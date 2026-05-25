@@ -8,9 +8,10 @@ Monday, 25th May — Log:
 Since I have already worked on AI personalisation and finding the hotspots in the curriculum using the insights generated during the test, I spent today researching ways to make it easier to create modules based on the concepts that are needed to be covered
 
 Focus: Concept Clustering and Its Applications in Curriculum Design
+
 The day was spent researching and experimenting with how embedding-based clustering of physics concepts could serve the curriculum engine, with the following three research questions driving the work:
 
-1. Concept Ordering — Reducing Friction in Learning
+1. Concept Ordering — Reducing Friction in Learning:  
 Since concepts within the same embedding cluster are semantically similar, clustering provides a principled basis for determining the order in which concepts should be taught. Grouping related concepts together and sequencing them in order of increasing complexity minimises the cognitive load of switching between unrelated ideas. The hypothesis is that a student encounters less friction when related concepts are introduced in a cohesive sequence rather than scattered across disconnected modules.
 
 2. Cross-Cluster Concept Links — A Recommendation Signal
