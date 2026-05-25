@@ -19,9 +19,13 @@ Concepts that are semantically close but belong to different clusters (i.e., dif
 
 3. Tiered Assessment Design — Leveraging Clusters for Difficulty Scaffolding
 Clustering also provides a natural scaffold for designing assessments at three tiers of difficulty:
+
 Basic tier — questions that test a student on a single atomic concept from one cluster.
+
 Intermediate tier — questions that require the student to reason across two or more related concepts from the same cluster, where the combination is semantically coherent.
+
 Advanced tier — questions that require reasoning across concepts from different clusters, where the combination is validated as meaningful by curriculum designers using inter-cluster similarity as a guide.
+
 The key constraint is that concepts are only combined in questions when the relationship between them is pedagogically meaningful — semantic similarity is used as a signal to help curriculum creators surface and verify these relationships, not as an automatic rule.
 
 Key Finding: Does Clustering Add Value Over NCERT's Existing Chapter Structure?
