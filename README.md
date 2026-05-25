@@ -89,3 +89,17 @@ Embedding-based clustering is most valuable **not as a replacement** for that st
 
 * **The chapter structure** drives the curriculum and the knowledge graph.
 * **Clustering** drives the analytics layer, recommendation layer, and assessment blueprint.
+
+---
+# 26th MAY
+
+## Goal:
+
+1. Create the NCERT content ready for it to act as a knowledge base on which AI creates modules (Using too much of the content from NCERT consumes a lot of tokens, so use the content for providing the skeleton around which modules should be made)
+2. Create meaningful relationships between the concepts across the chapters to help the recommendation system and prerequisite checks(make an internal tool, for helping in the creation of these cross-chapter links)
+3. Finalise the Onboarding questions.
+4. Finalise the schemas (make sure the AI module personalisation is based on the onboarding questions and the students understanding of the semantically close concepts)
+5. Implement most of the backend logic
+
+
+---
