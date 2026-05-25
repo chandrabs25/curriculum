@@ -1,4 +1,6 @@
 AI Curriculum Engine — Development Log
+
+
 Assumption:
 A POD has requested curriculum modules covering selected chapters from the Class 9 NCERT Science textbook. The current working scope includes Chapters 4, 6, 7, 8, 9, and 10 — the physics-related chapters — from which 192 atomic concepts have been extracted.
 
