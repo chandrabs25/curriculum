@@ -109,23 +109,12 @@ I have just finished implementing the pipeline that would generate the knowledge
 
 ---
 
-# Why Do We Need a Properly Structured Knowledge Base for Curriculum Generation?
+## 4:00 pm
 
-We need a well-structured knowledge base because the system should not only generate a curriculum, but also improve it based on each learner’s performance over time.
-
-After a learner completes an assessment, the evaluation feedback must be traceable back to the exact curriculum sections, concepts, and source textbook units that the questions were based on. Only then can the system reliably identify:
-
-1. Which concepts the learner understood well
-2. Which sections caused confusion
-3. Which misconceptions appeared in the answers
-4. Which modules should be revisited
-5. Whether the learner needs reassessment or relearning
-
-Without this structure, assessment feedback remains generic. With it, every test result can be mapped back to specific sections of the curriculum, allowing us to build a complete feedback loop:
-
-**Curriculum → Assessment → Evaluation → Weak Area Detection → Targeted Remediation → Updated Learner Insights → Improved Curriculum**
-
-This is why the knowledge base needs explicit relationships between sections, concepts, exercises, assessments, and learner insights. It allows the AI curriculum creator to become adaptive rather than just generative.
+I implemented a textbook ingestion pipeline that extracts section summaries, taught concepts, and required concepts using a single LLM call per section unit, saving thousands of API requests and keeping the execution fast. I then wrote the concept normalization logic to group these raw extractions into a global canonical concept registry, which allows us to natively bridge concepts across different subjects and grades. Finally, I built a programmatic relationship generator that automatically compiles the TEACHES_CONCEPT and REQUIRES_CONCEPT edges, and deterministically infers DEPENDS_ON_UNIT dependencies within each chapter by matching requirements and teachings on shared concepts, ensuring the graph is semantically consistent.
 
 ---
 
+## 7:30pm
+
+To make the graph artifacts usable by the application, I implemented the curriculum_engine querying and retrieval library. I built in-memory dictionary indexes cached in RAM via Python's @cached_property to ensure all graph lookups run in instant, $O(1)$ time instead of scanning lists linearly. I used these indexes to implement pathfinding algorithms that can trace prerequisites and dynamically map out remediation paths when a student struggles with specific concepts. I also added a token-based search indexing method over summaries and key terms to provide a robust, deterministic routing layer for module sequencing and assessment grading.
