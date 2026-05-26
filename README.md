@@ -105,7 +105,7 @@ Embedding-based clustering is most valuable **not as a replacement** for that st
 ---
 ## 3:00 pm:
 
-I have just finished implementing the pipeline that would generate the knowledge base with relationships like TEACHES_CONCEPT, REQUIRES_CONCEPT, DEPENDS_ON_UNIT, etc., and the script would run in the background calling gemini api. Currently finalising the various typed models that are used across for module generation, assessments, and insight creation.
+I have just finished implementing the pipeline that would generate the knowledge base with relationships like TEACHES_CONCEPT, REQUIRES_CONCEPT, DEPENDS_ON_UNIT, etc., and the script would run in the background calling gemini api. Currently finalising the various typed models that are used across for module generation, assessments, and insight creation. I am using the doing the project on class 11 and 12 physics, chemistry and biology textbooks instead, because I already had the base content with me from my earlier project, but I had to redesign the way relationships are created to make it suitable for this project.
 
 ---
 
