@@ -1,0 +1,1419 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_physics_12_ch2.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:physics:12:2",
+  "curriculum": "ncert",
+  "subject": "physics",
+  "grade": 12,
+  "textbook_name": "Physics Part I",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:physics:12:2",
+    "number": 2,
+    "title": "Electrostatic Potential and Capacitance",
+    "summary": "This chapter explores electrostatic potential and capacitance, fundamental concepts in electromagnetism. It begins by establishing the relationship between conservative forces, potential energy, and the electrostatic field. Electrostatic potential, a scalar quantity, is defined as the work done per unit charge to bring a charge from infinity to a point. The chapter derives the potential due to point charges, dipoles, and systems of charges using superposition.\n\nKey formulas include the potential due to a point charge ($V = Q/4πε₀r$) and the potential energy of a system of two charges ($U = q₁q₂/4πε₀r₁₂$). Equipotential surfaces, where the potential is constant, are introduced and shown to be perpendicular to electric field lines.\n\nThe latter half transitions to capacitance, defining it as the ratio of charge to potential difference ($C=Q/V$) and examining parallel-plate capacitors. The effect of dielectrics on capacitance is analyzed, leading to the concept of the dielectric constant. Capacitor combinations in series and parallel are explored, with formulas for calculating equivalent capacitance.\n\nThe chapter concludes by deriving the energy stored in a capacitor ($U = ½CV²$) and relating it to the energy density of the electric field. The chapter builds sequentially, starting with fundamental definitions and progressing to complex systems and practical applications, like capacitors, highlighting their importance in energy storage and electronics.",
+    "sections": [
+      {
+        "id": "ncert:physics:12:2:2.1",
+        "number": "2.1",
+        "title": "Introduction",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:2:2.1:1",
+            "order": 1,
+            "title": "Conservative Forces and Potential Energy",
+            "content_text": "The notion of potential energy is introduced in the context of conservative forces. When an external force does work in taking a body from one point to another against a force like spring force or gravitational force, that work gets stored as potential energy of the body. When the external force is removed, the body moves, gaining kinetic energy and losing an equal amount of potential energy, such that the sum of kinetic and potential energies is conserved. Forces of this kind are called conservative forces. Examples include spring force and gravitational force.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.1:2",
+            "order": 2,
+            "title": "Electrostatic Potential Energy Analogy",
+            "content_text": "Coulomb force between two stationary charges is also a conservative force. This is because both Coulomb force and gravitational force have an inverse-square dependence on distance and differ mainly in their proportionality constants (masses in gravity are replaced by charges in Coulomb's law). Thus, like the potential energy of a mass in a gravitational field, we can define electrostatic potential energy of a charge in an electrostatic field.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.1:3",
+            "order": 3,
+            "title": "Work Done in an Electrostatic Field",
+            "content_text": "Consider an electrostatic field $\\mathbf{E}$ due to a charge configuration. For simplicity, consider the field $\\mathbf{E}$ due to a charge $Q$ placed at the origin. Imagine bringing a test charge $q$ from a point $R$ to a point $P$ against the repulsive force due to $Q$. This assumes $Q$ and $q$ are both positive or both negative. To ensure the configuration is not disturbed, we assume $q$ is so small that it does not move $Q$. We apply an external force $\\mathbf{F}_{ext}$ just enough to counter the repulsive electric force $\\mathbf{F}_E$ (i.e., $\\mathbf{F}_{ext} = -\\mathbf{F}_E$), meaning there is no net force or acceleration. The work done by external forces in moving a charge $q$ from $R$ to $P$ is: $$W_{RP} = \\int_{R}^{P} \\mathbf{F}_{ext} \\cdot d\\mathbf{r} = -\\int_{R}^{P} \\mathbf{F}_{E} \\cdot d\\mathbf{r}$$ This work done is stored as potential energy.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 2.1",
+                "description": "A diagram showing a source charge $Q$ at the origin and a test charge $q$ being moved from a point $R$ to a point $P$ along a path against the repulsive electrostatic force.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.1:4",
+            "order": 4,
+            "title": "Electrostatic Potential Energy Difference",
+            "content_text": "At every point in an electric field, a particle with charge $q$ possesses a certain electrostatic potential energy. The work done by an external force increases the potential energy by an amount equal to the potential energy difference between points $R$ and $P$: $$\\Delta U = U_P - U_R = W_{RP}$$ Note that the work done by the electric field is negative, i.e., $-W_{RP}$. Electric potential energy difference between two points is defined as the work required to be done by an external force in moving (without accelerating) charge $q$ from one point to another for an electric field of any arbitrary charge configuration.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.1:5",
+            "order": 5,
+            "title": "Characteristics of Electrostatic Potential Energy",
+            "content_text": "Two important comments regarding potential energy: (i) The work done by an electrostatic field in moving a charge from one point to another depends only on the initial and final points and is independent of the path taken. This is the fundamental characteristic of a conservative force. (ii) The actual value of potential energy is not physically significant; only the difference of potential energy is significant. We can add an arbitrary constant $\\alpha$ to potential energy at every point without changing the difference: $(U_P + \\alpha) - (U_R + \\alpha) = U_P - U_R$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.1:6",
+            "order": 6,
+            "title": "Potential Energy at a Point",
+            "content_text": "There is freedom in choosing the point where potential energy is zero. A convenient choice is to have electrostatic potential energy zero at infinity. If we take point $R$ at infinity, the work done in bringing the charge $q$ from infinity to point $P$ is: $$W_{\\infty P} = U_P - U_{\\infty} = U_P$$ Potential energy of charge $q$ at a point (in the presence of field due to any charge configuration) is the work done by the external force (equal and opposite to the electric force) in bringing the charge $q$ from infinity to that point.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:2:2.2",
+        "number": "2.2",
+        "title": "Electrostatic Potential",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:2:2.2:1",
+            "order": 1,
+            "title": "Definition of Electrostatic Potential",
+            "content_text": "The potential energy of a test charge $q$ is proportional to $q$. To define a quantity independent of $q$, we divide the work done by the amount of charge $q$. This leads to the idea of electrostatic potential $V$. The work done per unit test charge is characteristic of the electric field associated with the charge configuration. From the relation for work done, we get the potential difference: $$V_P - V_R = \\frac{U_P - U_R}{q} = \\frac{W_{RP}}{q}$$ where $V_P$ and $V_R$ are the electrostatic potentials at $P$ and $R$, respectively. As with potential energy, only the potential difference is physically significant.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.2:2",
+            "order": 2,
+            "title": "Potential at a Point",
+            "content_text": "If we choose the potential to be zero at infinity, the electrostatic potential at a point is defined as: Work done by an external force in bringing a unit positive charge from infinity to a point = electrostatic potential ($V$) at that point. This section also notes the historical contribution of Count Alessandro Volta, who developed the first voltaic pile (battery).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:2:2.3",
+        "number": "2.3",
+        "title": "Potential due to a Point Charge",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:2:2.3:1",
+            "order": 1,
+            "title": "Derivation Setup for Point Charge Potential",
+            "content_text": "Consider a point charge $Q$ placed at the origin. To determine the electrostatic potential at any point $P$ with a position vector $\\vec{r}$ from the origin, we calculate the work done in bringing a unit positive test charge from infinity to $P$. For a positive charge $Q > 0$, the work is done against the repulsive electrostatic force. Since the work done is independent of the path, we choose the most convenient path: a radial line from infinity to the point $P$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 2.3",
+                "description": "A point charge $Q$ at the origin O. A unit positive test charge is moved from infinity along a radial line towards $Q$, passing through an intermediate point $P'$ at distance $r'$ and reaching point $P$ at distance $r$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.3:2",
+            "order": 2,
+            "title": "Force and Infinitesimal Work",
+            "content_text": "At an intermediate point $P'$ on the radial path at a distance $r'$, the electrostatic force on a unit positive charge is given by: $$\\vec{F} = \\frac{Q \\times 1}{4\\pi\\epsilon_0 r'^2} \\hat{r}'$$ where $\\hat{r}'$ is the unit vector along $OP'$. The work done against this force for a small displacement $\\Delta r'$ from $r'$ to $r' + \\Delta r'$ is: $$\\Delta W = -\\frac{Q}{4\\pi\\epsilon_0 r'^2} \\Delta r'$$ The negative sign is necessary because for a displacement towards the origin ($\\Delta r' < 0$), the work done $\\Delta W$ must be positive.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.3:3",
+            "order": 3,
+            "title": "Integration for Total Potential",
+            "content_text": "The total work done ($W$) by the external force to bring the charge from infinity ($r' = \\infty$) to the point $P$ ($r' = r$) is obtained by integrating the infinitesimal work: $$W = -\\int_{\\infty}^{r} \\frac{Q}{4\\pi\\epsilon_0 r'^2} dr' = \\left[ \\frac{Q}{4\\pi\\epsilon_0 r'} \\right]_{\\infty}^{r} = \\frac{Q}{4\\pi\\epsilon_0 r}$$ By definition, this work is the potential $V$ at $P$ due to the charge $Q$: $$V(r) = \\frac{Q}{4\\pi\\epsilon_0 r}$$",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.3:4",
+            "order": 4,
+            "title": "Sign of Charge and Potential at Infinity",
+            "content_text": "The equation $V(r) = \\frac{Q}{4\\pi\\epsilon_0 r}$ holds for any sign of the charge $Q$. If $Q < 0$, then $V < 0$. In this case, the work done by the external force to bring a unit positive test charge from infinity is negative because the electrostatic force is attractive, meaning the displacement and the electrostatic force are in the same direction. Furthermore, the derivation is consistent with the convention that the electrostatic potential is zero at infinity ($r \\to \\infty$).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.3:5",
+            "order": 5,
+            "title": "Comparison of Potential and Field Variation",
+            "content_text": "The electrostatic potential $V$ varies as $1/r$, whereas the electrostatic field $E$ varies as $1/r^2$. A graphical comparison shows that the magnitude of the electric field decreases much more rapidly with distance than the potential.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 2.4",
+                "description": "A graph showing the variation of potential $V$ (proportional to $1/r$) and electric field $E$ (proportional to $1/r^2$) with distance $r$. The $E$ curve (black) is steeper and falls below the $V$ curve (blue) as $r$ increases beyond 1 unit.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.3:6",
+            "order": 6,
+            "title": "Worked Example: Potential and Work",
+            "content_text": "This example demonstrates the calculation of potential at a distance from a point charge and the subsequent calculation of work done to move another charge to that point.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 2.1",
+                "problem": "(a) Calculate the potential at a point P due to a charge of $4 \\times 10^{-7}$ C located 9 cm away. (b) Hence obtain the work done in bringing a charge of $2 \\times 10^{-9}$ C from infinity to the point P. Does the answer depend on the path along which the charge is brought?",
+                "solution": "(a) $V = \\frac{1}{4\\pi\\epsilon_0} \\frac{Q}{r} = 9 \\times 10^9 \\text{ Nm}^2 \\text{ C}^{-2} \\times \\frac{4 \\times 10^{-7} \\text{ C}}{0.09 \\text{ m}} = 4 \\times 10^4 \\text{ V}$. (b) $W = qV = 2 \\times 10^{-9} \\text{ C} \\times 4 \\times 10^4 \\text{ V} = 8 \\times 10^{-5} \\text{ J}$. No, the work done is path independent. Any arbitrary infinitesimal path can be resolved into two perpendicular displacements: one along $\\vec{r}$ and another perpendicular to $\\vec{r}$. The work done corresponding to the latter will be zero."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:2:2.4",
+        "number": "2.4",
+        "title": "Potential due to an Electric Dipole",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:2:2.4:1",
+            "order": 1,
+            "title": "Dipole Potential and Superposition",
+            "content_text": "An electric dipole consists of two charges $q$ and $-q$ separated by a distance $2a$. It is characterized by a dipole moment vector $\\vec{p}$ with magnitude $p = q \\times 2a$, directed from $-q$ to $q$. Since electrostatic potential follows the superposition principle, the potential $V$ at any point $P$ is the sum of the potentials due to the individual charges $q$ and $-q$: $$V = \\frac{1}{4\\pi\\epsilon_0} \\left( \\frac{q}{r_1} - \\frac{q}{r_2} \\right)$$ where $r_1$ and $r_2$ are the distances of point $P$ from $q$ and $-q$ respectively.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 2.5",
+                "description": "Geometry for calculating the potential of a dipole. Charges $+q$ and $-q$ are at distances $a$ from the origin O. Point P is at distance $r$ from the origin, making an angle $\\theta$ with the dipole axis. Distances from $+q$ and $-q$ to P are $r_1$ and $r_2$ respectively.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.4:2",
+            "order": 2,
+            "title": "Geometric Relations for Dipole Potential",
+            "content_text": "Using the law of cosines for the geometry shown in Fig 2.5: $$r_1^2 = r^2 + a^2 - 2ar \\cos \\theta$$ $$r_2^2 = r^2 + a^2 + 2ar \\cos \\theta$$ For distances much greater than the dipole separation ($r \\gg a$), we can approximate these expressions by retaining terms only up to the first order in $a/r$: $$r_1^2 = r^2 \\left( 1 - \\frac{2a \\cos \\theta}{r} + \\frac{a^2}{r^2} \\right) \\cong r^2 \\left( 1 - \\frac{2a \\cos \\theta}{r} \\right)$$ Similarly, $$r_2^2 \\cong r^2 \\left( 1 + \\frac{2a \\cos \\theta}{r} \\right)$$\nUsing the Binomial theorem and retaining terms up to the first order in $a/r$, we obtain the reciprocals of the distances: $$\\frac{1}{r_1} \\cong \\frac{1}{r} \\left( 1 - \\frac{2a \\cos \\theta}{r} \\right)^{-1/2} \\cong \\frac{1}{r} \\left( 1 + \\frac{a}{r} \\cos \\theta \\right)$$ $$\\frac{1}{r_2} \\cong \\frac{1}{r} \\left( 1 + \\frac{2a \\cos \\theta}{r} \\right)^{-1/2} \\cong \\frac{1}{r} \\left( 1 - \\frac{a}{r} \\cos \\theta \\right)$$ Substituting these into the potential equation and using $p = 2qa$: $$V = \\frac{q}{4\\pi\\epsilon_0} \\frac{2a \\cos \\theta}{r^2} = \\frac{p \\cos \\theta}{4\\pi\\epsilon_0 r^2}$$ Since $p \\cos \\theta = \\vec{p} \\cdot \\hat{r}$, where $\\hat{r}$ is the unit vector along the position vector $\\vec{r}$... Since $p \\cos \\theta = \\vec{p} \\cdot \\hat{r}$, where $\\hat{r}$ is the unit vector along the position vector $\\vec{OP}$, the electric potential of a dipole is then given by $$V = \\frac{1}{4\\pi\\epsilon_0} \\frac{\\vec{p} \\cdot \\hat{r}}{r^2}; (r >> a)$$ This equation (2.15) is approximately true only for distances large compared to the size of the dipole, so that higher order terms in $a/r$ are negligible. For a point dipole $\\vec{p}$ at the origin, Eq. (2.15) is, however, exact.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.4:3",
+            "order": 3,
+            "title": "Potential on Dipole Axis and Equatorial Plane",
+            "content_text": "From Eq. (2.15), the potential on the dipole axis (where $\\theta = 0$ or $\\pi$) is given by $$V = \\pm \\frac{1}{4\\pi\\epsilon_0} \\frac{p}{r^2}$$ A positive sign is used for $\\theta = 0$, and a negative sign for $\\theta = \\pi$. The potential in the equatorial plane (where $\\theta = \\pi/2$) is zero.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.4:4",
+            "order": 4,
+            "title": "Contrasting Features of Dipole and Point Charge Potentials",
+            "content_text": "The important contrasting features of electric potential of a dipole from that due to a single charge are: (i) The potential due to a dipole depends not just on $r$ but also on the angle between the position vector $\\vec{r}$ and the dipole moment vector $\\vec{p}$. It is axially symmetric about $\\vec{p}$, meaning if you rotate the position vector $\\vec{r}$ about $\\vec{p}$ while keeping $\\theta$ fixed, the points on the generated cone will have the same potential. (ii) The electric dipole potential falls off at large distances as $1/r^2$, unlike the $1/r$ characteristic of a single point charge.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:2:2.5",
+        "number": "2.5",
+        "title": "Potential due to a System of Charges",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:2:2.5:1",
+            "order": 1,
+            "title": "Superposition Principle for Electrostatic Potential",
+            "content_text": "Consider a system of charges $q_1, q_2, ..., q_n$ with position vectors $\\vec{r}_1, \\vec{r}_2, ..., \\vec{r}_n$ relative to some origin. The potential $V_1$ at a point P due to charge $q_1$ is $V_1 = \\frac{1}{4\\pi\\epsilon_0} \\frac{q_1}{r_{1P}}$, where $r_{1P}$ is the distance between $q_1$ and P. Similarly, potentials $V_2, V_3, ..., V_n$ are calculated for other charges. By the superposition principle, the total potential $V$ at P is the algebraic sum of the potentials due to individual charges: $$V = V_1 + V_2 + ... + V_n = \\frac{1}{4\\pi\\epsilon_0} \\left( \\frac{q_1}{r_{1P}} + \\frac{q_2}{r_{2P}} + ... + \\frac{q_n}{r_{nP}} \\right)$$ This is represented in Figure 2.6.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 2.6",
+                "description": "A diagram showing a point P and several charges q1, q2, q3, q4, q5 at various distances r1P, r2P, r3P, r4P, r5P from P. It illustrates that the potential at a point due to a system of charges is the sum of potentials due to individual charges.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.5:2",
+            "order": 2,
+            "title": "Potential due to Continuous Charge Distributions",
+            "content_text": "For a continuous charge distribution with charge density $\\rho(\\vec{r})$, the distribution is divided into small volume elements $\\Delta v$, each carrying a charge $\\rho \\Delta v$. The potential is determined by summing (integrating) the contributions from all such volume elements over the entire distribution.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.5:3",
+            "order": 3,
+            "title": "Potential of a Uniformly Charged Spherical Shell",
+            "content_text": "For a uniformly charged spherical shell of radius $R$ and total charge $q$: (i) Outside the shell ($r \\geq R$), the potential is as if the entire charge is concentrated at the center: $$V = \\frac{1}{4\\pi\\epsilon_0} \\frac{q}{r}$$ (ii) Inside the shell, the electric field is zero, which implies the potential is constant and equal to its value at the surface: $$V = \\frac{1}{4\\pi\\epsilon_0} \\frac{q}{R}$$",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.5:4",
+            "order": 4,
+            "title": "Example 2.2: Points of Zero Potential",
+            "content_text": "This example demonstrates how to find points on a line joining two charges where the net electrostatic potential is zero. It involves solving for the distance $x$ from one charge such that the sum of potentials from both charges equals zero, considering points both between and outside the charges.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 2.2",
+                "problem": "Two charges $3 \\times 10^{-8}$ C and $-2 \\times 10^{-8}$ C are located 15 cm apart. At what point on the line joining the two charges is the electric potential zero? Take the potential at infinity to be zero.",
+                "solution": "Let us take the origin O at the location of the positive charge. The line joining the two charges is taken to be the x-axis; the negative charge is taken to be on the right side of the origin (Fig. 2.7). Let P be the required point on the x-axis where the potential is zero. If x is the x-coordinate of P, obviously x must be positive. If x lies between O and A, we have $$\\frac{1}{4\\pi\\epsilon_0} \\left[ \\frac{3 \\times 10^{-8}}{x \\times 10^{-2}} - \\frac{2 \\times 10^{-8}}{(15-x) \\times 10^{-2}} \\right] = 0$$ where x is in cm. That is, $$\\frac{3}{x} - \\frac{2}{15-x} = 0$$ which gives $x = 9$ cm. If x lies on the extended line OA, the required condition is $$\\frac{3}{x} - \\frac{2}{x-15} = 0$$ which gives $x = 45$ cm. Thus, electric potential is zero at 9 cm and 45 cm away from the positive charge on the side of the negative charge."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "FIGURE 2.7",
+                "description": "A line segment representing the x-axis with origin O at a 3e-8 C charge and point A at 15 cm with a -2e-8 C charge. Point P is shown between O and A.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.5:5",
+            "order": 5,
+            "title": "Example 2.3: Conceptual Analysis of Potential and Work",
+            "content_text": "This example provides a conceptual check on the signs of potential differences, potential energy changes, and work done in the fields of positive and negative point charges.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 2.3",
+                "problem": "Figures 2.8 (a) and (b) show the field lines of a positive and negative point charge respectively. (a) Give the signs of the potential difference $V_P - V_Q; V_B - V_A$. (b) Give the sign of the potential energy difference of a small negative charge between the points Q and P; A and B. (c) Give the sign of the work done by the field in moving a small positive charge from Q to P. (d) Give the sign of the work done by the external agency in moving a small negative charge from B to A. (e) Does the kinetic energy of a small negative charge increase or decrease in going from B to A?",
+                "solution": "(a) As $V \\propto 1/r$, $V_P > V_Q$. Thus, $(V_P - V_Q)$ is positive. Also $V_B$ is less negative than $V_A$. Thus, $V_B > V_A$ or $(V_B - V_A)$ is positive. (b) A small negative charge will be attracted towards positive charge. The negative charge moves from higher potential energy to lower potential energy. Therefore the sign of potential energy difference of a small negative charge between Q and P is positive. Similarly, $(P.E.)_A > (P.E.)_B$ and hence sign of potential energy differences is positive. (c) In moving a small positive charge from Q to P, work has to be done by an external agency against the electric field. Therefore, work done by the field is negative. (d) In moving a small negative charge from B to A work has to be done by the external agency. It is positive. (e) Due to force of repulsion on the negative charge, velocity decreases and hence the kinetic energy decreases in going from B to A."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "FIGURE 2.8",
+                "description": "Two diagrams showing electric field lines: (a) Radial lines pointing outward from a positive charge with points P and Q (P is closer to the charge); (b) Radial lines pointing inward toward a negative charge with points A and B (A is closer to the charge).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:2:2.6",
+        "number": "2.6",
+        "title": "Equipotential Surfaces",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:2:2.6:1",
+            "order": 1,
+            "title": "Definition and Point Charge",
+            "content_text": "An equipotential surface is a surface with a constant value of potential at all points on the surface. For a single charge $q$, the potential at a distance $r$ is given by $V = \\frac{1}{4\\pi\\epsilon_0} \\frac{q}{r}$. This equation shows that $V$ is constant if $r$ is constant. Consequently, the equipotential surfaces of a single point charge are concentric spherical surfaces centered at the charge. These surfaces provide a visual representation of the potential distribution around a charge, complementary to the picture provided by electric field lines.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 2.9",
+                "description": "(a) Equipotential surfaces for a single charge q are concentric spheres centered at the charge. (b) Electric field lines are radial, starting from the charge if q > 0.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.6:2",
+            "order": 2,
+            "title": "Normalcy of Electric Field to Equipotential Surfaces",
+            "content_text": "For any charge configuration, the equipotential surface through a point is always normal to the electric field at that point. This can be proven by contradiction: if the field were not normal to the surface, it would have a non-zero component along the surface. Moving a unit test charge against this component would require work. However, by definition, there is no potential difference between any two points on an equipotential surface, meaning no work is required to move a test charge along it. Therefore, the electric field must be normal to the equipotential surface at every point.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.6:3",
+            "order": 3,
+            "title": "Uniform Field and Other Configurations",
+            "content_text": "In a uniform electric field $\\mathbf{E}$ (for example, directed along the x-axis), the equipotential surfaces are planes normal to the field direction, which in this case are planes parallel to the y-z plane. For more complex configurations like an electric dipole or two identical positive charges, the equipotential surfaces are no longer simple spheres or planes but take on shapes that reflect the combined potential of the charges.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 2.10",
+                "description": "Equipotential surfaces for a uniform electric field E are planes perpendicular to the field lines.",
+                "image_url": null
+              },
+              {
+                "label": "Figure 2.11",
+                "description": "Equipotential surfaces for (a) an electric dipole and (b) two identical positive charges.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.6:4",
+            "order": 4,
+            "title": "Relation between Field and Potential",
+            "content_text": "Consider two closely spaced equipotential surfaces A and B with potentials $V$ and $V + \\delta V$. Let $\\delta l$ be the perpendicular distance from surface B to A. The work done in moving a unit positive charge from B to A against the field $\\mathbf{E}$ is $|\\mathbf{E}| \\delta l$. This work equals the potential difference $V_A - V_B = V - (V + \\delta V) = -\\delta V$. Thus, $|\\mathbf{E}| \\delta l = -\\delta V$, leading to the relation $|\\mathbf{E}| = -\\frac{\\delta V}{\\delta l}$. Since $\\delta V$ is negative in the direction of the field, we can also write $|\\mathbf{E}| = \\frac{|\\delta V|}{\\delta l}$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 2.12",
+                "description": "Two equipotential surfaces A and B used to derive the relation between electric field and potential.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.6:5",
+            "order": 5,
+            "title": "Key Conclusions on Field and Potential",
+            "content_text": "The relation $|\\mathbf{E}| = -\\frac{\\delta V}{\\delta l}$ leads to two significant conclusions: (i) The electric field is directed toward the region where the potential decreases most steeply. (ii) The magnitude of the electric field is equal to the change in the magnitude of potential per unit displacement normal to the equipotential surface at that point.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:2:2.7",
+        "number": "2.7",
+        "title": "Potential Energy of a System of Charges",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:2:2.7:1",
+            "order": 1,
+            "title": "Potential Energy of Two Charges",
+            "content_text": "The electrostatic potential energy of a system is the work done to assemble the charges from infinity. For two charges $q_1$ and $q_2$, bringing $q_1$ from infinity to $\\mathbf{r}_1$ requires no work ($W_1 = 0$) as there is no field. $q_1$ then creates a potential $V_1 = \\frac{1}{4\\pi\\epsilon_0} \\frac{q_1}{r_{1P}}$ in space. Bringing $q_2$ from infinity to $\\mathbf{r}_2$ requires work $W_2 = q_2 V_1(\\mathbf{r}_2) = \\frac{1}{4\\pi\\epsilon_0} \\frac{q_1 q_2}{r_{12}}$. This total work is stored as potential energy: $U = \\frac{1}{4\\pi\\epsilon_0} \\frac{q_1 q_2}{r_{12}}$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 2.13",
+                "description": "Potential energy of a system of two charges q1 and q2 separated by distance r12.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.7:2",
+            "order": 2,
+            "title": "Sign and Nature of Potential Energy",
+            "content_text": "The potential energy $U$ is positive if $q_1 q_2 > 0$ (like charges), indicating work is done against repulsive forces. If $q_1 q_2 < 0$ (unlike charges), $U$ is negative, as the attractive force does work. Because the electrostatic force is conservative, the work done (and thus $U$) is independent of the path taken or the order in which charges are brought to their locations.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.7:3",
+            "order": 3,
+            "title": "Potential Energy of a System of Three Charges",
+            "content_text": "For three charges $q_1, q_2, q_3$, the total potential energy is the sum of work done in steps. Work to bring $q_1$ is zero. Work for $q_2$ is $\\frac{1}{4\\pi\\epsilon_0} \\frac{q_1 q_2}{r_{12}}$. Work for $q_3$ involves moving it against the potentials of both $q_1$ and $q_2$: $W_3 = q_3 (V_1 + V_2) = \\frac{1}{4\\pi\\epsilon_0} (\\frac{q_1 q_3}{r_{13}} + \\frac{q_2 q_3}{r_{23}})$. The total potential energy is $U = \\frac{1}{4\\pi\\epsilon_0} (\\frac{q_1 q_2}{r_{12}} + \\frac{q_1 q_3}{r_{13}} + \\frac{q_2 q_3}{r_{23}})$. Generally, the potential energy of a system of charges is the work done by an external agency in assembling the charges at their locations.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 2.14",
+                "description": "Potential energy of a system of three charges q1, q2, and q3.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.7:4",
+            "order": 4,
+            "title": "Example 2.4: Potential Energy of Four Charges on a Square",
+            "content_text": "This example calculates the work required to assemble four charges at the corners of a square and determines whether additional work is needed to bring a fifth charge to the centre.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 2.4",
+                "problem": "Four charges are arranged at the corners of a square $ABCD$ of side $d$.\n(a) Find the work required to put together this arrangement.\n(b) A charge $q_0$ is brought to the centre $E$ of the square, the four charges being held fixed at its corners. How much extra work is needed to do this?",
+                "solution": "(a) The work done depends only on the final arrangement. We assemble the charges step by step: $+q$ at A, $-q$ at B, $+q$ at C, $-q$ at D.\n\n(i) Work to bring $+q$ to A: $W_1 = 0$\n\n(ii) Work to bring $-q$ to B: $W_2 = -\\frac{q^2}{4\\pi\\epsilon_0 d}$\n\n(iii) Work to bring $+q$ to C: $W_3 = \\frac{q^2}{4\\pi\\epsilon_0 d}\\left(\\frac{1}{\\sqrt{2}} - 1\\right)$\n\n(iv) Work to bring $-q$ to D involves the potential at D due to all three existing charges:\n$V(D) = \\frac{q}{4\\pi\\epsilon_0 d}\\left(2 - \\frac{1}{\\sqrt{2}}\\right)$\n\nSo $W_4 = -\\frac{q^2}{4\\pi\\epsilon_0 d}\\left(2 - \\frac{1}{\\sqrt{2}}\\right)$\n\nTotal work: $W = -\\frac{q^2}{4\\pi\\epsilon_0 d}\\left(4 - \\sqrt{2}\\right)$\n\nThis is the electrostatic potential energy of the charge arrangement.\n\n(b) The distance from each corner to centre $E$ is $\\frac{d}{\\sqrt{2}}$. The potential at E:\n$V(E) = \\frac{1}{4\\pi\\epsilon_0}\\left(\\frac{+q}{d/\\sqrt{2}} + \\frac{-q}{d/\\sqrt{2}} + \\frac{+q}{d/\\sqrt{2}} + \\frac{-q}{d/\\sqrt{2}}\\right) = 0$\n\nSince $V(E) = 0$, the extra work required is $W_{\\text{extra}} = q_0 \\times 0 = 0$. No work is needed to bring any charge to point E."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Fig 2.15",
+                "description": "Four charges ($+q$, $-q$, $+q$, $-q$) at the corners of a square ABCD of side $d$, with centre E.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:2:2.8",
+        "number": "2.8",
+        "title": "Potential Energy in an External Field",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:2:2.8:1",
+            "order": 1,
+            "title": "Potential Energy of a Single Charge in an External Field",
+            "content_text": "This section discusses the potential energy of a charge $q$ placed in an external electric field $\\mathbf{E}$. This external field is produced by sources other than the charge $q$ itself and is assumed to be unaffected by the presence of $q$. The field is specified by its potential $V$.\n\nBy definition, the potential energy of a charge $q$ at a point P in an external potential $V$ is the work done in bringing the charge from infinity to that point:\n\n$$U = qV(\\mathbf{r})$$\n\nwhere $V(\\mathbf{r})$ is the external potential at the location of the charge. This definition only accounts for the interaction energy with the external field, not the self-energy of the charge.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.8:2",
+            "order": 2,
+            "title": "Potential Energy of a System of Two Charges in an External Field",
+            "content_text": "When a system of two charges $q_1$ and $q_2$ is placed in an external electric field $\\mathbf{E}$, the total potential energy of the system is the sum of the potential energies of the individual charges in the external field and the mutual interaction energy between the charges. The potential energy of $q_1$ at $\\mathbf{r}_1$ in the external field is $q_1 V(\\mathbf{r}_1)$ and that of $q_2$ at $\\mathbf{r}_2$ is $q_2 V(\\mathbf{r}_2)$, where $V(\\mathbf{r})$ is the external potential. The mutual electrostatic potential energy is given by $\\frac{q_1 q_2}{4\\pi\\epsilon_0 r_{12}}$. Thus, the total potential energy $U$ is: $$U = q_1 V(\\mathbf{r}_1) + q_2 V(\\mathbf{r}_2) + \\frac{q_1 q_2}{4\\pi\\epsilon_0 r_{12}}$$ This is illustrated in the following example where a system is analyzed both with and without an external field.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 2.5",
+                "problem": "(c) Suppose that the same system of charges is now placed in an external electric field $E = A(1/r^2)$; $A = 9 \\times 10^5$ NC$^{-1}$ m$^2$. What would the electrostatic energy of the configuration be?",
+                "solution": "(a) $U = \\frac{1}{4\\pi\\epsilon_0} \\frac{q_1 q_2}{r} = 9 \\times 10^9 \\times \\frac{7 \\times (-2) \\times 10^{-12}}{0.18} = -0.7$ J. (b) $W = U_2 - U_1 = 0 - U = 0 - (-0.7) = 0.7$ J. (c) The mutual interaction energy of the two charges remains unchanged. In addition, there is the energy of interaction of the two charges with the external electric field. We find, $q_1 V(\\mathbf{r}_1) + q_2 V(\\mathbf{r}_2) = A \\frac{7 \\mu\\text{C}}{0.09\\text{m}} + A \\frac{-2 \\mu\\text{C}}{0.09\\text{m}}$ and the net electrostatic energy is $q_1 V(\\mathbf{r}_1) + q_2 V(\\mathbf{r}_2) + \\frac{q_1 q_2}{4\\pi\\epsilon_0 r_{12}} = A \\frac{7 \\mu\\text{C}}{0.09\\text{m}} + A \\frac{-2 \\mu\\text{C}}{0.09\\text{m}} - 0.7$ J $= 70 - 20 - 0.7 = 49.3$ J."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.8:3",
+            "order": 3,
+            "title": "Potential energy of a dipole in an external field",
+            "content_text": "Consider a dipole with charges $q_1 = +q$ and $q_2 = -q$ placed in a uniform electric field $\\mathbf{E}$. In a uniform field, the dipole experiences no net force but experiences a torque $\\mathbf{\\tau} = \\mathbf{p} \\times \\mathbf{E}$, which tends to rotate it. If an external torque $\\tau_{ext}$ is applied to rotate the dipole from angle $\\theta_0$ to $\\theta_1$ at an infinitesimal angular speed without angular acceleration, the work done is: $$W = \\int_{\\theta_0}^{\\theta_1} \\tau_{ext}(\\theta) d\\theta = \\int_{\\theta_0}^{\\theta_1} pE \\sin \\theta d\\theta = pE(\\cos \\theta_0 - \\cos \\theta_1)$$ This work is stored as the potential energy $U(\\theta)$ of the system. By choosing the reference angle $\\theta_0 = \\pi/2$ where potential energy is zero, we get: $$U(\\theta) = pE(\\cos \\frac{\\pi}{2} - \\cos \\theta) = -pE \\cos \\theta = -\\mathbf{p} \\cdot \\mathbf{E}$$",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 2.16",
+                "description": "A diagram showing an electric dipole with charges -q and +q separated by distance 2a in a uniform electric field E. The dipole moment vector p makes an angle theta with the field direction. The horizontal components of the charge positions relative to the center are shown as a cos(theta) and -a cos(theta).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.8:4",
+            "order": 4,
+            "title": "Alternative Derivation of Dipole Potential Energy",
+            "content_text": "The potential energy expression can also be understood by considering the work done in bringing the charges from infinity to their positions $\\mathbf{r}_1$ and $\\mathbf{r}_2$ in the external field. The expression reads: $$U'(\\theta) = q[V(\\mathbf{r}_1) - V(\\mathbf{r}_2)] - \\frac{q^2}{4\\pi\\epsilon_0 \\times 2a}$$ Here, $V(\\mathbf{r}_1) - V(\\mathbf{r}_2)$ is the potential difference between the positions of $+q$ and $-q$, which equals the work done in bringing a unit positive charge against the field from $\\mathbf{r}_2$ to $\\mathbf{r}_1$. For a displacement $2a \\cos \\theta$ parallel to the field, $V(\\mathbf{r}_1) - V(\\mathbf{r}_2) = -E \\times 2a \\cos \\theta$. Thus: $$U'(\\theta) = -pE \\cos \\theta - \\frac{q^2}{4\\pi\\epsilon_0 \\times 2a} = -\\mathbf{p} \\cdot \\mathbf{E} - \\frac{q^2}{4\\pi\\epsilon_0 \\times 2a}$$ Since the second term is a constant for a given dipole, it can be dropped, reducing the expression to $U(\\theta) = -\\mathbf{p} \\cdot \\mathbf{E}$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.8:5",
+            "order": 5,
+            "title": "Energy Released in Dipole Alignment",
+            "content_text": "When a substance with permanent dipoles is placed in an external field, the dipoles tend to align with the field. A change in the orientation of the dipoles results in a change in potential energy, which is often released as heat. This is demonstrated in the following example involving a mole of a polar substance.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 2.6",
+                "problem": "A molecule of a substance has a permanent electric dipole moment of magnitude $10^{-29}$ C m. A mole of this substance is polarised (at low temperature) by applying a strong electrostatic field of magnitude $10^6$ V m$^{-1}$. The direction of the field is suddenly changed by an angle of $60^\\circ$. Estimate the heat released by the substance in aligning its dipoles along the new direction of the field. For simplicity, assume 100% polarisation of the sample.",
+                "solution": "Here, dipole moment of each molecule $= 10^{-29}$ C m. As 1 mole of the substance contains $6 \\times 10^{23}$ molecules, total dipole moment of all the molecules, $p = 6 \\times 10^{23} \\times 10^{-29}$ C m $= 6 \\times 10^{-6}$ C m. Initial potential energy, $U_i = -pE \\cos \\theta = -6 \\times 10^{-6} \\times 10^6 \\cos 0^\\circ = -6$ J. Final potential energy (when $\\theta = 60^\\circ$), $U_f = -6 \\times 10^{-6} \\times 10^6 \\cos 60^\\circ = -3$ J. Change in potential energy $= -3$ J $- (-6$ J) $= 3$ J. So, there is loss in potential energy. This must be the energy released by the substance in the form of heat in aligning its dipoles."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:2:2.9",
+        "number": "2.9",
+        "title": "Electrostatics of Conductors",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:2:2.9:1",
+            "order": 1,
+            "title": "Nature of Charge Carriers in Conductors",
+            "content_text": "Conductors contain mobile charge carriers. In metallic conductors, these carriers are electrons. The outer (valence) electrons part away from their atoms and are free to move within the metal but not leave it. They form a kind of 'gas', colliding with each other and ions, moving randomly. In an external electric field, they drift against the direction of the field. In electrolytic conductors, the charge carriers are both positive and negative ions.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.9:2",
+            "order": 2,
+            "title": "Property 1: Inside a conductor, electrostatic field is zero",
+            "content_text": "Consider a conductor, neutral or charged. In the static situation, when there is no current inside or on the surface of the conductor, the electric field is zero everywhere inside the conductor. If the electric field were not zero, the free charge carriers would experience force and drift, which contradicts the static condition. Thus, the free charges distribute themselves such that the internal electric field is zero everywhere.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.9:3",
+            "order": 3,
+            "title": "Property 2: Field at the surface of a charged conductor must be normal",
+            "content_text": "At the surface of a charged conductor, the electrostatic field $\\mathbf{E}$ must be normal to the surface at every point. If $\\mathbf{E}$ were not normal, it would have a non-zero tangential component along the surface. This component would cause the free charges on the surface to move. In the static situation, therefore, $\\mathbf{E}$ should have no tangential component.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.9:4",
+            "order": 4,
+            "title": "Property 3: No excess charge in the interior of a conductor",
+            "content_text": "A neutral conductor has equal amounts of positive and negative charges in every small volume element. When a conductor is charged, the excess charge can reside only on the surface in the static situation. This follows from Gauss's law. For any arbitrary volume element $v$ inside a conductor, the electrostatic field is zero, so the total electric flux through the bounding surface $S$ is zero. By Gauss's law, there is no net charge enclosed by $S$. Since this holds for any volume, any excess charge must reside at the surface.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.9:5",
+            "order": 5,
+            "title": "Property 4: Constant potential throughout the conductor volume",
+            "content_text": "The electrostatic potential is constant throughout the volume of the conductor and has the same value (as inside) on its surface. This follows because $\\mathbf{E} = 0$ inside the conductor and has no tangential component on the surface. Consequently, no work is done in moving a small test charge within the conductor or on its surface. There is no potential difference between any two points inside or on the surface. If the conductor is charged, If the conductor is charged, electric field normal to the surface exists; this means potential will be different for the surface and a point just outside the surface. In a system of conductors of arbitrary size, shape and charge configuration, each conductor is characterised by a constant value of potential, but this constant may differ from one conductor to the other.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.9:6",
+            "order": 6,
+            "title": "Property 5: Electric field at the surface of a charged conductor",
+            "content_text": "The electric field at the surface of a charged conductor is given by $\\mathbf{E} = \\frac{\\sigma}{\\epsilon_0} \\mathbf{\\hat{n}}$, where $\\sigma$ is the surface charge density and $\\mathbf{\\hat{n}}$ is a unit vector normal to the surface in the outward direction. To derive this, choose a pill box (a short cylinder) as the Gaussian surface about any point P on the surface. The pill box is partly inside and partly outside the surface of the conductor, with a small area of cross section $\\delta S$ and negligible height. Just inside the surface, the electrostatic field is zero; just outside, the field is normal to the surface with magnitude $E$. The contribution to the total flux through the pill box comes only from the outside cross-section, equaling $\\pm E \\delta S$. The charge enclosed is $\\sigma \\delta S$. By Gauss’s law, $E \\delta S = \\frac{|\\sigma| \\delta S}{\\epsilon_0}$, which gives $E = \\frac{|\\sigma|}{\\epsilon_0}$. This vector relation is true for both signs of $\\sigma$. For $\\sigma > 0$, the field is normal outward; for $\\sigma < 0$, it is normal inward.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 2.17",
+                "description": "A Gaussian surface (a pill box) chosen to derive the electric field at the surface of a charged conductor. The pill box is partially inside and partially outside the conductor surface, with electric field E shown normal to the surface.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.9:7",
+            "order": 7,
+            "title": "Property 6: Electrostatic shielding",
+            "content_text": "Consider a conductor with a cavity and no charges inside it. A remarkable result is that the electric field inside the cavity is zero, regardless of the size and shape of the cavity or the external fields. We have already seen that the field inside a charged spherical shell is zero due to symmetry, but the vanishing of the electric field in a charge-free cavity is a general result. Even if the conductor is charged or charges are induced by an external field, all charges reside only on the outer surface. Any cavity in a conductor remains shielded from outside electrical influence; this is known as electrostatic shielding. This effect is used to protect sensitive instruments from external electrical fields.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 2.18",
+                "description": "The electric field inside a cavity of any conductor is zero. All charges reside only on the outer surface of a conductor with a cavity, and the potential V is constant throughout the conductor and the cavity.",
+                "image_url": null
+              },
+              {
+                "label": "Fig 2.19",
+                "description": "A summary diagram showing important electrostatic properties of a conductor: E=0 inside, potential V is constant, E is normal to the surface, and surface field magnitude is sigma/epsilon_0.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.9:8",
+            "order": 8,
+            "title": "Conceptual Applications of Electrostatics",
+            "content_text": "The principles of electrostatics explain various real-world phenomena. For instance, a comb run through dry hair attracts paper bits because it gets charged by friction and polarizes the molecules in the paper. This effect is reduced on rainy days due to decreased friction. Aircraft tires are made slightly conducting to safely discharge static electricity accumulated during flight to the ground upon landing, preventing sparks. Similarly, vehicles carrying inflammable materials use metallic ropes to ground static charges. Finally, a bird on a high-power line is safe because there is no potential difference across its body, whereas a person touching the line while grounded completes a circuit due to the large potential difference.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 2.7",
+                "problem": "(a) A comb run through one’s dry hair attracts small bits of paper. Why? What happens if the hair is wet or if it is a rainy day? (b) Ordinary rubber is an insulator. But special rubber tyres of aircraft are made slightly conducting. Why is this necessary? (c) Vehicles carrying inflammable materials usually have metallic ropes touching the ground during motion. Why? (d) A bird perches on a bare high power line, and nothing happens to the bird. A man standing on the ground touches the same line and gets a fatal shock. Why?",
+                "solution": "(a) The comb gets charged by friction. Molecules in the paper get polarised by the charged comb, resulting in a net force of attraction. If the hair is wet or it is a rainy day, friction reduces, the comb does not get charged, and won't attract paper. (b) To conduct charge produced by friction to the ground; accumulated static electricity may result in sparks and fire. (c) Similar to (b), to conduct charge to the ground. (d) Current passes only when there is a difference in potential; the bird is at a single potential, while the man creates a path to the ground (zero potential)."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:2:2.10",
+        "number": "2.10",
+        "title": "Dielectrics and Polarisation",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:2:2.10:1",
+            "order": 1,
+            "title": "Behavior of Dielectrics in an External Field",
+            "content_text": "Dielectrics are non-conducting substances with negligible charge carriers. In a conductor placed in an external electric field, free charges move until they create an internal field that exactly cancels the external field, making the net field zero. In a dielectric, free movement of charges is impossible. Instead, the external field induces a dipole moment by stretching or re-orienting molecules. The collective effect of these molecular dipoles results in net charges on the dielectric surface, creating an internal field that opposes the external field. Unlike in conductors, this induced field only reduces the external field rather than canceling it completely. The extent of this reduction depends on the nature of the dielectric.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 2.20",
+                "description": "Comparison of a conductor and a dielectric in an external field E0. In the conductor, the induced field Ein cancels E0. In the dielectric, Ein only reduces E0.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.10:2",
+            "order": 2,
+            "title": "Polar and Non-polar Molecules",
+            "content_text": "Molecules are classified as polar or non-polar based on their charge distribution. In a non-polar molecule, the centers of positive and negative charges coincide, resulting in no intrinsic dipole moment. Examples include oxygen ($O_2$), hydrogen ($H_2$), and carbon dioxide ($CO_2$). In a polar molecule, the centers of positive and negative charges are separated even without an external field, giving the molecule a permanent dipole moment. Examples include hydrogen chloride ($HCl$) and water ($H_2O$).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 2.21",
+                "description": "Examples of non-polar molecules (H2, CO2) where charge centers coincide, and polar molecules (HCl, H2O) with permanent dipole moments p.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.10:3",
+            "order": 3,
+            "title": "Induced Dipole Moment in Non-polar Molecules",
+            "content_text": "In an external electric field, the positive and negative charges of a non-polar molecule are displaced in opposite directions. This displacement stops when the external force on the constituent charges of the molecule is balanced by the restoring force due to internal fields in the molecule. Consequently, the non-polar molecule develops an induced dipole moment. The dielectric is then said to be polarised by the external field. In the simplest case, the induced dipole moment is in the direction of the field and is proportional to the field strength. Substances for which this assumption holds are called linear isotropic dielectrics. The induced dipole moments of different molecules add up, resulting in a net dipole moment for the dielectric in the presence of an external field.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 2.22 (a)",
+                "description": "Diagram showing non-polar molecules. In the absence of an external field (E=0), the centers of positive and negative charges coincide. In an external field (E ≠ 0), the charges are displaced, creating induced dipoles aligned with the field.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.10:4",
+            "order": 4,
+            "title": "Alignment of Polar Molecules in External Field",
+            "content_text": "A dielectric with polar molecules also develops a net dipole moment in an external field, but through a different mechanism. In the absence of an external field, the permanent dipoles of the molecules are oriented randomly due to thermal agitation, leading to a total dipole moment of zero. When an external field is applied, the individual dipole moments tend to align with the field. This results in a net dipole moment in the direction of the external field, meaning the dielectric is polarised. The extent of polarisation depends on the balance between the dipole potential energy in the external field (which favors alignment) and thermal energy (which disrupts alignment). While an 'induced dipole moment' effect may also occur as in non-polar molecules, the alignment effect is generally more significant for polar molecules.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 2.22 (b)",
+                "description": "Diagram showing polar molecules. At E=0, permanent dipoles are randomly oriented. At E ≠ 0, the dipoles show a preferential alignment in the direction of the external field.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.10:5",
+            "order": 5,
+            "title": "Polarisation and Electric Susceptibility",
+            "content_text": "Whether polar or non-polar, a dielectric develops a net dipole moment in the presence of an external field. Polarisation, denoted by $\\mathbf{P}$, is defined as the dipole moment per unit volume. For linear isotropic dielectrics, the relationship between polarisation and the electric field is given by: $$\\mathbf{P} = \\varepsilon_0 \\chi_e \\mathbf{E}$$ (2.37). Here, $\\chi_e$ is a constant characteristic of the dielectric known as the electric susceptibility of the dielectric medium.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.10:6",
+            "order": 6,
+            "title": "Induced Surface Charge and Field Modification",
+            "content_text": "Consider a rectangular dielectric slab in a uniform external field $\\mathbf{E}_0$. The field causes a uniform polarisation $\\mathbf{P}$. Inside the dielectric, any macroscopically small volume element $\\Delta v$ has no net charge because the positive charge of one dipole is neutralized by the negative charge of the adjacent dipole. However, at the surfaces normal to the electric field, there is a net charge density. The positive ends of the dipoles remain unneutralised at one surface (right) and the negative ends at the opposite surface (left). These unbalanced charges are induced charges. Thus, the polarised dielectric is equivalent to two charged surfaces with induced surface charge densities $\\sigma_p$ and $-\\sigma_p$. The field produced by these induced charges opposes the external field, thereby reducing the total field inside the dielectric. These charges are 'bound' charges, not free charges.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 2.23",
+                "description": "A uniformly polarised dielectric slab showing induced surface charge densities -σp on the left face and +σp on the right face. The internal polarisation P and the external field E are indicated.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:2:2.11",
+        "number": "2.11",
+        "title": "Capacitors and Capacitance",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:2:2.11:1",
+            "order": 1,
+            "title": "Definition and Structure of a Capacitor",
+            "content_text": "A capacitor is a system consisting of two conductors separated by an insulator. Typically, the conductors carry charges $Q$ and $-Q$ and have potentials $V_1$ and $V_2$. The potential difference is $V = V_1 - V_2$. $Q$ is referred to as the charge of the capacitor, although the total charge on the device is zero. The conductors are charged by connecting them to the terminals of a battery. Even a single conductor can act as a capacitor if the second conductor is assumed to be at infinity.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 2.24",
+                "description": "A system of two arbitrary conductors (Conductor 1 with charge Q and potential V1, Conductor 2 with charge -Q and potential V2) separated by an insulator, forming a capacitor.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.11:2",
+            "order": 2,
+            "title": "Capacitance",
+            "content_text": "The electric field between the conductors is proportional to the charge $Q$ (based on Coulomb's law and the superposition principle). Consequently, the potential difference $V$ is also proportional to $Q$. The ratio $Q/V$ is a constant for a given capacitor: $$C = \\frac{Q}{V}$$ (2.38). This constant $C$ is called the capacitance. It is independent of $Q$ or $V$ and depends only on the geometrical configuration (shape, size, separation) of the conductors and the nature of the dielectric separating them.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.11:3",
+            "order": 3,
+            "title": "Units and Symbols",
+            "content_text": "The SI unit of capacitance is the farad (F), where $1\\text{ F} = 1\\text{ coulomb volt}^{-1}$. Since the farad is a very large unit, sub-multiples are commonly used: $1\\mu\\text{F} = 10^{-6}\\text{ F}$, $1\\text{nF} = 10^{-9}\\text{ F}$, and $1\\text{pF} = 10^{-12}\\text{ F}$. In circuit diagrams, a fixed capacitor is represented by the symbol $\\dashv \\vdash$, while a variable capacitor is shown as $\\dashv \\slash \\vdash$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.11:4",
+            "order": 4,
+            "title": "Dielectric Strength and Practical Limits",
+            "content_text": "A capacitor with large $C$ can hold a large charge $Q$ at a relatively small $V$. If the potential difference is too high, the resulting strong electric field can ionise the surrounding air, causing the charge to leak away. The maximum electric field a dielectric can withstand without breakdown is called its dielectric strength. For air, this is approximately $3 \\times 10^6 \\text{ Vm}^{-1}$. For a 1 cm separation, this corresponds to $3 \\times 10^4 \\text{ V}$. To store large charges without leaking, a capacitor must have high capacitance so that the field remains below the breakdown limit.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:2:2.12",
+        "number": "2.12",
+        "title": "The Parallel Plate Capacitor",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:2:2.12:1",
+            "order": 1,
+            "title": "Structure of a Parallel Plate Capacitor",
+            "content_text": "A parallel plate capacitor consists of two large plane parallel conducting plates of area $A$ separated by a small distance $d$. The plates carry charges $Q$ and $-Q$, resulting in surface charge densities $\\sigma = Q/A$ and $-\\sigma$ respectively. When $d^2 \\ll A$, the plates can be treated as infinite planes to calculate the electric field.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 2.25",
+                "description": "A parallel plate capacitor with two plates (1 and 2) of area A separated by distance d. Plate 1 has charge density +σ and Plate 2 has -σ. Regions I (above), II (below), and the region between are indicated.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.12:2",
+            "order": 2,
+            "title": "Electric Field in Outer Regions",
+            "content_text": "Using the result for an infinite plane sheet of uniform surface charge density, the electric field produced by a single plate is $\\sigma / (2\\varepsilon_0)$. In the outer regions (Region I above plate 1 and Region II below plate 2), the fields due to the two plates are equal in magnitude but opposite in direction. Thus, they cancel out. For Outer region I: $$E = \\frac{\\sigma}{2\\varepsilon_0} - \\frac{\\sigma}{2\\varepsilon_0} = 0$$ (2.39) In the outer region II (the region below plate 2), the electric fields due to the two charged plates cancel each other out: $$E = \\frac{\\sigma}{2\\varepsilon_0} - \\frac{\\sigma}{2\\varepsilon_0} = 0$$ (2.40). In the inner region between plates 1 and 2, the electric fields due to the two charged plates add up because they are in the same direction: $$E = \\frac{\\sigma}{2\\varepsilon_0} + \\frac{\\sigma}{2\\varepsilon_0} = \\frac{\\sigma}{\\varepsilon_0} = \\frac{Q}{\\varepsilon_0 A}$$ (2.41). The direction of this electric field is from the positive plate to the negative plate.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.12:3",
+            "order": 3,
+            "title": "Capacitance of a Parallel Plate Capacitor",
+            "content_text": "The electric field is localised between the two plates and is uniform throughout. For a uniform electric field, the potential difference $V$ is simply the product of the electric field and the distance between the plates: $$V = Ed = \\frac{1}{\\varepsilon_0} \\frac{Qd}{A}$$ (2.42). The capacitance $C$ of the parallel plate capacitor is defined as $Q/V$, which gives: $$C = \\frac{Q}{V} = \\frac{\\varepsilon_0 A}{d}$$ (2.43). This result shows that the capacitance depends only on the geometry of the system (the area $A$ of the plates and their separation $d$).",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.12:4",
+            "order": 4,
+            "title": "Fringing of Field and Practical Considerations",
+            "content_text": "For plates with finite area, the field lines bend outward at the edges, an effect known as 'fringing of the field'. Consequently, the surface charge density $\\sigma$ is not strictly uniform across the entire plate. However, if $d^2 \\ll A$, these edge effects can be ignored and the field is given by Eq. (2.41). For typical values like $A = 1 \\text{ m}^2$ and $d = 1 \\text{ mm}$, the capacitance is $$C = \\frac{8.85 \\times 10^{-12} \\text{ C}^2 \\text{ N}^{-1} \\text{ m}^{-2} \\times 1 \\text{ m}^2}{10^{-3} \\text{ m}} = 8.85 \\times 10^{-9} \\text{ F}$$ (2.44). This demonstrates that 1 Farad is a very large unit. For a separation of $1 \\text{ cm}$, a $1 \\text{ F}$ capacitor would require an area of $$A = \\frac{Cd}{\\varepsilon_0} = \\frac{1 \\text{ F} \\times 10^{-2} \\text{ m}}{8.85 \\times 10^{-12} \\text{ C}^2 \\text{ N}^{-1} \\text{ m}^{-2}} = 10^9 \\text{ m}^2$$ (2.45), which corresponds to a plate roughly $30 \\text{ km}$ in length and breadth.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:2:2.13",
+        "number": "2.13",
+        "title": "Effect of Dielectric on Capacitance",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:2:2.13:1",
+            "order": 1,
+            "title": "Capacitance with Vacuum",
+            "content_text": "When there is a vacuum between the plates of a parallel plate capacitor of area $A$ and separation $d$, the electric field is $E_0 = \\sigma / \\varepsilon_0$ and the potential difference is $V_0 = E_0 d$. The capacitance in this case is denoted as $C_0$: $$C_0 = \\frac{Q}{V_0} = \\varepsilon_0 \\frac{A}{d}$$ (2.46).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.13:2",
+            "order": 2,
+            "title": "Effect of Dielectric Polarization",
+            "content_text": "When a dielectric fully occupies the space between the plates, it becomes polarised by the external field. This is equivalent to having two charged sheets at the surfaces of the dielectric with surface charge densities $\\sigma_p$ and $-\\sigma_p$. The net surface charge density on the plates effectively becomes $\\pm(\\sigma - \\sigma_p)$. The resulting electric field in the dielectric is $$E = \\frac{\\sigma - \\sigma_p}{\\varepsilon_0}$$ (2.47). The potential difference across the plates is then $$V = Ed = \\frac{\\sigma - \\sigma_p}{\\varepsilon_0} d$$ (2.48).",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.13:3",
+            "order": 3,
+            "title": "Dielectric Constant and Permittivity",
+            "content_text": "For linear dielectrics, the reduced charge density $(\\sigma - \\sigma_p)$ is proportional to $\\sigma$, expressed as $\\sigma - \\sigma_p = \\sigma/K$ (2.49), where $K$ is the dielectric constant of the material ($K > 1$). The potential difference becomes $$V = \\frac{\\sigma d}{\\varepsilon_0 K} = \\frac{Qd}{A \\varepsilon_0 K}$$ (2.50). The capacitance with the dielectric is $$C = \\frac{Q}{V} = \\frac{\\varepsilon_0 K A}{d}$$ (2.51). The product $\\varepsilon_0 K$ is the permittivity of the medium, $\\varepsilon = \\varepsilon_0 K$ (2.52). The dielectric constant $K$ is the dimensionless ratio $K = \\varepsilon / \\varepsilon_0$ (2.53) and can also be defined as $K = C/C_0$ (2.54). Thus, the dielectric constant is the factor by which capacitance increases when a dielectric is inserted. This definition holds for any type of capacitor.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.13:4",
+            "order": 4,
+            "title": "Example 2.8: Dielectric Slab Insertion",
+            "content_text": "This subsection explores the change in capacitance when a dielectric slab of thickness $(3/4)d$ is inserted into a parallel plate capacitor with plate separation $d$.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 2.8",
+                "problem": "A slab of material of dielectric constant $K$ has the same area as the plates of a parallel-plate capacitor but has a thickness $(3/4)d$, where $d$ is the separation of the plates. How is the capacitance changed when the slab is inserted between the plates?",
+                "solution": "Let $E_0 = V_0/d$ be the electric field between the plates when there is no dielectric and the potential difference is $V_0$. If the dielectric is now inserted, the electric field in the dielectric will be $E = E_0/K$. The potential difference will then be $$V = E_0 \\left(\\frac{1}{4}d\\right) + \\frac{E_0}{K} \\left(\\frac{3}{4}d\\right) = E_0 d \\left(\\frac{1}{4} + \\frac{3}{4K}\\right) = V_0 \\frac{K+3}{4K}$$ The potential difference decreases by the factor $(K + 3)/4K$ while the free charge $Q_0$ on the plates remains unchanged. The capacitance thus increases: $$C = \\frac{Q_0}{V} = \\frac{4K Q_0}{(K + 3) V_0} = \\frac{4K}{K + 3} C_0$$"
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:2:2.14",
+        "number": "2.14",
+        "title": "Combination of Capacitors",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:2:2.14:1",
+            "order": 1,
+            "title": "Introduction to Capacitor Combinations",
+            "content_text": "Multiple capacitors with capacitances $C_1, C_2, ..., C_n$ can be combined to create a system with a specific effective capacitance $C$. The value of this effective capacitance depends on the arrangement of the individual capacitors. The two primary types of combinations are series and parallel.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.14:2",
+            "order": 2,
+            "title": "Capacitors in Series: Charge Distribution",
+            "content_text": "In a series combination, capacitors are connected one after another. When connected to a battery, the left plate of the first capacitor ($C_1$) and the right plate of the last capacitor ($C_n$) receive charges $Q$ and $-Q$. Due to induction and the requirement for zero net charge on the isolated intermediate conductors, every capacitor in the series string carries the same magnitude of charge $Q$ on its plates. If the charges were not equal, an electric field would exist in the connecting conductors, causing charge to flow until equilibrium (and equal charge) is reached. Thus, in series, the charge $Q$ is the same for all capacitors. The total potential drop $V$ across the combination is the sum of the potential drops $V_1$ and $V_2$ across $C_1$ and $C_2$, respectively. $$V = V_1 + V_2 = \\frac{Q}{C_1} + \\frac{Q}{C_2}$$ i.e., $$\\frac{V}{Q} = \\frac{1}{C_1} + \\frac{1}{C_2}$$ Now we can regard the combination as an effective capacitor with charge $Q$ and potential difference $V$. The effective capacitance of the combination is $$C = \\frac{Q}{V}$$ We compare Eq. (2.57) with Eq. (2.56), and obtain $$\\frac{1}{C} = \\frac{1}{C_1} + \\frac{1}{C_2}$$ The proof clearly goes through for any number of capacitors arranged in a similar way. Equation (2.55), for $n$ capacitors arranged in series, generalises to $$V = V_1 + V_2 + \\dots + V_n = \\frac{Q}{C_1} + \\frac{Q}{C_2} + \\dots + \\frac{Q}{C_n}$$ Following the same steps as for the case of two capacitors, we get the general formula for effective capacitance of a series combination of $n$ capacitors: $$\\frac{1}{C} = \\frac{1}{C_1} + \\frac{1}{C_2} + \\frac{1}{C_3} + \\dots + \\frac{1}{C_n}$$",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 2.26",
+                "description": "A circuit diagram showing two capacitors, $C_1$ and $C_2$, connected in series. The plates are labeled with charges $+Q$ and $-Q$ for $C_1$, and $+Q$ and $-Q$ for $C_2$.",
+                "image_url": null
+              },
+              {
+                "label": "Figure 2.27",
+                "description": "A circuit diagram showing $n$ capacitors ($C_1, C_2, C_3, ..., C_n$) connected in a series chain. Each capacitor is shown with charges $+Q$ and $-Q$ on its respective plates.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.14:3",
+            "order": 3,
+            "title": "Capacitors in Parallel",
+            "content_text": "Figure 2.28 (a) shows two capacitors arranged in parallel. In this case, the same potential difference $V$ is applied across both the capacitors. But the plate charges ($\\pm Q_1$) on capacitor 1 and the plate charges ($\\pm Q_2$) on the capacitor 2 are not necessarily the same: $$Q_1 = C_1 V, Q_2 = C_2 V$$ The equivalent capacitor is one with charge $Q = Q_1 + Q_2$ and potential difference $V$. $$Q = CV = C_1 V + C_2 V$$ The effective capacitance $C$ is, from Eq. (2.63), $$C = C_1 + C_2$$ The general formula for effective capacitance $C$ for parallel combination of $n$ capacitors [Fig. 2.28 (b)] follows similarly, $$Q = Q_1 + Q_2 + \\dots + Q_n$$ i.e., $$CV = C_1 V + C_2 V + \\dots + C_n V$$ which gives $$C = C_1 + C_2 + \\dots + C_n$$",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 2.28",
+                "description": "Parallel combination of (a) two capacitors $C_1$ and $C_2$ connected across a potential difference $V$, and (b) $n$ capacitors $C_1, C_2, \\dots, C_n$ connected in parallel.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.14:4",
+            "order": 4,
+            "title": "Example 2.9: Capacitor Network Analysis",
+            "content_text": "This example demonstrates the calculation of equivalent capacitance and charge distribution in a mixed network. For a network of four $10 \\mu F$ capacitors connected to a 500 V supply, the capacitors $C_1, C_2,$ and $C_3$ are in series, and this branch is in parallel with $C_4$. The charge on a capacitor is defined as the charge on the plate with higher potential, which is equal and opposite to the charge on the plate with lower potential.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 2.9",
+                "problem": "A network of four $10 \\mu F$ capacitors is connected to a 500 V supply, as shown in Fig. 2.29. Determine (a) the equivalent capacitance of the network and (b) the charge on each capacitor.",
+                "solution": "(a) In the given network, $C_1, C_2$ and $C_3$ are connected in series. The effective capacitance $C'$ of these three capacitors is given by $1/C' = 1/C_1 + 1/C_2 + 1/C_3$. For $C_1 = C_2 = C_3 = 10 \\mu F$, $C' = (10/3) \\mu F$. The network has $C'$ and $C_4$ connected in parallel. Thus, the equivalent capacitance $C$ of the network is $C = C' + C_4 = (10/3 + 10) \\mu F = 13.3 \\mu F$. (b) The charge on each of the capacitors $C_1, C_2$ and $C_3$ is the same, say $Q$. Let the charge on $C_4$ be $Q'$. Since the potential difference across the series branch is 500 V, $Q/C_1 + Q/C_2 + Q/C_3 = 500 V$. Also, $Q'/C_4 = 500 V$. This gives $Q = 500 V \\times (10/3) \\mu F = 1.7 \\times 10^{-3} C$ and $Q' = 500 V \\times 10 \\mu F = 5.0 \\times 10^{-3} C$."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Figure 2.29",
+                "description": "A circuit diagram for Example 2.9 showing four capacitors $C_1, C_2, C_3, C_4$ connected to a 500 V source. $C_1, C_2, C_3$ form a series branch which is in parallel with $C_4$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:2:2.15",
+        "number": "2.15",
+        "title": "Energy Stored in a Capacitor",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:2:2.15:1",
+            "order": 1,
+            "title": "The Charging Process",
+            "content_text": "A capacitor is a system of two conductors with charge $Q$ and $-Q$. To determine the energy stored, consider initially two uncharged conductors 1 and 2. Imagine a process of transferring charge from conductor 2 to conductor 1 bit by bit, so that at the end, conductor 1 gets charge $Q$. By charge conservation, conductor 2 has charge $-Q$ at the end. In transferring positive charge from conductor 2 to conductor 1, work must be done externally because at any stage, conductor 1 is at a higher potential than conductor 2.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.15:2",
+            "order": 2,
+            "title": "Derivation of Stored Energy",
+            "content_text": "To calculate total work, consider an intermediate stage where conductors 1 and 2 have charges $Q'$ and $-Q'$. The potential difference is $V' = Q'/C$. If a small charge $\\delta Q'$ is transferred from 2 to 1, the work done is $$\\delta W = V' \\delta Q' = \\frac{Q'}{C} \\delta Q'$$ Total work $W$ is the integral from $0$ to $Q$: $$W = \\int_0^Q \\frac{Q'}{C} \\delta Q' = \\frac{1}{C} \\left[ \\frac{Q'^2}{2} \\right]_0^Q = \\frac{Q^2}{2C}$$ This work is stored as electrostatic potential energy $U$. Alternative forms are: $$W = \\frac{Q^2}{2C} = \\frac{1}{2} CV^2 = \\frac{1}{2} QV$$ This result is independent of the manner in which the charge configuration is built up.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 2.30",
+                "description": "(a) Work done in a small step of building charge on conductor 1 from $Q'$ to $Q' + \\delta Q'$. (b) Total work done in charging the capacitor, viewed as stored in the energy of the electric field between the plates.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.15:3",
+            "order": 3,
+            "title": "Energy Stored in the Electric Field",
+            "content_text": "The potential energy can be viewed as stored in the electric field between the plates. For a parallel plate capacitor of area $A$ and separation $d$: $$U = \\frac{1}{2} \\frac{Q^2}{C} = \\frac{(A\\sigma)^2}{2} \\times \\frac{d}{\\epsilon_0 A}$$ Since the electric field $E = \\sigma / \\epsilon_0$, we substitute $\\sigma = \\epsilon_0 E$ to get: $$U = \\frac{1}{2} \\epsilon_0 E^2 \\times Ad$$ Here, $Ad$ is the volume of the region between the plates where the electric field exists. This suggests that energy is distributed in space with an energy density.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.15:4",
+            "order": 4,
+            "title": "Energy Density of the Electric Field",
+            "content_text": "The energy stored in a parallel plate capacitor is distributed in the region between the plates where the electric field exists. The volume of this region is given by $Ad$, where $A$ is the area of the plates and $d$ is their separation. Energy density ($u$) is defined as the energy stored per unit volume of space. Based on the expression for total energy, the energy density of the electric field is given by: $$u = \\frac{1}{2} \\epsilon_0 E^2$$ Though derived for the specific case of a parallel plate capacitor, this result for energy density is very general and holds true for the electric field produced by any configuration of charges.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.15:5",
+            "order": 5,
+            "title": "Example 2.10: Energy Storage and Redistribution",
+            "content_text": "This example illustrates how to calculate the electrostatic energy stored in a capacitor and analyzes the redistribution of energy when a charged capacitor is connected to an identical uncharged one.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 2.10",
+                "problem": "(a) A 900 pF capacitor is charged by 100 V battery [Fig. 2.31(a)]. How much electrostatic energy is stored by the capacitor? (b) The capacitor is disconnected from the battery and connected to another 900 pF capacitor [Fig. 2.31(b)]. What is the electrostatic energy stored by the system?",
+                "solution": "(a) The charge on the capacitor is: $Q = CV = 900 \\times 10^{-12} \\text{ F} \\times 100 \\text{ V} = 9 \\times 10^{-8} \\text{ C}$. The energy stored by the capacitor is: $U = \\frac{1}{2} CV^2 = \\frac{1}{2} QV = \\frac{1}{2} \\times 9 \\times 10^{-8} \\text{ C} \\times 100 \\text{ V} = 4.5 \\times 10^{-6} \\text{ J}$. (b) In the steady situation, the two capacitors have their positive plates at the same potential, and their negative plates at the same potential. Let the common potential difference be $V'$. The charge on each capacitor is then $Q' = CV'$. By charge conservation, $Q' = Q/2$. This implies $V' = V/2$. The total energy of the system is: $U_{total} = 2 \\times \\frac{1}{2} Q' V' = \\frac{1}{4} QV = 2.25 \\times 10^{-6} \\text{ J}$."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Figure 2.31",
+                "description": "Diagram (a) shows a single capacitor C connected to a 100V battery, with charges +Q and -Q on its plates. Diagram (b) shows the first capacitor connected in parallel to a second identical capacitor C, with the total charge Q redistributed as Q/2 on each capacitor.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:2.15:6",
+            "order": 6,
+            "title": "Analysis of Energy Loss in Capacitor Sharing",
+            "content_text": "In the transition from a single charged capacitor to a system of two capacitors sharing the charge, the final energy ($2.25 \\times 10^{-6} \\text{ J}$) is only half of the initial energy ($4.5 \\times 10^{-6} \\text{ J}$), despite no charge being lost. This energy is dissipated during the transient period before the system reaches a steady state. During this period, a transient current flows from the first capacitor to the second, and the energy is lost in the form of heat and electromagnetic radiation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:2:Summary",
+        "number": "Summary",
+        "title": "Summary of Electrostatic Potential and Capacitance",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:2:Summary:1",
+            "order": 1,
+            "title": "Electrostatic Force and Potential Definition",
+            "content_text": "1. Electrostatic force is a conservative force. The work done by an external force (equal and opposite to the electrostatic force) in bringing a charge $q$ from a point R to a point P is $q(V_P - V_R)$, which represents the difference in potential energy of charge $q$ between the final and initial points. 2. Potential at a point is the work done per unit charge (by an external agency) in bringing a charge from infinity to that point. Potential at a point is arbitrary to within an additive constant, as the potential difference between two points is what is physically significant. If potential at infinity is chosen to be zero, the potential at a point with position vector $\\mathbf{r}$ due to a point charge $Q$ at the origin is: $$V(\\mathbf{r}) = \\frac{1}{4\\pi\\epsilon_0} \\frac{Q}{r}$$",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:Summary:2",
+            "order": 2,
+            "title": "Potential due to Dipoles and Systems of Charges",
+            "content_text": "3. The electrostatic potential at a point with position vector $\\mathbf{r}$ due to a point dipole of dipole moment $\\mathbf{p}$ at the origin is: $$V(\\mathbf{r}) = \\frac{1}{4\\pi\\epsilon_0} \\frac{\\mathbf{p} \\cdot \\mathbf{\\hat{r}}}{r^2}$$ This result is valid for a dipole with charges $-q$ and $q$ separated by $2a$ when $r \\gg a$. 4. For a charge configuration $q_1, q_2, \\dots, q_n$ with position vectors $\\mathbf{r}_1, \\mathbf{r}_2, \\dots, \\mathbf{r}_n$, the potential at a point P is given by the superposition principle: $$V = \\frac{1}{4\\pi\\epsilon_0} \\left( \\frac{q_1}{r_{1P}} + \\frac{q_2}{r_{2P}} + \\dots + \\frac{q_n}{r_{nP}} \\right)$$ where $r_{iP}$ is the distance between $q_i$ and P.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:Summary:3",
+            "order": 3,
+            "title": "Equipotential Surfaces",
+            "content_text": "5. An equipotential surface is a surface over which potential has a constant value. For a point charge, concentric spheres centered at the charge's location are equipotential surfaces. The electric field $\\mathbf{E}$ at a point is always perpendicular to the equipotential surface passing through that point and points in the direction of the steepest decrease of potential.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:Summary:4",
+            "order": 4,
+            "title": "Potential Energy of Charges and Dipoles",
+            "content_text": "6. Potential energy stored in a system of charges is the work done by an external agency in assembling the charges at their locations. For two charges $q_1, q_2$ at $\\mathbf{r}_1, \\mathbf{r}_2$, the potential energy is: $$U = \\frac{1}{4\\pi\\epsilon_0} \\frac{q_1 q_2}{r_{12}}$$ where $r_{12}$ is the distance between $q_1$ and $q_2$. 7. The potential energy of a charge $q$ in an external potential $V(\\mathbf{r})$ is $qV(\\mathbf{r})$. The potential energy of a dipole moment $\\mathbf{p}$ in a uniform electric field $\\mathbf{E}$ is $-\\mathbf{p} \\cdot \\mathbf{E}$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:Summary:5",
+            "order": 5,
+            "title": "Electrostatics of Conductors",
+            "content_text": "8. The electrostatic field $\\mathbf{E}$ is zero in the interior of a conductor. Just outside the surface of a charged conductor, $\\mathbf{E}$ is normal to the surface and given by $\\mathbf{E} = \\frac{\\sigma}{\\epsilon_0} \\mathbf{\\hat{n}}$, where $\\mathbf{\\hat{n}}$ is the outward normal unit vector and $\\sigma$ is the surface charge density. Charges in a conductor reside only at its surface. Potential is constant within and on the surface of a conductor. In a cavity within a conductor (containing no charges), the electric field is zero.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:Summary:6",
+            "order": 6,
+            "title": "Capacitors and Dielectrics",
+            "content_text": "9. A capacitor is a system of two conductors separated by an insulator. Capacitance is defined as $C = Q/V$, where $Q$ and $-Q$ are the charges on the conductors and $V$ is the potential difference. $C$ is determined purely by the geometry (shapes, sizes, and relative positions) of the conductors. The unit is the farad (F), where $1 \\text{ F} = 1 \\text{ C V}^{-1}$. For a parallel plate capacitor in vacuum: $$C = \\epsilon_0 \\frac{A}{d}$$ 10. Filling the space between plates with a dielectric induces polarisation, creating an internal field in the opposite direction. This reduces the net electric field and potential difference, thereby increasing capacitance to $C = KC_0$, where $K$ is the dielectric constant.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:Summary:7",
+            "order": 7,
+            "title": "Combination of Capacitors",
+            "content_text": "11. For capacitors in a series combination, the total capacitance $C$ is given by: $$\\frac{1}{C} = \\frac{1}{C_1} + \\frac{1}{C_2} + \\frac{1}{C_3} + \\dots$$ In a parallel combination, the total capacitance $C$ is: $$C = C_1 + C_2 + C_3 + \\dots$$ where $C_1, C_2, C_3, \\dots$ are individual capacitances. The energy $U$ stored in a capacitor of capacitance $C$, with charge $Q$ and voltage $V$ is given by the following relations: $$U = \\frac{1}{2}QV = \\frac{1}{2}CV^2 = \\frac{1}{2}\\frac{Q^2}{C}$$ This energy is stored in the electric field between the plates. Furthermore, the electric energy density (energy per unit volume) in a region with an electric field $E$ is given by $u = \\frac{1}{2}\\epsilon_0 E^2$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:Summary:8",
+            "order": 8,
+            "title": "Physical Quantities in Electrostatics",
+            "content_text": "The following table summarizes the key physical quantities related to electrostatic potential and capacitance, including their symbols, dimensions, units, and relevant remarks.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 2.1",
+                "caption": "Physical Quantities in Electrostatics",
+                "headers": [
+                  "Physical quantity",
+                  "Symbol",
+                  "Dimensions",
+                  "Unit",
+                  "Remark"
+                ],
+                "rows": [
+                  [
+                    "Potential",
+                    "$\\phi$ or $V$",
+                    "$[M^1 L^2 T^{-3} A^{-1}]$",
+                    "V",
+                    "Potential difference is physically significant"
+                  ],
+                  [
+                    "Capacitance",
+                    "$C$",
+                    "$[M^{-1} L^{-2} T^4 A^2]$",
+                    "F",
+                    "-"
+                  ],
+                  [
+                    "Polarisation",
+                    "$\\mathbf{P}$",
+                    "$[L^{-2} AT]$",
+                    "C m$^{-2}$",
+                    "Dipole moment per unit volume"
+                  ],
+                  [
+                    "Dielectric constant",
+                    "$K$",
+                    "[Dimensionless]",
+                    "-",
+                    "-"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:2:Points to Ponder",
+        "number": "Points to Ponder",
+        "title": "Points to Ponder",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:2:Points to Ponder:1",
+            "order": 1,
+            "title": "Electrostatic Equilibrium and Forces",
+            "content_text": "Electrostatics deals with forces between charges at rest. However, if there is a net electrostatic force on a charge, it cannot remain at rest unless an external force opposes it. Therefore, in electrostatics, it is understood that each charge is kept at rest by some unspecified force that opposes the net Coulomb force acting on it.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:Points to Ponder:2",
+            "order": 2,
+            "title": "Field Confinement in Capacitors",
+            "content_text": "A capacitor is designed to confine electric field lines within a small region of space. Because of this configuration, even if the electric field strength is high, the potential difference between the two conductors of the capacitor remains relatively small.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:Points to Ponder:3",
+            "order": 3,
+            "title": "Discontinuity of Electric Field and Continuity of Potential",
+            "content_text": "The electric field is discontinuous across the surface of a spherical charged shell; it is zero inside and $\\frac{\\sigma}{\\epsilon_0}\\hat{n}$ just outside. In contrast, the electric potential is continuous across the surface, maintaining a value equal to $q/4\\pi\\epsilon_0 R$ at the surface.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:Points to Ponder:4",
+            "order": 4,
+            "title": "Dipole Dynamics in an Electric Field",
+            "content_text": "The torque $\\mathbf{p} \\times \\mathbf{E}$ acting on a dipole causes it to oscillate about the direction of the electric field $\\mathbf{E}$. The dipole eventually aligns with $\\mathbf{E}$ only if there is a dissipative mechanism present to damp these oscillations.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:Points to Ponder:5",
+            "order": 5,
+            "title": "Self-Potential of a Point Charge",
+            "content_text": "The potential due to a point charge $q$ at its own location is not defined; mathematically, it tends toward infinity as the distance $r$ approaches zero.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:Points to Ponder:6",
+            "order": 6,
+            "title": "Potential Energy in an External Field",
+            "content_text": "In the expression $qV(\\mathbf{r})$ for the potential energy of a charge $q$, $V(\\mathbf{r})$ represents the potential created by external charges only, excluding the potential due to $q$ itself. If $V(\\mathbf{r})$ included the potential from $q$, the expression would be ill-defined due to the infinite self-potential mentioned previously.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:2:Points to Ponder:7",
+            "order": 7,
+            "title": "Electrostatic Shielding",
+            "content_text": "A cavity inside a conductor is shielded from external electrical influences. However, this shielding is not bidirectional; if charges are placed inside the cavity, the exterior of the conductor is not shielded from the fields produced by those internal charges.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:physics:12:2:ex:1",
+          "number": 1,
+          "problem": "Two charges $5 \\times 10^{-8}$ C and $-3 \\times 10^{-8}$ C are located 16 cm apart. At what point(s) on the line joining the two charges is the electric potential zero? Take the potential at infinity to be zero.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:2:ex:2",
+          "number": 2,
+          "problem": "A regular hexagon of side 10 cm has a charge 5 $\\mu$C at each of its vertices. Calculate the potential at the centre of the hexagon.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:2:ex:3",
+          "number": 3,
+          "problem": "Two charges 2 $\\mu$C and -2 $\\mu$C are placed at points A and B 6 cm apart. (a) Identify an equipotential surface of the system. (b) What is the direction of the electric field at every point on this surface?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:12:2:ex:4",
+          "number": 4,
+          "problem": "A spherical conductor of radius 12 cm has a charge of $1.6 \\times 10^{-7}$ C distributed uniformly on its surface. What is the electric field (a) inside the sphere (b) just outside the sphere (c) at a point 18 cm from the centre of the sphere?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:2:ex:5",
+          "number": 5,
+          "problem": "A parallel plate capacitor with air between the plates has a capacitance of 8 pF ($1\\text{ pF} = 10^{-12}\\text{ F}$). What will be the capacitance if the distance between the plates is reduced by half, and the space between them is filled with a substance of dielectric constant 6?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:2:ex:6",
+          "number": 6,
+          "problem": "Three capacitors each of capacitance 9 pF are connected in series. (a) What is the total capacitance of the combination? (b) What is the potential difference across each capacitor if the combination is connected to a 120 V supply?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:2:ex:7",
+          "number": 7,
+          "problem": "Three capacitors of capacitances 2 pF, 3 pF and 4 pF are connected in parallel. (a) What is the total capacitance of the combination? (b) Determine the charge on each capacitor if the combination is connected to a 100 V supply.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:2:ex:8",
+          "number": 8,
+          "problem": "In a parallel plate capacitor with air between the plates, each plate has an area of $6 \\times 10^{-3}\\text{ m}^2$ and the distance between the plates is 3 mm. Calculate the capacitance of the capacitor. If this capacitor is connected to a 100 V supply, what is the charge on each plate of the capacitor?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:2:ex:9",
+          "number": 9,
+          "problem": "Explain what would happen if in the capacitor given in Exercise 2.8, a 3 mm thick mica sheet (of dielectric constant = 6) were inserted between the plates, (a) while the voltage supply remained connected. (b) after the supply was disconnected.",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:12:2:ex:10",
+          "number": 10,
+          "problem": "A 12 pF capacitor is connected to a 50 V battery. How much electrostatic energy is stored in the capacitor?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:2:ex:11",
+          "number": 11,
+          "problem": "A 600 pF capacitor is charged by a 200 V supply. It is then disconnected from the supply and is connected to another uncharged 600 pF capacitor. How much electrostatic energy is lost in the process?",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        }
+      ]
+    }
+  }
+}

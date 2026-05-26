@@ -1,0 +1,1120 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_physics_11_ch7.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:physics:11:7",
+  "curriculum": "ncert",
+  "subject": "physics",
+  "grade": 11,
+  "textbook_name": "Physics Part I",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:physics:11:7",
+    "number": 7,
+    "title": "Gravitation",
+    "summary": "This chapter on Gravitation explores the force that governs the motion of celestial bodies and objects on Earth. It begins with historical models of planetary motion, leading to Kepler's three laws describing planetary orbits: elliptical paths with the Sun at a focus, equal areas swept in equal times (conservation of angular momentum), and a relationship between orbital period and semi-major axis.\n\nThe chapter then introduces Newton's Universal Law of Gravitation, quantifying the attractive force between any two masses. This law connects terrestrial gravitation with celestial motion and explains Kepler's laws. The concept of the gravitational constant, *G*, and its determination via Cavendish's experiment are covered. It also elaborates on the principle of superposition.\n\nThe chapter investigates the acceleration due to gravity, *g*, and its variation with height and depth from Earth's surface, considering the Earth's mass distribution. It introduces the concept of gravitational potential energy and relates it to the work done by gravity. It further defines Escape speed which is the minimum velocity that an object needs to escape Earth's gravitational pull.\n\nFinally, the chapter delves into Earth satellites, calculating their orbital speed, time period, and energy, emphasizing the bound state of orbiting bodies. The concept of weightlessness in satellites is addressed. The shell theorem and the conservation laws central to gravitation are highlighted in the end-of-chapter summary and \"Points to Ponder.\" This chapter's concepts are crucial for understanding planetary motion, satellite technology, and the structure of the universe.",
+    "sections": [
+      {
+        "id": "ncert:physics:11:7:7.1",
+        "number": "7.1",
+        "title": "Introduction",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:7:7.1:1",
+            "order": 1,
+            "title": "General Observations and Galileo's Contribution",
+            "content_text": "Early in life, we observe that material objects are attracted towards the earth. Objects thrown upwards fall back, and raindrops fall from clouds. Historically, the Italian physicist Galileo (1564-1642) recognized that all bodies, regardless of their masses, are accelerated towards the earth with a constant acceleration. He demonstrated this through experiments with bodies rolling down inclined planes, arriving at a value for the acceleration due to gravity that was close to modern accurate values.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:7.1:2",
+            "order": 2,
+            "title": "Historical Models of Planetary Motion",
+            "content_text": "The motion of stars and planets has been studied since ancient times. Early observations noted that stars appeared fixed relative to each other, while planets showed regular motions against the background of stars. Ptolemy, about 2000 years ago, proposed the 'geocentric' model where all celestial objects (stars, sun, planets) revolved around the earth in circular orbits or complex combinations of circles. In contrast, the 'heliocentric' model, where the Sun is the center, was mentioned by Indian astronomer Aryabhatta (5th century A.D.) and later developed by Nicolas Copernicus (1473-1543). Copernicus's model proposed that planets moved in circles around a fixed central sun. This theory was later supported by Galileo despite opposition from the state.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:7.1:3",
+            "order": 3,
+            "title": "The Work of Tycho Brahe and Johannes Kepler",
+            "content_text": "Tycho Brahe (1546-1601) spent his life recording precise naked-eye observations of planetary positions. His compiled data were later analyzed by his assistant Johannes Kepler (1571-1640). Kepler extracted three elegant laws from this data, known as Kepler's laws, which provided the foundation for Newton's universal law of gravitation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:7:7.2",
+        "number": "7.2",
+        "title": "Kepler's Laws",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:7:7.2:1",
+            "order": 1,
+            "title": "Law of Orbits",
+            "content_text": "Kepler's first law, the Law of Orbits, states: All planets move in elliptical orbits with the Sun situated at one of the foci. An ellipse is a closed curve where the sum of the distances from any point on the curve to two fixed points (foci $F_1$ and $F_2$) is constant. The longest diameter through the foci is the major axis, and half of this distance ($PO = AO$) is called the semi-major axis ($a$). A circle is a special case of an ellipse where the two foci merge into one point.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 7.1(a)",
+                "description": "An ellipse traced out by a planet around the sun. The sun is at focus S. The closest point P is the perihelion and the farthest point A is the aphelion. The semi-major axis is half the distance AP.",
+                "image_url": null
+              },
+              {
+                "label": "Fig. 7.1(b)",
+                "description": "A method for drawing an ellipse using a string fixed at two points F1 and F2, with a pencil stretching the string taut to trace the curve.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:7.2:2",
+            "order": 2,
+            "title": "Law of Areas",
+            "content_text": "Kepler's second law, the Law of Areas, states: The line that joins any planet to the sun sweeps equal areas in equal intervals of time. This implies that planets move faster when they are closer to the sun (perihelion) and slower when they are farther away (aphelion). This law is a consequence of the conservation of angular momentum for central forces.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 7.2",
+                "description": "A planet P moving in an elliptical orbit around the sun S. The shaded area $\\Delta A$ represents the area swept out by the radius vector in a small time interval $\\Delta t$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:7.2:3",
+            "order": 3,
+            "title": "Law of Periods",
+            "content_text": "Kepler's third law, the Law of Periods, states: The square of the time period of revolution of a planet is proportional to the cube of the semi-major axis of the ellipse traced out by the planet. Mathematically, $T^2 \\propto a^3$. Data for various planets confirms this relationship, as shown in Table 7.1, where the ratio $Q = T^2/a^3$ is nearly constant for all planets.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 7.1",
+                "caption": "Data from measurement of planetary motions given below confirm Kepler’s Law of Periods",
+                "headers": [
+                  "Planet",
+                  "a ($10^{10}$ m)",
+                  "T (years)",
+                  "Q ($10^{-34} y^2 m^{-3}$)"
+                ],
+                "rows": [
+                  [
+                    "Mercury",
+                    "5.79",
+                    "0.24",
+                    "2.95"
+                  ],
+                  [
+                    "Venus",
+                    "10.8",
+                    "0.615",
+                    "3.00"
+                  ],
+                  [
+                    "Earth",
+                    "15.0",
+                    "1",
+                    "2.96"
+                  ],
+                  [
+                    "Mars",
+                    "22.8",
+                    "1.88",
+                    "2.98"
+                  ],
+                  [
+                    "Jupiter",
+                    "77.8",
+                    "11.9",
+                    "3.01"
+                  ],
+                  [
+                    "Saturn",
+                    "143",
+                    "29.5",
+                    "2.98"
+                  ],
+                  [
+                    "Uranus",
+                    "287",
+                    "84",
+                    "2.98"
+                  ],
+                  [
+                    "Neptune",
+                    "450",
+                    "165",
+                    "2.99"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:physics:11:7:7.2:4",
+            "order": 4,
+            "title": "Derivation of the Law of Areas",
+            "content_text": "The law of areas can be understood as a consequence of the conservation of angular momentum. For a central force (where the force is along the vector joining the sun and the planet), the torque is zero, and thus angular momentum $\\mathbf{L}$ is constant. Let the sun be at the origin. The area $\\Delta \\mathbf{A}$ swept by the planet of mass $m$ in time $\\Delta t$ is given by $\\Delta \\mathbf{A} = \\frac{1}{2} (\\mathbf{r} \\times \\mathbf{v} \\Delta t)$. The areal velocity is $\\Delta \\mathbf{A} / \\Delta t = \\frac{1}{2} (\\mathbf{r} \\times \\mathbf{p}) / m = \\mathbf{L} / (2m)$. Since $\\mathbf{L}$ is constant for a central force, the areal velocity $\\Delta \\mathbf{A} / \\Delta t$ is constant.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:7.2:5",
+            "order": 5,
+            "title": "Example 7.1: Velocity at Perihelion and Aphelion",
+            "content_text": "This example applies the conservation of angular momentum to relate the speeds and distances at perihelion and aphelion. It also uses the law of areas to compare the time taken to traverse different segments of the elliptical orbit.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 7.1",
+                "problem": "Let the speed of the planet at the perihelion $P$ in Fig. 7.1(a) be $v_P$ and the Sun-planet distance $SP$ be $r_P$. Relate {$r_P, v_P$} to the corresponding quantities at the aphelion {$r_A, v_A$}. Will the planet take equal times to traverse $BAC$ and $CPB$?",
+                "solution": "The magnitude of the angular momentum at $P$ is $L_P = m r_P v_P$, since $\\mathbf{r}_P$ and $\\mathbf{v}_P$ are mutually perpendicular. Similarly, $L_A = m r_A v_A$. From angular momentum conservation, $m r_P v_P = m r_A v_A$, or $\\frac{v_P}{v_A} = \\frac{r_A}{r_P}$. Since $r_A > r_P$, $v_P > v_A$. The area $SBAC$ bounded by the ellipse and the radius vectors $SB$ and $SC$ is larger than $SBPC$ in Fig. 7.1. From Kepler’s second law, equal areas are swept in equal times. Hence the planet will take a longer time to traverse $BAC$ than $CPB$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:7:7.3",
+        "number": "7.3",
+        "title": "Universal Law of Gravitation",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:7:7.3:1",
+            "order": 1,
+            "title": "Newton's Reasoning and the Moon's Motion",
+            "content_text": "Legend says Newton was inspired by an apple falling from a tree to explain terrestrial gravitation and Kepler's laws. He reasoned that the moon revolving in an orbit of radius $R_m$ was subject to a centripetal acceleration $a_m$ due to earth's gravity. The magnitude is $a_m = \\frac{V^2}{R_m} = \\frac{4\\pi^2 R_m}{T^2}$, where $V$ is the speed of the moon and $T$ is its time period (approx. 27.3 days). Given $R_m \\approx 3.84 \\times 10^8$ m, the calculated $a_m$ is much smaller than $g$ on Earth's surface. This clearly shows that the force due to earth’s gravity decreases with distance. If one assumes that the gravitational force due to the earth decreases in proportion to the inverse square of the distance from the centre of the earth, we will have $a_m \\propto R_m^{-2}$ and $g \\propto R_E^{-2}$. From this, we get the ratio: $$\\frac{g}{a_m} = \\frac{R_m^2}{R_E^2} \\simeq 3600$$ (Eq. 7.4). This result is in agreement with the observed value of $g \\simeq 9.8$ m s$^{-2}$ and the value of $a_m$ calculated from the moon's orbital parameters. These observations led Newton to propose the Universal Law of Gravitation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:7.3:2",
+            "order": 2,
+            "title": "Statement of the Universal Law of Gravitation",
+            "content_text": "Every body in the universe attracts every other body with a force which is directly proportional to the product of their masses and inversely proportional to the square of the distance between them. This law is essentially from Newton's famous treatise 'Mathematical Principles of Natural Philosophy' (Principia).",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:7.3:3",
+            "order": 3,
+            "title": "Mathematical and Vector Representation",
+            "content_text": "Stated mathematically, the force $\\mathbf{F}$ on a point mass $m_2$ due to another point mass $m_1$ has the magnitude: $$|\\mathbf{F}| = G \\frac{m_1 m_2}{r^2}$$ (Eq. 7.5). In vector form, this can be expressed as: $$\\mathbf{F} = G \\frac{m_1 m_2}{r^2} (-\\hat{\\mathbf{r}}) = -G \\frac{m_1 m_2}{r^2} \\hat{\\mathbf{r}} = -G \\frac{m_1 m_2}{|\\mathbf{r}|^3} \\mathbf{r}$$. Here, $G$ is the universal gravitational constant, $\\hat{\\mathbf{r}}$ is the unit vector from $m_1$ to $m_2$, and $\\mathbf{r} = \\mathbf{r}_2 - \\mathbf{r}_1$. The gravitational force is attractive, meaning the force $\\mathbf{F}$ is along $-\\mathbf{r}$. By Newton's third law, the force on $m_1$ due to $m_2$ is $-\\mathbf{F}$. Thus, $\\mathbf{F}_{12} = -\\mathbf{F}_{21}$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 7.3",
+                "description": "A coordinate system showing two point masses $m_1$ and $m_2$ at position vectors $\\mathbf{r}_1$ and $\\mathbf{r}_2$. The vector $\\mathbf{r}$ points from $m_1$ to $m_2$, and the gravitational force on $m_1$ due to $m_2$ is directed along $\\mathbf{r}$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:7.3:4",
+            "order": 4,
+            "title": "Principle of Superposition for Gravitational Forces",
+            "content_text": "The law of gravitation refers to point masses. For a collection of point masses, the force on any one of them is the vector sum of the gravitational forces exerted by the other point masses. For example, the total force on mass $m_1$ due to masses $m_2, m_3, \\dots, m_n$ is: $$\\mathbf{F}_1 = \\frac{G m_2 m_1}{r_{21}^2} \\hat{\\mathbf{r}}_{21} + \\frac{G m_3 m_1}{r_{31}^2} \\hat{\\mathbf{r}}_{31} + \\dots + \\frac{G m_n m_1}{r_{n1}^2} \\hat{\\mathbf{r}}_{n1}$$. This is illustrated in Fig 7.4 where the resultant force is the vector sum of individual components.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 7.4",
+                "description": "Vector diagram showing the gravitational force on point mass $m_1$ as the vector sum of forces $\\mathbf{F}_{12}, \\mathbf{F}_{13},$ and $\\mathbf{F}_{14}$ exerted by masses $m_2, m_3,$ and $m_4$ respectively.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:7.3:5",
+            "order": 5,
+            "title": "Worked Example: Force on Centroid",
+            "content_text": "This example demonstrates the application of the principle of superposition and vector addition to find the net gravitational force on a mass placed at the centroid of an equilateral triangle formed by three other masses.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 7.2",
+                "problem": "Three equal masses of $m$ kg each are fixed at the vertices of an equilateral triangle ABC. (a) What is the force acting on a mass $2m$ placed at the centroid G of the triangle? (b) What is the force if the mass at the vertex A is doubled? Take AG = BG = CG = 1 m.",
+                "solution": "(a) The angle between GC and the positive x-axis is $30^\\circ$, and so is the angle between GB and the negative x-axis. The individual forces in vector notation are: $\\mathbf{F}_{GA} = \\frac{G m (2m)}{1} \\hat{\\mathbf{j}}$, $\\mathbf{F}_{GB} = \\frac{G m (2m)}{1} (-\\hat{\\mathbf{i}} \\cos 30^\\circ - \\hat{\\mathbf{j}} \\sin 30^\\circ)$, $\\mathbf{F}_{GC} = \\frac{G m (2m)}{1} (+\\hat{\\mathbf{i}} \\cos 30^\\circ - \\hat{\\mathbf{j}} \\sin 30^\\circ)$. From the principle of superposition, the resultant force $\\mathbf{F}_R = \\mathbf{F}_{GA} + \\mathbf{F}_{GB} + \\mathbf{F}_{GC} = 2Gm^2 \\hat{\\mathbf{j}} + 2Gm^2 (-\\hat{\\mathbf{i}} \\cos 30^\\circ - \\hat{\\mathbf{j}} \\sin 30^\\circ) + 2Gm^2 (\\hat{\\mathbf{i}} \\cos 30^\\circ - \\hat{\\mathbf{j}} \\sin 30^\\circ) = 0$. Alternatively, by symmetry, the resultant force ought to be zero. (b) If mass at A is doubled, $\\mathbf{F}'_{GA} = \\frac{G 2m \\cdot 2m}{1} \\hat{\\mathbf{j}} = 4Gm^2 \\hat{\\mathbf{j}}$. Since $\\mathbf{F}'_{GB} = \\mathbf{F}_{GB}$ and $\\mathbf{F}'_{GC} = \\mathbf{F}_{GC}$, the new resultant force is $\\mathbf{F}'_R = \\mathbf{F}'_{GA} + \\mathbf{F}'_{GB} + \\mathbf{F}'_{GC} = 2Gm^2 \\hat{\\mathbf{j}}$."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Fig. 7.5",
+                "description": "An equilateral triangle ABC with masses $m$ at each vertex and a mass $2m$ at the centroid G. Coordinate axes are shown with G as the origin.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:7.3:6",
+            "order": 6,
+            "title": "Gravitational Force for Extended Objects (Shell Theorems)",
+            "content_text": "For extended objects, the point mass law is not directly applicable. We must sum the forces from every point mass in the extended object vectorially, often using calculus. Two special cases for a hollow spherical shell of uniform density are: (1) The force of attraction on a point mass outside the shell is as if the entire mass of the shell is concentrated at its centre. (2) The force of attraction on a point mass situated inside the shell is zero. These results are crucial for calculating gravity for planetary bodies like Earth.",
+            "content_type": "theorem",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:7:7.4",
+        "number": "7.4",
+        "title": "The Gravitational Constant",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:7:7.4:1",
+            "order": 1,
+            "title": "Cavendish's Experiment",
+            "content_text": "The value of the universal gravitational constant $G$ was first determined experimentally by Henry Cavendish in 1798. The apparatus consists of a T-shaped bar AB with two small lead spheres attached at its ends, suspended by a fine wire. Two large lead spheres ($S_1, S_2$) are brought close to the small ones on opposite sides. The large spheres attract the small ones, creating a torque that twists the wire. At equilibrium, the gravitational torque equals the restoring torque of the wire: $G \\frac{Mm}{d^2} L = \\tau \\theta$ (Eq. 7.7), where $L$ is the length of the bar, $\\tau$ is the restoring couple per unit angle of twist, and $\\theta$ is the angle of twist.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 7.6",
+                "description": "Schematic drawing of Cavendish's experiment showing the torsion balance, small masses A and B, and large masses $S_1$ and $S_2$ positioned to create a torque.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:7.4:2",
+            "order": 2,
+            "title": "Value of G",
+            "content_text": "By measuring the angle of twist $\\theta$ and knowing the other parameters, $G$ can be calculated. Since Cavendish's time, measurements have been refined. The currently accepted value is: $$G = 6.67 \\times 10^{-11} \\text{ N m}^2/\\text{kg}^2$$ (Eq. 7.8).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:7:7.5",
+        "number": "7.5",
+        "title": "Acceleration Due to Gravity of the Earth",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:7:7.5:1",
+            "order": 1,
+            "title": "Force on a Point Outside the Earth",
+            "content_text": "The Earth can be modeled as a series of concentric spherical shells. According to the shell theorem, for a point mass outside the Earth, each shell exerts a force as if its mass were concentrated at the center. Therefore, the total gravitational force on an external point mass is as if the entire mass of the Earth ($M_E$) is concentrated at its center.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:7.5:2",
+            "order": 2,
+            "title": "Force on a Point Inside the Earth",
+            "content_text": "For a point mass $m$ at a depth $d$ below the surface (distance $r$ from the center), the situation is different. The shells with radius greater than $r$ exert no net gravitational force on $m$. Only the sphere of radius $r$ (mass $M_r$) exerts a force. Assuming uniform density $\\rho$, the mass of the Earth is $M_E = \\frac{4\\pi}{3} R_E^3 \\rho$ and the mass of the inner sphere is $M_r = \\frac{4\\pi}{3} r^3 \\rho$. The force on mass $m$ at distance $r$ is: $$F = \\frac{G m M_r}{r^2}$$ (Eq. 7.9).",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 7.7",
+                "description": "A diagram of the Earth showing a point mass $m$ at a depth $d$ from the surface. The distance from the center is $r = R_E - d$. The inner sphere of radius $r$ is shaded.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:7.5:3",
+            "order": 3,
+            "title": "Gravitational Force Inside the Earth (Conclusion)",
+            "content_text": "The gravitational force on a point mass $m$ at a distance $r$ from the centre of the earth (where $r < R_E$) is derived by considering the mass of the sphere within that radius. The force is given by: $F = Gm (\\frac{4\\pi}{3} \\rho) \\frac{r^3}{r^2} = Gm (\\frac{M_E}{R_E^3}) \\frac{r^3}{r^2} = \\frac{G m M_E}{R_E^3} r$. This expression shows that inside the earth, the gravitational force is directly proportional to the distance $r$ from the centre.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:7.5:4",
+            "order": 4,
+            "title": "Acceleration due to Gravity (g) on the Surface",
+            "content_text": "If the mass $m$ is situated on the surface of earth, then $r = R_E$ and the gravitational force on it is: $F = G \\frac{M_E m}{R_E^2}$. The acceleration experienced by the mass $m$, which is usually denoted by the symbol $g$, is related to $F$ by Newton’s 2nd law by the relation $F = mg$. Thus, we obtain the standard formula for acceleration due to gravity at the surface: $g = \\frac{F}{m} = \\frac{GM_E}{R_E^2}$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:7.5:5",
+            "order": 5,
+            "title": "Measuring g and Estimating Earth's Mass",
+            "content_text": "Acceleration $g$ is a readily measurable quantity, and $R_E$ is a known quantity. The measurement of the gravitational constant $G$ by Cavendish’s experiment, combined with the knowledge of $g$ and $R_E$, enables one to estimate the mass of the earth $M_E$ from the relation $M_E = \\frac{g R_E^2}{G}$. This is the reason why there is a popular statement regarding Cavendish: 'Cavendish weighed the earth'.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:7:7.6",
+        "number": "7.6",
+        "title": "Acceleration Due to Gravity Below and Above the Surface of Earth",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:7:7.6:1",
+            "order": 1,
+            "title": "Acceleration due to Gravity at a Height h",
+            "content_text": "Consider a point mass $m$ at a height $h$ above the surface of the earth. Since this point is outside the earth, its distance from the centre of the earth is $(R_E + h)$. If $F(h)$ denotes the magnitude of the force on the point mass $m$, we get: $F(h) = \\frac{GM_E m}{(R_E + h)^2}$. The acceleration experienced by the point mass is $g(h) = \\frac{F(h)}{m} = \\frac{GM_E}{(R_E + h)^2}$. This value is clearly less than the value of $g$ on the surface of earth.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 7.8 (a)",
+                "description": "A diagram showing a point mass m at a height h above the Earth's surface. The Earth is represented as a sphere of radius R_E, and the distance from the centre to the mass is R_E + h.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:7.6:2",
+            "order": 2,
+            "title": "Approximation for Small Heights",
+            "content_text": "For heights $h$ much smaller than the Earth's radius ($h \\ll R_E$), we can expand the expression for $g(h)$: $g(h) = \\frac{GM_E}{R_E^2(1 + h/R_E)^2} = g(1 + h/R_E)^{-2}$. Using the binomial expression for $\\frac{h}{R_E} \\ll 1$, we get the approximation: $g(h) \\cong g (1 - \\frac{2h}{R_E})$. This equation tells us that for small heights $h$ above the surface, the value of $g$ decreases by a factor $(1 - 2h/R_E)$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:7.6:3",
+            "order": 3,
+            "title": "Acceleration due to Gravity at a Depth d",
+            "content_text": "Consider a point mass $m$ at a depth $d$ below the surface of the earth, so that its distance from the centre is $(R_E - d)$. The earth can be thought of as being composed of a smaller sphere of radius $(R_E - d)$ and a spherical shell of thickness $d$. The force on $m$ due to the outer shell is zero because of the shell theorem. As far as the smaller sphere is concerned, the point mass is outside it, and the force is as if the entire mass $M_s$ of the smaller sphere is concentrated at the centre. Since mass is proportional to the cube of the radius, $M_s/M_E = (R_E - d)^3 / R_E^3$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 7.8 (b)",
+                "description": "A diagram showing a point mass m at a depth d below the Earth's surface. It illustrates an inner sphere of radius R_E - d and mass M_s, and an outer shell of thickness d. Only the inner sphere contributes to the gravitational force at this depth.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:7.6:4",
+            "order": 4,
+            "title": "Derivation of g at Depth d",
+            "content_text": "The force on the point mass at depth $d$ is $F(d) = G M_s m / (R_E - d)^2$. Substituting for $M_s$, we get: $F(d) = G M_E m (R_E - d) / R_E^3$. The acceleration due to gravity at depth $d$ is $g(d) = \\frac{F(d)}{m} = \\frac{GM_E}{R_E^3}(R_E - d) = g \\frac{R_E - d}{R_E} = g(1 - d/R_E)$. Thus, as we go down below earth’s surface, the acceleration due gravity decreases by a factor $(1 - d/R_E)$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:7.6:5",
+            "order": 5,
+            "title": "Variation of g Summary",
+            "content_text": "The acceleration due to earth's gravity is maximum on its surface, decreasing whether you go up (with height $h$) or down (with depth $d$).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:7:7.7",
+        "number": "7.7",
+        "title": "Gravitational Potential Energy",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:7:7.7:1",
+            "order": 1,
+            "title": "Concept of Gravitational Potential Energy",
+            "content_text": "Potential energy is the energy stored in a body at its given position. If the position of a particle changes due to forces acting on it, the change in its potential energy is the amount of work done on the body by the force. Forces for which the work done is independent of the path are conservative forces; the force of gravity is a conservative force.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:7.7:2",
+            "order": 2,
+            "title": "Potential Energy near Earth's Surface",
+            "content_text": "Close to the surface of earth ($h \\ll R_E$), the force of gravity is practically constant and equal to $mg$, directed towards the centre. The work done in lifting a particle of mass $m$ from height $h_1$ to $h_2$ is $W_{12} = mg(h_2 - h_1)$. We can associate a potential energy $W(h) = mgh + W_0$, where $W_0$ is a constant representing potential energy at the surface ($h=0$). The work done is the difference of potential energy between final and initial positions: $W_{12} = W(h_2) - W(h_1)$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:7.7:3",
+            "order": 3,
+            "title": "Potential Energy for Variable Gravitational Force",
+            "content_text": "For points at arbitrary distances from the earth, the constant force assumption is invalid. The gravitational force on a particle of mass $m$ at distance $r$ is $F = \\frac{GM_E m}{r^2}$. The work done in lifting a particle from $r = r_1$ to $r = r_2$ ($r_2 > r_1$) along a vertical path is calculated by integration: $W_{12} = \\int_{r_1}^{r_2} \\frac{G M_E m}{r^2} dr = -G M_E m (\\frac{1}{r_2} - \\frac{1}{r_1})$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:7.7:4",
+            "order": 4,
+            "title": "Potential Energy at a Point and Reference at Infinity",
+            "content_text": "We can associate a potential energy $W(r) = -\\frac{G M_E m}{r} + W_1$, valid for $r > R_E$. Setting $r = \\infty$, we find $W(r = \\infty) = W_1$, meaning $W_1$ is the potential energy at infinity. Conventionally, $W_1$ is set to zero, so the potential energy at a point is the work done in displacing the particle from infinity to that point: $W(r) = -\\frac{G M_E m}{r}$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:7.7:5",
+            "order": 5,
+            "title": "Gravitational Potential and System Potential Energy",
+            "content_text": "The gravitational potential at a point is defined as the potential energy of a particle of unit mass at that point. For a system of particles, the total potential energy is the sum of energies for all possible pairs of its constituent particles, following the superposition principle. For two particles $m_1$ and $m_2$ separated by distance $r$, the potential energy is $V = -\\frac{G m_1 m_2}{r}$ (choosing $V=0$ at $r \\to \\infty$).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:7.7:6",
+            "order": 6,
+            "title": "Example 7.3: Potential Energy of a System",
+            "content_text": "This example demonstrates the calculation of potential energy for a multi-particle system and the gravitational potential at a specific point using the superposition principle.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 7.3",
+                "problem": "Find the potential energy of a system of four particles placed at the vertices of a square of side l. Also obtain the potential at the centre of the square.",
+                "solution": "Consider four masses each of mass m at the corners of a square of side l (See Fig. 7.9). We have four mass pairs at distance l and two diagonal pairs at distance $\\sqrt{2}l$. Hence, the total potential energy is: $W(r) = -4 \\frac{G m^2}{l} - 2 \\frac{G m^2}{\\sqrt{2}l} = -\\frac{2 G m^2}{l} (2 + \\frac{1}{\\sqrt{2}}) \\cong -5.41 \\frac{G m^2}{l}$. The gravitational potential at the centre of the square (at distance $r = \\sqrt{2}l/2$ from each corner) is: $U(r) = -4 \\frac{G m}{\\sqrt{2}l/2} = -4\\sqrt{2} \\frac{G m}{l}$."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Fig 7.9",
+                "description": "A diagram showing four particles of mass m placed at the four vertices of a square with side length l. Dashed lines indicate the diagonals of the square, which have a length of sqrt(2)*l.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:7:7.8",
+        "number": "7.8",
+        "title": "Escape Speed",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:7:7.8:1",
+            "order": 1,
+            "title": "Introduction to Escape Speed",
+            "content_text": "If an object is thrown with enough initial speed, it can reach a point where it does not fall back to the earth. The principle of conservation of energy helps determine this speed. As the initial speed increases, the object reaches higher and higher heights until it can eventually reach infinity.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:7.8:2",
+            "order": 2,
+            "title": "Energy Conservation for Escape",
+            "content_text": "Suppose an object reaches infinity and its speed there is $V_f$. The total energy at infinity is $E(\\infty) = W_1 + \\frac{m V_f^2}{2}$, where $W_1$ is the potential energy at infinity. If the object was thrown initially with speed $V_i$ from a point at distance $(h + R_E)$ from the centre of the earth, its initial energy was $E(h + R_E) = \\frac{1}{2} m V_i^2 - \\frac{G M_E m}{(h + R_E)} + W_1$. By the principle of energy conservation, the initial energy of an object projected with speed $V_i$ from a distance $(h + R_E)$ and its final energy at infinity must be equal. Hence, $\\frac{m V_i^2}{2} - \\frac{G M_E m}{(h + R_E)} = \\frac{m V_f^2}{2}$ (Eq. 7.28). The right-hand side (R.H.S.) is a positive quantity with a minimum value of zero; therefore, the left-hand side (L.H.S.) must also be non-negative. Thus, an object can reach infinity as long as its initial speed $V_i$ satisfies the condition: $\\frac{m V_i^2}{2} - \\frac{G M_E m}{(h + R_E)} \\geq 0$ (Eq. 7.29).",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:7.8:3",
+            "order": 3,
+            "title": "Minimum Escape Speed",
+            "content_text": "The minimum value of $V_i$ required for an object to escape the Earth's gravitational pull corresponds to the case where the total energy is zero. This minimum speed is given by: $\\frac{1}{2} m (V_i^2)_{min} = \\frac{G M_E m}{h + R_E}$ (Eq. 7.30). If the object is thrown directly from the surface of the Earth ($h = 0$), the escape speed is: $(V_i)_{min} = \\sqrt{\\frac{2 G M_E}{R_E}}$ (Eq. 7.31). Using the relation for acceleration due to gravity $g = G M_E / R_E^2$, we can rewrite this as: $(V_i)_{min} = \\sqrt{2 g R_E}$ (Eq. 7.32).",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:7.8:4",
+            "order": 4,
+            "title": "Numerical Values and Atmospheric Implications",
+            "content_text": "Using the standard values for $g$ and $R_E$, the escape speed from Earth is numerically calculated as $(V_i)_{min} \\approx 11.2$ km/s. This is often referred to as the escape velocity. The same formula applies to other celestial bodies; for instance, on the Moon, the lower values of $g$ and radius result in an escape speed of approximately 2.3 km/s. This low escape speed is the primary reason the Moon has no atmosphere, as gas molecules formed there often have thermal velocities exceeding this limit and escape into space.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:7.8:5",
+            "order": 5,
+            "title": "Example 7.4: Projectile Between Two Spheres",
+            "content_text": "This example analyzes the motion of a projectile between two fixed solid spheres of masses $M$ and $4M$ with a center-to-center separation of $6R$. It introduces the concept of a 'neutral point' $N$ where the gravitational forces from both spheres cancel out. To reach the second sphere, the projectile must be launched with enough speed to at least reach this neutral point, after which the gravitational pull of the larger mass will dominate.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 7.4",
+                "problem": "Two uniform solid spheres of equal radii $R$, but mass $M$ and $4 M$ have a centre to centre separation $6 R$, as shown in Fig. 7.10. The two spheres are held fixed. A projectile of mass $m$ is projected from the surface of the sphere of mass $M$ directly towards the centre of the second sphere. Obtain an expression for the minimum speed $v$ of the projectile so that it reaches the surface of the second sphere.",
+                "solution": "The neutral point $N$ is where the two forces cancel: $\\frac{G M m}{r^2} = \\frac{4 G M m}{(6R-r)^2} \\Rightarrow (6R-r)^2 = 4r^2 \\Rightarrow 6R-r = 2r \\Rightarrow r = 2R$. The mechanical energy at the surface of $M$ is $E_i = \\frac{1}{2} m v^2 - \\frac{G M m}{R} - \\frac{4 G M m}{5R}$. At the neutral point $N$, the speed approaches zero, so $E_N = -\\frac{G M m}{2R} - \\frac{4 G M m}{4R}$. By conservation of energy $E_i = E_N$: $\\frac{1}{2} v^2 - \\frac{G M}{R} - \\frac{4 G M}{5R} = -\\frac{G M}{2R} - \\frac{G M}{R}$. Solving for $v$: $v^2 = \\frac{2 G M}{R} (\\frac{4}{5} - \\frac{1}{2}) = \\frac{3 G M}{5 R} \\Rightarrow v = \\sqrt{\\frac{3 G M}{5 R}}$. Note: the speed is non-zero when it strikes the heavier sphere."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Fig 7.10",
+                "description": "A diagram showing two spheres of mass M and 4M with radii R, separated by a distance 6R. A projectile of mass m is shown moving from the surface of M towards 4M, passing through a neutral point N at distance r from the center of M.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:7:7.9",
+        "number": "7.9",
+        "title": "Earth Satellites",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:7:7.9:1",
+            "order": 1,
+            "title": "Introduction to Satellites",
+            "content_text": "Earth satellites are objects that revolve around the Earth in circular or elliptical orbits. Their motion is governed by the same laws as planetary motion around the Sun (Kepler's laws). The Moon is Earth's only natural satellite, with a near-circular orbit and a period of ~27.3 days. Artificial satellites, launched since 1957, are used for telecommunications, geophysics, and meteorology.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:7.9:2",
+            "order": 2,
+            "title": "Orbital Speed of a Satellite",
+            "content_text": "For a satellite of mass $m$ in a circular orbit at a distance $(R_E + h)$ from the Earth's center, the required centripetal force is $F_c = \\frac{m V^2}{(R_E + h)}$. This is provided by the gravitational force $F_g = \\frac{G m M_E}{(R_E + h)^2}$. Equating these gives the orbital speed: $V^2 = \\frac{G M_E}{(R_E + h)}$ (Eq. 7.35). As altitude $h$ increases, the orbital speed $V$ decreases. For a satellite very close to the surface ($h \\approx 0$), $V = \\sqrt{g R_E}$ (Eq. 7.36).",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:7.9:3",
+            "order": 3,
+            "title": "Time Period of a Satellite",
+            "content_text": "The time period $T$ is the time taken to complete one revolution: $T = \\frac{2\\pi(R_E + h)}{V}$. Substituting the expression for $V$, we get $T = \\frac{2\\pi(R_E + h)^{3/2}}{\\sqrt{G M_E}}$ (Eq. 7.37). Squaring both sides yields $T^2 = k (R_E + h)^3$, where $k = 4 \\pi^2 / G M_E$ (Eq. 7.38). This confirms Kepler's law of periods for satellites.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:7.9:4",
+            "order": 4,
+            "title": "Satellites Close to Earth",
+            "content_text": "For satellites orbiting very close to the Earth's surface, $h$ is negligible compared to $R_E$. The time period simplifies to $T_o = 2\\pi\\sqrt{R_E / g}$ (Eq. 7.39). Using $g \\approx 9.8$ m/s$^2$ and $R_E = 6400$ km, $T_o$ is approximately 85 minutes.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:7.9:5",
+            "order": 5,
+            "title": "Example 7.5: Mass of Mars and Martian Year",
+            "content_text": "This example applies Kepler's third law to calculate the mass of Mars using the orbital data of its moon Phobos, and determines the length of a Martian year based on its orbital radius relative to Earth.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 7.5",
+                "problem": "The planet Mars has two moons, phobos and delmos. (i) phobos has a period 7 hours, 39 minutes and an orbital radius of $9.4 \\times 10^3$ km. Calculate the mass of mars. (ii) Assume that earth and mars move in circular orbits around the sun, with the martian orbit being 1.52 times the orbital radius of the earth. What is the length of the martian year in days?",
+                "solution": "(i) Using $M_m = \\frac{4 \\pi^2 R^3}{G T^2}$ with $T = 459$ min and $R = 9.4 \\times 10^3$ km: $M_m = \\frac{4 \\times (3.14)^2 \\times (9.4)^3 \\times 10^{18}}{6.67 \\times 10^{-11} \\times (459 \\times 60)^2} = 6.48 \\times 10^{23}$ kg. (ii) Using $\\frac{T_M^2}{T_E^2} = \\frac{R_{MS}^3}{R_{ES}^3}$: $T_M = (1.52)^{3/2} \\times 365 = 684$ days."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:7.9:6",
+            "order": 6,
+            "title": "Example 7.6: Weighing the Earth",
+            "content_text": "This example demonstrates two methods to calculate the mass of the Earth: one using surface gravity ($g$) and the other using the orbital parameters of the Moon.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 7.6",
+                "problem": "You are given the following data: $g = 9.81$ m s$^{-2}$, $R_E = 6.37 \\times 10^6$ m, the distance to the moon $R = 3.84 \\times 10^8$ m and the time period of the moon’s revolution is 27.3 days. Obtain the mass of the Earth $M_E$ in two different ways.",
+                "solution": "Method 1: $M_E = \\frac{g R_E^2}{G} = \\frac{9.81 \\times (6.37 \\times 10^6)^2}{6.67 \\times 10^{-11}} = 5.97 \\times 10^{24}$ kg. Method 2: $M_E = \\frac{4 \\pi^2 R^3}{G T^2} = \\frac{4 \\times 3.14^2 \\times (3.84)^3 \\times 10^{24}}{6.67 \\times 10^{-11} \\times (27.3 \\times 24 \\times 3600)^2} = 6.02 \\times 10^{24}$ kg. The difference is less than 1%."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:7.9:7",
+            "order": 7,
+            "title": "Example 7.7: Keplerian Constant and Moon's Period",
+            "content_text": "This example involves unit conversion for the constant $k$ and verifying the Moon's orbital period.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 7.7",
+                "problem": "Express the constant $k$ of Eq. (7.38) in days and kilometres. Given $k = 10^{-13}$ s$^2$ m$^{-3}$. The moon is at a distance of $3.84 \\times 10^5$ km from the earth. Obtain its time-period of revolution in days.",
+                "solution": "$k = 10^{-13} [\\frac{1}{(24 \\times 60 \\times 60)^2} d^2] [\\frac{1}{(1/1000)^3} km^{-3}] = 1.33 \\times 10^{-14} d^2 km^{-3}$. Using $T^2 = k R^3$: $T^2 = (1.33 \\times 10^{-14})(3.84 \\times 10^5)^3 \\Rightarrow T = 27.3$ days."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:7.9:8",
+            "order": 8,
+            "title": "Elliptical Orbits and Planetary Circularity",
+            "content_text": "Kepler's third law (Eq. 7.38) also applies to elliptical orbits if the radius $(R_E + h)$ is replaced by the semi-major axis of the ellipse. Most planetary orbits are nearly circular; for Earth, the ratio of semi-minor to semi-major axis ($b/a$) is 0.99986.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:7:7.10",
+        "number": "7.10",
+        "title": "Energy of an Orbiting Satellite",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:7:7.10:1",
+            "order": 1,
+            "title": "Kinetic and Potential Energy",
+            "content_text": "For a satellite in a circular orbit, the kinetic energy is $K.E = \\frac{1}{2} m v^2 = \\frac{G m M_E}{2(R_E + h)}$ (Eq. 7.40). The gravitational potential energy at distance $(R_E + h)$ is $P.E = -\\frac{G m M_E}{(R_E + h)}$ (Eq. 7.41). Note that the kinetic energy is positive and equal to half the magnitude of the negative potential energy.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:7.10:2",
+            "order": 2,
+            "title": "Total Energy and Bound State",
+            "content_text": "The total mechanical energy $E$ is the sum of $K.E$ and $P.E$: $E = -\\frac{G m M_E}{2(R_E + h)}$ (Eq. 7.42). The total energy is negative, indicating that the satellite is in a 'bound state' with the Earth. If the total energy were zero or positive, the object would escape to infinity. In elliptical orbits, $K.E$ and $P.E$ vary, but the total energy remains constant and negative.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:7.10:3",
+            "order": 3,
+            "title": "Example 7.8: Energy Changes in Satellite Orbit Transfer",
+            "content_text": "This example analyzes the energy requirements and changes when a satellite's orbit is modified. Consider a 400 kg satellite being transferred from a circular orbit of radius $2R_E$ to $4R_E$. 1. Total Energy Calculation: The total energy $E$ of a satellite in a circular orbit of radius $r$ is $E = -\\frac{G M_E m}{2r}$. Initial energy ($r_i = 2R_E$): $E_i = -\\frac{G M_E m}{4 R_E}$. Final energy ($r_f = 4R_E$): $E_f = -\\frac{G M_E m}{8 R_E}$. 2. Energy Required: The energy required is the difference $\\Delta E = E_f - E_i = \\frac{G M_E m}{8 R_E}$. Using $g = \\frac{G M_E}{R_E^2}$, we get $\\Delta E = \\frac{g m R_E}{8}$. Substituting $g = 9.81 \\text{ m/s}^2$, $m = 400 \\text{ kg}$, and $R_E = 6.37 \\times 10^6 \\text{ m}$, we find $\\Delta E = 3.13 \\times 10^9 \\text{ J}$. 3. Kinetic and Potential Energy Changes: The change in kinetic energy $\\Delta K$ is equal to $-\\Delta E$, so $\\Delta K = -3.13 \\times 10^9 \\text{ J}$. The satellite slows down in the higher orbit. The change in potential energy $\\Delta V$ is twice the change in total energy, $\\Delta V = 2 \\Delta E = 6.25 \\times 10^9 \\text{ J}$.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 7.8",
+                "problem": "A 400 kg satellite is in a circular orbit of radius $2R_E$ about the Earth. How much energy is required to transfer it to a circular orbit of radius $4R_E$? What are the changes in the kinetic and potential energies?",
+                "solution": "Initially, $E_i = -\\frac{G M_E m}{4 R_E}$. While finally $E_f = -\\frac{G M_E m}{8 R_E}$. The change in the total energy is $\\Delta E = E_f - E_i = \\frac{G M_E m}{8 R_E} = \\left(\\frac{G M_E}{R_E^2}\\right) \\frac{m R_E}{8}$. $\\Delta E = \\frac{g m R_E}{8} = \\frac{9.81 \\times 400 \\times 6.37 \\times 10^6}{8} = 3.13 \\times 10^9 \\text{ J}$. The kinetic energy is reduced and it mimics $\\Delta E$, namely, $\\Delta K = K_f - K_i = -3.13 \\times 10^9 \\text{ J}$. The change in potential energy is twice the change in the total energy, namely $\\Delta V = V_f - V_i = 6.25 \\times 10^9 \\text{ J}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:7:Summary",
+        "number": "Summary",
+        "title": "Summary",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:7:Summary:1",
+            "order": 1,
+            "title": "Newton's Law of Universal Gravitation",
+            "content_text": "Newton's law states that the gravitational force of attraction between two particles of masses $m_1$ and $m_2$ separated by distance $r$ is $F = G \\frac{m_1 m_2}{r^2}$. The universal gravitational constant $G$ is $6.672 \\times 10^{-11} \\text{ N m}^2 \\text{ kg}^{-2}$. For multiple masses, the resultant force $\\vec{F}_R$ on a particle is the vector sum of individual forces: $\\vec{F}_R = \\sum_{i=1}^{n} \\vec{F}_i$. This is known as the principle of superposition.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:Summary:2",
+            "order": 2,
+            "title": "Kepler's Laws of Planetary Motion",
+            "content_text": "Kepler's laws describe planetary orbits: (a) Orbits are elliptical with the Sun at one focus. (b) The radius vector sweeps equal areas in equal time (conservation of angular momentum). (c) The square of the period $T$ is proportional to the cube of the semi-major axis $a$. For circular orbits, $T^2 = \\left(\\frac{4\\pi^2}{G M_s}\\right) R^3$. This relation is valid for elliptical orbits if $R$ is replaced by the semi-major axis $a$.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:Summary:3",
+            "order": 3,
+            "title": "Variation in Acceleration Due to Gravity",
+            "content_text": "The acceleration due to gravity $g$ changes with position relative to Earth's surface. At height $h$ above the surface: $g(h) = \\frac{G M_E}{(R_E + h)^2} \\approx g(0) \\left(1 - \\frac{2h}{R_E}\\right)$ for $h \\ll R_E$. At depth $d$ below the surface: $g(d) = g(0) \\left(1 - \\frac{d}{R_E}\\right)$. Here, $g(0) = \\frac{G M_E}{R_E^2}$ is the value at the surface.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:Summary:4",
+            "order": 4,
+            "title": "Gravitational Potential Energy and Mechanical Energy",
+            "content_text": "Gravitational force is conservative, allowing the definition of gravitational potential energy $V = -\\frac{G m_1 m_2}{r}$, where $V \\to 0$ as $r \\to \\infty$. For a system of particles, the total potential energy is the sum of energies for all pairs. For a particle of mass $m$ near a body of mass $M$, the total mechanical energy $E = \\frac{1}{2} m v^2 - \\frac{G M m}{r}$ is a constant of motion.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:Summary:5",
+            "order": 5,
+            "title": "Energy of Orbiting Satellites and Escape Speed",
+            "content_text": "For a mass $m$ in a circular orbit of radius $a$ around mass $M$ ($M \\gg m$), the total energy is $E = -\\frac{G M m}{2a}$. This negative energy indicates a bound state. The kinetic energy is $K = \\frac{G M m}{2a}$ and potential energy is $V = -\\frac{G M m}{a}$. The escape speed from Earth's surface is $v_e = \\sqrt{\\frac{2 G M_E}{R_E}} = \\sqrt{2 g R_E}$, which is approximately $11.2 \\text{ km s}^{-1}$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:Summary:6",
+            "order": 6,
+            "title": "Gravitational Shell Theorems",
+            "content_text": "1. For a particle outside a uniform spherical shell or solid sphere, the sphere attracts it as if its entire mass were concentrated at the center. 2. Inside a uniform spherical shell, the gravitational force on a particle is zero. 3. Inside a homogeneous solid sphere, the force on a particle is exerted only by the spherical mass interior to the particle's position and acts toward the center.",
+            "content_type": "theorem",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:Summary:7",
+            "order": 7,
+            "title": "Table of Physical Quantities in Gravitation",
+            "content_text": "The following table summarizes the key physical quantities, their dimensions, units, and defining formulas used in gravitation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 7.1",
+                "caption": "Physical Quantities in Gravitation",
+                "headers": [
+                  "Physical Quantity",
+                  "Symbol",
+                  "Dimensions",
+                  "Unit",
+                  "Remarks"
+                ],
+                "rows": [
+                  [
+                    "Gravitational Constant",
+                    "G",
+                    "[M^{-1} L^3 T^{-2}]",
+                    "N m^2 kg^{-2}",
+                    "6.67 \\times 10^{-11}"
+                  ],
+                  [
+                    "Gravitational Potential Energy",
+                    "V(r)",
+                    "[M L^2 T^{-2}]",
+                    "J",
+                    "-\\frac{GMm}{r} (scalar)"
+                  ],
+                  [
+                    "Gravitational Potential",
+                    "U(r)",
+                    "[L^2 T^{-2}]",
+                    "J kg^{-1}",
+                    "-\\frac{GM}{r} (scalar)"
+                  ],
+                  [
+                    "Gravitational Intensity",
+                    "\\mathbf{E} or \\mathbf{g}",
+                    "[L T^{-2}]",
+                    "m s^{-2}",
+                    "\\frac{GM}{r^2} \\hat{r} (vector)"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:7:Points to Ponder",
+        "number": "Points to Ponder",
+        "title": "Points to Ponder",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:7:Points to Ponder:1",
+            "order": 1,
+            "title": "Conservation and Kepler's Laws",
+            "content_text": "In central force motion, angular momentum and total mechanical energy are conserved, while linear momentum is not. Kepler's second law arises from angular momentum conservation. Kepler's third law constant $K_s$ is universal for all planets orbiting the same star. This also applies to satellites orbiting the Earth.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:Points to Ponder:2",
+            "order": 2,
+            "title": "Weightlessness and Potential Energy Reference",
+            "content_text": "Weightlessness in satellites is due to the state of 'free fall'. Gravitational potential energy is $V = -\\frac{G m_1 m_2}{r} + \\text{constant}$. Choosing the constant such that $V \\to 0$ as $r \\to \\infty$ is standard. This choice makes the total energy of bound systems (like satellites) negative. The common expression $mgh$ is an approximation for the difference in potential energy near the surface.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:7:Points to Ponder:3",
+            "order": 3,
+            "title": "Rigid Bodies and Gravitational Shielding",
+            "content_text": "For spherically symmetric rigid bodies, the gravitational force acts as if the mass is concentrated at the center. Unlike electrical forces, gravitational forces cannot be shielded. A hollow shell does not protect a body inside from external gravitational influence, nor does it shield external bodies from the influence of a mass inside it.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:7:7.11",
+        "number": "7.11",
+        "title": "Exercises",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:7:7.11:1",
+            "order": 1,
+            "title": "Exercise Illustrations",
+            "content_text": "The following figure is used for exercises 7.10 and 7.11 regarding gravitational intensity in a hemispherical shell.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 7.11",
+                "description": "A hemispherical shell with its open base facing upwards. Point C is the center of the circular base. Point P is a point on the vertical axis of symmetry inside the shell. At point C, three arrows are shown: 'a' pointing horizontally to the right, 'b' pointing vertically upwards, and 'c' pointing vertically downwards. At point P, four arrows are shown: 'f' pointing vertically downwards, 'g' pointing vertically upwards, 'd' pointing downwards and to the left, and 'e' pointing downwards and to the right.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:physics:11:7:ex:1",
+          "number": 1,
+          "problem": "Answer the following:\n\n(a) You can shield a charge from electrical forces by putting it inside a hollow conductor. Can you shield a body from the gravitational influence of nearby matter by putting it inside a hollow sphere or by some other means?\n\n(b) An astronaut inside a small space ship orbiting around the earth cannot detect gravity. If the space station orbiting around the earth has a large size, can he hope to detect gravity?\n\n(c) If you compare the gravitational force on the earth due to the sun to that due to the moon, you would find that the Sun's pull is greater than the moon's pull. (You can check this yourself using the data available in the succeeding exercises). However, the tidal effect of the moon's pull is greater than the tidal effect of sun. Why?",
+          "solution": "",
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:7:ex:2",
+          "number": 2,
+          "problem": "Choose the correct alternative : (a) Acceleration due to gravity increases/decreases with increasing altitude. (b) Acceleration due to gravity increases/decreases with increasing depth (assume the earth to be a sphere of uniform density). (c) Acceleration due to gravity is independent of mass of the earth/mass of the body. (d) The formula $-G Mm(1/r_2 - 1/r_1)$ is more/less accurate than the formula $mg(r_2 - r_1)$ for the difference of potential energy between two points $r_2$ and $r_1$ distance away from the centre of the earth.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "mcq"
+        },
+        {
+          "id": "ncert:physics:11:7:ex:3",
+          "number": 3,
+          "problem": "Suppose there existed a planet that went around the Sun twice as fast as the earth. What would be its orbital size as compared to that of the earth ?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:7:ex:4",
+          "number": 4,
+          "problem": "Io, one of the satellites of Jupiter, has an orbital period of 1.769 days and the radius of the orbit is $4.22 \\times 10^8$ m. Show that the mass of Jupiter is about one-thousandth that of the sun.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:7:ex:5",
+          "number": 5,
+          "problem": "Let us assume that our galaxy consists of $2.5 \\times 10^{11}$ stars each of one solar mass. How long will a star at a distance of 50,000 ly from the galactic centre take to complete one revolution ? Take the diameter of the Milky Way to be $10^5$ ly.",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:7:ex:6",
+          "number": 6,
+          "problem": "Choose the correct alternative: (a) If the zero of potential energy is at infinity, the total energy of an orbiting satellite is negative of its kinetic/potential energy. (b) The energy required to launch an orbiting satellite out of earth’s gravitational influence is more/less than the energy required to project a stationary object at the same height (as the satellite) out of earth’s influence.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "mcq"
+        },
+        {
+          "id": "ncert:physics:11:7:ex:7",
+          "number": 7,
+          "problem": "Does the escape speed of a body from the earth depend on (a) the mass of the body, (b) the location from where it is projected, (c) the direction of projection, (d) the height of the location from where the body is launched?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:7:ex:8",
+          "number": 8,
+          "problem": "A comet orbits the sun in a highly elliptical orbit. Does the comet have a constant (a) linear speed, (b) angular speed, (c) angular momentum, (d) kinetic energy, (e) potential energy, (f) total energy throughout its orbit? Neglect any mass loss of the comet when it comes very close to the Sun.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:7:ex:9",
+          "number": 9,
+          "problem": "Which of the following symptoms is likely to afflict an astronaut in space (a) swollen feet, (b) swollen face, (c) headache, (d) orientational problem.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:7:ex:10",
+          "number": 10,
+          "problem": "In the following two exercises, choose the correct answer from among the given ones: The gravitational intensity at the centre of a hemispherical shell of uniform mass density has the direction indicated by the arrow (see Fig 7.11) (i) a, (ii) b, (iii) c, (iv) 0.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "mcq"
+        },
+        {
+          "id": "ncert:physics:11:7:ex:11",
+          "number": 11,
+          "problem": "For the above problem, the direction of the gravitational intensity at an arbitrary point P is indicated by the arrow (i) d, (ii) e, (iii) f, (iv) g.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "mcq"
+        },
+        {
+          "id": "ncert:physics:11:7:ex:12",
+          "number": 12,
+          "problem": "A rocket is fired from the earth towards the sun. At what distance from the earth’s centre is the gravitational force on the rocket zero ? Mass of the sun $= 2 \\times 10^{30}$ kg, mass of the earth $= 6 \\times 10^{24}$ kg. Neglect the effect of other planets etc. (orbital radius $= 1.5 \\times 10^{11}$ m).",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:7:ex:13",
+          "number": 13,
+          "problem": "How will you ‘weigh the sun’, that is estimate its mass? The mean orbital radius of the earth around the sun is $1.5 \\times 10^8$ km.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:7:ex:14",
+          "number": 14,
+          "problem": "A saturn year is 29.5 times the earth year. How far is the saturn from the sun if the earth is $1.50 \\times 10^8$ km away from the sun ?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:7:ex:15",
+          "number": 15,
+          "problem": "A body weighs 63 N on the surface of the earth. What is the gravitational force on it due to the earth at a height equal to half the radius of the earth ?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:7:ex:16",
+          "number": 16,
+          "problem": "Assuming the earth to be a sphere of uniform mass density, how much would a body weigh half way down to the centre of the earth if it weighed 250 N on the surface ?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:7:ex:17",
+          "number": 17,
+          "problem": "A rocket is fired vertically with a speed of 5 km $s^{-1}$ from the earth’s surface. How far from the earth does the rocket go before returning to the earth ? Mass of the earth $= 6.0 \\times 10^{24}$ kg; mean radius of the earth $= 6.4 \\times 10^6$ m; $G = 6.67 \\times 10^{-11}$ N $m^2$ $kg^{-2}$.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:7:ex:18",
+          "number": 18,
+          "problem": "The escape speed of a projectile on the earth’s surface is 11.2 km $s^{-1}$. A body is projected out with thrice this speed. What is the speed of the body far away from the earth? Ignore the presence of the sun and other planets.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:7:ex:19",
+          "number": 19,
+          "problem": "A satellite orbits the earth at a height of 400 km above the surface. How much energy must be expended to rocket the satellite out of the earth’s gravitational influence? Mass of the satellite $= 200$ kg; mass of the earth $= 6.0 \\times 10^{24}$ kg; radius of the earth $= 6.4 \\times 10^6$ m; $G = 6.67 \\times 10^{-11}$ N $m^2$ $kg^{-2}$.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:7:ex:20",
+          "number": 20,
+          "problem": "Two stars each of one solar mass ($= 2 \\times 10^{30}$ kg) are approaching each other for a head on collision. When they are a distance $10^9$ km, their speeds are negligible. What is the speed with which they collide ? The radius of each star is $10^4$ km. Assume the stars to remain undistorted until they collide. (Use the known value of $G$).",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:7:ex:21",
+          "number": 21,
+          "problem": "Two heavy spheres each of mass 100 kg and radius 0.10 m are placed 1.0 m apart on a horizontal table. What is the gravitational force and potential at the mid point of the line joining the centres of the spheres ? Is an object placed at that point in equilibrium? If so, is the equilibrium stable or unstable ?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        }
+      ]
+    }
+  }
+}

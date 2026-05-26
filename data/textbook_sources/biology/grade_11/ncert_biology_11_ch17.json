@@ -1,0 +1,546 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_biology_11_ch17.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:biology:11:17",
+  "curriculum": "ncert",
+  "subject": "biology",
+  "grade": 11,
+  "textbook_name": "Biology",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:biology:11:17",
+    "number": 17,
+    "title": "Locomotion and Movement",
+    "summary": "Chapter 17, \"Locomotion and Movement,\" explores the mechanisms that enable animals to move. It begins by classifying movement types, including amoeboid, ciliary, muscular, and flagellar movement. The chapter then focuses on muscles, detailing their types (skeletal, visceral, and cardiac), structure (fascicles, fibers, myofibrils), and the contractile proteins actin and myosin. The sliding filament theory explains muscle contraction, highlighting the roles of calcium, ATP, and neural signals in the cross-bridge cycle. Red and white muscle fibers are differentiated based on myoglobin content and metabolic activity.\n\nThe chapter moves on to the skeletal system, describing the axial (skull, vertebral column, sternum, ribs) and appendicular (limbs, girdles) skeletons, emphasizing bone and cartilage composition. Joints, the articulation points between bones, are classified as fibrous, cartilaginous, and synovial, with examples of each type. Finally, the chapter discusses disorders of the muscular and skeletal systems, such as myasthenia gravis and muscular dystrophy.\n\nThe sections build logically: understanding basic movement leads to an in-depth look at the muscle structure and function responsible for most complex movements. Then the skeletal system serves as the framework and joints act as fulcrums where muscle actions result in motion. Understanding these structures is crucial to grasp the biomechanics of movement and the underlying causes of related disorders. This knowledge is significant for athletes, healthcare professionals, and anyone interested in the intricacies of human movement.",
+    "sections": [
+      {
+        "id": "ncert:biology:11:17:17.1",
+        "number": "17.1",
+        "title": "Types of Movement",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:17:17.1:1",
+            "order": 1,
+            "title": "Introduction to Movement and Locomotion",
+            "content_text": "Movement is a significant feature of living beings, exhibited by both plants and animals. Simple forms include the streaming of protoplasm in unicellular organisms like Amoeba. More complex movements involve cilia, flagella, and tentacles. Humans move limbs, jaws, eyelids, and tongues. Locomotion is defined as voluntary movements that result in a change of place or location, such as walking, running, climbing, flying, and swimming. Locomotory structures may also serve other purposes; for example, Paramecium uses cilia for both food movement and locomotion, while Hydra uses tentacles for prey capture and locomotion. Humans use limbs for posture changes and locomotion. It is important to note that while all locomotions are movements, all movements are not locomotions. Animals perform locomotion for various reasons, including searching for food, shelter, mates, suitable breeding grounds, favorable climatic conditions, or escaping predators.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:17:17.1:2",
+            "order": 2,
+            "title": "Amoeboid Movement",
+            "content_text": "Amoeboid movement is exhibited by specialized cells in the human body, such as macrophages and leucocytes in the blood. This type of movement is achieved through the formation of pseudopodia, which are created by the streaming of protoplasm, similar to the mechanism in Amoeba. Cytoskeletal elements, particularly microfilaments, are also actively involved in facilitating amoeboid movement.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:17:17.1:3",
+            "order": 3,
+            "title": "Ciliary Movement",
+            "content_text": "Ciliary movement occurs in most internal tubular organs that are lined with ciliated epithelium. In the trachea, the coordinated beating of cilia helps in removing dust particles and foreign substances inhaled from the atmosphere. In the female reproductive tract, ciliary movement facilitates the passage of ova through the fallopian tubes.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:17:17.1:4",
+            "order": 4,
+            "title": "Muscular and Flagellar Movement",
+            "content_text": "Muscular movement is utilized for moving limbs, jaws, tongues, and other body parts, relying on the contractile property of muscles. Effective locomotion in humans and most multicellular organisms requires the perfectly coordinated activity of the muscular, skeletal, and neural systems. Additionally, flagellar movement is observed in the swimming of spermatozoa, the maintenance of water currents in the canal system of sponges, and the locomotion of certain protists like Euglena.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:17:17.2",
+        "number": "17.2",
+        "title": "Muscle",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:17:17.2:1",
+            "order": 1,
+            "title": "Muscle Characteristics and Classification",
+            "content_text": "Muscle is a specialized tissue of mesodermal origin. In a human adult, muscles contribute approximately $40-50\\%$ of the total body weight. Muscles possess four primary properties: excitability, contractility, extensibility, and elasticity. They are classified into three types based on their location, appearance, and the nature of their regulation: (i) Skeletal, (ii) Visceral, and (iii) Cardiac.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:17:17.2:2",
+            "order": 2,
+            "title": "Skeletal Muscles",
+            "content_text": "Skeletal muscles are closely associated with the skeletal components of the body. Under a microscope, they exhibit a striped appearance and are therefore called striated muscles. Because their activities are under the voluntary control of the nervous system, they are also known as voluntary muscles. They are primarily responsible for locomotory actions and changes in body posture.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:17:17.2:3",
+            "order": 3,
+            "title": "Visceral Muscles",
+            "content_text": "Visceral muscles are located in the inner walls of hollow visceral organs, such as the alimentary canal and reproductive tract. They do not show striations and appear smooth, leading to the names smooth muscles or non-striated muscles. Their activities are involuntary as they are not under the direct voluntary control of the nervous system. They assist in functions like transporting food through the digestive tract and gametes through the genital tract.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:17:17.2:4",
+            "order": 4,
+            "title": "Cardiac Muscles",
+            "content_text": "Cardiac muscles are the muscles of the heart. They consist of many cardiac muscle cells assembled in a branching pattern. Although they are striated in appearance, they are involuntary in nature because the nervous system does not control their activities directly.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:17:17.2:5",
+            "order": 5,
+            "title": "Structure of Skeletal Muscle",
+            "content_text": "A skeletal muscle is composed of numerous muscle bundles, also known as fascicles. These fascicles are held together by a common layer of collagenous connective tissue called fascia. Each muscle bundle contains a large number of muscle fibres (Figure 17.1).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 17.1",
+                "description": "A diagrammatic cross-sectional view of a skeletal muscle. It shows multiple circular muscle bundles (fascicles) enclosed within a common boundary. Each fascicle contains several smaller circular units representing muscle fibres (muscle cells). The outer membrane of a muscle fibre is labeled as the sarcolemma. Blood capillaries are shown distributed between the fascicles.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:17:17.2:6",
+            "order": 6,
+            "title": "Anatomy of a Muscle Fibre",
+            "content_text": "Each muscle fibre is a cell lined by a plasma membrane called the sarcolemma, which encloses the sarcoplasm. The muscle fibre is a syncitium, meaning it contains multiple nuclei. The endoplasmic reticulum of the muscle fibre is called the sarcoplasmic reticulum and acts as a storehouse for calcium ions ($Ca^{2+}$).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:17:17.2:7",
+            "order": 7,
+            "title": "Myofibrils and Striation Proteins",
+            "content_text": "The sarcoplasm contains many parallelly arranged filaments called myofilaments or myofibrils. These myofibrils exhibit alternate dark and light bands, giving the muscle its striated appearance. This pattern is due to the distribution of two proteins: Actin and Myosin. The light bands, which contain actin, are called I-bands or Isotropic bands. The dark bands are called 'A' or Anisotropic bands and contain The myofibrils contain actin and myosin proteins organized as parallel, rod-like structures aligned with the longitudinal axis. Actin filaments are significantly thinner than myosin filaments, leading to their classification as thin and thick filaments, respectively. Within the myofibril, 'I' bands are bisected by an elastic fiber known as the 'Z' line, to which thin filaments are securely attached. Conversely, thick filaments in the 'A' band are held together centrally by a thin fibrous membrane called the 'M' line. These bands alternate along the myofibril's length.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:17:17.2:8",
+            "order": 8,
+            "title": "The Sarcomere and H-Zone",
+            "content_text": "The functional unit of muscle contraction is the sarcomere, defined as the segment of a myofibril located between two consecutive 'Z' lines. In a relaxed state, the thick filaments are only partially overlapped by thin filaments at their edges. The central region of the thick filament that remains uncovered by thin filaments is designated as the 'H' zone.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 17.2",
+                "description": "A diagrammatic representation of muscle fiber anatomy showing the arrangement of A and I bands, Z lines, the H zone, and the boundaries of a sarcomere.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:17:17.2.1",
+        "number": "17.2.1",
+        "title": "Structure of Contractile Proteins",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:17:17.2.1:1",
+            "order": 1,
+            "title": "Composition of the Actin Filament",
+            "content_text": "An actin (thin) filament consists of two 'F' (filamentous) actin strands wound helically. Each 'F' actin is a polymer composed of monomeric 'G' (globular) actins. Two additional filaments of tropomyosin run along the length of the 'F' actins. A complex protein called troponin is positioned at regular intervals on the tropomyosin. In a resting muscle, a specific subunit of troponin masks the active binding sites for myosin located on the actin filaments.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:17:17.2.1:2",
+            "order": 2,
+            "title": "Structure of the Myosin Filament",
+            "content_text": "The myosin (thick) filament is a polymerized protein made of monomeric units called meromyosins. Each meromyosin has two distinct parts: a globular head with a short arm, known as heavy meromyosin (HMM), and a tail, known as light meromyosin (LMM). The HMM component projects outward at specific angles and distances from the filament surface, forming the 'cross arm'. The globular head functions as an active ATPase enzyme and contains specific binding sites for both ATP and actin.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 17.3",
+                "description": "Structural details of (a) an actin filament showing F-actin, tropomyosin, and troponin, and (b) a myosin monomer (meromyosin) highlighting the head, cross arm, and binding sites.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:17:17.2.2",
+        "number": "17.2.2",
+        "title": "Mechanism of Muscle Contraction",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:17:17.2.2:1",
+            "order": 1,
+            "title": "The Sliding Filament Theory",
+            "content_text": "The most widely accepted explanation for muscle contraction is the sliding filament theory. This theory posits that muscle fiber contraction occurs when thin filaments slide over thick filaments, reducing the overall length of the sarcomere without changing the length of the filaments themselves.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:17:17.2.2:2",
+            "order": 2,
+            "title": "Neural Activation and Calcium Release",
+            "content_text": "Contraction begins with a signal from the central nervous system (CNS) delivered via a motor neuron. A motor neuron and its connected muscle fibers form a motor unit. The junction where the neuron meets the muscle fiber's sarcolemma is the neuromuscular junction or motor-end plate. A signal here triggers the release of the neurotransmitter acetylcholine, which generates an action potential in the sarcolemma. This potential spreads and causes the release of calcium ions ($Ca^{++}$) into the sarcoplasm.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:17:17.2.2:3",
+            "order": 3,
+            "title": "The Cross Bridge Cycle",
+            "content_text": "Increased $Ca^{++}$ levels lead to calcium binding with troponin, which unmasks the active sites on actin. Using energy from ATP hydrolysis, the myosin head binds to these exposed sites to form a cross bridge. The myosin head then rotates, pulling the attached actin filaments toward the center of the 'A' band. This action pulls the 'Z' lines inward, shortening the sarcomere (contraction). During this process, 'I' bands shorten while 'A' bands maintain their length. After the power stroke, ADP and $P_i$ are released, a new ATP molecule binds to the myosin head to break the cross bridge, and the cycle repeats as ATP is hydrolyzed again.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 17.4",
+                "description": "A cyclic diagram showing the stages of muscle contraction: cross bridge formation, the sliding/rotation (power stroke), breaking of the cross bridge upon ATP binding, and ATP hydrolysis to reset the myosin head.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:17:17.2.2:4",
+            "order": 4,
+            "title": "Muscle Relaxation and Fatigue",
+            "content_text": "The process of muscle contraction continues as long as the neural signal persists. Once the signal ceases, $Ca^{++}$ ions are actively pumped back into the sarcoplasmic cisternae. This removal of calcium ions results in the masking of the active sites on actin filaments by the troponin complex. Consequently, the myosin heads can no longer bind to actin, and the 'Z' lines return to their original relaxed positions. The reaction time of muscle fibres varies across different muscles. Repeated and strenuous activation of muscles can lead to the accumulation of lactic acid due to the anaerobic breakdown of glycogen stored within them, a condition known as muscle fatigue.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 17.5",
+                "description": "A diagrammatic representation of the sliding-filament theory showing three stages of a sarcomere: Relaxed, Contracting, and Maximally Contracted. It illustrates the movement of thin filaments (actin) towards the center, the shortening of the I band and H zone, while the A band remains constant in length.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:17:17.2.2:5",
+            "order": 5,
+            "title": "Red and White Muscle Fibres",
+            "content_text": "Muscles are classified into two types based on their myoglobin content and metabolic properties. Red fibres (aerobic muscles) contain a high content of the red-coloured oxygen-storing pigment called myoglobin. These fibres possess a large number of mitochondria, which utilize the stored oxygen for ATP production through aerobic respiration. In contrast, White fibres possess very little myoglobin, giving them a pale or whitish appearance. They have fewer mitochondria but a high amount of sarcoplasmic reticulum. White fibres primarily depend on anaerobic processes for energy production.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:17:17.3",
+        "number": "17.3",
+        "title": "Skeletal System",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:17:17.3:1",
+            "order": 1,
+            "title": "Overview of the Skeletal System",
+            "content_text": "The skeletal system consists of a framework of bones and a few cartilages, playing a significant role in body movement. Bone and cartilage are specialized connective tissues. Bone has a very hard matrix due to the presence of calcium salts, whereas cartilage has a slightly pliable matrix due to chondroitin salts. In humans, the skeletal system is composed of 206 bones and a few cartilages. It is divided into two principal divisions: the axial skeleton and the appendicular skeleton.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 17.6",
+                "description": "A diagrammatic lateral view of the human skull labeling various bones including the Frontal, Parietal, Temporal, Occipital, Sphenoid, Ethmoid, Lacrimal, Nasal, Zygomatic, Maxilla, and Mandible. It also shows the Hyoid bone and the Occipital condyle.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:17:17.3:2",
+            "order": 2,
+            "title": "The Axial Skeleton: The Skull",
+            "content_text": "The axial skeleton comprises 80 bones distributed along the main axis of the body, including the skull, vertebral column, sternum, and ribs. The skull is composed of two sets of bones—cranial and facial—totaling 22 bones. Cranial bones (8 in number) form the hard protective outer covering, the cranium, for the brain. The facial region is made up of 14 skeletal elements forming the front part of the skull. A single U-shaped bone called the hyoid is present at the base of the buccal cavity and is included in the skull. Each middle ear contains three tiny bones—Malleus, Incus, and Stapes—collectively called Ear Ossicles. The skull articulates with the superior region of the vertebral column with the help of two occipital condyles, making the human skull dicondylic.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:17:17.3:3",
+            "order": 3,
+            "title": "The Axial Skeleton: Vertebral Column",
+            "content_text": "The vertebral column is formed by 26 serially arranged units called vertebrae and is positioned dorsally. It extends from the base of the skull and constitutes the main framework of the trunk. Each vertebra has a central hollow portion called the neural canal through which the spinal cord passes. The first vertebra is the atlas, which articulates with the occipital condyles. The vertebral column is differentiated into five regions: cervical (7), thoracic (12), lumbar (5), sacral (1-fused), and coccygeal (1-fused). Most mammals, including humans, have seven cervical vertebrae. The vertebral column protects the spinal cord, supports the head, and serves as the point of attachment for the ribs and musculature of the back.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 17.7",
+                "description": "A right lateral view of the human vertebral column showing the different regions: Cervical vertebrae, Thoracic vertebrae, Lumbar vertebrae, Sacrum, and Coccyx, along with intervertebral discs.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:17:17.3:4",
+            "order": 4,
+            "title": "The Axial Skeleton: Sternum and Ribs",
+            "content_text": "The sternum is a flat bone located on the ventral midline of the thorax. There are 12 pairs of ribs. Each rib is a thin flat bone connected dorsally to the vertebral column and ventrally to the sternum. Ribs are bicephalic, meaning they have two articulation surfaces on their dorsal end. The first seven pairs are 'true ribs', attached dorsally to thoracic vertebrae and ventrally to the sternum via hyaline cartilage. The 8th, 9th, and 10th pairs are 'vertebrochondral' (false) ribs; they do not articulate directly with the sternum but join the 7th rib. The last two pairs (11th and 12th) are 'floating ribs' as they are not connected ventrally. Together, the thoracic vertebrae, ribs, and sternum form the rib cage.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 17.8",
+                "description": "A frontal view of the human rib cage showing the sternum, the 12 pairs of ribs (categorized into true, false, and floating ribs), and their connection to the vertebral column.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:17:17.3:5",
+            "order": 5,
+            "title": "The Appendicular Skeleton",
+            "content_text": "The appendicular skeleton consists of the bones of the limbs along with their supporting girdles. Each limb is composed of 30 bones. The bones of the hand (fore limb) are The bones of the hand (fore limb) are humerus, radius and ulna, carpals (wrist bones – 8 in number), metacarpals (palm bones – 5 in number) and phalanges (digits – 14 in number). The humerus is the long bone of the upper arm, while the radius and ulna are the two bones of the forearm. The carpals make up the wrist, the metacarpals form the palm, and the phalanges are the bones of the fingers. Together, these 30 bones constitute the forelimb.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 17.9",
+                "description": "Frontal view of the right pectoral girdle and upper arm, showing the clavicle, scapula, humerus, radius, ulna, carpals, metacarpals, and phalanges.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:17:17.3:6",
+            "order": 6,
+            "title": "Bones of the Hindlimb",
+            "content_text": "The bones of the legs (hind limb) consist of the femur (thigh bone – the longest bone), tibia and fibula (lower leg bones), tarsals (ankle bones – 7 in number), metatarsals (5 in number) and phalanges (digits – 14 in number). Like the forelimb, the hind limb is composed of 30 bones. A cup-shaped bone called the patella (knee cap) covers the knee ventrally.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 17.10",
+                "description": "Frontal view of the right pelvic girdle and lower limb bones, illustrating the ilium, pubis, ischium (forming the coxal bone), sacrum, femur, patella, tibia, fibula, tarsals, metatarsals, and phalanges.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:17:17.3:7",
+            "order": 7,
+            "title": "The Pectoral Girdle",
+            "content_text": "Pectoral girdle bones help in the articulation of the upper limbs with the axial skeleton. Each girdle is formed of two halves. Each half of the pectoral girdle consists of a clavicle and a scapula. The scapula is a large triangular flat bone situated in the dorsal part of the thorax between the second and the seventh ribs. The dorsal, flat, triangular body of the scapula has a slightly elevated ridge called the spine which projects as a flat, expanded process called the acromion. The clavicle articulates with this acromion. Below the acromion is a depression called the glenoid cavity which articulates with the head of the humerus to form the shoulder joint. Each clavicle is a long slender bone with two curvatures, commonly called the collar bone.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:17:17.3:8",
+            "order": 8,
+            "title": "The Pelvic Girdle",
+            "content_text": "The pelvic girdle consists of two coxal bones and helps in the articulation of the lower limbs with the axial skeleton. Each coxal bone is formed by the fusion of three bones – ilium, ischium and pubis. At the point of fusion of these bones is a cavity called the acetabulum to which the head of the femur (thigh bone) articulates. The two halves of the pelvic girdle meet ventrally to form the pubic symphysis containing fibrous cartilage.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:17:17.4",
+        "number": "17.4",
+        "title": "Joints",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:17:17.4:1",
+            "order": 1,
+            "title": "Introduction to Joints",
+            "content_text": "Joints are essential for all types of movements involving the bony parts of the body, including locomotory movements. They are points of contact between bones, or between bones and cartilages. Force generated by the muscles is used to carry out movement through joints, where the joint acts as a fulcrum. The movability at these joints varies depending on different factors. Joints are classified into three major structural forms: fibrous, cartilaginous, and synovial.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:17:17.4:2",
+            "order": 2,
+            "title": "Fibrous Joints",
+            "content_text": "Fibrous joints do not allow any movement. This type of joint is shown by the flat skull bones which fuse end-to-end with the help of dense fibrous connective tissues in the form of sutures, to form the cranium.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:17:17.4:3",
+            "order": 3,
+            "title": "Cartilaginous Joints",
+            "content_text": "In cartilaginous joints, the bones involved are joined together with the help of cartilages. This type of joint permits limited movements. The joint between the adjacent vertebrae in the vertebral column is of this pattern.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:17:17.4:4",
+            "order": 4,
+            "title": "Synovial Joints",
+            "content_text": "Synovial joints are characterised by the presence of a fluid filled synovial cavity between the articulating surfaces of the two bones. Such an arrangement allows considerable movement and helps in locomotion. Examples include: Ball and socket joint (between humerus and pectoral girdle), hinge joint (knee joint), pivot joint (between atlas and axis), gliding joint (between the carpals) and saddle joint (between carpal and metacarpal of thumb).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:17:17.5",
+        "number": "17.5",
+        "title": "Disorders of Muscular and Skeletal System",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:17:17.5:1",
+            "order": 1,
+            "title": "Common Disorders",
+            "content_text": "The following are common disorders of the muscular and skeletal systems: 1. Myasthenia gravis: Auto immune disorder affecting neuromuscular junction leading to fatigue, weakening and paralysis of skeletal muscle. 2. Muscular dystrophy: Progressive degeneration of skeletal muscle mostly due to genetic disorder. 3. Tetany: Rapid spasms (wild contractions) in muscle due to low $Ca^{++}$ in body fluid. 4. Arthritis: Inflammation of joints. 5. Osteoporosis: Age-related disorder characterised by decreased bone mass and increased chances of fractures; decreased levels of estrogen is a common cause. 6. Gout: Inflammation of joints due to accumulation of uric acid crystals.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:biology:11:17:ex:1",
+          "number": 1,
+          "problem": "Draw the diagram of a sarcomere of skeletal muscle showing different regions.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:17:ex:2",
+          "number": 2,
+          "problem": "Define sliding filament theory of muscle contraction.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:17:ex:3",
+          "number": 3,
+          "problem": "Describe the important steps in muscle contraction.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:17:ex:4",
+          "number": 4,
+          "problem": "Write true or false. If false change the statement so that it is true. (a) Actin is present in thin filament (b) H-zone of striated muscle fibre represents both thick and thin filaments. (c) Human skeleton has 206 bones. (d) There are 11 pairs of ribs in man. (e) Sternum is present on the ventral side of the body.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:17:ex:5",
+          "number": 5,
+          "problem": "Write the difference between : (a) Actin and Myosin (b) Red and White muscles (c) Pectoral and Pelvic girdle",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:17:ex:6",
+          "number": 6,
+          "problem": "Match Column I with Column II : Column I (a) Smooth muscle (b) Tropomyosin (c) Red muscle (d) Skull. Column II (i) Myoglobin (ii) Thin filament (iii) Sutures (iv) Involuntary",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:17:ex:7",
+          "number": 7,
+          "problem": "What are the different types of movements exhibited by the cells of human body?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:17:ex:8",
+          "number": 8,
+          "problem": "How do you distinguish between a skeletal muscle and a cardiac muscle?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:17:ex:9",
+          "number": 9,
+          "problem": "Name the type of joint between the following:- (a) atlas/axis (b) carpal/metacarpal of thumb (c) between phalanges (d) femur/acetabulum (e) between cranial bones (f) between pubic bones in the pelvic girdle",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:17:ex:10",
+          "number": 10,
+          "problem": "Fill in the blank spaces: (a) All mammals (except a few) have ___________ cervical vertebra. (b) The number of phalanges in each limb of human is ___________ (c) Thin filament of myofibril contains 2 ‘F’ actins and two other proteins namely ___________ and ___________. (d) In a muscle fibre $Ca^{++}$ is stored in ___________. (e) ___________ and ___________ pairs of ribs are called floating ribs. (f) The human cranium is made of ___________ bones.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        }
+      ]
+    }
+  }
+}

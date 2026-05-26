@@ -1,0 +1,1436 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_physics_11_ch9.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:physics:11:9",
+  "curriculum": "ncert",
+  "subject": "physics",
+  "grade": 11,
+  "textbook_name": "Physics Part II",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:physics:11:9",
+    "number": 9,
+    "title": "Mechanical Properties of Fluids",
+    "summary": "This chapter on Mechanical Properties of Fluids introduces the fundamental behavior of liquids and gases, collectively known as fluids. It begins by defining fluids and differentiating them from solids, then delves into pressure, defining it as force per unit area. Pascal's Law explains pressure transmission in fluids at rest, leading to applications like hydraulic lifts and brakes. The chapter explores how pressure varies with depth, introducing atmospheric and gauge pressure, and uses barometers and manometers for measurement.\n\nMoving into fluid dynamics, the concept of streamline flow is presented, contrasting it with turbulent flow, followed by Bernoulli's Principle, a statement of energy conservation in flowing fluids. This principle is applied to Torricelli's Law for efflux speed and dynamic lift phenomena like the Magnus effect and aircraft wing lift. Viscosity, the internal friction within a fluid, is then discussed, including Stokes' Law for viscous drag on a sphere and the concept of terminal velocity.\n\nFinally, the chapter examines surface tension, explaining its molecular origin and its effects, such as capillary rise, wetting, and the excess pressure inside drops and bubbles. The chapter builds from basic definitions of pressure and density to complex applications and phenomena, highlighting real-world applications and emphasizing the importance of fluid mechanics in various fields.",
+    "sections": [
+      {
+        "id": "ncert:physics:11:9:9.1",
+        "number": "9.1",
+        "title": "Introduction",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:9:9.1:1",
+            "order": 1,
+            "title": "Definition and Nature of Fluids",
+            "content_text": "Fluids are substances that can flow, a category that includes both liquids and gases. This ability to flow is the fundamental property that distinguishes them from solids. Fluids are ubiquitous, forming the Earth's atmosphere and covering two-thirds of its surface with water. In biological systems, fluids are essential for life, as most mammalian bodies consist primarily of water and all physiological processes in plants and animals are mediated by fluids.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.1:2",
+            "order": 2,
+            "title": "Comparison Between Solids, Liquids, and Gases",
+            "content_text": "Unlike solids, fluids do not have a definite shape of their own. While both solids and liquids have a fixed volume, gases expand to fill the entire volume of their container. A key distinction lies in compressibility: solids and liquids have much lower compressibility compared to gases, meaning their volume changes very little under external pressure. Furthermore, fluids offer very little resistance to shear stress; their shape changes significantly even under the application of very small shear stress. The shearing stress of fluids is approximately a million times smaller than that of solids.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:9:9.2",
+        "number": "9.2",
+        "title": "Pressure",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:9:9.2:1",
+            "order": 1,
+            "title": "Concept of Pressure",
+            "content_text": "Pressure is defined by the relationship between a force and the area over which it is applied. Everyday experiences, such as a sharp needle piercing skin while a blunt object with a wider contact area does not, demonstrate that the impact of a force depends on its coverage area. The smaller the area on which a force acts, the greater the impact or pressure.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.2:2",
+            "order": 2,
+            "title": "Force in Fluids at Rest",
+            "content_text": "When an object is submerged in a fluid at rest, the fluid exerts a force on its surface that is always normal (perpendicular) to the surface at every point. This is because if there were a component of force parallel to the surface, the fluid would exert a counter-force (by Newton's third law) causing it to flow. Since the fluid is at rest, such parallel components cannot exist. This normal force can be measured using an idealised device consisting of an evacuated chamber with a spring-calibrated piston.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 9.1",
+                "description": "(a) A diagram showing a submerged object in a beaker of liquid, with arrows indicating that the force exerted by the liquid is normal to the object's surface and the beaker walls at all points. (b) An idealised pressure-measuring device consisting of a piston of area ΔA and a spring inside an evacuated chamber.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.2:3",
+            "order": 3,
+            "title": "Mathematical Definition of Pressure",
+            "content_text": "If $F$ is the magnitude of the normal force acting on a piston of area $A$, the average pressure $P_{av}$ is defined as the normal force acting per unit area: $$P_{av} = \\frac{F}{A}$$ (Eq. 9.1). In a more precise limiting sense, pressure $P$ at a point is defined as: $$P = \\lim_{\\Delta A \\to 0} \\frac{\\Delta F}{\\Delta A}$$ (Eq. 9.2). Pressure is a scalar quantity. Its dimensions are $[ML^{-1}T^{-2}]$ and its SI unit is the pascal (Pa), where $1 \\text{ Pa} = 1 \\text{ N m}^{-2}$. A common unit is the atmosphere (atm), defined as the pressure exerted by the atmosphere at sea level: $1 \\text{ atm} = 1.013 \\times 10^5 \\text{ Pa}$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.2:4",
+            "order": 4,
+            "title": "Density and Relative Density",
+            "content_text": "Density $\\rho$ for a fluid of mass $m$ occupying volume $V$ is defined as: $$\\rho = \\frac{m}{V}$$ (Eq. 9.3). It is a positive scalar quantity with SI units $kg m^{-3}$ and dimensions $[ML^{-3}]$. Liquids are largely incompressible, so their density remains nearly constant across pressures, whereas gas densities vary significantly. Relative density is the dimensionless ratio of a substance's density to the density of water at $4^{\\circ}C$ ($1.0 \\times 10^3 kg m^{-3}$). For example, the relative density of aluminium is 2.7.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 9.1",
+                "caption": "Densities of some common fluids at STP (0°C and 1 atm)",
+                "headers": [
+                  "Fluid",
+                  "$\\rho (kg m^{-3})$"
+                ],
+                "rows": [
+                  [
+                    "Water",
+                    "1.00 \\times 10^3"
+                  ],
+                  [
+                    "Sea water",
+                    "1.03 \\times 10^3"
+                  ],
+                  [
+                    "Mercury",
+                    "13.6 \\times 10^3"
+                  ],
+                  [
+                    "Ethyl alcohol",
+                    "0.806 \\times 10^3"
+                  ],
+                  [
+                    "Whole blood",
+                    "1.06 \\times 10^3"
+                  ],
+                  [
+                    "Air",
+                    "1.29"
+                  ],
+                  [
+                    "Oxygen",
+                    "1.43"
+                  ],
+                  [
+                    "Hydrogen",
+                    "9.0 \\times 10^{-2}"
+                  ],
+                  [
+                    "Interstellar space",
+                    "\\approx 10^{-20}"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:physics:11:9:9.2:5",
+            "order": 5,
+            "title": "Example 9.1: Pressure on Femurs",
+            "content_text": "This example calculates the average pressure sustained by human thigh bones (femurs) supporting the upper body weight.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 9.1",
+                "problem": "The two thigh bones (femurs), each of cross-sectional area $10 \\text{ cm}^2$ support the upper part of a human body of mass $40 \\text{ kg}$. Estimate the average pressure sustained by the femurs.",
+                "solution": "Total cross-sectional area of the femurs is $A = 2 \\times 10 \\text{ cm}^2 = 20 \\times 10^{-4} \\text{ m}^2$. The force acting on them is $F = 40 \\text{ kg wt} = 400 \\text{ N}$ (taking $g = 10 \\text{ m s}^{-2}$). This force acts vertically down and normally on the femurs. Thus, the average pressure is: $P_{av} = \\frac{F}{A} = \\frac{400}{20 \\times 10^{-4}} = 2 \\times 10^5 \\text{ N m}^{-2}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:9:9.2.1",
+        "number": "9.2.1",
+        "title": "Pascal's Law",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:9:9.2.1:1",
+            "order": 1,
+            "title": "Statement and Proof of Pascal's Law",
+            "content_text": "Pascal's Law states that the pressure in a fluid at rest is the same at all points if they are at the same height. This can be proven by considering a small right-angled prismatic element (ABC-DEF) within a fluid. Since the element is in equilibrium, the horizontal and vertical forces must balance. For the element shown in Fig 9.2, the forces $F_a, F_b, F_c$ acting on faces of area $A_a, A_b, A_c$ satisfy: $F_b \\sin \\theta = F_c$ and $F_b \\cos \\theta = F_a$. Geometrically, $A_b \\sin \\theta = A_c$ and $A_b \\cos \\theta = A_a$. Dividing these gives: $$\\frac{F_b}{A_b} = \\frac{F_c}{A_c} = \\frac{F_a}{A_a} \\implies P_b = P_c = P_a$$ (Eq. 9.4). This confirms pressure is the same in all directions and is a scalar.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 9.2",
+                "description": "A diagram showing a small right-angled prismatic fluid element ABC-DEF submerged in a liquid. Arrows represent normal forces Fa, Fb, and Fc acting on the respective faces of the prism to demonstrate pressure equilibrium.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:9:9.2.2",
+        "number": "9.2.2",
+        "title": "Variation of Pressure with Depth",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:9:9.2.2:1",
+            "order": 1,
+            "title": "Pressure-Depth Relationship Derivation",
+            "content_text": "To find how pressure varies with depth, consider a cylindrical fluid element at rest with base area $A$ and height $h$. Let the pressure at the top (point 1) be $P_1$ and at the bottom (point 2) be $P_2$. The vertical forces acting on the cylinder are the downward force $P_1 A$, the upward force $P_2 A$, and the weight of the fluid $mg$ acting downward. For equilibrium: $(P_2 - P_1) A = mg$ (Eq. 9.5). Substituting mass $m = \\rho V = \\rho h A$, we get: $$P_2 - P_1 = \\rho g h$$ (Eq. 9.6). This shows that pressure increases linearly with depth in a fluid of uniform density. Pressure difference depends on the vertical distance $h$ between two points, the mass density of the fluid $\\rho$, and the acceleration due to gravity $g$. If point 1 is shifted to the top of the fluid (e.g., water) which is open to the atmosphere, the pressure $P_1$ can be replaced by atmospheric pressure $P_a$. Replacing $P_2$ with $P$, the relationship becomes: $$P = P_a + \\rho g h$$ (Eq. 9.7). This equation shows that the absolute pressure $P$ at a depth $h$ below the surface of a liquid open to the atmosphere is greater than atmospheric pressure by an amount $\\rho g h$. The excess pressure, $P - P_a$, at depth $h$ is defined as the **gauge pressure** at that point. This linear increase in pressure with depth is a fundamental property of fluids of uniform density.",
+            "content_type": "derivation",
+            "worked_examples": [
+              {
+                "label": "Example 9.2",
+                "problem": "What is the pressure on a swimmer 10 m below the surface of a lake?",
+                "solution": "Here $h = 10$ m and $\\rho = 1000$ kg m$^{-3}$. Take $g = 10$ m s$^{-2}$. From Eq. (9.7): $P = P_a + \\rho g h = 1.01 \\times 10^5$ Pa + $1000$ kg m$^{-3} \\times 10$ m s$^{-2} \\times 10$ m $= 2.01 \\times 10^5$ Pa $\\approx 2$ atm. This is a 100% increase in pressure from surface level. At a depth of 1 km, the increase in pressure is 100 atm! Submarines are designed to withstand such enormous pressures."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Fig 9.3",
+                "description": "A vertical cylindrical column of fluid of height h and area A immersed in a fluid. Arrows indicate pressure forces acting on the sides and top/bottom surfaces. The weight mg acts downwards.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.2.2:2",
+            "order": 2,
+            "title": "Hydrostatic Paradox",
+            "content_text": "The expression for absolute pressure $P = P_a + \\rho g h$ does not include the area of the cylinder. This implies that the height of the fluid column is the determining factor for pressure, rather than the cross-sectional area, base area, or the shape of the container. Consequently, liquid pressure is identical at all points at the same horizontal level (same depth). This phenomenon is known as the **hydrostatic paradox**. As illustrated in Fig 9.4, three vessels of different shapes (A, B, and C) connected at the bottom will maintain the same liquid level when filled, despite holding different total amounts of water. This occurs because the water at the bottom has the same pressure below each section of the vessel.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 9.4",
+                "description": "Illustration of hydrostatic paradox. Three vessels A, B and C of different shapes (widening, narrowing, and cylindrical) contain different amounts of liquids, all up to the same height, connected by a horizontal pipe at the base.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:9:9.2.3",
+        "number": "9.2.3",
+        "title": "Atmospheric Pressure and Gauge Pressure",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:9:9.2.3:1",
+            "order": 1,
+            "title": "Measurement of Atmospheric Pressure: The Mercury Barometer",
+            "content_text": "Atmospheric pressure at any point is equal to the weight of a column of air of unit cross-sectional area extending from that point to the top of the atmosphere. At sea level, its value is approximately $1.013 \\times 10^5$ Pa. Evangelista Torricelli (1608–1647) devised the 'mercury barometer' to measure this. It consists of a long glass tube closed at one end, filled with mercury, and inverted into a trough of mercury. The space above the mercury in the tube is a vacuum (containing only negligible mercury vapour), so pressure at the top (Point A) is zero. The pressure at Point B inside the tube must equal the pressure at Point C outside (atmospheric pressure $P_a$) because they are at the same level. Thus: $$P_a = \\rho g h$$ (Eq. 9.8), where $\\rho$ is the density of mercury and $h$ is the height of the mercury column.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 9.5 (a)",
+                "description": "The mercury barometer: A glass tube inverted in a trough of mercury. The height h of the mercury column is measured from the surface of the mercury in the trough to the top of the column.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.2.3:2",
+            "order": 2,
+            "title": "Units of Pressure",
+            "content_text": "At sea level, the mercury column in a barometer typically has a height of about 76 cm, which is equivalent to one atmosphere (1 atm). Pressure is often stated in terms of cm or mm of mercury (Hg). A pressure equivalent of 1 mm Hg is called a **torr**: $1 \\text{ torr} = 133 \\text{ Pa}$. These units are common in medicine and physiology. In meteorology, the **bar** and **millibar** are used: $1 \\text{ bar} = 10^5 \\text{ Pa}$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.2.3:3",
+            "order": 3,
+            "title": "The Open Tube Manometer",
+            "content_text": "An open tube manometer measures pressure differences. It consists of a U-tube containing a liquid (low density like oil for small differences, high density like mercury for large differences). One end is open to the atmosphere ($P_a$) and the other is connected to the system being measured. The pressure $P$ at point A equals the pressure at point B. The gauge pressure $P - P_a$ is proportional to the height difference $h$ of the liquid columns: $P - P_a = \\rho g h$. While liquids are largely treated as incompressible (density remains constant), gases exhibit large density variations with changes in pressure and temperature.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 9.5 (b)",
+                "description": "The open tube manometer: A U-shaped tube with one end connected to a system of pressure P and the other open to atmospheric pressure Pa. The difference in liquid levels is h.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.2.3:4",
+            "order": 4,
+            "title": "Atmospheric and Oceanic Pressure Calculations",
+            "content_text": "Calculations involving atmospheric height and oceanic depth help illustrate pressure concepts. Note that in reality, air density and $g$ decrease with altitude, and the atmosphere extends over 100 km. Additionally, sea level pressure varies; a drop in mercury level by 10 mm or more often signals an approaching storm.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 9.3",
+                "problem": "The density of the atmosphere at sea level is 1.29 kg/m$^3$. Assume that it does not change with altitude. Then how high would the atmosphere extend?",
+                "solution": "We use Eq. (9.7): $\\rho g h = 1.29$ kg m$^{-3} \\times 9.8$ m s$^{-2} \\times h$ m $= 1.01 \\times 10^5$ Pa. Therefore, $h = 7989$ m $\\approx 8$ km."
+              },
+              {
+                "label": "Example 9.4",
+                "problem": "At a depth of 1000 m in an ocean (a) what is the absolute pressure? (b) What is the gauge pressure? (c) Find the force acting on the window of area 20 cm $\\times$ 20 cm of a submarine at this depth, the interior of which is maintained at sea-level atmospheric pressure. (The density of sea water is $1.03 \\times 10^3$ kg m$^{-3}$, $g = 10$ m s$^{-2}$.)",
+                "solution": "Here $h = 1000$ m and $\\rho = 1.03 \\times 10^3$ kg m$^{-3}$. (a) Absolute pressure $P = P_a + \\rho g h = 1.01 \\times 10^5$ Pa + $(1.03 \\times 10^3$ kg m$^{-3} \\times 10$ m s$^{-2} \\times 1000$ m) $= 104.01 \\times 10^5$ Pa $\\approx 104$ atm. (b) Gauge pressure $P_g = P - P_a = \\rho g h = 103 \\times 10^5$ Pa $\\approx 103$ atm. (c) The net pressure acting on the window is the gauge pressure $P_g$ (since internal pressure is $P_a$). Area $A = 0.2$ m $\\times 0.2$ m $= 0.04$ m$^2$. Force $F = P_g A = 103 \\times 10^5$ Pa $\\times 0.04$ m$^2 = 4.12 \\times 10^5$ N."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:9:9.2.4",
+        "number": "9.2.4",
+        "title": "Hydraulic Machines",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:9:9.2.4:1",
+            "order": 1,
+            "title": "Pascal's Law for Pressure Transmission",
+            "content_text": "A fundamental principle of fluid mechanics states: **whenever external pressure is applied on any part of a fluid contained in a vessel, it is transmitted undiminished and equally in all directions.** This is another form of Pascal's law. It can be demonstrated by a horizontal cylinder with a piston and multiple vertical tubes; pushing the piston causes the fluid level to rise equally in all tubes. This principle is the basis for devices like hydraulic lifts and hydraulic brakes.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 9.6 (a)",
+                "description": "A horizontal cylinder with a piston at the left end and three vertical tubes of different shapes (A, B, C) on top. Pushing the piston transmits pressure equally, raising the fluid to the same height in all tubes.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.2.4:2",
+            "order": 2,
+            "title": "The Hydraulic Lift",
+            "content_text": "In a hydraulic lift, two pistons of different cross-sectional areas $A_1$ and $A_2$ are connected by a liquid-filled space. A small force $F_1$ applied to the smaller piston $A_1$ creates a pressure $P = F_1 / A_1$. This pressure is transmitted undiminished to the larger piston $A_2$, resulting in an upward force: $$F_2 = P A_2 = \\frac{F_1 A_2}{A_1}$$ Since $A_2 > A_1$, the output force $F_2$ is much larger than $F_1$. The ratio $A_2 / A_1$ is called the **mechanical advantage** of the device, allowing it to lift heavy loads like cars with minimal effort.",
+            "content_type": "derivation",
+            "worked_examples": [
+              {
+                "label": "Example 9.5",
+                "problem": "Two syringes of different cross-sections (without needles) filled with water are connected with a tightly fitted rubber tube filled with water. Diameters of the smaller piston and larger piston are 1.0 cm and 3.0 cm respectively. (a) Find the force exerted on the larger piston when a force of 10 N is applied to the smaller piston. (b) If the smaller piston is pushed in through 6.0 cm, how much does the larger piston move out?",
+                "solution": "Answer (a) Since pressure is transmitted undiminished throughout the fluid, [CONTINUES]"
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Fig 9.6 (b)",
+                "description": "Schematic of a hydraulic lift. A small piston with area A1 receives force F1. The pressure is transmitted through the fluid to a large piston with area A2, which exerts an upward force F2 to lift a car.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.2.4:3",
+            "order": 3,
+            "title": "Example Calculation for Hydraulic Lift",
+            "content_text": "In a hydraulic system, the force $F_2$ exerted by the larger piston is related to the force $F_1$ on the smaller piston by the ratio of their areas: $F_2 = \\frac{A_2}{A_1} F_1$. For instance, if $F_1 = 10$ N and the radii are $1/2 \\times 10^{-2}$ m and $3/2 \\times 10^{-2}$ m, then $F_2 = \\frac{\\pi(3/2 \\times 10^{-2} \\text{ m})^2}{\\pi(1/2 \\times 10^{-2} \\text{ m})^2} \\times 10 \\text{ N} = 90 \\text{ N}$. Furthermore, since water is considered perfectly incompressible, the volume displaced by the smaller piston moving inwards must equal the volume moved outwards by the larger piston: $L_1 A_1 = L_2 A_2$. Thus, the distance moved by the larger piston $L_2 = \\frac{A_1}{A_2} L_1$. If $L_1 = 6 \\times 10^{-2}$ m, then $L_2 \\simeq 0.67 \\times 10^{-2} \\text{ m} = 0.67 \\text{ cm}$. Note that atmospheric pressure is common to both pistons and is typically ignored in these calculations.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.2.4:4",
+            "order": 4,
+            "title": "Example 9.6: Car Lift Calculation",
+            "content_text": "This example demonstrates the application of Pascal's law in a car lift where compressed air transmits pressure to a large piston to lift a heavy vehicle.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 9.6",
+                "problem": "In a car lift compressed air exerts a force $F_1$ on a small piston having a radius of $5.0$ cm. This pressure is transmitted to a second piston of radius $15$ cm (Fig 9.7). If the mass of the car to be lifted is $1350$ kg, calculate $F_1$. What is the pressure necessary to accomplish this task? ($g = 9.8 \\text{ ms}^{-2}$).",
+                "solution": "Since pressure is transmitted undiminished throughout the fluid, $F_1 = \\frac{A_1}{A_2} F_2 = \\frac{\\pi(5 \\times 10^{-2} \\text{ m})^2}{\\pi(15 \\times 10^{-2} \\text{ m})^2} (1350 \\text{ kg} \\times 9.8 \\text{ m s}^{-2}) = 1470 \\text{ N} \\approx 1.5 \\times 10^3 \\text{ N}$. The air pressure that will produce this force is $P = \\frac{F_1}{A_1} = \\frac{1.5 \\times 10^3 \\text{ N}}{\\pi(5 \\times 10^{-2})^2 \\text{ m}} = 1.9 \\times 10^5 \\text{ Pa}$. This is almost double the atmospheric pressure."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.2.4:5",
+            "order": 5,
+            "title": "Hydraulic Brakes",
+            "content_text": "Hydraulic brakes in automobiles work on the same principle as the hydraulic lift. When a small force is applied to the brake pedal, the master piston moves inside the master cylinder. The resulting pressure is transmitted through the brake oil to larger pistons attached to the wheels. These larger pistons push the brake shoes against the brake lining, creating a large retarding force. An important advantage is that the pressure set up by the pedal is transmitted equally to all cylinders, ensuring equal braking effort on all wheels.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:9:9.3",
+        "number": "9.3",
+        "title": "Streamline Flow",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:9:9.3:1",
+            "order": 1,
+            "title": "Introduction to Fluid Dynamics and Steady Flow",
+            "content_text": "The study of fluids in motion is known as fluid dynamics. When fluid flow is smooth, it is often characterized as steady flow. Flow is said to be steady if at any given point, the velocity of each passing fluid particle remains constant in time. While the velocity of a particle may change as it moves from one point to another, every particle passing through a specific point behaves exactly like the previous particle that passed that point. In steady flow, each particle follows a smooth path, and the paths of particles do not cross each other.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.3:2",
+            "order": 2,
+            "title": "Streamlines",
+            "content_text": "The path taken by a fluid particle under steady flow is called a streamline. It is defined as a curve whose tangent at any point is in the direction of the fluid velocity at that point. A curve like $PQ$ in Fig. 9.7(a) acts as a permanent map of fluid flow. No two streamlines can cross; if they did, an oncoming fluid particle could go either way, and the flow would not be steady. In steady flow, the map of flow is stationary in time.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 9.7",
+                "description": "(a) A typical trajectory of a fluid particle showing points P and Q. (b) A region of streamline flow showing a bundle of streamlines passing through cross-sections at P, R, and Q.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.3:3",
+            "order": 3,
+            "title": "Equation of Continuity",
+            "content_text": "Consider planes perpendicular to the direction of fluid flow at points $P$, $R$, and $Q$ with areas $A_P$, $A_R$, and $A_Q$. Let the speeds be $v_P$, $v_R$, and $v_Q$. The mass of fluid $\\Delta m_P$ crossing $A_P$ in time $\\Delta t$ is $\\rho_P A_P v_P \\Delta t$. For an incompressible fluid where density $\\rho$ is constant, the mass flowing in must equal the mass flowing out. Thus, $\\rho A_P v_P \\Delta t = \\rho A_R v_R \\Delta t = \\rho A_Q v_Q \\Delta t$. This simplifies to $A_P v_P = A_R v_R = A_Q v_Q$, or more generally, $Av = \\text{constant}$. This is called the equation of continuity, representing the conservation of mass in the flow of incompressible fluids. $Av$ gives the volume flux or flow rate. Consequently, where streamlines are closely spaced (narrower portions), velocity increases.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.3:4",
+            "order": 4,
+            "title": "Turbulent Flow",
+            "content_text": "Steady flow is achieved at low flow speeds. Beyond a limiting value called the critical speed, the flow loses steadiness and becomes turbulent. Turbulent flow is characterized by whirlpool-like regions called 'white water rapids'. In such flow, velocities at different points may have different magnitudes and directions that are not parallel, as shown in Fig. 9.8(b).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 9.8",
+                "description": "(a) Some streamlines for fluid flow (laminar). (b) A jet of air striking a flat plate placed perpendicular to it, showing an example of turbulent flow with eddies.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:9:9.4",
+        "number": "9.4",
+        "title": "Bernoulli's Principle",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:9:9.4:1",
+            "order": 1,
+            "title": "Introduction to Bernoulli's Principle",
+            "content_text": "Bernoulli's principle relates the pressure difference between two points in a pipe to both velocity changes (kinetic energy change) and elevation changes (potential energy change). It was developed by Daniel Bernoulli in 1738 and is essentially a statement of the conservation of energy for flowing fluids. It assumes the fluid is incompressible and the flow is steady.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.4:2",
+            "order": 2,
+            "title": "Derivation of Bernoulli's Equation",
+            "content_text": "Consider fluid moving in a pipe of varying cross-section and height (Fig. 9.9). In time $\\Delta t$, fluid at the left end (area $A_1$, speed $v_1$) moves a distance $v_1 \\Delta t$. The work done on this fluid is $W_1 = P_1 A_1 (v_1 \\Delta t) = P_1 \\Delta V$. At the right end (area $A_2$, speed $v_2$), the work done by the fluid is $W_2 = P_2 A_2 (v_2 \\Delta t) = P_2 \\Delta V$. The total work done is $(P_1 - P_2) \\Delta V$. This work goes into changing the kinetic energy $\\Delta K = \\frac{1}{2} \\rho \\Delta V (v_2^2 - v_1^2)$ and the potential energy $\\Delta U = \\rho g \\Delta V (h_2 - h_1)$. By the work-energy theorem, $(P_1 - P_2) \\Delta V = \\frac{1}{2} \\rho \\Delta V (v_2^2 - v_1^2) + \\rho g \\Delta V (h_2 - h_1)$. Dividing by $\\Delta V$ and rearranging gives $P_1 + \\frac{1}{2} \\rho v_1^2 + \\rho g h_1 = P_2 + \\frac{1}{2} \\rho v_2^2 + \\rho g h_2$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 9.9",
+                "description": "The flow of an ideal fluid in a pipe of varying cross section. The fluid in a section of length $v_1 \\Delta t$ moves to the section of length $v_2 \\Delta t$ in time $\\Delta t$. Heights $h_1$ and $h_2$ are measured from a reference level.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.4:3",
+            "order": 3,
+            "title": "Bernoulli's Equation and Limitations",
+            "content_text": "Bernoulli's equation states: $P + \\frac{1}{2} \\rho v^2 + \\rho g h = \\text{constant}$. In words, along a streamline, the sum of the pressure ($P$), the kinetic energy per unit volume ($\\frac{\\rho v^2}{2}$), and the potential energy per unit volume ($\\rho gh$) remains constant. Limitations include: 1. It assumes no energy is lost due to internal friction (viscosity). 2. It applies to incompressible fluids. 3. It does not hold for non-steady or turbulent flows where velocity and pressure fluctuate. When a fluid is at rest ($v=0$), the equation reduces to $P_1 + \\rho g h_1 = P_2 + \\rho g h_2$, which is the same as the static pressure variation law.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:9:9.4.1",
+        "number": "9.4.1",
+        "title": "Speed of Efflux: Torricelli's Law",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:9:9.4.1:1",
+            "order": 1,
+            "title": "Concept of Efflux",
+            "content_text": "The word efflux means fluid outflow. Torricelli discovered that the speed of efflux from an open tank is given by a formula identical to that of a freely falling body. Consider a tank containing a liquid of density $\\rho$ with a small hole in its side at a height $y_1$ from the bottom. The air above the liquid, whose surface is at height $y_2$, is at pressure $P$. From the equation of continuity, $v_1 A_1 = v_2 A_2$, so $v_2 = \\frac{A_1}{A_2} v_1$ If the cross-sectional area of the tank $A_2$ is much larger than that of the hole ($A_2 >> A_1$), we may take the fluid to be approximately at rest at the top, i.e., $v_2 \\approx 0$. Applying the Bernoulli equation at points 1 (the hole) and 2 (the surface) and noting that at the hole $P_1 = P_a$ (atmospheric pressure), we have: $P_a + \\frac{1}{2}\\rho v_1^2 + \\rho g y_1 = P + \\rho g y_2$. Taking $y_2 - y_1 = h$, we derive the speed of efflux as $v_1 = \\sqrt{2g h + \\frac{2(P - P_a)}{\\rho}}$. In situations like rocket propulsion, where $P >> P_a$, the term $2gh$ may be ignored, and the speed of efflux is determined primarily by the container pressure.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 9.10",
+                "description": "A container filled with liquid to height y2, with a small hole at height y1. The pressure at the top surface is P and the pressure at the hole is atmospheric pressure Pa. The speed of efflux is v1.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.4.1:2",
+            "order": 2,
+            "title": "Torricelli's Law Statement",
+            "content_text": "If the tank is open to the atmosphere, then $P = P_a$. In this case, the equation for efflux speed simplifies to $v_1 = \\sqrt{2gh}$. This formula is identical to the speed attained by a body falling freely from rest through a height $h$. This result is known as Torricelli's law, which states that the speed of efflux from an open tank is equal to the speed a free-falling body would acquire in falling through the same vertical distance.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:9:9.4.2",
+        "number": "9.4.2",
+        "title": "Dynamic Lift",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:9:9.4.2:1",
+            "order": 1,
+            "title": "Concept of Dynamic Lift",
+            "content_text": "Dynamic lift is the force that acts on a body, such as an airplane wing, a hydrofoil, or a spinning ball, by virtue of its motion through a fluid. This force causes deviations from normal trajectories, such as a spinning ball curving in the air. These phenomena can be explained using Bernoulli's principle by analyzing the pressure differences created by variations in fluid velocity around the object.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.4.2:2",
+            "order": 2,
+            "title": "Magnus Effect",
+            "content_text": "The Magnus effect explains the dynamic lift on a spinning ball. (i) Ball moving without spin: The streamlines are symmetric, and the fluid velocity above and below the ball is the same, resulting in zero pressure difference and no net vertical force. (ii) Ball moving with spin: A spinning ball drags air along with it. If the ball moves forward, the air moves backward relative to it. On the side where the ball's surface moves in the same direction as the air flow, the velocity increases. On the opposite side, the velocity decreases. This velocity difference creates a pressure difference (lower pressure where velocity is higher), resulting in a net upward force called the Magnus effect.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 9.11 (a) and (b)",
+                "description": "(a) Symmetric streamlines around a non-spinning ball. (b) Crowded streamlines above a spinning ball indicating higher velocity and lower pressure, leading to dynamic lift.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.4.2:3",
+            "order": 3,
+            "title": "Aerofoil or Lift on Aircraft Wing",
+            "content_text": "An aerofoil is a solid piece shaped to provide upward dynamic lift when moving horizontally through air. The cross-section of an aircraft wing is shaped such that the streamlines crowd together more above the wing than below it. This causes the flow speed on top to be higher than the speed below. According to Bernoulli's principle, the pressure on the upper surface is lower than on the lower surface. This pressure difference results in an upward force (dynamic lift) that balances the weight of the plane.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 9.11 (c)",
+                "description": "Streamlines around an aerofoil showing crowding on the upper surface, indicating higher velocity and lower pressure.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.4.2:4",
+            "order": 4,
+            "title": "Example 9.7: Aircraft Lift Calculation",
+            "content_text": "This example demonstrates how to estimate the pressure difference and fractional speed increase required for a Boeing aircraft to maintain level flight.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 9.7",
+                "problem": "A fully loaded Boeing aircraft has a mass of $3.3 \\times 10^5$ kg. Its total wing area is $500$ m$^2$. It is in level flight with a speed of $960$ km/h. (a) Estimate the pressure difference between the lower and upper surfaces of the wings (b) Estimate the fractional increase in the speed of the air on the upper surface of the wing relative to the lower surface. [The density of air is $\\rho = 1.2$ kg m$^{-3}$]",
+                "solution": "(a) The weight of the Boeing aircraft is balanced by the upward force due to the pressure difference: $\\Delta P \\cdot A = mg$. $\\Delta P = (3.3 \\times 10^5 \\text{ kg} \\times 9.8 \\text{ m s}^{-2}) / 500 \\text{ m}^2 = 6.5 \\times 10^3 \\text{ N m}^{-2}$. (b) Ignoring the small height difference, $\\Delta P = \\frac{\\rho}{2}(v_2^2 - v_1^2) = \\frac{\\rho}{2}(v_2 - v_1)(v_2 + v_1)$. Let $v_{av} = (v_2 + v_1)/2 = 960 \\text{ km/h} = 267 \\text{ m s}^{-1}$. Then $(v_2 - v_1) = \\frac{\\Delta P}{\\rho v_{av}}$. The fractional increase is $(v_2 - v_1)/v_{av} = \\frac{\\Delta P}{\\rho v_{av}^2} \\approx \\frac{6.5 \\times 10^3}{1.2 \\times (267)^2} \\approx 0.08$. The speed above the wing needs to be only 8% higher than that below."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:9:9.5",
+        "number": "9.5",
+        "title": "Viscosity",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:9:9.5:1",
+            "order": 1,
+            "title": "Definition of Viscosity",
+            "content_text": "Most fluids are not ideal and offer resistance to motion. This resistance, which acts like internal friction between layers of fluid in relative motion, is called viscosity. When a fluid flows, the layer in contact with a surface has the same velocity as the surface. In a flow between a fixed bottom plate and a moving top plate, the velocities of layers increase uniformly from zero at the bottom to the velocity of the top layer.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.5:2",
+            "order": 2,
+            "title": "Laminar Flow and Shearing Stress",
+            "content_text": "In laminar flow, layers of liquid slide over one another. If a horizontal force $F$ is applied to the top layer of area $A$, the fluid undergoes a shear strain. Over a time interval $\\Delta t$, the strain is $\\Delta x / l$, where $l$ is the separation between plates. Unlike solids, the stress in a flowing fluid depends on the 'rate of change of strain' or 'strain rate', given by $\\frac{\\Delta x}{l \\Delta t} = v/l$, where $v$ is the velocity of the top plate.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 9.12",
+                "description": "(a) A layer of liquid between two parallel plates, with the top plate moving at velocity v. (b) Velocity distribution for viscous flow in a pipe, showing maximum velocity at the axis and zero at the walls.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.5:3",
+            "order": 3,
+            "title": "Coefficient of Viscosity",
+            "content_text": "The coefficient of viscosity (denoted by the Greek letter $\\eta$, 'eta') for a fluid is defined as the ratio of shearing stress to the strain rate: $\\eta = \\frac{F/A}{v/l} = \\frac{Fl}{vA}$. The SI unit of viscosity is poiseuille (Pl). Other common units are $N s m^{-2}$ or $Pa s$. The dimensions of viscosity are $[ML^{-1}T^{-1}]$. Thin liquids like water and alcohol have lower viscosity than thick liquids like coal tar or blood.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.5:4",
+            "order": 4,
+            "title": "Temperature Dependence of Viscosity",
+            "content_text": "The viscosity of liquids generally decreases as temperature increases. Conversely, the viscosity of gases increases with an increase in temperature. For example, blood is 'thicker' (more viscous) than water, and its relative viscosity remains constant between $0^{\\circ}C$ and $37^{\\circ}C$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.5:5",
+            "order": 5,
+            "title": "Example 9.8: Measuring Viscosity",
+            "content_text": "This example illustrates how to calculate the coefficient of viscosity using a moving block on a liquid film.\nThe metal block moves to the right because of the tension in the string. The tension $T$ is equal in magnitude to the weight of the suspended mass $m$. Thus, the shear force $F$ is $F = T = mg = 0.010 \\text{ kg} \\times 9.8 \\text{ m s}^{-2} = 9.8 \\times 10^{-2} \\text{ N}$. The shear stress on the fluid is $F/A = \\frac{9.8 \\times 10^{-2}}{0.10} \\text{ N/m}^2$. The strain rate is $v/l = \\frac{0.085}{0.30 \\times 10^{-3}}$. The coefficient of viscosity is $\\eta = \\frac{\\text{stress}}{\\text{strain rate}} = \\frac{(9.8 \\times 10^{-2} \\text{ N})(0.30 \\times 10^{-3} \\text{ m})}{(0.085 \\text{ m s}^{-1})(0.10 \\text{ m}^2)} = 3.46 \\times 10^{-3} \\text{ Pa s}$.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 9.8",
+                "problem": "A metal block of area $0.10$ m$^2$ is connected to a $0.010$ kg mass via a string that passes over an ideal pulley, as in Fig. 9.13. A liquid with a film thickness of $0.30$ mm is placed between the block and the table. When released the block moves to the right with a constant speed of $0.085$ m s$^{-1}$. Find the coefficient of viscosity of the liquid.",
+                "solution": "The metal block moves with constant speed because the tension in the string equals the viscous force. Tension $T = mg = 0.010 \\text{ kg} \\times 9.8 \\text{ m s}^{-2} = 9.8 \\times 10^{-2} \\text{ N}$. Shearing force $F = T = 9.8 \\times 10^{-2} \\text{ N}$. Area $A = 0.10$ m$^2$. Velocity $v = 0.085$ m s$^{-1}$. Thickness $l = 0.30$ mm $= 3 \\times 10^{-4}$ m. $\\eta = \\frac{Fl}{vA} = \\frac{(9.8 \\times 10^{-2} \\text{ N})(3 \\times 10^{-4} \\text{ m})}{(0.085 \\text{ m s}^{-1})(0.10 \\text{ m}^2)} = 3.46 \\times 10^{-3} \\text{ Pa s}$."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Fig. 9.13",
+                "description": "Experimental setup for measuring viscosity: a block on a liquid film connected to a falling weight via a pulley.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.5:6",
+            "order": 6,
+            "title": "Viscosities of Common Fluids",
+            "content_text": "The viscosity of fluids varies significantly with temperature. For liquids, viscosity generally decreases as temperature increases, while for gases, it increases with temperature. Table 9.2 provides the viscosities of several common fluids at specific temperatures.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 9.2",
+                "caption": "The viscosities of some fluids",
+                "headers": [
+                  "Fluid",
+                  "T(°C)",
+                  "Viscosity (mPl)"
+                ],
+                "rows": [
+                  [
+                    "Water",
+                    "20",
+                    "1.0"
+                  ],
+                  [
+                    "Water",
+                    "100",
+                    "0.3"
+                  ],
+                  [
+                    "Blood",
+                    "37",
+                    "2.7"
+                  ],
+                  [
+                    "Machine Oil",
+                    "16",
+                    "113"
+                  ],
+                  [
+                    "Machine Oil",
+                    "38",
+                    "34"
+                  ],
+                  [
+                    "Glycerine",
+                    "20",
+                    "830"
+                  ],
+                  [
+                    "Honey",
+                    "—",
+                    "200"
+                  ],
+                  [
+                    "Air",
+                    "0",
+                    "0.017"
+                  ],
+                  [
+                    "Air",
+                    "40",
+                    "0.019"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:9:9.5.1",
+        "number": "9.5.1",
+        "title": "Stokes' Law",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:9:9.5.1:1",
+            "order": 1,
+            "title": "Definition of Stokes' Law",
+            "content_text": "When a body falls through a fluid, it drags the layer of the fluid in contact with it, setting up relative motion between different layers. This results in a retarding viscous force. Sir George G. Stokes (1819–1903) enunciated that for a sphere of radius $a$ moving with velocity $v$ through a fluid of viscosity $\\eta$, the viscous drag force $F$ is given by $F = 6\\pi\\eta av$. This is known as Stokes' law.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.5.1:2",
+            "order": 2,
+            "title": "Terminal Velocity",
+            "content_text": "Stokes' law describes a retarding force proportional to velocity. For an object like a raindrop falling through air, it initially accelerates due to gravity. As the velocity increases, the retarding viscous force also increases. Eventually, the sum of the viscous force and the buoyant force equals the gravitational force, resulting in zero net force and zero acceleration. The sphere then descends with a constant velocity called the terminal velocity $v_t$. In equilibrium, $6\\pi\\eta av_t = (4\\pi/3) a^3 (\\rho - \\sigma)g$, where $\\rho$ and $\\sigma$ are the mass densities of the sphere and the fluid respectively. Solving for $v_t$, we obtain $v_t = 2a^2 (\\rho - \\sigma)g / (9\\eta)$. Thus, terminal velocity depends on the square of the radius and inversely on the viscosity.\nThis example demonstrates the application of the terminal velocity formula to calculate the viscosity of a medium.",
+            "content_type": "derivation",
+            "worked_examples": [
+              {
+                "label": "Example 9.9",
+                "problem": "The terminal velocity of a copper ball of radius $2.0 \\text{ mm}$ falling through a tank of oil at $20^{\\circ}\\text{C}$ is $6.5 \\text{ cm s}^{-1}$. Compute the viscosity of the oil at $20^{\\circ}\\text{C}$. Density of oil is $1.5 \\times 10^3 \\text{ kg m}^{-3}$, density of copper is $8.9 \\times 10^3 \\text{ kg m}^{-3}$.",
+                "solution": "We have $v_t = 6.5 \\times 10^{-2} \\text{ m s}^{-1}$, $a = 2 \\times 10^{-3} \\text{ m}$, $g = 9.8 \\text{ m s}^{-2}$, $\\rho = 8.9 \\times 10^3 \\text{ kg m}^{-3}$, $\\sigma = 1.5 \\times 10^3 \\text{ kg m}^{-3}$. From the terminal velocity equation $\\eta = \\frac{2}{9} \\frac{a^2 (\\rho - \\sigma)g}{v_t}$, we substitute the values: $\\eta = \\frac{2}{9} \\times \\frac{(2 \\times 10^{-3})^2 \\text{ m}^2 \\times 9.8 \\text{ m s}^{-2}}{6.5 \\times 10^{-2} \\text{ m s}^{-1}} \\times (8.9 - 1.5) \\times 10^3 \\text{ kg m}^{-3} = 9.9 \\times 10^{-1} \\text{ kg m}^{-1} \\text{ s}^{-1}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:9:9.6",
+        "number": "9.6",
+        "title": "SURFACE TENSION",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:9:9.6:1",
+            "order": 1,
+            "title": "Introduction to Surface Phenomena",
+            "content_text": "Liquids possess free surfaces that exhibit unique phenomena: oil and water do not mix, water wets human skin but not duck feathers, mercury does not wet glass, and sap rises to the tops of trees. These effects are related to the free surfaces of liquids, which possess additional energy known as surface energy. This phenomenon is called surface tension and is concerned only with liquids, as gases do not have free surfaces.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.6:2",
+            "order": 2,
+            "title": "Surface Energy (9.6.1)",
+            "content_text": "A liquid stays together because of attraction between molecules. A molecule deep inside the liquid is attracted by surrounding molecules in all directions, resulting in a negative potential energy. The average potential energy of these interior molecules is constant. To evaporate the liquid, energy (heat of evaporation) must be supplied to overcome these attractions. For water, this is approximately $40 \\text{ kJ/mol}$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.6:3",
+            "order": 3,
+            "title": "Molecular Basis of Surface Energy",
+            "content_text": "A molecule near the surface is surrounded by liquid molecules only on its lower side. Consequently, it has less negative potential energy than a molecule in the bulk (roughly half). Thus, molecules at the surface have extra energy compared to those in the interior. A liquid tends to minimize its surface area to reach the lowest energy state. The density of liquid molecules drops rapidly to zero at the surface over a distance of a few molecular sizes.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 9.14",
+                "description": "Schematic picture of molecules in a liquid. (a) Molecule inside a liquid experiencing attraction from all sides. (b) Molecule at the surface experiencing attraction only from below. (c) Graph showing the balance of attractive (A) and repulsive (R) forces near the surface.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.6:4",
+            "order": 4,
+            "title": "Surface Energy and Surface Tension (9.6.2)",
+            "content_text": "Creating more surface area (spreading the liquid) requires energy because it involves bringing more molecules to the surface. This extra energy associated with the surface is called surface energy. Surface tension is the manifestation of this energy requirement.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.6:5",
+            "order": 5,
+            "title": "Relation between Surface Tension and Force",
+            "content_text": "Consider a horizontal liquid film ending in a bar of length $l$ free to slide. If the bar is moved by a small distance $d$, the surface area increases. Since the film has two sides, the increase in area is $2ld$. If $S$ is the surface energy per unit area, the extra energy is $S(2ld)$. This energy comes from the work done by an external force $F$, so $Fd = S(2ld)$, which gives $S = F/2l$. Here, $S$ is the magnitude of surface tension, defined as the force per unit length or the surface energy per unit area.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 9.15",
+                "description": "Stretching a film. (a) A film in equilibrium with a movable bar of length $l$. (b) The film stretched an extra distance $d$ by an applied force $F$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.6:6",
+            "order": 6,
+            "title": "Properties of Surface Tension",
+            "content_text": "Surface tension is a force per unit length acting in the plane of the interface. It depends on the materials on both sides of the interface and generally decreases with increasing temperature. Table 9.3 provides surface tension values for various liquids.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 9.3",
+                "caption": "Surface tension of some liquids at the temperatures indicated with the heats of the vaporisation",
+                "headers": [
+                  "Liquid",
+                  "Temp (°C)",
+                  "Surface Tension (N/m)",
+                  "Heat of vaporisation (kJ/mol)"
+                ],
+                "rows": [
+                  [
+                    "Helium",
+                    "-270",
+                    "0.000239",
+                    "0.115"
+                  ],
+                  [
+                    "Oxygen",
+                    "-183",
+                    "0.0132",
+                    "7.1"
+                  ],
+                  [
+                    "Ethanol",
+                    "20",
+                    "0.0227",
+                    "40.6"
+                  ],
+                  [
+                    "Water",
+                    "20",
+                    "0.0727",
+                    "44.16"
+                  ],
+                  [
+                    "Mercury",
+                    "20",
+                    "0.4355",
+                    "63.2"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:physics:11:9:9.6:7",
+            "order": 7,
+            "title": "Experimental Measurement of Surface Tension",
+            "content_text": "A fluid will stick to a solid surface if the surface energy between the fluid and the solid is smaller than the sum of surface energies between solid-air and fluid-air. This attraction between the solid surface and the liquid can be measured experimentally using a balance as shown in Fig. 9.16. A flat vertical glass plate, forming one arm of the balance, is balanced by weights on the other side with its horizontal edge just over water. The vessel is raised slightly until the liquid just touches the glass plate and pulls it down due to surface tension. Weights are added until the plate just clears the water. If the additional weight required is $W$, the surface tension of the liquid-air interface is given by: $$S_{la} = \\frac{W}{2l} = \\frac{mg}{2l}$$ where $m$ is the extra mass and $l$ is the length of the plate edge. The subscript (la) emphasises that the liquid-air interface tension is involved.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 9.16",
+                "description": "A balance setup for measuring surface tension where a glass plate is suspended from one arm and balanced by weights $W$ on the other. The plate is in contact with a liquid in a vessel labeled 'I'.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.6:8",
+            "order": 8,
+            "title": "Angle of Contact",
+            "content_text": "The surface of a liquid near the plane of contact with another medium is generally curved. The angle between the tangent to the liquid surface at the point of contact and the solid surface inside the liquid is termed the angle of contact, denoted by $\\theta$. The value of $\\theta$ determines whether a liquid will spread on the surface of a solid or form droplets. For example, water forms droplets on a lotus leaf (obtuse angle) but spreads over a clean plastic plate (acute angle).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 9.17",
+                "description": "Different shapes of water drops with interfacial tensions: (a) on a lotus leaf showing an obtuse angle of contact $\\theta$, and (b) on a clean plastic plate showing an acute angle of contact $\\theta$. Interfacial tensions $S_{la}$, $S_{sa}$, and $S_{sl}$ are shown as vectors.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.6:9",
+            "order": 9,
+            "title": "Equilibrium of Interfacial Tensions",
+            "content_text": "Consider the three interfacial tensions at the interfaces: liquid-air ($S_{la}$), solid-air ($S_{sa}$), and solid-liquid ($S_{sl}$). At the line of contact, the surface forces between the three media must be in equilibrium. From Fig. 9.17(b), the following relation is derived: $$S_{la} \\cos \\theta + S_{sl} = S_{sa}$$ The angle of contact is obtuse if $S_{sl} > S_{sa}$ (e.g., water-leaf interface) and acute if $S_{sl} < S_{sa}$ (e.g., water-plastic interface).",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.6:10",
+            "order": 10,
+            "title": "Wetting and Non-wetting Liquids",
+            "content_text": "When $\\theta$ is an obtuse angle, liquid molecules are attracted strongly to themselves and weakly to those of the solid; it costs significant energy to create a liquid-solid surface, and the liquid does not wet the solid (e.g., water on waxy surfaces or mercury on any surface). Conversely, if molecules are strongly attracted to the solid, $S_{sl}$ is reduced, and $\\theta$ is acute; the liquid then wets the solid (e.g., water on glass). Soaps and detergents act as wetting agents by reducing the angle of contact so they can penetrate surfaces effectively. Water-proofing agents are added to create a large angle of contact between water and fibers.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.6:11",
+            "order": 11,
+            "title": "Drops and Bubbles - Spherical Shape",
+            "content_text": "Free liquid drops and bubbles are spherical because a sphere has the minimum surface area for a given volume. Since a liquid-air interface has energy, the state of minimum energy corresponds to the least area. If gravity and other forces (like air resistance) are ineffective, liquid drops remain perfectly spherical.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.6:12",
+            "order": 12,
+            "title": "Excess Pressure inside a Liquid Drop",
+            "content_text": "Surface tension causes the pressure inside a spherical drop to be higher than the pressure outside. For a drop of radius $r$ in equilibrium, if the radius increases by $\\Delta r$, the extra surface energy is: $$[4\\pi(r + \\Delta r)^2 - 4\\pi r^2] S_{la} = 8\\pi r \\Delta r S_{la}$$ This energy cost is balanced by the work done by the pressure difference $(P_i - P_o)$ during expansion: $$W = (P_i - P_o) 4\\pi r^2 \\Delta r$$ Equating these gives the excess pressure: $$(P_i - P_o) = \\frac{2 S_{la}}{r}$$ In general, for any liquid-gas interface, the convex side has a higher pressure than the concave side.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 9.18",
+                "description": "Diagrams of (a) a liquid drop, (b) a cavity (air bubble in liquid), and (c) a soap bubble in air, all of radius $r$. $P_i$ and $P_o$ represent internal and external pressures respectively.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.6:13",
+            "order": 13,
+            "title": "Excess Pressure inside a Gas Bubble",
+            "content_text": "A bubble in air (Fig. 9.18(c)) differs from a drop because it has two interfaces (inner and outer). Applying the energy balance argument to both interfaces, the excess pressure is doubled: $$(P_i - P_o) = \\frac{4 S_{la}}{r}$$ This explains why extra air pressure is needed to blow a soap bubble.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.6:14",
+            "order": 14,
+            "title": "Capillary Rise",
+            "content_text": "One consequence of the pressure difference across a curved interface is capillary rise, where water rises in a narrow tube against gravity. The word 'capilla' means hair in Latin; in hair-thin tubes, the rise is very large. This occurs because the pressure difference across the concave meniscus in the tube creates a lower pressure just below the surface compared to the atmospheric pressure outside.\nFor a capillary tube of radius $a$, the radius of the concave meniscus is $r = a / \\cos \\theta$. The pressure difference across the meniscus is: $$(P_i - P_o) = \\frac{2S}{r} = \\frac{2S \\cos \\theta}{a}$$ At the same horizontal level (points A and B in Fig. 9.19(a)), the pressure must be equal: $P_o + h \\rho g = P_i = P_A$. Substituting the pressure difference: $$h \\rho g = (P_i - P_o) = \\frac{2S \\cos \\theta}{a}$$ Thus, the capillary rise height $h$ is: $$h = \\frac{2S \\cos \\theta}{\\rho g a}$$ This shows that capillary rise is due to surface tension and is larger for smaller tube radii $a$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 9.19",
+                "description": "Capillary rise: (a) Schematic of a narrow tube of radius $a$ immersed in water showing rise height $h$. (b) Enlarged view of the concave meniscus with contact angle $\\theta$ and radius of curvature $r$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.6:15",
+            "order": 15,
+            "title": "Capillary Depression",
+            "content_text": "If the liquid meniscus is convex (as with mercury), the contact angle $\\theta$ is obtuse, making $\\cos \\theta$ negative. In such cases, the liquid level inside the capillary will be lower than the level outside, a phenomenon known as capillary depression.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:9.6:16",
+            "order": 16,
+            "title": "Worked Example: Pressure in a Submerged Bubble",
+            "content_text": "This example calculates the pressure required to blow a hemispherical bubble at the end of a capillary tube submerged in water.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 9.10",
+                "problem": "The lower end of a capillary tube of diameter 2.00 mm is dipped 8.00 cm below the surface of water in a beaker. What is the pressure required in the tube in order to blow a hemispherical bubble at its end in water? The surface tension of water at temperature of the experiments is $7.30 \\times 10^{-2}$ N m$^{-1}$. 1 atmospheric pressure = $1.01 \\times 10^5$ Pa, density of water = 1000 kg/m$^3$, $g = 9.80$ m s$^{-2}$. Also calculate the excess pressure.",
+                "solution": "The excess pressure in a bubble of gas in a liquid is given by $2S/r$. Note there is only one liquid surface here. The radius of the bubble $r$ is equal to the radius of the capillary tube ($1.00$ mm $= 10^{-3}$ m) since the bubble is hemispherical. The pressure outside the bubble $P_o$ is atmospheric pressure plus the hydrostatic pressure of the 8.00 cm water column: $$P_o = 1.01 \\times 10^5 + (0.08 \\times 1000 \\times 9.80) = 1.01784 \\times 10^5 \\text{ Pa}$$ The pressure inside the bubble $P_i$ is: $$P_i = P_o + \\frac{2S}{r} = 1.01784 \\times 10^5 + \\frac{2 \\times 7.30 \\times 10^{-2}}{10^{-3}} = 1.01784 \\times 10^5 + 146 \\text{ Pa} = 1.0193 \\times 10^5 \\text{ Pa}$$ Rounded to three significant figures, $P_i = 1.02 \\times 10^5$ Pa. The excess pressure is 146 Pa."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:9:Summary",
+        "number": "Summary",
+        "title": "Summary",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:9:Summary:1",
+            "order": 1,
+            "title": "Fundamental Properties of Fluids",
+            "content_text": "1. The basic property of a fluid is that it can flow. It does not have any resistance to change of its shape; thus, the shape of a fluid is governed by the shape of its container. 2. A liquid is incompressible and has a free surface of its own. A gas is compressible and it expands to occupy all the space available to it. 3. If $F$ is the normal force exerted by a fluid on an area $A$ then the average pressure $P_{av}$ is defined as the ratio of the force to area: $P_{av} = F/A$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:Summary:2",
+            "order": 2,
+            "title": "Pascal's Law",
+            "content_text": "Pascal's law states that pressure in a fluid at rest is the same at all points which are at the same height. Furthermore, a change in pressure applied to an enclosed fluid is transmitted undiminished to every point of the fluid and the walls of the containing vessel.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:Summary:3",
+            "order": 3,
+            "title": "Variation of Pressure with Depth",
+            "content_text": "The pressure in a fluid varies with depth $h$ according to the expression $P = P_a + \\rho gh$, where $P_a$ is the atmospheric pressure and $\\rho$ is the density of the fluid, assumed to be uniform.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:Summary:4",
+            "order": 4,
+            "title": "Bernoulli's Principle",
+            "content_text": "Bernoulli's principle states that as we move along a streamline, the sum of the pressure ($P$), the kinetic energy per unit volume ($\\rho v^2/2$), and the potential energy per unit volume ($\\rho gy$) remains constant: $P + \\rho v^2/2 + \\rho gy = \\text{constant}$. This equation is essentially the conservation of energy applied to non-viscous fluid motion in steady state. In reality, no fluid has zero viscosity; viscosity acts like friction and converts kinetic energy into heat energy, making this statement an approximation.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:Summary:5",
+            "order": 5,
+            "title": "Viscosity and Coefficient of Viscosity",
+            "content_text": "While fluids do not require shear stress for shear strain, applying a shear stress generates motion that causes a shear strain growing with time. The ratio of the shear stress to the time rate of shearing strain is known as the coefficient of viscosity, $\\eta$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:Summary:6",
+            "order": 6,
+            "title": "Stokes' Law",
+            "content_text": "Stokes' law states that the viscous drag force $\\mathbf{F}$ on a sphere of radius $a$ moving with velocity $\\mathbf{v}$ through a fluid of viscosity $\\eta$ is given by: $\\mathbf{F} = 6\\pi\\eta a\\mathbf{v}$.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:Summary:7",
+            "order": 7,
+            "title": "Surface Tension",
+            "content_text": "Surface tension is defined as the force per unit length (or surface energy per unit area) acting in the plane of the interface between the liquid and the bounding surface. It represents the extra energy that molecules at the interface possess compared to those in the interior of the fluid.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:9:Points to Ponder",
+        "number": "Points to Ponder",
+        "title": "Points to Ponder",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:9:Points to Ponder:1",
+            "order": 1,
+            "title": "Nature of Pressure as a Scalar",
+            "content_text": "Pressure is a scalar quantity. Although the definition 'force per unit area' might suggest it is a vector, the 'force' in the numerator refers specifically to the component of the force normal to the area upon which it is impressed. Fluid mechanics requires a shift from particle and rigid body mechanics to properties that vary from point to point within the fluid.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:Points to Ponder:2",
+            "order": 2,
+            "title": "Pressure Distribution in Fluids",
+            "content_text": "Pressure in a fluid is not only exerted on solid boundaries like container walls or immersed objects; it exists at all points within the fluid. A fluid element is in equilibrium because the pressures exerted on its various faces are equal.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:Points to Ponder:3",
+            "order": 3,
+            "title": "Applicability of the Pressure-Depth Relation",
+            "content_text": "The expression for pressure $P = P_a + \\rho gh$ holds true if the fluid is incompressible. This is practically applicable to liquids, which are largely incompressible and thus maintain a constant density $\\rho$ with height.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:Points to Ponder:4",
+            "order": 4,
+            "title": "Gauge Pressure and Measurement",
+            "content_text": "Gauge pressure ($P_g$) is the difference between the actual pressure ($P$) and the atmospheric pressure ($P_a$): $P - P_a = P_g$. Many pressure-measuring devices, such as tyre pressure gauges and sphygmomanometers (blood pressure gauges), measure gauge pressure.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:Points to Ponder:5",
+            "order": 5,
+            "title": "Streamline Flow Properties",
+            "content_text": "A streamline represents a map of fluid flow. In steady flow, two streamlines cannot intersect, as intersection would imply the fluid particle could have two different velocities at that point.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:Points to Ponder:6",
+            "order": 6,
+            "title": "Viscous Drag and Bernoulli's Principle",
+            "content_text": "Bernoulli's principle does not strictly hold in the presence of viscous drag. The work done by dissipative viscous forces must be accounted for, which typically results in a lower pressure at a point than the value predicted by the ideal Bernoulli equation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:Points to Ponder:7",
+            "order": 7,
+            "title": "Molecular Origin of Surface Tension",
+            "content_text": "Surface tension arises due to the excess potential energy of molecules on the surface compared to those in the interior. This surface energy exists at the interface separating two substances (at least one of which is a fluid) and is not a property of a single fluid in isolation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:9:Points to Ponder:8",
+            "order": 8,
+            "title": "Summary of Physical Quantities",
+            "content_text": "The following table summarizes the key physical quantities related to fluid mechanics, including their symbols, dimensions, units, and important remarks.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "null",
+                "caption": "Physical Quantities in Fluid Mechanics",
+                "headers": [
+                  "Physical Quantity",
+                  "Symbol",
+                  "Dimensions",
+                  "Unit",
+                  "Remarks"
+                ],
+                "rows": [
+                  [
+                    "Pressure",
+                    "P",
+                    "$[M L^{-1} T^{-2}]$",
+                    "pascal (Pa)",
+                    "1 atm = $1.013 \\times 10^5$ Pa, Scalar"
+                  ],
+                  [
+                    "Density",
+                    "$\\rho$",
+                    "$[M L^{-3}]$",
+                    "$\\text{kg m}^{-3}$",
+                    "Scalar"
+                  ],
+                  [
+                    "Specific Gravity",
+                    "",
+                    "No",
+                    "No",
+                    "$\\frac{\\rho_{\\text{substance}}}{\\rho_{\\text{water}}}$, Scalar"
+                  ],
+                  [
+                    "Co-efficient of viscosity",
+                    "$\\eta$",
+                    "$[M L^{-1} T^{-1}]$",
+                    "Pa s or poiseuilles (Pl)",
+                    "Scalar"
+                  ],
+                  [
+                    "Surface Tension",
+                    "S",
+                    "$[M T^{-2}]$",
+                    "$\\text{N m}^{-1}$",
+                    "Scalar"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:9:9.7",
+        "number": "9.7",
+        "title": "Exercises",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:9:9.7:1",
+            "order": 1,
+            "title": "Exercise Illustrations",
+            "content_text": "This section contains the final set of exercises for the chapter on Mechanical Properties of Fluids, focusing on the application of the equation of continuity, surface tension, and pressure differences in drops and bubbles. The following diagrams are referenced in the exercises or provide context for fluid flow and surface film phenomena.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 9.20",
+                "description": "A diagram illustrating fluid flow through a horizontal pipe with a constriction. Two vertical manometer tubes are attached to measure the pressure at the wide and narrow sections. Case (a) shows a higher liquid level in the wide section's tube compared to the narrow section. Case (b) shows a lower liquid level in the wide section's tube compared to the narrow section.",
+                "image_url": null
+              },
+              {
+                "label": "Fig. 9.21",
+                "description": "Three diagrams (a), (b), and (c) showing a thin liquid film supported by a wire frame with a movable slider of length 40 cm at the bottom. (a) depicts a rectangular frame. (b) depicts a frame that widens towards the top. (c) depicts a frame with a pointed, triangular top. In all three cases, the film supports a weight attached to the slider.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:physics:11:9:ex:1",
+          "number": 1,
+          "problem": "Explain why\n\n(a) The blood pressure in humans is greater at the feet than at the brain\n\n(b) Atmospheric pressure at a height of about 6 km decreases to nearly half of its value at the sea level, though the height of the atmosphere is more than 100 km\n\n(c) Hydrostatic pressure is a scalar quantity even though pressure is force divided by area.",
+          "solution": "",
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:9:ex:2",
+          "number": 2,
+          "problem": "Explain why\n\n(a) The angle of contact of mercury with glass is obtuse, while that of water with glass is acute.\n\n(b) Water on a clean glass surface tends to spread out while mercury on the same surface tends to form drops. (Put differently, water wets glass while mercury does not.)\n\n(c) Surface tension of a liquid is independent of the area of the surface\n\n(d) Water with detergent dissolved in it should have small angles of contact.\n\n(e) A drop of liquid under no external forces is always spherical in shape",
+          "solution": "",
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:9:ex:3",
+          "number": 3,
+          "problem": "Fill in the blanks using the word(s) from the list appended with each statement:\n\n(a) Surface tension of liquids generally ... with temperatures (increases / decreases)\n\n(b) Viscosity of gases ... with temperature, whereas viscosity of liquids ... with temperature (increases / decreases)\n\n(c) For solids with elastic modulus of rigidity, the shearing force is proportional to ... , while for fluids it is proportional to ... (shear strain / rate of shear strain)\n\n(d) For a fluid in a steady flow, the increase in flow speed at a constriction follows (conservation of mass / Bernoulli's principle)\n\n(e) For the model of a plane in a wind tunnel, turbulence occurs at a ... speed for turbulence for an actual plane (greater / smaller)",
+          "solution": "",
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:9:ex:4",
+          "number": 4,
+          "problem": "Explain why\n\n(a) To keep a piece of paper horizontal, you should blow over, not under, it\n\n(b) When we try to close a water tap with our fingers, fast jets of water gush through the openings between our fingers\n\n(c) The size of the needle of a syringe controls flow rate better than the thumb pressure exerted by a doctor while administering an injection\n\n(d) A fluid flowing out of a small hole in a vessel results in a backward thrust on the vessel\n\n(e) A spinning cricket ball in air does not follow a parabolic trajectory",
+          "solution": "",
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:9:ex:5",
+          "number": 5,
+          "problem": "A 50 kg girl wearing high heel shoes balances on a single heel. The heel is circular with a diameter 1.0 cm. What is the pressure exerted by the heel on the horizontal floor?",
+          "solution": "",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:9:ex:6",
+          "number": 6,
+          "problem": "Toricelli's barometer used mercury. Pascal duplicated it using French wine of density 984 kg m$^{-3}$. Determine the height of the wine column for normal atmospheric pressure.",
+          "solution": "",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:9:ex:7",
+          "number": 7,
+          "problem": "A vertical off-shore structure is built to withstand a maximum stress of $10^9$ Pa. Is the structure suitable for putting up on top of an oil well in the ocean? Take the depth of the ocean to be roughly 3 km, and ignore ocean currents.",
+          "solution": "",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:9:ex:8",
+          "number": 8,
+          "problem": "A hydraulic automobile lift is designed to lift cars with a maximum mass of 3000 kg. The area of cross-section of the piston carrying the load is 425 cm$^2$. What maximum pressure would the smaller piston have to bear?",
+          "solution": "",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:9:ex:9",
+          "number": 9,
+          "problem": "A U-tube contains water and methylated spirit separated by mercury. The mercury columns in the two arms are in level with 10.0 cm of water in one arm and 12.5 cm of spirit in the other. What is the specific gravity of spirit?",
+          "solution": "",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:9:ex:10",
+          "number": 10,
+          "problem": "In the previous problem, if 15.0 cm of water and spirit each are further poured into the respective arms of the tube, what is the difference in the levels of mercury in the two arms? (Specific gravity of mercury = 13.6)",
+          "solution": "",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:9:ex:11",
+          "number": 11,
+          "problem": "Can Bernoulli's equation be used to describe the flow of water through a rapid in a river? Explain.",
+          "solution": "",
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:9:ex:12",
+          "number": 12,
+          "problem": "Does it matter if one uses gauge instead of absolute pressures in applying Bernoulli's equation? Explain.",
+          "solution": "",
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:9:ex:13",
+          "number": 13,
+          "problem": "Glycerine flows steadily through a horizontal tube of length 1.5 m and radius 1.0 cm. If the amount of glycerine collected per second at one end is $4.0 \\times 10^{-3}$ kg s$^{-1}$, what is the pressure difference between the two ends of the tube? (Density of glycerine = $1.3 \\times 10^3$ kg m$^{-3}$ and viscosity of glycerine = 0.83 Pa s). [You may also like to check if the assumption of laminar flow in the tube is correct].",
+          "solution": "",
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:9:ex:14",
+          "number": 14,
+          "problem": "In a test experiment on a model aeroplane in a wind tunnel, the flow speeds on the upper and lower surfaces of the wing are 70 m s$^{-1}$ and 63 m s$^{-1}$ respectively. What is the lift on the wing if its area is 2.5 m$^2$? Take the density of air to be 1.3 kg m$^{-3}$.",
+          "solution": "",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:9:ex:15",
+          "number": 15,
+          "problem": "Figures 9.20(a) and (b) refer to the steady flow of a (non-viscous) liquid. Which of the two figures is incorrect? Why?",
+          "solution": "",
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:9:ex:16",
+          "number": 16,
+          "problem": "The cylindrical tube of a spray pump has a cross-section of $8.0 \\text{ cm}^2$ one end of which has 40 fine holes each of diameter $1.0 \\text{ mm}$. If the liquid flow inside the tube is $1.5 \\text{ m min}^{-1}$, what is the speed of ejection of the liquid through the holes?",
+          "solution": "Given: Area of cross-section of tube $A_1 = 8.0 \\text{ cm}^2 = 8.0 \\times 10^{-4} \\text{ m}^2$. Speed of flow inside $v_1 = 1.5 \\text{ m/min} = \\frac{1.5}{60} \\text{ m/s} = 0.025 \\text{ m/s}$. Number of holes $n = 40$. Diameter of each hole $d = 1.0 \\text{ mm} = 10^{-3} \\text{ m}$, so radius $r = 0.5 \\times 10^{-3} \\text{ m}$. Total area of holes $A_2 = n \\times \\pi r^2 = 40 \\times \\pi \\times (0.5 \\times 10^{-3})^2 = 40 \\times 3.14 \\times 0.25 \\times 10^{-6} = 3.14 \\times 10^{-5} \\text{ m}^2$. Using the equation of continuity $A_1 v_1 = A_2 v_2$: $v_2 = \\frac{A_1 v_1}{A_2} = \\frac{8.0 \\times 10^{-4} \\times 0.025}{3.14 \\times 10^{-5}} \\approx 0.637 \\text{ m/s}$.",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:9:ex:17",
+          "number": 17,
+          "problem": "A U-shaped wire is dipped in a soap solution, and removed. The thin soap film formed between the wire and the light slider supports a weight of $1.5 \\times 10^{-2} \\text{ N}$ (which includes the small weight of the slider). The length of the slider is $30 \\text{ cm}$. What is the surface tension of the film?",
+          "solution": "The weight $W$ is balanced by the force of surface tension $F$. Since a soap film has two surfaces, $F = 2Sl$, where $S$ is the surface tension and $l$ is the length of the slider. Given $W = 1.5 \\times 10^{-2} \\text{ N}$ and $l = 30 \\text{ cm} = 0.3 \\text{ m}$. $1.5 \\times 10^{-2} = 2 \\times S \\times 0.3 \\Rightarrow S = \\frac{1.5 \\times 10^{-2}}{0.6} = 2.5 \\times 10^{-2} \\text{ N m}^{-1}$.",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:9:ex:18",
+          "number": 18,
+          "problem": "Figure 9.21 (a) shows a thin liquid film supporting a small weight $= 4.5 \\times 10^{-2} \\text{ N}$. What is the weight supported by a film of the same liquid at the same temperature in Fig. (b) and (c)? Explain your answer physically.",
+          "solution": "The weight supported by the film is determined by the upward force of surface tension, which is $F = 2Sl$. Here, $S$ is the surface tension (constant for the same liquid and temperature) and $l$ is the length of the slider. In all three cases (a), (b), and (c), the length of the slider is given as $40 \\text{ cm}$. Therefore, the force of surface tension is the same in all cases. Consequently, the weight supported in (b) and (c) is the same as in (a), which is $4.5 \\times 10^{-2} \\text{ N}$. The shape of the frame above the slider does not affect the force exerted on the slider itself.",
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:9:ex:19",
+          "number": 19,
+          "problem": "What is the pressure inside the drop of mercury of radius $3.00 \\text{ mm}$ at room temperature? Surface tension of mercury at that temperature ($20^\\circ\\text{C}$) is $4.65 \\times 10^{-1} \\text{ N m}^{-1}$. The atmospheric pressure is $1.01 \\times 10^5 \\text{ Pa}$. Also give the excess pressure inside the drop.",
+          "solution": "Radius $R = 3.00 \\text{ mm} = 3 \\times 10^{-3} \\text{ m}$. Surface tension $S = 4.65 \\times 10^{-1} \\text{ N m}^{-1}$. Atmospheric pressure $P_a = 1.01 \\times 10^5 \\text{ Pa}$. Excess pressure $P_{excess} = \\frac{2S}{R} = \\frac{2 \\times 4.65 \\times 10^{-1}}{3 \\times 10^{-3}} = 310 \\text{ Pa}$. Total pressure inside $P_i = P_a + P_{excess} = 1.01 \\times 10^5 + 310 = 1.0131 \\times 10^5 \\text{ Pa}$.",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:9:ex:20",
+          "number": 20,
+          "problem": "What is the excess pressure inside a bubble of soap solution of radius $5.00 \\text{ mm}$, given that the surface tension of soap solution at the temperature ($20^\\circ\\text{C}$) is $2.50 \\times 10^{-2} \\text{ N m}^{-1}$? If an air bubble of the same dimension were formed at depth of $40.0 \\text{ cm}$ inside a container containing the soap solution (of relative density $1.20$), what would be the pressure inside the bubble? ($1 \\text{ atmospheric pressure is } 1.01 \\times 10^5 \\text{ Pa}$).",
+          "solution": "1) For the soap bubble in air: $R = 5 \\times 10^{-3} \\text{ m}$, $S = 2.50 \\times 10^{-2} \\text{ N m}^{-1}$. Excess pressure $P_{excess} = \\frac{4S}{R} = \\frac{4 \\times 2.50 \\times 10^{-2}}{5 \\times 10^{-3}} = 20 \\text{ Pa}$. 2) For the air bubble in liquid: It has only one surface. Excess pressure $P'_{excess} = \\frac{2S}{R} = 10 \\text{ Pa}$. Depth $h = 0.4 \\text{ m}$, density $\\rho = 1.20 \\times 10^3 \\text{ kg/m}^3$. Pressure at depth $h$: $P_o = P_a + \\rho gh = 1.01 \\times 10^5 + (1200 \\times 9.8 \\times 0.4) = 1.01 \\times 10^5 + 4704 = 105704 \\text{ Pa}$. Pressure inside the air bubble $P_i = P_o + P'_{excess} = 105704 + 10 = 105714 \\text{ Pa} \\approx 1.06 \\times 10^5 \\text{ Pa}$.",
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1271 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_chemistry_12_ch9.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:chemistry:12:9",
+  "curriculum": "ncert",
+  "subject": "chemistry",
+  "grade": 12,
+  "textbook_name": "Chemistry",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:chemistry:12:9",
+    "number": 9,
+    "title": "Amines",
+    "summary": "This chapter on Amines delves into the structure, classification, nomenclature, preparation, physical properties, and chemical reactions of these important organic compounds. Amines are derivatives of ammonia ($NH_3$) and are categorized as primary, secondary, or tertiary based on the number of alkyl or aryl groups attached to the nitrogen atom. The IUPAC naming system is explained, with emphasis on N-substitution for secondary and tertiary amines.\n\nSeveral methods for amine preparation are detailed, including reduction of nitro compounds, ammonolysis of alkyl halides, reduction of nitriles and amides, and Gabriel phthalimide synthesis. Physical properties like solubility and boiling point are influenced by hydrogen bonding, which is more pronounced in primary amines.\n\nThe chapter highlights the basic character of amines, explaining factors affecting their basic strength: inductive effect, solvation, and steric hindrance. Arylamines are weaker bases than alkylamines due to resonance. Reactions covered include alkylation, acylation, carbylamine reaction, and reactions with nitrous acid and Hinsberg's reagent. Electrophilic substitution in aniline is discussed, emphasizing the activating and directing influence of the $-NH_2$ group. Finally, the preparation and reactions of diazonium salts are covered, highlighting their utility as intermediates in synthesizing a variety of aromatic compounds that are not accessible through direct substitution, demonstrating the practical significance of amines in organic synthesis.",
+    "sections": [
+      {
+        "id": "ncert:chemistry:12:9:9",
+        "number": "9",
+        "title": "Amines",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:9:9:1",
+            "order": 1,
+            "title": "Introduction to Amines",
+            "content_text": "Amines are an important class of organic compounds derived by replacing one or more hydrogen atoms of an ammonia molecule ($NH_3$) with alkyl or aryl groups. They are widely found in nature within proteins, vitamins, alkaloids, and hormones. Synthetic amines are used in the production of polymers, dye stuffs, and drugs. Biologically active examples include adrenaline and ephedrine, which contain secondary amino groups and are used to increase blood pressure. Novocain is a synthetic amino compound used as an anaesthetic in dentistry, while Benadryl is a well-known antihistaminic drug containing a tertiary amino group. Additionally, quaternary ammonium salts serve as surfactants, and diazonium salts are vital intermediates in synthesizing aromatic compounds and azo dyes.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9:2",
+            "order": 2,
+            "title": "Definition of Amines",
+            "content_text": "Amines can be considered as derivatives of ammonia, obtained by the replacement of one, two, or all three hydrogen atoms by alkyl and/or aryl groups. Examples include methylamine ($CH_3-NH_2$), aniline ($C_6H_5-NH_2$), dimethylamine ($CH_3-NH-CH_3$), and trimethylamine ($CH_3-N(CH_3)_2$).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:9:9.1",
+        "number": "9.1",
+        "title": "Structure of Amines",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:9:9.1:1",
+            "order": 1,
+            "title": "Hybridization and Geometry of Amines",
+            "content_text": "Like ammonia, the nitrogen atom in amines is trivalent and carries an unshared pair of electrons. The nitrogen orbitals in amines are $sp^3$ hybridised, resulting in a pyramidal geometry. Three of the $sp^3$ hybridised orbitals overlap with the orbitals of hydrogen or carbon (depending on the amine's composition), while the fourth orbital contains the lone pair of electrons. Due to the presence of this unshared pair, the bond angle $C-N-E$ (where $E$ is $C$ or $H$) is typically less than the ideal tetrahedral angle of $109.5^\\circ$. For example, in trimethylamine, the bond angle is $108^\\circ$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 9.1",
+                "description": "Pyramidal shape of trimethylamine showing the nitrogen atom at the apex with an unshared electron pair in an sp3 orbital, and three methyl groups forming the base of the pyramid with a C-N-C bond angle of 108 degrees.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:9:9.2",
+        "number": "9.2",
+        "title": "Classification",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:9:9.2:1",
+            "order": 1,
+            "title": "Primary, Secondary, and Tertiary Amines",
+            "content_text": "Amines are classified as primary ($1^\\circ$), secondary ($2^\\circ$), and tertiary ($3^\\circ$) based on the number of hydrogen atoms replaced in the ammonia molecule. If one hydrogen atom is replaced by an alkyl ($R$) or aryl ($Ar$) group, a primary amine ($RNH_2$ or $ArNH_2$) is formed. If two hydrogen atoms are replaced by alkyl/aryl groups, it is a secondary amine ($R-NH-R'$). If all three hydrogen atoms are replaced, it is a tertiary amine ($R-N(R'')-R'$). Amines are further classified as 'simple' when all alkyl or aryl groups are identical, and 'mixed' when the groups are different.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:9:9.3",
+        "number": "9.3",
+        "title": "Nomenclature",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:9:9.3:1",
+            "order": 1,
+            "title": "Naming Aliphatic Amines",
+            "content_text": "In the common system, aliphatic amines are named by prefixing the alkyl group to 'amine' as one word (e.g., methylamine). For secondary and tertiary amines with identical groups, the prefix 'di' or 'tri' is used. In the IUPAC system, primary amines are named as alkanamines, derived by replacing the 'e' of the parent alkane with 'amine' (e.g., $CH_3NH_2$ is methanamine). If the amino group is at different positions, locants are used to specify the carbon atom bearing the $-NH_2$ group. For compounds with multiple amino groups, the 'e' of the alkane suffix is retained, and prefixes like 'di' or 'tri' are added (e.g., $H_2N-CH_2-CH_2-NH_2$ is ethane-1,2-diamine).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.3:2",
+            "order": 2,
+            "title": "Naming Secondary and Tertiary Amines (IUPAC)",
+            "content_text": "To name secondary and tertiary amines in the IUPAC system, the locant 'N' is used to designate substituents attached to the nitrogen atom. The largest alkyl group is chosen as the parent alkane. For example, $CH_3NHCH_2CH_3$ is named N-methylethanamine, and $(CH_3CH_2)_3N$ is named N,N-diethylethanamine.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.3:3",
+            "order": 3,
+            "title": "Naming Arylamines",
+            "content_text": "In arylamines, the $-NH_2$ group is directly attached to the benzene ring. The simplest arylamine is $C_6H_5NH_2$, commonly known as aniline, which is also an accepted IUPAC name. In the IUPAC system, the suffix 'e' of arene is replaced by 'amine', making $C_6H_5NH_2$ benzenamine. Other examples include o-toluidine (2-methylaniline) and p-bromoaniline (4-bromobenzenamine).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 9.1",
+                "caption": "Nomenclature of Some Alkylamines and Arylamines",
+                "headers": [
+                  "Amine",
+                  "Common name",
+                  "IUPAC name"
+                ],
+                "rows": [
+                  [
+                    "$CH_3-CH_2-NH_2$",
+                    "Ethylamine",
+                    "Ethanamine"
+                  ],
+                  [
+                    "$CH_3-CH_2-CH_2-NH_2$",
+                    "n-Propylamine",
+                    "Propan-1-amine"
+                  ],
+                  [
+                    "$CH_3-CH(NH_2)-CH_3$",
+                    "Isopropylamine",
+                    "Propan-2-amine"
+                  ],
+                  [
+                    "$CH_3-NH-CH_2-CH_3$",
+                    "Ethylmethylamine",
+                    "N-Methylethanamine"
+                  ],
+                  [
+                    "$CH_3-N(CH_3)-CH_3$",
+                    "Trimethylamine",
+                    "N,N-Dimethylmethanamine"
+                  ],
+                  [
+                    "$C_2H_5-N(C_2H_5)-CH_2-CH_2-CH_2-CH_3$",
+                    "N,N-Diethylbutylamine",
+                    "N,N-Diethylbutan-1-amine"
+                  ],
+                  [
+                    "$NH_2-CH_2-CH=CH_2$",
+                    "Allylamine",
+                    "Prop-2-en-1-amine"
+                  ],
+                  [
+                    "$NH_2-(CH_2)_6-NH_2$",
+                    "Hexamethylenediamine",
+                    "Hexane-1,6-diamine"
+                  ],
+                  [
+                    "Aniline ($C_6H_5NH_2$)",
+                    "Aniline",
+                    "Aniline or Benzenamine"
+                  ],
+                  [
+                    "o-Toluidine ($2-CH_3C_6H_4NH_2$)",
+                    "o-Toluidine",
+                    "2-Methylaniline"
+                  ],
+                  [
+                    "p-Bromoaniline ($4-BrC_6H_4NH_2$)",
+                    "p-Bromoaniline",
+                    "4-Bromobenzenamine or 4-Bromoaniline"
+                  ],
+                  [
+                    "N,N-Dimethylaniline ($C_6H_5N(CH_3)_2$)",
+                    "N,N-Dimethylaniline",
+                    "N,N-Dimethylbenzenamine"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.3:4",
+            "order": 4,
+            "title": "Intext Questions on Classification and Nomenclature",
+            "content_text": "This subsection contains practice questions regarding the classification of amines as primary, secondary, or tertiary, and the identification of isomeric amines for a given molecular formula ($C_4H_{11}N$), including their IUPAC names and the types of isomerism they exhibit.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:9:9.4",
+        "number": "9.4",
+        "title": "Preparation of Amines",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:9:9.4:1",
+            "order": 1,
+            "title": "Reduction of Nitro Compounds",
+            "content_text": "Nitro compounds are reduced to amines by passing hydrogen gas in the presence of finely divided nickel, palladium, or platinum. They can also be reduced using metals in an acidic medium. For example, nitrobenzene is reduced to aniline using $H_2/Pd$ in ethanol. Reduction with iron scrap and hydrochloric acid ($Fe + HCl$) is preferred for industrial preparation because the $FeCl_2$ formed gets hydrolysed to release hydrochloric acid during the reaction; thus, only a small amount of $HCl$ is required to initiate the reaction. Nitroalkanes can similarly be reduced to the corresponding alkanamines.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 9.4.1",
+                "description": "Chemical equations showing the reduction of nitrobenzene to aniline using (i) $H_2/Pd$ in ethanol and (ii) $Sn+HCl$ or $Fe+HCl$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.4:2",
+            "order": 2,
+            "title": "Ammonolysis of Alkyl Halides",
+            "content_text": "The carbon-halogen bond in alkyl or benzyl halides is polar and can be easily cleaved by a nucleophile. When an alkyl or benzyl halide reacts with an ethanolic solution of ammonia in a sealed tube at $373$ K, it undergoes a nucleophilic substitution reaction where the halogen atom is replaced by an amino ($-NH_2$) group. This process is called ammonolysis. The primary amine formed acts as a nucleophile and can further react with more alkyl halide to form secondary and tertiary amines, and finally a quaternary ammonium salt ($R_4N^+X^-$).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 9.4.2",
+                "description": "Mechanism showing the nucleophilic attack of an ammonia molecule on an alkyl halide ($R-X$) to form a substituted ammonium salt.",
+                "image_url": null
+              },
+              {
+                "label": "Fig 9.4.3",
+                "description": "Reaction sequence showing the progression from a primary amine ($1^\\circ$) to secondary ($2^\\circ$), tertiary ($3^\\circ$), and finally a quaternary ammonium salt through successive reactions with alkyl halides ($RX$).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.4:3",
+            "order": 3,
+            "title": "Recovery and Reactivity in Ammonolysis",
+            "content_text": "The free amine can be obtained from the ammonium salt by treatment with a strong base: $R-NH_3^+X^- + NaOH \\rightarrow R-NH_2 + H_2O + NaX$. A disadvantage of ammonolysis is that it produces a mixture of primary, secondary, and tertiary amines. However, the primary amine can be made the major product by using a large excess of ammonia. The order of reactivity of alkyl halides with amines is $RI > RBr > RCl$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.4:4",
+            "order": 4,
+            "title": "Worked Example: Ammonolysis Reactions",
+            "content_text": "This example illustrates the step-by-step chemical equations for the reaction of ethanolic ammonia with chloroethane and the ammonolysis of benzyl chloride followed by reaction with methyl chloride.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 9.1",
+                "problem": "Write chemical equations for the following reactions: (i) Reaction of ethanolic $NH_3$ with $C_2H_5Cl$. (ii) Ammonolysis of benzyl chloride and reaction of amine so formed with two moles of $CH_3Cl$.",
+                "solution": "(i) $C_2H_5Cl \\xrightarrow{NH_3} C_2H_5NH_2 \\xrightarrow{C_2H_5Cl} (C_2H_5)_2NH \\xrightarrow{C_2H_5Cl} (C_2H_5)_3N \\xrightarrow{C_2H_5Cl} (C_2H_5)_4N^+Cl^-$. (ii) $C_6H_5CH_2Cl \\xrightarrow{NH_3} C_6H_5CH_2NH_2 \\xrightarrow{2CH_3Cl} C_6H_5CH_2N(CH_3)_2$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.4:5",
+            "order": 5,
+            "title": "Reduction of Nitriles",
+            "content_text": "Nitriles are reduced to primary amines using lithium aluminium hydride ($LiAlH_4$) or catalytic hydrogenation (e.g., $H_2/Ni$ or $Na(Hg)/C_2H_5OH$). This reaction is significant for the 'ascent of amine series' because the resulting amine contains one carbon atom more than the starting alkyl halide used to prepare the nitrile: $R-C \\equiv N \\xrightarrow{H_2/Ni} R-CH_2-NH_2$.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.4:6",
+            "order": 6,
+            "title": "Reduction of Amides",
+            "content_text": "Amides are reduced to amines by treatment with lithium aluminium hydride ($LiAlH_4$) followed by water. The carbonyl group is converted to a methylene group, yielding an amine with the same number of carbons: $R-CO-NH_2 \\xrightarrow{(i) LiAlH_4, (ii) H_2O} R-CH_2-NH_2$.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.4:7",
+            "order": 7,
+            "title": "Gabriel Phthalimide Synthesis",
+            "content_text": "Gabriel synthesis is used to prepare primary aliphatic amines. Phthalimide reacts with ethanolic $KOH$ to form potassium phthalimide, which is then heated with an alkyl halide ($R-X$) to produce N-alkylphthalimide. Alkaline hydrolysis of this intermediate yields the primary amine and sodium phthalate. Aromatic primary amines cannot be prepared this way because aryl halides do not undergo nucleophilic substitution with the phthalimide anion.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 9.4.4",
+                "description": "Reaction scheme for Gabriel phthalimide synthesis: Phthalimide $\\rightarrow$ Potassium phthalimide $\\rightarrow$ N-Alkylphthalimide $\\rightarrow$ Primary amine + Sodium phthalate.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.4:8",
+            "order": 8,
+            "title": "Hoffmann Bromamide Degradation Reaction",
+            "content_text": "Hoffmann developed a method to prepare primary amines by treating an amide with bromine in aqueous or ethanolic sodium hydroxide. In this reaction, an alkyl or aryl group migrates from the carbonyl carbon to the nitrogen atom. The resulting amine contains one carbon less than the starting amide: $R-CO-NH_2 + Br_2 + 4NaOH \\rightarrow R-NH_2 + Na_2CO_3 + 2NaBr + 2H_2O$.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.4:9",
+            "order": 9,
+            "title": "Worked Example: Synthetic Conversions",
+            "content_text": "This example demonstrates how to use nitrile intermediates and reduction to increase the carbon chain length in amine synthesis.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 9.2",
+                "problem": "Write chemical equations for the following conversions: (i) $CH_3-CH_2-Cl$ into $CH_3-CH_2-CH_2-NH_2$ (ii) $C_6H_5-CH_2-Cl$ into $C_6H_5-CH_2-CH_2-NH_2$",
+                "solution": "(i) $CH_3CH_2Cl \\xrightarrow{\\text{Ethanolic } NaCN} CH_3CH_2CN \\xrightarrow{\\text{reduction}} CH_3CH_2CH_2NH_2$. (ii) $C_6H_5CH_2Cl \\xrightarrow{\\text{Ethanolic } NaCN} C_6H_5CH_2CN \\xrightarrow{H_2/Ni} C_6H_5CH_2CH_2NH_2$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.4:10",
+            "order": 10,
+            "title": "Worked Example: Hofmann Bromamide Degradation",
+            "content_text": "",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example",
+                "problem": "Write structures and IUPAC names of (i) the amide which gives propanamine by Hoffmann bromamide reaction. (ii) the amine produced by the Hoffmann degradation of benzamide.",
+                "solution": "(i) Propanamine contains three carbons. Hence, the amide molecule must contain four carbon atoms. The starting amide is butanamide ($CH_3CH_2CH_2CONH_2$). (ii) Benzamide is an aromatic amide containing seven carbon atoms. The amine formed is aniline (benzenamine, $C_6H_5NH_2$), an aromatic primary amine containing six carbon atoms."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.4:11",
+            "order": 11,
+            "title": "In-text Exercise 9.3",
+            "content_text": "",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Exercise 9.3",
+                "problem": "How will you convert (i) Benzene into aniline (ii) Benzene into N,N-dimethylaniline (iii) $Cl$-$(CH_2)_4$-$Cl$ into hexan-1,6-diamine?",
+                "solution": null
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:9:9.5",
+        "number": "9.5",
+        "title": "Physical Properties",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:9:9.5:1",
+            "order": 1,
+            "title": "General Physical Properties",
+            "content_text": "The lower aliphatic amines are gases with fishy odour. Primary amines with three or more carbon atoms are liquid and still higher ones are solid. Aniline and other arylamines are usually colourless but get coloured on storage due to atmospheric oxidation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.5:2",
+            "order": 2,
+            "title": "Solubility",
+            "content_text": "Lower aliphatic amines are soluble in water because they can form hydrogen bonds with water molecules. However, solubility decreases with increase in molar mass of amines due to increase in size of the hydrophobic alkyl part. Higher amines are essentially insoluble in water. Amines are soluble in organic solvents like alcohol, ether and benzene. Alcohols are more polar than amines and form stronger intermolecular hydrogen bonds than amines.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.5:3",
+            "order": 3,
+            "title": "Boiling Points and Hydrogen Bonding",
+            "content_text": "Primary and secondary amines are engaged in intermolecular association due to hydrogen bonding between nitrogen of one and hydrogen of another molecule. This intermolecular association is more in primary amines than in secondary amines as there are two hydrogen atoms available for hydrogen bond formation. Tertiary amines do not have intermolecular association due to the absence of hydrogen atom available for hydrogen bond formation. Therefore, the order of boiling points of isomeric amines is: Primary > Secondary > Tertiary.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Intermolecular hydrogen bonding in primary amines",
+                "description": "Diagram showing hydrogen bonding between the H atom of one primary amine molecule and the N atom of another, forming a chain: R-N-H···N-H···N-R.",
+                "image_url": null
+              }
+            ],
+            "tables": [
+              {
+                "label": null,
+                "caption": null,
+                "headers": [
+                  "Compound",
+                  "Molar mass",
+                  "b.p./K"
+                ],
+                "rows": [
+                  [
+                    "$n$-$C_4H_9NH_2$",
+                    "73",
+                    "350.8"
+                  ],
+                  [
+                    "$(C_2H_5)_2NH$",
+                    "73",
+                    "329.3"
+                  ],
+                  [
+                    "$C_2H_5N(CH_3)_2$",
+                    "73",
+                    "310.5"
+                  ],
+                  [
+                    "$C_2H_5CH(CH_3)_2$",
+                    "72",
+                    "300.8"
+                  ],
+                  [
+                    "$n$-$C_4H_9OH$",
+                    "74",
+                    "390.3"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:9:9.6",
+        "number": "9.6",
+        "title": "Chemical Reactions",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:9:9.6:1",
+            "order": 1,
+            "title": "Basic Character of Amines",
+            "content_text": "Amines are reactive due to the difference in electronegativity between nitrogen and hydrogen atoms and the presence of an unshared pair of electrons on the nitrogen atom. The number of hydrogen atoms attached to the nitrogen atom determines the course of reaction. Amines behave as nucleophiles due to the presence of the unshared electron pair.\n\nAmines, being basic in nature, react with acids to form salts: $RNH_2 + HX \\rightleftharpoons RNH_3^+X^-$. Amine salts on treatment with a base like NaOH regenerate the parent amine: $RNH_3^+X^- + OH^- \\rightarrow RNH_2 + H_2O + X^-$. Amine salts are soluble in water but insoluble in organic solvents like ether. This reaction is the basis for the separation of amines from non-basic organic compounds.\n\nBasic character of amines can be understood in terms of their $K_b$ and $pK_b$ values. Larger the value of $K_b$ or smaller the value of $pK_b$, stronger is the base. Aliphatic amines are stronger bases than ammonia ($pK_b = 4.75$) due to the +I effect of alkyl groups leading to high electron density on the nitrogen atom. Their $pK_b$ values lie in the range of 3 to 4.22. Aromatic amines are weaker bases than ammonia due to the electron withdrawing nature of the aryl group.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": null,
+                "caption": null,
+                "headers": [
+                  "Name of amine",
+                  "pKb"
+                ],
+                "rows": [
+                  [
+                    "Methanamine",
+                    "3.38"
+                  ],
+                  [
+                    "N-Methylmethanamine",
+                    "3.27"
+                  ],
+                  [
+                    "N,N-Dimethylmethanamine",
+                    "4.22"
+                  ],
+                  [
+                    "Ethanamine",
+                    "3.29"
+                  ],
+                  [
+                    "N-Ethylethanamine",
+                    "3.00"
+                  ],
+                  [
+                    "N,N-Diethylethanamine",
+                    "3.25"
+                  ],
+                  [
+                    "Benzenamine (Aniline)",
+                    "9.38"
+                  ],
+                  [
+                    "Phenylmethanamine",
+                    "4.70"
+                  ],
+                  [
+                    "N-Methylaniline",
+                    "9.30"
+                  ],
+                  [
+                    "N,N-Dimethylaniline",
+                    "8.92"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.6:2",
+            "order": 2,
+            "title": "Factors Affecting Basic Strength of Amines",
+            "content_text": "The basic strength of amines is not solely determined by the inductive effect (+I or -I) of the substituents. While the inductive effect is a primary factor, other significant influences include the solvation effect and steric hindrance. Discrepancies observed when interpreting $K_b$ values based only on inductive effects can be explained by considering these additional factors. The interplay between these effects determines the overall availability of the nitrogen lone pair for protonation and the stability of the resulting ammonium cation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.6:3",
+            "order": 3,
+            "title": "Structure-Basicity Relationship of Amines",
+            "content_text": "The basicity of an amine is fundamentally linked to its chemical structure. The basic character depends on the ease with which the amine can form a cation by accepting a proton from an acid. According to the principle of chemical equilibrium, the more stable the resulting cation is relative to the parent amine, the more basic the amine will be. This stability is influenced by the electronic and steric environment around the nitrogen atom.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.6:4",
+            "order": 4,
+            "title": "Alkanamines versus Ammonia: Inductive Effect",
+            "content_text": "Alkanamines are generally stronger bases than ammonia. This is primarily due to the electron-releasing nature (+I effect) of alkyl groups. The alkyl group pushes electron density towards the nitrogen atom, making the unshared electron pair more available for sharing with a proton from an acid. Furthermore, the substituted ammonium ion formed after protonation ($R-NH_3^+$) is stabilized by the dispersal of the positive charge through the +I effect of the alkyl group. Consequently, the basic nature of aliphatic amines is expected to increase with the number of alkyl groups.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Reaction with Proton",
+                "description": "Chemical equations showing the reaction of an alkanamine ($R-NH_2$) and ammonia ($NH_3$) with a proton ($H^+$) to form their respective cations, illustrating the dispersal of positive charge in the substituted ammonium ion.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.6:5",
+            "order": 5,
+            "title": "Basicity of Amines in the Gaseous Phase",
+            "content_text": "In the gaseous phase, the basicity of amines follows a regular trend that aligns perfectly with the inductive effect. Since there are no solvent molecules to interact with the ions, the only factor is the electron-releasing ability of the alkyl groups. The order of basicity in the gaseous phase is: tertiary amine > secondary amine > primary amine > $NH_3$. This order reflects the increasing stabilization of the ammonium cation as more alkyl groups are added to the nitrogen atom.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.6:6",
+            "order": 6,
+            "title": "Solvation Effect in the Aqueous Phase",
+            "content_text": "In aqueous solution, the basicity trend of amines is not as regular as in the gaseous phase, as shown by $pK_b$ values (referenced in Table 9.3). In water, substituted ammonium cations are stabilized not only by the +I effect but also by solvation through hydrogen bonding with water molecules. The extent of solvation depends on the number of hydrogen atoms available on the nitrogen for H-bonding. Smaller, less substituted ions (like $1^\\circ$ ammonium ions) can form more hydrogen bonds and are thus more stabilized by solvation than larger, more substituted ions ($3^\\circ$). The order of stability due to solvation is: $1^\\circ > 2^\\circ > 3^\\circ$. This solvation effect opposes the inductive effect trend.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Solvation Stability",
+                "description": "Diagram showing the decreasing order of the extent of H-bonding in water for primary ($1^\\circ$), secondary ($2^\\circ$), and tertiary ($3^\\circ$) ammonium ions, which correlates to their stability by solvation.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.6:7",
+            "order": 7,
+            "title": "Steric Hindrance and Final Basicity Order",
+            "content_text": "Steric hindrance also influences basicity, particularly when alkyl groups are bulky. Large groups can physically block the approach of water molecules, reducing stabilization by solvation, or hinder the approach of a proton. The final basic strength of alkyl amines in the aqueous state is determined by a subtle interplay of the inductive effect, solvation effect, and steric hindrance. For methyl-substituted amines, the order is: $(CH_3)_2NH > CH_3NH_2 > (CH_3)_3N > NH_3$. For ethyl-substituted amines, the order is: $(C_2H_5)_2NH > (C_2H_5)_3N > C_2H_5NH_2 > NH_3$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.6:8",
+            "order": 8,
+            "title": "Arylamines versus Ammonia: Resonance Effect",
+            "content_text": "Arylamines, such as aniline, are significantly weaker bases than ammonia, reflected in their high $pK_b$ values. This is because the $-NH_2$ group is attached directly to the benzene ring, allowing the unshared electron pair on the nitrogen atom to be in conjugation with the $\\pi$-electron system of the ring. This delocalization makes the lone pair less available for protonation. Aniline is a resonance hybrid of five structures, where the lone pair is distributed over the ortho and para positions of the ring.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Aniline Resonance",
+                "description": "Five resonating structures of aniline (I-V) showing the delocalization of the nitrogen lone pair into the benzene ring, resulting in partial positive charge on nitrogen and negative charges at ortho and para positions.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.6:9",
+            "order": 9,
+            "title": "Stability of Aniline vs Anilinium Ion",
+            "content_text": "The low basicity of aniline is further explained by comparing the stability of the neutral molecule with its protonated form, the anilinium ion. Aniline is stabilized by five resonance structures, whereas the anilinium ion, which lacks the lone pair for conjugation, can only be represented by two Kekule resonating structures. Since a higher number of resonating structures generally indicates greater stability, aniline is more stable than the anilinium ion. This high stability of the reactant relative to the product reduces the proton acceptability of aromatic amines compared to ammonia.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Anilinium Ion Resonance",
+                "description": "Two resonating structures (I and II) of the anilinium ion, showing the positive charge localized on the nitrogen atom.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.6:10",
+            "order": 10,
+            "title": "Effect of Substituents on Aromatic Amine Basicity",
+            "content_text": "The basicity of substituted anilines is affected by the electronic nature of the substituents. Electron-releasing groups (ERGs) such as $-OCH_3$ and $-CH_3$ increase basic strength by increasing the electron density on the nitrogen atom. In contrast, electron-withdrawing groups (EWGs) such as $-NO_2$, $-SO_3H$, $-COOH$, and halogens ($-X$) decrease basic strength by withdrawing electron density away from the nitrogen, making the lone pair even less available for protonation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.6:11",
+            "order": 11,
+            "title": "Worked Example: Basicity Order",
+            "content_text": "This example demonstrates how to apply the principles of inductive effect and resonance to rank amines by basic strength.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 9.4",
+                "problem": "Arrange the following in decreasing order of their basic strength: $C_6H_5NH_2, C_2H_5NH_2, (C_2H_5)_2NH, NH_3$",
+                "solution": "The decreasing order of basic strength of the above amines and ammonia follows the following order: $(C_2H_5)_2NH > C_2H_5NH_2 > NH_3 > C_6H_5NH_2$. Secondary aliphatic amines are stronger than primary ones due to the +I effect. Both are stronger than ammonia. Aniline ($C_6H_5NH_2$) is the weakest due to resonance delocalization of the lone pair."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.6:12",
+            "order": 12,
+            "title": "Alkylation of Amines",
+            "content_text": "Amines undergo alkylation when they react with alkyl halides. This reaction involves the nucleophilic attack of the amine nitrogen on the alkyl halide, leading to the replacement of hydrogen atoms by alkyl groups. This process can continue until a quaternary ammonium salt is formed.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.6:13",
+            "order": 13,
+            "title": "Acylation of Amines",
+            "content_text": "Aliphatic and aromatic primary and secondary amines react with acid chlorides, anhydrides, and esters through nucleophilic substitution to form amides. This reaction is known as acylation. It involves the replacement of a hydrogen atom of the $-NH_2$ or $>N-H$ group by an acyl group ($R-CO-$). The reaction is typically carried out in the presence of a base stronger than the amine, such as pyridine. Pyridine removes the $HCl$ formed during the reaction, which prevents the protonation of the amine and shifts the equilibrium to the right.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Acylation Reactions",
+                "description": "Chemical equations showing the acylation of ethanamine and N-ethylethanamine with acetyl chloride to form N-ethylethanamide and N,N-diethylethanamide respectively, and the reaction of benzenamine with ethanoic anhydride to form N-phenylethanamide (acetanilide).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.6:14",
+            "order": 14,
+            "title": "Benzoylation and Reaction with Carboxylic Acids",
+            "content_text": "Amines also react with benzoyl chloride ($C_6H_5COCl$) in a process known as benzoylation. For example, methanamine reacts with benzoyl chloride to produce N-methylbenzamide and $HCl$. Additionally, amines react with carboxylic acids at room temperature to form salts through an acid-base neutralization reaction.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Benzoylation of Methanamine",
+                "description": "Reaction equation: $CH_3NH_2 + C_6H_5COCl \\rightarrow CH_3NHCOC_6H_5 + HCl$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.6:15",
+            "order": 15,
+            "title": "Carbylamine Reaction",
+            "content_text": "Aliphatic and aromatic primary amines, when heated with chloroform ($CHCl_3$) and ethanolic potassium hydroxide ($KOH$), form isocyanides or carbylamines. These substances are characterized by a highly foul smell. This reaction is specific to primary amines; secondary and tertiary amines do not undergo this reaction. Consequently, it is known as the carbylamine reaction or isocyanide test and is used as a qualitative test for primary amines. The general chemical equation is: $R-NH_2 + CHCl_3 + 3KOH \\xrightarrow{Heat} R-NC + 3KCl + 3H_2O$.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.6:16",
+            "order": 16,
+            "title": "Reaction with Nitrous Acid",
+            "content_text": "The three classes of amines (primary, secondary, and tertiary) react differently with nitrous acid ($HNO_2$), which is typically prepared in situ from a mineral acid (like $HCl$) and sodium nitrite ($NaNO_2$).\n\n(a) Primary aliphatic amines react with nitrous acid to form aliphatic diazonium salts. These salts are highly unstable and decompose to liberate nitrogen gas quantitatively and produce alcohols. The quantitative evolution of nitrogen is a standard method used in the estimation of amino acids and proteins: $R-NH_2 + HNO_2 \\xrightarrow{NaNO_2 + HCl} [R-N_2^+Cl^-] \\xrightarrow{H_2O} ROH + N_2 + HCl$.\n\n(b) Aromatic amines react with nitrous acid at low temperatures (273-278 K) to form stable diazonium salts, such as benzenediazonium chloride: $C_6H_5-NH_2 \\xrightarrow[273-278 K]{NaNO_2 + 2HCl} C_6H_5-N_2^+Cl^- + NaCl + 2H_2O$. Secondary and tertiary amines react with nitrous acid in a different manner.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.6:17",
+            "order": 17,
+            "title": "Reaction with Arylsulphonyl Chloride (Hinsberg's Reagent)",
+            "content_text": "Benzenesulphonyl chloride ($C_6H_5SO_2Cl$), known as Hinsberg’s reagent, is used to distinguish between primary, secondary, and tertiary amines.\n\n(a) Primary Amines: Reaction with benzenesulphonyl chloride yields N-ethylbenzenesulphonyl amide. The hydrogen attached to the nitrogen in this sulphonamide is strongly acidic due to the presence of the strong electron-withdrawing sulphonyl group, making the product soluble in alkali.\n\n(b) Secondary Amines: Reaction yields N,N-diethylbenzenesulphonamide. Since there is no hydrogen atom attached to the nitrogen atom in this product, it is not acidic and is insoluble in alkali.\n\n(c) Tertiary Amines: These do not react with benzenesulphonyl chloride. This difference in reactivity allows for the distinction and separation of a mixture of amines. In modern practice, $p$-toluenesulphonyl chloride has largely replaced benzenesulphonyl chloride for this test.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Hinsberg Reaction Scheme",
+                "description": "Chemical structures showing the reaction of benzenesulphonyl chloride with primary and secondary amines to form their respective sulphonamides.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.6:18",
+            "order": 18,
+            "title": "Electrophilic Substitution: Reactivity and Orientation",
+            "content_text": "Aniline is a resonance hybrid where the $-NH_2$ group acts as a powerful activating group. The lone pair of electrons on the nitrogen atom is delocalized into the benzene ring, increasing electron density, particularly at the ortho- and para- positions. Consequently, aniline is highly reactive toward electrophilic substitution, and substitution occurs preferentially at these positions.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.6:19",
+            "order": 19,
+            "title": "Bromination of Aniline",
+            "content_text": "Aniline reacts vigorously with bromine water at room temperature to produce a white precipitate of 2,4,6-tribromoaniline. Due to the high reactivity of the amino group, it is difficult to stop the reaction at the monosubstitution stage. To prepare monosubstituted derivatives, the activating effect of the $-NH_2$ group must be controlled by 'protection'. This is achieved by acetylating aniline with acetic anhydride in the presence of pyridine to form acetanilide ($N$-phenylethanamide). In acetanilide, the lone pair of electrons on nitrogen interacts with the carbonyl oxygen through resonance, making them less available for donation to the benzene ring. This reduces the activating effect, allowing for controlled electrophilic substitution (e.g., bromination to the para-position) followed by hydrolysis to recover the substituted amine.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Bromination Scheme",
+                "description": "Reaction of aniline with bromine water to form 2,4,6-tribromoaniline, and the multi-step protection-deprotection sequence to form 4-bromoaniline.",
+                "image_url": null
+              },
+              {
+                "label": "Resonance in Acetanilide",
+                "description": "Resonance structures showing the delocalization of the nitrogen lone pair into the acetyl carbonyl group.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.6:20",
+            "order": 20,
+            "title": "Nitration of Aniline",
+            "content_text": "Direct nitration of aniline with concentrated nitric acid and sulphuric acid is problematic because it leads to tarry oxidation products. Furthermore, in the strongly acidic medium, aniline is protonated to form the anilinium ion ($C_6H_5NH_3^+$). Unlike the $-NH_2$ group, the anilinium ion is meta-directing. This results in a significant amount of the meta-derivative (47%) alongside the para (51%) and ortho (2%) products. To obtain $p$-nitroaniline as the major product, the $-NH_2$ group is first protected by acetylation. The resulting acetanilide is nitrated and then hydrolyzed: $Aniline \\xrightarrow{(CH_3CO)_2O, Pyridine} Acetanilide \\xrightarrow{HNO_3, H_2SO_4, 288K} p-Nitroacetanilide \\xrightarrow{OH^- or H^+} p-Nitroaniline$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Nitration Products",
+                "description": "Chemical structures showing the percentage yield of ortho, meta, and para nitroaniline from direct nitration.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.6:21",
+            "order": 21,
+            "title": "Sulphonation of Aniline",
+            "content_text": "Aniline reacts with concentrated sulphuric acid to form anilinium hydrogensulphate. Upon heating this salt at 453-473 K, it rearranges to form $p$-aminobenzene sulphonic acid, commonly known as sulphanilic acid, as the major product. Sulphanilic acid exists as a Zwitter ion, where the acidic sulphonic group ($-SO_3H$) transfers a proton to the basic amino group ($-NH_2$), resulting in a dipolar structure: $NH_3^+-C_6H_4-SO_3^-$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Sulphonation and Zwitter Ion",
+                "description": "Reaction sequence from aniline to anilinium hydrogensulphate to sulphanilic acid, showing the Zwitter ion equilibrium.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.6:22",
+            "order": 22,
+            "title": "Friedel-Crafts Reaction in Aniline",
+            "content_text": "Aniline does not undergo Friedel-Crafts reactions (alkylation or acetylation). This is because the Lewis acid catalyst used in the reaction, anhydrous aluminium chloride ($AlCl_3$), reacts with the basic amino group of aniline to form a salt. In this salt, the nitrogen atom acquires a positive charge, which makes the $-NH_2$ group a strong deactivating group, preventing further electrophilic substitution.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:9:9.7",
+        "number": "9.7",
+        "title": "Method of Preparation of Diazonium Salts",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:9:9.7:1",
+            "order": 1,
+            "title": "General Formula and Nomenclature of Diazonium Salts",
+            "content_text": "Diazonium salts have the general formula $R N_2^+ X^-$ where $R$ stands for an aryl group and $X^-$ ion may be $Cl^-$, $Br^-$, $HSO_4^-$, $BF_4^-$, etc. They are named by suffixing 'diazonium' to the name of the parent hydrocarbon from which they are formed, followed by the name of the anion such as chloride, hydrogensulphate, etc. The $N_2^+$ group is called the diazonium group. For example, $C_6H_5 N_2^+ Cl^-$ is named as benzenediazonium chloride and $C_6H_5 N_2^+ HSO_4^-$ is known as benzenediazonium hydrogensulphate.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.7:2",
+            "order": 2,
+            "title": "Stability of Diazonium Salts",
+            "content_text": "Primary aliphatic amines form highly unstable alkyldiazonium salts. In contrast, primary aromatic amines form arenediazonium salts which are stable for a short time in solution at low temperatures (273-278 K). The stability of arenediazonium ion is explained on the basis of resonance, where the positive charge is delocalized over the benzene ring at the ortho and para positions.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Resonance Structures",
+                "description": "Resonance structures of the benzenediazonium ion showing the delocalization of the positive charge from the nitrogen atom to the ortho and para positions of the benzene ring.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.7:3",
+            "order": 3,
+            "title": "Diazotisation",
+            "content_text": "Benzenediazonium chloride is prepared by the reaction of aniline with nitrous acid at 273-278 K. Nitrous acid is produced in the reaction mixture by the reaction of sodium nitrite with hydrochloric acid. The conversion of primary aromatic amines into diazonium salts is known as diazotisation. Due to its instability, the diazonium salt is generally not stored and is used immediately after its preparation. The reaction is: $C_6H_5NH_2 + NaNO_2 + 2HCl \\xrightarrow{273-278K} C_6H_5 N_2^+ Cl^- + NaCl + 2H_2O$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:9:9.8",
+        "number": "9.8",
+        "title": "Physical Properties",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:9:9.8:1",
+            "order": 1,
+            "title": "Physical Properties of Benzenediazonium Chloride",
+            "content_text": "Benzenediazonium chloride is a colourless crystalline solid. It is readily soluble in water and is stable in the cold but reacts with water when warmed. It decomposes easily in the dry state. Benzenediazonium fluoroborate is water insoluble and stable at room temperature.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:9:9.9",
+        "number": "9.9",
+        "title": "Chemical Reactions",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:9:9.9:1",
+            "order": 1,
+            "title": "Classification of Diazonium Salt Reactions",
+            "content_text": "The reactions of diazonium salts can be broadly divided into two categories: (A) reactions involving displacement of nitrogen and (B) reactions involving retention of the diazo group. In displacement reactions, the diazonium group acts as a very good leaving group and is substituted by other groups such as $Cl^-$, $Br^-$, $I^-$, $CN^-$, and $OH^-$. The nitrogen formed escapes from the reaction mixture as a gas.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.9:2",
+            "order": 2,
+            "title": "Replacement by Halide or Cyanide Ion (Sandmeyer Reaction)",
+            "content_text": "The $Cl^-$, $Br^-$, and $CN^-$ nucleophiles can easily be introduced in the benzene ring in the presence of $Cu(I)$ ion. This reaction is called the Sandmeyer reaction. The general reactions are: $ArN_2^+X^- \\xrightarrow{Cu_2Cl_2/HCl} ArCl + N_2$, $ArN_2^+X^- \\xrightarrow{Cu_2Br_2/HBr} ArBr + N_2$, and $ArN_2^+X^- \\xrightarrow{CuCN/KCN} ArCN + N_2$.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Sandmeyer Reaction",
+                "description": "Reaction scheme showing the conversion of arenediazonium salts to aryl chlorides, bromides, or cyanides using cuprous salts.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.9:3",
+            "order": 3,
+            "title": "Gatterman Reaction",
+            "content_text": "Alternatively, chlorine or bromine can be introduced in the benzene ring by treating the diazonium salt solution with the corresponding halogen acid in the presence of copper powder. This is referred to as the Gatterman reaction. The yield in the Sandmeyer reaction is found to be better than the Gatterman reaction. Reactions: $ArN_2^+X^- \\xrightarrow{Cu/HCl} ArCl + N_2 + CuX$ and $ArN_2^+X^- \\xrightarrow{Cu/HBr} ArBr + N_2 + CuX$.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Gatterman Reaction",
+                "description": "Reaction scheme showing the conversion of arenediazonium salts to aryl halides using copper powder and halogen acids.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.9:4",
+            "order": 4,
+            "title": "Replacement by Iodide Ion",
+            "content_text": "Iodine is not easily introduced into the benzene ring directly, but when the diazonium salt solution is treated with potassium iodide, iodobenzene is formed: $ArN_2^+Cl^- + KI \\rightarrow ArI + KCl + N_2$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.9:5",
+            "order": 5,
+            "title": "Replacement by Fluoride Ion",
+            "content_text": "When arenediazonium chloride is treated with fluoroboric acid, arene diazonium fluoroborate is precipitated which on heating decomposes to yield aryl fluoride: $ArN_2^+Cl^- + HBF_4 \\rightarrow Ar-N_2^+BF_4^- \\xrightarrow{\\Delta} Ar-F + BF_3 + N_2$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.9:6",
+            "order": 6,
+            "title": "Replacement by Hydrogen",
+            "content_text": "Certain mild reducing agents like hypophosphorous acid (phosphinic acid) or ethanol reduce diazonium salts to arenes and themselves get oxidised to phosphorous acid and ethanal, respectively. Reactions: $ArN_2^+Cl^- + H_3PO_2 + H_2O \\rightarrow ArH + N_2 + H_3PO_3 + HCl$ and $ArN_2^+Cl^- + CH_3CH_2OH \\rightarrow ArH + N_2 + CH_3CHO + HCl$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.9:7",
+            "order": 7,
+            "title": "Replacement by Hydroxyl Group",
+            "content_text": "If the temperature of the diazonium salt solution is allowed to rise up to 283 K, the salt gets hydrolysed to phenol: $ArN_2^+Cl^- + H_2O \\rightarrow ArOH + N_2 + HCl$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.9:8",
+            "order": 8,
+            "title": "Replacement by Nitro Group",
+            "content_text": "When arenediazonium fluoroborate is heated with aqueous sodium nitrite solution in the presence of copper, the diazonium group is replaced by $-NO_2$ group. The process involves first forming the fluoroborate salt, then reacting with $NaNO_2$ and $Cu$ under heat.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Nitro Group Replacement",
+                "description": "Chemical reaction sequence showing benzenediazonium chloride reacting with fluoroboric acid to form benzenediazonium fluoroborate, which then reacts with sodium nitrite and copper to form nitrobenzene.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.9:9",
+            "order": 9,
+            "title": "Coupling Reactions (Retention of Diazo Group)",
+            "content_text": "The azo products obtained have an extended conjugate system having both the aromatic rings joined through the $-N=N-$ bond. These compounds are often coloured and are used as dyes. Benzene diazonium chloride reacts with phenol in which the phenol molecule at its para position is coupled with the diazonium salt to form p-hydroxyazobenzene (orange dye). Similarly, the reaction with aniline yields p-aminoazobenzene (yellow dye). This is an example of an electrophilic substitution reaction.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Coupling with Phenol",
+                "description": "Reaction of benzenediazonium chloride with phenol in basic medium ($OH^-$) to produce p-hydroxyazobenzene, an orange dye.",
+                "image_url": null
+              },
+              {
+                "label": "Coupling with Aniline",
+                "description": "Reaction of benzenediazonium chloride with aniline in acidic medium ($H^+$) to produce p-aminoazobenzene, a yellow dye.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:9:9.10",
+        "number": "9.10",
+        "title": "Importance of Diazonium Salts in Synthesis of Aromatic Compounds",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:9:9.10:1",
+            "order": 1,
+            "title": "Synthetic Utility of Diazonium Salts",
+            "content_text": "Diazonium salts are excellent intermediates for the introduction of $-F$, $-Cl$, $-Br$, $-I$, $-CN$, $-OH$, and $-NO_2$ groups into the aromatic ring. Aryl fluorides and iodides cannot be prepared by direct halogenation. The cyano group cannot be introduced by nucleophilic substitution of chlorine in chlorobenzene, but cyanobenzene can be easily obtained from diazonium salts. Thus, the replacement of the diazo group by other groups is helpful in preparing substituted aromatic compounds that cannot be prepared by direct substitution in benzene or substituted benzene.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.10:2",
+            "order": 2,
+            "title": "Example 9.5: Multi-step Synthesis of Substituted Aromatic Compounds",
+            "content_text": "The synthetic utility of diazonium salts is particularly evident in preparing those substituted aromatic compounds which cannot be prepared by direct substitution in benzene or substituted benzene. This is demonstrated in the conversion of 4-nitrotoluene to 2-bromobenzoic acid. The process involves strategic placement of a bromine atom followed by the transformation of the nitro and methyl groups. The nitro group is reduced to an amine, converted to a diazonium salt, and then removed to leave the bromine in the desired position. Finally, the methyl group is oxidized to a carboxylic acid.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 9.5",
+                "problem": "How will you convert 4-nitrotoluene to 2-bromobenzoic acid?",
+                "solution": "The conversion is achieved through the following steps: 1. Bromination: 4-Nitrotoluene reacts with $Br_2$ to give 2-bromo-4-nitrotoluene. 2. Reduction: 2-Bromo-4-nitrotoluene is reduced with $Sn/HCl$ to 2-bromo-4-aminotoluene. 3. Diazotization: 2-Bromo-4-aminotoluene reacts with $NaNO_2/HCl$ at $273-278 K$ to form the corresponding diazonium salt. 4. Deamination: The diazonium salt is treated with $H_2O/H_3PO_2$ to remove the diazonium group, yielding 2-bromotoluene. 5. Oxidation: 2-Bromotoluene is oxidized with alkaline $KMnO_4$ followed by acidification to give 2-bromobenzoic acid."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Reaction Scheme 9.5",
+                "description": "A flow chart showing the conversion of 4-nitrotoluene to 2-bromobenzoic acid. Steps: (i) $Br_2$ addition to the ring, (ii) $Sn/HCl$ reduction of $-NO_2$ to $-NH_2$, (iii) $NaNO_2/HCl$ diazotization to $-N_2Cl$, (iv) $H_2O/H_3PO_2$ replacement of $-N_2Cl$ by $-H$, (v) $KMnO_4/\\bar{O}H$ oxidation of $-CH_3$ to $-COOH$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:9.10:3",
+            "order": 3,
+            "title": "Intext Question 9.9: Synthetic Applications",
+            "content_text": "The following intext questions test the application of diazonium salts in the synthesis of specific aromatic derivatives like 3-nitrotoluene and 1,3,5-tribromobenzene.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Intext Question 9.9",
+                "problem": "Convert: (i) 3-Methylaniline into 3-nitrotoluene. (ii) Aniline into 1,3,5-tribromobenzene.",
+                "solution": "(i) 3-Methylaniline is diazotized with $NaNO_2/HCl$ at $273K$, then treated with $HBF_4$ to form 3-methylbenzenediazonium fluoroborate, which is heated with $NaNO_2$ and $Cu$ to yield 3-nitrotoluene. (ii) Aniline is brominated with $Br_2/H_2O$ to form 2,4,6-tribromoaniline, which is then diazotized and treated with $C_2H_5OH$ to remove the diazonium group, yielding 1,3,5-tribromobenzene."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:9:Summary",
+        "number": "Summary",
+        "title": "Summary",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:9:Summary:1",
+            "order": 1,
+            "title": "Classification and Structure of Amines",
+            "content_text": "Amines can be considered as derivatives of ammonia obtained by replacement of hydrogen atoms with alkyl or aryl groups. Replacement of one hydrogen atom of ammonia gives rise to structure of the type $R-NH_2$, known as primary amine. Secondary amines are characterised by the structure $R_2NH$ or $R-NHR'$ and tertiary amines by $R_3N$, $RNR'R''$ or $R_2NR'$. Secondary and tertiary amines are known as simple amines if the alkyl or aryl groups are the same and mixed amines if the groups are different. Like ammonia, all the three types of amines have one unshared electron pair on nitrogen atom due to which they behave as Lewis bases.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:Summary:2",
+            "order": 2,
+            "title": "Synthesis and Physical Properties",
+            "content_text": "Amines are usually formed from nitro compounds, halides, amides, imides, etc. They exhibit hydrogen bonding which influence their physical properties. In alkylamines, a combination of electron releasing, steric and H-bonding factors influence the stability of the substituted ammonium cations in protic polar solvents and thus affect the basic nature of amines. Alkyl amines are found to be stronger bases than ammonia.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:Summary:3",
+            "order": 3,
+            "title": "Basicity of Aromatic Amines",
+            "content_text": "In aromatic amines, electron releasing and withdrawing groups, respectively increase and decrease their basic character. Aniline is a weaker base than ammonia. Reactions of amines are governed by availability of the unshared pair of electrons on nitrogen. Influence of the number of hydrogen atoms at nitrogen atom on the type of reactions and nature of products is responsible for identification and distinction between primary, secondary and tertiary amines.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:Summary:4",
+            "order": 4,
+            "title": "Identification and Reactivity Control",
+            "content_text": "$p$-Toluenesulphonyl chloride is used for the identification of primary, secondary and tertiary amines. Presence of amino group in aromatic ring enhances reactivity of the aromatic amines. Reactivity of aromatic amines can be controlled by acylation process, i.e., by treating with acetyl chloride or acetic anhydride. Tertiary amines like trimethylamine are used as insect attractants.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:9:Summary:5",
+            "order": 5,
+            "title": "Aryldiazonium Salts and Synthetic Utility",
+            "content_text": "Aryldiazonium salts, usually obtained from arylamines, undergo replacement of the diazonium group with a variety of nucleophiles to provide advantageous methods for producing aryl halides, cyanides, phenols and arenes by reductive removal of the diazo group. Coupling reaction of aryldiazonium salts with phenols or arylamines give rise to the formation of azo dyes.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:chemistry:12:9:ex:1",
+          "number": 1,
+          "problem": "Classify the following amines as primary, secondary or tertiary: (i) 1-Aminonaphthalene (ii) N,N-Dimethyl-1-aminonaphthalene (iii) $(C_2H_5)_2CHNH_2$ (iv) $(C_2H_5)_2NH$",
+          "solution": "(i) Primary (ii) Tertiary (iii) Primary (iv) Secondary",
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:9:ex:2",
+          "number": 2,
+          "problem": "(i) Write structures of different isomeric amines corresponding to the molecular formula, $C_4H_{11}N$. (ii) Write IUPAC names of all the isomers. (iii) What type of isomerism is exhibited by different pairs of amines?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "short_answer"
+        },
+        {
+          "id": "ncert:chemistry:12:9:ex:3",
+          "number": 3,
+          "problem": "Arrange the following in increasing order of their basic strength: (i) $C_2H_5NH_2$, $C_6H_5NH_2$, $NH_3$, $C_6H_5CH_2NH_2$ and $(C_2H_5)_2NH$ (ii) $C_2H_5NH_2$, $(C_2H_5)_2NH$, $(C_2H_5)_3N$, $C_6H_5NH_2$ (iii) $CH_3NH_2$, $(CH_3)_2NH$, $(CH_3)_3N$, $C_6H_5NH_2$, $C_6H_5CH_2NH_2$.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:9:ex:4",
+          "number": 4,
+          "problem": "Complete the following acid-base reactions and name the products: (i) $CH_3CH_2CH_2NH_2 + HCl \\rightarrow$ (ii) $(C_2H_5)_3N + HCl \\rightarrow$",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:9:ex:5",
+          "number": 5,
+          "problem": "Write reactions of the final alkylation product of aniline with excess of methyl iodide in the presence of sodium carbonate solution.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:9:ex:6",
+          "number": 6,
+          "problem": "Write chemical reaction of aniline with benzoyl chloride and write the name of the product obtained.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:9:ex:7",
+          "number": 7,
+          "problem": "Write structures of different isomers corresponding to the molecular formula, $C_3H_9N$. Write IUPAC names of the isomers which will liberate nitrogen gas on treatment with nitrous acid.",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:9:ex:8",
+          "number": 8,
+          "problem": "Account for the following: (i) $pK_b$ of aniline is more than that of methylamine. (ii) Ethylamine is soluble in water whereas aniline is not. (iii) Methylamine in water reacts with ferric chloride to precipitate hydrated ferric oxide. (iv) Although amino group is $o-$ and $p-$ directing in aromatic electrophilic substitution reactions, aniline on nitration gives a substantial amount of $m$-nitroaniline. (v) Aniline does not undergo Friedel-Crafts reaction. (vi) Diazonium salts of aromatic amines are more stable than those of aliphatic amines. (vii) Gabriel phthalimide synthesis is preferred for synthesising primary amines.",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:9:ex:9",
+          "number": 9,
+          "problem": "Arrange the following: (i) In decreasing order of the $pK_b$ values: $C_2H_5NH_2, C_6H_5NHCH_3, (C_2H_5)_2NH$ and $C_6H_5NH_2$ (ii) In increasing order of basic strength: $C_6H_5NH_2, C_6H_5N(CH_3)_2, (C_2H_5)_2NH$ and $CH_3NH_2$ (iii) In increasing order of basic strength: (a) Aniline, $p$-nitroaniline and $p$-toluidine (b) $C_6H_5NH_2, C_6H_5NHCH_3, C_6H_5CH_2NH_2$. (iv) In decreasing order of basic strength in gas phase: $C_2H_5NH_2, (C_2H_5)_2NH, (C_2H_5)_3N$ and $NH_3$ (v) In increasing order of boiling point: $C_2H_5OH, (CH_3)_2NH, C_2H_5NH_2$ (vi) In increasing order of solubility in water: $C_6H_5NH_2, (C_2H_5)_2NH, C_2H_5NH_2$.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:9:ex:10",
+          "number": 10,
+          "problem": "How will you convert: (i) Ethanoic acid into methanamine (ii) Hexanenitrile into 1-aminopentane (iii) Methanol to ethanoic acid (iv) Ethanamine into methanamine (v) Ethanoic acid into propanoic acid (vi) Methanamine into ethanamine (vii) Nitromethane into dimethylamine (viii) Propanoic acid into ethanoic acid?",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:9:ex:11",
+          "number": 11,
+          "problem": "Describe a method for the identification of primary, secondary and tertiary amines. Also write chemical equations of the reactions involved.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "long_answer"
+        },
+        {
+          "id": "ncert:chemistry:12:9:ex:12",
+          "number": 12,
+          "problem": "Write short notes on the following: (i) Carbylamine reaction (ii) Diazotisation (iii) Hofmann’s bromamide reaction (iv) Coupling reaction (v) Ammonolysis (vi) Acetylation (vii) Gabriel phthalimide synthesis.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "short_answer"
+        },
+        {
+          "id": "ncert:chemistry:12:9:ex:13",
+          "number": 13,
+          "problem": "Accomplish the following conversions: (i) Nitrobenzene to benzoic acid (ii) Benzene to $m$-bromophenol (iii) Benzoic acid to aniline (iv) Aniline to 2,4,6-tribromofluorobenzene (v) Benzyl chloride to 2-phenylethanamine (vi) Chlorobenzene to $p$-chloroaniline (vii) Aniline to $p$-bromoaniline (viii) Benzamide to toluene (ix) Aniline to benzyl alcohol.",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:9:ex:14",
+          "number": 14,
+          "problem": "Give the structures of A, B and C in the following reactions: (i) $CH_3CH_2I \\xrightarrow{NaCN} A \\xrightarrow{OH^- / \\text{Partial hydrolysis}} B \\xrightarrow{NaOH+Br_2} C$ (ii) $C_6H_5N_2Cl \\xrightarrow{CuCN} A \\xrightarrow{H_2O/H^+} B \\xrightarrow{NH_3 / \\Delta} C$ (iii) $CH_3CH_2Br \\xrightarrow{KCN} A \\xrightarrow{LiAlH_4} B \\xrightarrow{HNO_2 / 0^\\circ C} C$ (iv) $C_6H_5NO_2 \\xrightarrow{Fe/HCl} A \\xrightarrow{NaNO_2+HCl / 273 K} B \\xrightarrow{H_2O/H^+ / \\Delta} C$ (v) $CH_3COOH \\xrightarrow{NH_3 / \\Delta} A \\xrightarrow{NaOBr} B \\xrightarrow{NaNO_2/HCl} C$ (vi) $C_6H_5NO_2 \\xrightarrow{Fe/HCl} A \\xrightarrow{HNO_2 / 273 K} B \\xrightarrow{C_6H_5OH} C$",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:9:ex:15",
+          "number": 15,
+          "problem": "An aromatic compound 'A' on treatment with aqueous ammonia and heating forms compound 'B' which on heating with $Br_2$ and KOH forms a compound 'C' of molecular formula $C_6H_7N$. Write the structures and IUPAC names of compounds A, B and C.",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:9:ex:16",
+          "number": 16,
+          "problem": "Complete the following reactions: (i) $C_6H_5NH_2 + CHCl_3 + alc. KOH \\rightarrow$ (ii) $C_6H_5N_2Cl + H_3PO_2 + H_2O \\rightarrow$ (iii) $C_6H_5NH_2 + H_2SO_4 (conc.) \\rightarrow$ (iv) $C_6H_5N_2Cl + C_2H_5OH \\rightarrow$ (v) $C_6H_5NH_2 + Br_2 (aq) \\rightarrow$ (vi) $C_6H_5NH_2 + (CH_3CO)_2O \\rightarrow$ (vii) $C_6H_5N_2Cl \\xrightarrow{HBF_4, then NaNO_2/Cu}$",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:9:ex:17",
+          "number": 17,
+          "problem": "Why cannot aromatic primary amines be prepared by Gabriel phthalimide synthesis?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:9:ex:18",
+          "number": 18,
+          "problem": "Write the reactions of (i) aromatic and (ii) aliphatic primary amines with nitrous acid.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:9:ex:19",
+          "number": 19,
+          "problem": "Give plausible explanation for each of the following: (i) Why are amines less acidic than alcohols of comparable molecular masses? (ii) Why do primary amines have higher boiling point than tertiary amines? (iii) Why are aliphatic amines stronger bases than aromatic amines?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        }
+      ]
+    }
+  }
+}

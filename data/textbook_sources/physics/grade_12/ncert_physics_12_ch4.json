@@ -1,0 +1,1297 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_physics_12_ch4.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:physics:12:4",
+  "curriculum": "ncert",
+  "subject": "physics",
+  "grade": 12,
+  "textbook_name": "Physics Part I",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:physics:12:4",
+    "number": 4,
+    "title": "Moving Charges and Magnetism",
+    "summary": "This chapter, \"Moving Charges and Magnetism,\" explores the fundamental relationship between electricity and magnetism. It begins by introducing the magnetic force experienced by moving charges, described by the Lorentz force law, and defines the unit of magnetic field strength. The chapter then investigates the motion of charged particles in magnetic fields, demonstrating circular and helical paths, and examines the Biot-Savart law, which allows calculation of the magnetic field produced by current-carrying conductors. This law is applied to find the field due to a circular loop and a current element.\n\nAmpere’s circuital law, a more convenient method for calculating magnetic fields in symmetric situations, is introduced and used to determine the field of an infinite wire and within a solenoid. The chapter further examines the force between parallel currents, leading to the definition of the Ampere. It then analyzes the torque on a current loop in a magnetic field, introducing the concept of magnetic dipole moment and highlighting the analogy to electric dipoles. Finally, the moving coil galvanometer is explained, illustrating how these principles are used in a practical device to measure current and voltage.\n\nEach section builds upon previous concepts, progressing from the fundamental forces on individual charges to the fields produced by current distributions and their effects on other currents and loops. The chapter demonstrates the practical applications of electromagnetism, emphasizing the importance of these principles in understanding various technologies.",
+    "sections": [
+      {
+        "id": "ncert:physics:12:4:4.1",
+        "number": "4.1",
+        "title": "Introduction",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:4:4.1:1",
+            "order": 1,
+            "title": "Oersted's Discovery",
+            "content_text": "In 1820, Danish physicist Hans Christian Oersted discovered that electricity and magnetism are intimately related. During a lecture demonstration, he noticed that an electric current in a straight wire caused a noticeable deflection in a nearby magnetic compass needle. He found that the alignment of the needle is tangential to an imaginary circle centered on the wire, with its plane perpendicular to the wire. This deflection is most noticeable when the current is large and the needle is sufficiently close to the wire, allowing the earth's magnetic field to be ignored. Reversing the direction of the current reverses the orientation of the needle. Furthermore, iron filings sprinkled around the wire arrange themselves in concentric circles with the wire as the centre. Oersted concluded that moving charges or currents produce a magnetic field in the surrounding space.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.1",
+                "description": "The magnetic field due to a straight long current-carrying wire. (a) A ring of compass needles surrounds a wire where current emerges out of the plane (represented by a dot). The needles align tangentially in a counter-clockwise direction. (b) The current moves into the plane (represented by a cross), and the needles reverse direction (clockwise). (c) Iron filings around the wire arrange in concentric circles, illustrating the field lines. The darkened ends of the needles represent north poles, and the effect of the earth's magnetic field is neglected.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.1:2",
+            "order": 2,
+            "title": "Unification and Electromagnetic Waves",
+            "content_text": "Following Oersted's discovery, James Maxwell in 1864 unified the laws of electricity and magnetism, realizing that light is composed of electromagnetic waves. This led to the discovery of radio waves by Hertz and their production by J.C. Bose and G. Marconi by the end of the 19th century. The 20th century saw significant progress due to an increased understanding of electromagnetism, leading to the invention of devices for the production, amplification, transmission, and detection of electromagnetic waves.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.1:3",
+            "order": 3,
+            "title": "Notation Conventions for Field Direction",
+            "content_text": "In the study of magnetism, a specific convention is used to represent directions in three dimensions on a two-dimensional plane. A current or a field (electric or magnetic) emerging out of the plane of the paper is depicted by a dot ($\\odot$), representing the tip of an arrow pointed at the observer. A current or a field going into the plane of the paper is depicted by a cross ($\\otimes$), representing the feathered tail of an arrow moving away. These conventions are illustrated in Figures 4.1(a) and 4.1(b).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:4:4.2",
+        "number": "4.2",
+        "title": "Magnetic Force",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:4:4.2:1",
+            "order": 1,
+            "title": "Sources and Fields: Electric Field Recapitulation",
+            "content_text": "A static charge $Q$ acts as the source of an electric field $\\mathbf{E}$. At a distance $r$, the electric field is given by:\n$$\\mathbf{E} = \\frac{Q \\hat{\\mathbf{r}}}{4\\pi\\epsilon_0 r^2}$$\nwhere $\\hat{\\mathbf{r}}$ is the unit vector along $\\mathbf{r}$. A test charge $q$ interacting with this field experiences a force $\\mathbf{F}$ given by:\n$$\\mathbf{F} = q \\mathbf{E} = \\frac{q Q \\hat{\\mathbf{r}}}{4\\pi\\epsilon_0 r^2}$$\nThe field $\\mathbf{E}$ is a physical entity that conveys energy and momentum and takes finite time to propagate. This concept was stressed by Faraday and incorporated by Maxwell. While fields can vary with time, for initial discussions, we assume they are static. The principle of superposition applies: the fields from multiple charges add vectorially.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.2:2",
+            "order": 2,
+            "title": "Introduction to the Magnetic Field",
+            "content_text": "Just as static charges produce an electric field, moving charges or currents produce a magnetic field, denoted by $\\mathbf{B}(\\mathbf{r})$. It is a vector field defined at each point in space and can depend on time. Experimentally, it is found to obey the principle of superposition: the magnetic field of several sources is the vector addition of the magnetic field of each individual source.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.2:3",
+            "order": 3,
+            "title": "The Lorentz Force",
+            "content_text": "Consider a point charge $q$ moving with velocity $\\mathbf{v}$ located at position $\\mathbf{r}$ at time $t$ in the presence of both an electric field $\\mathbf{E}(\\mathbf{r})$ and a magnetic field $\\mathbf{B}(\\mathbf{r})$. The total force $\\mathbf{F}$ on the charge is the sum of the electric and magnetic forces:\n$$\\mathbf{F} = q [\\mathbf{E}(\\mathbf{r}) + \\mathbf{v} \\times \\mathbf{B}(\\mathbf{r})] = \\mathbf{F}_{electric} + \\mathbf{F}_{magnetic}$$\nThis force was first formulated by H.A. Lorentz based on the experiments of Ampere and others, and is known as the Lorentz force.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.2:4",
+            "order": 4,
+            "title": "Features of Magnetic Force",
+            "content_text": "The magnetic force component $q [\\mathbf{v} \\times \\mathbf{B}]$ has several key features:\n(i) It depends on the charge $q$, the velocity $\\mathbf{v}$, and the magnetic field $\\mathbf{B}$. The force on a negative charge is in the opposite direction to that on a positive charge.\n(ii) The magnetic force includes a vector product of velocity and magnetic field. The vector product makes the force due to magnetic The magnetic force includes a vector product of velocity and magnetic field. The vector product makes the force due to magnetic field vanish (become zero) if velocity and magnetic field are parallel or anti-parallel. The force acts in a (sideways) direction perpendicular to both the velocity and the magnetic field. Its direction is given by the screw rule or right hand rule for vector (or cross) product as illustrated in Fig. 4.2. (iii) The magnetic force is zero if charge is not moving (as then $|v| = 0$). Only a moving charge feels the magnetic force.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 4.2",
+                "description": "The direction of the magnetic force acting on a charged particle. (a) The force on a positively charged particle with velocity $\\vec{v}$ and making an angle $\\theta$ with the magnetic field $\\vec{B}$ is given by the right-hand rule. (b) A moving charged particle $q$ is deflected in an opposite sense to $-q$ in the presence of magnetic field.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.2:5",
+            "order": 5,
+            "title": "Unit of Magnetic Field",
+            "content_text": "The expression for the magnetic force helps us to define the unit of the magnetic field. If one takes $q$, $\\vec{F}$ and $\\vec{v}$ all to be unity in the force equation $\\vec{F} = q [\\vec{v} \\times \\vec{B}] = q v B \\sin \\theta \\hat{n}$, where $\\theta$ is the angle between $\\vec{v}$ and $\\vec{B}$. The magnitude of magnetic field $B$ is 1 SI unit, when the force acting on a unit charge (1 C), moving perpendicular to $\\vec{B}$ with a speed 1 m/s, is one newton. Dimensionally, we have $[B] = [F/qv]$ and the unit of $\\vec{B}$ are Newton second / (coulomb metre). This unit is called tesla (T) named after Nikola Tesla (1856 – 1943). Tesla is a rather large unit. A smaller unit (non-SI) called gauss ($=10^{-4}$ tesla) is also often used. The earth’s magnetic field is about $3.6 \\times 10^{-5}$ T.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.2:6",
+            "order": 6,
+            "title": "Magnetic Force on a Current-Carrying Conductor",
+            "content_text": "We can extend the analysis for force due to magnetic field on a single moving charge to a straight rod carrying current. Consider a rod of a uniform cross-sectional area $A$ and length $l$. Let the number density of mobile charge carriers (electrons) be $n$. Then the total number of mobile charge carriers in it is $nlA$. For a steady current $I$ in this conducting rod, we may assume that each mobile carrier has an average drift velocity $\\vec{v}_d$. In the presence of an external magnetic field $\\vec{B}$, the force on these carriers is: $\\vec{F} = (nlA)q \\vec{v}_d \\times \\vec{B}$. Since $nq\\vec{v}_d$ is the current density $\\vec{j}$ and $|(nq\\vec{v}_d)|A$ is the current $I$, we have $\\vec{F} = [(nq\\vec{v}_d)lA] \\times \\vec{B} = [\\vec{j}Al] \\times \\vec{B} = I\\vec{l} \\times \\vec{B}$. Here $\\vec{l}$ is a vector of magnitude $l$, the length of the rod, and with a direction identical to the current $I$. If the wire has an arbitrary shape, we calculate the Lorentz force by considering it as a collection of linear strips $d\\vec{l}_j$ and summing: $\\vec{F} = \\sum_j I d\\vec{l}_j \\times \\vec{B}$. This summation can be converted to an integral in most cases.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.2:7",
+            "order": 7,
+            "title": "Example 4.1: Suspension of a Wire",
+            "content_text": "This example demonstrates the balance of magnetic force and gravitational force on a current-carrying wire.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 4.1",
+                "problem": "A straight wire of mass 200 g and length 1.5 m carries a current of 2 A. It is suspended in mid-air by a uniform horizontal magnetic field $\\vec{B}$ (Fig. 4.3). What is the magnitude of the magnetic field?",
+                "solution": "From Eq. (4.4), we find that there is an upward force $\\vec{F}$, of magnitude $IlB$. For mid-air suspension, this must be balanced by the force due to gravity: $mg = IlB$. Therefore, $B = \\frac{mg}{Il} = \\frac{0.2 \\times 9.8}{2 \\times 1.5} = 0.65$ T. Note that it would have been sufficient to specify $m/l$, the mass per unit length of the wire. The earth’s magnetic field is approximately $4 \\times 10^{-5}$ T and we have ignored it."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "FIGURE 4.3",
+                "description": "A horizontal wire of length $l$ carrying current $I$ is suspended in a magnetic field $\\vec{B}$ directed into the page. The downward force of gravity $mg$ is balanced by the upward magnetic force.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.2:8",
+            "order": 8,
+            "title": "Example 4.2: Direction of Lorentz Force",
+            "content_text": "This example applies the right-hand rule to determine the direction of force on moving positive and negative charges.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 4.2",
+                "problem": "If the magnetic field is parallel to the positive $y$-axis and the charged particle is moving along the positive $x$-axis (Fig. 4.4), which way would the Lorentz force be for (a) an electron (negative charge), (b) a proton (positive charge).",
+                "solution": "The velocity $\\vec{v}$ of particle is along the $x$-axis, while $\\vec{B}$, the magnetic field is along the $y$-axis, so $\\vec{v} \\times \\vec{B}$ is along the $z$-axis (screw rule or right-hand thumb rule). So, (a) for electron it will be along $-z$ axis. (b) for a positive charge (proton) the force is along $+z$ axis."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "FIGURE 4.4",
+                "description": "A coordinate system showing velocity $\\vec{v}$ along the $x$-axis and magnetic field $\\vec{B}$ (represented by crosses) along the $y$-axis.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:4:4.3",
+        "number": "4.3",
+        "title": "Motion in a Magnetic Field",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:4:4.3:1",
+            "order": 1,
+            "title": "Work Done by Magnetic Force",
+            "content_text": "The magnetic force $\\vec{F} = q(\\vec{v} \\times \\vec{B})$ is always perpendicular to the velocity $\\vec{v}$ of the particle. Since power $P = \\vec{F} \\cdot \\vec{v} = 0$, the magnetic force does no work on the particle. Consequently, there is no change in the magnitude of the velocity (speed) or the kinetic energy of the particle, though the direction of momentum may be changed. This is unlike the force due to an electric field, $q\\vec{E}$, which can have a component parallel to motion and thus transfer energy.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.3:2",
+            "order": 2,
+            "title": "Circular Motion in a Uniform Magnetic Field",
+            "content_text": "Consider the case where the velocity $\\vec{v}$ is perpendicular to a uniform magnetic field $\\vec{B}$. The perpendicular force, $q \\vec{v} \\times \\vec{B}$, acts as a centripetal force and produces a circular motion perpendicular to the magnetic field. The particle will describe a circle if $\\vec{v}$ and $\\vec{B}$ are perpendicular to each other.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 4.5",
+                "description": "Circular motion of a charge $q$ in a uniform magnetic field $\\vec{B}$ directed into the page. The force $\\vec{F}$ always points towards the center of the circle.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.3:3",
+            "order": 3,
+            "title": "Derivation of Radius and Frequency",
+            "content_text": "If $r$ is the radius of the circular path, the centripetal force $mv^2/r$ is provided by the magnetic force $qvB$. Equating the two: $mv^2/r = qvB$, which gives $r = mv/qB$. The radius is proportional to the momentum $mv$. The angular frequency is $\\omega = v/r = qB/m$. The frequency of rotation is $\\nu = \\omega/(2\\pi) = qB/(2\\pi m)$. Notably, the frequency $\\nu$ is independent of the velocity or energy of the particle. This independence has important applications in the design of a cyclotron.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.3:4",
+            "order": 4,
+            "title": "Helical Motion",
+            "content_text": "If the velocity has a component parallel to $\\vec{B}$, this component remains unchanged because the magnetic field does not exert force parallel to itself. The motion in a plane perpendicular to $\\vec{B}$ remains circular as before. The combination of uniform linear motion along the field and circular motion perpendicular to it produces a helical motion. The distance moved along the magnetic field in one rotation is called the pitch.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 4.6",
+                "description": "Helical motion of a charged particle when its velocity has a component parallel to the magnetic field $\\vec{B}$. The diagram shows the radius of the helix and the pitch.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.3:5",
+            "order": 5,
+            "title": "Pitch and Radius of Helix",
+            "content_text": "When a charged particle moves in a magnetic field with a velocity component parallel to the field, its trajectory is a helix. The distance moved along the magnetic field in one rotation is called the pitch $p$. Using the period of rotation $T$, the pitch is given by: $$p = v_{||} T = \\frac{2\\pi m v_{||}}{q B}$$ where $v_{||}$ is the velocity component parallel to the magnetic field. The radius of the circular component of this motion is referred to as the radius of the helix.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.3:6",
+            "order": 6,
+            "title": "Example 4.3: Electron Motion in a Magnetic Field",
+            "content_text": "This example calculates the physical parameters of an electron's path when moving perpendicular to a uniform magnetic field. It demonstrates the application of the radius formula $r = \\frac{mv}{qB}$, the frequency formula $\\nu = \\frac{v}{2\\pi r}$, and the kinetic energy calculation in electron-volts (eV).",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 4.3",
+                "problem": "What is the radius of the path of an electron (mass $9 \\times 10^{-31}$ kg and charge $1.6 \\times 10^{-19}$ C) moving at a speed of $3 \\times 10^7$ m/s in a magnetic field of $6 \\times 10^{-4}$ T perpendicular to it? What is its frequency? Calculate its energy in keV. ($1 \\text{ eV} = 1.6 \\times 10^{-19}$ J).",
+                "solution": "Using the formula for radius: $r = \\frac{mv}{qB} = \\frac{9 \\times 10^{-31} \\text{ kg} \\times 3 \\times 10^7 \\text{ m s}^{-1}}{1.6 \\times 10^{-19} \\text{ C} \\times 6 \\times 10^{-4} \\text{ T}} = 28 \\times 10^{-2} \\text{ m} = 28 \\text{ cm}$. \\nFrequency $\\nu = \\frac{v}{2\\pi r} = \\frac{17 \\times 10^6 \\text{ s}^{-1}}{1} = 17 \\times 10^6 \\text{ Hz} = 17 \\text{ MHz}$. \\nEnergy $E = \\frac{1}{2} m v^2 = \\frac{1}{2} (9 \\times 10^{-31} \\text{ kg}) \\times (9 \\times 10^{14} \\text{ m}^2/\\text{s}^2) = 40.5 \\times 10^{-17} \\text{ J} \\approx 4 \\times 10^{-16} \\text{ J}$. \\nIn keV: $E = \\frac{4 \\times 10^{-16} \\text{ J}}{1.6 \\times 10^{-19} \\text{ J/eV}} = 2.5 \\text{ keV}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:4:4.4",
+        "number": "4.4",
+        "title": "Magnetic Field due to a Current Element, Biot-Savart Law",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:4:4.4:1",
+            "order": 1,
+            "title": "Introduction to Biot-Savart Law",
+            "content_text": "All magnetic fields are produced by currents (moving charges) or intrinsic magnetic moments. The Biot-Savart law describes the magnetic field produced by a current-carrying conductor. For an infinitesimal element $d\\mathbf{l}$ of a conductor carrying current $I$, the magnetic field $d\\mathbf{B}$ at a point $P$ at distance $r$ is determined by the displacement vector $\\mathbf{r}$ and the angle $\\theta$ between $d\\mathbf{l}$ and $\\mathbf{r}$. In vector notation: $$d\\mathbf{B} = \\frac{\\mu_0}{4\\pi} \\frac{I d\\mathbf{l} \\times \\mathbf{r}}{r^3}$$ where $\\mu_0/4\\pi$ is the constant of proportionality for vacuum.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.7",
+                "description": "Illustration of the Biot-Savart law showing a current element $I d\\mathbf{l}$ producing a magnetic field $d\\mathbf{B}$ at a point $P$ at distance $r$. The angle $\\theta$ is shown between the element and the displacement vector. The $\\otimes$ sign indicates the field is directed into the page.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.4:2",
+            "order": 2,
+            "title": "Magnitude and Permeability of Free Space",
+            "content_text": "The magnitude of the magnetic field is given by: $$|d\\mathbf{B}| = \\frac{\\mu_0}{4\\pi} \\frac{I dl \\sin \\theta}{r^2}$$ The proportionality constant in SI units is exactly: $$\\frac{\\mu_0}{4\\pi} = 10^{-7} \\text{ Tm/A}$$ The constant $\\mu_0$ is called the permeability of free space (or vacuum). The direction of the field is determined by the Right Hand Screw rule: moving from the first vector ($d\\mathbf{l}$) toward the second vector ($\\mathbf{r}$), an anticlockwise movement results in a field towards you, and clockwise results in a field away from you.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.4:3",
+            "order": 3,
+            "title": "Comparison with Coulomb's Law",
+            "content_text": "The Biot-Savart law for magnetic fields has several similarities and differences compared to Coulomb's law for electrostatic fields: \\n(i) Both are long-range, following an inverse square law ($1/r^2$). The principle of superposition applies to both. \\n(ii) The electrostatic field is produced by a scalar source (charge), while the magnetic field is produced by a vector source ($I d\\mathbf{l}$). \\n(iii) The electrostatic field is along the displacement vector, whereas the magnetic field is perpendicular to the plane containing the displacement vector and the current element. \\n(iv) The Biot-Savart law has an angle dependence ($\\sin \\theta$), which is absent in Coulomb's law. Specifically, the magnetic field is zero along the direction of the current element (where $\\theta = 0$ or $180^\\circ$).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.4:4",
+            "order": 4,
+            "title": "Relation between Fundamental Constants",
+            "content_text": "There is a fundamental relationship between the permittivity of free space ($\\epsilon_0$), the permeability of free space ($\\mu_0$), and the speed of light in vacuum ($c$): $$\\epsilon_0 \\mu_0 = (4\\pi \\epsilon_0) \\frac{\\mu_0}{4\\pi} = \\frac{1}{9 \\times 10^9} (10^{-7}) = \\frac{1}{(3 \\times 10^8)^2} = \\frac{1}{c^2}$$ Since $c$ is constant, the product $\\mu_0 \\epsilon_0$ is fixed. In SI units, $\\mu_0$ is fixed as $4\\pi \\times 10^{-7}$ Tm/A.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.4:5",
+            "order": 5,
+            "title": "Example 4.4: Magnetic Field from a Small Current Element",
+            "content_text": "This example demonstrates how to calculate the magnetic field at a specific point on the y-axis due to a small current element placed at the origin along the x-axis. It utilizes the cross-product properties of unit vectors: $\\hat{i} \\times \\hat{j} = \\hat{k}$.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 4.4",
+                "problem": "An element $\\Delta \\mathbf{l} = \\Delta x \\hat{i}$ is placed at the origin and carries a large current $I = 10$ A. What is the magnetic field on the y-axis at a distance of $0.5$ m? $\\Delta x = 1$ cm.",
+                "solution": "Using the magnitude formula: $|d\\mathbf{B}| = \\frac{\\mu_0}{4\\pi} \\frac{I dl \\sin \\theta}{r^2}$. \\nGiven $dl = \\Delta x = 10^{-2}$ m, $I = 10$ A, $r = 0.5$ m. Since the point is on the y-axis and the element is on the x-axis, $\\theta = 90^\\circ$ and $\\sin \\theta = 1$. \\n$|d\\mathbf{B}| = \\frac{10^{-7} \\times 10 \\times 10^{-2}}{0.5^2} = 4 \\times 10^{-8}$ T. \\nThe direction is given by $d\\mathbf{l} \\times \\mathbf{r} = \\Delta x \\hat{i} \\times y \\hat{j} = y \\Delta x (\\hat{i} \\times \\hat{j}) = y \\Delta x \\hat{k}$. Thus, the field is in the $+z$-direction."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Figure 4.8",
+                "description": "Coordinate system showing a current element $\\Delta x$ at the origin along the x-axis and a point P at a distance of 0.5 m along the y-axis where the magnetic field is to be calculated.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:4:4.5",
+        "number": "4.5",
+        "title": "Magnetic Field on the Axis of a Circular Current Loop",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:4:4.5:1",
+            "order": 1,
+            "title": "Geometry and Setup",
+            "content_text": "To evaluate the magnetic field of a circular loop along its axis, we consider a loop of radius $R$ carrying a steady current $I$. The loop is placed in the $y-z$ plane with its center at the origin $O$. The $x$-axis is the axis of the loop. We aim to calculate the magnetic field at point $P$ on the axis at a distance $x$ from the center.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.9",
+                "description": "A circular current loop of radius $R$ in the y-z plane. Point P is on the x-axis at distance $x$. A current element $d\\mathbf{l}$ is shown, with the resulting magnetic field $d\\mathbf{B}$ and its components $d\\mathbf{B}_x$ and $d\\mathbf{B}_\\perp$ at point P.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.5:2",
+            "order": 2,
+            "title": "Application of Biot-Savart Law to the Loop",
+            "content_text": "Consider a conducting element $d\\mathbf{l}$ of the loop. The magnitude of the magnetic field $d\\mathbf{B}$ due to $d\\mathbf{l}$ is: $$dB = \\frac{\\mu_0}{4\\pi} \\frac{I |d\\mathbf{l} \\times \\mathbf{r}|}{r^3}$$ From the geometry, $r^2 = x^2 + R^2$. Any element $d\\mathbf{l}$ of the loop is perpendicular to the displacement vector $\\mathbf{r}$ from the element to the axial point. For example, if $d\\mathbf{l}$ is in the $y-z$ plane, $\\mathbf{r}$ is in the $x-y$ plane. Thus, $|d\\mathbf{l} \\times \\mathbf{r}| = r dl$. The magnitude becomes: $$dB = \\frac{\\mu_0}{4\\pi} \\frac{I dl}{x^2 + R^2} \\text{ [CONTINUES]}$$",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.5:3",
+            "order": 3,
+            "title": "Integration of Magnetic Field Components",
+            "content_text": "The direction of the magnetic field element $d\\mathbf{B}$ is perpendicular to the plane formed by the current element $d\\mathbf{l}$ and the position vector $\\mathbf{r}$. It can be resolved into an $x$-component $dB_x$ and a component perpendicular to the $x$-axis, $dB_\\perp$. Due to the symmetry of the circular loop, for every current element $d\\mathbf{l}$, there is a diametrically opposite element whose $dB_\\perp$ contribution cancels out the $dB_\\perp$ of the first element. Consequently, when summed over the entire loop, the perpendicular components result in zero. Only the $x$-components, which are aligned along the axis of the loop, survive and add up. The net magnetic field is obtained by integrating the $x$-component $dB_x = dB \\cos \\theta$ over the circumference of the loop. From the geometry of the setup, $\\cos \\theta = \\frac{R}{(x^2 + R^2)^{1/2}}$. Substituting the expression for $dB$ from the Biot-Savart law, we get $dB_x = \\frac{\\mu_0 I dl}{4\\pi} \\frac{R}{(x^2 + R^2)^{3/2}}$. Integrating $dl$ over the loop gives the circumference $2\\pi R$. The final expression for the magnetic field at a point P on the axis is $\\mathbf{B} = B_x \\mathbf{\\hat{i}} = \\frac{\\mu_0 I R^2}{2(x^2 + R^2)^{3/2}} \\mathbf{\\hat{i}}$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.5:4",
+            "order": 4,
+            "title": "Magnetic Field at the Center of the Loop",
+            "content_text": "As a special case of the general formula for the magnetic field on the axis of a circular loop, we can determine the field at the exact centre of the loop. At the centre, the distance $x$ from the centre along the axis is zero ($x = 0$). Substituting this into the general formula $\\mathbf{B} = \\frac{\\mu_0 I R^2}{2(x^2 + R^2)^{3/2}} \\mathbf{\\hat{i}}$, we obtain the magnetic field at the centre: $\\mathbf{B}_0 = \\frac{\\mu_0 I}{2R} \\mathbf{\\hat{i}}$.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.5:5",
+            "order": 5,
+            "title": "Magnetic Field Lines and Right-Hand Thumb Rule",
+            "content_text": "The magnetic field lines produced by a circular current-carrying wire form closed loops. The direction of this magnetic field can be determined using a specific version of the right-hand thumb rule: Curl the palm of your right hand around the circular wire such that your fingers point in the direction of the current flow. The extended right-hand thumb then points in the direction of the magnetic field. In this configuration, the side of the loop from which the field lines emerge can be considered the north pole, and the side where they enter can be considered the south pole of an equivalent magnet.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.10",
+                "description": "A diagram showing the magnetic field lines for a current loop. The lines form closed loops around the wire. A hand is shown illustrating the right-hand thumb rule where fingers curl with the current and the thumb points in the direction of the field.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.5:6",
+            "order": 6,
+            "title": "Example 4.5: Magnetic Field of a Semi-circular Arc",
+            "content_text": "This example analyzes the magnetic field contribution from a wire bent into a semi-circular arc with straight segments. It highlights that straight segments do not contribute to the field at the center if the current is parallel to the position vector ($d\\mathbf{l} \\times \\mathbf{r} = 0$). For the semi-circular part, the field magnitude is exactly half that of a full circular loop.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 4.5",
+                "problem": "A straight wire carrying a current of 12 A is bent into a semi-circular arc of radius 2.0 cm as shown in Fig. 4.11(a). Consider the magnetic field B at the centre of the arc. (a) What is the magnetic field due to the straight segments? (b) In what way the contribution to B from the semicircle differs from that of a circular loop and in what way does it resemble? (c) Would your answer be different if the wire were bent into a semi-circular arc of the same radius but in the opposite way as shown in Fig. 4.11(b)?",
+                "solution": "(a) $d\\mathbf{l}$ and $\\mathbf{r}$ for each element of the straight segments are parallel. Therefore, $d\\mathbf{l} \\times \\mathbf{r} = 0$. Straight segments do not contribute to $|\\mathbf{B}|$. (b) For all segments of the semicircular arc, $d\\mathbf{l} \\times \\mathbf{r}$ are all parallel to each other (into the plane of the paper). All such contributions add up in magnitude. Hence direction of $\\mathbf{B}$ for a semicircular arc is given by the right-hand rule and magnitude is half that of a circular loop. Thus $\\mathbf{B}$ is $1.9 \\times 10^{-4}$ T normal to the plane of the paper going into it. (c) Same magnitude of $\\mathbf{B}$ but opposite in direction to that in (b)."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Figure 4.11",
+                "description": "Two configurations of a wire: (a) a straight wire with a semi-circular upward bend in the middle, and (b) a straight wire with a semi-circular downward bend in the middle. Arrows indicate current direction.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.5:7",
+            "order": 7,
+            "title": "Example 4.6: Magnetic Field of a Multi-turn Coil",
+            "content_text": "This example demonstrates how to calculate the magnetic field at the center of a tightly wound coil. When a coil has $N$ turns, the magnetic field at the center is $N$ times the field produced by a single circular turn, provided the turns are wound closely enough to share the same radius.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 4.6",
+                "problem": "Consider a tightly wound 100 turn coil of radius 10 cm, carrying a current of 1 A. What is the magnitude of the magnetic field at the centre of the coil?",
+                "solution": "Since the coil is tightly wound, we may take each circular element to have the same radius $R = 10$ cm $= 0.1$ m. The number of turns $N = 100$. The magnitude of the magnetic field is, $B = \\frac{\\mu_0 NI}{2R} = \\frac{4\\pi \\times 10^{-7} \\times 10^2 \\times 1}{2 \\times 10^{-1}} = 2\\pi \\times 10^{-4} = 6.28 \\times 10^{-4}$ T."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:4:4.6",
+        "number": "4.6",
+        "title": "Ampere’s Circuital Law",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:4:4.6:1",
+            "order": 1,
+            "title": "Introduction to Ampere’s Circuital Law",
+            "content_text": "Ampere’s circuital law provides an alternative way to express the Biot-Savart law, often simplifying calculations in symmetric systems. It considers an open surface bounded by a closed loop (the boundary). For a surface with current passing through it, we divide the boundary into small line elements $d\\mathbf{l}$. At each element, we consider the tangential component of the magnetic field $B_t$ and calculate the product $B_t dl$, which is equivalent to the dot product $\\mathbf{B} \\cdot d\\mathbf{l}$. Summing these products over the entire closed boundary leads to a line integral.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.12",
+                "description": "A diagram showing an open surface with a boundary C. Current I is shown passing through the surface. The boundary is divided into small elements dl.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.6:2",
+            "order": 2,
+            "title": "Mathematical Statement and Sign Convention",
+            "content_text": "Ampere’s law states that the line integral of the magnetic field $\\mathbf{B}$ around any closed path is equal to $\\mu_0$ times the total current $I$ passing through the surface enclosed by the path: $\\oint \\mathbf{B} \\cdot d\\mathbf{l} = \\mu_0 I$. A sign convention is used to determine the direction of positive current: curl the fingers of the right hand in the direction the boundary is traversed for the integral; the thumb then points in the direction of positive current.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.6:3",
+            "order": 3,
+            "title": "The Amperian Loop and Simplified Calculations",
+            "content_text": "For practical applications, a simplified version of Ampere's law is used by choosing a specific path called an 'Amperian loop'. This loop is chosen such that at every point, the magnetic field $\\mathbf{B}$ is either: (i) tangential to the loop and constant in magnitude ($B$), (ii) normal to the loop, or (iii) zero. If $L$ is the length of the part of the loop where $\\mathbf{B}$ is tangential and $I_e$ is the enclosed current, the law simplifies to $BL = \\mu_0 I_e$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.6:4",
+            "order": 4,
+            "title": "Magnetic Field due to an Infinite Straight Wire",
+            "content_text": "Ampere’s law allows for an easy evaluation of the magnetic field for symmetric systems, similar to how Gauss' law works for electric fields. For a straight infinite current-carrying wire, we choose a circular Amperian loop of radius $r$ centered on the wire. The magnetic field is tangential to the circumference at all points. The line integral becomes $B \\times 2\\pi r$. Applying Ampere's law: $B \\times 2\\pi r = \\mu_0 I$, which gives $B = \\frac{\\mu_0 I}{2\\pi r}$. This result implies that the field magnitude is constant at all points on a circle of radius $r$ centered on the wire. In other words, the magnetic field\nAndre Marie Ampere (1775 – 1836) was a French physicist, mathematician, and chemist who founded the science of electrodynamics. A child prodigy who mastered advanced mathematics by age 12, he grasped the significance of Oersted’s discovery and conducted extensive experiments to link electricity and magnetism. His work culminated in the 1827 publication 'Mathematical Theory of Electrodynamic Phenomena Deduced Solely from Experiments', where he hypothesized that all magnetic phenomena result from circulating electric currents. Known for being humble and absent-minded, he once even forgot a dinner invitation from Emperor Napoleon.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.6:5",
+            "order": 5,
+            "title": "Symmetry and Magnetic Field Lines of a Straight Wire",
+            "content_text": "The magnetic field produced by a long straight wire possesses cylindrical symmetry. This means that the field magnitude, which could normally depend on three coordinates, depends only on the radial distance $r$. The field direction at any point on a circle of radius $r$ is tangential to it. Consequently, the lines of constant magnitude of the magnetic field form concentric circles. These magnetic field lines form closed loops, which is a fundamental difference from electrostatic field lines that originate from positive charges and end at negative charges. The expression for the magnetic field of a straight wire provides a theoretical justification for Oersted’s experiments. The field is directly proportional to the current $I$ and inversely proportional to the distance $r$ from the infinitely long current source. Even though the wire is infinite, the field at a non-zero distance is not infinite; it only tends to blow up when very close to the wire.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 4.1(c)",
+                "description": "Reference to iron filings forming concentric circles around a current-carrying wire, illustrating magnetic field lines.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.6:6",
+            "order": 6,
+            "title": "The Right-Hand Rule for Straight Wires",
+            "content_text": "A simple rule exists to determine the direction of the magnetic field due to a long wire, known as the right-hand rule: Grasp the wire in your right hand with your extended thumb pointing in the direction of the current. Your fingers will curl around in the direction of the magnetic field. It is important to distinguish this from the right-hand rule used for current loops; in the case of a straight wire, the thumb represents current and fingers represent the field, whereas for a loop, the roles are often reversed to find the field on the axis.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.6:7",
+            "order": 7,
+            "title": "Comparison with Biot-Savart and Gauss's Laws",
+            "content_text": "Ampere’s circuital law is not fundamentally different in content from the Biot-Savart law; both relate the magnetic field to the current and express the same physical consequences of a steady electrical current. Ampere’s law is to the Biot-Savart law what Gauss’s law is to Coulomb’s law. Both Ampere’s and Gauss’s laws relate a physical quantity on a boundary (magnetic or electric field) to the source in the interior (current or charge). Ampere’s circuital law specifically holds for steady currents that do not fluctuate with time.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.6:8",
+            "order": 8,
+            "title": "Example 4.7: Magnetic Field of a Thick Wire",
+            "content_text": "This example applies Ampere's law to find the magnetic field both inside and outside a long straight wire of radius $a$ with a uniform current distribution. For the region outside the wire ($r > a$), the Amperian loop is a circle of radius $r$ concentric with the wire's cross-section. The enclosed current is the total current $I$. For the region inside the wire ($r < a$), the current enclosed $I_e$ is less than $I$. Since the current distribution is uniform, $I_e = I \frac{\text{Area of loop}}{\text{Area of cross-section}} = I \frac{\text{\\pi} r^2}{\text{\\pi} a^2} = \frac{I r^2}{a^2}$.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 4.7",
+                "problem": "Figure 4.13 shows a long straight wire of a circular cross-section (radius $a$) carrying steady current $I$. The current $I$ is uniformly distributed across this cross-section. Calculate the magnetic field in the region $r < a$ and $r > a$.",
+                "solution": "(a) Consider the case $r > a$. The Amperian loop, labelled 2, is a circle concentric with the cross-section. For this loop, $L = 2 \text{\\pi} r$ and $I_e = \text{Current enclosed by the loop} = I$. The result is the familiar expression for a long straight wire: $B(2 \text{\\pi} r) = \text{\\mu}_0 I \\Rightarrow B = \\frac{\text{\\mu}_0 I}{2 \text{\\pi} r}$ [Eq. 4.15(a)]. Thus, $B \\propto 1/r$ for $r > a$. (b) For $r < a$, the current enclosed $I_e$ is less than $I$. Since the current distribution is uniform, $I_e = I \\left( \\frac{\\text{\\pi} r^2}{\\text{\\pi} a^2} \\right) = \\frac{I r^2}{a^2}$. Using Ampere’s law, $B(2 \text{\\pi} r) = \\text{\\mu}_0 \\frac{I r^2}{a^2} \\Rightarrow B = \\left( \\frac{\\text{\\mu}_0 I}{2 \text{\\pi} a^2} \\right) r$ [Eq. 4.15(b)]. Thus, $B \\propto r$ for $r < a$."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Figure 4.13",
+                "description": "Cross-section of a wire of radius 'a' showing two Amperian loops: loop 1 inside the wire at radius 'r' and loop 2 outside the wire at radius 'r'.",
+                "image_url": null
+              },
+              {
+                "label": "Figure 4.14",
+                "description": "A plot of the magnitude of magnetic field B versus distance r from the center of the wire. The field increases linearly from the center ($B \\propto r$) until the surface ($r=a$) and then decreases as $1/r$ ($B \\propto 1/r$) outside the wire.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.6:9",
+            "order": 9,
+            "title": "Limitations and Symmetry in Ampere's Law",
+            "content_text": "While Ampere’s circuital law holds for any closed loop, it does not always facilitate an easy evaluation of the magnetic field. For instance, in the case of a circular loop, it cannot be used to easily extract the expression $B = \text{\\mu}_0 I / 2R$ for the field at the center. The law is most useful in situations of high symmetry where the field is constant in magnitude and tangential to the Amperian loop, allowing the integral to be simplified. We use these symmetry properties to calculate fields in systems like the solenoid.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:4:4.7",
+        "number": "4.7",
+        "title": "The Solenoid",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:4:4.7:1",
+            "order": 1,
+            "title": "Definition and Structure of a Solenoid",
+            "content_text": "A solenoid consists of a long wire wound in the form of a helix where the neighboring turns are closely spaced. A 'long' solenoid is one whose length is much larger than its radius. Each turn of the solenoid can be regarded as a circular loop. The net magnetic field produced is the vector sum of the fields due to all these individual turns. To prevent short-circuiting between turns, enamelled wires are used so that the turns are insulated from each other.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.7:2",
+            "order": 2,
+            "title": "Magnetic Field Pattern of a Solenoid",
+            "content_text": "The magnetic field lines for a finite solenoid are shown in Figure 4.15. In an enlarged view of a section (Fig 4.15a), it is observed that the magnetic fields between two neighboring turns tend to cancel each other out. For a finite solenoid (Fig 4.15b), the field at the interior mid-point $P$ is uniform, strong, and directed along the axis of the solenoid. Conversely, the field at the exterior mid-point $Q$ is weak and directed along the axis with no significant perpendicular or normal component.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.15",
+                "description": "(a) Enlarged section of a solenoid showing how circular loops between neighboring turns tend to cancel. (b) Magnetic field lines of a finite solenoid showing a dense, uniform field inside and a sparse, weak field outside.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.7:3",
+            "order": 3,
+            "title": "Magnetic Field of a Very Long Solenoid",
+            "content_text": "For a very long solenoid, the magnetic field inside becomes perfectly uniform and parallel to the axis, while the field outside becomes negligible. To determine the field magnitude using Ampere's law, we consider a rectangular Amperian loop $abcd$ as shown in Figure 4.16. As the solenoid is made longer it appears like a long cylindrical metal sheet. Figure 4.16 represents this idealised picture. The field outside the solenoid approaches zero. We shall assume that the field outside is zero. The field inside becomes everywhere parallel to the axis. Consider a rectangular Amperian loop $abcd$. Along $cd$ the field is zero as argued above. Along transverse sections $bc$ and $ad$, the field component is zero. Thus, these two sections make no contribution. Let the field along $ab$ be $B$. Thus, the relevant length of the Amperian loop is, $L = h$. Let $n$ be the number of turns per unit length, then the total number of turns is $nh$. The enclosed current is, $I_e = I(nh)$, where $I$ is the current in the solenoid. From Ampere’s circuital law [Eq. 4.13 (b)]: $BL = μ_0 I_e$, $Bh = μ_0 I(nh) \\implies B = μ_0 n I$. The direction of the field is given by the right-hand rule. The solenoid is commonly used to obtain a uniform magnetic field. We shall see in the next chapter that a large field is possible by inserting a soft iron core inside the solenoid.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.16",
+                "description": "The magnetic field of a very long solenoid with a rectangular Amperian loop 'abcd' used to calculate the field. The side 'ab' is inside the solenoid, while 'cd' is outside.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.7:4",
+            "order": 4,
+            "title": "Calculation of Magnetic Field in a Solenoid",
+            "content_text": "This example demonstrates the calculation of the magnetic field inside a solenoid using the formula $B = μ_0 n I$, considering the solenoid's length, number of turns, and current. It also verifies the applicability of the long solenoid approximation by comparing the length to the radius.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 4.8",
+                "problem": "A solenoid of length 0.5 m has a radius of 1 cm and is made up of 500 turns. It carries a current of 5 A. What is the magnitude of the magnetic field inside the solenoid?",
+                "solution": "The number of turns per unit length is, $n = \\frac{500}{0.5} = 1000$ turns/m. The length $l = 0.5$ m and radius $r = 0.01$ m. Thus, $l/a = 50$ i.e., $l \\gg a$. Hence, we can use the long solenoid formula, namely, Eq. (4.20): $B = μ_0 n I = 4\\pi \\times 10^{-7} \\times 10^3 \\times 5 = 6.28 \\times 10^{-3}$ T."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:4:4.8",
+        "number": "4.8",
+        "title": "Force Between Two Parallel Currents, The Ampere",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:4:4.8:1",
+            "order": 1,
+            "title": "Introduction to Magnetic Force between Parallel Currents",
+            "content_text": "We have learnt that there exists a magnetic field due to a conductor carrying a current which obeys the Biot-Savart law. Further, we have learnt that an external magnetic field will exert a force on a current-carrying conductor. This follows from the Lorentz force formula. Thus, it is logical to expect that two current-carrying conductors placed near each other will exert (magnetic) forces on each other. In the period 1820-25, Ampere studied the nature of this magnetic force and its dependence on the magnitude of the current, on the shape and size of the conductors, as well as, the distances between the conductors. In this section, we shall take the simple example of two parallel current-carrying conductors, which will perhaps help us to appreciate Ampere’s painstaking work.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.8:2",
+            "order": 2,
+            "title": "Derivation of Force between Two Parallel Conductors",
+            "content_text": "Figure 4.17 shows two long parallel conductors a and b separated by a distance $d$ and carrying (parallel) currents $I_a$ and $I_b$, respectively. The conductor 'a' produces, the same magnetic field $\\mathbf{B}_a$ at all points along the conductor 'b'. The right-hand rule tells us that the direction of this field is downwards (when the conductors are placed horizontally). Its magnitude is given by: $B_a = \\frac{μ_0 I_a}{2\\pi d}$. The conductor 'b' carrying a current $I_b$ will experience a sideways force due to the field $\\mathbf{B}_a$. The direction of this force is towards the conductor 'a'. We label this force as $\\mathbf{F}_{ba}$, the force on a segment $L$ of 'b' due to 'a'. The magnitude of this force is given by: $F_{ba} = I_b L B_a = \\frac{μ_0 I_a I_b}{2\\pi d} L$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.17",
+                "description": "Two long straight parallel conductors 'a' and 'b' carrying steady currents $I_a$ and $I_b$ and separated by a distance $d$. $\\mathbf{B}_a$ is the magnetic field set up by conductor 'a' at conductor 'b', and $\\mathbf{F}_{ba}$ is the force on 'b' due to 'a'.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.8:3",
+            "order": 3,
+            "title": "Newton's Third Law and Magnetic Forces",
+            "content_text": "It is possible to compute the force on 'a' due to 'b'. From considerations similar to above we can find the force $\\mathbf{F}_{ab}$, on a segment of length $L$ of 'a' due to the current in 'b'. It is equal in magnitude to $F_{ba}$, and directed towards 'b'. Thus, $\\mathbf{F}_{ba} = -\\mathbf{F}_{ab}$. Note that this is consistent with Newton’s third Law. Thus, at least for parallel conductors and steady currents, we have shown that the Biot-Savart law and the Lorentz force yield results in accordance with Newton’s third Law. It turns out that when we have time-dependent currents and/or charges in motion, Newton’s third law may not hold for forces between charges and/or conductors. An essential consequence of the Newton’s third law in mechanics is conservation of momentum of an isolated system. This, however, holds even for the case of time-dependent situations with electromagnetic fields, provided the momentum carried by fields is also taken into account. We have seen from above that currents flowing in the same direction attract each other. One can show that oppositely directed currents repel each other. Thus, Parallel currents attract, and antiparallel currents repel. This rule is the opposite of what we find in electrostatics. Like (same sign) charges repel each other, but like (parallel) currents attract each other.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.8:4",
+            "order": 4,
+            "title": "Definition of the Ampere",
+            "content_text": "Let $f_{ba}$ represent the magnitude of the force $\\mathbf{F}_{ba}$ per unit length. Then, $f_{ba} = \\frac{μ_0 I_a I_b}{2\\pi d}$. The above expression is used to define the ampere (A), which is one of the seven SI base units. The ampere is the value of that steady current which, when maintained in each of the two very long, straight, parallel conductors of negligible cross-section, and placed one metre apart in vacuum, would produce on each of these conductors a force equal to $2 \\times 10^{-7}$ newtons per metre of length. This definition of the ampere was adopted in 1946. It is a theoretical definition. In practice, one must eliminate the effect of the earth’s magnetic field and substitute very long wires by multiturn coils of appropriate geometries. An instrument called the current balance is used to measure this mechanical force.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.8:5",
+            "order": 5,
+            "title": "Definition of the Coulomb",
+            "content_text": "The SI unit of charge, namely, the coulomb, can now be defined in terms of the ampere. When a steady current of 1A is set up in a conductor, the quantity of charge that flows through its cross-section in 1s is one coulomb (1C).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.8:6",
+            "order": 6,
+            "title": "Magnetic Force on a Conductor in Earth's Field",
+            "content_text": "This example calculates the force per unit length on a current-carrying conductor due to the Earth's magnetic field, illustrating the importance of accounting for environmental fields when standardizing the ampere.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 4.9",
+                "problem": "The horizontal component of the earth’s magnetic field at a certain place is $3.0 \\times 10^{-5}$ T and the direction of the field is from the geographic south to the geographic north. A very long straight conductor is carrying a steady current of 1A. What is the force per unit length on it when it is placed on a horizontal table and the direction of the current is (a) east to west; (b) south to north?",
+                "solution": "$\\mathbf{F} = I\\mathbf{l} \\times \\mathbf{B}$. $F = IlB \\sin \\theta$. The force per unit length is $f = F/l = I B \\sin \\theta$. (a) When the current is flowing from east to west, $\\theta = 90^\\circ$. Hence, $f = IB = 1 \\times 3 \\times 10^{-5} = 3 \\times 10^{-5}$ N m$^{-1}$. This is larger than the value $2 \\times 10^{-7}$ N m$^{-1}$ quoted in the definition of the ampere. Hence it is important to eliminate the effect of the earth’s magnetic field and other stray fields while standardising the ampere. The direction of the force is downwards. This direction may be obtained by the directional property of cross product of vectors. (b) When the current is flowing from south to north, $\\theta = 0^\\circ$. $f = 0$. Hence there is no force on the conductor."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:4:4.9",
+        "number": "4.9",
+        "title": "Torque on Current Loop, Magnetic Dipole",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:4:4.9:1",
+            "order": 1,
+            "title": "Torque on a rectangular current loop in a uniform magnetic field",
+            "content_text": "We now show that a rectangular loop carrying a steady current $I$ and placed in a uniform magnetic field experiences a torque. It does not experience a net force. This behaviour is analogous to that of electric dipole in a uniform electric field (Section 1.11). A rectangular current-carrying loop placed in a uniform magnetic field experiences a torque. It does not experience a net force. This behaviour is analogous to that of an electric dipole in a uniform electric field. We first consider the simple case when the rectangular loop is placed such that the uniform magnetic field $\\mathbf{B}$ is in the plane of the loop. The field exerts no force on the two arms AD and BC of the loop as they are parallel or antiparallel to the field. It is perpendicular to the arm AB of the loop and exerts a force $\\mathbf{F}_1$ on it which is directed into the plane of the loop, with magnitude $F_1 = I b B$. Similarly, it exerts a force $\\mathbf{F}_2$ on the arm CD directed out of the plane of the paper, with magnitude $F_2 = I b B = F_1$. Thus, the net force on the loop is zero. However, there is a torque on the loop due to the pair of forces $\\mathbf{F}_1$ and $\\mathbf{F}_2$. This torque tends to rotate the loop anticlockwise. The magnitude of the torque is $\\tau = F_1 \\frac{a}{2} + F_2 \\frac{a}{2} = IbB \\frac{a}{2} + IbB \\frac{a}{2} = I(ab)B = IAB$, where $A = ab$ is the area of the rectangle.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 4.18",
+                "description": "(a) A rectangular current-carrying coil of dimensions $a \\times b$ in a uniform magnetic field $\\mathbf{B}$. The magnetic moment $\\mathbf{m}$ points downwards. The torque $\\boldsymbol{\\tau}$ is along the axis and tends to rotate the coil anticlockwise. (b) The couple acting on the coil viewed from the AD end, showing forces $\\mathbf{F}_1$ and $\\mathbf{F}_2$ with lever arms $a/2$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.9:2",
+            "order": 2,
+            "title": "Torque on a Rectangular Loop: Magnetic Field at an Angle with the Normal",
+            "content_text": "We next consider the case when the plane of the loop is not along the magnetic field, but makes an angle with it. We take the angle between the field and the normal to the coil to be angle $\\theta$. The forces on the arms BC and DA are equal, opposite, and act along the axis of the coil, which connects the centres of mass of BC and DA. Being collinear along the axis they cancel each other, resulting in no net force or torque. The forces on arms AB and CD are $\\mathbf{F}_1$ and $\\mathbf{F}_2$. They too are equal and opposite, with magnitude $F_1 = F_2 = IbB$. But they are not collinear! This results in a couple. The perpendicular distance between the forces of the couple is $a \\sin \\theta$. The magnitude of the torque on the loop is $\\tau = F_1 \\frac{a}{2} \\sin \\theta + F_2 \\frac{a}{2} \\sin \\theta = IabB \\sin \\theta = IAB \\sin \\theta$. As $\\theta \\to 0$, the perpendicular distance between the forces approaches zero, making the forces collinear and the torque zero.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 4.19",
+                "description": "(a) The area vector of the loop ABCD makes an arbitrary angle $\\theta$ with the magnetic field $\\mathbf{B}$. (b) Top view of the loop showing the forces $\\mathbf{F}_1$ and $\\mathbf{F}_2$ acting on the arms AB and CD, with the perpendicular distance $a \\sin \\theta$ between them.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.9:3",
+            "order": 3,
+            "title": "Definition of Magnetic Moment",
+            "content_text": "The torque on a current loop can be expressed as the vector product of the magnetic moment of the coil and the magnetic field. We define the magnetic moment $\\mathbf{m}$ of the current loop as $\\mathbf{m} = I \\mathbf{A}$, where the direction of the area vector $\\mathbf{A}$ is given by the right-hand thumb rule: curl the fingers of the right hand in the direction of the current, and the thumb points in the direction of the area vector. The dimensions of the magnetic moment are $[A][L^2]$ and its SI unit is $Am^2$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.9:4",
+            "order": 4,
+            "title": "Vector Expression for Torque and Electrostatic Analogy",
+            "content_text": "The torque $\\boldsymbol{\\tau}$ on a current loop in a uniform magnetic field $\\mathbf{B}$ is given by $\\boldsymbol{\\tau} = \\mathbf{m} \\times \\mathbf{B}$. This is analogous to the electrostatic case where an electric dipole of dipole moment $\\mathbf{p}_e$ in an electric field $\\mathbf{E}$ experiences a torque $\\boldsymbol{\\tau} = \\mathbf{p}_e \\times \\mathbf{E}$. If the loop has $N$ closely wound turns, the expression for torque still holds, with the magnetic moment being $\\mathbf{m} = NI\\mathbf{A}$.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.9:5",
+            "order": 5,
+            "title": "Equilibrium and Stability of a Magnetic Dipole",
+            "content_text": "The torque $\\boldsymbol{\\tau}$ vanishes when $\\mathbf{m}$ is either parallel or antiparallel to the magnetic field $\\mathbf{B}$, indicating a state of equilibrium. When $\\mathbf{m}$ and $\\mathbf{B}$ are parallel ($\\theta = 0$), the equilibrium is stable; any small rotation produces a torque that brings the coil back to its original position. When they are antiparallel ($\\theta = \\pi$), the equilibrium is unstable as any rotation produces a torque that increases the rotation. This torque is the reason why a small magnet or any magnetic dipole aligns itself with the external magnetic field.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.9:6",
+            "order": 6,
+            "title": "Worked Example: Circular Coil in a Magnetic Field",
+            "content_text": "This example demonstrates the calculation of magnetic field at the center of a coil, its magnetic moment, and the dynamics of its rotation in an external magnetic field using the torque equation and Newton's second law for rotation.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 4.10",
+                "problem": "A 100 turn closely wound circular coil of radius 10 cm carries a current of 3.2 A. (a) What is the field at the centre of the coil? (b) What is the magnetic moment of this coil? The coil is placed in a vertical plane and is free to rotate about a horizontal axis which coincides with its diameter. A uniform magnetic field of 2T in the horizontal direction exists such that initially the axis of the coil is in the direction of the field. The coil rotates through an angle of 90° under the influence of the magnetic field. (c) What are the magnitudes of the torques on the coil in the initial and final position? (d) What is the angular speed acquired by the coil when it has rotated by 90°? The moment of inertia of the coil is 0.1 kg m².",
+                "solution": "(a) $B = \\frac{\\mu_0 NI}{2R} = \\frac{4\\pi \\times 10^{-7} \\times 100 \\times 3.2}{2 \\times 0.1} = 2 \\times 10^{-3}$ T. Direction is given by right-hand thumb rule. (b) $m = NIA = NI\\pi r^2 = 100 \\times 3.2 \\times 3.14 \\times 10^{-2} = 10$ $Am^2$. (c) $\\tau = |\\mathbf{m} \\times \\mathbf{B}| = m B \\sin \\theta$. Initially $\\theta = 0$, so $\\tau_i = 0$. Finally $\\theta = \\pi/2$, so $\\tau_f = mB = 10 \\times 2 = 20$ Nm. (d) From Newton's second law, $\\mathcal{I} \\frac{d\\omega}{dt} = mB \\sin \\theta$. Using chain rule, $\\frac{d\\omega}{dt} = \\frac{d\\omega}{d\\theta} \\frac{d\\theta}{dt} = \\omega \\frac{d\\omega}{d\\theta}$. Thus, $\\mathcal{I} \\omega d\\omega = mB \\sin \\theta d\\theta$. Integrating from $\\theta = 0$ to $\\pi/2$: $\\mathcal{I} \\frac{\\omega_f^2}{2} = mB \\int_0^{\\pi/2} \\sin \\theta d\\theta = mB$. $\\omega_f = (\\frac{2mB}{\\mathcal{I}})^{1/2} = (\\frac{2 \\times 20}{10^{-1}})^{1/2} = 20$ $s^{-1}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.9:7",
+            "order": 7,
+            "title": "Conceptual Analysis of Current Loops",
+            "content_text": "This subsection addresses conceptual questions regarding the behavior of current loops in magnetic fields, including constraints on rotation axes and the orientation of stable equilibrium. This subsection addresses conceptual questions regarding the behavior of current loops in magnetic fields, including constraints on rotation axes and the orientation of stable equilibrium. For a horizontal loop, the area vector $\\mathbf{A}$ is in the vertical direction. Since torque is defined as $\\mathbf{\\tau} = I \\mathbf{A} \\times \\mathbf{B}$, the torque vector $\\mathbf{\\tau}$ must be in the plane of the loop for any magnetic field $\\mathbf{B}$. Consequently, the loop cannot rotate about a vertical axis as that would require a vertical torque component. The orientation of stable equilibrium occurs when the area vector $\\mathbf{A}$ is aligned with the external magnetic field $\\mathbf{B}$. In this state, the magnetic field produced by the loop itself is in the same direction as the external field, maximizing the total magnetic flux through the loop. Additionally, a flexible current loop of irregular shape will transition to a circular shape in an external magnetic field to maximize its area for a given perimeter, thereby maximizing the magnetic flux.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 4.11",
+                "problem": "(a) A current-carrying circular loop lies on a smooth horizontal plane. Can a uniform magnetic field be set up in such a manner that the loop turns around itself (i.e., turns about the vertical axis)? (b) A current-carrying circular loop is located in a uniform external magnetic field. If the loop is free to turn, what is its orientation of stable equilibrium? Show that in this orientation, the flux of [CONTINUES]",
+                "solution": "Not provided in the current text snippet."
+              },
+              {
+                "label": "Example 4.11",
+                "problem": "(c) A loop of irregular shape carrying current is located in an external magnetic field. If the wire is flexible, why does it change to a circular shape? [Note: Parts (a) and (b) regarding rotation axes and stable equilibrium are addressed in the solution based on previous context].",
+                "solution": "(a) No, because that would require $\\mathbf{\\tau}$ to be in the vertical direction. But $\\mathbf{\\tau} = I \\mathbf{A} \\times \\mathbf{B}$, and since $\\mathbf{A}$ of the horizontal loop is in the vertical direction, $\\mathbf{\\tau}$ would be in the plane of the loop for any $\\mathbf{B}$. (b) Orientation of stable equilibrium is one where the area vector $\\mathbf{A}$ of the loop is in the direction of external magnetic field. In this orientation, the magnetic field produced by the loop is in the same direction as external field, both normal to the plane of the loop, thus giving rise to maximum flux of the total field. (c) It assumes circular shape with its plane normal to the field to maximise flux, since for a given perimeter, a circle encloses greater area than any other shape."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.9:8",
+            "order": 8,
+            "title": "Circular Current Loop as a Magnetic Dipole",
+            "content_text": "A circular current loop acts as the elementary magnetic element, behaving similarly to an electric dipole at large distances. The magnetic field on the axis of a circular loop of radius $R$ carrying steady current $I$ at a distance $x$ from the center is given by $B = \\frac{\\mu_0 I R^2}{2(x^2 + R^2)^{3/2}}$. For points far from the loop ($x \\gg R$), the $R^2$ term in the denominator can be neglected, simplifying the expression to $B \\approx \\frac{\\mu_0 I R^2}{2x^3}$. Given the area of the loop $A = \\pi R^2$, we can rewrite this as $B = \\frac{\\mu_0 I A}{2\\pi x^3}$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.9:9",
+            "order": 9,
+            "title": "Magnetic Moment and Dipole Analogy",
+            "content_text": "By defining the magnetic moment $\\mathbf{m}$ of the loop as having a magnitude $m = IA$, the axial magnetic field expression becomes $B \\approx \\frac{\\mu_0 m}{2\\pi x^3} = \\frac{\\mu_0}{4\\pi} \\frac{2m}{x^3}$. This is mathematically analogous to the electric field of a dipole on its axis, $E = \\frac{1}{4\\pi\\epsilon_0} \\frac{2p_e}{x^3}$. The similarity is established by substituting $\\mu_0 \\to 1/\\epsilon_0$, $\\mathbf{m} \\to \\mathbf{p}_e$ (electrostatic dipole), and $\\mathbf{B} \\to \\mathbf{E}$ (electrostatic field).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.9:10",
+            "order": 10,
+            "title": "Equatorial Field and General Dipole Equivalence",
+            "content_text": "The analogy between magnetic and electric dipoles extends to the perpendicular bisector (equatorial plane). For an electric dipole, the field is $E \\approx \\frac{p_e}{4\\pi\\epsilon_0 x^3}$. Applying the same substitutions, the magnetic field for a current loop in the plane of the loop at a distance $x \\gg R$ is $B \\approx \\frac{\\mu_0}{4\\pi} \\frac{m}{x^3}$. These results apply to any planar current loop, establishing that such loops are equivalent to magnetic dipoles with moment $\\mathbf{m} = I\\mathbf{A}$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.9:11",
+            "order": 11,
+            "title": "Magnetic Monopoles and Intrinsic Moments",
+            "content_text": "A fundamental difference exists between electric and magnetic dipoles: while electric dipoles are composed of two elementary charges (monopoles), magnetic monopoles are not known to exist. The magnetic dipole (or current loop) is the most elementary magnetic element. Ampere suggested all magnetism arises from circulating currents; however, elementary particles like electrons and protons also possess an intrinsic magnetic moment that is not caused by circulating currents.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:4:4.10",
+        "number": "4.10",
+        "title": "The Moving Coil Galvanometer",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:4:4.10:1",
+            "order": 1,
+            "title": "Introduction to the Moving Coil Galvanometer (MCG)",
+            "content_text": "The moving coil galvanometer (MCG) is a device used to detect or measure small electric currents and voltages. Its operation is based on the principle that a current-carrying coil placed in a magnetic field experiences a torque, as discussed in Section 4.9.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.10:2",
+            "order": 2,
+            "title": "Construction and Principle of MCG",
+            "content_text": "The MCG consists of a coil with many turns ($N$) free to rotate about a fixed axis in a uniform radial magnetic field. A cylindrical soft-iron core is placed inside the coil to make the magnetic field radial and increase its strength. When a current $I$ flows through the coil, it experiences a magnetic torque $\\tau = NIAB$. Because the field is radial, the angle between the area vector and the magnetic field is always $90^\\circ$ (so $\\sin\\theta = 1$).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.20",
+                "description": "A schematic of a moving coil galvanometer showing the scale, pointer, permanent magnets (N and S poles), the coil, a soft-iron core, a pivot, and a spring (Sp) providing restoring torque in a uniform radial magnetic field.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.10:3",
+            "order": 3,
+            "title": "Torque Balance and Deflection",
+            "content_text": "The magnetic torque $NIAB$ tends to rotate the coil. This is balanced by a counter torque $k\\phi$ provided by a spring $S_p$, where $k$ is the torsional constant (restoring torque per unit twist) and $\\phi$ is the angular deflection. In equilibrium, $k\\phi = NIAB$, which leads to the deflection formula: $\\phi = \\left( \\frac{NAB}{k} \\right) I$. The deflection $\\phi$ is indicated on a scale by a pointer attached to the spring.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.10:4",
+            "order": 4,
+            "title": "Applications and Limitations as an Ammeter",
+            "content_text": "The galvanometer can be used as a detector (e.g., in a Wheatstone bridge) to find the neutral position where no current flows. However, it cannot be used directly as an ammeter for two reasons: (i) it is extremely sensitive, giving full-scale deflection for currents of the order of $\\mu A$, and (ii) it has a large resistance $R_G$, which would significantly alter the current in the circuit it is measuring.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.10:5",
+            "order": 5,
+            "title": "Conversion to Ammeter using Shunt Resistance",
+            "content_text": "To convert a galvanometer into an ammeter, a very small resistance $r_s$, called a shunt resistance, is connected in parallel with the galvanometer coil. This allows most of the current to pass through the shunt. The effective resistance of this arrangement is $R_G r_s / (R_G + r_s) \\approx r_s$ if $R_G \\gg r_s$. The scale is then calibrated to read the total current value.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.21",
+                "description": "Circuit diagram showing a galvanometer (G) with resistance $R_G$ connected in parallel with a small shunt resistance $r_s$ to form an ammeter.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.10:6",
+            "order": 6,
+            "title": "Current Sensitivity",
+            "content_text": "Current sensitivity is defined as the deflection per unit current, $\\phi/I$. From the equilibrium equation, current sensitivity is given by $\\frac{\\phi}{I} = \\frac{NAB}{k}$. To increase sensitivity, manufacturers can increase the number of turns $N$, the area $A$, or the magnetic field $B$, or decrease the torsional constant $k$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.10:7",
+            "order": 7,
+            "title": "Conversion to Voltmeter",
+            "content_text": "The galvanometer can also be used as a voltmeter to measure the voltage across a given section of the circuit. For this it must be connected in parallel with that section of the circuit. Further, it must draw a very small current, otherwise the voltage measurement will disturb the original set up by an amount which is very large. Usually we like to keep the disturbance due to the measuring device below one per cent. To ensure this, a large resistance $R$ is connected in series with the galvanometer. This arrangement is schematically depicted in Fig.4.22. Note that the resistance of the voltmeter is now $R_G + R \\approx R$, which is a large value.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 4.22",
+                "description": "Conversion of a galvanometer (G) to a voltmeter by the introduction of a resistance R of large value in series. The diagram shows a galvanometer with internal resistance $R_G$ connected in series with an external large resistance $R$ to form the voltmeter.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.10:8",
+            "order": 8,
+            "title": "Voltage Sensitivity",
+            "content_text": "The scale of the voltmeter is calibrated to read off the voltage value with ease. We define the voltage sensitivity as the deflection per unit voltage. From the galvanometer equation $\\phi = (\\frac{NAB}{k})I$, we can derive the voltage sensitivity by dividing both sides by $V$: $\\frac{\\phi}{V} = (\\frac{NAB}{k})\\frac{I}{V} = (\\frac{NAB}{k})\\frac{1}{R}$ (Eq. 4.28). Here, $R$ is the total resistance of the voltmeter.\nAn interesting point to note is that increasing the current sensitivity may not necessarily increase the voltage sensitivity. Let us take the current sensitivity equation $\\frac{\\phi}{I} = \\frac{NAB}{k}$. If we double the number of turns ($N \\rightarrow 2N$), the current sensitivity doubles: $\\frac{\\phi}{I} \\rightarrow 2\\frac{\\phi}{I}$. However, the resistance of the galvanometer is also likely to double, since it is proportional to the length of the wire. In the voltage sensitivity equation, if $N \\rightarrow 2N$ and $R \\rightarrow 2R$, the voltage sensitivity $\\frac{\\phi}{V}$ remains unchanged. Thus, the modification needed for conversion of a galvanometer to an ammeter is different from what is needed for converting it into a voltmeter.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:4.10:9",
+            "order": 9,
+            "title": "Example 4.12: Current Measurement in a Circuit",
+            "content_text": "This example demonstrates the effect of ammeter resistance on current measurement in a simple circuit. A circuit consists of a 3.00 V battery and a 3.00 $\\Omega$ resistor. We calculate the current for three cases: (a) using a galvanometer with $R_G = 60.00 \\Omega$, (b) using the same galvanometer converted to an ammeter with a shunt $r_s = 0.02 \\Omega$, and (c) using an ideal ammeter with zero resistance.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 4.12",
+                "problem": "In the circuit (Fig. 4.23) the current is to be measured. What is the value of the current if the ammeter shown (a) is a galvanometer with a resistance $R_G = 60.00 \\Omega$; (b) is a galvanometer described in (a) but converted to an ammeter by a shunt resistance $r_s = 0.02 \\Omega$; (c) is an ideal ammeter with zero resistance?",
+                "solution": "(a) Total resistance in the circuit is $R_G + 3 = 60 + 3 = 63 \\Omega$. Hence, $I = V/R = 3/63 = 0.048 A$. (b) Resistance of the galvanometer converted to an ammeter is $R_A = \\frac{R_G r_s}{R_G + r_s} = \\frac{60 \\times 0.02}{60 + 0.02} \\approx 0.02 \\Omega$. Total resistance in the circuit is $0.02 + 3 = 3.02 \\Omega$. Hence, $I = 3/3.02 = 0.99 A$. (c) For the ideal ammeter with zero resistance, $R_{total} = 3 \\Omega$, so $I = 3/3 = 1.00 A$."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "FIGURE 4.23",
+                "description": "A series circuit diagram showing a 3.00 V DC source, a 3.00 $\\Omega$ resistor, and an ammeter labeled 'A' connected in series.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:4:Summary",
+        "number": "Summary",
+        "title": "Summary of Moving Charges and Magnetism",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:4:Summary:1",
+            "order": 1,
+            "title": "Lorentz Force and Force on a Conductor",
+            "content_text": "The total force on a charge $q$ moving with velocity $\\vec{v}$ in the presence of magnetic and electric fields $\\vec{B}$ and $\\vec{E}$ is called the Lorentz force: $\\vec{F} = q(\\vec{v} \\times \\vec{B} + \\vec{E})$. The magnetic force $q(\\vec{v} \\times \\vec{B})$ is normal to $\\vec{v}$ and the work done by it is zero. A straight conductor of length $l$ carrying a steady current $I$ experiences a force $\\vec{F} = I\\vec{l} \\times \\vec{B}$ in a uniform external magnetic field $\\vec{B}$, where the direction of $\\vec{l}$ is given by the direction of the current.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:Summary:2",
+            "order": 2,
+            "title": "Cyclotron Frequency",
+            "content_text": "In a uniform magnetic field $\\vec{B}$, a charge $q$ executes a circular orbit in a plane normal to $\\vec{B}$. Its frequency of uniform circular motion is called the cyclotron frequency and is given by $\\nu_c = \\frac{qB}{2\\pi m}$. This frequency is independent of the particle's speed and radius, a fact exploited in the cyclotron to accelerate charged particles.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:Summary:3",
+            "order": 3,
+            "title": "Biot-Savart Law",
+            "content_text": "The Biot-Savart law asserts that the magnetic field $d\\vec{B}$ due to an element $d\\vec{l}$ carrying a steady current $I$ at a point $P$ at a distance $r$ from the current element is $d\\vec{B} = \\frac{\\mu_0}{4\\pi} I \\frac{d\\vec{l} \\times \\vec{r}}{r^3}$. To obtain the total field at $P$, we must integrate this vector expression over the entire length of the conductor.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:Summary:4",
+            "order": 4,
+            "title": "Magnetic Field of a Circular Coil",
+            "content_text": "The magnitude of the magnetic field due to a circular coil of radius $R$ carrying a current $I$ at an axial distance $x$ from the centre is $B = \\frac{\\mu_0 I R^2}{2(x^2 + R^2)^{3/2}}$. At the centre of the coil, this reduces to $B = \\frac{\\mu_0 I}{2R}$.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:Summary:5",
+            "order": 5,
+            "title": "Ampere's Circuital Law",
+            "content_text": "Ampere's Circuital Law states that for an open surface $S$ bounded by a loop $C$, $\\oint_C \\vec{B} \\cdot d\\vec{l} = \\mu_0 I$, where $I$ refers to the current passing through $S$. The sign of $I$ is determined by the right-hand rule. In a simplified form, if $\\vec{B}$ is tangent to a closed curve of length $L$ and constant in magnitude, then $BL = \\mu_0 I_e$, where $I_e$ is the net enclosed current.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:Summary:6",
+            "order": 6,
+            "title": "Magnetic Field of a Straight Wire and Solenoid",
+            "content_text": "The magnitude of the magnetic field at a distance $R$ from a long, straight wire carrying a current $I$ is $B = \\frac{\\mu_0 I}{2\\pi R}$. The field lines are circles concentric with the wire. Inside a long solenoid, the field is $B = \\mu_0 n I$, where $n$ is the number of turns per unit length.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:Summary:7",
+            "order": 7,
+            "title": "Force between Parallel Currents and Torque on Loops",
+            "content_text": "Parallel currents attract and anti-parallel currents repel. A planar loop carrying current $I$ with $N$ turns and area $A$ has a magnetic moment $\\vec{m} = N I \\vec{A}$. The direction of $\\vec{m}$ is given by the right-hand thumb rule. In a uniform magnetic field $\\vec{B}$, the net force on the loop is zero, but it experiences a torque $\\vec{\\tau} = \\vec{m} \\times \\vec{B}$.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:Summary:8",
+            "order": 8,
+            "title": "Moving Coil Galvanometer Principles",
+            "content_text": "In a moving coil galvanometer, the magnetic torque is balanced by a counter-torque from a spring: $k\\phi = NIAB$, where $\\phi$ is the equilibrium deflection and $k$ is the torsion constant. A galvanometer is converted to an ammeter by adding a small shunt resistance $r_s$ in parallel, and to a voltmeter by adding a large resistance $R$ in series.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:Summary:9",
+            "order": 9,
+            "title": "Physical Quantities in Magnetism",
+            "content_text": "The following table summarizes the key physical quantities introduced in this chapter, including their symbols, nature (scalar or vector), dimensional formulas, SI units, and relevant remarks.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 4.1",
+                "caption": "Physical Quantities in Magnetism",
+                "headers": [
+                  "Physical Quantity",
+                  "Symbol",
+                  "Nature",
+                  "Dimensions",
+                  "Units",
+                  "Remarks"
+                ],
+                "rows": [
+                  [
+                    "Permeability of free space",
+                    "$\\mu_0$",
+                    "Scalar",
+                    "$[MLT^{-2}A^{-2}]$",
+                    "T m A$^{-1}$",
+                    "$4\\pi \\times 10^{-7}$ T m A$^{-1}$"
+                  ],
+                  [
+                    "Magnetic Field",
+                    "$\\mathbf{B}$",
+                    "Vector",
+                    "$[M T^{-2}A^{-1}]$",
+                    "T (tesla)",
+                    ""
+                  ],
+                  [
+                    "Magnetic Moment",
+                    "$\\mathbf{m}$",
+                    "Vector",
+                    "$[L^2A]$",
+                    "A m$^2$ or J/T",
+                    ""
+                  ],
+                  [
+                    "Torsion Constant",
+                    "$k$",
+                    "Scalar",
+                    "$[M L^2T^{-2}]$",
+                    "N m rad$^{-1}$",
+                    "Appears in MCG"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:4:Points to Ponder",
+        "number": "Points to Ponder",
+        "title": "Points to Ponder",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:4:Points to Ponder:1",
+            "order": 1,
+            "title": "Magnetic Field Lines and Steady Currents",
+            "content_text": "Electrostatic field lines originate at a positive charge and terminate at a negative charge or fade at infinity. In contrast, magnetic field lines always form closed loops. The discussions in this chapter are restricted to steady currents that do not vary with time. When currents vary with time, Newton’s third law is valid only if the momentum carried by the electromagnetic field is taken into account.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:Points to Ponder:2",
+            "order": 2,
+            "title": "Lorentz Force and Frame of Reference",
+            "content_text": "The Lorentz force is given by $\\mathbf{F} = q (\\mathbf{v} \\times \\mathbf{B} + \\mathbf{E})$. This velocity-dependent force implies that if one switches to a frame with instantaneous velocity $\\mathbf{v}$, the magnetic part of the force vanishes. In this new frame, the motion of the charged particle is explained by the existence of an appropriate electric field. This resolution of the paradox highlights that electricity and magnetism are linked phenomena (electromagnetism) and that the Lorentz force expression does not imply a universal preferred frame of reference in nature.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:4:Points to Ponder:3",
+            "order": 3,
+            "title": "Relationship between Ampere’s and Biot-Savart Laws",
+            "content_text": "Ampere’s Circuital law is not independent of the Biot-Savart law; it can be derived from it. Their relationship is analogous to the relationship between Gauss’s law and Coulomb’s law in electrostatics.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:physics:12:4:ex:1",
+          "number": 1,
+          "problem": "A circular coil of wire consisting of 100 turns, each of radius 8.0 cm carries a current of 0.40 A. What is the magnitude of the magnetic field B at the centre of the coil?",
+          "solution": "Using $B = \\frac{\\mu_0 N I}{2R}$, $B = \\frac{4\\pi \\times 10^{-7} \\times 100 \\times 0.40}{2 \\times 0.08} = 3.1 \\times 10^{-4}$ T.",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:4:ex:2",
+          "number": 2,
+          "problem": "A long straight wire carries a current of 35 A. What is the magnitude of the field B at a point 20 cm from the wire?",
+          "solution": "Using $B = \\frac{\\mu_0 I}{2\\pi r}$, $B = \\frac{2 \\times 10^{-7} \\times 35}{0.20} = 3.5 \\times 10^{-5}$ T.",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:4:ex:3",
+          "number": 3,
+          "problem": "A long straight wire in the horizontal plane carries a current of 50 A in north to south direction. Give the magnitude and direction of B at a point 2.5 m east of the wire.",
+          "solution": "Magnitude: $B = \\frac{2 \\times 10^{-7} \\times 50}{2.5} = 4.0 \\times 10^{-6}$ T. Direction: Vertically upwards (by Right Hand Thumb Rule).",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:4:ex:4",
+          "number": 4,
+          "problem": "A horizontal overhead power line carries a current of 90 A in east to west direction. What is the magnitude and direction of the magnetic field due to the current 1.5 m below the line?",
+          "solution": "Magnitude: $B = \\frac{2 \\times 10^{-7} \\times 90}{1.5} = 1.2 \\times 10^{-5}$ T. Direction: Towards South.",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:4:ex:5",
+          "number": 5,
+          "problem": "What is the magnitude of magnetic force per unit length on a wire carrying a current of 8 A and making an angle of 30° with the direction of a uniform magnetic field of 0.15 T?",
+          "solution": "$f = I B \\sin \\theta = 8 \\times 0.15 \\times \\sin 30^\\circ = 0.6$ N/m.",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:4:ex:6",
+          "number": 6,
+          "problem": "A 3.0 cm wire carrying a current of 10 A is placed inside a solenoid perpendicular to its axis. The magnetic field inside the solenoid is given to be 0.27 T. What is the magnetic force on the wire?",
+          "solution": "$F = I L B \\sin 90^\\circ = 10 \\times 0.03 \\times 0.27 = 8.1 \\times 10^{-2}$ N.",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:4:ex:7",
+          "number": 7,
+          "problem": "Two long and parallel straight wires A and B carrying currents of 8.0 A and 5.0 A in the same direction are separated by a distance of 4.0 cm. Estimate the force on a 10 cm section of wire A.",
+          "solution": "$F = \\frac{\\mu_0 I_1 I_2 L}{2\\pi d} = \\frac{2 \\times 10^{-7} \\times 8 \\times 5 \\times 0.1}{0.04} = 2.0 \\times 10^{-5}$ N (Attractive).",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:4:ex:8",
+          "number": 8,
+          "problem": "A closely wound solenoid 80 cm long has 5 layers of windings of 400 turns each. The diameter of the solenoid is 1.8 cm. If the current carried is 8.0 A, estimate the magnitude of B inside the solenoid near its centre.",
+          "solution": "$n = \\frac{5 \\times 400}{0.8} = 2500$ turns/m. $B = \\mu_0 n I = 4\\pi \\times 10^{-7} \\times 2500 \\times 8.0 \\approx 2.5 \\times 10^{-2}$ T.",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:4:ex:9",
+          "number": 9,
+          "problem": "A square coil of side 10 cm consists of 20 turns and carries a current of 12 A. The coil is suspended vertically and the normal to the plane of the coil makes an angle of 30° with the direction of a uniform horizontal magnetic field of magnitude 0.80 T. What is the magnitude of torque experienced by the coil?",
+          "solution": "$\\tau = N I A B \\sin \\theta = 20 \\times 12 \\times (0.1)^2 \\times 0.80 \\times \\sin 30^\\circ = 0.96$ N m.",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:4:ex:10",
+          "number": 10,
+          "problem": "Two moving coil meters, $M_1$ and $M_2$ have the following particulars: $R_1 = 10 \\Omega, N_1 = 30, A_1 = 3.6 \\times 10^{-3}$ m$^2, B_1 = 0.25$ T; $R_2 = 14 \\Omega, N_2 = 42, A_2 = 1.8 \\times 10^{-3}$ m$^2, B_2 = 0.50$ T. (The spring constants are identical for the two meters). Determine the ratio of (a) current sensitivity and (b) voltage sensitivity of $M_2$ and $M_1$.",
+          "solution": "(a) Ratio of current sensitivity $\\frac{S_{i2}}{S_{i1}} = \\frac{N_2 B_2 A_2}{N_1 B_1 A_1} = 1.4$. (b) Ratio of voltage sensitivity $\\frac{S_{v2}}{S_{v1}} = \\frac{S_{i2}}{R_2} \\times \\frac{R_1}{S_{i1}} = 1.0$.",
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:4:ex:11",
+          "number": 11,
+          "problem": "In a chamber, a uniform magnetic field of 6.5 G ($1 G = 10^{-4}$ T) is maintained. An electron is shot into the field with a speed of $4.8 \\times 10^6$ m s$^{-1}$ normal to the field. Explain why the path of the electron is a circle. Determine the radius of the circular orbit. ($e = 1.6 \\times 10^{-19}$ C, $m_e = 9.1 \\times 10^{-31}$ kg)",
+          "solution": "The magnetic force $\\mathbf{F} = q(\\mathbf{v} \\times \\mathbf{B})$ is always perpendicular to velocity, providing centripetal acceleration. $r = \\frac{mv}{qB} = \\frac{9.1 \\times 10^{-31} \\times 4.8 \\times 10^6}{1.6 \\times 10^{-19} \\times 6.5 \\times 10^{-4}} = 4.2$ cm.",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:4:ex:12",
+          "number": 12,
+          "problem": "In Exercise 4.11 obtain the frequency of revolution of the electron in its circular orbit. Does the answer depend on the speed of the electron? Explain.",
+          "solution": "$\\nu = \\frac{qB}{2\\pi m} = 18.18 \\times 10^6$ Hz = 18 MHz. The frequency is independent of speed because $v$ and $r$ are proportional.",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:4:ex:13",
+          "number": 13,
+          "problem": "(a) A circular coil of 30 turns and radius 8.0 cm carrying a current of 6.0 A is suspended vertically in a uniform horizontal magnetic field of magnitude 1.0 T. The field lines make an angle of 60° with the normal of the coil. Calculate the magnitude of the counter torque that must be applied to prevent the coil from turning. (b) Would your answer change, if the circular coil in (a) were replaced by a planar coil of some irregular shape that encloses the same area? (All other particulars are also unaltered.)",
+          "solution": "(a) $\\tau = N I A B \\sin \\theta = 30 \\times 6.0 \\times (\\pi \\times 0.08^2) \\times 1.0 \\times \\sin 60^\\circ \\approx 3.1$ N m. (b) No, the torque depends only on the area, not the shape.",
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        }
+      ]
+    }
+  }
+}

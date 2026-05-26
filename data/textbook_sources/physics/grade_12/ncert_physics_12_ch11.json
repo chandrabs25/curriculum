@@ -1,0 +1,767 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_physics_12_ch11.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:physics:12:11",
+  "curriculum": "ncert",
+  "subject": "physics",
+  "grade": 12,
+  "textbook_name": "Physics Part II",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:physics:12:11",
+    "number": 11,
+    "title": "Dual Nature of Radiation and Matter",
+    "summary": "This chapter explores the dual nature of radiation and matter, revealing their wave-particle duality. It begins with electron emission, discussing the work function and various emission methods (thermionic, field, and photoelectric). The core of the chapter focuses on the photoelectric effect, detailing Hertz, Hallwachs, and Lenard's observations and the experimental setup to study the effects of light intensity, potential, and frequency on photocurrent.\n\nEinstein's revolutionary photon picture explains the photoelectric effect, introducing the concept of energy quanta ($E = h\\nu$) and Einstein's photoelectric equation ($K_{max} = h\\nu - \\phi_0$). This equation successfully explains experimental observations that the wave theory couldn't, such as the threshold frequency and instantaneous emission.\n\nThe chapter then delves into the particle nature of light, defining photon properties. Transitioning to matter, it introduces de Broglie's hypothesis, proposing that matter also possesses wave-like properties with a wavelength inversely proportional to momentum ($\\lambda = h/p$). The chapter culminates by emphasizing that both radiation and matter exhibit wave-particle duality, bridging a connection between previously distinct concepts. The practical significance lies in understanding phenomena like photoelectric cells, electron microscopes, and advancing our understanding of quantum mechanics.",
+    "sections": [
+      {
+        "id": "ncert:physics:12:11:11.1",
+        "number": "11.1",
+        "title": "Introduction",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:11:11.1:1",
+            "order": 1,
+            "title": "Historical Context of Light and Matter",
+            "content_text": "By the late 19th century, Maxwell's electromagnetic equations and Hertz's 1887 experiments had firmly established light as a wave. Concurrently, studies of electric discharge in low-pressure gases (around 0.001 mm of mercury) led to major breakthroughs, including Roentgen's discovery of X-rays in 1895 and J.J. Thomson's discovery of the electron in 1897. These findings were pivotal in evolving our understanding of atomic structure.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:11:11.1:2",
+            "order": 2,
+            "title": "Cathode Rays and Specific Charge",
+            "content_text": "In 1870, William Crookes discovered cathode rays, which he later proposed were streams of fast-moving negative particles. J.J. Thomson confirmed this by using perpendicular electric and magnetic fields to measure their speed and specific charge (charge-to-mass ratio, $e/m$). He found $e/m$ to be $1.76 \\times 10^{11}$ C/kg, a value independent of the cathode material or the gas used, suggesting these particles were universal constituents of matter.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:11:11.1:3",
+            "order": 3,
+            "title": "Discovery of the Electron and Charge Quantization",
+            "content_text": "Similar negative particles were found to be emitted from metals when heated or exposed to ultraviolet light. In 1897, Thomson named these universal particles 'electrons'. Later, in 1913, R.A. Millikan's oil-drop experiment determined the elementary charge of an electron to be $e = 1.602 \\times 10^{-19}$ C, establishing that electric charge is quantized. By combining $e$ and $e/m$, the mass ($m$) of the electron was calculated.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:11:11.2",
+        "number": "11.2",
+        "title": "Electron Emission",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:11:11.2:1",
+            "order": 1,
+            "title": "The Surface Barrier",
+            "content_text": "While metals contain free electrons responsible for conductivity, these electrons cannot spontaneously leave the metal. If an electron tries to escape, the metal surface becomes positively charged, exerting an attractive pull that keeps the electron inside. To overcome this 'surface barrier', an electron must be supplied with a specific minimum amount of energy.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:11:11.2:2",
+            "order": 2,
+            "title": "Work Function and the Electron Volt",
+            "content_text": "The minimum energy required for an electron to escape a metal surface is called the work function, denoted by $\\phi_0$. It is measured in electron volts (eV), where 1 eV is the energy gained by an electron accelerated through a potential difference of 1 volt. The conversion is $1 \\text{ eV} = 1.602 \\times 10^{-19}$ J. The work function depends on the specific metal and its surface properties.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:11:11.2:3",
+            "order": 3,
+            "title": "Methods of Electron Emission",
+            "content_text": "There are three primary physical processes to supply the energy needed for electron emission: (i) Thermionic emission, where thermal energy is provided by heating; (ii) Field emission, where a very strong electric field (approx. $10^8$ V/m) pulls electrons out; and (iii) Photoelectric emission, where light of a suitable frequency causes the emission of 'photoelectrons'.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:11:11.3",
+        "number": "11.3",
+        "title": "Photoelectric Effect",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:11:11.3:1",
+            "order": 1,
+            "title": "Hertz's Observations",
+            "content_text": "In 1887, Heinrich Hertz noticed that high-voltage sparks across a detector loop were significantly enhanced when the emitter plate was illuminated by ultraviolet light from an arc lamp. This was the first observation of photoelectric emission, where light facilitates the escape of charged particles from a metal surface.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:11:11.3:2",
+            "order": 2,
+            "title": "Hallwachs' and Lenard's Observations",
+            "content_text": "Lenard observed that UV radiation falling on an emitter plate in an evacuated tube caused a current to flow, which stopped immediately when the light was removed. Hallwachs further showed that a negatively charged zinc plate lost its charge when irradiated with UV light, while an uncharged plate became positive. They concluded that UV light causes the emission of negatively charged particles (later identified as electrons) from the metal surface.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:11:11.3:3",
+            "order": 3,
+            "title": "Threshold Frequency and Photosensitive Substances",
+            "content_text": "When the emitter plate is connected to a negative charge, the emitted electrons are pushed towards the collector plate by the electric field. Hallwachs and Lenard observed that when ultraviolet light fell on the emitter plate, no electrons were emitted at all when the frequency of the incident light was smaller than a certain minimum value, called the threshold frequency ($\\nu_0$). This minimum frequency depends on the nature of the material of the emitter plate. It was found that certain metals like zinc, cadmium, magnesium, etc., responded only to ultraviolet light (short wavelength) to cause electron emission. However, alkali metals such as lithium, sodium, potassium, caesium, and rubidium were sensitive even to visible light. All these photosensitive substances emit electrons when illuminated by light. After the discovery of electrons, these emitted particles were termed photoelectrons, and the phenomenon is called the photoelectric effect.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:11:11.4",
+        "number": "11.4",
+        "title": "Experimental Study of Photoelectric Effect",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:11:11.4:1",
+            "order": 1,
+            "title": "Experimental Arrangement",
+            "content_text": "The experimental study of the photoelectric effect uses an arrangement consisting of an evacuated glass or quartz tube containing a photosensitive plate C (emitter) and another metal plate A (collector). Monochromatic light from a source S of sufficiently short wavelength passes through a quartz window W and falls on the photosensitive plate C. The quartz window permits ultraviolet radiation to pass through and irradiate the plate. Electrons emitted by plate C are collected by plate A, driven by the electric field created by a battery. The battery maintains a variable potential difference between the plates, and a commutator allows the polarity of the plates to be reversed. The potential difference is measured by a voltmeter (V) and the resulting photo current is measured by a microammeter ($\\mu$A). The intensity and frequency of the incident light, as well as the potential difference $V$, can be varied to study their effects on the photocurrent.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 11.1",
+                "description": "Schematic view of the experimental arrangement for the study of the photoelectric effect, showing an evacuated glass tube with an emitter plate C, a collector plate A, a quartz window, a light source S, a commutator, a voltmeter, and a microammeter.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:11:11.4:2",
+            "order": 2,
+            "title": "Effect of Intensity of Light on Photocurrent",
+            "content_text": "To study the effect of intensity, the collector A is maintained at a positive potential with respect to emitter C so that ejected electrons are attracted to it. Keeping the frequency of incident radiation and the potential fixed, the intensity of light is varied (e.g., by changing the distance of the light source). It is found that the photoelectric current increases linearly with the intensity of incident light. This indicates that the number of photoelectrons emitted per second is directly proportional to the intensity of incident radiation.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 11.2",
+                "description": "A graph showing a linear relationship between the intensity of light (x-axis) and the photoelectric current (y-axis).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:11:11.4:3",
+            "order": 3,
+            "title": "Effect of Potential on Photoelectric Current",
+            "content_text": "With a fixed frequency $\\nu$ and fixed intensity $I_1$, the positive (accelerating) potential of plate A is gradually increased. The photoelectric current increases with the potential until it reaches a maximum value called the saturation current. At this stage, all the photoelectrons emitted by plate C reach plate A, and further increases in accelerating potential do not increase the current. If we now apply a negative (retarding) potential to plate A, the photocurrent decreases rapidly because the electrons are repelled. Only the sufficiently energetic electrons reach the collector. At a specific critical negative potential $V_0$, the photocurrent drops to zero. This minimum negative potential $V_0$ for which the photocurrent stops is called the cut-off or stopping potential.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 11.3",
+                "description": "Variation of photocurrent with collector plate potential for different intensities $I_1, I_2, I_3$ (where $I_3 > I_2 > I_1$). The curves show that while saturation current increases with intensity, the stopping potential $V_0$ remains the same for a given frequency.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:11:11.4:4",
+            "order": 4,
+            "title": "Maximum Kinetic Energy and Stopping Potential",
+            "content_text": "The stopping potential $V_0$ is related to the maximum kinetic energy of the emitted photoelectrons. Since the photocurrent is zero when the stopping potential is sufficient to repel even the most energetic photoelectrons, the maximum kinetic energy $K_{max}$ is given by: $$K_{max} = e V_0$$ where $e$ is the charge of an electron. For a given frequency of incident radiation, the stopping potential is independent of its intensity. This implies that the maximum kinetic energy of photoelectrons depends on the light source and the emitter plate material, but is independent of the intensity of incident radiation.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:11:11.4:5",
+            "order": 5,
+            "title": "Effect of Frequency of Incident Radiation on Stopping Potential",
+            "content_text": "To study the relation between frequency $\\nu$ and stopping potential $V_0$, the intensity of light is kept constant at various frequencies. It is observed that the stopping potential is more negative for higher frequencies of incident radiation ($V_{03} > V_{02} > V_{01}$ for $\\nu_3 > \\nu_2 > \\nu_1$). This implies that the greater the frequency of incident light, the greater is the maximum kinetic energy of the photoelectrons, requiring a greater retarding potential to stop them completely. Interestingly, the saturation current remains the same for different frequencies of incident radiation of the same intensity.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 11.4",
+                "description": "Variation of photoelectric current with collector plate potential for different frequencies $\\nu_1, \\nu_2, \\nu_3$ of incident radiation. The graph shows different stopping potentials for different frequencies but the same saturation current.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:11:11.4:6",
+            "order": 6,
+            "title": "Linear Relationship between Stopping Potential and Frequency",
+            "content_text": "A graph between the frequency of incident radiation and the corresponding stopping potential for different metals yields a straight line. The graph shows: (i) the stopping potential $V_0$ varies linearly with the frequency of incident radiation for a given photosensitive material. (ii) there exists a certain minimum cut-off frequency $\\nu_0$ (threshold frequency) for which the stopping potential is zero. For frequencies lower than $\\nu_0$, no photoelectric emission occurs, no matter how intense the light is. Different substances have different threshold frequencies.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 11.5",
+                "description": "Variation of stopping potential $V_0$ with frequency $\\nu$ of incident radiation for two different metals, Metal A and Metal B. Both show a linear relationship with different threshold frequencies $\\nu_0$ and $\\nu'_0$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:11:11.4:7",
+            "order": 7,
+            "title": "Implications of Observations: Linearity and Threshold Frequency",
+            "content_text": "The observations of the photoelectric effect have two major implications: (i) The maximum kinetic energy of the photoelectrons varies linearly with the frequency of incident radiation, but is independent of its intensity. (ii) For a frequency $\\nu$ of incident radiation lower than the cut-off frequency $\\nu_0$, no photoelectric emission is possible even if the intensity is large. This minimum, cut-off frequency $\\nu_0$ is called the threshold frequency. It is different for different metals. Different photosensitive materials respond differently to light. For example, selenium is more sensitive than zinc or copper. The same photosensitive substance gives different responses to light of different wavelengths; ultraviolet light gives rise to the photoelectric effect in copper while green or red light does not.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:11:11.4:8",
+            "order": 8,
+            "title": "Instantaneous Nature of Photoelectric Emission",
+            "content_text": "In all experiments, it is found that if the frequency of the incident radiation exceeds the threshold frequency, the photoelectric emission starts instantaneously without any apparent time lag, even if the incident radiation is very dim. It is now known that emission starts in a time of the order of $10^{-9}$ s or less.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:11:11.4:9",
+            "order": 9,
+            "title": "Summary of Experimental Features and Observations",
+            "content_text": "The experimental features and observations of the photoelectric effect are summarized as follows: (i) For a given photosensitive material and frequency of incident radiation (above the threshold frequency), the photoelectric current is directly proportional to the intensity of incident light. (ii) For a given photosensitive material and frequency of incident radiation, saturation current is found to be proportional to the intensity of incident radiation, whereas the stopping potential is independent of its intensity. (iii) For a given photosensitive material, there exists a certain minimum cut-off frequency of the incident radiation, called the threshold frequency $\\nu_0$, below which no emission of photoelectrons takes place, no matter how intense the incident light is. Above the threshold frequency, the stopping potential or equivalently the maximum kinetic energy of the emitted photoelectrons increases linearly with the frequency of the incident radiation, but is independent of its intensity. (iv) The photoelectric emission is an instantaneous process without any apparent time lag ($\\sim 10^{-9}$ s or less), even when the incident radiation is made exceedingly dim.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:11:11.5",
+        "number": "11.5",
+        "title": "Photoelectric Effect and Wave Theory of Light",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:11:11.5:1",
+            "order": 1,
+            "title": "Wave Picture of Light and its Predictions",
+            "content_text": "The wave nature of light was well established by the end of the nineteenth century through phenomena like interference, diffraction, and polarisation. According to the wave picture, light is an electromagnetic wave consisting of electric and magnetic fields with a continuous distribution of energy over the region of space over which the wave is extended. In this picture, free electrons at the surface of a metal absorb radiant energy continuously. The greater the intensity of radiation, the greater the amplitude of electric and magnetic fields, and consequently, the greater the energy absorbed by each electron. Therefore, the maximum kinetic energy of the photoelectrons is expected to increase with an increase in intensity.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:11:11.5:2",
+            "order": 2,
+            "title": "Failure of Wave Theory to Explain Photoelectric Effect",
+            "content_text": "The wave theory fails to explain the photoelectric effect for several reasons. First, it predicts that a sufficiently intense beam of radiation of any frequency should eventually impart enough energy to electrons to escape, meaning a threshold frequency should not exist. This contradicts experimental observations. Second, in the wave picture, energy absorption takes place continuously over the entire wavefront. Since many electrons absorb energy, the energy absorbed per electron per unit time is small. Calculations estimate it could take hours for an electron to gain enough energy to overcome the work function, yet emission is observed to be instantaneous ($\\sim 10^{-9}$ s). Thus, the wave picture cannot explain the most basic features of photoelectric emission.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:11:11.6",
+        "number": "11.6",
+        "title": "Einstein’s Photoelectric Equation: Energy Quantum of Radiation",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:11:11.6:1",
+            "order": 1,
+            "title": "Einstein's Quantum Picture of Radiation",
+            "content_text": "In 1905, Albert Einstein proposed a radically new picture of electromagnetic radiation. He suggested that radiation energy is not continuous but built up of discrete units called quanta of energy. Each quantum of radiant energy has energy $h\\nu$, where $h$ is Planck’s constant and $\\nu$ is the frequency of light. In the photoelectric effect, an electron absorbs a single quantum of energy ($h\\nu$). If this energy exceeds the minimum energy needed for the electron to escape (the work function $\\phi_0$), the electron is emitted with maximum kinetic energy.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:11:11.6:2",
+            "order": 2,
+            "title": "Einstein's Photoelectric Equation",
+            "content_text": "The maximum kinetic energy $K_{max}$ of an emitted electron is given by the energy of the absorbed photon minus the work function of the metal: $K_{max} = h\\nu - \\phi_0$ (Eq. 11.2). More tightly bound electrons will emerge with kinetic energies less than this maximum value. The intensity of light of a given frequency is determined by the number of photons incident per second. Increasing the intensity increases the number of emitted electrons per second, but the maximum kinetic energy of the emitted photoelectrons is determined solely by the energy of each individual photon.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:11:11.6:3",
+            "order": 3,
+            "title": "Explanation of Linear Relationship and Threshold Frequency",
+            "content_text": "According to Einstein's equation $K_{max} = h\\nu - \\phi_0$, $K_{max}$ depends linearly on $\\nu$ and is independent of intensity, matching experimental observations. Since $K_{max}$ must be non-negative, photoelectric emission is possible only if $h\\nu > \\phi_0$, or $\\nu > \\nu_0$, where $\\nu_0 = \\phi_0 / h$ (Eq. 11.3). This explains the existence of a threshold frequency $\\nu_0$ for the metal surface, below which no photoelectric emission is possible, regardless of the intensity of the incident radiation or how long it falls on the surface.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:11:11.6:4",
+            "order": 4,
+            "title": "Explanation of Intensity Dependence and Instantaneous Nature",
+            "content_text": "In Einstein's picture, intensity is proportional to the number of energy quanta (photons) per unit area per unit time. A greater number of photons leads to a greater number of electrons absorbing energy and being emitted, explaining why photoelectric current is proportional to intensity for $\\nu > \\nu_0$. Furthermore, the basic process involves the absorption of a light quantum by a single electron, which is an instantaneous process. This explains why there is no time lag, even at low intensities. Intensity only determines how many electrons participate in the process, not the energy of individual electrons.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:11:11.6:5",
+            "order": 5,
+            "title": "Relation between Stopping Potential and Frequency",
+            "content_text": "Using the relation $K_{max} = eV_0$ (Eq. 11.1), Einstein's photoelectric equation (Eq. 11.2) can be written as $eV_0 = h\\nu - \\phi_0$ for $\\nu \\geq \\nu_0$, which simplifies to $V_0 = \\frac{h}{e}\\nu - \\frac{\\phi_0}{e}$ (Eq. 11.4). This is an important result. It predicts that the $V_0$ versus $\\nu$ curve is a straight line with a slope equal to $h/e$. This slope is a universal constant, independent of the nature of the material.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:11:11.6:6",
+            "order": 6,
+            "title": "Albert Einstein (1879 – 1955)",
+            "content_text": "Albert Einstein was one of the greatest physicists of all time. In 1905, his 'annus mirabilis', he published three path-breaking papers: one on light quanta (photons) to explain the photoelectric effect, one on Brownian motion providing evidence for the atomic picture of matter, and one on the special theory of relativity. In 1916, he published the general theory of relativity. His later contributions include stimulated emission, the static model of the universe, quantum statistics of massive bosons, and foundations of quantum mechanics. He was awarded the Nobel Prize in Physics in 1921 for his contributions to theoretical physics and the photoelectric effect.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Albert Einstein Portrait",
+                "description": "A portrait of Albert Einstein (1879 – 1955), the physicist who proposed the quantum theory of light to explain the photoelectric effect.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:11:11.6:7",
+            "order": 7,
+            "title": "Millikan’s Experimental Verification",
+            "content_text": "During 1906-1916, R.A. Millikan performed a series of experiments on the photoelectric effect, initially aimed at disproving Einstein’s photoelectric equation. He measured the slope of the straight line obtained for stopping potential versus frequency for sodium. Using the known value of $e$, he determined the value of Planck’s constant $h$ to be approximately $6.626 \\times 10^{-34}$ $\\text{J s}$, which was in close agreement with values determined in entirely different contexts. In 1916, Millikan’s results proved the validity of Einstein’s photoelectric equation instead of disproving it. This successful explanation, along with the experimental determination of $h$ and $\\phi_0$, led to the widespread acceptance of Einstein’s quantum picture of light. Millikan verified the equation with great precision for various alkali metals over a wide range of radiation frequencies.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:11:11.7",
+        "number": "11.7",
+        "title": "Particle Nature of Light: The Photon",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:11:11.7:1",
+            "order": 1,
+            "title": "The Photon Concept and Confirmation",
+            "content_text": "The photoelectric effect provided evidence that light, when interacting with matter, behaves as if it were composed of discrete quanta or packets of energy, each of energy $h\\nu$. Einstein further proposed that these light quanta are associated with a definite momentum $p = h\\nu/c$. This particle-like entity was later named the photon. The particle-like behavior of light was further confirmed in 1924 by A.H. Compton’s experiments on the scattering of X-rays from electrons. For their contributions, Einstein was awarded the Nobel Prize in Physics in 1921, and Millikan received it in 1923 for his work on the elementary charge and the photoelectric effect.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:11:11.7:2",
+            "order": 2,
+            "title": "Properties of Photons",
+            "content_text": "The photon picture of electromagnetic radiation can be summarized as follows: (i) In interaction with matter, radiation behaves as if it is made up of particles called photons. (ii) Each photon has energy $E = h\\nu$ and momentum $p = h\\nu/c$, and travels at the speed of light $c$. (iii) All photons of a particular frequency $\\nu$ (or wavelength $\\lambda$) have the same energy $E = h\\nu = hc/\\lambda$ and momentum $p = h\\nu/c = h/\\lambda$, regardless of the radiation's intensity. Increasing intensity only increases the number of photons per second crossing a given area; it does not change the energy of individual photons. (iv) Photons are electrically neutral and are not deflected by electric or magnetic fields. (v) In photon-particle collisions, total energy and total momentum are conserved, though the number of photons may not be conserved as they can be absorbed or created.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:11:11.7:3",
+            "order": 3,
+            "title": "Example 11.1: Photon Energy and Emission Rate",
+            "content_text": "This example demonstrates how to calculate the energy of a single photon and the average number of photons emitted per second from a laser source of known power and frequency.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 11.1",
+                "problem": "Monochromatic light of frequency $6.0 \\times 10^{14}$ $\\text{Hz}$ is produced by a laser. The power emitted is $2.0 \\times 10^{-3}$ $\\text{W}$. (a) What is the energy of a photon in the light beam? (b) How many photons per second, on an average, are emitted by the source?",
+                "solution": "(a) Each photon has an energy $E = h\\nu = (6.63 \\times 10^{-34}$ $\\text{J s})(6.0 \\times 10^{14}$ $\\text{Hz}) = 3.98 \\times 10^{-19}$ $\\text{J}$. (b) If $N$ is the number of photons emitted by the source per second, the power $P$ transmitted in the beam equals $N$ times the energy per photon $E$, so that $P = NE$. Then $N = \\frac{P}{E} = \\frac{2.0 \\times 10^{-3} \\text{ W}}{3.98 \\times 10^{-19} \\text{ J}} = 5.0 \\times 10^{15}$ photons per second."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:11:11.7:4",
+            "order": 4,
+            "title": "Example 11.2: Threshold Frequency and Wavelength",
+            "content_text": "This example illustrates the application of Einstein's photoelectric equation to determine the threshold frequency and the incident wavelength required to produce a specific stopping potential.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 11.2",
+                "problem": "The work function of caesium is 2.14 eV. Find (a) the threshold frequency for caesium, and (b) the wavelength of the incident light if the photocurrent is brought to zero by a stopping potential of 0.60 V.",
+                "solution": "(a) For the cut-off or threshold frequency, the energy $h\\nu_0$ of the incident radiation must be equal to work function $\\phi_0$, so that $\\nu_0 = \\frac{\\phi_0}{h} = \\frac{2.14 \\text{ eV}}{6.63 \\times 10^{-34} \\text{ J s}} = \\frac{2.14 \\times 1.6 \\times 10^{-19} \\text{ J}}{6.63 \\times 10^{-34} \\text{ J s}} = 5.16 \\times 10^{14}$ $\\text{Hz}$. Thus, for frequencies less than this threshold frequency, no photoelectrons are ejected. (b) Photocurrent reduces to zero when maximum kinetic energy of the emitted photoelectrons equals the potential energy $eV_0$ by the retarding potential $V_0$. Einstein’s Photoelectric equation is $eV_0 = h\\nu - \\phi_0 = \\frac{hc}{\\lambda} - \\phi_0$ or, $\\lambda = \\frac{hc}{eV_0 + \\phi_0} = \\frac{(6.63 \\times 10^{-34} \\text{ J s})(3 \\times 10^8 \\text{ m/s})}{(0.60 \\text{ eV} + 2.14 \\text{ eV})} = \\frac{19.89 \\times 10^{-26} \\text{ J m}}{2.74 \\text{ eV}} = \\frac{19.89 \\times 10^{-26} \\text{ J m}}{2.74 \\times 1.6 \\times 10^{-19} \\text{ J}} = 454$ $\\text{nm}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:11:11.8",
+        "number": "11.8",
+        "title": "Wave Nature of Matter",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:11:11.8:1",
+            "order": 1,
+            "title": "Dual Nature of Radiation",
+            "content_text": "Light exhibits a dual nature: wave-like and particle-like. Wave nature is evident in phenomena like interference, diffraction, and polarization. Particle nature (photons) is evident in the photoelectric effect and Compton effect. The description suited for an experiment depends on its nature. For example, the eye focuses light using wave principles (eye-lens), but absorbs it as photons (retina's rods and cones).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:11:11.8:2",
+            "order": 2,
+            "title": "De Broglie’s Hypothesis",
+            "content_text": "In 1924, Louis Victor de Broglie proposed that if radiation has a dual nature, matter should also exhibit wave-like properties. He reasoned that nature is symmetrical and that the two basic physical entities—matter and energy—must share this symmetrical character. If radiation shows dual aspects, so should moving particles of matter.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:11:11.8:3",
+            "order": 3,
+            "title": "The de Broglie Relation",
+            "content_text": "De Broglie proposed that the wavelength $\\lambda$ associated with a particle of momentum $p$ is given by: $\\lambda = \\frac{h}{p} = \\frac{h}{mv}$ (Eq. 11.5), where $m$ is the mass and $v$ is the speed of the particle. This is known as the de Broglie relation, and $\\lambda$ is the de Broglie wavelength. Planck’s constant $h$ relates the wave attribute ($\\lambda$) to the particle attribute ($p$). This hypothesis applies to all material particles.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:11:11.8:4",
+            "order": 4,
+            "title": "Louis Victor de Broglie (1892 – 1987)",
+            "content_text": "Louis Victor de Broglie was a French physicist who proposed the revolutionary idea of the wave nature of matter. His work was developed by Erwin Schrödinger into wave mechanics. In 1929, de Broglie was awarded the Nobel Prize in Physics for his discovery of the wave nature of electrons.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Portrait",
+                "description": "A portrait of Louis Victor de Broglie, the French physicist who formulated the de Broglie hypothesis.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:11:11.8:5",
+            "order": 5,
+            "title": "De Broglie Wavelength of a Photon",
+            "content_text": "For a photon, momentum is $p = h\\nu/c$ (Eq. 11.6). Substituting this into the de Broglie relation gives: $\\frac{h}{p} = \\frac{c}{\\nu} = \\lambda$ (Eq. 11.7). This shows that the de Broglie wavelength of a photon equals the electromagnetic wavelength of the radiation it represents.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:11:11.8:6",
+            "order": 6,
+            "title": "Dependence on Mass and Velocity",
+            "content_text": "From Eq. 11.5, the de Broglie wavelength $\\lambda$ is smaller for heavier particles",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:11:11.8:7",
+            "order": 7,
+            "title": "Wavelength of Macroscopic vs Sub-atomic Objects",
+            "content_text": "The de Broglie wavelength for macroscopic objects is extremely small and beyond current measurement capabilities. For example, a ball of mass $0.12 \\text{ kg}$ moving at $20 \\text{ m s}^{-1}$ has a momentum $p = mv = 2.40 \\text{ kg m s}^{-1}$. Its de Broglie wavelength is $\\lambda = \\frac{h}{p} = \\frac{6.63 \\times 10^{-34} \\text{ J s}}{2.40 \\text{ kg m s}^{-1}} = 2.76 \\times 10^{-34} \\text{ m}$. This explains why macroscopic objects do not exhibit wave-like properties in daily life. Conversely, in the sub-atomic domain, such as for electrons, the wave character is significant and measurable because the wavelengths are comparable to atomic scales.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:11:11.8:8",
+            "order": 8,
+            "title": "Example 11.3: de Broglie Wavelength Calculations",
+            "content_text": "This example demonstrates the calculation of de Broglie wavelengths for both a sub-atomic particle (electron) and a macroscopic object (ball) to highlight the difference in their wave-like behavior. The electron's wavelength is found to be in the range of X-rays, making its wave nature experimentally observable, whereas the ball's wavelength is far too small to be detected.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 11.3",
+                "problem": "What is the de Broglie wavelength associated with (a) an electron moving with a speed of $5.4 \\times 10^6 \\text{ m/s}$, and (b) a ball of mass $150 \\text{ g}$ travelling at $30.0 \\text{ m/s}$?",
+                "solution": "(a) For the electron: Mass $m = 9.11 \\times 10^{-31} \\text{ kg}$, speed $v = 5.4 \\times 10^6 \\text{ m/s}$. Momentum $p = mv = 9.11 \\times 10^{-31} \\text{ (kg)} \\times 5.4 \\times 10^6 \\text{ (m/s)} = 4.92 \\times 10^{-24} \\text{ kg m/s}$. de Broglie wavelength, $\\lambda = h/p = \\frac{6.63 \\times 10^{-34} \\text{ J s}}{4.92 \\times 10^{-24} \\text{ kg m/s}} = 0.135 \\text{ nm}$. (b) For the ball: Mass $m' = 0.150 \\text{ kg}$, speed $v' = 30.0 \\text{ m/s}$. Momentum $p' = m'v' = 0.150 \\text{ (kg)} \\times 30.0 \\text{ (m/s)} = 4.50 \\text{ kg m/s}$. de Broglie wavelength $\\lambda' = h/p' = \\frac{6.63 \\times 10^{-34} \\text{ J s}}{4.50 \\text{ kg m/s}} = 1.47 \\times 10^{-34} \\text{ m}$. The de Broglie wavelength of the electron is comparable with X-ray wavelengths. However, for the ball, it is about $10^{-19}$ times the size of the proton, quite beyond experimental measurement."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:11:Summary",
+        "number": "Summary",
+        "title": "Summary of Dual Nature of Radiation and Matter",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:11:Summary:1",
+            "order": 1,
+            "title": "Work Function and Photoelectric Emission",
+            "content_text": "The work function ($\\phi_0$) is the minimum energy required for an electron to escape a metal surface. This energy can be supplied via heat, strong electric fields, or light of suitable frequency. The photoelectric effect is the emission of electrons from metals when illuminated by light of appropriate frequency, converting light energy into electrical energy while obeying the law of conservation of energy. It is an instantaneous process.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:11:Summary:2",
+            "order": 2,
+            "title": "Experimental Characteristics of Photoelectric Effect",
+            "content_text": "Photoelectric current depends on the intensity of incident light, the potential difference between electrodes, and the nature of the emitter material. The stopping potential ($V_0$) depends on the frequency of incident light and the emitter material but is independent of light intensity for a given frequency. It is related to the maximum kinetic energy of emitted electrons by $e V_0 = (1/2) m v_{max}^2 = K_{max}$. No emission occurs below a characteristic threshold frequency ($\\nu_0$), regardless of intensity.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:11:Summary:3",
+            "order": 3,
+            "title": "Einstein's Photon Picture and Photoelectric Equation",
+            "content_text": "Einstein explained the photoelectric effect by proposing that light consists of discrete energy packets called photons. Each photon has energy $E = h\\nu$ and momentum $p = h/\\lambda$. Photoelectric emission occurs when an electron absorbs a single photon. Einstein's photoelectric equation, $\\frac{1}{2} m v_{max}^2 = V_0 e = h\\nu - \\phi_0 = h(\\nu - \\nu_0)$, is based on energy conservation and was experimentally confirmed by Millikan, leading to an accurate determination of Planck's constant $h$.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:11:Summary:4",
+            "order": 4,
+            "title": "Dual Nature and de Broglie Wavelength",
+            "content_text": "Radiation and matter both exhibit dual nature (wave and particle). Louis Victor de Broglie proposed that moving material particles have associated matter waves with a wavelength $\\lambda = h/p$. This relation links a wave property ($\\lambda$) with a particle property ($p$). The de Broglie wavelength is independent of the particle's charge and nature and is significantly measurable only for sub-atomic particles due to their small mass and momentum.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 11.1",
+                "caption": "Key Physical Quantities in Dual Nature of Radiation and Matter",
+                "headers": [
+                  "Physical Quantity",
+                  "Symbol",
+                  "Dimensions",
+                  "Unit",
+                  "Remarks"
+                ],
+                "rows": [
+                  [
+                    "Planck's constant",
+                    "$h$",
+                    "$[ML^2T^{-1}]$",
+                    "J s",
+                    "$E = h\\nu$"
+                  ],
+                  [
+                    "Stopping potential",
+                    "$V_0$",
+                    "$[ML^2T^{-3}A^{-1}]$",
+                    "V",
+                    "$e V_0 = K_{max}$"
+                  ],
+                  [
+                    "Work function",
+                    "$\\phi_0$",
+                    "$[ML^2T^{-2}]$",
+                    "J; eV",
+                    "$K_{max} = E - \\phi_0$"
+                  ],
+                  [
+                    "Threshold frequency",
+                    "$\\nu_0$",
+                    "$[T^{-1}]$",
+                    "Hz",
+                    "$\\nu_0 = \\phi_0/h$"
+                  ],
+                  [
+                    "de Broglie wavelength",
+                    "$\\lambda$",
+                    "$[L]$",
+                    "m",
+                    "$\\lambda = h/p$"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:11:Points to Ponder",
+        "number": "Points to Ponder",
+        "title": "Points to Ponder",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:11:Points to Ponder:1",
+            "order": 1,
+            "title": "Electronic Properties and Energy Distribution in Metals",
+            "content_text": "Free electrons move within a metal in an approximately constant potential but are not free to leave without additional energy. They follow a specific energy distribution (different from Maxwell's distribution) and obey Pauli's exclusion principle. Consequently, different electrons require different amounts of energy to escape; the work function represents the minimum energy required for the most energetic electrons to be emitted.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:11:Points to Ponder:2",
+            "order": 2,
+            "title": "Interaction of Light and Matter",
+            "content_text": "The photoelectric effect demonstrates that energy absorption from light occurs in discrete units of $h\\nu$. The independence of stopping potential from light intensity and its dependence on frequency serve as the primary evidence distinguishing the photon-picture from the classical wave-picture of light.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:11:Points to Ponder:3",
+            "order": 3,
+            "title": "Wave Properties: Phase and Group Velocity",
+            "content_text": "The wavelength of a matter wave $\\lambda = h/p$ has physical significance. While the phase velocity $v_p$ of a matter wave has no physical significance, the group velocity is physically meaningful and is equal to the velocity of the particle itself.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:physics:12:11:ex:1",
+          "number": 1,
+          "problem": "Find the (a) maximum frequency, and (b) minimum wavelength of X-rays produced by $30 \\text{ kV}$ electrons.",
+          "solution": "(a) The maximum energy of a photon is equal to the kinetic energy of the electron: $E_{max} = eV = 30 \\times 10^3 \\text{ eV} = 4.8 \\times 10^{-15} \\text{ J}$. The maximum frequency is $\\nu_{max} = E_{max}/h = \\frac{4.8 \\times 10^{-15}}{6.63 \\times 10^{-34}} \\approx 7.24 \\times 10^{18} \\text{ Hz}$. (b) The minimum wavelength is $\\lambda_{min} = c/\\nu_{max} = \\frac{3 \\times 10^8}{7.24 \\times 10^{18}} \\approx 0.0414 \\text{ nm}$.",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:11:ex:2",
+          "number": 2,
+          "problem": "The work function of caesium metal is 2.14 eV. When light of frequency $6 \\times 10^{14}$ Hz is incident on the metal surface, photoemission of electrons occurs. What is the (a) maximum kinetic energy of the emitted electrons, (b) Stopping potential, and (c) maximum speed of the emitted photoelectrons?",
+          "solution": "(a) $K_{max} = h\\nu - \\Phi_0 \\approx 0.34$ eV (b) $V_0 = K_{max}/e = 0.34$ V (c) $v_{max} = \\sqrt{2K_{max}/m} \\approx 3.44 \\times 10^5$ m/s",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:11:ex:3",
+          "number": 3,
+          "problem": "The photoelectric cut-off voltage in a certain experiment is 1.5 V. What is the maximum kinetic energy of photoelectrons emitted?",
+          "solution": "$K_{max} = eV_0 = 1.5$ eV $= 2.4 \\times 10^{-19}$ J",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:11:ex:4",
+          "number": 4,
+          "problem": "Monochromatic light of wavelength 632.8 nm is produced by a helium-neon laser. The power emitted is 9.42 mW. (a) Find the energy and momentum of each photon in the light beam, (b) How many photons per second, on the average, arrive at a target irradiated by this beam? (Assume the beam to have uniform cross-section which is less than the target area), and (c) How fast does a hydrogen atom have to travel in order to have the same momentum as that of the photon?",
+          "solution": "(a) $E = hc/\\lambda \\approx 3.14 \\times 10^{-19}$ J, $p = E/c \\approx 1.05 \\times 10^{-27}$ kg m/s (b) $n = P/E \\approx 3 \\times 10^{16}$ photons/s (c) $v = p/m_H \\approx 0.63$ m/s",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:11:ex:5",
+          "number": 5,
+          "problem": "In an experiment on photoelectric effect, the slope of the cut-off voltage versus frequency of incident light is found to be $4.12 \\times 10^{-15}$ V s. Calculate the value of Planck’s constant.",
+          "solution": "$h = e \\times \\text{slope} = 1.6 \\times 10^{-19} \\times 4.12 \\times 10^{-15} \\approx 6.59 \\times 10^{-34}$ J s",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:11:ex:6",
+          "number": 6,
+          "problem": "The threshold frequency for a certain metal is $3.3 \\times 10^{14}$ Hz. If light of frequency $8.2 \\times 10^{14}$ Hz is incident on the metal, predict the cut-off voltage for the photoelectric emission.",
+          "solution": "$V_0 = \\frac{h}{e}(\\nu - \\nu_0) \\approx 2.03$ V",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:11:ex:7",
+          "number": 7,
+          "problem": "The work function for a certain metal is 4.2 eV. Will this metal give photoelectric emission for incident radiation of wavelength 330 nm?",
+          "solution": "$E = hc/\\lambda \\approx 3.76$ eV. Since $E < \\Phi_0$, no photoelectric emission will occur.",
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:12:11:ex:8",
+          "number": 8,
+          "problem": "Light of frequency $7.21 \\times 10^{14}$ Hz is incident on a metal surface. Electrons with a maximum speed of $6.0 \\times 10^5$ m/s are ejected from the surface. What is the threshold frequency for photoemission of electrons?",
+          "solution": "$\\nu_0 = \\nu - \\frac{mv_{max}^2}{2h} \\approx 4.73 \\times 10^{14}$ Hz",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:11:ex:9",
+          "number": 9,
+          "problem": "Light of wavelength 488 nm is produced by an argon laser which is used in the photoelectric effect. When light from this spectral line is incident on the emitter, the stopping (cut-off) potential of photoelectrons is 0.38 V. Find the work function of the material from which the emitter is made.",
+          "solution": "$\\Phi_0 = \\frac{hc}{\\lambda} - eV_0 \\approx 2.16$ eV",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:11:ex:10",
+          "number": 10,
+          "problem": "What is the de Broglie wavelength of (a) a bullet of mass 0.040 kg travelling at the speed of 1.0 km/s, (b) a ball of mass 0.060 kg moving at a speed of 1.0 m/s, and (c) a dust particle of mass $1.0 \\times 10^{-9}$ kg drifting with a speed of 2.2 m/s?",
+          "solution": "(a) $\\lambda = h/mv \\approx 1.7 \\times 10^{-35}$ m (b) $\\lambda \\approx 1.1 \\times 10^{-32}$ m (c) $\\lambda \\approx 3.0 \\times 10^{-25}$ m",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:11:ex:11",
+          "number": 11,
+          "problem": "Show that the wavelength of electromagnetic radiation is equal to the de Broglie wavelength of its quantum (photon).",
+          "solution": "For a photon, $p = E/c = h\\nu/c$. The de Broglie wavelength is $\\lambda_{dB} = h/p = h/(h\\nu/c) = c/\\nu$. This is the same as the wavelength of electromagnetic radiation $\\lambda = c/\\nu$.",
+          "difficulty": "medium",
+          "exercise_type": "derivation"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1438 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_biology_12_ch5.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:biology:12:5",
+  "curriculum": "ncert",
+  "subject": "biology",
+  "grade": 12,
+  "textbook_name": "Biology",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:biology:12:5",
+    "number": 5,
+    "title": "MOLECULAR BASIS OF INHERITANCE",
+    "summary": "This chapter, \"Molecular Basis of Inheritance,\" explores the structure and function of DNA and RNA, and how they facilitate the transmission of genetic information. It begins by detailing DNA's double helix structure, emphasizing base pairing rules (Chargaff's rule: A=T, G=C) and its packaging into chromosomes within eukaryotes. The chapter then presents historical experiments like Griffith's transformation experiment and the Hershey-Chase experiment, which solidified DNA as the genetic material, contrasting its stability and role with RNA.\n\nThe concept of the central dogma (DNA -> RNA -> Protein) is introduced, along with the processes of replication, transcription, and translation. Replication is explained using the semiconservative model, supported by the Meselson-Stahl experiment. Transcription details the creation of RNA from a DNA template, highlighting differences between prokaryotic and eukaryotic processes, including RNA splicing. Translation focuses on how the genetic code, read in triplets, directs protein synthesis with the help of tRNA and ribosomes.\n\nThe chapter also covers gene regulation, specifically the lac operon model in prokaryotes, illustrating how gene expression can be controlled by environmental factors. It culminates with the Human Genome Project, discussing its goals, methodologies, key findings, and the rise of bioinformatics. Finally, DNA fingerprinting is explored, emphasizing VNTRs and their applications in forensics and genetic diversity studies. Each section builds upon the previous one, demonstrating how genetic information is stored, accessed, and ultimately expressed. The chapter has practical significance in understanding genetic diseases, developing diagnostic tools, and advancing biotechnology.",
+    "sections": [
+      {
+        "id": "ncert:biology:12:5:5.1",
+        "number": "5.1",
+        "title": "The DNA",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:5:5.1:1",
+            "order": 1,
+            "title": "Introduction to Nucleic Acids",
+            "content_text": "Deoxyribonucleic acid (DNA) and ribonucleic acid (RNA) are the two types of nucleic acids found in living systems. DNA acts as the genetic material in most organisms. RNA, while acting as genetic material in some viruses, mostly functions as a messenger. RNA also has additional roles as an adapter, structural molecule, and in some cases, a catalytic molecule. The determination of the complete nucleotide sequence of the human genome has initiated the era of genomics.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.1:2",
+            "order": 2,
+            "title": "DNA Length and Organismal Characteristics",
+            "content_text": "DNA is a long polymer of deoxyribonucleotides. Its length is defined by the number of nucleotides (or base pairs, bp) present in it, which is characteristic of an organism. Examples include: \n1. Bacteriophage $\\phi \\times 174$: $5386$ nucleotides. \n2. Bacteriophage lambda: $48502$ base pairs (bp). \n3. Escherichia coli: $4.6 \\times 10^6$ bp. \n4. Haploid content of human DNA: $3.3 \\times 10^9$ bp.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:5:5.1.1",
+        "number": "5.1.1",
+        "title": "Structure of Polynucleotide Chain",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:5:5.1.1:1",
+            "order": 1,
+            "title": "Components of a Nucleotide",
+            "content_text": "A nucleotide consists of three components: a nitrogenous base, a pentose sugar (ribose in RNA, deoxyribose in DNA), and a phosphate group. Nitrogenous bases are categorized into Purines (Adenine and Guanine) and Pyrimidines (Cytosine, Uracil, and Thymine). Cytosine is common to both DNA and RNA; Thymine is specific to DNA, while Uracil is found in RNA in place of Thymine.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.1.1:2",
+            "order": 2,
+            "title": "Nucleoside and Nucleotide Linkages",
+            "content_text": "A nitrogenous base links to the $OH$ of $1'C$ pentose sugar via an N-glycosidic linkage to form a nucleoside (e.g., adenosine, deoxyguanosine, cytidine). When a phosphate group links to the $OH$ of $5'C$ of a nucleoside via a phosphoester linkage, a nucleotide is formed. Two nucleotides join through a $3'-5'$ phosphodiester linkage to form a dinucleotide, and subsequent additions form a polynucleotide chain.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 5.1",
+                "description": "A diagram of a polynucleotide chain showing the $5'$ phosphate end, the $3'$ hydroxyl end, the sugar-phosphate backbone, and nitrogenous bases (A, T, G, C) projecting inwards.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.1.1:3",
+            "order": 3,
+            "title": "Polynucleotide Chain Polarity and Backbone",
+            "content_text": "A polynucleotide chain has polarity: one end has a free phosphate moiety at the $5'$-end of the sugar ($5'$-end), and the other has a free $OH$ at the $3'C$ group ($3'$-end). The backbone is composed of sugar and phosphates, with nitrogenous bases projecting inside from this backbone.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.1.1:4",
+            "order": 4,
+            "title": "Structural Differences in RNA",
+            "content_text": "In RNA, every nucleotide residue has an additional $-OH$ group at the $2'$-position of the ribose sugar. Furthermore, Uracil is present instead of Thymine ($5$-methyl uracil).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.1.1:5",
+            "order": 5,
+            "title": "Discovery of the DNA Double Helix",
+            "content_text": "DNA was first identified as 'Nuclein' by Friedrich Meischer in 1869. In 1953, James Watson and Francis Crick proposed the Double Helix model for DNA structure, based on X-ray diffraction data from Maurice Wilkins and Rosalind Franklin.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.1.1:6",
+            "order": 6,
+            "title": "Chargaff's Rule",
+            "content_text": "Erwin Chargaff observed that for double-stranded DNA, the ratios between Adenine and Thymine, and Guanine and Cytosine, are constant and equal to one ($A/T = 1$ and $G/C = 1$).",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.1.1:7",
+            "order": 7,
+            "title": "Base Pairing and Complementarity",
+            "content_text": "Base pairing is a unique property where strands are complementary. If the sequence of bases in one strand is known, the sequence in the other can be predicted. Each strand can act as a template for the synthesis of a new strand, resulting in daughter DNA molecules identical to the parental DNA.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.1.1:8",
+            "order": 8,
+            "title": "Salient Features of DNA Double Helix (i-iii)",
+            "content_text": "The primary features of the DNA double helix include: (i) It consists of two polynucleotide chains with a sugar-phosphate backbone and inward-projecting bases. (ii) The chains have anti-parallel polarity ($5' \\rightarrow 3'$ and $3' \\rightarrow 5'$). (iii) Bases are paired via hydrogen bonds (H-bonds): Adenine pairs with Thymine ($2$ H-bonds) and Guanine pairs with Cytosine ($3$ H-bonds). This purine-pyrimidine pairing ensures a uniform distance between the two strands.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.1.1:9",
+            "order": 9,
+            "title": "Salient Features of DNA Double Helix (iv)",
+            "content_text": "(iv) The two chains are coiled in a right-handed fashion. The pitch of the helix is $3.4$ nm (where $1$ nm = $10^{-9}$ m) and there are roughly $10$ bp in each turn. Consequently, the distance between a bp in a helix is approximately $0.34$ nm. The two chains are coiled in a right-handed fashion. The pitch of the helix is $3.4$ nm (where $1$ nm = $10^{-9}$ m) and there are roughly $10$ bp in each turn.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.1.1:10",
+            "order": 10,
+            "title": "Salient Features of DNA Double Helix (v)",
+            "content_text": "The plane of one base pair stacks over the other in the double helix. This stacking arrangement, in addition to H-bonds, confers significant stability to the helical structure of DNA.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 5.2",
+                "description": "A diagram of a double-stranded polynucleotide chain showing two antiparallel strands (5' to 3' and 3' to 5'). It illustrates the sugar-phosphate backbone, nitrogenous bases (Adenine, Thymine, Guanine, Cytosine), and the hydrogen bonds connecting them (two between A and T, three between G and C).",
+                "image_url": null
+              },
+              {
+                "label": "Figure 5.3",
+                "description": "A simplified representation of the DNA double helix showing the twisted ladder structure. It highlights the base pairs as the rungs and the sugar-phosphate backbone as the sides of the ladder.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.1.1:11",
+            "order": 11,
+            "title": "The Central Dogma",
+            "content_text": "The proposition of a double helix structure for DNA and its simplicity in explaining genetic implications was revolutionary. Francis Crick proposed the Central Dogma in molecular biology, which states that genetic information flows from DNA to RNA to Protein (DNA $\\rightarrow$ RNA $\\rightarrow$ Protein). In some viruses, the flow of information is in the reverse direction, from RNA to DNA.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Central Dogma Diagram",
+                "description": "A flowchart showing DNA undergoing replication, then transcription to form mRNA, which then undergoes translation to form a protein.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:5:5.1.2",
+        "number": "5.1.2",
+        "title": "Packaging of DNA Helix",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:5:5.1.2:1",
+            "order": 1,
+            "title": "DNA Length and Packaging Challenge",
+            "content_text": "If the distance between two consecutive base pairs is $0.34$ nm ($0.34 \\times 10^{-9}$ m), the length of the DNA double helix in a typical mammalian cell (containing $6.6 \\times 10^9$ bp) is approximately $2.2$ metres ($6.6 \\times 10^9 \\text{ bp} \\times 0.34 \\times 10^{-9} \\text{ m/bp}$). This length is significantly greater than the dimension of a typical nucleus, which is approximately $10^{-6}$ m. This necessitates a highly efficient packaging mechanism. For example, in E. coli, if the DNA length is $1.36$ mm, the number of base pairs is approximately $4 \\times 10^6$ bp.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.1.2:2",
+            "order": 2,
+            "title": "DNA Packaging in Prokaryotes",
+            "content_text": "In prokaryotes like E. coli, which lack a defined nucleus, the DNA is not scattered throughout the cell. Instead, the negatively charged DNA is held together with some positively charged proteins in a region called the 'nucleoid'. The DNA in the nucleoid is organized into large loops held by these proteins.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.1.2:3",
+            "order": 3,
+            "title": "Histones in Eukaryotes",
+            "content_text": "In eukaryotes, DNA packaging is more complex and involves a set of positively charged, basic proteins called histones. A protein's charge depends on the abundance of amino acid residues with charged side chains. Histones are rich in basic amino acid residues like lysine and arginine, both of which carry positive charges in their side chains.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.1.2:4",
+            "order": 4,
+            "title": "The Nucleosome Structure",
+            "content_text": "Histones organize into a unit of eight molecules known as a histone octamer. The negatively charged DNA is wrapped around this positively charged histone octamer to form a structure called a nucleosome. A typical nucleosome contains approximately $200$ bp of DNA helix.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 5.4a",
+                "description": "A diagram of a nucleosome showing the DNA thread wrapped around a core of histone molecules (the histone octamer). It also shows the H1 histone protein associated with the structure.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.1.2:5",
+            "order": 5,
+            "title": "Chromatin and 'Beads-on-String'",
+            "content_text": "Nucleosomes are the repeating units of a structure in the nucleus called chromatin, which appears as thread-like stained bodies. Under an electron microscope (EM), nucleosomes in chromatin appear as a 'beads-on-string' structure.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 5.4b",
+                "description": "An electron micrograph (EM) picture showing the 'beads-on-string' appearance of chromatin, where the beads represent individual nucleosomes.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.1.2:6",
+            "order": 6,
+            "title": "Higher Level Packaging",
+            "content_text": "The 'beads-on-string' structure is further packaged into chromatin fibers, which coil and condense during the metaphase stage of cell division to form chromosomes. Packaging at higher levels requires an additional set of proteins known as Non-histone Chromosomal (NHC) proteins.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.1.2:7",
+            "order": 7,
+            "title": "Euchromatin and Heterochromatin",
+            "content_text": "In a typical nucleus, chromatin exists in two forms: 1. Euchromatin: Loosely packed regions that stain light; these are transcriptionally active. 2. Heterochromatin: Densely packed regions that stain dark; these are transcriptionally inactive.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:5:5.2",
+        "number": "5.2",
+        "title": "The Search for Genetic Material",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:5:5.2:1",
+            "order": 1,
+            "title": "Historical Context of Genetic Material",
+            "content_text": "While Meischer discovered 'nuclein' and Mendel proposed principles of inheritance around the same time, proving DNA as the genetic material took much longer. By 1926, the quest reached the molecular level. Scientists like Mendel, Sutton, and Morgan had narrowed the search to chromosomes in the nucleus, but the specific molecule acting as genetic material remained unidentified.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.2:2",
+            "order": 2,
+            "title": "Griffith's Transforming Principle",
+            "content_text": "In 1928, Frederick Griffith conducted experiments with Streptococcus pneumoniae, the bacterium causing pneumonia. He observed that a living bacterium could change its physical form, a phenomenon he called transformation.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.2:3",
+            "order": 3,
+            "title": "Griffith's Experimental Observations",
+            "content_text": "Griffith used two strains of S. pneumoniae: the S strain (smooth, shiny colonies with a polysaccharide coat, virulent) and the R strain (rough colonies, non-virulent). His findings were: 1. S strain injected into mice $\\rightarrow$ Mice die. 2. R strain injected into mice $\\rightarrow$ Mice live. 3. Heat-killed S strain injected into mice $\\rightarrow$ Mice live. 4. Mixture of heat-killed S strain and live R strain injected into mice $\\rightarrow$ Mice die. Griffith recovered living S strain bacteria from the dead mice in the fourth case, concluding that the R strain had been transformed by a 'transforming principle' (genetic material) transferred from the heat-killed S strain.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.2:4",
+            "order": 4,
+            "title": "Conclusion of Griffith's Experiment",
+            "content_text": "From his experiments with Streptococcus pneumoniae, Frederick Griffith concluded that the R strain bacteria had somehow been transformed by the heat-killed S strain bacteria. He proposed that some 'transforming principle', transferred from the heat-killed S strain, had enabled the R strain to synthesise a smooth polysaccharide coat and become virulent. This transformation was attributed to the transfer of genetic material. However, the specific biochemical nature of this genetic material was not defined by Griffith's experiments.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.2:5",
+            "order": 5,
+            "title": "Biochemical Characterisation of Transforming Principle",
+            "content_text": "Prior to the work of Oswald Avery, Colin MacLeod, and Maclyn McCarty (1933-44), genetic material was thought to be a protein. They worked to determine the biochemical nature of the 'transforming principle' in Griffith's experiment. They purified biochemicals (proteins, DNA, RNA, etc.) from heat-killed S cells to see which ones could transform live R cells into S cells. They discovered that DNA alone from S bacteria caused R bacteria to become transformed. They also discovered that protein-digesting enzymes (proteases) and RNA-digesting enzymes (RNases) did not affect transformation, indicating the transforming substance was not a protein or RNA. Digestion with DNase did inhibit transformation, suggesting that DNA caused the transformation. They concluded that DNA is the hereditary material, though not all biologists were convinced at the time. A key conceptual question arises: Can you think of any difference between DNAs and DNase?",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:5:5.2.1",
+        "number": "5.2.1",
+        "title": "The Genetic Material is DNA",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:5:5.2.1:1",
+            "order": 1,
+            "title": "The Hershey-Chase Experiment",
+            "content_text": "The unequivocal proof that DNA is the genetic material came from the experiments of Alfred Hershey and Martha Chase (1952). They worked with bacteriophages—viruses that infect bacteria. When a bacteriophage attaches to a bacterium, its genetic material enters the bacterial cell. The bacterial cell then treats the viral genetic material as its own and manufactures more virus particles. Hershey and Chase aimed to discover whether it was protein or DNA from the viruses that entered the bacteria.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 5.5",
+                "description": "The Hershey-Chase experiment diagram showing two parallel paths. Path 1: Bacteriophages labeled with radioactive sulfur ($^{35}S$) in their protein capsule infect E. coli. After blending and centrifugation, radioactivity is detected in the supernatant (viral coats) but not in the bacterial cells. Path 2: Bacteriophages labeled with radioactive phosphorus ($^{32}P$) in their DNA infect E. coli. After blending and centrifugation, radioactivity is detected in the bacterial cells but not in the supernatant. The steps shown are 1. Infection, 2. Blending, and 3. Centrifugation.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.2.1:2",
+            "order": 2,
+            "title": "Experimental Procedure: Radioactive Labeling",
+            "content_text": "Hershey and Chase grew some viruses on a medium containing radioactive phosphorus ($^{32}P$) and others on a medium containing radioactive sulfur ($^{35}S$). Viruses grown in the presence of radioactive phosphorus contained radioactive DNA but not radioactive protein, because DNA contains phosphorus but protein does not. Conversely, viruses grown on radioactive sulfur contained radioactive protein but not radioactive DNA, because DNA does not contain sulfur.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.2.1:3",
+            "order": 3,
+            "title": "Infection, Blending, and Centrifugation",
+            "content_text": "Radioactive phages were allowed to attach to E. coli bacteria. As the infection proceeded, the viral coats were removed from the bacteria by agitating them in a blender. The virus particles were then separated from the bacteria by spinning them in a centrifuge. This process allowed the researchers to determine which radioactive component (DNA or protein) had entered the bacterial cells.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.2.1:4",
+            "order": 4,
+            "title": "Results and Conclusion of Hershey-Chase Experiment",
+            "content_text": "Bacteria infected with viruses that had radioactive DNA ($^{32}P$) were found to be radioactive, indicating that DNA was the material that passed from the virus to the bacteria. Bacteria infected with viruses that had radioactive proteins ($^{35}S$) were not radioactive. This indicated that proteins did not enter the bacteria from the viruses. Therefore, DNA is the genetic material that is passed from virus to bacteria.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:5:5.2.2",
+        "number": "5.2.2",
+        "title": "Properties of Genetic Material (DNA versus RNA)",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:5:5.2.2:1",
+            "order": 1,
+            "title": "Criteria for Genetic Material",
+            "content_text": "While DNA is the predominant genetic material, RNA performs dynamic functions as a messenger and adapter and serves as the genetic material in some viruses (e.g., Tobacco Mosaic viruses, QB bacteriophage). A molecule that acts as a genetic material must fulfill the following criteria: (i) It should be able to generate its replica (Replication). (ii) It should be stable chemically and structurally. (iii) It should provide the scope for slow changes (mutation) that are required for evolution. (iv) It should be able to express itself in the form of 'Mendelian Characters'.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.2.2:2",
+            "order": 2,
+            "title": "Stability Comparison: DNA vs RNA",
+            "content_text": "Both DNA and RNA can direct their duplications due to base pairing and complementarity. However, stability is a key differentiator. DNA is chemically less reactive and structurally more stable than RNA. This is because: 1. RNA has a $2'$-OH group present at every nucleotide, which is a reactive group making RNA labile and easily degradable. 2. RNA is known to be catalytic, hence reactive. 3. The presence of thymine in DNA instead of uracil (found in RNA) confers additional stability. Griffith's experiment showed that heat, which killed the bacteria, did not destroy the properties of the genetic material, further proving DNA's stability.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.2.2:3",
+            "order": 3,
+            "title": "Mutation and Evolution",
+            "content_text": "Both DNA and RNA are able to mutate. However, because RNA is unstable, it mutates at a faster rate. Consequently, viruses having an RNA genome and a shorter life span mutate and evolve faster than DNA-based organisms.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.2.2:4",
+            "order": 4,
+            "title": "Expression of Genetic Information",
+            "content_text": "RNA can directly code for the synthesis of proteins and thus can easily express characters. DNA, however, is dependent on RNA for the synthesis of proteins. The protein-synthesising machinery has evolved around RNA. While both can function as genetic material, DNA is preferred for the storage of genetic information due to its superior stability, whereas RNA is better suited for the transmission of genetic information.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.2.2:5",
+            "order": 5,
+            "title": "Stability and Transmission of Genetic Information",
+            "content_text": "DNA, being more stable than RNA, is the preferred molecule for the long-term storage of genetic information. However, for the actual transmission of genetic information to the next generation or for protein synthesis, RNA is more efficient. This is because RNA can directly code for the synthesis of proteins, whereas DNA is dependent on RNA for this process.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:5:5.3",
+        "number": "5.3",
+        "title": "RNA World",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:5:5.3:1",
+            "order": 1,
+            "title": "RNA as the First Genetic Material",
+            "content_text": "Evidence suggests that RNA was the first genetic material. Essential life processes such as metabolism, translation, and splicing evolved around RNA. RNA has the unique ability to act as both a genetic material and a catalyst. There are several important biochemical reactions in living systems that are catalyzed by RNA catalysts (ribozymes) rather than protein enzymes.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.3:2",
+            "order": 2,
+            "title": "Evolution of DNA from RNA",
+            "content_text": "Because RNA acts as a catalyst, it is chemically reactive and inherently unstable. Consequently, DNA evolved from RNA through chemical modifications that increased its stability. DNA is double-stranded and possesses complementary strands, which further resists changes and allows for the evolution of sophisticated repair mechanisms to maintain genetic integrity.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:5:5.4",
+        "number": "5.4",
+        "title": "Replication",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:5:5.4:1",
+            "order": 1,
+            "title": "The Semiconservative Model",
+            "content_text": "While proposing the double helical structure for DNA, Watson and Crick immediately suggested a scheme for its replication. They noted that the specific base pairing suggested a possible copying mechanism. The proposed scheme, known as semiconservative DNA replication, suggests that the two strands of the DNA helix separate and each acts as a template for the synthesis of a new complementary strand. Upon completion, each resulting DNA molecule consists of one parental (original) strand and one newly synthesized strand.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 5.6",
+                "description": "The Watson-Crick model for semiconservative DNA replication showing the parental double helix unwinding and two new daughter strands being synthesized using the parental strands as templates.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:5:5.4.1",
+        "number": "5.4.1",
+        "title": "The Experimental Proof",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:5:5.4.1:1",
+            "order": 1,
+            "title": "Meselson and Stahl's Experiment - Methodology",
+            "content_text": "In 1958, Matthew Meselson and Franklin Stahl provided experimental proof for semiconservative replication using Escherichia coli. They grew E. coli in a medium containing $^{15}NH_4Cl$ (where $^{15}N$ is a heavy isotope of nitrogen) for many generations until the $^{15}N$ was incorporated into the DNA. This 'heavy' DNA could be distinguished from normal DNA ($^{14}N$) using cesium chloride ($CsCl$) density gradient centrifugation, which separates molecules based on their densities. Note that $^{15}N$ is a stable isotope, not a radioactive one.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.4.1:2",
+            "order": 2,
+            "title": "Meselson and Stahl's Experiment - Results",
+            "content_text": "The cells were then transferred to a medium with normal $^{14}NH_4Cl$. Samples were taken at definite time intervals as the cells multiplied. DNA extracted after 20 minutes (one generation of E. coli) had a hybrid or intermediate density ($^{14}N^{15}N$). DNA extracted after 40 minutes (two generations) was composed of equal amounts of hybrid DNA and 'light' DNA ($^{14}N^{14}N$). This confirmed that one strand of the original heavy DNA was conserved in each hybrid molecule.",
+            "content_type": "experiment",
+            "worked_examples": [
+              {
+                "label": "Example 5.1",
+                "problem": "If E. coli was allowed to grow for 80 minutes in $^{14}N$ medium after being transferred from $^{15}N$, what would be the proportions of light and hybrid density DNA molecules?",
+                "solution": "After 80 minutes (4 generations), the ratio of hybrid to light DNA would be $2:14$ or $1:7$. There will always be only 2 hybrid DNA molecules (containing the original 2 parental $^{15}N$ strands), while the rest will be light DNA ($^{14}N^{14}N$)."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Figure 5.7",
+                "description": "Meselson and Stahl's experiment showing the separation of DNA by centrifugation. It depicts the transition from heavy DNA ($^{15}N^{15}N$) to hybrid DNA ($^{15}N^{14}N$) after 20 minutes, and then to a mixture of light ($^{14}N^{14}N$) and hybrid DNA after 40 minutes.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.4.1:3",
+            "order": 3,
+            "title": "Semiconservative Replication in Chromosomes",
+            "content_text": "Similar experiments were performed by Taylor and colleagues in 1958 on Vicia faba (faba beans) using radioactive thymidine to detect the distribution of newly synthesized DNA in chromosomes. These experiments proved that DNA in chromosomes also replicates semiconservatively.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:5:5.4.2",
+        "number": "5.4.2",
+        "title": "The Machinery and the Enzymes",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:5:5.4.2:1",
+            "order": 1,
+            "title": "DNA-dependent DNA Polymerase",
+            "content_text": "DNA replication requires a set of catalysts called enzymes. The primary enzyme is DNA-dependent DNA polymerase, which uses a DNA template to catalyze the polymerization of deoxynucleotides. These enzymes are highly efficient; for example, E. coli with $4.6 \\times 10^6$ bp completes replication in 18 minutes, averaging a rate of $2000$ bp per second. They also operate with a high degree of accuracy to prevent mutations.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.4.2:2",
+            "order": 2,
+            "title": "Energetics of Replication",
+            "content_text": "Replication is an energetically expensive process. Deoxyribonucleoside triphosphates (dNTPs) serve a dual purpose: they act as substrates for polymerization and provide energy for the reaction. The energy comes from the two terminal phosphates, which are high-energy phosphates similar to those in ATP.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.4.2:3",
+            "order": 3,
+            "title": "The Replication Fork and Directionality",
+            "content_text": "Because of the high energy requirement, the two strands of DNA cannot be separated over their entire length at once. Instead, replication occurs within a small opening of the DNA helix called the replication fork. DNA-dependent DNA polymerase can only catalyze polymerization in one direction: $5' \\rightarrow 3'$. This creates a complication at the fork: on the template strand with $3' \\rightarrow 5'$ polarity, replication is continuous. On the template strand with $5' \\rightarrow 3'$ polarity, replication is discontinuous, producing small fragments that are later joined by the enzyme DNA ligase.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.4.2:4",
+            "order": 4,
+            "title": "Origin of Replication",
+            "content_text": "DNA polymerases cannot initiate replication on their own. Replication does not start randomly; it begins at specific regions called the origin of replication. In E. coli, there is a definite region where replication originates. It is The requirement of an origin of replication is fundamental for DNA propagation. Because of this requirement, a piece of DNA that needs to be propagated during recombinant DNA procedures must be integrated into a vector. These vectors provide the necessary origin of replication to allow the foreign DNA segment to be replicated within the host organism.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.4.2:5",
+            "order": 5,
+            "title": "Eukaryotic Replication and Polyploidy",
+            "content_text": "In eukaryotic organisms, DNA replication occurs specifically during the S-phase of the cell cycle. It is essential that the processes of DNA replication and cell division are highly coordinated. A failure in the cell division process following DNA replication leads to a condition known as polyploidy, which is a chromosomal anomaly where the organism has extra sets of chromosomes.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 5.8",
+                "description": "A diagram of a Replicating Fork showing the unwinding of the parental DNA strands. It illustrates continuous synthesis on one strand (leading strand) and discontinuous synthesis on the other (lagging strand), with arrows indicating the direction of synthesis from 5' to 3'. Polarity of the template and newly synthesized strands is clearly marked.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:5:5.5",
+        "number": "5.5",
+        "title": "Transcription",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:5:5.5:1",
+            "order": 1,
+            "title": "Definition and Principle of Transcription",
+            "content_text": "Transcription is the biological process of copying genetic information from one strand of DNA into a complementary strand of RNA. This process is governed by the principle of complementarity, similar to DNA replication, with the notable exception that adenosine (A) pairs with uracil (U) instead of thymine (T). Unlike replication, which duplicates the entire genome, transcription is selective, copying only a specific segment of DNA and only one of the two strands into RNA.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.5:2",
+            "order": 2,
+            "title": "Why Only One DNA Strand is Transcribed",
+            "content_text": "There are two main reasons why both strands of DNA are not transcribed simultaneously. First, if both strands acted as templates, they would produce two different RNA molecules with distinct sequences. If these were translated, they would result in proteins with different amino acid sequences, meaning one DNA segment would code for two different proteins, which would complicate the genetic information transfer machinery. Second, the two complementary RNA molecules produced would bind to each other to form double-stranded RNA, which would prevent the RNA from being translated into protein, rendering the transcription process futile.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:5:5.5.1",
+        "number": "5.5.1",
+        "title": "Transcription Unit",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:5:5.5.1:1",
+            "order": 1,
+            "title": "Components of a Transcription Unit",
+            "content_text": "A transcription unit in DNA is primarily defined by three distinct regions: (i) A Promoter, which is the binding site for RNA polymerase; (ii) The Structural gene, which contains the sequence to be transcribed; and (iii) A Terminator, which marks the end of the transcription process.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.5.1:2",
+            "order": 2,
+            "title": "Template and Coding Strands",
+            "content_text": "DNA-dependent RNA polymerase catalyzes the polymerization of ribonucleotides only in the $5' \\rightarrow 3'$ direction. Therefore, the DNA strand with $3' \\rightarrow 5'$ polarity serves as the template strand. The other strand, which has $5' \\rightarrow 3'$ polarity and a sequence identical to the resulting RNA (except for having thymine instead of uracil), is called the coding strand. By convention, all reference points for defining a transcription unit (such as upstream or downstream) are made with respect to the coding strand.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 5.1",
+                "problem": "Given the following DNA sequences from a transcription unit, write the sequence of the RNA transcribed: Template Strand: $3'$-ATGCATGCATGCATGCATGCATGC-$5'$; Coding Strand: $5'$-TACGTACGTACGTACGTACGTACG-$3'$.",
+                "solution": "The RNA sequence will be identical to the coding strand, but with Thymine (T) replaced by Uracil (U). RNA Sequence: $5'$-UACGUACGUACGUACGUACGUACG-$3'$."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Figure 5.9",
+                "description": "A schematic structure of a transcription unit showing a double-stranded DNA. It identifies the Promoter at the 5' end of the coding strand (upstream), the Structural gene in the middle, and the Terminator at the 3' end of the coding strand (downstream). The transcription start site is marked with an arrow.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.5.1:3",
+            "order": 3,
+            "title": "Promoter and Terminator Functions",
+            "content_text": "The promoter and terminator flank the structural gene. The promoter is located upstream (towards the $5'$-end of the coding strand) and provides the binding site for RNA polymerase. Its presence defines which strand will serve as the template. The terminator is located downstream (towards the $3'$-end of the coding strand) and defines the end of the transcription process. Additionally, regulatory sequences may be present further upstream or downstream of the promoter, which play roles in gene expression regulation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:5:5.5.2",
+        "number": "5.5.2",
+        "title": "Transcription Unit and the Gene",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:5:5.5.2:1",
+            "order": 1,
+            "title": "Defining a Gene and Cistron",
+            "content_text": "A gene is the functional unit of inheritance. While genes are located on DNA, defining them strictly in terms of DNA sequence can be difficult. A cistron is defined as a segment of DNA coding for a polypeptide. A transcription unit can be monocistronic (coding for one polypeptide), which is common in eukaryotes, or polycistronic (coding for multiple polypeptides), which is typical in bacteria and prokaryotes. DNA sequences coding for tRNA or rRNA also define genes.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.5.2:2",
+            "order": 2,
+            "title": "Split-gene Arrangement: Exons and Introns",
+            "content_text": "In eukaryotes, monocistronic structural genes often have interrupted coding sequences, known as a split-gene arrangement. The coding or expressed sequences are called exons, which appear in mature or processed RNA. These are interrupted by introns (intervening sequences) that do not appear in the mature RNA. This arrangement complicates the definition of a gene. Furthermore, inheritance is affected by regulatory sequences which, though they may not code for RNA or protein, are sometimes referred to as regulatory genes.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:5:5.5.3",
+        "number": "5.5.3",
+        "title": "Types of RNA and the process of Transcription",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:5:5.5.3:1",
+            "order": 1,
+            "title": "Major Types of RNA in Bacteria",
+            "content_text": "In bacteria, three major types of RNA are essential for protein synthesis: mRNA (messenger RNA), which provides the template for translation; tRNA (transfer RNA), which reads the genetic code and brings amino acids; and rRNA (ribosomal RNA), which serves structural and catalytic roles. A single DNA-dependent RNA polymerase catalyzes the transcription of all these RNA types in bacteria.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.5.3:2",
+            "order": 2,
+            "title": "The Process of Transcription: Initiation",
+            "content_text": "The process of transcription in bacteria involves three main stages: Initiation, Elongation, and Termination. During Initiation, RNA polymerase binds to the promoter region. The enzyme uses nucleoside triphosphates as substrates and polymerizes them in a template-dependent fashion, following the rule of complementarity. and polymerises in a template depended fashion following the rule of complementarity. It somehow also facilitates opening of the helix and continues elongation. Only a short stretch of RNA remains bound to the enzyme. Once the polymerases reaches the terminator region, the nascent RNA falls off, so also the RNA polymerase. This results in termination of transcription.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 5.10",
+                "description": "A diagram illustrating the three stages of transcription in bacteria: 1. Initiation: RNA polymerase binds to the promoter with the help of the sigma factor (sigma). 2. Elongation: The RNA polymerase moves along the DNA, synthesizing the RNA strand. 3. Termination: The RNA polymerase and the nascent RNA dissociate from the DNA at the terminator, aided by the rho factor (rho).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.5.3:3",
+            "order": 3,
+            "title": "Role of Initiation and Termination Factors",
+            "content_text": "An intriguing question is how the RNA polymerase is able to catalyse all the three steps: initiation, elongation, and termination. The RNA polymerase is only capable of catalysing the process of elongation. It associates transiently with initiation-factor ($\\sigma$) and termination-factor ($\\rho$) to initiate and terminate the transcription, respectively. Association with these factors alters the specificity of the RNA polymerase to either initiate or terminate.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.5.3:4",
+            "order": 4,
+            "title": "Transcription in Bacteria",
+            "content_text": "In bacteria, the mRNA does not require any processing to become active. Furthermore, since transcription and translation take place in the same compartment (there is no separation of cytosol and nucleus in bacteria), translation can often begin much before the mRNA is fully transcribed. Consequently, transcription and translation can be coupled in bacteria.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.5.3:5",
+            "order": 5,
+            "title": "Transcription in Eukaryotes: Multiple RNA Polymerases",
+            "content_text": "In eukaryotes, there are two additional complexities. First, there are at least three RNA polymerases in the nucleus (in addition to those found in organelles), showing a clear division of labour. RNA polymerase I transcribes rRNAs (28S, 18S, and 5.8S). RNA polymerase III is responsible for transcription of tRNA, 5srRNA, and snRNAs (small nuclear RNAs). RNA polymerase II transcribes the precursor of mRNA, known as heterogeneous nuclear RNA (hnRNA).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.5.3:6",
+            "order": 6,
+            "title": "Post-transcriptional Processing in Eukaryotes",
+            "content_text": "The second complexity in eukaryotes is that primary transcripts (hnRNA) contain both functional exons and non-functional introns. They undergo splicing, where introns are removed and exons are joined in a defined order. Additionally, hnRNA undergoes capping (adding methyl guanosine triphosphate to the 5'-end) and tailing (adding 200-300 adenylate residues to the 3'-end in a template-independent manner). The fully processed hnRNA is then called mRNA and is transported out of the nucleus for translation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 5.11",
+                "description": "A diagrammatic representation of the process of transcription in eukaryotes. It shows a DNA double helix being transcribed into hnRNA. The hnRNA contains exons and introns. The process illustrates capping at the 5' end with mGppp, RNA splicing to remove introns, and polyadenylation (tailing) at the 3' end to form a Poly A tail. The final product is mature Messenger RNA (mRNA).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.5.3:7",
+            "order": 7,
+            "title": "Significance of Split-gene Arrangement",
+            "content_text": "The split-gene arrangement is considered an ancient feature of the genome. The presence of introns is reminiscent of antiquity, and the process of splicing represents the dominance of the RNA-world. Understanding RNA and RNA-dependent processes has assumed significant importance in modern biology.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:5:5.6",
+        "number": "5.6",
+        "title": "Genetic Code",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:5:5.6:1",
+            "order": 1,
+            "title": "Introduction to Genetic Code",
+            "content_text": "During replication and transcription, nucleic acids are copied based on complementarity. However, translation involves transferring genetic information from a polymer of nucleotides to a polymer of amino acids, where no complementarity exists. Evidence suggested that changes in nucleic acids were responsible for changes in amino acids in proteins, leading to the proposition of a genetic code to direct protein synthesis.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.6:2",
+            "order": 2,
+            "title": "The Triplet Code Hypothesis",
+            "content_text": "Deciphering the genetic code required scientists from several disciplines. George Gamow, a physicist, argued that since there are only 4 bases to code for 20 amino acids, the code must be a combination of bases. He suggested a triplet code, as a permutation of $4^3$ ($4 \\times 4 \\times 4$) would generate 64 codons, which is more than enough to cover all 20 amino acids.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.6:3",
+            "order": 3,
+            "title": "Experimental Deciphering of the Code",
+            "content_text": "Har Gobind Khorana developed chemical methods to synthesise RNA molecules with defined base combinations (homopolymers and copolymers). Marshall Nirenberg's cell-free system for protein synthesis was crucial for deciphering the code. Additionally, the Severo Ochoa enzyme (polynucleotide phosphorylase) was used to polymerise RNA with defined sequences in a template-independent manner. These efforts led to the creation of the genetic code checker-board.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 5.1",
+                "caption": "The Codons for the Various Amino Acids",
+                "headers": [
+                  "First position",
+                  "U",
+                  "C",
+                  "A",
+                  "G",
+                  "Third position"
+                ],
+                "rows": [
+                  [
+                    "U",
+                    "UUU Phe, UUC Phe, UUA Leu, UUG Leu",
+                    "UCU Ser, UCC Ser, UCA Ser, UCG Ser",
+                    "UAU Tyr, UAC Tyr, UAA Stop, UAG Stop",
+                    "UGU Cys, UGC Cys, UGA Stop, UGG Trp",
+                    "U, C, A, G"
+                  ],
+                  [
+                    "C",
+                    "CUU Leu, CUC Leu, CUA Leu, CUG Leu",
+                    "CCU Pro, CCC Pro, CCA Pro, CCG Pro",
+                    "CAU His, CAC His, CAA Gln, CAG Gln",
+                    "CGU Arg, CGC Arg, CGA Arg, CGG Arg",
+                    "U, C, A, G"
+                  ],
+                  [
+                    "A",
+                    "AUU Ile, AUC Ile, AUA Ile, AUG Met",
+                    "ACU Thr, ACC Thr, ACA Thr, ACG Thr",
+                    "AAU Asn, AAC Asn, AAA Lys, AAG Lys",
+                    "AGU Ser, AGC Ser, AGA Arg, AGG Arg",
+                    "U, C, A, G"
+                  ],
+                  [
+                    "G",
+                    "GUU Val, GUC Val, GUA Val, GUG Val",
+                    "GCU Ala, GCC Ala, GCA Ala, GCG Ala",
+                    "GAU Asp, GAC Asp, GAA Glu, GAG Glu",
+                    "GGU Gly, GGC Gly, GGA Gly, GGG Gly",
+                    "U, C, A, G"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:biology:12:5:5.6:4",
+            "order": 4,
+            "title": "Salient Features of Genetic Code",
+            "content_text": "The key features of the genetic code are: (i) The codon is a triplet; 61 codons code for amino acids and 3 are stop codons. (ii) The code is degenerate, meaning some amino acids are coded by more than one codon. (iii) The code is read in mRNA in a contiguous fashion without punctuation. (iv) The code is nearly universal (e.g., UUU codes for Phenylalanine in most organisms). (v) AUG has dual functions: it codes for Methionine (met) and acts as the initiator codon. (vi) UAA, UAG, and UGA are stop terminator codons.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.6:5",
+            "order": 5,
+            "title": "Predicting Nucleotide Sequences and Degeneracy",
+            "content_text": "The relationship between the genetic code and amino acids can be explored by attempting to predict the nucleotide sequence of an mRNA from a given amino acid sequence, such as Met-Phe-Phe-Phe-Phe-Phe-Phe. However, this task is complicated by the degeneracy of the genetic code, where most amino acids are specified by more than one codon. This exercise highlights the non-ambiguous but degenerate nature of the code, where one codon always codes for the same amino acid, but one amino acid can be represented by multiple codons.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 5.1",
+                "problem": "Following is the sequence of amino acids coded by an mRNA. Predict the nucleotide sequence in the RNA: Met-Phe-Phe-Phe-Phe-Phe-Phe",
+                "solution": "Due to the degeneracy of the genetic code, most amino acids are coded by more than one codon. While Methionine (Met) is coded only by AUG, Phenylalanine (Phe) can be coded by either UUU or UUC. Therefore, multiple possible nucleotide sequences could code for this polypeptide, making it difficult to predict the exact original RNA sequence."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.6:6",
+            "order": 6,
+            "title": "Mutations and the Genetic Code: Point Mutations",
+            "content_text": "The relationship between genes and DNA is best understood through mutation studies. Point mutations involve a change in a single base pair in the DNA sequence. A classic example of a point mutation occurs in the gene for the beta globin chain, where a single base change results in the substitution of the amino acid glutamate with valine. This specific mutation leads to the diseased condition known as sickle cell anemia. Large-scale mutations, such as deletions or rearrangements of DNA segments, are easier to comprehend as they often result in the loss or gain of entire genes and their functions.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.6:7",
+            "order": 7,
+            "title": "Frameshift Mutations",
+            "content_text": "Frameshift mutations occur when the insertion or deletion of one or more bases alters the reading frame of the genetic message. This can be illustrated using a word analogy: 'RAM HAS RED CAP'. If a letter 'B' is inserted between 'HAS' and 'RED', the sequence becomes 'RAM HAS BRE DCA P'. Inserting two letters ('BI') results in 'RAM HAS BIR EDC AP'. However, inserting three letters ('BIG') restores the reading frame for subsequent words: 'RAM HAS BIG RED CAP'. Similarly, deleting one or two letters shifts the frame, while deleting three letters (a full triplet) removes one word without affecting the rest of the sentence. In genetics, inserting or deleting one or two bases changes the reading frame from that point onwards, whereas inserting or deleting three bases (or multiples thereof) adds or removes one or more codons/amino acids without altering the downstream reading frame. These are known as frameshift insertion or deletion mutations.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.6:8",
+            "order": 8,
+            "title": "tRNA – The Adapter Molecule",
+            "content_text": "Francis Crick proposed that an adapter molecule must exist to read the genetic code and link it to specific amino acids, as amino acids themselves have no structural specialty to recognize the code. This molecule is tRNA (transfer RNA), formerly called sRNA (soluble RNA). tRNA features an anticodon loop with bases complementary to the mRNA codons and an amino acid acceptor end (at the $3'$ end) to which it binds specific amino acids. tRNAs are highly specific, with at least one type for each amino acid. A specific initiator tRNA exists for the start of translation, but there are no tRNAs for stop codons. While the secondary structure of tRNA is often depicted as a clover-leaf, its actual three-dimensional structure is a compact molecule that resembles an inverted L.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 5.12",
+                "description": "A diagram showing two tRNA molecules acting as adapters. One tRNA has the anticodon UCA and carries the amino acid Serine (Ser), corresponding to the mRNA codon AGU. The other tRNA has the anticodon UAC and carries Tyrosine (Tyr), corresponding to the start codon AUG on the mRNA strand. The mRNA is shown in the $5'$ to $3'$ direction.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:5:5.7",
+        "number": "5.7",
+        "title": "Translation",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:5:5.7:1",
+            "order": 1,
+            "title": "Introduction to Translation and Amino Acid Activation",
+            "content_text": "Translation is the process by which amino acids are polymerized to form a polypeptide chain. The specific order and sequence of these amino acids are defined by the sequence of bases in the mRNA. The formation of a peptide bond between amino acids requires energy. Therefore, the first phase of translation involves the activation of amino acids in the presence of ATP and their linkage to their cognate tRNA. This process is known as charging of tRNA or, more specifically, aminoacylation of tRNA. When two such charged tRNAs are brought close together, the formation of a peptide bond between the amino acids they carry is energetically favored.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.7:2",
+            "order": 2,
+            "title": "The Ribosome and its Catalytic Role",
+            "content_text": "The ribosome is the cellular machinery responsible for protein synthesis. It consists of structural RNAs and approximately 80 different proteins. In its inactive state, the ribosome exists as two separate subunits: a large subunit and a small subunit. Translation begins when the small subunit binds to an mRNA molecule. The large subunit contains two sites where subsequent amino acids (carried by tRNAs) can bind, allowing them to be positioned close enough for peptide bond formation. Notably, the ribosome also functions as a catalyst; in bacteria, the $23S$ rRNA acts as a ribozyme to facilitate the formation of peptide bonds.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.7:3",
+            "order": 3,
+            "title": "Translational Unit and Untranslated Regions (UTRs)",
+            "content_text": "A translational unit in mRNA is the specific sequence of RNA flanked by a start codon (AUG) and a stop codon, which codes for a polypeptide. Additionally, mRNA contains sequences that are not translated into protein, known as untranslated regions (UTRs). UTRs are located at both the $5'$-end (preceding the start codon) and the $3'$-end (following the stop codon). These regions are essential for the efficiency of the translation process.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.7:4",
+            "order": 4,
+            "title": "The Process of Translation: Initiation, Elongation, and Termination",
+            "content_text": "The process of translation occurs in three main stages: 1. Initiation: The ribosome binds to the mRNA at the start codon (AUG), which is recognized only by the specific initiator tRNA. 2. Elongation: The ribosome moves along the mRNA from codon to codon. Amino acid-tRNA complexes sequentially bind to the appropriate codons through complementary base pairing with the tRNA anticodon. Amino acids are added one by one, extending the polypeptide chain as dictated by the DNA sequence represented in the mRNA. 3. Termination: When the ribosome reaches a stop codon, a release factor binds to it. This signals the end of translation, leading to the release of the completed polypeptide chain from the ribosome.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 5.13",
+                "description": "A schematic representation of translation showing a ribosome (large and small subunits) moving along an mRNA strand. It depicts a growing polypeptide chain consisting of amino acids like Gly, Leu, Tyr, Ser, etc. Charged tRNAs are shown entering the ribosome at the A and P sites, matching their anticodons to the mRNA codons to add amino acids to the chain.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:5:5.8",
+        "number": "5.8",
+        "title": "Regulation of Gene Expression",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:5:5.8:1",
+            "order": 1,
+            "title": "Levels of Regulation of Gene Expression",
+            "content_text": "Regulation of gene expression is a broad term encompassing various mechanisms that control the formation of a polypeptide. Since gene expression ultimately results in a functional product, it can be regulated at multiple stages. In eukaryotes, this regulation can be exerted at four distinct levels: (i) transcriptional level: During the formation of the primary transcript. (ii) processing level: During the regulation of splicing. (iii) transport level: During the movement of mRNA from the nucleus to the cytoplasm. (iv) translational level: During the actual synthesis of the protein.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.8:2",
+            "order": 2,
+            "title": "Examples and Conditions of Gene Regulation",
+            "content_text": "Genes in a cell are expressed to perform specific functions. For example, E. coli synthesizes the enzyme beta-galactosidase to catalyze the hydrolysis of the disaccharide lactose into galactose and glucose, which the bacteria use as an energy source. If lactose is not available, the bacteria do not require the synthesis of this enzyme. Therefore, gene expression is regulated by metabolic, physiological, or environmental conditions. Similarly, the development and differentiation of an embryo into an adult organism result from the coordinated regulation of several sets of genes.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.8:3",
+            "order": 3,
+            "title": "Prokaryotic Regulation and Operators",
+            "content_text": "In prokaryotes, the control of the rate of transcriptional initiation is the primary site for gene expression regulation. In a transcription unit, the activity of RNA polymerase at a given promoter is regulated by interactions with accessory proteins, which can be activators (positive regulation) or repressors (negative regulation). The accessibility of promoter regions in prokaryotic DNA is often regulated by proteins interacting with sequences called operators. The operator region is adjacent to the promoter elements in most operons. Each operon has a specific operator and a specific repressor; for instance, the lac operator is unique to the lac operon and interacts specifically with the lac repressor.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:5:5.8.1",
+        "number": "5.8.1",
+        "title": "The Lac operon",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:5:5.8.1:1",
+            "order": 1,
+            "title": "Discovery and Definition of the Operon",
+            "content_text": "The lac operon was elucidated by geneticist Francois Jacob and biochemist Jacque Monod. It was the first transcriptionally regulated system to be described. In the lac operon (where 'lac' refers to lactose), a polycistronic structural gene is regulated by a common promoter and regulatory genes. This arrangement is common in bacteria and is called an operon. Other examples include the trp operon, ara operon, his operon, and val operon.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.8.1:2",
+            "order": 2,
+            "title": "Structural and Regulatory Genes of the Lac Operon",
+            "content_text": "The lac operon consists of one regulatory gene, the $i$ gene, and three structural genes ($z, y, a$). The $i$ gene (derived from 'inhibitor') codes for the repressor of the lac operon. The $z$ gene codes for beta-galactosidase ($\\beta$-gal), which hydrolyzes lactose into galactose and glucose. The $y$ gene codes for permease, which increases the cell's permeability to $\\beta$-galactosides. The $a$ gene encodes a transacetylase. All three gene products are required for the metabolism of lactose. In most operons, the genes are needed together to function in the same or related metabolic pathways.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 5.14",
+                "description": "A schematic diagram of the lac operon showing two conditions. In the 'absence of inducer', the repressor mRNA from the $i$ gene produces a repressor protein that binds to the operator (o), preventing RNA polymerase from transcribing the structural genes. In the 'presence of inducer', the inducer binds to the repressor, making it inactive. This allows RNA polymerase to transcribe the lac mRNA from the $z, y, a$ genes, which is then translated into beta-galactosidase, permease, and transacetylase.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.8.1:3",
+            "order": 3,
+            "title": "Mechanism of the Lac Operon: The Inducer",
+            "content_text": "Lactose is the substrate for beta-galactosidase and regulates the switching on and off of the operon; thus, it is termed the inducer. In the absence of a preferred carbon source like glucose, if lactose is provided, it is transported into the cells by permease. Note that a very low level of lac operon expression must always be present for lactose to enter the cell initially. The repressor protein, synthesized constitutively by the $i$ gene, binds to the operator and prevents transcription. When an inducer like lactose or allolactose is present, it interacts with the repressor and inactivates it. This allows RNA polymerase access to the promoter, and transcription proceeds. Regulation of the lac operon can be viewed as the regulation of enzyme synthesis by its substrate.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.8.1:4",
+            "order": 4,
+            "title": "Negative and Positive Regulation",
+            "content_text": "Regulation of the lac operon by a repressor is referred to as negative regulation. While the lac operon is also subject to positive regulation, that topic is beyond the scope of this level. It is important to remember that glucose or galactose cannot act as inducers for the lac operon.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:5:5.9",
+        "number": "5.9",
+        "title": "Human Genome Project",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:5:5.9:1",
+            "order": 1,
+            "title": "Introduction and Magnitude of the HGP",
+            "content_text": "The Human Genome Project (HGP) was a 'mega project' launched in 1990 to determine the complete DNA sequence of the human genome. The human genome contains approximately $3 \\times 10^9$ bp. If the cost of sequencing was US $3 per bp, the total estimated cost was approximately 9 billion US dollars. Storing the sequence information in books (1000 pages per book, 1000 letters per page) would require 3300 books for the sequence from a single human cell. This enormous data volume necessitated high-speed computational devices for storage, retrieval, and analysis.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.9:2",
+            "order": 2,
+            "title": "Bioinformatics",
+            "content_text": "The Human Genome Project was closely associated with the rapid development of a new area in biology called Bioinformatics, which uses computational tools to manage and analyze biological data.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.9:3",
+            "order": 3,
+            "title": "Goals of HGP",
+            "content_text": "The primary goals of the HGP included: (i) Identifying all the approximately 20,000-25,000 genes in human DNA; (ii) Determining the sequences of the 3 billion chemical base pairs that make up human DNA; (iii) Storing this information in databases; (iv) Improving tools for data analysis; (v) Transferring related technologies to other sectors, such as industries; (vi) Addressing the ethical, legal, and social issues (ELSI) that may arise from the project.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.9:4",
+            "order": 4,
+            "title": "History and Coordination of the Project",
+            "content_text": "The HGP was a 13-year project coordinated by the U.S. Department of Energy and the National Institute of Health. During its early years, the Wellcome Trust (U.K.) became a major partner, with additional contributions from Japan, France, Germany, China, and others. The project was completed in 2003. Knowledge of DNA variations among individuals leads to revolutionary ways to diagnose, treat, and prevent thousands of disorders. disorders that affect human beings. Besides providing clues to understanding human biology, learning about non-human organisms DNA sequences can lead to an understanding of their natural capabilities that can be applied toward solving challenges in health care, agriculture, energy production, environmental remediation. Many non-human model organisms, such as bacteria, yeast, Caenorhabditis elegans (a free living non-pathogenic nematode), Drosophila (the fruit fly), plants (rice and Arabidopsis), etc., have also been sequenced.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.9:5",
+            "order": 5,
+            "title": "Methodologies of HGP",
+            "content_text": "The methods involved two major approaches. One approach focused on identifying all the genes that are expressed as RNA (referred to as Expressed Sequence Tags (ESTs)). The other took the blind approach of simply sequencing the whole set of genome that contained all the coding and non-coding sequence, and later assigning different regions in the sequence with functions (a term referred to as Sequence Annotation).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.9:6",
+            "order": 6,
+            "title": "DNA Sequencing Process",
+            "content_text": "For sequencing, the total DNA from a cell is isolated and converted into random fragments of relatively smaller sizes (recall DNA is a very long polymer, and there are technical limitations in sequencing very long pieces of DNA) and cloned in suitable host using specialised vectors. The cloning resulted into amplification of each piece of DNA fragment so that it subsequently could be sequenced with ease. The commonly used hosts were bacteria and yeast, and the vectors were called as BAC (bacterial artificial chromosomes), and YAC (yeast artificial chromosomes).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.9:7",
+            "order": 7,
+            "title": "Sequencing and Alignment",
+            "content_text": "The fragments were sequenced using automated DNA sequencers that worked on the principle of a method developed by Frederick Sanger. (Remember, Sanger is also credited for developing method for determination of amino acid sequences in proteins). These sequences were then arranged based on some overlapping regions present in them. This required generation of overlapping fragments for sequencing. Alignment of these sequences was humanly not possible. Therefore, specialised computer based programs were developed (Figure 5.15). These sequences were subsequently annotated and were assigned to each chromosome. The sequence of chromosome 1 was completed only in May 2006 (this was the last of the 24 human chromosomes – 22 autosomes and X and Y – to be sequenced). Another challenging task was assigning the genetic and physical maps on the genome. This was generated using information on polymorphism of restriction endonuclease recognition sites, and some repetitive DNA sequences known as microsatellites (one of the applications of polymorphism in repetitive DNA sequences shall be explained in next section of DNA fingerprinting).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 5.15",
+                "description": "A representative diagram of the Human Genome Project showing the workflow from a human subject to a cell, then to a chromosome, followed by DNA extraction and sequencing, and finally computer-based sequence analysis and annotation.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:5:5.9.1",
+        "number": "5.9.1",
+        "title": "Salient Features of Human Genome",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:5:5.9.1:1",
+            "order": 1,
+            "title": "Key Observations from HGP",
+            "content_text": "Some of the salient observations drawn from human genome project are as follows: (i) The human genome contains $3164.7$ million bp. (ii) The average gene consists of $3000$ bases, but sizes vary greatly, with the largest known human gene being dystrophin at $2.4$ million bases. (iii) The total number of genes is estimated at $30,000$—much lower than previous estimates of $80,000$ to $1,40,000$ genes. Almost all ($99.9$ per cent) nucleotide bases are exactly the same in all humans. (iv) The functions are unknown for over $50$ per cent of the discovered genes. (v) Less than $2$ per cent of the genome codes for proteins. (vi) Repeated sequences make up very large portion of the human genome. (vii) Repetitive sequences are stretches of DNA sequences that are repeated many times, sometimes hundred to thousand times. They are thought to have no direct coding functions, but they shed light on chromosome structure, dynamics and evolution. (viii) Chromosome 1 has most genes ($2968$), and the Y has the fewest ($231$). (ix) Scientists have identified about $1.4$ million locations where single-base DNA differences (SNPs – single nucleotide polymorphism, pronounced as 'snips') occur in humans. This information promises to revolutionise the processes of finding chromosomal locations for disease-associated sequences and tracing human history.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:5:5.9.2",
+        "number": "5.9.2",
+        "title": "Applications and Future Challenges",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:5:5.9.2:1",
+            "order": 1,
+            "title": "Impact on Biological Research",
+            "content_text": "Deriving meaningful knowledge from the DNA sequences will define research through the coming decades leading to our understanding of biological systems. This enormous task will require the expertise and creativity of tens of thousands of scientists from varied disciplines in both the public and private sectors worldwide. One of the greatest impacts of having the HG sequence may well be enabling a radically new approach to biological research. In the past, researchers studied one or a few genes at a time. With whole-genome sequences and new high-throughput technologies, we can approach questions systematically and on a much broader scale. They can study all the genes in a genome, for example, all the transcripts in a particular tissue or organ or tumor, or how tens of thousands of genes and proteins work together in interconnected networks to orchestrate the chemistry of life.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:5:5.10",
+        "number": "5.10",
+        "title": "DNA Fingerprinting",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:5:5.10:1",
+            "order": 1,
+            "title": "Introduction to DNA Fingerprinting",
+            "content_text": "As stated in the preceding section, $99.9$ per cent of base sequence among humans is the same. Assuming human genome as $3 \\times 10^9$ bp, in how many base sequences would there be differences? It is these differences in sequence of DNA which make every individual unique in their phenotypic appearance. If one aims to find out genetic differences between two individuals or among individuals of a population, sequencing the DNA every time would be a daunting and expensive task. Imagine trying to compare two sets of $3 \\times 10^6$ base pairs. DNA fingerprinting is a very quick way to compare the DNA sequences of any two individuals.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.10:2",
+            "order": 2,
+            "title": "Repetitive and Satellite DNA",
+            "content_text": "DNA fingerprinting involves identifying differences in some specific regions in DNA sequence called as repetitive DNA, because in these sequences, a small stretch of DNA is repeated many times. These repetitive DNA are separated from bulk genomic DNA as different peaks during density gradient centrifugation. The bulk DNA forms a major peak and the other small peaks are referred to as satellite DNA. Depending on base composition (A : T rich or G:C rich), length of segment, and number of repetitive units, the satellite DNA is classified into many categories, such as micro-satellites, mini-satellites etc. These sequences normally do not code for any proteins, but they form a large portion of human genome. These sequence show high degree of polymorphism and form the basis of DNA fingerprinting. Since DNA from every tissue (such as blood, hair-follicle, skin, bone, saliva, sperm etc.), from an individual show the same degree of polymorphism, they become very useful identification tool in forensic applications. Further, as the polymorphisms are inheritable from parents to children, DNA fingerprinting is the basis of paternity testing, in case of disputes.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.10:3",
+            "order": 3,
+            "title": "DNA Polymorphism",
+            "content_text": "As polymorphism in DNA sequence is the basis of genetic mapping of human genome as well as of DNA fingerprinting, it is essential that we understand what DNA polymorphism means in simple terms. Polymorphism (variation at genetic level) arises due to mutations. (Recall different kind of mutations and their effects that you have already studied in Chapter 4, and in the preceding sections in this chapter.) New mutations may arise in an individual either in somatic cells or in the germ cells (cells that generate gametes in sexually reproducing organisms). If a germ cell mutation does not seriously impair individual’s ability to have offspring who can transmit the mutation, it can spread to other members of population (through sexual reproduction). Allelic sequence variation is traditionally described as DNA polymorphism if more than one variant (allele) at a locus occurs in a human population with a frequency greater than $0.01$. In simple terms, an inheritable mutation observed in a population at high frequency is referred to as DNA polymorphism. The probability of such variation is higher in non-coding DNA sequences because mutations there may not immediately impact an individual's reproductive ability. These mutations accumulate over generations, forming the basis of variability. Polymorphisms range from single nucleotide changes to large-scale changes and play a vital role in evolution and speciation.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.10:4",
+            "order": 4,
+            "title": "Methodology of DNA Fingerprinting",
+            "content_text": "The technique of DNA Fingerprinting was pioneered by Alec Jeffreys using satellite DNA as a probe, specifically Variable Number of Tandem Repeats (VNTR). The process involves Southern blot hybridisation with a radiolabelled VNTR probe. The key steps are: (i) DNA isolation, (ii) digestion using restriction endonucleases, (iii) separation of fragments via electrophoresis, (iv) blotting (transferring fragments to synthetic membranes like nitrocellulose or nylon), (v) hybridisation with the labelled VNTR probe, and (vi) detection of hybridised fragments through autoradiography.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.10:5",
+            "order": 5,
+            "title": "VNTR and its Characteristics",
+            "content_text": "VNTR is a type of mini-satellite where a small DNA sequence is repeated tandemly. The number of copies varies between individuals and even between chromosomes in the same individual. These repeats exhibit high polymorphism, resulting in VNTR sizes ranging from $0.1$ to $20$ kb. After hybridisation, the autoradiogram displays a unique banding pattern for each individual (except monozygotic twins), which serves as a genetic signature. This is illustrated in Figure 5.16, which shows how banding patterns can be used to match DNA samples.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 5.16",
+                "description": "A schematic representation of DNA fingerprinting comparing DNA from a crime scene (C) with two individuals (A and B). It shows paternal and maternal chromosomes (7, 2, and 16) for each. The number of short tandem repeats is represented by colored blocks. The resulting gel electrophoresis pattern shows bands for C, A, and B. The banding pattern of the crime scene DNA (C) matches that of Individual B, indicating a match.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:5:5.10:6",
+            "order": 6,
+            "title": "Applications and Sensitivity",
+            "content_text": "The sensitivity of DNA fingerprinting is significantly enhanced by the Polymerase Chain Reaction (PCR), allowing analysis from just a single cell. Beyond forensic science, the technique is used to determine population and genetic diversities and has applications in evolutionary biology. Various probes are currently used to generate these fingerprints.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:5:",
+        "number": "",
+        "title": "Summary",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:5::1",
+            "order": 1,
+            "title": "Chapter Summary",
+            "content_text": "Nucleic acids, DNA and RNA, are nucleotide polymers. DNA is the primary genetic material due to its stability, while RNA facilitates information transfer. DNA's double helix is stabilized by hydrogen bonds between complementary bases ($A=T$ and $G \\equiv C$). Replication is semi-conservative. Transcription converts DNA to RNA; in eukaryotes, introns are spliced out to form functional mRNA. The genetic code is a triplet system where mRNA codons specify amino acids. Translation occurs at ribosomes with tRNA acting as an adapter. rRNA can function as a ribozyme catalyst. Gene expression is regulated, exemplified by the bacterial Lac operon. The Human Genome Project sequenced the entire human genome, revealing extensive genetic information. DNA fingerprinting identifies individuals based on DNA polymorphism and is used in forensics, population studies, and evolutionary biology.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "EXERCISES",
+      "items": [
+        {
+          "id": "ncert:biology:12:5:ex:1",
+          "number": 1,
+          "problem": "If following is the sequence of nucleotides in mRNA, predict the sequence of amino acid coded by it (take help of the checkerboard): -AUG UUU UUC UUC UUU UUU UUC-",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:5:ex:2",
+          "number": 2,
+          "problem": "If a double stranded DNA has 20 per cent of cytosine, calculate the per cent of adenine in the DNA.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:5:ex:3",
+          "number": 3,
+          "problem": "If the sequence of one strand of DNA is written as follows: $5'$-ATGCATGCATGCATGCATGCATGCATGC-$3'$ Write down the sequence of complementary strand in $5'$-$3'$ direction.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:5:ex:4",
+          "number": 4,
+          "problem": "If the sequence of the coding strand in a transcription unit is written as follows: $5'$-ATGCATGCATGCATGCATGCATGCATGC-$3'$ Write down the sequence of mRNA.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:5:ex:5",
+          "number": 5,
+          "problem": "Which property of DNA double helix led Watson and Crick to hypothesise semi-conservative mode of DNA replication? Explain.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:5:ex:6",
+          "number": 6,
+          "problem": "Depending upon the chemical nature of the template (DNA or RNA) and the nature of nucleic acids synthesised from it (DNA or RNA), list the types of nucleic acid polymerases.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:5:ex:7",
+          "number": 7,
+          "problem": "How did Hershey and Chase differentiate between DNA and protein in their experiment while proving that DNA is the genetic material?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:5:ex:8",
+          "number": 8,
+          "problem": "Differentiate between the followings: (a) Repetitive DNA and Satellite DNA (b) mRNA and tRNA (c) Template strand and Coding strand",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:5:ex:9",
+          "number": 9,
+          "problem": "List two essential roles of ribosome during translation.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:5:ex:10",
+          "number": 10,
+          "problem": "In the medium where E. coli was growing, lactose was added, which induced the lac operon. Then, why does lac operon shut down some time after addition of lactose in the medium?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:5:ex:11",
+          "number": 11,
+          "problem": "Explain (in one or two lines) the function of the followings: (a) Promoter (b) tRNA (c) Exons",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:5:ex:12",
+          "number": 12,
+          "problem": "Why is the Human Genome project called a mega project?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:5:ex:13",
+          "number": 13,
+          "problem": "What is DNA fingerprinting? Mention its application.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:5:ex:14",
+          "number": 14,
+          "problem": "Briefly describe the following: (a) Transcription (b) Polymorphism (c) Translation (d) Bioinformatics",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        }
+      ]
+    }
+  }
+}

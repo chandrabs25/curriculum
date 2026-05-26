@@ -1,0 +1,955 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_biology_11_ch9.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:biology:11:9",
+  "curriculum": "ncert",
+  "subject": "biology",
+  "grade": 11,
+  "textbook_name": "Biology",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:biology:11:9",
+    "number": 9,
+    "title": "Biomolecules",
+    "summary": "This chapter on Biomolecules explores the chemical composition of living organisms, focusing on the structure and function of key organic molecules. It begins by detailing methods to analyze chemical components, distinguishing between organic and inorganic substances, and highlighting the unique properties of biomolecules.\n\nThe chapter categorizes biomolecules into micromolecules (like amino acids, sugars, fatty acids, nucleotides) and macromolecules (proteins, polysaccharides, nucleic acids), explaining their roles and classification. A key exception is lipids, which, despite being micromolecules, are found in the macromolecular fraction due to their arrangement in cellular structures.\n\nThe discussion progresses to proteins, emphasizing their structure from primary (amino acid sequence) to quaternary (subunit assembly), and the diverse functions they perform. Polysaccharides are presented as storage molecules (starch, glycogen) and structural components (cellulose, chitin). Nucleic acids (DNA and RNA) are described in terms of their nucleotide building blocks and the significance of nitrogenous bases and sugars.\n\nEnzymes, primarily proteins, are explored in detail, including their catalytic action, factors affecting their activity (temperature, pH, substrate concentration), enzyme inhibition, and classification based on reaction type. The chapter introduces the concept of activation energy and how enzymes lower it, as well as co-factors, apoenzymes, prosthetic groups, and co-enzymes.\n\nUltimately, the chapter reveals a chemical unity underlying the diversity of life, highlighting the importance of these molecules in biological processes. This knowledge is crucial for understanding biological functions at the molecular level and has practical applications in fields like medicine, biotechnology, and nutrition.",
+    "sections": [
+      {
+        "id": "ncert:biology:11:9:9.1",
+        "number": "9.1",
+        "title": "How to Analyse Chemical Composition?",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:9:9.1:1",
+            "order": 1,
+            "title": "Comparison of Elemental Composition",
+            "content_text": "Living organisms exhibit a wide diversity in the biosphere. To understand their chemical makeup, elemental analysis can be performed on plant tissue, animal tissue, or microbial paste. This analysis yields a list of elements such as carbon, hydrogen, oxygen, and others, along with their respective content per unit mass. Interestingly, a similar analysis of non-living matter, such as a piece of the earth's crust, produces a similar list of elements. However, a closer examination reveals a significant difference: the relative abundance of carbon and hydrogen with respect to other elements is higher in any living organism than in the earth's crust. This comparison is detailed in Table 9.1.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 9.1",
+                "caption": "A Comparison of Elements Present in Non-living and Living Matter",
+                "headers": [
+                  "Element",
+                  "% Weight of Earth's crust",
+                  "% Weight of Human body"
+                ],
+                "rows": [
+                  [
+                    "Hydrogen (H)",
+                    "0.14",
+                    "9.5"
+                  ],
+                  [
+                    "Carbon (C)",
+                    "0.03",
+                    "18.5"
+                  ],
+                  [
+                    "Oxygen (O)",
+                    "46.6",
+                    "65.0"
+                  ],
+                  [
+                    "Nitrogen (N)",
+                    "very little",
+                    "3.3"
+                  ],
+                  [
+                    "Sulphur (S)",
+                    "0.03",
+                    "0.3"
+                  ],
+                  [
+                    "Sodium (Na)",
+                    "2.8",
+                    "0.2"
+                  ],
+                  [
+                    "Calcium (Ca)",
+                    "3.6",
+                    "1.5"
+                  ],
+                  [
+                    "Magnesium (Mg)",
+                    "2.1",
+                    "0.1"
+                  ],
+                  [
+                    "Silicon (Si)",
+                    "27.7",
+                    "negligible"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:biology:11:9:9.1:2",
+            "order": 2,
+            "title": "Chemical Analysis of Organic Compounds",
+            "content_text": "To identify the organic compounds in living organisms, a tissue sample (like a vegetable or liver) is ground in trichloroacetic acid ($Cl_3CCOOH$) using a mortar and pestle. This process creates a thick slurry. When this slurry is strained through cheesecloth or cotton, it is separated into two fractions: the filtrate (technically called the acid-soluble pool) and the retentate (the acid-insoluble fraction). Scientists have identified thousands of organic compounds in the acid-soluble pool. Analytical techniques allow for the isolation and purification of these compounds, leading to the determination of their molecular formulas and probable structures. All carbon compounds obtained from living tissues are collectively called 'biomolecules'.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:9:9.1:3",
+            "order": 3,
+            "title": "Analysis of Inorganic Constituents (The Ash Method)",
+            "content_text": "Living organisms also contain inorganic elements and compounds. To analyze these, a destructive experiment is performed. A small amount of living tissue is weighed (wet weight) and then dried. All the water evaporates, leaving the dry weight. When the tissue is fully burnt, all carbon compounds are oxidized to gaseous forms (such as $CO_2$ and water vapour) and removed. The remaining material is called 'ash'. This ash contains inorganic elements like calcium and magnesium. Additionally, inorganic compounds such as sulphate and phosphate are found in the acid-soluble fraction. Therefore, elemental analysis provides the elemental composition of living tissues (H, O, Cl, C, etc.), while compound analysis identifies the organic and inorganic constituents (Table 9.2).",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 9.2",
+                "caption": "A List of Representative Inorganic Constituents of Living Tissues",
+                "headers": [
+                  "Component",
+                  "Formula"
+                ],
+                "rows": [
+                  [
+                    "Sodium",
+                    "$Na^+$"
+                  ],
+                  [
+                    "Potassium",
+                    "$K^+$"
+                  ],
+                  [
+                    "Calcium",
+                    "$Ca^{++}$"
+                  ],
+                  [
+                    "Magnesium",
+                    "$Mg^{++}$"
+                  ],
+                  [
+                    "Water",
+                    "$H_2O$"
+                  ],
+                  [
+                    "Compounds",
+                    "$NaCl, CaCO_3, PO_4^{3-}, SO_4^{2-}$"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:biology:11:9:9.1:4",
+            "order": 4,
+            "title": "Structure and Classification of Amino Acids",
+            "content_text": "Amino acids are organic compounds containing an amino group ($-NH_2$) and an acidic carboxyl group ($-COOH$) as substituents on the same carbon atom, known as the $\\alpha$-carbon. Because of this, they are called $\\alpha$-amino acids. They are essentially substituted methanes. The four valency positions of the $\\alpha$-carbon are occupied by four substituent groups: hydrogen, a carboxyl group, an amino group, and a variable group designated as the R group. Based on the nature of the R group, there are many amino acids, but only twenty types occur in proteins. For example, if the R group is hydrogen, the amino acid is glycine; if it is a methyl group, it is alanine; and if it is a hydroxy methyl group, it is serine.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:9:9.1:5",
+            "order": 5,
+            "title": "Ionizable Properties and Zwitterionic Form of Amino Acids",
+            "content_text": "The physical and chemical properties of amino acids are determined by their amino, carboxyl, and R functional groups. Amino acids are classified based on the number of amino and carboxyl groups into acidic (e.g., glutamic acid), basic (e.g., lysine), and neutral (e.g., valine) types. Some are aromatic, such as tyrosine, phenylalanine, and tryptophan. A unique property of amino acids is the ionizable nature of the $-NH_2$ and $-COOH$ groups. Consequently, the structure of an amino acid changes in solutions of different pH. The zwitterionic form occurs when the molecule carries both a positive and a negative charge simultaneously, as shown in the equilibrium between forms (A), (B), and (C).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Zwitterionic Form",
+                "description": "A diagram showing the pH-dependent structural changes of an amino acid. Form (A) shows the protonated amino group ($H_3N^+ - CH(R) - COOH$), Form (B) is the zwitterionic form ($H_3N^+ - CH(R) - COO^-$) with both positive and negative charges, and Form (C) is the deprotonated form ($H_2N - CH(R) - COO^-$).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:9:9.1:6",
+            "order": 6,
+            "title": "Lipids: Fatty Acids and Glycerol",
+            "content_text": "Lipids are generally water-insoluble molecules. Simple lipids include fatty acids, which consist of a carboxyl group attached to an R group. The R group can be a methyl ($-CH_3$), ethyl ($-C_2H_5$), or a chain of 1 to 19 carbons ($-CH_2$ groups). For instance, palmitic acid has 16 carbons (including the carboxyl carbon), and arachidonic acid has 20 carbons. Fatty acids are categorized as saturated (lacking double bonds) or unsaturated (containing one or more $C=C$ double bonds). Another simple lipid is glycerol, which is chemically trihydroxy propane.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:9:9.1:7",
+            "order": 7,
+            "title": "Complex Lipids and Phospholipids",
+            "content_text": "Many lipids contain both glycerol and fatty acids, where the fatty acids are esterified with glycerol. These can exist as monoglycerides, diglycerides, and triglycerides. They are further classified as fats or oils based on their melting points; oils (like gingelly oil) have lower melting points and remain liquid in winter. Some lipids, called phospholipids, contain phosphorus and a phosphorylated organic compound. These are vital components of cell membranes, such as lecithin. Neural tissues also contain lipids with more complex structures.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:9:9.1:8",
+            "order": 8,
+            "title": "Nitrogen Bases, Nucleosides, and Nucleotides",
+            "content_text": "Living organisms contain carbon compounds with heterocyclic rings, known as nitrogen bases: adenine, guanine, cytosine, uracil, and thymine. When a nitrogen base is attached to a sugar, the molecule is called a nucleoside (e.g., adenosine, guanosine, thymidine, uridine, and cytidine). If a phosphate group is also esterified to the sugar, it becomes a nucleotide (e.g., adenylic acid, guanylic acid, thymidylic acid, uridylic acid, and cytidylic acid). Nucleic acids, such as DNA and RNA, consist of chains of nucleotides and serve as the genetic material of the cell. Figure 9.1 provides a diagrammatic representation of various small molecular weight organic compounds found in living tissues. These compounds include: 1. Sugars (Carbohydrates): Glucose ($C_6H_{12}O_6$) and Ribose ($C_5H_{10}O_5$). 2. Amino acids: Glycine (where the R-group is $H$), Alanine (where the R-group is $CH_3$), and Serine (where the R-group is $CH_2-OH$). 3. Fats and oils (lipids): Palmitic acid ($CH_3-(CH_2)_{14}-COOH$), Glycerol, Triglyceride (where $R_1, R_2$, and $R_3$ are fatty acids), Phospholipid (Lecithin), and Cholesterol. 4. Nitrogen bases: Adenine (a purine) and Uracil (a pyrimidine). 5. Nucleosides: Adenosine and Uridine. 6. Nucleotide: Adenylic acid. These structures represent the diverse chemical categories found within the acid-soluble pool of living tissues.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 9.1",
+                "description": "Diagrammatic representation of small molecular weight organic compounds in living tissues, showing chemical structures for sugars (Glucose, Ribose), amino acids (Glycine, Alanine, Serine), lipids (Palmitic acid, Glycerol, Triglyceride, Phospholipid/Lecithin, Cholesterol), nitrogen bases (Adenine, Uracil), nucleosides (Adenosine, Uridine), and a nucleotide (Adenylic acid).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:9:9.2",
+        "number": "9.2",
+        "title": "Primary and Secondary Metabolites",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:9:9.2:1",
+            "order": 1,
+            "title": "Primary and Secondary Metabolites",
+            "content_text": "The isolation and structural determination of thousands of compounds from living organisms is a key aspect of biological chemistry. Biomolecules found in living organisms can be called 'metabolites'. In animal tissues, one notices the presence of primary metabolites, such as amino acids and sugars, which have identifiable functions and play known roles in normal physiological processes. In contrast, plant, fungal, and microbial cells contain thousands of other compounds called secondary metabolites. These include alkaloids, flavonoids, rubber, essential oils, antibiotics, coloured pigments, scents, gums, and spices. While primary metabolites have clear physiological roles, the functions of many secondary metabolites in their host organisms are not yet fully understood. However, many secondary metabolites are useful for human welfare (e.g., rubber, drugs, spices, scents, and pigments) and some possess significant ecological importance. Table 9.3 lists various categories of secondary metabolites and examples.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 9.3",
+                "caption": "Some Secondary Metabolites",
+                "headers": [
+                  "Category",
+                  "Secondary Metabolites"
+                ],
+                "rows": [
+                  [
+                    "Pigments",
+                    "Carotenoids, Anthocyanins, etc."
+                  ],
+                  [
+                    "Alkaloids",
+                    "Morphine, Codeine, etc."
+                  ],
+                  [
+                    "Terpenoides",
+                    "Monoterpenes, Diterpenes etc."
+                  ],
+                  [
+                    "Essential oils",
+                    "Lemon grass oil, etc."
+                  ],
+                  [
+                    "Toxins",
+                    "Abrin, Ricin"
+                  ],
+                  [
+                    "Lectins",
+                    "Concanavalin A"
+                  ],
+                  [
+                    "Drugs",
+                    "Vinblastin, curcumin, etc."
+                  ],
+                  [
+                    "Polymeric substances",
+                    "Rubber, gums, cellulose"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:9:9.3",
+        "number": "9.3",
+        "title": "Biomacromolecules",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:9:9.3:1",
+            "order": 1,
+            "title": "Classification of Biomolecules by Molecular Weight",
+            "content_text": "Chemical compounds in living organisms are categorized into two types based on their molecular weight. Compounds in the acid-soluble pool have molecular weights ranging from 18 to approximately 800 daltons (Da) and are called micromolecules or simply biomolecules. The acid-insoluble fraction contains four types of organic compounds: proteins, nucleic acids, polysaccharides, and lipids. Except for lipids, these classes have molecular weights of ten thousand daltons and above and are termed macromolecules or biomacromolecules.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:9:9.3:2",
+            "order": 2,
+            "title": "The Lipid Exception in the Acid-Insoluble Fraction",
+            "content_text": "Lipids are found in the acid-insoluble fraction despite having molecular weights not exceeding 800 Da. This occurs because lipids are small molecular weight compounds arranged into structures like cell membranes and other organelle membranes. When tissue is ground, these membranes break into pieces and form water-insoluble vesicles. These vesicles get separated with the acid-insoluble pool during filtration. Thus, while lipids are found in the macromolecular fraction, they are not strictly macromolecules.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:9:9.3:3",
+            "order": 3,
+            "title": "Cellular Composition and Abundance",
+            "content_text": "The acid-soluble pool roughly represents cytoplasmic composition, while the macromolecules from the cytoplasm and organelles form the acid-insoluble fraction. Together, they represent the entire chemical composition of living tissues. Analysis of the average composition of cells (Table 9.4) shows that water is the most abundant chemical (70-90% of total cellular mass), followed by proteins (10-15%), nucleic acids (5-7%), carbohydrates (3%), lipids (2%), and ions (1%).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 9.4",
+                "caption": "Average Composition of Cells",
+                "headers": [
+                  "Component",
+                  "% of the total cellular mass"
+                ],
+                "rows": [
+                  [
+                    "Water",
+                    "70-90"
+                  ],
+                  [
+                    "Proteins",
+                    "10-15"
+                  ],
+                  [
+                    "Carbohydrates",
+                    "3"
+                  ],
+                  [
+                    "Lipids",
+                    "2"
+                  ],
+                  [
+                    "Nucleic acids",
+                    "5-7"
+                  ],
+                  [
+                    "Ions",
+                    "1"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:9:9.4",
+        "number": "9.4",
+        "title": "Proteins",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:9:9.4:1",
+            "order": 1,
+            "title": "Protein Structure and Heterogeneity",
+            "content_text": "Proteins are polypeptides, which are linear chains of amino acids linked by peptide bonds. Each protein is a polymer of amino acids. Since there are 20 types of amino acids (e.g., alanine, cysteine, proline, tryptophan, lysine, etc.), a protein is a heteropolymer, not a homopolymer. A homopolymer consists of only one type of monomer repeating 'n' times.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:9:9.4:2",
+            "order": 2,
+            "title": "Essential Amino Acids and Protein Functions",
+            "content_text": "Amino acids are classified as essential or non-essential. Essential amino acids cannot be made by the body and must be obtained through diet; thus, dietary proteins are their source. Proteins perform numerous vital functions: transporting nutrients across cell membranes (e.g., GLUT-4 enables glucose transport), fighting infectious agents (antibodies), and acting as hormones (insulin), enzymes (trypsin), or sensory receptors (Table 9.5). Collagen is the most abundant protein in the animal world, while Ribulose bisphosphate Carboxylase-Oxygenase (RuBisCO) is the most abundant protein in the entire biosphere. These proteins perform critical functions as listed in Table 9.5.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 9.5",
+                "caption": "Some Proteins and their Functions",
+                "headers": [
+                  "Protein",
+                  "Functions"
+                ],
+                "rows": [
+                  [
+                    "Collagen",
+                    "Intercellular ground substance"
+                  ],
+                  [
+                    "Trypsin",
+                    "Enzyme"
+                  ],
+                  [
+                    "Insulin",
+                    "Hormone"
+                  ],
+                  [
+                    "Antibody",
+                    "Fights infectious agents"
+                  ],
+                  [
+                    "Receptor",
+                    "Sensory reception (smell, taste, hormone, etc.)"
+                  ],
+                  [
+                    "GLUT-4",
+                    "Enables glucose transport into cells"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:9:9.5",
+        "number": "9.5",
+        "title": "Polysaccharides",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:9:9.5:1",
+            "order": 1,
+            "title": "Polysaccharides as Macromolecules",
+            "content_text": "Polysaccharides are long chains of sugars found in the acid-insoluble pellet. They are essentially threads containing different monosaccharides as building blocks. If a polysaccharide consists of only one type of monosaccharide, it is called a homopolymer. For example, cellulose is a homopolymer consisting only of glucose units.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:9:9.5:2",
+            "order": 2,
+            "title": "Types and Examples of Polysaccharides",
+            "content_text": "Various polysaccharides serve different roles in nature. Starch is a variant of cellulose that acts as a storehouse of energy in plant tissues. Animals have a similar storage variant called glycogen. Inulin is a polymer of fructose.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:9:9.5:3",
+            "order": 3,
+            "title": "Chain Polarity and Starch-Iodine Test",
+            "content_text": "In a polysaccharide chain like glycogen, the right end is the reducing end and the left end is the non-reducing end. Starch forms helical secondary structures that can hold $I_2$ (iodine) molecules in the helical portion, resulting in a blue color. Cellulose does not contain these complex helices and therefore cannot hold $I_2$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 9.2",
+                "description": "Diagrammatic representation of a portion of glycogen showing its branched structure and individual glucose units.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:9:9.5:4",
+            "order": 4,
+            "title": "Complex Polysaccharides and Chitin",
+            "content_text": "Plant cell walls are composed of cellulose, and products like paper (from plant pulp) and cotton fiber are also cellulosic. Nature also contains complex polysaccharides with amino-sugars and chemically modified sugars, such as glucosamine and N-acetyl galactosamine. Chitin is a complex polysaccharide found in the exoskeletons of arthropods and is mostly a homopolymer.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:9:9.6",
+        "number": "9.6",
+        "title": "Nucleic Acids",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:9:9.6:1",
+            "order": 1,
+            "title": "Polynucleotides and Nucleotide Structure",
+            "content_text": "Nucleic acids are polynucleotides found in the acid-insoluble fraction of living tissues. Along with polysaccharides and polypeptides, they form the true macromolecular fraction. The building block of a nucleic acid is a nucleotide, which consists of three chemically distinct components: a heterocyclic compound, a monosaccharide, and a phosphoric acid or phosphate.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:9:9.6:2",
+            "order": 2,
+            "title": "Nitrogenous Bases and Sugars",
+            "content_text": "The heterocyclic compounds in nucleic acids are nitrogenous bases: adenine, guanine, uracil, cytosine, and thymine. Adenine and guanine are substituted purines, while the others are substituted pyrimidines. The sugar is either ribose (a pentose) or $2'$ deoxyribose. Nucleic acids containing deoxyribose are called deoxyribonucleic acid (DNA), and those containing ribose are called ribonucleic acid (RNA).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:9:9.7",
+        "number": "9.7",
+        "title": "Structure of Proteins",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:9:9.7:1",
+            "order": 1,
+            "title": "Levels of Protein Structure",
+            "content_text": "Protein structure is described at four levels. In inorganic chemistry, structure refers to molecular formulae (e.g., $\\text{NaCl}$, $\\text{MgCl}_2$). Organic chemists use two-dimensional views (e.g., benzene, naphthalene). Physicists use three-dimensional views. Biologists, however, describe protein structure at four distinct levels of complexity.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:9:9.7:2",
+            "order": 2,
+            "title": "Primary Structure",
+            "content_text": "The primary structure of a protein is the sequence of amino acids, providing positional information (which amino acid is first, second, etc.). A protein is imagined as a line where the left end is the first amino acid (N-terminal amino acid) and the right end is the last amino acid (C-terminal amino acid).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:9:9.7:3",
+            "order": 3,
+            "title": "Secondary Structure",
+            "content_text": "The secondary structure involves the folding of the protein thread. It can form a helix (similar to a revolving staircase); in proteins, only right-handed helices are observed. Other regions may fold into different forms, such as the beta-pleated sheet.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:9:9.7:4",
+            "order": 4,
+            "title": "Tertiary Structure",
+            "content_text": "The tertiary structure is formed when the long protein chain folds upon itself like a hollow woolen ball. This gives a 3-dimensional view of the protein and is absolutely necessary for many biological activities. It is stabilized by bonds such as hydrogen bonds and disulfide bonds.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:9:9.7:5",
+            "order": 5,
+            "title": "Quaternary Structure and Haemoglobin",
+            "content_text": "The quaternary structure is the assembly of more than one polypeptide or subunit. These subunits are arranged with respect to each other (e.g., linear strings, spheres, or cubes). For example, adult human haemoglobin (Hb) consists of 4 subunits: two identical $\\alpha$ type subunits and two identical $\\beta$ type subunits ($2\\alpha$ and $2\\beta$).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 9.3",
+                "description": "Illustration of the four levels of protein structure: (a) Primary structure showing a linear polypeptide chain; (b) Secondary structure showing Alpha-helix and Beta-pleated sheet; (c) Tertiary structure showing a 3D folded polypeptide with hydrogen and disulfide bonds; (d) Quaternary structure showing the assembly of multiple subunits.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:9:9.8",
+        "number": "9.8",
+        "title": "Enzymes",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:9:9.8:1",
+            "order": 1,
+            "title": "Nature of Enzymes",
+            "content_text": "Almost all enzymes are proteins. Some nucleic acids, called ribozymes, also behave like enzymes. Like proteins, enzymes have primary, secondary, and tertiary structures. The tertiary structure is particularly important for enzyme function. Enzymes possess specific pockets known as 'active sites' where substrates bind. These sites allow enzymes to catalyze reactions at extremely high speeds. A key distinction between organic enzymes and inorganic catalysts is their thermal sensitivity; while inorganic catalysts function well at high temperatures and pressures, most enzymes degrade above $40^\\circ\\text{C}$. However, enzymes from thermophilic organisms, like those in hot springs, remain stable and functional at temperatures reaching $80\\text{--}90^\\circ\\text{C}$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:9:9.8.1",
+        "number": "9.8.1",
+        "title": "Chemical Reactions",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:9:9.8.1:1",
+            "order": 1,
+            "title": "Types of Chemical and Physical Changes",
+            "content_text": "Chemical compounds undergo physical or chemical changes. Physical changes involve a change in state or shape without bond breakage, such as ice melting. Chemical reactions involve the breaking of old bonds and the formation of new ones, such as the reaction between barium hydroxide and sulfuric acid: $Ba(OH)_2 + H_2SO_4 \\rightarrow BaSO_4 + 2H_2O$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:9:9.8.1:2",
+            "order": 2,
+            "title": "Rate of Reaction",
+            "content_text": "The rate of a reaction is the amount of product produced per unit time, represented as $\\text{rate} = \\frac{\\delta P}{\\delta t}$. Rates are affected by temperature, typically doubling or halving with every $10^\\circ\\text{C}$ change. Enzyme-catalyzed reactions occur at much higher velocities than uncatalyzed ones.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:9:9.8.1:3",
+            "order": 3,
+            "title": "Catalytic Power of Enzymes",
+            "content_text": "Enzymes are incredibly powerful catalysts. For example, the reaction between carbon dioxide and water to form carbonic acid ($CO_2 + H_2O \\xrightarrow{\\text{Carbonic anhydrase}} H_2CO_3$) is extremely slow without an enzyme, producing only about 200 molecules per hour. However, in the presence of the enzyme carbonic anhydrase, the reaction rate increases to about 600,000 molecules per second, which is an acceleration of approximately 10 million times.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:9:9.8.1:4",
+            "order": 4,
+            "title": "Metabolic Pathways",
+            "content_text": "A metabolic pathway is a series of linked chemical reactions where each step is catalyzed by specific enzymes. An example is glycolysis, where glucose is converted into pyruvic acid through a ten-step process ($C_6H_{12}O_6 + O_2 \\rightarrow 2C_3H_4O_3 + 2H_2O$). Depending on the cellular conditions and the enzymes involved, different end products can be formed from the same pathway, such as lactic acid in anaerobic muscle cells or ethanol during yeast fermentation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:9:9.8.2",
+        "number": "9.8.2",
+        "title": "How do Enzymes bring about such High Rates of Chemical Conversions?",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:9:9.8.2:1",
+            "order": 1,
+            "title": "Formation of the Enzyme-Substrate Complex",
+            "content_text": "To understand enzyme efficiency, one must look at the 'active site'. The substrate (S) binds to the enzyme (E) at this site, forming a temporary enzyme-substrate (ES) complex. This is a necessary step where the substrate undergoes a transformation into a transition state before becoming the final product (P). The process is summarized as $S \\rightarrow P$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:9:9.8.2:2",
+            "order": 2,
+            "title": "Activation Energy and Energy Barriers",
+            "content_text": "The transformation of a substrate into a product involves passing through an unstable, high-energy transition state. The energy difference between the substrate's stable state and this transition state is known as the activation energy. Enzymes function by lowering this energy barrier, making it easier for the reaction to proceed. If the final product (P) has lower potential energy than the substrate (S), the reaction is exothermic; otherwise, it is endothermic. Enzymes facilitate both types of reactions by reducing the required activation energy.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 9.4",
+                "description": "A graph showing the relationship between potential energy and the progress of a chemical reaction. It illustrates two pathways: one with a high activation energy barrier (without enzyme) and another with a significantly lower activation energy barrier (with enzyme). The graph also indicates the energy levels of the substrate (S) and the product (P), showing the transition state at the peak of the curves.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:9:9.8.3",
+        "number": "9.8.3",
+        "title": "Nature of Enzyme Action",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:9:9.8.3:1",
+            "order": 1,
+            "title": "The Catalytic Cycle of Enzyme Action",
+            "content_text": "The catalytic action of an enzyme follows a specific cycle: (1) The substrate binds to the enzyme's active site. (2) This binding induces a conformational change in the enzyme, causing it to wrap more tightly around the substrate. (3) The active site then facilitates the breaking of old bonds and the formation of new ones, resulting in an enzyme-product (EP) complex. This cycle is summarized as $E + S \\rightleftharpoons ES \\rightarrow EP \\rightarrow E + P$. The final step of the catalytic cycle involves the enzyme releasing the products of the reaction. Once the products are released, the free enzyme is restored to its original state and is ready to bind to another molecule of the substrate. This allows the enzyme to run through the catalytic cycle once again, facilitating the conversion of more substrate into product. The overall cycle can be summarized by the equation: $E + S \\rightleftharpoons ES \\rightarrow EP \\rightarrow E + P$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:9:9.8.4",
+        "number": "9.8.4",
+        "title": "Factors Affecting Enzyme Activity",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:9:9.8.4:1",
+            "order": 1,
+            "title": "General Factors Influencing Enzyme Activity",
+            "content_text": "The activity of an enzyme is highly sensitive to its environment. Any change in conditions that can alter the tertiary structure of the protein will affect its catalytic efficiency. The primary factors that regulate enzyme activity include temperature, pH, changes in substrate concentration, and the binding of specific chemicals that can either enhance or inhibit its function.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:9:9.8.4:2",
+            "order": 2,
+            "title": "Effect of Temperature and pH",
+            "content_text": "Enzymes generally function within a narrow range of temperature and pH. Each enzyme exhibits its highest activity at a specific 'optimum temperature' and 'optimum pH'. Activity declines significantly both below and above these optimum values. Low temperatures preserve the enzyme in a temporarily inactive state, whereas high temperatures destroy enzymatic activity because the proteins are denatured by heat, losing their functional three-dimensional shape.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 9.5 (a) and (b)",
+                "description": "Graphs showing the effect of pH and temperature on enzyme activity. Both (a) pH and (b) Temperature show a bell-shaped curve where activity is maximal at an optimum point and declines on either side.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:9:9.8.4:3",
+            "order": 3,
+            "title": "Effect of Substrate Concentration",
+            "content_text": "As the concentration of substrate $[S]$ increases, the velocity of the enzymatic reaction rises initially. However, the reaction eventually reaches a maximum velocity ($V_{max}$), which is not exceeded by any further increase in substrate concentration. This occurs because the number of enzyme molecules is limited. Once all enzyme molecules are saturated with substrate (i.e., all active sites are occupied), no free enzyme molecules are available to bind with additional substrate. The substrate concentration at which the reaction velocity is half of $V_{max}$ is known as the Michaelis constant ($K_m$).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 9.5 (c)",
+                "description": "A graph of velocity of reaction (V) versus substrate concentration [S]. The curve is hyperbolic, approaching a maximum velocity ($V_{max}$). The point $V_{max}/2$ on the y-axis corresponds to the Michaelis constant ($K_m$) on the x-axis.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:9:9.8.4:4",
+            "order": 4,
+            "title": "Enzyme Inhibition and Competitive Inhibitors",
+            "content_text": "Enzyme activity can be shut off by the binding of specific chemicals, a process known as inhibition. The chemical that performs this is called an inhibitor. In competitive inhibition, the inhibitor closely resembles the substrate's molecular structure and competes for the enzyme's active site. Because the inhibitor occupies the site, the actual substrate cannot bind, leading to a decline in enzyme action. A notable example is the inhibition of succinic dehydrogenase by malonate, which resembles the substrate succinate. Competitive inhibitors are frequently used to control bacterial pathogens by blocking essential metabolic enzymes.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:9:9.8.5",
+        "number": "9.8.5",
+        "title": "Classification and Nomenclature of Enzymes",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:9:9.8.5:1",
+            "order": 1,
+            "title": "Overview of Enzyme Classification",
+            "content_text": "Thousands of enzymes have been discovered and studied. They are classified into six major classes based on the type of reactions they catalyse. Each class is further divided into 4-13 subclasses and named using a standardized four-digit number system.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:9:9.8.5:2",
+            "order": 2,
+            "title": "Oxidoreductases and Transferases",
+            "content_text": "1. Oxidoreductases/dehydrogenases: These enzymes catalyse oxidoreduction between two substrates $S$ and $S'$. The general reaction is: $S \\text{ reduced} + S' \\text{ oxidised} \\longrightarrow S \\text{ oxidised} + S' \\text{ reduced}$. 2. Transferases: These enzymes catalyse the transfer of a group $G$ (other than hydrogen) between a pair of substrates $S$ and $S'$. The general reaction is: $S - G + S' \\longrightarrow S + S' - G$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:9:9.8.5:3",
+            "order": 3,
+            "title": "Hydrolases and Lyases",
+            "content_text": "3. Hydrolases: These enzymes catalyse the hydrolysis of various bonds, including ester, ether, peptide, glycosidic, C-C, C-halide, or P-N bonds. 4. Lyases: These enzymes catalyse the removal of groups from substrates by mechanisms other than hydrolysis, typically leaving double bonds in the product. The reaction can be represented as: $\\begin{smallmatrix} X & Y \\\\ | & | \\\\ C & - & C \\end{smallmatrix} \\longrightarrow X - Y + C = C$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:9:9.8.5:4",
+            "order": 4,
+            "title": "Isomerases and Ligases",
+            "content_text": "5. Isomerases: This class includes all enzymes that catalyse the inter-conversion of optical, geometric, or positional isomers. 6. Ligases: These enzymes catalyse the linking together of two compounds, such as the joining of C-O, C-S, C-N, or P-O bonds.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:9:9.8.6",
+        "number": "9.8.6",
+        "title": "Co-factors",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:9:9.8.6:1",
+            "order": 1,
+            "title": "Apoenzymes and the Necessity of Co-factors",
+            "content_text": "While enzymes are made of polypeptide chains, many require non-protein constituents called co-factors to become catalytically active. In such cases, the protein portion of the enzyme is referred to as the apoenzyme. Co-factors are essential for the enzyme's function, and their removal results in the loss of catalytic activity. There are three types of co-factors: prosthetic groups, co-enzymes, and metal ions.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:9:9.8.6:2",
+            "order": 2,
+            "title": "Prosthetic Groups",
+            "content_text": "Prosthetic groups are organic compounds that are distinguished by being tightly and permanently bound to the apoenzyme. For example, in the enzymes peroxidase and catalase, which catalyse the breakdown of hydrogen peroxide into water and oxygen, 'haem' is the prosthetic group and forms an integral part of the enzyme's active site.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:9:9.8.6:3",
+            "order": 3,
+            "title": "Co-enzymes",
+            "content_text": "Co-enzymes are organic compounds whose association with the apoenzyme is transient, occurring only during the course of catalysis. They often serve as co-factors in multiple different enzyme-catalyzed reactions. Many co-enzymes are derived from vitamins; for instance, nicotinamide adenine dinucleotide (NAD) and NADP contain the vitamin niacin.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:9:9.8.6:4",
+            "order": 4,
+            "title": "Metal Ions and Catalytic Importance",
+            "content_text": "Certain enzymes require metal ions for activity. These ions form coordination bonds with side chains at the active site and simultaneously with the substrate. For example, zinc is a necessary co-factor for the proteolytic enzyme carboxypeptidase. The fact that catalytic activity is lost when the co-factor is removed demonstrates their crucial role in the enzyme's catalytic cycle.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:9:Summary",
+        "number": "Summary",
+        "title": "Summary of Biomolecules",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:9:Summary:1",
+            "order": 1,
+            "title": "Chemical Unity and Small Biomolecules",
+            "content_text": "Despite the diversity of life, the chemical composition and metabolic reactions of organisms are remarkably similar. Living systems have a higher relative abundance of carbon, hydrogen, and oxygen compared to non-living matter. Water is the most abundant chemical in living organisms. Small biomolecules (molecular weight <1000 Da) include 20 types of amino acids, various sugars (monosaccharides and disaccharides), fatty acids, glycerol, and 5 types of nucleotides (along with nucleosides and nitrogen bases). Fats and oils are glycerides, and phospholipids are specialized lipids containing a phosphorylated nitrogenous compound.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:9:Summary:2",
+            "order": 2,
+            "title": "Biomacromolecules and Structural Hierarchy",
+            "content_text": "Living systems contain three main types of macromolecules: proteins, nucleic acids, and polysaccharides. Lipids are also found in the macromolecular fraction due to their association with membranes. Biomacromolecules are polymers made of distinct building blocks: proteins are heteropolymers of amino acids, and nucleic acids (DNA and RNA) are polymers of nucleotides. These biomacromolecules have a hierarchy of structures – [SKIPPED — this content needs manual extraction from pages 16-16] [CONTINUES]\n\n...primary, secondary, tertiary and quaternary. Nucleic acids serve as genetic material. Polysaccharides are components of cell wall in plants, fungi and also of the exoskeleton of arthropods. They also are storage forms of energy (e.g., starch and glycogen). Proteins serve a variety of cellular functions. Many of them are enzymes, some are antibodies, some are receptors, some are hormones and some others are structural proteins. Collagen is the most abundant protein in animal world and Ribulose bisphosphate Carboxylase-Oxygenase (RuBisCO) is the most abundant protein in the whole of the biosphere.\n\nEnzymes are proteins which catalyse biochemical reactions in the cells. Ribozymes are nucleic acids with catalytic power. Proteinaceous enzymes exhibit substrate specificity, require optimum temperature and pH for maximal activity. They are denatured at high temperatures. Enzymes lower activation energy of reactions and enhance greatly the rate of the reactions. Nucleic acids carry hereditary information and are passed on from parental generation to progeny.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:biology:11:9:ex:1",
+          "number": 1,
+          "problem": "What are macromolecules? Give examples.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:9:ex:2",
+          "number": 2,
+          "problem": "What is meant by tertiary structure of proteins?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:9:ex:3",
+          "number": 3,
+          "problem": "Find and write down structures of 10 interesting small molecular weight biomolecules. Find if there is any industry which manufactures the compounds by isolation. Find out who are the buyers.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:9:ex:4",
+          "number": 4,
+          "problem": "Find out and make a list of proteins used as therapeutic agents. Find other applications of proteins (e.g., Cosmetics etc.)",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:9:ex:5",
+          "number": 5,
+          "problem": "Explain the composition of triglyceride.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:9:ex:6",
+          "number": 6,
+          "problem": "Can you attempt building models of biomolecules using commercially available atomic models (Ball and Stick models)?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:9:ex:7",
+          "number": 7,
+          "problem": "Draw the structure of the amino acid, alanine.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:9:ex:8",
+          "number": 8,
+          "problem": "What are gums made of? Is Fevicol different?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:9:ex:9",
+          "number": 9,
+          "problem": "Find out a qualitative test for proteins, fats and oils, amino acids and test any fruit juice, saliva, sweat and urine for them.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:9:ex:10",
+          "number": 10,
+          "problem": "Find out how much cellulose is made by all the plants in the biosphere and compare it with how much of paper is manufactured by man and hence what is the consumption of plant material by man annually. What a loss of vegetation!",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:9:ex:11",
+          "number": 11,
+          "problem": "Describe the important properties of enzymes.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        }
+      ]
+    }
+  }
+}

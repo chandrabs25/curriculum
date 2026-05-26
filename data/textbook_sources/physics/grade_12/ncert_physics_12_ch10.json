@@ -1,0 +1,773 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_physics_12_ch10.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:physics:12:10",
+  "curriculum": "ncert",
+  "subject": "physics",
+  "grade": 12,
+  "textbook_name": "Physics Part II",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:physics:12:10",
+    "number": 10,
+    "title": "Wave Optics",
+    "summary": "This chapter delves into Wave Optics, exploring the wave nature of light and phenomena like interference, diffraction, and polarization. It begins with the historical context, contrasting the corpuscular and wave models of light, highlighting Huygens' Principle as a cornerstone for understanding wave propagation. Huygens' Principle describes how each point on a wavefront acts as a source of secondary wavelets, allowing us to predict the wavefront's future position.\n\nThe chapter then uses Huygens' Principle to derive the laws of reflection and refraction, culminating in Snell's Law ($n_1 \\sin i = n_2 \\sin r$). It explains how refraction affects wavelength and introduces the concept of total internal reflection. Next, the chapter explores interference, emphasizing the importance of coherent sources and the principle of superposition. Young's double-slit experiment is presented as a key demonstration, leading to formulas for bright ($xd/D = n\\lambda$) and dark fringes ($xd/D = (n + \\frac{1}{2})\\lambda$). Diffraction is then introduced as the bending of waves around obstacles, explaining single-slit diffraction patterns. Finally, polarization is discussed, emphasizing the transverse nature of light waves and using Malus' Law to quantify intensity changes through polaroids.\n\nEach section builds upon the previous, starting with foundational principles of wave behavior and applying them to explain increasingly complex phenomena. Understanding these concepts is crucial for developing optical instruments and technologies.",
+    "sections": [
+      {
+        "id": "ncert:physics:12:10:10.1",
+        "number": "10.1",
+        "title": "Introduction",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:10:10.1:1",
+            "order": 1,
+            "title": "The Corpuscular Model of Light",
+            "content_text": "In 1637, Descartes proposed the corpuscular model of light and derived Snell’s law. This model explained the laws of reflection and refraction at an interface. A key prediction of the corpuscular model was that if a ray of light bends towards the normal during refraction, the speed of light would be greater in the second (denser) medium. This model was further developed by Isaac Newton in his book 'OPTICKS'. Due to Newton's immense popularity, the corpuscular model remained the dominant theory for a long time.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.1:2",
+            "order": 2,
+            "title": "Huygens' Wave Theory and Foucault's Experiment",
+            "content_text": "In 1678, Christiaan Huygens proposed the wave theory of light. Unlike the corpuscular model, the wave model predicted that if a light ray bends towards the normal upon refraction, the speed of light would be less in the second medium. This prediction directly contradicted the corpuscular model. In 1850, Foucault experimentally demonstrated that the speed of light in water is indeed less than the speed of light in air, confirming the wave model's prediction. Initially, the wave theory faced resistance because it was believed waves required a medium for propagation, and light's ability to travel through a vacuum was not understood.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.1:3",
+            "order": 3,
+            "title": "Interference and the Limit of Geometrical Optics",
+            "content_text": "In 1801, Thomas Young performed his famous interference experiment, firmly establishing light as a wave phenomenon. He measured the wavelength of visible light, finding it to be extremely small; for instance, the wavelength of yellow light is approximately $0.6 \\mu m$. Because these wavelengths are so small compared to the dimensions of typical optical instruments like mirrors and lenses, light can be assumed to travel in straight lines. This approximation is the basis of geometrical optics. Geometrical optics is defined as the branch of optics that neglects the finiteness of the wavelength, where a 'ray' is defined as the path of energy propagation in the limit of the wavelength tending to zero.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.1:4",
+            "order": 4,
+            "title": "Maxwell's Electromagnetic Theory",
+            "content_text": "Around the middle of the 19th century, James Clerk Maxwell developed a set of equations describing the laws of electricity and magnetism. From these, he derived the wave equation and predicted the existence of electromagnetic waves. Maxwell calculated the speed of electromagnetic waves in free space and found it to be very close to the measured speed of light. He concluded that light must be an electromagnetic wave. According to Maxwell, light waves are associated with time-varying and space-varying electric and magnetic fields, which regenerate each other and allow propagation even in a vacuum. Later, Heinrich Hertz (around 1890) produced radiowaves in the laboratory, and J.C. Bose and G. Marconi made practical applications of these waves.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:10:10.2",
+        "number": "10.2",
+        "title": "Huygens Principle",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:10:10.2:1",
+            "order": 1,
+            "title": "Definition of a Wavefront",
+            "content_text": "A wavefront is defined as a surface of constant phase. When a disturbance is created (e.g., dropping a stone in water), waves spread out. At any instant, all points on a circle centered at the source oscillate in phase because they are at the same distance from the source. This locus of points oscillating in phase is the wavefront. The speed with which the wavefront moves outwards from the source is the speed of the wave. The energy of the wave always travels in a direction perpendicular to the wavefront.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.2:2",
+            "order": 2,
+            "title": "Types of Wavefronts",
+            "content_text": "The shape of a wavefront depends on the source. For a point source emitting waves uniformly in all directions, the locus of points with the same amplitude and phase are spheres; this is known as a spherical wave. At a very large distance from the source, a small portion of this sphere can be considered a plane, which is known as a plane wave.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 10.1 (a)",
+                "description": "A diagram showing a point source at the center with concentric circles representing diverging spherical wavefronts. Arrows point radially outward, perpendicular to the wavefronts, indicating the direction of wave propagation.",
+                "image_url": null
+              },
+              {
+                "label": "Figure 10.1 (b)",
+                "description": "A diagram showing parallel vertical planes representing a plane wave. This is an approximation of a small portion of a spherical wave at a large distance from the source. Arrows point horizontally, perpendicular to the planes.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.2:3",
+            "order": 3,
+            "title": "Huygens' Geometrical Construction",
+            "content_text": "Huygens principle allows us to determine the shape of a wavefront at a later time if we know its shape at $t = 0$. According to the principle: 1. Each point of a wavefront acts as a source of a secondary disturbance. 2. The wavelets emanating from these points (called secondary wavelets) spread out in all directions with the speed of the wave ($v$). 3. By drawing a common tangent (envelope) to all these secondary spheres at a later time $\\tau$, we obtain the new position of the wavefront. For a spherical wavefront $F_1 F_2$ at $t=0$, the secondary wavelets have a radius $v\\tau$. The forward envelope $G_1 G_2$ represents the new wavefront. Note that the backwave (represented by $D_1 D_2$) does not exist in reality.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 10.2",
+                "description": "A geometrical construction of a wavefront. An initial arc $F_1 F_2$ (spherical wavefront at $t=0$) has several points on it acting as centers for small dashed circles (secondary wavelets) of radius $v\\tau$. A solid arc $G_1 G_2$ is drawn tangent to the front of these wavelets, representing the new wavefront at $t=\\tau$. A dashed arc $D_1 D_2$ is shown behind the source, labeled as the backwave which does not exist.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.2:4",
+            "order": 4,
+            "title": "Spherical Wavefront Construction",
+            "content_text": "To determine the shape of a wavefront at a later time $t = \\tau$, we draw spheres of radius $v\\tau$ from each point on the initial spherical wavefront, where $v$ represents the speed of the waves in the medium. By drawing a common tangent to all these secondary spheres, we obtain the new position of the wavefront. As shown in Fig. 10.2, the new wavefront $G_1G_2$ is again spherical with the point $O$ as the centre.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.2:5",
+            "order": 5,
+            "title": "The Backwave Shortcoming",
+            "content_text": "Huygens' model predicts a backwave, shown as $D_1D_2$ in Fig. 10.2, which is not observed in reality. Huygens addressed this by assuming that the amplitude of secondary wavelets is maximum in the forward direction and zero in the backward direction. While this adhoc assumption explained the absence of the backwave, it was not entirely satisfactory. The absence of the backwave is more rigorously justified by advanced wave theory.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.2:6",
+            "order": 6,
+            "title": "Huygens Principle for Plane Waves",
+            "content_text": "Huygens principle can also be applied to determine the shape of a plane wavefront propagating through a medium. As illustrated in Fig. 10.3, if $F_1F_2$ is the plane wavefront at $t = 0$, the new wavefront $G_1G_2$ at a later time $\\tau$ is also a plane. The lines $A_1A_2, B_1B_2$, etc., are normal to both $F_1F_2$ and $G_1G_2$ and represent the rays of the wave.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 10.3",
+                "description": "Huygens geometrical construction for a plane wave propagating to the right. $F_1 F_2$ is the plane wavefront at $t = 0$ and $G_1 G_2$ is the wavefront at a later time $\\tau$. The lines $A_1A_2, B_1B_2$ etc. are normal to both wavefronts and represent rays.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:10:10.3",
+        "number": "10.3",
+        "title": "Refraction and Reflection of Plane Waves using Huygens Principle",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:10:10.3:1",
+            "order": 1,
+            "title": "Refraction of a Plane Wave: Geometric Setup",
+            "content_text": "To derive the laws of refraction using Huygens principle, consider a plane wavefront $AB$ incident at an angle $i$ on a surface $PP'$ separating medium 1 (speed $v_1$) and medium 2 (speed $v_2$). Let $\\tau$ be the time taken by the wavefront to travel the distance $BC$, such that $BC = v_1 \\tau$. To find the refracted wavefront, we draw a sphere of radius $v_2 \\tau$ from point $A$ in the second medium. The tangent plane $CE$ drawn from point $C$ to this sphere represents the refracted wavefront, where $AE = v_2 \\tau$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 10.4",
+                "description": "A plane wave $AB$ is incident at an angle $i$ on the surface $PP'$ separating medium 1 and medium 2. The wave undergoes refraction, and $CE$ represents the refracted wavefront. The figure shows $v_2 < v_1$, causing the refracted wave to bend towards the normal.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.3:2",
+            "order": 2,
+            "title": "Derivation of the Ratio of Sines",
+            "content_text": "From the geometry of triangles $ABC$ and $AEC$ in Fig. 10.4, we can express the angles of incidence $i$ and refraction $r$. Specifically, $\\sin i = \\frac{BC}{AC} = \\frac{v_1 \\tau}{AC}$ and $\\sin r = \\frac{AE}{AC} = \\frac{v_2 \\tau}{AC}$. By dividing these two expressions, we obtain the fundamental relation: $\\frac{\\sin i}{\\sin r} = \\frac{v_1}{v_2}$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.3:3",
+            "order": 3,
+            "title": "Snell's Law and Refractive Index",
+            "content_text": "Defining the refractive indices of the two media as $n_1 = c/v_1$ and $n_2 = c/v_2$ (where $c$ is the speed of light in vacuum), the ratio of sines can be rewritten as $n_1 \\sin i = n_2 \\sin r$. This is Snell's law of refraction. This derivation shows that if $r < i$, then $v_2 < v_1$, meaning light travels slower in a denser medium. This result from wave theory was later confirmed experimentally, proving superior to the corpuscular model which predicted the opposite.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.3:4",
+            "order": 4,
+            "title": "Wavelength and Frequency in Refraction",
+            "content_text": "During refraction, the frequency $\\nu$ of the wave remains constant. If $\\lambda_1$ and $\\lambda_2$ denote the wavelengths in medium 1 and 2, then $\\frac{\\lambda_1}{\\lambda_2} = \\frac{BC}{AE} = \\frac{v_1}{v_2}$. This implies that $\\frac{v_1}{\\lambda_1} = \\frac{v_2}{\\lambda_2} = \\nu$. Consequently, when a wave enters a denser medium where $v_2 < v_1$, the wavelength decreases proportionally with the speed, while the frequency remains unchanged.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.3:5",
+            "order": 5,
+            "title": "Refraction at a Rarer Medium",
+            "content_text": "When a plane wave is incident on a rarer medium ($v_2 > v_1$), the refracted wavefront bends away from the normal ($r > i$). The construction is similar to the denser medium case, but the secondary wavelet radius $v_2 \\tau$ is larger than $BC$. Despite the change in direction, the relation $n_1 \\sin i = n_2 \\sin r$ still holds.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 10.5",
+                "description": "Refraction of a plane wave incident on a rarer medium for which $v_2 > v_1$. The plane wave bends away from the normal.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.3:6",
+            "order": 6,
+            "title": "Critical Angle and Total Internal Reflection",
+            "content_text": "For refraction into a rarer medium, there exists a critical angle $i_c$ defined by $\\sin i_c = \\frac{n_2}{n_1}$. At this angle, the angle of refraction $r = 90^\\circ$. For any angle of incidence $i > i_c$, no refracted wave can exist, and the wave undergoes total internal reflection. This phenomenon is a direct consequence of the wave nature of light.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.3:7",
+            "order": 7,
+            "title": "Reflection of a Plane Wave: Geometric Construction",
+            "content_text": "Consider a plane wave $AB$ incident at an angle $i$ on a reflecting surface $MN$. Let $v$ be the speed of the wave in the medium. In time $\\tau$, the wavefront advances from $B$ to $C$, covering a distance $BC = v\\tau$. To construct the reflected wavefront, we draw a sphere of radius $v\\tau$ from point $A$. The tangent plane $CE$ from point $C$ to this sphere represents the reflected wavefront, where $AE = BC = v\\tau$.\nChristiaan Huygens (1629 – 1695) was a prominent Dutch physicist, astronomer, and mathematician. He is the founder of the wave theory of light, which he detailed in his book 'Treatise on Light'. Beyond optics, he explained double refraction in calcite, analyzed circular and simple harmonic motion, designed improved clocks and telescopes, and discovered the rings of Saturn.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.3:8",
+            "order": 8,
+            "title": "Law of Reflection",
+            "content_text": "By considering the triangles EAC and BAC in the reflection of a plane wave AB by a reflecting surface MN, we find that they are congruent. Consequently, the angle of incidence $i$ and the angle of reflection $r$ are equal. This geometric congruence provides a derivation for the law of reflection using the wave theory of light.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 10.6",
+                "description": "Reflection of a plane wave AB by the reflecting surface MN. AB and CE represent incident and reflected wavefronts respectively, with angles $i$ and $r$ marked.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.3:9",
+            "order": 9,
+            "title": "Wavefronts through Optical Elements",
+            "content_text": "The behavior of wavefronts as they undergo reflection or refraction through prisms, lenses, and mirrors can be explained by the delay caused by the medium's thickness and the speed of light within it. In a thin prism, the lower portion of an incoming plane wavefront travels through a greater thickness of glass. Since light travels slower in glass, this portion is delayed more, resulting in a tilt in the emerging wavefront. For a thin convex lens, the central part of the incident plane wave traverses the thickest portion and is delayed the most, causing the emerging wavefront to become spherical and converge toward the focus F. Similarly, a plane wave incident on a concave mirror reflects as a spherical wave converging toward the focal point F.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 10.7",
+                "description": "Refraction and reflection of a plane wave by (a) a thin prism showing a tilted wavefront, (b) a convex lens showing a converging spherical wavefront of radius $f$, and (c) a concave mirror showing a converging spherical wavefront of radius $R/2$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.3:10",
+            "order": 10,
+            "title": "Principle of Equal Time",
+            "content_text": "A fundamental consequence of wave propagation through optical systems is that the total time taken from a point on the object to the corresponding point on the image is the same when measured along any ray. For instance, in a convex lens, although a ray passing through the center traverses a shorter physical path than a ray near the edge, it travels at a slower speed through the glass. These factors balance such that the total travel time remains identical for all rays forming the image.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.3:11",
+            "order": 11,
+            "title": "Example 10.1: Frequency, Energy, and Intensity",
+            "content_text": "This example addresses fundamental questions regarding the nature of light waves during interaction with matter. It explains that frequency remains constant during reflection and refraction because it is determined by the source oscillators. It also clarifies that energy is a function of amplitude rather than propagation speed, and defines intensity in the photon model as the number of photons crossing a unit area per unit time.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 10.1",
+                "problem": "(a) When monochromatic light is incident on a surface separating two media, the reflected and refracted light both have the same frequency as the incident frequency. Explain why? (b) When light travels from a rarer to a denser medium, the speed decreases. Does the reduction in speed imply a reduction in the energy carried by the light wave? (c) In the wave picture of light, intensity of light is determined by the square of the amplitude of the wave. What determines the intensity of light in the photon picture of light?",
+                "solution": "(a) Reflection and refraction arise through interaction of incident light with the atomic constituents of matter. Atoms may be viewed as oscillators, which take up the frequency of the external agency (light) causing forced oscillations. The frequency of light emitted by a charged oscillator equals its frequency of oscillation. Thus, the frequency of scattered light equals the frequency of incident light. (b) No. Energy carried by a wave depends on the amplitude of the wave, not on the speed of wave propagation. (c) For a given frequency, intensity of light in the photon picture is determined by the number of photons crossing an unit area per unit time."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:10:10.4",
+        "number": "10.4",
+        "title": "Coherent and Incoherent Addition of Waves",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:10:10.4:1",
+            "order": 1,
+            "title": "Superposition Principle",
+            "content_text": "The study of interference patterns is rooted in the superposition principle. According to this principle, at any particular point in a medium, the resultant displacement produced by multiple waves is the vector sum of the individual displacements produced by each wave.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.4:2",
+            "order": 2,
+            "title": "Coherent Sources",
+            "content_text": "Two sources are said to be coherent if the phase difference between the displacements they produce at a particular point does not change with time. This can be demonstrated using two needles $S_1$ and $S_2$ oscillating in phase in a water trough. The resulting interference pattern shows nodal lines (N) where there is no displacement and antinodal lines (A) where displacement is maximized.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 10.8",
+                "description": "(a) Two needles $S_1$ and $S_2$ oscillating in phase in water. (b) The resulting interference pattern showing crests (solid circles), troughs (dashed circles), nodal lines N, and antinodal lines A.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.4:3",
+            "order": 3,
+            "title": "Constructive Interference at the Perpendicular Bisector",
+            "content_text": "Consider a point P on the perpendicular bisector of two coherent sources $S_1$ and $S_2$. Since $S_1P = S_2P$, waves arrive at P in phase. If $y_1 = a \\cos \\omega t$ and $y_2 = a \\cos \\omega t$, the resultant displacement is $y = y_1 + y_2 = 2a \\cos \\omega t$. The intensity $I$ is proportional to the square of the amplitude, so $I = 4I_0$, where $I_0 \\propto a^2$. This is called constructive interference.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.4:4",
+            "order": 4,
+            "title": "Constructive Interference for Path Difference $n\\lambda$",
+            "content_text": "At a point Q where the path difference $S_2Q - S_1Q = 2\\lambda$, the waves from $S_1$ arrive exactly two cycles earlier than those from $S_2$. This corresponds to a phase difference of $4\\pi$. The displacements are $y_1 = a \\cos \\omega t$ and $y_2 = a \\cos(\\omega t - 4\\pi) = a \\cos \\omega t$. The waves are in phase, resulting in an intensity of $4I_0$ and constructive interference. This holds for any path difference that is an integral multiple of the wavelength, $n\\lambda$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 10.9(a)",
+                "description": "Constructive interference at a point Q for which the path difference $S_2Q - S_1Q = 2\\lambda$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.4:5",
+            "order": 5,
+            "title": "Destructive Interference for Path Difference $(n+1/2)\\lambda$",
+            "content_text": "At a point R where the path difference $S_2R - S_1R = -2.5\\lambda$, the waves from $S_1$ arrive two and a half cycles later than those from $S_2$. This corresponds to a phase difference of $5\\pi$. The displacements are $y_1 = a \\cos \\omega t$ and $y_2 = a \\cos(\\omega t + 5\\pi) = -a \\cos \\omega t$. The displacements are $180^\\circ$ out of phase, and the resultant displacement is zero, leading to destructive interference.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 10.9(b)",
+                "description": "Destructive interference at a point R for which the path difference $S_2R - S_1R = -2.5\\lambda$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.4:6",
+            "order": 6,
+            "title": "Locus of Points for Constant Path Difference",
+            "content_text": "The locus of points for which the path difference $S_1P - S_2P$ is constant (e.g., $0, \\pm\\lambda, \\pm 2\\lambda, \\pm 3\\lambda$) forms a set of hyperbolas. These curves represent the spatial distribution of maximum and minimum intensities in the interference pattern. g., $0, \\pm\\lambda, \\pm 2\\lambda, \\pm 3\\lambda$) forms a set of hyperbolas. These curves represent the spatial distribution of maximum and minimum intensities in the interference pattern. Where we have used the fact that a path difference of $2.5\\lambda$ corresponds to a phase difference of $5\\pi$. The two displacements are now out of phase and the two displacements will cancel out to give zero intensity. This is referred to as destructive interference. To summarise: If we have two coherent sources $S_1$ and $S_2$ vibrating in phase, then for an arbitrary point $P$ whenever the path difference, $S_1P \\sim S_2P = n\\lambda$ ($n = 0, 1, 2, 3,...$), we will have constructive interference and the resultant intensity will be $4I_0$; the sign $\\sim$ between $S_1P$ and $S_2P$ represents the difference between $S_1P$ and $S_2P$. On the other hand, if the point $P$ is such that the path difference, $S_1P \\sim S_2P = (n + \\frac{1}{2})\\lambda$ ($n = 0, 1, 2, 3, ...$), we will have destructive interference and the resultant intensity will be zero.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 10.10",
+                "description": "Locus of points for which $S_1P - S_2P$ is equal to zero, $\\pm\\lambda, \\pm 2\\lambda, \\pm 3\\lambda$, forming hyperbolic patterns.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.4:7",
+            "order": 7,
+            "title": "Derivation of Resultant Intensity",
+            "content_text": "For any other arbitrary point $G$, let the phase difference between the two displacements be $\\phi$. Thus, if the displacement produced by $S_1$ is given by $y_1 = a \\cos \\omega t$, then, the displacement produced by $S_2$ would be $y_2 = a \\cos (\\omega t + \\phi)$ and the resultant displacement will be given by $y = y_1 + y_2 = a [\\cos \\omega t + \\cos (\\omega t + \\phi)] = 2 a \\cos (\\phi/2) \\cos (\\omega t + \\phi/2)$. The amplitude of the resultant displacement is $2a \\cos (\\phi/2)$ and therefore the intensity at that point will be $I = 4 I_0 \\cos^2 (\\phi/2)$. If $\\phi = 0, \\pm 2\\pi, \\pm 4\\pi,...$ which corresponds to the condition for constructive interference, we get maximum intensity. If $\\phi = \\pm \\pi, \\pm 3\\pi, \\pm 5\\pi ...$ which corresponds to destructive interference, we get zero intensity.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.4:8",
+            "order": 8,
+            "title": "Coherence and Stability of Interference Patterns",
+            "content_text": "If the two sources are coherent (i.e., if the two needles are going up and down regularly) then the phase difference $\\phi$ at any point will not change with time and we will have a stable interference pattern; i.e., the positions of maxima and minima will not change with time. However, if the two needles do not maintain a constant phase difference, then the interference pattern will also change with time and, if the phase difference changes very rapidly with time, the positions of maxima and minima will also vary rapidly with time and we will see a \"time-averaged\" intensity distribution.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.4:9",
+            "order": 9,
+            "title": "Incoherent Addition of Waves",
+            "content_text": "When the phase difference between the two vibrating sources changes rapidly with time, we say that the two sources are incoherent. In this case, we observe an average intensity given by $I = 2 I_0$ at all points. When this happens, the intensities just add up. This is indeed what happens when two separate light sources illuminate a wall.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:10:10.5",
+        "number": "10.5",
+        "title": "Interference of Light Waves and Young’s Experiment",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:10:10.5:1",
+            "order": 1,
+            "title": "The Challenge of Coherence in Light",
+            "content_text": "If we use two sodium lamps illuminating two pinholes, we will not observe any interference fringes. This is because the light wave emitted from an ordinary source (like a sodium lamp) undergoes abrupt phase changes in times of the order of $10^{-10}$ seconds. Thus the light waves coming out from two independent sources of light will not have any fixed phase relationship and would be incoherent, meaning the intensities on the screen will simply add up without forming a pattern.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 10.11",
+                "description": "Two independent sodium lamps illuminating two pinholes S1 and S2. The light from these sources is incoherent, resulting in the addition of intensities on the screen without interference fringes.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.5:2",
+            "order": 2,
+            "title": "Young's Double-Slit Technique",
+            "content_text": "The British physicist Thomas Young used an ingenious technique to \"lock\" the phases of the waves emanating from $S_1$ and $S_2$. He made two pinholes $S_1$ and $S_2$ (very close to each other) on an opaque screen. These were illuminated by another pinhole $S$ that was in turn lit by a bright source. Light waves spread out from $S$ and fall on both $S_1$ and $S_2$. $S_1$ and $S_2$ then behave like two coherent sources because light waves coming from $S_1$ and $S_2$ are derived from the same original source and any abrupt phase change in $S$ will manifest in exactly similar phase changes in the light coming out from $S_1$ and $S_2$. Thus, the two sources $S_1$ and $S_2$ will be locked in phase.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 10.12",
+                "description": "(a) A 3D schematic of Young's arrangement where a single source S illuminates two slits S1 and S2, which then produce an interference pattern on a screen. (b) A 2D geometric representation showing the distance d between slits, distance D to the screen, and the point P at distance x from the center O.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.5:3",
+            "order": 3,
+            "title": "Mathematical Condition for Bright Fringes",
+            "content_text": "The spherical waves emanating from $S_1$ and $S_2$ produce interference fringes on the screen $GG'$. Based on the geometry of the setup, we will have constructive interference resulting in a bright region when the path difference satisfies the condition $\\frac{xd}{D} = n\\lambda$. This gives the positions of the bright fringes as: $$x = x_n = \\frac{n\\lambda D}{d}; n = 0, \\pm 1, \\pm 2, ...$$",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.5:4",
+            "order": 4,
+            "title": "Mathematical Condition for Dark Fringes",
+            "content_text": "On the other hand, we will have destructive interference resulting in a dark region when the path difference satisfies the condition $\\frac{xd}{D} = (n + \\frac{1}{2})\\lambda$. This gives the positions of the dark fringes as: $$x = x_n = (n + \\frac{1}{2}) \\frac{\\lambda D}{d}; n = 0, \\pm 1, \\pm 2, ...$$",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.5:5",
+            "order": 5,
+            "title": "Characteristics of Interference Fringes",
+            "content_text": "Thus dark and bright bands appear on the screen, which are called fringes. The equations for $x_n$ show that dark and bright fringes are equally spaced. A computer-generated fringe pattern illustrates these alternating bands of intensity.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 10.13",
+                "description": "A computer-generated fringe pattern showing vertical dark and bright bands (fringes) produced by two point sources. The parameters used are d = 0.025 mm, D = 5 cm, and wavelength lambda = 5 x 10^-5 cm.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:10:10.6",
+        "number": "10.6",
+        "title": "Diffraction",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:10:10.6:1",
+            "order": 1,
+            "title": "Introduction to Diffraction",
+            "content_text": "If we look clearly at the shadow cast by an opaque object, close to the region of geometrical shadow, there are alternate dark and bright regions just like in interference. This happens due to the phenomenon of diffraction. Diffraction is a general characteristic exhibited by all types of waves, be it sound waves, light waves, water waves or matter waves. Since the wavelength of light is much smaller than the dimensions of most obstacles; we do not encounter diffraction effects of light in everyday observations. However, the finite resolution of our eye or of optical instruments such as telescopes or microscopes is limited due to the phenomenon of diffraction. Indeed the colours that you see when a CD is viewed is due to diffraction effects. We will now discuss the phenomenon of diffraction.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.6:2",
+            "order": 2,
+            "title": "10.6.1 The single slit",
+            "content_text": "In the discussion of Young’s experiment, we stated that a single narrow slit acts as a new source from which light spreads out. Early experimenters, including Newton, noticed that light spreads out from narrow holes and slits, entering regions where a shadow would be expected. These effects, known as diffraction, are best understood using wave ideas, similar to how sound waves can be heard around a corner. When a double slit in Young’s experiment is replaced by a single narrow slit (illuminated by a monochromatic source), a broad pattern with a central bright region is seen. On both sides, there are alternate dark and bright regions, with the intensity becoming weaker away from the centre.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 10.14",
+                "description": "The geometry of path differences for diffraction by a single slit. It shows a parallel beam of light falling normally on a single slit LN of width $a$. The midpoint of the slit is M. A line through M perpendicular to the slit plane meets the screen at C. Points L, M, N act as sources, and rays make an angle $\\theta$ with the normal MC to reach a point P on the screen.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.6:3",
+            "order": 3,
+            "title": "Geometry and Intensity of Single Slit Diffraction",
+            "content_text": "To understand the diffraction pattern, consider a parallel beam of light falling normally on a single slit $LN$ of width $a$. The midpoint of the slit is $M$. A straight line through $M$ perpendicular to the slit plane meets the screen at $C$. We analyze the intensity at any point $P$ on the screen. Straight lines joining $P$ to different points $L, M, N$, etc., can be treated as parallel, making an angle $\\theta$ with the normal $MC$. The basic idea is to divide the slit into much smaller parts and add their contributions at $P$ with proper phase differences. Since the incoming wavefront is parallel to the plane of the slit, these sources are in phase. It is observed that the intensity has a central maximum at $\\theta = 0$ and other secondary maxima at $\\theta \\approx (n+1/2) \\lambda/a$, which go on becoming weaker and weaker with increasing $n$. The minima (zero intensity) are at $\\theta \\approx n\\lambda/a$, where $n = \\pm 1, \\pm 2, \\pm 3, \\dots$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 10.15",
+                "description": "(a) Intensity distribution graph showing a high central peak at $\\theta=0$ and smaller secondary peaks on either side. (b) Photograph of fringes due to diffraction at a single slit, showing a wide bright central band and narrower, dimmer bands on the sides.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.6:4",
+            "order": 4,
+            "title": "Interference vs. Diffraction",
+            "content_text": "There has been prolonged discussion about the difference between interference and diffraction among scientists. Richard Feynman noted that no one has been able to define the difference satisfactorily; it is often a matter of usage. Generally, when there are only a few sources (like two interfering sources), the result is called interference. If there is a large number of sources, the word diffraction is more often used. In the double-slit experiment, the pattern on the screen is actually a superposition of single-slit diffraction from each slit and the double-slit interference pattern.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.6:5",
+            "order": 5,
+            "title": "10.6.2 Seeing the single slit diffraction pattern",
+            "content_text": "The single-slit diffraction pattern can be observed using two razor blades and a clear glass electric bulb with a straight filament. Hold the two blades so that the edges are parallel and have a narrow slit in between. Keep the slit parallel to the filament right in front of the eye. With slight adjustment of the width and parallelism, the pattern of bright and dark bands should be seen. Since the position of bands (except the central one) depends on wavelength, they show some colours. Using a red or blue filter makes the fringes clearer, with wider fringes for red compared to blue. The filament acts as the first slit $S$, and the eye lens focuses the pattern on the retina.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 10.16",
+                "description": "Illustration of holding two razor blades together to form a single narrow slit. Viewing a bulb filament through this slit reveals clear diffraction bands.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.6:6",
+            "order": 6,
+            "title": "Energy Conservation in Wave Optics",
+            "content_text": "In both interference and diffraction, light energy is redistributed. If energy reduces in one region (producing a dark fringe), it increases in another region (producing a bright fringe). There is no net gain or loss of energy, which is consistent with the principle of conservation of energy.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:10:10.7",
+        "number": "10.7",
+        "title": "Polarisation",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:10:10.7:1",
+            "order": 1,
+            "title": "Introduction to Polarisation and Transverse Waves",
+            "content_text": "Consider a long string held horizontally with one end fixed. Moving the other end up and down periodically generates a wave propagating in the $+x$ direction. This wave is described as a transverse wave because the displacement (along the $y$ direction) is at right angles to the direction of propagation. Since the displacement is in the $y$ direction, it is referred to as a $y$-polarised wave. Because each point on the string moves on a straight line, the wave is also referred to as a linearly polarised wave.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 10.17",
+                "description": "(a) Curves representing the displacement of a string at $t=0$ and $t=\\Delta t$ as a sinusoidal wave propagates in the $+x$-direction. (b) Curve representing the time variation of the displacement at $x=0$ and $x=\\Delta x$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.7:2",
+            "order": 2,
+            "title": "Mathematical Description of a Transverse Wave",
+            "content_text": "A transverse wave propagating in the $+x$ direction can be described by the equation: $$y(x, t) = a \\sin (kx - \\omega t)$$ where $a$ represents the amplitude and $\\omega = 2\\pi\\nu$ represents the angular frequency of the wave. Further, the wavelength $\\lambda$ associated with the wave is given by: $$\\lambda = \\frac{2\\pi}{k}$$ where $k$ is the wave number. The displacement is in the $y$ direction, perpendicular to the $x$ direction of propagation.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.7:3",
+            "order": 3,
+            "title": "Plane Polarised and Unpolarised Waves",
+            "content_text": "A string wave confined to the $x-y$ plane is referred to as a plane polarised wave. Similarly, vibration of the string in the $x-z$ plane generates a $z$-polarised wave with displacement given by $z(x,t) = a \\sin(kx - \\omega t)$ (Eq. 10.17). Linearly polarised waves, such as those described by these equations, are transverse waves, meaning the displacement of each point is always at right angles to the direction of propagation. If the plane of vibration changes randomly in very short intervals of time, the wave is known as an unpolarised wave. In an unpolarised wave, the displacement changes randomly with time while remaining perpendicular to the direction of propagation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.7:4",
+            "order": 4,
+            "title": "Polarisation of Light and Polaroids",
+            "content_text": "Light waves are transverse; the electric field associated with a propagating light wave is always at right angles to the direction of propagation. This can be demonstrated using polaroids, which are thin plastic-like sheets consisting of long chain molecules aligned in a particular direction. The electric vectors of the light wave along the direction of these aligned molecules are absorbed. When unpolarised light is incident on a polaroid, it becomes linearly polarised with the electric vector oscillating along a direction perpendicular to the aligned molecules; this direction is known as the pass-axis of the polaroid.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.7:5",
+            "order": 5,
+            "title": "Malus' Law",
+            "content_text": "When light from an ordinary source (like a sodium lamp) passes through a polaroid sheet $P_1$, its intensity is reduced by half. Rotating $P_1$ has no effect on the transmitted intensity. If an identical polaroid $P_2$ is placed before $P_1$, rotating $P_1$ significantly affects the intensity. In one position (crossed), the intensity transmitted by the pair is nearly zero. When turned by $90^\\circ$ from this position, $P_1$ transmits nearly the full intensity emerging from $P_2$. If the pass-axis of $P_2$ makes an angle $\\theta$ with the pass-axis of $P_1$, the component $E \\cos \\theta$ of the electric field passes through. Thus, the intensity varies as $I = I_0 \\cos^2 \\theta$ (Eq. 10.18), where $I_0$ is the intensity of the polarized light after passing through the first polaroid. This is known as Malus' law. The intensity coming out of a single polaroid is half of the incident unpolarised intensity.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 10.18",
+                "description": "(a) Passage of light through two polaroids $P_2$ and $P_1$. The transmitted fraction falls from 1 to 0 as the angle between them varies from $0^\\circ$ to $90^\\circ$. Light seen through a single polaroid $P_1$ does not vary with angle. (b) Behaviour of the electric vector when light passes through two polaroids. The transmitted polarisation is the component parallel to the polaroid axis. Double arrows show the oscillations of the electric vector.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.7:6",
+            "order": 6,
+            "title": "Applications of Polaroids",
+            "content_text": "Polaroids are used to control light intensity in various applications, including sunglasses and windowpanes. They are also employed in photographic cameras to reduce glare and in 3D movie cameras to provide depth perception.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:10.7:7",
+            "order": 7,
+            "title": "Example 10.2: Intensity through Rotating Polaroid",
+            "content_text": "This example analyzes the intensity of light when a polaroid sheet is rotated between two crossed polaroids.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 10.2",
+                "problem": "Discuss the intensity of transmitted light when a polaroid sheet is rotated between two crossed polaroids?",
+                "solution": "Let $I_0$ be the intensity of polarised light after passing through the first polariser $P_1$. Then the intensity of light after passing through the second polariser $P_2$ (at angle $\\theta$ to $P_1$) will be $I = I_0 \\cos^2 \\theta$. Since $P_1$ and $P_3$ are crossed, the angle between the pass axes of $P_2$ and $P_3$ will be $(\\pi/2 - \\theta)$. Hence the intensity of light emerging from $P_3$ will be $I = I_0 \\cos^2 \\theta \\cos^2 (\\frac{\\pi}{2} - \\theta) = I_0 \\cos^2 \\theta \\sin^2 \\theta = (I_0/4) \\sin^2 2\\theta$. Therefore, the transmitted intensity will be maximum when $\\theta = \\pi/4$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:10:Summary",
+        "number": "Summary",
+        "title": "Summary and Points to Ponder",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:10:Summary:1",
+            "order": 1,
+            "title": "Summary of Wave Optics",
+            "content_text": "1. Huygens' principle: each point on a wavefront is a source of secondary waves, which add up to give the wavefront at a later time. 2. Huygens' construction explains the laws of reflection and refraction. 3. Superposition principle: interference occurs when sources have the same frequency and a stable phase difference. 4. Young's double slit experiment produces equally spaced interference fringes. 5. A single slit of width $a$ gives a diffraction pattern with a central maximum and minima at angles of $\\pm \\frac{\\lambda}{a}, \\pm \\frac{2\\lambda}{a}$, etc. 6. Natural light is unpolarised. A polaroid transmits only the component parallel to its pass-axis, resulting in linearly polarised light. When viewed through a second polaroid rotated through $2\\pi$, two maxima and minima of intensity are seen.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:10:Summary:2",
+            "order": 2,
+            "title": "Points to Ponder",
+            "content_text": "1. Wave theory, developed by Huygens, Young, and Fresnel, explains how light spreads from point sources and its overall behavior. 2. Interference involves the superposition of amplitudes from different sources, leading to constructive or destructive results. 3. Diffraction phenomena define the limits of ray optics and the resolution of optical instruments like microscopes and telescopes, which is set by the wavelength of light. 4. Interference and diffraction occur for both longitudinal and transverse waves, but polarisation is unique to transverse waves like light.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:physics:12:10:ex:1",
+          "number": 1,
+          "problem": "Monochromatic light of wavelength $589\\text{ nm}$ is incident from air on a water surface. What are the wavelength, frequency and speed of (a) reflected, and (b) refracted light? Refractive index of water is $1.33$.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:10:ex:2",
+          "number": 2,
+          "problem": "What is the shape of the wavefront in each of the following cases: (a) Light diverging from a point source. (b) Light emerging out of a convex lens when a point source is placed at its focus. (c) The portion of the wavefront of light from a distant star intercepted by the Earth.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:12:10:ex:3",
+          "number": 3,
+          "problem": "(a) The refractive index of glass is $1.5$. What is the speed of light in glass? (Speed of light in vacuum is $3.0 \\times 10^8\\text{ m s}^{-1}$) (b) Is the speed of light in glass independent of the colour of light? If not, which of the two colours red and violet travels slower in a glass prism?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:10:ex:4",
+          "number": 4,
+          "problem": "In a Young’s double-slit experiment, the slits are separated by $0.28\\text{ mm}$ and the screen is placed $1.4\\text{ m}$ away. The distance between the central bright fringe and the fourth bright fringe is measured to be $1.2\\text{ cm}$. Determine the wavelength of light used in the experiment.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:10:ex:5",
+          "number": 5,
+          "problem": "In Young’s double-slit experiment using monochromatic light of wavelength $\\lambda$, the intensity of light at a point on the screen where path difference is $\\lambda$, is $K$ units. What is the intensity of light at a point where path difference is $\\lambda/3$?",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:10:ex:6",
+          "number": 6,
+          "problem": "A beam of light consisting of two wavelengths, $650\\text{ nm}$ and $520\\text{ nm}$, is used to obtain interference fringes in a Young’s double-slit experiment. (a) Find the distance of the third bright fringe on the screen from the central maximum for wavelength $650\\text{ nm}$. (b) What is the least distance from the central maximum where the bright fringes due to both the wavelengths coincide?",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        }
+      ]
+    }
+  }
+}

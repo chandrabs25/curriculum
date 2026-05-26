@@ -1,0 +1,1148 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_physics_11_ch5.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:physics:11:5",
+  "curriculum": "ncert",
+  "subject": "physics",
+  "grade": 11,
+  "textbook_name": "Physics Part I",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:physics:11:5",
+    "number": 5,
+    "title": "Work, Energy and Power",
+    "summary": "This chapter introduces the fundamental concepts of work, energy, and power in physics. It begins by defining the scalar product (dot product) of vectors, a crucial mathematical tool for calculating work. Work is then defined as the force applied over a displacement and introduces the Work-Energy Theorem, linking work done to changes in kinetic energy.\n\nThe chapter distinguishes between positive and negative work and explores kinetic energy, emphasizing its dependence on mass and velocity. It then extends the concept of work to variable forces, using graphical and integral methods for calculation. Potential energy is introduced as stored energy associated with conservative forces like gravity and spring forces, leading to the principle of conservation of mechanical energy (the sum of kinetic and potential energy remains constant).\n\nThe chapter further discusses the potential energy of a spring and the impact of non-conservative forces like friction on the work-energy theorem. Power, the rate at which work is done, is defined with its units and relation to force and velocity. Finally, the chapter analyzes collisions, differentiating between elastic and inelastic types and applying conservation laws of momentum and energy. These concepts are interconnected, with each section building upon the previous to provide a comprehensive understanding of energy transfer and transformations in physical systems. The chapter highlights the importance of these concepts in understanding a wide range of phenomena, from simple motion to complex collisions.",
+    "sections": [
+      {
+        "id": "ncert:physics:11:5:5.1",
+        "number": "5.1",
+        "title": "Introduction",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:5:5.1:1",
+            "order": 1,
+            "title": "Everyday vs. Physics Definitions",
+            "content_text": "The terms 'work', 'energy', and 'power' are frequently used in everyday language with broad meanings. For example, a farmer ploughing a field, a student studying for an exam, or an artist painting are all said to be 'working'. However, in physics, 'work' has a precise and definite meaning. Similarly, 'energy' is often used to describe stamina, such as that of a long-distance runner, but in physics, it is specifically defined as the capacity to do work. 'Power' in daily life might refer to the speed or intensity of an action, like a 'powerful' punch in boxing, which is close to its physical definition. This chapter aims to develop a rigorous understanding of these three quantities, starting with the mathematical prerequisite of the scalar product of vectors.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:5:5.1.1",
+        "number": "5.1.1",
+        "title": "The Scalar Product",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:5:5.1.1:1",
+            "order": 1,
+            "title": "Definition of Scalar Product",
+            "content_text": "The scalar product or dot product of any two vectors $\\mathbf{A}$ and $\\mathbf{B}$, denoted as $\\mathbf{A} \\cdot \\mathbf{B}$, is defined as: $\\mathbf{A} \\cdot \\mathbf{B} = AB \\cos \\theta$, where $A$ and $B$ are the magnitudes of the vectors and $\\theta$ is the angle between them. Since $A$, $B$, and $\\cos \\theta$ are scalars, the dot product itself is a scalar quantity. While each vector has a direction, their scalar product does not.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 5.1 (a)",
+                "description": "Two vectors A and B originating from the same point with an angle θ between them.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:5.1.1:2",
+            "order": 2,
+            "title": "Geometric Interpretation",
+            "content_text": "Geometrically, the scalar product can be viewed as the product of the magnitude of one vector and the projection of the second vector onto the first. Specifically, $\\mathbf{A} \\cdot \\mathbf{B} = A(B \\cos \\theta)$, where $B \\cos \\theta$ is the projection of $\\mathbf{B}$ onto $\\mathbf{A}$. Alternatively, $\\mathbf{A} \\cdot \\mathbf{B} = B(A \\cos \\theta)$, where $A \\cos \\theta$ is the projection of $\\mathbf{A}$ onto $\\mathbf{B}$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 5.1 (b) and (c)",
+                "description": "Fig 5.1(b) shows the projection of vector B onto vector A as B cos θ. Fig 5.1(c) shows the projection of vector A onto vector B as A cos θ.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:5.1.1:3",
+            "order": 3,
+            "title": "Properties of Scalar Product",
+            "content_text": "The scalar product follows several algebraic laws: 1. Commutative Law: $\\mathbf{A} \\cdot \\mathbf{B} = \\mathbf{B} \\cdot \\mathbf{A}$. 2. Distributive Law: $\\mathbf{A} \\cdot (\\mathbf{B} + \\mathbf{C}) = \\mathbf{A} \\cdot \\mathbf{B} + \\mathbf{A} \\cdot \\mathbf{C}$. 3. Scalar Multiplication: $\\mathbf{A} \\cdot (\\lambda \\mathbf{B}) = \\lambda (\\mathbf{A} \\cdot \\mathbf{B})$ for any real number $\\lambda$. The proofs of these equations are left as an exercise.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:5.1.1:4",
+            "order": 4,
+            "title": "Unit Vectors and Component Form",
+            "content_text": "For unit vectors $\\hat{i}, \\hat{j}, \\hat{k}$ along the mutually perpendicular $x, y, z$ axes: $\\hat{i} \\cdot \\hat{i} = \\hat{j} \\cdot \\hat{j} = \\hat{k} \\cdot \\hat{k} = 1$ and $\\hat{i} \\cdot \\hat{j} = \\hat{j} \\cdot \\hat{k} = \\hat{k} \\cdot \\hat{i} = 0$. Given vectors in component form $\\mathbf{A} = A_x\\hat{i} + A_y\\hat{j} + A_z\\hat{k}$ and $\\mathbf{B} = B_x\\hat{i} + B_y\\hat{j} + B_z\\hat{k}$, their scalar product is: $\\mathbf{A} \\cdot \\mathbf{B} = A_x B_x + A_y B_y + A_z B_z$. From this, the magnitude squared is $\\mathbf{A} \\cdot \\mathbf{A} = A^2 = A_x^2 + A_y^2 + A_z^2$. If $\\mathbf{A} \\cdot \\mathbf{B} = 0$, the vectors are perpendicular.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:5.1.1:5",
+            "order": 5,
+            "title": "Worked Example: Angle Between Vectors",
+            "content_text": "This example demonstrates how to use the component form of the scalar product to find the angle between two vectors and the projection of one onto another.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 5.1",
+                "problem": "Find the angle between force $\\mathbf{F} = (3\\hat{i} + 4\\hat{j} - 5\\hat{k})$ unit and displacement $\\mathbf{d} = (5\\hat{i} + 4\\hat{j} + 3\\hat{k})$ unit. Also find the projection of $\\mathbf{F}$ on $\\mathbf{d}$.",
+                "solution": "The scalar product is $\\mathbf{F} \\cdot \\mathbf{d} = F_x d_x + F_y d_y + F_z d_z = 3(5) + 4(4) + (-5)(3) = 15 + 16 - 15 = 16$ units. Also, $\\mathbf{F} \\cdot \\mathbf{d} = F d \\cos \\theta = 16$. Magnitude of $\\mathbf{F}$ is $F = \\sqrt{3^2 + 4^2 + (-5)^2} = \\sqrt{50}$ units. Magnitude of $\\mathbf{d}$ is $d = \\sqrt{5^2 + 4^2 + 3^2} = \\sqrt{50}$ units. Thus, $\\cos \\theta = 16 / (\\sqrt{50}\\sqrt{50}) = 16 / 50 = 0.32$, so $\\theta = \\cos^{-1} 0.32$. The projection of $\\mathbf{F}$ on $\\mathbf{d}$ is $F \\cos \\theta = (\\mathbf{F} \\cdot \\mathbf{d}) / d = 16 / \\sqrt{50} \\approx 2.26$ units."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:5:5.2",
+        "number": "5.2",
+        "title": "Notions of Work and Kinetic Energy: The Work-Energy Theorem",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:5:5.2:1",
+            "order": 1,
+            "title": "Derivation for Constant Acceleration",
+            "content_text": "For rectilinear motion under constant acceleration $a$, the kinematic equation is $v^2 - u^2 = 2as$, where $u$ and $v$ are initial and final speeds and $s$ is the distance. Multiplying by $m/2$ gives: $\\frac{1}{2}mv^2 - \\frac{1}{2}mu^2 = mas = Fs$, where $F = ma$ is the constant force. This shows that the change in a quantity related to speed is equal to the product of force and displacement.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:5.2:2",
+            "order": 2,
+            "title": "Generalization to Three Dimensions",
+            "content_text": "In three dimensions, using vector notation, the equation becomes $v^2 - u^2 = 2 \\mathbf{a} \\cdot \\mathbf{d}$, where $\\mathbf{a}$ is the acceleration vector and $\\mathbf{d}$ is the displacement vector. Multiplying by $m/2$: $\\frac{1}{2}mv^2 - \\frac{1}{2}mu^2 = m \\mathbf{a} \\cdot \\mathbf{d} = \\mathbf{F} \\cdot \\mathbf{d}$. This equation provides the motivation for defining kinetic energy and work.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:5.2:3",
+            "order": 3,
+            "title": "Definitions and the Work-Energy Theorem",
+            "content_text": "We define Kinetic Energy ($K$) as $K = \\frac{1}{2}mv^2$. We define Work ($W$) done by a force as the product of the displacement and the component of the force along the displacement: $W = \\mathbf{F} \\cdot \\mathbf{d}$. The equation then becomes: $K_f - K_i = W$. The Work-Energy (WE) Theorem states: The change in kinetic energy of a particle is equal to the work done on it by the net force. This derivation is for a constant force, but it can be generalized to a varying force in later sections.",
+            "content_type": "theorem",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:5.2:4",
+            "order": 4,
+            "title": "Worked Example: Raindrop and Resistive Force",
+            "content_text": "This example applies the work-energy theorem to a system involving both gravitational and resistive forces.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 5.2",
+                "problem": "A raindrop of mass $1.00$ g falls from a height $1.00$ km and hits the ground with a speed of $50.0$ m/s. (a) What is the work done by the gravitational force? (b) What is the work done by the unknown resistive force? (Take $g = 10$ m/s$^2$)",
+                "solution": "(a) The change in kinetic energy is $\\Delta K = \\frac{1}{2}mv^2 - 0 = \\frac{1}{2} \\times 10^{-3} \\times 50^2 = 1.25$ J. The work done by gravity is $W_g = mgh = 10^{-3} \\times 10 \\times 10^3 = 10.0$ J. (b) From the work-energy theorem, $\\Delta K = W_g + W_r$, where $W_r$ is the work done by the resistive force. Thus, $W_r = \\Delta K - W_g = 1.25 - 10.0 = -8.75$ J. The negative sign indicates the resistive force opposes the motion."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:5:5.3",
+        "number": "5.3",
+        "title": "Work",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:5:5.3:1",
+            "order": 1,
+            "title": "Definition of Work by a Constant Force",
+            "content_text": "Work is done by a force on a body over a certain displacement. Consider a constant force $\\mathbf{F}$ acting on an object of mass $m$. If the object undergoes a displacement $\\mathbf{d}$ at an angle $\\theta$ to the force, the work done is defined as the scalar product of force and displacement: $W = \\mathbf{F} \\cdot \\mathbf{d} = Fd \\cos \\theta$. The work done by the force is defined to be the product of component of the force in the direction of the displacement and the magnitude of this displacement. Thus $W = (F \\cos \\theta)d = \\mathbf{F} \\cdot \\mathbf{d}$. We see that if there is no displacement, there is no work done even if the force is large. For example, pushing hard against a rigid brick wall does no work. No work is done if: (i) the displacement is zero, such as a weightlifter holding a 150 kg mass steadily on his shoulder; (ii) the force is zero, such as a block moving on a smooth horizontal table without friction; (iii) the force and displacement are mutually perpendicular ($\\theta = \\pi/2$). For a block on a smooth horizontal table, the gravitational force $mg$ does no work. Similarly, if the moon's orbit around the earth is circular, the earth's gravitational force does no work because the instantaneous displacement is tangential while the force is radial.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 5.2",
+                "description": "An object of mass m undergoes a displacement d along the x-axis under the influence of a force F acting at an angle θ to the horizontal.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:5.3:2",
+            "order": 2,
+            "title": "Positive and Negative Work",
+            "content_text": "Work can be both positive and negative. If $\\theta$ is between $0^\\circ$ and $90^\\circ$, $\\cos \\theta$ is positive. If $\\theta$ is between $90^\\circ$ and $180^\\circ$, $\\cos \\theta$ is negative. In many examples, the frictional force opposes displacement and $\\theta = 180^\\circ$. Then the work done by friction is negative ($\\cos 180^\\circ = -1$).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:5.3:3",
+            "order": 3,
+            "title": "Units and Dimensions of Work",
+            "content_text": "Work and energy have the same dimensions, $[ML^2T^{-2}]$. The SI unit of these is joule (J), named after the British physicist James Prescott Joule (1811-1869). Since work and energy are widely used as physical concepts, alternative units abound, such as the erg, electron volt (eV), calorie (cal), and kilowatt hour (kWh). These are listed in Table 5.1.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 5.1",
+                "caption": "Alternative Units of Work/Energy in J",
+                "headers": [
+                  "Unit",
+                  "Value in J"
+                ],
+                "rows": [
+                  [
+                    "erg",
+                    "$10^{-7}$ J"
+                  ],
+                  [
+                    "electron volt (eV)",
+                    "$1.6 \\times 10^{-19}$ J"
+                  ],
+                  [
+                    "calorie (cal)",
+                    "4.186 J"
+                  ],
+                  [
+                    "kilowatt hour (kWh)",
+                    "$3.6 \\times 10^6$ J"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:physics:11:5:5.3:4",
+            "order": 4,
+            "title": "Example 5.3: Work and Newton's Third Law",
+            "content_text": "This example explores the work done by frictional forces and the application of Newton's Third Law to work. The lesson is that while forces between two bodies are always equal and opposite, the work done by those forces is not necessarily equal and opposite. For instance, the road does negative work on a skidding cycle, but the cycle does zero work on the road because the road does not move.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 5.3",
+                "problem": "A cyclist comes to a skidding stop in 10 m. During this process, the force on the cycle due to the road is 200 N and is directly opposed to the motion. (a) How much work does the road do on the cycle? (b) How much work does the cycle do on the road?",
+                "solution": "(a) The stopping force and the displacement make an angle of $180^\\circ$ ($\\pi$ rad) with each other. Thus, work done by the road, $W_r = Fd \\cos \\theta = 200 \\times 10 \\times \\cos \\pi = -2000$ J. It is this negative work that brings the cycle to a halt in accordance with WE theorem. (b) From Newton’s Third Law an equal and opposite force acts on the road due to the cycle. Its magnitude is 200 N. However, the road undergoes no displacement. Thus, work done by cycle on the road is zero."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:5:5.4",
+        "number": "5.4",
+        "title": "KINETIC ENERGY",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:5:5.4:1",
+            "order": 1,
+            "title": "Definition of Kinetic Energy",
+            "content_text": "If an object of mass $m$ has velocity $\\mathbf{v}$, its kinetic energy $K$ is $K = \\frac{1}{2} m \\mathbf{v} \\cdot \\mathbf{v} = \\frac{1}{2} mv^2$. Kinetic energy is a scalar quantity. The kinetic energy of an object is a measure of the work an object can do by virtue of its motion. This notion has been intuitively known for a long time; for example, the kinetic energy of a fast flowing stream has been used to grind corn, and sailing ships employ the kinetic energy of the wind. Table 5.2 lists the kinetic energies for various objects.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 5.2",
+                "caption": "Typical kinetic energies (K)",
+                "headers": [
+                  "Object",
+                  "Mass (kg)",
+                  "Speed (m s$^{-1}$)",
+                  "K (J)"
+                ],
+                "rows": [
+                  [
+                    "Car",
+                    "2000",
+                    "25",
+                    "$6.3 \\times 10^5$"
+                  ],
+                  [
+                    "Running athlete",
+                    "70",
+                    "10",
+                    "$3.5 \\times 10^3$"
+                  ],
+                  [
+                    "Bullet",
+                    "$5 \\times 10^{-2}$",
+                    "200",
+                    "$10^3$"
+                  ],
+                  [
+                    "Stone dropped from 10 m",
+                    "1",
+                    "14",
+                    "$10^2$"
+                  ],
+                  [
+                    "Rain drop at terminal speed",
+                    "$3.5 \\times 10^{-5}$",
+                    "9",
+                    "$1.4 \\times 10^{-3}$"
+                  ],
+                  [
+                    "Air molecule",
+                    "$\\approx 10^{-26}$",
+                    "500",
+                    "$\\approx 10^{-21}$"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:physics:11:5:5.4:2",
+            "order": 2,
+            "title": "Example 5.4: Emergent Speed of a Bullet",
+            "content_text": "This example demonstrates how to calculate the change in speed when the kinetic energy of an object is reduced by a certain percentage. It shows that a 90% reduction in kinetic energy results in only a 68% reduction in speed.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 5.4",
+                "problem": "In a ballistics demonstration a police officer fires a bullet of mass 50.0 g with speed 200 m s$^{-1}$ on soft plywood of thickness 2.00 cm. The bullet emerges with only 10% of its initial kinetic energy. What is the emergent speed of the bullet?",
+                "solution": "The initial kinetic energy of the bullet is $mv^2/2 = 1000$ J. It has a final kinetic energy of $0.1 \\times 1000 = 100$ J. If $v_f$ is the emergent speed of the bullet, $\\frac{1}{2} m v_f^2 = 100$ J, which gives $v_f = \\sqrt{\\frac{2 \\times 100 \\text{ J}}{0.05 \\text{ kg}}} = 63.2$ m s$^{-1}$. The speed is reduced by approximately 68% (not 90%)."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:5:5.5",
+        "number": "5.5",
+        "title": "WORK DONE BY A VARIABLE FORCE",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:5:5.5:1",
+            "order": 1,
+            "title": "Graphical Analysis of Variable Force",
+            "content_text": "A constant force is rare; variable forces are more commonly encountered. Fig. 5.3 is a plot of a varying force in one dimension. If the displacement $\\Delta x$ is small, we can take the force $F(x)$ as approximately constant and the work done is $\\Delta W = F(x) \\Delta x$. This is illustrated in Fig. 5.3(a). Adding successive rectangular areas in Fig. 5.3(a) we get the total work done as $W \\cong \\sum_{x_i}^{x_f} F(x) \\Delta x$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 5.3(a)",
+                "description": "A plot of a varying force F(x) versus displacement x. The displacement is divided into small intervals delta x. For one such interval, a shaded rectangle represents the work done delta W = F(x) delta x.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:5.5:2",
+            "order": 2,
+            "title": "Integral Representation of Work",
+            "content_text": "If the displacements are allowed to approach zero, then the number of terms in the sum increases without limit, but the sum approaches a definite value equal to the area under the curve in Fig. 5.3(b). Then the work done is $W = \\lim_{\\Delta x \\to 0} \\sum_{x_i}^{x_f} F(x) \\Delta x = \\int_{x_i}^{x_f} F(x) dx$. Thus, for a varying force the work done can be expressed as a definite integral of force over displacement.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 5.3(b)",
+                "description": "The plot of force versus displacement where the area under the curve between initial position xi and final position xf is shaded to represent the total work done.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:5.5:3",
+            "order": 3,
+            "title": "Example 5.5: Work Done by Applied and Frictional Forces",
+            "content_text": "This example illustrates the graphical method for calculating work done by both a variable applied force and a constant frictional force. The work done is calculated as the area under the force-displacement graph. Note that the area on the negative side of the force axis (representing",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:5.5:4",
+            "order": 4,
+            "title": "Comparison of Newton's Second Law and the Work-Energy Theorem",
+            "content_text": "A significant observation in mechanics is the comparison between Newton's second law and the work-energy theorem. Newton's second law for two or three dimensions is expressed in vector form, which provides detailed information regarding the directions of forces and accelerations. In contrast, the work-energy theorem is formulated in scalar form. While the scalar form simplifies many calculations, it does not explicitly contain the directional information that is inherent in the vector representation of Newton's second law.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:5.5:5",
+            "order": 5,
+            "title": "Example 5.6: Work Done by a Variable Retarding Force",
+            "content_text": "This example demonstrates how to calculate the work done and the resulting change in kinetic energy when the applied force is not constant. The scenario involves a block moving through a rough patch where the retarding force is inversely proportional to the displacement. This requires the use of integration to determine the total work done on the block as it moves from the start to the end of the rough patch.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 5.6",
+                "problem": "A block of mass $m = 1$ kg, moving on a horizontal surface with speed $v_i = 2$ m s$^{-1}$ enters a rough patch ranging from $x = 0.10$ m to $x = 2.01$ m. The retarding force $F_r$ on the block in this range is inversely proportional to $x$ over this range, $F_r = \\frac{-k}{x}$ for $0.1 < x < 2.01$ m, and $F_r = 0$ for $x < 0.1$ m and $x > 2.01$ m where $k = 0.5$ J. What is the final kinetic energy and speed $v_f$ of the block as it crosses this patch?",
+                "solution": "From the work-energy theorem for a variable force (Eq. 5.8a): $K_f = K_i + \\int_{0.1}^{2.01} \\frac{-k}{x} dx = \\frac{1}{2} m v_i^2 - k \\ln(x) \\big|_{0.1}^{2.01} = \\frac{1}{2} m v_i^2 - k \\ln(2.01/0.1) = 2 - 0.5 \\ln(20.1) \\approx 2 - 1.5 = 0.5$ J. The final speed is $v_f = \\sqrt{2 K_f / m} = \\sqrt{2(0.5)/1} = 1$ m s$^{-1}$. Note: $\\ln$ is the symbol for the natural logarithm to the base $e$ [$\\ln X = \\log_e X = 2.303 \\log_{10} X$]."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:5:5.7",
+        "number": "5.7",
+        "title": "THE CONCEPT OF POTENTIAL ENERGY",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:5:5.7:1",
+            "order": 1,
+            "title": "Introduction to Potential Energy",
+            "content_text": "The term 'potential' implies a possibility or capacity for action, and potential energy is understood as 'stored' energy. For example, a stretched bow-string possesses potential energy that is released to propel an arrow. Similarly, fault lines in the earth's crust act like compressed springs, storing energy that is released during an earthquake. Thus, potential energy is the energy stored in a body due to its position or configuration. When the body is released, this stored energy is typically converted into kinetic energy.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:5.7:2",
+            "order": 2,
+            "title": "Gravitational Potential Energy",
+            "content_text": "The gravitational force on an object of mass $m$ near the Earth's surface is $mg$. For heights $h$ much smaller than the Earth's radius $R_E$ ($h \\ll R_E$), $g$ can be considered constant. The work done by an external agent to lift the object to a height $h$ is $mgh$, which is stored as gravitational potential energy $V(h) = mgh$. This energy is defined as the negative of the work done by the gravitational force during the displacement. Note that the variation of $g$ with height is a more complex topic discussed in the context of gravitation.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:5.7:3",
+            "order": 3,
+            "title": "Relationship between Force and Potential Energy",
+            "content_text": "When height $h$ is treated as a variable, the gravitational force $F$ is the negative derivative of the potential energy $V(h)$ with respect to $h$: $F = -\\frac{d}{dh} V(h) = -mg$. The negative sign indicates that the force is directed downwards. When an object is released from height $h$, its potential energy is converted into kinetic energy. Just before impact with the ground, its speed $v$ satisfies $\\frac{1}{2} m v^2 = m g h$, demonstrating the transformation of stored potential energy into motion.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:5.7:4",
+            "order": 4,
+            "title": "Mathematical Definition of Potential Energy and Conservative Forces",
+            "content_text": "Mathematically, potential energy $V(x)$ is defined for a class of forces where the force $F(x)$ can be expressed as the negative derivative of the potential: $F(x) = -\\frac{dV}{dx}$. This implies that the work done by the force is $\\int_{x_i}^{x_f} F(x) dx = V_i - V_f$. Forces like gravity, where the work done depends only on the initial and final positions and not the path, are called conservative forces. The dimensions of potential energy are $[ML^2T^{-2}]$ and its unit is the joule (J). The change in potential energy $\\Delta V$ is the negative of the work done by the conservative force: $\\Delta V = -F(x) \\Delta x$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:5:5.8",
+        "number": "5.8",
+        "title": "THE CONSERVATION OF MECHANICAL ENERGY",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:5:5.8:1",
+            "order": 1,
+            "title": "Derivation of the Principle of Conservation of Mechanical Energy",
+            "content_text": "For a body moving under a conservative force $F$, the work-energy theorem gives $\\Delta K = F(x) \\Delta x$. From the definition of potential energy, $-\\Delta V = F(x) \\Delta x$. Combining these results in $\\Delta K + \\Delta V = 0$, or $\\Delta(K + V) = 0$. This shows that the sum of kinetic and potential energy, $K + V(x)$, remains constant: $K_i + V(x_i) = K_f + V(x_f)$. This constant sum is the total mechanical energy of the system.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:5.8:2",
+            "order": 2,
+            "title": "Definitions and Properties of Conservative Forces",
+            "content_text": "A force $F(x)$ is defined as conservative if it meets these criteria: 1. It is derived from a scalar potential $V(x)$ via $F(x) = -dV/dx$ (in 3D, this involves vector derivatives). 2. The work done by the force depends only on the endpoints of the path ($W = V(x_i) - V(x_f)$). 3. The work done by the force over any closed path is zero. Gravity is a prime example of a conservative force, whereas friction is non-conservative because the work it does depends on the path length.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:5.8:3",
+            "order": 3,
+            "title": "The Principle of Conservation of Total Mechanical Energy",
+            "content_text": "The principle states that the total mechanical energy of a system is conserved if the forces performing work on it are conservative. While the individual kinetic and potential energies may change as the system evolves, their sum $E = K + V$ remains constant.",
+            "content_type": "theorem",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:5.8:4",
+            "order": 4,
+            "title": "Application: Conservation of Energy in a Freely Falling Body",
+            "content_text": "Consider a ball of mass $m$ dropped from height $H$. At the top, energy is purely potential ($E_H = mgH$). At an intermediate height $h$, it is a mix ($E_h = mgh + \\frac{1}{2} m v_h^2$). At the ground, it is purely kinetic ($E_0 = \\frac{1}{2} m v_f^2$). Since gravity is conservative, $E_H = E_0$, leading to $v_f = \\sqrt{2gH}$. Similarly, $E_H = E_h$ leads to $v_h^2 = 2g(H-h)$. This illustrates the continuous conversion of potential energy into kinetic energy.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 5.5",
+                "description": "A diagram depicting a ball of mass $m$ being dropped from a cliff of height $H$. It shows the velocity and height at three stages: the release point ($v=0, h=H$), an intermediate point ($v=v_h, h=h$), and the impact point ($v=v_f, h=0$).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:5.8:5",
+            "order": 5,
+            "title": "Example 5.7: Vertical Circular Motion of a Bob",
+            "content_text": "This example applies the principle of conservation of mechanical energy to the vertical circular motion of a bob. By analyzing the forces (gravity and tension) and energy at the lowest, middle, and highest points of the trajectory, we can determine the minimum initial velocity required for the bob to complete the circle. By analyzing the forces (gravity and tension) and energy at the lowest, middle, and highest points of the trajectory, we can determine the minimum initial velocity required for the bob to complete the circle. From the energy conservation and force balance at the middle point B, we find $\\therefore v_B = \\sqrt{3gL}$. (iii) The ratio of the kinetic energies at B and C is: $$\\frac{K_B}{K_C} = \\frac{\\frac{1}{2}mv_B^2}{\\frac{1}{2}mv_C^2} = \\frac{3}{1}$$ At point C, the string becomes slack and the velocity of the bob is horizontal and to the left. If the connecting string is cut at this instant, the bob will execute a projectile motion with horizontal projection akin to a rock kicked horizontally from the edge of a cliff. Otherwise, the bob will continue on its circular path and complete the revolution.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 5.7",
+                "problem": "A bob of mass $m$ is suspended by a light string of length $L$. It is imparted a horizontal velocity $v_0$ at the lowest point $A$ such that it completes a semi-circular trajectory in the vertical plane with the string becoming slack only on reaching the topmost point, $C$. This is shown in Fig. 5.6. Obtain an expression for (i) $v_0$; (ii) the speeds at points $B$ and $C$; (iii) the ratio of the kinetic energies $(K_B/K_C)$ at $B$ and $C$. Comment on the nature of the trajectory of the bob after it reaches the point $C$.",
+                "solution": "(i) The external forces are gravity and tension $T$. Tension does no work as it is always perpendicular to the displacement. Thus, mechanical energy $E$ is conserved. Setting $V=0$ at $A$, the energy at $A$ is $E = \\frac{1}{2} m v_0^2$. At the top point $C$, the string slackens ($T_C = 0$), so $mg = m v_c^2 / L \\implies v_c = \\sqrt{gL}$. The energy at $C$ is $E = \\frac{1}{2} m v_c^2 + 2mgL = \\frac{5}{2} mgL$. Equating $E_A = E_C$ gives $\\frac{1}{2} m v_0^2 = \\frac{5}{2} mgL \\implies v_0 = \\sqrt{5gL}$. (ii) The speed at $C$ is $v_c = \\sqrt{gL}$. At point $B$, the height is $L$, so $E = \\frac{1}{2} m v_B^2 + mgL$. Equating this to the energy at $A$ gives $\\frac{1}{2} m v_B^2 + mgL = \\frac{5}{2} mgL \\implies \\frac{1}{2} m v_B^2 = \\frac{3}{2} mgL \\implies v_B = \\sqrt{3gL}$. [CONTINUES]"
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Fig. 5.6",
+                "description": "A diagram showing a bob of mass $m$ on a string of length $L$ in vertical circular motion. It marks the lowest point $A$, the horizontal point $B$, and the highest point $C$, showing the velocity vectors and the force of gravity $mg$ at each point.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:5:5.9",
+        "number": "5.9",
+        "title": "THE POTENTIAL ENERGY OF A SPRING",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:5:5.9:1",
+            "order": 1,
+            "title": "Hooke's Law and the Spring Force",
+            "content_text": "The spring force is an example of a variable force which is conservative. Consider a block attached to a spring resting on a smooth horizontal surface. In an ideal spring, the spring force $F_s$ is proportional to $x$, where $x$ is the displacement of the block from the equilibrium position. This displacement can be positive (extension) or negative (compression). This force law is called Hooke’s law and is mathematically stated as: $$F_s = -kx$$ The constant $k$ is called the spring constant, with units of $N m^{-1}$. A spring is stiff if $k$ is large and soft if $k$ is small.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 5.7",
+                "description": "Illustration of spring force: (a) Equilibrium position $x=0, F_s=0$. (b) Stretched spring $x>0, F_s<0$. (c) Compressed spring $x<0, F_s>0$. (d) Plot of $F_s$ versus $x$ showing a linear relationship with negative slope $-k$, where the area under the curve represents work done.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:5.9:2",
+            "order": 2,
+            "title": "Work Done by the Spring Force",
+            "content_text": "Suppose the block is pulled outwards to an extension $x_m$. The work done by the spring force is calculated by integrating the force over the displacement: $$W_s = \\int_{0}^{x_m} F_s dx = -\\int_{0}^{x_m} kx dx = -\\frac{kx_m^2}{2}$$ This expression can also be obtained by calculating the area of the triangle in the $F_s$ vs $x$ plot. Note that the work done by the external pulling force $F$ is positive ($W = +\\frac{kx_m^2}{2}$) because it overcomes the spring force. The same logic applies to compression; for a displacement $x_c$, the spring force does work $W_s = -\\frac{kx_c^2}{2}$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:5.9:3",
+            "order": 3,
+            "title": "Spring Force as a Conservative Force",
+            "content_text": "If the block is moved from an initial displacement $x_i$ to a final displacement $x_f$, the work done by the spring force $W_s$ is: $$W_s = -\\int_{x_i}^{x_f} kx dx = \\frac{kx_i^2}{2} - \\frac{kx_f^2}{2}$$ This shows that the work done by the spring force depends only on the endpoints. In a cyclic process where the block is pulled from $x_i$ and allowed to return to $x_i$, the total work done is zero ($W_s = 0$). Thus, the spring force is a conservative force.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:5.9:4",
+            "order": 4,
+            "title": "Potential Energy of a Spring",
+            "content_text": "We define the potential energy $V(x)$ of the spring to be zero when the block-spring system is in the equilibrium position. For an extension or compression $x$, the potential energy is: $$V(x) = \\frac{kx^2}{2}$$ It can be verified that the negative gradient of the potential energy equals the spring force: $-dV/dx = -kx = F_s$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:5.9:5",
+            "order": 5,
+            "title": "Conservation of Mechanical Energy in Spring Systems",
+            "content_text": "If a block of mass $m$ is extended to $x_m$ and released from rest, its total mechanical energy at any arbitrary point $x$ (where $x$ lies between $-x_m$ and $+x_m$) is given by: $$\\frac{1}{2}kx_m^2 = \\frac{1}{2}kx^2 + \\frac{1}{2}mv^2$$ This conservation principle suggests that speed and kinetic energy are maximum at the equilibrium position ($x=0$): $$\\frac{1}{2}mv_m^2 = \\frac{1}{2}kx_m^2 \\implies v_m = \\sqrt{\\frac{k}{m}}x_m$$ The ratio $k/m$ has dimensions of $[T^{-2}]$, making the equation dimensionally correct. Kinetic energy is converted to potential energy and vice versa, while total mechanical energy $E$ remains constant.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 5.8",
+                "description": "Parabolic plots of potential energy $V$ (opening upwards) and kinetic energy $K$ (opening downwards) for a spring obeying Hooke's law. The sum $E = K + V$ is represented by a constant horizontal line.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:5.9:6",
+            "order": 6,
+            "title": "Example 5.8: Car Collision with a Spring",
+            "content_text": "This example demonstrates the application of energy conservation to a car colliding with a horizontally mounted spring to simulate accidents.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 5.8",
+                "problem": "To simulate car accidents, auto manufacturers study the collisions of moving cars with mounted springs of different spring constants. Consider a typical simulation with a car of mass $1000$ kg moving with a speed $18.0$ km/h on a smooth road and colliding with a horizontally mounted spring of spring constant $6.25 \\times 10^3$ N m$^{-1}$. What is the maximum compression of the spring?",
+                "solution": "At maximum compression, the kinetic energy $K$ of the car is converted entirely into the potential energy $V$ of the spring. First, convert speed to SI units: $18$ km/h = $5$ m/s. The kinetic energy is: $K = \\frac{1}{2}mv^2 = \\frac{1}{2} \\times 10^3 \\times 5 \\times 5 = 1.25 \\times 10^4$ J. At maximum compression $x_m$, $V = \\frac{1}{2}kx_m^2 = K$. So, $1.25 \\times 10^4 = \\frac{1}{2} \\times (6.25 \\times 10^3) \\times x_m^2$. Solving for $x_m$: $x_m^2 = 4.00 \\implies x_m = 2.00$ m."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:5.9:7",
+            "order": 7,
+            "title": "Remarks on Conservative and Non-conservative Forces",
+            "content_text": "(i) Energy discussions often lack temporal information; to find the time over which compression occurs, Newton's Second Law is required. (ii) Not all forces are conservative; friction is a non-conservative force that modifies the conservation of energy principle. (iii) The zero of potential energy is arbitrary and set for convenience (e.g., $V=0$ at equilibrium for springs, or at the Earth's surface for gravity), but it must be maintained consistently throughout a discussion.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:5.9:8",
+            "order": 8,
+            "title": "Example 5.9: Spring Compression with Friction",
+            "content_text": "This example explores how non-conservative forces like friction affect the maximum compression of a spring.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 5.9",
+                "problem": "Consider Example 5.8 taking the coefficient of friction, $\\mu$, to be $0.5$ and calculate the maximum compression of the spring.",
+                "solution": "In the presence of friction, both the spring force and the frictional force oppose the motion. We use the work-energy theorem: $\\Delta K = W_{net}$. The change in kinetic energy is $\\Delta K = K_f - K_i = 0 - \\frac{1}{2}mv^2$. The work done by the net force is $W = -\\frac{1}{2}kx_m^2 - \\mu mg x_m$. Equating these: $\\frac{1}{2}mv^2 = \\frac{1}{2}kx_m^2 + \\mu mg x_m$. Substituting values ($m=1000, v=5, k=6.25 \\times 10^3, \\mu=0.5, g=10$): $1.25 \\times 10^4 = 3.125 \\times 10^3 x_m^2 + 5 \\times 10^3 x_m$. This gives the quadratic equation: $k x_m^2 + 2\\mu mg x_m - mv^2 = 0$. Solving for $x_m$: $x_m = \\frac{-\\mu mg + [\\mu^2 m^2 g^2 + mk v^2]^{1/2}}{k}$. Putting in numerical values, we obtain $x_m = 1.35$ m, which is less than the frictionless case."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Fig. 5.9",
+                "description": "Free body diagram of the car during compression: Normal force $N$ upwards, weight $mg$ downwards, spring force $kx$ and friction $\\mu mg$ both acting opposite to the direction of motion.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:5.9:9",
+            "order": 9,
+            "title": "General Work-Energy Theorem with Non-conservative Forces",
+            "content_text": "When both conservative forces ($F_c$) and non-conservative forces ($F_{nc}$) act on a body, the work-energy theorem states: $(F_c + F_{nc}) \\Delta x = \\Delta K$. Since $F_c \\Delta x = -\\Delta V$, we can rewrite this as: $\\Delta(K + V) = F_{nc} \\Delta x \\implies \\Delta E = W_{nc}$. This means the change in total mechanical energy equals the work done by non-conservative forces: $E_f - E_i = W_{nc}$, where $W_{nc}$ is the total work done by the non-conservative forces over the path. Note that Unlike the conservative force, the work done by a non-conservative force, $W_{nc}$, depends on the particular path taken from the initial state $i$ to the final state $f$. This is a key distinction from conservative forces, where the work done is independent of the path and depends only on the endpoints.",
+            "content_type": "theorem",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:5:5.10",
+        "number": "5.10",
+        "title": "POWER",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:5:5.10:1",
+            "order": 1,
+            "title": "Definition of Power",
+            "content_text": "Power is defined as the time rate at which work is done or energy is transferred. While work measures the total energy change, power measures how quickly that change occurs. A person is considered physically fit if they can perform a task, such as climbing stairs, in a shorter amount of time.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:5.10:2",
+            "order": 2,
+            "title": "Average and Instantaneous Power",
+            "content_text": "The average power ($P_{av}$) of a force is the ratio of the work ($W$) to the total time ($t$) taken: $$P_{av} = \\frac{W}{t}$$. The instantaneous power ($P$) is the limiting value of the average power as the time interval approaches zero: $$P = \\frac{dW}{dt}$$",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:5.10:3",
+            "order": 3,
+            "title": "Power in terms of Force and Velocity",
+            "content_text": "The work $dW$ done by a force $\\mathbf{F}$ for a displacement $d\\mathbf{r}$ is $dW = \\mathbf{F} \\cdot d\\mathbf{r}$. The instantaneous power can therefore be expressed as the dot product of force and velocity: $$P = \\mathbf{F} \\cdot \\frac{d\\mathbf{r}}{dt} = \\mathbf{F} \\cdot \\mathbf{v}$$ where $\\mathbf{v}$ is the instantaneous velocity.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:5.10:4",
+            "order": 4,
+            "title": "Units and Dimensions of Power",
+            "content_text": "Power is a scalar quantity with dimensions $[ML^2T^{-3}]$. The SI unit of power is the watt (W), where $1 \\text{ W} = 1 \\text{ J s}^{-1}$. It is named after James Watt. Another unit used for engines is horse-power (hp): $$1 \\text{ hp} = 746 \\text{ W}$$",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:5.10:5",
+            "order": 5,
+            "title": "Energy Consumption and the Kilowatt-hour",
+            "content_text": "Electricity consumption is measured in kilowatt-hours (kWh), which is a unit of energy, not power. One kilowatt-hour is the energy consumed by a 1000-watt appliance in one hour: $$1 \\text{ kWh} = 10^3 \\text{ W} \\times 3600 \\text{ s} = 3.6 \\times 10^6 \\text{ J}$$",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:5.10:6",
+            "order": 6,
+            "title": "Worked Example 5.10: Power of an Elevator Motor",
+            "content_text": "This example calculates the power required to move a loaded elevator at a constant speed against gravity and friction.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 5.10",
+                "problem": "An elevator can carry a maximum load of 1800 kg (elevator + passengers) is moving up with a constant speed of $2 \\text{ m s}^{-1}$. The frictional force opposing the motion is 4000 N. Determine the minimum power delivered by the motor to the elevator in watts as well as in horse power.",
+                "solution": "The total downward force is $F = mg + F_f = (1800 \\times 10) + 4000 = 22000 \\text{ N}$. To move at constant speed, the motor must provide this force. Power $P = F \\cdot v = 22000 \\times 2 = 44000 \\text{ W}$. In horse power, $P = 44000 / 746 \\approx 59 \\text{ hp}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:5:5.11",
+        "number": "5.11",
+        "title": "COLLISIONS",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:5:5.11:1",
+            "order": 1,
+            "title": "Introduction to Collisions",
+            "content_text": "Collisions involve the interaction of two or more bodies where momentum and energy conservation laws are applied. We consider an idealized case where a mass $m_1$ with initial velocity $v_{1i}$ collides with a stationary mass $m_2$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 5.10",
+                "description": "Collision of mass $m_1$ with a stationary mass $m_2$. $m_1$ moves along the x-axis and strikes $m_2$ at the origin. Post-collision, $m_1$ moves at angle $\\theta_1$ with velocity $v_{1f}$ and $m_2$ moves at angle $\\theta_2$ with velocity $v_{2f}$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:5.11:2",
+            "order": 2,
+            "title": "Elastic and Inelastic Collisions",
+            "content_text": "In all collisions, total linear momentum is conserved because impulsive forces are internal and cancel out (Newton's third law). However, kinetic energy is not always conserved. In an elastic collision, kinetic energy is conserved. In an inelastic collision, some kinetic energy is lost to heat or deformation. If the bodies move together after collision, it is called a completely inelastic collision.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:5.11:3",
+            "order": 3,
+            "title": "Completely Inelastic Collisions in One Dimension",
+            "content_text": "For a completely inelastic collision where $m_1$ hits stationary $m_2$ and they stick together, momentum conservation gives: $m_1 v_{1i} = (m_1 + m_2) v_f$. The final velocity is $v_f = \\frac{m_1}{m_1 + m_2} v_{1i}$. The loss in kinetic energy is $\\Delta K = \\frac{1}{2} \\frac{m_1 m_2}{m_1 + m_2} v_{1i}^2$.\nIn a 1D elastic collision, both momentum and kinetic energy are conserved. The final velocities are: $$v_{1f} = \\frac{m_1 - m_2}{m_1 + m_2} v_{1i}$$ and $$v_{2f} = \\frac{2 m_1 v_{1i}}{m_1 + m_2}$$. If $m_1 = m_2$, the particles swap velocities. If $m_2 \\gg m_1$, the light particle reverses its velocity while the heavy one remains at rest.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:5.11:4",
+            "order": 4,
+            "title": "Worked Example 5.11: Slowing Down of Neutrons",
+            "content_text": "This example shows how elastic collisions with light nuclei (moderators) are used to slow down fast neutrons in nuclear reactors.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 5.11",
+                "problem": "Show that a neutron can lose most of its kinetic energy in an elastic collision with light nuclei like deuterium or carbon. Calculate the fractional energy lost for deuterium ($m_2 \\approx 2m_1$).",
+                "solution": "The fractional kinetic energy retained by the neutron is $f_1 = K_{1f}/K_{1i} = ((m_1 - m_2)/(m_1 + m_2))^2$. The fractional energy gained by the moderator (lost by neutron) is $f_2 = 1 - f_1 = 4m_1 m_2 / (m_1 + m_2)^2$. For deuterium, $f_2 = 4(1)(2)/(1+2)^2 = 8/9 \\approx 90\\%$. Thus, 90% of the energy is transferred in one head-on collision."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:5.11:5",
+            "order": 5,
+            "title": "Collisions in Two Dimensions",
+            "content_text": "In 2D collisions, momentum is conserved along both x and y axes. For $m_1$ hitting stationary $m_2$: \n1. $m_1 v_{1i} = m_1 v_{1f} \\cos \\theta_1 + m_2 v_{2f} \\cos \\theta_2$ \n2. $0 = m_1 v_{1f} \\sin \\theta_1 - m_2 v_{2f} \\sin \\theta_2$ \nIf elastic, $\\frac{1}{2} m_1 v_{1i}^2 = \\frac{1}{2} m_1 v_{1f}^2 + \\frac{1}{2} m_2 v_{2f}^2$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:5.11:6",
+            "order": 6,
+            "title": "Worked Example 5.12: Elastic Collision of Billiard Balls",
+            "content_text": "This example proves that two identical masses in an elastic collision move off at right angles if one was initially at rest.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 5.12",
+                "problem": "Two billiard balls of equal mass undergo an elastic collision. The target ball is at rest and moves off at $\\theta_2 = 37^\\circ$. Obtain $\\theta_1$.",
+                "solution": "Momentum conservation: $\\mathbf{v}_{1i} = \\mathbf{v}_{1f} + \\mathbf{v}_{2f}$. Squaring gives $v_{1i}^2 = v_{1f}^2 + v_{2f}^2 + 2\\mathbf{v}_{1f} \\cdot \\mathbf{v}_{2f}$. Kinetic energy conservation for equal masses gives $v_{1i}^2 = v_{1f}^2 + v_{2f}^2$. Thus, $2\\mathbf{v}_{1f} \\cdot \\mathbf{v}_{2f} = 0$, meaning the velocities are perpendicular. $\\theta_1 + \\theta_2 = 90^\\circ$. So $\\theta_1 = 90^\\circ - 37^\\circ = 53^\\circ$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:5.11:7",
+            "order": 7,
+            "title": "Example 5.12: Conclusion of Elastic Collision Analysis",
+            "content_text": "Continuing from the previous analysis of a glancing elastic collision between two equal masses ($m_1 = m_2$) where the second mass is initially at rest, we use the conservation of kinetic energy. The relation is given by $v_{1i}^2 = v_{1f}^2 + v_{2f}^2$ (Eq. 5.32). By comparing this with the general vector relation derived from momentum conservation, $v_{1i}^2 = v_{1f}^2 + v_{2f}^2 + 2v_{1f}v_{2f} \text{cos}(\theta_1 + 37^\text{o})$ (Eq. 5.31), we find that $\text{cos}(\theta_1 + 37^\text{o}) = 0$. This implies that $\theta_1 + 37^\text{o} = 90^\text{o}$, which gives $\theta_1 = 53^\text{o}$. This result proves a general principle: when two equal masses undergo a glancing elastic collision with one of them at rest, they will move at right angles to each other after the collision.",
+            "content_type": "derivation",
+            "worked_examples": [
+              {
+                "label": "Example 5.12 (Continued)",
+                "problem": "Show that for an elastic collision of two equal masses, one of which is at rest, the particles move at right angles to each other after the collision.",
+                "solution": "Since the collision is elastic and $m_1 = m_2$, conservation of kinetic energy gives $v_{1i}^2 = v_{1f}^2 + v_{2f}^2$. Comparing this with the momentum conservation equation $v_{1i}^2 = v_{1f}^2 + v_{2f}^2 + 2v_{1f}v_{2f} \text{cos}(\theta_1 + \theta_2)$, we get $\text{cos}(\theta_1 + \theta_2) = 0$, which means $\theta_1 + \theta_2 = 90^\text{o}$. In the specific case where $\theta_2 = 37^\text{o}$, we find $\theta_1 = 53^\text{o}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:5.11:8",
+            "order": 8,
+            "title": "Collisions and Scattering",
+            "content_text": "In macroscopic physics, such as games of billiards or marbles, collisions are often simplified by assuming smooth spherical masses that interact only upon physical contact. However, in the broader physical world, collisions can occur without physical touch through 'action at a distance' forces. Examples include a comet being deflected by the sun's gravitational field or an alpha particle being deflected by a nucleus. Such events are referred to as scattering. The final velocities and directions of the particles in scattering depend on their initial velocities, the nature of the interaction force, and the physical properties (mass, shape, size) of the particles.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:5:Summary",
+        "number": "Summary",
+        "title": "Summary of Work, Energy and Power",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:5:Summary:1",
+            "order": 1,
+            "title": "Core Principles and Potential Energy",
+            "content_text": "The chapter's key concepts are summarized as follows: 1. The work-energy theorem states that the change in kinetic energy of a body is the work done by the net force: $K_f - K_i = W_{net}$. 2. A force is conservative if the work done by it is path-independent and depends only on endpoints, or if the work done over any closed path is zero. 3. For a conservative force in one dimension, potential energy $V(x)$ is defined such that $F(x) = -\frac{dV(x)}{dx}$ or $V_i - V_f = \\int_{x_i}^{x_f} F(x) dx$. 4. Conservation of mechanical energy states that total energy $E = K + V$ remains constant if only conservative forces act. 5. Gravitational potential energy near Earth's surface is $V(x) = mgx$. 6. Elastic potential energy of a spring is $V(x) = \\frac{1}{2}kx^2$.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:5:Summary:2",
+            "order": 2,
+            "title": "Scalar Product and Physical Quantities",
+            "content_text": "The scalar (dot) product of vectors $\\mathbf{A}$ and $\\mathbf{B}$ is $\\mathbf{A} \\cdot \\mathbf{B} = AB \\cos \\theta$. It is commutative and distributive. For unit vectors: $\\hat{i} \\cdot \\hat{i} = \\hat{j} \\cdot \\hat{j} = \\hat{k} \\cdot \\hat{k} = 1$ and $\\hat{i} \\cdot \\hat{j} = \\hat{j} \\cdot \\hat{k} = \\hat{k} \\cdot \\hat{i} = 0$. The following table summarizes the dimensions and units of key physical quantities.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 5.1",
+                "caption": "Physical Quantities in Work, Energy and Power",
+                "headers": [
+                  "Physical Quantity",
+                  "Symbol",
+                  "Dimensions",
+                  "Units",
+                  "Remarks"
+                ],
+                "rows": [
+                  [
+                    "Work",
+                    "$W$",
+                    "$[ML^2T^{-2}]$",
+                    "J",
+                    "$W = \\mathbf{F} \\cdot \\mathbf{d}$"
+                  ],
+                  [
+                    "Kinetic energy",
+                    "$K$",
+                    "$[ML^2T^{-2}]$",
+                    "J",
+                    "$K = \\frac{1}{2}mv^2$"
+                  ],
+                  [
+                    "Potential energy",
+                    "$V(x)$",
+                    "$[ML^2T^{-2}]$",
+                    "J",
+                    "$F(x) = -\\frac{dV(x)}{dx}$"
+                  ],
+                  [
+                    "Mechanical energy",
+                    "$E$",
+                    "$[ML^2T^{-2}]$",
+                    "J",
+                    "$E = K + V$"
+                  ],
+                  [
+                    "Spring constant",
+                    "$k$",
+                    "$[MT^{-2}]$",
+                    "N m$^{-1}$",
+                    "$F = -kx$, $V(x) = \\frac{1}{2}kx^2$"
+                  ],
+                  [
+                    "Power",
+                    "$P$",
+                    "$[ML^2T^{-3}]$",
+                    "W",
+                    "$P = \\mathbf{F} \\cdot \\mathbf{v}$, $P = \\frac{dW}{dt}$"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:5:Points to Ponder",
+        "number": "Points to Ponder",
+        "title": "Points to Ponder",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:5:Points to Ponder:1",
+            "order": 1,
+            "title": "Conceptual Nuances in Mechanics",
+            "content_text": "1. 'Work done' must always be associated with a specific force and displacement. 2. Work is a scalar but can be negative (e.g., friction). 3. While mutual forces between two bodies sum to zero ($\\mathbf{F}_{12} + \\mathbf{F}_{21} = 0$), the total work done by them ($W_{12} + W_{21}$) is not necessarily zero. 4. The Work-Energy (WE) theorem is a scalar form of Newton's Second Law and holds in all inertial frames. 5. Potential energy is relative; its zero point is a matter of choice (e.g., ground for gravity, equilibrium for springs). 6. Not all forces have an associated potential energy (e.g., friction). 7. In collisions, linear momentum is conserved at every instant, but kinetic energy conservation in elastic collisions applies only to the states before and after the collision, as deformation occurs during the interaction.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:physics:11:5:ex:1",
+          "number": 1,
+          "problem": "The sign of work done by a force on a body is important to understand. State carefully if the following quantities are positive or negative: (a) work done by a man in lifting a bucket out of a well by means of a rope tied to the bucket. (b) work done by gravitational force in the above case, (c) work done by friction on a body sliding down an inclined plane, (d) work done by an applied force on a body moving on a rough horizontal plane with uniform velocity, (e) work done by the resistive force of air on a vibrating pendulum in bringing it to rest.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:5:ex:2",
+          "number": 2,
+          "problem": "A body of mass 2 kg initially at rest moves under the action of an applied horizontal force of 7 N on a table with coefficient of kinetic friction = 0.1. Compute the (a) work done by the applied force in 10 s, (b) work done by friction in 10 s, (c) work done by the net force on the body in 10 s, (d) change in kinetic energy of the body in 10 s, and interpret your results.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:5:ex:3",
+          "number": 3,
+          "problem": "Given in Fig. 5.11 are examples of some potential energy functions in one dimension. The total energy of the particle is indicated by a cross on the ordinate axis. In each case, specify the regions, if any, in which the particle cannot be found for the given energy. Also, indicate the minimum total energy the particle must have in each case. Think of simple physical contexts for which these potential energy shapes are relevant.",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:5:ex:4",
+          "number": 4,
+          "problem": "The potential energy function for a particle executing linear simple harmonic motion is given by $V(x) = \\frac{kx^2}{2}$, where $k$ is the force constant of the oscillator. For $k = 0.5 \\text{ N m}^{-1}$, the graph of $V(x)$ versus $x$ is shown in Fig. 5.12. Show that a particle of total energy 1 J moving under this potential must 'turn back' when it reaches $x = \\pm 2 \\text{ m}$.",
+          "solution": "",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:5:ex:5",
+          "number": 5,
+          "problem": "Answer the following: (a) The casing of a rocket in flight burns up due to friction. At whose expense is the heat energy required for burning obtained? The rocket or the atmosphere? (b) Comets move around the sun in highly elliptical orbits. The gravitational force on the comet due to the sun is not normal to the comet's velocity in general. Yet the work done by the gravitational force over every complete orbit of the comet is zero. Why? (c) An artificial satellite orbiting the earth in very thin atmosphere loses its energy gradually due to dissipation against atmospheric resistance, however small. Why then does its speed increase progressively as it comes closer and closer to the earth? (d) In Fig. 5.13(i) the man walks 2 m carrying a mass of 15 kg on his hands. In Fig. 5.13(ii), he walks the same distance pulling the rope behind him. The rope goes over a pulley, and a mass of 15 kg hangs at its other end. In which case is the work done greater?",
+          "solution": "",
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:5:ex:6",
+          "number": 6,
+          "problem": "Underline the correct alternative: (a) When a conservative force does positive work on a body, the potential energy of the body increases/decreases/remains unaltered. (b) Work done by a body against friction always results in a loss of its kinetic/potential energy. (c) The rate of change of total momentum of a many-particle system is proportional to the external force/sum of the internal forces on the system. (d) In an inelastic collision of two bodies, the quantities which do not change after the collision are the total kinetic energy/total linear momentum/total energy of the system of two bodies.",
+          "solution": "",
+          "difficulty": "easy",
+          "exercise_type": "mcq"
+        },
+        {
+          "id": "ncert:physics:11:5:ex:7",
+          "number": 7,
+          "problem": "State if each of the following statements is true or false. Give reasons for your answer. (a) In an elastic collision of two bodies, the momentum and energy of each body is conserved. (b) Total energy of a system is always conserved, no matter what internal and external forces on the body are present. (c) Work done in the motion of a body over a closed loop is zero for every force in nature. (d) In an inelastic collision, the final kinetic energy is always less than the initial kinetic energy of the system.",
+          "solution": "",
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:5:ex:8",
+          "number": 8,
+          "problem": "Answer carefully, with reasons: (a) In an elastic collision of two billiard balls, is the total kinetic energy conserved during the short time of collision of the balls (i.e. when they are in contact)? (b) Is the total linear momentum conserved during the short time of an elastic collision of two balls? (c) What are the answers to (a) and (b) for an inelastic collision? (d) If the potential energy of two billiard balls depends only on the separation distance between their centres, is the collision elastic or inelastic?",
+          "solution": "",
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:5:ex:9",
+          "number": 9,
+          "problem": "A body is initially at rest. It undergoes one-dimensional motion with constant acceleration. The power delivered to it at time $t$ is proportional to (i) $t^{1/2}$ (ii) $t$ (iii) $t^{3/2}$ (iv) $t^2$",
+          "solution": "",
+          "difficulty": "easy",
+          "exercise_type": "mcq"
+        },
+        {
+          "id": "ncert:physics:11:5:ex:10",
+          "number": 10,
+          "problem": "A body is moving unidirectionally under the influence of a source of constant power. Its displacement in time $t$ is proportional to (i) $t^{1/2}$ (ii) $t$ (iii) $t^{3/2}$ (iv) $t^2$",
+          "solution": "",
+          "difficulty": "medium",
+          "exercise_type": "mcq"
+        },
+        {
+          "id": "ncert:physics:11:5:ex:11",
+          "number": 11,
+          "problem": "A body constrained to move along the z-axis of a coordinate system is subject to a constant force $\\vec{F}$ given by $\\vec{F} = -\\hat{i} + 2\\hat{j} + 3\\hat{k} \\text{ N}$ where $\\hat{i}, \\hat{j}, \\hat{k}$ are unit vectors along the x, y- and z-axis of the system respectively. What is the work done by this force in moving the body a distance of 4 m along the z-axis?",
+          "solution": "",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:5:ex:12",
+          "number": 12,
+          "problem": "An electron and a proton are detected in a cosmic ray experiment, the first with kinetic energy 10 keV, and the second with 100 keV. Which is faster, the electron or the proton? Obtain the ratio of their speeds. (electron mass = $9.11 \\times 10^{-31} \\text{ kg}$, proton mass = $1.67 \\times 10^{-27} \\text{ kg}$, $1 \\text{ eV} = 1.60 \\times 10^{-19} \\text{ J}$).",
+          "solution": "",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:5:ex:13",
+          "number": 13,
+          "problem": "A rain drop of radius 2 mm falls from a height of 500 m above the ground. It falls with decreasing acceleration (due to viscous resistance of the air) until at half its original height, it attains its maximum (terminal) speed, and moves with uniform speed thereafter. What is the work done by the gravitational force on the drop in the first and second half of its journey? What is the work done by the resistive force in the entire journey if its speed on reaching the ground is $10 \\text{ m s}^{-1}$?",
+          "solution": "",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:5:ex:14",
+          "number": 14,
+          "problem": "A molecule in a gas container hits a horizontal wall with speed $200 \\text{ m s}^{-1}$ and angle $30^\\circ$ with the normal, and rebounds with the same speed. Is momentum conserved in the collision? Is the collision elastic or inelastic?",
+          "solution": "",
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:5:ex:15",
+          "number": 15,
+          "problem": "A pump on the ground floor of a building can pump up water to fill a tank of volume $30 \\text{ m}^3$ in 15 min. If the tank is 40 m above the ground, and the efficiency of the pump is 30%, how much electric power is consumed by the pump?",
+          "solution": "",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:5:ex:16",
+          "number": 16,
+          "problem": "Two identical ball bearings in contact with each other and resting on a frictionless table are hit head-on by another ball bearing of the same mass moving initially with a speed $V$. If the collision is elastic, which of the following (Fig. 5.14) is a possible result after collision?",
+          "solution": "",
+          "difficulty": "medium",
+          "exercise_type": "mcq"
+        },
+        {
+          "id": "ncert:physics:11:5:ex:17",
+          "number": 17,
+          "problem": "The bob A of a pendulum released from $30^\\circ$ to the vertical hits another bob B of the same mass at rest on a table as shown in Fig. 5.15. How high does the bob A rise after the collision? Neglect the size of the bobs and assume the collision to be elastic.",
+          "solution": "",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:5:ex:18",
+          "number": 18,
+          "problem": "The bob of a pendulum is released from a horizontal position. If the length of the pendulum is 1.5 m, what is the speed with which the bob arrives at the lowermost point, given that it dissipated 5% of its initial energy against air resistance?",
+          "solution": "",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:5:ex:19",
+          "number": 19,
+          "problem": "A trolley of mass 300 kg carrying a sandbag of 25 kg is moving uniformly with a speed of 27 km/h on a frictionless track. After a while, sand starts leaking out of a hole on the floor of the trolley at the rate of $0.05 \\text{ kg s}^{-1}$. What is the speed of the trolley after the entire sand bag is empty?",
+          "solution": "",
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:5:ex:20",
+          "number": 20,
+          "problem": "A body of mass 0.5 kg travels in a straight line with velocity $v = a x^{3/2}$ where $a = 5 \\text{ m}^{-1/2} \\text{ s}^{-1}$. What is the work done by the net force during its displacement from $x = 0$ to $x = 2 \\text{ m}$?",
+          "solution": "",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:5:ex:21",
+          "number": 21,
+          "problem": "The blades of a windmill sweep out a circle of area $A$. (a) If the wind flows at a velocity $v$ perpendicular to the circle, what is the mass of the air passing through it in time $t$? (b) What is the kinetic energy of the air? (c) Assume that the windmill converts 25% of the wind's energy into electrical energy, and that $A = 30 \\text{ m}^2$, $v = 36 \\text{ km/h}$ and the density of air is $1.2 \\text{ kg m}^{-3}$. What is the electrical power produced?",
+          "solution": "",
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:5:ex:22",
+          "number": 22,
+          "problem": "A person trying to lose weight (dieter) lifts a 10 kg mass, one thousand times, to a height of 0.5 m each time. Assume that the potential energy lost each time she lowers the mass is dissipated. (a) How much work does she do against the gravitational force? (b) Fat supplies $3.8 \\times 10^7 \\text{ J}$ of energy per kilogram which is converted to mechanical energy with a 20% efficiency rate. How much fat will the dieter use up?",
+          "solution": "",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:5:ex:23",
+          "number": 23,
+          "problem": "A family uses 8 kW of power. (a) Direct solar energy is incident on the horizontal surface at an average rate of $200 \\text{ W}$ per square meter. If 20% of this energy can be converted",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": "conceptual"
+        }
+      ]
+    }
+  }
+}

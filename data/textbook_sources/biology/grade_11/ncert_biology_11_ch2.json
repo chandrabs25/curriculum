@@ -1,0 +1,586 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_biology_11_ch2.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:biology:11:2",
+  "curriculum": "ncert",
+  "subject": "biology",
+  "grade": 11,
+  "textbook_name": "Biology",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:biology:11:2",
+    "number": 2,
+    "title": "Biological Classification",
+    "summary": "This chapter on Biological Classification introduces the five-kingdom system proposed by Whittaker: Monera, Protista, Fungi, Plantae, and Animalia. It begins with Kingdom Monera, focusing on bacteria. It details their diversity, including Archaebacteria (extremophiles) and Eubacteria (true bacteria). Nutritional modes (autotrophic and heterotrophic) and reproduction methods are explained. Next, Kingdom Protista covers diverse, mostly unicellular eukaryotes like Chrysophytes, Dinoflagellates, Euglenoids, Slime molds, and Protozoans, each with unique characteristics and ecological roles.\n\nThe chapter then delves into Kingdom Fungi, emphasizing their heterotrophic nature, morphology (hyphae, mycelium), and reproduction methods (vegetative, asexual, sexual). It classifies fungi into Phycomycetes, Ascomycetes, Basidiomycetes, and Deuteromycetes based on mycelium structure and spore formation. Kingdoms Plantae and Animalia are briefly described, focusing on their basic characteristics (eukaryotic, multicellular). Plantae introduces the concept of alternation of generations.\n\nFinally, the chapter addresses entities not included in the five-kingdom system: viruses, viroids, prions, and lichens. Viruses are acellular pathogens with either DNA or RNA, viroids are infectious RNA molecules, and prions are infectious proteins. Lichens are symbiotic associations between algae and fungi. This chapter highlights the hierarchical organization of life and the diverse strategies organisms employ for survival. Understanding biological classification is crucial for studying evolution, ecology, and various fields like medicine and agriculture.",
+    "sections": [
+      {
+        "id": "ncert:biology:11:2:2",
+        "number": "2",
+        "title": "Biological Classification",
+        "content_text": "Since the dawn of civilisation, there have been many attempts to classify living organisms. It was done instinctively not using criteria that were scientific but borne out of a need to use organisms for our own use – for food, shelter and clothing. Aristotle was the earliest to attempt a more scientific basis for classification. He used simple morphological characters to classify plants into trees, shrubs and herbs. He also divided animals into two groups, those which had red blood and those that did not.\n\nIn Linnaeus' time a **Two Kingdom** system of classification with **Plantae** and **Animalia** kingdoms was developed that included all plants and animals respectively. This system did not distinguish between the eukaryotes and prokaryotes, unicellular and multicellular organisms and photosynthetic (green algae) and non-photosynthetic (fungi) organisms. Classification of organisms into plants and animals was easily done and was easy to understand, but, a large number of organisms did not fall into either category. Hence the two kingdom classification used for a long time was found inadequate. Besides, gross morphology a need was also felt for including other characteristics like cell structure, nature of wall, mode of nutrition, habitat, methods of reproduction, evolutionary relationships, etc. Classification systems for the living organisms have hence, undergone several changes over the time. Though plant and animal kingdoms have been a constant under all different systems, the understanding of what groups/organisms be included under these kingdoms have been changing; the number and nature of other kingdoms have also been understood differently by different scientists over the time.\n\n**TABLE 2.1 Characteristics of the Five Kingdoms**\n\n| Characters       | Monera                             | Protista                                 | Fungi                                | Plantae                               | Animalia                                 |\n\n| :--------------- | :--------------------------------- | :--------------------------------------- | :----------------------------------- | :------------------------------------ | :--------------------------------------- |\n\n| Cell type        | Prokaryotic                        | Eukaryotic                               | Eukaryotic                           | Eukaryotic                            | Eukaryotic                               |\n\n| Cell wall        | Noncellulosic (Polysaccharide + amino acid) | Present in some                        | Present with chitin                  | Present (cellulose)                   | Absent                                   |\n\n| Nuclear membrane | Absent                             | Present                                  | Present                              | Present                               | Present                                  |\n\n| Body organisation | Cellular                           | Cellular                                 | Multicellular/ loose tissue          | Tissue/organ                          | Tissue/organ/system                      |\n\n| Mode of nutrition | Autotrophic (chemosynthetic and photosynthetic) and Heterotrophic (saprophytic/parasitic) | Autotrophic (Photosynthetic) and Heterotrophic | Heterotrophic (Saprophytic/Parasitic) | Autotrophic (Photosynthetic)          | Heterotrophic (Holozoic/Saprophytic etc.) |\n\nR.H. Whittaker (1969) proposed a **Five Kingdom Classification**. The kingdoms defined by him were named **Monera, Protista, Fungi, Plantae** and **Animalia**. The main criteria for classification used by him include cell structure, body organisation, mode of nutrition, reproduction and phylogenetic relationships. **Table 2.1** gives a comparative account of different characteristics of the five kingdoms.\n\nThe three-domain system has also been proposed that divides the Kingdom Monera into two domains, leaving the remaining eukaryotic kingdoms in the third domain and thereby a six kingdom classification. You will learn about this system in detail in higher classes.\n\nLet us look at this five kingdom classification to understand the issues and considerations that influenced the classification system. Earlier classification systems included bacteria, blue green algae, fungi, mosses, ferns, gymnosperms and the angiosperms under ‘Plants’. The character that unified this whole kingdom was that all the organisms included had a cell wall in their cells. This placed together groups which widely differed in other characteristics. It brought together the prokaryotic bacteria and the blue green algae (cyanobacteria) with other groups which were eukaryotic. It also grouped together the unicellular organisms and the multicellular ones, say, for example, *Chlamydomonas* and *Spirogyra* were placed together under algae. The classification did not differentiate between the heterotrophic group – fungi, and the autotrophic green plants, though they also showed a characteristic difference in their walls composition – the fungi had chitin in their walls while the green plants had a cellulosic cell wall. When such characteristics were considered, the fungi were placed in a separate kingdom – Kingdom Fungi. All prokaryotic organisms were grouped together under Kingdom Monera and the unicellular eukaryotic organisms were placed in Kingdom Protista. Kingdom Protista has brought together *Chlamydomonas*, *Chlorella* (earlier placed in Algae within Plants and both having cell walls) with *Paramecium* and *Amoeba* (which were earlier placed in the animal kingdom which lack cell wall). It has put together organisms which, in earlier classifications, were placed in different kingdoms. This happened because the criteria for classification changed. This kind of changes will take place in future too depending on the improvement in our understanding of characteristics and evolutionary relationships. Over time, an attempt has been made to evolve a classification system which reflects not only the morphological, physiological and reproductive similarities, but is also phylogenetic, i.e., is based on evolutionary relationships.\n\nIn this chapter we will study characteristics of Kingdoms Monera, Protista and Fungi of the Whittaker system of classification. The Kingdoms Plantae and Animalia, commonly referred to as plant and animal kingdoms, respectively, will be dealt separately in chapters 3 and 4.",
+        "subsections": []
+      },
+      {
+        "id": "ncert:biology:11:2:2.1",
+        "number": "2.1",
+        "title": "Kingdom Monera",
+        "content_text": "Bacteria are the sole members of the Kingdom Monera. They are the most abundant micro-organisms. Bacteria occur almost everywhere. Hundreds of bacteria are present in a handful of soil. They also live in extreme habitats such as hot springs, deserts, snow and deep oceans where very few other life forms can survive. Many of them live in or on other organisms as parasites.\n\nBacteria are grouped under four categories based on their shape: the spherical Coccus (pl.: cocci), the rod-shaped Bacillus (pl.: bacilli), the comma-shaped Vibrium (pl.: vibrio) and the spiral Spirillum (pl.: spirilla) (Figure 2.1).\n\n---\n\n**Figure 2.1** Bacteria of different shapes\n\n[Image: A diagram showing the four basic shapes of bacteria. It is divided into four parts:\n\n- **Coccus:** Spherical or round-shaped bacteria, shown as individual circles and in clusters (like grapes).\n\n- **Bacillus:** Rod-shaped bacteria, shown as individual cylindrical rods.\n\n- **Vibrium:** Comma-shaped bacteria, shown as curved, rod-like forms resembling a comma.\n\n- **Spirillum:** Spiral-shaped bacteria, shown as long, twisted, corkscrew-like forms.\n\nEach shape is clearly labeled.]",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:2:2.1:1",
+            "order": 1,
+            "title": "Bacterial Complexity and Nutrition",
+            "content_text": "Though the bacterial structure is very simple, they are very complex in behaviour. Compared to many other organisms, bacteria as a group show the most extensive metabolic diversity. Some of the bacteria are autotrophic, i.e., they synthesise their own food from inorganic substrates. They may be photosynthetic autotrophic or chemosynthetic autotrophic. The vast majority of bacteria are heterotrophs, i.e., they depend on other organisms or on dead organic matter for food.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:2:2.1:2",
+            "order": 2,
+            "title": "2.1.1 Archaebacteria",
+            "content_text": "These bacteria are special since they live in some of the most harsh habitats such as extreme salty areas (halophiles), hot springs (thermoacidophiles) and marshy areas (methanogens). Archaebacteria differ from other bacteria in having a different cell wall structure and this feature is responsible for their survival in extreme conditions. Methanogens are present in the gut of several ruminant animals such as cows and buffaloes and they are responsible for the production of methane (biogas) from the dung of these animals.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:2:2.1:3",
+            "order": 3,
+            "title": "2.1.2 Eubacteria",
+            "content_text": "There are thousands of different eubacteria or ‘true bacteria’. They are characterised by the presence of a rigid cell wall, and if motile, a flagellum. The cyanobacteria (also referred to as blue-green algae) have chlorophyll $a$ similar to green plants and are photosynthetic autotrophs. The cyanobacteria are unicellular, colonial or filamentous, freshwater/marine or terrestrial algae. The colonies are generally surrounded by gelatinous sheath. They often form blooms in polluted water bodies. Some of these organisms can fix atmospheric nitrogen in specialised cells called heterocysts, e.g., Nostoc and Anabaena. Chemosynthetic autotrophic bacteria oxidise various inorganic substances such as nitrates, nitrites and ammonia and use the released energy for their ATP production. They play a great role in recycling nutrients like nitrogen, phosphorous, iron and sulphur.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 2.2",
+                "description": "A diagram of Nostoc, a filamentous blue-green algae. It shows a chain of cells (trichome) surrounded by a mucilaginous sheath. Specialized larger cells called heterocysts are visible within the filament, which are responsible for nitrogen fixation.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:2:2.1:4",
+            "order": 4,
+            "title": "Heterotrophic Bacteria",
+            "content_text": "Heterotrophic bacteria are most abundant in nature. The majority are important decomposers. Many of them have a significant impact on human affairs. They are helpful in making curd from milk, production of antibiotics, fixing nitrogen in legume roots, etc. Some are pathogens causing damage to human beings, crops, farm animals and pets. Cholera, typhoid, tetanus, citrus canker are well known diseases caused by different bacteria.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:2:2.1:5",
+            "order": 5,
+            "title": "Bacterial Reproduction and Mycoplasma",
+            "content_text": "Bacteria reproduce mainly by fission. Sometimes, under unfavourable conditions, they produce spores. They also reproduce by a sort of sexual reproduction by adopting a primitive type of DNA transfer from one bacterium to the other. The Mycoplasma are organisms that completely lack a cell wall. They are the smallest living cells known and can survive without oxygen. Many mycoplasma are pathogenic in animals and plants.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 2.3",
+                "description": "A diagram showing a bacterium undergoing binary fission. The cell wall and cell membrane are labeled, and the DNA is shown replicating and being distributed into two daughter cells as the cell constricts in the middle.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:2:2.2",
+        "number": "2.2",
+        "title": "Kingdom Protista",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:2:2.2:1",
+            "order": 1,
+            "title": "General Characteristics",
+            "content_text": "All single-celled eukaryotes are placed under Protista, but the boundaries of this kingdom are not well defined. What may be ‘a photosynthetic protistan’ to one biologist may be ‘a plant’ to another. In this book we include Chrysophytes, Dinoflagellates, Euglenoids, Slime moulds and Protozoans under Protista. Members of Protista are primarily aquatic. This kingdom forms a link with the others dealing with plants, animals and fungi. Being eukaryotes, the protistan cell body contains a well defined nucleus and other membrane-bound organelles. Some have flagella or cilia. Protists reproduce asexually and sexually by a process involving cell fusion and zygote formation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:2:2.2:2",
+            "order": 2,
+            "title": "2.2.1 Chrysophytes",
+            "content_text": "This group includes diatoms and golden algae (desmids). They are found in fresh water as well as in marine environments. They are microscopic and float passively in water currents (plankton). Most of them are photosynthetic. In diatoms the cell walls form two thin overlapping shells, which fit together as in a soap box. The walls are embedded with silica and thus the walls are indestructible. Thus, diatoms have left behind large amount of cell wall deposits in their habitat; this accumulation over billions of years is referred to as ‘diatomaceous earth’. Being gritty this soil is used in polishing, filtration of oils and syrups. Diatoms are the chief ‘producers’ in the oceans.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:2:2.2:3",
+            "order": 3,
+            "title": "2.2.2 Dinoflagellates",
+            "content_text": "These organisms are mostly marine and photosynthetic. They appear yellow, green, brown, blue or red depending on the main pigments present in their cells. The cell wall has stiff cellulose plates on the outer surface. Most of them have two flagella; one lies longitudinally and the other transversely in a furrow between the wall plates. Very often, red dinoflagellates (Example: Gonyaulax) undergo such rapid multiplication that they make the sea appear red (red tides). Toxins released by such large numbers may even kill other marine animals such as fishes.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 2.4",
+                "description": "A composite figure showing four types of protists: (a) a Dinoflagellate with its characteristic stiff cellulose plates and flagella; (b) Euglena, showing its spindle shape and flagellum; (c) a Slime mould appearing as a spreading plasmodial mass; (d) Paramoecium, a ciliated protozoan with its distinct slipper shape.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:2:2.2:4",
+            "order": 4,
+            "title": "2.2.3 Euglenoids",
+            "content_text": "Majority of them are fresh water organisms found in stagnant water. Instead of a cell wall, they have a protein rich layer called pellicle which makes their body flexible. They have two flagella, a short and a long one. Though they are photosynthetic in the presence of sunlight, when deprived of sunlight they behave like heterotrophs by predating on other smaller organisms. Interestingly, the pigments of euglenoids are identical to those present in higher plants. Example: Euglena.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:2:2.2:5",
+            "order": 5,
+            "title": "2.2.4 Slime Moulds",
+            "content_text": "Slime moulds are saprophytic protists. The body moves along decaying twigs and leaves engulfing organic material. Under suitable conditions, they form an aggregation called plasmodium which may grow and spread over several feet. During unfavourable conditions, the plasmodium differentiates and forms fruiting bodies bearing spores at their tips. The spores possess true walls. They are extremely resistant and survive for many years, even under adverse conditions. The spores are dispersed by air currents.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:2:2.2:6",
+            "order": 6,
+            "title": "2.2.5 Protozoans",
+            "content_text": "All protozoans are heterotrophs and live as predators or parasites. They are believed to be primitive relatives of animals. There are four major groups of protozoans. Amoeboid protozoans: These organisms live in fresh water, sea water or moist soil. They move and capture Amoeboid protozoans live in fresh water, sea water or moist soil. They move and capture their prey by putting out pseudopodia (false feet) as in Amoeba. Marine forms have silica shells on their surface. Some of them such as Entamoeba are parasites.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:2:2.2:7",
+            "order": 7,
+            "title": "Flagellated Protozoans",
+            "content_text": "The members of this group are either free-living or parasitic. They have flagella. The parasitic forms cause diseases such as sleeping sickness. Example: Trypanosoma.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:2:2.2:8",
+            "order": 8,
+            "title": "Ciliated Protozoans",
+            "content_text": "These are aquatic, actively moving organisms because of the presence of thousands of cilia. They have a cavity (gullet) that opens to the outside of the cell surface. The coordinated movement of rows of cilia causes the water laden with food to be steered into the gullet. Example: Paramoecium.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:2:2.2:9",
+            "order": 9,
+            "title": "Sporozoans",
+            "content_text": "This includes diverse organisms that have an infectious spore-like stage in their life cycle. The most notorious is Plasmodium (malarial parasite) which causes malaria, a disease which has a staggering effect on human population.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:2:2.3",
+        "number": "2.3",
+        "title": "Kingdom Fungi",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:2:2.3:1",
+            "order": 1,
+            "title": "General Characteristics and Habitat",
+            "content_text": "The fungi constitute a unique kingdom of heterotrophic organisms. They show a great diversity in morphology and habitat. Common examples include fungi on moist bread, rotten fruits, mushrooms, and toadstools. White spots seen on mustard leaves are due to a parasitic fungus. Some fungi are unicellular, such as yeast (used to make bread and beer), while others cause diseases in plants and animals, like the wheat rust-causing Puccinia. Some are sources of antibiotics, such as Penicillium. Fungi are cosmopolitan and occur in air, water, soil, and on animals and plants. They prefer to grow in warm and humid places.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:2:2.3:2",
+            "order": 2,
+            "title": "Morphology and Cellular Structure",
+            "content_text": "With the exception of yeasts which are unicellular, fungi are filamentous. Their bodies consist of long, slender thread-like structures called hyphae. The network of hyphae is known as mycelium. Some hyphae are continuous tubes filled with multinucleated cytoplasm; these are called coenocytic hyphae. Others have septae or cross walls in their hyphae. The cell walls of fungi are composed of chitin and polysaccharides.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:2:2.3:3",
+            "order": 3,
+            "title": "Modes of Nutrition",
+            "content_text": "Most fungi are heterotrophic and absorb soluble organic matter from dead substrates and hence are called saprophytes. Those that depend on living plants and animals are called parasites. They can also live as symbionts—in association with algae as lichens and with roots of higher plants as mycorrhiza.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:2:2.3:4",
+            "order": 4,
+            "title": "Reproduction and Spore Types",
+            "content_text": "Reproduction in fungi can take place by vegetative means—fragmentation, fission and budding. Asexual reproduction is by spores called conidia or sporangiospores or zoospores, and sexual reproduction is by oospores, ascospores and basidiospores. The various spores are produced in distinct structures called fruiting bodies.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:2:2.3:5",
+            "order": 5,
+            "title": "The Sexual Cycle and Dikaryophase",
+            "content_text": "The sexual cycle involves the following three steps: (i) Fusion of protoplasms between two motile or non-motile gametes called plasmogamy. (ii) Fusion of two nuclei called karyogamy. (iii) Meiosis in zygote resulting in haploid spores. When a fungus reproduces sexually, two haploid hyphae of compatible mating types come together and fuse. In some fungi, the fusion of two haploid cells immediately results in diploid cells ($2n$). However, in other fungi (ascomycetes and basidiomycetes), an intervening dikaryotic stage ($n + n$, i.e., two nuclei per cell) occurs; such a condition is called a dikaryon and the phase is called dikaryophase of fungus. Later, the parental nuclei fuse and the cells become diploid. Fungi form fruiting bodies in which reduction division occurs, leading to formation of haploid spores.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:2:2.3:6",
+            "order": 6,
+            "title": "Basis of Classification",
+            "content_text": "The morphology of the mycelium, mode of spore formation and fruiting bodies form the basis for the division of the kingdom into various classes.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:2:2.3:7",
+            "order": 7,
+            "title": "2.3.1 Phycomycetes",
+            "content_text": "Members of phycomycetes are found in aquatic habitats and on decaying wood in moist and damp places or as obligate parasites on plants. The mycelium is aseptate and coenocytic. Asexual reproduction takes place by zoospores (motile) or by aplanospores (non-motile). These spores are endogenously produced in sporangium. A zygospore is formed by fusion of two gametes. These gametes are similar in morphology (isogamous) or dissimilar (anisogamous or oogamous). Some common examples are Mucor, Rhizopus (the bread mould) and Albugo (the parasitic fungi on mustard).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 2.5 (a)",
+                "description": "Microscopic view of Mucor showing sporangia and hyphae.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:2:2.3:8",
+            "order": 8,
+            "title": "2.3.2 Ascomycetes",
+            "content_text": "Commonly known as sac-fungi, the ascomycetes are mostly multicellular, e.g., Penicillium, or rarely unicellular, e.g., yeast (Saccharomyces). They are saprophytic, decomposers, parasitic or coprophilous (growing on dung). Mycelium is branched and septate. The asexual spores are conidia produced exogenously on the special mycelium called conidiophores. Conidia on germination produce mycelium. Sexual spores are called ascospores which are produced endogenously in sac like asci (singular ascus). These asci are arranged in different types of fruiting bodies called ascocarps. Some examples are Aspergillus, Claviceps and Neurospora. Neurospora is used extensively in biochemical and genetic work. Many members like morels and truffles are edible and are considered delicacies.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 2.5 (b)",
+                "description": "Microscopic view of Aspergillus showing conidiophores and conidia.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:2:2.3:9",
+            "order": 9,
+            "title": "2.3.3 Basidiomycetes",
+            "content_text": "Commonly known forms of basidiomycetes are mushrooms, bracket fungi or puffballs. They grow in soil, on logs and tree stumps and in living plant bodies as parasites, e.g., rusts and smuts. The mycelium is branched and septate. The asexual spores are generally not found, but vegetative reproduction by fragmentation is common. The sex organs are absent, but plasmogamy is brought about by fusion of two vegetative or somatic cells of different strains or genotypes. The resultant structure is dikaryotic which ultimately gives rise to basidium. Karyogamy and meiosis take place in the basidium producing four basidiospores. The basidiospores are exogenously produced on the basidium (pl.: basidia). The basidia are arranged in fruiting bodies called basidiocarps. Some common members are Agaricus (mushroom), Ustilago (smut) and Puccinia (rust fungus).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 2.5 (c)",
+                "description": "Illustration of Agaricus, a common mushroom.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:2:2.3:10",
+            "order": 10,
+            "title": "2.3.4 Deuteromycetes",
+            "content_text": "Commonly known as imperfect fungi because only the asexual or vegetative phases of these fungi are known. When the sexual forms of these fungi were discovered they were moved into classes they rightly belong to. It is also possible that the asexual and vegetative stage have been given one name (and placed under deuteromycetes) and the sexual stage another (and placed under another class). Later when the linkages were established, the fungi were correctly identified and moved out of deuteromycetes. Once perfect (sexual) stages of members of deuteromycetes were discovered, they were often moved to ascomycetes and basidiomycetes. The deuteromycetes reproduce only by asexual spores known as conidia. The mycelium is septate and branched. Some members are saprophytes or parasites while a large number of them are decomposers of litter and help in mineral cycling. Some examples are Alternaria, Colletotrichum and Trichoderma.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:2:2.4",
+        "number": "2.4",
+        "title": "Kingdom Plantae",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:2:2.4:1",
+            "order": 1,
+            "title": "Characteristics of Kingdom Plantae",
+            "content_text": "Kingdom Plantae includes all eukaryotic chlorophyll-containing organisms commonly called plants. While most are autotrophic, a few members are partially heterotrophic, such as insectivorous plants (e.g., Bladderwort and Venus fly trap) or parasites (e.g., Cuscuta). Plant cells possess an eukaryotic structure with prominent chloroplasts and a cell wall primarily composed of cellulose. This kingdom encompasses diverse groups including algae, bryophytes, pteridophytes, gymnosperms, and angiosperms. Detailed study of eukaryotic cell structure is covered in Chapter 8.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:2:2.4:2",
+            "order": 2,
+            "title": "Alternation of Generations",
+            "content_text": "The life cycle of plants is characterized by two distinct phases: the diploid sporophytic phase and the haploid gametophytic phase. These phases alternate with each other in a phenomenon known as alternation of generations. The relative lengths of these haploid and diploid phases, and whether they are free-living or dependent on others, vary significantly among different plant groups. Further details of this kingdom are explored in Chapter 3.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:2:2.5",
+        "number": "2.5",
+        "title": "Kingdom Animalia",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:2:2.5:1",
+            "order": 1,
+            "title": "Characteristics of Kingdom Animalia",
+            "content_text": "Kingdom Animalia is characterized by heterotrophic eukaryotic organisms that are multicellular and lack cell walls. They depend directly or indirectly on plants for food. Animals digest their food in an internal cavity and store food reserves in the form of glycogen or fat. Their mode of nutrition is holozoic, involving the ingestion of food. They follow a definite growth pattern, developing into adults with a specific shape and size. Higher forms exhibit elaborate sensory and neuromotor mechanisms. Most animals are capable of locomotion. Sexual reproduction typically involves the copulation of male and female, followed by embryological development. Salient features of various phyla are described in Chapter 4.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:2:2.6",
+        "number": "2.6",
+        "title": "Viruses, Viroids, Prions and Lichens",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:2:2.6:1",
+            "order": 1,
+            "title": "General Nature of Viruses",
+            "content_text": "In Whittaker's five-kingdom classification, there is no mention of lichens or acellular organisms like viruses, viroids, and prions. Viruses are not considered truly 'living' because they do not possess a cell structure. Instead, they are non-cellular organisms characterized by an inert crystalline structure outside a living cell. Once they infect a host cell, they take over its machinery to replicate themselves, often killing the host. Consequently, viruses are classified as obligate parasites.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:2:2.6:2",
+            "order": 2,
+            "title": "Historical Milestones in Virology",
+            "content_text": "The name 'virus' means venom or poisonous fluid. Dmitri Ivanowsky (1892) identified certain microbes as the causal agents of the mosaic disease of tobacco; these were found to be smaller than bacteria as they passed through bacteria-proof filters. M.W. Beijerinck (1898) demonstrated that the extract of infected tobacco plants could cause infection in healthy plants, naming the fluid *Contagium vivum fluidum* (infectious living fluid). W.M. Stanley (1935) showed that viruses could be crystallized, with the crystals consisting largely of proteins.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:2:2.6:3",
+            "order": 3,
+            "title": "Viral Structure and Composition",
+            "content_text": "In addition to proteins, viruses contain genetic material, which can be either RNA or DNA, but never both. A virus is essentially a nucleoprotein, and its genetic material is the infectious component. Generally, viruses that infect plants have single-stranded RNA, while those that infect animals have either single or double-stranded RNA or double-stranded DNA. Bacteriophages, which are viruses that infect bacteria, are usually double-stranded DNA viruses. The nucleic acid is protected by a protein coat called the capsid, which is composed of small subunits called capsomeres. These capsomeres are arranged in helical or polyhedral geometric forms.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 2.6 (a)",
+                "description": "Tobacco Mosaic Virus (TMV) showing a rod-shaped structure with a helical arrangement of capsomeres forming the capsid and an internal RNA strand.",
+                "image_url": null
+              },
+              {
+                "label": "Figure 2.6 (b)",
+                "description": "A Bacteriophage showing a complex structure with a polyhedral head, a collar, a sheath, and tail fibers.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:2:2.6:4",
+            "order": 4,
+            "title": "Viral Pathogenesis and Symptoms",
+            "content_text": "Viruses are responsible for various diseases. In humans, they cause mumps, smallpox, herpes, influenza, and AIDS. In plants, viral symptoms include mosaic formation, leaf rolling and curling, yellowing and vein clearing, dwarfing, and stunted growth.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:2:2.6:5",
+            "order": 5,
+            "title": "Viroids",
+            "content_text": "Viroids were discovered by T.O. Diener in 1971 as a new infectious agent smaller than viruses. They cause potato spindle tuber disease. A viroid consists of free RNA and lacks the protein coat found in viruses. The RNA of the viroid is of low molecular weight.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:2:2.6:6",
+            "order": 6,
+            "title": "Prions",
+            "content_text": "Prions are agents consisting of abnormally folded proteins that cause certain infectious neurological diseases. They are similar in size to viruses. Notable diseases caused by prions include bovine spongiform encephalopathy (BSE), commonly known as mad cow disease in cattle, and its human variant, Creutzfeldt-Jakob disease (CJD).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:2:2.6:7",
+            "order": 7,
+            "title": "Lichens",
+            "content_text": "Lichens are symbiotic associations, representing mutually useful relationships between algae and fungi. The algal component is known as the phycobiont (autotrophic), and the fungal component is the mycobiont (heterotrophic). Algae prepare food for fungi, while fungi provide shelter and absorb mineral nutrients and water for their partner. Lichens are highly sensitive to pollution and serve as excellent pollution indicators, as they do not grow in polluted areas.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:2:Summary",
+        "number": "Summary",
+        "title": "Summary of Biological Classification",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:2:Summary:1",
+            "order": 1,
+            "title": "Chapter Overview",
+            "content_text": "Biological classification was first proposed by Aristotle based on simple morphological characters. Linnaeus later classified organisms into two kingdoms – Plantae and Animalia. Whittaker proposed an elaborate five kingdom classification – Monera, Protista, Fungi, Plantae and Animalia, based on criteria like cell structure, body organisation, mode of nutrition, reproduction, and phylogenetic relationships. In this system, bacteria are in Monera, single-celled eukaryotes in Protista, and diverse saprophytic organisms in Fungi. Plantae includes all eukaryotic chlorophyll-containing organisms, and Animalia includes heterotrophic multicellular organisms lacking cell walls. The mode of [CONTINUES]",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:biology:11:2:ex:1",
+          "number": 1,
+          "problem": "Discuss how classification systems have undergone several changes over a period of time?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:2:ex:2",
+          "number": 2,
+          "problem": "State two economically important uses of: (a) heterotrophic bacteria (b) archaebacteria",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:2:ex:3",
+          "number": 3,
+          "problem": "What is the nature of cell-walls in diatoms?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:2:ex:4",
+          "number": 4,
+          "problem": "Find out what do the terms ‘algal bloom’ and ‘red-tides’ signify.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:2:ex:5",
+          "number": 5,
+          "problem": "How are viroids different from viruses?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:2:ex:6",
+          "number": 6,
+          "problem": "Describe briefly the four major groups of Protozoa.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:2:ex:7",
+          "number": 7,
+          "problem": "Plants are autotrophic. Can you think of some plants that are partially heterotrophic?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:2:ex:8",
+          "number": 8,
+          "problem": "What do the terms phycobiont and mycobiont signify?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:2:ex:9",
+          "number": 9,
+          "problem": "Give a comparative account of the classes of Kingdom Fungi under the following: (i) mode of nutrition (ii) mode of reproduction",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:2:ex:10",
+          "number": 10,
+          "problem": "What are the characteristic features of Euglenoids?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:2:ex:11",
+          "number": 11,
+          "problem": "Give a brief account of viruses with respect to their structure and nature of genetic material. Also name four common viral diseases.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:2:ex:12",
+          "number": 12,
+          "problem": "Organise a discussion in your class on the topic – Are viruses living or non-living?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        }
+      ]
+    }
+  }
+}

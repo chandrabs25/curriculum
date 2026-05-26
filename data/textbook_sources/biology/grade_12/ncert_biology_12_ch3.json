@@ -1,0 +1,639 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_biology_12_ch3.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:biology:12:3",
+  "curriculum": "ncert",
+  "subject": "biology",
+  "grade": 12,
+  "textbook_name": "Biology",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:biology:12:3",
+    "number": 3,
+    "title": "Reproductive Health",
+    "summary": "Chapter 3, \"Reproductive Health,\" covers a wide range of topics related to the well-being of individuals and society in the context of reproduction. It begins by defining reproductive health according to the WHO and outlining India's national action plans like Family Planning and the RCH program. It highlights the importance of awareness, sex education, and medical infrastructure in achieving reproductive health goals.\n\nThe chapter then addresses population stabilization, exploring global and national population trends, causes of population explosion, and various contraceptive methods, including natural, barrier, IUDs, oral contraceptives, injectables, implants, and surgical sterilization. It emphasizes the characteristics of an ideal contraceptive and discusses potential side effects.\n\nFurther, the chapter examines Medical Termination of Pregnancy (MTP), its legal status in India under the MTP Act of 1971 (amended in 2017), safety considerations, and the dangers of misuse, such as female foeticide. The section on Sexually Transmitted Infections (STIs) defines STIs, discusses their modes of transmission, symptoms, complications, and preventive measures.\n\nFinally, the chapter defines infertility, explores its causes, and describes Assisted Reproductive Technologies (ART) like IVF, ZIFT, GIFT, ICSI, and artificial insemination, acknowledging the social and ethical considerations surrounding these technologies. The chapter connects each section, building from basic understanding to increasingly complex reproductive health issues, and emphasizing that prioritizing reproductive health enhances individual well-being and ensures a healthier society. The practical significance is clear: informed individuals can make responsible choices regarding contraception, family planning, and sexual health, reducing the incidence of unwanted pregnancies, STIs, and infertility, and promoting overall societal well-being.",
+    "sections": [
+      {
+        "id": "ncert:biology:12:3:3.1",
+        "number": "3.1",
+        "title": "Reproductive Health – Problems and Strategies",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:3:3.1:1",
+            "order": 1,
+            "title": "WHO Definition of Reproductive Health",
+            "content_text": "Reproductive health, as defined by the World Health Organisation (WHO), refers to total well-being in all aspects of reproduction, including physical, emotional, behavioural, and social dimensions. A society is considered reproductively healthy if its members have physically and functionally normal reproductive organs and healthy emotional and behavioural interactions in all sex-related aspects.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:3:3.1:2",
+            "order": 2,
+            "title": "National Action Plans: Family Planning and RCH",
+            "content_text": "India was among the first countries in the world to initiate national action plans and programmes to attain total reproductive health as a social goal. These programmes, called 'family planning', were initiated in 1951 and have been periodically assessed. Currently, improved programmes covering wider reproduction-related areas are in operation under the name 'Reproductive and Child Health Care (RCH)' programmes. Their major tasks include creating awareness about reproduction-related aspects and providing facilities and support for building a reproductively healthy society.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:3:3.1:3",
+            "order": 3,
+            "title": "Awareness and Sex Education",
+            "content_text": "Awareness is disseminated through audio-visual and print media by governmental and non-governmental agencies. Parents, close relatives, teachers, and friends also play a major role. Introduction of sex education in schools is encouraged to provide right information to the young, discouraging myths and misconceptions about sex-related aspects. This includes information about reproductive organs, adolescence and related changes, safe and hygienic sexual practices, sexually transmitted diseases (STD), and AIDS.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:3:3.1:4",
+            "order": 4,
+            "title": "Medical Infrastructure and Support Services",
+            "content_text": "Successful implementation of RCH plans requires strong infrastructural facilities, professional expertise, and material support. These are essential to provide medical assistance and care for problems like pregnancy, delivery, STDs, abortions, contraception, menstrual problems, and infertility. Educating fertile couples and those in marriageable age groups about birth control options, care of pregnant mothers, post-natal care, and the importance of breastfeeding is crucial for building socially conscious healthy families.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:3:3.1:5",
+            "order": 5,
+            "title": "Amniocentesis: Procedure, Use, and Statutory Ban",
+            "content_text": "Amniocentesis is a fetal sex-determination and disorder test based on the chromosomal pattern in the amniotic fluid surrounding the developing embryo. In this procedure, some of the amniotic fluid is taken to analyse fetal cells and dissolved substances to test for genetic disorders such as Down syndrome, haemophilia, and sickle-cell anemia. Due to its misuse for sex-determination leading to female foeticide, there is a statutory ban on amniocentesis for sex-determination in India.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:3:3.1:6",
+            "order": 6,
+            "title": "Research and Development: The 'Saheli' Contraceptive",
+            "content_text": "Research in reproduction-related areas is supported by various agencies to find new methods or improve existing ones. A notable achievement is the development of 'Saheli', a new oral contraceptive for females, by scientists at the Central Drug Research Institute (CDRI) in Lucknow, India.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:3:3.1:7",
+            "order": 7,
+            "title": "Indicators of Improved Reproductive Health",
+            "content_text": "Improved reproductive health of a society is indicated by better awareness about sex-related matters, an increased number of medically assisted deliveries, better post-natal care leading to decreased maternal mortality rate (MMR) and infant mortality rate (IMR), increased number of couples with small families, and better detection and cure of STDs.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:3:3.2",
+        "number": "3.2",
+        "title": "Population Stabilisation and Birth Control",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:3:3.2:1",
+            "order": 1,
+            "title": "Global and National Population Trends",
+            "content_text": "The last century saw an explosive impact on population growth due to improved quality of life and health facilities. The world population rose from $2$ billion ($2000$ million) in 1900 to $6$ billion by 2000 and $7.2$ billion in 2011. India's population, which was approximately $350$ million at independence, reached close to $1$ billion by 2000 and crossed $1.2$ billion in May 2011.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 3.1",
+                "caption": "Population Growth Statistics",
+                "headers": [
+                  "Region",
+                  "Year",
+                  "Population"
+                ],
+                "rows": [
+                  [
+                    "World",
+                    "1900",
+                    "2 billion"
+                  ],
+                  [
+                    "World",
+                    "2000",
+                    "6 billion"
+                  ],
+                  [
+                    "World",
+                    "2011",
+                    "7.2 billion"
+                  ],
+                  [
+                    "India",
+                    "Independence",
+                    "350 million"
+                  ],
+                  [
+                    "India",
+                    "2000",
+                    "1 billion"
+                  ],
+                  [
+                    "India",
+                    "2011",
+                    "1.2 billion"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:biology:12:3:3.2:2",
+            "order": 2,
+            "title": "Causes of the Population Explosion",
+            "content_text": "The primary reasons for the population explosion include a rapid decline in the death rate, maternal mortality rate (MMR), and infant mortality rate (IMR), along with an increase in the number of people in the reproducible age group.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:3:3.2:3",
+            "order": 3,
+            "title": "Strategies for Population Control",
+            "content_text": "According to the 2011 census, India's growth rate was less than $2\\%$, i.e., $20/1000$/year. To prevent absolute scarcity of basic requirements like food, shelter, and clothing, the government motivates smaller families using various contraceptive methods. Measures include media advertisements (e.g., 'Hum Do Hamare Do'), promoting the 'one child norm', and the statutory raising of marriageable age to $18$ years for females and $21$ years for males. Incentives are also given to couples with small families.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:3:3.2:4",
+            "order": 4,
+            "title": "Characteristics of an Ideal Contraceptive",
+            "content_text": "An ideal contraceptive should be user-friendly, easily available, effective, and reversible with no or least side-effects. It should also in no way interfere with the sexual drive, desire, and/or the sexual act of the user.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:3:3.2:5",
+            "order": 5,
+            "title": "Classification of Contraceptive Methods",
+            "content_text": "A wide range of contraceptive methods are available, which can be broadly grouped into the following categories: Natural/Traditional, Barrier, IUDs, Oral contraceptives, Injectables, Implants, and Surgical methods. Natural methods work on the principle of avoiding chances of ovum and sperms meeting. 1. Periodic abstinence: Couples avoid or abstain from coitus from day $10$ to $17$ of the menstrual cycle when ovulation could be expected. This is known as the fertile period because chances of fertilisation are very high. 2. Withdrawal or coitus interruptus: The male partner withdraws his penis from the vagina just before ejaculation so as to avoid insemination. 3. Lactational amenorrhea: This method is based on the fact that ovulation and the menstrual cycle do not occur during the period of intense lactation following parturition. It is effective only up to a maximum period of six months following parturition. These methods have no side effects as no medicines or devices are used, but chances of failure are high.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 3.1",
+                "description": "Illustration of a surgical contraceptive method (Tubectomy) showing the fallopian tubes cut and tied to prevent pregnancy.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:3:3.2:6",
+            "order": 6,
+            "title": "Barrier Methods",
+            "content_text": "In barrier methods, ovum and sperms are prevented from physically meeting with the help of barriers. Condoms are barriers made of thin rubber/latex sheath used to cover the penis in the male or vagina and cervix in the female just before coitus. 'Nirodh' is a popular brand of condom for the male. Use of condoms has increased due to the additional benefit of protecting the user from contracting STIs and AIDS. They are disposable, can be self-inserted, and provide privacy. Diaphragms, cervical caps, and vaults are reusable rubber barriers inserted into the female reproductive tract to cover the cervix during coitus. Spermicidal creams, jellies, and foams are often used with these barriers to increase efficiency.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 3.1(a)",
+                "description": "A line drawing of a male condom.",
+                "image_url": null
+              },
+              {
+                "label": "Figure 3.1(b)",
+                "description": "A photograph of a female condom, showing a transparent latex sheath with rings at both ends.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:3:3.2:7",
+            "order": 7,
+            "title": "Intra Uterine Devices (IUDs)",
+            "content_text": "Intra Uterine Devices (IUDs) are inserted by doctors or expert nurses in the uterus through the vagina. They are one of the most widely accepted methods of contraception in India. IUDs increase phagocytosis of sperms within the uterus. Copper-releasing IUDs release $Cu$ ions that suppress sperm motility and the fertilising capacity of sperms. Hormone-releasing IUDs make the uterus unsuitable for implantation and the cervix hostile to the sperms.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 3.2",
+                "description": "A photograph of a Copper T (CuT) device, showing the T-shaped plastic frame with copper wire wound around the stem and two white strings attached to the base.",
+                "image_url": null
+              }
+            ],
+            "tables": [
+              {
+                "label": "Table 3.1",
+                "caption": "Types of Intra Uterine Devices (IUDs)",
+                "headers": [
+                  "Category",
+                  "Examples"
+                ],
+                "rows": [
+                  [
+                    "Non-medicated IUDs",
+                    "Lippes loop"
+                  ],
+                  [
+                    "Copper releasing IUDs",
+                    "CuT, Cu7, Multiload 375"
+                  ],
+                  [
+                    "Hormone releasing IUDs",
+                    "Progestasert, LNG-20"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:biology:12:3:3.2:8",
+            "order": 8,
+            "title": "Oral Contraceptives (Pills)",
+            "content_text": "Oral administration of small doses of either progestogens or progestogen-estrogen combinations is used by females in the form of tablets called pills. Pills are taken daily for a period of $21$ days, starting preferably within the first five days of the menstrual cycle. After a gap of $7$ days (during which menstruation occurs), the pattern is repeated until the female desires to prevent conception. They inhibit ovulation and implantation and alter the quality of cervical mucus to retard sperm entry. 'Saheli' is a new oral contraceptive for females containing a non-steroidal preparation. It is a 'once a week' pill with very few side effects and high contraceptive value.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:3:3.2:9",
+            "order": 9,
+            "title": "Injectables and Implants",
+            "content_text": "Progestogens alone or in combination with estrogen can be used by females as injections or implants under the skin. Their mode of action is similar to that of pills, but their effective periods are much longer.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 3.3",
+                "description": "A photograph of contraceptive implants, showing six small, matchstick-sized rods that are inserted under the skin.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:3:3.2:10",
+            "order": 10,
+            "title": "Emergency Contraception",
+            "content_text": "Administration of progestogens, progestogen-estrogen combinations, or IUDs within $72$ hours of coitus has been found to be very effective as emergency contraceptives. These are used to avoid possible pregnancy due to rape or casual unprotected intercourse.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:3:3.2:11",
+            "order": 11,
+            "title": "Surgical Methods (Sterilisation)",
+            "content_text": "Surgical methods, also called sterilisation, are terminal methods to prevent any more pregnancies by blocking gamete transport. In males, the procedure is called vasectomy, where a small part of the vas deferens is removed or tied up through a small incision on the scrotum. In females, it is called tubectomy, where a small part of the fallopian tube is removed or tied up through a small incision in the abdomen or through the vagina. These techniques are highly effective, but their reversibility is very poor.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 3.4(a)",
+                "description": "Diagram of the male reproductive system illustrating a vasectomy, where the vas deferens is cut and tied.",
+                "image_url": null
+              },
+              {
+                "label": "Figure 3.4(b)",
+                "description": "Diagram of the female reproductive system illustrating a tubectomy, where the fallopian tubes are cut and tied.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:3:3.2:12",
+            "order": 12,
+            "title": "Side Effects of Contraceptives",
+            "content_text": "The selection of a contraceptive method should be done in consultation with medical professionals. Contraceptives are not regular requirements for reproductive health but are used against a natural event (conception). Possible ill-effects include nausea, abdominal pain, breakthrough bleeding, irregular menstrual bleeding, or even breast cancer. Though these effects are not very significant, they should not be ignored.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:3:3.3",
+        "number": "3.3",
+        "title": "Medical Termination of Pregnancy (MTP)",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:3:3.3:1",
+            "order": 1,
+            "title": "Definition and Global Context",
+            "content_text": "Intentional or voluntary termination of pregnancy before full term is called medical termination of pregnancy (MTP) or induced abortion. Nearly $45$ to $50$ million MTPs are performed annually worldwide, accounting for $1/5^{th}$ of the total number of conceived pregnancies in a year. MTP is a subject of debate in many countries due to emotional, ethical, religious, and social issues.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:3:3.3:2",
+            "order": 2,
+            "title": "Legal Status and the MTP Act in India",
+            "content_text": "The Government of India legalised MTP in $1971$ with strict conditions to avoid its misuse, particularly to check indiscriminate and illegal female foeticides. The Medical Termination of Pregnancy (Amendment) Act, 2017 was enacted to reduce illegal abortions and maternal mortality. According to this Act, a pregnancy may be terminated within the first $12$ weeks on the opinion of one registered medical practitioner. For pregnancies between $12$ and $24$ weeks, the opinion of two registered medical practitioners is required. Grounds for termination include risk to the life or physical/mental health of the pregnant woman, or substantial risk that the child would be born with serious physical or mental abnormalities.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:3:3.3:3",
+            "order": 3,
+            "title": "Safety and Misuse of MTP",
+            "content_text": "MTPs are considered relatively safe during the first trimester (up to $12$ weeks of pregnancy). Second trimester abortions are much riskier. A disturbing trend is that many MTPs are performed illegally by unqualified quacks, which is unsafe and potentially fatal. Another dangerous trend is the misuse of amniocentesis to determine the sex of the unborn child; if the foetus is found to be female, it is often followed by MTP, which is illegal.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:3:3.3:4",
+            "order": 4,
+            "title": "Prevention of Unhealthy Trends in MTP",
+            "content_text": "Unsafe and illegal abortion practices must be avoided as they are dangerous for both the young mother and the foetus. To reverse the current unhealthy trend of illegal abortions, effective counselling is required to emphasize the need for avoiding unprotected coitus and to explain the risk factors involved. Additionally, the provision of more comprehensive health care facilities is essential to ensure the safety and well-being of women seeking reproductive health services.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:3:3.4",
+        "number": "3.4",
+        "title": "Sexually Transmitted Infections (STIs)",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:3:3.4:1",
+            "order": 1,
+            "title": "Definition and Common STIs",
+            "content_text": "Infections or diseases that are transmitted through sexual intercourse are collectively referred to as sexually transmitted infections (STI), venereal diseases (VD), or reproductive tract infections (RTI). Common examples include gonorrhoea, syphilis, genital herpes, chlamydiasis, genital warts, trichomoniasis, and hepatitis-B. HIV (Human Immunodeficiency Virus), which leads to AIDS, is the most dangerous and widely discussed STI. HIV infection is covered in greater detail in Chapter 7.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:3:3.4:2",
+            "order": 2,
+            "title": "Modes of Transmission and Curability",
+            "content_text": "While primarily spread through sexual contact, some STIs like hepatitis-B and HIV can also be transmitted by sharing injection needles or surgical instruments with infected persons, through blood transfusions, or from an infected mother to her foetus. Most STIs are completely curable if they are detected early and treated properly. However, hepatitis-B, genital herpes, and HIV infections are currently not curable.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:3:3.4:3",
+            "order": 3,
+            "title": "Symptoms and Complications",
+            "content_text": "Early symptoms of most STIs are minor and include itching, fluid discharge, slight pain, and swellings in the genital region. Infected females are often asymptomatic and may remain undetected for long periods. The absence of significant early symptoms and the social stigma attached to STIs often deter individuals from seeking timely detection and treatment. If left untreated, these infections can lead to severe complications such as pelvic inflammatory diseases (PID), abortions, still births, ectopic pregnancies, infertility, or even cancer of the reproductive tract.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:3:3.4:4",
+            "order": 4,
+            "title": "Prevention of STIs",
+            "content_text": "STIs are a major threat to a healthy society, with high incidence rates reported among individuals in the 15-24 age group. Prevention is possible by following three simple principles: (i) Avoid sex with unknown or multiple partners; (ii) Always use condoms during coitus; (iii) In case of doubt, consult a qualified doctor for early detection and complete treatment if diagnosed with an infection.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:3:3.5",
+        "number": "3.5",
+        "title": "Infertility",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:3:3.5:1",
+            "order": 1,
+            "title": "Understanding Infertility and its Causes",
+            "content_text": "Infertility is defined as the inability of a couple to produce children despite unprotected sexual co-habitation. The causes can be physical, congenital, diseases, drugs, immunological, or psychological. In many societies, the female is often unfairly blamed for childlessness, though the problem frequently lies with the male partner. Specialized infertility clinics can assist in the diagnosis and corrective treatment of many of these disorders.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:3:3.5:2",
+            "order": 2,
+            "title": "Assisted Reproductive Technologies (ART): IVF and ET",
+            "content_text": "When corrective treatments are not possible, couples can be assisted through assisted reproductive technologies (ART). A common method is in vitro fertilisation (IVF), where fertilisation occurs outside the body in simulated laboratory conditions, followed by embryo transfer (ET). This is popularly known as the 'test tube baby' programme. In this process, ova from the wife/donor and sperms from the husband/donor are collected and induced to form a zygote in the laboratory.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:3:3.5:3",
+            "order": 3,
+            "title": "Zygote Intra Fallopian Transfer (ZIFT) and Intra Uterine Transfer (IUT)",
+            "content_text": "Following IVF, the zygote or early embryos (with up to 8 blastomeres) can be transferred into the fallopian tube; this procedure is called Zygote Intra Fallopian Transfer (ZIFT). If the embryo has more than 8 blastomeres, it is transferred into the uterus to complete its development, a process known as Intra Uterine Transfer (IUT). Embryos formed by in-vivo fertilisation (fusion of gametes within the female) can also be used for such transfers to assist females who cannot conceive.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:3:3.5:4",
+            "order": 4,
+            "title": "Gamete Intra Fallopian Transfer (GIFT) and Intra Cytoplasmic Sperm Injection (ICSI)",
+            "content_text": "Gamete Intra Fallopian Transfer (GIFT) involves transferring an ovum collected from a donor into the fallopian tube of another female who cannot produce one but can provide a suitable environment for fertilisation. Another specialized procedure is Intra Cytoplasmic Sperm Injection (ICSI), where an embryo is formed in the laboratory by directly injecting a sperm into the ovum.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:3:3.5:5",
+            "order": 5,
+            "title": "Artificial Insemination (AI) and Intra-Uterine Insemination (IUI)",
+            "content_text": "Infertility caused by the male partner's inability to inseminate the female or due to very low sperm counts can be corrected by artificial insemination (AI). In this technique, semen collected from the husband or a healthy donor is artificially introduced into the vagina or the uterus. When introduced into the uterus, it is called intra-uterine insemination (IUI).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:3:3.5:6",
+            "order": 6,
+            "title": "Social Aspects and Adoption",
+            "content_text": "ART procedures require high precision, specialized professionals, and expensive instrumentation, making them available only in limited centers and affordable to few. Emotional, religious, and social factors also influence the adoption of these methods. Since the ultimate goal is to have children, legal adoption is considered one of the best methods for couples seeking parenthood, especially given the large number of orphaned and destitute children in India.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:3:Summary",
+        "number": "Summary",
+        "title": "Summary of Reproductive Health",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:3:Summary:1",
+            "order": 1,
+            "title": "Chapter Overview and National Strategy",
+            "content_text": "Reproductive health refers to total well-being in physical, emotional, behavioural, and social aspects of reproduction. India was the first nation to initiate national action plans for a reproductively healthy society. Key strategies include creating awareness about reproductive organs, adolescence, and safe sexual practices. Improved health facilities have led to reduced maternal and infant mortality rates and better management of issues like menstrual irregularities, pregnancy, and delivery.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:3:Summary:2",
+            "order": 2,
+            "title": "Population Control and MTP",
+            "content_text": "Improved health facilities and living conditions led to explosive population growth, necessitating the propagation of various contraceptive methods (natural, barrier, IUDs, pills, etc.). Medical Termination of Pregnancy (MTP) is legal in India and is performed to terminate unwanted pregnancies due to rapes or casual relationships, or when the pregnancy is harmful to the mother or foetus.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:3:Summary:3",
+            "order": 3,
+            "title": "STIs and Infertility",
+            "content_text": "Sexually Transmitted Infections (STIs) can lead to complications like Pelvic Inflammatory Diseases (PIDs), stillbirths, and infertility. Infertility is defined as the inability to conceive or produce children even after 2 years of unprotected sexual cohabitation. Various Assisted Reproductive Technologies (ART) like IVF, ZIFT, GIFT, ICSI, and AI are available to help infertile couples achieve parenthood.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:biology:12:3:ex:1",
+          "number": 1,
+          "problem": "What do you think is the significance of reproductive health in a society?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:3:ex:2",
+          "number": 2,
+          "problem": "Suggest the aspects of reproductive health which need to be given special attention in the present scenario.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:3:ex:3",
+          "number": 3,
+          "problem": "Is sex education necessary in schools? Why?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:3:ex:4",
+          "number": 4,
+          "problem": "Do you think that reproductive health in our country has improved in the past 50 years? If yes, mention some such areas of improvement.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:3:ex:5",
+          "number": 5,
+          "problem": "What are the suggested reasons for population explosion?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:3:ex:6",
+          "number": 6,
+          "problem": "Is the use of contraceptives justified? Give reasons.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:3:ex:7",
+          "number": 7,
+          "problem": "Removal of gonads cannot be considered as a contraceptive option. Why?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:3:ex:8",
+          "number": 8,
+          "problem": "Amniocentesis for sex determination is banned in our country. Is this ban necessary? Comment.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:3:ex:9",
+          "number": 9,
+          "problem": "Suggest some methods to assist infertile couples to have children.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:3:ex:10",
+          "number": 10,
+          "problem": "What are the measures one has to take to prevent from contracting STDs?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:3:ex:11",
+          "number": 11,
+          "problem": "State True/False with explanation (a) Abortions could happen spontaneously too. (b) Infertility is defined as the inability to produce a viable offspring and is always due to abnormalities/defects in the female partner. (c) Complete lactation could help as a natural method of contraception. (d) Creating awareness about sex related aspects is an effective method to improve reproductive health of the people.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:3:ex:12",
+          "number": 12,
+          "problem": "Correct the following statements : (a) Surgical methods of contraception prevent gamete formation. (b) All sexually transmitted diseases are completely curable. (c) Oral pills are very popular contraceptives among the rural women. (d) In E. T. techniques, embryos are always transferred into the uterus.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        }
+      ]
+    }
+  }
+}

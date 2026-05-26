@@ -1,0 +1,803 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_biology_12_ch2.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:biology:12:2",
+  "curriculum": "ncert",
+  "subject": "biology",
+  "grade": 12,
+  "textbook_name": "Biology",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:biology:12:2",
+    "number": 2,
+    "title": "Human Reproduction",
+    "summary": "Chapter 2, \"Human Reproduction,\" comprehensively covers the biological processes enabling human procreation. It starts by detailing the male and female reproductive systems, outlining their structures (testes, ovaries, ducts, glands) and functions. The chapter then explains gametogenesis, differentiating between spermatogenesis (sperm formation) and oogenesis (ovum formation), including hormonal controls (GnRH, LH, FSH) and cellular events. Spermiogenesis, spermiation, and follicular development are also key topics.\n\nThe menstrual cycle is discussed in detail, dividing it into phases: menstrual, follicular, ovulatory, and luteal, and linking these to hormonal changes (estrogen, progesterone). Fertilization, including sperm capacitation and the acrosomal reaction, implantation, and the formation of the placenta are then explained. Sex determination based on chromosomes (XX/XY) is also detailed.\n\nThe chapter progresses to pregnancy and embryonic development, highlighting the role of the placenta, embryonic layers (ectoderm, endoderm, mesoderm), and stem cells. Finally, parturition (childbirth) is described, focusing on the neuroendocrine mechanisms (oxytocin) and lactation, emphasizing the importance of colostrum. Each section builds upon the previous one, progressively unfolding the complexities of human reproduction. The chapter's content is fundamentally significant for understanding human biology, reproductive health, and family planning.",
+    "sections": [
+      {
+        "id": "ncert:biology:12:2:2.1",
+        "number": "2.1",
+        "title": "The Male Reproductive System",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:2:2.1:1",
+            "order": 1,
+            "title": "Introduction to Human Reproduction",
+            "content_text": "Humans are sexually reproducing and viviparous organisms. The reproductive process involves several sequential events: gametogenesis (the formation of gametes, i.e., sperms in males and ovum in females), insemination (transfer of sperms into the female genital tract), and fertilisation (fusion of male and female gametes leading to the formation of a zygote). This is followed by the formation and development of a blastocyst and its attachment to the uterine wall (implantation), embryonic development (gestation), and finally the delivery of the baby (parturition). These reproductive events occur after the onset of puberty. A notable difference between sexes is that sperm formation continues even in old men, whereas the formation of ova ceases in women around the age of fifty years.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:2:2.1:2",
+            "order": 2,
+            "title": "Overview of the Male Reproductive System",
+            "content_text": "The male reproductive system is situated in the pelvis region. It consists of a pair of testes, accessory ducts, glands, and the external genitalia. These components work together to produce, store, and transport sperm, as well as secrete hormones necessary for male reproductive function.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 2.1(a)",
+                "description": "A diagrammatic sectional view of the male pelvis showing the reproductive system, including the ureter, seminal vesicle, urinary bladder, vas deferens, prostate, penis, urethra, glans penis, foreskin, testis, scrotum, bulbourethral gland, anus, rectum, and ejaculatory duct.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:2:2.1:3",
+            "order": 3,
+            "title": "The Testes and Scrotum",
+            "content_text": "The testes are located outside the abdominal cavity within a pouch called the scrotum. The primary function of the scrotum is to maintain the temperature of the testes at approximately $2-2.5^\\circ\\text{C}$ lower than the normal internal body temperature. This lower temperature is essential for the process of spermatogenesis (sperm production). In adults, each testis is oval in shape, measuring about 4 to 5 cm in length and 2 to 3 cm in width. Each testis is enclosed by a dense covering.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:2:2.1:4",
+            "order": 4,
+            "title": "Internal Structure of the Testis",
+            "content_text": "Internally, each testis is divided into approximately 250 compartments known as testicular lobules. Within each lobule, there are one to three highly coiled seminiferous tubules. These tubules are the specific sites where sperms are produced. The seminiferous tubules are lined on their inner side by two distinct types of cells: male germ cells (spermatogonia) and Sertoli cells.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 2.1(b)",
+                "description": "A diagrammatic view of the male reproductive system with a part of the testis open to show inner details such as testicular lobules, rete testis, vasa efferentia, and epididymis.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:2:2.1:5",
+            "order": 5,
+            "title": "Cells of the Seminiferous Tubules and Interstitial Space",
+            "content_text": "The male germ cells (spermatogonia) undergo meiotic divisions to eventually form sperms. The Sertoli cells provide essential nutrition to these developing germ cells. The regions outside the seminiferous tubules are called interstitial spaces. These spaces contain small blood vessels and interstitial cells, also known as Leydig cells. Leydig cells are responsible for the synthesis and secretion of testicular hormones called androgens. Additionally, other immunologically competent cells are present in these spaces.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 2.2",
+                "description": "A diagrammatic sectional view of a seminiferous tubule showing interstitial cells, spermatogonia, spermatozoa, and Sertoli cells.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:2:2.1:6",
+            "order": 6,
+            "title": "Male Sex Accessory Ducts",
+            "content_text": "The male sex accessory ducts include the rete testis, vasa efferentia, epididymis, and vas deferens. The pathway for sperm transport begins in the seminiferous tubules, which open into the vasa efferentia through the rete testis. The vasa efferentia then leave the testis and open into the epididymis, located along the posterior surface of each testis. The epididymis leads to the vas deferens, which ascends into the abdomen and loops over the urinary bladder. The vas deferens receives a duct from the seminal vesicle and opens into the urethra as the ejaculatory duct. These ducts store and transport sperms from the testis to the outside through the urethra, which originates from the urinary bladder and extends through the penis to its external opening called the urethral meatus.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:2:2.1:7",
+            "order": 7,
+            "title": "Male External Genitalia",
+            "content_text": "The penis is the male external genitalia. It is composed of specialized erectile tissue that facilitates the erection of the penis, which is necessary for insemination. The enlarged distal end of the penis is called the glans penis, and it is covered by a loose, retractable fold of skin known as the foreskin.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:2:2.1:8",
+            "order": 8,
+            "title": "Male Accessory Glands",
+            "content_text": "The male accessory glands include the paired seminal vesicles, a single prostate gland, and paired bulbourethral glands. The collective secretions of these glands form the seminal plasma. Seminal plasma is rich in fructose, calcium, and certain enzymes. The secretions from the bulbourethral glands specifically aid in the lubrication of the penis during intercourse.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:2:2.2",
+        "number": "2.2",
+        "title": "The Female Reproductive System",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:2:2.2:1",
+            "order": 1,
+            "title": "Overview of the Female Reproductive System",
+            "content_text": "The female reproductive system is located in the pelvic region and consists of a pair of ovaries, a pair of oviducts, the uterus, cervix, vagina, and external genitalia. Additionally, a pair of mammary glands is integrated structurally and functionally with these organs to support the processes of ovulation, fertilisation, pregnancy, birth, and child care.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:2:2.2:2",
+            "order": 2,
+            "title": "The Ovaries",
+            "content_text": "The ovaries are the primary female sex organs. They produce the female gamete (ovum) and several steroid hormones known as ovarian hormones. One ovary is located on each side of the lower abdomen. Each ovary is approximately 2 to 4 cm in length and is connected to the pelvic wall and uterus by ligaments. Each ovary is covered by a thin epithelium that encloses the ovarian stroma. The stroma is divided into two distinct zones: a peripheral cortex and an inner medulla.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:2:2.2:3",
+            "order": 3,
+            "title": "Female Accessory Ducts - Oviducts",
+            "content_text": "The female accessory ducts consist of the oviducts (fallopian tubes), uterus, and vagina. Each fallopian tube is approximately 10-12 cm long and extends from the periphery of each ovary to the uterus. The part of the fallopian tube closest to the ovary is the funnel-shaped infundibulum. The edges of the infundibulum possess finger-like projections called fimbriae, which are essential for the collection of the ovum after ovulation. The infundibulum leads to a wider part of the oviduct called the ampulla. The final part of the oviduct is the isthmus, which has a narrow lumen and connects the duct to the uterus.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 2.3 (a)",
+                "description": "A diagrammatic sectional view of the female pelvis showing the reproductive system, including the uterus, urinary bladder, pubic symphysis, urethra, clitoris, labia minora, labia majora, vaginal orifice, cervix, rectum, vagina, and anus.",
+                "image_url": null
+              },
+              {
+                "label": "Figure 2.3 (b)",
+                "description": "A diagrammatic sectional view of the female reproductive system showing the uterine fundus, uterine cavity, fallopian tube (isthmus, ampulla, infundibulum), fimbriae, ovary, and the three layers of the uterine wall (perimetrium, myometrium, endometrium), leading to the cervix, cervical canal, and vagina.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:2:2.2:4",
+            "order": 4,
+            "title": "The Uterus (Womb)",
+            "content_text": "The uterus, also known as the womb, is a single organ shaped like an inverted pear. It is supported by ligaments attached to the pelvic wall. The uterus opens into the vagina through a narrow cervix. The cavity of the cervix is called the cervical canal, which, along with the vagina, forms the birth canal. The wall of the uterus is composed of three layers of tissue: 1. Perimetrium: The external thin membranous layer. 2. Myometrium: The middle thick layer of smooth muscle, which exhibits strong contractions during the delivery of the baby. 3. Endometrium: The inner glandular layer that lines the uterine cavity and undergoes cyclical changes during the menstrual cycle.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:2:2.2:5",
+            "order": 5,
+            "title": "Female External Genitalia",
+            "content_text": "The female external genitalia include the mons pubis, labia majora, labia minora, hymen, and clitoris. The mons pubis is a cushion of fatty tissue covered by skin and pubic hair. The labia majora are fleshy folds of tissue that extend down from the mons pubis and surround the vaginal opening. The labia minora are paired folds of tissue located under the labia majora. The opening of the vagina is often covered partially by a membrane called the hymen. The clitoris is a tiny finger-like structure located at the upper junction of the two labia minora, above the urethral opening. The hymen can be torn during first coitus or by activities like sudden falls, insertion of tampons, or active participation in sports like horseback riding or cycling. In some women, the hymen persists even after coitus; therefore, its presence or absence is not a reliable indicator of virginity.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:2:2.2:6",
+            "order": 6,
+            "title": "Mammary Glands",
+            "content_text": "A functional mammary gland is a characteristic of all female mammals. These are paired structures (breasts) containing glandular tissue and variable amounts of fat. The glandular tissue of each breast is divided into 15-20 mammary lobes, which contain clusters of cells called alveoli. The cells of the alveoli secrete milk, which is stored in the cavities (lumens) of the alveoli. The alveoli open into mammary tubules. The tubules of each lobe join to form a mammary duct. Several mammary ducts join to form a wider mammary ampulla, which is connected to the lactiferous duct through which milk is expressed during breastfeeding.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 2.4",
+                "description": "A diagrammatic sectional view of the mammary gland showing mammary lobes, alveoli, mammary ducts, ampulla, lactiferous ducts, nipple, areola, fat deposits, ribs, muscles between ribs, and the pectoralis major muscle.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:2:2.3",
+        "number": "2.3",
+        "title": "Gametogenesis",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:2:2.3:1",
+            "order": 1,
+            "title": "Introduction to Gametogenesis",
+            "content_text": "Gametogenesis is the process by which the primary sex organs—the testis in males and the ovaries in females—produce gametes, namely sperms and ovum, respectively.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:2:2.3:2",
+            "order": 2,
+            "title": "Spermatogenesis - Process and Cell Types",
+            "content_text": "In the testis, immature male germ cells called spermatogonia produce sperms through spermatogenesis, which begins at puberty. The spermatogonia (singular: spermatogonium) are present on the inside wall of seminiferous tubules and multiply by mitotic division to increase in number. Each spermatogonium is diploid and contains 46 chromosomes. Some spermatogonia, called primary spermatocytes, periodically undergo meiosis. A primary spermatocyte completes the first meiotic division (reduction division), leading to the formation of two equal, haploid cells called secondary spermatocytes, which have only 23 chromosomes each. The secondary spermatocytes then undergo the second meiotic division to produce four equal, haploid spermatids.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 2.5",
+                "description": "A diagrammatic sectional view of an enlarged seminiferous tubule showing the progression from spermatogonium to primary spermatocyte, secondary spermatocyte, spermatid, and finally spermatozoa (sperms), with Sertoli cells providing support.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:2:2.3:3",
+            "order": 3,
+            "title": "Spermiogenesis and Spermiation",
+            "content_text": "The spermatids are transformed into spermatozoa (sperms) by a process called spermiogenesis. After spermiogenesis, the sperm heads become embedded in the Sertoli cells. They are finally released from the seminiferous tubules by the process called spermiation.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:2:2.3:4",
+            "order": 4,
+            "title": "Hormonal Control of Spermatogenesis",
+            "content_text": "Spermatogenesis starts at puberty due to a significant increase in the secretion of gonadotropin-releasing hormone (GnRH), a hypothalamic hormone. Increased levels of GnRH act on the anterior pituitary gland to stimulate the secretion of two gonadotropins: luteinising hormone (LH) and follicle-stimulating hormone (FSH). LH acts on the Leydig cells and stimulates the synthesis and secretion of androgens, which in turn stimulate the process of spermatogenesis. FSH acts on the Sertoli cells and stimulates FSH acts on the Sertoli cells and stimulates the secretion of some factors which help in the process of spermiogenesis.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:2:2.3:5",
+            "order": 5,
+            "title": "Structure of a Sperm",
+            "content_text": "A sperm is a microscopic structure composed of a head, neck, a middle piece, and a tail. A plasma membrane envelops the whole body of the sperm. The sperm head contains an elongated haploid nucleus, the anterior portion of which is covered by a cap-like structure called the acrosome. The acrosome is filled with enzymes that help in the fertilisation of the ovum. The middle piece possesses numerous mitochondria, which produce energy for the movement of the tail that facilitates sperm motility essential for fertilisation. During a single coitus, a human male ejaculates about $200$ to $300$ million sperms. For normal fertility, at least $60$ per cent of these sperms must have normal shape and size, and at least $40$ per cent of them must show vigorous motility.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 2.6",
+                "description": "Diagram of a human sperm showing the Head (containing the Acrosome and Nucleus with chromosomal material), Neck, Middle piece (containing Mitochondria as an energy source for swimming), and the Tail. The entire structure is enclosed by a Plasma membrane.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:2:2.3:6",
+            "order": 6,
+            "title": "Role of Accessory Ducts and Glands in Sperm Maturation",
+            "content_text": "Sperms released from the seminiferous tubules are transported by the accessory ducts. Secretions of the epididymis, vas deferens, seminal vesicle, and prostate are essential for the maturation and motility of sperms. The seminal plasma along with the sperms constitute the semen. The functions of male sex accessory ducts and glands are maintained by the testicular hormones (androgens).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:2:2.3:7",
+            "order": 7,
+            "title": "Oogenesis: Initiation and Primary Oocytes",
+            "content_text": "The process of formation of a mature female gamete is called oogenesis, which is markedly different from spermatogenesis. Oogenesis is initiated during the embryonic development stage when a couple of million gamete mother cells (oogonia) are formed within each fetal ovary; no more oogonia are formed and added after birth. These cells start division and enter into prophase-I of the meiotic division and get temporarily arrested at that stage, called primary oocytes.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:2:2.3:8",
+            "order": 8,
+            "title": "Follicular Development in the Ovary",
+            "content_text": "Each primary oocyte gets surrounded by a layer of granulosa cells and is called the primary follicle. A large number of these follicles degenerate during the phase from birth to puberty. Therefore, at puberty, only $60,000$ to $80,000$ primary follicles are left in each ovary. The primary follicles get surrounded by more layers of granulosa cells and a new theca and are called secondary follicles. The secondary follicle soon transforms into a tertiary follicle which is characterised by a fluid-filled cavity called the antrum. The theca layer is organised into an inner theca interna and an outer theca externa.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 2.7",
+                "description": "Diagrammatic section view of an ovary showing blood vessels, primary follicles, tertiary follicles showing the antrum, Graafian follicle, secondary oocyte, corpus luteum, and the process of ovulation.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:2:2.3:9",
+            "order": 9,
+            "title": "Meiotic Division and Secondary Oocyte Formation",
+            "content_text": "It is at the tertiary follicle stage that the primary oocyte within the follicle grows in size and completes its first meiotic division. This is an unequal division resulting in the formation of a large haploid secondary oocyte and a tiny first polar body. The secondary oocyte retains the bulk of the nutrient-rich cytoplasm of the primary oocyte. At present, it is not certain whether the first polar body divides further or degenerates.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:2:2.3:10",
+            "order": 10,
+            "title": "Maturation to Graafian Follicle and Ovulation",
+            "content_text": "The tertiary follicle further changes into the mature follicle or Graafian follicle. The secondary oocyte forms a new membrane called zona pellucida surrounding it. The Graafian follicle now ruptures to release the secondary oocyte (ovum) from the ovary by the process called ovulation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:2:2.3:11",
+            "order": 11,
+            "title": "Comparison of Spermatogenesis and Oogenesis",
+            "content_text": "Spermatogenesis and oogenesis differ significantly in their timing and outcomes. Spermatogenesis begins at puberty and results in four equal-sized haploid spermatozoa from one primary spermatocyte. Oogenesis begins during fetal life, is arrested until puberty, and results in one large haploid ovum and polar bodies due to unequal cytokinesis. Both processes involve a reduction in chromosome number from $46$ to $23$ per cell.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 2.8",
+                "description": "Schematic representation comparing (a) Spermatogenesis and (b) Oogenesis. It tracks the chromosome number per cell (46 to 23) through mitosis, differentiation, and the first and second meiotic divisions across different life stages (fetal life, birth/childhood, puberty, and adult reproductive life).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:2:2.4",
+        "number": "2.4",
+        "title": "Menstrual Cycle",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:2:2.4:1",
+            "order": 1,
+            "title": "Introduction to the Menstrual Cycle",
+            "content_text": "The reproductive cycle in female primates (e.g., monkeys, apes, and human beings) is called the menstrual cycle. The first menstruation begins at puberty and is called menarche. In human females, menstruation is repeated at an average interval of about $28/29$ days, and the cycle of events starting from one menstruation till the next one is called the menstrual cycle. One ovum is released (ovulation) during the middle of each menstrual cycle.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:2:2.4:2",
+            "order": 2,
+            "title": "The Menstrual Phase",
+            "content_text": "The cycle starts with the menstrual phase, when menstrual flow occurs and it lasts for $3$ to $5$ days. The menstrual flow results due to the breakdown of the endometrial lining of the uterus and its blood vessels which forms a liquid that comes out through the vagina. Menstruation only occurs if the released ovum is not fertilised. Lack of menstruation may be indicative of pregnancy; however, it may also be caused by other underlying causes like stress or poor health.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 2.9",
+                "description": "Diagrammatic presentation of events during a menstrual cycle, showing Pituitary hormone levels (FSH, LH), Ovarian events (follicle development, ovulation, corpus luteum), Ovarian hormone levels (Estrogen, Progesterone), and Uterine events (menses, proliferative phase, secretory phase) over a 29-day period.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:2:2.4:3",
+            "order": 3,
+            "title": "The Follicular (Proliferative) Phase",
+            "content_text": "The menstrual phase is followed by the follicular phase. During this phase, the primary follicles in the ovary grow to become a fully mature Graafian follicle and simultaneously the endometrium of the uterus regenerates through proliferation. These changes in the ovary and the uterus are induced by changes in the levels of pituitary and ovarian hormones. The secretion of The secretion of gonadotropins (LH and FSH) increases gradually during the follicular phase, and stimulates follicular development as well as secretion of estrogens by the growing follicles. Both LH and FSH attain a peak level in the middle of cycle (about $14^{th}$ day). Rapid secretion of LH leading to its maximum level during the mid-cycle called LH surge induces rupture of Graafian follicle and thereby the release of ovum (ovulation).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:2:2.4:4",
+            "order": 4,
+            "title": "The Luteal Phase and Corpus Luteum",
+            "content_text": "The ovulation (ovulatory phase) is followed by the luteal phase during which the remaining parts of the Graafian follicle transform as the corpus luteum. The corpus luteum secretes large amounts of progesterone which is essential for maintenance of the endometrium. Such an endometrium is necessary for implantation of the fertilised ovum and other events of pregnancy. During pregnancy all events of the menstrual cycle stop and there is no menstruation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 2.9",
+                "description": "Mentioned in text as depicting the transformation of Graafian follicle into corpus luteum.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:2:2.4:5",
+            "order": 5,
+            "title": "Menopause and Reproductive Phase",
+            "content_text": "In the absence of fertilisation, the corpus luteum degenerates. This causes disintegration of the endometrium leading to menstruation, marking a new cycle. In human beings, menstrual cycles ceases around $50$ years of age; that is termed as menopause. Cyclic menstruation is an indicator of normal reproductive phase and extends between menarche and menopause.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:2:2.4:6",
+            "order": 6,
+            "title": "Menstrual Hygiene",
+            "content_text": "Maintenance of hygiene and sanitation during menstruation is very important. Take bath and clean yourself regularly. Use sanitary napkins or clean homemade pads. Change sanitary napkins or homemade pads after every $4-5$ hrs as per the requirement. Dispose of the used sanitary napkins properly wrapping it with a used paper. Do not throw the used napkins in the drainpipe of toilets or in the open area. After handling the napkin wash hands with soap.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:2:2.5",
+        "number": "2.5",
+        "title": "Fertilisation and Implantation",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:2:2.5:1",
+            "order": 1,
+            "title": "Insemination and Gamete Transport",
+            "content_text": "During copulation (coitus) semen is released by the penis into the vagina (insemination). The motile sperms swim rapidly, pass through the cervix, enter into the uterus and finally reach the ampullary region of the fallopian tube. The ovum released by the ovary is also transported to the ampullary region where fertilisation takes place. Fertilisation can only occur if the ovum and sperms are transported simultaneously to the ampullary region. This is the reason why not all copulations lead to fertilisation and pregnancy.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:2:2.5:2",
+            "order": 2,
+            "title": "The Process of Fertilisation",
+            "content_text": "The process of fusion of a sperm with an ovum is called fertilisation. During fertilisation, a sperm comes in contact with the zona pellucida layer of the ovum and induces changes in the membrane that block the entry of additional sperms. Thus, it ensures that only one sperm can fertilise an ovum. The secretions of the acrosome help the sperm enter into the cytoplasm of the ovum through the zona pellucida and the plasma membrane.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 2.10",
+                "description": "Ovum surrounded by few sperms. The diagram shows the ovum with its layers: zona pellucida, perivitelline space, and cells of the corona radiata. Several sperms are shown attempting to penetrate the outer layers.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:2:2.5:3",
+            "order": 3,
+            "title": "Completion of Meiosis and Zygote Formation",
+            "content_text": "The entry of sperm induces the completion of the meiotic division of the secondary oocyte. The second meiotic division is also unequal and results in the formation of a second polar body and a haploid ovum (ootid). Soon the haploid nucleus of the sperms and that of the ovum fuse together to form a diploid zygote. How many chromosomes will be there in the zygote?",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:2:2.5:4",
+            "order": 4,
+            "title": "Sex Determination in Humans",
+            "content_text": "The sex of the baby is decided at the fertilisation stage. The chromosome pattern in the human female is $XX$ and that in the male is $XY$. Therefore, all the haploid gametes (ova) produced by the female have the sex chromosome $X$ whereas in the male gametes (sperms) the sex chromosome could be either $X$ or $Y$. Hence, $50$ per cent of sperms carry the $X$ chromosome while the other $50$ per cent carry the $Y$. After fusion of the male and female gametes the zygote would carry either $XX$ or $XY$ depending on whether the sperm carrying $X$ or $Y$ fertilised the ovum. The zygote carrying $XX$ would develop into a female baby and $XY$ would form a male. Scientifically it is correct to say that the sex of the baby is determined by the father and not by the mother!",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:2:2.5:5",
+            "order": 5,
+            "title": "Cleavage and Morula Formation",
+            "content_text": "The mitotic division starts as the zygote moves through the isthmus of the oviduct called cleavage towards the uterus and forms $2, 4, 8, 16$ daughter cells called blastomeres. The embryo with $8$ to $16$ blastomeres is called a morula. The morula continues to divide and transforms into blastocyst as it moves further into the uterus.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 2.11",
+                "description": "Transport of ovum, fertilisation and passage of growing embryo through fallopian tube. The diagram illustrates: (a) Ovum, (b) Fertilisation, (c) Zygote, (d) 2-celled stage, (e) Morula, (f) Blastocyst, (g) Blastocyst (enlarged), and (H) Implantation in the uterine wall.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:2:2.5:6",
+            "order": 6,
+            "title": "Blastocyst Structure and Implantation",
+            "content_text": "The blastomeres in the blastocyst are arranged into an outer layer called trophoblast and an inner group of cells attached to trophoblast called the inner cell mass. The trophoblast layer then gets attached to the endometrium and the inner cell mass gets differentiated as the embryo. After attachment, the uterine cells divide rapidly and cover the blastocyst. As a result, the blastocyst becomes embedded in the endometrium of the uterus. This is called implantation and it leads to pregnancy.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:2:2.6",
+        "number": "2.6",
+        "title": "Pregnancy and Embryonic Development",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:2:2.6:1",
+            "order": 1,
+            "title": "Formation of the Placenta",
+            "content_text": "After implantation, finger-like projections appear on the trophoblast called chorionic villi which are surrounded by the uterine tissue and maternal blood. The chorionic villi and uterine tissue become interdigitated with each other and jointly form a structural and functional unit between developing embryo (foetus) and maternal body called placenta.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 2.12",
+                "description": "The human foetus within the uterus. Labels include: placental villi, cavity of uterus, yolk sac, embryo, umbilical cord with its vessels, and plug of mucus in cervix.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:2:2.6:2",
+            "order": 2,
+            "title": "Functions and Hormones of the Placenta",
+            "content_text": "The placenta facilitates the supply of oxygen and nutrients to the embryo and also removal of carbon dioxide and excretory/waste materials produced by the embryo. The placenta is connected to the embryo through an umbilical cord which helps in the transport of substances to and from the embryo. Placenta also acts as an endocrine tissue and produces several hormones like human chorionic gonadotropin (hCG), human placental lactogen (hPL), estrogens, progestogens, etc. In the later phase of pregnancy, a hormone called relaxin is also secreted by the ovary. hCG, hPL and relaxin are produced in women only during pregnancy.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:2:2.6:3",
+            "order": 3,
+            "title": "Maternal Hormonal Changes During Pregnancy",
+            "content_text": "During pregnancy the levels of other hormones like estrogens, progestogens, cortisol, prolactin, thyroxine, etc., are increased several-folds in the maternal blood. Increased production of these hormones is essential for supporting the fetal growth, metabolic changes in the mother and maintenance of pregnancy.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:2:2.6:4",
+            "order": 4,
+            "title": "Initial Differentiation of the Embryo",
+            "content_text": "Immediately after implantation, the inner cell mass (embryo) differentiates Immediately after implantation, the inner cell mass, which becomes the embryo, undergoes differentiation into two primary layers: an outer layer known as the ectoderm and an inner layer called the endoderm. Shortly thereafter, a third layer, the mesoderm, develops between the ectoderm and endoderm. These three primary germ layers are responsible for the formation of all tissues and organs in the adult organism.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:2:2.6:5",
+            "order": 5,
+            "title": "Potency of Stem Cells",
+            "content_text": "The inner cell mass contains specialized cells referred to as stem cells. These cells possess the unique potency to differentiate into and give rise to all the various tissues and organs found in the human body.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:2:2.6:6",
+            "order": 6,
+            "title": "Timeline of Human Embryonic Development",
+            "content_text": "Human pregnancy typically spans a gestation period of 9 months. Development follows a specific chronological sequence: after the first month, the embryo's heart is formed, which can be detected via stethoscope. By the end of the second month, limbs and digits appear. By the end of the first trimester (12 weeks), major organ systems, including limbs and external genitalia, are well-developed. The fifth month is characterized by the first fetal movements and the appearance of hair on the head. By the end of the second trimester (24 weeks), the body is covered in fine hair, eyelids separate, and eyelashes form. By the end of nine months, the fetus is fully developed and prepared for birth.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:2:2.7",
+        "number": "2.7",
+        "title": "Parturition and Lactation",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:2:2.7:1",
+            "order": 1,
+            "title": "Mechanism of Parturition",
+            "content_text": "The process of delivering the fetus at the end of the 9-month gestation period is called parturition. This process is triggered by a complex neuroendocrine mechanism. The signals for childbirth originate from the fully developed fetus and the placenta, which initiate mild uterine contractions known as the foetal ejection reflex.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:2:2.7:2",
+            "order": 2,
+            "title": "Hormonal Control of Childbirth",
+            "content_text": "The foetal ejection reflex stimulates the maternal pituitary gland to release oxytocin. Oxytocin acts on the uterine muscles, inducing stronger contractions. These stronger contractions, in turn, stimulate the further secretion of oxytocin in a positive feedback loop. This cycle results in increasingly powerful contractions that lead to the expulsion of the baby through the birth canal, followed by the delivery of the placenta. Doctors often use oxytocin injections to medically induce delivery when necessary.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:2:2.7:3",
+            "order": 3,
+            "title": "Lactation and the Importance of Colostrum",
+            "content_text": "During pregnancy, the mammary glands undergo differentiation and begin producing milk toward the end of the term, a process known as lactation. The milk produced during the first few days of lactation is called colostrum. Colostrum is vital because it contains numerous antibodies that provide essential resistance and passive immunity to the newborn. Medical professionals strongly recommend breastfeeding during the initial growth period to ensure the health of the infant.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:biology:12:2:ex:1",
+          "number": 1,
+          "problem": "Fill in the blanks: (a) Humans reproduce ________ (asexually/sexually). (b) Humans are ________ (oviparous, viviparous, ovoviviparous). (c) Fertilisation is ________ in humans (external/internal). (d) Male and female gametes are ________ (diploid/haploid). (e) Zygote is ________ (diploid/haploid). (f) The process of release of ovum from a mature follicle is called ________. (g) Ovulation is induced by a hormone called ________. (h) The fusion of male and female gametes is called ________. (i) Fertilisation takes place in ________. (j) Zygote divides to form ________ which is implanted in uterus. (k) The structure which provides vascular connection between foetus and uterus is called ________.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:2:ex:2",
+          "number": 2,
+          "problem": "Draw a labelled diagram of male reproductive system.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:2:ex:3",
+          "number": 3,
+          "problem": "Draw a labelled diagram of female reproductive system.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:2:ex:4",
+          "number": 4,
+          "problem": "Write two major functions each of testis and ovary.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:2:ex:5",
+          "number": 5,
+          "problem": "Describe the structure of a seminiferous tubule.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:2:ex:6",
+          "number": 6,
+          "problem": "What is spermatogenesis? Briefly describe the process of spermatogenesis.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:2:ex:7",
+          "number": 7,
+          "problem": "Name the hormones involved in regulation of spermatogenesis.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:2:ex:8",
+          "number": 8,
+          "problem": "Define spermiogenesis and spermiation.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:2:ex:9",
+          "number": 9,
+          "problem": "Draw a labelled diagram of sperm.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:2:ex:10",
+          "number": 10,
+          "problem": "What are the major components of seminal plasma?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:2:ex:11",
+          "number": 11,
+          "problem": "What are the major functions of male accessory ducts and glands?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:2:ex:12",
+          "number": 12,
+          "problem": "What is oogenesis? Give a brief account of oogenesis.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:2:ex:13",
+          "number": 13,
+          "problem": "Draw a labelled diagram of a section through ovary.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:2:ex:14",
+          "number": 14,
+          "problem": "Draw a labelled diagram of a Graafian follicle?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:2:ex:15",
+          "number": 15,
+          "problem": "Name the functions of the following: (a) Corpus luteum (b) Endometrium (c) Acrosome (d) Sperm tail (e) Fimbriae",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:2:ex:16",
+          "number": 16,
+          "problem": "Identify True/False statements. Correct each false statement to make it true. (a) Androgens are produced by Sertoli cells. (b) Spermatozoa get nutrition from Sertoli cells. (c) Leydig cells are found in ovary. (d) Leydig cells synthesise androgens. (e) Oogenesis takes place in corpus luteum. (f) Menstrual cycle ceases during pregnancy. (g) Presence or absence of hymen is not a reliable indicator of virginity or sexual experience.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:2:ex:17",
+          "number": 17,
+          "problem": "What is menstrual cycle? Which hormones regulate menstrual cycle?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:2:ex:18",
+          "number": 18,
+          "problem": "What is parturition? Which hormones are involved in induction of parturition?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:2:ex:19",
+          "number": 19,
+          "problem": "In our society the women are often blamed for giving birth to daughters. Can you explain why this is not correct?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:2:ex:20",
+          "number": 20,
+          "problem": "How many eggs are released by a human ovary in a month? How many eggs do you think would have been released if the mother gave birth to identical twins? Would your answer change if the twins born were fraternal?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:2:ex:21",
+          "number": 21,
+          "problem": "How many eggs do you think were released by the ovary of a female dog which gave birth to 6 puppies?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        }
+      ]
+    }
+  }
+}

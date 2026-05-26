@@ -1,0 +1,712 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_biology_11_ch19.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:biology:11:19",
+  "curriculum": "ncert",
+  "subject": "biology",
+  "grade": 11,
+  "textbook_name": "Biology",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:biology:11:19",
+    "number": 19,
+    "title": "Chemical Coordination and Integration",
+    "summary": "This chapter on Chemical Coordination and Integration explores how hormones, secreted by the endocrine system, regulate bodily functions in conjunction with the nervous system. It begins by defining endocrine glands and hormones, emphasizing their role in long-term regulation. The chapter then delves into the human endocrine system, describing the structure and function of various glands including the hypothalamus, pituitary, pineal, thyroid, parathyroid, thymus, adrenal, pancreas, and gonads (testes and ovaries).\n\nFor each gland, the hormones secreted and their specific effects on target organs are discussed. Key concepts include the role of insulin and glucagon in glucose homeostasis, the effects of thyroid hormones on metabolic rate, and the functions of adrenal hormones in stress response and electrolyte balance. Disorders associated with hormone imbalances, such as diabetes mellitus, goiter, and Addison's disease, are also covered. The chapter also highlights hormones secreted by the heart, kidney, and gastrointestinal tract.\n\nFinally, the chapter explains the mechanisms of hormone action, differentiating between membrane-bound and intracellular receptors. It classifies hormones based on their chemical nature (peptides, steroids, amino acid derivatives) and describes how each type interacts with its respective receptors to elicit a physiological response. Understanding these mechanisms is vital for comprehending how hormones exert their diverse and crucial effects on the body, maintaining homeostasis and coordinating various life processes.",
+    "sections": [
+      {
+        "id": "ncert:biology:11:19:19.1",
+        "number": "19.1",
+        "title": "Endocrine Glands and Hormones",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:19:19.1:1",
+            "order": 1,
+            "title": "Introduction to Chemical Coordination",
+            "content_text": "The neural system provides a point-to-point rapid coordination among organs. However, neural coordination is fast but short-lived. As nerve fibres do not innervate all cells of the body and cellular functions need to be continuously regulated, a special kind of coordination and integration is provided by hormones. The neural system and the endocrine system jointly coordinate and regulate the physiological functions in the body.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:19:19.1:2",
+            "order": 2,
+            "title": "Definition of Endocrine Glands and Hormones",
+            "content_text": "Endocrine glands lack ducts and are hence called ductless glands. Their secretions are called hormones. The classical definition of a hormone is a chemical produced by endocrine glands and released into the blood and transported to a distantly located target organ. The current scientific definition is: Hormones are non-nutrient chemicals which act as intercellular messengers and are produced in trace amounts. This definition covers a number of new molecules in addition to the hormones secreted by organized endocrine glands. Invertebrates possess simple endocrine systems with few hormones, whereas vertebrates have a large number of chemicals acting as hormones to provide coordination.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:19:19.2",
+        "number": "19.2",
+        "title": "Human Endocrine System",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:19:19.2:1",
+            "order": 1,
+            "title": "Components of the Human Endocrine System",
+            "content_text": "The endocrine glands and hormone-producing diffused tissues/cells located in different parts of our body constitute the endocrine system. The organized endocrine bodies in our body include the pituitary, pineal, thyroid, adrenal, pancreas, parathyroid, thymus, and gonads (testis in males and ovary in females). In addition, some other organs like the gastrointestinal tract, liver, kidney, and heart also produce hormones. Figure 19.1 shows the location of these glands.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 19.1",
+                "description": "A diagram showing the location of endocrine glands in the human body: Hypothalamus, Pineal, Pituitary, Thyroid and Parathyroid, Thymus, Pancreas, Adrenal, Ovary (in female), and Testis (in male).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:19:19.2:2",
+            "order": 2,
+            "title": "19.2.1 The Hypothalamus",
+            "content_text": "The hypothalamus is the basal part of the diencephalon, forebrain, and it regulates a wide spectrum of body functions. It contains several groups of neurosecretory cells called nuclei which produce hormones. These hormones regulate the synthesis and secretion of pituitary hormones. The hormones produced by the hypothalamus are of two types: releasing hormones (which stimulate secretion of pituitary hormones) and inhibiting hormones (which inhibit secretions of pituitary hormones). For example, Gonadotrophin releasing hormone (GnRH) stimulates the pituitary synthesis and release of gonadotrophins, while somatostatin inhibits the release of growth hormone from the pituitary. These hormones reach the pituitary gland through a portal circulatory system to regulate the anterior pituitary, while the posterior pituitary is under direct neural regulation of the hypothalamus.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:19:19.2:3",
+            "order": 3,
+            "title": "19.2.2 The Pituitary Gland - Anatomy",
+            "content_text": "The pituitary gland is located in a bony cavity called sella turcica and is attached to the hypothalamus by a stalk. It is divided anatomically into an adenohypophysis and a neurohypophysis. The adenohypophysis consists of two portions: pars distalis and pars intermedia. The pars distalis region, commonly called the anterior pituitary, produces growth hormone (GH), prolactin (PRL), thyroid stimulating hormone (TSH), adrenocorticotrophic hormone (ACTH), luteinizing hormone (LH), and follicle stimulating hormone (FSH). Pars intermedia secretes only one hormone called melanocyte stimulating hormone (MSH), though in humans it is almost merged with pars distalis. The neurohypophysis (pars nervosa), also known as the posterior pituitary, stores and releases two hormones called oxytocin and vasopressin, which are synthesized by the hypothalamus and transported axonally.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 19.2",
+                "description": "Diagrammatic representation of the pituitary gland and its relationship with the hypothalamus, showing the stalk, portal circulation to the anterior pituitary, and direct neural connection to the posterior pituitary.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:19:19.2:4",
+            "order": 4,
+            "title": "19.2.2 Growth Hormone and its Disorders",
+            "content_text": "Over-secretion of GH stimulates abnormal growth of the body leading to gigantism, while low secretion results in stunted growth known as pituitary dwarfism. Excess secretion of growth hormone in adults, especially in middle age, can result in severe disfigurement (especially of the face) called Acromegaly. This condition may lead to serious complications and premature death if unchecked. It is hard to diagnose in early stages and often goes undetected for many years until changes in external features become noticeable.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:19:19.2:5",
+            "order": 5,
+            "title": "19.2.2 Functions of Other Pituitary Hormones",
+            "content_text": "Prolactin (PRL) regulates the growth of mammary glands and milk formation. Thyroid Stimulating Hormone (TSH) stimulates the synthesis and secretion of thyroid hormones. Adrenocorticotrophic Hormone (ACTH) stimulates the synthesis and secretion of steroid hormones called glucocorticoids from the adrenal cortex. Luteinizing Hormone (LH) and Follicle Stimulating Hormone (FSH) stimulate gonadal activity and are called gonadotrophins. In males, LH stimulates androgen synthesis and secretion from the testis, while FSH and androgens regulate spermatogenesis. In females, LH induces ovulation of fully mature follicles (graafian follicles) and maintains the corpus luteum. FSH stimulates growth and development of the ovarian The pituitary gland secretes several other hormones that regulate various physiological processes. Melanocyte Stimulating Hormone (MSH) acts on the melanocytes, which are melanin-containing cells, and regulates the pigmentation of the skin. Oxytocin acts on the smooth muscles of the body and stimulates their contraction; in females, it specifically stimulates vigorous contraction of the uterus during childbirth and the ejection of milk from the mammary glands. Vasopressin acts primarily on the kidneys, where it stimulates the resorption of water and electrolytes by the distal tubules, thereby reducing the loss of water through urine (a process known as diuresis). Due to this function, vasopressin is also commonly referred to as anti-diuretic hormone (ADH).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 19.3",
+                "description": "Diagrammatic view of the position of Thyroid and Parathyroid: (a) Ventral side showing the two lobes of the thyroid gland on either side of the trachea, connected by the isthmus; (b) Dorsal side showing four parathyroid glands, one pair in each lobe of the thyroid gland.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:19:19.2:6",
+            "order": 6,
+            "title": "Diabetes Insipidus",
+            "content_text": "An impairment that affects the synthesis or release of anti-diuretic hormone (ADH) results in a diminished ability of the kidney to conserve water. This leads to excessive water loss and dehydration, a clinical condition known as Diabetes Insipidus.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:19:19.2.3",
+        "number": "19.2.3",
+        "title": "The Pineal Gland",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:19:19.2.3:1",
+            "order": 1,
+            "title": "Melatonin and Circadian Rhythm",
+            "content_text": "The pineal gland is located on the dorsal side of the forebrain and secretes a hormone called melatonin. Melatonin plays a critical role in the regulation of the body's 24-hour (diurnal) rhythm. It helps maintain normal rhythms such as the sleep-wake cycle and body temperature. Additionally, melatonin influences various other processes including metabolism, skin pigmentation, the menstrual cycle, and the body's defense capability.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:19:19.2.4",
+        "number": "19.2.4",
+        "title": "Thyroid Gland",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:19:19.2.4:1",
+            "order": 1,
+            "title": "Anatomy and Hormones of the Thyroid Gland",
+            "content_text": "The thyroid gland consists of two lobes located on either side of the trachea, interconnected by a thin flap of connective tissue called the isthmus. The gland is composed of follicles and stromal tissues. Each thyroid follicle consists of follicular cells enclosing a cavity. These cells synthesise two primary hormones: tetraiodothyronine or thyroxine ($T_4$) and triiodothyronine ($T_3$).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:19:19.2.4:2",
+            "order": 2,
+            "title": "Hypothyroidism and Goitre",
+            "content_text": "Iodine is essential for the normal rate of hormone synthesis in the thyroid. A deficiency of iodine in the diet leads to hypothyroidism and the enlargement of the thyroid gland, a condition commonly called goitre. Hypothyroidism during pregnancy can cause defective development and maturation of the fetus, leading to stunted growth (cretinism), mental retardation, low intelligence quotient, abnormal skin, and deaf-mutism. In adult women, hypothyroidism may cause the menstrual cycle to become irregular.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:19:19.2.4:3",
+            "order": 3,
+            "title": "Hyperthyroidism and Graves' Disease",
+            "content_text": "Hyperthyroidism occurs when the rate of synthesis and secretion of thyroid hormones increases to abnormally high levels, often due to cancer or the development of nodules in the thyroid gland. This condition adversely affects body physiology. Exophthalmic goitre is a specific form of hyperthyroidism characterized by thyroid enlargement, protrusion of the eyeballs, increased basal metabolic rate (BMR), and weight loss; it is also known as Graves' disease.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:19:19.2.4:4",
+            "order": 4,
+            "title": "Functions of Thyroid Hormones and Thyrocalcitonin",
+            "content_text": "Thyroid hormones are vital for regulating the basal metabolic rate (BMR) and supporting red blood cell formation. They control the metabolism of carbohydrates, proteins, and fats, and influence water and electrolyte balance. Additionally, the thyroid gland secretes a protein hormone called thyrocalcitonin (TCT), which plays a key role in regulating blood calcium levels.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:19:19.2.5",
+        "number": "19.2.5",
+        "title": "Parathyroid Gland",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:19:19.2.5:1",
+            "order": 1,
+            "title": "The Parathyroid Gland and PTH",
+            "content_text": "In humans, four parathyroid glands are located on the back side of the thyroid gland, with one pair in each of the two thyroid lobes. These glands secrete a peptide hormone called parathyroid hormone (PTH). The secretion of PTH is primarily regulated by the circulating levels of calcium ions in the blood.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:19:19.2.5:2",
+            "order": 2,
+            "title": "Role of PTH in Calcium Balance",
+            "content_text": "Parathyroid hormone (PTH) increases $Ca^{2+}$ levels in the blood, making it a hypercalcemic hormone. It achieves this by acting on bones to stimulate bone resorption (dissolution or demineralisation), stimulating the reabsorption of $Ca^{2+}$ by the renal tubules, and increasing $Ca^{2+}$ absorption from digested food. Along with thyrocalcitonin (TCT), PTH plays a significant role in maintaining calcium balance in the body.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:19:19.2.6",
+        "number": "19.2.6",
+        "title": "Thymus",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:19:19.2.6:1",
+            "order": 1,
+            "title": "The Thymus and Immune System Development",
+            "content_text": "The thymus gland is a lobular structure situated between the lungs, behind the sternum on the ventral side of the aorta. It plays a major role in the development of the immune system by secreting peptide hormones called thymosins.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:19:19.2.6:2",
+            "order": 2,
+            "title": "Thymosins and Immunity in Aging",
+            "content_text": "Thymosins are essential for the differentiation of T-lymphocytes, which provide cell-mediated immunity, and they also promote the production of antibodies for humoral immunity. The thymus degenerates in older individuals, leading to decreased thymosin production and a subsequent weakening of immune responses in the elderly.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:19:19.2.7",
+        "number": "19.2.7",
+        "title": "Adrenal Gland",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:19:19.2.7:1",
+            "order": 1,
+            "title": "Structure of the Adrenal Gland and Addison's Disease",
+            "content_text": "The body contains one pair of adrenal glands, with one located above each kidney. Each gland is composed of two types of tissues: the centrally located adrenal medulla and the outer adrenal cortex. Underproduction of hormones by the adrenal cortex can alter carbohydrate metabolism, causing acute weakness and fatigue, a condition known as Addison's disease.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 19.4",
+                "description": "Diagrammatic representation of the adrenal gland: (a) Location of the adrenal gland above the kidney; (b) Sectional view showing the centrally located adrenal medulla and the outer adrenal cortex.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:19:19.2.7:2",
+            "order": 2,
+            "title": "Hormones of the Adrenal Medulla: Catecholamines",
+            "content_text": "The adrenal medulla secretes two hormones: adrenaline (epinephrine) and noradrenaline (norepinephrine), collectively known as catecholamines. These hormones are rapidly secreted in response to stress or emergency situations.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:19:19.2.7:3",
+            "order": 3,
+            "title": "Emergency Response: Fight or Flight",
+            "content_text": "Adrenaline and noradrenaline are called emergency hormones or hormones of 'Fight or Flight'. They increase alertness, cause pupillary dilation, piloerection (raising of hairs), and sweating. They also increase the heart beat, the strength of heart contraction, and the rate of respiration. Additionally, catecholamines stimulate the breakdown of glycogen resulting in Catecholamines (adrenaline and noradrenaline) stimulate the breakdown of glycogen resulting in an increased concentration of glucose in blood. In addition, they also stimulate the breakdown of lipids and proteins.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:19:19.2.7:4",
+            "order": 4,
+            "title": "Structure of the Adrenal Cortex",
+            "content_text": "The adrenal cortex can be divided into three layers: the zona reticularis (inner layer), zona fasciculata (middle layer), and zona glomerulosa (outer layer). The adrenal cortex secretes many hormones, commonly called corticoids.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:19:19.2.7:5",
+            "order": 5,
+            "title": "Glucocorticoids and Mineralocorticoids",
+            "content_text": "Corticoids involved in carbohydrate metabolism are called glucocorticoids. In the human body, cortisol is the main glucocorticoid. Corticoids which regulate the balance of water and electrolytes in our body are called mineralocorticoids. Aldosterone is the main mineralocorticoid in our body.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:19:19.2.7:6",
+            "order": 6,
+            "title": "Functions of Glucocorticoids (Cortisol)",
+            "content_text": "Glucocorticoids stimulate gluconeogenesis, lipolysis, and proteolysis; and inhibit cellular uptake and utilisation of amino acids. Cortisol is also involved in maintaining the cardio-vascular system as well as the kidney functions. Glucocorticoids, particularly cortisol, produce anti-inflammatory reactions and suppress the immune response. Cortisol also stimulates RBC production.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:19:19.2.7:7",
+            "order": 7,
+            "title": "Functions of Mineralocorticoids (Aldosterone)",
+            "content_text": "Aldosterone acts mainly at the renal tubules and stimulates the reabsorption of $Na^{+}$ and water and excretion of $K^{+}$ and phosphate ions. Thus, aldosterone helps in the maintenance of electrolytes, body fluid volume, osmotic pressure, and blood pressure.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:19:19.2.7:8",
+            "order": 8,
+            "title": "Adrenal Androgenic Steroids",
+            "content_text": "Small amounts of androgenic steroids are also secreted by the adrenal cortex which play a role in the growth of axial hair, pubic hair, and facial hair during puberty.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:19:19.2.8",
+        "number": "19.2.8",
+        "title": "Pancreas",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:19:19.2.8:1",
+            "order": 1,
+            "title": "Structure and Cell Types of the Pancreas",
+            "content_text": "Pancreas is a composite gland which acts as both exocrine and endocrine gland. The endocrine pancreas consists of 'Islets of Langerhans'. There are about 1 to 2 million Islets of Langerhans in a normal human pancreas representing only 1 to 2 per cent of the pancreatic tissue. The two main types of cells in the Islet of Langerhans are called $\\alpha$-cells and $\\beta$-cells. The $\\alpha$-cells secrete a hormone called glucagon, while the $\\beta$-cells secrete insulin.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:19:19.2.8:2",
+            "order": 2,
+            "title": "Glucagon: The Hyperglycemic Hormone",
+            "content_text": "Glucagon is a peptide hormone and plays an important role in maintaining the normal blood glucose levels. Glucagon acts mainly on the liver cells (hepatocytes) and stimulates glycogenolysis resulting in an increased blood sugar (hyperglycemia). In addition, this hormone stimulates the process of gluconeogenesis which also contributes to hyperglycemia. Glucagon reduces the cellular glucose uptake and utilisation. Thus, glucagon is a hyperglycemic hormone.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:19:19.2.8:3",
+            "order": 3,
+            "title": "Insulin: The Hypoglycemic Hormone",
+            "content_text": "Insulin is a peptide hormone which plays a major role in the regulation of glucose homeostasis. Insulin acts mainly on hepatocytes and adipocytes (cells of adipose tissue), and enhances cellular glucose uptake and utilisation. As a result, there is a rapid movement of glucose from blood to hepatocytes and adipocytes resulting in decreased blood glucose levels (hypoglycemia). Insulin also stimulates conversion of glucose to glycogen (glycogenesis) in the target cells. The glucose homeostasis in blood is thus maintained jointly by the two – insulin and glucagons.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:19:19.2.8:4",
+            "order": 4,
+            "title": "Diabetes Mellitus",
+            "content_text": "Prolonged hyperglycemia leads to a complex disorder called diabetes mellitus which is associated with loss of glucose through urine and formation of harmful compounds known as ketone bodies. Diabetic patients are successfully treated with insulin therapy.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:19:19.2.9",
+        "number": "19.2.9",
+        "title": "Testis",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:19:19.2.9:1",
+            "order": 1,
+            "title": "Structure and Androgen Secretion",
+            "content_text": "A pair of testis is present in the scrotal sac (outside abdomen) of male individuals. Testis performs dual functions as a primary sex organ as well as an endocrine gland. Testis is composed of seminiferous tubules and stromal or interstitial tissue. The Leydig cells or interstitial cells, which are present in the intertubular spaces produce a group of hormones called androgens mainly testosterone.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:19:19.2.9:2",
+            "order": 2,
+            "title": "Functions of Androgens",
+            "content_text": "Androgens regulate the development, maturation and functions of the male accessory sex organs like epididymis, vas deferens, seminal vesicles, prostate gland, urethra etc. These hormones stimulate muscular growth, growth of facial and axillary hair, aggressiveness, low pitch of voice etc. Androgens play a major stimulatory role in the process of spermatogenesis (formation of spermatozoa). Androgens act on the central neural system and influence the male sexual behaviour (libido). These hormones produce anabolic (synthetic) effects on protein and carbohydrate metabolism.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:19:19.2.10",
+        "number": "19.2.10",
+        "title": "Ovary",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:19:19.2.10:1",
+            "order": 1,
+            "title": "Structure and Ovarian Hormones",
+            "content_text": "Females have a pair of ovaries located in the abdomen. Ovary is the primary female sex organ which produces one ovum during each menstrual cycle. In addition, ovary also produces two groups of steroid hormones called estrogen and progesterone. Ovary is composed of ovarian follicles and stromal tissues. The estrogen is synthesised and secreted mainly by the growing ovarian follicles. After ovulation, the ruptured follicle is converted to a structure called corpus luteum, which secretes mainly progesterone.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:19:19.2.10:2",
+            "order": 2,
+            "title": "Functions of Estrogen",
+            "content_text": "Estrogens produce wide ranging actions such as stimulation of growth and activities of female secondary sex organs, development of growing ovarian follicles, appearance of female secondary sex characters (e.g., high pitch of voice, etc.) and mammary gland development. Estrogens also regulate female sexual behaviour.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:19:19.2.10:3",
+            "order": 3,
+            "title": "Functions of Progesterone",
+            "content_text": "Progesterone supports pregnancy. Progesterone also acts on the mammary glands and stimulates the formation of alveoli (sac-like structures which store milk) and milk secretion.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:19:19.3",
+        "number": "19.3",
+        "title": "Hormones of Heart, Kidney and Gastrointestinal Tract",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:19:19.3:1",
+            "order": 1,
+            "title": "Atrial Natriuretic Factor (ANF)",
+            "content_text": "The atrial wall of our heart secretes a very important peptide hormone called atrial natriuretic factor (ANF), which decreases blood pressure. When blood pressure is increased, ANF is secreted which causes dilation of the blood vessels. This reduces the blood pressure.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:19:19.3:2",
+            "order": 2,
+            "title": "Erythropoietin",
+            "content_text": "The juxtaglomerular cells of kidney produce a peptide hormone called erythropoietin which stimulates erythropoiesis (formation of RBC).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:19:19.3:3",
+            "order": 3,
+            "title": "Gastro-intestinal Hormones",
+            "content_text": "Endocrine cells present in different parts of the gastro-intestinal tract secrete four major peptide hormones: gastrin, secretin, cholecystokinin (CCK) and gastric inhibitory peptide (GIP). Gastrin acts on the gastric glands and stimulates the secretion of hydrochloric acid and pepsinogen. Secretin acts on the exocrine pancreas and stimulates secretion of water and bicarbonate ions. CCK acts on both pancreas and gall bladder and stimulates the secretion of pancreatic enzymes and bile juice, respectively. GIP inhibits gastric secretion and motility.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:19:19.3:4",
+            "order": 4,
+            "title": "Growth Factors",
+            "content_text": "Several other non-endocrine tissues secrete hormones called growth factors. These factors are essential for the normal growth of tissues and their repairing/regeneration.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:19:19.4",
+        "number": "19.4",
+        "title": "Mechanism of Hormone Action",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:19:19.4:1",
+            "order": 1,
+            "title": "Hormone Receptors",
+            "content_text": "Hormones produce their effects on target tissues by binding to specific proteins called hormone receptors located in the target tissues only. Hormone receptors present on the cell membrane of the target cells are called membrane-bound receptors and the receptors present inside the target cell are called intracellular receptors, mostly nuclear receptors (present in the\nThe binding of a hormone to its specific receptor leads to the formation of a hormone-receptor complex, which triggers biochemical changes in the target tissue. These changes ensure that various physiological functions are regulated by hormones.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:19:19.4:2",
+            "order": 2,
+            "title": "Chemical Classification of Hormones",
+            "content_text": "On the basis of their chemical nature, hormones can be divided into four main groups: (i) peptide, polypeptide, and protein hormones, which include insulin, glucagon, pituitary hormones, and hypothalamic hormones; (ii) steroids, such as cortisol, testosterone, estradiol, and progesterone; (iii) iodothyronines, which are the thyroid hormones; and (iv) amino-acid derivatives, such as epinephrine.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:19:19.4:3",
+            "order": 3,
+            "title": "Mechanism of Action via Membrane-bound Receptors",
+            "content_text": "Hormones that interact with membrane-bound receptors, such as protein hormones (e.g., FSH), typically do not enter the target cell. Instead, they bind to the receptor on the cell surface, which triggers an initial response (Response 1). This leads to the generation of second messengers, such as cyclic AMP, $IP_3$, or $Ca^{++}$. These second messengers then propagate the signal to regulate cellular metabolism and biochemical responses. Ultimately, these processes result in physiological responses, such as ovarian growth in the case of FSH.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 19.5 (a)",
+                "description": "Diagrammatic representation of the mechanism of protein hormone action (e.g., FSH). It shows the hormone binding to a membrane-bound receptor on an ovarian cell membrane, triggering a primary response, the generation of second messengers (Cyclic AMP or $Ca^{++}$), subsequent biochemical responses, and final physiological responses like ovarian growth.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:19:19.4:4",
+            "order": 4,
+            "title": "Mechanism of Action via Intracellular Receptors",
+            "content_text": "Hormones that interact with intracellular receptors, such as steroid hormones (e.g., estrogen) and iodothyronines, are lipid-soluble and can cross the cell membrane. They bind to receptors located inside the cell, often within the nucleus, to form a hormone-receptor complex. This complex interacts directly with the genome to regulate gene expression or chromosome function. This regulation involves the synthesis of specific mRNA and subsequent proteins, which lead to cumulative biochemical actions. These actions result in physiological and developmental effects, such as tissue growth and differentiation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 19.5 (b)",
+                "description": "Diagrammatic representation of the mechanism of steroid hormone action (e.g., estrogen). It shows the hormone crossing the uterine cell membrane and nuclear membrane to bind with an intracellular receptor. The resulting hormone-receptor complex interacts with the genome (DNA) to produce mRNA and proteins, leading to physiological responses such as tissue growth and differentiation.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:19:Summary",
+        "number": "Summary",
+        "title": "Summary",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:19:Summary:1",
+            "order": 1,
+            "title": "Overview of the Endocrine System and Pituitary Gland",
+            "content_text": "Hormones are special chemicals that provide coordination, integration, and regulation in the human body. The endocrine system includes the hypothalamus, pituitary, pineal, thyroid, adrenal, parathyroid, thymus, and gonads (testis and ovary). Other organs like the heart, kidney, and gastrointestinal tract also produce hormones. The pituitary gland consists of the pars distalis (producing six trophic hormones), pars intermedia (secreting one hormone), and pars nervosa or neurohypophysis (secreting two hormones). These hormones regulate the growth and development of somatic tissues and peripheral endocrine glands.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:19:Summary:2",
+            "order": 2,
+            "title": "Pineal, Thyroid, and Parathyroid Glands",
+            "content_text": "The pineal gland secretes melatonin, which regulates 24-hour (diurnal) rhythms, including sleep-wake cycles and body temperature. The thyroid gland produces $T_3$ and $T_4$, which are essential for basal metabolic rate, central nervous system development, erythropoiesis, and the metabolism of carbohydrates, proteins, and fats. It also secretes thyrocalcitonin (TCT), which lowers blood calcium levels. The parathyroid glands secrete parathyroid hormone (PTH), which increases blood $Ca^{2+}$ levels and plays a major role in calcium homeostasis.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:19:Summary:3",
+            "order": 3,
+            "title": "Thymus and Adrenal Glands",
+            "content_text": "The thymus gland secretes thymosins, which are involved in the differentiation of T-lymphocytes (cell-mediated immunity) and the production of antibodies (humoral immunity). The adrenal gland has a medulla and a cortex. The adrenal medulla secretes epinephrine and norepinephrine, which increase alertness, pupil dilation, piloerection, sweating, heart rate, respiration, and stimulate glycogenolysis, lipolysis, and proteolysis. The adrenal cortex secretes glucocorticoids (e.g., cortisol), which stimulate gluconeogenesis, lipolysis, proteolysis, and erythropoiesis, and have anti-inflammatory effects. It also secretes mineralocorticoids, which regulate water and electrolyte balance.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:19:Summary:4",
+            "order": 4,
+            "title": "Pancreas and Gonads",
+            "content_text": "The endocrine pancreas secretes glucagon and insulin. Glucagon stimulates glycogenolysis and gluconeogenesis, resulting in hyperglycemia. Insulin stimulates cellular glucose uptake, utilization, and glycogenesis, resulting in hypoglycemia. Insulin deficiency or resistance leads to diabetes mellitus. The testis secretes androgens, which stimulate the development and functions of male accessory sex organs, secondary sex characters, spermatogenesis, male sexual behavior, anabolic pathways, and erythropoiesis. The ovary secretes estrogen, which stimulates the growth and development of female accessory sex organs and secondary sex characters, and progesterone, which plays a role in pregnancy and lactation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:19:Summary:5",
+            "order": 5,
+            "title": "Hormones of Other Organs",
+            "content_text": "Several other organs have endocrine functions. The atrial wall of the heart produces atrial natriuretic factor (ANF), which decreases blood pressure. The kidney produces erythropoietin, which stimulates erythropoiesis. The gastrointestinal tract secretes hormones such as gastrin, secretin, cholecystokinin (CCK), and gastric inhibitory peptide (GIP). These hormones regulate the secretion of digestive juices and assist in the process of digestion.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:biology:11:19:ex:1",
+          "number": 1,
+          "problem": "Define the following: (a) Exocrine gland (b) Endocrine gland (c) Hormone",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:19:ex:2",
+          "number": 2,
+          "problem": "Diagrammatically indicate the location of the various endocrine glands in our body.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:19:ex:3",
+          "number": 3,
+          "problem": "List the hormones secreted by the following: (a) Hypothalamus (b) Pituitary (c) Thyroid (d) Parathyroid (e) Adrenal (f) Pancreas (g) Testis (h) Ovary (i) Thymus (j) Atrium (k) Kidney (l) G-I Tract",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:19:ex:4",
+          "number": 4,
+          "problem": "Fill in the blanks: Hormones | Target gland. (a) Hypothalamic hormones | __________ (b) Thyrotrophin (TSH) | __________ (c) Corticotrophin (ACTH) | __________ (d) Gonadotrophins (LH, FSH) | __________ (e) Melanotrophin (MSH) | __________",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:19:ex:5",
+          "number": 5,
+          "problem": "Write short notes on the functions of the following hormones: (a) Parathyroid hormone (PTH) (b) Thyroid hormones (c) Thymosins (d) Androgens (e) Estrogens (f) Insulin and Glucagon",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:19:ex:6",
+          "number": 6,
+          "problem": "Give example(s) of: (a) Hyperglycemic hormone and hypoglycemic hormone (b) Hypercalcemic hormone (c) Gonadotrophic hormones (d) Progestational hormone (e) Blood pressure lowering hormone (f) Androgens and estrogens",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:19:ex:7",
+          "number": 7,
+          "problem": "Which hormonal deficiency is responsible for the following: (a) Diabetes mellitus (b) Goitre (c) Cretinism",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:19:ex:8",
+          "number": 8,
+          "problem": "Briefly mention the mechanism of action of FSH.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:19:ex:9",
+          "number": 9,
+          "problem": "Match the following: Column I: (a) $T_4$, (b) PTH, (c) GnRH, (d) LH. Column II: (i) Hypothalamus, (ii) Thyroid, (iii) Pituitary, (iv) Parathyroid",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        }
+      ]
+    }
+  }
+}

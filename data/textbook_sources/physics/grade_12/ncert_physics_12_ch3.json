@@ -1,0 +1,1107 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_physics_12_ch3.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:physics:12:3",
+  "curriculum": "ncert",
+  "subject": "physics",
+  "grade": 12,
+  "textbook_name": "Physics Part I",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:physics:12:3",
+    "number": 3,
+    "title": "Current Electricity",
+    "summary": "This chapter on Current Electricity introduces the fundamental concepts of electric current, Ohm's Law, and the behavior of electric circuits. It begins by defining electric current as the flow of charge and introduces the concepts of drift velocity and current density. Ohm's Law, V=IR, is presented as a fundamental relationship between voltage, current, and resistance, with the microscopic origin of resistivity explained through the motion of electrons and their collisions within a conductor. The chapter details the temperature dependence of resistivity in different materials like metals and semiconductors.\n\nThe concept of electrical power and energy dissipation (Joule heating) is introduced, highlighting its relevance in power transmission. The chapter then discusses cells, their electromotive force (EMF), internal resistance, and how cells can be combined in series and parallel. Kirchhoff's rules (junction and loop rules) are introduced as powerful tools for analyzing complex circuits. Finally, the Wheatstone bridge is discussed as a practical application of Kirchhoff's rules for precise resistance measurement.\n\nThese concepts build upon each other, starting from the basic definition of current and leading to the analysis of complex circuits. This knowledge is essential for understanding electrical circuits in various applications, from household appliances to complex electronic devices. The chapter provides a strong foundation for further studies in electromagnetism and electronics.",
+    "sections": [
+      {
+        "id": "ncert:physics:12:3:3.1",
+        "number": "3.1",
+        "title": "Introduction",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:3:3.1:1",
+            "order": 1,
+            "title": "Introduction to Electric Current",
+            "content_text": "In previous studies of electrostatics, charges were considered to be at rest. However, charges in motion constitute an electric current. Such currents occur naturally in various situations, such as lightning, where charges flow from clouds to the earth through the atmosphere, often with disastrous results. Unlike the non-steady flow in lightning, many everyday devices like torches and cell-driven clocks utilize charges that flow in a steady manner, similar to the smooth flow of water in a river. This chapter explores the basic laws governing steady electric currents.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:3:3.2",
+        "number": "3.2",
+        "title": "Electric Current",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:3:3.2:1",
+            "order": 1,
+            "title": "Definition of Electric Current",
+            "content_text": "To define electric current, imagine a small area held normal to the direction of charge flow. Both positive and negative charges may move forward and backward across this area. In a time interval $t$, let $q_+$ be the net amount of positive charge (forward minus backward) flowing in the forward direction, and $q_-$ be the net amount of negative charge flowing in the forward direction. The net charge $q$ flowing across the area in the forward direction is given by $q = q_+ - q_-$. For a steady current, this net charge is proportional to the time $t$, and the current $I$ is defined as the quotient: $$I = \\frac{q}{t}$$ (Eq. 3.1). This represents the current across the area in the forward direction; a negative value indicates a net current in the backward direction.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:3.2:2",
+            "order": 2,
+            "title": "Instantaneous Current and Units",
+            "content_text": "When currents are not steady, the current is defined at a specific time $t$. Let $\\Delta Q$ be the net charge flowing across a cross-section during the time interval $\\Delta t$ (between times $t$ and $t + \\Delta t$). The instantaneous current $I(t)$ is defined as the limit of the ratio of $\\Delta Q$ to $\\Delta t$ as $\\Delta t$ tends to zero: $$I(t) = \\lim_{\\Delta t \\to 0} \\frac{\\Delta Q}{\\Delta t}$$ (Eq. 3.2). In SI units, current is measured in ampere (A). The ampere is defined through the magnetic effects of currents. Magnitudes of current vary widely: lightning carries currents of the order of tens of thousands of amperes, domestic appliances use currents of the order of amperes, and currents in human nerves are in the microampere ($\\mu$A) range.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:3:3.3",
+        "number": "3.3",
+        "title": "Electric Currents in Conductors",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:3:3.3:1",
+            "order": 1,
+            "title": "Nature of Charge Carriers",
+            "content_text": "Electric charges experience a force when an electric field is applied. If free to move, they contribute to a current. In nature, free charged particles exist in the ionosphere. In most atoms and molecules, electrons and nuclei are bound and not free to move. Bulk matter contains a vast number of molecules (e.g., $\\sim 10^{22}$ in a gram of water). In conductors, such as metals, some electrons are practically free to move within the bulk material. In solid conductors, atoms are tightly bound, and the current is carried by negatively charged electrons moving against a background of fixed positive ions. In other conductors like electrolytic solutions, both positive and negative charges can move.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:3.3:2",
+            "order": 2,
+            "title": "Thermal Motion and Net Current",
+            "content_text": "In the absence of an electric field, electrons in a conductor move due to thermal motion, colliding with fixed ions. After each collision, the direction of an electron's velocity is completely random. On average, the number of electrons traveling in any direction equals the number traveling in the opposite direction. Consequently, there is no preferential direction for electron velocities, and no net electric current exists.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:3.3:3",
+            "order": 3,
+            "title": "Effect of an External Electric Field",
+            "content_text": "When an electric field is applied to a conductor, electrons are accelerated. For example, if two thin dielectric discs with charges $+Q$ and $-Q$ are attached to the ends of a metallic cylinder (as shown in Fig. 3.1), an electric field $\\vec{E}$ is created from the positive to the negative charge. Electrons accelerate towards the $+Q$ charge, eventually neutralizing the charges on the discs. This results in a transient current that stops once the charges are neutralized. To maintain a steady current, mechanisms like cells or batteries are required to continuously replenish the charges and maintain a steady electric field within the conductor.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 3.1",
+                "description": "A metallic cylinder with dielectric discs at its ends. The left disc carries a positive charge $+Q$ and the right disc carries a negative charge $-Q$. An internal electric field $\\vec{E}$ points from left to right, causing electrons to drift towards the positive end to neutralize the charges.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:3:3.4",
+        "number": "3.4",
+        "title": "Ohm's Law",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:3:3.4:1",
+            "order": 1,
+            "title": "Statement of Ohm's Law",
+            "content_text": "Discovered by G.S. Ohm in 1828, Ohm's law is a fundamental principle regarding the flow of currents. It states that the current $I$ flowing through a conductor is directly proportional to the potential difference $V$ across its ends: $V \\propto I$, or $$V = RI$$ (Eq. 3.3). The constant of proportionality $R$ is called the resistance of the conductor. The SI unit of resistance is the ohm, denoted by the symbol $\\Omega$. Resistance depends on the material of the conductor and its physical dimensions.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:3.4:2",
+            "order": 2,
+            "title": "Dependence of Resistance on Dimensions",
+            "content_text": "The dependence of resistance $R$ on the dimensions of a conductor can be analyzed using a rectangular slab of length $l$ and cross-sectional area $A$ [Fig. 3.2(a)]. If two such identical slabs are placed side by side in series [Fig. 3.2(b)], the total length of the combination becomes $2l$. The current $I$ flowing through the combination is the same as that flowing through an individual slab. If $V$ is the potential difference across the ends of the first slab, then $V$ is also the potential difference across the ends of the second slab since the second slab is Georg Simon Ohm (1787–1854) was a German physicist and professor at Munich. He was led to his law by an analogy between the conduction of heat and electricity. In this analogy, the electric field is considered analogous to the temperature gradient, and the electric current is analogous to the heat flow.\nidentical to the first and the same current $I$ flows through both. The potential difference across the ends of the combination is clearly sum of the potential difference across the two individual slabs and hence equals $2V$. The current through the combination is $I$ and the resistance of the combination $R_c$ is [from Eq. (3.3)], $R_c = \\frac{2V}{I} = 2R$ (3.4) since $V/I = R$, the resistance of either of the slabs. Thus, doubling the length of a conductor doubles the resistance. In general, then resistance is proportional to length, $R \\propto l$ (3.5). Next, imagine dividing the slab into two by cutting it lengthwise so that the slab can be considered as a combination of two identical slabs of length $l$, but each having a cross sectional area of $A/2$ [Fig. 3.2(c)]. For a given voltage $V$ across the slab, if $I$ is the current through the entire slab, then clearly the current flowing through each of the two half-slabs is $I/2$. Since the potential difference across the ends of the half-slabs is $V$, i.e., the same as across the full slab, the resistance of each of the half-slabs $R_1$ is $R_1 = \\frac{V}{(I/2)} = 2\\frac{V}{I} = 2R$ (3.6). Thus, halving the area of the cross-section of a conductor doubles the resistance. In general, then the resistance $R$ is inversely proportional to the cross-sectional area, $R \\propto \\frac{1}{A}$ (3.7). Combining Eqs. (3.5) and (3.7), we have $R \\propto \\frac{l}{A}$ (3.8) and hence for a given conductor $R = \\rho \\frac{l}{A}$ (3.9) where the constant of proportionality $\\rho$ depends on the material of the conductor but not on its dimensions. $\\rho$ is called resistivity.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 3.2",
+                "description": "Illustrations for the relation $R = \\rho l/A$. (a) A single rectangular slab of length $l$ and area $A$. (b) Two identical slabs in series, doubling the length to $2l$ while keeping area $A$ constant. (c) A slab divided into two parallel halves, each with length $l$ and half the original area $A/2$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:3.4:3",
+            "order": 3,
+            "title": "Vector Form of Ohm's Law",
+            "content_text": "Using the last equation, Ohm’s law reads $V = I \\times R = \\frac{I \\rho l}{A}$ (3.10). Current per unit area (taken normal to the current), $I/A$, is called current density and is denoted by $j$. The SI units of the current density are $A/m^2$. Further, if $E$ is the magnitude of uniform electric field in the conductor whose length is $l$, then the potential difference $V$ across its ends is $El$. Using these, the last equation reads $El = j \\rho l$ or, $E = j \\rho$ (3.11). The above relation for magnitudes $E$ and $j$ can indeed be cast in a vector form. The current density, (which we have defined as the current through unit area normal to the current) is also directed along $\\mathbf{E}$, and is also a vector $\\mathbf{j} (= j \\mathbf{E}/E)$. Thus, the last equation can be written as, $\\mathbf{E} = \\mathbf{j} \\rho$ (3.12) or, $\\mathbf{j} = \\sigma \\mathbf{E}$ (3.13) where $\\sigma = 1/\\rho$ is called the conductivity. Ohm’s law is often stated in an equivalent form, Eq. (3.13) in addition to Eq.(3.3). In the next section, we will try to understand the origin of the Ohm’s law as arising from the characteristics of the drift of electrons.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:3:3.5",
+        "number": "3.5",
+        "title": "Drift of Electrons and the Origin of Resistivity",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:3:3.5:1",
+            "order": 1,
+            "title": "Random Motion and Acceleration of Electrons",
+            "content_text": "As remarked before, an electron will suffer collisions with the heavy fixed ions, but after collision, it will emerge with the same speed but in random directions. If we consider all the electrons, their average velocity will be zero since their directions are random. Thus, if there are $N$ electrons and the velocity of the $i^{th}$ electron ($i = 1, 2, 3, ... N$) at a given time is $\\mathbf{v}_i$, then $\\frac{1}{N} \\sum_{i=1}^{N} \\mathbf{v}_i = 0$ (3.14). Consider now the situation when an electric field is present. Electrons will be accelerated due to this field by $\\mathbf{a} = \\frac{-e\\mathbf{E}}{m}$ (3.15) where $-e$ is the charge and $m$ is the mass of an electron. Consider again the $i^{th}$ electron at a given time $t$. This electron would have had its last collision some time before $t$, and let $t_i$ be the time elapsed after its last collision. If $\\mathbf{v}_i$ was its velocity immediately after the last collision, then its velocity $\\mathbf{V}_i$ at time $t$ is $\\mathbf{V}_i = \\mathbf{v}_i + \\frac{-e\\mathbf{E}}{m} t_i$ (3.16) since starting with its last collision it was accelerated (Fig. 3.3) with an acceleration given by Eq. (3.15) for a time interval $t_i$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 3.3",
+                "description": "A schematic picture of an electron moving from a point A to another point B through repeated collisions, and straight line travel between collisions (full lines). If an electric field is applied as shown, the electron ends up at point B' (dotted lines). A slight drift in a direction opposite the electric field is visible.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:3.5:2",
+            "order": 2,
+            "title": "Relaxation Time and Drift Velocity",
+            "content_text": "The average velocity of the electrons at time $t$ is the average of all the $\\mathbf{V}_i$’s. The average of $\\mathbf{v}_i$’s is zero [Eq. (3.14)] since immediately after any collision, the direction of the velocity of an electron is completely random. The collisions of the electrons do not occur at regular intervals but at random times. Let us denote by $\\tau$, the average time between successive collisions. Then at a given time, some of the electrons would have spent time more than $\\tau$ and some less than $\\tau$. In other words, the time $t_i$ in Eq. (3.16) will be less than $\\tau$ for some and more than $\\tau$ for others as we go through the values of $i = 1, 2 ..... N$. The average value of $t_i$ then is $\\tau$ (known as relaxation time). Thus, averaging Eq. (3.16) over the $N$-electrons at any given time $t$ gives us for the average velocity $\\mathbf{v}_d$: $\\mathbf{v}_d = (\\mathbf{V}_i)_{average} = (\\mathbf{v}_i)_{average} - \\frac{e\\mathbf{E}}{m} (t_i)_{average} = 0 - \\frac{e\\mathbf{E}}{m} \\tau = -\\frac{e\\mathbf{E}}{m} \\tau$ (3.17). This last result is surprising. It tells us that the electrons move with an average velocity which is independent of time, although electrons are accelerated. This is the phenomenon of drift and the velocity $\\mathbf{v}_d$ in Eq. (3.17) is called the drift velocity.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:3.5:3",
+            "order": 3,
+            "title": "Relation between Current and Drift Velocity",
+            "content_text": "Because of the drift, there will be net transport of charges across any area perpendicular to $\\mathbf{E}$. Consider a planar area $A$, located inside the conductor such that the normal to the area is parallel to $\\mathbf{E}$ (Fig. 3.4). Then because of the drift, in an infinitesimal amount of time $\\Delta t$, all electrons to the left of the area at distances upto $|v_d| \\Delta t$ would have crossed the area. If $n$ is the number of free electrons per unit volume in the metal, then there are $n \\Delta t |v_d| A$ such electrons. Since each electron carries a charge $-e$, the total charge transported across this area $A$ to the right in time $\\Delta t$ is $-ne A |v_d| \\Delta t$. $\\mathbf{E}$ is directed towards the left and hence the total charge transported along $\\mathbf{E}$ across the area is negative of this. The amount of charge crossing the area $A$ in time $\\Delta t$ is by definition [Eq. (3.2)] $I \\Delta t$, where $I$ is the magnitude of the current. Hence, $I \\Delta t = +ne A |v_d| \\Delta t$ (3.18). Substituting the value of $|v_d|$ from Eq. (3.17): $I \\Delta t = \\frac{e^2 A}{m} \\tau n \\Delta t |E|$ (3.19).",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 3.4",
+                "description": "Current in a metallic conductor. The magnitude of current density in a metal is the magnitude of charge contained in a cylinder of unit area and length $v_d$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:3.5:4",
+            "order": 4,
+            "title": "Microscopic Origin of Ohm's Law",
+            "content_text": "By definition $I$ is related to the magnitude $|j|$ of the current density by $I = |j| A$ (3.20). Hence, from Eqs. (3.19) and (3.20), $|j| = \\frac{ne^2}{m} \\tau |E|$ (3.21). The vector $\\mathbf{j}$ is parallel to $\\mathbf{E}$ and hence we can write Eq. (3.21) in the vector form $\\mathbf{j} = \\frac{ne^2}{m} \\tau \\mathbf{E}$ (3.22). Comparison with Eq. (3.13) shows that Eq. (3.22) is exactly the Ohm’s law, if we identify the conductivity $\\sigma$ as $\\sigma = \\frac{ne^2}{m} \\tau$ (3.23). This simple model of electrical conduction successfully reproduces Ohm's law, provided that the electron density $n$ and the relaxation time $\\tau$ are treated as constants that do not depend on the applied electric field $\\mathbf{E}$. The limitations of this law are discussed in subsequent sections.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:3.5:5",
+            "order": 5,
+            "title": "Example 3.1: Estimating Drift Speed",
+            "content_text": "This example provides a numerical estimation of the drift speed of conduction electrons in a copper wire and compares it with thermal speeds and the speed of electric field propagation.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 3.1",
+                "problem": "(a) Estimate the average drift speed of conduction electrons in a copper wire of cross-sectional area $1.0 \\times 10^{-7} \\text{ m}^2$ carrying a current of $1.5 \\text{ A}$. Assume that each copper atom contributes roughly one conduction electron. The density of copper is $9.0 \\times 10^3 \\text{ kg/m}^3$, and its atomic mass is $63.5 \\text{ u}$. (b) Compare the drift speed obtained above with, (i) thermal speeds of copper atoms at ordinary temperatures, (ii) speed of propagation of electric field along the conductor which causes the drift motion.",
+                "solution": "(a) The drift speed $v_d$ is given by $v_d = I/neA$. The density of conduction electrons $n$ is calculated as $n = \\frac{6.0 \\times 10^{23}}{63.5} \\times 9.0 \\times 10^6 = 8.5 \\times 10^{28} \\text{ m}^{-3}$. Substituting values: $v_d = \\frac{1.5}{8.5 \\times 10^{28} \\times 1.6 \\times 10^{-19} \\times 1.0 \\times 10^{-7}} = 1.1 \\times 10^{-3} \\text{ m s}^{-1} = 1.1 \\text{ mm s}^{-1}$. (b) (i) At $300 \\text{ K}$, thermal speed is $\\approx 2 \\times 10^2 \\text{ m/s}$. Drift speed is $\\approx 10^{-5}$ times smaller. (ii) Electric field propagates at the speed of light ($3.0 \\times 10^8 \\text{ m s}^{-1}$). Drift speed is smaller by a factor of $10^{-11}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:3.5:6",
+            "order": 6,
+            "title": "Example 3.2: Conceptual Aspects of Current and Drift",
+            "content_text": "This example addresses common conceptual questions regarding the establishment of current, the nature of electron motion under an electric field, and the path of electrons between collisions.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 3.2",
+                "problem": "(a) How is current established almost instantly if drift speed is so small? (b) Why do electrons acquire a steady average drift speed despite constant force? (c) How can we obtain large currents if drift speed and electron charge are small? (d) Do all 'free' electrons move in the same direction during drift? (e) Are electron paths straight lines between collisions in the (i) absence and (ii) presence of an electric field?",
+                "solution": "(a) The electric field is established throughout the circuit at the speed of light, causing local electron drift everywhere simultaneously. (b) Electrons accelerate between collisions but lose their acquired drift speed upon colliding with metal ions; on average, they maintain a steady drift speed. (c) The electron number density $n$ is enormous ($\\sim 10^{29} \\text{ m}^{-3}$), compensating for small $v_d$ and $e$. (d) No, drift velocity is a small bias superposed on large random thermal velocities. (e) (i) Straight lines in the absence of a field. (ii) Curved paths in the presence of an electric field."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:3:3.5.1",
+        "number": "3.5.1",
+        "title": "Mobility",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:3:3.5.1:1",
+            "order": 1,
+            "title": "Definition and Units of Mobility",
+            "content_text": "Conductivity in materials arises from mobile charge carriers (electrons in metals, ions in electrolytes). Mobility $\\mu$ is defined as the magnitude of the drift velocity per unit electric field: $\\mu = \\frac{|\\mathbf{v}_d|}{E}$ (3.24). The SI unit of mobility is $\\text{m}^2/\\text{Vs}$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:3.5.1:2",
+            "order": 2,
+            "title": "Mobility in Terms of Relaxation Time",
+            "content_text": "By substituting the expression for drift velocity $v_d = \\frac{e\\tau E}{m}$ into the mobility definition, we obtain $\\mu = \\frac{v_d}{E} = \\frac{e\\tau}{m}$ (3.25), where $\\tau$ is the average collision time for electrons.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:3:3.6",
+        "number": "3.6",
+        "title": "Limitations of Ohm's Law",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:3:3.6:1",
+            "order": 1,
+            "title": "Deviations from Linearity",
+            "content_text": "In many materials, the linear relationship where $V$ is proportional to $I$ fails, especially at higher currents. This is represented by a curve that deviates from the ideal straight line in a $V$ vs $I$ graph.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 3.5",
+                "description": "A graph of Voltage (V) versus Current (I). A dashed straight line represents the linear Ohm's law, while a solid blue line shows the actual behavior of a good conductor deviating from linearity at higher values.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:3.6:2",
+            "order": 2,
+            "title": "Directional Dependence of Current",
+            "content_text": "In certain devices like diodes, the magnitude of current depends on the sign of the applied voltage. Reversing the polarity of $V$ for the same magnitude does not result in a current of the same magnitude in the opposite direction.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 3.6",
+                "description": "Characteristic V-I curve of a diode. The scales for positive and negative voltage/current are different, showing non-symmetric behavior when the polarity is reversed.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:3.6:3",
+            "order": 3,
+            "title": "Non-unique V-I Relationship and Negative Resistance",
+            "content_text": "Some materials, such as Gallium Arsenide (GaAs), exhibit a non-unique relationship between $V$ and $I$, where the same current can be achieved at different voltages. These materials can also show a 'negative resistance' region where current decreases as voltage increases.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 3.7",
+                "description": "V-I curve for GaAs showing a non-linear region, a region of negative resistance where the slope is negative, and a non-unique relationship between current and voltage.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:3:3.7",
+        "number": "3.7",
+        "title": "Resistivity of Various Materials",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:3:3.7:1",
+            "order": 1,
+            "title": "Classification of Materials",
+            "content_text": "Materials are broadly classified into three categories based on their electrical resistivity: conductors (low resistivity), semiconductors (intermediate), and insulators (high resistivity).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:3.7:2",
+            "order": 2,
+            "title": "Comparison of Resistivities",
+            "content_text": "Materials are broadly classified based on their resistivity values. Metals possess low resistivities, typically ranging from $10^{-8} \\Omega m$ to $10^{-6} \\Omega m$. In contrast, insulators such as ceramic, rubber, and plastics exhibit extremely high resistivities, often $10^{18}$ times greater than those of metals. Semiconductors fall between these two extremes. A unique characteristic of semiconductors is that their resistivity decreases as temperature rises. Furthermore, the resistivity of semiconductors can be significantly altered and decreased by the addition of small amounts of specific impurities, a property that is extensively utilized in the fabrication of electronic devices.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:3:3.8",
+        "number": "3.8",
+        "title": "Temperature Dependence of Resistivity",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:3:3.8:1",
+            "order": 1,
+            "title": "Mathematical Relation for Metallic Conductors",
+            "content_text": "The resistivity of a material is dependent on temperature, though the nature of this dependence varies across different materials. For metallic conductors, over a limited and relatively small temperature range, the resistivity $\\rho_T$ at a temperature $T$ is approximately related to the resistivity $\\rho_0$ at a reference temperature $T_0$ by the linear equation: $$\\rho_T = \\rho_0 [1 + \\alpha (T-T_0)] \\quad (3.26)$$ Here, $\\alpha$ is defined as the temperature coefficient of resistivity. From this equation, it can be seen that the dimension of $\\alpha$ is $(Temperature)^{-1}$. For most metals, $\\alpha$ is a positive value, indicating that resistivity increases with temperature.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:3.8:2",
+            "order": 2,
+            "title": "Graphical Analysis of Resistivity",
+            "content_text": "While Equation (3.26) suggests a linear relationship, real materials often show deviations. For copper, the graph of resistivity against temperature is approximately linear at higher temperatures but deviates significantly from a straight line at temperatures much lower than $0^\\circ C$ (as shown in Fig. 3.8). Thus, the linear approximation is only valid over a limited range around the reference temperature $T_0$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 3.8",
+                "description": "A graph showing the resistivity $\\rho_T$ of copper (in units of $10^{-8} \\Omega m$) as a function of temperature $T$ (in Kelvin). The curve starts near the origin and increases non-linearly at low temperatures before becoming more linear at higher temperatures.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:3.8:3",
+            "order": 3,
+            "title": "Resistivity in Alloys and Standard Resistors",
+            "content_text": "Certain materials, particularly alloys like Nichrome (an alloy of nickel, iron, and chromium), exhibit a very weak dependence of resistivity on temperature (Fig. 3.9). Other alloys such as manganin and constantan possess similar properties. Because their resistance values change very little with temperature fluctuations, these materials are widely used in the construction of wire-bound standard resistors.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 3.9",
+                "description": "A graph of resistivity $\\rho_T$ of nichrome (in $\\mu\\Omega cm$) as a function of absolute temperature $T$ (in Kelvin). The graph is a straight line with a positive slope that does not pass through the origin, indicating a high residual resistivity even at low temperatures.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:3.8:4",
+            "order": 4,
+            "title": "Temperature Dependence in Semiconductors",
+            "content_text": "Unlike metals, the resistivities of semiconductors decrease as temperature increases. This inverse relationship is typically non-linear, as illustrated in Fig. 3.10 for a typical semiconductor.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 3.10",
+                "description": "A graph showing the temperature dependence of resistivity $\\rho$ for a typical semiconductor. The resistivity decreases sharply and exponentially as the temperature $T$ increases.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:3.8:5",
+            "order": 5,
+            "title": "Microscopic Origin of Temperature Dependence",
+            "content_text": "The temperature dependence of resistivity can be qualitatively understood using the expression: $$\\rho = \\frac{1}{\\sigma} = \\frac{m}{ne^2\\tau} \\quad (3.27)$$ where $n$ is the number of free electrons per unit volume and $\\tau$ is the average relaxation time between collisions. As temperature increases, the thermal speed of electrons increases, leading to more frequent collisions with the vibrating ions of the lattice. This results in a decrease in the average relaxation time $\\tau$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:3.8:6",
+            "order": 6,
+            "title": "Comparison: Metals vs. Semiconductors",
+            "content_text": "In metals, the number density $n$ of free electrons is essentially independent of temperature. Therefore, the increase in resistivity with temperature is primarily due to the decrease in $\\tau$. In contrast, for insulators and semiconductors, $n$ increases significantly with temperature. This increase in $n$ more than compensates for any decrease in $\\tau$, causing the overall resistivity $\\rho$ to decrease as temperature rises.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:3.8:7",
+            "order": 7,
+            "title": "Worked Example: Nichrome Heating Element",
+            "content_text": "This example demonstrates how to calculate the steady-state temperature of a heating element using the temperature coefficient of resistance.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 3.3",
+                "problem": "An electric toaster uses nichrome for its heating element. When a negligibly small current passes through it, its resistance at room temperature ($27.0 ^\\circ C$) is found to be $75.3 \\Omega$. When the toaster is connected to a $230 V$ supply, the current settles, after a few seconds, to a steady value of $2.68 A$. What is the steady temperature of the nichrome element? The temperature coefficient of resistance of nichrome averaged over the temperature range involved, is $1.70 \\times 10^{-4} ^\\circ C^{-1}$.",
+                "solution": "When the current is small, heating effects are ignored and $T_1 = 27.0 ^\\circ C$. At the steady state with $V = 230 V$ and $I = 2.68 A$, the resistance $R_2$ is: $$R_2 = \\frac{230 V}{2.68 A} = 85.8 \\Omega$$ Using the relation $R_2 = R_1 [1 + \\alpha (T_2 - T_1)]$, we get: $$T_2 - T_1 = \\frac{(85.8 - 75.3)}{(75.3) \\times 1.70 \\times 10^{-4}} = 820 ^\\circ C$$ Thus, $T_2 = 820 + 27.0 = 847 ^\\circ C$. The steady temperature is reached when the heat produced by the current equals the heat loss to the surroundings."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:3.8:8",
+            "order": 8,
+            "title": "Worked Example: Platinum Resistance Thermometer",
+            "content_text": "This example illustrates the application of temperature dependence of resistance in thermometry.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 3.4",
+                "problem": "The resistance of the platinum wire of a platinum resistance thermometer at the ice point is $5 \\Omega$ and at steam point is $5.23 \\Omega$. When the thermometer is inserted in a hot bath, the resistance of the platinum wire is $5.795 \\Omega$. Calculate the temperature of the bath.",
+                "solution": "Given $R_0 = 5 \\Omega$, $R_{100} = 5.23 \\Omega$ and $R_t = 5.795 \\Omega$. Using the linear relation $R_t = R_0(1 + \\alpha t)$, we can derive the temperature $t$ as: $$t = \\frac{R_t - R_0}{R_{100} - R_0} \\times 100$$ $$t = \\frac{5.795 - 5}{5.23 - 5} \\times 100 = \\frac{0.795}{0.23} \\times 100 = 345.65 ^\\circ C$$"
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:3:3.9",
+        "number": "3.9",
+        "title": "Electrical Energy, Power",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:3:3.9:1",
+            "order": 1,
+            "title": "Potential Energy of Charges in a Conductor",
+            "content_text": "Consider a conductor with endpoints A and B, carrying a current $I$ from A to B. Let the electric potentials at A and B be $V(A)$ and $V(B)$ respectively. Since current flows from A to B, $V(A) > V(B)$, and the potential difference is $V = V(A) - V(B) > 0$. In a time interval $\\Delta t$, an amount of charge $\\Delta Q = I \\Delta t$ moves from A to B. The potential energy of the charge at A is $Q V(A)$ and at B is $Q V(B)$. The change in potential energy $\\Delta U_{pot}$ is: $$\\Delta U_{pot} = \\text{Final P.E.} - \\text{Initial P.E.} = \\Delta Q [V(B) - V(A)] = -\\Delta Q V = -I V \\Delta t < 0 \\quad (3.28)$$",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:3.9:2",
+            "order": 2,
+            "title": "Energy Dissipation and Joule Heating",
+            "content_text": "If charges moved freely without collisions, their kinetic energy would increase such that total energy is conserved: $\\Delta K = -\\Delta U_{pot} = I V \\Delta t > 0$. However, in a real conductor, charge carriers collide with ions and atoms. During these collisions, the energy gained by the charges is shared with the atoms, causing them to vibrate more vigorously. This results in the conductor heating up. The energy dissipated as heat in the conductor during time $\\Delta t$ is: $$\\Delta W = I V \\Delta t \\quad (3.31)$$ This phenomenon is known as Joule heating.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:3.9:3",
+            "order": 3,
+            "title": "Electric Power",
+            "content_text": "The energy dissipated per unit time is defined as the power dissipated, $P$. It is given by: $$P = \\frac{\\Delta W}{\\Delta t} = I V \\quad (3.32)$$ Using Ohm’s law $V = IR$, we get $P = I^2 R = V^2/R$ (3.33) as the power loss (“ohmic loss”) in a conductor of resistance $R$ carrying a current $I$. It is this power which heats up, for example, the coil of an electric bulb to incandescence, radiating out heat and light.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:3.9:4",
+            "order": 4,
+            "title": "Source of Electrical Power",
+            "content_text": "To maintain a steady current through a conductor, an external source must supply power. In a simple circuit with a cell, the chemical energy of the cell's electrolyte supplies this power for as long as it can. The expressions for power, Eqs. (3.32) and (3.33), show the dependence of the power dissipated in a resistor $R$ on the current through it and the voltage across it.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 3.11",
+                "description": "A circuit diagram showing a resistor R connected across the terminals of an electrolytic cell. It illustrates that heat is produced in the resistor and the energy dissipated comes from the chemical energy of the electrolyte.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:3.9:5",
+            "order": 5,
+            "title": "Application to Power Transmission",
+            "content_text": "Electrical power is transmitted from power stations to homes and factories via transmission cables that may span hundreds of miles. To minimize power loss in these cables, which have a finite resistance $R_c$, transmission is done at high voltages. Consider a device $R$ to which power $P$ is delivered. If $V$ is the voltage across $R$ and $I$ is the current, then $P = VI$ (3.34). The power dissipated (wasted) in the connecting wires is $P_c = I^2 R_c = \\frac{P^2 R_c}{V^2}$ (3.35). Since $P_c$ is inversely proportional to $V^2$, carrying current at enormous values of $V$ reduces power waste. This is why high voltage danger signs are common on transmission lines. At the destination, a transformer lowers the voltage to a safe value for use.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:3:3.10",
+        "number": "3.10",
+        "title": "Cells, EMF, Internal Resistance",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:3:3.10:1",
+            "order": 1,
+            "title": "The Electrolytic Cell",
+            "content_text": "A simple device to maintain a steady current in an electric circuit is the electrolytic cell. A cell has two electrodes, the positive (P) and the negative (N), immersed in an electrolytic solution. The electrodes exchange charges with the electrolyte. The positive electrode has a potential difference $V_+ (V_+ > 0)$ between itself and the electrolyte solution immediately adjacent to it (marked A). Similarly, the negative electrode develops a negative potential $-(V_-) (V_- \\ge 0)$ relative to the electrolyte adjacent to it (marked B).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 3.12",
+                "description": "(a) Sketch of an electrolytic cell showing positive terminal P, negative terminal N, and points A and B in the electrolyte. (b) The standard circuit symbol for a cell with positive and negative terminals.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:3.10:2",
+            "order": 2,
+            "title": "Electromotive Force (emf)",
+            "content_text": "When there is no current, the electrolyte has the same potential throughout. The potential difference between P and N is $V_+ - (-V_-) = V_+ + V_-$. This difference is called the electromotive force (emf) of the cell, denoted by $\\varepsilon$. Thus, $\\varepsilon = V_+ + V_- > 0$ (3.36). Despite the name, emf is a potential difference and not a force; the name is historical, from a time when the phenomenon was not fully understood.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:3.10:3",
+            "order": 3,
+            "title": "Internal Resistance",
+            "content_text": "The electrolyte through which a current flows has a finite resistance $r$, called the internal resistance. In an open circuit where the external resistance $R$ is infinite, the current $I = 0$ and the potential difference $V$ between P and N is equal to the emf $\\varepsilon$ (3.37). Internal resistance varies between cells; dry cells typically have much higher internal resistance than common electrolytic cells.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:3.10:4",
+            "order": 4,
+            "title": "Terminal Potential Difference",
+            "content_text": "When a finite resistance $R$ is connected across the cell, a current $I$ flows from N to P through the electrolyte and from P to N through $R$. The potential difference $V$ between P and N is $V = V_+ + V_- - Ir = \\varepsilon - Ir$ (3.38). The negative sign for $Ir$ arises because the current $I$ flows from B to A in the electrolyte. In practical calculations, internal resistance may be neglected if $\\varepsilon \\gg Ir$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:3.10:5",
+            "order": 5,
+            "title": "Current in a Simple Circuit",
+            "content_text": "Since $V$ is the potential difference across the external resistor $R$, Ohm’s law gives $V = IR$ (3.39). Combining this with the terminal voltage equation, we get $IR = \\varepsilon - Ir$, which simplifies to $I = \\frac{\\varepsilon}{R + r}$ (3.40). This equation determines the steady current in a circuit containing a single cell and a resistor.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:3.10:6",
+            "order": 6,
+            "title": "Maximum Current from a Cell",
+            "content_text": "The maximum current that can be drawn from a cell occurs when the external resistance $R = 0$ (short circuit), given by $I_{max} = \\varepsilon/r$. In practice, the maximum allowed current is usually much lower to prevent permanent damage to the cell.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:3:3.11",
+        "number": "3.11",
+        "title": "Cells in Series and in Parallel",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:3:3.11:1",
+            "order": 1,
+            "title": "Cells in Series",
+            "content_text": "Like resistors, cells can be combined and replaced by an equivalent cell for calculations. Consider two cells in series with emfs $\\varepsilon_1, \\varepsilon_2$ and internal resistances $r_1, r_2$. The potential difference across the first cell is $V_{AB} = V(A) - V(B) = \\varepsilon_1 - Ir_1$ (3.41). For the second cell, $V_{BC} = V(B) - V(C) = \\varepsilon_2 - Ir_2$ (3.42). The total potential difference is $V_{AC} = V(A) - V(C) = (V(A) - V(B)) + (V(B) - V(C)) = (\\varepsilon_1 + \\varepsilon_2) - I(r_1 + r_2)$ (3.43). Comparing this to $V_{AC} = \\varepsilon_{eq} - Ir_{eq}$ (3.44), we find $\\varepsilon_{eq} = \\varepsilon_1 + \\varepsilon_2$ (3.45) and $r_{eq} = r_1 + r_2$ (3.46). This applies when the negative electrode of the first is connected to the positive of the second. If instead we connect the two negatives, If instead we connect the two negatives of the cells together, Eq. (3.42) would change to $V_{BC} = -\\epsilon_2 - I r_2$ and we will get $\\epsilon_{eq} = \\epsilon_1 - \\epsilon_2$ (assuming $\\epsilon_1 > \\epsilon_2$) (3.47). The rule for series combination clearly can be extended to any number of cells: (i) The equivalent emf of a series combination of n cells is just the sum of their individual emfs, and (ii) The equivalent internal resistance of a series combination of n cells is just the sum of their internal resistances. This is so, when the current leaves each cell from the positive electrode. If in the combination, the current leaves any cell from the negative electrode, the emf of the cell enters the expression for $\\epsilon_{eq}$ with a negative sign, as in Eq. (3.47).",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 3.13",
+                "description": "Two cells of emfs $\\varepsilon_1, \\varepsilon_2$ and internal resistances $r_1, r_2$ connected in series between points A, B, and C, and their equivalent single cell representation with $\\varepsilon_{eq}$ and $r_{eq}$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:3.11:2",
+            "order": 2,
+            "title": "Cells in Parallel - Two Cells",
+            "content_text": "Consider a parallel combination of two cells (Fig. 3.14). Let $I_1$ and $I_2$ be the currents leaving the positive electrodes of the cells. At the point $B_1$, $I_1$ and $I_2$ flow in whereas the current $I$ flows out. Since as much charge flows in as out, we have $I = I_1 + I_2$ (3.48). Let $V(B_1)$ and $V(B_2)$ be the potentials at $B_1$ and $B_2$, respectively. Then, considering the first cell, the potential difference across its terminals is $V \\equiv V(B_1) - V(B_2) = \\epsilon_1 - I_1 r_1$ (3.49). Similarly, for the second cell, $V = V(B_1) - V(B_2) = \\epsilon_2 - I_2 r_2$ (3.50). Combining these equations: $I = I_1 + I_2 = \\frac{\\epsilon_1 - V}{r_1} + \\frac{\\epsilon_2 - V}{r_2} = \\left(\\frac{\\epsilon_1}{r_1} + \\frac{\\epsilon_2}{r_2}\\right) - V\\left(\\frac{1}{r_1} + \\frac{1}{r_2}\\right)$ (3.51). Hence, $V$ is given by $V = \\frac{\\epsilon_1 r_2 + \\epsilon_2 r_1}{r_1 + r_2} - I \\frac{r_1 r_2}{r_1 + r_2}$ (3.52). If we replace the combination by a single cell of emf $\\epsilon_{eq}$ and internal resistance $r_{eq}$, we have $V = \\epsilon_{eq} - I r_{eq}$ (3.53). Comparing the equations, we get $\\epsilon_{eq} = \\frac{\\epsilon_1 r_2 + \\epsilon_2 r_1}{r_1 + r_2}$ (3.54) and $r_{eq} = \\frac{r_1 r_2}{r_1 + r_2}$ (3.55).",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 3.14",
+                "description": "Two cells in parallel. For connections across A and C, the combination can be replaced by one cell of emf $\\epsilon_{eq}$ and internal resistances $r_{eq}$ whose values are given in Eqs. (3.54) and (3.55).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:3.11:3",
+            "order": 3,
+            "title": "Generalization for n Cells in Parallel",
+            "content_text": "The equations for two cells in parallel can be expressed more simply as $\\frac{1}{r_{eq}} = \\frac{1}{r_1} + \\frac{1}{r_2}$ (3.56) and $\\frac{\\epsilon_{eq}}{r_{eq}} = \\frac{\\epsilon_1}{r_1} + \\frac{\\epsilon_2}{r_2}$ (3.57). If the negative terminal of the second cell is connected to the positive terminal of the first, $\\epsilon_2$ is replaced by $-\\epsilon_2$. For $n$ cells of emf $\\epsilon_1, ..., \\epsilon_n$ and internal resistances $r_1, ..., r_n$ connected in parallel, the combination is equivalent to a single cell with $\\frac{1}{r_{eq}} = \\sum_{i=1}^n \\frac{1}{r_i}$ (3.58) and $\\frac{\\epsilon_{eq}}{r_{eq}} = \\sum_{i=1}^n \\frac{\\epsilon_i}{r_i}$ (3.59).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:3:3.12",
+        "number": "3.12",
+        "title": "Kirchhoff's Rules",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:3:3.12:1",
+            "order": 1,
+            "title": "Example 3.5: Solution and Symmetry in Networks",
+            "content_text": "The network of resistors in a cube is not reducible to simple series and parallel combinations. There is, however, a clear symmetry in the problem which we can exploit to obtain the equivalent resistance of the network. The paths AA', AD and AB are obviously symmetrically placed in the network. Thus, the current in each must be the same, say, $I$. Further, at the corners A', B and D, the incoming current $I$ must split equally into the two outgoing branches. In this manner, the current in all the 12 edges of the cube are easily written down in terms of $I$, using Kirchhoff's first rule and the symmetry in the problem. Next take a closed loop, say, ABCC'EA, and apply Kirchhoff's second rule: $-IR - (1/2)IR - IR + \\epsilon = 0$ where $R$ is the resistance of each edge and $\\epsilon$ the emf of battery. Thus, $\\epsilon = \\frac{5}{2}IR$. The equivalent resistance $R_{eq}$ of the network is $R_{eq} = \\frac{\\epsilon}{3I} = \\frac{5}{6}R$. For $R = 1 \\Omega$, $R_{eq} = (5/6) \\Omega$ and for $\\epsilon = 10 V$, the total current ($3I$) in the network is $3I = 10 V / (5/6) \\Omega = 12 A$, i.e., $I = 4 A$. The current flowing in each edge can now be read off from the Fig. 3.16.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 3.5",
+                "problem": "[Continued from previous page] A network of resistors in the shape of a cube with resistance $R$ in each edge. Find the equivalent resistance and current in each edge.",
+                "solution": "The paths AA', AD and AB are symmetrically placed. Current in each is $I$. At corners A', B and D, current $I$ splits into two branches of $I/2$. Loop ABCC'EA: $-IR - (1/2)IR - IR + \\epsilon = 0 \\implies \\epsilon = \\frac{5}{2}IR$. Total current $= 3I$. $R_{eq} = \\frac{\\epsilon}{3I} = \\frac{5}{6}R$. For $R=1\\Omega, \\epsilon=10V$, $R_{eq}=5/6\\Omega, 3I=12A, I=4A$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:3.12:2",
+            "order": 2,
+            "title": "Application of Kirchhoff's Rules in General Networks",
+            "content_text": "It should be noted that because of the symmetry of the network, the great power of Kirchhoff's rules has not been very apparent in Example 3.5. In a general network, there will be no such simplification due to symmetry, and only by application of Kirchhoff's rules to junctions and closed loops (as many as necessary to solve the unknowns in the network) can we handle the problem. This is illustrated in Example 3.6.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:3.12:3",
+            "order": 3,
+            "title": "Example 3.6: Multi-loop Network Analysis",
+            "content_text": "Each branch of the network is assigned an unknown current to be determined by the application of Kirchhoff's rules. To reduce the number of unknowns at the outset, the first rule of Kirchhoff is used at every junction to assign the unknown current in each branch. We then have three unknowns $I_1, I_2$ and $I_3$ which can be found by applying the second rule of Kirchhoff to three different closed loops. It is easily verified that Kirchhoff's second rule applied to the remaining closed loops does not provide any additional independent equation, that is, the calculated values of currents satisfy the second rule for every closed loop of the network. For example, the total voltage drop over the closed loop BADEB is $5 V + (\\frac{5}{8} \\times 4) V - (\\frac{15}{8} \\times 4) V$, which is equal to zero, as required by Kirchhoff's second rule.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 3.6",
+                "problem": "Determine the current in each branch of the network shown in Fig. 3.17.",
+                "solution": "Assign unknown currents $I_1, I_2, I_3$. Kirchhoff's second rule for the closed loop ADCA gives $10 - 4(I_1 - I_2) + 2(I_2 + I_3 - I_1) - I_1 = 0$, that is, $7I_1 - 6I_2 - 2I_3 = 10$ [3.61(a)]. For the closed loop ABCA, we get $10 - 4I_2 - 2(I_2 + I_3) - I_1 = 0$, that is, $I_1 + 6I_2 + 2I_3 = 10$ [3.61(b)]. For the closed loop BCDEB, we get $5 - 2(I_2 + I_3) - 2(I_2 + I_3 - I_1) = 0$, that is, $2I_1 - 4I_2 - 4I_3 = -5$ [3.61(c)]. These three simultaneous equations give $I_1 = 2.5A, I_2 = \\frac{5}{8}A, I_3 = \\frac{7}{8}A$. The currents in the various branches are: $AB : \\frac{5}{8} A, CA : 2\\frac{1}{2} A, DEB : 1\\frac{7}{8} A, AD : 1\\frac{7}{8} A, CD : 0 A, BC : 2\\frac{1}{2} A$."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Figure 3.17",
+                "description": "A circuit diagram showing a network of resistors and two batteries. A 10V battery is in the central branch AC. A 5V battery is in the branch containing the 2 ohm resistor between B and C. Resistors of 4 ohms, 2 ohms, 1 ohm, and 2 ohms are arranged in various branches. Currents $I_1, I_2, I_3$ and their combinations are labeled at junctions A, B, C, and D.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:3:3.13",
+        "number": "3.13",
+        "title": "Wheatstone Bridge",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:3:3.13:1",
+            "order": 1,
+            "title": "Structure of the Wheatstone Bridge",
+            "content_text": "As an application of Kirchhoff's rules consider the circuit shown in Fig. 3.18, which is called the Wheatstone bridge. The bridge has four resistors $R_1, R_2, R_3$ and $R_4$. Across one pair of diagonally opposite points (A and C in the figure) a source is connected. This (i.e., AC) is called the battery arm. Between the other two vertices, B and D, a galvanometer G (which is a device to detect currents) is connected. This line, shown as BD in the figure, is called the galvanometer arm. For simplicity, we assume that the cell has no internal resistance.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 3.18",
+                "description": "A standard Wheatstone bridge circuit diagram. Four resistors $R_1, R_2, R_3, R_4$ form a diamond shape. A galvanometer G is connected between points B and D. A battery with emf $\\epsilon$ is connected across points A and C. Currents $I_1, I_2, I_3, I_4$ are shown in the respective arms.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:3.13:2",
+            "order": 2,
+            "title": "The Balanced Condition",
+            "content_text": "In general there will be currents flowing across all the resistors as well as a current $I_g$ through G. Of special interest, is the case of a balanced bridge where the resistors are such that $I_g = 0$. We can easily get the balance condition, such that there is no current through G. In this case, the Kirchhoff's junction rule applied to junctions D and B immediately gives us the relations $I_1 = I_3$ and $I_2 = I_4$. Next, we apply Kirchhoff's loop rule to closed loops ADBA and CBDC. The first loop gives $-I_1 R_1 + 0 + I_2 R_2 = 0$ (Eq. 3.62) and the second loop gives, upon using $I_3 = I_1, I_4 = I_2$, $I_2 R_4 + 0 - I_1 R_3 = 0$ (Eq. 3.63). From Eq. (3.62), we obtain $I_1/I_2 = R_2/R_1$ whereas from Eq. (3.63), we obtain $I_1/I_2 = R_4/R_3$. Hence, we obtain the condition $\\frac{R_2}{R_1} = \\frac{R_4}{R_3}$ [3.64(a)]. This last equation relating the four resistors is called the balance condition for the galvanometer to give zero or null deflection.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:3.13:3",
+            "order": 3,
+            "title": "Determination of Unknown Resistance",
+            "content_text": "The Wheatstone bridge and its balance condition provide a practical method for determination of an unknown resistance. Let us suppose we have an unknown resistance, which we insert in the fourth arm; $R_4$ is thus not known. Keeping known resistances $R_1$ and $R_2$ in the first and second arm of the bridge, we go on varying $R_3$ till the galvanometer shows a null deflection. The bridge then is balanced, and from the balance condition the value of the unknown resistance $R_4$ is given by $R_4 = R_3 \\frac{R_2}{R_1}$ [3.64(b)]. A practical device using this principle is called the meter bridge.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:3.13:4",
+            "order": 4,
+            "title": "Example 3.7: Current in a Wheatstone Bridge",
+            "content_text": "The four arms of a Wheatstone bridge (Fig. 3.19) have the following resistances: $AB = 100\\Omega, BC = 10\\Omega, CD = 5\\Omega$, and $DA = 60\\Omega$. A galvanometer of $15\\Omega$ resistance is connected across BD. Calculate the current through the galvanometer when a potential difference of 10V is maintained across AC. To find the current through the galvanometer, we apply Kirchhoff's rules to the Wheatstone bridge meshes. In mesh BADB, the sum of potential drops is $100I_1 + 15I_g - 60I_2 = 0$. In mesh BCDB, the equation is $10(I_1 - I_g) - 15I_g - 5(I_2 + I_g) = 0$. For the loop ADCEA, which includes the 10V battery, we have $60I_2 + 5(I_2 + I_g) = 10$. Solving these equations simultaneously, we first express $I_2$ in terms of $I_g$ as $I_2 = 31.5I_g$, and then substitute this into the third equation to find $I_g = 4.87$ mA.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 3.7",
+                "problem": "The four arms of a Wheatstone bridge (Fig. 3.19) have the following resistances: $AB = 100\\Omega, BC = 10\\Omega, CD = 5\\Omega$, and $DA = 60\\Omega$. A galvanometer of $15\\Omega$ resistance is connected across BD. Calculate the current through the galvanometer when a potential difference of 10V is maintained across AC.",
+                "solution": "[Solution continues on next page]"
+              },
+              {
+                "label": "Example 3.7",
+                "problem": "A Wheatstone bridge has resistances $AB = 100\\Omega$, $BC = 10\\Omega$, $CD = 5\\Omega$, and $DA = 60\\Omega$. A galvanometer of $15\\Omega$ resistance is connected across BD. Calculate the current through the galvanometer when a potential difference of 10V is maintained across AC.",
+                "solution": "Considering the mesh BADB, we have $100I_1 + 15I_g - 60I_2 = 0$ or $20I_1 + 3I_g - 12I_2 = 0$ [3.65(a)]. Considering the mesh BCDB, we have $10(I_1 - I_g) - 15I_g - 5(I_2 + I_g) = 0$, which simplifies to $2I_1 - 6I_g - I_2 = 0$ [3.65(b)]. Considering the mesh ADCEA, $60I_2 + 5(I_2 + I_g) = 10$, which simplifies to $13I_2 + I_g = 2$ [3.65(c)]. Multiplying Eq. (3.65b) by 10 gives $20I_1 - 60I_g - 10I_2 = 0$ [3.65(d)]. Subtracting (3.65d) from (3.65a) gives $63I_g - 2I_2 = 0$, so $I_2 = 31.5I_g$ [3.65(e)]. Substituting this into (3.65c): $13(31.5I_g) + I_g = 2 \\Rightarrow 410.5I_g = 2$. Thus, $I_g = 4.87$ mA."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Figure 3.19",
+                "description": "A Wheatstone bridge circuit for Example 3.7. Resistances are labeled: $100\\Omega$ (AB), $10\\Omega$ (BC), $5\\Omega$ (CD), $60\\Omega$ (DA). The galvanometer in the center has a resistance of $15\\Omega$. A 10V battery is connected across A and C.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:3:Summary",
+        "number": "Summary",
+        "title": "Summary",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:3:Summary:1",
+            "order": 1,
+            "title": "Current and Electromotive Force",
+            "content_text": "Electric current is defined as the rate of charge flow through a specific area. To maintain this flow, an external source provides electromotive force (emf), which is the work done per unit charge to move it from low to high potential. Emf represents the potential difference when the source is not part of a closed circuit.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:Summary:2",
+            "order": 2,
+            "title": "Ohm's Law and Resistance",
+            "content_text": "Ohm's law states that current is proportional to the applied voltage, with resistance $R$ as the constant ($V = RI$). Resistance depends on the material's resistivity $\rho$, length $l$, and area $A$ via $R = \\rho l / A$. Resistivity varies significantly across metals ($10^{-8}$ to $10^{-6} \\Omega$ m), semiconductors, and insulators.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:Summary:3",
+            "order": 3,
+            "title": "Microscopic View of Resistivity",
+            "content_text": "At a microscopic level, current density $\\mathbf{j}$ relates to drift velocity $\\mathbf{v}_d$ and charge carrier density $n$ as $\\mathbf{j} = nq\\mathbf{v}_d$. Resistivity is determined by the mass of the carrier, its charge, density, and the relaxation time $\\tau$ between collisions: $\\rho = m / (ne^2\\tau)$. Drift velocity is given by $v_d = eE\\tau/m$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:Summary:4",
+            "order": 4,
+            "title": "Temperature Dependence and Limitations",
+            "content_text": "Resistivity typically increases with temperature, characterized by a coefficient $\\alpha$. Ohm's law is not a universal law; it fails in devices like rectifiers or materials like GaAs where the $V-I$ relationship is non-linear, sign-dependent, or non-unique.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:Summary:5",
+            "order": 5,
+            "title": "Circuits and Kirchhoff's Rules",
+            "content_text": "In practical circuits, the terminal voltage $V_{ext}$ of a cell is $V_{ext} = IR = \\frac{\\varepsilon}{R+r}R$. Complex circuits are analyzed using Kirchhoff's rules: the junction rule (charge conservation) and the loop rule (energy conservation). The Wheatstone bridge null condition is $R_1/R_2 = R_3/R_4$.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:Summary:6",
+            "order": 6,
+            "title": "Table of Physical Quantities",
+            "content_text": "The following table summarizes the key physical quantities in current electricity, including their symbols, SI units, and dimensional formulas.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Physical Quantities",
+                "caption": "Summary of Physical Quantities in Current Electricity",
+                "headers": [
+                  "Physical Quantity",
+                  "Symbol",
+                  "Dimensions",
+                  "Unit",
+                  "Remark"
+                ],
+                "rows": [
+                  [
+                    "Electric current",
+                    "$I$",
+                    "$[A]$",
+                    "A",
+                    "SI base unit"
+                  ],
+                  [
+                    "Charge",
+                    "$Q, q$",
+                    "$[T A]$",
+                    "C",
+                    ""
+                  ],
+                  [
+                    "Voltage, Electric potential difference",
+                    "$V$",
+                    "$[M L^2 T^{-3} A^{-1}]$",
+                    "V",
+                    "Work/charge"
+                  ],
+                  [
+                    "Electromotive force",
+                    "$\\varepsilon$",
+                    "$[M L^2 T^{-3} A^{-1}]$",
+                    "V",
+                    "Work/charge"
+                  ],
+                  [
+                    "Resistance",
+                    "$R$",
+                    "$[M L^2 T^{-3} A^{-2}]$",
+                    "$\\Omega$",
+                    "$R = V/I$"
+                  ],
+                  [
+                    "Resistivity",
+                    "$\\rho$",
+                    "$[M L^3 T^{-3} A^{-2}]$",
+                    "$\\Omega$ m",
+                    "$R = \\rho l/A$"
+                  ],
+                  [
+                    "Electrical conductivity",
+                    "$\\sigma$",
+                    "$[M^{-1} L^{-3} T^3 A^2]$",
+                    "S",
+                    "$\\sigma = 1/\\rho$"
+                  ],
+                  [
+                    "Electric field",
+                    "$\\mathbf{E}$",
+                    "$[M L T^{-3} A^{-1}]$",
+                    "V m$^{-1}$",
+                    "Electric force/charge"
+                  ],
+                  [
+                    "Drift speed",
+                    "$v_d$",
+                    "$[L T^{-1}]$",
+                    "m s$^{-1}$",
+                    "$v_d = e E \\tau / m$"
+                  ],
+                  [
+                    "Relaxation time",
+                    "$\\tau$",
+                    "$[T]$",
+                    "s",
+                    ""
+                  ],
+                  [
+                    "Current density",
+                    "$\\mathbf{j}$",
+                    "$[L^{-2} A]$",
+                    "A m$^{-2}$",
+                    "current/area"
+                  ],
+                  [
+                    "Mobility",
+                    "$\\mu$",
+                    "$[M^{-1} T^3 A]$",
+                    "m$^2$ V$^{-1}$ s$^{-1}$",
+                    "$v_d / E$"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:3:Points to Ponder",
+        "number": "Points to Ponder",
+        "title": "Points to Ponder",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:3:Points to Ponder:1",
+            "order": 1,
+            "title": "Scalar Nature of Current",
+            "content_text": "Although current is indicated with arrows to show direction in circuit diagrams, it is a scalar quantity because it does not obey vector addition laws. Mathematically, current $I$ is the scalar product of the current density vector $\\mathbf{j}$ and the area vector $\\Delta\\mathbf{S}$, i.e., $I = \\mathbf{j} \\cdot \\Delta\\mathbf{S}$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:Points to Ponder:2",
+            "order": 2,
+            "title": "Interpretation of Ohm's Law",
+            "content_text": "A resistor obeys Ohm’s law while a diode does not. The assertion that $V = IR$ is a statement of Ohm’s law is not strictly true; rather, this equation defines resistance $R$, and it may be applied to all conducting devices whether they obey Ohm’s law or not. Ohm’s law specifically asserts that the plot of $I$ versus $V$ is linear, meaning $R$ is independent of $V$. Another statement of Ohm’s law is derived from the vector equation $\\mathbf{E} = \\rho \\mathbf{j}$, which implies that a conducting material obeys Ohm’s law when the resistivity $\\rho$ of the material does not depend on the magnitude and direction of the applied electric field $\\mathbf{E}$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:Points to Ponder:3",
+            "order": 3,
+            "title": "Validity Range of Ohm's Law",
+            "content_text": "Homogeneous conductors like silver or semiconductors like pure germanium (or germanium containing impurities) obey Ohm’s law within a specific range of electric field values. However, if the electric field becomes too strong, departures from Ohm’s law occur in all cases.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:Points to Ponder:4",
+            "order": 4,
+            "title": "Nature of Electron Motion in Conductors",
+            "content_text": "The motion of conduction electrons in an electric field $\\mathbf{E}$ is the sum of two components: (i) motion due to random thermal collisions and (ii) motion due to the electric field $\\mathbf{E}$. The motion due to random collisions averages to zero over time and does not contribute to the drift velocity $v_d$. Therefore, the drift velocity $v_d$ is solely a result of the applied electric field acting on the electrons.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:Points to Ponder:5",
+            "order": 5,
+            "title": "Current Density and Charge Carriers",
+            "content_text": "The relation $\\mathbf{j} = \\rho \\mathbf{v}$ must be applied to each type of charge carrier separately. In a conducting wire, the total current density $\\mathbf{j}$ and total charge density $\\rho$ arise from both positive and negative charges: $\\mathbf{j} = \\rho_+ \\mathbf{v}_+ + \\rho_- \\mathbf{v}_-$ and $\\rho = \\rho_+ + \\rho_-$. In a neutral wire carrying current, $\\rho_+ = -\\rho_-$. Since the positive ions are stationary ($\\mathbf{v}_+ \\approx 0$), the total charge density $\\rho = 0$, while the current density is $\\mathbf{j} = \\rho_- \\mathbf{v}_-$. This demonstrates that the relation $\\mathbf{j} = \\rho \\mathbf{v}$ does not apply to the total (net) charge density of the conductor.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:3:Points to Ponder:6",
+            "order": 6,
+            "title": "Kirchhoff's Junction Rule",
+            "content_text": "Kirchhoff’s junction rule is based on the principle of conservation of charge. It states that the outgoing currents add up and are equal to the incoming currents at a junction. The validity of this rule is independent of the physical geometry of the wires; bending or reorienting the wires does not change the validity of Kirchhoff’s junction rule.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:physics:12:3:ex:1",
+          "number": 1,
+          "problem": "The storage battery of a car has an emf of $12\\text{ V}$. If the internal resistance of the battery is $0.4\\text{ }\\Omega$, what is the maximum current that can be drawn from the battery?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:3:ex:2",
+          "number": 2,
+          "problem": "A battery of emf $10\\text{ V}$ and internal resistance $3\\text{ }\\Omega$ is connected to a resistor. If the current in the circuit is $0.5\\text{ A}$, what is the resistance of the resistor? What is the terminal voltage of the battery when the circuit is closed?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:3:ex:3",
+          "number": 3,
+          "problem": "At room temperature ($27.0\\text{ }^\\circ\\text{C}$) the resistance of a heating element is $100\\text{ }\\Omega$. What is the temperature of the element if the resistance is found to be $117\\text{ }\\Omega$, given that the temperature coefficient of the material of the resistor is $1.70 \\times 10^{-4}\\text{ }^\\circ\\text{C}^{-1}$?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:3:ex:4",
+          "number": 4,
+          "problem": "A negligibly small current is passed through a wire of length $15\\text{ m}$ and uniform cross-section $6.0 \\times 10^{-7}\\text{ m}^2$, and its resistance is measured to be $5.0\\text{ }\\Omega$. What is the resistivity of the material at the temperature of the experiment?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:3:ex:5",
+          "number": 5,
+          "problem": "A silver wire has a resistance of $2.1\\text{ }\\Omega$ at $27.5\\text{ }^\\circ\\text{C}$, and a resistance of $2.7\\text{ }\\Omega$ at $100\\text{ }^\\circ\\text{C}$. Determine the temperature coefficient of resistivity of silver.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:3:ex:6",
+          "number": 6,
+          "problem": "A heating element using nichrome connected to a $230\\text{ V}$ supply draws an initial current of $3.2\\text{ A}$ which settles after a few seconds to a steady value of $2.8\\text{ A}$. What is the steady temperature of the heating element if the room temperature is $27.0\\text{ }^\\circ\\text{C}$? Temperature coefficient of resistance of nichrome averaged over the temperature range involved is $1.70 \\times 10^{-4}\\text{ }^\\circ\\text{C}^{-1}$.",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:3:ex:7",
+          "number": 7,
+          "problem": "Determine the current in each branch of the network shown in Fig. 3.20.",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:3:ex:8",
+          "number": 8,
+          "problem": "A storage battery of emf $8.0\\text{ V}$ and internal resistance $0.5\\text{ }\\Omega$ is being charged by a $120\\text{ V}$ dc supply using a series resistor of $15.5\\text{ }\\Omega$. What is the terminal voltage of the battery during charging? What is the purpose of having a series resistor in the charging circuit?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:3:ex:9",
+          "number": 9,
+          "problem": "The number density of free electrons in a copper conductor estimated in Example 3.1 is $8.5 \\times 10^{28}\\text{ m}^{-3}$. How long does an electron take to drift from one end of a wire $3.0\\text{ m}$ long to its other end? The area of cross-section of the wire is $2.0 \\times 10^{-6}\\text{ m}^2$ and it is carrying a current of $3.0\\text{ A}$.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        }
+      ]
+    }
+  }
+}

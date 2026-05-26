@@ -1,0 +1,489 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_biology_12_ch8.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:biology:12:8",
+  "curriculum": "ncert",
+  "subject": "biology",
+  "grade": 12,
+  "textbook_name": "Biology",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:biology:12:8",
+    "number": 8,
+    "title": "Microbes in Human Welfare",
+    "summary": "This chapter, \"Microbes in Human Welfare,\" explores the diverse and beneficial roles microbes play in our lives. It begins by introducing the ubiquitous nature and diversity of microbes, from bacteria and fungi to viruses and prions. The chapter then delves into specific applications, starting with household products like curd, dosa, and cheese, highlighting the role of Lactic Acid Bacteria and other fermenting microbes.\n\nMoving to industrial applications, the chapter discusses the large-scale production of antibiotics, chemicals, enzymes, and bioactive molecules like Cyclosporin A and Statins. A significant section is dedicated to sewage treatment, explaining the processes of primary, secondary (biological), and tertiary treatments, along with the importance of Biochemical Oxygen Demand (BOD) in assessing water quality. The production of biogas, a renewable energy source, through anaerobic digestion is also detailed, including the structure and operation of a biogas plant.\n\nThe chapter concludes with the use of microbes as biocontrol agents and biofertilizers, emphasizing the importance of sustainable agricultural practices. Examples include Bacillus thuringiensis (Bt) for pest control and Trichoderma as a fungal biocontrol agent. Overall, the chapter demonstrates how harnessing the power of microbes can lead to improved food production, waste management, and environmentally friendly solutions. The sections connect by progressing from simple, everyday uses of microbes to more complex industrial and environmental applications, showcasing their immense potential for human welfare.",
+    "sections": [
+      {
+        "id": "ncert:biology:12:8:8.0",
+        "number": "8.0",
+        "title": "Introduction to Microbes",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:8:8.0:1",
+            "order": 1,
+            "title": "Occurrence and Habitats of Microbes",
+            "content_text": "Microbes are the major components of biological systems on Earth, existing alongside macroscopic plants and animals. They are omnipresent, found in soil, water, air, and within the bodies of plants and animals. Remarkably, microbes thrive in extreme environments where no other life-forms can survive, such as deep inside thermal vents (geysers) with temperatures as high as $100^\\circ\\text{C}$, deep in soil, under several metres of snow, and in highly acidic environments.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 8.1",
+                "description": "Microscopic views of bacteria: (a) Rod-shaped bacteria magnified 1500X; (b) Spherical shaped bacteria magnified 1500X; (c) A rod-shaped bacterium showing flagella magnified 50,000X.",
+                "image_url": null
+              },
+              {
+                "label": "Figure 8.2",
+                "description": "Microscopic views of viruses: (a) A bacteriophage showing structural components like head, collar, tail, plate, pins, and prongs; (b) Adenovirus, known for causing respiratory infections; (c) Rod-shaped Tobacco Mosaic Virus (TMV) magnified approximately 1,00,000-1,50,000X.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:8:8.0:2",
+            "order": 2,
+            "title": "Diversity and Culturing of Microbes",
+            "content_text": "Microbes are highly diverse, encompassing protozoa, bacteria, fungi, and microscopic agents like viruses, viroids, and prions (which are proteinaceous infectious agents). While most are microscopic, bacteria and many fungi can be grown on nutritive media to form colonies. These colonies are visible to the naked eye and serve as essential tools for scientific studies on micro-organisms.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 8.3",
+                "description": "Colonies of microbes growing in petri dishes: (a) Bacterial colonies appearing as small distinct spots; (b) A large, spreading fungal colony.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:8:8.1",
+        "number": "8.1",
+        "title": "Microbes in Household Products",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:8:8.1:1",
+            "order": 1,
+            "title": "Production of Curd and Role of LAB",
+            "content_text": "A primary example of microbial utility is the conversion of milk to curd by Lactic Acid Bacteria (LAB), such as Lactobacillus. When a small amount of curd (inoculum or starter) containing millions of LAB is added to fresh milk at suitable temperatures, the bacteria multiply. During this growth, LAB produce acids that coagulate and partially digest milk proteins. This process not only transforms milk into curd but also enhances its nutritional value by increasing Vitamin $B_{12}$ content. Furthermore, LAB play a vital role in human health by checking the growth of disease-causing microbes in the stomach.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:8:8.1:2",
+            "order": 2,
+            "title": "Microbes in Fermented Foods",
+            "content_text": "Microbes are essential in preparing various fermented foods. The dough used for making 'dosa' and 'idli' is fermented by bacteria, resulting in a puffed-up appearance due to the production of $CO_2$ gas. Similarly, bread is made by fermenting dough with baker's yeast (*Saccharomyces cerevisiae*). Traditional drinks like 'Toddy', common in southern India, are produced by fermenting sap from palms. Additionally, microbes are used to ferment fish, soyabean, and bamboo-shoots for food production.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:8:8.1:3",
+            "order": 3,
+            "title": "Microbes in Cheese Production",
+            "content_text": "Cheese is one of the oldest microbial food products, with varieties distinguished by texture, flavor, and taste. The large holes in 'Swiss cheese' are caused by the production of large amounts of $CO_2$ by the bacterium *Propionibacterium sharmanii*. In contrast, 'Roquefort cheese' is ripened by growing specific fungi on it, which imparts a unique flavor to the cheese.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:8:8.2",
+        "number": "8.2",
+        "title": "Microbes in Industrial Products",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:8:8.2:1",
+            "order": 1,
+            "title": "Industrial Scale Production",
+            "content_text": "In industrial settings, microbes are utilized to synthesize valuable products such as beverages and antibiotics. To produce these on a large scale, microbes must be grown in very large vessels known as fermentors. Microbes, particularly yeasts, have been used since ancient times for the production of beverages such as wine, beer, whisky, brandy, and rum. The yeast Saccharomyces cerevisiae, commonly known as brewer's yeast, is used for fermenting malted cereals and fruit juices to produce ethanol. The specific type of alcoholic drink produced depends on the raw material used for fermentation and the processing method. Wine and beer are produced without distillation, whereas whisky, brandy, and rum are produced by the distillation of the fermented broth. Large-scale production requires the use of fermentors, which are very large vessels as shown in Figure 8.4 and Figure 8.5.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 8.4",
+                "description": "A photograph showing several large, industrial-scale cylindrical metal vessels known as fermentors used for large-scale microbial growth.",
+                "image_url": null
+              },
+              {
+                "label": "Figure 8.5",
+                "description": "A photograph of a complex industrial fermentation plant featuring various pipes, tanks, and structural supports for large-scale production.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:8:8.2:2",
+            "order": 2,
+            "title": "Antibiotics",
+            "content_text": "Antibiotics are chemical substances produced by some microbes that can kill or retard the growth of other disease-causing microbes. The term 'antibiotic' is derived from the Greek words 'anti' (against) and 'bio' (life), meaning 'against life' in the context of pathogens, while for humans they are 'pro life'. Penicillin was the first antibiotic to be discovered by Alexander Fleming. While working on Staphylococci bacteria, Fleming observed a mould (Penicillium notatum) growing in an unwashed culture plate that inhibited the growth of the bacteria. Its full potential as an effective antibiotic was later established by Ernest Chain and Howard Florey. It was extensively used to treat wounded soldiers in World War II, and Fleming, Chain, and Florey were awarded the Nobel Prize in 1945. Antibiotics have significantly improved the treatment of deadly diseases such as plague, whooping cough (kali khansi), diphtheria (gal ghotu), and leprosy (kusht rog).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:8:8.2:3",
+            "order": 3,
+            "title": "Chemicals, Enzymes and other Bioactive Molecules",
+            "content_text": "Microbes are utilized for the industrial production of organic acids, alcohols, and enzymes. Examples of acid producers include Aspergillus niger (a fungus) for citric acid, Acetobacter aceti (a bacterium) for acetic acid, Clostridium butylicum (a bacterium) for butyric acid, and Lactobacillus (a bacterium) for lactic acid. Yeast (Saccharomyces cerevisiae) is used for commercial ethanol production. Enzymes like lipases are used in detergent formulations to remove oily stains from laundry. Pectinases and proteases are used to clarify bottled fruit juices. Streptokinase, produced by the bacterium Streptococcus and modified by genetic engineering, is used as a 'clot buster' to remove clots from the blood vessels of patients who have undergone myocardial infarction leading to heart attack.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:8:8.2:4",
+            "order": 4,
+            "title": "Bioactive Molecules: Cyclosporin A and Statins",
+            "content_text": "Other important bioactive molecules include Cyclosporin A and Statins. Cyclosporin A, produced by the fungus Trichoderma polysporum, is used as an immunosuppressive agent in organ-transplant patients. Statins, produced by the yeast Monascus purpureus, are used as blood-cholesterol lowering agents. Statins function by competitively inhibiting the enzyme responsible for the synthesis of cholesterol in the body.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:8:8.3",
+        "number": "8.3",
+        "title": "Microbes in Sewage Treatment",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:8:8.3:1",
+            "order": 1,
+            "title": "Introduction to Sewage Treatment",
+            "content_text": "Municipal waste-water, also known as sewage, contains large amounts of organic matter and pathogenic microbes. It cannot be discharged directly into natural water bodies like rivers. Instead, it is treated in Sewage Treatment Plants (STPs) to make it less polluting. This treatment is carried out by heterotrophic microbes naturally present in the sewage and occurs in two main stages: Primary treatment and Secondary treatment.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 8.6",
+                "description": "A photograph of a secondary treatment tank in a sewage treatment plant, showing a large open-air concrete basin with mechanical aeration equipment.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:8:8.3:2",
+            "order": 2,
+            "title": "Primary Treatment",
+            "content_text": "Primary treatment involves the physical removal of large and small particles from sewage through filtration and sedimentation. Initially, floating debris is removed by sequential filtration. Then, grit (soil and small pebbles) is removed by sedimentation. All solids that settle form the primary sludge, while the supernatant forms the effluent. The effluent from the primary settling tank is then taken for secondary treatment.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:8:8.3:3",
+            "order": 3,
+            "title": "Secondary Treatment (Biological Treatment)",
+            "content_text": "The primary effluent is passed into large aeration tanks where it is constantly agitated mechanically and air is pumped into it. This allows vigorous growth of useful aerobic microbes into flocs, which are masses of bacteria associated with fungal filaments to form mesh-like structures. As they grow, these microbes consume the major part of the organic matter in the effluent, significantly reducing the Biochemical Oxygen Demand (BOD).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:8:8.3:4",
+            "order": 4,
+            "title": "Biochemical Oxygen Demand (BOD)",
+            "content_text": "BOD refers to the amount of oxygen that would be consumed if all the organic matter in one liter of water were oxidized by bacteria. The BOD test measures the rate of uptake of oxygen by micro-organisms in a sample of water; thus, BOD is a measure of the organic matter present in the water. The greater the BOD of waste water, the more is its polluting potential. Sewage water is treated until the BOD is significantly reduced.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:8:8.3:5",
+            "order": 5,
+            "title": "Activated Sludge and Anaerobic Digestion",
+            "content_text": "Once the BOD is reduced, the effluent is passed into a settling tank where the bacterial flocs are allowed to sediment. This sediment is called activated sludge. A small part of the activated sludge is pumped back into the aeration tank to serve as the inoculum. The remaining major part of the sludge is pumped into large tanks called anaerobic sludge digesters. Here, anaerobic bacteria digest the bacteria and fungi in the sludge.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:8:8.3:6",
+            "order": 6,
+            "title": "Biogas Production and Final Disposal",
+            "content_text": "During the anaerobic digestion process, bacteria produce a mixture of gases such as methane, hydrogen sulphide, and carbon dioxide. These gases form biogas, which can be used as a source of energy as it is inflammable. The treated effluent from the secondary treatment plant is generally released into natural water bodies like rivers and streams. Microbial treatment remains the most effective method for processing millions of gallons of wastewater globally every day. For over a century, this methodology has been practiced worldwide, and currently, no man-made technology has been able to match the efficiency of natural microbial sewage treatment.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 8.7",
+                "description": "An aerial view of a large-scale sewage treatment plant showing multiple circular tanks used for the sedimentation and aeration processes.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:8:8.3:7",
+            "order": 7,
+            "title": "Government Initiatives for River Conservation",
+            "content_text": "Due to rapid urbanization, the volume of sewage produced has outpaced the capacity of treatment plants, leading to the discharge of untreated waste into rivers and an increase in water-borne diseases. To combat this, the Ministry of Environment and Forests initiated the Ganga Action Plan and Yamuna Action Plan. these projects aim to build numerous sewage treatment plants to ensure that only treated effluent is released into these major rivers.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:8:8.4",
+        "number": "8.4",
+        "title": "Microbes in Production of Biogas",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:8:8.4:1",
+            "order": 1,
+            "title": "Biogas and Methanogens",
+            "content_text": "Biogas is a fuel gas mixture, predominantly methane ($CH_4$), produced through microbial activity. The specific gases generated depend on the microbes involved and the organic substrates they consume. While fermentation in dough or cheese produces $CO_2$, certain anaerobic bacteria growing on cellulosic material produce large amounts of methane along with $CO_2$ and $H_2$. These bacteria are known as methanogens, with *Methanobacterium* being a common example. They are found in anaerobic sewage sludge and the rumen of cattle, where they assist in the breakdown of cellulose for animal nutrition.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:8:8.4:2",
+            "order": 2,
+            "title": "Structure and Operation of a Biogas Plant",
+            "content_text": "A biogas plant consists of a concrete tank (10-15 feet deep) where bio-wastes and a slurry of cattle dung (gobar) are collected. A floating cover is placed over the slurry, which rises as gas is produced by microbial activity. The plant has an outlet connected to a pipe that supplies biogas to nearby houses for cooking and lighting. The spent slurry is removed through a separate outlet and can be used as a nutrient-rich fertilizer. These plants are common in rural areas due to the high availability of cattle dung.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 8.8",
+                "description": "A schematic diagram of a typical biogas plant showing the underground digester tank, the inlet for dung and water slurry, the floating gas-holder containing methane and carbon dioxide, the gas outlet pipe, and the outlet for the spent sludge.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:8:8.4:3",
+            "order": 3,
+            "title": "Institutional Support in India",
+            "content_text": "The technology for biogas production in India was primarily developed through the collaborative efforts of the Indian Agricultural Research Institute (IARI) and the Khadi and Village Industries Commission (KVIC).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:8:8.5",
+        "number": "8.5",
+        "title": "Microbes as Biocontrol Agents",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:8:8.5:1",
+            "order": 1,
+            "title": "Concept of Biocontrol and Organic Farming",
+            "content_text": "Biocontrol refers to the use of biological methods to manage plant diseases and pests, offering a sustainable alternative to toxic chemical insecticides and pesticides. Organic farming emphasizes biodiversity as a means of maintaining health in the ecosystem. Instead of eradicating pests, organic farmers use a system of checks and balances through natural predation to keep pest populations at manageable levels, preserving the complex web of interactions between flora and fauna.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:8:8.5:2",
+            "order": 2,
+            "title": "Examples of Biological Control",
+            "content_text": "Common examples of biocontrol include using Ladybirds to control aphids and Dragonflies to control mosquitoes. The bacterium *Bacillus thuringiensis* (Bt) is used to control butterfly caterpillars; its spores are sprayed on plants, and once ingested by larvae, a toxin is released in their gut that kills them while leaving other insects unharmed. Advances in genetic engineering have allowed scientists to integrate Bt toxin genes directly into plants like Bt-cotton, making them inherently resistant to pests.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:8:8.5:3",
+            "order": 3,
+            "title": "Fungal and Viral Biocontrol Agents",
+            "content_text": "The fungus *Trichoderma* is a free-living species common in root ecosystems that acts as an effective biocontrol agent against several plant pathogens. Baculoviruses, specifically those in the genus *Nucleopolyhedrovirus*, are excellent candidates for Integrated Pest Management (IPM). They are species-specific, narrow-spectrum insecticidal pathogens that do not negatively impact non-target organisms like plants, mammals, birds, or beneficial insects.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:8:8.6",
+        "number": "8.6",
+        "title": "Microbes as Biofertilisers",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:8:8.6:1",
+            "order": 1,
+            "title": "The Need for Biofertilisers",
+            "content_text": "Environmental pollution caused by the excessive use of chemical fertilizers is a major global concern. To meet the increasing demand for agricultural productivity sustainably, there is a significant shift toward the use of biofertilisers. [SKIPPED — this content needs manual extraction from pages 10-12] [CONTINUES]\n\n...demand of agricultural produce has contributed significantly to this pollution. Of course, we have now realised that there are problems associated with the overuse of chemical fertilisers and there is a large pressure to switch to **organic farming** – the use of **biofertilisers**. Biofertilisers are organisms that enrich the nutrient quality of the soil. The main sources of biofertilisers are bacteria, fungi and cyanobacteria. You have studied about the nodules on the roots of leguminous plants formed by the symbiotic association of *Rhizobium*. These bacteria fix atmospheric nitrogen into organic forms, which is used by the plant as nutrient. Other bacteria can fix atmospheric nitrogen while free-living in the soil (examples *Azospirillum* and *Azotobacter*), thus enriching the nitrogen content of the soil.\n\nFungi are also known to form symbiotic associations with plants (**mycorrhiza**). Many members of the genus *Glomus* form mycorrhiza. The fungal symbiont in these associations absorbs phosphorus from soil and passes it to the plant. Plants having such associations show other benefits also, such as resistance to root-borne pathogens, tolerance to salinity and drought, and an overall increase in plant growth and development. *Can you tell what advantage the fungus derives from this association?*\n\nCyanobacteria are autotrophic microbes widely distributed in aquatic and terrestrial environments many of which can fix atmospheric nitrogen, e.g. *Anabaena*, *Nostoc*, *Oscillatoria*, etc. In paddy fields, cyanobacteria serve as an important biofertiliser. Blue green algae also add organic matter to the soil and increase its fertility. Currently, in our country, a number of biofertilisers are available commercially in the market and farmers use these regularly in their fields to replenish soil nutrients and to reduce dependence on chemical fertilisers.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:8:Summary",
+        "number": "Summary",
+        "title": "Summary",
+        "content_text": "Microbes are a very important component of life on earth. Not all microbes are pathogenic. Many microbes are very useful to human beings. We use microbes and microbially derived products almost every day. Bacteria called lactic acid bacteria (LAB) grow in milk to convert it into curd. The dough, which is used to make bread, is fermented by yeast called *Saccharomyces cerevisiae*. Certain dishes such as *idli* and *dosa*, are made from dough fermented by microbes. Bacteria and fungi are used to impart particular texture, taste and flavor to cheese. Microbes are used to produce industrial products like lactic acid, acetic acid and alcohol, which are used in a variety of processes in the industry. Antibiotics like penicillins produced by useful microbes are used to kill disease-causing harmful microbes. Antibiotics have played a major role in controlling infectious diseases like diphtheria, whooping cough and pneumonia. For more than a hundred years, microbes are being used to treat sewage (waste water) by the process of activated sludge formation and this helps in recycling of water in nature. Methanogens produce methane (biogas) while degrading plant waste. Biogas produced by microbes is used as a source of energy in rural areas. Microbes can also be used to kill harmful pests, a process called as biocontrol. The biocontrol measures help us to avoid heavy use of toxic pesticides for controlling pests. There is a need these days to push for use of biofertilisers in place of chemical fertilisers. It is clear from the diverse uses human beings have put microbes to that they play an important role in the welfare of human society.",
+        "subsections": []
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:biology:12:8:ex:1",
+          "number": 1,
+          "problem": "Bacteria cannot be seen with the naked eyes, but these can be seen with the help of a microscope. If you have to carry a sample from your home to your biology laboratory to demonstrate the presence of microbes with the help of a microscope, which sample would you carry and why?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:8:ex:2",
+          "number": 2,
+          "problem": "Give examples to prove that microbes release gases during metabolism.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:8:ex:3",
+          "number": 3,
+          "problem": "In which food would you find lactic acid bacteria? Mention some of their useful applications.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:8:ex:4",
+          "number": 4,
+          "problem": "Name some traditional Indian foods made of wheat, rice and Bengal gram (or their products) which involve use of microbes.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:8:ex:5",
+          "number": 5,
+          "problem": "In which way have microbes played a major role in controlling diseases caused by harmful bacteria?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:8:ex:6",
+          "number": 6,
+          "problem": "Name any two species of fungus, which are used in the production of the antibiotics.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:8:ex:7",
+          "number": 7,
+          "problem": "What is sewage? In which way can sewage be harmful to us?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:8:ex:8",
+          "number": 8,
+          "problem": "What is the key difference between primary and secondary sewage treatment?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:8:ex:9",
+          "number": 9,
+          "problem": "Do you think microbes can also be used as source of energy? If yes, how?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:8:ex:10",
+          "number": 10,
+          "problem": "Microbes can be used to decrease the use of chemical fertilisers and pesticides. Explain how this can be accomplished.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:8:ex:11",
+          "number": 11,
+          "problem": "Three water samples namely river water, untreated sewage water and secondary effluent discharged from a sewage treatment plant were subjected to BOD test. The samples were labelled A, B and C; but the laboratory attendant did not note which was which. The BOD values of the three samples A, B and C were recorded as 20mg/L, 8mg/L and 400mg/L, respectively. Which sample of the water is most polluted? Can you assign the correct label to each assuming the river water is relatively clean?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:8:ex:12",
+          "number": 12,
+          "problem": "Find out the name of the microbes from which Cyclosporin A (an immunosuppressive drug) and Statins (blood cholesterol lowering agents) are obtained.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:8:ex:13",
+          "number": 13,
+          "problem": "Find out the role of microbes in the following and discuss it with your teacher. (a) Single cell protein (SCP) (b) Soil",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:8:ex:14",
+          "number": 14,
+          "problem": "Arrange the following in the decreasing order (most important first) of their importance, for the welfare of human society. Give reasons for your answer. Biogas, Citric acid, Penicillin and Curd",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:8:ex:15",
+          "number": 15,
+          "problem": "How do biofertilisers enrich the fertility of the soil?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        }
+      ]
+    }
+  }
+}

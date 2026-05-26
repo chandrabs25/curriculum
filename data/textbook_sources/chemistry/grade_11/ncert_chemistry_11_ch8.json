@@ -1,0 +1,2659 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_chemistry_11_ch8.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:chemistry:11:8",
+  "curriculum": "ncert",
+  "subject": "chemistry",
+  "grade": 11,
+  "textbook_name": "Chemistry Part II",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:chemistry:11:8",
+    "number": 8,
+    "title": "Organic Chemistry – Some Basic Principles and Techniques",
+    "summary": "This chapter introduces the fundamental principles of organic chemistry. It begins by exploring the unique properties of carbon, like catenation and tetravalency, and how hybridization (sp3, sp2, sp) influences molecular shapes, bond lengths, and electronegativity. The chapter then delves into representing organic molecules using complete, condensed, and bond-line structural formulas, and classifies them based on functional groups and homologous series.\n\nA significant portion covers IUPAC nomenclature, emphasizing the rules for naming alkanes, branched chains, cyclic compounds, and molecules with functional groups. The chapter explains isomerism, distinguishing between structural (chain, position, functional, metamerism) and stereoisomerism.\n\nThe concepts of organic reaction mechanisms are introduced, including bond fission (heterolytic and homolytic), carbocations, carbanions, free radicals, nucleophiles, and electrophiles. Electron displacement effects like inductive, resonance, electromeric, and hyperconjugation are discussed, influencing reactivity.\n\nFinally, the chapter outlines methods for purifying organic compounds (sublimation, crystallization, distillation, extraction, chromatography) and qualitative (detection of N, S, halogens) and quantitative analysis (estimation of C, H, N, S, halogens, P, O), with Dumas and Kjeldahl methods. Sections build upon each other, starting with basic structural concepts and progressing to reaction mechanisms and analytical techniques. The chapter provides a foundation for understanding the structure, reactivity, and analysis of organic compounds, crucial for various fields.",
+    "sections": [
+      {
+        "id": "ncert:chemistry:11:8:8.1",
+        "number": "8.1",
+        "title": "GENERAL INTRODUCTION",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:8:8.1:1",
+            "order": 1,
+            "title": "Catenation and the Scope of Organic Chemistry",
+            "content_text": "Carbon has the unique property called catenation, which allows it to form covalent bonds with other carbon atoms. It also forms covalent bonds with atoms of other elements such as hydrogen, oxygen, nitrogen, sulphur, phosphorus, and halogens. The compounds resulting from these bonds are studied under a specialized branch of chemistry known as organic chemistry. This field incorporates basic principles and techniques of analysis required to understand the formation and properties of organic compounds.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.1:2",
+            "order": 2,
+            "title": "Importance and Applications of Organic Compounds",
+            "content_text": "Organic compounds are vital for sustaining life on Earth. They include complex molecules like deoxyribonucleic acid (DNA), which carries genetic information, and proteins that are essential components of blood, muscles, and skin. Beyond biological systems, organic compounds are found in everyday materials such as clothing, fuels, polymers, dyes, and medicines. These represent some of the most important areas of application for these compounds.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.1:3",
+            "order": 3,
+            "title": "Historical Development and the Rejection of Vital Force Theory",
+            "content_text": "The science of organic chemistry dates back to around 1780, when chemists began distinguishing between organic compounds (from plants and animals) and inorganic compounds (from mineral sources). Berzilius, a Swedish chemist, proposed the 'vital force' theory, suggesting a mysterious force was necessary for the formation of organic compounds. This theory was debunked in 1828 by F. Wohler, who synthesized urea (an organic compound) from an inorganic compound, ammonium cyanate, by heating: $\\text{NH}_4\\text{CNO} \\xrightarrow{\\text{Heat}} \\text{NH}_2\\text{CONH}_2$. Subsequent syntheses of acetic acid by Kolbe (1845) and methane by Berthelot (1856) confirmed that organic compounds could be synthesized in laboratories from inorganic sources.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Urea Synthesis",
+                "description": "Chemical equation showing the conversion of Ammonium cyanate to Urea upon heating: NH4CNO -> NH2CONH2.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:8:8.2",
+        "number": "8.2",
+        "title": "TETRAVALENCE OF CARBON: SHAPES OF ORGANIC COMPOUNDS",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:8:8.2:1",
+            "order": 1,
+            "title": "Hybridization and Molecular Shapes",
+            "content_text": "The shapes of organic molecules are explained by the tetravalence of carbon and the formation of covalent bonds through the hybridization of $s$ and $p$ orbitals. Carbon atoms utilize $sp^3$, $sp^2$, and $sp$ hybrid orbitals to form molecules. For example, methane ($\\text{CH}_4$) involves $sp^3$ hybridization, ethene ($\\text{C}_2\\text{H}_4$) involves $sp^2$ hybridization, and ethyne ($\\text{C}_2\\text{H}_2$) involves $sp$ hybridization. These hybridization states determine the specific geometric arrangements of the atoms.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.2:2",
+            "order": 2,
+            "title": "Influence of Hybridization on Bond Length and Enthalpy",
+            "content_text": "Hybridization significantly affects bond length and bond enthalpy (strength). An $sp$ hybrid orbital has more $s$ character (50%) compared to $sp^2$ (33.3%) and $sp^3$ (25%). Because $s$ orbitals are closer to the nucleus, $sp$ hybrid orbitals form shorter and stronger bonds than $sp^3$ orbitals. The $sp^2$ hybrid orbital, being intermediate in $s$ character, produces bonds with length and enthalpy values between those of $sp$ and $sp^3$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.2:3",
+            "order": 3,
+            "title": "Hybridization and Electronegativity",
+            "content_text": "The electronegativity of carbon changes with its hybridization state. A higher $s$ character in the hybrid orbitals leads to greater electronegativity because the electrons are held more tightly by the nucleus. Consequently, an $sp$ hybridised carbon (50% $s$ character) is more electronegative than $sp^2$ (33.3% $s$ character) or $sp^3$ (25% $s$ character) hybridised carbons. This variation in electronegativity influences the physical and chemical properties of the molecules.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.2:4",
+            "order": 4,
+            "title": "Formation and Geometry of Pi Bonds",
+            "content_text": "A $\\pi$ (pi) bond is formed by the sideways overlap of parallel $p$ orbitals on adjacent atoms. For effective overlap, the $p$ orbitals must be mutually parallel and perpendicular to the plane of the molecule. In an ethene ($\\text{H}_2\\text{C}=\\text{CH}_2$) molecule, this requirement means all atoms must lie in the same plane. The $p$ orbitals are mutually parallel and both the $p$ orbitals are perpendicular to the plane of the molecule. The electron charge cloud of the $\\pi$ bond is distributed above and below the plane of the bonding atoms.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.2:5",
+            "order": 5,
+            "title": "Properties of Pi Bonds: Restricted Rotation and Reactivity",
+            "content_text": "The requirement for parallel $p$ orbital overlap in a $\\pi$ bond restricts the rotation around a carbon-carbon double bond ($\\text{C}=\\text{C}$), as rotation of one $\\text{CH}_2$ fragment with respect to the other would interfere with the maximum overlap of $p$ orbitals. Furthermore, because the $\\pi$ electron cloud is located above and below the molecular plane, these electrons are easily accessible to attacking reagents. Thus, $\\pi$ bonds generally serve as the most reactive centers in molecules containing multiple bonds.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.2:6",
+            "order": 6,
+            "title": "Worked Example: Counting Sigma and Pi Bonds",
+            "content_text": "This example demonstrates how to identify and count the number of $\\sigma$ and $\\pi$ bonds in various organic molecules based on their structural formulas.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 8.1",
+                "problem": "How many $\\sigma$ and $\\pi$ bonds are present in each of the following molecules? (a) $\\text{HC} \\equiv \\text{CCH} = \\text{CHCH}_3$ (b) $\\text{CH}_2 = \\text{C} = \\text{CHCH}_3$",
+                "solution": "(a) $\\sigma_{\\text{C}-\\text{C}}: 4; \\sigma_{\\text{C}-\\text{H}}: 6; \\pi_{\\text{C}=\\text{C}}: 1; \\pi_{\\text{C} \\equiv \\text{C}}: 2$ (b) $\\sigma_{\\text{C}-\\text{C}}: 3; \\sigma_{\\text{C}-\\text{H}}: 6; \\pi_{\\text{C}=\\text{C}}: 2$"
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.2:7",
+            "order": 7,
+            "title": "Worked Example: Determining Hybridization States",
+            "content_text": "This example focuses on identifying the hybridization state ($sp^3, sp^2, sp$) of each carbon atom in different organic compounds.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 8.2",
+                "problem": "What is the type of hybridisation of each carbon in the following compounds? (a) $\\text{CH}_3\\text{Cl}$, (b) $(\\text{CH}_3)_2\\text{CO}$, (c) $\\text{CH}_3\\text{CN}$, (d) $\\text{HCONH}_2$, (e) $\\text{CH}_3\\text{CH}=\\text{CHCN}$",
+                "solution": "(a) $sp^3$, (b) $sp^3, sp^2$, (c) $sp^3, sp$, (d) $sp^2$, (e) $sp^3, sp^2, sp^2, sp$"
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.2:8",
+            "order": 8,
+            "title": "Worked Example: Hybridization and Molecular Geometry",
+            "content_text": "This example relates the hybridization state of carbon to the resulting geometric shape of the molecule.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 8.3",
+                "problem": "Write the state of hybridisation of carbon in the following compounds and shapes of each of the molecules. (a) $\\text{H}_2\\text{C}=\\text{O}$, (b) $\\text{CH}_3\\text{F}$, (c) $\\text{HC} \\equiv \\text{N}$",
+                "solution": "(a) $sp^2$ hybridised carbon, trigonal planar; (b) $sp^3$ hybridised carbon, tetrahedral; (c) $sp$ hybridised carbon, linear."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:8:8.3",
+        "number": "8.3",
+        "title": "STRUCTURAL REPRESENTATIONS OF ORGANIC COMPOUNDS",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:8:8.3:1",
+            "order": 1,
+            "title": "Complete Structural Formulas",
+            "content_text": "Complete structural formulas are based on Lewis structures where every two-electron covalent bond is represented by a dash (–). A single dash denotes a single bond, a double dash denotes a double bond, and a triple dash denotes a triple bond. Lone pairs of electrons on heteroatoms like oxygen, nitrogen, or halogens may or may not be shown. Examples include the full dash structures for ethane, ethene, ethyne, and methanol.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Complete Structural Formulas",
+                "description": "Dash structures for Ethane (CH3-CH3), Ethene (CH2=CH2), Ethyne (CH≡CH), and Methanol (CH3-OH) showing all bonds.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.3:2",
+            "order": 2,
+            "title": "Condensed Structural Formulas",
+            "content_text": "Condensed structural formulas abbreviate the representation by omitting some or all of the dashes representing covalent bonds and by indicating the number of identical groups attached to an atom by a subscript. For instance, ethane is written as $\\text{CH}_3\\text{CH}_3$, ethene as $\\text{H}_2\\text{C}=\\text{CH}_2$, ethyne as $\\text{HC} \\equiv \\text{CH}$, and methanol as $\\text{CH}_3\\text{OH}$. Further simplification can be achieved for longer chains, such as $\\text{CH}_3(\\text{CH}_2)_6\\text{CH}_3$ for octane.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.3:3",
+            "order": 3,
+            "title": "Bond-line Structural Formulas",
+            "content_text": "In bond-line structural representations, carbon and hydrogen atoms are not explicitly shown. Carbon-carbon bonds are drawn as zig-zag lines. The terminals of the lines represent methyl ($\\text{CH}_3$) groups unless a functional group is specified. The junctions (vertices) represent carbon atoms bonded to the number of hydrogen atoms required to satisfy carbon's tetravalency. Heteroatoms (like O, Cl, N) are always specifically written.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Bond-line Representations",
+                "description": "Zig-zag bond-line structures for 3-Methyloctane and 2-bromobutane, showing how branches and heteroatoms are depicted.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.3:4",
+            "order": 4,
+            "title": "Bond-line Formulas for Cyclic Compounds",
+            "content_text": "In cyclic compounds, bond-line formulas are represented by drawing the corresponding polygon. Each corner of the polygon represents a carbon atom, and the lines represent the bonds between them. Hydrogen atoms are not explicitly shown; it is assumed that each carbon atom is bonded to enough hydrogen atoms to satisfy its tetravalence (four bonds). For instance, cyclopropane is represented as a triangle, cyclopentane as a pentagon, and chlorocyclohexane as a hexagon with a chlorine atom ($Cl$) attached to one of the vertices.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Cyclic Bond-line Formulas",
+                "description": "Diagrams showing the bond-line formulas for cyclopropane (a triangle), cyclopentane (a pentagon), and chlorocyclohexane (a hexagon with a Cl substituent).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.3:5",
+            "order": 5,
+            "title": "Problem 8.4: Expanding Condensed Formulas",
+            "content_text": "This example demonstrates how to convert condensed structural formulas into complete structural formulas by showing all atoms and the bonds between them.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 8.4",
+                "problem": "Expand each of the following condensed formulas into their complete structural formulas: (a) $CH_3CH_2COCH_2CH_3$ (b) $CH_3CH=CH(CH_2)_3CH_3$",
+                "solution": "(a) The complete structural formula for pentan-3-one ($CH_3CH_2COCH_2CH_3$) shows a five-carbon chain with a double bond between the third carbon and an oxygen atom (carbonyl group). All other carbons are saturated with hydrogens: $H_3C-CH_2-C(=O)-CH_2-CH_3$. (b) The complete structural formula for oct-2-ene ($CH_3CH=CH(CH_2)_3CH_3$) shows an eight-carbon chain with a double bond between the second and third carbons. The remaining carbons are bonded to the appropriate number of hydrogens to maintain tetravalence."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.3:6",
+            "order": 6,
+            "title": "Problem 8.5: Condensed and Bond-line Formulas",
+            "content_text": "This example focuses on converting semi-condensed formulas into both fully condensed and bond-line representations.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 8.5",
+                "problem": "For each of the following compounds, write a condensed formula and also their bond-line formula: (a) $HOCH_2CH_2CH_2CH(CH_3)CH(CH_3)CH_3$ (b) $N \\equiv C - CH(OH) - C \\equiv N$",
+                "solution": "(a) Condensed formula: $HO(CH_2)_3CH(CH_3)CH(CH_3)_2$. Bond-line formula: A zigzag line representing a six-carbon main chain with an $-OH$ group at one end and two methyl branches at the other end. (b) Condensed formula: $HOCH(CN)_2$. Bond-line formula: A central carbon atom with an $-OH$ group and two nitrile ($-CN$) groups branching off."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.3:7",
+            "order": 7,
+            "title": "Problem 8.6: Expanding Bond-line Formulas",
+            "content_text": "This example illustrates the process of identifying all carbon and hydrogen atoms in a bond-line structure to produce a complete structural formula.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 8.6",
+                "problem": "Expand each of the following bond-line formulas to show all the atoms including carbon and hydrogen: (a) A hexagon with an isopropyl group. (b) A zigzag line with 8 vertices. (c) A chain with a triple bond and a methyl branch. (d) A branched 4-carbon chain.",
+                "solution": "(a) The structure is isopropylcyclohexane. The hexagon consists of one $CH$ group (bonded to the isopropyl group) and five $CH_2$ groups. The isopropyl group is $-CH(CH_3)_2$. (b) The structure is octane, a straight chain of eight carbon atoms: $CH_3(CH_2)_6CH_3$. (c) The structure is 4-methylpent-1-yne: $HC \\equiv C - CH_2 - CH(CH_3)_2$. (d) The structure is 2,3-dimethylbutane: $(CH_3)_2CH-CH(CH_3)_2$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.3:8",
+            "order": 8,
+            "title": "Three-Dimensional Representation of Organic Molecules",
+            "content_text": "The 3-D structure of organic molecules is represented on 2-D paper using specific conventions: 1. A solid wedge ($\\blacktriangleleft$) indicates a bond projecting out of the plane of the paper towards the observer. 2. A dashed wedge ($\\shortparallel$) indicates a bond projecting out of the plane of the paper and away from the observer. 3. A normal line (—) indicates a bond lying in the plane of the paper. For example, in the wedge-and-dash representation of methane ($CH_4$), two $C-H$ bonds are in the plane, one is towards the observer, and one is away.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 8.1",
+                "description": "Wedge-and-dash representation of methane ($CH_4$) showing bonds in the plane, a solid wedge for a bond towards the observer, and a dashed wedge for a bond away from the observer.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.3:9",
+            "order": 9,
+            "title": "Molecular Models",
+            "content_text": "Molecular models are physical or virtual devices used to visualize the 3-D shapes of molecules. Three common types are: 1. Framework model: Highlights the pattern of bonds while ignoring atom size. 2. Ball-and-stick model: Atoms are shown as balls and bonds as sticks. For multiple bonds, springs are often used. 3. Space-filling model: Represents atoms as spheres with radii proportional to their van der Waals radii, showing the relative volume occupied by each atom. Computer graphics also provide advanced molecular modelling capabilities.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 8.2",
+                "description": "Comparison of Framework, Ball-and-stick, and Space-filling models for a molecule.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:8:8.4",
+        "number": "8.4",
+        "title": "CLASSIFICATION OF ORGANIC COMPOUNDS",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:8:8.4:1",
+            "order": 1,
+            "title": "Heterocyclic Aromatic Compounds",
+            "content_text": "Heterocyclic aromatic compounds are cyclic compounds that contain at least one heteroatom (an atom other than carbon, such as oxygen, nitrogen, or sulfur) within the aromatic ring. Examples include Furan (containing oxygen), Thiophene (containing sulfur), and Pyridine (containing nitrogen). Organic compounds can also be classified based on their functional groups into different families or homologous series.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 8.4a",
+                "description": "Chemical structures of heterocyclic aromatic compounds: Furan (five-membered ring with O), Thiophene (five-membered ring with S), and Pyridine (six-membered ring with N).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.4:2",
+            "order": 2,
+            "title": "8.4.1 Functional Group",
+            "content_text": "A functional group is an atom or a group of atoms joined to the carbon chain in a specific manner, which is responsible for the characteristic chemical properties of the organic compound. Common examples of functional groups include the hydroxyl group ($-\\text{OH}$), the aldehyde group ($-\\text{CHO}$), and the carboxylic acid group ($-\\text{COOH}$).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.4:3",
+            "order": 3,
+            "title": "8.4.2 Homologous Series",
+            "content_text": "A homologous series is a group or series of organic compounds that contain the same characteristic functional group and can be represented by a general molecular formula. The individual members of such a series are called homologues. Successive members in a homologous series differ from each other by a $-\\text{CH}_2$ unit in their molecular formula. Examples of homologous series include alkanes, alkenes, alkynes, haloalkanes, alkanols, alkanals, alkanones, alkanoic acids, and amines. It is also possible for a compound to contain two or more identical or different functional groups, leading to polyfunctional compounds.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:8:8.5",
+        "number": "8.5",
+        "title": "NOMENCLATURE OF ORGANIC COMPOUNDS",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:8:8.5:1",
+            "order": 1,
+            "title": "Introduction and Trivial Names",
+            "content_text": "Organic chemistry involves millions of compounds, necessitating a systematic naming method. Before the development of the IUPAC system, organic compounds were given trivial or common names based on their origin or specific properties. For example, citric acid is named after citrus fruits, and formic acid is named from the Latin word for ant (*formica*). Some common names, like Buckminsterfullerene for the $C_{60}$ carbon cluster, are still used today due to their historical significance or simplicity compared to lengthy systematic names. Table 8.1 provides common names for several organic compounds.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 8.1",
+                "caption": "Common or Trivial Names of Some Organic Compounds",
+                "headers": [
+                  "Compound",
+                  "Common name"
+                ],
+                "rows": [
+                  [
+                    "$\\text{CH}_4$",
+                    "Methane"
+                  ],
+                  [
+                    "$\\text{H}_3\\text{CCH}_2\\text{CH}_2\\text{CH}_3$",
+                    "$n$-Butane"
+                  ],
+                  [
+                    "$(\\text{H}_3\\text{C})_2\\text{CHCH}_3$",
+                    "Isobutane"
+                  ],
+                  [
+                    "$(\\text{H}_3\\text{C})_4\\text{C}$",
+                    "Neopentane"
+                  ],
+                  [
+                    "$\\text{H}_3\\text{CCH}_2\\text{CH}_2\\text{OH}$",
+                    "$n$-Propyl alcohol"
+                  ],
+                  [
+                    "$\\text{HCHO}$",
+                    "Formaldehyde"
+                  ],
+                  [
+                    "$(\\text{H}_3\\text{C})_2\\text{CO}$",
+                    "Acetone"
+                  ],
+                  [
+                    "$\\text{CHCl}_3$",
+                    "Chloroform"
+                  ],
+                  [
+                    "$\\text{CH}_3\\text{COOH}$",
+                    "Acetic acid"
+                  ],
+                  [
+                    "$\\text{C}_6\\text{H}_6$",
+                    "Benzene"
+                  ],
+                  [
+                    "$\\text{C}_6\\text{H}_5\\text{OCH}_3$",
+                    "Anisole"
+                  ],
+                  [
+                    "$\\text{C}_6\\text{H}_5\\text{NH}_2$",
+                    "Aniline"
+                  ],
+                  [
+                    "$\\text{C}_6\\text{H}_5\\text{COCH}_3$",
+                    "Acetophenone"
+                  ],
+                  [
+                    "$\\text{CH}_3\\text{OCH}_2\\text{CH}_3$",
+                    "Ethyl methyl ether"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.5:2",
+            "order": 2,
+            "title": "8.5.1 The IUPAC System of Nomenclature",
+            "content_text": "The IUPAC (International Union of Pure and Applied Chemistry) system provides a systematic method where names are directly correlated with the chemical structure. A systematic name is generally derived by identifying the parent hydrocarbon chain and the functional group(s) attached to it. The parent name can be modified using prefixes and suffixes. Hydrocarbons with only carbon-carbon single bonds are called alkanes. Unsaturated hydrocarbons contain at least one carbon-carbon double or triple bond.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 8.5a",
+                "description": "Diagram showing the components of an IUPAC name: a parent chain of carbons with attached functional groups (OH, Br) and a methyl branch.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.5:3",
+            "order": 3,
+            "title": "8.5.2 IUPAC Nomenclature of Alkanes - Straight Chain Hydrocarbons",
+            "content_text": "Straight chain hydrocarbons are named based on the number of carbon atoms in the chain, followed by the suffix '-ane'. For the first four alkanes (methane to butane), the prefixes are derived from trivial names. For chains with five or more carbons, prefixes indicate the number of atoms (e.g., pent-, hex-). These alkanes form a homologous series where each member differs by a $-\\text{CH}_2$ group. Table 8.2 lists the IUPAC names for various unbranched saturated hydrocarbons.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 8.2",
+                "caption": "IUPAC Names of Some Unbranched Saturated Hydrocarbons",
+                "headers": [
+                  "Name",
+                  "Molecular formula",
+                  "Name",
+                  "Molecular formula"
+                ],
+                "rows": [
+                  [
+                    "Methane",
+                    "$\\text{CH}_4$",
+                    "Heptane",
+                    "$\\text{C}_7\\text{H}_{16}$"
+                  ],
+                  [
+                    "Ethane",
+                    "$\\text{C}_2\\text{H}_6$",
+                    "Octane",
+                    "$\\text{C}_8\\text{H}_{18}$"
+                  ],
+                  [
+                    "Propane",
+                    "$\\text{C}_3\\text{H}_8$",
+                    "Nonane",
+                    "$\\text{C}_9\\text{H}_{20}$"
+                  ],
+                  [
+                    "Butane",
+                    "$\\text{C}_4\\text{H}_{10}$",
+                    "Decane",
+                    "$\\text{C}_{10}\\text{H}_{22}$"
+                  ],
+                  [
+                    "Pentane",
+                    "$\\text{C}_5\\text{H}_{12}$",
+                    "Icosane",
+                    "$\\text{C}_{20}\\text{H}_{42}$"
+                  ],
+                  [
+                    "Hexane",
+                    "$\\text{C}_6\\text{H}_{14}$",
+                    "Triacontane",
+                    "$\\text{C}_{30}\\text{H}_{62}$"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.5:4",
+            "order": 4,
+            "title": "Branched Chain Hydrocarbons and Alkyl Groups",
+            "content_text": "In branched chain compounds, small carbon chains called alkyl groups are attached to the parent chain. An alkyl group is formed by removing one hydrogen atom from a saturated hydrocarbon. They are named by replacing the '-ane' suffix of the parent alkane with '-yl'. For example, methane ($\\text{CH}_4$) becomes a methyl group ($-\\text{CH}_3$). Table 8.3 lists common alkyl groups and their structures. Common abbreviations for these groups include Me (methyl), Et (ethyl), Pr (propyl), and Bu (butyl).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 8.5b",
+                "description": "Examples of branched chain hydrocarbons showing (a) a methyl branch on a butane chain and (b) methyl and ethyl branches on a pentane chain.",
+                "image_url": null
+              }
+            ],
+            "tables": [
+              {
+                "label": "Table 8.3",
+                "caption": "Some Alkyl Groups",
+                "headers": [
+                  "Molecular formula (Alkane)",
+                  "Name of alkane",
+                  "Structural formula (Alkyl group)",
+                  "Name of alkyl group"
+                ],
+                "rows": [
+                  [
+                    "$\\text{CH}_4$",
+                    "Methane",
+                    "$-\\text{CH}_3$",
+                    "Methyl"
+                  ],
+                  [
+                    "$\\text{C}_2\\text{H}_6$",
+                    "Ethane",
+                    "$-\\text{CH}_2\\text{CH}_3$",
+                    "Ethyl"
+                  ],
+                  [
+                    "$\\text{C}_3\\text{H}_8$",
+                    "Propane",
+                    "$-\\text{CH}_2\\text{CH}_2\\text{CH}_3$",
+                    "Propyl"
+                  ],
+                  [
+                    "$\\text{C}_4\\text{H}_{10}$",
+                    "Butane",
+                    "$-\\text{CH}_2\\text{CH}_2\\text{CH}_2\\text{CH}_3$",
+                    "Butyl"
+                  ],
+                  [
+                    "$\\text{C}_{10}\\text{H}_{22}$",
+                    "Decane",
+                    "$-\\text{CH}_2(\\text{CH}_2)_8\\text{CH}_3$",
+                    "Decyl"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.5:5",
+            "order": 5,
+            "title": "Branched Alkyl Groups",
+            "content_text": "Alkyl groups can themselves be branched. These branched groups often have specific trivial names that are widely used. Examples include Isopropyl-, sec-Butyl-, Isobutyl-, tert-Butyl-, and Neopentyl- groups. For instance, the propyl group can exist as a straight chain ($n$-propyl) or a branched chain (isopropyl).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 8.5c",
+                "description": "Structural formulas for branched alkyl groups: Isopropyl, sec-Butyl, Isobutyl, tert-Butyl, and Neopentyl.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.5:6",
+            "order": 6,
+            "title": "Nomenclature Rules for Branched Chain Alkanes: Rule 1",
+            "content_text": "Rule 1: Identify the longest carbon chain in the molecule. This chain is designated as the parent or root chain. If there are multiple chains of different lengths, the one with the maximum number of carbon atoms is selected. For example, a chain with nine carbons is preferred over one with eight carbons, even if both are present in the same structure.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 8.5d",
+                "description": "Comparison of two ways to select the parent chain in the same molecule: (I) shows the correct selection of a 9-carbon chain, while (II) shows an incorrect 8-carbon chain.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.5:7",
+            "order": 7,
+            "title": "Nomenclature Rules for Branched Chain Alkanes: Rule 2",
+            "content_text": "Rule 2: Number the carbon atoms of the parent chain to identify the positions of the branches. The numbering must be done in a way that the branched carbon atoms (locants) receive the lowest possible numbers. For example, numbering from left to right might give branches at positions 2 and 6, while numbering from right to left might give 4 and 8; the former is correct.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 8.5e",
+                "description": "A carbon chain numbered in two directions to demonstrate the lowest locant rule. The numbering that assigns lower numbers to the substituent positions is chosen.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.5:8",
+            "order": 8,
+            "title": "Nomenclature Rules for Branched Chain Alkanes: Rule 3",
+            "content_text": "Rule 3: The names of alkyl groups attached as branches are prefixed to the parent alkane name. Their positions are indicated by the carbon number to which they are attached. If different types of alkyl groups are present, they are listed in alphabetical order. For example, in 6-ethyl-2-methylnonane, 'ethyl' is listed before 'methyl'. Numbers are separated from names by hyphens, and there is no space between the last substituent and the parent name.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.5:9",
+            "order": 9,
+            "title": "Nomenclature Rules for Branched Chain Alkanes: Rule 4",
+            "content_text": "Rule 4: If two or more identical substituent groups are present, their positions are indicated by numbers separated by commas. The number of identical groups is indicated by prefixes such as di- (2), tri- (3), tetra- (4), penta- (5), hexa- (6), etc. These prefixes are ignored when determining the alphabetical order of the substituents.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 8.5f",
+                "description": "Examples of molecules named using Rule 4: 2,4-Dimethylpentane, 2,2,4-Trimethylpentane, and 3-Ethyl-4,4-dimethylheptane.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.5:10",
+            "order": 10,
+            "title": "Nomenclature Rules for Branched Chain Alkanes: Rule 5",
+            "content_text": "Rule 5: If two different substituents are located at equivalent positions from either end of the parent chain, the lower number is assigned to the substituent that comes first in alphabetical order. For example, in a chain where an ethyl and a methyl group are at positions 3 and 6 respectively from one side, and 6 and 3 from the other, the numbering that gives ethyl the number 3 is correct (3-ethyl-6-methyloctane).",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 8.5g",
+                "description": "Structure of 3-ethyl-6-methyloctane showing the numbering priority given to the ethyl group over the methyl group due to alphabetical order.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.5:11",
+            "order": 11,
+            "title": "Nomenclature Rules for Branched Chain Alkanes: Rule 6",
+            "content_text": "Rule 6: Branched alkyl groups are named by numbering the carbon atom of the branch that is attached to the parent chain as carbon 1. The rest of the branch is then named using the same rules as for alkanes. For example, a branch might be named as a 1,3-dimethylbutyl group. The name of a complex branched chain alkyl group is placed in parentheses while naming the compound. When arranging substituent names in alphabetical order, the prefixes 'iso-' and 'neo-' are considered part of the fundamental name of the alkyl group. However, the prefixes 'sec-' and 'tert-' are not considered part of the fundamental name. The use of 'iso' and related common prefixes for naming alkyl groups is permitted by IUPAC nomenclature as long as these groups are not further substituted. In multi-substituted compounds, two additional rules are important: 1. If two chains of equal size exist, the chain with the greater number of side chains is selected as the parent chain. 2. After selecting the parent chain, numbering must begin from the end that is closer to a substituent.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 8.5h",
+                "description": "Example of numbering within a complex branched alkyl group, where the carbon attached to the parent chain is designated as carbon 1.",
+                "image_url": null
+              },
+              {
+                "label": "Example Structure 1",
+                "description": "A decane chain with a 2-ethylbutyl group at position 5 and two methyl groups at position 3, named 5-(2-Ethylbutyl)-3,3-dimethyldecane.",
+                "image_url": null
+              },
+              {
+                "label": "Example Structure 2",
+                "description": "A decane chain with a sec-butyl group at position 5 and an isopropyl group at position 4, named 5-sec-Butyl-4-isopropyldecane.",
+                "image_url": null
+              },
+              {
+                "label": "Example Structure 3",
+                "description": "A nonane chain with a 2,2-dimethylpropyl group at position 5, named 5-(2,2-Dimethylpropyl)nonane.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.5:12",
+            "order": 12,
+            "title": "Nomenclature of Cyclic Compounds",
+            "content_text": "A saturated monocyclic compound is named by adding the prefix 'cyclo-' to the name of the corresponding straight-chain alkane. If side chains are present, the standard rules for branched alkanes apply. For numbering, the substituents are listed in alphabetical order, and the carbon atoms are numbered such that the substituents receive the lowest possible locants. In cases of multiple substituents, the carbon that is more heavily branched receives the lower number.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Cyclic Examples",
+                "description": "Structures of Cyclopentane (a five-membered ring), 1-Methyl-3-propylcyclohexane (a six-membered ring with methyl and propyl groups), and 3-Ethyl-1,1-dimethylcyclohexane (showing more branched carbon getting lower number).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.5:13",
+            "order": 13,
+            "title": "Problem 8.7: Correcting IUPAC Names",
+            "content_text": "This problem involves identifying errors in IUPAC nomenclature based on the rules of lowest locants and alphabetical priority.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 8.7",
+                "problem": "Structures and IUPAC names of some hydrocarbons are given below. Explain why the names given in the parentheses are incorrect. (a) $CH_3-CH(CH_3)-CH_2-CH_2-CH(CH_3)-CH(CH_3)-CH_2-CH_3$ [2,5,6-Trimethyloctane and not 3,4,7-Trimethyloctane] (b) $CH_3-CH_2-CH(CH_2CH_3)-CH_2-CH(CH_3)-CH_2-CH_3$ [3-Ethyl-5-methylheptane and not 5-Ethyl-3-methylheptane]",
+                "solution": "(a) The lowest locant set 2,5,6 is lower than 3,5,7. (b) Substituents are in equivalent positions (3 and 5); the lower number is given to the substituent that comes first alphabetically (Ethyl before Methyl)."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:8:8.5.3",
+        "number": "8.5.3",
+        "title": "Nomenclature of Organic Compounds having Functional Group(s)",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:8:8.5.3:1",
+            "order": 1,
+            "title": "Functional Groups and Basic Rules",
+            "content_text": "A functional group is an atom or a group of atoms bonded together in a unique manner that serves as the site of chemical reactivity. Compounds with the same functional group, such as alcohols ($CH_3OH$, $CH_3CH_2OH$), exhibit similar chemical properties. To name these compounds: 1. Identify the functional group to determine the appropriate suffix (e.g., '-ol' for alcohols). 2. Select the longest carbon chain that contains the functional group. 3. Number the chain such that the carbon atom attached to the functional group receives the lowest possible number.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.5.3:2",
+            "order": 2,
+            "title": "Nomenclature of Polyfunctional Compounds",
+            "content_text": "In polyfunctional compounds, one functional group is chosen as the principal functional group, which determines the suffix. Other groups are treated as substituents and named using prefixes. The choice of the principal group follows a specific order of priority: $-COOH > -SO_3H > -COOR$ (R=alkyl group) $> COCl > -CONH_2 > -CN > -HC=O > >C=O > -OH > -NH_2 > >C=C< > -C\\equiv C-$. Other groups like alkyl ($-R$), phenyl ($C_6H_5-$), halogens ($F, Cl, Br, I$), nitro ($-NO_2$), and alkoxy ($-OR$) are always treated as prefix substituents. For example, a compound with both alcohol and keto groups is named as a hydroxyalkanone because the keto group has higher priority.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.5.3:3",
+            "order": 3,
+            "title": "Multiple Identical Functional Groups",
+            "content_text": "If more than one functional group of the same type is present, their number is indicated by adding numerical prefixes like 'di', 'tri', etc., before the class suffix. In such cases, the full name of the parent alkane is retained before the suffix. For example, $CH_2(OH)CH_2(OH)$ is named ethane-1,2-diol. However, for multiple double or triple bonds, the '-ne' ending of the alkane is dropped and 'a' is added; for example, $CH_2=CH-CH=CH_2$ is named buta-1,3-diene.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.5.3:4",
+            "order": 4,
+            "title": "Problem 8.8: IUPAC Naming with Functional Groups",
+            "content_text": "Application of nomenclature rules to compounds containing hydroxyl, keto, and carboxyl groups.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Problem 8.8",
+                "problem": "Write the IUPAC names of the compounds i-iv from their given structures: (i) $CH_3-CH_2-CH(OH)-CH_2-CH_2-CH(CH_3)-CH_2-CH_3$ (ii) $CH_3-CH_2-C(=O)-CH_2-C(=O)-CH_3$ (iii) $CH_3-C(=O)-CH_2-CH_2-CH_2-COOH$",
+                "solution": "(i) The functional group is alcohol (-OH), suffix '-ol'. The longest chain has 8 carbons (octane). The -OH is at C3 and a methyl group is at C6. Name: 6-Methyloctan-3-ol. (ii) The functional group is ketone (>C=O), suffix '-one'. Two keto groups make it 'dione' at C2 and C4. Longest chain is 6 carbons. Name: Hexane-2,4-dione. (iii) [Solution continues on next page]"
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.5.3:5",
+            "order": 5,
+            "title": "Summary of Functional Groups and Classes",
+            "content_text": "Table 8.4 provides a comprehensive list of functional groups, their structures, IUPAC prefixes, suffixes, and examples.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 8.4",
+                "caption": "Some Functional Groups and Classes of Organic Compounds",
+                "headers": [
+                  "Class of compounds",
+                  "Functional group structure",
+                  "IUPAC group prefix",
+                  "IUPAC group suffix",
+                  "Example"
+                ],
+                "rows": [
+                  [
+                    "Alkanes",
+                    " - ",
+                    " - ",
+                    "-ane",
+                    "Butane, $CH_3(CH_2)_2CH_3$"
+                  ],
+                  [
+                    "Alkenes",
+                    "$>C=C<$",
+                    " - ",
+                    "-ene",
+                    "But-1-ene, $CH_2=CHCH_2CH_3$"
+                  ],
+                  [
+                    "Alkynes",
+                    "$-C\\equiv C-$",
+                    " - ",
+                    "-yne",
+                    "But-1-yne, $CH\\equiv CCH_2CH_3$"
+                  ],
+                  [
+                    "Arenes",
+                    " - ",
+                    " - ",
+                    " - ",
+                    "Benzene"
+                  ],
+                  [
+                    "Halides",
+                    "$-X (X=F, Cl, Br, I)$",
+                    "halo-",
+                    " - ",
+                    "1-Bromobutane, $CH_3(CH_2)_2CH_2Br$"
+                  ],
+                  [
+                    "Alcohols",
+                    "$-OH$",
+                    "hydroxy-",
+                    "-ol",
+                    "Butan-2-ol, $CH_3CH_2CHOHCH_3$"
+                  ],
+                  [
+                    "Aldehydes",
+                    "$-CHO$",
+                    "formyl, or oxo",
+                    "-al",
+                    "Butanal, $CH_3(CH_2)_2CHO$"
+                  ],
+                  [
+                    "Ketones",
+                    "$>C=O$",
+                    "oxo-",
+                    "-one",
+                    "Butan-2-one, $CH_3CH_2COCH_3$"
+                  ],
+                  [
+                    "Nitriles",
+                    "$-C\\equiv N$",
+                    "cyano",
+                    "nitrile",
+                    "Pentanenitrile, $CH_3CH_2CH_2CH_2CN$"
+                  ],
+                  [
+                    "Ethers",
+                    "$-R-O-R-$",
+                    "alkoxy-",
+                    " - ",
+                    "Ethoxyethane, $CH_3CH_2OCH_2CH_3$"
+                  ],
+                  [
+                    "Carboxylic acids",
+                    "$-COOH$",
+                    "carboxy",
+                    "-oic acid",
+                    "Butanoic acid, $CH_3(CH_2)_2CO_2H$"
+                  ],
+                  [
+                    "Carboxylate ions",
+                    "$-COO^-$",
+                    " - ",
+                    "-oate",
+                    "Sodium butanoate, $CH_3(CH_2)_2CO_2^- Na^+$"
+                  ],
+                  [
+                    "Esters",
+                    "$-COOR$",
+                    "alkoxycarbonyl",
+                    "-oate",
+                    "Methyl propanoate, $CH_3CH_2COOCH_3$"
+                  ],
+                  [
+                    "Acyl halides",
+                    "$-COX (X=F, Cl, Br, I)$",
+                    "halocarbonyl",
+                    "-oyl halide",
+                    "Butanoyl chloride, $CH_3(CH_2)_2COCl$"
+                  ],
+                  [
+                    "Amines",
+                    "$-NH_2, >NH, >N-$",
+                    "amino-",
+                    "-amine",
+                    "Butan-2-amine, $CH_3CHNH_2CH_2CH_3$"
+                  ],
+                  [
+                    "Amides",
+                    "$-CONH_2, -CONHR, -CONR_2$",
+                    "-carbamoyl",
+                    "-amide",
+                    "Butanamide, $CH_3(CH_2)_2CONH_2$"
+                  ],
+                  [
+                    "Nitro compounds",
+                    "$-NO_2$",
+                    "nitro",
+                    " - ",
+                    "1-Nitrobutane, $CH_3(CH_2)_3NO_2$"
+                  ],
+                  [
+                    "Sulphonic acids",
+                    "$-SO_3H$",
+                    "sulpho",
+                    "sulphonic acid",
+                    "Methylsulphonic acid, $CH_3SO_3H$"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.5.3:6",
+            "order": 6,
+            "title": "Solution to Problem 8.8 (iii) and (iv)",
+            "content_text": "In the case of compounds with multiple functional groups, a principal functional group is selected based on priority. For example, in 5-Oxohexanoic acid, the carboxylic acid group ($-COOH$) is the principal functional group, and the ketone group at carbon 5 is treated as a substituent indicated by the prefix 'oxo'. The parent chain is numbered starting from the carbon of the $-COOH$ group. In the case of compounds with multiple carbon-carbon double or triple bonds, suffixes like 'diene' or 'triyne' are used. For example, in Hexa-1,3-dien-5-yne, the longest chain has 6 carbons with double bonds at positions 1 and 3, and a triple bond at position 5.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 8.8 (iii)",
+                "problem": "Name the compound: $CH_3COCH_2CH_2CH_2COOH$",
+                "solution": "Here, two functional groups namely ketone and carboxylic acid are present. The principal functional group is the carboxylic acid group; hence the parent chain will be suffixed with 'oic' acid. Numbering of the chain starts from carbon of $-COOH$ functional group. The keto group in the chain at carbon 5 is indicated by 'oxo'. The longest chain including the principal functional group has 6 carbon atoms; hence the parent hydrocarbon is hexane. The compound is, therefore, named as 5-Oxohexanoic acid."
+              },
+              {
+                "label": "Problem 8.8 (iv)",
+                "problem": "Name the compound: $CH \\equiv C-CH=CH-CH=CH_2$",
+                "solution": "The two $C=C$ functional groups are present at carbon atoms 1 and 3, while the $C \\equiv C$ functional group is present at carbon 5. These groups are indicated by suffixes 'diene' and 'yne' respectively. The longest chain containing the functional groups has 6 carbon atoms; hence the parent hydrocarbon is hexane. The name of compound, therefore, is Hexa-1,3-dien-5-yne."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.5.3:7",
+            "order": 7,
+            "title": "Problem 8.9: Deriving Structures from Names",
+            "content_text": "To derive the structural formula from an IUPAC name, identify the parent hydrocarbon chain length from the word root (e.g., 'hex' for 6 carbons, 'pent' for 5). Then, locate the functional groups and substituents based on the locants provided in the name. For cyclic compounds, the ring size is indicated (e.g., 'cyclohex' for a six-membered ring). Priority rules determine the numbering: for instance, in Cyclohex-2-en-1-ol, the hydroxyl group ($-OH$) gets preference over the double bond for the C-1 position.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Problem 8.9",
+                "problem": "Derive the structure of (i) 2-Chlorohexane, (ii) Pent-4-en-2-ol, (iii) 3-Nitrocyclohexene, (iv) Cyclohex-2-en-1-ol, (v) 6-Hydroxyheptanal.",
+                "solution": "(i) 'hexane' indicates 6 carbon atoms. Chloro at C-2: $CH_3CH_2CH_2CH_2CH(Cl)CH_3$. (ii) 'pent' indicates 5 carbons. 'en' at C-4 and 'ol' at C-2: $CH_2=CHCH_2CH(OH)CH_3$. (iii) Six-membered ring with double bond at C-1 and nitro at C-3. Double bond gets preference over $-NO_2$. (iv) '1-ol' means $-OH$ at C-1. $-OH$ gets preference over $C=C$. (v) 'heptanal' indicates 7 carbons with an aldehyde group. '6-hydroxy' indicates $-OH$ at C-6: $CH_3CH(OH)CH_2CH_2CH_2CH_2CHO$."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Structure 8.9 (iii)",
+                "description": "Structural formula of 3-Nitrocyclohexene showing a six-membered ring with a double bond between C1-C2 and a nitro group at C3.",
+                "image_url": null
+              },
+              {
+                "label": "Structure 8.9 (iv)",
+                "description": "Structural formula of Cyclohex-2-en-1-ol showing a six-membered ring with a hydroxyl group at C1 and a double bond between C2-C3.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:8:8.5.4",
+        "number": "8.5.4",
+        "title": "Nomenclature of Substituted Benzene Compounds",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:8:8.5.4:1",
+            "order": 1,
+            "title": "Introduction to Benzene Nomenclature",
+            "content_text": "For IUPAC nomenclature of substituted benzene compounds, the substituent is placed as a prefix to the word 'benzene'. However, many common names are universally accepted and used as base names. For example, Methylbenzene is commonly known as Toluene, Methoxybenzene as Anisole, and Aminobenzene as Aniline. Other simple derivatives include Nitrobenzene and Bromobenzene.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Monosubstituted Benzenes",
+                "description": "Chemical structures of Toluene (benzene with $-CH_3$), Anisole (benzene with $-OCH_3$), Aniline (benzene with $-NH_2$), Nitrobenzene (benzene with $-NO_2$), and Bromobenzene (benzene with $-Br$).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.5.4:2",
+            "order": 2,
+            "title": "Disubstituted Benzene Derivatives",
+            "content_text": "When a benzene ring is disubstituted, the positions of the substituents are defined by numbering the carbon atoms such that the substituents receive the lowest possible numbers. In the trivial (common) system, prefixes ortho (o), meta (m), and para (p) are used for 1,2-, 1,3-, and 1,4- positions respectively. For example, 1,2-dibromobenzene is ortho-dibromobenzene.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Disubstituted Benzenes",
+                "description": "Structures of 1,2-Dibromobenzene (ortho), 1,3-Dibromobenzene (meta), and 1,4-Dibromobenzene (para).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.5.4:3",
+            "order": 3,
+            "title": "Polysubstituted Benzene Derivatives",
+            "content_text": "For tri- or higher substituted benzene derivatives, the ortho, meta, para prefixes cannot be used. Instead, the compounds are named by identifying substituent positions following the lowest locant rule. The substituent of the base compound (if one is chosen, like in anisole or aniline) is assigned number 1. The direction of numbering is chosen to give the next substituent the lowest possible number. Substituents are listed in alphabetical order in the final name.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Polysubstituted Examples",
+                "description": "Structures of 1-Chloro-2,4-dinitrobenzene, 2-Chloro-1-methyl-4-nitrobenzene, 2-Chloro-4-methylanisole, 4-Ethyl-2-methylaniline, and 3,4-Dimethylphenol.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.5.4:4",
+            "order": 4,
+            "title": "Benzene as a Substituent (Phenyl Group)",
+            "content_text": "When a benzene ring is attached to an alkane chain that contains a functional group, the benzene ring is treated as a substituent rather than the parent. In such cases, the benzene substituent is called a phenyl group, represented as $C_6H_5-$ and often abbreviated as 'Ph'.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.5.4:5",
+            "order": 5,
+            "title": "Problem 8.10: Structural Formulas of Benzene Derivatives",
+            "content_text": "This problem involves applying the rules of benzene nomenclature to draw structures from names, including the use of trivial prefixes (o, p) and complex substituent numbering.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Problem 8.10",
+                "problem": "Write the structural formula of: (a) o-Ethylanisole, (b) p-Nitroaniline, (c) 2,3-Dibromo-1-phenylpentane, (d) 4-Ethyl-1-fluoro-2-nitrobenzene.",
+                "solution": "Structures are drawn based on the base compound (Anisole for 'a', Aniline for 'b') or the parent alkane chain (Pentane for 'c', Benzene for 'd') with substituents placed at the indicated locants."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Solution 8.10",
+                "description": "Structural formulas for (a) o-Ethylanisole, (b) p-Nitroaniline, (c) 2,3-Dibromo-1-phenylpentane, and (d) 4-Ethyl-1-fluoro-2-nitrobenzene.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:8:8.6",
+        "number": "8.6",
+        "title": "ISOMERISM",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:8:8.6:1",
+            "order": 1,
+            "title": "Concept of Isomerism",
+            "content_text": "The phenomenon of existence of two or more compounds possessing the same molecular formula but different properties is known as isomerism. Such compounds are called isomers. Isomerism is broadly classified into two types: Structural Isomerism and Stereoisomerism.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.6:2",
+            "order": 2,
+            "title": "Classification of Isomerism",
+            "content_text": "Isomerism is divided into Structural isomerism and Stereoisomerism. Structural isomerism includes chain isomerism, position isomerism, functional group isomerism, and metamerism. Stereoisomerism includes geometrical isomerism and optical isomerism.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Isomerism Flowchart",
+                "description": "A flowchart showing the classification of isomerism into Structural (Chain, Position, Functional group, Metamerism) and Stereoisomerism (Geometrical, Optical).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:8:8.6.1",
+        "number": "8.6.1",
+        "title": "Structural Isomerism",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:8:8.6.1:1",
+            "order": 1,
+            "title": "Definition of Structural Isomerism",
+            "content_text": "Compounds having the same molecular formula but different structures (the manners in which atoms are linked) are classified as structural isomers.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.6.1:2",
+            "order": 2,
+            "title": "Chain Isomerism",
+            "content_text": "When two or more compounds have the same molecular formula but different carbon skeletons (branching), they are referred to as chain isomers. For example, the molecular formula $C_5H_{12}$ represents three chain isomers: Pentane (straight chain), Isopentane (2-Methylbutane), and Neopentane (2,2-Dimethylpropane).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Chain Isomers of $C_5H_{12}$",
+                "description": "Structures of Pentane, Isopentane, and Neopentane showing different carbon skeletons.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.6.1:3",
+            "order": 3,
+            "title": "Position Isomerism",
+            "content_text": "When two or more compounds differ in the position of a substituent atom or functional group on the same carbon skeleton, they are called position isomers. For example, the molecular formula $C_3H_8O$ represents two alcohols: Propan-1-ol and Propan-2-ol.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Position Isomers of $C_3H_8O$",
+                "description": "Structures of Propan-1-ol and Propan-2-ol showing the hydroxyl group at different carbon positions.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.6.1:4",
+            "order": 4,
+            "title": "Functional Group Isomerism",
+            "content_text": "Two or more compounds having the same molecular formula but different functional groups are called functional isomers. For example, the molecular formula $C_3H_6O$ can represent an aldehyde (Propanal) and a ketone: The molecular formula $C_3H_6O$ can represent an aldehyde (Propanal) and a ketone (Propanone). Propanone has the structure $CH_3-C(=O)-CH_3$ and Propanal has the structure $CH_3-CH_2-CHO$. These two compounds have the same molecular formula but different functional groups, making them functional isomers.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.6.1:5",
+            "order": 5,
+            "title": "Metamerism",
+            "content_text": "Metamerism arises due to different alkyl chains on either side of the functional group in the molecule. For example, the molecular formula $C_4H_{10}O$ represents methoxypropane ($CH_3OC_3H_7$) and ethoxyethane ($C_2H_5OC_2H_5$).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:8:8.6.2",
+        "number": "8.6.2",
+        "title": "Stereoisomerism",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:8:8.6.2:1",
+            "order": 1,
+            "title": "Stereoisomerism",
+            "content_text": "The compounds that have the same constitution and sequence of covalent bonds but differ in relative positions of their atoms or groups in space are called stereoisomers. This special type of isomerism is called stereoisomerism and can be classified as geometrical and optical isomerism.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:8:8.7",
+        "number": "8.7",
+        "title": "FUNDAMENTAL CONCEPTS IN ORGANIC REACTION MECHANISM",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:8:8.7:1",
+            "order": 1,
+            "title": "General Reaction Scheme",
+            "content_text": "In an organic reaction, the organic molecule (also referred to as a substrate) reacts with an appropriate attacking reagent and leads to the formation of one or more intermediate(s) and finally product(s). The general reaction is depicted as follows: Organic molecule (Substrate) + Attacking Reagent $\\rightarrow$ [Intermediate] $\\rightarrow$ Product(s) + Byproducts. Substrate is that reactant which supplies carbon to the new bond and the other reactant is called reagent. If both the reactants supply carbon to the new bond then choice is arbitrary and in that case the molecule on which attention is focused is called substrate.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.7:2",
+            "order": 2,
+            "title": "Reaction Mechanism",
+            "content_text": "A sequential account of each step, describing details of electron movement, energetics during bond cleavage and bond formation, and the rates of transformation of reactants into products (kinetics) is referred to as reaction mechanism. The knowledge of reaction mechanism helps in understanding the reactivity of organic compounds and in planning strategy for their synthesis.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:8:8.7.1",
+        "number": "8.7.1",
+        "title": "Fission of a Covalent Bond",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:8:8.7.1:1",
+            "order": 1,
+            "title": "Heterolytic Cleavage",
+            "content_text": "A covalent bond can get cleaved by heterolytic cleavage. In heterolytic cleavage, the bond breaks in such a fashion that the shared pair of electrons remains with one of the fragments. After heterolysis, one atom has a sextet electronic structure and a positive charge and the other, a valence octet with at least one lone pair and a negative charge. For example, heterolytic cleavage of bromomethane will give $\\overset{+}{C}H_3$ and $Br^-$ as shown: $H_3C-Br \\rightarrow \\overset{+}{C}H_3 + Br^-$. Organic reactions which proceed through heterolytic bond cleavage are called ionic or heteropolar or just polar reactions.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.7.1:2",
+            "order": 2,
+            "title": "Carbocations",
+            "content_text": "A species having a carbon atom possessing sextet of electrons and a positive charge is called a carbocation (earlier called carbonium ion). The $\\overset{+}{C}H_3$ ion is known as a methyl cation or methyl carbonium ion. Carbocations are classified as primary, secondary or tertiary depending on whether one, two or three carbons are directly attached to the positively charged carbon. Examples include ethyl cation ($CH_3\\overset{+}{C}H_2$, primary), isopropyl cation ($(CH_3)_2\\overset{+}{C}H$, secondary), and tert-butyl cation ($(CH_3)_3\\overset{+}{C}$, tertiary). Carbocations are highly unstable and reactive species. Alkyl groups directly attached to the positively charged carbon stabilise the carbocations due to inductive and hyperconjugation effects. The observed order of carbocation stability is: $\\overset{+}{C}H_3 < CH_3\\overset{+}{C}H_2 < (CH_3)_2\\overset{+}{C}H < (CH_3)_3\\overset{+}{C}$. These carbocations have trigonal planar shape with positively charged carbon being $sp^2$ hybridised. The shape of $\\overset{+}{C}H_3$ may be considered as being derived from the overlap of three equivalent $C(sp^2)$ hybridised orbitals with 1s orbital of each of the three hydrogen atoms. The remaining carbon orbital is perpendicular to the molecular plane and contains no electrons.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 8.3(a)",
+                "description": "Shape of methyl carbocation showing the trigonal planar arrangement of C-H bonds and the empty p-orbital perpendicular to the plane.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.7.1:3",
+            "order": 3,
+            "title": "Carbanions",
+            "content_text": "The heterolytic cleavage can also give a species in which carbon gets the shared pair of electrons. For example, when group Z attached to the carbon leaves without electron pair, the methyl anion ($H_3C:^-$) is formed. Such a carbon species carrying a negative charge on carbon atom is called carbanion. Carbon in carbanion is generally $sp^3$ hybridised and its structure is distorted tetrahedron. Carbanions are also unstable and reactive species.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 8.3(b)",
+                "description": "Shape of methyl carbanion showing the distorted tetrahedral structure with a lone pair of electrons on the carbon atom.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.7.1:4",
+            "order": 4,
+            "title": "Homolytic Cleavage and Free Radicals",
+            "content_text": "In homolytic cleavage, one of the electrons of the shared pair in a covalent bond goes with each of the bonded atoms. The movement of a single electron takes place instead of an electron pair, shown by a 'half-headed' (fish hook) arrow. Such cleavage results in the formation of neutral species (atom or group) which contains an unpaired electron, called free radicals. Like carbocations and carbanions, free radicals are also very reactive. Alkyl radicals are classified as primary, secondary, or tertiary. Alkyl radical stability increases as we proceed from primary to tertiary: $\\dot{C}H_3 < \\dot{C}H_2CH_3 < \\dot{C}H(CH_3)_2 < \\dot{C}(CH_3)_3$. Organic reactions which proceed by homolytic fission are called free radical or homopolar or nonpolar reactions.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.7.1:5",
+            "order": 5,
+            "title": "Worked Example: Formation of Reactive Intermediates",
+            "content_text": "This example demonstrates the use of curved-arrow notation to show the formation of reactive intermediates during heterolytic cleavage of specific covalent bonds.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Problem 8.11",
+                "problem": "Using curved-arrow notation, show the formation of reactive intermediates when the following covalent bonds undergo heterolytic cleavage. (a) $CH_3-SCH_3$, (b) $CH_3-CN$, (c) $CH_3-Cu$",
+                "solution": "(a) $CH_3 \\curvearrowright SCH_3 \\rightarrow \\overset{+}{C}H_3 + ^-SCH_3$; (b) $CH_3 \\curvearrowright CN \\rightarrow \\overset{+}{C}H_3 + ^-CN$; (c) $CH_3 \\curvearrowleft Cu \\rightarrow ^-CH_3 + \\overset{+}{C}u$"
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:8:8.7.2",
+        "number": "8.7.2",
+        "title": "Substrate and Reagent",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:8:8.7.2:1",
+            "order": 1,
+            "title": "Substrate and Reagent Definitions",
+            "content_text": "Ions are generally not formed in the reactions of organic compounds; molecules as such participate in the reaction. A molecule whose carbon is involved in new bond formation is called substrate and the other one is called reagent. When carbon-carbon bond is formed, the choice of naming the reactants as substrate and reagent is arbitrary. Examples: (i) $CH_2=CH_2$ (Substrate) + $Br_2$ (Reagent) $\\rightarrow$ $CH_2Br-CH_2Br$ (Product); (ii) Benzene (Substrate) + $CH_3Cl$ (Reagent) $\\rightarrow$ Toluene + $HCl$ (Products).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.7.2:2",
+            "order": 2,
+            "title": "Nucleophiles and Electrophiles",
+            "content_text": "Reagents attack the reactive site of the substrate. The reactive site may be electron deficient (a positive reactive site) or electron rich. A reagent that brings an electron pair to the reactive site is called a nucleophile ($Nu:$), i.e., nucleus seeking. Nucleophiles are negatively charged ions with lone pair of electrons such as hydroxide ($HO^-$), cyanide ($NC^-$) ions and carbanions ($R_3C:^-$), or neutral molecules such as $H_2O$, $R_3N$, $R_2NH$ etc. A reagent that takes away an electron pair from reactive site is called electrophile ($E^+$) i.e., electron seeking. Examples include carbocations ($\\overset{+}{C}H_3$) and neutral molecules having functional groups like carbonyl group ($>C=O$) or alkyl halides ($R_3C-X$). In neutral molecules such as alkyl halides, due to the polarity of the C-X bond a partial positive charge is generated on the carbon atom and hence the carbon atom becomes an electrophilic centre at which a nucleophile can attack.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.7.2:3",
+            "order": 3,
+            "title": "Worked Example: Categorizing Reagents",
+            "content_text": "This example involves categorizing various chemical species as either nucleophiles or electrophiles based on their electronic structure.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Problem 8.12",
+                "problem": "Giving justification, categorise the following molecules/ions as nucleophile or electrophile: $HS^-$, $BF_3$, $C_2H_5O^-$, $(CH_3)_3N:$, $Cl^+$, $CH_3\\overset{+}{C}=O$, $H_2N^-$, $NO_2^+$",
+                "solution": "Nucleophiles: $HS^-$, $C_2H_5O^-$, $(CH_3)_3N:$, $H_2N^-$. These species have unshared pair of electrons, which can be donated and shared with an electrophile. Electrophiles: $BF_3$, $Cl^+$, $CH_3\\overset{+}{C}=O$, $NO_2^+$. Reactive sites have only six valence electrons; can accept electron pair from a nucleophile."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.7.2:4",
+            "order": 4,
+            "title": "Worked Example: Identifying Electrophilic Centers",
+            "content_text": "This example focuses on identifying the specific atom in a molecule that acts as an electrophilic center due to bond polarity.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Problem 8.13",
+                "problem": "Identify electrophilic centre in the following: $CH_3CH=O$, $CH_3CN$, $CH_3I$.",
+                "solution": "Among $CH_3\\overset{*}{C}H=O$, $H_3\\overset{*}{C}C\\equiv N$, and $H_3\\overset{*}{C}-I$, the starred carbon atoms are electrophilic centers as they will have partial positive charge due to polarity of the bond."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:8:8.7.3",
+        "number": "8.7.3",
+        "title": "Electron Movement in Organic Reactions",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:8:8.7.3:1",
+            "order": 1,
+            "title": "Curved-Arrow Notation",
+            "content_text": "The movement of electrons in organic reactions can be shown by curved-arrow notation. It shows how changes in bonding occur due to electronic redistribution during the reaction. To show the change in position of a pair of electrons, curved arrow starts from the point from where an electron pair is shifted and it ends at a location to which the pair of electron may move. Presentation of shifting of electron pair is given below: (i) from $\\pi$ bond to adjacent bond position, (ii) from $\\pi$ bond to adjacent atom, (iii) from atom to adjacent bond position.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Presentation of shifting of electron pair",
+                "description": "Three diagrams showing: (i) a double bond shifting to an adjacent single bond position, (ii) a double bond shifting to one of the atoms, and (iii) a lone pair on an atom shifting to an adjacent bond position.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.7.3:2",
+            "order": 2,
+            "title": "Single Electron Movement",
+            "content_text": "Movement of single electron is indicated by a single barbed ‘fish hooks’ (i.e. half headed curved arrow). For example, in transfer of hydroxide ion giving ethanol and in the dissociation of chloromethane, the movement of electron using curved arrows can be depicted as follows: the reaction of $HO^-$ with $CH_3-Br$ involves pair movement, while the dissociation of $CH_3-Cl$ into free radicals involves single electron movement shown by fish hooks.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Electron Movement Examples",
+                "description": "Diagram 1: Hydroxide ion attacking methyl bromide to form methanol and bromide ion using full-headed arrows. Diagram 2: Homolytic fission of chloromethane into methyl and chlorine radicals using half-headed fish-hook arrows.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:8:8.7.4",
+        "number": "8.7.4",
+        "title": "Electron Displacement Effects in Covalent Bonds",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:8:8.7.4:1",
+            "order": 1,
+            "title": "Types of Electron Displacement",
+            "content_text": "The electron displacement in an organic molecule may take place either in the ground state under the influence of an atom or a substituent group or in the presence of an appropriate attacking reagent. The electron displacements due to the influence of an atom or a substituent group present in the molecule cause permanent polarisation of the bond. Inductive effect and resonance effects are examples of this type of electron displacements. Temporary electron displacement effects are seen in a molecule when a reagent approaches to attack it. This type of electron displacement is called electromeric effect or polarisability effect.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:8:8.7.5",
+        "number": "8.7.5",
+        "title": "Inductive Effect",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:8:8.7.5:1",
+            "order": 1,
+            "title": "Mechanism of Inductive Effect",
+            "content_text": "When a covalent bond is formed between atoms of different electronegativity, the electron density is more towards the more electronegative atom of the bond. Such a shift of electron density results in a polar covalent bond. Bond polarity leads to various electronic effects in organic compounds. Consider chloroethane ($CH_3CH_2Cl$): the C–Cl bond is polarized such that carbon-1 gains partial positive charge ($\\delta^+$) and chlorine gains partial negative charge ($\\delta^-$). This carbon-1 then draws electron density from the adjacent C-C bond, developing a smaller partial positive charge ($\\delta\\delta^+$) on carbon-2. This polarisation of a $\\sigma$-bond caused by the polarisation of an adjacent $\\sigma$-bond is the inductive effect. It decreases rapidly as the number of intervening bonds increases and becomes vanishingly small after three bonds.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Inductive Effect in Chloroethane",
+                "description": "Structural formula of chloroethane showing $\\delta\\delta^+$ on $CH_3$, $\\delta^+$ on $CH_2$, and $\\delta^-$ on $Cl$, with arrows on the bonds pointing towards the chlorine atom.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.7.5:2",
+            "order": 2,
+            "title": "Classification of Substituents",
+            "content_text": "Substituents are classified as electron-withdrawing or electron-donating relative to hydrogen. Electron-withdrawing groups (-I effect) include halogens, nitro ($-NO_2$), cyano ($-CN$), carboxy ($-COOH$), ester ($-COOR$), and aryloxy ($-OAr$). Electron-donating groups (+I effect) include alkyl groups like methyl ($-CH_3$) and ethyl ($-CH_2-CH_3$).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.7.5:3",
+            "order": 3,
+            "title": "Worked Examples on Inductive Effect",
+            "content_text": "The following examples illustrate how electronegativity and distance influence the polarity and magnitude of the inductive effect.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 8.14",
+                "problem": "Which bond is more polar in the following pairs of molecules: (a) $H_3C-H$, $H_3C-Br$ (b) $H_3C-NH_2$, $H_3C-OH$ (c) $H_3C-OH$, $H_3C-SH$",
+                "solution": "(a) C–Br, since Br is more electronegative than H, (b) C–O, (c) C–O"
+              },
+              {
+                "label": "Problem 8.15",
+                "problem": "In which C–C bond of $CH_3CH_2CH_2Br$, the inductive effect is expected to be the least?",
+                "solution": "Magnitude of inductive effect diminishes as the number of intervening bonds increases. Hence, the effect is least in the bond between carbon-3 and hydrogen (or the C2-C3 bond relative to the C1-Br source)."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:8:8.7.6",
+        "number": "8.7.6",
+        "title": "Resonance Structure",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:8:8.7.6:1",
+            "order": 1,
+            "title": "Concept of Resonance and Benzene",
+            "content_text": "Many organic molecules cannot be explained by a single Lewis structure. Benzene, for example, has alternating C–C single and C=C double bonds in its cyclic structure, which suggests different bond lengths. However, experimental data shows a uniform C–C bond distance of 139 pm, intermediate between single (154 pm) and double (134 pm) bonds. Benzene is represented as a hybrid of two energetically identical resonance structures (I and II). These canonical structures are hypothetical and do not represent the real molecule individually.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Benzene Resonance",
+                "description": "Two hexagonal structures of benzene with alternating double bonds in different positions, connected by a double-headed resonance arrow.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.7.6:2",
+            "order": 2,
+            "title": "Nitromethane and Resonance Hybrid",
+            "content_text": "Nitromethane ($CH_3NO_2$) is another example. It can be represented by two Lewis structures where the two N-O bonds appear different. Experimentally, both N-O bonds are of the same length, intermediate between single and double bonds. The actual structure is a resonance hybrid of the two canonical forms.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Nitromethane Resonance",
+                "description": "Two Lewis structures of nitromethane showing the formal charges and the shifting of the double bond between the two oxygen atoms.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.7.6:3",
+            "order": 3,
+            "title": "Resonance Energy and Stability Rules",
+            "content_text": "The resonance hybrid has lower energy than any canonical structure. The difference in energy between the actual structure and the lowest energy resonance structure is the resonance stabilisation energy. More contributing structures lead to higher resonance energy. Rules for writing resonance structures: (i) same positions of nuclei, (ii) same number of unpaired electrons. Stability increases with: more covalent bonds, all atoms having octets, less charge separation, negative charge on more electronegative atoms, and more dispersal of charge.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.7.6:4",
+            "order": 4,
+            "title": "Worked Examples on Resonance Structures",
+            "content_text": "The following problems demonstrate how to draw resonance structures and evaluate their relative stability based on structural rules.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 8.16",
+                "problem": "Write resonance structures of $CH_3COO^-$ and show the movement of electrons by curved arrows.",
+                "solution": "The structures involve the delocalization of the negative charge between the two oxygen atoms. [Diagram shows two structures where the C=O and C-O- swap positions]."
+              },
+              {
+                "label": "Problem 8.17",
+                "problem": "Write resonance structures of $CH_2=CH-CHO$. Indicate relative stability of the contributing structures.",
+                "solution": "Structure I: $CH_2=CH-CH=O$ (most stable, no charge separation, octets complete). Structure II: $^+CH_2-CH=CH-O^-$ (less stable, charge separation). Structure III: $^-CH_2-CH=CH-O^+$ (least stable, oxygen has positive charge). Stability: I > II > III."
+              },
+              {
+                "label": "Problem 8.18",
+                "problem": "Explain why the following two structures, I and II cannot be the major contributors to the real structure of $CH_3COOCH_3$. Structure I: $CH_3-C^+(O^-)-O-CH_3$; Structure II: $CH_3-C(=O)-O^+-CH_3$.",
+                "solution": "The two structures are less important contributors as they involve charge separation. Additionally, structure I contains a carbon atom with an incomplete octet."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:8:8.7.7",
+        "number": "8.7.7",
+        "title": "Resonance Effect",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:8:8.7.7:1",
+            "order": 1,
+            "title": "The Resonance Effect (R or M Effect)",
+            "content_text": "The resonance effect is defined as ‘the polarity produced in the molecule by the interaction of two $\\pi$-bonds or between a $\\pi$-bond and lone pair of electrons present on an adjacent atom’. The effect is transmitted through the chain. There are two types: Positive Resonance Effect (+R) and Negative Resonance Effect (-R).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.7.7:2",
+            "order": 2,
+            "title": "Positive Resonance Effect (+R effect)",
+            "content_text": "In this effect, the transfer of electrons is away from an atom or substituent group attached to the conjugated system. This increases electron density at certain positions in the molecule. Example: aniline. Groups showing +R effect: – halogen, –OH, –OR, –OCOR, –$NH_2$, –NHR, –$NR_2$, –NHCOR.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Positive Resonance Effect in Aniline",
+                "description": "Resonance structures of aniline showing the lone pair of nitrogen moving into the benzene ring, creating negative charges at ortho and para positions.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.7.7:3",
+            "order": 3,
+            "title": "Negative Resonance Effect (- R effect)",
+            "content_text": "This effect is observed when the transfer of electrons is towards the atom or substituent group attached to the conjugated system. Example: nitrobenzene. Groups showing – R effect: – COOH, –CHO, >C=O, – CN, –$NO_2$. The presence of alternate single and double bonds in an open chain or cyclic system is termed as a conjugated system. These systems often show abnormal behaviour. The examples are 1,3-butadiene, aniline and nitrobenzene etc. In such systems, the $\\pi$-electrons are delocalised and the system develops polarity.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Negative Resonance Effect in Nitrobenzene",
+                "description": "Resonance structures of nitrobenzene showing the $\\pi$ electrons of the benzene ring moving towards the nitro group, creating positive charges at ortho and para positions.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:8:8.7.8",
+        "number": "8.7.8",
+        "title": "Electromeric Effect (E effect)",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:8:8.7.8:1",
+            "order": 1,
+            "title": "Definition and Nature of Electromeric Effect",
+            "content_text": "It is a temporary effect. The organic compounds having a multiple bond (a double or triple bond) show this effect in the presence of an attacking reagent only. It is defined as the complete transfer of a shared pair of $\\pi$-electrons to one of the atoms joined by a multiple bond on the demand of an attacking reagent. The effect is annulled as soon as the attacking reagent is removed from the domain of the reaction. It is represented by E and the shifting of the electrons is shown by a curved arrow ($\\curvearrowright$).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.7.8:2",
+            "order": 2,
+            "title": "Positive Electromeric Effect (+E effect)",
+            "content_text": "In this effect the $\\pi$-electrons of the multiple bond are transferred to that atom to which the reagent gets attached. For example, the addition of a proton ($H^+$) to an alkene: $>C=C< + H^+ \\rightarrow >\\overset{+}{C}-C(H)<$. The electrons shift to the carbon where the $H^+$ attaches.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.7.8:3",
+            "order": 3,
+            "title": "Negative Electromeric Effect (-E effect)",
+            "content_text": "In this effect the $\\pi$-electrons of the multiple bond are transferred to that atom to which the attacking reagent does not get attached. For example, the addition of a cyanide ion ($CN^-$) to a carbonyl or multiple bond system: $>C=C< + CN^- \\rightarrow >C(CN)-\\overset{-}{C}<$. The electrons shift to the atom away from the point of attachment of the reagent.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.7.8:4",
+            "order": 4,
+            "title": "Competition between Inductive and Electromeric Effects",
+            "content_text": "When inductive and electromeric effects operate in opposite directions in a molecule, the electromeric effect predominates over the inductive effect.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:8:8.7.9",
+        "number": "8.7.9",
+        "title": "Hyperconjugation",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:8:8.7.9:1",
+            "order": 1,
+            "title": "Definition of Hyperconjugation",
+            "content_text": "Hyperconjugation is a general stabilising interaction. It involves delocalisation of $\\sigma$ electrons of C—H bond of an alkyl group directly attached to an atom of unsaturated system or to an atom with an unshared $p$ orbital. The $\\sigma$ electrons of C—H bond of the alkyl group enter into partial conjugation with the attached unsaturated system or with the unshared $p$ orbital. Hyperconjugation is a permanent effect.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.7.9:2",
+            "order": 2,
+            "title": "Mechanism in Carbocations",
+            "content_text": "To understand hyperconjugation effect, let us take an example of $CH_3 \\overset{+}{C}H_2$ (ethyl cation) in which the positively charged carbon atom has an empty $p$ orbital. One of the C-H bonds of the methyl group can align in the plane of this empty $p$ orbital and the electrons constituting the C-H bond in plane with this $p$ orbital can then be delocalised into the empty $p$ orbital as depicted in Fig. 8.4 (a). This type of overlap stabilises the carbocation because electron density from the adjacent $\\sigma$ bond helps in dispersing the positive charge.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 8.4(a)",
+                "description": "Orbital diagram showing hyperconjugation in ethyl cation. It shows the overlap of the $sp^3-1s$ $\\sigma$ bond of a C-H group with the empty $2p$ orbital of the adjacent carbocation center.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.7.9:3",
+            "order": 3,
+            "title": "Stability of Carbocations",
+            "content_text": "In general, greater the number of alkyl groups attached to a positively charged carbon atom, the greater is the hyperconjugation interaction and stabilisation of the cation. Thus, the relative stability of carbocations follows the order: $(CH_3)_3 \\overset{+}{C} > (CH_3)_2 \\overset{+}{C}H > CH_3 \\overset{+}{C}H_2 > \\overset{+}{C}H_3$. Tertiary carbocations are the most stable due to the presence of nine C-H bonds available for hyperconjugation.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 8.19",
+                "problem": "Explain why $(CH_3)_3 \\overset{+}{C}$ is more stable than $CH_3 \\overset{+}{C}H_2$ and $\\overset{+}{C}H_3$ is the least stable cation.",
+                "solution": "Hyperconjugation interaction in $(CH_3)_3 \\overset{+}{C}$ is greater than in $CH_3 \\overset{+}{C}H_2$ as the $(CH_3)_3 \\overset{+}{C}$ has nine C-H bonds. In $\\overset{+}{C}H_3$, vacant $p$ orbital is perpendicular to the plane in which C-H bonds lie; hence cannot overlap with it. Thus, $\\overset{+}{C}H_3$ lacks hyperconjugative stability."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.7.9:4",
+            "order": 4,
+            "title": "Hyperconjugation in Alkenes and No-Bond Resonance",
+            "content_text": "Hyperconjugation is also possible in alkenes and alkylarenes. Delocalisation of electrons by hyperconjugation in the case of alkene (like propene) involves the overlap of C-H $\\sigma$ bonds with the $\\pi$ system. There are various ways of looking at the hyperconjugative effect; one way is to regard the C—H bond as possessing partial ionic character due to resonance. Because there is no formal bond between the proton and the carbon in some resonance structures, hyperconjugation is also termed as 'no bond resonance'.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 8.4(b)",
+                "description": "Orbital diagram showing hyperconjugation in propene, illustrating the overlap of the methyl C-H $\\sigma$ orbital with the $\\pi$ orbital of the double bond.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:8:8.7.10",
+        "number": "8.7.10",
+        "title": "Types of Organic Reactions and Mechanisms",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:8:8.7.10:1",
+            "order": 1,
+            "title": "Classification of Organic Reactions",
+            "content_text": "Organic reactions can be classified into the following four major categories: (i) Substitution reactions, (ii) Addition reactions, (iii) Elimination reactions, and (iv) Rearrangement reactions. Detailed study of these reactions occurs in subsequent units.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:8:8.8",
+        "number": "8.8",
+        "title": "METHODS OF PURIFICATION OF ORGANIC COMPOUNDS",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:8:8.8:1",
+            "order": 1,
+            "title": "Introduction to Purification",
+            "content_text": "Once an organic compound is extracted from a natural source or synthesised in the laboratory, it is essential to purify it. Various methods used for the purification of organic compounds are based on the nature of the compound and the impurity present in it.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.8:2",
+            "order": 2,
+            "title": "Common Techniques and Purity Criteria",
+            "content_text": "The common techniques used for purification are: (i) Sublimation, (ii) Crystallisation, (iii) Distillation, (iv) Differential extraction and (v) Chromatography. The purity of a compound is ascertained by determining its melting or boiling point, as pure compounds have sharp melting and boiling points. Modern methods also use chromatographic and spectroscopic techniques.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.8:3",
+            "order": 3,
+            "title": "8.8.1 Sublimation",
+            "content_text": "On heating, some solid substances change from solid to vapour state without passing through liquid state. This principle is known as sublimation and is used to separate sublimable compounds from non-sublimable impurities.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.8:4",
+            "order": 4,
+            "title": "8.8.2 Crystallisation",
+            "content_text": "This is based on the difference in the solubilities of the compound and the impurities in a suitable solvent. The impure compound is dissolved in a solvent in which it is sparingly soluble at room temperature but appreciably soluble at higher temperature. The solution is concentrated to saturation and cooled, allowing the pure compound to crystallise out. Impurities remain in the mother liquor. If needed, activated charcoal is used to remove coloured impurities by adsorption. Repeated crystallisation is used for higher purity.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.8:5",
+            "order": 5,
+            "title": "8.8.3 Distillation (Simple Distillation)",
+            "content_text": "This method is used to separate volatile liquids from nonvolatile impurities or liquids having sufficient difference in their boiling points (e.g., Chloroform at 334 K and Aniline at 457 K). The liquid mixture is heated in a round bottom flask; the lower boiling component vaporises first, is condensed in a water-cooled condenser, and collected in a receiver.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 8.5",
+                "description": "Apparatus for simple distillation showing a round bottom flask on a sand bath, a thermometer, a Liebig condenser with water inlet/outlet, and a receiver flask.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.8:6",
+            "order": 6,
+            "title": "Fractional Distillation",
+            "content_text": "If the difference in boiling points of two liquids is not much, simple distillation cannot be used. In fractional distillation, vapours are passed through a fractionating column before condensation. The column allows for repeated condensation and vaporisation; vapours of the liquid with the higher boiling point condense earlier in the column, while the rising vapours become richer in the more volatile (lower boiling) component. By the time the vapours reach to the top of the fractionating column, these are rich in the more volatile component. Fractionating columns are available in various sizes and designs as shown in Fig.8.7. A fractionating column provides many surfaces for heat exchange between the ascending vapours and the descending condensed liquid. Some of the condensing liquid in the fractionating column obtains heat from the ascending vapours and revaporises. The vapours thus become richer in low boiling component. The vapours of low boiling component ascend to the top of the column. On reaching the top, the vapours become pure in low boiling component and pass through the condenser and the pure liquid is collected in a receiver. After a series of successive distillations, the remaining liquid in the distillation flask gets enriched in high boiling component. Each successive condensation and vaporisation unit in the fractionating column is called a theoretical plate. Commercially, columns with hundreds of plates are available. One of the technological applications of fractional distillation is to separate different fractions of crude oil in petroleum industry.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig.8.6",
+                "description": "A laboratory setup for fractional distillation showing a round bottom flask in an oil bath, a fractionating column with packing, a thermometer, a condenser with water inlet/outlet, and a receiver flask for the distilled liquid.",
+                "image_url": null
+              },
+              {
+                "label": "Fig.8.7",
+                "description": "Two types of fractionating columns: a simple packed column filled with glass beads and a bubble plate column.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.8:7",
+            "order": 7,
+            "title": "Distillation under reduced pressure",
+            "content_text": "This method is used to purify liquids having very high boiling points and those, which decompose at or below their boiling points. Such liquids are made to boil at a temperature lower than their normal boiling points by reducing the pressure on their surface. A liquid boils at a temperature at which its vapour pressure is equal to the external pressure. The pressure is reduced with the help of a water pump or vacuum pump (Fig.8.8). Glycerol can be separated from spent-lye in soap industry by using this technique.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig.8.8",
+                "description": "Setup for distillation under reduced pressure featuring a flask with a capillary to regulate air, a thermometer, a condenser, a receiver flask, a manometer to measure pressure, and a vacuum pump.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.8:8",
+            "order": 8,
+            "title": "Steam Distillation",
+            "content_text": "This technique is applied to separate substances which are steam volatile and are immiscible with water. In steam distillation, steam from a steam generator is passed through a heated flask containing the liquid to be distilled. The mixture of steam and the volatile organic compound is condensed and collected. The compound is later separated from water using a separating funnel. In steam distillation, the liquid boils when the sum of vapour pressures due to the organic liquid ($p_1$) and that due to water ($p_2$) becomes equal to the atmospheric pressure ($p$), i.e. $p = p_1 + p_2$. Since $p_1$ is lower than $p$, the organic liquid vaporises at lower temperature than its boiling point. Thus, if one of the substances in the mixture is water and the other, a water insoluble substance, then the mixture will boil close to but below, 373K. A mixture of water and the substance is obtained which can be separated by using a separating funnel. Aniline is separated by this technique from aniline – water mixture (Fig.8.9).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig.8.9",
+                "description": "Steam distillation setup showing a steam generator with a safety tube, a heated flask containing the compound to be distilled, a condenser, and a conical flask collecting the distilled liquid and water.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:8:8.8.4",
+        "number": "8.8.4",
+        "title": "Differential Extraction",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:8:8.8.4:1",
+            "order": 1,
+            "title": "Principle and Process of Differential Extraction",
+            "content_text": "When an organic compound is present in an aqueous medium, it is separated by shaking it with an organic solvent in which it is more soluble than in water. The organic solvent and the aqueous solution should be immiscible with each other so that they form two distinct layers which can be separated by a separatory funnel. The organic solvent is later removed by distillation or by evaporation to get back the compound. Differential extraction is carried out in a separatory funnel as shown in Fig. 8.10. If the organic compound is less soluble in the organic solvent, a very large quantity of solvent would be required to extract even a very small quantity of the compound. The technique of continuous extraction is employed in such cases. In this technique, the same solvent is repeatedly used for extraction of the compound.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig.8.10",
+                "description": "Differential extraction using a separatory funnel. The 'Before extraction' state shows a solvent layer above an aqueous layer containing the organic compound. The 'After extraction' state shows the organic compound has moved into the upper solvent layer.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:8:8.8.5",
+        "number": "8.8.5",
+        "title": "Chromatography",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:8:8.8.5:1",
+            "order": 1,
+            "title": "Introduction and Classification of Chromatography",
+            "content_text": "Chromatography is an important technique extensively used to separate mixtures into their components, purify compounds and also to test the purity of compounds. The name chromatography is based on the Greek word chroma, for colour since the method was first used for the separation of coloured substances found in plants. In this technique, the mixture of substances is applied onto a stationary phase, which may be a solid or a liquid. A pure solvent, a mixture of solvents, or a gas is allowed to move slowly over the stationary phase. The components of the mixture get gradually separated from one another. The moving phase is called the mobile phase. Based on the principle involved, chromatography is classified into different categories. Two of these are: (a) Adsorption chromatography, and (b) Partition chromatography.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.8.5:2",
+            "order": 2,
+            "title": "Adsorption Chromatography",
+            "content_text": "Adsorption chromatography is based on the fact that different compounds are adsorbed on an adsorbent to different degrees. Commonly used adsorbents are silica gel and alumina. When a mobile phase is allowed to move over a stationary phase (adsorbent), the components of the mixture move by varying distances over the stationary phase. Following are two main types of chromatographic techniques based on the principle of differential adsorption: (a) Column chromatography, and (b) Thin layer chromatography.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.8.5:3",
+            "order": 3,
+            "title": "Column Chromatography",
+            "content_text": "Column chromatography involves the separation of a mixture over a column of adsorbent (stationary phase) packed in a glass tube. The column is fitted with a stopcock at its lower end. The mixture to be separated is placed on the top of the adsorbent column. An appropriate eluant, which is a liquid or a mixture of liquids (mobile phase), is allowed to flow down the column slowly. Depending upon the degree to which the compounds are adsorbed, complete separation takes place. The most readily adsorbed substances are retained near the top, while others move down to various distances in the column based on their affinity for the stationary phase.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 8.11",
+                "description": "Column chromatography showing different stages of separation. A glass tube contains adsorbent (stationary phase) and glass wool at the bottom. A mixture of compounds (a+b+c) is added with solvent. As the process progresses, the components separate into distinct colored bands (a, b, and c) at different heights in the column.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.8.5:4",
+            "order": 4,
+            "title": "Thin Layer Chromatography (TLC)",
+            "content_text": "Thin layer chromatography (TLC) is a type of adsorption chromatography involving the separation of substances over a thin layer (about 0.2 mm thick) of an adsorbent like silica gel or alumina coated on a glass plate, known as a chromaplate. A solution of the mixture is applied as a small spot near one end of the plate. The plate is placed in a closed jar containing an eluant. As the eluant rises by capillary action, components move up to different distances based on their adsorption. The relative adsorption is expressed by the retardation factor ($R_f$ value):\n$$R_f = \\frac{\\text{Distance moved by the substance from base line (x)}}{\\text{Distance moved by the solvent from base line (y)}}$$\nColoured spots are visible directly, while colourless spots are detected using UV light, iodine crystals (appearing as brown spots), or specific spray reagents like ninhydrin for amino acids.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 8.12 (a)",
+                "description": "Thin layer chromatography setup showing a glass plate coated with adsorbent inside a closed jar containing solvent. A sample dot is placed on the base line.",
+                "image_url": null
+              },
+              {
+                "label": "Fig. 8.12 (b)",
+                "description": "A developed chromatogram showing the distance 'x' moved by the substance spot and distance 'y' moved by the solvent front from the base line.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.8.5:5",
+            "order": 5,
+            "title": "Partition Chromatography",
+            "content_text": "Partition chromatography is based on the continuous differential partitioning of components between stationary and mobile phases. Paper chromatography is a common example where a special chromatography paper acts as the support. Water trapped within the cellulose fibers of the paper acts as the stationary phase. A strip of paper with a sample spot is suspended in a solvent (mobile phase). As the solvent rises, components are selectively retained based on their partition coefficients. The resulting paper with separated spots is called a chromatogram. Colourless spots are visualized using UV light or spray reagents.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 8.13",
+                "description": "Paper chromatography setup showing chromatography paper suspended in a jar with solvent. Two variations are shown: one with a single spot and another showing the separation of components at different heights.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:8:8.9",
+        "number": "8.9",
+        "title": "QUALITATIVE ANALYSIS OF ORGANIC COMPOUNDS",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:8:8.9:1",
+            "order": 1,
+            "title": "Introduction to Qualitative Analysis",
+            "content_text": "Qualitative analysis involves detecting the elements present in an organic compound. While carbon and hydrogen are the primary elements, compounds may also contain oxygen, nitrogen, sulphur, halogens, and phosphorus.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.9:2",
+            "order": 2,
+            "title": "Detection of Carbon and Hydrogen",
+            "content_text": "Carbon and hydrogen are detected by heating the organic compound with copper(II) oxide ($CuO$). Carbon is oxidized to carbon dioxide ($CO_2$), which turns lime-water milky. Hydrogen is oxidized to water ($H_2O$), which turns white anhydrous copper sulphate blue.\n$$C + 2CuO \\xrightarrow{\\Delta} 2Cu + CO_2$$\n$$2H + CuO \\xrightarrow{\\Delta} Cu + H_2O$$\n$$CO_2 + Ca(OH)_2 \\rightarrow CaCO_3 \\downarrow + H_2O$$\n$$5H_2O + CuSO_4 \\rightarrow CuSO_4 \\cdot 5H_2O$$",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.9:3",
+            "order": 3,
+            "title": "Detection of Other Elements: Lassaigne’s Test",
+            "content_text": "Nitrogen, sulphur, halogens, and phosphorus are detected using Lassaigne’s test. The organic compound is fused with sodium metal to convert covalent elements into water-soluble ionic forms: sodium cyanide ($NaCN$), sodium sulphide ($Na_2S$), and sodium halides ($NaX$).\n$$Na + C + N \\xrightarrow{\\Delta} NaCN$$\n$$2Na + S \\xrightarrow{\\Delta} Na_2S$$\n$$Na + X \\xrightarrow{\\Delta} NaX \\text{ (X = Cl, Br, or I)}$$\nThe fused mass is extracted with distilled water to prepare the 'sodium fusion extract'.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.9:4",
+            "order": 4,
+            "title": "Test for Nitrogen",
+            "content_text": "The sodium fusion extract is boiled with iron(II) sulphate ($FeSO_4$) and acidified with concentrated sulphuric acid. $NaCN$ reacts with $Fe^{2+}$ to form sodium hexacyanidoferrate(II). Some $Fe^{2+}$ is oxidized to $Fe^{3+}$, which then reacts to form Prussian blue colored iron(III) hexacyanidoferrate(II).\n$$6CN^- + Fe^{2+} \\rightarrow [Fe(CN)_6]^{4-}$$\n$$3[Fe(CN)_6]^{4-} + 4Fe^{3+} \\xrightarrow{xH_2O} Fe_4[Fe(CN)_6]_3 \\cdot xH_2O$$",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.9:5",
+            "order": 5,
+            "title": "Test for Sulphur",
+            "content_text": "Sulphur can be detected by two methods:\n(a) Acidifying the extract with acetic acid and adding lead acetate, which forms a black precipitate of lead sulphide ($PbS$):\n$$S^{2-} + Pb^{2+} \\rightarrow PbS \\text{ (Black)}$$\n(b) Adding sodium nitroprusside to the extract, which produces a violet colour:\n$$S^{2-} + [Fe(CN)_5NO]^{2-} \\rightarrow [Fe(CN)_5NOS]^{4-} \\text{ (Violet)}$$\nIf both N and S are present, sodium thiocyanate ($NaSCN$) forms, giving a blood-red colour with $Fe^{3+}$. If excess sodium is used during fusion, $NaSCN$ decomposes into $NaCN$ and $Na_2S$.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.9:6",
+            "order": 6,
+            "title": "Test for Halogens",
+            "content_text": "The sodium fusion extract is acidified with nitric acid and treated with silver nitrate ($AgNO_3$).\n$$X^- + Ag^+ \\rightarrow AgX$$\n- White precipitate soluble in $NH_4OH$ indicates Chlorine ($Cl$).\n- Yellowish precipitate sparingly soluble in $NH_4OH$ indicates Bromine ($Br$).\n- Yellow precipitate insoluble in $NH_4OH$ indicates Iodine ($I$).\nIf N or S are present, the extract must be boiled with concentrated $HNO_3$ first to remove $CN^-$ and $S^{2-}$ ions, which would otherwise interfere by forming precipitates with $AgNO_3$.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.9:7",
+            "order": 7,
+            "title": "Test for Phosphorus",
+            "content_text": "The compound is heated with sodium peroxide to oxidize phosphorus to phosphate. The solution is boiled with nitric acid and treated with ammonium molybdate. A yellow precipitate of ammonium phosphomolybdate confirms phosphorus.\n$$Na_3PO_4 + 3HNO_3 \\rightarrow H_3PO_4 + 3NaNO_3$$\n$$H_3PO_4 + 12(NH_4)_2MoO_4 + 21HNO_3 \\rightarrow (NH_4)_3PO_4 \\cdot 12MoO_3 + 21NH_4NO_3 + 12H_2O$$",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:8:8.10",
+        "number": "8.10",
+        "title": "QUANTITATIVE ANALYSIS",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:8:8.10:1",
+            "order": 1,
+            "title": "Introduction to Quantitative Analysis",
+            "content_text": "Quantitative analysis determines the mass percentage of each element in a compound, which is essential for calculating empirical and molecular formulas.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.10:2",
+            "order": 2,
+            "title": "Estimation of Carbon and Hydrogen",
+            "content_text": "A known mass of an organic compound is burnt in excess oxygen and copper(II) oxide. Carbon is converted to $CO_2$ and hydrogen to $H_2O$. The masses of $CO_2$ and $H_2O$ produced are used to calculate the percentages of C and H.\n$$C_xH_y + (x + y/4) O_2 \\rightarrow x CO_2 + (y/2) H_2O$$ The mass of water produced is determined by passing the mixture through a weighed U-tube containing anhydrous calcium chloride. Carbon dioxide is absorbed in another U-tube containing concentrated solution of potassium hydroxide. These tubes are connected in series (Fig. 8.14). The increase in masses of calcium chloride and potassium hydroxide gives the amounts of water and carbon dioxide from which the percentages of carbon and hydrogen are calculated. Let the mass of organic compound be $m$ g, mass of water and carbon dioxide produced be $m_1$ and $m_2$ g respectively:\n\nPercentage of carbon = $\\frac{12 \\times m_2 \\times 100}{44 \\times m}$\n\nPercentage of hydrogen = $\\frac{2 \\times m_1 \\times 100}{18 \\times m}$",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 8.14",
+                "description": "Apparatus for the estimation of carbon and hydrogen. It shows a combustion tube containing a sample in a platinum boat and CuO pallets heated by a burner. Pure dry oxygen is passed through. The products pass through a U-tube with anhydrous $CaCl_2$ (to absorb water) and then a U-tube with KOH solution (to absorb $CO_2$). Excess $O_2$ exits at the end.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.10:3",
+            "order": 3,
+            "title": "Worked Example 8.20",
+            "content_text": "Calculation of the percentage composition of carbon and hydrogen in an organic compound based on the masses of $CO_2$ and $H_2O$ produced during complete combustion.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Problem 8.20",
+                "problem": "On complete combustion, 0.246 g of an organic compound gave 0.198g of carbon dioxide and 0.1014g of water. Determine the percentage composition of carbon and hydrogen in the compound.",
+                "solution": "Percentage of carbon = $\\frac{12 \\times 0.198 \\times 100}{44 \\times 0.246} = 21.95\\%$\nPercentage of hydrogen = $\\frac{2 \\times 0.1014 \\times 100}{18 \\times 0.246} = 4.58\\%$"
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.10:4",
+            "order": 4,
+            "title": "Nitrogen - Dumas Method",
+            "content_text": "There are two methods for estimation of nitrogen: (i) Dumas method and (ii) Kjeldahl’s method. In the Dumas method, the nitrogen containing organic compound, when heated with copper oxide in an atmosphere of carbon dioxide, yields free nitrogen in addition to carbon dioxide and water.\n$$C_xH_yN_z + (2x + y/2) CuO \\rightarrow x CO_2 + (y/2) H_2O + (z/2) N_2 + (2x + y/2) Cu$$\nTraces of nitrogen oxides formed, if any, are reduced to nitrogen by passing the gaseous mixture over a heated copper gauze. The mixture of gases so produced is collected over an aqueous solution of potassium hydroxide which absorbs carbon dioxide. Nitrogen is collected in the upper part of the graduated tube (Fig. 8.15).\n\nLet the mass of organic compound = $m$ g\nVolume of nitrogen collected = $V_1$ mL\nRoom temperature = $T_1$ K\nVolume of nitrogen at STP = $\\frac{P_1 V_1 \\times 273}{760 \\times T_1}$ (Let it be $V$ mL)\nWhere $P_1$ and $V_1$ are the pressure and volume of nitrogen. $P_1$ is obtained by the relation: $P_1 = \\text{Atmospheric pressure} - \\text{Aqueous tension}$.\nSince 22400 mL $N_2$ at STP weighs 28 g, $V$ mL $N_2$ at STP weighs = $\\frac{28 \\times V}{22400}$ g.\nPercentage of nitrogen = $\\frac{28 \\times V \\times 100}{22400 \\times m}$",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 8.15",
+                "description": "Dumas method apparatus. A furnace contains a tube with $CO_2$ inlet, CuO gauze, organic compound mixed with CuO, coarse CuO, and reduced copper gauze. The gases pass through a mercury seal into a nitrometer filled with KOH solution. Nitrogen gas collects at the top of the graduated nitrometer.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.10:5",
+            "order": 5,
+            "title": "Worked Example 8.21",
+            "content_text": "Numerical application of the Dumas method to calculate the percentage of nitrogen, including corrections for aqueous tension and conversion to STP volume.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Problem 8.21",
+                "problem": "In Dumas’ method for estimation of nitrogen, 0.3g of an organic compound gave 50mL of nitrogen collected at 300K temperature and 715mm pressure. Calculate the percentage composition of nitrogen in the compound. (Aqueous tension at 300K=15 mm)",
+                "solution": "Volume of nitrogen collected at 300K and 715mm pressure is 50 mL.\nActual pressure = $715 - 15 = 700$ mm.\nVolume of nitrogen at STP = $\\frac{273 \\times 700 \\times 50}{300 \\times 760} = 41.9$ mL.\n22,400 mL of $N_2$ at STP weighs = 28 g.\n41.9 mL of nitrogen weighs = $\\frac{28 \\times 41.9}{22400}$ g.\nPercentage of nitrogen = $\\frac{28 \\times 41.9 \\times 100}{22400 \\times 0.3} = 17.46\\%$"
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.10:6",
+            "order": 6,
+            "title": "Nitrogen - Kjeldahl's Method",
+            "content_text": "In Kjeldahl's method, the nitrogen-containing compound is heated with concentrated sulphuric acid, converting nitrogen to ammonium sulphate. The mixture is then heated with excess sodium hydroxide to liberate ammonia gas, which is absorbed in a known excess of standard sulphuric acid. The amount of ammonia is determined by back-titrating the unreacted acid with a standard alkali.\n\nChemical Reactions:\n1. $\\text{Organic compound} + H_2SO_4 \\rightarrow (NH_4)_2SO_4$\n2. $(NH_4)_2SO_4 + 2NaOH \\rightarrow Na_2SO_4 + 2NH_3 + 2H_2O$\n3. $2NH_3 + H_2SO_4 \\rightarrow (NH_4)_2SO_4$\n\nDerivation:\nLet mass of organic compound = $m$ g. Volume of $H_2SO_4$ (molarity $M$) taken = $V$ mL. Volume of $NaOH$ (molarity $M$) used for titration of excess acid = $V_1$ mL.\n$V_1$ mL of $NaOH$ ($M$) = $V_1/2$ mL of $H_2SO_4$ ($M$).\nVolume of $H_2SO_4$ ($M$) reacted with $NH_3 = (V - V_1/2)$ mL.\n$(V - V_1/2)$ mL of $H_2SO_4$ ($M$) = $2(V - V_1/2)$ mL of $NH_3$ ($M$).\n1000 mL of 1 M $NH_3$ contains 14 g of N.\nPercentage of $N = \\frac{1.4 \\times M \\times 2(V - V_1/2)}{m}$\n\nLimitations: This method is not applicable to compounds containing nitrogen in nitro and azo groups or nitrogen in a ring (e.g., pyridine), as these do not convert to ammonium sulphate under these conditions.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 8.16",
+                "description": "Kjeldahl method apparatus showing two stages: 1. Digestion: Heating the organic compound with conc. $H_2SO_4$ and $CuSO_4$ in a Kjeldahl flask. 2. Distillation: The digested contents are mixed with NaOH in a round-bottom flask with a Kjeldahl trap. Liberated ammonia is distilled through a condenser and absorbed into a flask containing a known volume of standard acid.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.10:7",
+            "order": 7,
+            "title": "Worked Example 8.22",
+            "content_text": "Calculation of nitrogen percentage using Kjeldahl's method data.\nThe final calculation for the percentage of nitrogen in the organic compound is as follows: Mass of nitrogen = $\\frac{14 \\times 20}{1000}$ g. Percentage of nitrogen = $\\frac{14 \\times 20 \\times 100}{1000 \\times 0.5} = 56.0\\%$.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Problem 8.22",
+                "problem": "During estimation of nitrogen present in an organic compound by Kjeldahl’s method, the ammonia evolved from 0.5 g of the compound in Kjeldahl’s estimation of nitrogen, neutralized 10 mL of 1 M $H_2SO_4$. Find out the percentage of nitrogen in the compound.",
+                "solution": "1 M of 10 mL $H_2SO_4 = 1M$ of 20 mL $NH_3$\n1000 mL of 1M ammonia contains 14 g nitrogen\n20 mL of 1M ammonia contains = 0.28 g. Percentage of nitrogen = (0.28 × 100) / 0.5 = 56.0%"
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.10:8",
+            "order": 8,
+            "title": "8.10.3 Halogens - Carius Method",
+            "content_text": "The Carius method is used for the estimation of halogens in an organic compound. A known mass of the organic compound is heated with fuming nitric acid in the presence of silver nitrate contained in a hard glass tube known as a Carius tube (Fig. 8.17). During this process, carbon and hydrogen present in the compound are oxidised to carbon dioxide and water. The halogen present reacts with silver nitrate to form the corresponding silver halide (AgX). The silver halide is then filtered, washed, dried, and weighed.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 8.17",
+                "description": "Apparatus for the Carius method. It consists of a long hard glass tube (Carius tube) approximately 50 cm in length and 2 cm in diameter. Inside the tube, a sealed capillary contains the organic compound, which is surrounded by fuming nitric acid (HNO3) and silver nitrate (AgNO3).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.10:9",
+            "order": 9,
+            "title": "8.10.3 Halogens - Quantitative Calculation",
+            "content_text": "To calculate the percentage of halogen, let the mass of the organic compound taken be $m$ g and the mass of silver halide (AgX) formed be $m_1$ g. Since 1 mole of AgX contains 1 mole of halogen (X), the mass of halogen in $m_1$ g of AgX is given by: $\\text{Mass of halogen} = \\frac{\\text{atomic mass of X} \\times m_1}{\\text{molecular mass of AgX}}$. The percentage of halogen is then: $\\text{Percentage of halogen} = \\frac{\\text{atomic mass of X} \\times m_1 \\times 100}{\\text{molecular mass of AgX} \\times m}$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.10:10",
+            "order": 10,
+            "title": "Worked Example 8.23",
+            "content_text": "This example illustrates the application of the Carius method for estimating the percentage of bromine in an organic compound.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 8.23",
+                "problem": "In Carius method of estimation of halogen, 0.15 g of an organic compound gave 0.12 g of AgBr. Find out the percentage of bromine in the compound.",
+                "solution": "Molar mass of AgBr = $108 + 80 = 188$ g mol$^{-1}$. 188 g AgBr contains 80 g bromine. Therefore, 0.12 g AgBr contains $\\frac{80 \\times 0.12}{188}$ g bromine. Percentage of bromine = $\\frac{80 \\times 0.12 \\times 100}{188 \\times 0.15} = 34.04\\%$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.10:11",
+            "order": 11,
+            "title": "8.10.4 Sulphur - Estimation Method",
+            "content_text": "In the estimation of sulphur, a known mass of an organic compound is heated in a Carius tube with sodium peroxide or fuming nitric acid. The sulphur present in the compound is oxidised to sulphuric acid. This is then precipitated as barium sulphate ($BaSO_4$) by adding an excess of barium chloride solution in water. The resulting precipitate is filtered, washed, dried, and weighed. The percentage of sulphur is then calculated from the mass of barium sulphate obtained.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.10:12",
+            "order": 12,
+            "title": "8.10.4 Sulphur - Quantitative Calculation",
+            "content_text": "Let the mass of the organic compound taken be $m$ g and the mass of barium sulphate formed be $m_1$ g. Since 1 mole of $BaSO_4$ ($233$ g) contains 32 g of sulphur, $m_1$ g of $BaSO_4$ contains $\\frac{32 \\times m_1}{233}$ g of sulphur. The percentage of sulphur is calculated as: $\\text{Percentage of sulphur} = \\frac{32 \\times m_1 \\times 100}{233 \\times m}$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.10:13",
+            "order": 13,
+            "title": "Worked Example 8.24",
+            "content_text": "This example demonstrates the calculation of sulphur percentage based on the mass of barium sulphate precipitate.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 8.24",
+                "problem": "In sulphur estimation, 0.157 g of an organic compound gave 0.4813 g of barium sulphate. What is the percentage of sulphur in the compound?",
+                "solution": "Molecular mass of $BaSO_4 = 137 + 32 + 64 = 233$ g. 233 g $BaSO_4$ contains 32 g sulphur. 0.4813 g $BaSO_4$ contains $\\frac{32 \\times 0.4813}{233}$ g sulphur. Percentage of sulphur = $\\frac{32 \\times 0.4813 \\times 100}{233 \\times 0.157} = 42.10\\%$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.10:14",
+            "order": 14,
+            "title": "8.10.5 Phosphorus - Estimation Method",
+            "content_text": "A known mass of an organic compound is heated with fuming nitric acid, which oxidises the phosphorus present to phosphoric acid. This can be precipitated as ammonium phosphomolybdate, $(NH_4)_3PO_4 \\cdot 12MoO_3$, by adding ammonia and ammonium molybdate. Alternatively, phosphoric acid may be precipitated as magnesium ammonium phosphate ($MgNH_4PO_4$) by adding magnesia mixture, which upon ignition yields magnesium pyrophosphate ($Mg_2P_2O_7$).",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.10:15",
+            "order": 15,
+            "title": "8.10.5 Phosphorus - Quantitative Calculation",
+            "content_text": "If phosphorus is estimated as ammonium phosphomolybdate, the percentage is: $\\text{Percentage of phosphorus} = \\frac{31 \\times m_1 \\times 100}{1877 \\times m}$, where $m_1$ is the mass of $(NH_4)_3PO_4 \\cdot 12MoO_3$ and $1877$ g is its molar mass. If estimated as $Mg_2P_2O_7$, the percentage is: $\\text{Percentage of phosphorus} = \\frac{62 \\times m_1 \\times 100}{222 \\times m}$, where $m_1$ is the mass of $Mg_2P_2O_7$ formed and $222$ u is its molar mass. The factor 62 represents the mass of two phosphorus atoms present in one molecule of $Mg_2P_2O_7$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.10:16",
+            "order": 16,
+            "title": "8.10.6 Oxygen - Estimation Methods",
+            "content_text": "The percentage of oxygen in an organic compound is usually found by difference: subtracting the sum of the percentages of all other elements from 100. However, it can be estimated directly by decomposing a definite mass of the compound by heating in a stream of nitrogen gas. The gaseous products containing oxygen are passed over red-hot coke, converting all oxygen to carbon monoxide ($CO$). This mixture is then passed through warm iodine pentoxide ($I_2O_5$), where $CO$ is oxidised to carbon dioxide ($CO_2$), producing iodine ($I_2$). The reactions are: $2C + O_2 \\xrightarrow{1373 K} 2CO$ (A) and $I_2O_5 + 5CO \\rightarrow I_2 + 5CO_2$ (B).",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.10:17",
+            "order": 17,
+            "title": "8.10.6 Oxygen - Direct Estimation Calculation",
+            "content_text": "By equating the amount of $CO$ produced in reaction (A) to the amount used in reaction (B), we find that 1 mole of oxygen ($32$ g) liberated from the compound produces 2 moles of carbon dioxide ($88$ g). Let the mass of organic compound be $m$ g and the mass of $CO_2$ produced be $m_1$ g. The percentage of oxygen is: $\\text{Percentage of oxygen} = \\frac{32 \\times m_1 \\times 100}{88 \\times m}$. The percentage can also be derived from the amount of iodine produced.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:8.10:18",
+            "order": 18,
+            "title": "Modern Elemental Analysis",
+            "content_text": "Presently, the estimation of elements (C, H, N) in an organic compound is carried out using microquantities of substances and automatic experimental techniques. An apparatus known as a CHN elemental analyser is used, which requires only 1-3 mg of the substance and displays the results on a screen within a short time.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:8:SUMMARY",
+        "number": "SUMMARY",
+        "title": "Summary of Organic Chemistry Principles",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:8:SUMMARY:1",
+            "order": 1,
+            "title": "Structure, Bonding and Shapes",
+            "content_text": "Organic compounds are formed due to covalent bonding. Their nature is described using the orbitals hybridisation concept, where carbon can have $sp^3$, $sp^2$, and $sp$ hybridised orbitals. These lead to tetrahedral (methane), planar (ethene), and linear (ethyne) shapes. Single bonds are sigma ($\\sigma$) bonds, while multiple bonds involve pi ($\\pi$) bonds formed by lateral overlap of unhybridised p orbitals. 3D representations use wedge and dash formulas.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:SUMMARY:2",
+            "order": 2,
+            "title": "Classification and Nomenclature",
+            "content_text": "Organic compounds are classified by structure or functional groups. A functional group is an atom or group of atoms that determines the physical and chemical properties of the compound. Systematic naming follows rules laid down by the International Union of Pure and Applied Chemistry (IUPAC), correlating names with structure so the reader can deduce the formula.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:SUMMARY:3",
+            "order": 3,
+            "title": "Reaction Mechanisms and Displacement Effects",
+            "content_text": "Mechanisms involve the breaking and making of covalent bonds, which can occur in heterolytic (forming carbocations or carbanions) or homolytic (forming free radicals) fashion. Species are classified as nucleophiles (electron pair donors) or electrophiles (electron pair acceptors). Electron displacement effects like inductive, resonance, electromeric, and hyperconjugation effects polarise bonds. Reactions are broadly classified as substitution, addition, elimination, and rearrangement.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:SUMMARY:4",
+            "order": 4,
+            "title": "Purification and Qualitative Analysis",
+            "content_text": "Purification methods include sublimation, distillation, and differential extraction based on physical property differences. Chromatography is a versatile technique for separation and identification based on differential adsorption or partitioning. Qualitative analysis involves detecting elements like nitrogen, sulphur, and halogens, often using Lassaigne's test.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:8:SUMMARY:5",
+            "order": 5,
+            "title": "Quantitative Analysis Summary",
+            "content_text": "Quantitative analysis determines the elemental composition. Carbon and hydrogen are estimated by measuring $CO_2$ and $H_2O$ produced. Nitrogen is estimated by Dumas or Kjeldahl's method. Halogens are estimated by the Carius method, and sulphur and phosphorus are estimated by oxidising them to sulphuric and phosphoric acids, respectively. Oxygen is usually determined by difference.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:chemistry:11:8:ex:1",
+          "number": 1,
+          "problem": "What are hybridisation states of each carbon atom in the following compounds? $CH_2=C=O$, $CH_3CH=CH_2$, $(CH_3)_2CO$, $CH_2=CHCN$, $C_6H_6$",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:8:ex:2",
+          "number": 2,
+          "problem": "Indicate the $\\sigma$ and $\\pi$ bonds in the following molecules: $C_6H_6$, $C_6H_{12}$, $CH_2Cl_2$, $CH_2=C=CH_2$, $CH_3NO_2$, $HCONHCH_3$",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:8:ex:3",
+          "number": 3,
+          "problem": "Write bond line formulas for: Isopropyl alcohol, 2,3-Dimethylbutanal, Heptan-4-one.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:8:ex:4",
+          "number": 4,
+          "problem": "Give the IUPAC names of the following compounds: (a) (b) (c) (d) (e) (f) $Cl_2CHCH_2OH$",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:8:ex:5",
+          "number": 5,
+          "problem": "Which of the following represents the correct IUPAC name for the compounds concerned? (a) 2,2-Dimethylpentane or 2-Dimethylpentane (b) 2,4,7-Trimethyloctane or 2,5,7-Trimethyloctane (c) 2-Chloro-4-methylpentane or 4-Chloro-2-methylpentane (d) But-3-yn-1-ol or But-4-ol-1-yne.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:8:ex:6",
+          "number": 6,
+          "problem": "Draw formulas for the first five members of each homologous series beginning with the following compounds. (a) H-COOH (b) $CH_3COCH_3$ (c) $H-CH=CH_2$",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:8:ex:7",
+          "number": 7,
+          "problem": "Give condensed and bond line structural formulas and identify the functional group(s) present, if any, for: (a) 2,2,4-Trimethylpentane (b) 2-Hydroxy-1,2,3-propanetricarboxylic acid (c) Hexanedial",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:8:ex:8",
+          "number": 8,
+          "problem": "Identify the functional groups in the following compounds (a) $CHO$ (b) (c) (d) $OCH_2CH_2N(C_2H_5)_2$ (e) (f) $CH_3CHO$",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:8:ex:9",
+          "number": 9,
+          "problem": "Which of the two: $O_2NCH_2CH_2O^-$ or $CH_3CH_2O^-$ is expected to be more stable and why?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:8:ex:10",
+          "number": 10,
+          "problem": "Explain why alkyl groups act as electron donors when attached to a $\\pi$ system.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:8:ex:11",
+          "number": 11,
+          "problem": "Draw the resonance structures for the following compounds. Show the electron shift using curved-arrow notation. (a) $C_6H_5OH$ (b) $C_6H_5NO_2$ (c) $CH_3CH=CHCHO$ (d) $C_6H_5$-$CHO$ (e) $C_6H_5$-$CH_2^+$ (f) $CH_3CH=CH$-$CH_2^+$",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:8:ex:12",
+          "number": 12,
+          "problem": "What are electrophiles and nucleophiles? Explain with examples.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:8:ex:13",
+          "number": 13,
+          "problem": "Identify the reagents shown in bold in the following equations as nucleophiles or electrophiles: (a) $CH_3COOH + HO^- \\rightarrow CH_3COO^- + H_2O$ (b) $CH_3COCH_3 + CN^- \\rightarrow (CH_3)_2C(CN)(OH)$ (c) $C_6H_6 + CH_3CO^+ \\rightarrow C_6H_5COCH_3$",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:8:ex:14",
+          "number": 14,
+          "problem": "Classify the following reactions in one of the reaction type studied in this unit. (a) $CH_3CH_2Br + HS^- \\rightarrow CH_3CH_2SH + Br^-$ (b) $(CH_3)_2C=CH_2 + HCl \\rightarrow (CH_3)_2ClC$-$CH_3$ (c) $CH_3CH_2Br + HO^- \\rightarrow CH_2=CH_2 + H_2O + Br^-$ (d) $(CH_3)_3C$-$CH_2OH + HBr \\rightarrow (CH_3)_2CBrCH_2CH_3 + H_2O$",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:8:ex:15",
+          "number": 15,
+          "problem": "What is the relationship between the members of following pairs of structures? Are they structural or geometrical isomers or resonance contributors? (a) $H_2C=C^+H$-$CH_2^-$ and $^-H_2C$-$CH=CH_2^+$ (b) $H_2C=C=CH_2$ and $H_2C$-$C \\equiv CH$ (c) $H_2C=C=O$ and $H_2C$-$C \\equiv O^+$",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:8:ex:16",
+          "number": 16,
+          "problem": "For the following bond cleavages, use curved-arrows to show the electron flow and classify each as homolysis or heterolysis. Identify reactive intermediate produced as free radical, carbocation and carbanion. (a) $CH_3O$-$OCH_3 \\rightarrow CH_3O^\\bullet + ^\\bullet OCH_3$ (b) $(CH_3)_3CO^- + H_2O \\rightarrow (CH_3)_3COH + ^-OH$ (c) Bromobenzene formation (d) $CH_2=CH_2 + H^+ \\rightarrow CH_3$-$CH_2^+$",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:8:ex:17",
+          "number": 17,
+          "problem": "Explain the terms Inductive and Electromeric effects. Which electron displacement effect explains the following correct orders of acidity of the carboxylic acids? (a) $Cl_3CCOOH > Cl_2CHCOOH > ClCH_2COOH$ (b) $CH_3CH_2COOH > (CH_3)_2CHCOOH > (CH_3)_3C \\cdot COOH$",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:8:ex:18",
+          "number": 18,
+          "problem": "Give a brief description of the principles of the following techniques taking an example in each case. (a) Crystallisation (b) Distillation (c) Chromatography",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:8:ex:19",
+          "number": 19,
+          "problem": "Describe the method, which can be used to separate two compounds with different solubilities in a solvent S.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:8:ex:20",
+          "number": 20,
+          "problem": "What is the difference between distillation, distillation under reduced pressure and steam distillation?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:8:ex:21",
+          "number": 21,
+          "problem": "Discuss the chemistry of Lassaigne's test.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:8:ex:22",
+          "number": 22,
+          "problem": "Differentiate between the principle of estimation of nitrogen in an organic compound by (i) Dumas method and (ii) Kjeldahl's method.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:8:ex:23",
+          "number": 23,
+          "problem": "Discuss the principle of estimation of halogens, sulphur and phosphorus present in an organic compound.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:8:ex:24",
+          "number": 24,
+          "problem": "Explain the principle of paper chromatography.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:8:ex:25",
+          "number": 25,
+          "problem": "Why is nitric acid added to sodium extract before adding silver nitrate for testing halogens?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:8:ex:26",
+          "number": 26,
+          "problem": "Explain the reason for the fusion of an organic compound with metallic sodium for testing nitrogen, sulphur and halogens.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:8:ex:27",
+          "number": 27,
+          "problem": "Name a suitable technique of separation of the components from a mixture of calcium sulphate and camphor.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:8:ex:28",
+          "number": 28,
+          "problem": "Explain, why an organic liquid vaporises at a temperature below its boiling point in its steam distillation?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:8:ex:29",
+          "number": 29,
+          "problem": "Will $CCl_4$ give white precipitate of $AgCl$ on heating it with silver nitrate? Give reason for your answer.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:8:ex:30",
+          "number": 30,
+          "problem": "Why is a solution of potassium hydroxide used to absorb carbon dioxide evolved during the estimation of carbon present in an organic compound?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:8:ex:31",
+          "number": 31,
+          "problem": "Why is it necessary to use acetic acid and not sulphuric acid for acidification of sodium extract for testing sulphur by lead acetate test?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:8:ex:32",
+          "number": 32,
+          "problem": "An organic compound contains 69% carbon and 4.8% hydrogen, the remainder being oxygen. Calculate the masses of carbon dioxide and water produced when 0.20 g of this substance is subjected to complete combustion.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:8:ex:33",
+          "number": 33,
+          "problem": "A sample of 0.50 g of an organic compound was treated according to Kjeldahl's method. The ammonia evolved was absorbed in 50 ml of 0.5 M $H_2SO_4$. The residual acid required 60 mL of 0.5 M solution of NaOH for neutralisation. Find the percentage composition of nitrogen in the compound.",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:8:ex:34",
+          "number": 34,
+          "problem": "0.3780 g of an organic chloro compound gave 0.5740 g of silver chloride in Carius estimation. Calculate the percentage of chlorine present in the compound.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:8:ex:35",
+          "number": 35,
+          "problem": "In the estimation of sulphur by Carius method, 0.468 g of an organic sulphur compound afforded 0.668 g of barium sulphate. Find out the percentage of sulphur in the given compound.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:8:ex:36",
+          "number": 36,
+          "problem": "In the organic compound $CH_3$-$CH$-$CH_2$-$C \\equiv CH$, the pair of hybridised orbitals involved in the formation of $C_2$-$C_3$ bond is: (a) $sp$-$sp^2$ (b) $sp$-$sp^3$ (c) $sp^2$-$sp^3$ (d) $sp^3$-$sp^3$",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "mcq"
+        },
+        {
+          "id": "ncert:chemistry:11:8:ex:37",
+          "number": 37,
+          "problem": "In the Lassaigne's test for nitrogen in an organic compound, the Prussian blue colour is obtained due to the formation of: (a) $Na_4[Fe(CN)_6]$ (b) $Fe_4[Fe(CN)_6]_3$ (c) $Fe_2[Fe(CN)_6]$ (d) $Fe_3[Fe(CN)_6]_4$",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "mcq"
+        },
+        {
+          "id": "ncert:chemistry:11:8:ex:38",
+          "number": 38,
+          "problem": "Which of the following carbocation is most stable? (a) $(CH_3)_3C^+$ (b) $(CH_3)_3C^-$ (c) $(CH_3)_2CH_2^+$ (d) $(CH_3)_2CH_2^-$",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "mcq"
+        },
+        {
+          "id": "ncert:chemistry:11:8:ex:39",
+          "number": 39,
+          "problem": "The best and latest technique for isolation, purification and separation of organic compounds is: (a) Crystallisation (b) Distillation (c) Sublimation (d) Chromatography",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "mcq"
+        },
+        {
+          "id": "ncert:chemistry:11:8:ex:40",
+          "number": 40,
+          "problem": "The reaction: $CH_3CH_2I + KOH(aq) \\rightarrow CH_3CH_2OH + KI$ is classified as: (a) electrophilic substitution (b) nucleophilic substitution (c) elimination (d) addition.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "mcq"
+        }
+      ]
+    }
+  }
+}

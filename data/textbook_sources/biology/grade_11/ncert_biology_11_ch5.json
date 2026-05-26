@@ -1,0 +1,778 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_biology_11_ch5.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:biology:11:5",
+  "curriculum": "ncert",
+  "subject": "biology",
+  "grade": 11,
+  "textbook_name": "Biology",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:biology:11:5",
+    "number": 5,
+    "title": "Morphology of Flowering Plants",
+    "summary": "This chapter on the morphology of flowering plants explores the external structures and their variations in angiosperms. It begins by establishing the root and shoot systems as the fundamental divisions of a plant, delving into the types of root systems (tap, fibrous, adventitious) and their modifications. The chapter then examines the stem, highlighting its characteristics, functions, and modifications.\n\nLeaves are discussed in detail, covering their parts (leaf base, petiole, lamina), venation (reticulate, parallel), types (simple, compound), and arrangement on the stem (phyllotaxy). The inflorescence, or arrangement of flowers, is introduced, differentiating between racemose and cymose types.\n\nThe flower, being the reproductive unit, is thoroughly explained, including its structure (calyx, corolla, androecium, gynoecium), symmetry, and the arrangement of floral parts relative to the ovary. The chapter also covers fruit development from the ovary and seed structure, differentiating between dicot and monocot seeds.\n\nFinally, the chapter introduces a semi-technical description of flowering plants using floral diagrams and formulas, exemplified by the Solanaceae family. The chapter connects the sections by progressively building from basic plant parts to complex reproductive structures, providing a framework for plant identification and classification. Understanding plant morphology is crucial for agriculture, horticulture, and botany, enabling informed decisions about plant breeding, cultivation, and conservation.",
+    "sections": [
+      {
+        "id": "ncert:biology:11:5:5",
+        "number": "5",
+        "title": "Morphology of Flowering Plants",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:5:5:1",
+            "order": 1,
+            "title": "Introduction to Plant Morphology",
+            "content_text": "Higher plants, particularly angiosperms, exhibit a vast diversity in external structure, yet they share common features such as roots, stems, leaves, flowers, and fruits. Morphology refers to the study of these external structures. For a successful understanding and classification of higher plants, it is necessary to use standard technical terms and definitions. Additionally, one must consider the variations in different plant parts that arise as adaptations to their environment, such as adaptations for various habitats, protection, climbing, and storage. The chapter covers the following topics: 5.1 The Root, 5.2 The Stem, 5.3 The Leaf, 5.4 The Inflorescence, 5.5 The Flower, 5.6 The Fruit, 5.7 The Seed, 5.8 Semi-technical Description of a Typical Flowering Plant, and 5.9 Description of Some Important Families.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:5:5:2",
+            "order": 2,
+            "title": "The Root and Shoot Systems",
+            "content_text": "A typical flowering plant is divided into two main systems based on its position relative to the ground. The underground part of the plant is known as the root system, while the portion that grows above the ground is called the shoot system (Figure 5.1).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:5:5.1",
+        "number": "5.1",
+        "title": "The Root",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:5:5.1:1",
+            "order": 1,
+            "title": "Development of the Root System in Dicots",
+            "content_text": "In the majority of dicotyledonous plants, the root system develops from the direct elongation of the radicle. This elongation leads to the formation of the primary root, which grows inside the soil. The primary root gives rise to lateral roots of several orders, which are categorized as secondary, tertiary, and so on. The primary roots and its branches constitute the tap root system, as seen in the mustard plant (Figure 5.2a).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 5.1",
+                "description": "A diagram of a flowering plant showing the shoot system (flower, fruit, stem, leaf, node, internode, bud) and the root system (primary root, secondary root).",
+                "image_url": null
+              },
+              {
+                "label": "Figure 5.2",
+                "description": "Three types of root systems: (a) Tap root system with a main root and lateral branches, (b) Fibrous root system with a cluster of roots originating from the stem base, and (c) Adventitious roots arising from the stem or branches.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:5:5.1:2",
+            "order": 2,
+            "title": "Fibrous Root System",
+            "content_text": "In monocotyledonous plants, the primary root is short lived and is replaced by a large number of roots. These roots originate from the base of the stem and constitute the fibrous root system, as seen in the wheat plant (Figure 5.2b).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:5:5.1:3",
+            "order": 3,
+            "title": "Adventitious Roots",
+            "content_text": "In some plants, like grass, Monstera and the banyan tree, roots arise from parts of the plant other than the radicle and are called adventitious roots (Figure 5.2c).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:5:5.1:4",
+            "order": 4,
+            "title": "Functions of the Root System",
+            "content_text": "The main functions of the root system are absorption of water and minerals from the soil, providing a proper anchorage to the plant parts, storing reserve food material and synthesis of plant growth regulators.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:5:5.1.1",
+        "number": "5.1.1",
+        "title": "Regions of the Root",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:5:5.1.1:1",
+            "order": 1,
+            "title": "Root Cap",
+            "content_text": "The root is covered at the apex by a thimble-like structure called the root cap (Figure 5.3). It protects the tender apex of the root as it makes its way through the soil.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 5.3",
+                "description": "A longitudinal section of a root tip showing the root cap at the apex, followed by the region of meristematic activity, the region of elongation, and the region of maturation with root hairs.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:5:5.1.1:2",
+            "order": 2,
+            "title": "Region of Meristematic Activity",
+            "content_text": "A few millimetres above the root cap is the region of meristematic activity. The cells of this region are very small, thin-walled and with dense protoplasm. They divide repeatedly.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:5:5.1.1:3",
+            "order": 3,
+            "title": "Region of Elongation",
+            "content_text": "The cells proximal to the region of meristematic activity undergo rapid elongation and enlargement and are responsible for the growth of the root in length. This region is called the region of elongation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:5:5.1.1:4",
+            "order": 4,
+            "title": "Region of Maturation and Root Hairs",
+            "content_text": "The cells of the elongation zone gradually differentiate and mature. Hence, this zone, proximal to region of elongation, is called the region of maturation. From this region some of the epidermal cells form very fine and delicate, thread-like structures called root hairs. These root hairs absorb water and minerals from the soil.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:5:5.2",
+        "number": "5.2",
+        "title": "The Stem",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:5:5.2:1",
+            "order": 1,
+            "title": "Characteristics and Origin",
+            "content_text": "The stem is the ascending part of the axis bearing branches, leaves, flowers and fruits. It develops from the plumule of the embryo of a germinating seed. Stem is generally green when young and later often become woody and dark brown.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:5:5.2:2",
+            "order": 2,
+            "title": "Nodes, Internodes, and Buds",
+            "content_text": "The stem bears nodes and internodes. The region of the stem where leaves are born are called nodes while internodes are the portions between two nodes. The stem bears buds, which may be terminal or axillary.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:5:5.2:3",
+            "order": 3,
+            "title": "Functions of the Stem",
+            "content_text": "The main function of the stem is spreading out branches bearing leaves, flowers and fruits. It conducts water, minerals and photosynthates. Some stems perform the function of storage of food, support, protection and of vegetative propagation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:5:5.3",
+        "number": "5.3",
+        "title": "The Leaf",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:5:5.3:1",
+            "order": 1,
+            "title": "Characteristics and Origin",
+            "content_text": "The leaf is a lateral, generally flattened structure borne on the stem. It develops at the node and bears a bud in its axil. The axillary bud later develops into a branch. Leaves originate from shoot apical meristems and are arranged in an acropetal order. They are the most important vegetative organs for photosynthesis.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:5:5.3:2",
+            "order": 2,
+            "title": "Parts of a Leaf: Leaf Base",
+            "content_text": "A typical leaf consists of three main parts: leaf base, petiole and lamina (Figure 5.4 a). The leaf is attached to the stem by the leaf base and may bear two lateral small leaf like structures called stipules. In monocotyledonous plants, the leaf base expands into a sheath covering the stem partially or wholly. In some leguminous plants the leafbase may become swollen, which is called the pulvinus.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 5.4",
+                "description": "Structure and venation of a leaf: (a) Parts of a leaf including lamina, petiole, leaf base, stipule, and axillary bud; (b) Reticulate venation showing a network of veins; (c) Parallel venation showing veins running parallel to each other.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:5:5.3:3",
+            "order": 3,
+            "title": "Parts of a Leaf: Petiole and Lamina",
+            "content_text": "The petiole help hold the blade to light. Long thin flexible petioles allow leaf blades to flutter in wind, thereby cooling the leaf and bringing fresh air to leaf surface. The lamina or the leaf blade is the green expanded part of the leaf with veins and veinlets. There is, usually, a middle prominent vein, which is known as the midrib. Veins provide rigidity to the leaf blade and act as channels of transport for water, minerals and food materials. The shape, margin, apex, surface and extent of incision of lamina varies in different leaves.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:5:5.3.1",
+        "number": "5.3.1",
+        "title": "Venation",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:5:5.3.1:1",
+            "order": 1,
+            "title": "Definition and Types",
+            "content_text": "The arrangement of veins and the veinlets in the lamina of leaf is termed as venation. When the veinlets form a network, the venation is termed as reticulate (Figure 5.4 b). When the veins run parallel to each other within a lamina, the venation is termed as parallel (Figure 5.4 c). Leaves of dicotyledonous plants generally possess reticulate venation, while parallel venation is the characteristic of most monocotyledonous.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:5:5.3.2",
+        "number": "5.3.2",
+        "title": "Types of Leaves",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:5:5.3.2:1",
+            "order": 1,
+            "title": "Simple and Compound Leaves",
+            "content_text": "A leaf is said to be simple, when its lamina is entire or when incised, the incisions do not touch the midrib. When the incisions of the lamina reach up to the midrib breaking it into a number of leaflets, the leaf is called compound. A bud is present in the axil of petiole in both simple and compound leaves, but not in the axil of leaflets of the compound leaf.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:5:5.3.2:2",
+            "order": 2,
+            "title": "Types of Compound Leaves",
+            "content_text": "The compound leaves may be of two types (Figure 5.5). In a pinnately compound leaf a In a pinnately compound leaf, a number of leaflets are present on a common axis, known as the rachis. This rachis represents the midrib of the leaf. A classic example of this leaf type is found in the neem tree.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 5.5",
+                "description": "Types of compound leaves: (a) Neem (pinnately compound leaf) where leaflets are attached to a common axis called the rachis; (b) Silk Cotton (palmately compound leaf) where leaflets are attached at a single point at the tip of the petiole.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:5:5.3.2:3",
+            "order": 3,
+            "title": "Palmately Compound Leaves",
+            "content_text": "In palmately compound leaves, the leaflets are not arranged along an axis but are instead attached at a single common point. This point is typically the tip of the petiole. An example of a plant with palmately compound leaves is the silk cotton tree.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:5:5.3.3",
+        "number": "5.3.3",
+        "title": "Phyllotaxy",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:5:5.3.3:1",
+            "order": 1,
+            "title": "Definition and Types of Phyllotaxy",
+            "content_text": "Phyllotaxy refers to the specific pattern of arrangement of leaves on the stem or branch of a plant. This arrangement is generally categorized into three primary types: alternate, opposite, and whorled. In the alternate type, a single leaf arises at each node in an alternating fashion; examples include the china rose, mustard, and sunflower. In the opposite type, a pair of leaves arises at every node and they lie directly opposite to each other, as seen in Calotropis and guava plants. In the whorled type, more than two leaves arise at a single node to form a circle or whorl, as observed in Alstonia.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 5.6",
+                "description": "Different types of phyllotaxy: (a) Alternate arrangement in China rose, (b) Opposite arrangement in Guava, and (c) Whorled arrangement in Alstonia.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:5:5.4",
+        "number": "5.4",
+        "title": "The Inflorescence",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:5:5.4:1",
+            "order": 1,
+            "title": "The Nature of a Flower",
+            "content_text": "A flower is fundamentally a modified shoot. In this modification, the shoot apical meristem transforms into a floral meristem. During this transition, the internodes do not elongate, causing the axis to become condensed. The apex then produces various types of floral appendages laterally at successive nodes instead of leaves. When a shoot tip transforms into a single flower, it is described as solitary.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:5:5.4:2",
+            "order": 2,
+            "title": "Types of Inflorescence",
+            "content_text": "The arrangement of flowers on the floral axis is termed as inflorescence. There are two major types based on whether the apex continues to grow or develops into a flower: 1. Racemose: The main axis continues to grow indefinitely, and flowers are borne laterally in an acropetal succession (younger flowers at the top, older at the base). 2. Cymose: The main axis terminates in a flower, which limits its growth. In this type, flowers are borne in a basipetal order (older flowers at the top, younger at the base).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 5.7",
+                "description": "A plant showing Racemose inflorescence where the main axis continues growth and flowers are arranged laterally.",
+                "image_url": null
+              },
+              {
+                "label": "Figure 5.8",
+                "description": "A diagram of Cymose inflorescence where the main axis ends in a flower.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:5:5.5",
+        "number": "5.5",
+        "title": "The Flower",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:5:5.5:1",
+            "order": 1,
+            "title": "Floral Whorls and Structure",
+            "content_text": "The flower is the reproductive unit in angiosperms, specialized for sexual reproduction. A typical flower consists of four different kinds of whorls arranged successively on the swollen end of the stalk (pedicel), which is called the thalamus or receptacle. These whorls are: 1. Calyx (accessory organ), 2. Corolla (accessory organ), 3. Androecium (reproductive organ), and 4. Gynoecium (reproductive organ). In some flowers like lily, the calyx and corolla are not distinct and are collectively termed the perianth.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:5:5.5:2",
+            "order": 2,
+            "title": "Sexuality and Symmetry of Flowers",
+            "content_text": "A flower is bisexual if it contains both androecium and gynoecium. It is unisexual if it contains only stamens or only carpels. In terms of symmetry, flowers are: 1. Actinomorphic (radial symmetry): Can be divided into two equal radial halves by any radial plane passing through the center (e.g., mustard, datura, chilli). 2. Zygomorphic (bilateral symmetry): Can be divided into two similar halves only in one particular vertical plane (e.g., pea, gulmohur, bean, Cassia). 3. Asymmetric (irregular): Cannot be divided into two similar halves by any vertical plane passing through the center (e.g., canna).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:5:5.5:3",
+            "order": 3,
+            "title": "Merous Condition and Bracts",
+            "content_text": "Flowers can be classified based on the number of floral appendages: trimerous (multiples of 3), tetramerous (multiples of 4), or pentamerous (multiples of 5). Additionally, flowers with reduced leaves found at the base of the pedicel are called bracteate, while those without them are called ebracteate.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:5:5.5:4",
+            "order": 4,
+            "title": "Position of Floral Parts on Thalamus",
+            "content_text": "Based on the position of the calyx, corolla, and androecium relative to the ovary on the thalamus, flowers are described as: 1. Hypogynous: The gynoecium occupies the highest position while other parts are situated below it. The ovary is said to be superior (e.g., mustard, china rose, brinjal). 2. Perigynous: The gynoecium is situated in the center and other parts are located on the rim of the thalamus at almost the same level. The ovary is said to be half inferior (e.g., plum, rose, peach). 3. Epigynous: The margin of the thalamus grows upward enclosing the ovary completely and getting fused with it; other parts arise above the ovary. The ovary is said to be inferior (e.g., guava, cucumber, ray florets of sunflower).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 5.9",
+                "description": "Position of floral parts on thalamus: (a) Hypogynous showing superior ovary, (b) and (c) Perigynous showing half-inferior ovary, and (d) Epigynous showing inferior ovary.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:5:5.5.1",
+        "number": "5.5.1",
+        "title": "Parts of a Flower",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:5:5.5.1:1",
+            "order": 1,
+            "title": "Calyx and Corolla",
+            "content_text": "The calyx is the outermost whorl, composed of sepals. Sepals are generally green and leaf-like, protecting the flower in the bud stage. The calyx can be gamosepalous (sepals united) or polysepalous (sepals free). The corolla is composed of petals, which are usually brightly colored to attract insects for pollination. Like the calyx, the corolla can be gamopetalous (petals united) or polypetalous (petals free). Corolla shapes vary and can be tubular, bell-shaped, funnel-shaped, or wheel-shaped.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 5.10",
+                "description": "Exploded view of a flower showing its parts: Calyx, Corolla, Androecium, and Gynoecium.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:5:5.5.1:2",
+            "order": 2,
+            "title": "Aestivation",
+            "content_text": "Aestivation is the mode of arrangement of sepals or petals in a floral bud with respect to the other members of the same whorl. The main types of aestivation are valvate, twisted, imbricate and vexillary (Figure 5.11). Aestivation is the mode of arrangement of sepals or petals in a floral bud with respect to the other members of the same whorl. The main types of aestivation are:\n1. Valvate: When sepals or petals in a whorl just touch one another at the margin, without overlapping, as in Calotropis.\n2. Twisted: If one margin of the appendage overlaps that of the next one and so on, as seen in china rose, lady’s finger, and cotton.\n3. Imbricate: If the margins of sepals or petals overlap one another but not in any particular direction, as in Cassia and gulmohur.\n4. Vexillary (or Papilionaceous): Characteristic of pea and bean flowers, where there are five petals. The largest petal (standard) overlaps the two lateral petals (wings), which in turn overlap the two smallest anterior petals (keel).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 5.11",
+                "description": "Types of aestivation in corolla: (a) Valvate, where petals meet at the edges without overlapping; (b) Twisted, where each petal overlaps the next in a regular pattern; (c) Imbricate, where petals overlap irregularly; (d) Vexillary, showing the large standard petal, two wings, and two fused keel petals.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:5:5.5.1:3",
+            "order": 3,
+            "title": "Androecium",
+            "content_text": "Androecium is composed of stamens, representing the male reproductive organ. Each stamen consists of a stalk or a filament and an anther. Each anther is usually bilobed, and each lobe has two chambers called pollen-sacs, where pollen grains are produced. A sterile stamen is called a staminode. Stamens of a flower may be united with other members such as petals or among themselves. When stamens are attached to the petals, they are epipetalous as in brinjal, or epiphyllous when attached to the perianth as in the flowers of lily. The stamens in a flower may either remain free (polyandrous) or may be united in varying degrees. The stamens may be united into one bunch or one bundle (monoadelphous) as in china rose, or two bundles (diadelphous) as in pea, or into more than two bundles (polyadelphous) as in citrus. There may be a variation in the length of filaments within a flower, as in Salvia and mustard.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:5:5.5.1:4",
+            "order": 4,
+            "title": "Gynoecium",
+            "content_text": "Gynoecium is the female reproductive part of the flower and is made up of one or more carpels. A carpel consists of three parts namely stigma, style and ovary. Ovary is the enlarged basal part, on which lies the elongated tube, the style. The style connects the ovary to the stigma. The stigma is usually at the tip of the style and is the receptive surface for pollen grains. Each ovary bears one or more ovules attached to a flattened, cushion-like placenta. When more than one carpel is present, they may be free (as in lotus and rose) and are called apocarpous. They are termed syncarpous when carpels are fused, as in mustard and tomato. After fertilisation, the ovules develop into seeds and the ovary matures into a fruit.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:5:5.5.1:5",
+            "order": 5,
+            "title": "Placentation",
+            "content_text": "Placentation is the arrangement of ovules within the ovary. The main types of placentation are:\n- Marginal: The placenta forms a ridge along the ventral suture of the ovary and the ovules are borne on this ridge forming two rows, as in pea.\n- Axile: When the placenta is axial and the ovules are attached to it in a multilocular ovary, as in china rose, tomato and lemon.\n- Parietal: The ovules develop on the inner wall of the ovary or on peripheral part. Ovary is one-chambered but it becomes two-chambered due to the formation of the false septum, e.g., mustard and Argemone.\n- Free central: When the ovules are borne on central axis and septa are absent, as in Dianthus and Primrose.\n- Basal: The placenta develops at the base of ovary and a single ovule is attached to it, as in sunflower, marigold.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 5.12",
+                "description": "Types of placentation: (a) Marginal, showing ovules along a suture; (b) Axile, showing ovules in a central axis of a partitioned ovary; (c) Parietal, showing ovules on the outer wall; (d) Free central, showing ovules on a central column without partitions; (e) Basal, showing a single ovule at the base.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:5:5.6",
+        "number": "5.6",
+        "title": "The Fruit",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:5:5.6:1",
+            "order": 1,
+            "title": "General Characteristics and Structure",
+            "content_text": "The fruit is a characteristic feature of the flowering plants. It is a mature or ripened ovary, developed after fertilisation. If a fruit is formed without fertilisation of the ovary, it is called a parthenocarpic fruit. Generally, the fruit consists of a wall or pericarp and seeds. The pericarp may be dry or fleshy. When pericarp is thick and fleshy, it is differentiated into the outer epicarp, the middle mesocarp and the inner endocarp.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:5:5.6:2",
+            "order": 2,
+            "title": "The Drupe",
+            "content_text": "In mango and coconut, the fruit is known as a drupe (Figure 5.13). They develop from monocarpellary superior ovaries and are one seeded. In mango the pericarp is well differentiated into an outer thin epicarp, a middle fleshy edible mesocarp and an inner stony hard endocarp. In coconut which is also a drupe, the mesocarp is fibrous.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 5.13",
+                "description": "Parts of a fruit: (a) Mango, showing the thin epicarp, thick fleshy mesocarp, and the seed enclosed in a stony endocarp; (b) Coconut, showing the fibrous mesocarp and the hard endocarp.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:5:5.7",
+        "number": "5.7",
+        "title": "The Seed",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:5:5.7:1",
+            "order": 1,
+            "title": "General Structure",
+            "content_text": "The ovules after fertilisation, develop into seeds. A seed is made up of a seed coat and an embryo. The embryo is made up of a radicle, an embryonal axis and one (as in wheat, maize) or two cotyledons (as in gram and pea).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:5:5.7:2",
+            "order": 2,
+            "title": "Structure of a Dicotyledonous Seed",
+            "content_text": "The outermost covering of a seed is the seed coat. The seed coat has two layers, the outer testa and the inner tegmen. The hilum is a scar on the seed coat through which the developing seeds were attached to the fruit. Above the hilum is a small pore called the micropyle. Within the seed coat is the embryo, consisting of an embryonal axis and two cotyledons. The cotyledons are often fleshy and full of reserve food materials. At the two ends of the embryonal axis are present the radicle and the plumule (Figure 5.14). In some seeds such as castor the endosperm formed as a result of double fertilisation, is a food storing tissue and called endospermic seeds. In plants such as bean, gram and pea, the endosperm is not present in mature seeds and such seeds are called non-endospermous.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 5.14",
+                "description": "Structure of dicotyledonous seed: External view showing seed coat, hilum, and micropyle; Internal view showing cotyledons, plumule, and radicle.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:5:5.7:3",
+            "order": 3,
+            "title": "Structure of Monocotyledonous Seed",
+            "content_text": "Generally, monocotyledonous seeds are endospermic but some as in orchids are non-endospermic. In the seeds of cereals such as maize the In the seeds of cereals such as maize, the seed coat is membranous and generally fused with the fruit wall. The endosperm is bulky and stores food. The outer covering of the endosperm separates the embryo by a proteinous layer called the aleurone layer. The embryo is small and situated in a groove at one end of the endosperm. It consists of one large and shield-shaped cotyledon known as the scutellum and a short axis with a plumule and a radicle. The plumule and radicle are enclosed in sheaths which are called coleoptile and coleorhiza respectively.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 5.15",
+                "description": "Diagrammatic representation of the structure of a monocotyledonous seed (maize), showing the seed coat & fruit-wall, endosperm, aleurone layer, and the embryo consisting of scutellum, coleoptile, plumule, radicle, and coleorhiza.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:5:5.8",
+        "number": "5.8",
+        "title": "Semi-Technical Description of a Typical Flowering Plant",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:5:5.8:1",
+            "order": 1,
+            "title": "Introduction to Floral Descriptions and Symbols",
+            "content_text": "Various morphological features are used to describe a flowering plant. The description must be brief, in simple and scientific language, and presented in a proper sequence. The plant is described beginning with its habit, vegetative characters (roots, stem, and leaves), and then floral characters (inflorescence and flower parts). After describing various parts of the plant, a floral diagram and a floral formula are presented. The floral formula is represented by specific symbols: $Br$ stands for bracteate, $K$ stands for calyx, $C$ for corolla, $P$ for perianth, $A$ for androecium, and $G$ for Gynoecium. $\\underline{G}$ denotes a superior ovary and $\\overline{G}$ denotes an inferior ovary. Gender and symmetry are represented by $\\text{♂}$ for male, $\\text{♀}$ for female, $\\text{⚥}$ for bisexual plants, $\\oplus$ for actinomorphic, and $\\%$ for zygomorphic nature of the flower.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:5:5.8:2",
+            "order": 2,
+            "title": "Floral Diagram and Formula Representation",
+            "content_text": "In a floral formula, fusion is indicated by enclosing the figure within brackets, and adhesion is shown by a line drawn above the symbols of the floral parts. A floral diagram provides information about the number of parts of a flower, their arrangement, and their relation to one another. The position of the mother axis with respect to the flower is represented by a dot on the top of the floral diagram. Calyx, corolla, androecium, and gynoecium are drawn in successive whorls, with the calyx being the outermost and the gynoecium being in the centre. The floral diagram and floral formula in Figure 5.16 represent the mustard plant (Family: Brassicaceae).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 5.16",
+                "description": "Floral diagram and floral formula for the mustard plant (Brassicaceae). The formula is $\\oplus \\text{⚥ } K_{2+2} C_4 A_{2+4} \\underline{G}_{(2)}$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:5:5.9",
+        "number": "5.9",
+        "title": "Solanaceae",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:5:5.9:1",
+            "order": 1,
+            "title": "General and Vegetative Characters of Solanaceae",
+            "content_text": "Solanaceae is a large family, commonly called the 'potato family'. It is widely distributed in tropics, subtropics, and even temperate zones. Vegetative characters include: Plants are mostly herbs, shrubs, and rarely small trees. The stem is herbaceous, rarely woody, aerial, erect, cylindrical, branched, solid or hollow, hairy or glabrous; it features an underground stem in potato ($Solanum$ $tuberosum$). Leaves are alternate, simple, rarely pinnately compound, exstipulate, with reticulate venation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 5.17",
+                "description": "Solanum nigrum (makoi) plant showing: (a) Flowering twig (b) Flower (c) L.S. of flower (d) Stamens (e) Carpel (f) Floral diagram.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:5:5.9:2",
+            "order": 2,
+            "title": "Floral Characters of Solanaceae",
+            "content_text": "The floral characters of Solanaceae are as follows: Inflorescence is solitary, axillary, or cymose as in $Solanum$. Flowers are bisexual and actinomorphic. The calyx consists of five sepals, which are united, persistent, and show valvate aestivation. The corolla consists of five petals, which are united and show valvate aestivation. The androecium has five stamens that are epipetalous. The gynoecium is bicarpellary, obligately placed, syncarpous, with a superior ovary; it is bilocular, and the placenta is swollen with many ovules, showing axile placentation. Fruits are typically a berry or capsule, and seeds are many and endospermous.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:5:5.9:3",
+            "order": 3,
+            "title": "Floral Formula and Economic Importance of Solanaceae",
+            "content_text": "The floral formula for Solanaceae is $\\oplus \\text{⚥ } K_{(5)} \\overbrace{C_{(5)} A_5} \\underline{G}_{(2)}$. Many plants belonging to this family are of significant economic importance: they are sources of food (tomato, brinjal, potato), spices (chilli), medicine (belladonna, ashwagandha), fumigatories (tobacco), and ornamentals (petunia).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:5:5.10",
+        "number": "5.10",
+        "title": "Summary",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:5:5.10:1",
+            "order": 1,
+            "title": "Chapter Summary",
+            "content_text": "Flowering plants exhibit enormous variation in shape, size, structure, mode of nutrition, life span, habit, and habitat. They have well-developed root and shoot systems. The root system is either tap root or fibrous. Roots may be modified for storage of food, mechanical support, and respiration. The shoot system is differentiated into stem, leaves, flowers, and fruits. Stems feature nodes, internodes, and multicellular hair, and are positively phototropic. Leaves are lateral outgrowths of the stem developed exogeneously at the node, performing photosynthesis and exhibiting variations in shape, size, margin, apex, and incisions. The flower is a modified shoot meant for sexual reproduction, arranged in various inflorescences. Flowers vary in structure, symmetry, and ovary position. After fertilisation, the ovary modifies into fruits and ovules into seeds. Seeds can be monocotyledonous or dicotyledonous. Floral characteristics form the basis of classification.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:5:5.10:2",
+            "order": 2,
+            "title": "Technical Description of Flowering Plants",
+            "content_text": "The identification of flowering plants can be illustrated through semi-technical descriptions of families. Hence, a flowering plant is described in a definite sequence by using scientific terms. The floral features are represented in the summarised form as floral diagrams and floral formula.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:biology:11:5:ex:1",
+          "number": 1,
+          "problem": "How is a pinnately compound leaf different from a palmately compound leaf?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:5:ex:2",
+          "number": 2,
+          "problem": "Explain with suitable examples the different types of phyllotaxy.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:5:ex:3",
+          "number": 3,
+          "problem": "Define the following terms: (a) aestivation (b) placentation (c) actinomorphic (d) zygomorphic (e) superior ovary (f) perigynous flower (g) epipetalous stamen",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:5:ex:4",
+          "number": 4,
+          "problem": "Differentiate between (a) Racemose and cymose inflorescence (b) Apocarpous and syncarpous ovary",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:5:ex:5",
+          "number": 5,
+          "problem": "Draw the labelled diagram of the following: (i) gram seed (ii) V.S. of maize seed",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:5:ex:6",
+          "number": 6,
+          "problem": "Take one flower of the family Solanaceae and write its semi-technical description. Also draw their floral diagram.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:5:ex:7",
+          "number": 7,
+          "problem": "Describe the various types of placentations found in flowering plants.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:5:ex:8",
+          "number": 8,
+          "problem": "What is a flower? Describe the parts of a typical angiosperm flower.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:5:ex:9",
+          "number": 9,
+          "problem": "Define the term inflorescence. Explain the basis for the different types inflorescence in flowering plants.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:5:ex:10",
+          "number": 10,
+          "problem": "Describe the arrangement of floral members in relation to their insertion on thalamus.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        }
+      ]
+    }
+  }
+}

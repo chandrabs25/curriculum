@@ -1,0 +1,1162 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_chemistry_11_ch7.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:chemistry:11:7",
+  "curriculum": "ncert",
+  "subject": "chemistry",
+  "grade": 11,
+  "textbook_name": "Chemistry Part II",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:chemistry:11:7",
+    "number": 7,
+    "title": "Redox Reactions",
+    "summary": "This chapter on Redox Reactions introduces the fundamental concepts of oxidation and reduction, initially through classical definitions involving the gain or loss of oxygen/hydrogen, and later refined with electron transfer and oxidation number perspectives. It establishes that redox reactions always occur simultaneously, defining oxidizing and reducing agents.\n\nThe chapter progresses from simple electron transfer reactions to the concept of oxidation numbers, providing specific rules for their assignment, and using them to define oxidation (increase in oxidation number) and reduction (decrease). Different types of redox reactions are explored, including combination, decomposition, displacement (metal and non-metal), and disproportionation.\n\nBalancing redox reactions is covered using both the oxidation number and half-reaction methods, demonstrating how to balance equations in acidic and basic mediums. The connection between redox reactions and titrations is briefly mentioned, along with the limitations of the oxidation number concept. The chapter concludes with an introduction to electrode processes, including the Daniell cell and electrode potentials.\n\nThe sections build upon each other, transitioning from basic definitions to complex applications. This knowledge is crucial across chemistry, underpinning understanding in fields like electrochemistry, corrosion, and various industrial processes. The ability to identify, classify, and balance redox reactions is a core skill for any chemistry student.",
+    "sections": [
+      {
+        "id": "ncert:chemistry:11:7:7.1",
+        "number": "7.1",
+        "title": "CLASSICAL IDEA OF REDOX REACTIONS – OXIDATION AND REDUCTION REACTIONS",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:7:7.1:1",
+            "order": 1,
+            "title": "Introduction to Redox Reactions",
+            "content_text": "Chemistry is essentially a study of redox systems, where oxidation and reduction always occur simultaneously. These reactions are fundamental to various phenomena in pharmaceutical, biological, industrial, metallurgical, and agricultural fields. Practical applications include the burning of fuels for energy, electrochemical processes for extracting reactive metals and non-metals, manufacturing chemical compounds like caustic soda, and the operation of batteries. Redox processes also underlie environmental concerns such as the 'Hydrogen Economy' and the 'Ozone Hole'. As the quote states, 'Where there is oxidation, there is always reduction – Chemistry is essentially a study of redox systems.'",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.1:2",
+            "order": 2,
+            "title": "Oxidation as Addition of Oxygen",
+            "content_text": "Originally, the term oxidation was used to describe the addition of oxygen to an element or a compound. Due to the presence of approximately 20% dioxygen in the atmosphere, many elements naturally combine with it to form oxides. Examples include the oxidation of magnesium and sulphur: $$2\\text{Mg (s)} + \\text{O}_2 \\text{ (g)} \\rightarrow 2\\text{MgO (s)}$$ (7.1) and $$\\text{S (s)} + \\text{O}_2 \\text{ (g)} \\rightarrow \\text{SO}_2 \\text{ (g)}$$ (7.2). In these reactions, magnesium and sulphur are oxidised on account of addition of oxygen to them.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.1:3",
+            "order": 3,
+            "title": "Oxidation as Removal of Hydrogen",
+            "content_text": "The scope of oxidation was broadened to include the removal of hydrogen from a substance. For instance, in the reaction of methane with oxygen, hydrogen is replaced by oxygen, which is interpreted as oxidation of methane: $$\\text{CH}_4 \\text{ (g)} + 2\\text{O}_2 \\text{ (g)} \\rightarrow \\text{CO}_2 \\text{ (g)} + 2\\text{H}_2\\text{O (l)}$$ (7.3). Similarly, the reaction of hydrogen sulphide with oxygen involves the removal of hydrogen from sulphur, representing the oxidation of $$\\text{H}_2\\text{S}$$: $$2\\text{H}_2\\text{S(g)} + \\text{O}_2 \\text{ (g)} \\rightarrow 2\\text{S (s)} + 2\\text{H}_2\\text{O (l)}$$ (7.4).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.1:4",
+            "order": 4,
+            "title": "Oxidation involving Electronegative and Electropositive Elements",
+            "content_text": "As chemical knowledge grew, oxidation was further extended to include reactions that do not involve oxygen but involve other electronegative elements or the removal of electropositive elements. For example, magnesium reacts with fluorine, chlorine, and sulphur to form $$\\text{MgF}_2$$, $$\\text{MgCl}_2$$, and $$\\text{MgS}$$ respectively, all of which are considered oxidation of magnesium: $$\\text{Mg (s)} + \\text{F}_2 \\text{ (g)} \\rightarrow \\text{MgF}_2 \\text{ (s)}$$ (7.5), $$\\text{Mg (s)} + \\text{Cl}_2 \\text{ (g)} \\rightarrow \\text{MgCl}_2 \\text{ (s)}$$ (7.6), and $$\\text{Mg (s)} + \\text{S (s)} \\rightarrow \\text{MgS (s)}$$ (7.7). Additionally, the removal of an electropositive element like potassium from potassium ferrocyanide to form potassium ferricyanide is also an oxidation process: $$2\\text{K}_4[\\text{Fe(CN)}_6]\\text{(aq)} + \\text{H}_2\\text{O}_2 \\text{ (aq)} \\rightarrow 2\\text{K}_3[\\text{Fe(CN)}_6]\\text{(aq)} + 2\\text{KOH (aq)}$$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.1:5",
+            "order": 5,
+            "title": "Summary of Classical Oxidation and Reduction",
+            "content_text": "To summarise, oxidation is defined as the addition of oxygen or an electronegative element to a substance, or the removal of hydrogen or an electropositive element from a substance. Conversely, reduction is defined as the removal of oxygen or an electronegative element from a substance, or the addition of hydrogen or an electropositive element to a substance.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.1:6",
+            "order": 6,
+            "title": "Examples of Reduction Processes",
+            "content_text": "Based on the classical definition, the following are examples of reduction: 1. Removal of oxygen from mercuric oxide: $$2\\text{HgO (s)} \\xrightarrow{\\Delta} 2\\text{Hg (l)} + \\text{O}_2 \\text{ (g)}$$ (7.8). 2. Removal of electronegative element (chlorine) from ferric chloride: $$2\\text{FeCl}_3 \\text{ (aq)} + \\text{H}_2 \\text{ (g)} \\rightarrow 2\\text{FeCl}_2 \\text{ (aq)} + 2\\text{HCl(aq)}$$ (7.9). 3. Addition of hydrogen to ethene: $$\\text{CH}_2 = \\text{CH}_2 \\text{ (g)} + \\text{H}_2 \\text{ (g)} \\rightarrow \\text{H}_3\\text{C} - \\text{CH}_3 \\text{ (g)}$$ (7.10). 4. Addition of electropositive element (mercury) to mercuric chloride: $$2\\text{HgCl}_2 \\text{ (aq)} + \\text{SnCl}_2 \\text{ (aq)} \\rightarrow \\text{Hg}_2\\text{Cl}_2 \\text{(s)} + \\text{SnCl}_4 \\text{ (aq)}$$ (7.11).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.1:7",
+            "order": 7,
+            "title": "The Simultaneous Nature of Redox Reactions",
+            "content_text": "In many reactions, such as the reaction between mercuric chloride and stannous chloride (7.11), oxidation and reduction occur simultaneously. While mercuric chloride is reduced, stannous chloride is oxidised due to the addition of electronegative chlorine. Because these processes always occur together, the term 'redox' was coined to describe this class of chemical reactions.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.1:8",
+            "order": 8,
+            "title": "Identifying Oxidation and Reduction in Reactions",
+            "content_text": "Applying the classical definitions allows for the identification of species undergoing oxidation and reduction in various chemical equations. This is demonstrated in Problem 7.1.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Problem 7.1",
+                "problem": "In the reactions given below, identify the species undergoing oxidation and reduction: (i) $$\\text{H}_2\\text{S (g)} + \\text{Cl}_2 \\text{ (g)} \\rightarrow 2\\text{HCl (g)} + \\text{S (s)}$$ (ii) $$3\\text{Fe}_3\\text{O}_4 \\text{ (s)} + 8\\text{Al (s)} \\rightarrow 9\\text{Fe (s)} + 4\\text{Al}_2\\text{O}_3 \\text{ (s)}$$ (iii) $$2\\text{Na (s)} + \\text{H}_2 \\text{ (g)} \\rightarrow 2\\text{NaH (s)}$$",
+                "solution": "(i) $$\\text{H}_2\\text{S}$$ is oxidised because a more electronegative element, chlorine, is added to hydrogen (or a more electropositive element, hydrogen, has been removed from S). $$\\text{Cl}_2$$ is reduced due to addition of hydrogen to it. (ii) Aluminium is oxidised because oxygen is added to it. Ferrous ferric oxide ($$\\text{Fe}_3\\text{O}_4$$) is reduced because oxygen has been removed from it. (iii) With the careful application of the concept of electronegativity only we may infer that sodium is oxidised and hydrogen is reduced. Reaction (iii) chosen here prompts us to think in terms of another way to define redox reactions."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:7:7.2",
+        "number": "7.2",
+        "title": "REDOX REACTIONS IN TERMS OF ELECTRON TRANSFER REACTIONS",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:7:7.2:1",
+            "order": 1,
+            "title": "Redox Reactions as Electron Transfer Processes",
+            "content_text": "Many redox reactions involve the formation of ionic compounds through the transfer of electrons. For example, in the reactions of sodium with chlorine, oxygen, and sulphur, sodium is oxidised while the other elements are reduced. The products formed—$$\\text{Na}^+\\text{Cl}^-$$, $$(\\text{Na}^+)_2\\text{O}^{2-}$$, and $$(\\text{Na}^+)_2\\text{S}^{2-}$$—are ionic, suggesting that charges are produced through electron transfer. The reactions can be rewritten to show the loss and gain of electrons: $$2\\text{Na(s)} + \\text{Cl}_2\\text{(g)} \\rightarrow 2\\text{Na}^+\\text{Cl}^-\\text{(s)}$$ (7.12), $$4\\text{Na(s)} + \\text{O}_2\\text{(g)} \\rightarrow 2(\\text{Na}^+)_2\\text{O}^{2-}\\text{(s)}$$ (7.13), and $$2\\text{Na(s)} + \\text{S(s)} \\rightarrow (\\text{Na}^+)_2\\text{S}^{2-}\\text{(s)}$$ (7.14).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Diagram 7.1",
+                "description": "Flow diagram for the reaction $$2\\text{Na(s)} + \\text{Cl}_2\\text{(g)} \\rightarrow 2\\text{Na}^+\\text{Cl}^-\\text{(s)}$$ showing the loss of $$2\\text{e}^-$$ from sodium and the gain of $$2\\text{e}^-$$ by chlorine.",
+                "image_url": null
+              },
+              {
+                "label": "Diagram 7.2",
+                "description": "Flow diagram for the reaction $$2\\text{Na(s)} + \\text{O}_2\\text{(g)} \\rightarrow (\\text{Na}^+)_2\\text{O}^{2-}\\text{(s)}$$ showing the loss of $$2\\text{e}^-$$ from sodium and the gain of $$2\\text{e}^-$$ by oxygen.",
+                "image_url": null
+              },
+              {
+                "label": "Diagram 7.3",
+                "description": "Flow diagram for the reaction $$2\\text{Na(s)} + \\text{S(s)} \\rightarrow (\\text{Na}^+)_2\\text{S}^{2-}\\text{(s)}$$ showing the loss of $$2\\text{e}^-$$ from sodium and the gain of $$2\\text{e}^-$$ by sulphur.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.2:2",
+            "order": 2,
+            "title": "Half-Reactions and Electron Loss/Gain",
+            "content_text": "For convenience, redox processes can be considered as two separate steps called half-reactions: one involving the loss of electrons and the other involving the gain of electrons. For the formation of sodium chloride: Oxidation half-reaction: $$2\\text{Na(s)} \\rightarrow 2\\text{Na}^+\\text{(g)} + 2\\text{e}^-$$ and Reduction half-reaction: $$\\text{Cl}_2\\text{(g)} + 2\\text{e}^- \\rightarrow 2\\text{Cl}^-\\text{(g)}$$. Each of these steps explicitly shows the involvement of electrons. The sum of the half-reactions gives the overall reaction: $$2\\text{Na(s)} + \\text{Cl}_2\\text{(g)} \\rightarrow 2\\text{Na}^+\\text{Cl}^-\\text{(s)}$$. Half-reactions that involve loss of electrons are called oxidation reactions, while those involving gain of electrons are called reduction reactions.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.2:3",
+            "order": 3,
+            "title": "Electronic Definitions of Redox Species",
+            "content_text": "The electron transfer concept provides a new way of defining redox terms: Oxidation is the loss of electron(s) by any species, and Reduction is the gain of electron(s) by any species. An Oxidising agent is the acceptor of electron(s), while a Reducing agent is the donor of electron(s). In the reactions discussed, sodium acts as a reducing agent because it donates electrons, while chlorine, oxygen, and sulphur act as oxidising agents because they accept electrons.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.2:4",
+            "order": 4,
+            "title": "Justifying Redox Changes via Electron Transfer",
+            "content_text": "The electron transfer model can be used to justify why certain reactions, such as the formation of sodium hydride, are classified as redox changes. This is explored in Problem 7.2.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Problem 7.2",
+                "problem": "Justify that the reaction: $$2\\text{Na(s)} + \\text{H}_2\\text{(g)} \\rightarrow 2\\text{NaH (s)}$$ is a redox change.",
+                "solution": "Since in the above reaction the compound formed is an ionic compound, which may also be represented as $$\\text{Na}^+\\text{H}^- \\text{(s)}$$, this suggests that one half reaction in this process is: $$2\\text{Na (s)} \\rightarrow 2\\text{Na}^+\\text{(g)} + 2\\text{e}^-$$ and the other half reaction is: $$\\text{H}_2\\text{(g)} + 2\\text{e}^- \\rightarrow 2\\text{H}^-\\text{(g)}$$. As sodium loses electrons and hydrogen gains electrons, the reaction is a redox change."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.2:5",
+            "order": 5,
+            "title": "Splitting Redox Reactions into Half-Reactions",
+            "content_text": "The splitting of a reaction into two half-reactions automatically reveals the oxidation and reduction components. For example, in the reaction between sodium and hydrogen, the half-reactions are: $2Na(s) \\rightarrow 2Na^+(g) + 2e^-$ and $H_2(g) + 2e^- \\rightarrow 2H^-(g)$. This reveals that sodium is oxidised and hydrogen is reduced, confirming the complete reaction is a redox change.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.2:6",
+            "order": 6,
+            "title": "Competitive Electron Transfer Reactions: Zinc and Copper",
+            "content_text": "When a strip of metallic zinc is placed in an aqueous solution of copper nitrate for about one hour, the strip becomes coated with reddish metallic copper and the blue color of the solution (due to $Cu^{2+}$ ions) disappears. The formation of $Zn^{2+}$ ions can be confirmed by making the solution alkaline with ammonia and passing $H_2S$ gas, which results in white zinc sulphide ($ZnS$) precipitate. The reaction is: $$Zn(s) + Cu^{2+}(aq) \\rightarrow Zn^{2+}(aq) + Cu(s) \\quad (7.15)$$ In this reaction, zinc loses electrons (oxidised) and copper ion gains electrons (reduced). Investigation of the equilibrium state shows that the reaction greatly favours the products over the reactants, as attempts to detect $Cu^{2+}$ ions in a zinc sulphate solution containing copper metal fail.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 7.1",
+                "description": "A three-stage diagram showing a zinc rod in copper nitrate solution. Initial stage: Zn rod in blue solution. Intermediate stage: Intensity of blue color is reduced. Final stage: $Cu^{2+}$ is deposited as Cu on the Zn rod and the solution becomes colorless.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.2:7",
+            "order": 7,
+            "title": "Competitive Electron Transfer Reactions: Copper and Silver",
+            "content_text": "If copper metal is placed in a silver nitrate solution, the solution develops a blue color due to the formation of $Cu^{2+}$ ions. The reaction is: $$Cu(s) + 2Ag^+(aq) \\rightarrow Cu^{2+}(aq) + 2Ag(s) \\quad (7.16)$$ Here, $Cu(s)$ is oxidised to $Cu^{2+}(aq)$ and $Ag^+(aq)$ is reduced to $Ag(s)$. The equilibrium greatly favours the products $Cu^{2+}(aq)$ and $Ag(s)$.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 7.2",
+                "description": "A three-stage diagram showing a copper rod in silver nitrate solution. Initial stage: Cu rod in colorless solution. Intermediate stage: Blue color starts developing. Final stage: Intensity of blue color increases and silver deposits on the copper rod.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.2:8",
+            "order": 8,
+            "title": "Competitive Electron Transfer Reactions: Cobalt and Nickel",
+            "content_text": "When metallic cobalt is placed in a nickel sulphate solution, the following reaction occurs: $$Co(s) + Ni^{2+}(aq) \\rightarrow Co^{2+}(aq) + Ni(s) \\quad (7.17)$$ At equilibrium, chemical tests reveal that both $Ni^{2+}(aq)$ and $Co^{2+}(aq)$ are present at moderate concentrations. In this case, neither the reactants nor the products are greatly favoured.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.2:9",
+            "order": 9,
+            "title": "Metal Activity Series",
+            "content_text": "The competition for the release of electrons among metals allows for the creation of a metal activity series or electrochemical series. Based on the experiments, the electron releasing tendency of the metals is in the order: $Zn > Cu > Ag$. This competition for electrons is the fundamental principle used to design Galvanic cells, which convert chemical energy into electrical energy.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:7:7.3",
+        "number": "7.3",
+        "title": "OXIDATION NUMBER",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:7:7.3:1",
+            "order": 1,
+            "title": "Oxidation Number in Covalent Compounds",
+            "content_text": "In reactions involving covalent compounds, such as $2H_2(g) + O_2(g) \\rightarrow 2H_2O(l)$ (7.18), electron transfer is not complete but can be visualized as an electron shift. For example, H goes from a neutral state in $H_2$ to a positive state in $H_2O$, while O goes from zero in $O_2$ to a dinegative state in $H_2O$. To keep track of these shifts, the concept of oxidation number is used. It assumes a complete transfer of electrons from a less electronegative atom to a more electronegative atom for book-keeping purposes.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.3:2",
+            "order": 2,
+            "title": "Definition of Oxidation Number",
+            "content_text": "Oxidation number denotes the oxidation state of an element in a compound ascertained according to a set of rules formulated on the basis that electron pair in a covalent bond belongs entirely to more electronegative element.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.3:3",
+            "order": 3,
+            "title": "Rules for Oxidation Number: Elements and Monoatomic Ions",
+            "content_text": "Rule 1: In elements in the free or uncombined state, each atom bears an oxidation number of zero. Examples include $H_2, O_2, Cl_2, O_3, P_4, S_8, Na, Mg, Al$. Rule 2: For ions composed of only one atom, the oxidation number is equal to the charge on the ion. Thus, $Na^+$ is +1, $Mg^{2+}$ is +2, $Fe^{3+}$ is +3, $Cl^-$ is -1, and $O^{2-}$ is -2. In compounds, all alkali metals have an oxidation number of +1, all alkaline earth metals have +2, and aluminium is regarded as +3.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.3:4",
+            "order": 4,
+            "title": "Rules for Oxidation Number: Oxygen",
+            "content_text": "Rule 3: The oxidation number of oxygen in most compounds is -2. However, there are two kinds of exceptions: 1. In peroxides (e.g., $H_2O_2, Na_2O_2$), oxygen is assigned an oxidation number of -1. In superoxides (e.g., $KO_2, RbO_2$), it is -1/2. 2. When oxygen is bonded to fluorine, such as in oxygen difluoride ($OF_2$) and dioxygen difluoride ($O_2F_2$), the oxygen is assigned an oxidation number of +2 and +1, respectively.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.3:5",
+            "order": 5,
+            "title": "Rules for Oxidation Number: Hydrogen and Halogens",
+            "content_text": "Rule 4: The oxidation number of hydrogen is +1, except when it is bonded to metals in binary compounds (metal hydrides like $LiH, NaH, CaH_2$), where its oxidation number is -1. Rule 5: In all its compounds, fluorine has an oxidation number of -1. Other halogens ($Cl, Br, I$) also have an oxidation number of -1 when they occur as halide ions in their compounds. However, when combined with oxygen (in oxoacids and oxoanions), they have positive oxidation numbers.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.3:6",
+            "order": 6,
+            "title": "Rules for Oxidation Number: Summation in Compounds and Ions",
+            "content_text": "Rule 6: The algebraic sum of the oxidation numbers of all the atoms in a compound must be zero. In a polyatomic ion, the algebraic sum of all the oxidation numbers of atoms of the ion must equal the charge on the ion. For example, the sum of oxidation numbers of one carbon and three oxygen atoms in the carbonate ion, $(CO_3)^{2-}$, must equal -2.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.3:7",
+            "order": 7,
+            "title": "Oxidation State and Periodic Trends",
+            "content_text": "Metallic elements generally have positive oxidation numbers, while nonmetallic elements can have positive or negative oxidation numbers. Transition elements usually display several positive oxidation states. For representative elements, the highest oxidation number is usually the group number (for groups 1 and 2) or the group number minus 10 (for groups 13-17). The term 'oxidation state' is often used interchangeably with 'oxidation number'. For example, in $CO_2$, the oxidation state of carbon is +4 and oxygen is -2.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.3:8",
+            "order": 8,
+            "title": "Highest Oxidation States and Periodic Trends",
+            "content_text": "The highest oxidation number state of a group element is often related to its position in the periodic table. For elements in groups 1 and 2, the highest oxidation state corresponds to their group number (+1 and +2 respectively). For elements in groups 13 through 17, the highest oxidation state is generally equal to the group number minus 10. This trend is illustrated in the following table for representative elements across the third period.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 7.x",
+                "caption": "Highest oxidation number state of the group elements",
+                "headers": [
+                  "Group",
+                  "1",
+                  "2",
+                  "13",
+                  "14",
+                  "15",
+                  "16",
+                  "17"
+                ],
+                "rows": [
+                  [
+                    "Element",
+                    "Na",
+                    "Mg",
+                    "Al",
+                    "Si",
+                    "P",
+                    "S",
+                    "Cl"
+                  ],
+                  [
+                    "Compound",
+                    "NaCl",
+                    "$MgSO_4$",
+                    "$AlF_3$",
+                    "$SiCl_4$",
+                    "$P_4O_{10}$",
+                    "$SF_6$",
+                    "$HClO_4$"
+                  ],
+                  [
+                    "Highest oxidation number state",
+                    "+1",
+                    "+2",
+                    "+3",
+                    "+4",
+                    "+5",
+                    "+6",
+                    "+7"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.3:9",
+            "order": 9,
+            "title": "Stock Notation",
+            "content_text": "The oxidation number or state of a metal in a compound is often represented using a system developed by German chemist Alfred Stock, known as Stock notation. In this system, the oxidation number of the metal is expressed as a Roman numeral in parentheses immediately following the symbol of the metal in the molecular formula. For example, aurous chloride is written as $Au(I)Cl$ and auric chloride as $Au(III)Cl_3$. Similarly, stannous chloride is $Sn(II)Cl_2$ and stannic chloride is $Sn(IV)Cl_4$. This notation helps identify whether a species is in an oxidised or reduced form; for instance, $Hg_2(I)Cl_2$ is the reduced form of $Hg(II)Cl_2$.\nThis example demonstrates how to calculate the oxidation state of metallic elements and represent the resulting compounds using Stock notation.",
+            "content_type": "definition",
+            "worked_examples": [
+              {
+                "label": "Problem 7.3",
+                "problem": "Using Stock notation, represent the following compounds: $HAuCl_4$, $Tl_2O$, $FeO$, $Fe_2O_3$, $CuI$, $CuO$, $MnO$ and $MnO_2$.",
+                "solution": "By applying the rules for calculating oxidation numbers, we find the oxidation state of each metallic element: \n1. $HAuCl_4 \\rightarrow Au$ has +3 \n2. $Tl_2O \\rightarrow Tl$ has +1 \n3. $FeO \\rightarrow Fe$ has +2 \n4. $Fe_2O_3 \\rightarrow Fe$ has +3 \n5. $CuI \\rightarrow Cu$ has +1 \n6. $CuO \\rightarrow Cu$ has +2 \n7. $MnO \\rightarrow Mn$ has +2 \n8. $MnO_2 \\rightarrow Mn$ has +4 \n\nTherefore, the compounds are represented as: $HAu(III)Cl_4$, $Tl_2(I)O$, $Fe(II)O$, $Fe_2(III)O_3$, $Cu(I)I$, $Cu(II)O$, $Mn(II)O$, $Mn(IV)O_2$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.3:10",
+            "order": 10,
+            "title": "Redox Definitions in Terms of Oxidation Number",
+            "content_text": "The concept of oxidation number provides a precise way to define redox processes: \n- **Oxidation**: An increase in the oxidation number of an element in a given substance. \n- **Reduction**: A decrease in the oxidation number of an element in a given substance. \n- **Oxidising agent (Oxidant)**: A reagent that increases the oxidation number of an element in another substance. \n- **Reducing agent (Reductant)**: A reagent that lowers the oxidation number of an element in another substance. \n- **Redox reactions**: Reactions involving a change in the oxidation number of the interacting species.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.3:11",
+            "order": 11,
+            "title": "Worked Example: Justifying a Redox Reaction",
+            "content_text": "This example illustrates how to identify the species being oxidised and reduced by assigning oxidation numbers to all atoms in a chemical equation.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 7.4",
+                "problem": "Justify that the reaction: $2Cu_2O(s) + Cu_2S(s) \\rightarrow 6Cu(s) + SO_2(g)$ is a redox reaction. Identify the species oxidised/reduced, which acts as an oxidant and which acts as a reductant.",
+                "solution": "Assigning oxidation numbers to each species: \n$2\\overset{+1}{Cu}_2\\overset{-2}{O}(s) + \\overset{+1}{Cu}_2\\overset{-2}{S}(s) \\rightarrow 6\\overset{0}{Cu}(s) + \\overset{+4}{S}\\overset{-2}{O}_2(g)$ \nIn this reaction, copper is reduced from the +1 state to the 0 state. Sulphur is oxidised from the -2 state to the +4 state. Therefore, the reaction is a redox reaction. $Cu(I)$ (in $Cu_2O$ and $Cu_2S$) acts as the oxidant, while $S$ (in $Cu_2S$) acts as the reductant."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:7:7.3.1",
+        "number": "7.3.1",
+        "title": "Types of Redox Reactions",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:7:7.3.1:1",
+            "order": 1,
+            "title": "Combination Reactions",
+            "content_text": "A combination reaction is denoted as $A + B \\rightarrow C$. For such a reaction to be a redox reaction, at least one of the reactants (A or B) must be in its elemental form. All combustion reactions involving elemental dioxygen are redox reactions. Examples include: \n1. $C(s) + O_2(g) \\xrightarrow{\\Delta} \\overset{+4}{C}\\overset{-2}{O}_2(g)$ \n2. $3Mg(s) + N_2(g) \\xrightarrow{\\Delta} \\overset{+2}{Mg}_3\\overset{-3}{N}_2(s)$ \n3. $CH_4(g) + 2O_2(g) \\xrightarrow{\\Delta} CO_2(g) + 2H_2O(l)$",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.3.1:2",
+            "order": 2,
+            "title": "Decomposition Reactions",
+            "content_text": "Decomposition reactions are the reverse of combination reactions, where a compound breaks down into two or more components. A decomposition is a redox reaction if at least one of the products is in the elemental state. \nExamples: \n1. $2H_2O(l) \\xrightarrow{\\Delta} 2H_2(g) + O_2(g)$ \n2. $2NaH(s) \\xrightarrow{\\Delta} 2Na(s) + H_2(g)$ \n3. $2KClO_3(s) \\xrightarrow{\\Delta} 2KCl(s) + 3O_2(g)$ \nNote that not all decomposition reactions are redox. For example, the thermal decomposition of calcium carbonate: $CaCO_3(s) \\xrightarrow{\\Delta} CaO(s) + CO_2(g)$ involves no change in oxidation numbers and is thus not a redox reaction.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.3.1:3",
+            "order": 3,
+            "title": "Displacement Reactions: Metal Displacement",
+            "content_text": "In a displacement reaction, an ion or atom in a compound is replaced by an ion or atom of another element: $X + YZ \\rightarrow XZ + Y$. \nIn metal displacement, a metal in a compound is displaced by another metal in its elemental state. This is common in metallurgical processes to obtain pure metals from ores. \nExamples: \n1. $CuSO_4(aq) + Zn(s) \\rightarrow Cu(s) + ZnSO_4(aq)$ \n2. $V_2O_5(s) + 5Ca(s) \\xrightarrow{\\Delta} 2V(s) + 5CaO(s)$ \n3. $TiCl_4(l) + 2Mg(s) \\xrightarrow{\\Delta} Ti(s) + 2MgCl_2(s)$ \n4. $Cr_2O_3(s) + 2Al(s) \\xrightarrow{\\Delta} Al_2O_3(s) + 2Cr(s)$ \nIn these cases, the displacing metal is a stronger reducing agent (more capable of losing electrons) than the metal being displaced.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.3.1:4",
+            "order": 4,
+            "title": "Non-metal Displacement: Hydrogen Displacement",
+            "content_text": "Non-metal displacement reactions often involve the displacement of hydrogen or, more rarely, oxygen. \n1. **Alkali and Alkaline Earth Metals**: Highly reactive metals like $Na$, $Ca$, $Sr$, and $Ba$ displace hydrogen from cold water: $2Na(s) + 2H_2O(l) \\rightarrow 2NaOH(aq) + H_2(g)$. \n2. **Less Active Metals**: Metals like $Mg$ and $Fe$ do not react with cold water but displace hydrogen from steam: $Mg(s) + 2H_2O(l) \\xrightarrow{\\Delta} Mg(OH)_2(s) + H_2(g)$. \n3. **Reaction with Acids**: Many metals displace hydrogen from dilute acids: $Zn(s) + 2HCl(aq) \\rightarrow ZnCl_2(aq) + H_2(g)$. The rate of hydrogen evolution reflects the metal's reactivity ($Mg > Zn > Fe$). Very inactive metals like $Ag$ and $Au$ do not react with hydrochloric acid. The reducing activity follows the order $Zn > Cu > Ag$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.3.1:5",
+            "order": 5,
+            "title": "Non-metal Displacement: Halogen Displacement",
+            "content_text": "A reactivity series exists for halogens where oxidising power decreases down the group ($F_2 > Cl_2 > Br_2 > I_2$). \n- **Fluorine**: So reactive it displaces oxygen from water: $2H_2O(l) + 2F_2(g) \\rightarrow 4HF(aq) + O_2(g)$. \n- **Chlorine**: Can displace bromide and iodide ions from their aqueous solutions: $Cl_2(g) + 2KBr(aq) \\rightarrow 2KCl(aq) + Br_2(l)$. \n- **Bromine**: Can displace iodide ions: $Br_2(l) + 2I^-(aq) \\rightarrow 2Br^-(aq) + I_2(s)$. \nThese reactions are used in the 'Layer Test' to identify $Br^-$ and $I^-$ in the lab. Industrially, halogens are recovered from halides via oxidation: $2X^- \\rightarrow X_2 + 2e^-$, as fluorine is the strongest oxidising agent; there is no way to convert $F^-$ ions to $F_2$ by chemical means. The only way to achieve $F_2$ from $F^-$ is to oxidise electrolytically, the details of which you will study at a later stage.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.3.1:6",
+            "order": 6,
+            "title": "Disproportionation Reactions",
+            "content_text": "Disproportionation reactions represent a unique category of redox processes where a single element in a specific oxidation state is simultaneously oxidized and reduced. For such a reaction to occur, the element must be capable of existing in at least three different oxidation states. The reacting species is typically in an intermediate oxidation state, which then transforms into both higher and lower oxidation states during the chemical change.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.3.1:7",
+            "order": 7,
+            "title": "Examples of Disproportionation",
+            "content_text": "A classic example of disproportionation is the decomposition of hydrogen peroxide ($2H_2O_2 \\rightarrow 2H_2O + O_2$), where oxygen moves from a $-1$ state to $0$ (oxidation) and $-2$ (reduction). Other elements like phosphorus ($P_4$), sulfur ($S_8$), and chlorine ($Cl_2$) also undergo similar reactions in alkaline media. For instance, chlorine reacts with hydroxide ions to form hypochlorite ($ClO^-$) and chloride ($Cl^-$), a process utilized in producing household bleaching agents.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.3.1:8",
+            "order": 8,
+            "title": "Fluorine's Unique Behavior",
+            "content_text": "Unlike other halogens, fluorine does not undergo disproportionation. When reacting with alkali, it forms $F^-$ and $OF_2$. This departure is due to fluorine being the most electronegative element, which prevents it from exhibiting any positive oxidation states necessary for the oxidation component of a disproportionation reaction.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.3.1:9",
+            "order": 9,
+            "title": "Worked Example: Disproportionation of Chlorine Oxoanions",
+            "content_text": "This example examines which chlorine oxoanions can undergo disproportionation and provides the corresponding chemical equations.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 7.5",
+                "problem": "Which of the following species, do not show disproportionation reaction and why? $ClO^-$, $ClO_2^-$, $ClO_3^-$ and $ClO_4^-$. Also write reaction for each of the species that disproportionates.",
+                "solution": "Among the listed oxoanions, $ClO_4^-$ does not disproportionate because chlorine is in its highest oxidation state ($+7$). The others disproportionate as follows: $3ClO^- \\rightarrow 2Cl^- + ClO_3^-$; $6ClO_2^- \\xrightarrow{h\\nu} 4ClO_3^- + 2Cl^-$; $4ClO_3^- \\rightarrow Cl^- + 3ClO_4^-$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.3.1:10",
+            "order": 10,
+            "title": "Worked Example: Classification of Redox Reactions",
+            "content_text": "This example demonstrates how to categorize various chemical reactions into combination, decomposition, displacement, or disproportionation types.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 7.6",
+                "problem": "Suggest a scheme of classification of the following redox reactions: (a) $N_2 (g) + O_2 (g) \\rightarrow 2 NO (g)$ (b) $2Pb(NO_3)_2(s) \\rightarrow 2PbO(s) + 4 NO_2 (g) + O_2 (g)$ (c) $NaH(s) + H_2O(l) \\rightarrow NaOH(aq) + H_2 (g)$ (d) $2NO_2(g) + 2OH^-(aq) \\rightarrow NO_2^-(aq) + NO_3^-(aq) + H_2O(l)$",
+                "solution": "(a) Combination redox reaction: two elements combine to form a compound. (b) Decomposition redox reaction: a compound breaks down into multiple components. (c) Displacement redox reaction: hydrogen in water is displaced by hydride ion. (d) Disproportionation redox reaction: $NO_2$ ($+4$ state) is simultaneously reduced to $NO_2^-$ ($+3$ state) and oxidized to $NO_3^-$ ($+5$ state)."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.3.1:11",
+            "order": 11,
+            "title": "The Paradox of Fractional Oxidation Number",
+            "content_text": "Fractional oxidation numbers (e.g., $4/3$ for $C$ in $C_3O_2$) are average values that do not reflect the actual state of individual atoms. Structural analysis reveals that atoms of the same element in a molecule often have different whole-number oxidation states. For example, in $C_3O_2$, the terminal carbons are $+2$ and the central one is $0$. Similarly, in $S_4O_6^{2-}$, the terminal sulfurs are $+5$ while the middle ones are $0$. Mixed oxides like $Fe_3O_4$ and $Pb_3O_4$ also contain atoms in multiple oxidation states.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Structures of $C_3O_2$, $Br_3O_8$, and $S_4O_6^{2-}$",
+                "description": "The diagram shows the bonding and oxidation states for three species: 1) Carbon suboxide ($C_3O_2$) with a linear $O=C=C=C=O$ structure where terminal carbons are $+2$ and the central carbon is $0$. 2) Tribromooctaooxide ($Br_3O_8$) showing three bromine atoms with terminal ones at $+6$ and the middle one at $+4$. 3) Tetrathionate ion ($S_4O_6^{2-}$) with a chain of four sulfur atoms where terminal sulfurs are $+5$ and middle ones are $0$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.3.1:12",
+            "order": 12,
+            "title": "Worked Example: Reactivity of Mixed Oxides",
+            "content_text": "This example explains the differing chemical behavior of $Pb_3O_4$ when treated with different acids based on its nature as a mixed oxide.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 7.7",
+                "problem": "Why do the following reactions proceed differently? $Pb_3O_4 + 8HCl \\rightarrow 3PbCl_2 + Cl_2 + 4H_2O$ and $Pb_3O_4 + 4HNO_3 \\rightarrow 2Pb(NO_3)_2 + PbO_2 + 2H_2O$",
+                "solution": "$Pb_3O_4$ is a mixture of $2$ mol $PbO$ and $1$ mol $PbO_2$. In $PbO_2$, lead is in the $+4$ state, making it a strong oxidant. It oxidizes $Cl^-$ from $HCl$ to $Cl_2$. However, $HNO_3$ is itself an oxidant, so it does not react with $PbO_2$. Instead, only the basic $PbO$ component reacts with $HNO_3$ in an acid-base reaction to form $Pb(NO_3)_2$ and water."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:7:7.3.2",
+        "number": "7.3.2",
+        "title": "Balancing of Redox Reactions",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:7:7.3.2:1",
+            "order": 1,
+            "title": "Methods for Balancing Redox Reactions",
+            "content_text": "Chemical equations for redox processes are balanced using two main methods: the Oxidation Number Method and the Half-Reaction Method. The choice depends on the specific reaction and the preference of the user. The Oxidation Number Method relies on tracking changes in oxidation states, while the Half-Reaction Method splits the process into oxidation and reduction components.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.3.2:2",
+            "order": 2,
+            "title": "The Oxidation Number Method",
+            "content_text": "This method involves five steps: 1) Write correct formulas for all species. 2) Identify atoms undergoing oxidation state changes. 3) Equalize the total increase and decrease in oxidation numbers by adjusting coefficients. 4) Balance ionic charges by adding $H^+$ (for acidic solutions) or $OH^-$ (for basic solutions). 5) Balance hydrogen and oxygen atoms by adding $H_2O$ molecules to the appropriate side.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.3.2:3",
+            "order": 3,
+            "title": "Worked Example: Balancing in Acidic Medium",
+            "content_text": "This example initiates the process of balancing a complex redox reaction in an acidic environment using the oxidation number method. Step 1: The skeletal ionic equation is: $\\text{Cr}_2\\text{O}_7^{2-}(\\text{aq}) + \\text{SO}_3^{2-}(\\text{aq}) \\rightarrow \\text{Cr}^{3+}(\\text{aq}) + \\text{SO}_4^{2-}(\\text{aq})$. Step 2: Assign oxidation numbers for Cr (+6) and S (+4). This indicates that the dichromate ion is the oxidant and the sulphite ion is the reductant. Step 3: Calculate the increase and decrease of oxidation number, and make them equal. The oxidation state of chromium changes from +6 to +3 (a decrease of 3 per atom, total 6 for two Cr atoms). The oxidation state of sulphur changes from +4 to +6 (an increase of 2). To equalize, place numeral 2 before the chromium ion on the right and numeral 3 before the sulphate ion on the right, balancing the atoms on both sides: $\\text{Cr}_2\\text{O}_7^{2-}(\\text{aq}) + 3\\text{SO}_3^{2-}(\\text{aq}) \\rightarrow 2\\text{Cr}^{3+}(\\text{aq}) + 3\\text{SO}_4^{2-}(\\text{aq})$. Step 4: In acidic medium, balance ionic charges by adding $8\\text{H}^+$ to the left side to make charges equal on both sides. Step 5: Finally, count hydrogen atoms and add $4\\text{H}_2\\text{O}$ molecules on the right to achieve a balanced redox change: $\\text{Cr}_2\\text{O}_7^{2-}(\\text{aq}) + 3\\text{SO}_3^{2-}(\\text{aq}) + 8\\text{H}^+(\\text{aq}) \\rightarrow 2\\text{Cr}^{3+}(\\text{aq}) + 3\\text{SO}_4^{2-}(\\text{aq}) + 4\\text{H}_2\\text{O}(\\text{l})$.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 7.8",
+                "problem": "Write the net ionic equation for the reaction of potassium dichromate(VI), $K_2Cr_2O_7$ with sodium sulphite, $Na_2SO_3$, in an acid solution to give chromium(III) ion and the sulphate ion.",
+                "solution": "[CONTINUES]"
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.3.2:4",
+            "order": 4,
+            "title": "Oxidation Number Method: Balancing in Basic Medium",
+            "content_text": "Balancing redox reactions in a basic medium follows the same initial steps as in an acidic medium (assigning oxidation numbers and equalizing the change in oxidation state). However, the net ionic charge is balanced by adding hydroxide ions ($\\text{OH}^-$) to the appropriate side. Finally, water molecules are added to balance the hydrogen atoms. This process ensures that both mass and charge are conserved in the basic environment.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 7.9",
+                "problem": "Permanganate ion reacts with bromide ion in basic medium to give manganese dioxide and bromate ion. Write the balanced ionic equation for the reaction.",
+                "solution": "Step 1: Skeletal equation: $\\text{MnO}_4^-(\\text{aq}) + \\text{Br}^-(\\text{aq}) \\rightarrow \\text{MnO}_2(\\text{s}) + \\text{BrO}_3^-(\\text{aq})$. Step 2: Assign oxidation numbers: Mn (+7 to +4), Br (-1 to +5). Mn is the oxidant, Br is the reductant. Step 3: Equalize increase (+6 for Br) and decrease (-3 for Mn) by multiplying Mn species by 2: $2\\text{MnO}_4^-(\\text{aq}) + \\text{Br}^-(\\text{aq}) \\rightarrow 2\\text{MnO}_2(\\text{s}) + \\text{BrO}_3^-(\\text{aq})$. Step 4: Balance charges in basic medium. Left side charge is -3, right side is -1. Add $2\\text{OH}^-$ to the right: $2\\text{MnO}_4^-(\\text{aq}) + \\text{Br}^-(\\text{aq}) \\rightarrow 2\\text{MnO}_2(\\text{s}) + \\text{BrO}_3^-(\\text{aq}) + 2\\text{OH}^-(\\text{aq})$. Step 5: Balance H atoms by adding $1\\text{H}_2\\text{O}$ to the left: $2\\text{MnO}_4^-(\\text{aq}) + \\text{Br}^-(\\text{aq}) + \\text{H}_2\\text{O}(\\text{l}) \\rightarrow 2\\text{MnO}_2(\\text{s}) + \\text{BrO}_3^-(\\text{aq}) + 2\\text{OH}^-(\\text{aq})$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.3.2:5",
+            "order": 5,
+            "title": "Half Reaction Method (Ion-Electron Method)",
+            "content_text": "In the half reaction method, the overall redox equation is split into two separate half-reactions: one for oxidation and one for reduction. Each half-reaction is balanced individually for atoms and charge. This method provides a clear view of the electron transfer process. The steps involve producing an unbalanced ionic equation, separating it into half-reactions, balancing atoms other than O and H, balancing O and H using water and protons, and finally balancing the charge by adding electrons. The two half-reactions are then multiplied by appropriate factors to equalize the number of electrons before being added together.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example: Acidic Medium",
+                "problem": "Balance the equation showing the oxidation of $\\text{Fe}^{2+}$ ions to $\\text{Fe}^{3+}$ ions by dichromate ions ($\\text{Cr}_2\\text{O}_7^{2-}$) in acidic medium.",
+                "solution": "Step 1: $\\text{Fe}^{2+}(\\text{aq}) + \\text{Cr}_2\\text{O}_7^{2-}(\\text{aq}) \\rightarrow \\text{Fe}^{3+}(\\text{aq}) + \\text{Cr}^{3+}(\\text{aq})$. Step 2: Oxidation half: $\\text{Fe}^{2+}(\\text{aq}) \\rightarrow \\text{Fe}^{3+}(\\text{aq})$; Reduction half: $\\text{Cr}_2\\text{O}_7^{2-}(\\text{aq}) \\rightarrow \\text{Cr}^{3+}(\\text{aq})$. Step 3: Balance Cr: $\\text{Cr}_2\\text{O}_7^{2-}(\\text{aq}) \\rightarrow 2\\text{Cr}^{3+}(\\text{aq})$. Step 4: Balance O and H in acidic medium: $\\text{Cr}_2\\text{O}_7^{2-}(\\text{aq}) + 14\\text{H}^+(\\text{aq}) \\rightarrow 2\\text{Cr}^{3+}(\\text{aq}) + 7\\text{H}_2\\text{O}(\\text{l})$. Step 5: Balance charges with electrons: $\\text{Fe}^{2+}(\\text{aq}) \\rightarrow \\text{Fe}^{3+}(\\text{aq}) + \\text{e}^-$ and $\\text{Cr}_2\\text{O}_7^{2-}(\\text{aq}) + 14\\text{H}^+(\\text{aq}) + 6\\text{e}^- \\rightarrow 2\\text{Cr}^{3+}(\\text{aq}) + 7\\text{H}_2\\text{O}(\\text{l})$. Step 6: Multiply oxidation half by 6 and add: $6\\text{Fe}^{2+}(\\text{aq}) + \\text{Cr}_2\\text{O}_7^{2-}(\\text{aq}) + 14\\text{H}^+(\\text{aq}) \\rightarrow 6\\text{Fe}^{3+}(\\text{aq}) + 2\\text{Cr}^{3+}(\\text{aq}) + 7\\text{H}_2\\text{O}(\\text{l})$. Step 7: Verify atoms and charges."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.3.2:6",
+            "order": 6,
+            "title": "Half Reaction Method in Basic Medium",
+            "content_text": "To balance a reaction in basic medium using the half reaction method, the equation is first balanced as if it were in an acidic medium. Then, for every $\\text{H}^+$ ion present, an equal number of $\\text{OH}^-$ ions are added to both sides of the equation. On the side where $\\text{H}^+$ and $\text{OH}^-$ appear together, they are combined to form $\\text{H}_2\\text{O}$ molecules. This adjustment ensures the reaction conditions reflect the basic environment.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 7.10",
+                "problem": "Permanganate(VII) ion, $\\text{MnO}_4^-$ in basic solution oxidises iodide ion, $\\text{I}^-$ to produce molecular iodine ($\\text{I}_2$) and manganese (IV) oxide ($\\text{MnO}_2$). Write a balanced ionic equation.",
+                "solution": "Step 1: $\\text{MnO}_4^-(\\text{aq}) + \\text{I}^-(\\text{aq}) \\rightarrow \\text{MnO}_2(\\text{s}) + \\text{I}_2(\\text{s})$. Step 2: Oxidation: $\\text{I}^- \\rightarrow \\text{I}_2$; Reduction: $\\text{MnO}_4^- \\rightarrow \\text{MnO}_2$. Step 3: Balance I: $2\\text{I}^- \\rightarrow \\text{I}_2$. Step 4: Balance O and H in reduction half (acidic first, then add $4\\text{OH}^-$ to both sides): $\\text{MnO}_4^-(\\text{aq}) + 2\\text{H}_2\\text{O}(\\text{l}) \\rightarrow \\text{MnO}_2(\\text{s}) + 4\\text{OH}^-(\\text{aq})$. Step 5: Balance charges: $2\\text{I}^- \\rightarrow \\text{I}_2 + 2\\text{e}^-$ and $\\text{MnO}_4^- + 2\\text{H}_2\\text{O} + 3\\text{e}^- \\rightarrow \\text{MnO}_2 + 4\\text{OH}^-$. Step 6: Multiply oxidation by 3 and reduction by 2, then add: $6\\text{I}^-(\\text{aq}) + 2\\text{MnO}_4^-(\\text{aq}) + 4\\text{H}_2\\text{O}(\\text{l}) \\rightarrow 3\\text{I}_2(\\text{s}) + 2\\text{MnO}_2(\\text{s}) + 8\\text{OH}^-(\\text{aq})$. Step 7: Final verification."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:7:7.3.3",
+        "number": "7.3.3",
+        "title": "Redox Reactions as the Basis for Titrations",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:7:7.3.3:1",
+            "order": 1,
+            "title": "Principles of Redox Titrations and Indicators",
+            "content_text": "Redox titrations determine the strength of a reductant or oxidant using a redox-sensitive indicator. Three main methods are used to detect the end-point: (i) Self-indicators: Reagents like permanganate ion ($\\text{MnO}_4^-$) are intensely coloured. The end-point is reached when the last bit of reductant is consumed, and a single drop of excess $\\text{MnO}_4^-$ creates a lasting pink colour at concentrations as low as $10^{-6} \\text{ mol dm}^{-3}$. (ii) External indicators: Reagents like diphenylamine are used when there is no dramatic auto-colour change; they are oxidised immediately after the reactant is consumed, producing a distinct colour change (e.g., intense blue with dichromate). (iii) Specific indicators: Starch is used for titrations involving iodine. Iodine forms an intense blue colour with starch. In the reaction of $\\text{Cu}^{2+}$ with $\\text{I}^-$, liberated iodine is titrated against thiosulphate ions ($\\text{S}_2\\text{O}_3^{2-}$): $2\\text{Cu}^{2+}(\\text{aq}) + 4\\text{I}^-(\\text{aq}) \\rightarrow \\text{Cu}_2\\text{I}_2(\\text{s}) + \\text{I}_2(\\text{aq})$ and $\\text{I}_2(\\text{aq}) + 2\\text{S}_2\\text{O}_3^{2-}(\\text{aq}) \\rightarrow 2\\text{I}^-(\\text{aq}) + \\text{S}_4\\text{O}_6^{2-}(\\text{aq})$.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:7:7.3.4",
+        "number": "7.3.4",
+        "title": "Limitations of Concept of Oxidation Number",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:7:7.3.4:1",
+            "order": 1,
+            "title": "Evolution of Redox Concepts",
+            "content_text": "The concept of redox processes has evolved over time. While oxidation numbers provide a formal method for balancing equations, modern chemistry visualises oxidation as a decrease in electron density and reduction as an increase in electron density around the atoms involved in the reaction.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:7:7.4",
+        "number": "7.4",
+        "title": "REDOX REACTIONS AND ELECTRODE PROCESSES",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:7:7.4:1",
+            "order": 1,
+            "title": "Introduction to Electrode Processes",
+            "content_text": "Redox reactions can be observed through experiments such as dipping a zinc rod into a copper sulphate solution. This initiates a spontaneous reaction where zinc is oxidised and copper ions are reduced. The redox reaction takes place and during the In the direct reaction between a zinc rod and copper sulphate solution, zinc is oxidised to zinc ions and copper ions are reduced to metallic copper, with heat being evolved. To harness this energy or study the process better, the experiment is modified so that the electron transfer occurs indirectly. This is achieved by separating the zinc metal from the copper sulphate solution. A copper strip is placed in a copper sulphate solution in one beaker, and a zinc rod is placed in a zinc sulphate solution in another beaker. In each beaker, both the reduced and oxidised forms of the same species are present, representing the species in the reduction and oxidation half-reactions. A redox couple is defined as having together the oxidised and reduced forms of a substance taking part in an oxidation or reduction half reaction. This is represented by separating the oxidised form from the reduced form by a vertical line or a slash representing an interface (e.g., solid/solution). For example, the two redox couples in this experiment are represented as $Zn^{2+}/Zn$ and $Cu^{2+}/Cu$. By convention, the oxidised form is put before the reduced form.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.4:2",
+            "order": 2,
+            "title": "The Daniell Cell",
+            "content_text": "The Daniell cell is a setup where the two beakers containing the redox couples are placed side by side and connected. The solutions are connected by a salt bridge, which is a U-tube containing a solution of potassium chloride ($KCl$) or ammonium nitrate ($NH_4NO_3$) solidified with agar-agar. This bridge provides electrical contact between the solutions without allowing them to mix. The zinc and copper rods (electrodes) are connected by a metallic wire through an ammeter and a switch. When the switch is on, the following observations are made: 1. Electrons flow from the zinc rod to the copper rod through the external metallic wire. 2. Electricity flows through the solution via the migration of ions through the salt bridge. This flow of current is driven by a potential difference between the two electrodes.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 7.3",
+                "description": "The set-up for Daniell cell. It shows two beakers connected by a salt bridge. The left beaker contains a zinc rod (anode, negative) in a $ZnSO_4$ solution, where oxidation occurs ($Zn \\rightarrow Zn^{2+} + 2e^-$). The right beaker contains a copper rod (cathode, positive) in a $CuSO_4$ solution, where reduction occurs ($Cu^{2+} + 2e^- \\rightarrow Cu$). A metallic wire with a switch and ammeter connects the two electrodes. Electrons flow from the anode to the cathode, while current flows in the opposite direction. The salt bridge allows ion migration to complete the circuit.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:7:7.4:3",
+            "order": 3,
+            "title": "Electrode Potential and Standard Electrode Potential",
+            "content_text": "The potential associated with each electrode is known as electrode potential. When the concentration of each species in the electrode reaction is unity (1 M), any gas involved is at 1 atmospheric pressure, and the temperature is 298 K, the potential is called the Standard Electrode Potential ($E^\\ominus$). By convention, the $E^\\ominus$ of the hydrogen electrode is defined as 0.00 volts. The $E^\\ominus$ value measures the relative tendency of active species to remain in their oxidised or reduced forms. A negative $E^\\ominus$ indicates the redox couple is a stronger reducing agent than the $H^+/H_2$ couple, while a positive $E^\\ominus$ indicates it is a weaker reducing agent. Table 7.1 lists standard electrode potentials for various reduction half-reactions. These values are crucial for understanding the relative strengths of oxidising and reducing agents.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 7.1",
+                "caption": "The Standard Electrode Potentials at 298 K. Ions are present as aqueous species and $H_2O$ as liquid; gases and solids are shown by g and s respectively.",
+                "headers": [
+                  "Reaction (Oxidised form + $ne^-$ $\\rightarrow$ Reduced form)",
+                  "$E^\\ominus$ / V"
+                ],
+                "rows": [
+                  [
+                    "$F_2(g) + 2e^- \\rightarrow 2F^-$",
+                    "2.87"
+                  ],
+                  [
+                    "$Co^{3+} + e^- \\rightarrow Co^{2+}$",
+                    "1.81"
+                  ],
+                  [
+                    "$H_2O_2 + 2H^+ + 2e^- \\rightarrow 2H_2O$",
+                    "1.78"
+                  ],
+                  [
+                    "$MnO_4^- + 8H^+ + 5e^- \\rightarrow Mn^{2+} + 4H_2O$",
+                    "1.51"
+                  ],
+                  [
+                    "$Au^{3+} + 3e^- \\rightarrow Au(s)$",
+                    "1.40"
+                  ],
+                  [
+                    "$Cl_2(g) + 2e^- \\rightarrow 2Cl^-$",
+                    "1.36"
+                  ],
+                  [
+                    "$Cr_2O_7^{2-} + 14H^+ + 6e^- \\rightarrow 2Cr^{3+} + 7H_2O$",
+                    "1.33"
+                  ],
+                  [
+                    "$O_2(g) + 4H^+ + 4e^- \\rightarrow 2H_2O$",
+                    "1.23"
+                  ],
+                  [
+                    "$MnO_2(s) + 4H^+ + 2e^- \\rightarrow Mn^{2+} + 2H_2O$",
+                    "1.23"
+                  ],
+                  [
+                    "$Br_2 + 2e^- \\rightarrow 2Br^-$",
+                    "1.09"
+                  ],
+                  [
+                    "$NO_3^- + 4H^+ + 3e^- \\rightarrow NO(g) + 2H_2O$",
+                    "0.97"
+                  ],
+                  [
+                    "$2Hg^{2+} + 2e^- \\rightarrow Hg_2^{2+}$",
+                    "0.92"
+                  ],
+                  [
+                    "$Ag^+ + e^- \\rightarrow Ag(s)$",
+                    "0.80"
+                  ],
+                  [
+                    "$Fe^{3+} + e^- \\rightarrow Fe^{2+}$",
+                    "0.77"
+                  ],
+                  [
+                    "$O_2(g) + 2H^+ + 2e^- \\rightarrow H_2O_2$",
+                    "0.68"
+                  ],
+                  [
+                    "$I_2(s) + 2e^- \\rightarrow 2I^-$",
+                    "0.54"
+                  ],
+                  [
+                    "$Cu^+ + e^- \\rightarrow Cu(s)$",
+                    "0.52"
+                  ],
+                  [
+                    "$Cu^{2+} + 2e^- \\rightarrow Cu(s)$",
+                    "0.34"
+                  ],
+                  [
+                    "$AgCl(s) + e^- \\rightarrow Ag(s) + Cl^-$",
+                    "0.22"
+                  ],
+                  [
+                    "$AgBr(s) + e^- \\rightarrow Ag(s) + Br^-$",
+                    "0.10"
+                  ],
+                  [
+                    "$2H^+ + 2e^- \\rightarrow H_2(g)$",
+                    "0.00"
+                  ],
+                  [
+                    "$Pb^{2+} + 2e^- \\rightarrow Pb(s)$",
+                    "-0.13"
+                  ],
+                  [
+                    "$Sn^{2+} + 2e^- \\rightarrow Sn(s)$",
+                    "-0.14"
+                  ],
+                  [
+                    "$Ni^{2+} + 2e^- \\rightarrow Ni(s)$",
+                    "-0.25"
+                  ],
+                  [
+                    "$Fe^{2+} + 2e^- \\rightarrow Fe(s)$",
+                    "-0.44"
+                  ],
+                  [
+                    "$Cr^{3+} + 3e^- \\rightarrow Cr(s)$",
+                    "-0.74"
+                  ],
+                  [
+                    "$Zn^{2+} + 2e^- \\rightarrow Zn(s)$",
+                    "-0.76"
+                  ],
+                  [
+                    "$2H_2O + 2e^- \\rightarrow H_2(g) + 2OH^-$",
+                    "-0.83"
+                  ],
+                  [
+                    "$Al^{3+} + 3e^- \\rightarrow Al(s)$",
+                    "-1.66"
+                  ],
+                  [
+                    "$Mg^{2+} + 2e^- \\rightarrow Mg(s)$",
+                    "-2.36"
+                  ],
+                  [
+                    "$Na^+ + e^- \\rightarrow Na(s)$",
+                    "-2.71"
+                  ],
+                  [
+                    "$Ca^{2+} + 2e^- \\rightarrow Ca(s)$",
+                    "-2.87"
+                  ],
+                  [
+                    "$K^+ + e^- \\rightarrow K(s)$",
+                    "-2.93"
+                  ],
+                  [
+                    "$Li^+ + e^- \\rightarrow Li(s)$",
+                    "-3.05"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:7:7.5",
+        "number": "7.5",
+        "title": "SUMMARY",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:7:7.5:1",
+            "order": 1,
+            "title": "Chapter Overview",
+            "content_text": "Redox reactions involve simultaneous oxidation and reduction. They are conceptualised through classical ideas, electron transfer, and oxidation numbers. Oxidation numbers are assigned based on specific rules, and redox equations can be balanced using the oxidation number or ion-electron methods. Redox reactions are classified into four categories: combination, decomposition, displacement, and disproportionation. The concepts of redox couples and electrode processes are fundamental to the study of electrochemical cells and have wide applications.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:chemistry:11:7:ex:1",
+          "number": 1,
+          "problem": "Assign oxidation number to the underlined elements in each of the following species: (a) $NaH_2\\underline{P}O_4$ (b) $NaH\\underline{S}O_4$ (c) $H_4\\underline{P}_2O_7$ (d) $K_2\\underline{Mn}O_4$ (e) $Ca\\underline{O}_2$ (f) $Na\\underline{B}H_4$ (g) $H_2\\underline{S}_2O_7$ (h) $KAl(\\underline{S}O_4)_2 \\cdot 12 H_2O$",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:7:ex:2",
+          "number": 2,
+          "problem": "What are the oxidation number of the underlined elements in each of the following and how do you rationalise your results? (a) $K\\underline{I}_3$ (b) $H_2\\underline{S}_4O_6$ (c) $\\underline{Fe}_3O_4$ (d) $\\underline{C}H_3\\underline{C}H_2OH$ (e) $\\underline{C}H_3\\underline{C}OOH$",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:7:ex:3",
+          "number": 3,
+          "problem": "Justify that the following reactions are redox reactions: (a) $CuO(s) + H_2(g) \\rightarrow Cu(s) + H_2O(g)$ (b) $Fe_2O_3(s) + 3CO(g) \\rightarrow 2Fe(s) + 3CO_2(g)$ (c) $4BCl_3(g) + 3LiAlH_4(s) \\rightarrow 2B_2H_6(g) + 3LiCl(s) + 3AlCl_3(s)$ (d) $2K(s) + F_2(g) \\rightarrow 2K^+F^-(s)$ (e) $4NH_3(g) + 5O_2(g) \\rightarrow 4NO(g) + 6H_2O(g)$",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:7:ex:4",
+          "number": 4,
+          "problem": "Fluorine reacts with ice and results in the change: $H_2O(s) + F_2(g) \\rightarrow HF(g) + HOF(g)$. Justify that this reaction is a redox reaction.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:7:ex:5",
+          "number": 5,
+          "problem": "Calculate the oxidation number of sulphur, chromium and nitrogen in $H_2SO_5$, $Cr_2O_7^{2-}$ and $NO_3^-$. Suggest structure of these compounds. Count for the fallacy.",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:7:ex:6",
+          "number": 6,
+          "problem": "Write formulas for the following compounds: (a) Mercury(II) chloride (b) Nickel(II) sulphate (c) Tin(IV) oxide (d) Thallium(I) sulphate (e) Iron(III) sulphate (f) Chromium(III) oxide",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "short_answer"
+        },
+        {
+          "id": "ncert:chemistry:11:7:ex:7",
+          "number": 7,
+          "problem": "Suggest a list of the substances where carbon can exhibit oxidation states from -4 to +4 and nitrogen from -3 to +5.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "short_answer"
+        },
+        {
+          "id": "ncert:chemistry:11:7:ex:8",
+          "number": 8,
+          "problem": "While sulphur dioxide and hydrogen peroxide can act as oxidising as well as reducing agents in their reactions, ozone and nitric acid act only as oxidants. Why?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:7:ex:9",
+          "number": 9,
+          "problem": "Consider the reactions: (a) $6CO_2(g) + 6H_2O(l) \\rightarrow C_6H_{12}O_6(aq) + 6O_2(g)$ Consider the reactions: (a) $6CO_2(g) + 6H_2O(l) \\rightarrow C_6H_{12}O_6(aq) + 6O_2(g)$ (b) $O_3(g) + H_2O_2(l) \\rightarrow H_2O(l) + 2O_2(g)$. Why it is more appropriate to write these reactions as: (a) $6CO_2(g) + 12H_2O(l) \\rightarrow C_6H_{12}O_6(aq) + 6H_2O(l) + 6O_2(g)$ (b) $O_3(g) + H_2O_2(l) \\rightarrow H_2O(l) + O_2(g) + O_2(g)$. Also suggest a technique to investigate the path of the above (a) and (b) redox reactions.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:7:ex:10",
+          "number": 10,
+          "problem": "The compound $AgF_2$ is unstable compound. However, if formed, the compound acts as a very strong oxidising agent. Why?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:7:ex:11",
+          "number": 11,
+          "problem": "Whenever a reaction between an oxidising agent and a reducing agent is carried out, a compound of lower oxidation state is formed if the reducing agent is in excess and a compound of higher oxidation state is formed if the oxidising agent is in excess. Justify this statement giving three illustrations.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:7:ex:12",
+          "number": 12,
+          "problem": "How do you count for the following observations? (a) Though alkaline potassium permanganate and acidic potassium permanganate both are used as oxidants, yet in the manufacture of benzoic acid from toluene we use alcoholic potassium permanganate as an oxidant. Why? Write a balanced redox equation for the reaction. (b) When concentrated sulphuric acid is added to an inorganic mixture containing chloride, we get colourless pungent smelling gas $HCl$, but if the mixture contains bromide then we get red vapour of bromine. Why?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:7:ex:13",
+          "number": 13,
+          "problem": "Identify the substance oxidised reduced, oxidising agent and reducing agent for each of the following reactions: (a) $2AgBr(s) + C_6H_6O_2(aq) \\rightarrow 2Ag(s) + 2HBr(aq) + C_6H_4O_2(aq)$ (b) $HCHO(l) + 2[Ag(NH_3)_2]^+(aq) + 3OH^-(aq) \\rightarrow 2Ag(s) + HCOO^-(aq) + 4NH_3(aq) + 2H_2O(l)$ (c) $HCHO(l) + 2Cu^{2+}(aq) + 5OH^-(aq) \\rightarrow Cu_2O(s) + HCOO^-(aq) + 3H_2O(l)$ (d) $N_2H_4(l) + 2H_2O_2(l) \\rightarrow N_2(g) + 4H_2O(l)$ (e) $Pb(s) + PbO_2(s) + 2H_2SO_4(aq) \\rightarrow 2PbSO_4(s) + 2H_2O(l)$",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:7:ex:14",
+          "number": 14,
+          "problem": "Consider the reactions: $2S_2O_3^{2-}(aq) + I_2(s) \\rightarrow S_4O_6^{2-}(aq) + 2I^-(aq)$ and $S_2O_3^{2-}(aq) + 2Br_2(l) + 5H_2O(l) \\rightarrow 2SO_4^{2-}(aq) + 4Br^-(aq) + 10H^+(aq)$. Why does the same reductant, thiosulphate react differently with iodine and bromine?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:7:ex:15",
+          "number": 15,
+          "problem": "Justify giving reactions that among halogens, fluorine is the best oxidant and among hydrohalic compounds, hydroiodic acid is the best reductant.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:7:ex:16",
+          "number": 16,
+          "problem": "Why does the following reaction occur? $XeO_6^{4-}(aq) + 2F^-(aq) + 6H^+(aq) \\rightarrow XeO_3(g) + F_2(g) + 3H_2O(l)$. What conclusion about the compound $Na_4XeO_6$ (of which $XeO_6^{4-}$ is a part) can be drawn from the reaction.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:7:ex:17",
+          "number": 17,
+          "problem": "Consider the reactions: (a) $H_3PO_2(aq) + 4AgNO_3(aq) + 2H_2O(l) \\rightarrow H_3PO_4(aq) + 4Ag(s) + 4HNO_3(aq)$ (b) $H_3PO_2(aq) + 2CuSO_4(aq) + 2H_2O(l) \\rightarrow H_3PO_4(aq) + 2Cu(s) + H_2SO_4(aq)$ (c) $C_6H_5CHO(l) + 2[Ag(NH_3)_2]^+(aq) + 3OH^-(aq) \\rightarrow C_6H_5COO^-(aq) + 2Ag(s) + 4NH_3(aq) + 2H_2O(l)$ (d) $C_6H_5CHO(l) + 2Cu^{2+}(aq) + 5OH^-(aq) \\rightarrow$ No change observed. What inference do you draw about the behaviour of $Ag^+$ and $Cu^{2+}$ from these reactions?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:7:ex:18",
+          "number": 18,
+          "problem": "Balance the following redox reactions by ion – electron method: (a) $MnO_4^-(aq) + I^-(aq) \\rightarrow MnO_2(s) + I_2(s)$ (in basic medium) (b) $MnO_4^-(aq) + SO_2(g) \\rightarrow Mn^{2+}(aq) + HSO_4^-(aq)$ (in acidic solution) (c) $H_2O_2(aq) + Fe^{2+}(aq) \\rightarrow Fe^{3+}(aq) + H_2O(l)$ (in acidic solution) (d) $Cr_2O_7^{2-} + SO_2(g) \\rightarrow Cr^{3+}(aq) + SO_4^{2-}(aq)$ (in acidic solution)",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:7:ex:19",
+          "number": 19,
+          "problem": "Balance the following equations in basic medium by ion-electron method and oxidation number methods and identify the oxidising agent and the reducing agent. (a) $P_4(s) + OH^-(aq) \\rightarrow PH_3(g) + HPO_2^-(aq)$ (b) $N_2H_4(l) + ClO_3^-(aq) \\rightarrow NO(g) + Cl^-(aq)$ (c) $Cl_2O_7(g) + H_2O_2(aq) \\rightarrow ClO_2^-(aq) + O_2(g) + H^+$",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:7:ex:20",
+          "number": 20,
+          "problem": "What sorts of informations can you draw from the following reaction? $(CN)_2(g) + 2OH^-(aq) \\rightarrow CN^-(aq) + CNO^-(aq) + H_2O(l)$",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:7:ex:21",
+          "number": 21,
+          "problem": "The $Mn^{3+}$ ion is unstable in solution and undergoes disproportionation to give $Mn^{2+}$, $MnO_2$, and $H^+$ ion. Write a balanced ionic equation for the reaction.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:7:ex:22",
+          "number": 22,
+          "problem": "Consider the elements: Cs, Ne, I and F (a) Identify the element that exhibits only negative oxidation state. (b) Identify the element that exhibits only postive oxidation state. (c) Identify the element that exhibits both positive and negative oxidation states. (d) Identify the element which exhibits neither the negative nor the positive oxidation state.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:7:ex:23",
+          "number": 23,
+          "problem": "Chlorine is used to purify drinking water. Excess of chlorine is harmful. The excess of chlorine is removed by treating with sulphur dioxide. Present a balanced equation for this redox change taking place in water.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:7:ex:24",
+          "number": 24,
+          "problem": "Refer to the periodic table given in your book and now answer the following questions: (a) Select the possible non metals that can show disproportionation reaction. (b) Select three metals that can show disproportionation reaction.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:7:ex:25",
+          "number": 25,
+          "problem": "In Ostwald’s process for the manufacture of nitric acid, the first step involves the oxidation of ammonia gas by oxygen gas to give nitric oxide gas and steam. What is the maximum weight of nitric oxide that can be obtained starting only with 10.00 g. of ammonia and 20.00 g of oxygen?",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:7:ex:26",
+          "number": 26,
+          "problem": "Using the standard electrode potentials given in the Table 8.1, predict if the reaction between the following is feasible: (a) $Fe^{3+}(aq)$ and $I^-(aq)$ (b) $Ag^+(aq)$ and $Cu(s)$ (c) $Fe^{3+}(aq)$ and $Cu(s)$ (d) $Ag(s)$ and $Fe^{3+}(aq)$ (e) $Br_2(aq)$ and $Fe^{2+}(aq)$.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:7:ex:27",
+          "number": 27,
+          "problem": "Predict the products of electrolysis in each of the following: (i) An aqueous solution of $AgNO_3$ with silver electrodes (ii) An aqueous solution $AgNO_3$ with platinum electrodes (iii) A dilute solution of $H_2SO_4$ with platinum electrodes (iv) An aqueous solution of $CuCl_2$ with platinum electrodes.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:7:ex:28",
+          "number": 28,
+          "problem": "Arrange the following metals in the order in which they displace each other from the solution of their salts. Al, Cu, Fe, Mg and Zn.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:7:ex:29",
+          "number": 29,
+          "problem": "Given the standard electrode potentials, $K^+/K = -2.93V$, $Ag^+/Ag = 0.80V$, $Hg^{2+}/Hg = 0.79V$, $Mg^{2+}/Mg = -2.37V$, $Cr^{3+}/Cr = -0.74V$ arrange these metals in their increasing order of reducing power.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:7:ex:30",
+          "number": 30,
+          "problem": "Depict the galvanic cell in which the reaction $Zn(s) + 2Ag^+(aq) \\rightarrow Zn^{2+}(aq) + 2Ag(s)$ takes place, Further show: (i) which of the electrode is negatively charged, (ii) the carriers of the current in the cell, and (iii) individual reaction at each electrode.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        }
+      ]
+    }
+  }
+}

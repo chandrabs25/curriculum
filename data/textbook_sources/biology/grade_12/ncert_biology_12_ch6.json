@@ -1,0 +1,721 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_biology_12_ch6.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:biology:12:6",
+  "curriculum": "ncert",
+  "subject": "biology",
+  "grade": 12,
+  "textbook_name": "Biology",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:biology:12:6",
+    "number": 6,
+    "title": "Evolution",
+    "summary": "This chapter on Evolution explores the history of life forms on Earth, starting with the origin of life itself. It begins with the Big Bang theory and the formation of Earth, then delves into early theories about the origin of life, ultimately focusing on the Oparin-Haldane hypothesis and Miller's experiment which support the idea of chemical evolution leading to the first life forms.\n\nThe chapter then transitions to evidence for evolution, examining paleontological, embryological, anatomical (homology & analogy), biochemical, and anthropogenic evidence, including examples like industrial melanism and the development of antibiotic resistance. Adaptive radiation, exemplified by Darwin's finches and Australian marsupials, demonstrates how species diversify in different environments. Biological evolution is discussed, highlighting the role of natural selection, genetic fitness, and the influence of Lamarckism and Malthus.\n\nThe mechanism of evolution is further explored through mutation theory and the Hardy-Weinberg principle, which describes genetic equilibrium in a population and factors that disrupt it (gene flow, genetic drift, mutation, recombination, and natural selection). Finally, the chapter provides a brief account of the evolution of vertebrates, including reptiles, dinosaurs, and mammals, culminating in the origin and evolution of humans, tracing our lineage from early primates to Homo sapiens. Understanding evolutionary principles is vital for fields like medicine, agriculture, and conservation.",
+    "sections": [
+      {
+        "id": "ncert:biology:12:6:6.1",
+        "number": "6.1",
+        "title": "Origin of Life",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:6:6.1:1",
+            "order": 1,
+            "title": "Introduction to Evolutionary Biology",
+            "content_text": "Evolutionary Biology is the study of the history of life forms on earth. To understand the changes in flora and fauna that have occurred over millions of years, one must understand the context of the origin of life, including the evolution of the earth, stars, and the universe itself. Stellar distances are measured in light years. When we look at stars, we are essentially looking back in time because the light we see today started its journey millions of years ago from trillions of kilometers away.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:6:6.1:2",
+            "order": 2,
+            "title": "The Big Bang Theory and the Origin of the Universe",
+            "content_text": "The universe is approximately 13.8 billion years old and contains huge clusters of galaxies, which in turn contain stars and clouds of gas and dust. The Big Bang theory explains the origin of the universe as a singular, unimaginable physical explosion. Following this explosion, the universe expanded, causing the temperature to decrease. Hydrogen ($H$) and Helium ($He$) formed sometime later. Under the force of gravitation, these gases condensed to form the galaxies of the present-day universe.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:6:6.1:3",
+            "order": 3,
+            "title": "Formation of Earth and Early Atmospheric Conditions",
+            "content_text": "Earth was formed about 4.5 billion years ago in the solar system of the milky way galaxy. Initially, there was no atmosphere. The surface was covered by molten mass which released water vapor, methane ($CH_4$), carbon dioxide ($CO_2$), and ammonia ($NH_3$). Ultraviolet (UV) rays from the sun broke down water into Hydrogen ($H_2$) and Oxygen ($O_2$). The lighter $H_2$ escaped, while oxygen combined with ammonia and methane to form water, $CO_2$, and other compounds. As the earth cooled, the ozone layer formed, and water vapor fell as rain, filling depressions to form oceans. Life appeared approximately 500 million years after the formation of earth, roughly 4 billion years ago.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:6:6.1:4",
+            "order": 4,
+            "title": "Early Theories: Panspermia and Spontaneous Generation",
+            "content_text": "Early Greek thinkers proposed the idea of 'Panspermia', suggesting that units of life called 'spores' were transferred to different planets, including Earth. Another long-held belief was the theory of 'spontaneous generation', which posited that life arose from decaying and rotting matter like straw and mud.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:6:6.1:5",
+            "order": 5,
+            "title": "Louis Pasteur’s Experiment on Biogenesis",
+            "content_text": "Louis Pasteur dismissed the theory of spontaneous generation through careful experimentation. He demonstrated that life comes only from pre-existing life. In his experiment, he used pre-sterilised flasks; life did not arise in a closed flask containing killed yeast, but in a flask open to the air, new living organisms arose from the killed yeast. This established the principle of biogenesis, though it did not explain how the very first life form originated.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:6:6.1:6",
+            "order": 6,
+            "title": "Chemical Evolution: The Oparin-Haldane Hypothesis",
+            "content_text": "Oparin of Russia and Haldane of England proposed that the first form of life could have come from pre-existing non-living organic molecules (such as RNA and proteins). They argued that the formation of life was preceded by chemical evolution—the formation of diverse organic molecules from inorganic constituents. The conditions on early earth that favored this were high temperature, volcanic storms, and a reducing atmosphere containing $CH_4$, $NH_3$, etc.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:6:6.1:7",
+            "order": 7,
+            "title": "Miller's Experiment",
+            "content_text": "In 1953, S.L. Miller, an American scientist, provided experimental evidence for chemical evolution. He created conditions similar to early earth in a laboratory scale using a closed flask. He used an electric discharge to simulate lightning in a mixture of $CH_4$, $H_2$, $NH_3$, and water vapor at $800^\\circ C$. After the experiment, he observed the formation of amino acids. Similar experiments by others resulted in the formation of sugars, nitrogen bases, pigments, and fats. Analysis of meteorite content also revealed similar compounds, suggesting that such processes occur elsewhere in space.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 6.1",
+                "description": "A diagrammatic representation of Miller's experiment setup. It shows a closed glass apparatus with a large flask containing gases ($CH_4$, $NH_3$, $H_2O$, $H_2$) and electrodes for spark discharge. A smaller flask contains boiling water to provide steam. A condenser with 'water in' and 'water out' ports cools the gases, leading to a trap where liquid water containing organic compounds collects. A vacuum pump connection is also visible.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:6:6.1:8",
+            "order": 8,
+            "title": "Origin of First Life Forms",
+            "content_text": "The first non-cellular forms of life are thought to have originated 3 billion years ago. These were likely giant molecules like RNA, proteins, and polysaccharides that could reproduce their molecules. The first cellular forms of life probably originated about 2000 million years ago as single cells in a water environment. This version of biogenesis—that life arose slowly through evolutionary forces from non-living molecules—is now widely accepted.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:6:6.2",
+        "number": "6.2",
+        "title": "Evolution of Life Forms - A Theory",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:6:6.2:1",
+            "order": 1,
+            "title": "Theory of Special Creation",
+            "content_text": "Conventional religious literature describes the theory of special creation, which has three main connotations: 1. All living organisms (species or types) seen today were created as such. 2. Diversity has always been the same since creation and will remain so in the future. 3. The earth is approximately 4000 years old. These ideas were strongly challenged during the nineteenth century.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:6:6.2:2",
+            "order": 2,
+            "title": "Darwinian Observations and Gradual Evolution",
+            "content_text": "Based on observations made during a sea voyage on the H.M.S. Beagle, Charles Darwin concluded that existing life forms share similarities to varying degrees among themselves and with life forms that existed millions of years ago. He noted that many life forms have gone extinct, while new forms arose at different periods of history. He proposed that there has been a gradual evolution of life forms. Any population Any population has built in variation in characteristics. Those characteristics which enable some to survive better in natural conditions (climate, food, physical factors, etc.) would outbreed others that are less-endowed to survive under such natural conditions. Another word used is fitness of the individual or population. The fitness, according to Darwin, refers ultimately and only to reproductive fitness. Hence, those who are better fit in an environment, leave more progeny than others. These, therefore, will survive more and hence are selected by nature. He called it natural selection and implied it as a mechanism of evolution. Let us also remember that Alfred Wallace, a naturalist who worked in Malay Archipelago had also come to similar conclusions around the same time. In due course of time, apparently new types of organisms are recognisable. All the existing life forms share similarities and share common ancestors. However, these ancestors were present at different periods in the history of earth (epochs, periods and eras). The geological history of earth closely correlates with the biological history of earth. A common permissible conclusion is that earth is very old, not thousand of years as was thought earlier but billions of years old.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:6:6.3",
+        "number": "6.3",
+        "title": "What are the Evidences for Evolution?",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:6:6.3:1",
+            "order": 1,
+            "title": "Paleontological Evidence",
+            "content_text": "Evidence that evolution of life forms has indeed taken place on earth has come from many quarters. Fossils are remains of hard parts of life-forms found in rocks. Rocks form sediments and a cross-section of earth's crust indicates the arrangement of sediments one over the other during the long history of earth. Different-aged rock sediments contain fossils of different life-forms who probably died during the formation of the particular sediment. Some of them appear similar to modern organisms. They represent extinct organisms (e.g., Dinosaurs). A study of fossils in different sedimentary layers indicates the geological period in which they existed. The study showed that life-forms varied over time and certain life forms are restricted to certain geological time-spans. Hence, new forms of life have arisen at different times in the history of earth. All this is called paleontological evidence. The ages of fossils are calculated using methods like radioactive-dating and the principles behind the procedure.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 6.2",
+                "description": "A family tree of dinosaurs and their living modern day counterpart organisms like crocodiles and birds. It shows the evolutionary relationships between various dinosaur groups like Triceratops, Tyrannosaurus, Pteranodon, Stegosaurus, and Brachiosaurus, leading to modern crocodiles and birds (Archaeopteryx).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:6:6.3:2",
+            "order": 2,
+            "title": "Embryological Support for Evolution",
+            "content_text": "Embryological support for evolution was also proposed by Ernst Heckel based upon the observation of certain features during embryonic stage common to all vertebrates that are absent in adult. For example, the embryos of all vertebrates including human develop a row of vestigial gill slit just behind the head but it is a functional organ only in fish and not found in any other adult vertebrates. However, this proposal was disapproved on careful study performed by Karl Ernst von Baer. He noted that embryos never pass through the adult stages of other animals.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:6:6.3:3",
+            "order": 3,
+            "title": "Homology and Divergent Evolution",
+            "content_text": "Comparative anatomy and morphology shows similarities and differences among organisms of today and those that existed years ago. Such similarities can be interpreted to understand whether common ancestors were shared or not. For example, whales, bats, Cheetah and human (all mammals) share similarities in the pattern of bones of forelimbs. Though these forelimbs perform different functions in these animals, they have similar anatomical structure – all of them have humerus, radius, ulna, carpals, metacarpals and phalanges in their forelimbs. Hence, in these animals, the same structure developed along different directions due to adaptations to different needs. This is divergent evolution and these structures are homologous. Homology indicates common ancestry. Other examples are vertebrate hearts or brains. In plants also, the thorn and tendrils of Bougainvillea and Cucurbita represent homology. Homology is based on divergent evolution.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 6.3",
+                "description": "Example of homologous organs in (a) Plants, showing the thorn of Bougainvillea and the tendril of Cucurbita, and (b) Animals, showing the forelimbs of Man, Cheetah, Whale, and Bat, highlighting the similar skeletal structure (humerus, radius, ulna, carpals, metacarpals, and phalanges) despite different functions.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:6:6.3:4",
+            "order": 4,
+            "title": "Analogy and Convergent Evolution",
+            "content_text": "Analogy refers to a situation exactly opposite to homology. Wings of butterfly and of birds look alike. They are not anatomically similar structures though they perform similar functions. Hence, analogous structures are a result of convergent evolution - different structures evolving for the same function and hence having similarity. Other examples of analogy are the eye of the octopus and of mammals or the flippers of Penguins and Dolphins. One can say that it is the similar habitat that has resulted in selection of similar adaptive features in different groups of organisms but toward the same function. Sweet potato (root modification) and potato (stem modification) is another example for analogy.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:6:6.3:5",
+            "order": 5,
+            "title": "Biochemical Evidence",
+            "content_text": "In the same line of argument, similarities in proteins and genes performing a given function among diverse organisms give clues to common ancestry. These biochemical similarities point to the same shared ancestry as structural similarities among diverse organisms.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:6:6.3:6",
+            "order": 6,
+            "title": "Anthropogenic Evolution",
+            "content_text": "Man has bred selected plants and animals for agriculture, horticulture, sport or security. Man has domesticated many wild animals and crops. This intensive breeding programme has created breeds that differ from other breeds (e.g., dogs) but still are of the same group. It is argued that if within hundreds of years, man could create new breeds, could not nature have done the same over millions of years?",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:6:6.3:7",
+            "order": 7,
+            "title": "Natural Selection - Industrial Melanism",
+            "content_text": "Another interesting observation supporting evolution by natural selection comes from England. In a collection of moths made in 1850s, i.e., before industrialisation set in, it was observed that there were more white-winged moths on trees than dark-winged or melanised moths. However, in the collection carried out from the same area, but after industrialisation, i.e., in 1920, there were more dark-winged moths in the same area, i.e., the proportion was reversed. The explanation put forth for the observation of moth population shifts in England was that 'predators will spot a moth against a contrasting background'. During the post-industrialisation period, tree trunks became dark due to industrial smoke and soot. Under this condition, the white-winged moth did not survive well due to predators, while the dark-winged or melanised moth survived. Before industrialisation, thick growth of almost white-coloured lichen covered the trees; in that background, the white-winged moth survived but the dark-coloured moths were picked out by predators. Lichens are significant as industrial pollution indicators because they do not grow in polluted areas. This camouflage mechanism allowed better-adapted moths to survive and increase in population size. This understanding is supported by rural areas where industrialisation did not occur and the count of melanic moths remained low. It is important to note that in a mixed population, no variant is completely wiped out.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 6.4",
+                "description": "Comparison of white-winged and dark-winged moths on tree trunks. (a) In unpolluted areas, white-winged moths are camouflaged against light-colored lichens. (b) In polluted areas, dark-winged moths are camouflaged against soot-darkened trunks.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:6:6.3:8",
+            "order": 8,
+            "title": "Evolution by Anthropogenic Action",
+            "content_text": "The excess use of herbicides and pesticides has resulted in the selection of resistant varieties in a much shorter time scale. Similarly, the use of antibiotics or drugs against eukaryotic organisms and microbes has led to the appearance of resistant organisms/cells within months or years rather than centuries. These are prime examples of evolution by anthropogenic (human-induced) action. This demonstrates that evolution is not a directed process in the sense of determinism; rather, it is a stochastic process based on chance events in nature and chance mutations in organisms.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:6:6.4",
+        "number": "6.4",
+        "title": "What is Adaptive Radiation?",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:6:6.4:1",
+            "order": 1,
+            "title": "Darwin's Finches",
+            "content_text": "During his journey to the Galapagos Islands, Darwin observed an amazing diversity of creatures, particularly small black birds now known as Darwin’s Finches. He conjectured that all varieties evolved on the island itself from an original seed-eating ancestor. Over time, many other forms with altered beaks arose, enabling them to become insectivorous and vegetarian finches to exploit different food sources.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 6.5",
+                "description": "Illustrations showing the variety of beak shapes in Darwin's finches, adapted for different feeding habits on the Galapagos Islands.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:6:6.4:2",
+            "order": 2,
+            "title": "Definition of Adaptive Radiation",
+            "content_text": "Adaptive radiation is defined as the process of evolution of different species in a given geographical area starting from a point and literally radiating to other areas of geography or habitats. Darwin’s finches are one of the best-known examples of this phenomenon.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:6:6.4:3",
+            "order": 3,
+            "title": "Australian Marsupials",
+            "content_text": "Australian marsupials provide another example of adaptive radiation. A number of different marsupials, each distinct from the other, evolved from an ancestral stock within the isolated Australian island continent.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 6.6",
+                "description": "A diagram depicting the adaptive radiation of Australian marsupials, showing various forms like the Kangaroo, Koala, and Tasmanian wolf originating from a central ancestral point.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:6:6.4:4",
+            "order": 4,
+            "title": "Convergent Evolution",
+            "content_text": "When more than one adaptive radiation occurs in an isolated geographical area representing different habitats, it results in convergent evolution. For instance, placental mammals in Australia evolved into varieties that appear remarkably similar to corresponding marsupials, such as the placental wolf and the Tasmanian wolf (a marsupial). This similarity between unrelated groups due to similar environmental pressures is a hallmark of convergence.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Figure 6.7",
+                "caption": "Convergent evolution of Australian Marsupials and placental mammals",
+                "headers": [
+                  "Placental mammals",
+                  "Australian marsupials"
+                ],
+                "rows": [
+                  [
+                    "Mole",
+                    "Marsupial mole"
+                  ],
+                  [
+                    "Anteater",
+                    "Numbat (anteater)"
+                  ],
+                  [
+                    "Mouse",
+                    "Marsupial mouse"
+                  ],
+                  [
+                    "Lemur",
+                    "Spotted cuscus"
+                  ],
+                  [
+                    "Flying squirrel",
+                    "Flying phalanger"
+                  ],
+                  [
+                    "Bobcat",
+                    "Tasmanian tiger cat"
+                  ],
+                  [
+                    "Wolf",
+                    "Tasmanian wolf"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:6:6.5",
+        "number": "6.5",
+        "title": "Biological Evolution",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:6:6.5:1",
+            "order": 1,
+            "title": "Origin of Biological Evolution",
+            "content_text": "Evolution by natural selection, in a true sense, would have started when cellular forms of life with differences in metabolic capability originated on Earth.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:6:6.5:2",
+            "order": 2,
+            "title": "Rate of Evolution and Life Span",
+            "content_text": "The essence of Darwinian theory is natural selection. The rate at which new forms appear is linked to the life cycle or life span of the organism. Microbes, which divide rapidly, can produce millions of individuals and show evolutionary changes (like antibiotic resistance) within hours or days. In contrast, for larger animals like fish or fowl with longer life spans, similar evolutionary changes would take millions of years. Fitness is relative to the environment; for example, in a bacterial colony, a change in medium might favor a variant (population B) over the original (population A), leading B to outgrow A and eventually appear as a new species.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:6:6.5:3",
+            "order": 3,
+            "title": "Genetic Basis of Fitness",
+            "content_text": "Nature selects for fitness, which is based on characteristics that are inherited. Therefore, there must be a genetic basis for an organism to be selected and to evolve. Adaptive ability is not just a trait but is inherited and has a genetic foundation. Fitness is the end result of an organism's ability to adapt and be selected by nature.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:6:6.5:4",
+            "order": 4,
+            "title": "Key Concepts of Darwinian Theory",
+            "content_text": "Branching descent and natural selection are the two key concepts of the Darwinian Theory of Evolution.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:6:6.5:5",
+            "order": 5,
+            "title": "Lamarckism",
+            "content_text": "Even before Darwin, the French naturalist Lamarck proposed that the evolution of life forms occurred, but he argued it was driven by the use and disuse of organs. He gave the examples of Giraffes who in an attempt to forage leaves on tall trees had had to adapt by elongation of their necks. As they passed on this acquired character of elongated neck to succeeding generations, Giraffes, slowly, over the years, came to acquire long necks. Nobody believes this conjecture any more.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:6:6.5:6",
+            "order": 6,
+            "title": "Evolution: Process or Result?",
+            "content_text": "The nature of evolution is a subject of debate: is it a process or the result of a process? The world we see, inanimate and animate, is only the success stories of evolution. When we describe the story of this world we describe evolution as a process. On the other hand when we describe the story of life on earth, we treat evolution as a consequence of a process called natural selection. It remains unclear whether to regard evolution and natural selection as processes or the end results of unknown processes.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:6:6.5:7",
+            "order": 7,
+            "title": "Darwinian Natural Selection and Malthusian Influence",
+            "content_text": "Darwin's theory of natural selection was significantly influenced by the work of Thomas Malthus on populations. Natural selection is based on several factual observations: natural resources are limited, populations remain stable in size except for seasonal fluctuations, and members of a population vary in characteristics (no two individuals are exactly alike). Theoretically, if every individual reproduced maximally, population size would grow exponentially (as seen in bacterial populations). However, because resources are limited, competition ensues, and only some survive. Darwin's key insight was that heritable variations that improve resource utilization (making an individual better adapted to its habitat) enable those individuals to reproduce more and leave more progeny. Over many generations, these survivors change the population characteristics, leading to the emergence of new forms.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:6:6.6",
+        "number": "6.6",
+        "title": "Mechanism of Evolution",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:6:6.6:1",
+            "order": 1,
+            "title": "Mutation Theory by Hugo de Vries",
+            "content_text": "The origin of variation and the process of speciation were addressed by Hugo de Vries in the early 20th century. Based on his work with the evening primrose, de Vries brought forth the idea of mutations—large differences arising suddenly in a population. He believed that mutation, rather than the minor heritable variations discussed by Darwin, is the primary cause of evolution. Mutations are characterized as random and directionless, whereas Darwinian variations are small and directional. While Darwin viewed evolution as a gradual process, de Vries believed mutation caused speciation and hence called it saltation (single-step large mutation). Later studies in population genetics provided further clarity on these mechanisms.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:6:6.7",
+        "number": "6.7",
+        "title": "Hardy-Weinberg Principle",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:6:6.7:1",
+            "order": 1,
+            "title": "Genetic Equilibrium",
+            "content_text": "In a given population, the frequency of occurrence of alleles of a gene or a locus can be determined. The Hardy-Weinberg principle states that allele frequencies in a population are stable and remain constant from generation to generation. The gene pool, which comprises the total genes and their alleles in a population, remains constant. This state is known as genetic equilibrium. The sum total of all allelic frequencies is equal to 1.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:6:6.7:2",
+            "order": 2,
+            "title": "Mathematical Representation of Hardy-Weinberg",
+            "content_text": "The Hardy-Weinberg principle is expressed using algebraic equations. In a diploid population, if $p$ and $q$ represent the frequencies of allele $A$ and allele $a$ respectively, the frequency of $AA$ individuals is $p^2$, the frequency of $aa$ is $q^2$, and the frequency of $Aa$ is $2pq$. This relationship is a binomial expansion of $(p+q)^2$. Thus, the frequencies can be represented as: $p^2 + 2pq + q^2 = 1$. When the measured frequency of alleles differs from the expected values, the extent of the difference indicates the degree of evolutionary change. Any disturbance in genetic equilibrium (Hardy-Weinberg equilibrium) is interpreted as evidence that evolution is occurring.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:6:6.7:3",
+            "order": 3,
+            "title": "Factors Affecting Hardy-Weinberg Equilibrium",
+            "content_text": "Five main factors are known to disrupt Hardy-Weinberg equilibrium: gene migration (or gene flow), genetic drift, mutation, genetic recombination, and natural selection. Gene migration occurs when a section of a population moves to a new location, altering gene frequencies in both the original and the new populations. If this migration occurs repeatedly, it is termed gene flow. If the change in allele frequency happens by chance, it is called genetic drift. In some cases, the change in frequency is so drastic in a new sample of the population that they evolve into a different species. The original drifted population is then referred to as 'founders', and this phenomenon is known as the founder effect.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:6:6.7:4",
+            "order": 4,
+            "title": "Operation of Natural Selection on Population Traits",
+            "content_text": "Natural selection is a process where heritable variations that enhance survival allow individuals to reproduce more successfully. Over time, this leads to changes in the population's genetic makeup and can result in speciation. Natural selection can influence the distribution of traits in a population in three ways: (1) Stabilisation: More individuals acquire the mean character value, causing the distribution peak to become higher and narrower. (2) Directional change: More individuals acquire a value other than the mean character value, shifting the peak in one direction. (3) Disruption: More individuals acquire peripheral character values at both ends of the distribution curve, leading to the formation of two distinct peaks. These effects are illustrated in Figure 6.8.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 6.8",
+                "description": "Diagrammatic representation of the operation of natural selection on different traits: (a) Stabilising selection, where the peak gets higher and narrower as the mean phenotype is favoured; (b) Directional selection, where the peak shifts in one direction as one extreme phenotype is favoured; and (c) Disruptive selection, where two peaks form as both peripheral character values are favoured over the mean.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:6:6.8",
+        "number": "6.8",
+        "title": "A Brief Account of Evolution",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:6:6.8:1",
+            "order": 1,
+            "title": "Origin of First Cellular Forms",
+            "content_text": "About 2000 million years ago (mya), the first cellular forms of life appeared on Earth. The precise mechanism by which non-cellular aggregates of giant macromolecules evolved into cells with membranous envelopes is not yet known. Some of these early cells developed the ability to release $O_2$. The reaction The reaction could have been similar to the light reaction in photosynthesis where water is split with the help of solar energy captured and channelised by appropriate light harvesting pigments. Slowly single-celled organisms became multi-cellular life forms. By the time of $500$ mya, invertebrates were formed and active. Jawless fish probably evolved around $350$ mya. Sea weeds and few plants existed probably around $320$ mya. The first organisms that invaded land were plants. They were widespread on land when animals invaded land. Figure 6.9 illustrates the evolution of various plant forms from chlorophyte ancestors through tracheophyte ancestors and Rhynia-type plants.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 6.9",
+                "description": "A sketch of the evolution of plant forms through geological periods, showing the lineage from Chlorophyte ancestors to modern Angiosperms, including branches for Bryophytes, Lycopods, Ferns, Ginkgos, Conifers, and Cycads across the Paleozoic, Mesozoic, and Cenozoic eras.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:6:6.8:2",
+            "order": 2,
+            "title": "Evolution of Vertebrates",
+            "content_text": "Fish with stout and strong fins could move on land and go back to water. This was about $350$ mya. In $1938$, a fish caught in South Africa happened to be a Coelacanth which was thought to be extinct. These animals called lobefins evolved into the first amphibians that lived on both land and water. There are no specimens of these left with us. However, these were ancestors of modern day frogs and salamanders. Figure 6.10 provides a representative evolutionary history of vertebrates, tracing the path from early reptiles to modern groups.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 6.10",
+                "description": "Representative evolutionary history of vertebrates through geological periods, showing the divergence of Sauropsids (leading to turtles, lizards, snakes, crocodiles, dinosaurs, and birds) and Synapsids (leading to pelycosaurs, therapsids, and mammals) from early reptiles.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:6:6.8:3",
+            "order": 3,
+            "title": "Evolution of Reptiles and Dinosaurs",
+            "content_text": "The amphibians evolved into reptiles. They lay thick-shelled eggs which do not dry up in sun unlike those of amphibians. Modern day descendants include turtles, tortoises, and crocodiles. In the next $200$ million years or so, reptiles of different shapes and sizes dominated on earth. Giant ferns (pteridophytes) were present but they all fell to form coal deposits slowly. Some of these land reptiles went back into water to evolve into fish-like reptiles probably $200$ mya (e.g., Ichthyosaurs). The land reptiles, the dinosaurs, included the Tyrannosaurus rex, which was about $20$ feet in height and had huge fearsome dagger-like teeth. About $65$ mya, the dinosaurs suddenly disappeared from the earth. Possible reasons include climatic changes or evolution into birds. Small-sized reptiles of that era still exist today.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:6:6.8:4",
+            "order": 4,
+            "title": "Evolution of Mammals",
+            "content_text": "The first mammals were like shrews, with small-sized fossils. Mammals were viviparous and protected their unborn young inside the mother’s body. They were more intelligent in sensing and avoiding danger. When reptiles declined, mammals took over the earth. In South America, mammals resembling horses, hippopotamuses, bears, and rabbits existed. Due to continental drift, when South America joined North America, these animals were overridden by North American fauna. Conversely, pouched mammals of Australia survived due to a lack of competition. Some mammals, like whales, dolphins, seals, and sea cows, live wholly in water. The evolution of man, with language skills and self-consciousness, is considered the most successful story of evolution.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:6:6.9",
+        "number": "6.9",
+        "title": "Origin and Evolution of Man",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:6:6.9:1",
+            "order": 1,
+            "title": "Early Primates",
+            "content_text": "About $15$ mya, primates called Dryopithecus and Ramapithecus existed. They were hairy and walked like gorillas and chimpanzees. Ramapithecus was more man-like, while Dryopithecus was more ape-like. Hominid fossils discovered in Ethiopia and Tanzania revealed that about $3-4$ mya, man-like primates walked in eastern Africa. They were probably not taller than $4$ feet but walked upright.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:6:6.9:2",
+            "order": 2,
+            "title": "Australopithecines and Homo habilis",
+            "content_text": "Two mya, Australopithecines lived in East African grasslands. They hunted with stone weapons but essentially ate fruit. The first human-like being, the hominid, was called Homo habilis. Their brain capacities were between $650-800$ cc, and they probably did not eat meat.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:6:6.9:3",
+            "order": 3,
+            "title": "Homo erectus",
+            "content_text": "Fossils discovered in Java in $1891$ revealed the next stage, Homo erectus, about $1.5$ mya. Homo erectus had a large brain around $900$ cc. Homo erectus probably ate meat. This stage of human evolution followed the discovery of fossils in Java in $1891$, which revealed that Homo erectus lived about $1.5$ mya and possessed a large brain of around $900$ cc.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 6.11",
+                "description": "A comparison of the skulls of an adult modern human being, a baby chimpanzee, and an adult chimpanzee. The illustration highlights that the skull of a baby chimpanzee bears a closer resemblance to an adult human skull than it does to an adult chimpanzee skull.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:6:6.9:4",
+            "order": 4,
+            "title": "Neanderthal Man",
+            "content_text": "The Neanderthal man, with a brain size of $1400$ cc, lived in the near east and central Asia between $1,00,000-40,000$ years back. They used hides to protect their body and buried their dead.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:6:6.9:5",
+            "order": 5,
+            "title": "Homo sapiens and Modern Human History",
+            "content_text": "Homo sapiens arose in Africa and moved across continents and developed into distinct races. During the ice age between $75,000-10,000$ years ago, modern Homo sapiens arose. Pre-historic cave art developed about $18,000$ years ago; one such cave painting by pre-historic humans can be seen at the Bhimbetka rock shelter in the Raisen district of Madhya Pradesh. Agriculture came around $10,000$ years back and human settlements started. The rest of what happened is part of human history of growth and decline of civilisations. The evolution of modern man is particularly notable for the parallel development of the human brain and language.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:6:6.9:6",
+            "order": 6,
+            "title": "Summary of Evolutionary Principles",
+            "content_text": "The origin of life on Earth is understood within the context of the origin of the universe. Chemical evolution, involving the formation of biomolecules, is believed to have preceded the first cellular life forms. Organic evolution is driven by natural selection acting on variations within a population, which results in variable fitness. Factors such as habitat fragmentation and genetic drift can accentuate these variations, leading to speciation. Evidence for evolution is derived from comparative anatomy (homology and branching descent), fossil records, and comparative biochemistry.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:biology:12:6:ex:1",
+          "number": 1,
+          "problem": "Explain antibiotic resistance observed in bacteria in light of Darwinian selection theory.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:6:ex:2",
+          "number": 2,
+          "problem": "Find out from newspapers and popular science articles any new fossil discoveries or controversies about evolution.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:6:ex:3",
+          "number": 3,
+          "problem": "Attempt giving a clear definition of the term species.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:6:ex:4",
+          "number": 4,
+          "problem": "Try to trace the various components of human evolution (hint: brain size and function, skeletal structure, dietary preference, etc.)",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:6:ex:5",
+          "number": 5,
+          "problem": "Find out through internet and popular science articles whether animals other than man has self-consciousness.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:6:ex:6",
+          "number": 6,
+          "problem": "List 10 modern-day animals and using the internet resources link it to a corresponding ancient fossil. Name both.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:6:ex:7",
+          "number": 7,
+          "problem": "Practise drawing various animals and plants.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:6:ex:8",
+          "number": 8,
+          "problem": "Describe one example of adaptive radiation.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:6:ex:9",
+          "number": 9,
+          "problem": "Can we call human evolution as adaptive radiation?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:6:ex:10",
+          "number": 10,
+          "problem": "Using various resources such as your school Library or the internet and discussions with your teacher, trace the evolutionary stages of any one animal, say horse.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        }
+      ]
+    }
+  }
+}

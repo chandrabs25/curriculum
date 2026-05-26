@@ -1,0 +1,629 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_biology_11_ch14.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:biology:11:14",
+  "curriculum": "ncert",
+  "subject": "biology",
+  "grade": 11,
+  "textbook_name": "Biology",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:biology:11:14",
+    "number": 14,
+    "title": "Breathing and Exchange of Gases",
+    "summary": "This chapter explores the mechanisms of breathing and gas exchange in humans. It begins by outlining the respiratory organs and their diverse adaptations across different organisms, focusing on the human respiratory system's structure, including the lungs, bronchi, and alveoli. The mechanics of breathing, specifically inspiration and expiration, are explained in terms of pressure gradients and muscle action (diaphragm and intercostal muscles). Respiratory volumes and capacities like Tidal Volume (TV), Inspiratory Reserve Volume (IRV), Expiratory Reserve Volume (ERV), and Vital Capacity (VC), and their measurement using spirometry are introduced.\n\nThe chapter then delves into the exchange of gases ($O_2$ and $CO_2$) between the alveoli and blood, emphasizing the role of partial pressure and diffusion. It describes the transport of these gases in the blood, including the function of hemoglobin in oxygen transport and the formation of oxyhemoglobin and carbaminohemoglobin. The oxygen dissociation curve and the importance of factors like $pCO_2$ and pH are discussed in relation to oxygen delivery to tissues. The chapter covers the neural and chemical regulation of breathing, highlighting the role of the respiratory rhythm center in the medulla and the chemosensitive areas. Finally, it discusses common respiratory disorders like asthma, emphysema, and occupational respiratory diseases, emphasizing the importance of respiratory health. The information builds progressively, starting from basic anatomy and physiology to the complexities of gas exchange, transport, regulation and related diseases. Understanding these concepts is crucial for diagnosing and treating respiratory ailments and promoting overall health.",
+    "sections": [
+      {
+        "id": "ncert:biology:11:14:14",
+        "number": "14",
+        "title": "Breathing and Exchange of Gases",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:14:14:1",
+            "order": 1,
+            "title": "Introduction to Respiration and Breathing",
+            "content_text": "Organisms utilize oxygen ($O_2$) to indirectly break down simple nutrient molecules like glucose, amino acids, and fatty acids to derive the energy required for various life activities. This catabolic process results in the release of carbon dioxide ($CO_2$), which is a harmful byproduct. Consequently, it is essential that $O_2$ is continuously provided to the cells and the $CO_2$ produced by them is released. The process of exchanging $O_2$ from the atmosphere with $CO_2$ produced by the cells is called breathing, which is commonly referred to as respiration. In humans, this process can be felt as the rhythmic movement of the chest. The respiratory organs and the mechanism of breathing are described in the following sections of this chapter.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:14:14.1",
+        "number": "14.1",
+        "title": "Respiratory Organs",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:14:14.1:1",
+            "order": 1,
+            "title": "Diversity of Respiratory Mechanisms in Animals",
+            "content_text": "The mechanisms of breathing vary significantly across different groups of animals, primarily depending on their habitats and levels of organization. Lower invertebrates like sponges, coelenterates, and flatworms exchange $O_2$ with $CO_2$ through simple diffusion over their entire body surface. Earthworms use their moist cuticle for gas exchange, while insects possess a network of tracheal tubes to transport atmospheric air directly within the body. Special vascularized structures called gills (branchial respiration) are used by most aquatic arthropods and molluscs. In contrast, terrestrial forms use vascularized bags called lungs (pulmonary respiration) for the exchange of gases. Among vertebrates, fishes use gills, while reptiles, birds, and mammals respire through lungs. Amphibians like frogs exhibit a unique capability, as they can respire through their lungs and also through their moist skin, a process known as cutaneous respiration. The human respiratory system begins with a pair of external nostrils opening above the upper lips, which lead to a nasal chamber through the nasal passage. The nasal chamber opens into the pharynx, a portion of which serves as the common passage for both food and air. The pharynx opens through the larynx region into the trachea. The larynx is a cartilaginous box that helps in sound production and is hence called the sound box. During swallowing, the glottis can be covered by a thin elastic cartilaginous flap called the epiglottis to prevent the entry of food into the larynx.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:14:14.1:2",
+            "order": 2,
+            "title": "The Bronchial Tree and Alveoli",
+            "content_text": "The trachea is a straight tube extending up to the mid-thoracic cavity, which divides at the level of the 5th thoracic vertebra into a right and left primary bronchi. Each bronchus undergoes repeated divisions to form the secondary and tertiary bronchi and bronchioles, ending in very thin terminal bronchioles. The tracheae, primary, secondary and tertiary bronchi, and initial bronchioles are supported by incomplete cartilaginous rings. Each terminal bronchiole gives rise to a number of very thin, irregular-walled and vascularised bag-like structures called alveoli. The branching network of bronchi, bronchioles and alveoli comprise the lungs.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 14.1",
+                "description": "Diagrammatic view of the human respiratory system showing the epiglottis, larynx, trachea, and the branching of the bronchus into the lungs. The sectional view of the left lung reveals the alveoli, bronchioles, and pleural fluid. The lungs are shown situated above the diaphragm and protected by the rib cage and pleural membranes.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:14:14.1:3",
+            "order": 3,
+            "title": "Structure and Protection of the Lungs",
+            "content_text": "Humans have two lungs which are covered by a double layered pleura, with pleural fluid between them. This fluid reduces friction on the lung-surface. The outer pleural membrane is in close contact with the thoracic lining, whereas the inner pleural membrane is in contact with the lung surface.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:14:14.1:4",
+            "order": 4,
+            "title": "Functional Divisions: Conducting and Exchange Parts",
+            "content_text": "The respiratory system is divided into two functional parts. The conducting part starts with the external nostrils and extends up to the terminal bronchioles. It transports atmospheric air to the alveoli, clears it from foreign particles, humidifies it, and brings the air to body temperature. The exchange or respiratory part consists of the alveoli and their ducts. This is the site of actual diffusion of $O_2$ and $CO_2$ between blood and atmospheric air.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:14:14.1:5",
+            "order": 5,
+            "title": "The Thoracic Chamber and Pulmonary Volume",
+            "content_text": "The lungs are situated in the thoracic chamber, which is anatomically an air-tight chamber. It is formed dorsally by the vertebral column, ventrally by the sternum, laterally by the ribs, and on the lower side by the dome-shaped diaphragm. The anatomical setup of the lungs in the thorax is such that any change in the volume of the thoracic cavity will be reflected in the lung (pulmonary) cavity. This arrangement is essential for breathing, as we cannot directly alter the pulmonary volume.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:14:14.1:6",
+            "order": 6,
+            "title": "Basic Steps of Respiration",
+            "content_text": "Respiration involves the following five steps: (i) Breathing or pulmonary ventilation by which atmospheric air is drawn in and $CO_2$ rich alveolar air is released out. (ii) Diffusion of gases ($O_2$ and $CO_2$) across alveolar membrane. (iii) Transport of gases by the blood. (iv) Diffusion of $O_2$ and $CO_2$ between blood and tissues. (v) Utilisation of $O_2$ by the cells for catabolic reactions and resultant release of $CO_2$ (cellular respiration).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:14:14.2",
+        "number": "14.2",
+        "title": "Mechanism of Breathing",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:14:14.2:1",
+            "order": 1,
+            "title": "Principles of Inspiration and Expiration",
+            "content_text": "Breathing involves two stages: inspiration, during which atmospheric air is drawn in, and expiration, by which the alveolar air is released out. The movement of air into and out of the lungs is carried out by creating a pressure gradient between the lungs and the atmosphere. Inspiration occurs if the pressure within the lungs (intra-pulmonary pressure) is less than the atmospheric pressure, creating a negative pressure in the lungs. Similarly, expiration takes place when the intra-pulmonary pressure is higher than the atmospheric pressure. The diaphragm and a specialised set of muscles—external and internal intercostals between the ribs—help in the generation of such gradients.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 14.2",
+                "description": "Mechanism of breathing showing two stages: (a) Inspiration, where air enters the lungs as the diaphragm contracts and the rib cage expands, increasing thoracic volume; (b) Expiration, where air is expelled as the diaphragm relaxes and arches upwards and the rib cage returns to its original position, decreasing thoracic volume.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:14:14.2:2",
+            "order": 2,
+            "title": "Mechanism of Inspiration",
+            "content_text": "Inspiration is initiated by the contraction of the diaphragm which increases the volume of the thoracic chamber in the antero-posterior axis. The contraction of external inter-costal muscles lifts up the ribs and the sternum causing an increase in the volume of the thoracic chamber in the dorso-ventral axis. The overall increase in the thoracic volume causes a similar increase in pulmonary volume. An increase in pulmonary volume decreases the intra-pulmonary pressure to less than the atmospheric pressure which forces the air from outside to move into the lungs.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:14:14.2:3",
+            "order": 3,
+            "title": "Mechanism of Expiration",
+            "content_text": "Relaxation of the diaphragm and the inter-costal muscles returns the diaphragm and sternum to their normal positions and reduces the thoracic volume and thereby the pulmonary volume. This leads to an increase in intra-pulmonary pressure to slightly above the atmospheric pressure causing the expulsion of air from the lungs. Humans have the ability to increase the strength of inspiration and expiration with the help of additional muscles in the abdomen.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:14:14.2:4",
+            "order": 4,
+            "title": "Breathing Rate and Spirometry",
+            "content_text": "On average, a healthy human breathes 12-16 times/minute. The volume of air involved in breathing movements can be estimated by using a spirometer which helps in clinical assessment of pulmonary functions.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:14:14.2.1",
+        "number": "14.2.1",
+        "title": "Respiratory Volumes and Capacities",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:14:14.2.1:1",
+            "order": 1,
+            "title": "Tidal Volume (TV)",
+            "content_text": "Tidal Volume (TV) is the volume of air inspired or expired during a normal respiration. It is approximately 500 mL. A healthy man can inspire or expire approximately 6000 to 8000 mL of air per minute.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:14:14.2.1:2",
+            "order": 2,
+            "title": "Inspiratory Reserve Volume (IRV)",
+            "content_text": "Inspiratory Reserve Volume (IRV) is the additional volume of air a person can inspire by a forcible inspiration. This averages 2500 mL to 3000 mL.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:14:14.2.1:3",
+            "order": 3,
+            "title": "Expiratory Reserve Volume (ERV)",
+            "content_text": "Expiratory Reserve Volume (ERV) is the additional volume of air a person can expire by a forcible expiration. This averages 1000 mL to 1100 mL. Residual Volume (RV) is the volume of air remaining in the lungs even after a forcible expiration. This averages 1100 mL to 1200 mL. Because this air remains in the lungs, it cannot be measured directly by spirometry.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:14:14.2.1:4",
+            "order": 4,
+            "title": "Inspiratory Capacity (IC)",
+            "content_text": "Inspiratory Capacity (IC) is the total volume of air a person can inspire after a normal expiration. This includes tidal volume and inspiratory reserve volume ($TV + IRV$). It represents the maximum amount of air that can be inhaled following a resting exhale.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:14:14.2.1:5",
+            "order": 5,
+            "title": "Expiratory Capacity (EC)",
+            "content_text": "Expiratory Capacity (EC) is the total volume of air a person can expire after a normal inspiration. This includes tidal volume and expiratory reserve volume ($TV + ERV$).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:14:14.2.1:6",
+            "order": 6,
+            "title": "Functional Residual Capacity (FRC)",
+            "content_text": "Functional Residual Capacity (FRC) is the volume of air that will remain in the lungs after a normal expiration. This includes $ERV + RV$. It acts as a buffer to prevent large fluctuations in gas concentrations during the breathing cycle.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:14:14.2.1:7",
+            "order": 7,
+            "title": "Vital Capacity (VC)",
+            "content_text": "Vital Capacity (VC) is the maximum volume of air a person can breathe in after a forced expiration. This includes $ERV$, $TV$ and $IRV$. Alternatively, it is the maximum volume of air a person can breathe out after a forced inspiration.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:14:14.2.1:8",
+            "order": 8,
+            "title": "Total Lung Capacity (TLC)",
+            "content_text": "Total Lung Capacity (TLC) is the total volume of air accommodated in the lungs at the end of a forced inspiration. This includes $RV$, $ERV$, $TV$ and $IRV$, or can be expressed as $Vital Capacity + Residual Volume$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:14:14.3",
+        "number": "14.3",
+        "title": "Exchange of Gases",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:14:14.3:1",
+            "order": 1,
+            "title": "Sites and Mechanism of Gas Exchange",
+            "content_text": "Alveoli are the primary sites of exchange of gases. Exchange of gases also occurs between blood and tissues. $O_2$ and $CO_2$ are exchanged in these sites by simple diffusion mainly based on pressure/concentration gradient. Solubility of the gases as well as the thickness of the membranes involved in diffusion are also some important factors that can affect the rate of diffusion.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:14:14.3:2",
+            "order": 2,
+            "title": "Partial Pressure",
+            "content_text": "Pressure contributed by an individual gas in a mixture of gases is called partial pressure and is represented as $pO_2$ for oxygen and $pCO_2$ for carbon dioxide. Partial pressures of these two gases in the atmospheric air and the two sites of diffusion (alveoli and tissues) are given in Table 14.1. The data indicates a concentration gradient for oxygen from alveoli to blood and blood to tissues. Similarly, a gradient is present for $CO_2$ in the opposite direction, i.e., from tissues to blood and blood to alveoli.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 14.1",
+                "caption": "Partial Pressures (in mm Hg) of Oxygen and Carbon dioxide at Different Parts Involved in Diffusion in Comparison to those in Atmosphere",
+                "headers": [
+                  "Respiratory Gas",
+                  "Atmospheric Air",
+                  "Alveoli",
+                  "Blood (Deoxygenated)",
+                  "Blood (Oxygenated)",
+                  "Tissues"
+                ],
+                "rows": [
+                  [
+                    "$O_2$",
+                    "159",
+                    "104",
+                    "40",
+                    "95",
+                    "40"
+                  ],
+                  [
+                    "$CO_2$",
+                    "0.3",
+                    "40",
+                    "45",
+                    "40",
+                    "45"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:biology:11:14:14.3:3",
+            "order": 3,
+            "title": "Solubility and Diffusion Rate",
+            "content_text": "As the solubility of $CO_2$ is 20-25 times higher than that of $O_2$, the amount of $CO_2$ that can diffuse through the diffusion membrane per unit difference in partial pressure is much higher compared to that of $O_2$. This high solubility allows $CO_2$ to be exchanged efficiently even with a smaller partial pressure gradient compared to oxygen.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 14.3",
+                "description": "Diagrammatic representation of exchange of gases at the alveolus and the body tissues with blood and transport of oxygen and carbon dioxide. It shows the pathway from inspired air to alveoli ($pO_2=104$, $pCO_2=40$), through the pulmonary vein to the heart, then via systemic arteries ($pO_2=95$, $pCO_2=40$) to body tissues ($pO_2=40$, $pCO_2=45$), and back via systemic veins ($pO_2=40$, $pCO_2=45$) and pulmonary artery to the lungs.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:14:14.3:4",
+            "order": 4,
+            "title": "The Diffusion Membrane",
+            "content_text": "The diffusion membrane is made up of three major layers: (1) the thin squamous epithelium of alveoli, (2) the endothelium of alveolar capillaries, and (3) the basement substance (composed of a thin basement membrane supporting the squamous epithelium and the basement membrane surrounding the single layer endothelial cells of capillaries) in between them. However, its total thickness is much less than a millimetre (approx. 0.2 mm). Therefore, all the factors in our body are favourable for diffusion of $O_2$ from alveoli to tissues and that of $CO_2$ from tissues to alveoli.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 14.4",
+                "description": "A Diagram of a section of an alveolus with a pulmonary capillary. It labels the air space, the one-celled thick squamous epithelium of the alveolar wall, the alveolar cavity, the blood capillary containing red blood cells, the endothelium of the blood capillary, and the basement substance between the two layers.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:14:14.4",
+        "number": "14.4",
+        "title": "Transport of Gases",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:14:14.4:1",
+            "order": 1,
+            "title": "Overview of Gas Transport",
+            "content_text": "Blood is the medium of transport for $O_2$ and $CO_2$. About 97 per cent of $O_2$ is transported by RBCs in the blood. The remaining 3 per cent of $O_2$ is carried in a dissolved state through the plasma. Nearly 20-25 per cent of $CO_2$ is transported by RBCs whereas 70 per cent of it is carried as bicarbonate. About 7 per cent of $CO_2$ is carried in a dissolved state through plasma.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:14:14.4.1",
+        "number": "14.4.1",
+        "title": "Transport of Oxygen",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:14:14.4.1:1",
+            "order": 1,
+            "title": "Oxyhaemoglobin Formation",
+            "content_text": "Haemoglobin is a red coloured iron containing pigment present in the RBCs. $O_2$ can bind with haemoglobin in a reversible manner to form oxyhaemoglobin. Each haemoglobin molecule can carry a maximum of four molecules of $O_2$. Binding of oxygen with haemoglobin is primarily related to partial pressure of $O_2$. Partial pressure of $CO_2$, hydrogen ion concentration and temperature are the other factors which can interfere with this binding.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:14:14.4.1:2",
+            "order": 2,
+            "title": "Oxygen Dissociation Curve",
+            "content_text": "A sigmoid curve is obtained when percentage saturation of haemoglobin with $O_2$ is plotted against the $pO_2$. This curve is called the Oxygen dissociation curve and is highly useful in studying the effect of factors like $pCO_2$, $H^+$ concentration, etc., on binding of $O_2$ with haemoglobin. In the alveoli, where there is high $pO_2$, low $pCO_2$, lesser $H^+$ concentration and lower temperature, the factors are all favourable for the formation of oxyhaemoglobin. In the tissues, where low $pO_2$, high $pCO_2$, high $H^+$ concentration and higher temperature exist, the conditions are favourable for dissociation of oxygen from the oxyhaemoglobin.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 14.5",
+                "description": "Oxygen dissociation curve showing the percentage saturation of haemoglobin with oxygen (y-axis, 0 to 100) plotted against the partial pressure of oxygen in mm Hg (x-axis, 0 to 100). The curve is sigmoid (S-shaped).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:14:14.4.1:3",
+            "order": 3,
+            "title": "Oxygen Delivery to Tissues",
+            "content_text": "The physiological conditions ensure that $O_2$ gets bound to haemoglobin in the lung surface and gets dissociated at the tissues. Every 100 ml of oxygenated blood can deliver around 5 ml of $O_2$ to the tissues under normal physiological conditions.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:14:14.4.2",
+        "number": "14.4.2",
+        "title": "Transport of Carbon dioxide",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:14:14.4.2:1",
+            "order": 1,
+            "title": "Carbamino-haemoglobin",
+            "content_text": "$CO_2$ is carried by haemoglobin as carbamino-haemoglobin (about 20-25 per cent). This binding is related to the partial pressure of $CO_2$. $pO_2$ is a major factor which could affect this binding. When $pCO_2$ is high and $pO_2$ is low as in the tissues, more binding of carbon dioxide occurs whereas, when the $pCO_2$ is low and $pO_2$ is high as in the alveoli, dissociation of $CO_2$ from carbamino-haemoglobin takes place, i.e., $CO_2$ which is bound to haemoglobin from the tissues is delivered at the alveoli. This dissociation is favoured at the alveolar site because the partial pressure of carbon dioxide ($pCO_2$) is low and the partial pressure of oxygen ($pO_2$) is high, which is the opposite of the conditions found in the tissues where binding occurs.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:14:14.4.2:2",
+            "order": 2,
+            "title": "Role of Carbonic Anhydrase in Carbon Dioxide Transport",
+            "content_text": "RBCs contain a very high concentration of the enzyme, carbonic anhydrase, and minute quantities of the same are present in the plasma as well. This enzyme facilitates the reversible reaction: $CO_2 + H_2O \\xrightleftharpoons{\\text{Carbonic anhydrase}} H_2CO_3 \\xrightleftharpoons{\\text{Carbonic anhydrase}} HCO_3^- + H^+$. At the tissue site, where $pCO_2$ is high due to catabolism, $CO_2$ diffuses into the blood (RBCs and plasma) and forms bicarbonate ($HCO_3^-$) and hydrogen ions ($H^+$). At the alveolar site, where $pCO_2$ is low, the reaction proceeds in the opposite direction, leading to the formation of $CO_2$ and $H_2O$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Reaction Box",
+                "description": "A chemical equation showing the reversible reaction of carbon dioxide and water to form carbonic acid, which then dissociates into bicarbonate and hydrogen ions, facilitated by the enzyme carbonic anhydrase in both directions.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:14:14.4.2:3",
+            "order": 3,
+            "title": "Efficiency of Carbon Dioxide Delivery",
+            "content_text": "Through the bicarbonate mechanism, $CO_2$ trapped at the tissue level is transported to the alveoli and released. Quantitatively, every $100$ ml of deoxygenated blood delivers approximately $4$ ml of $CO_2$ to the alveoli for expiration.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:14:14.5",
+        "number": "14.5",
+        "title": "Regulation of Respiration",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:14:14.5:1",
+            "order": 1,
+            "title": "Neural Regulation of Respiratory Rhythm",
+            "content_text": "Human beings possess a significant ability to maintain and moderate the respiratory rhythm to suit the demands of body tissues through the neural system. A specialised centre in the medulla region of the brain, called the respiratory rhythm centre, is primarily responsible for this regulation. Another centre in the pons region, known as the pneumotaxic centre, can moderate the functions of the respiratory rhythm centre. Neural signals from the pneumotaxic centre can reduce the duration of inspiration and thereby alter the respiratory rate.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:14:14.5:2",
+            "order": 2,
+            "title": "Chemical Regulation and Chemosensitive Areas",
+            "content_text": "A chemosensitive area situated adjacent to the rhythm centre is highly sensitive to $CO_2$ and hydrogen ions ($H^+$). An increase in these substances activates this centre, which then signals the rhythm centre to make necessary adjustments in the respiratory process to eliminate them. Additionally, receptors associated with the aortic arch and carotid artery can recognise changes in $CO_2$ and $H^+$ concentration and send remedial signals to the rhythm centre. Notably, the role of oxygen in the regulation of respiratory rhythm is quite insignificant.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:14:14.6",
+        "number": "14.6",
+        "title": "Disorders of Respiratory System",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:14:14.6:1",
+            "order": 1,
+            "title": "Asthma and Emphysema",
+            "content_text": "Asthma is a difficulty in breathing causing wheezing due to inflammation of the bronchi and bronchioles. Emphysema is a chronic disorder in which alveolar walls are damaged, leading to a decrease in the respiratory surface area; one of its major causes is cigarette smoking.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:14:14.6:2",
+            "order": 2,
+            "title": "Occupational Respiratory Disorders",
+            "content_text": "In certain industries, such as those involving grinding or stone-breaking, excessive dust production can overwhelm the body's defense mechanisms. Long-term exposure leads to inflammation and fibrosis (proliferation of fibrous tissues), causing serious lung damage. Workers in these industries are advised to wear protective masks.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:biology:11:14:ex:1",
+          "number": 1,
+          "problem": "Define vital capacity. What is its significance?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:14:ex:2",
+          "number": 2,
+          "problem": "State the volume of air remaining in the lungs after a normal breathing.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:14:ex:3",
+          "number": 3,
+          "problem": "Diffusion of gases occurs in the alveolar region only and not in the other parts of respiratory system. Why?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:14:ex:4",
+          "number": 4,
+          "problem": "What are the major transport mechanisms for $CO_2$? Explain.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:14:ex:5",
+          "number": 5,
+          "problem": "What will be the $pO_2$ and $pCO_2$ in the atmospheric air compared to those in the alveolar air? (i) $pO_2$ lesser, $pCO_2$ higher (ii) $pO_2$ higher, $pCO_2$ lesser (iii) $pO_2$ higher, $pCO_2$ higher (iv) $pO_2$ lesser, $pCO_2$ lesser",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:14:ex:6",
+          "number": 6,
+          "problem": "Explain the process of inspiration under normal conditions.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:14:ex:7",
+          "number": 7,
+          "problem": "How is respiration regulated?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:14:ex:8",
+          "number": 8,
+          "problem": "What is the effect of $pCO_2$ on oxygen transport?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:14:ex:9",
+          "number": 9,
+          "problem": "What happens to the respiratory process in a man going up a hill?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:14:ex:10",
+          "number": 10,
+          "problem": "What is the site of gaseous exchange in an insect?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:14:ex:11",
+          "number": 11,
+          "problem": "Define oxygen dissociation curve. Can you suggest any reason for its sigmoidal pattern?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:14:ex:12",
+          "number": 12,
+          "problem": "Have you heard about hypoxia? Try to gather information about it, and discuss with your friends.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:14:ex:13",
+          "number": 13,
+          "problem": "Distinguish between (a) IRV and ERV (b) Inspiratory capacity and Expiratory capacity. (c) Vital capacity and Total lung capacity.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:14:ex:14",
+          "number": 14,
+          "problem": "What is Tidal volume? Find out the Tidal volume (approximate value) for a healthy human in an hour.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        }
+      ]
+    }
+  }
+}

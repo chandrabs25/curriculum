@@ -1,0 +1,976 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_physics_11_ch2.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:physics:11:2",
+  "curriculum": "ncert",
+  "subject": "physics",
+  "grade": 11,
+  "textbook_name": "Physics Part I",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:physics:11:2",
+    "number": 2,
+    "title": "Motion in a Straight Line",
+    "summary": "This chapter, \"Motion in a Straight Line,\" introduces the fundamental concepts of kinematics, focusing on describing motion without delving into its causes. It begins by defining motion, highlighting the importance of rectilinear motion and the simplification achieved through the point object approximation. The chapter progresses from average velocity to instantaneous velocity, introducing the use of calculus for precise descriptions, and defines instantaneous speed as the magnitude of instantaneous velocity.\n\nThe concept of acceleration is introduced as the rate of change of velocity, distinguishing between average and instantaneous acceleration and discussing its graphical interpretation using velocity-time graphs. Important kinematic equations for uniformly accelerated motion are derived, relating displacement, time, initial and final velocities, and acceleration: $v = v_0 + at$, $x = v_0 t + \\frac{1}{2} a t^2$, and $v^2 = v_0^2 + 2ax$.\n\nThe chapter emphasizes the application of these equations to real-world scenarios, particularly motion under gravity (free fall). Examples, such as Galileo's law of odd numbers, stopping distance of vehicles, and reaction time, demonstrate the practical significance of the concepts. The chapter connects the graphical representation of motion with its mathematical description, providing a comprehensive understanding of kinematic quantities. Finally, it underscores the importance of choosing a reference frame and adhering to sign conventions when applying these concepts.",
+    "sections": [
+      {
+        "id": "ncert:physics:11:2:2.1",
+        "number": "2.1",
+        "title": "INTRODUCTION",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:2:2.1:1",
+            "order": 1,
+            "title": "Introduction to Motion",
+            "content_text": "Motion is common to everything in the universe, from everyday activities like walking and riding a bicycle to biological processes like blood flow in arteries. Even objects seemingly at rest, like the Earth, are in motion, rotating on their axis and revolving around the sun. This chapter focuses on describing motion by developing concepts of velocity and acceleration.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:2:2.1:2",
+            "order": 2,
+            "title": "Rectilinear Motion and Point Object Approximation",
+            "content_text": "The study of motion of objects along a straight line is known as rectilinear motion. To simplify the description of motion, objects are often treated as point objects. This approximation is valid when the size of the object is much smaller than the distance it moves over a reasonable duration of time. In many real-life situations, the size of objects can be neglected, allowing them to be considered point-like without significant error.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:2:2.1:3",
+            "order": 3,
+            "title": "Kinematics",
+            "content_text": "Kinematics is the branch of physics that studies ways to describe motion without considering the causes of that motion. The causes of motion are addressed in later chapters (starting from Chapter 4).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:2:2.2",
+        "number": "2.2",
+        "title": "INSTANTANEOUS VELOCITY AND SPEED",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:2:2.2:1",
+            "order": 1,
+            "title": "Definition of Instantaneous Velocity",
+            "content_text": "While average velocity describes motion over a time interval, it does not provide information about the velocity at specific instants. Instantaneous velocity, or simply velocity $v$, is defined as the limit of the average velocity as the time interval $\\Delta t$ becomes infinitesimally small.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:2:2.2:2",
+            "order": 2,
+            "title": "Calculus Representation of Velocity",
+            "content_text": "In the language of calculus, the instantaneous velocity is the differential coefficient of position $x$ with respect to time $t$. It is expressed as: $$v = \\lim_{\\Delta t \\to 0} \\frac{\\Delta x}{\\Delta t} = \\frac{dx}{dt}$$ This represents the rate of change of position with respect to time at a specific instant.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:2:2.2:3",
+            "order": 3,
+            "title": "Graphical and Numerical Determination of Velocity",
+            "content_text": "Velocity at an instant can be determined graphically as the slope of the tangent to the position-time ($x-t$) graph at that instant. For example, in Fig. 2.1, the velocity at $t = 4 s$ is the slope of the tangent at point $P$. Numerically, velocity can be found by calculating the average velocity $\\Delta x/\\Delta t$ for increasingly smaller time intervals $\\Delta t$ centered at the instant of interest. Table 2.1 demonstrates this for the function $x = 0.08 t^3$ at $t = 4.0 s$, where the value approaches $3.84 m s^{-1}$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 2.1",
+                "description": "A position-time graph for an object following $x = 0.08 t^3$. It illustrates how the slope of the line connecting two points (average velocity) approaches the slope of the tangent at point P (instantaneous velocity) as the time interval decreases.",
+                "image_url": null
+              }
+            ],
+            "tables": [
+              {
+                "label": "Table 2.1",
+                "caption": "Limiting value of $\\Delta x/\\Delta t$ at $t = 4 s$",
+                "headers": [
+                  "$\\Delta t$ (s)",
+                  "$t_1$ (s)",
+                  "$t_2$ (s)",
+                  "$x(t_1)$ (m)",
+                  "$x(t_2)$ (m)",
+                  "$\\Delta x$ (m)",
+                  "$\\Delta x / \\Delta t$ (m s$^{-1}$)"
+                ],
+                "rows": [
+                  [
+                    "2.0",
+                    "3.0",
+                    "5.0",
+                    "2.16",
+                    "10.0",
+                    "7.84",
+                    "3.92"
+                  ],
+                  [
+                    "1.0",
+                    "3.5",
+                    "4.5",
+                    "3.43",
+                    "7.29",
+                    "3.86",
+                    "3.86"
+                  ],
+                  [
+                    "0.5",
+                    "3.75",
+                    "4.25",
+                    "4.21875",
+                    "6.14125",
+                    "1.9225",
+                    "3.845"
+                  ],
+                  [
+                    "0.1",
+                    "3.95",
+                    "4.05",
+                    "4.93039",
+                    "5.31441",
+                    "0.38402",
+                    "3.8402"
+                  ],
+                  [
+                    "0.01",
+                    "3.995",
+                    "4.005",
+                    "5.100824",
+                    "5.139224",
+                    "0.0384",
+                    "3.8400"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:physics:11:2:2.2:4",
+            "order": 4,
+            "title": "Example 2.1: Velocity from Position Function",
+            "content_text": "This example demonstrates how to use differential calculus to find instantaneous velocity and the standard formula for average velocity given a position-time function.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 2.1",
+                "problem": "The position of an object moving along x-axis is given by $x = a + bt^2$ where $a = 8.5 m$, $b = 2.5 m s^{-2}$ and $t$ is measured in seconds. What is its velocity at $t = 0 s$ and $t = 2.0 s$? What is the average velocity between $t = 2.0 s$ and $t = 4.0 s$?",
+                "solution": "In notation of differential calculus, the velocity is $v = \\frac{dx}{dt} = \\frac{d}{dt}(a + bt^2) = 2bt = 5.0 t m s^{-1}$. At $t = 0 s$, $v = 0 m s^{-1}$ and at $t = 2.0 s$, $v = 10 m s^{-1}$. Average velocity = $\\frac{x(4.0) - x(2.0)}{4.0 - 2.0} = \\frac{(a + 16b) - (a + 4b)}{2.0} = \\frac{12b}{2.0} = 6.0 \\times b = 6.0 \\times 2.5 = 15 m s^{-1}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:2:2.2:5",
+            "order": 5,
+            "title": "Instantaneous Speed",
+            "content_text": "Instantaneous speed, or simply speed, is the magnitude of the instantaneous velocity. Unlike average speed, which can differ from the magnitude of average velocity, the instantaneous speed at any instant is always equal to the magnitude of the instantaneous velocity at that same instant. For example, velocities of $+24.0 m s^{-1}$ and $-24.0 m s^{-1}$ both correspond to a speed of $24.0 m s^{-1}$. For uniform motion, velocity is the same as average velocity at all instants.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:2:2.3",
+        "number": "2.3",
+        "title": "ACCELERATION",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:2:2.3:1",
+            "order": 1,
+            "title": "Concept of Acceleration",
+            "content_text": "Acceleration describes the rate at which the velocity of an object changes with time. Historically, Galileo concluded that for freely falling objects, the rate of change of velocity with time is constant, leading to the formal definition of acceleration.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:2:2.3:2",
+            "order": 2,
+            "title": "Average Acceleration",
+            "content_text": "The average acceleration $\\bar{a}$ over a time interval is defined as the change of velocity divided by the time interval: $$\\bar{a} = \\frac{v_2 - v_1}{t_2 - t_1} = \\frac{\\Delta v}{\\Delta t}$$ where $v_2$ and $v_1$ are instantaneous velocities at times $t_2$ and $t_1$. The SI unit of acceleration is $m s^{-2}$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:2:2.3:3",
+            "order": 3,
+            "title": "Graphical Interpretation of Acceleration",
+            "content_text": "On a velocity-time graph, the average acceleration between two points is represented by the slope of the straight line connecting the points $(v_1, t_1)$ and $(v_2, t_2)$. On a velocity-time graph, the average acceleration between two points is represented by the slope of the straight line connecting the points $(v_1, t_1)$ and $(v_2, t_2)$. Instantaneous acceleration is defined in the same way as the instantaneous velocity: $$a = \\lim_{\\Delta t \\to 0} \\frac{\\Delta v}{\\Delta t} = \\frac{dv}{dt}$$ The acceleration at an instant is the slope of the tangent to the $v-t$ curve at that instant.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:2:2.3:4",
+            "order": 4,
+            "title": "Nature of Acceleration",
+            "content_text": "Since velocity is a quantity having both magnitude and direction, a change in velocity may involve either or both of these factors. Acceleration, therefore, may result from a change in speed (magnitude), a change in direction, or changes in both. Like velocity, acceleration can also be positive, negative, or zero.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:2:2.3:5",
+            "order": 5,
+            "title": "Position-Time Graphs for Acceleration",
+            "content_text": "Position-time graphs for motion with positive, negative, and zero acceleration are shown in Figs. 2.2 (a), (b), and (c), respectively. Note that the graph curves upward for positive acceleration; downward for negative acceleration and it is a straight line for zero acceleration.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 2.2",
+                "description": "Position-time graphs for motion with (a) positive acceleration (curving upwards), (b) negative acceleration (curving downwards), and (c) zero acceleration (straight line).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:2:2.3:6",
+            "order": 6,
+            "title": "Constant Acceleration and Velocity-Time Relation",
+            "content_text": "Although acceleration can vary with time, our study in this chapter will be restricted to motion with constant acceleration. In this case, the average acceleration equals the constant value of acceleration during the interval. If the velocity of an object is $v_0$ at $t = 0$ and $v$ at time $t$, we have: $$\\bar{a} = \\frac{v - v_0}{t - 0} \\text{ or, } v = v_0 + at$$",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:2:2.3:7",
+            "order": 7,
+            "title": "Velocity-Time Graphs for Constant Acceleration",
+            "content_text": "Velocity-time graphs for motion with constant acceleration can represent various scenarios: (a) An object moving in a positive direction with a positive acceleration. (b) An object moving in a positive direction with a negative acceleration. (c) An object moving in a negative direction with a negative acceleration. (d) An object moving in a positive direction till time $t_1$, and then turns back with the same negative acceleration.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 2.3",
+                "description": "Velocity-time graphs for motions with constant acceleration: (a) Positive direction, positive acceleration; (b) Positive direction, negative acceleration; (c) Negative direction, negative acceleration; (d) Motion in positive direction with negative acceleration that changes direction at time $t_1$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:2:2.3:8",
+            "order": 8,
+            "title": "Displacement from Velocity-Time Graph",
+            "content_text": "An interesting feature of a velocity-time graph for any moving object is that the area under the curve represents the displacement over a given time interval. A general proof of this statement requires use of calculus. We can, however, see that it is true for the simple case of an object moving with constant velocity $u$. Its velocity-time graph is a straight line parallel to the time axis. The area under it between $t = 0$ and $t = T$ is the area of the rectangle of height $u$ and base $T$. Therefore, $\\text{area} = u \\times T = uT$, which is the displacement in this time interval. Note the dimensions of quantities on the two coordinate axes (velocity and time), and you will arrive at the answer ($L T^{-1} \\times T = L$).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 2.4",
+                "description": "Area under $v-t$ curve equals displacement of the object over a given time interval for constant velocity.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:2:2.3:9",
+            "order": 9,
+            "title": "Physical Reality of Motion Graphs",
+            "content_text": "The $x-t$, $v-t$, and $a-t$ graphs shown in several figures in this chapter have sharp kinks at some points, implying that the functions are not differentiable at these points. In any realistic situation, the functions will be differentiable at all points and the graphs will be smooth. Physically, this means that acceleration and velocity cannot change values abruptly at an instant; changes are always continuous.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:2:2.4",
+        "number": "2.4",
+        "title": "KINEMATIC EQUATIONS FOR UNIFORMLY ACCELERATED MOTION",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:2:2.4:1",
+            "order": 1,
+            "title": "Introduction to Kinematic Equations",
+            "content_text": "For uniformly accelerated motion, we can derive simple equations that relate displacement ($x$), time taken ($t$), initial velocity ($v_0$), final velocity ($v$), and acceleration ($a$). Equation (2.4) already obtained gives a relation between final and initial velocities $v$ and $v_0$ of an object moving with uniform acceleration $a$: $v = v_0 + at$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:2:2.4:2",
+            "order": 2,
+            "title": "Derivation of Displacement-Time Relation",
+            "content_text": "The relation $v = v_0 + at$ is graphically represented in Fig. 2.5. The area under this curve between instants $0$ and $t$ represents the displacement $x$. This area is the sum of the area of triangle ABC and the area of rectangle OACD: $$x = \\frac{1}{2}(v - v_0)t + v_0 t$$ Since $v - v_0 = at$, we substitute this to get: $$x = v_0 t + \\frac{1}{2} a t^2$$",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 2.5",
+                "description": "Area under $v-t$ curve for an object with uniform acceleration, showing the geometric components (triangle and rectangle) used for derivation.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:2:2.4:3",
+            "order": 3,
+            "title": "Average Velocity and Displacement",
+            "content_text": "The displacement equation can also be written in terms of average velocity. For constant acceleration, the average velocity $\\bar{v}$ is the arithmetic average of the initial and final velocities: $$\\bar{v} = \\frac{v + v_0}{2}$$ The displacement is then: $$x = \\frac{v + v_0}{2} t = \\bar{v} t$$ This means the object undergoes displacement $x$ with an average velocity equal to the arithmetic average of the initial and final velocities.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:2:2.4:4",
+            "order": 4,
+            "title": "Derivation of Velocity-Displacement Relation",
+            "content_text": "By substituting the value of $t = (v - v_0)/a$ from the first kinematic equation into the displacement equation $x = \\bar{v} t$, we get: $$x = \\left( \\frac{v + v_0}{2} \\right) \\left( \\frac{v - v_0}{a} \\right) = \\frac{v^2 - v_0^2}{2a}$$ Rearranging gives the velocity-displacement relation: $$v^2 = v_0^2 + 2ax$$",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:2:2.4:5",
+            "order": 5,
+            "title": "Summary of Kinematic Equations",
+            "content_text": "The three important kinematic equations connecting $v_0, v, a, t,$ and $x$ for constant acceleration are: $v = v_0 + at$, $x = v_0 t + \\frac{1}{2} a t^2$, and $v^2 = v_0^2 + 2ax$. If the position at $t = 0$ is non-zero ($x_0$), these equations are modified by replacing $x$ with $x - x_0$: $$v = v_0 + at$$ $$x = x_0 + v_0 t + \\frac{1}{2} a t^2$$ $$v^2 = v_0^2 + 2a(x - x_0)$$ These are kinematic equations of rectilinear motion for constant acceleration.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:2:2.4:6",
+            "order": 6,
+            "title": "Derivation using Calculus",
+            "content_text": "The kinematic equations can also be derived using the method of calculus. This method is advantageous as it can be used for motion with non-uniform acceleration also. By definition, $a = dv/dt$, which leads to $v = v_0 + at$ upon integration. Similarly, $v = dx/dt$ leads to the displacement equation, and $a = v(dv/dx)$ leads to the velocity-displacement relation.",
+            "content_type": "derivation",
+            "worked_examples": [
+              {
+                "label": "Example 2.2",
+                "problem": "Obtain equations of motion for constant acceleration using method of calculus.",
+                "solution": "By definition $a = \\frac{dv}{dt} \\implies dv = a dt$. Integrating both sides: $\\int_{v_0}^v dv = \\int_0^t a dt \\implies v - v_0 = a \\int_0^t dt = at \\implies v = v_0 + at$. Further, $v = \\frac{dx}{dt} \\implies dx = v dt$. Integrating both sides: $\\int_{x_0}^x dx = \\int_0^t v dt = \\int_0^t (v_0 + at) dt \\implies x - x_0 = v_0 t + \\frac{1}{2} a t^2 \\implies x = x_0 + v_0 t + \\frac{1}{2} a t^2$. We can also write $a = \\frac{dv}{dt} = \\frac{dv}{dx} \\frac{dx}{dt} = v \\frac{dv}{dx} \\implies v dv = a dx$. Integrating both sides: $\\int_{v_0}^v v dv = \\int_{x_0}^x a dx \\implies \\frac{v^2 - v_0^2}{2} = a(x - x_0) \\implies v^2 = v_0^2 + 2a(x - x_0)$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:2:2.4:7",
+            "order": 7,
+            "title": "Application: Motion under Gravity",
+            "content_text": "The kinematic equations can be applied to solve problems involving motion under gravity, where acceleration is constant ($g$). For an object thrown upwards, the acceleration is $-g$ if the upward direction is taken as positive. FIRST METHOD : In the first method, we split the path into two parts: the upward motion (A to B) and the downward motion (B to C) and calculate the corresponding time taken $t_1$ and $t_2$. Since the velocity at B is zero, we have $v = v_0 + at$, which gives $0 = 20 - 10t_1$, or $t_1 = 2$ s. This is the time in going from A to B. From B, or the point of the maximum height, the ball falls freely under the acceleration due to gravity. The ball is moving in negative $y$ direction. We use equation $y = y_0 + v_0t + \\frac{1}{2}at^2$. We have $y_0 = 45$ m, $y = 0$, $v_0 = 0$, $a = -g = -10$ m s$^{-2}$. Solving $0 = 45 + (\\frac{1}{2}) (-10) t_2^2$, we get $t_2 = 3$ s. Therefore, the total time taken by the ball before it hits the ground is $t_1 + t_2 = 2$ s + 3 s = 5 s. SECOND METHOD : The total time taken can also be calculated by noting the coordinates of initial and final positions of the ball with respect to the origin chosen and using equation $y = y_0 + v_0t + \\frac{1}{2}at^2$. Now $y_0 = 25$ m, $y = 0$ m, $v_0 = 20$ m s$^{-1}$, $a = -10$ m s$^{-2}$. Substituting these, we get $0 = 25 + 20t + (\\frac{1}{2}) (-10) t^2$, or $5t^2 - 20t - 25 = 0$. Solving this quadratic equation for $t$, we get $t = 5$ s. Note that the second method is better since we do not have to worry about the path of the motion as the motion is under constant acceleration.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 2.3",
+                "problem": "A ball is thrown vertically upwards with a velocity of $20 \\text{ m s}^{-1}$ from the top of a multistorey building. The height of the point from where the ball is thrown is $25.0 \\text{ m}$ from the ground. (a) How high will the ball rise? and (b) how long will it be before the ball hits the ground? Take $g = 10 \\text{ m s}^{-2}$.",
+                "solution": "(a) Let us take the $y$-axis in the vertically upward direction with zero at the ground. Now $v_0 = +20 \\text{ m s}^{-1}$, $a = -g = -10 \\text{ m s}^{-2}$, $v = 0 \\text{ m s}^{-1}$ (at maximum height). If the ball rises to height $y$ from the point of launch, then using the equation $v^2 = v_0^2 + 2a(y - y_0)$ we get: $0 = (20)^2 + 2(-10)(y - y_0)$. Solving, we get $(y - y_0) = 20 \\text{ m}$. (b) We can solve this part of the problem in two ways. Note carefully the methods used. [CONTINUES]"
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Fig. 2.6",
+                "description": "A diagram showing the path of a ball thrown upwards from a point A on a 25m high building, reaching a peak B, and falling down to the ground at point C. It illustrates the coordinate system with the origin at the ground and the upward direction as positive.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:2:2.4:8",
+            "order": 8,
+            "title": "Example 2.4: Free Fall Analysis",
+            "content_text": "An object released near the surface of the Earth is accelerated downward under the influence of the force of gravity. The magnitude of acceleration due to gravity is represented by $g$. If air resistance is neglected, the object is said to be in free fall. If the height through which the object falls is small compared to the earth’s radius, $g$ can be taken to be constant, equal to $9.8$ m s$^{-2}$. Free fall is thus a case of motion with uniform acceleration. We assume that the motion is in $y$-direction, more correctly in $-y$-direction because we choose upward direction as positive. Since the acceleration due to gravity is always downward, it is in the negative direction and we have $a = -g = -9.8$ m s$^{-2}$. The object is released from rest at $y = 0$. Therefore, $v_0 = 0$ and the equations of motion become: $v = -gt = -9.8t$ m s$^{-1}$, $y = -\\frac{1}{2}gt^2 = -4.9t^2$ m, and $v^2 = -2gy = -19.6y$ m$^2$ s$^{-2}$.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 2.4",
+                "problem": "Free-fall : Discuss the motion of an object under free fall. Neglect air resistance.",
+                "solution": "An object released near the surface of the Earth is accelerated downward under the influence of the force of gravity. The magnitude of acceleration due to gravity is represented by $g$. If air resistance is neglected, the object is said to be in free fall. If the height through which the object falls is small compared to the earth’s radius, $g$ can be taken to be constant, equal to $9.8$ m s$^{-2}$. Free fall is thus a case of motion with uniform acceleration. We assume that the motion is in $y$-direction, more correctly in $-y$-direction because we choose upward direction as positive. Since the acceleration due to gravity is always downward, it is in the negative direction and we have $a = -g = -9.8$ m s$^{-2}$. The object is released from rest at $y = 0$. Therefore, $v_0 = 0$ and the equations of motion become: $v = 0 - gt = -9.8t$ m s$^{-1}$, $y = 0 - \\frac{1}{2}gt^2 = -4.9t^2$ m, $v^2 = 0 - 2gy = -19.6y$ m$^2$ s$^{-2}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:2:2.4:9",
+            "order": 9,
+            "title": "Kinematic Equations for Free Fall",
+            "content_text": "The equations of motion for an object in free fall from rest at $y=0$ describe the velocity and distance travelled as a function of time and the variation of velocity with distance. These are: $v = -9.8t$, $y = -4.9t^2$, and $v^2 = -19.6y$. The variation of acceleration, velocity, and distance with time are plotted in Fig. 2.7. Acceleration remains constant at $-9.8$ m/s$^2$, velocity decreases linearly from zero, and position follows a downward parabolic curve.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 2.7",
+                "description": "A set of three graphs illustrating free fall: (a) Variation of acceleration with time showing a constant negative value of -9.8 m/s^2, (b) Variation of velocity with time showing a linear decrease from zero, and (c) Variation of distance with time showing a downward parabolic curve.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:2:2.4:10",
+            "order": 10,
+            "title": "Example 2.5: Galileo’s Law of Odd Numbers",
+            "content_text": "Galileo’s law of odd numbers states that the distances traversed, during equal intervals of time, by a body falling from rest, stand to one another in the same ratio as the odd numbers beginning with unity (1: 3: 5: 7...). By dividing the time interval into equal segments $\\tau$ and using $y = -\\frac{1}{2}gt^2$, we can calculate the position at $0, \\tau, 2\\tau, 3\\tau...$. If we take $y_0 = -\\frac{1}{2}g\\tau^2$, the positions are $y_0, 4y_0, 9y_0, 16y_0...$. The distances traversed in successive intervals are the differences between these positions: $y_0, 3y_0, 5y_0, 7y_0...$, which follow the ratio 1: 3: 5: 7: 9: 11... as shown in Table 2.2. This law was established by Galileo Galilei, the first to make quantitative studies of free fall.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 2.5",
+                "problem": "Galileo’s law of odd numbers : 'The distances traversed, during equal intervals of time, by a body falling from rest, stand to one another in the same ratio as the odd numbers beginning with unity [namely, 1: 3: 5: 7...].' Prove it.",
+                "solution": "Let us divide the time interval of motion of an object under free fall into many equal intervals $\\tau$ and find out the distances traversed during successive intervals of time. Since initial velocity is zero, we have $y = -\\frac{1}{2}gt^2$. Using this equation, we can calculate the position of the object after different time intervals, $0, \\tau, 2\\tau, 3\\tau...$ which are given in second column of Table 2.2. If we take $(-1/2) g\\tau^2$ as $y_0$ — the position coordinate after first time interval $\\tau$, then third column gives the positions in the unit of $y_0$. The fourth column gives the distances traversed in successive $\\tau$s. We find that the distances are in the simple ratio 1: 3: 5: 7: 9: 11... as shown in the last column."
+              }
+            ],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 2.2",
+                "caption": "Galileo's law of odd numbers",
+                "headers": [
+                  "$t$",
+                  "y",
+                  "y in terms of $y_0 [= (-1/2) g \\tau^2]$",
+                  "Distance traversed in successive intervals",
+                  "Ratio of distances traversed"
+                ],
+                "rows": [
+                  [
+                    "0",
+                    "0",
+                    "0",
+                    "",
+                    ""
+                  ],
+                  [
+                    "$\\tau$",
+                    "$-(1/2) g \\tau^2$",
+                    "y_0",
+                    "y_0",
+                    "1"
+                  ],
+                  [
+                    "$2\\tau$",
+                    "$-4(1/2) g \\tau^2$",
+                    "4y_0",
+                    "3y_0",
+                    "3"
+                  ],
+                  [
+                    "$3\\tau$",
+                    "$-9(1/2) g \\tau^2$",
+                    "9y_0",
+                    "5y_0",
+                    "5"
+                  ],
+                  [
+                    "$4\\tau$",
+                    "$-16(1/2) g \\tau^2$",
+                    "16y_0",
+                    "7y_0",
+                    "7"
+                  ],
+                  [
+                    "$5\\tau$",
+                    "$-25(1/2) g \\tau^2$",
+                    "25y_0",
+                    "9y_0",
+                    "9"
+                  ],
+                  [
+                    "$6\\tau$",
+                    "$-36(1/2) g \\tau^2$",
+                    "36y_0",
+                    "11y_0",
+                    "11"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:physics:11:2:2.4:11",
+            "order": 11,
+            "title": "Example 2.6: Stopping Distance of Vehicles",
+            "content_text": "Stopping distance ($d_s$) is the distance a vehicle travels before coming to rest after brakes are applied. It is a critical factor for road safety and depends on initial velocity ($v_0$) and braking capacity (deceleration $-a$). Using $v^2 = v_0^2 + 2ax$ and setting $v = 0$, we derive $d_s = \\frac{-v_0^2}{2a}$. This indicates that stopping distance is proportional to the square of the initial velocity. Doubling the initial velocity increases the stopping distance by a factor of 4 for the same deceleration. This is an important factor in setting speed limits, such as in school zones.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 2.6",
+                "problem": "Stopping distance of vehicles : When brakes are applied to a moving vehicle, the distance it travels before stopping is called stopping distance. It is an important factor for road safety and depends on the initial velocity ($v_0$) and the braking capacity, or deceleration, $-a$ that is caused by the braking. Derive an expression for stopping distance of a vehicle in terms of $v_0$ and $a$.",
+                "solution": "Let the distance travelled by the vehicle before it stops be $d_s$. Then, using equation of motion $v^2 = v_0^2 + 2ax$, and noting that $v = 0$, we have the stopping distance $d_s = \\frac{-v_0^2}{2a}$. Thus, the stopping distance is proportional to the square of the initial velocity. Doubling the initial velocity increases the stopping distance by a factor of 4 (for the same deceleration). For the car of a particular make, the braking distance was found to be 10 m, 20 m, 34 m and 50 m corresponding to velocities of 11, 15, 20 and 25 m/s which are nearly consistent with the above formula."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:2:2.4:12",
+            "order": 12,
+            "title": "Example 2.7: Reaction Time",
+            "content_text": "Reaction time is the time a person takes to observe, think, and act. It depends on the complexity of the situation and the individual. It can be measured by dropping a ruler through a person's fingers and measuring the distance $d$ it falls before being caught. Since the ruler is in free fall ($v_0 = 0, a = -g$), the reaction time $t_r$ is related to $d$ by $d = -\\frac{1}{2}gt_r^2$, which gives $t_r = \\sqrt{\\frac{2d}{g}}$. For a distance of 21.0 cm, the reaction time is approximately 0.2 s.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 2.7",
+                "problem": "Reaction time : When a situation demands our immediate action, it takes some time before we really respond. Reaction time is the time a person takes to observe, think and act... You can measure your reaction time by a simple experiment. Take a ruler and ask your friend to drop it vertically through the gap between your thumb and forefinger (Fig. 2.8). After you catch it, find the distance $d$ travelled by the ruler. In a particular case, $d$ was found to be 21.0 cm. Estimate reaction time.",
+                "solution": "The ruler drops under free fall. Therefore, $v_0 = 0$, and $a = -g = -9.8$ m s$^{-2}$. The distance travelled $d$ and the reaction time $t_r$ are related by $d = -\\frac{1}{2}gt_r^2$. Or, $t_r = \\sqrt{\\frac{2d}{g}}$ s. Given $d = 21.0$ cm and $g = 9.8$ m s$^{-2}$ the reaction time is $t_r = \\sqrt{\\frac{2 \\times 0.21}{9.8}}$ s $\\cong 0.2$ s."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Fig. 2.8",
+                "description": "A photograph showing a person's hand positioned to catch a vertical ruler dropped by another person, used to measure reaction time based on the distance the ruler falls.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:2:Summary",
+        "number": "Summary",
+        "title": "Summary",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:2:Summary:1",
+            "order": 1,
+            "title": "Motion and Position",
+            "content_text": "An object is said to be in motion if its position changes with time. The position of the object can be specified with reference to a conveniently chosen origin. For motion in a straight line, position to the right of the origin is taken as positive and to the left as negative. The average speed of an object is greater or equal to the magnitude of the average velocity over a given time interval.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:2:Summary:2",
+            "order": 2,
+            "title": "Instantaneous Velocity",
+            "content_text": "Instantaneous velocity or simply velocity is defined as the limit of the average velocity as the time interval $\\Delta t$ becomes infinitesimally small: $v = \\lim_{\\Delta t \\to 0} \\bar{v} = \\lim_{\\Delta t \\to 0} \\frac{\\Delta x}{\\Delta t} = \\frac{dx}{dt}$. The velocity at a particular instant is equal to the slope of the tangent drawn on position-time graph at that instant. Average acceleration is defined as the change in velocity divided by the time interval during which the change occurs. It is represented by the formula: $$\\bar{a} = \\frac{\\Delta v}{\\Delta t}$$ where $\\Delta v$ is the change in velocity and $\\Delta t$ is the time interval.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:2:Summary:3",
+            "order": 3,
+            "title": "Instantaneous Acceleration",
+            "content_text": "Instantaneous acceleration is defined as the limit of the average acceleration as the time interval $\\Delta t$ goes to zero: $$a = \\lim_{\\Delta t \\to 0} \\bar{a} = \\lim_{\\Delta t \\to 0} \\frac{\\Delta v}{\\Delta t} = \\frac{dv}{dt}$$ The acceleration of an object at a particular time is equal to the slope of the velocity-time ($v-t$) graph at that instant of time.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:2:Summary:4",
+            "order": 4,
+            "title": "Graphical Interpretation of Motion",
+            "content_text": "The nature of motion can be interpreted from position-time ($x-t$) and velocity-time ($v-t$) graphs. For uniform motion, acceleration is zero; the $x-t$ graph is a straight line inclined to the time axis, and the $v-t$ graph is a straight line parallel to the time axis. For motion with uniform acceleration, the $x-t$ graph is a parabola, while the $v-t$ graph is a straight line inclined to the time axis.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:2:Summary:5",
+            "order": 5,
+            "title": "Displacement from Velocity-Time Graphs",
+            "content_text": "The area under the velocity-time curve between two specific times $t_1$ and $t_2$ is equal to the displacement of the object during that interval of time.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:2:Summary:6",
+            "order": 6,
+            "title": "Kinematic Equations for Uniformly Accelerated Motion",
+            "content_text": "For objects in uniformly accelerated rectilinear motion, five quantities—displacement $x$, time taken $t$, initial velocity $v_0$, final velocity $v$, and acceleration $a$—are related by a set of kinematic equations of motion: \n1. $v = v_0 + at$\n2. $x = v_0 t + \\frac{1}{2} at^2$\n3. $v^2 = v_0^2 + 2ax$\nThese equations assume the position of the object at time $t = 0$ is $0$. If the particle starts at $x = x_0$, then $x$ in the above equations is replaced by $(x - x_0)$.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:2:Summary:7",
+            "order": 7,
+            "title": "Summary of Kinematic Quantities",
+            "content_text": "The following table summarizes the key physical quantities in kinematics, including their symbols, dimensions, units, and defining remarks.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Summary Table",
+                "caption": "Physical Quantities in Kinematics",
+                "headers": [
+                  "Physical quantity",
+                  "Symbol",
+                  "Dimensions",
+                  "Unit",
+                  "Remarks"
+                ],
+                "rows": [
+                  [
+                    "Path length",
+                    "",
+                    "[L]",
+                    "m",
+                    ""
+                  ],
+                  [
+                    "Displacement",
+                    "$\\Delta x$",
+                    "[L]",
+                    "m",
+                    "$= x_2 - x_1$. In one dimension, its sign indicates the direction."
+                  ],
+                  [
+                    "Velocity (a) Average",
+                    "$\\bar{v}$",
+                    "[LT^{-1}]",
+                    "m s^{-1}",
+                    "$= \\frac{\\Delta x}{\\Delta t}$"
+                  ],
+                  [
+                    "Velocity (b) Instantaneous",
+                    "$v$",
+                    "[LT^{-1}]",
+                    "m s^{-1}",
+                    "$= \\lim_{\\Delta t \\to 0} \\frac{\\Delta x}{\\Delta t} = \\frac{dx}{dt}$. In one dimension, its sign indicates the direction."
+                  ],
+                  [
+                    "Speed (a) Average",
+                    "",
+                    "[LT^{-1}]",
+                    "m s^{-1}",
+                    "$= \\frac{\\text{Path length}}{\\text{Time interval}}$"
+                  ],
+                  [
+                    "Speed (b) Instantaneous",
+                    "",
+                    "[LT^{-1}]",
+                    "m s^{-1}",
+                    "$= \\frac{dx}{dt}$"
+                  ],
+                  [
+                    "Acceleration (a) Average",
+                    "$\\bar{a}$",
+                    "[LT^{-2}]",
+                    "m s^{-2}",
+                    "$= \\frac{\\Delta v}{\\Delta t}$"
+                  ],
+                  [
+                    "Acceleration (b) Instantaneous",
+                    "$a$",
+                    "[LT^{-2}]",
+                    "m s^{-2}",
+                    "$= \\lim_{\\Delta t \\to 0} \\frac{\\Delta v}{\\Delta t} = \\frac{dv}{dt}$. In one dimension, its sign indicates the direction."
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:2:Points to Ponder",
+        "number": "Points to Ponder",
+        "title": "Points to Ponder",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:2:Points to Ponder:1",
+            "order": 1,
+            "title": "Reference Frames and Sign Conventions",
+            "content_text": "The choice of origin and the positive direction of an axis are matters of choice. One must first specify these before assigning signs to quantities like displacement, velocity, and acceleration.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:2:Points to Ponder:2",
+            "order": 2,
+            "title": "Acceleration and Speeding Up/Slowing Down",
+            "content_text": "If a particle is speeding up, acceleration is in the direction of velocity. If its speed is decreasing, acceleration is in the direction opposite to that of the velocity. This statement is independent of the choice of the origin and the axis.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:2:Points to Ponder:3",
+            "order": 3,
+            "title": "Acceleration due to Gravity and Direction",
+            "content_text": "The sign of acceleration depends on the choice of the positive direction of the axis. For example, if the vertically upward direction is chosen as positive, the acceleration due to gravity is negative. If a particle is falling under gravity, this acceleration, though negative, results in an increase in speed. For a particle thrown upward, the same negative acceleration results in a decrease in speed.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:2:Points to Ponder:4",
+            "order": 4,
+            "title": "Velocity and Acceleration at Specific Instants",
+            "content_text": "Zero velocity at any instant does not necessarily imply zero acceleration at that instant. A particle may be momentarily at rest and yet have non-zero acceleration. For example, a particle thrown upward has zero velocity at its uppermost point, but the acceleration at that instant continues to be the acceleration due to gravity.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:2:Points to Ponder:5",
+            "order": 5,
+            "title": "Algebraic Nature and Validity of Kinematic Equations",
+            "content_text": "In kinematic equations, quantities are algebraic and can be positive or negative. These equations are applicable in all situations for one-dimensional motion with constant acceleration, provided proper signs are used. Note that definitions of instantaneous velocity and acceleration are always exact, while kinematic equations are true only for motion where magnitude and direction of acceleration are constant.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:2:Exercises",
+        "number": "Exercises",
+        "title": "Exercises",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:2:Exercises:1",
+            "order": 1,
+            "title": "Kinematics and Graph Interpretation",
+            "content_text": "This subsection covers exercises 2.8 to 2.14. Exercise 2.8 requires plotting a speed-time graph for a bouncing ball, accounting for energy loss (speed reduction) at each impact. Exercise 2.9 explores the fundamental distinctions between distance (total path length) and displacement magnitude, as well as average speed and average velocity magnitude, emphasizing that path length and average speed are always greater than or equal to displacement and average velocity magnitude, respectively. Exercise 2.10 provides a numerical application of these concepts using a round-trip journey to a market. Exercise 2.11 clarifies that while average quantities differ, instantaneous speed is always equal to the magnitude of instantaneous velocity because the path length and displacement magnitude converge over an infinitesimally small time interval. Exercise 2.12 involves identifying physically impossible one-dimensional motion graphs, such as those showing multiple positions or velocities at a single time, negative speeds, or decreasing total path lengths. Exercise 2.13 examines an $x-t$ plot to distinguish between the path of motion (straight line) and the graphical representation of position over time. Exercise 2.14 is a relative motion problem involving a police pursuit, requiring the calculation of the bullet's speed relative to a moving target.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 2.10",
+                "description": "Four graphs labeled (a) to (d). (a) shows an x-t graph with a loop, (b) shows a circular v-t graph, (c) shows a speed-t graph with negative values, and (d) shows a total path length-t graph that decreases.",
+                "image_url": null
+              },
+              {
+                "label": "Fig. 2.11",
+                "description": "An x-t plot where the position is zero for $t < 0$ and follows a curved path for $t > 0$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:2:Exercises:2",
+            "order": 2,
+            "title": "Advanced Motion Analysis",
+            "content_text": "This subsection covers exercises 2.15 through 2.18. Exercise 2.15 asks for physical scenarios corresponding to specific $x-t$, $v-t$, and $a-t$ graphs, such as a ball bouncing or receiving an impulsive force. Exercise 2.16 analyzes the signs of position, velocity, and acceleration for a particle in simple harmonic motion (SHM) at specific time points. Exercise 2.17 uses an $x-t$ plot to compare average speeds in different intervals based on the magnitude of the slope. Exercise 2.18 analyzes a speed-time graph to determine intervals of maximum average acceleration and speed, as well as the signs of motion variables and instantaneous acceleration at specific points.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 2.12",
+                "description": "Three graphs labeled (a) to (c). (a) is an x-t graph with sharp changes in slope, (b) is a v-t graph with vertical jumps, and (c) is an a-t graph showing a single narrow pulse.",
+                "image_url": null
+              },
+              {
+                "label": "Fig. 2.13",
+                "description": "An x-t plot of a particle executing simple harmonic motion, showing a sinusoidal wave oscillating between positive and negative x values over time t.",
+                "image_url": null
+              },
+              {
+                "label": "Fig. 2.14",
+                "description": "An x-t plot of a particle in one-dimensional motion with three highlighted time intervals (1, 2, and 3) showing different slopes and curvatures.",
+                "image_url": null
+              },
+              {
+                "label": "Fig. 2.15",
+                "description": "A speed-time graph of a particle in motion along a constant direction, with three equal time intervals (1, 2, and 3) and specific points labeled A, B, C, and D.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:physics:11:2:ex:1",
+          "number": 1,
+          "problem": "In which of the following examples of motion, can the body be considered approximately a point object: (a) a railway carriage moving without jerks between two stations. (b) a monkey sitting on top of a man cycling smoothly on a circular track. (c) a spinning cricket ball that turns sharply on hitting the ground. (d) a tumbling beaker that has slipped off the edge of a table.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:2:ex:2",
+          "number": 2,
+          "problem": "The position-time ($x-t$) graphs for two children A and B returning from their school O to their homes P and Q respectively are shown in Fig. 2.9. Choose the correct entries in the brackets below: (a) (A/B) lives closer to the school than (B/A). (b) (A/B) starts from the school earlier than (B/A). (c) (A/B) walks faster than (B/A). (d) A and B reach home at the (same/different) time. (e) (A/B) overtakes (B/A) on the road (once/twice).",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "mcq"
+        },
+        {
+          "id": "ncert:physics:11:2:ex:3",
+          "number": 3,
+          "problem": "A woman starts from her home at 9.00 am, walks with a speed of $5 \\text{ km h}^{-1}$ on a straight road up to her office $2.5 \\text{ km}$ away, stays at the office up to 5.00 pm, and returns home by an auto with a speed of $25 \\text{ km h}^{-1}$. Choose suitable scales and plot the $x-t$ graph of her motion.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:2:ex:4",
+          "number": 4,
+          "problem": "A drunkard walking in a narrow lane takes 5 steps forward and 3 steps backward, followed again by 5 steps forward and 3 steps backward, and so on. Each step is $1 \\text{ m}$ long and requires $1 \\text{ s}$. Plot the $x-t$ graph of his motion. Determine graphically and otherwise how long the drunkard takes to fall in a pit $13 \\text{ m}$ away from the start.",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:2:ex:5",
+          "number": 5,
+          "problem": "A car moving along a straight highway with speed of $126 \\text{ km h}^{-1}$ is brought to a stop within a distance of $200 \\text{ m}$. What is the retardation of the car (assumed uniform), and how long does it take for the car to stop?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:2:ex:6",
+          "number": 6,
+          "problem": "A player throws a ball upwards with an initial speed of $29.4 \\text{ m s}^{-1}$. (a) What is the direction of acceleration during the upward motion of the ball? (b) What are the velocity and acceleration of the ball at the highest point of its motion? (c) Choose the $x = 0 \\text{ m}$ and $t = 0 \\text{ s}$ to be the location and time of the ball at its highest point, vertically downward direction to be the positive direction of $x$-axis, and give the signs of position, velocity and acceleration of the ball during its upward, and downward motion. (d) To what height does the ball rise and after how long does the ball return to the player’s hands? (Take $g = 9.8 \\text{ m s}^{-2}$ and neglect air resistance).",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:2:ex:7",
+          "number": 7,
+          "problem": "Read each statement below carefully and state with reasons and examples, if it is true or false; A particle in one-dimensional motion (a) with zero speed at an instant may have non-zero acceleration at that instant, (b) with zero speed may have non-zero velocity, (c) with constant speed must have zero acceleration, (d) with positive value of acceleration must be speeding up.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:2:ex:8",
+          "number": 8,
+          "problem": "A ball is dropped from a height of 90 m on a floor. At each collision with the floor, the ball loses one tenth of its speed. Plot the speed-time graph of its motion between $t = 0$ to 12 s.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:2:ex:9",
+          "number": 9,
+          "problem": "Explain clearly, with examples, the distinction between: (a) magnitude of displacement (sometimes called distance) over an interval of time, and the total length of path covered by a particle over the same interval; (b) magnitude of average velocity over an interval of time, and the average speed over the same interval. [Average speed of a particle over an interval of time is defined as the total path length divided by the time interval]. Show in both (a) and (b) that the second quantity is either greater than or equal to the first. When is the equality sign true? [For simplicity, consider one-dimensional motion only].",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:2:ex:10",
+          "number": 10,
+          "problem": "A man walks on a straight road from his home to a market 2.5 km away with a speed of 5 km h$^{-1}$. Finding the market closed, he instantly turns and walks back home with a speed of 7.5 km h$^{-1}$. What is the (a) magnitude of average velocity, and (b) average speed of the man over the interval of time (i) 0 to 30 min, (ii) 0 to 50 min, (iii) 0 to 40 min? [Note: You will appreciate from this exercise why it is better to define average speed as total path length divided by time, and not as magnitude of average velocity. You would not like to tell the tired man on his return home that his average speed was zero!]",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:2:ex:11",
+          "number": 11,
+          "problem": "In Exercises 2.9 and 2.10, we have carefully distinguished between average speed and magnitude of average velocity. No such distinction is necessary when we consider instantaneous speed and magnitude of velocity. The instantaneous speed is always equal to the magnitude of instantaneous velocity. Why?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:2:ex:12",
+          "number": 12,
+          "problem": "Look at the graphs (a) to (d) (Fig. 2.10) carefully and state, with reasons, which of these cannot possibly represent one-dimensional motion of a particle.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:2:ex:13",
+          "number": 13,
+          "problem": "Figure 2.11 shows the $x-t$ plot of one-dimensional motion of a particle. Is it correct to say from the graph that the particle moves in a straight line for $t < 0$ and on a parabolic path for $t > 0$? If not, suggest a suitable physical context for this graph.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:2:ex:14",
+          "number": 14,
+          "problem": "A police van moving on a highway with a speed of 30 km h$^{-1}$ fires a bullet at a thief’s car speeding away in the same direction with a speed of 192 km h$^{-1}$. If the muzzle speed of the bullet is 150 m s$^{-1}$, with what speed does the bullet hit the thief’s car? (Note: Obtain that speed which is relevant for damaging the thief’s car).",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:2:ex:15",
+          "number": 15,
+          "problem": "Suggest suitable physical situations for each of the following graphs (Fig 2.12): (a) x-t graph, (b) v-t graph, (c) a-t graph.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:2:ex:16",
+          "number": 16,
+          "problem": "Figure 2.13 gives the $x-t$ plot of a particle executing one-dimensional simple harmonic motion. Give the signs of position, velocity and acceleration variables of the particle at $t = 0.3$ s, 1.2 s, $-1.2$ s.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:2:ex:17",
+          "number": 17,
+          "problem": "Figure 2.14 gives the $x-t$ plot of a particle in one-dimensional motion. Three different equal intervals of time are shown. In which interval is the average speed greatest, and in which is it the least? Give the sign of average velocity for each interval.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:2:ex:18",
+          "number": 18,
+          "problem": "Figure 2.15 gives a speed-time graph of a particle in motion along a constant direction. Three equal intervals of time are shown. In which interval is the average acceleration greatest in magnitude? In which interval is the average speed greatest? Choosing the positive direction as the constant direction of motion, give the signs of $v$ and $a$ in the three intervals. What are the accelerations at the points A, B, C and D?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        }
+      ]
+    }
+  }
+}

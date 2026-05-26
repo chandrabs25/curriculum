@@ -1,0 +1,805 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_physics_11_ch8.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:physics:11:8",
+  "curriculum": "ncert",
+  "subject": "physics",
+  "grade": 11,
+  "textbook_name": "Physics Part II",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:physics:11:8",
+    "number": 8,
+    "title": "Mechanical Properties of Solids",
+    "summary": "This chapter delves into the mechanical properties of solids, focusing on their elastic behavior. It introduces the concepts of stress and strain, defining them as the restoring force per unit area and the fractional change in dimension, respectively. Different types of stress (tensile, compressive, shearing, and hydraulic) and corresponding strains are explained. Hooke's Law is presented, stating that stress is proportional to strain within the elastic limit.\n\nThe stress-strain curve is analyzed to understand material behavior under increasing load, differentiating between elastic and plastic regions, yield point, ultimate tensile strength, and fracture point. Materials are classified as brittle or ductile based on this curve. The chapter then introduces elastic moduli – Young's modulus (for tensile/compressive stress), Shear modulus (for shearing stress), and Bulk modulus (for hydraulic stress). These moduli relate stress and strain and quantify a material's stiffness. Compressibility, the reciprocal of the bulk modulus, is also defined.\n\nThe latter part of the chapter applies these concepts to real-world scenarios like structural engineering (design of beams and columns), crane rope design, and determining the maximum height of a mountain. The bending of beams and the concept of buckling are discussed, highlighting the importance of material properties and structural design in ensuring stability and safety. Finally, elastic potential energy stored in a stretched wire is derived, and Poisson’s ratio is introduced. The chapter emphasizes the importance of understanding elasticity in engineering design and everyday applications.",
+    "sections": [
+      {
+        "id": "ncert:physics:11:8:8.1",
+        "number": "8.1",
+        "title": "Introduction",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:8:8.1:1",
+            "order": 1,
+            "title": "Elasticity and Plasticity",
+            "content_text": "In physics, a rigid body is generally defined as a hard solid object with a definite shape and size. However, real bodies can be stretched, compressed, and bent. Even a rigid steel bar can be deformed when a sufficiently large external force is applied. The property of a body, by virtue of which it tends to regain its original size and shape when the applied force is removed, is known as elasticity. The deformation caused in such cases is called elastic deformation. Conversely, substances like putty or mud have no tendency to regain their previous shape and get permanently deformed; such substances are called plastic and this property is called plasticity.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:8:8.1:2",
+            "order": 2,
+            "title": "Applications of Elastic Behaviour",
+            "content_text": "The elastic behaviour of materials is crucial in engineering design. Knowledge of the elastic properties of materials like steel and concrete is essential for designing buildings, bridges, automobiles, and ropeways. It helps answer questions regarding the design of strong yet light aeroplanes, the specific I-shape of railway tracks, and why certain materials like glass are brittle while others like brass are not.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:8:8.2",
+        "number": "8.2",
+        "title": "Stress and Strain",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:8:8.2:1",
+            "order": 1,
+            "title": "Definition of Stress",
+            "content_text": "When external forces are applied to a body, a restoring force is developed within it. This restoring force is equal in magnitude but opposite in direction to the applied force. The restoring force per unit area is known as stress. If $F$ is the force applied normal to the cross-section and $A$ is the area of cross-section, then: $$\\text{Magnitude of the stress} = F/A \\quad (8.1)$$ The SI unit of stress is $N m^{-2}$ or pascal (Pa), and its dimensional formula is $[ML^{-1}T^{-2}]$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:8:8.2:2",
+            "order": 2,
+            "title": "Longitudinal Stress and Strain",
+            "content_text": "When a cylinder is stretched by two equal forces applied normal to its cross-sectional area, the restoring force per unit area is called tensile stress. If the cylinder is compressed under applied forces, it is known as compressive stress. Tensile or compressive stress is also termed longitudinal stress. The change in length $\\Delta L$ to the original length $L$ of the body is known as longitudinal strain: $$\\text{Longitudinal strain} = \\frac{\\Delta L}{L} \\quad (8.2)$$",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:8:8.2:3",
+            "order": 3,
+            "title": "Shearing Stress and Strain",
+            "content_text": "When two equal and opposite deforming forces are applied parallel to the cross-sectional area of a cylinder, there is a relative displacement between opposite faces. The restoring force per unit area developed due to this tangential force is known as tangential or shearing stress. The resulting strain is called shearing strain, defined as the ratio of the relative displacement $\\Delta x$ of the faces to the length $L$: $$\\text{Shearing strain} = \\frac{\\Delta x}{L} = \\tan \\theta \\quad (8.3)$$ where $\\theta$ is the angular displacement. For small $\\theta$, $\\tan \\theta \\approx \\theta$: $$\\text{Shearing strain} \\approx \\theta \\quad (8.4)$$ This can be visualized by pressing a book horizontally with the hand.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 8.1",
+                "description": "(a) A cylindrical body under tensile stress elongates by $\\Delta L$. (b) Shearing stress on a cylinder deforming it by an angle $\\theta$. (c) A book subjected to shearing stress. (d) A solid sphere under hydraulic stress where force is normal to the surface at every point.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:8:8.2:4",
+            "order": 4,
+            "title": "Hydraulic Stress and Volume Strain",
+            "content_text": "When a solid sphere is placed in a fluid under high pressure, it is compressed uniformly on all sides. The force applied by the fluid acts perpendicular to the surface at every point, leading to a decrease in volume without changing the geometrical shape. The internal restoring force per unit area in this case is known as hydraulic stress, which is equal to the hydraulic pressure. The resulting strain is called volume strain, defined as the ratio of change in volume $(\\Delta V)$ to the original volume $(V)$: $$\\text{Volume strain} = \\frac{\\Delta V}{V} \\quad (8.5)$$ Strain is a ratio of change in dimension to the original dimension and thus has no units or dimensional formula.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:8:8.3",
+        "number": "8.3",
+        "title": "Hooke's Law",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:8:8.3:1",
+            "order": 1,
+            "title": "Statement of Hooke's Law",
+            "content_text": "For small deformations, the stress and strain are proportional to each other. This is known as Hooke's law. Mathematically: $$\\text{stress} \\propto \\text{strain}$$ $$\\text{stress} = k \\times \\text{strain} \\quad (8.6)$$ where $k$ is the proportionality constant known as the modulus of elasticity. Hooke's law is an empirical law valid for most materials, though some materials do not exhibit this linear relationship.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:8:8.4",
+        "number": "8.4",
+        "title": "Stress-Strain Curve",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:8:8.4:1",
+            "order": 1,
+            "title": "The Tensile Test Experiment",
+            "content_text": "The relationship between stress and strain for a material is determined experimentally. In a standard test, a cylinder or wire is stretched by an applied force. The fractional change in length (strain) and the applied force needed to cause it are recorded. The force is increased in steps and the change in length is noted. A graph is then plotted between the stress (magnitude of applied force per unit area) and the strain produced.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:8:8.4:2",
+            "order": 2,
+            "title": "Analysis of the Stress-Strain Curve",
+            "content_text": "A typical stress-strain curve for a metal has several regions: 1. Proportional Limit (O to A): Stress is linear to strain; Hooke's law is obeyed. 2. Yield Point (B): Also known as the elastic limit. Between A and B, stress and strain are not proportional, but the body still returns to its original dimensions when the load is removed. The stress at point B is the yield strength $(\\sigma_y)$. 3. Plastic Deformation: Beyond point B, even a small increase in stress causes a large increase in strain. If the load is removed at a point C between B and D, the body does not regain its original dimension and retains a permanent set (residual strain). 4. Ultimate Tensile Strength (D): The maximum stress the material can withstand. 5. Fracture Point (E): The point where the material eventually breaks.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 8.2",
+                "description": "A typical stress-strain curve for a metal showing the proportional limit (A), yield point (B), permanent set, ultimate tensile strength (D), and fracture point (E).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:8:8.4:3",
+            "order": 3,
+            "title": "Brittle and Ductile Materials",
+            "content_text": "Materials are classified based on the proximity of the ultimate tensile strength point (D) and the fracture point (E) on the stress-strain curve. If points D and E are close together, the material is said to be brittle. If points D and E are far apart, the material is said to be ductile.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:8:8.4:4",
+            "order": 4,
+            "title": "Elastomers",
+            "content_text": "The stress-strain behavior varies significantly from material to material. For instance, rubber can be pulled to several times its original length and still return to its original shape. Fig. 8.3 illustrates the stress-strain curve for the elastic tissue of the aorta, the large vessel carrying blood from the heart. It is important to note that although the elastic region for such materials is very large, they do not obey Hooke’s law over most of that region. Furthermore, there is no well-defined plastic region. Substances like the tissue of the aorta and rubber, which can be stretched to cause large strains, are specifically called elastomers.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 8.3",
+                "description": "A graph showing the stress-strain curve for the elastic tissue of the aorta. The curve starts at the origin and rises steeply as strain increases toward 1.0, with stress reaching approximately $1.0 \\times 10^6 N m^{-2}$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:8:8.5",
+        "number": "8.5",
+        "title": "ELASTIC MODULI",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:8:8.5:1",
+            "order": 1,
+            "title": "Introduction to Elastic Moduli",
+            "content_text": "The proportional region within the elastic limit of the stress-strain curve (represented as region OA in Fig. 8.2) is of critical importance for structural and manufacturing engineering designs. In this region, the ratio of stress to strain is constant for a given material. This ratio is called the modulus of elasticity and is considered a characteristic property of the material.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:8:8.5:2",
+            "order": 2,
+            "title": "Young’s Modulus",
+            "content_text": "Experimental observations indicate that for a given material, the magnitude of the strain produced is the same whether the applied stress is tensile or compressive. The ratio of tensile (or compressive) stress ($\\sigma$) to the longitudinal strain ($\\epsilon$) is defined as Young’s modulus and is denoted by the symbol $Y$. Mathematically, $Y = \\frac{\\sigma}{\\epsilon}$. Using the definitions of stress and strain, we have $Y = \\frac{F/A}{\\Delta L/L} = \\frac{F \\times L}{A \\times \\Delta L}$. Since strain is a dimensionless quantity, the SI unit of Young’s modulus is the same as that of stress, which is $N m^{-2}$ or Pascal (Pa). Table 8.1 provides the values of Young’s moduli and yield strengths for various materials. Metals generally exhibit large Young’s moduli, indicating they are less easily deformed.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 8.1",
+                "caption": "Young’s moduli and yield strengths of some materials",
+                "headers": [
+                  "Substance",
+                  "Density $\\rho$ ($kg m^{-3}$)",
+                  "Young’s modulus $Y$ ($10^9 N m^{-2}$)",
+                  "Ultimate strength $\\sigma_u$ ($10^6 N m^{-2}$)",
+                  "Yield strength $\\sigma_y$ ($10^6 N m^{-2}$)"
+                ],
+                "rows": [
+                  [
+                    "Aluminium",
+                    "2710",
+                    "70",
+                    "110",
+                    "95"
+                  ],
+                  [
+                    "Copper",
+                    "8890",
+                    "110",
+                    "400",
+                    "200"
+                  ],
+                  [
+                    "Iron (wrought)",
+                    "7800-7900",
+                    "190",
+                    "330",
+                    "170"
+                  ],
+                  [
+                    "Steel",
+                    "7860",
+                    "200",
+                    "400",
+                    "250"
+                  ],
+                  [
+                    "Glass#",
+                    "2190",
+                    "65",
+                    "50",
+                    "—"
+                  ],
+                  [
+                    "Concrete",
+                    "2320",
+                    "30",
+                    "40",
+                    "—"
+                  ],
+                  [
+                    "Wood#",
+                    "525",
+                    "13",
+                    "50",
+                    "—"
+                  ],
+                  [
+                    "Bone#",
+                    "1900",
+                    "9.4",
+                    "170",
+                    "—"
+                  ],
+                  [
+                    "Polystyrene",
+                    "1050",
+                    "3",
+                    "48",
+                    "—"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:physics:11:8:8.5:3",
+            "order": 3,
+            "title": "Comparison of Material Elasticity",
+            "content_text": "Materials with large Young's moduli require a significant force to produce even a small change in length. For example, to increase the length of a thin steel wire with a $0.1 cm^2$ cross-sectional area by $0.1\\%$, a force of $2000$ N is required. In contrast, the forces required to produce the same strain in aluminium, brass, and copper wires of the same area are $690$ N, $900$ N, and $1100$ N, respectively. This demonstrates that steel is more elastic than copper, brass, and aluminium. Consequently, steel is preferred for heavy-duty machinery and structural designs. Materials like wood, bone, concrete, and glass have relatively small Young’s moduli.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:8:8.5:4",
+            "order": 4,
+            "title": "Example 8.1: Stress, Elongation, and Strain in a Steel Rod",
+            "content_text": "This example calculates the mechanical properties of a structural steel rod under a specific load.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 8.1",
+                "problem": "A structural steel rod has a radius of $10$ mm and a length of $1.0$ m. A $100$ kN force stretches it along its length. Calculate (a) stress, (b) elongation, and (c) strain on the rod. Young’s modulus, of structural steel is $2.0 \\times 10^{11} N m^{-2}$.",
+                "solution": "We assume the rod is held by a clamp at one end, and the force $F$ is applied at the other end, parallel to the length of the rod. (a) Stress $= \\frac{F}{A} = \\frac{F}{\\pi r^2} = \\frac{100 \\times 10^3 N}{3.14 \\times (10^{-2} m)^2} = 3.18 \\times 10^8 N m^{-2}$. (b) The elongation, $\\Delta L = \\frac{(F/A)L}{Y} = \\frac{(3.18 \\times 10^8 N m^{-2})(1 m)}{2 \\times 10^{11} N m^{-2}} = 1.59 \\times 10^{-3} m = 1.59$ mm. (c) The strain is given by Strain $= \\frac{\\Delta L}{L} = \\frac{1.59 \\times 10^{-3} m}{1 m} = 1.59 \\times 10^{-3} = 0.16 \\%$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:8:8.5:5",
+            "order": 5,
+            "title": "Example 8.2: Load on Connected Wires",
+            "content_text": "This example explores the distribution of elongation and the required load for a composite wire system.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 8.2",
+                "problem": "A copper wire of length $2.2$ m and a steel wire of length $1.6$ m, both of diameter $3.0$ mm, are connected end to end. When stretched by a load, the net elongation is found to be $0.70$ mm. Obtain the load applied.",
+                "solution": "The copper and steel wires are under the same tension (load $W$) and have the same cross-sectional area $A$. Stress $= \\text{strain} \\times \\text{Young’s modulus}$. Therefore, $\\frac{W}{A} = Y_c \\times \\frac{\\Delta L_c}{L_c} = Y_s \\times \\frac{\\Delta L_s}{L_s}$, where subscripts $c$ and $s$ refer to copper and stainless steel. Or, $\\frac{\\Delta L_c}{\\Delta L_s} = \\frac{Y_s}{Y_c} \\times \\frac{L_c}{L_s}$. Given $L_c = 2.2$ m, $L_s = 1.6$ m, $Y_c = 1.1 \\times 10^{11} N m^{-2}$, and $Y_s = 2.0 \\times 10^{11} N m^{-2}$. $\\frac{\\Delta L_c}{\\Delta L_s} = \\frac{2.0 \\times 10^{11}}{1.1 \\times 10^{11}} \\times \\frac{2.2}{1.6} = 2.5$. Total elongation $\\Delta L_c + \\Delta L_s = 7.0 \\times 10^{-4}$ m. Solving these, $\\Delta L_c = 5.0 \\times 10^{-4}$ m and $\\Delta L_s = 2.0 \\times 10^{-4}$ m. Therefore, $W = \\frac{A \\times Y_c \\times \\Delta L_c}{L_c} = \\frac{\\pi (1.5 \\times 10^{-3})^2 \\times (1.1 \\times 10^{11}) \\times (5.0 \\times 10^{-4})}{2.2} = 1.8 \\times 10^2$ N."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:8:8.5:6",
+            "order": 6,
+            "title": "Example 8.3: Compression of Human Thighbone",
+            "content_text": "This application calculates the compression of a human femur under the weight of a human pyramid.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 8.3",
+                "problem": "In a human pyramid in a circus, the entire weight of the balanced group is supported by the legs of a performer who is lying on his back (as shown in Fig. 8.4). The combined mass of all the persons performing the act, and the tables, plaques etc. involved is $280$ kg. The mass of the performer lying on his back at the bottom of the pyramid is $60$ kg. Each thighbone (femur) of this performer has a length of $50$ cm and an effective radius of $2.0$ cm. Determine the amount by which each thighbone gets compressed under the extra load.",
+                "solution": "Total mass $= 280$ kg. Mass of bottom performer $= 60$ kg. Mass supported by his legs $= 280 - 60 = 220$ kg. Weight of supported mass $= 220 \\times 9.8 = 2156$ N. Weight supported by each thighbone $= \\frac{1}{2}(2156) = 1078$ N. From Table 8.1, Young’s modulus for bone $Y = 9.4 \\times 10^9 N m^{-2}$. Length $L = 0.5$ m, radius $r = 2.0$ cm. Area $A = \\pi (2 \\times 10^{-2})^2 = 1.26 \\times 10^{-3} m^2$. Compression $\\Delta L = \\frac{F \\times L}{Y \\times A} = \\frac{1078 \\times 0.5}{9.4 \\times 10^9 \\times 1.26 \\times 10^{-3}} = 4.55 \\times 10^{-5}$ m. Fractional decrease is $\\frac{\\Delta L}{L} = 0.000091$ or $0.0091 \\%$."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Fig. 8.4",
+                "description": "A photograph showing a human pyramid in a circus, with several performers balanced on top of each other.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:8:8.5:7",
+            "order": 7,
+            "title": "Shear Modulus",
+            "content_text": "The ratio of shearing stress to the corresponding shearing strain is called the shear modulus of the material, represented by $G$. It is also known as the modulus of rigidity. The formula is $G =",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:8:8.5:8",
+            "order": 8,
+            "title": "Bulk Modulus",
+            "content_text": "When a body is submerged in a fluid, it undergoes hydraulic stress equal in magnitude to the hydraulic pressure. This leads to a decrease in the volume of the body, producing a volume strain. The ratio of hydraulic stress to the corresponding hydraulic strain is called the bulk modulus, denoted by the symbol $B$. The formula is given by: $$B = -p / (\\Delta V / V)$$ The negative sign indicates that an increase in pressure ($p$) results in a decrease in volume (negative $\\Delta V$). For a system in equilibrium, $B$ is always positive. The SI unit of bulk modulus is the same as that of pressure, i.e., $N m^{-2}$ or $Pa$. The bulk moduli of common materials are listed in Table 8.3.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 8.3",
+                "caption": "Bulk moduli (B) of some common Materials",
+                "headers": [
+                  "Material",
+                  "B ($10^9 N m^{-2}$ or $GPa$)"
+                ],
+                "rows": [
+                  [
+                    "Aluminium",
+                    "72"
+                  ],
+                  [
+                    "Brass",
+                    "61"
+                  ],
+                  [
+                    "Copper",
+                    "140"
+                  ],
+                  [
+                    "Glass",
+                    "37"
+                  ],
+                  [
+                    "Iron",
+                    "100"
+                  ],
+                  [
+                    "Nickel",
+                    "260"
+                  ],
+                  [
+                    "Steel",
+                    "160"
+                  ],
+                  [
+                    "Water (Liquid)",
+                    "2.2"
+                  ],
+                  [
+                    "Ethanol (Liquid)",
+                    "0.9"
+                  ],
+                  [
+                    "Carbon disulphide (Liquid)",
+                    "1.56"
+                  ],
+                  [
+                    "Glycerine (Liquid)",
+                    "4.76"
+                  ],
+                  [
+                    "Mercury (Liquid)",
+                    "25"
+                  ],
+                  [
+                    "Air (at STP) (Gas)",
+                    "$1.0 \\times 10^{-4}$"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:physics:11:8:8.5:9",
+            "order": 9,
+            "title": "Compressibility",
+            "content_text": "The reciprocal of the bulk modulus is called compressibility and is denoted by $k$. It is defined as the fractional change in volume per unit increase in pressure: $$k = (1/B) = -(1/\\Delta p) \\times (\\Delta V/V)$$ Data shows that the bulk moduli for solids are much larger than for liquids, which are in turn much larger than for gases. Consequently, solids are the least compressible, while gases are the most compressible (about a million times more than solids). The high incompressibility of solids is due to the tight coupling between neighboring atoms, whereas molecules in gases are very poorly coupled.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:8:8.5:10",
+            "order": 10,
+            "title": "Summary of Elastic Moduli",
+            "content_text": "The various types of stress, strain, and their corresponding elastic moduli are summarized in Table 8.4. This table provides a quick reference for tensile, shearing, and hydraulic deformations across different states of matter.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 8.4",
+                "caption": "Stress, strain and various elastic moduli",
+                "headers": [
+                  "Type of stress",
+                  "Stress",
+                  "Strain",
+                  "Change in shape",
+                  "Change in volume",
+                  "Elastic Modulus",
+                  "Name of Modulus",
+                  "State of Matter"
+                ],
+                "rows": [
+                  [
+                    "Tensile or compressive",
+                    "Two equal and opposite forces perpendicular to opposite faces",
+                    "Elongation or compression parallel to force direction ($\\Delta L/L$)",
+                    "Yes",
+                    "No",
+                    "$Y = (F L)/(A \\Delta L)$",
+                    "Young's modulus",
+                    "Solid"
+                  ],
+                  [
+                    "Shearing",
+                    "Two equal and opposite forces parallel to opposite surfaces",
+                    "Pure shear, $\\theta$",
+                    "Yes",
+                    "No",
+                    "$G = F/(A \\theta)$",
+                    "Shear modulus or modulus of rigidity",
+                    "Solid"
+                  ],
+                  [
+                    "Hydraulic",
+                    "Forces perpendicular everywhere to the surface",
+                    "Volume change ($\\Delta V/V$)",
+                    "No",
+                    "Yes",
+                    "$B = -p/(\\Delta V/V)$",
+                    "Bulk modulus",
+                    "Solid, liquid and gas"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:physics:11:8:8.5:11",
+            "order": 11,
+            "title": "Example 8.5: Compression in the Ocean",
+            "content_text": "This example demonstrates how to calculate the fractional compression of water at extreme depths using the bulk modulus.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 8.5",
+                "problem": "The average depth of Indian Ocean is about 3000 m. Calculate the fractional compression, $\\Delta V/V$, of water at the bottom of the ocean, given that the bulk modulus of water is $2.2 \\times 10^9 N m^{-2}$. (Take $g = 10 m s^{-2}$)",
+                "solution": "The pressure exerted by a 3000 m column of water is: $p = h \\rho g = 3000 \\text{ m} \\times 1000 \\text{ kg m}^{-3} \\times 10 \\text{ m s}^{-2} = 3 \\times 10^7 \\text{ N m}^{-2}$. The fractional compression is: $\\Delta V/V = \\text{stress}/B = (3 \\times 10^7 \\text{ N m}^{-2}) / (2.2 \\times 10^9 \\text{ N m}^{-2}) = 1.36 \\times 10^{-2}$ or $1.36\\%$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:8:8.5:12",
+            "order": 12,
+            "title": "Poisson's Ratio",
+            "content_text": "When a wire is stretched, it becomes longer but also thinner. The strain perpendicular to the applied force is called lateral strain. Simon Poisson pointed out that within the elastic limit, lateral strain is proportional to longitudinal strain. The ratio of lateral strain to longitudinal strain is called Poisson's ratio ($\\sigma$). If $d$ is the diameter and $L$ is the length: $$\\sigma = (\\Delta d/d) / (\\Delta L/L)$$ It is a ratio of two strains, making it a pure number with no dimensions or units. For steels, the value is between 0.28 and 0.30, and for aluminium alloys, it is about 0.33.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:8:8.5:13",
+            "order": 13,
+            "title": "Elastic Potential Energy in a Stretched Wire",
+            "content_text": "When a wire is stretched, work is done against inter-atomic forces and stored as elastic potential energy. For a wire of length $L$ and area $A$ stretched by $l$ by a force $F$: $$W = \\int_0^l \\frac{YAl}{L} dl = \\frac{YA}{L} \\frac{l^2}{2}$$ This can be rewritten as: $$W = \\frac{1}{2} \\times \\text{Young's modulus} \\times \\text{strain}^2 \\times \\text{volume of the wire}$$ Or: $$W = \\frac{1}{2} \\times \\text{stress} \\times \\text{strain} \\times \\text{volume of the wire}$$ The elastic potential energy per unit volume ($u$) is: $$u = \\frac{1}{2} \\sigma \\epsilon$$",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:8:8.6",
+        "number": "8.6",
+        "title": "APPLICATIONS OF ELASTIC BEHAVIOUR OF MATERIALS",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:8:8.6:1",
+            "order": 1,
+            "title": "Structural Engineering and Elasticity",
+            "content_text": "Elastic behavior plays a vital role in engineering. Designing buildings, bridges, and columns requires precise knowledge of the elastic properties of materials to ensure they can withstand loads without permanent deformation or failure. For instance, beams used in construction often have specific cross-sections (like the I-shape) to optimize strength and weight.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:8:8.6:2",
+            "order": 2,
+            "title": "Design of Crane Ropes",
+            "content_text": "Cranes use thick metal ropes to lift heavy loads. To prevent permanent deformation, the stress on the rope must not exceed its yield strength ($\\sigma_y$). For a load $M$, the required cross-sectional area $A$ is: $$A \\ge Mg / \\sigma_y$$ For a 10-tonne load and mild steel ($\\sigma_y \\approx 300 \\times 10^6 N m^{-2}$), $A \\ge 3.3 \\times 10^{-4} m^2$, corresponding to a radius of about 1 cm. In practice, a safety factor is applied, and a thicker rope (e.g., 3 cm radius) made of braided thin wires is used for flexibility and strength.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:8:8.6:3",
+            "order": 3,
+            "title": "Bending of Beams and Sag",
+            "content_text": "A beam of length $l$, breadth $b$, and depth $d$, supported at its ends and loaded at the center with weight $W$, will sag by an amount $\\delta$: $$\\delta = \\frac{Wl^3}{4bd^3Y}$$ To minimize sagging for a given load, one should use a material with a large Young's modulus ($Y$) and increase the depth ($d$) of the beam rather than its breadth ($b$), as $\\delta$ is inversely proportional to $d^3$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 8.6",
+                "description": "A horizontal beam of length l, breadth b, and depth d, supported at both ends. A weight W is suspended from the center, causing the beam to sag downwards by a distance delta.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:8:8.6:4",
+            "order": 4,
+            "title": "Buckling and I-shaped Beams",
+            "content_text": "While increasing the depth $d$ of a beam reduces bending, a very deep and thin beam may bend sideways, a phenomenon called buckling. To prevent this while maintaining a large load-bearing surface and depth, beams are often manufactured with an I-shaped cross-section. This shape reduces the weight of the beam without sacrificing strength, thereby reducing cost.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 8.7",
+                "description": "Three cross-sectional shapes of a beam: (a) a standard rectangular section of a bar with breadth b and depth d; (b) a thin bar showing how it can buckle or bend sideways; (c) the commonly used I-shaped section for load-bearing bars.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:8:8.6:5",
+            "order": 5,
+            "title": "Pillars and Columns",
+            "content_text": "The design of pillars in buildings and bridges must account for the conditions under which they function. A pillar with rounded ends supports less load than one with a distributed shape at the ends. Precise structural engineering ensures long-term reliability and safety by choosing the correct shapes and materials.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:8:8.6:6",
+            "order": 6,
+            "title": "Maximum Height of a Mountain",
+            "content_text": "The maximum height of a mountain on Earth is limited to approximately 10 km due to the elastic properties of rocks. A mountain base is not under uniform compression; it experiences shearing stress because the rocks can flow under the weight of the material above. The stress at the bottom of a mountain of height $h$ is given by $h\\rho g$, where $\\rho$ is the density of the rock and $g$ is the acceleration due to gravity. For a typical rock, the elastic limit is about $30 \\times 10^7 \\text{ N m}^{-2}$. Equating $h\\rho g$ to this limit with $\\rho = 3 \\times 10^3 \\text{ kg m}^{-3}$ and $g = 10 \\text{ m s}^{-2}$ yields: $$h = \\frac{30 \\times 10^7 \\text{ N m}^{-2}}{3 \\times 10^3 \\text{ kg m}^{-3} \\times 10 \\text{ m s}^{-2}} = 10 \\text{ km}$$. This theoretical limit is consistent with the height of Mt. Everest, which is nearly 9 km.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 8.8",
+                "description": "Pillars or columns: (a) a pillar with rounded ends, (b) a pillar with distributed ends to better support weight.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:8:Summary",
+        "number": "Summary",
+        "title": "Summary",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:8:Summary:1",
+            "order": 1,
+            "title": "Fundamental Concepts of Elasticity",
+            "content_text": "Stress is the restoring force per unit area and strain is the fractional change in dimension. There are three types of stresses: (a) tensile stress (longitudinal stress associated with stretching) or compressive stress (associated with compression), (b) shearing stress, and (c) hydraulic stress. For many materials, stress is directly proportional to strain for small deformations, known as Hooke’s law. The constant of proportionality is the modulus of elasticity. A class of solids called elastomers does not obey Hooke’s law.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:8:Summary:2",
+            "order": 2,
+            "title": "Mathematical Expressions for Elastic Moduli",
+            "content_text": "The elastic behavior of objects is described by three moduli: 1. Young’s modulus ($Y$): For objects under tension or compression, Hooke’s law takes the form $F/A = Y \\Delta L/L$, where $\\Delta L/L$ is the tensile or compressive strain. 2. Shear modulus ($G$): For objects undergoing shear deformation where a pair of forces is applied parallel to the upper and lower faces, $F/A = G \\times \\Delta L/L$, where $\\Delta L$ is the horizontal displacement and $L$ is the vertical height. This type of stress is possible only in solids. 3. Bulk modulus ($B$): For objects undergoing hydraulic compression due to pressure $p$ from a surrounding fluid, $p = B (\\Delta V/V)$, where $\\Delta V/V$ is the volume strain.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:8:Points to Ponder",
+        "number": "Points to Ponder",
+        "title": "Points to Ponder",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:8:Points to Ponder:1",
+            "order": 1,
+            "title": "Conceptual Insights into Elasticity",
+            "content_text": "Key conceptual points include: 1. In a wire suspended from a ceiling and stretched by a weight $F$, the tension at any cross-section $A$ is $F$, and the tensile stress is $F/A$. 2. Hooke’s law is valid only in the linear part of the stress-strain curve. 3. Young’s modulus and shear modulus are relevant only for solids, while bulk modulus applies to solids, liquids, and gases. 4. Metals have larger Young’s modulus values than alloys and elastomers. 5. In physics, a material that stretches less for a given load is considered more elastic (e.g., steel is more elastic than rubber). 6. Longitudinal strain can produce lateral strain (change in radius), described by the Poisson ratio. 7. Stress is not a vector quantity because it cannot be assigned a specific direction like a force.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:physics:11:8:ex:1",
+          "number": 1,
+          "problem": "A steel wire of length 4.7 m and cross-sectional area $3.0 \\times 10^{-5} \\text{ m}^2$ stretches by the same amount as a copper wire of length 3.5 m and cross-sectional area of $4.0 \\times 10^{-5} \\text{ m}^2$ under a given load. What is the ratio of the Young’s modulus of steel to that of copper?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:8:ex:2",
+          "number": 2,
+          "problem": "Figure 8.9 shows the strain-stress curve for a given material. What are (a) Young’s modulus and (b) approximate yield strength for this material? [The graph shows stress in $10^6 \\text{ N m}^{-2}$ on the y-axis and strain on the x-axis. The linear portion passes through (0.002, 150) and the curve peaks near 300.]",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:8:ex:3",
+          "number": 3,
+          "problem": "The stress-strain graphs for materials A and B are shown in Fig. 8.10. The graphs are drawn to the same scale. (a) Which of the materials has the greater Young’s modulus? (b) Which of the two is the stronger material? [Graph A has a steeper slope and a higher fracture point than Graph B.]",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:8:ex:4",
+          "number": 4,
+          "problem": "Read the following two statements below carefully and state, with reasons, if it is true or false. (a) The Young’s modulus of rubber is greater than that of steel; (b) The stretching of a coil is determined by its shear modulus.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:8:ex:5",
+          "number": 5,
+          "problem": "Two wires of diameter 0.25 cm, one made of steel and the other made of brass are loaded as shown in Fig. 8.11. The unloaded length of steel wire is 1.5 m and that of brass wire is 1.0 m. Compute the elongations of the steel and the brass wires. [Fig 8.11 shows a 1.5m steel wire supporting a 4.0kg mass, which then supports a 1.0m brass wire with a 6.0kg mass at the bottom.]",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:8:ex:6",
+          "number": 6,
+          "problem": "The edge of an aluminium cube is 10 cm long. One face of the cube is firmly fixed to a vertical wall. A mass of 100 kg is then attached to the opposite face of the cube. The shear modulus of aluminium is 25 GPa. What is the vertical deflection of this face?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:8:ex:7",
+          "number": 7,
+          "problem": "Four identical hollow cylindrical columns of mild steel support a big structure of mass 50,000 kg. The inner and outer radii of each column are 30 and 60 cm respectively. Assuming the load distribution to be uniform, calculate the compressional strain of each column.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:8:ex:8",
+          "number": 8,
+          "problem": "A piece of copper having a rectangular cross-section of $15.2 \\text{ mm} \\times 19.1 \\text{ mm}$ is pulled in tension with 44,500 N force, producing only elastic deformation. Calculate the resulting strain?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:8:ex:9",
+          "number": 9,
+          "problem": "A steel cable with a radius of 1.5 cm supports a chairlift at a ski area. If the maximum stress is not to exceed $10^8 \\text{ N m}^{-2}$, what is the maximum load the cable can support?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:8:ex:10",
+          "number": 10,
+          "problem": "A rigid bar of mass 15 kg is supported symmetrically by three wires each 2.0 m long. Those at each end are of copper and the middle one is of iron. Determine the ratios of their diameters if each is to have the same tension.",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:8:ex:11",
+          "number": 11,
+          "problem": "A 14.5 kg mass, fastened to the end of a steel wire of unstretched length 1.0 m, is whirled in a vertical circle with an angular velocity of 2 rev/s at the bottom of the circle. The cross-sectional area of the wire is $0.065 \\text{ cm}^2$. Calculate the elongation of the wire when the mass is at the lowest point of its path.",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:8:ex:12",
+          "number": 12,
+          "problem": "Compute the bulk modulus of water from the following data: Initial volume = 100.0 litre, Pressure increase = 100.0 atm ($1 \\text{ atm} = 1.013 \\times 10^5$ Pa), Final volume = 100.5 litre. Compare the bulk modulus of water with that of air (at constant temperature). Explain in simple terms why the ratio is so large.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:8:ex:13",
+          "number": 13,
+          "problem": "What is the density of water at a depth where pressure is 80.0 atm, given that its density at the surface is $1.03 \\times 10^3 \\text{ kg m}^{-3}$?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:8:ex:14",
+          "number": 14,
+          "problem": "Compute the fractional change in volume of a glass slab, when subjected to a hydraulic pressure of 10 atm.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:8:ex:15",
+          "number": 15,
+          "problem": "Determine the volume contraction of a solid copper cube, 10 cm on an edge, when subjected to a hydraulic pressure of $7.0 \\times 10^6$ Pa.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:8:ex:16",
+          "number": 16,
+          "problem": "How much should the pressure on a litre of water be changed to compress it by 0.10%?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        }
+      ]
+    }
+  }
+}

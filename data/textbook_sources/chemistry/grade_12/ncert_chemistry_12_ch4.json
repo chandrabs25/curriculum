@@ -1,0 +1,2973 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_chemistry_12_ch4.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:chemistry:12:4",
+  "curriculum": "ncert",
+  "subject": "chemistry",
+  "grade": 12,
+  "textbook_name": "Chemistry",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:chemistry:12:4",
+    "number": 4,
+    "title": "The d- and f-Block Elements",
+    "summary": "This chapter explores the d- and f-block elements, focusing on their position in the periodic table, electronic configurations, and properties. The chapter begins by defining transition metals and their location in the d-block, emphasizing the general electronic configuration (n-1)d^(1-10)ns^(1-2) and exceptions like Chromium and Copper due to the stability of half-filled and fully-filled orbitals. It then delves into the general properties of transition elements like metallic character, melting/boiling points, enthalpies of atomization, and atomic/ionic sizes, introducing the concept of lanthanoid contraction and its impact.\n\nThe discussion then transitions to key properties such as ionization enthalpies, oxidation states, standard electrode potentials, and chemical reactivity. It highlights trends and anomalies in these properties, explaining the reducing/oxidizing nature of certain ions. Magnetic properties, including paramagnetism and the spin-only formula (µ = √(n(n+2)), are also covered. The chapter then discusses color formation, complex compound formation, catalytic properties, interstitial compounds, and alloy formation.\n\nFinally, the chapter examines important compounds of transition elements like potassium dichromate and potassium permanganate, their preparation, structures, and oxidizing properties, concluding with detailed exploration of the lanthanoids and actinoids, including electronic configurations, lanthanide/actinoid contraction, oxidation states, and properties. The chapter connects various sections by demonstrating how electronic configuration influences physical and chemical properties, ultimately tying these characteristics to real-world applications like catalysts, alloys, and pigments, showcasing the practical importance of understanding these elements.",
+    "sections": [
+      {
+        "id": "ncert:chemistry:12:4:4",
+        "number": "4",
+        "title": "The d- and f-Block Elements",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:4:4:1",
+            "order": 1,
+            "title": "Introduction to d- and f-Block Elements",
+            "content_text": "The $d$-block of the periodic table contains the elements of groups 3-12 in which the $d$ orbitals are progressively filled in each of the four long periods. The $f$-block consists of elements in which $4f$ and $5f$ orbitals are progressively filled; these are placed in a separate panel at the bottom of the periodic table. The names transition metals and inner transition metals are often used to refer to the elements of $d$- and $f$-blocks respectively. Iron, copper, silver, and gold are transition elements that have played vital roles in human civilization, while inner transition elements like Thorium (Th), Protactinium (Pa), and Uranium (U) are critical sources of nuclear energy. There are four series of transition metals: the $3d$ series (Sc to Zn), $4d$ series (Y to Cd), $5d$ series (La and Hf to Hg), and $6d$ series (Ac and Rf to Cn). The two series of inner transition metals, $4f$ (Ce to Lu) and $5f$ (Th to Lr), are known as lanthanoids and actinoids respectively.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4:2",
+            "order": 2,
+            "title": "IUPAC Definition of Transition Metals",
+            "content_text": "Originally, the name transition metals was derived from the fact that their chemical properties were transitional between those of $s$ and $p$-block elements. According to IUPAC, transition metals are defined as metals which have an incomplete $d$ subshell either in their neutral atom or in their ions. Zinc, cadmium, and mercury of group 12 have a full $d^{10}$ configuration in their ground state as well as in their common oxidation states; hence, they are not strictly regarded as transition metals. However, as they are the end members of the $3d, 4d,$ and $5d$ transition series, their chemistry is studied along with the transition metals. The presence of partly filled $d$ or $f$ orbitals makes transition elements distinct from non-transition elements, though the usual theory of valence can often be applied successfully to both.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:4:4.1",
+        "number": "4.1",
+        "title": "Position in the Periodic Table",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:4:4.1:1",
+            "order": 1,
+            "title": "Location of the d-Block",
+            "content_text": "The $d$-block occupies the large middle section of the periodic table, flanked between the $s$- and $p$-blocks. In these elements, the $d$-orbitals of the penultimate energy level receive electrons. This gives rise to four rows of transition metals: the $3d, 4d, 5d,$ and $6d$ series.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:4:4.2",
+        "number": "4.2",
+        "title": "Electronic Configurations of the d-Block Elements",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:4:4.2:1",
+            "order": 1,
+            "title": "General Electronic Configuration",
+            "content_text": "In general, the electronic configuration of the outer orbitals of $d$-block elements is $(n-1)d^{1-10} ns^{1-2}$. An exception is Palladium (Pd), which has an electronic configuration of $4d^{10} 5s^0$. The $(n-1)$ notation stands for the inner $d$ orbitals, which may have one to ten electrons, while the outermost $ns$ orbital may have one or two electrons. This generalization has exceptions due to the very small energy difference between $(n-1)d$ and $ns$ orbitals.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.2:2",
+            "order": 2,
+            "title": "Stability of Half-filled and Filled Orbitals",
+            "content_text": "Half-filled and completely filled sets of orbitals are relatively more stable. This factor is reflected in the electronic configurations of Chromium (Cr) and Copper (Cu) in the $3d$ series. Chromium has a $3d^5 4s^1$ configuration instead of $3d^4 4s^2$, and Copper has a $3d^{10} 4s^1$ configuration instead of $3d^9 4s^2$. The energy gap between the two sets of orbitals ($3d$ and $4s$) is small enough to allow an electron to enter the $3d$ orbitals to achieve these stable configurations.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.2:3",
+            "order": 3,
+            "title": "Electronic Configurations of Transition Series",
+            "content_text": "The ground state electronic configurations of the outer orbitals for the four transition series are detailed in Table 4.1. Note that elements like Zn, Cd, Hg, and Cn have completely filled $d$ orbitals ($(n-1)d^{10} ns^2$) in both ground and common oxidation states, excluding them from the strict definition of transition elements.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 4.1 (Part 1)",
+                "caption": "Electronic Configurations of outer orbitals of the 1st Series (ground state)",
+                "headers": [
+                  "",
+                  "Sc",
+                  "Ti",
+                  "V",
+                  "Cr",
+                  "Mn",
+                  "Fe",
+                  "Co",
+                  "Ni",
+                  "Cu",
+                  "Zn"
+                ],
+                "rows": [
+                  [
+                    "Z",
+                    "21",
+                    "22",
+                    "23",
+                    "24",
+                    "25",
+                    "26",
+                    "27",
+                    "28",
+                    "29",
+                    "30"
+                  ],
+                  [
+                    "4s",
+                    "2",
+                    "2",
+                    "2",
+                    "1",
+                    "2",
+                    "2",
+                    "2",
+                    "2",
+                    "1",
+                    "2"
+                  ],
+                  [
+                    "3d",
+                    "1",
+                    "2",
+                    "3",
+                    "5",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "10",
+                    "10"
+                  ]
+                ]
+              },
+              {
+                "label": "Table 4.1 (Part 2)",
+                "caption": "Electronic Configurations of outer orbitals of the 2nd Series (ground state)",
+                "headers": [
+                  "",
+                  "Y",
+                  "Zr",
+                  "Nb",
+                  "Mo",
+                  "Tc",
+                  "Ru",
+                  "Rh",
+                  "Pd",
+                  "Ag",
+                  "Cd"
+                ],
+                "rows": [
+                  [
+                    "Z",
+                    "39",
+                    "40",
+                    "41",
+                    "42",
+                    "43",
+                    "44",
+                    "45",
+                    "46",
+                    "47",
+                    "48"
+                  ],
+                  [
+                    "5s",
+                    "2",
+                    "2",
+                    "1",
+                    "1",
+                    "1",
+                    "1",
+                    "1",
+                    "0",
+                    "1",
+                    "2"
+                  ],
+                  [
+                    "4d",
+                    "1",
+                    "2",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "10",
+                    "10",
+                    "10"
+                  ]
+                ]
+              },
+              {
+                "label": "Table 4.1 (Part 3)",
+                "caption": "Electronic Configurations of outer orbitals of the 3rd Series (ground state)",
+                "headers": [
+                  "",
+                  "La",
+                  "Hf",
+                  "Ta",
+                  "W",
+                  "Re",
+                  "Os",
+                  "Ir",
+                  "Pt",
+                  "Au",
+                  "Hg"
+                ],
+                "rows": [
+                  [
+                    "Z",
+                    "57",
+                    "72",
+                    "73",
+                    "74",
+                    "75",
+                    "76",
+                    "77",
+                    "78",
+                    "79",
+                    "80"
+                  ],
+                  [
+                    "6s",
+                    "2",
+                    "2",
+                    "2",
+                    "2",
+                    "2",
+                    "2",
+                    "2",
+                    "1",
+                    "1",
+                    "2"
+                  ],
+                  [
+                    "5d",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "9",
+                    "10",
+                    "10"
+                  ]
+                ]
+              },
+              {
+                "label": "Table 4.1 (Part 4)",
+                "caption": "Electronic Configurations of outer orbitals of the 4th Series (ground state)",
+                "headers": [
+                  "",
+                  "Ac",
+                  "Rf",
+                  "Db",
+                  "Sg",
+                  "Bh",
+                  "Hs",
+                  "Mt",
+                  "Ds",
+                  "Rg",
+                  "Cn"
+                ],
+                "rows": [
+                  [
+                    "Z",
+                    "89",
+                    "104",
+                    "105",
+                    "106",
+                    "107",
+                    "108",
+                    "109",
+                    "110",
+                    "111",
+                    "112"
+                  ],
+                  [
+                    "7s",
+                    "2",
+                    "2",
+                    "2",
+                    "2",
+                    "2",
+                    "2",
+                    "2",
+                    "2",
+                    "1",
+                    "2"
+                  ],
+                  [
+                    "6d",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "10",
+                    "10"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.2:4",
+            "order": 4,
+            "title": "General Characteristics of Transition Elements",
+            "content_text": "The $d$ orbitals of transition elements protrude to the periphery of the atom more than $s$ and $p$ orbitals. Consequently, they are more influenced by their surroundings and significantly affect the atoms or molecules around them. Elements with partly filled $d$ orbitals (ions with $d^n$ configurations where $n=1-9$) exhibit characteristic properties such as a variety of oxidation states, formation of colored ions, and complex formation with various ligands. Transition metals and their compounds also show catalytic properties and paramagnetic behavior. While there are greater similarities in properties horizontally across a row compared to non-transition elements, some group similarities also exist.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.2:5",
+            "order": 5,
+            "title": "Worked Example: Transition vs. Non-transition Classification",
+            "content_text": "This example explains the criteria for classifying an element as a transition element based on its electronic configuration.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 4.1",
+                "problem": "On what ground can you say that scandium ($Z = 21$) is a transition element but zinc ($Z = 30$) is not?",
+                "solution": "On the basis of incompletely filled $3d$ orbitals in case of scandium atom in its ground state ($3d^1$), it is regarded as a transition element. On the other hand, zinc atom has completely filled $d$ orbitals ($3d^{10}$) in its ground state as well as in its oxidised state, hence it is not regarded as a transition element."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:4:4.3",
+        "number": "4.3",
+        "title": "General Properties of the Transition Elements (d-Block)",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:4:4.3:1",
+            "order": 1,
+            "title": "Physical Properties and Metallic Character",
+            "content_text": "Nearly all transition elements display typical metallic properties, including high tensile strength, ductility, malleability, high thermal and electrical conductivity, and metallic lustre. With the exceptions of Zn, Cd, Hg, and Mn, they possess one or more typical metallic structures (such as bcc, hcp, or ccp) at normal temperatures. The lattice structures for the three transition series are detailed in the accompanying table. Transition metals (excluding Zn, Cd, and Hg) are generally very hard and have low volatility.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Lattice Structures of Transition Metals",
+                "caption": "Lattice structures of transition metals where bcc = body centred cubic; hcp = hexagonal close packed; ccp = cubic close packed; X = a typical metal structure.",
+                "headers": [
+                  "3d Series",
+                  "Structure",
+                  "4d Series",
+                  "Structure",
+                  "5d Series",
+                  "Structure"
+                ],
+                "rows": [
+                  [
+                    "Sc",
+                    "hcp (bcc)",
+                    "Y",
+                    "hcp (bcc)",
+                    "La",
+                    "hcp (ccp, bcc)"
+                  ],
+                  [
+                    "Ti",
+                    "hcp (bcc)",
+                    "Zr",
+                    "hcp (bcc)",
+                    "Hf",
+                    "hcp (bcc)"
+                  ],
+                  [
+                    "V",
+                    "bcc",
+                    "Nb",
+                    "bcc",
+                    "Ta",
+                    "bcc"
+                  ],
+                  [
+                    "Cr",
+                    "bcc",
+                    "Mo",
+                    "bcc",
+                    "W",
+                    "bcc"
+                  ],
+                  [
+                    "Mn",
+                    "X (bcc, ccp)",
+                    "Tc",
+                    "hcp",
+                    "Re",
+                    "hcp"
+                  ],
+                  [
+                    "Fe",
+                    "bcc (hcp)",
+                    "Ru",
+                    "hcp",
+                    "Os",
+                    "hcp"
+                  ],
+                  [
+                    "Co",
+                    "ccp (hcp)",
+                    "Rh",
+                    "ccp",
+                    "Ir",
+                    "ccp"
+                  ],
+                  [
+                    "Ni",
+                    "ccp",
+                    "Pd",
+                    "ccp",
+                    "Pt",
+                    "ccp"
+                  ],
+                  [
+                    "Cu",
+                    "ccp",
+                    "Ag",
+                    "ccp",
+                    "Au",
+                    "ccp"
+                  ],
+                  [
+                    "Zn",
+                    "X (hcp)",
+                    "Cd",
+                    "X (hcp)",
+                    "Hg",
+                    "X"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.3:2",
+            "order": 2,
+            "title": "Trends in Melting and Boiling Points",
+            "content_text": "Transition metals exhibit high melting and boiling points. These high values are attributed to the involvement of a greater number of electrons from the $(n-1)d$ subshell in addition to the $ns$ electrons in interatomic metallic bonding. In any transition series, the melting points rise to a maximum at approximately the $d^5$ configuration (except for anomalous values in Mn and Tc) and then fall regularly as the atomic number increases, as shown in Fig. 4.1.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 4.1",
+                "description": "A line graph showing the trends in melting points (in $10^3$ K) of transition elements against their atomic numbers. The graph displays three curves for the 3d, 4d, and 5d series, showing peaks at Cr, Mo, and W respectively, with notable dips at Mn and Tc.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.3:3",
+            "order": 3,
+            "title": "Enthalpies of Atomisation",
+            "content_text": "Transition elements possess high enthalpies of atomisation, which are illustrated in Fig. 4.2. The maxima occurring around the middle of each series suggest that having one unpaired electron per $d$ orbital is particularly favorable for strong interatomic interactions. Generally, a higher number of valence electrons results in stronger metallic bonding. Metals with very high enthalpies of atomisation (and thus high boiling points) tend to be noble in their chemical reactions. Notably, metals of the second ($4d$) and third ($5d$) series have greater enthalpies of atomisation than their corresponding elements in the first ($3d$) series, which explains the more frequent occurrence of metal-metal bonding in compounds of heavy transition metals.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 4.2",
+                "description": "A line graph depicting the trends in enthalpies of atomisation ($\\Delta_a H^\\circ / kJ mol^{-1}$) of transition elements against atomic number. It shows that the 5d series (Series 3) generally has the highest enthalpy, followed by the 4d series (Series 2) and the 3d series (Series 1).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.3:4",
+            "order": 4,
+            "title": "Variation in Atomic and Ionic Sizes",
+            "content_text": "In general, ions of the same charge within a given transition series show a progressive decrease in radius as the atomic number increases. This occurs because each new electron enters a $d$ orbital while the nuclear charge increases by one unit. Since the shielding effect of a $d$ electron is relatively poor, the net electrostatic attraction between the nuclear charge and the outermost electron increases, leading to a decrease in ionic radius. The same trend is observed in atomic radii, though the variation within a series is relatively small. Fig. 4.3 illustrates these trends across the three series.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 4.3",
+                "description": "A line graph showing the trends in atomic radii (in nm) of transition elements. The 3d series shows a clear decrease, while the 4d and 5d series curves are positioned higher but are nearly overlapping due to lanthanoid contraction.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.3:5",
+            "order": 5,
+            "title": "Lanthanoid Contraction",
+            "content_text": "While atomic sizes increase from the $3d$ to the $4d$ series, the radii of the $5d$ series are virtually identical to those of the corresponding $4d$ elements (e.g., Zr is 160 pm and Hf is 159 pm). This phenomenon is caused by the intervention of the $4f$ orbitals, which are filled before the $5d$ series begins. The filling of $4f$ orbitals results in a regular decrease in atomic radii known as the Lanthanoid contraction. This contraction essentially compensates for the expected increase in size due to higher principal quantum numbers. The cause is the imperfect shielding of one $4f$ electron by another, which is even less effective than $d$-electron shielding. Consequently, the second and third transition series elements exhibit very similar physical and chemical properties.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.3:6",
+            "order": 6,
+            "title": "Density and Properties of the First Transition Series",
+            "content_text": "The decrease in metallic radius combined with the increase in atomic mass leads to a general increase in the density of transition elements across a series. For the first transition series ($3d$), a significant increase in density is observed from titanium ($Z=22$) to copper ($Z=29$). Comprehensive data regarding electronic configurations, enthalpies, radii, and densities for the $3d$ series are provided in Table 4.2.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 4.2",
+                "caption": "Electronic Configurations and some other Properties of the First Series of Transition Elements",
+                "headers": [
+                  "Property",
+                  "Sc",
+                  "Ti",
+                  "V",
+                  "Cr",
+                  "Mn",
+                  "Fe",
+                  "Co",
+                  "Ni",
+                  "Cu",
+                  "Zn"
+                ],
+                "rows": [
+                  [
+                    "Atomic number",
+                    "21",
+                    "22",
+                    "23",
+                    "24",
+                    "25",
+                    "26",
+                    "27",
+                    "28",
+                    "29",
+                    "30"
+                  ],
+                  [
+                    "Config: M",
+                    "$3d^1 4s^2$",
+                    "$3d^2 4s^2$",
+                    "$3d^3 4s^2$",
+                    "$3d^5 4s^1$",
+                    "$3d^5 4s^2$",
+                    "$3d^6 4s^2$",
+                    "$3d^7 4s^2$",
+                    "$3d^8 4s^2$",
+                    "$3d^{10} 4s^1$",
+                    "$3d^{10} 4s^2$"
+                  ],
+                  [
+                    "Config: M+",
+                    "$3d^1 4s^1$",
+                    "$3d^2 4s^1$",
+                    "$3d^3 4s^1$",
+                    "$3d^5$",
+                    "$3d^5 4s^1$",
+                    "$3d^6 4s^1$",
+                    "$3d^7 4s^1$",
+                    "$3d^8 4s^1$",
+                    "$3d^{10}$",
+                    "$3d^{10} 4s^1$"
+                  ],
+                  [
+                    "Config: M2+",
+                    "$3d^1$",
+                    "$3d^2$",
+                    "$3d^3$",
+                    "$3d^4$",
+                    "$3d^5$",
+                    "$3d^6$",
+                    "$3d^7$",
+                    "$3d^8$",
+                    "$3d^9$",
+                    "$3d^{10}$"
+                  ],
+                  [
+                    "Config: M3+",
+                    "[Ar]",
+                    "$3d^1$",
+                    "$3d^2$",
+                    "$3d^3$",
+                    "$3d^4$",
+                    "$3d^5$",
+                    "$3d^6$",
+                    "$3d^7$",
+                    "—",
+                    "—"
+                  ],
+                  [
+                    "$\\Delta_a H^\\circ / kJ mol^{-1}$",
+                    "326",
+                    "473",
+                    "515",
+                    "397",
+                    "281",
+                    "416",
+                    "425",
+                    "430",
+                    "339",
+                    "126"
+                  ],
+                  [
+                    "$\\Delta_i H^\\circ (I)$",
+                    "631",
+                    "656",
+                    "650",
+                    "653",
+                    "717",
+                    "762",
+                    "758",
+                    "736",
+                    "745",
+                    "906"
+                  ],
+                  [
+                    "$\\Delta_i H^\\circ (II)$",
+                    "1235",
+                    "1309",
+                    "1414",
+                    "1592",
+                    "1509",
+                    "1561",
+                    "1644",
+                    "1752",
+                    "1958",
+                    "1734"
+                  ],
+                  [
+                    "$\\Delta_i H^\\circ (III)$",
+                    "2393",
+                    "2657",
+                    "2833",
+                    "2990",
+                    "3260",
+                    "2962",
+                    "3243",
+                    "3402",
+                    "3556",
+                    "3837"
+                  ],
+                  [
+                    "Radius (M) / pm",
+                    "164",
+                    "147",
+                    "135",
+                    "129",
+                    "137",
+                    "126",
+                    "125",
+                    "125",
+                    "128",
+                    "137"
+                  ],
+                  [
+                    "Radius (M2+) / pm",
+                    "—",
+                    "—",
+                    "79",
+                    "82",
+                    "82",
+                    "77",
+                    "74",
+                    "70",
+                    "73",
+                    "75"
+                  ],
+                  [
+                    "Radius (M3+) / pm",
+                    "73",
+                    "67",
+                    "64",
+                    "62",
+                    "65",
+                    "65",
+                    "61",
+                    "60",
+                    "—",
+                    "—"
+                  ],
+                  [
+                    "$E^\\circ (M^{2+}/M) / V$",
+                    "—",
+                    "-1.63",
+                    "-1.18",
+                    "-0.90",
+                    "-1.18",
+                    "-0.44",
+                    "-0.28",
+                    "-0.25",
+                    "+0.34",
+                    "-0.76"
+                  ],
+                  [
+                    "$E^\\circ (M^{3+}/M^{2+}) / V$",
+                    "—",
+                    "-0.37",
+                    "-0.26",
+                    "-0.41",
+                    "+1.57",
+                    "+0.77",
+                    "+1.97",
+                    "—",
+                    "—",
+                    "—"
+                  ],
+                  [
+                    "Density / $g cm^{-3}$",
+                    "3.43",
+                    "4.1",
+                    "6.07",
+                    "7.19",
+                    "7.21",
+                    "7.8",
+                    "8.7",
+                    "8.9",
+                    "8.9",
+                    "7.1"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.3:7",
+            "order": 7,
+            "title": "Enthalpies of Atomisation in Transition Elements",
+            "content_text": "Transition elements exhibit higher enthalpies of atomisation compared to other elements. This is attributed to the presence of a large number of unpaired electrons in their atoms. These unpaired electrons facilitate stronger interatomic interactions and, consequently, stronger metallic bonding between the atoms, which results in higher enthalpies of atomisation.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 4.2",
+                "problem": "Why do the transition elements exhibit higher enthalpies of atomisation?",
+                "solution": "Because of large number of unpaired electrons in their atoms they have stronger interatomic interaction and hence stronger bonding between atoms resulting in higher enthalpies of atomisation."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.3:8",
+            "order": 8,
+            "title": "Ionisation Enthalpies: General Trends",
+            "content_text": "There is a general increase in ionisation enthalpy along each series of the transition elements from left to right. This increase is due to the increase in nuclear charge that accompanies the filling of the inner $d$ orbitals. However, the successive enthalpies of these elements do not increase as steeply as in the case of non-transition elements. The variation in ionisation enthalpy along a series of transition elements is much less in comparison to the variation along a period of non-transition elements. While the first ionisation enthalpy generally increases, the magnitude of the increase in the second and third ionisation enthalpies for successive elements is much higher along a series. When $d$-block elements form ions, $ns$ electrons are lost before $(n - 1)d$ electrons. As we move along the $3d$ series, electrons are added to the inner $3d$ orbitals, which shield the $4s$ electrons from the increasing nuclear charge more effectively than outer shell electrons shield one another. Consequently, atomic radii decrease less rapidly, and ionisation energies increase only slightly along the series.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.3:9",
+            "order": 9,
+            "title": "Factors Affecting Ionisation Enthalpy: Exchange Energy",
+            "content_text": "The value of ionisation enthalpy is governed by three main factors: the attraction of each electron towards the nucleus, the repulsion between the electrons, and the exchange energy. Exchange energy is responsible for the stabilisation of the energy state and is approximately proportional to the total number of possible pairs of parallel spins in the degenerate orbitals. When several electrons occupy a set of degenerate orbitals, the lowest energy state corresponds to the maximum possible extent of single occupation of orbitals and parallel spins (Hund's rule). A loss of exchange energy increases the stability. For example, $Mn^+$ has a $3d^5 4s^1$ configuration and $Cr^+$ has a $3d^5$ configuration; the ionisation enthalpy of $Mn^+$ is lower than $Cr^+$ because there is no loss of exchange energy at the $d^6$ configuration. Similarly, $Fe^{2+}$ has a $3d^6$ configuration and $Mn^{2+}$ has a $3d^5$ configuration, making the ionisation enthalpy of $Fe^{2+}$ lower than that of $Mn^{2+}$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.3:10",
+            "order": 10,
+            "title": "Second and Third Ionisation Enthalpies",
+            "content_text": "To form $M^{2+}$ ions from gaseous atoms, the sum of the first and second ionisation enthalpies is required in addition to the enthalpy of atomisation. The second ionisation enthalpy shows unusually high values for $Cr$ and $Cu$ because their $M^+$ ions have stable $d^5$ and $d^{10}$ configurations, respectively. Conversely, the value for $Zn$ is low because ionisation involves the removal of one $4s$ electron, resulting in a stable $d^{10}$ configuration. The third ionisation enthalpies are generally quite high, reflecting the difficulty of removing an electron from $d^5$ ($Mn^{2+}$) and $d^{10}$ ($Zn^{2+}$) ions. High values for the third ionisation enthalpies of copper, nickel, and zinc explain why it is difficult to obtain oxidation states greater than $+2$ for these elements.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.3:11",
+            "order": 11,
+            "title": "Oxidation States of Transition Elements",
+            "content_text": "A notable feature of transition elements is the great variety of oxidation states they exhibit in their compounds. This variability arises from the incomplete filling of $d$ orbitals, allowing oxidation states to differ by unity (e.g., $V^{II}, V^{III}, V^{IV}, V^{V}$), unlike non-transition elements where oxidation states typically differ by two. The most common oxidation states for the first-row transition metals are shown in the table below.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 4.3",
+                "caption": "Oxidation States of the first row Transition Metal (the most common ones are in bold types)",
+                "headers": [
+                  "Sc",
+                  "Ti",
+                  "V",
+                  "Cr",
+                  "Mn",
+                  "Fe",
+                  "Co",
+                  "Ni",
+                  "Cu",
+                  "Zn"
+                ],
+                "rows": [
+                  [
+                    "+3",
+                    "+2",
+                    "+2",
+                    "+2",
+                    "**+2**",
+                    "**+2**",
+                    "**+2**",
+                    "**+2**",
+                    "+1",
+                    "**+2**"
+                  ],
+                  [
+                    "",
+                    "+3",
+                    "+3",
+                    "**+3**",
+                    "+3",
+                    "**+3**",
+                    "**+3**",
+                    "+3",
+                    "**+2**",
+                    ""
+                  ],
+                  [
+                    "",
+                    "**+4**",
+                    "+4",
+                    "+4",
+                    "+4",
+                    "+4",
+                    "+4",
+                    "+4",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "**+5**",
+                    "+5",
+                    "+5",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "**+6**",
+                    "+6",
+                    "+6",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "+7",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.3:12",
+            "order": 12,
+            "title": "Trends and Stability in Oxidation States",
+            "content_text": "The elements in the middle of the series exhibit the greatest number of oxidation states; for instance, Manganese ($Mn$) shows all states from $+2$ to $+7$. Elements at the ends of the series show fewer states: Scandium ($Sc$) and Titanium ($Ti$) have too few electrons to lose or share, while Copper ($Cu$) and Zinc ($Zn$) have too many $d$ electrons (fewer orbitals available for sharing). Scandium(II) is virtually unknown, and Titanium(IV) is more stable than Titanium(III) or Titanium(II). At the other end, Zinc only shows the $+2$ oxidation state. Higher oxidation states are often stabilized in oxides and oxoanions, such as $Ti^{IV}O_2$, $V^V O_2^+$, $Cr^{VI}O_4^{2-}$, and $Mn^{VII}O_4^-$. However, there is a sharp decrease in the stability of higher oxidation states after Manganese, with typical species being $Fe^{II, III}$, $Co^{II, III}$, $Ni^{II}$, $Cu^{I, II}$, and $Zn^{II}$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.3:13",
+            "order": 13,
+            "title": "Group Trends and Low Oxidation States",
+            "content_text": "In the $d$-block, higher oxidation states are often more stable for heavier members of a group, which is the opposite of the $p$-block (where the inert pair effect favors lower states). For example, in Group 6, $Mo(VI)$ and $W(VI)$ are more stable than $Cr(VI)$. Consequently, $Cr(VI)$ in the form of dichromate is a strong oxidising agent in acidic media, whereas $MoO_3$ and $WO_3$ are not. Additionally, low oxidation states are found when a complex compound has ligands with $\\pi$-acceptor character in addition to $\\sigma$-bonding, such as in $Ni(CO)_4$ and $Fe(CO)_5$, where the oxidation state of the metal is zero.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.3:14",
+            "order": 14,
+            "title": "Example: Non-variable Oxidation States",
+            "content_text": "While most transition elements show variable oxidation states, some do not. Scandium is a primary example of a transition element that does not exhibit variable oxidation states in its common compounds.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 4.3",
+                "problem": "Name a transition element which does not exhibit variable oxidation states.",
+                "solution": "Scandium ($Z = 21$) does not exhibit variable oxidation states."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.3:15",
+            "order": 15,
+            "title": "Trends in the M2+/M Standard Electrode Potentials",
+            "content_text": "Table 4.4 contains the thermochemical parameters related to the transformation of the solid metal atoms to $M^{2+}$ ions in solution and their standard electrode potentials. The observed values of $E^\\circ$ and those calculated using the data of Table 4.4 are compared in Fig. 4.4. The general trend towards less negative $E^\\circ$ values across the series is related to the general increase in the sum of the first and second ionisation enthalpies. The stability of the half-filled $d$ sub-shell in $Mn^{2+}$ and the completely filled $d^{10}$ configuration in $Zn^{2+}$ are related to their $E^\\circ$ values, whereas $E^\\circ$ for Ni is related to the highest negative $\\Delta_{hyd}H^\\circ$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 4.4",
+                "description": "A line graph showing the observed (blue squares) and calculated (red diamonds) values for the standard electrode potentials ($M^{2+} \\rightarrow M^\\circ$) of the 3d transition elements from Ti to Zn. The x-axis lists the elements (Ti, V, Cr, Mn, Fe, Co, Ni, Cu, Zn) and the y-axis shows the potential in Volts ranging from -2.0 to 0.5. The graph shows a general upward trend with notable dips at Mn and Zn, and a peak at Cu.",
+                "image_url": null
+              }
+            ],
+            "tables": [
+              {
+                "label": "Table 4.4",
+                "caption": "Thermochemical data (kJ mol$^{-1}$) for the first row Transition Elements and the Standard Electrode Potentials for the Reduction of $M^{II}$ to $M$.",
+                "headers": [
+                  "Element (M)",
+                  "$\\Delta_a H^\\circ (M)$",
+                  "$\\Delta_i H_1^\\circ$",
+                  "$\\Delta_i H_2^\\circ$",
+                  "$\\Delta_{hyd} H^\\circ (M^{2+})$",
+                  "$E^\\circ / V$"
+                ],
+                "rows": [
+                  [
+                    "Ti",
+                    "469",
+                    "656",
+                    "1309",
+                    "-1866",
+                    "-1.63"
+                  ],
+                  [
+                    "V",
+                    "515",
+                    "650",
+                    "1414",
+                    "-1895",
+                    "-1.18"
+                  ],
+                  [
+                    "Cr",
+                    "398",
+                    "653",
+                    "1592",
+                    "-1925",
+                    "-0.90"
+                  ],
+                  [
+                    "Mn",
+                    "279",
+                    "717",
+                    "1509",
+                    "-1862",
+                    "-1.18"
+                  ],
+                  [
+                    "Fe",
+                    "418",
+                    "762",
+                    "1561",
+                    "-1998",
+                    "-0.44"
+                  ],
+                  [
+                    "Co",
+                    "427",
+                    "758",
+                    "1644",
+                    "-2079",
+                    "-0.28"
+                  ],
+                  [
+                    "Ni",
+                    "431",
+                    "736",
+                    "1752",
+                    "-2121",
+                    "-0.25"
+                  ],
+                  [
+                    "Cu",
+                    "339",
+                    "745",
+                    "1958",
+                    "-2121",
+                    "0.34"
+                  ],
+                  [
+                    "Zn",
+                    "130",
+                    "906",
+                    "1734",
+                    "-2059",
+                    "-0.76"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.3:16",
+            "order": 16,
+            "title": "Unique behavior of Copper",
+            "content_text": "The unique behaviour of Cu, having a positive $E^\\circ$, accounts for its inability to liberate $H_2$ from acids. Only oxidising acids (nitric and hot concentrated sulphuric) react with Cu, the acids being reduced. The high energy to transform $Cu(s)$ to $Cu^{2+}(aq)$ is not balanced by its hydration enthalpy.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.3:17",
+            "order": 17,
+            "title": "Anomalous E values for Mn, Ni, and Zn",
+            "content_text": "It is interesting to note that the value of $E^\\circ$ for Mn, Ni and Zn are more negative than expected from the trend. The stability of the half-filled $d$ sub-shell in $Mn^{2+}$ and the completely filled $d^{10}$ configuration in $Zn^{2+}$ are related to their $E^\\circ$ values, whereas $E^\\circ$ for Ni is related to the highest negative $\\Delta_{hyd}H^\\circ$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.3:18",
+            "order": 18,
+            "title": "Trends in the M3+/M2+ Standard Electrode Potentials",
+            "content_text": "An examination of the $E^\\circ(M^{3+}/M^{2+})$ values shows varying trends. The low value for Sc reflects the stability of $Sc^{3+}$ which has a noble gas configuration. The highest value for Zn is due to the removal of an electron from the stable $d^{10}$ configuration of $Zn^{2+}$. The comparatively high value for Mn shows that $Mn^{2+}(d^5)$ is particularly stable, whereas comparatively low value for Fe shows the extra stability of $Fe^{3+}(d^5)$. The comparatively low value for V is related to the stability of $V^{2+}$ (half-filled $t_{2g}$ level).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.3:19",
+            "order": 19,
+            "title": "Example 4.4: Reducing and Oxidising Nature of Cr2+ and Mn3+",
+            "content_text": "This example explains why $Cr^{2+}$ is a reducing agent while $Mn^{3+}$ is an oxidising agent, despite both having a $d^4$ electronic configuration. The difference lies in the stability of the resulting configurations after the redox reaction. $Cr^{2+}$ becomes $Cr^{3+}$ ($d^3$), which is stable due to a half-filled $t_{2g}$ level. $Mn^{3+}$ becomes $Mn^{2+}$ ($d^5$), which is stable due to a half-filled $d$ sub-shell.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 4.4",
+                "problem": "Why is $Cr^{2+}$ reducing and $Mn^{3+}$ oxidising when both have $d^4$ configuration?",
+                "solution": "$Cr^{2+}$ is reducing as its configuration changes from $d^4$ to $d^3$, the latter having a half-filled $t_{2g}$ level. On the other hand, the change from $Mn^{3+}$ to $Mn^{2+}$ results in the half-filled ($d^5$) configuration which has extra stability."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.3:20",
+            "order": 20,
+            "title": "Trends in Stability of Higher Oxidation States: Halides",
+            "content_text": "Table 4.5 shows the stable halides of the 3d series of transition metals. The highest oxidation numbers are achieved in $TiX_4$ (tetrahalides), $VF_5$ and $CrF_6$. The +7 state for Mn is not represented in simple halides but $MnO_3F$ is known. Beyond Mn no metal has a trihalide except $FeX_3$ and $CoF_3$. The ability of fluorine to stabilise the highest oxidation state is due to either higher lattice energy as in the case of $CoF_3$, or higher bond enthalpy terms for the higher covalent compounds, e.g., $VF_5$ and $CrF_6$. Although $V^{+5}$ is represented only by $VF_5$, the other halides undergo hydrolysis to give oxohalides, $VOX_3$. Fluorides are unstable in low oxidation states e.g., $VX_2$ ($X = Cl, Br$ or $I$) and the same applies to $CuX$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 4.5",
+                "caption": "Formulas of Halides of 3d Metals. Key: $X = F \\rightarrow I$; $X^I = F \\rightarrow Br$; $X^{II} = F, Cl$; $X^{III} = Cl \\rightarrow I$.",
+                "headers": [
+                  "Oxidation Number",
+                  "Halides"
+                ],
+                "rows": [
+                  [
+                    "+6",
+                    "$CrF_6$"
+                  ],
+                  [
+                    "+5",
+                    "$VF_5, CrF_5$"
+                  ],
+                  [
+                    "+4",
+                    "$TiX_4, VX_4^I, CrX_4, MnF_4$"
+                  ],
+                  [
+                    "+3",
+                    "$TiX_3, VX_3, CrX_3, MnF_3, FeX_3^I, CoF_3$"
+                  ],
+                  [
+                    "+2",
+                    "$TiX_2^{III}, VX_2, CrX_2, MnX_2, FeX_2, CoX_2, NiX_2, CuX_2^{II}, ZnX_2$"
+                  ],
+                  [
+                    "+1",
+                    "$CuX^{III}$"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.3:21",
+            "order": 21,
+            "title": "Stability of Copper Halides and Disproportionation",
+            "content_text": "All $Cu^{II}$ halides are known except the iodide. In this case, $Cu^{2+}$ oxidises $I^-$ to $I_2$: $$2Cu^{2+} + 4I^- \\rightarrow Cu_2I_2(s) + I_2$$ Many copper (I) compounds are unstable in aqueous solution and undergo disproportionation: $$2Cu^+ \\rightarrow Cu^{2+} + Cu$$ The stability of $Cu^{2+}(aq)$ rather than $Cu^+(aq)$ is due to the much more negative $\\Delta_{hyd}H^\\circ$ of $Cu^{2+}(aq)$ than $Cu^+$, which more than compensates for the second ionisation enthalpy of Cu.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.3:22",
+            "order": 22,
+            "title": "Trends in Stability of Higher Oxidation States: Oxides",
+            "content_text": "The ability of oxygen to stabilise the highest oxidation state is demonstrated in the oxides. The highest oxidation number in the oxides (Table 4.6) coincides with the group number and is attained in $Sc_2O_3$ to $Mn_2O_7$. Beyond Group 7, no higher oxides of Fe above $Fe_2O_3$ are known, although ferrates (VI) ($FeO_4^{2-}$) are formed in alkaline media but they readily decompose to $Fe_2O_3$ and $O_2$. Besides the oxides, oxocations stabilise $V^V$ as $VO_2^+$, $V^{IV}$ as $VO^{2+}$ and $Ti^{IV}$ as $TiO^{2+}$. The ability of oxygen to stabilise these high oxidation states exceeds that of fluorine. Oxygen's ability to form multiple bonds to metals explains its superiority. In the covalent oxide $Mn_2O_7$, each Mn is tetrahedrally surrounded by O's including a Mn-O-Mn bridge. Tetrahedral $[MO_4]^{n-}$ ions are known for $V^V, Cr^{VI}, Mn^V, Mn^{VI}$ and $Mn^{VII}$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 4.6",
+                "caption": "Oxides of 3d Metals. * denotes mixed oxides.",
+                "headers": [
+                  "Oxidation Number",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "10",
+                  "11",
+                  "12"
+                ],
+                "rows": [
+                  [
+                    "+7",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "$Mn_2O_7$",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "+6",
+                    "",
+                    "",
+                    "",
+                    "$CrO_3$",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "+5",
+                    "",
+                    "",
+                    "$V_2O_5$",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "+4",
+                    "",
+                    "$TiO_2$",
+                    "$V_2O_4$",
+                    "$CrO_2$",
+                    "$MnO_2$",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "+3",
+                    "$Sc_2O_3$",
+                    "$Ti_2O_3$",
+                    "$V_2O_3$",
+                    "$Cr_2O_3$",
+                    "$Mn_2O_3, Mn_3O_4^*$",
+                    "$Fe_2O_3, Fe_3O_4^*$",
+                    "$Co_3O_4^*$",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "+2",
+                    "",
+                    "$TiO$",
+                    "$VO$",
+                    "$(CrO)$",
+                    "$MnO$",
+                    "$FeO$",
+                    "$CoO$",
+                    "$NiO$",
+                    "$CuO$",
+                    "$ZnO$"
+                  ],
+                  [
+                    "+1",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "$Cu_2O$",
+                    ""
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.3:23",
+            "order": 23,
+            "title": "Example 4.5: Oxidising Power of Oxoanions",
+            "content_text": "This example discusses the trend in oxidising power among oxoanions of transition metals in their highest oxidation states. The oxidising power increases in the series $VO_2^+ < Cr_2O_7^{2-} < MnO_4^-$. This is attributed to the increasing stability of the lower oxidation states to which these species are reduced.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 4.5",
+                "problem": "How would you account for the increasing oxidising power in the series $VO_2^+ < Cr_2O_7^{2-} < MnO_4^-$?",
+                "solution": "This is due to the increasing stability of the lower species to which they are reduced."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.3:24",
+            "order": 24,
+            "title": "Chemical Reactivity and $E^\\circ$ Values",
+            "content_text": "Transition metals vary widely in their chemical reactivity. Many are sufficiently electropositive to dissolve in mineral acids, though some are 'noble' and unaffected by single acids. Metals of the first series (except copper) are relatively reactive and oxidized by $1\\text{M H}^+$, though reaction rates with agents like $H^+$ can be slow (e.g., Ti and V are passive to dilute non-oxidising acids at room temperature). The $E^\\circ$ values for $M^{2+}/M$ indicate a decreasing tendency to form divalent cations across the series, becoming less negative. Irregularities in $E^\\circ$ values for Mn, Ni, and Zn are noted: $Mn^{2+}$ ($d^5$) and $Zn^{2+}$ ($d^{10}$) stabilities relate to half-filled and completely filled subshells, while Ni's value relates to its high negative enthalpy of hydration. For the $M^{3+}/M^{2+}$ couple, $Mn^{3+}$ and $Co^{3+}$ are strong oxidising agents in aqueous solution, while $Ti^{2+}$, $V^{2+}$, and $Cr^{2+}$ are strong reducing agents that liberate hydrogen from dilute acids: $2\\text{Cr}^{2+}(\\text{aq}) + 2\\text{H}^+(\\text{aq}) \\rightarrow 2\\text{Cr}^{3+}(\\text{aq}) + \\text{H}_2(\\text{g})$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.3:25",
+            "order": 25,
+            "title": "Example 4.6: Irregularity in $E^\\circ$ Values",
+            "content_text": "The $E^\\circ (M^{2+}/M)$ values for first-row transition metals are not regular. This irregularity is explained by the non-uniform variation of ionisation enthalpies (sum of first and second) and sublimation enthalpies. For instance, manganese and vanadium have relatively lower sublimation enthalpies compared to others in the series.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 4.6",
+                "problem": "For the first row transition metals the $E^\\circ$ values are: $V (-1.18)$, $Cr (-0.91)$, $Mn (-1.18)$, $Fe (-0.44)$, $Co (-0.28)$, $Ni (-0.25)$, $Cu (+0.34)$. Explain the irregularity in the above values.",
+                "solution": "The $E^\\circ (M^{2+}/M)$ values are not regular which can be explained from the irregular variation of ionisation enthalpies ($\\Delta_i H_1 + \\Delta_i H_2$) and also the sublimation enthalpies which are relatively much less for manganese and vanadium."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.3:26",
+            "order": 26,
+            "title": "Example 4.7: $Mn^{3+}/Mn^{2+}$ Redox Couple",
+            "content_text": "The stability of the $+2$ state for Manganese is significantly higher than the $+3$ state due to the electronic configuration. The transition from $Mn^{2+}$ to $Mn^{3+}$ requires removing an electron from a stable half-filled $d^5$ configuration, leading to a very high third ionisation energy.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 4.7",
+                "problem": "Why is the $E^\\circ$ value for the $Mn^{3+}/Mn^{2+}$ couple much more positive than that for $Cr^{3+}/Cr^{2+}$ or $Fe^{3+}/Fe^{2+}$? Explain.",
+                "solution": "Much larger third ionisation energy of Mn (where the required change is $d^5$ to $d^4$) is mainly responsible for this. This also explains why the $+3$ state of Mn is of little importance."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.3:27",
+            "order": 27,
+            "title": "Magnetic Properties",
+            "content_text": "Substances exhibit two main types of magnetic behavior: diamagnetism and paramagnetism. Diamagnetic substances are repelled by an applied magnetic field, while paramagnetic substances are attracted. Ferromagnetism is an extreme form of paramagnetism where substances are attracted very strongly. Most transition metal ions are paramagnetic due to the presence of unpaired electrons. Each unpaired electron possesses a magnetic moment associated with its spin angular momentum and orbital angular momentum.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.3:28",
+            "order": 28,
+            "title": "The Spin-Only Formula",
+            "content_text": "In the first series of transition metals, the contribution of orbital angular momentum is effectively quenched. Therefore, the magnetic moment is determined primarily by the number of unpaired electrons ($n$) and is calculated using the 'spin-only' formula: $$\\mu = \\sqrt{n(n+2)}$$ where $\\mu$ is the magnetic moment in units of Bohr magneton (BM). A single unpaired electron has a theoretical magnetic moment of $1.73$ BM. As the number of unpaired electrons increases, the magnetic moment increases, providing an indication of the number of unpaired electrons present in the atom, molecule, or ion.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 4.7",
+                "caption": "Calculated and Observed Magnetic Moments (BM)",
+                "headers": [
+                  "Ion",
+                  "Configuration",
+                  "Unpaired electron(s)",
+                  "Calculated Magnetic moment",
+                  "Observed Magnetic moment"
+                ],
+                "rows": [
+                  [
+                    "$Sc^{3+}$",
+                    "$3d^0$",
+                    "0",
+                    "0",
+                    "0"
+                  ],
+                  [
+                    "$Ti^{3+}$",
+                    "$3d^1$",
+                    "1",
+                    "1.73",
+                    "1.75"
+                  ],
+                  [
+                    "$Ti^{2+}$",
+                    "$3d^2$",
+                    "2",
+                    "2.84",
+                    "2.76"
+                  ],
+                  [
+                    "$V^{2+}$",
+                    "$3d^3$",
+                    "3",
+                    "3.87",
+                    "3.86"
+                  ],
+                  [
+                    "$Cr^{2+}$",
+                    "$3d^4$",
+                    "4",
+                    "4.90",
+                    "4.80"
+                  ],
+                  [
+                    "$Mn^{2+}$",
+                    "$3d^5$",
+                    "5",
+                    "5.92",
+                    "5.96"
+                  ],
+                  [
+                    "$Fe^{2+}$",
+                    "$3d^6$",
+                    "4",
+                    "4.90",
+                    "5.3 - 5.5"
+                  ],
+                  [
+                    "$Co^{2+}$",
+                    "$3d^7$",
+                    "3",
+                    "3.87",
+                    "4.4 - 5.2"
+                  ],
+                  [
+                    "$Ni^{2+}$",
+                    "$3d^8$",
+                    "2",
+                    "2.84",
+                    "2.9 - 3.4"
+                  ],
+                  [
+                    "$Cu^{2+}$",
+                    "$3d^9$",
+                    "1",
+                    "1.73",
+                    "1.8 - 2.2"
+                  ],
+                  [
+                    "$Zn^{2+}$",
+                    "$3d^{10}$",
+                    "0",
+                    "0",
+                    ""
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.3:29",
+            "order": 29,
+            "title": "Example 4.8: Calculating Magnetic Moment",
+            "content_text": "To calculate the magnetic moment of an ion, first determine its electronic configuration and the number of unpaired electrons ($n$), then apply the spin-only formula.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 4.8",
+                "problem": "Calculate the magnetic moment of a divalent ion in aqueous solution if its atomic number is 25.",
+                "solution": "With atomic number 25, the divalent ion ($Mn^{2+}$) in aqueous solution will have $d^5$ configuration (five unpaired electrons). The magnetic moment, $\\mu$ is $\\mu = \\sqrt{5(5+2)} = 5.92$ BM"
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.3:30",
+            "order": 30,
+            "title": "Formation of Coloured Ions",
+            "content_text": "The colour of transition metal ions is attributed to the excitation of an electron from a lower energy $d$ orbital to a higher energy $d$ orbital ($d-d$ transition). The energy required for this excitation corresponds to the frequency of light absorbed in the visible region. The observed colour is the complementary colour of the light absorbed. This frequency depends on the nature of the ligands. In aqueous solutions where water molecules act as ligands, specific colours are observed for different ions as listed in Table 4.8.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 4.5",
+                "description": "A photograph showing seven volumetric flasks containing coloured solutions of first-row transition metal ions in aqueous solution. From left to right: $V^{4+}$ (blue), $V^{3+}$ (green), $Mn^{2+}$ (pale pink), $Fe^{3+}$ (yellow/orange), $Co^{2+}$ (pink/red), $Ni^{2+}$ (green), and $Cu^{2+}$ (blue).",
+                "image_url": null
+              }
+            ],
+            "tables": [
+              {
+                "label": "Table 4.8",
+                "caption": "Colours of Some of the First Row (aquated) Transition Metal Ions",
+                "headers": [
+                  "Configuration",
+                  "Example",
+                  "Colour"
+                ],
+                "rows": [
+                  [
+                    "$3d^0$",
+                    "$Sc^{3+}$",
+                    "colourless"
+                  ],
+                  [
+                    "$3d^0$",
+                    "$Ti^{4+}$",
+                    "colourless"
+                  ],
+                  [
+                    "$3d^1$",
+                    "$Ti^{3+}$",
+                    "purple"
+                  ],
+                  [
+                    "$3d^1$",
+                    "$V^{4+}$",
+                    "blue"
+                  ],
+                  [
+                    "$3d^2$",
+                    "$V^{3+}$",
+                    "green"
+                  ],
+                  [
+                    "$3d^3$",
+                    "$V^{2+}$",
+                    "violet"
+                  ],
+                  [
+                    "$3d^3$",
+                    "$Cr^{3+}$",
+                    "violet"
+                  ],
+                  [
+                    "$3d^4$",
+                    "$Mn^{3+}$",
+                    "violet"
+                  ],
+                  [
+                    "$3d^4$",
+                    "$Cr^{2+}$",
+                    "blue"
+                  ],
+                  [
+                    "$3d^5$",
+                    "$Mn^{2+}$",
+                    "pink"
+                  ],
+                  [
+                    "$3d^5$",
+                    "$Fe^{3+}$",
+                    "yellow"
+                  ],
+                  [
+                    "$3d^6$",
+                    "$Fe^{2+}$",
+                    "green"
+                  ],
+                  [
+                    "$3d^6, 3d^7$",
+                    "$Co^{3+}, Co^{2+}$",
+                    "bluepink"
+                  ],
+                  [
+                    "$3d^8$",
+                    "$Ni^{2+}$",
+                    "green"
+                  ],
+                  [
+                    "$3d^9$",
+                    "$Cu^{2+}$",
+                    "blue"
+                  ],
+                  [
+                    "$3d^{10}$",
+                    "$Zn^{2+}$",
+                    "colourless"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.3:31",
+            "order": 31,
+            "title": "Formation of Complex Compounds",
+            "content_text": "Complex compounds are those in which the metal ions bind a number of anions or neutral molecules giving complex species with characteristic properties. A few examples are: $[Fe(CN)_6]^{3-}$, $[Fe(CN)_6]^{4-}$, $[Cu(NH_3)_4]^{2+}$ and $[PtCl_4]^{2-}$. The formation of complex compounds is dealt with in detail in Unit 5. The transition metals form a large number of complex compounds. This is due to the comparatively smaller sizes of the metal ions, their high ionic charges and the availability of d orbitals for bond formation. Examples of such complex species include $[Fe(CN)_6]^{3-}$, $[Fe(CN)_6]^{4-}$, $[Cu(NH_3)_4]^{2+}$ and $[PtCl_4]^{2-}$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.3:32",
+            "order": 32,
+            "title": "Catalytic Properties",
+            "content_text": "The transition metals and their compounds are known for their catalytic activity. This activity is ascribed to their ability to adopt multiple oxidation states and to form complexes. Examples include Vanadium(V) oxide in the Contact Process, finely divided iron in Haber’s Process, and nickel in Catalytic Hydrogenation. Catalysts at a solid surface involve the formation of bonds between reactant molecules and atoms of the surface of the catalyst; first row transition metals utilize $3d$ and $4s$ electrons for bonding. This increases the concentration of the reactants at the catalyst surface and weakens the bonds in the reacting molecules, thereby lowering the activation energy. Because transition metal ions can change their oxidation states, they become more effective catalysts. For instance, iron(III) catalyses the reaction between iodide and persulphate ions: $2 I^- + S_2O_8^{2-} \\rightarrow I_2 + 2 SO_4^{2-}$. The catalytic action involves: $2 Fe^{3+} + 2 I^- \\rightarrow 2 Fe^{2+} + I_2$ and $2 Fe^{2+} + S_2O_8^{2-} \\rightarrow 2 Fe^{3+} + 2 SO_4^{2-}$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.3:33",
+            "order": 33,
+            "title": "Formation of Interstitial Compounds",
+            "content_text": "Interstitial compounds are formed when small atoms like H, C or N are trapped inside the crystal lattices of metals. They are usually non-stoichiometric and are neither typically ionic nor covalent. Examples include $TiC$, $Mn_4N$, $Fe_3H$, $VH_{0.56}$ and $TiH_{1.7}$. These compounds do not correspond to normal oxidation states of the metal. Their principal characteristics are: (i) High melting points, higher than those of pure metals. (ii) Extreme hardness; some borides approach diamond in hardness. (iii) Retention of metallic conductivity. (iv) Chemical inertness.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.3:34",
+            "order": 34,
+            "title": "Alloy Formation",
+            "content_text": "An alloy is a blend of metals prepared by mixing the components, forming homogeneous solid solutions where atoms of one metal are distributed randomly among atoms of another. Such alloys are formed by atoms with metallic radii within about 15 percent of each other. Transition metals readily form alloys due to similar radii. These alloys are hard and have high melting points. Ferrous alloys like stainless steel and various steels (using Cr, V, W, Mo, Mn) are well known. Alloys with non-transition metals, such as brass (copper-zinc) and bronze (copper-tin), are also industrially important.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:4:4.4",
+        "number": "4.4",
+        "title": "Some Important Compounds of Transition Elements",
+        "content_text": "",
+        "subsections": []
+      },
+      {
+        "id": "ncert:chemistry:12:4:4.4.1",
+        "number": "4.4.1",
+        "title": "Oxides and Oxoanions of Metals",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:4:4.4.1:1",
+            "order": 1,
+            "title": "Disproportionation of Oxidation States",
+            "content_text": "Disproportionation occurs when a particular oxidation state becomes less stable relative to other oxidation states (one lower and one higher). For example, manganese(VI) is unstable relative to manganese(VII) and manganese(IV) in acidic solution.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 4.9",
+                "problem": "What is meant by ‘disproportionation’ of an oxidation state? Give an example.",
+                "solution": "When a particular oxidation state becomes less stable relative to other oxidation states, one lower, one higher, it is said to undergo disproportionation. For example, manganese (VI) becomes unstable relative to manganese(VII) and manganese (IV) in acidic solution. $3 Mn^{VI}O_4^{2-} + 4 H^+ \\rightarrow 2 Mn^{VII}O_4^- + Mn^{IV}O_2 + 2 H_2O$"
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.4.1:2",
+            "order": 2,
+            "title": "General Trends in Metal Oxides",
+            "content_text": "Oxides are generally formed by the reaction of metals with oxygen at high temperatures. All metals except scandium form MO oxides which are ionic. The highest oxidation number in oxides coincides with the group number and is attained in $Sc_2O_3$ to $Mn_2O_7$. Beyond group 7, no higher oxides of iron above $Fe_2O_3$ are known. Oxocations like $VO_2^+$, $VO^{2+}$ and $TiO^{2+}$ also stabilize high oxidation states. As the oxidation number increases, ionic character decreases. $Mn_2O_7$ is a covalent green oil, while $CrO_3$ and $V_2O_5$ have low melting points and predominant acidic character. $Mn_2O_7$ gives $HMnO_4$ and $CrO_3$ gives $H_2CrO_4$ and $H_2Cr_2O_7$. $V_2O_5$ is amphoteric, reacting with both acids and alkalies to give $VO^{2+}$ and $VO_4^{3-}$ salts respectively.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.4.1:3",
+            "order": 3,
+            "title": "Preparation of Potassium Dichromate ($K_2Cr_2O_7$)",
+            "content_text": "Potassium dichromate is prepared from chromite ore ($FeCr_2O_4$) by fusion with sodium carbonate in free access of air: $4 FeCr_2O_4 + 8 Na_2CO_3 + 7 O_2 \\rightarrow 8 Na_2CrO_4 + 2 Fe_2O_3 + 8 CO_2$. The yellow solution of sodium chromate is filtered and acidified with sulphuric acid to give orange sodium dichromate: $2 Na_2CrO_4 + 2 H^+ \\rightarrow Na_2Cr_2O_7 + 2 Na^+ + H_2O$. Sodium dichromate is more soluble than potassium dichromate and is converted to the latter by treatment with potassium chloride: $Na_2Cr_2O_7 + 2 KCl \\rightarrow K_2Cr_2O_7 + 2 NaCl$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.4.1:4",
+            "order": 4,
+            "title": "Chromate-Dichromate Equilibrium",
+            "content_text": "Chromates and dichromates are interconvertible in aqueous solution depending on the pH. The oxidation state of chromium remains $+6$ in both. In acidic solution, chromate converts to dichromate: $2 CrO_4^{2-} + 2 H^+ \\rightarrow Cr_2O_7^{2-} + H_2O$. In alkaline solution, dichromate converts back to chromate: $Cr_2O_7^{2-} + 2 OH^- \\rightarrow 2 CrO_4^{2-} + H_2O$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.4.1:5",
+            "order": 5,
+            "title": "Structures of Chromate and Dichromate Ions",
+            "content_text": "The chromate ion ($CrO_4^{2-}$) is tetrahedral. The dichromate ion ($Cr_2O_7^{2-}$) consists of two tetrahedra sharing one corner with a $Cr-O-Cr$ bond angle of $126^\\circ$. The $Cr-O$ bond lengths are $179$ pm for the bridging oxygen and $163$ pm for the terminal oxygens.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Chromate ion",
+                "description": "A tetrahedral structure with a central Chromium atom bonded to four Oxygen atoms, carrying a $2-$ charge.",
+                "image_url": null
+              },
+              {
+                "label": "Dichromate ion",
+                "description": "Two tetrahedral units joined by a shared Oxygen atom. The $Cr-O-Cr$ bond angle is $126^\\circ$. Bridging $Cr-O$ distance is $179$ pm and terminal $Cr-O$ distance is $163$ pm.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.4.1:6",
+            "order": 6,
+            "title": "Oxidising Properties of Potassium Dichromate",
+            "content_text": "Potassium dichromate is a strong oxidising agent, especially in acidic solution. Its oxidising action is represented as: $Cr_2O_7^{2-} + 14 H^+ + 6 e^- \\rightarrow 2 Cr^{3+} + 7 H_2O$ ($E^\\circ = 1.33V$). It oxidises iodides to iodine ($6 I^- \\rightarrow 3 I_2 + 6 e^-$), sulphides to sulphur ($3 H_2S \\rightarrow 6 H^+ + 3 S + 6 e^-$), tin(II) to tin(IV) ($3 Sn^{2+} \\rightarrow 3 Sn^{4+} + 6 e^-$), and iron(II) to iron(III) ($6 Fe^{2+} \\rightarrow 6 Fe^{3+} + 6 e^-$). The full ionic equation for the reaction with $Fe^{2+}$ is: $Cr_2O_7^{2-} + 14 H^+ + 6 Fe^{2+} \\rightarrow 2 Cr^{3+} + 6 Fe^{3+} + 7 H_2O$.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.4.1:7",
+            "order": 7,
+            "title": "Preparation of Potassium Permanganate ($KMnO_4$)",
+            "content_text": "Potassium permanganate is prepared by the fusion of $MnO_2$ with an alkali metal hydroxide ($KOH$) and an oxidising agent like $KNO_3$. This produces dark green $K_2MnO_4$, which disproportionates in neutral or acidic solution to give permanganate: $2 MnO_2 + 4 KOH + O_2 \\rightarrow 2 K_2MnO_4 + 2 H_2O$ and $3 MnO_4^{2-} + 4 H^+ \\rightarrow 2 MnO_4^- + MnO_2 + 2 H_2O$. Commercially, it is prepared by alkaline oxidative fusion of $MnO_2$ followed by electrolytic oxidation of manganate(VI) in alkaline solution. In the laboratory, a manganese (II) ion salt is oxidised by peroxodisulphate to permanganate: $$2Mn^{2+} + 5S_2O_8^{2-} + 8H_2O \\rightarrow 2MnO_4^- + 10SO_4^{2-} + 16H^+$$ Potassium permanganate forms dark purple (almost black) crystals which are isostructural with those of $KClO_4$. The salt is not very soluble in water ($6.4$ g/100 g of water at 293 K), but when heated it decomposes at 513 K: $$2KMnO_4 \\rightarrow K_2MnO_4 + MnO_2 + O_2$$ It has two physical properties of considerable interest: its intense colour and its diamagnetism along with temperature-dependent weak paramagnetism. These can be explained by the use of molecular orbital theory.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Preparation Flow",
+                "description": "Flowchart showing $MnO_2$ fused with $KOH$ and oxidised with air or $KNO_3$ to form manganate ion ($MnO_4^{2-}$), which then undergoes electrolytic oxidation in alkaline solution to form permanganate ion ($MnO_4^-$).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.4.1:8",
+            "order": 8,
+            "title": "Structure and Magnetism of Manganate and Permanganate Ions",
+            "content_text": "The manganate and permanganate ions are tetrahedral; the $\\pi$-bonding takes place by overlap of $p$ orbitals of oxygen with $d$ orbitals of manganese. The green manganate ($MnO_4^{2-}$) is paramagnetic because of one unpaired electron, but the permanganate ($MnO_4^-$) is diamagnetic due to the absence of unpaired electron.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Tetrahedral manganate ion",
+                "description": "A tetrahedral structure showing a central Manganese (Mn) atom bonded to four Oxygen (O) atoms. One oxygen has a double bond, and three have single bonds with negative charges, representing the green manganate ion.",
+                "image_url": null
+              },
+              {
+                "label": "Tetrahedral permanganate ion",
+                "description": "A tetrahedral structure showing a central Manganese (Mn) atom bonded to four Oxygen (O) atoms. Three oxygens have double bonds, and one has a single bond with a negative charge, representing the purple permanganate ion.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.4.1:9",
+            "order": 9,
+            "title": "Oxidising Properties and Redox Potentials of Permanganate",
+            "content_text": "Acidified permanganate solution oxidises oxalates to carbon dioxide, iron(II) to iron(III), nitrites to nitrates and iodides to free iodine. The reduction of permanganate can be represented by the following half-reactions: \n1. $MnO_4^- + e^- \\rightarrow MnO_4^{2-}$ ($E^\\circ = + 0.56$ V)\n2. $MnO_4^- + 4H^+ + 3e^- \\rightarrow MnO_2 + 2H_2O$ ($E^\\circ = + 1.69$ V)\n3. $MnO_4^- + 8H^+ + 5e^- \\rightarrow Mn^{2+} + 4H_2O$ ($E^\\circ = + 1.52$ V)\nThe hydrogen ion concentration plays an important part in influencing the reaction. Although many reactions can be understood by consideration of redox potential, kinetics is also an important factor. Permanganate at $[H^+] = 1$ should oxidise water but in practice the reaction is extremely slow unless manganese(II) ions are present or the temperature is raised.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.4.1:10",
+            "order": 10,
+            "title": "Oxidising Reactions of $KMnO_4$ in Acidic Solutions",
+            "content_text": "In acid solutions, $KMnO_4$ acts as a powerful oxidant. Key reactions include:\n(a) Iodine liberation from potassium iodide: $$10I^- + 2MnO_4^- + 16H^+ \\rightarrow 2Mn^{2+} + 8H_2O + 5I_2$$\n(b) Conversion of $Fe^{2+}$ ion (green) to $Fe^{3+}$ (yellow): $$5Fe^{2+} + MnO_4^- + 8H^+ \\rightarrow Mn^{2+} + 4H_2O + 5Fe^{3+}$$\n(c) Oxidation of oxalate ion or oxalic acid at 333 K: $$5C_2O_4^{2-} + 2MnO_4^- + 16H^+ \\rightarrow 2Mn^{2+} + 8H_2O + 10CO_2$$\n(d) Oxidation of hydrogen sulphide to sulphur: $$5S^{2-} + 2MnO_4^- + 16H^+ \\rightarrow 2Mn^{2+} + 8H_2O + 5S$$\n(e) Oxidation of sulphurous acid or sulphite to sulphate: $$5SO_3^{2-} + 2MnO_4^- + 6H^+ \\rightarrow 2Mn^{2+} + 3H_2O + 5SO_4^{2-}$$\n(f) Oxidation of nitrite to nitrate: $$5NO_2^- + 2MnO_4^- + 6H^+ \\rightarrow 2Mn^{2+} + 5NO_3^- + 3H_2O$$",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.4.1:11",
+            "order": 11,
+            "title": "Oxidising Reactions in Neutral/Alkaline Solutions and Uses",
+            "content_text": "In neutral or faintly alkaline solutions:\n(a) Oxidation of iodide to iodate: $$2MnO_4^- + H_2O + I^- \\rightarrow 2MnO_2 + 2OH^- + IO_3^-$$\n(b) Oxidation of thiosulphate to sulphate: $$8MnO_4^- + 3S_2O_3^{2-} + H_2O \\rightarrow 8MnO_2 + 6SO_4^{2-} + 2OH^-$$\n(c) Oxidation of manganous salt to $MnO_2$ (catalyzed by $ZnSO_4$ or $ZnO$): $$2MnO_4^- + 3Mn^{2+} + 2H_2O \\rightarrow 5MnO_2 + 4H^+$$\nNote: Permanganate titrations in the presence of hydrochloric acid are unsatisfactory because $HCl$ is oxidised to chlorine. \nUses: $KMnO_4$ is used in analytical chemistry, as an oxidant in organic chemistry, for bleaching wool, cotton, silk, and for decolourisation of oils.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:4:4.5",
+        "number": "4.5",
+        "title": "The Lanthanoids",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:4:4.5:1",
+            "order": 1,
+            "title": "Introduction to the f-Block Elements",
+            "content_text": "The f-block consists of two series: lanthanoids (the fourteen elements following lanthanum) and actinoids (the fourteen elements following actinium). Lanthanum is often included in discussions of lanthanoids (symbol Ln) due to close resemblance. The lanthanoids resemble one another closely, having only one stable oxidation state (+3). Their chemistry provides an opportunity to examine the effect of small changes in size and nuclear charge. Actinoids are more complicated due to a wide range of oxidation states and radioactivity.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.5:2",
+            "order": 2,
+            "title": "Electronic Configurations of Lanthanoids",
+            "content_text": "Atoms of these elements have electronic configurations with $6s^2$ common but with variable occupancy of the $4f$ level. However, the electronic configurations of all the tripositive ions ($Ln^{3+}$), which are the most stable oxidation states, are of the form $4f^n$ ($n = 1$ to 14 with increasing atomic number).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.5:3",
+            "order": 3,
+            "title": "Atomic and Ionic Sizes: Lanthanoid Contraction",
+            "content_text": "The overall decrease in atomic and ionic radii from lanthanum to lutetium is known as the lanthanoid contraction. This is a unique feature where the decrease in ionic radii ($M^{3+}$ ions) is quite regular. This contraction is attributed to imperfect shielding of one $4f$ electron by another in the same sub-shell; the shielding of one $4f$ electron is less than that of a $d$ electron. Consequently, as nuclear charge increases along the series, the radii decrease. A major effect of this contraction is that the radii of the members of the third transition series (e.g., Hf, 159 pm) are very similar to those of the corresponding members of the second series (e.g., Zr, 160 pm), leading to their occurrence together in nature and difficulty in separation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 4.6",
+                "description": "A line graph showing the trends in ionic radii (pm) of lanthanoids against atomic number. It depicts a steady decrease in radii for $M^{3+}$ ions from $La^{3+}$ to $Lu^{3+}$, and also shows points for $M^{2+}$ and $M^{4+}$ ions.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.5:4",
+            "order": 4,
+            "title": "Oxidation States of Lanthanoids",
+            "content_text": "In the lanthanoids, $Ln(III)$ compounds are predominant. Occasionally, +2 and +4 ions are obtained in solution or solid compounds due to the extra stability of empty ($f^0$), half-filled ($f^7$), or filled ($f^{14}$) subshells. For example, $Ce^{IV}$ is favoured by its noble gas configuration ($f^0$), but it is a strong oxidant reverting to +3 ($E^\\circ$ for $Ce^{4+}/Ce^{3+}$ is $+1.74$ V). $Pr, Nd, Tb,$ and $Dy$ also exhibit +4 states but only in oxides ($MO_2$). $Eu^{2+}$ is formed by losing two $s$ electrons, leaving an $f^7$ configuration; it is a strong reducing agent. $Yb^{2+}$ ($f^{14}$) is also a reductant. $Tb^{IV}$ has a half-filled $f$-orbital and acts as an oxidant. Samarium exhibits both +2 and +3 oxidation states.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.5:5",
+            "order": 5,
+            "title": "Electronic Configurations and Atomic Radii of Lanthanoids",
+            "content_text": "The electronic configurations and radii of lanthanum and the lanthanoids are detailed in Table 4.9. The table provides the configurations for the neutral atoms (Ln) as well as their common ions ($Ln^{2+}$, $Ln^{3+}$, and $Ln^{4+}$). It also tracks the atomic and ionic radii, illustrating the gradual decrease in size known as the lanthanoid contraction. Note that only electrons outside the $[Xe]$ core are indicated in the configurations.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 4.9",
+                "caption": "Electronic Configurations and Radii of Lanthanum and Lanthanoids",
+                "headers": [
+                  "Atomic Number",
+                  "Name",
+                  "Symbol",
+                  "Electronic configurations (Ln)",
+                  "Electronic configurations ($Ln^{2+}$)",
+                  "Electronic configurations ($Ln^{3+}$)",
+                  "Radii/pm ($Ln^{4+}$)",
+                  "Radii/pm (Ln)",
+                  "Radii/pm ($Ln^{3+}$)"
+                ],
+                "rows": [
+                  [
+                    "57",
+                    "Lanthanum",
+                    "La",
+                    "$5d^1 6s^2$",
+                    "$5d^1$",
+                    "$4f^0$",
+                    "",
+                    "187",
+                    "106"
+                  ],
+                  [
+                    "58",
+                    "Cerium",
+                    "Ce",
+                    "$4f^1 5d^1 6s^2$",
+                    "$4f^2$",
+                    "$4f^1$",
+                    "$4f^0$",
+                    "183",
+                    "103"
+                  ],
+                  [
+                    "59",
+                    "Praseodymium",
+                    "Pr",
+                    "$4f^3 6s^2$",
+                    "$4f^3$",
+                    "$4f^2$",
+                    "$4f^1$",
+                    "182",
+                    "101"
+                  ],
+                  [
+                    "60",
+                    "Neodymium",
+                    "Nd",
+                    "$4f^4 6s^2$",
+                    "$4f^4$",
+                    "$4f^3$",
+                    "$4f^2$",
+                    "181",
+                    "99"
+                  ],
+                  [
+                    "61",
+                    "Promethium",
+                    "Pm",
+                    "$4f^5 6s^2$",
+                    "$4f^5$",
+                    "$4f^4$",
+                    "",
+                    "181",
+                    "98"
+                  ],
+                  [
+                    "62",
+                    "Samarium",
+                    "Sm",
+                    "$4f^6 6s^2$",
+                    "$4f^6$",
+                    "$4f^5$",
+                    "",
+                    "180",
+                    "96"
+                  ],
+                  [
+                    "63",
+                    "Europium",
+                    "Eu",
+                    "$4f^7 6s^2$",
+                    "$4f^7$",
+                    "$4f^6$",
+                    "",
+                    "199",
+                    "95"
+                  ],
+                  [
+                    "64",
+                    "Gadolinium",
+                    "Gd",
+                    "$4f^7 5d^1 6s^2$",
+                    "$4f^7 5d^1$",
+                    "$4f^7$",
+                    "",
+                    "180",
+                    "94"
+                  ],
+                  [
+                    "65",
+                    "Terbium",
+                    "Tb",
+                    "$4f^9 6s^2$",
+                    "$4f^9$",
+                    "$4f^8$",
+                    "$4f^7$",
+                    "178",
+                    "92"
+                  ],
+                  [
+                    "66",
+                    "Dysprosium",
+                    "Dy",
+                    "$4f^{10} 6s^2$",
+                    "$4f^{10}$",
+                    "$4f^9$",
+                    "$4f^8$",
+                    "177",
+                    "91"
+                  ],
+                  [
+                    "67",
+                    "Holmium",
+                    "Ho",
+                    "$4f^{11} 6s^2$",
+                    "$4f^{11}$",
+                    "$4f^{10}$",
+                    "",
+                    "176",
+                    "89"
+                  ],
+                  [
+                    "68",
+                    "Erbium",
+                    "Er",
+                    "$4f^{12} 6s^2$",
+                    "$4f^{12}$",
+                    "$4f^{11}$",
+                    "",
+                    "175",
+                    "88"
+                  ],
+                  [
+                    "69",
+                    "Thulium",
+                    "Tm",
+                    "$4f^{13} 6s^2$",
+                    "$4f^{13}$",
+                    "$4f^{12}$",
+                    "",
+                    "174",
+                    "87"
+                  ],
+                  [
+                    "70",
+                    "Ytterbium",
+                    "Yb",
+                    "$4f^{14} 6s^2$",
+                    "$4f^{14}$",
+                    "$4f^{13}$",
+                    "",
+                    "173",
+                    "86"
+                  ],
+                  [
+                    "71",
+                    "Lutetium",
+                    "Lu",
+                    "$4f^{14} 5d^1 6s^2$",
+                    "$4f^{14} 5d^1$",
+                    "$4f^{14}$",
+                    "",
+                    "",
+                    ""
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.5:6",
+            "order": 6,
+            "title": "General Characteristics of Lanthanoids",
+            "content_text": "All lanthanoids are silvery white soft metals that tarnish rapidly in air. Hardness increases with atomic number; samarium is steel hard. Melting points range between 1000 to 1200 K, though samarium melts at 1623 K. They possess typical metallic structures and are good conductors of heat and electricity. Density and other properties change smoothly, with exceptions for Eu, Yb, and occasionally Sm and Tm. Many trivalent lanthanoid ions ($Ln^{3+}$) are coloured in both solid and aqueous states due to the presence of $f$ electrons. $La^{3+}$ and $Lu^{3+}$ are exceptions and show no colour. Absorption bands are narrow, likely due to excitation within the $f$ level. Lanthanoid ions other than $f^0$ type ($La^{3+}$, $Ce^{4+}$) and $f^{14}$ type ($Yb^{2+}$, $Lu^{3+}$) are paramagnetic. Ionisation enthalpies are around 600 kJ/mol for the first and 1200 kJ/mol for the second, comparable to calcium. The third ionisation enthalpy is abnormally low for La, Gd, and Lu, indicating the stability of empty, half-filled, and completely filled $f$ levels.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.5:7",
+            "order": 7,
+            "title": "Chemical Behaviour and Reactions of Lanthanoids",
+            "content_text": "In general, earlier members are reactive like calcium, while later members behave more like aluminium. The standard electrode potential ($E^\\circ$) for the half-reaction $Ln^{3+}(aq) + 3e^- \\rightarrow Ln(s)$ ranges from $-2.2$ to $-2.4$ V, with Eu being $-2.0$ V. The metals combine with hydrogen when gently heated. They form carbides ($Ln_3C$, $Ln_2C_3$, and $LnC_2$) when heated with carbon. They liberate hydrogen from dilute acids and burn in halogens to form halides ($LnX_3$). They react with water to form oxides ($M_2O_3$) and hydroxides ($M(OH)_3$). The hydroxides are definite compounds, basic like alkaline earth metal oxides and hydroxides. Their general reactions are summarized in Figure 4.7.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 4.7",
+                "description": "A central node labeled 'Ln' (Lanthanoid) showing various chemical reactions: burning in $O_2$ to form $Ln_2O_3$; reacting with acids to release $H_2$; reacting with halogens to form $LnX_3$; reacting with $H_2O$ to form $Ln(OH)_3 + H_2$; heating with carbon at 2773 K to form $LnC_2$; heating with nitrogen to form $LnN$; and heating with sulfur to form $Ln_2S_3$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.5:8",
+            "order": 8,
+            "title": "Uses of Lanthanoids",
+            "content_text": "The primary use of lanthanoids is in the production of alloy steels for plates and pipes. A well-known alloy is 'mischmetall', consisting of a lanthanoid metal (~95%), iron (~5%), and traces of S, C, Ca, and Al. Mischmetall is used in magnesium-based alloys to produce bullets, shells, and lighter flints. Mixed oxides of lanthanoids serve as catalysts in petroleum cracking. Individual lanthanoid oxides are used as phosphors in television screens and similar fluorescing surfaces.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:4:4.6",
+        "number": "4.6",
+        "title": "The Actinoids",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:4:4.6:1",
+            "order": 1,
+            "title": "Introduction to Actinoids",
+            "content_text": "The actinoids include the fourteen elements from Thorium (Th) to Lawrencium (Lr). They are radioactive elements. Earlier members have relatively long half-lives, but later members have very short half-lives, ranging from a day to 3 minutes for Lawrencium ($Z=103$). The latter members are often prepared only in nanogram quantities, making their study difficult. Properties of actinium and actinoids are listed in Table 4.10.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 4.10",
+                "caption": "Some Properties of Actinium and Actinoids",
+                "headers": [
+                  "Atomic Number",
+                  "Name",
+                  "Symbol",
+                  "Electronic configurations (M)",
+                  "Electronic configurations ($M^{3+}$)",
+                  "Electronic configurations ($M^{4+}$)",
+                  "Radii/pm ($M^{3+}$)",
+                  "Radii/pm ($M^{4+}$)"
+                ],
+                "rows": [
+                  [
+                    "89",
+                    "Actinium",
+                    "Ac",
+                    "$6d^1 7s^2$",
+                    "$5f^0$",
+                    "",
+                    "111",
+                    ""
+                  ],
+                  [
+                    "90",
+                    "Thorium",
+                    "Th",
+                    "$6d^2 7s^2$",
+                    "$5f^1$",
+                    "$5f^0$",
+                    "",
+                    "99"
+                  ],
+                  [
+                    "91",
+                    "Protactinium",
+                    "Pa",
+                    "$5f^2 6d^1 7s^2$",
+                    "$5f^2$",
+                    "$5f^1$",
+                    "",
+                    "96"
+                  ],
+                  [
+                    "92",
+                    "Uranium",
+                    "U",
+                    "$5f^3 6d^1 7s^2$",
+                    "$5f^3$",
+                    "$5f^2$",
+                    "103",
+                    "93"
+                  ],
+                  [
+                    "93",
+                    "Neptunium",
+                    "Np",
+                    "$5f^4 6d^1 7s^2$",
+                    "$5f^4$",
+                    "$5f^3$",
+                    "101",
+                    "92"
+                  ],
+                  [
+                    "94",
+                    "Plutonium",
+                    "Pu",
+                    "$5f^6 7s^2$",
+                    "$5f^5$",
+                    "$5f^4$",
+                    "100",
+                    "90"
+                  ],
+                  [
+                    "95",
+                    "Americium",
+                    "Am",
+                    "$5f^7 7s^2$",
+                    "$5f^6$",
+                    "$5f^5$",
+                    "99",
+                    "89"
+                  ],
+                  [
+                    "96",
+                    "Curium",
+                    "Cm",
+                    "$5f^7 6d^1 7s^2$",
+                    "$5f^7$",
+                    "$5f^6$",
+                    "99",
+                    "88"
+                  ],
+                  [
+                    "97",
+                    "Berkelium",
+                    "Bk",
+                    "$5f^9 7s^2$",
+                    "$5f^8$",
+                    "$5f^7$",
+                    "98",
+                    "87"
+                  ],
+                  [
+                    "98",
+                    "Californium",
+                    "Cf",
+                    "$5f^{10} 7s^2$",
+                    "$5f^9$",
+                    "$5f^8$",
+                    "98",
+                    "86"
+                  ],
+                  [
+                    "99",
+                    "Einsteinium",
+                    "Es",
+                    "$5f^{11} 7s^2$",
+                    "$5f^{10}$",
+                    "$5f^9$",
+                    "",
+                    ""
+                  ],
+                  [
+                    "100",
+                    "Fermium",
+                    "Fm",
+                    "$5f^{12} 7s^2$",
+                    "$5f^{11}$",
+                    "$5f^{10}$",
+                    "",
+                    ""
+                  ],
+                  [
+                    "101",
+                    "Mendelevium",
+                    "Md",
+                    "$5f^{13} 7s^2$",
+                    "$5f^{12}$",
+                    "$5f^{11}$",
+                    "",
+                    ""
+                  ],
+                  [
+                    "102",
+                    "Nobelium",
+                    "No",
+                    "$5f^{14} 7s^2$",
+                    "$5f^{13}$",
+                    "$5f^{12}$",
+                    "",
+                    ""
+                  ],
+                  [
+                    "103",
+                    "Lawrencium",
+                    "Lr",
+                    "$5f^{14} 6d^1 7s^2$",
+                    "$5f^{14}$",
+                    "$5f^{13}$",
+                    "",
+                    ""
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.6:2",
+            "order": 2,
+            "title": "Electronic Configurations of Actinoids",
+            "content_text": "All actinoids are believed to have a $7s^2$ configuration with variable occupancy of the $5f$ and $6d$ subshells. The fourteen electrons are formally added to $5f$, starting from Protactinium ($Z=91$) rather than Thorium ($Z=90$). Irregularities in configurations, similar to lanthanoids, are related to the stability of $f^0$, $f^7$, and $f^{14}$ occupancies. For example, Am and Cm have configurations $[Rn] 5f^7 7s^2$ and $[Rn] 5f^7 6d^1 7s^2$ respectively. Although $5f$ orbitals resemble $4f$ in angular wave-function, they are not as deeply buried, allowing $5f$ electrons to participate in bonding to a greater extent.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.6:3",
+            "order": 3,
+            "title": "Ionic Sizes and Actinoid Contraction",
+            "content_text": "A gradual decrease in the size of atoms or $M^{3+}$ ions occurs across the actinoid series, known as the actinoid contraction. This is analogous to the lanthanoid contraction but is greater from element to element due to the even poorer shielding effect of $5f$ electrons compared to $4f$ electrons.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.6:4",
+            "order": 4,
+            "title": "Oxidation States of Actinoids",
+            "content_text": "Actinoids exhibit a greater range of oxidation states than lanthanoids because the $5f$, $6d$, and $7s$ energy levels are of comparable energies. While the general oxidation state is +3, elements in the first half of the series frequently show higher states. For instance, maximum oxidation states increase from +4 in Th to +5, +6, and +7 in Pa, U, and Np respectively, before decreasing in later elements (see Table 4.11). Actinoids resemble lanthanoids in having more compounds in the +3 state than the +4 state. However, +3 and +4 ions tend to hydrolyse. The distribution of oxidation states is highly uneven between the earlier and later elements.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 4.11",
+                "caption": "Oxidation States of Actinium and Actinoids",
+                "headers": [
+                  "Ac",
+                  "Th",
+                  "Pa",
+                  "U",
+                  "Np",
+                  "Pu",
+                  "Am",
+                  "Cm",
+                  "Bk",
+                  "Cf",
+                  "Es",
+                  "Fm",
+                  "Md",
+                  "No",
+                  "Lr"
+                ],
+                "rows": [
+                  [
+                    "3",
+                    "",
+                    "3",
+                    "3",
+                    "3",
+                    "3",
+                    "3",
+                    "3",
+                    "3",
+                    "3",
+                    "3",
+                    "3",
+                    "3",
+                    "3",
+                    "3"
+                  ],
+                  [
+                    "",
+                    "4",
+                    "4",
+                    "4",
+                    "4",
+                    "4",
+                    "4",
+                    "4",
+                    "4",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "5",
+                    "5",
+                    "5",
+                    "5",
+                    "5",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "6",
+                    "6",
+                    "6",
+                    "6",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "7",
+                    "7",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.6:5",
+            "order": 5,
+            "title": "General Characteristics and Comparison with Lanthanoids",
+            "content_text": "Actinoid metals are silvery in appearance but display a variety of structures. This structural variability arises from irregularities in metallic radii, which are far greater than those observed in lanthanoids. Actinoids are highly reactive metals, particularly when in a finely divided state. They react with boiling water to produce a mixture of oxides and hydrides and combine with most non-metals at moderate temperatures. While hydrochloric acid reacts with all actinoid metals, nitric acid has a limited effect due to the formation of a protective oxide layer. These metals are generally resistant to alkalies.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.6:6",
+            "order": 6,
+            "title": "Magnetic Properties of Actinoids",
+            "content_text": "The magnetic properties of actinoids are more complex than those of lanthanoids. Although the variation in magnetic susceptibility with the number of unpaired $5f$ electrons follows a similar trend to lanthanoids, the actinoids generally exhibit higher values for these properties.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.6:7",
+            "order": 7,
+            "title": "Ionisation Enthalpies of Actinoids",
+            "content_text": "Early actinoids have lower ionisation enthalpies compared to early lanthanoids. This is because the $5f$ orbitals penetrate less into the inner electron core and are more effectively shielded from the nuclear charge than the $4f$ orbitals of lanthanoids. Consequently, the outer electrons in actinoids are less tightly bound and more available for chemical bonding.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.6:8",
+            "order": 8,
+            "title": "Comparison with Lanthanoids",
+            "content_text": "Actinoids show behavior similar to lanthanoids primarily in the second half of the series. In the early part, similarities are mostly seen in properties that do not involve changes in oxidation state. Both series experience contraction (lanthanoid and actinoid contraction), which significantly influences the atomic sizes and properties of subsequent elements. Currently, lanthanoid contraction is considered more significant in chemical studies because the chemistry of elements following the actinoids is less extensively explored.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.6:9",
+            "order": 9,
+            "title": "Worked Example: Lanthanoid Oxidation States",
+            "content_text": "This example identifies a specific lanthanoid known for a common higher oxidation state.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 4.10",
+                "problem": "Name a member of the lanthanoid series which is well known to exhibit +4 oxidation state.",
+                "solution": "Cerium ($Z = 58$)"
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.6:10",
+            "order": 10,
+            "title": "Conceptual Question: Actinoid vs Lanthanoid Contraction",
+            "content_text": "This question addresses the relative magnitude of contraction in the two $f$-block series.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Intext Question 4.10",
+                "problem": "Actinoid contraction is greater from element to element than lanthanoid contraction. Why?",
+                "solution": "The shielding of $5f$ electrons is poorer than that of $4f$ electrons. Consequently, the effective nuclear charge increases more significantly across the actinoid series, leading to a more pronounced contraction in atomic and ionic sizes."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:4:4.7",
+        "number": "4.7",
+        "title": "Some Applications of d- and f-Block Elements",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:4:4.7:1",
+            "order": 1,
+            "title": "Industrial and Construction Applications",
+            "content_text": "Iron and steels are the most critical construction materials, produced by reducing iron oxides and alloying with carbon and metals like chromium, manganese, and nickel. Compounds such as titanium oxide ($TiO$) are used in the pigment industry, while manganese dioxide ($MnO_2$) is essential for dry battery cells. The battery industry also utilizes zinc and nickel/cadmium systems. Group 11 metals ($Cu, Ag, Au$) are traditionally known as coinage metals, though modern coins are often made of copper-coated steel or copper-nickel alloys.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.7:2",
+            "order": 2,
+            "title": "Catalytic and Specialized Applications",
+            "content_text": "Transition metals and their compounds are vital catalysts in various industrial processes. Examples include vanadium pentoxide ($V_2O_5$) for sulfuric acid production, Ziegler-Natta catalysts ($TiCl_4$ with $Al(CH_3)_3$) for polyethylene manufacture, iron for the Haber process (ammonia), and nickel for the hydrogenation of fats. The Wacker process uses $PdCl_2$ to catalyze the oxidation of ethyne to ethanal. Additionally, silver bromide ($AgBr$) is used in photography for its light-sensitive properties, and various complexes are used in organic syntheses like the polymerization of alkynes.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:4:Summary",
+        "number": "Summary",
+        "title": "Summary of d- and f-Block Elements",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:4:Summary:1",
+            "order": 1,
+            "title": "Overview of d-Block and Transition Elements",
+            "content_text": "The $d$-block (Groups 3-12) involves the progressive filling of inner $d$ orbitals. Transition elements are characterized by metallic properties, high melting and boiling points, and strong interatomic bonding involving $(n-1)d$ electrons. Maxima in these physical properties typically occur near the middle of each series, corresponding to a favorable configuration for strong interatomic interaction.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:Summary:2",
+            "order": 2,
+            "title": "Physical and Chemical Characteristics",
+            "content_text": "Transition metals exhibit variable oxidation states, paramagnetic behavior, and the ability to form colored ions, interstitial compounds, and complexes. Their ionisation enthalpies increase less steeply than those of main group elements. While most transition metals are electropositive and reactive, copper is a notable exception. They react with non-metals to form binary compounds and oxides that can be acidic, basic, or amphoteric. $K_2Cr_2O_7$ and $KMnO_4$ are significant strong oxidizing agents.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:Summary:3",
+            "order": 3,
+            "title": "Characteristics of f-Block Elements",
+            "content_text": "The $f$-block consists of lanthanoids and actinoids. Lanthanoid contraction leads to a steady decrease in atomic and ionic sizes, which has significant consequences for the chemistry of elements following them. The principal oxidation state for these elements is +3, though +2 and +4 are also observed. Actinoids are more complex due to their multiple oxidation states and radioactive nature, making their study more challenging.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:4:4.8",
+        "number": "4.8",
+        "title": "Answers to Some Intext Questions",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:4:4.8:1",
+            "order": 1,
+            "title": "Silver as a Transition Element",
+            "content_text": "Silver ($Z = 47$) can exhibit a $+2$ oxidation state in which it has an incompletely filled $d$-subshell ($4d^9$). According to the definition of transition elements, which requires a partially filled $d$-orbital in the ground state or any of its common oxidation states, silver is classified as a transition element.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.8:2",
+            "order": 2,
+            "title": "Metallic Bonding in Zinc",
+            "content_text": "In the formation of metallic bonds in zinc, no electrons from the $3d$-orbitals are involved because the $3d$ subshell is completely filled ($3d^{10}$). In contrast, for all other metals of the $3d$ series, electrons from the $d$-orbitals are always involved in the formation of metallic bonds, contributing to their characteristic metallic properties.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.8:3",
+            "order": 3,
+            "title": "Unpaired Electrons in Manganese",
+            "content_text": "Manganese ($Z = 25$) has the electronic configuration $[Ar] 3d^5 4s^2$. In its atomic state, it possesses five unpaired electrons in the $3d$ subshell, which is the maximum number of unpaired electrons among the elements of the $3d$ transition series.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.8:4",
+            "order": 4,
+            "title": "Variation in Ionisation Enthalpies",
+            "content_text": "The irregular variation of ionisation enthalpies across the transition series is primarily attributed to the varying degrees of stability of different $3d$ electronic configurations. For instance, $d^0$, $d^5$, and $d^{10}$ configurations are exceptionally stable, leading to deviations from a smooth trend.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.8:5",
+            "order": 5,
+            "title": "High Oxidation States with Oxygen and Fluorine",
+            "content_text": "Due to their small size and high electronegativity, oxygen and fluorine are capable of oxidising transition metals to their highest possible oxidation states.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.8:6",
+            "order": 6,
+            "title": "Reducing Power of $Cr^{2+}$ vs $Fe^{2+}$",
+            "content_text": "$Cr^{2+}$ is a stronger reducing agent than $Fe^{2+}$. The oxidation of $Cr^{2+}$ to $Cr^{3+}$ involves a change from $d^4$ to $d^3$ configuration. In an aqueous medium, the $d^3$ configuration is more stable than the $d^5$ configuration (formed by the oxidation of $Fe^{2+}$ to $Fe^{3+}$) due to higher Crystal Field Stabilisation Energy (CFSE).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.8:7",
+            "order": 7,
+            "title": "Disproportionation of $Cu^+$",
+            "content_text": "In aqueous solution, $Cu^+$ ions are unstable and undergo disproportionation to form $Cu^{2+}$ and metallic copper: $2Cu^+(aq) \\rightarrow Cu^{2+}(aq) + Cu(s)$. This reaction is energetically favourable as indicated by its $E^\\circ$ value.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.8:8",
+            "order": 8,
+            "title": "Shielding in Actinoids",
+            "content_text": "The $5f$ electrons in actinoids are more effectively shielded from the nuclear charge. However, the $5f$ electrons themselves provide poor shielding from element to element in the series, which contributes to the actinoid contraction.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:4:4.8:9",
+            "order": 9,
+            "title": "Data Tables for Exercises",
+            "content_text": "The following tables provide data required for solving the end-of-chapter exercises, including electrode potentials and magnetic moments.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 4.17",
+                "caption": "Electrode Potentials for M2+/M and M3+/M2+ Systems",
+                "headers": [
+                  "System",
+                  "E° Value (V)"
+                ],
+                "rows": [
+                  [
+                    "$Cr^{2+}/Cr$",
+                    "$-0.9$"
+                  ],
+                  [
+                    "$Cr^{3+}/Cr^{2+}$",
+                    "$-0.4$"
+                  ],
+                  [
+                    "$Mn^{2+}/Mn$",
+                    "$-1.2$"
+                  ],
+                  [
+                    "$Mn^{3+}/Mn^{2+}$",
+                    "$+1.5$"
+                  ],
+                  [
+                    "$Fe^{2+}/Fe$",
+                    "$-0.4$"
+                  ],
+                  [
+                    "$Fe^{3+}/Fe^{2+}$",
+                    "$+0.8$"
+                  ]
+                ]
+              },
+              {
+                "label": "Table 4.38",
+                "caption": "Magnetic Moments of Complex Species",
+                "headers": [
+                  "Example",
+                  "Magnetic Moment (BM)"
+                ],
+                "rows": [
+                  [
+                    "$K_4[Mn(CN)_6]$",
+                    "2.2"
+                  ],
+                  [
+                    "$[Fe(H_2O)_6]^{2+}$",
+                    "5.3"
+                  ],
+                  [
+                    "$K_2[MnCl_4]$",
+                    "5.9"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:chemistry:12:4:ex:1",
+          "number": 1,
+          "problem": "Silver atom has completely filled d orbitals ($4d^{10}$) in its ground state. How can you say that it is a transition element?",
+          "solution": "Silver can exhibit a $+2$ oxidation state (for example, in $AgF_2$) in which it has an incompletely filled $d$-subshell ($4d^9$). According to the definition, an element is a transition element if it has an incomplete $d$-subshell in its ground state or in any of its common oxidation states. Therefore, silver is a transition element.",
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:4:ex:2",
+          "number": 2,
+          "problem": "In the series Sc ($Z = 21$) to Zn ($Z = 30$), the enthalpy of atomisation of zinc is the lowest, i.e., 126 kJ mol$^{-1}$. Why?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:4:ex:3",
+          "number": 3,
+          "problem": "Which of the $3d$ series of the transition metals exhibits the largest number of oxidation states and why?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:4:ex:4",
+          "number": 4,
+          "problem": "The $E^\\circ(M^{2+}/M)$ value for copper is positive (+0.34V). What is possible reason for this? (Hint: consider its high $\\Delta_a H^\\circ$ and low $\\Delta_{hyd} H^\\circ$)",
+          "solution": "The high energy required to transform $Cu(s)$ to $Cu^{2+}(aq)$ (sum of enthalpy of atomization and ionization enthalpies) is not balanced by its hydration enthalpy, leading to a positive standard electrode potential.",
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:4:ex:5",
+          "number": 5,
+          "problem": "How would you account for the irregular variation of ionisation enthalpies (first and second) in the first series of the transition elements?",
+          "solution": "The irregular variation is due to the varying degrees of stability of the d configurations (like $d^0, d^5, d^{10}$) and the varying effectiveness of the shielding of the d electrons.",
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:4:ex:6",
+          "number": 6,
+          "problem": "Calculate the ‘spin only’ magnetic moment of $M^{2+}_{\\text{(aq)}}$ ion ($Z = 27$).",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:4:ex:9",
+          "number": 9,
+          "problem": "Explain why $Cu^+$ ion is not stable in aqueous solutions?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:4:ex:7",
+          "number": 7,
+          "problem": "What is lanthanoid contraction? What are the consequences of lanthanoid contraction?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:4:ex:8",
+          "number": 8,
+          "problem": "What are the characteristics of the transition elements and why are they called transition elements? Which of the $d$-block elements may not be regarded as the transition elements?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:4:ex:10",
+          "number": 10,
+          "problem": "What are the different oxidation states exhibited by the lanthanoids?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:4:ex:11",
+          "number": 11,
+          "problem": "Explain giving reasons: (i) Transition metals and many of their compounds show paramagnetic behaviour. (ii) The enthalpies of atomisation of the transition metals are high. (iii) The transition metals generally form coloured compounds. (iv) Transition metals and their many compounds act as good catalyst.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:4:ex:12",
+          "number": 12,
+          "problem": "What are interstitial compounds? Why are such compounds well known for transition metals?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:4:ex:13",
+          "number": 13,
+          "problem": "How is the variability in oxidation states of transition metals different from that of the non transition metals? Illustrate with examples.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:4:ex:14",
+          "number": 14,
+          "problem": "Describe the preparation of potassium dichromate from iron chromite ore. What is the effect of increasing pH on a solution of potassium dichromate?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:4:ex:15",
+          "number": 15,
+          "problem": "Describe the oxidising action of potassium dichromate and write the ionic equations for its reaction with: (i) iodide (ii) iron(II) solution and (iii) $H_2S$.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:4:ex:16",
+          "number": 16,
+          "problem": "Describe the preparation of potassium permanganate. How does the acidified permanganate solution react with (i) iron(II) ions (ii) $SO_2$ and (iii) oxalic acid? Write the ionic equations for the reactions.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "long_answer"
+        },
+        {
+          "id": "ncert:chemistry:12:4:ex:17",
+          "number": 17,
+          "problem": "For $M^{2+}/M$ and $M^{3+}/M^{2+}$ systems the $E^\\circ$ values for some metals are as follows: $Cr^{2+}/Cr$: $-0.9V$, $Cr^{3+}/Cr^{2+}$: $-0.4V$; $Mn^{2+}/Mn$: $-1.2V$, $Mn^{3+}/Mn^{2+}$: $+1.5V$; $Fe^{2+}/Fe$: $-0.4V$, $Fe^{3+}/Fe^{2+}$: $+0.8V$. Use this data to comment upon: (i) the stability of $Fe^{3+}$ in acid solution as compared to that of $Cr^{3+}$ or $Mn^{3+}$ and (ii) the ease with which iron can be oxidised as compared to a similar process for either chromium or manganese metal.",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:4:ex:18",
+          "number": 18,
+          "problem": "Predict which of the following will be coloured in aqueous solution? $Ti^{3+}$, $V^{3+}$, $Cu^+$, $Sc^{3+}$, $Mn^{2+}$, $Fe^{3+}$ and $Co^{2+}$. Give reasons for each.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:4:ex:19",
+          "number": 19,
+          "problem": "Compare the stability of $+2$ oxidation state for the elements of the first transition series.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:4:ex:20",
+          "number": 20,
+          "problem": "Compare the chemistry of actinoids with that of the lanthanoids with special reference to: (i) electronic configuration (ii) atomic and ionic sizes and (iii) oxidation state (iv) chemical reactivity.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:4:ex:21",
+          "number": 21,
+          "problem": "How would you account for the following: (i) Of the $d^4$ species, $Cr^{2+}$ is strongly reducing while manganese(III) is strongly oxidising. (ii) Cobalt(II) is stable in aqueous solution but in the presence of complexing reagents it is easily oxidised. (iii) The $d^1$ configuration is very unstable in ions.",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:4:ex:22",
+          "number": 22,
+          "problem": "What is meant by 'disproportionation'? Give two examples of disproportionation reaction in aqueous solution.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:4:ex:23",
+          "number": 23,
+          "problem": "Which metal in the first series of transition metals exhibits $+1$ oxidation state most frequently and why?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:4:ex:24",
+          "number": 24,
+          "problem": "Calculate the number of unpaired electrons in the following gaseous ions: $Mn^{3+}$, $Cr^{3+}$, $V^{3+}$ and $Ti^{3+}$. Which one of these is the most stable in aqueous solution?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:4:ex:25",
+          "number": 25,
+          "problem": "Give examples and suggest reasons for the following features of the transition metal chemistry: (i) The lowest oxide of transition metal is basic, the highest is amphoteric/acidic. (ii) A transition metal exhibits highest oxidation state in oxides and fluorides. (iii) The highest oxidation state is exhibited in oxoanions of a metal.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:4:ex:26",
+          "number": 26,
+          "problem": "Indicate the steps in the preparation of: (i) $K_2Cr_2O_7$ from chromite ore. (ii) $KMnO_4$ from pyrolusite ore.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "long_answer"
+        },
+        {
+          "id": "ncert:chemistry:12:4:ex:27",
+          "number": 27,
+          "problem": "What are alloys? Name an important alloy which contains some of the lanthanoid metals. Mention its uses.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:4:ex:28",
+          "number": 28,
+          "problem": "What are inner transition elements? Decide which of the following atomic numbers are the atomic numbers of the inner transition elements : 29, 59, 74, 95, 102, 104.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:4:ex:29",
+          "number": 29,
+          "problem": "The chemistry of the actinoid elements is not so smooth as that of the lanthanoids. Justify this statement by giving some examples from the oxidation state of these elements.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:4:ex:30",
+          "number": 30,
+          "problem": "Which is the last element in the series of the actinoids? Write the electronic configuration of this element. Comment on the possible oxidation state of this element.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:4:ex:31",
+          "number": 31,
+          "problem": "Use Hund’s rule to derive the electronic configuration of $Ce^{3+}$ ion, and calculate its magnetic moment on the basis of ‘spin-only’ formula.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:4:ex:32",
+          "number": 32,
+          "problem": "Name the members of the lanthanoid series which exhibit $+4$ oxidation states and those which exhibit $+2$ oxidation states. Try to correlate this type of behaviour with the electronic configurations of these elements.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:4:ex:33",
+          "number": 33,
+          "problem": "Compare the chemistry of the actinoids with that of lanthanoids with reference to: (i) electronic configuration (ii) oxidation states and (iii) chemical reactivity.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:4:ex:34",
+          "number": 34,
+          "problem": "Write the electronic configurations of the elements with the atomic numbers 61, 91, 101, and 109.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:4:ex:35",
+          "number": 35,
+          "problem": "Compare the general characteristics of the first series of the transition metals with those of the second and third series metals in the respective vertical columns. Give special emphasis on the following points: (i) electronic configurations (ii) oxidation states (iii) ionisation enthalpies and (iv) atomic sizes.",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:4:ex:36",
+          "number": 36,
+          "problem": "Write down the number of $3d$ electrons in each of the following ions: $Ti^{2+}$, $V^{2+}$, $Cr^{3+}$, $Mn^{2+}$, $Fe^{2+}$, $Fe^{3+}$, $Co^{2+}$, $Ni^{2+}$ and $Cu^{2+}$. Indicate how would you expect the five $3d$ orbitals to be occupied for these hydrated ions (octahedral).",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:4:ex:37",
+          "number": 37,
+          "problem": "Comment on the statement that elements of the first transition series possess many properties different from those of heavier transition elements.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:4:ex:38",
+          "number": 38,
+          "problem": "What can be inferred from the magnetic moment values of the following complex species? $K_4[Mn(CN)_6]$ (2.2 BM), $[Fe(H_2O)_6]^{2+}$ (5.3 BM), $K_2[MnCl_4]$ (5.9 BM).",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1062 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_biology_11_ch11.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:biology:11:11",
+  "curriculum": "ncert",
+  "subject": "biology",
+  "grade": 11,
+  "textbook_name": "Biology",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:biology:11:11",
+    "number": 11,
+    "title": "Photosynthesis in Higher Plants",
+    "summary": "This chapter explores photosynthesis in higher plants, detailing how plants convert light energy into chemical energy in the form of carbohydrates. It begins by establishing the fundamental requirements for photosynthesis: chlorophyll, light, and carbon dioxide, and introduces the historical experiments that unveiled the process. These experiments ultimately led to the understanding of photosynthesis as a light-dependent reaction where water's hydrogen reduces carbon dioxide, summarized by the equation: 6CO2 + 12H2O → C6H12O6 + 6H2O + 6O2.\n\nThe chapter then delves into the location of photosynthesis within chloroplasts, differentiating between light-dependent reactions (occurring in the thylakoid membranes and involving Photosystems I and II) and light-independent reactions (the Calvin cycle in the stroma). The roles of pigments like chlorophyll a and b, and carotenoids in light absorption are explained. The chemiosmotic hypothesis, crucial for ATP synthesis, is presented.\n\nThe Calvin cycle, with its carboxylation, reduction, and regeneration phases, forms the core of carbon fixation. The chapter contrasts C3 and C4 pathways, highlighting the adaptation of C4 plants to hot, dry environments through Kranz anatomy and PEP carboxylase. Photorespiration and its impact on C3 plants are examined. Finally, external factors influencing photosynthesis, such as light, carbon dioxide concentration, temperature, and water availability, are discussed, emphasizing Blackman's Law of Limiting Factors. Understanding these factors allows for optimizing plant growth and crop yield.",
+    "sections": [
+      {
+        "id": "ncert:biology:11:11:11",
+        "number": "11",
+        "title": "Photosynthesis in Higher Plants",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:11:11:1",
+            "order": 1,
+            "title": "Introduction to Photosynthesis",
+            "content_text": "All animals, including humans, depend on plants for their food. Green plants are autotrophs because they synthesize the food they need through photosynthesis, while all other organisms that depend on them are called heterotrophs. Photosynthesis is a physico-chemical process by which green plants use light energy to drive the synthesis of organic compounds. Ultimately, all living forms on Earth depend on sunlight for energy. This chapter focuses on the structure of the photosynthetic machinery and the various reactions that transform light energy into chemical energy.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:11:2",
+            "order": 2,
+            "title": "Importance of Photosynthesis",
+            "content_text": "Photosynthesis is essential for two primary reasons: 1. It is the primary source of all food on Earth. 2. It is responsible for the release of oxygen ($O_2$) into the atmosphere by green plants, which is necessary for aerobic organisms to breathe. Without this process, there would be no oxygen in the atmosphere.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:11:11.1",
+        "number": "11.1",
+        "title": "What do we Know?",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:11:11.1:1",
+            "order": 1,
+            "title": "Basic Requirements for Photosynthesis",
+            "content_text": "Simple experiments have shown that chlorophyll (the green pigment of the leaf), light, and carbon dioxide ($CO_2$) are required for photosynthesis to occur.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:11.1:2",
+            "order": 2,
+            "title": "Experiment for Starch Formation",
+            "content_text": "The necessity of light and chlorophyll can be demonstrated by testing leaves for the presence of starch. This can be done using a variegated leaf or a leaf partially covered with black paper and exposed to light. Testing these leaves for starch reveals that photosynthesis occurs only in the green parts of the leaves that were exposed to light. Another experiment to understand the requirements for photosynthesis involves enclosing a part of a leaf in a test tube containing cotton soaked in $KOH$ (potassium hydroxide), which absorbs $CO_2$. The other half of the leaf is left exposed to the air. The entire setup is then placed in light for some time. When the leaf is later tested for the presence of starch, the part that was exposed to air tests positive, while the portion inside the tube (deprived of $CO_2$) tests negative. This experiment demonstrates that carbon dioxide ($CO_2$) is essential for the process of photosynthesis.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:11:11.2",
+        "number": "11.2",
+        "title": "Early Experiments",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:11:11.2:1",
+            "order": 1,
+            "title": "Joseph Priestley's Experiments (1770)",
+            "content_text": "Joseph Priestley performed a series of experiments in 1770 that revealed the essential role of air in the growth of green plants. He observed that a candle burning in a closed bell jar soon gets extinguished, and a mouse in the same closed space would soon suffocate. He concluded that both a burning candle and a breathing animal somehow 'damage' the air. However, when he placed a mint plant in the same bell jar, he found that the mouse stayed alive and the candle continued to burn. Priestley hypothesised that plants restore to the air whatever breathing animals and burning candles remove. Priestley is also credited with the discovery of oxygen in 1774.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 11.1",
+                "description": "Priestley’s experiment showing a bell jar with: (a) a burning candle and a mouse, (b) the candle extinguished and the mouse dead, (c) a mint plant added to the setup with a candle and mouse, and (d) the candle remaining lit and the mouse alive in the presence of the plant.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:11.2:2",
+            "order": 2,
+            "title": "Jan Ingenhousz's Contribution",
+            "content_text": "Jan Ingenhousz (1730-1799) used a setup similar to Priestley's to show that sunlight is essential for the plant process that purifies the air fouled by burning candles or breathing animals. In an experiment with an aquatic plant, he observed that in bright sunlight, small bubbles formed around the green parts of the plant, while no bubbles formed in the dark. He later identified these bubbles as oxygen ($O_2$). This showed that only the green parts of plants could release oxygen in the presence of light.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:11.2:3",
+            "order": 3,
+            "title": "Julius von Sachs and Glucose Production (1854)",
+            "content_text": "In 1854, Julius von Sachs provided evidence that glucose is produced when plants grow. He noted that glucose is usually stored as starch. His studies further showed that the green substance in plants (chlorophyll) is located in special bodies (later called chloroplasts) within plant cells. He established that the green parts of plants are where glucose is made.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:11.2:4",
+            "order": 4,
+            "title": "T.W. Engelmann and the Action Spectrum",
+            "content_text": "T.W. Engelmann (1843-1909) used a prism to split light into its spectral components and illuminated a green alga, Cladophora, placed in a suspension of aerobic bacteria. The bacteria were used to detect the sites of $O_2$ evolution. He observed that the bacteria accumulated mainly in the regions of blue and red light of the split spectrum. This allowed him to describe the first action spectrum of photosynthesis, which resembles the absorption spectra of chlorophyll $a$ and $b$.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:11.2:5",
+            "order": 5,
+            "title": "The Empirical Equation of Photosynthesis",
+            "content_text": "By the middle of the nineteenth century, the key features of plant photosynthesis were understood: plants use light energy to make carbohydrates from $CO_2$ and water. The empirical equation representing the total process for oxygen-evolving organisms was understood as: $$CO_2 + H_2O \\xrightarrow{Light} [CH_2O] + O_2$$ where $[CH_2O]$ represents a carbohydrate (e.g., glucose, a six-carbon sugar).",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:11.2:6",
+            "order": 6,
+            "title": "Cornelius van Niel's Hypothesis",
+            "content_text": "Cornelius van Niel (1897-1985), based on his studies of purple and green bacteria, demonstrated that photosynthesis is essentially a light-dependent reaction in which hydrogen from a suitable oxidisable compound reduces carbon dioxide to carbohydrates. This can be expressed by the general formula: $$2H_2A + CO_2 \\xrightarrow{Light} 2A + CH_2O + H_2O$$ In green plants, $H_2O$ is the hydrogen donor and is oxidised to $O_2$. Some organisms, like purple and green sulphur bacteria, do not release $O_2$ because they use $H_2S$ as the hydrogen donor, and the oxidation product is sulphur or sulphate.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:11.2:7",
+            "order": 7,
+            "title": "The Correct Balanced Equation",
+            "content_text": "Van Niel inferred that the $O_2$ evolved by green plants comes from $H_2O$, not from carbon dioxide. This was later proved using radioisotopic techniques. The correct balanced equation representing the overall process of photosynthesis is: $$6CO_2 + 12H_2O \\xrightarrow{Light} C_6H_{12}O_6 + 6H_2O + 6O_2$$ where $C_6H_{12}O_6$ represents glucose. The $O_2$ released is derived from water. Photosynthesis is not a single reaction but a multistep process.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:11:11.3",
+        "number": "11.3",
+        "title": "Where does Photosynthesis take Place?",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:11:11.3:1",
+            "order": 1,
+            "title": "The Site of Photosynthesis",
+            "content_text": "Photosynthesis takes place in the green leaves of plants and other green parts. Specifically, it occurs within the mesophyll cells in the leaves, which contain a large number of chloroplasts. Chloroplasts align themselves along the walls of the mesophyll cells to receive the optimum quantity of incident light. They align with their flat surfaces parallel to the walls when light intensity is high and perpendicular when it is low to regulate light absorption.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:11.3:2",
+            "order": 2,
+            "title": "Chloroplast Structure and Division of Labour",
+            "content_text": "Within the chloroplast, there is a membranous system consisting of grana, stroma lamellae, and the matrix stroma. There is a clear division of labour: the membrane system (grana and stroma lamellae) is responsible for trapping light energy and synthesising ATP and NADPH. In the stroma, enzymatic reactions incorporate $CO_2$ into the plant, leading to the synthesis of sugar, which in turn forms starch.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 11.2",
+                "description": "Diagrammatic representation of an electron micrograph of a section of chloroplast showing the outer membrane, inner membrane, stromal lamella, grana, stroma, ribosomes, starch granules, and lipid droplets.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:11.3:3",
+            "order": 3,
+            "title": "Light and Dark Reactions",
+            "content_text": "The reactions occurring in the membrane system that are directly light-driven are called light reactions (photochemical reactions). The reactions occurring in the stroma are not directly light-driven but are dependent on the products of light reactions (ATP and NADPH); these are called dark reactions (carbon reactions). The term 'dark reaction' is a convention and does not mean they occur only in darkness or are independent of light-derived products.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:11:11.4",
+        "number": "11.4",
+        "title": "How many Types of Pigments are Involved in Photosynthesis?",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:11:11.4:1",
+            "order": 1,
+            "title": "Leaf Pigments and Chromatography",
+            "content_text": "Plants exhibit various shades of green in their leaves, which can be investigated by separating leaf pigments using paper chromatography. This process reveals that the color observed in leaves is not due to a single pigment but a combination of four: Chlorophyll a (appearing bright or blue-green on the chromatogram), chlorophyll b (yellow-green), xanthophylls (yellow), and carotenoids (yellow to yellow-orange). Pigments are defined as substances with the ability to absorb light at specific wavelengths. Chlorophyll a is the most abundant plant pigment in the world.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:11.4:2",
+            "order": 2,
+            "title": "Absorption and Action Spectra",
+            "content_text": "The relationship between light absorption and the rate of photosynthesis is understood through spectral analysis. Figure 11.3a shows the absorption spectrum of chlorophyll a, b, and carotenoids, highlighting that chlorophyll a has maximum absorption peaks in the blue and red regions of the visible spectrum (VIBGYOR). Figure 11.3b displays the action spectrum of photosynthesis, measured by oxygen ($O_2$) release, which also shows peaks in the blue and red regions. When these graphs are superimposed (Figure 11.3c), there is a significant correlation between the absorption of chlorophyll a and the rate of photosynthesis, leading to the conclusion that chlorophyll a is the chief pigment involved. However, the overlap is not perfectly one-to-one, indicating that other pigments also contribute to the process.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 11.3a",
+                "description": "Graph showing the absorption spectrum of chlorophyll a, b and the carotenoids across the visible spectrum (400-700 nm).",
+                "image_url": null
+              },
+              {
+                "label": "Figure 11.3b",
+                "description": "Graph showing the action spectrum of photosynthesis as measured by the rate of oxygen release.",
+                "image_url": null
+              },
+              {
+                "label": "Figure 11.3c",
+                "description": "Graph showing the action spectrum of photosynthesis superimposed on the absorption spectrum of chlorophyll a.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:11.4:3",
+            "order": 3,
+            "title": "Accessory Pigments",
+            "content_text": "While chlorophyll a is the primary pigment, other thylakoid pigments such as chlorophyll b, xanthophylls, and carotenoids serve as accessory pigments. These pigments absorb light at wavelengths where chlorophyll a does not and transfer the captured energy to chlorophyll a. This arrangement enables a broader range of the visible light spectrum to be utilized for photosynthesis and provides a protective function by shielding chlorophyll a from photo-oxidation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:11:11.5",
+        "number": "11.5",
+        "title": "What is Light Reaction?",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:11:11.5:1",
+            "order": 1,
+            "title": "Definition and Components of Light Reaction",
+            "content_text": "The light reaction, or the 'Photochemical' phase, includes light absorption, water splitting, oxygen release, and the formation of high-energy chemical intermediates: ATP and NADPH. Several protein complexes are involved in this process within the thylakoid membranes.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:11.5:2",
+            "order": 2,
+            "title": "Light Harvesting Complexes (LHC)",
+            "content_text": "Pigments are organized into two discrete photochemical light harvesting complexes (LHC) within Photosystem I (PS I) and Photosystem II (PS II). These are named in the sequence of their discovery, not their functional order. The LHC are made up of hundreds of pigment molecules bound to proteins. Each photosystem contains all pigments (except one molecule of chlorophyll a) forming a light harvesting system also called antennae (Figure 11.4). These pigments make photosynthesis more efficient by absorbing different wavelengths of light.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 11.4",
+                "description": "The light harvesting complex showing antennae pigment molecules absorbing photons and transferring energy to the central reaction centre, which then passes an electron to a primary acceptor.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:11.5:3",
+            "order": 3,
+            "title": "Reaction Centres (P700 and P680)",
+            "content_text": "The single chlorophyll a molecule forms the reaction centre, which differs in the two photosystems. In PS I, the reaction centre chlorophyll a has an absorption peak at 700 nm, hence it is called P700. In PS II, it has an absorption maximum at 680 nm and is called P680.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:11:11.6",
+        "number": "11.6",
+        "title": "The Electron Transport",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:11:11.6:1",
+            "order": 1,
+            "title": "Electron Flow in PS II",
+            "content_text": "In Photosystem II, the reaction centre chlorophyll a absorbs 680 nm red light, causing electrons to become excited and jump into an orbit farther from the atomic nucleus. These electrons are picked up by an primary electron acceptor which passes them to an electron transport system consisting of cytochromes. This movement of electrons is 'downhill' in terms of an oxidation-reduction or redox potential scale. The electrons are not used up as they pass through the chain but are passed on to the pigments of Photosystem I.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:11.6:2",
+            "order": 2,
+            "title": "The Z Scheme of Electron Transport",
+            "content_text": "Simultaneously, electrons in the reaction centre of PS I are excited by red light of wavelength 700 nm and transferred to another acceptor molecule with a greater redox potential. These electrons are moved downhill again, this time to a molecule of energy-rich $NADP^+$. The addition of these electrons reduces $NADP^+$ to $NADPH + H^+$. This whole scheme of transfer of electrons, starting from PS II, uphill to the acceptor, down the electron transport chain to PS I, excitation of electrons, transfer to another acceptor, and finally downhill to $NADP^+$ reducing it to $NADPH + H^+$ is called the Z scheme due to its characteristic shape (Figure 11.5). This shape is formed when all carriers are placed in sequence on a redox potential scale.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 11.5",
+                "description": "Z scheme of light reaction showing the pathway of electron flow from water splitting at PS II, through the electron transport system (generating ATP), to PS I, and finally to the reduction of NADP+ to NADPH.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:11:11.6.1",
+        "number": "11.6.1",
+        "title": "Splitting of Water",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:11:11.6.1:1",
+            "order": 1,
+            "title": "Mechanism and Equation of Water Splitting",
+            "content_text": "To supply electrons continuously to PS II, the electrons moved from the photosystem must be replaced. This is achieved by the splitting of water, which is associated with PS II. Water is split into $2H^+$, [O], and electrons. This process creates oxygen, one of the net products of photosynthesis. The electrons needed to replace those removed from PS I are provided by PS II. The water splitting complex is located on the inner side of the thylakoid membrane, meaning protons and $O_2$ are released into the lumen. The reaction is represented as: $$2H_2O \rightarrow 4H^+ + O_2 + 4e^-$$",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:11:11.6.2",
+        "number": "11.6.2",
+        "title": "Cyclic and Non-cyclic Photo-phosphorylation",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:11:11.6.2:1",
+            "order": 1,
+            "title": "Introduction to Photo-phosphorylation",
+            "content_text": "Living organisms have the capability of extracting energy from oxidisable substances and store this in the form of bond energy. Special substances like ATP carry this energy in their chemical bonds. The process through which The process through which ATP is synthesised by cells (in mitochondria and chloroplasts) is named phosphorylation. Photo-phosphorylation is the synthesis of ATP from ADP and inorganic phosphate in the presence of light. When the two photosystems work in a series, first PS II and then the PS I, a process called non-cyclic photo-phosphorylation occurs. The two photosystems are connected through an electron transport chain, as seen in the Z scheme. Both ATP and $NADPH + H^+$ are synthesised by this kind of electron flow.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:11.6.2:2",
+            "order": 2,
+            "title": "Cyclic Photo-phosphorylation",
+            "content_text": "When only PS I is functional, the electron is circulated within the photosystem and the phosphorylation occurs due to cyclic flow of electrons. A possible location where this could be happening is in the stroma lamellae. While the membrane or lamellae of the grana have both PS I and PS II, the stroma lamellae membranes lack PS II as well as the NADP reductase enzyme. The excited electron does not pass on to $NADP^+$ but is cycled back to the PS I complex through the electron transport chain. The cyclic flow hence results only in the synthesis of ATP, but not of $NADPH + H^+$. Cyclic photophosphorylation also occurs when only light of wavelengths beyond 680 nm are available for excitation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 11.6",
+                "description": "A diagram of cyclic photophosphorylation showing light hitting Chlorophyll P700 (Photosystem I). The excited electron is captured by an e- acceptor and then passed through an electron transport system, which generates ATP from ADP + iP, before the electron returns to the Chlorophyll P700.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:11:11.6.3",
+        "number": "11.6.3",
+        "title": "Chemiosmotic Hypothesis",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:11:11.6.3:1",
+            "order": 1,
+            "title": "Introduction to the Chemiosmotic Hypothesis",
+            "content_text": "The chemiosmotic hypothesis explains the mechanism of ATP synthesis in the chloroplast. Similar to respiration, ATP synthesis in photosynthesis is linked to the development of a proton gradient across a membrane. In this case, the gradient develops across the thylakoid membranes. A key difference is that in photosynthesis, proton accumulation occurs towards the inside of the membrane, specifically in the lumen, whereas in respiration, protons accumulate in the intermembrane space of the mitochondria during electron transport.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:11.6.3:2",
+            "order": 2,
+            "title": "Development of the Proton Gradient: Water Splitting",
+            "content_text": "The first factor contributing to the proton gradient is the splitting of water molecules. This process takes place on the inner side of the thylakoid membrane. Consequently, the protons ($H^+$) or hydrogen ions produced by the splitting of water accumulate within the lumen of the thylakoids.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:11.6.3:3",
+            "order": 3,
+            "title": "Development of the Proton Gradient: Electron and Proton Transport",
+            "content_text": "As electrons move through the photosystems, protons are transported across the membrane. This happens because the primary electron acceptor, located towards the outer side of the membrane, transfers its electron not to an electron carrier but to an H carrier (such as Plastoquinone). This molecule removes a proton from the stroma while transporting an electron. When this molecule passes its electron to the electron carrier on the inner side of the membrane, the proton is released into the lumen side of the membrane.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:11.6.3:4",
+            "order": 4,
+            "title": "Development of the Proton Gradient: NADP Reductase Activity",
+            "content_text": "The NADP reductase enzyme is located on the stroma side of the membrane. Along with electrons that come from the acceptor of electrons of PS I, protons are necessary for the reduction of $NADP^+$ to $NADPH + H^+$. These protons are also removed from the stroma, further contributing to the depletion of protons in the stroma and their relative accumulation in the lumen.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:11.6.3:5",
+            "order": 5,
+            "title": "ATP Synthase and the Breakdown of the Gradient",
+            "content_text": "The accumulation of protons in the lumen and their decrease in the stroma creates a proton gradient across the thylakoid membrane and a measurable decrease in pH in the lumen. This gradient is important because its breakdown leads to the synthesis of ATP. The gradient is broken down due to the movement of protons across the membrane to the stroma through the transmembrane channel of the $CF_0$ of the ATP synthase. The ATP synthase enzyme consists of two parts: $CF_0$, which is embedded in the thylakoid membrane and forms a channel for facilitated diffusion of protons, and $CF_1$, which protrudes on the outer surface of the thylakoid membrane facing the stroma. The breakdown of the gradient provides enough energy to cause a conformational change in the $CF_1$ particle, which makes the enzyme synthesise several molecules of energy-packed ATP.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 11.7",
+                "description": "A detailed diagram of ATP synthesis through chemiosmosis. It shows the thylakoid membrane separating the stroma (low H+ concentration) from the lumen (high H+ concentration). It depicts PS II, Plastoquinone (PQ), Cytochrome B6f, PS I, and NADP reductase. Water splitting is shown in the lumen. The ATP synthase complex is shown with CF0 in the membrane and CF1 in the stroma, facilitating the flow of H+ from the lumen to the stroma to produce ATP from ADP + Pi.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:11.6.3:6",
+            "order": 6,
+            "title": "Requirements for Chemiosmosis",
+            "content_text": "Chemiosmosis requires a membrane, a proton pump, a proton gradient, and ATP synthase. Energy is used to pump protons across a membrane to create a gradient or a high concentration of protons within the thylakoid lumen. ATP synthase has a channel that allows diffusion of protons back across the membrane; this releases enough energy to activate the ATP synthase enzyme that catalyses the formation of ATP. Along with the NADPH produced by the movement of electrons, the ATP will be used immediately in the biosynthetic reaction taking place in the stroma, responsible for fixing $CO_2$ and synthesis of sugars.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:11:11.7",
+        "number": "11.7",
+        "title": "Where are the ATP and NADPH Used?",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:11:11.7:1",
+            "order": 1,
+            "title": "The Biosynthetic Phase",
+            "content_text": "The products of the light reaction are ATP, NADPH, and $O_2$. While $O_2$ diffuses out of the chloroplast, ATP and NADPH are used to drive the processes leading to the synthesis of food (sugars). This is known as the biosynthetic phase of photosynthesis. This process does not directly depend on the presence of light but is dependent on the products of the light reaction (ATP and NADPH), besides $CO_2$ and $H_2O$. If light becomes unavailable, the biosynthetic process continues for some time and then stops; it resumes when light is made available again. Calling the biosynthetic phase the 'dark reaction' is a misnomer because it is indirectly dependent on light.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:11.7:2",
+            "order": 2,
+            "title": "Discovery of the Calvin Cycle",
+            "content_text": "In the biosynthetic phase, $CO_2$ is combined with $H_2O$ to produce $(CH_2O)_n$ or sugars. After World War II, Melvin Calvin used radioactive $^{14}C$ in algal photosynthesis studies, which led to the discovery that the first $CO_2$ fixation product was a 3-carbon organic acid called 3-phosphoglyceric acid (PGA). He also worked out the complete biosynthetic pathway, which was named the Calvin cycle after him. The first product identified, PGA, contains three carbon atoms.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:11.7:3",
+            "order": 3,
+            "title": "$C_3$ and $C_4$ Pathways",
+            "content_text": "Scientists investigated whether all plants use PGA as the first product of $CO_2$ fixation. Research across various plants led to the discovery of another group where the first stable product is an organic acid with 4 carbon atoms, identified as oxaloacetic acid (OAA). Consequently, $CO_2$ assimilation during photosynthesis is classified into two main types: the $C_3$ pathway, where the first product is a $C_3$ acid (PGA), and the $C_4$ pathway, where the first product is a $C_4$ acid (OAA). These groups exhibit distinct associated characteristics.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:11.7:4",
+            "order": 4,
+            "title": "11.7.1 The Primary Acceptor of $CO_2$",
+            "content_text": "Scientists initially struggled to identify the molecule that accepts $CO_2$ to form the 3-carbon PGA. They expected a 2-carbon compound, but studies unexpectedly revealed that the acceptor molecule is a 5-carbon ketose sugar called ribulose bisphosphate (RuBP). It took many years of experimentation to reach this conclusion and move past the assumption of a 2-carbon precursor.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:11.7:5",
+            "order": 5,
+            "title": "11.7.2 The Calvin Cycle",
+            "content_text": "Melvin Calvin and his colleagues mapped the entire pathway, demonstrating that it operates in a cyclic manner where RuBP is regenerated. The Calvin pathway occurs in all photosynthetic plants, regardless of whether they utilize $C_3$ or $C_4$ pathways. For analytical purposes, the cycle is divided into three main stages: carboxylation, reduction, and regeneration.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 11.8",
+                "description": "A diagrammatic representation of the Calvin cycle showing three stages: (1) Carboxylation, where $CO_2$ and $H_2O$ combine with Ribulose-1,5-bisphosphate to form 3-phosphoglycerate; (2) Reduction, where ATP and NADPH are used to convert 3-phosphoglycerate into Triose phosphate, which can then form sucrose or starch; and (3) Regeneration, where Triose phosphate is converted back into Ribulose-1,5-bisphosphate using ATP.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:11.7:6",
+            "order": 6,
+            "title": "Stage 1: Carboxylation",
+            "content_text": "Carboxylation is the fixation of $CO_2$ into a stable organic intermediate and is considered the most crucial step of the Calvin cycle. In this step, $CO_2$ is utilized for the carboxylation of RuBP. The reaction is catalyzed by the enzyme RuBP carboxylase. This process results in the formation of two molecules of 3-PGA. Because this enzyme also possesses oxygenation activity, it is more accurately named RuBP carboxylase-oxygenase, or RuBisCO.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:11.7:7",
+            "order": 7,
+            "title": "Stage 2: Reduction",
+            "content_text": "Reduction involves a series of reactions leading to the formation of glucose. This stage utilizes 2 molecules of ATP for phosphorylation and 2 molecules of NADPH for reduction for every $CO_2$ molecule fixed. To produce one single molecule of glucose, the cycle must fix six molecules of $CO_2$, requiring 6 full turns of the cycle.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:11.7:8",
+            "order": 8,
+            "title": "Stage 3: Regeneration",
+            "content_text": "Regeneration of the $CO_2$ acceptor molecule, RuBP, is essential for the cycle to continue uninterrupted. This stage requires one molecule of ATP for phosphorylation to convert the intermediate back into RuBP.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:11.7:9",
+            "order": 9,
+            "title": "Summary of Calvin Cycle Requirements",
+            "content_text": "For every $CO_2$ molecule entering the Calvin cycle, a total of 3 molecules of ATP and 2 molecules of NADPH are required. The requirement for more ATP than NADPH is likely met by cyclic photophosphorylation. To synthesize one molecule of glucose, 6 turns of the cycle are necessary, resulting in a total requirement of 18 ATP and 12 NADPH molecules. The following table summarizes the inputs and outputs of the cycle for one glucose molecule.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 11.1",
+                "caption": "Calvin Cycle Inputs and Outputs for One Glucose Molecule",
+                "headers": [
+                  "In",
+                  "Out"
+                ],
+                "rows": [
+                  [
+                    "Six $CO_2$",
+                    "One glucose"
+                  ],
+                  [
+                    "18 ATP",
+                    "18 ADP"
+                  ],
+                  [
+                    "12 NADPH",
+                    "12 NADP"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:11:11.8",
+        "number": "11.8",
+        "title": "The $C_4$ Pathway",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:11:11.8:1",
+            "order": 1,
+            "title": "Introduction to $C_4$ Plants",
+            "content_text": "Plants adapted to dry tropical regions utilize the $C_4$ pathway. While they use oxaloacetic acid (OAA) as the first $CO_2$ fixation product, they still employ the $C_3$ pathway (Calvin cycle) as their primary biosynthetic pathway. $C_4$ plants are distinguished by their ability to tolerate higher temperatures, respond to high light intensities, lack the process of photorespiration, and demonstrate greater biomass productivity.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:11.8:2",
+            "order": 2,
+            "title": "Kranz Anatomy and Bundle Sheath Cells",
+            "content_text": "A defining feature of $C_4$ plants is their specialized leaf anatomy. They possess large cells around the vascular bundles known as bundle sheath cells. This arrangement is called 'Kranz' anatomy, where 'Kranz' means 'wreath', reflecting the circular arrangement of cells. Bundle sheath cells may form several layers, contain a high number of chloroplasts, have thick walls impervious to gas exchange, and lack intercellular spaces. Common examples include maize and sorghum.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:11.8:3",
+            "order": 3,
+            "title": "The Hatch and Slack Pathway Mechanism",
+            "content_text": "The $C_4$ pathway, also known as the Hatch and Slack Pathway, is a cyclic process. The primary $CO_2$ acceptor in this pathway is a 3-carbon molecule called phosphoenol pyruvate (PEP), which is located in the mesophyll cells. The enzyme responsible for this initial fixation is PEP carboxylase or PEPcase. A crucial distinction is that mesophyll cells lack the RuBisCO enzyme. The first product of this fixation is the 4-carbon acid oxaloacetic acid (OAA), which is formed within the mesophyll cells.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 11.9",
+                "description": "A diagrammatic representation of the Hatch and Slack Pathway showing the interaction between a mesophyll cell and a bundle sheath cell. Atmospheric $CO_2$ enters the mesophyll cell and is converted to $HCO_3^-$. It reacts with Phosphoenol-pyruvate (PEP) during the fixation step to form a $C_4$ acid. This $C_4$ acid is transported via plasmodesmata to the bundle sheath cell. Inside the bundle sheath cell, the $C_4$ acid undergoes decarboxylation, releasing $CO_2$ and a $C_3$ acid. The released $CO_2$ is fixed by the Calvin cycle (RuBisCO). The $C_3$ acid is transported back to the mesophyll cell, where it undergoes regeneration to reform PEP, completing the cycle.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:11.8:4",
+            "order": 4,
+            "title": "Transport and Decarboxylation in $C_4$ Plants",
+            "content_text": "Following its formation, OAA is converted into other 4-carbon compounds, such as malic acid or aspartic acid, still within the mesophyll cells. these $C_4$ acids are then transported to the bundle sheath cells. Once inside the bundle sheath cells, these $C_4$ acids are broken down (decarboxylated) to release $CO_2$ and a 3-carbon molecule.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:11.8:5",
+            "order": 5,
+            "title": "Regeneration and the Calvin Cycle in $C_4$ Plants",
+            "content_text": "The 3-carbon molecule resulting from decarboxylation is transported back to the mesophyll cells, where it is converted back into PEP to complete the cycle. The $CO_2$ released in the bundle sheath cells enters the $C_3$ or Calvin pathway, which is the universal pathway for sugar synthesis in all plants. The bundle sheath cells are rich in the enzyme Ribulose bisphosphate carboxylase-oxygenase (RuBisCO) but lack PEPcase. Thus, while the Calvin pathway occurs in the mesophyll cells of $C_3$ plants, in $C_4$ plants, it is restricted to the bundle sheath cells.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:11:11.9",
+        "number": "11.9",
+        "title": "Photorespiration",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:11:11.9:1",
+            "order": 1,
+            "title": "The Dual Nature of RuBisCO",
+            "content_text": "Photorespiration is a process that highlights a major physiological difference between $C_3$ and $C_4$ plants. It involves the first step of the Calvin pathway, where RuBP combines with $CO_2$ to form two molecules of 3PGA, catalyzed by the enzyme RuBisCO: $$RuBP + CO_2 \\xrightarrow{RuBisCo} 2 \\times 3PGA$$ RuBisCO is the most abundant enzyme globally and possesses an active site that can bind both $CO_2$ and $O_2$. It has a higher affinity for $CO_2$ when the concentrations of $CO_2$ and $O_2$ are nearly equal. The binding is competitive, meaning the relative concentrations of $O_2$ and $CO_2$ determine which gas will bind to the enzyme.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:11.9:2",
+            "order": 2,
+            "title": "Mechanism of Photorespiration in $C_3$ Plants",
+            "content_text": "In $C_3$ plants, some $O_2$ binds to RuBisCO, which decreases $CO_2$ fixation. In this scenario, RuBP binds with $O_2$ instead of $CO_2$, forming one molecule of phosphoglycerate (3C) and one molecule of phosphoglycolate (2C). This process is known as photorespiration. Unlike photosynthesis, the photorespiratory pathway does not synthesize sugars, ATP, or NADPH. Instead, it consumes ATP and results in the release of $CO_2$. The specific biological function of photorespiration remains unknown.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:11.9:3",
+            "order": 3,
+            "title": "Absence of Photorespiration in $C_4$ Plants",
+            "content_text": "Photorespiration does not occur in $C_4$ plants because they possess a mechanism to increase the $CO_2$ concentration at the enzyme site. When the $C_4$ acid is decarboxylated in the bundle sheath cells, it releases $CO_2$, significantly raising the intracellular $CO_2$ concentration. This ensures that RuBisCO functions primarily as a carboxylase, minimizing its oxygenase activity. Consequently, $C_4$ plants exhibit higher productivity, better yields, and greater tolerance to high temperatures than $C_3$ plants.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:11.9:4",
+            "order": 4,
+            "title": "Comparison of $C_3$ and $C_4$ Plants",
+            "content_text": "The differences between $C_3$ and $C_4$ plants involve various anatomical and physiological characteristics, including the site of the Calvin cycle, the primary $CO_2$ acceptor, and the presence of photorespiration under different environmental conditions. These differences are summarized in Table 11.1.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 11.1",
+                "caption": "Fill in the Columns 2 and 3 in this table to highlight the differences between $C_3$ and $C_4$ Plants",
+                "headers": [
+                  "Characteristics",
+                  "$C_3$ Plants",
+                  "$C_4$ Plants",
+                  "Choose from"
+                ],
+                "rows": [
+                  [
+                    "Cell type in which the Calvin cycle takes place",
+                    "",
+                    "",
+                    "Mesophyll/Bundle sheath/both"
+                  ],
+                  [
+                    "Cell type in which the initial carboxylation reaction occurs",
+                    "",
+                    "",
+                    "Mesophyll/Bundle sheath /both"
+                  ],
+                  [
+                    "How many cell types does the leaf have that fix $CO_2$.",
+                    "",
+                    "",
+                    "Two: Bundle sheath and mesophyll; One: Mesophyll; Three: Bundle sheath, palisade, spongy mesophyll"
+                  ],
+                  [
+                    "Which is the primary $CO_2$ acceptor",
+                    "",
+                    "",
+                    "RuBP/PEP/PGA"
+                  ],
+                  [
+                    "Number of carbons in the primary $CO_2$ acceptor",
+                    "",
+                    "",
+                    "5 / 4 / 3"
+                  ],
+                  [
+                    "Which is the primary $CO_2$ fixation product",
+                    "",
+                    "",
+                    "PGA/OAA/RuBP/PEP"
+                  ],
+                  [
+                    "No. of carbons in the primary $CO_2$ fixation product",
+                    "",
+                    "",
+                    "3 / 4 / 5"
+                  ],
+                  [
+                    "Does the plant have RuBisCO?",
+                    "",
+                    "",
+                    "Yes/No/Not always"
+                  ],
+                  [
+                    "Does the plant have PEP Case?",
+                    "",
+                    "",
+                    "Yes/No/Not always"
+                  ],
+                  [
+                    "Which cells in the plant have Rubisco?",
+                    "",
+                    "",
+                    "Mesophyll/Bundle sheath/none"
+                  ],
+                  [
+                    "$CO_2$ fixation rate under high light conditions",
+                    "",
+                    "",
+                    "Low/ high/ medium"
+                  ],
+                  [
+                    "Whether photorespiration is present at low light intensities",
+                    "",
+                    "",
+                    "High/negligible/sometimes"
+                  ],
+                  [
+                    "Whether photorespiration is present at high light intensities",
+                    "",
+                    "",
+                    "High/negligible/sometimes"
+                  ],
+                  [
+                    "Whether photorespiration would be present at low $CO_2$ concentrations",
+                    "",
+                    "",
+                    "High/negligible/sometimes"
+                  ],
+                  [
+                    "Whether photorespiration would be present at high $CO_2$ concentrations",
+                    "",
+                    "",
+                    "High/negligible/sometimes"
+                  ],
+                  [
+                    "Temperature optimum",
+                    "",
+                    "",
+                    "30-40°C/20-25°C/above 40°C"
+                  ],
+                  [
+                    "Examples",
+                    "",
+                    "",
+                    "Cut vertical sections of leaves of different plants and observe under the microscope for Kranz anatomy and list them in the appropriate columns."
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:11:11.10",
+        "number": "11.10",
+        "title": "Factors affecting Photosynthesis",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:11:11.10:1",
+            "order": 1,
+            "title": "Internal and External Factors",
+            "content_text": "The rate of photosynthesis is a critical determinant of plant yield, including crop plants. It is influenced by both internal (plant) and external factors. Internal factors include the number, size, age, and orientation of leaves, mesophyll cells, and chloroplasts, as well as internal $CO_2$ concentration and the amount of chlorophyll. These internal factors depend on the plant's genetic predisposition and its growth. External factors include the availability of sunlight, temperature, $CO_2$ concentration, and water. While these factors interact simultaneously, the rate of photosynthesis is typically determined by the factor that is at sub-optimal levels.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:11.10:2",
+            "order": 2,
+            "title": "Blackman's Law of Limiting Factors",
+            "content_text": "When multiple factors affect a biochemical process, Blackman's (1905) Law of Limiting Factors comes into effect. The law states: 'If a chemical process is affected by more than one factor, then its rate will be determined by the factor which is nearest to its minimal value: it is the factor which directly affects the process if its quantity is changed.' For example, even with optimal light and $CO_2$ conditions, a plant may not photosynthesize if the temperature is very low. Once the temperature is optimized, the plant will begin photosynthesizing.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:11:11.10.1",
+        "number": "11.10.1",
+        "title": "Light",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:11:11.10.1:1",
+            "order": 1,
+            "title": "Light Intensity and Photosynthesis Rate",
+            "content_text": "Light as a factor involves light quality, light intensity, and the duration of exposure. At low light intensities, there is a linear relationship between incident light and $CO_2$ fixation rates. However, at higher light intensities, the rate gradually stops increasing as other factors become limiting. This relationship is depicted in Figure 11.10.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 11.10",
+                "description": "A graph showing the effect of light intensity on the rate of photosynthesis. Region A shows a linear increase in the rate of photosynthesis with increasing light intensity. Region B represents the transition where the rate begins to level off. Region C is the plateau where the rate remains constant despite further increases in light intensity. Point D indicates the light intensity at which saturation occurs, and E represents the maximum rate of photosynthesis.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:11.10.1:2",
+            "order": 2,
+            "title": "Light Saturation and High Intensity Effects",
+            "content_text": "Light saturation occurs at approximately 10 percent of full sunlight. Therefore, except for plants in deep shade or dense forests, light is rarely a limiting factor in nature. However, an increase in incident light beyond the saturation point can lead to the breakdown of chlorophyll, resulting in a decrease in the rate of photosynthesis.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:11:11.10.2",
+        "number": "11.10.2",
+        "title": "Carbon dioxide Concentration",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:11:11.10.2:1",
+            "order": 1,
+            "title": "$CO_2$ as a Limiting Factor",
+            "content_text": "Carbon dioxide is the major limiting factor for photosynthesis. Its concentration in the atmosphere is very low, between 0.03 and 0.04 percent. Increasing the concentration up to 0.05 percent can lead to an increase in $CO_2$ fixation rates, but levels higher than this can become damaging to plants over long periods.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:11.10.2:2",
+            "order": 2,
+            "title": "Differential Response of $C_3$ and $C_4$ Plants",
+            "content_text": "$C_3$ and $C_4$ plants respond differently to $CO_2$ concentrations. At low light conditions, neither group responds to high $CO_2$. At high light intensities, both show increased rates. $C_4$ plants show saturation at about $360 \\mu l L^{-1}$, while $C_3$ plants respond to higher $CO_2$ concentrations, with saturation seen only beyond $450 \\mu l L^{-1}$. Thus, current atmospheric $CO_2$ levels are limiting to $C_3$ plants. This knowledge is applied in greenhouse farming for crops like tomatoes and bell peppers, which are grown in $CO_2$-enriched atmospheres to achieve higher yields.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:11:11.10.3",
+        "number": "11.10.3",
+        "title": "Temperature",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:11:11.10.3:1",
+            "order": 1,
+            "title": "Temperature Sensitivity of Photosynthetic Reactions",
+            "content_text": "The dark reactions of photosynthesis are enzymatic and thus highly temperature-controlled. Although light reactions are also temperature-sensitive, they are affected to a much lesser extent. $C_4$ plants respond to higher temperatures and exhibit higher rates of photosynthesis, whereas $C_3$ plants have a much lower temperature optimum. The temperature optimum also depends on the plant's habitat; tropical plants have a higher temperature optimum than plants adapted to temperate climates.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:11:11.10.4",
+        "number": "11.10.4",
+        "title": "Water",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:11:11.10.4:1",
+            "order": 1,
+            "title": "Indirect Effects of Water Stress",
+            "content_text": "While water is a reactant in the light reaction, its effect as a limiting factor is primarily indirect through its impact on the plant's physiology. Water stress causes stomata to close, thereby reducing $CO_2$ availability. Furthermore, water stress causes leaves to wilt, which reduces the surface area available for light absorption and decreases metabolic activity.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:11:Summary",
+        "number": "Summary",
+        "title": "Summary of Photosynthesis in Higher Plants",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:11:Summary:1",
+            "order": 1,
+            "title": "General Process and Site of Photosynthesis",
+            "content_text": "Green plants produce food through photosynthesis by taking in $CO_2$ from the atmosphere and using it to synthesize carbohydrates, primarily glucose and starch. Light reactions occur in the thylakoid membranes (grana) of chloroplasts, while the carbon-fixing (chemosynthetic) pathway occurs in the stroma.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:Summary:2",
+            "order": 2,
+            "title": "Light Reactions and Electron Transport",
+            "content_text": "Photosynthesis involves two stages: light reactions and carbon-fixing reactions. In light reactions, pigments in the antenna absorb light energy and funnel it to reaction centers: P700 in PS I and P680 in PS II. Electrons are excited and transferred through PS II and PS I to form NADPH. A proton gradient is created across the thylakoid membrane, and its breakdown through the $F_0$ part of the ATPase enzyme releases energy for ATP synthesis. Water splitting at PS II releases $O_2$, protons, and electrons.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:11:Summary:3",
+            "order": 3,
+            "title": "Carbon Fixation and the $C_4$ Pathway",
+            "content_text": "In the carbon fixation cycle, RuBisCO adds $CO_2$ to RuBP (a 5-carbon compound) to form two molecules of 3-carbon PGA, which are then converted to sugar via the Calvin cycle. RuBisCO also catalyzes photorespiration, a wasteful oxygenation reaction in $C_3$ plants. Tropical $C_4$ plants use a specialized pathway where $CO_2$ fixation first occurs in the mesophyll (forming a 4-carbon compound), and the Calvin cycle is then carried out in bundle sheath cells to synthesize carbohydrates.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:biology:11:11:ex:1",
+          "number": 1,
+          "problem": "By looking at a plant externally, can you tell whether a plant is $C_3$ or $C_4$? Why and how?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:11:ex:2",
+          "number": 2,
+          "problem": "By looking at which internal structure of a plant you can tell whether a plant is $C_3$ or $C_4$? Explain.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:11:ex:3",
+          "number": 3,
+          "problem": "Even though a very few cells in a $C_4$ plant carry out the biosynthetic – Calvin pathway, yet they are highly productive. Can you discuss why?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:11:ex:4",
+          "number": 4,
+          "problem": "RuBisCO is an enzyme that acts both as a carboxylase and oxygenase. Why do you think RuBisCO carries out more carboxylation in \\( C_4 \\) plants?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:11:ex:5",
+          "number": 5,
+          "problem": "Suppose there were plants that had a high concentration of Chlorophyll \\( b \\), but lacked chlorophyll \\( a \\), would it carry out photosynthesis? Then why do plants have chlorophyll \\( b \\) and other accessory pigments?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:11:ex:6",
+          "number": 6,
+          "problem": "Why is the colour of a leaf kept in the dark frequently becomes yellow, or pale green? Which pigment do you think is more stable?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:11:ex:7",
+          "number": 7,
+          "problem": "Look at leaves of the same plant on the shady side and compare it with the leaves on the sunny side. Or, compare the potted plants kept in the sunlight with those in the shade. Which of them has leaves that are darker green? Why?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:11:ex:8",
+          "number": 8,
+          "problem": "Figure 11.10 shows the effect of light on the rate of photosynthesis. Based on the graph, answer the following questions: (a) At which point/s (A, B or C) in the curve light is a limiting factor? (b) What could be the limiting factor/s in region A? (c) What do C and D represent on the curve?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:11:ex:9",
+          "number": 9,
+          "problem": "Give comparison between the following: (a) \\( C_3 \\) and \\( C_4 \\) pathways (b) Cyclic and non-cyclic photophosphorylation (c) Anatomy of leaf in \\( C_3 \\) and \\( C_4 \\) plants",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,523 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_biology_12_ch12.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:biology:12:12",
+  "curriculum": "ncert",
+  "subject": "biology",
+  "grade": 12,
+  "textbook_name": "Biology",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:biology:12:12",
+    "number": 12,
+    "title": "Ecosystem",
+    "summary": "Chapter 12, \"Ecosystem,\" explores the structure and function of ecosystems as fundamental units of nature. The chapter begins by defining ecosystems and highlighting their components: abiotic (non-living) and biotic (living). Key structural aspects include species composition and stratification. Functionally, ecosystems are driven by productivity, decomposition, energy flow, and nutrient cycling.\n\nProductivity focuses on primary production (biomass creation by plants) and distinguishes between Gross Primary Productivity (GPP) and Net Primary Productivity (NPP). Decomposition details how organic matter is broken down by decomposers, involving fragmentation, leaching, and catabolism, influenced by oxygen availability, chemical composition and climatic factors.\n\nEnergy flow, governed by the laws of thermodynamics, is unidirectional from the sun to producers (autotrophs) to consumers (heterotrophs). Food chains (grazing and detritus) and food webs illustrate these relationships. Trophic levels describe an organism's position in the food chain. The 10% law explains energy transfer limitations between trophic levels. Ecological pyramids (numbers, biomass, and energy) depict trophic relationships, though with limitations.\n\nThese sections connect to illustrate a holistic view of how ecosystems function. The principles of energy flow, decomposition, and productivity work together to create stable, self-sustaining environments. Understanding ecosystems is crucial for conservation, resource management, and appreciating the interconnectedness of life on Earth.",
+    "sections": [
+      {
+        "id": "ncert:biology:12:12:12.1",
+        "number": "12.1",
+        "title": "Ecosystem – Structure and Function",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:12:12.1:1",
+            "order": 1,
+            "title": "Definition and Classification of Ecosystems",
+            "content_text": "An ecosystem is a functional unit of nature where living organisms interact among themselves and with their surrounding physical environment. Ecosystems vary significantly in size, ranging from a small pond to a large forest or sea. The entire biosphere is often regarded as a global ecosystem, composed of all local ecosystems on Earth. For study purposes, ecosystems are generally divided into two categories: terrestrial (e.g., forest, grassland, desert) and aquatic (e.g., pond, lake, wetland, river, estuary). Additionally, man-made ecosystems include crop fields and aquariums.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Chapter Header Image",
+                "description": "A conceptual diagram showing a cycle involving a tree, insects, a bird, and organic-rich soil, representing the flow of matter and energy in an ecosystem.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:12:12.1:2",
+            "order": 2,
+            "title": "Ecosystem Structure: Species Composition and Stratification",
+            "content_text": "The interaction of biotic (living) and abiotic (non-living) components results in a physical structure characteristic of each ecosystem type. Two key structural features are: 1. Species Composition: The identification and enumeration of plant and animal species within the ecosystem. 2. Stratification: The vertical distribution of different species occupying different levels. For instance, in a forest, trees occupy the top vertical strata, shrubs the second, and herbs and grasses occupy the bottom layers.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:12:12.1:3",
+            "order": 3,
+            "title": "Functional Aspects of Ecosystems",
+            "content_text": "To understand an ecosystem as a self-sustaining unit, four basic aspects are considered: (i) Productivity, (ii) Decomposition, (iii) Energy flow, and (iv) Nutrient cycling. These processes facilitate the conversion of inorganic materials into organic matter using solar energy, the transfer of energy through food chains/webs, and the eventual degradation and loss of energy as heat.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:12:12.1:4",
+            "order": 4,
+            "title": "Case Study: Pond Ecosystem",
+            "content_text": "A pond serves as a simple, self-sustainable aquatic ecosystem. Its components include: \n- Abiotic components: Water containing dissolved inorganic and organic substances, and rich soil deposits at the bottom. Solar input, temperature cycles, and day-length regulate its functions.\n- Autotrophic components: Phytoplankton, certain algae, and floating, submerged, or marginal plants.\n- Consumers: Zooplankton, free-swimming forms, and bottom-dwelling organisms.\n- Decomposers: Fungi, bacteria, and flagellates, which are especially abundant at the pond bottom.\nThe system exhibits unidirectional energy flow towards higher trophic levels and dissipation of energy as heat to the environment.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:12:12.2",
+        "number": "12.2",
+        "title": "Productivity",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:12:12.2:1",
+            "order": 1,
+            "title": "Primary Production and Productivity",
+            "content_text": "Primary production is defined as the amount of biomass or organic matter produced per unit area over a time period by plants during photosynthesis. It is expressed in terms of weight ($g m^{-2}$) or energy ($kcal m^{-2}$). The rate of biomass production is called productivity, expressed as $g m^{-2} yr^{-1}$ or $kcal m^{-2} yr^{-1}$ to allow for comparisons between different ecosystems.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:12:12.2:2",
+            "order": 2,
+            "title": "Gross and Net Primary Productivity",
+            "content_text": "Primary productivity is divided into: \n1. Gross Primary Productivity (GPP): The total rate of production of organic matter during photosynthesis. A significant portion of GPP is utilized by plants in respiration (R).\n2. Net Primary Productivity (NPP): The biomass remaining after respiration losses. This is the available biomass for consumption by heterotrophs (herbivores and decomposers). The relationship is defined by the formula: $$GPP - R = NPP$$",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:12:12.2:3",
+            "order": 3,
+            "title": "Secondary Productivity and Global Statistics",
+            "content_text": "Secondary productivity is defined as the rate of formation of new organic matter by consumers. Primary productivity depends on plant species, environmental factors (nutrients, photosynthetic capacity), and varies across ecosystems. The annual net primary productivity of the whole biosphere is approximately 170 billion tons (dry weight) of organic matter. Despite covering about 70 percent of the Earth's surface, the oceans contribute only about 55 billion tons, while the rest comes from land.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:12:12.3",
+        "number": "12.3",
+        "title": "Decomposition",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:12:12.3:1",
+            "order": 1,
+            "title": "Definition and Detritus",
+            "content_text": "Decomposition is the process by which decomposers break down complex organic matter into inorganic substances like carbon dioxide, water, and nutrients. The raw material for this process is called detritus, which includes dead plant remains (leaves, bark, flowers) and dead remains of animals, including fecal matter.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:12:12.3:2",
+            "order": 2,
+            "title": "Steps of Decomposition",
+            "content_text": "Decomposition involves several simultaneous steps: \n1. Fragmentation: Detritivores (e.g., earthworms) break down detritus into smaller particles.\n2. Leaching: Water-soluble inorganic nutrients move down into the soil horizon and precipitate as unavailable salts.\n3. Catabolism: Bacterial and fungal enzymes degrade detritus into simpler inorganic substances.\n4. Humification and Mineralisation: These occur during decomposition in the soil. Humification leads Humification and Mineralisation occur during decomposition in the soil. Humification leads to the accumulation of a dark coloured amorphous substance called humus that is highly resistant to microbial action and undergoes decomposition at an extremely slow rate. Being colloidal in nature, humus serves as a reservoir of nutrients. The humus is further degraded by some microbes, leading to the release of inorganic nutrients through the process known as mineralisation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 12.1",
+                "description": "A diagrammatic representation of the decomposition cycle in a terrestrial ecosystem. It shows a tree growing in soil, a green leaf falling to the ground, some leaves being eaten by insects/animals (nutrients entering the food web), and others being partially consumed by decomposers like fungi and bacteria. It illustrates leaching of nutrients into soil by chemical action, further decomposition by earthworms, bacteria, soil mites, and fungi, eventually resulting in organic-rich soil.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:12:12.3:3",
+            "order": 3,
+            "title": "Factors Regulating Decomposition",
+            "content_text": "Decomposition is largely an oxygen-requiring process. The rate of decomposition is controlled by the chemical composition of detritus and climatic factors. In a particular climatic condition, the decomposition rate is slower if detritus is rich in lignin and chitin, and quicker if detritus is rich in nitrogen and water-soluble substances like sugars. Temperature and soil moisture are the most important climatic factors that regulate decomposition through their effects on the activities of soil microbes. Warm and moist environments favour decomposition, whereas low temperature and anaerobiosis inhibit decomposition, resulting in the build-up of organic materials.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:12:12.4",
+        "number": "12.4",
+        "title": "Energy Flow",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:12:12.4:1",
+            "order": 1,
+            "title": "Solar Energy and PAR",
+            "content_text": "Except for the deep sea hydro-thermal ecosystem, the sun is the only source of energy for all ecosystems on Earth. Of the incident solar radiation, less than $50\\%$ of it is photosynthetically active radiation (PAR). Plants and photosynthetic bacteria (autotrophs) fix the Sun's radiant energy to make food from simple inorganic materials. Plants capture only $2-10\\%$ of the PAR, and this small amount of energy sustains the entire living world.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:12:12.4:2",
+            "order": 2,
+            "title": "Thermodynamics in Ecosystems",
+            "content_text": "Energy flows through different organisms of an ecosystem in a unidirectional manner: from the sun to producers and then to consumers. Ecosystems are not exempt from the Laws of Thermodynamics. They follow the First Law of Thermodynamics regarding energy transfer. They also follow the Second Law of Thermodynamics, as they need a constant supply of energy to synthesise the molecules they require and to counteract the universal tendency toward increasing disorderliness.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:12:12.4:3",
+            "order": 3,
+            "title": "Producers",
+            "content_text": "The green plants in the ecosystem are called producers. In a terrestrial ecosystem, major producers are herbaceous and woody plants. In an aquatic ecosystem, producers are various species like phytoplankton, algae, and higher plants.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:12:12.4:4",
+            "order": 4,
+            "title": "Consumers and Trophic Categories",
+            "content_text": "All animals depend on plants (directly or indirectly) for their food needs and are called consumers or heterotrophs. If they feed on producers (plants), they are called primary consumers. If animals eat other animals which in turn eat plants, they are called secondary consumers. Tertiary consumers eat secondary consumers. Primary consumers are herbivores (e.g., insects, birds, and mammals in terrestrial ecosystems; molluscs in aquatic ecosystems). Consumers that feed on herbivores are primary carnivores, and those that depend on primary carnivores are secondary carnivores.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:12:12.4:5",
+            "order": 5,
+            "title": "Grazing Food Chain (GFC)",
+            "content_text": "A simple grazing food chain (GFC) is depicted as: Grass (Producer) $\\rightarrow$ Goat (Primary Consumer) $\\rightarrow$ Man (Secondary Consumer). In this chain, energy trapped by the producer is passed on to a consumer or the organism dies.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:12:12.4:6",
+            "order": 6,
+            "title": "Detritus Food Chain (DFC)",
+            "content_text": "The detritus food chain (DFC) begins with dead organic matter. It is made up of decomposers, which are heterotrophic organisms, mainly fungi and bacteria. These are known as saprotrophs ($sapro$: to decompose). They meet their energy and nutrient requirements by degrading dead organic matter or detritus. Decomposers secrete digestive enzymes that breakdown dead and waste materials into simple, inorganic materials, which are subsequently absorbed by them.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:12:12.4:7",
+            "order": 7,
+            "title": "Food Web and Energy Flow Comparison",
+            "content_text": "In an aquatic ecosystem, GFC is the major conduit for energy flow. In a terrestrial ecosystem, a much larger fraction of energy flows through the detritus food chain than through the GFC. Detritus food chains may be connected with the grazing food chain at some levels: some organisms of DFC are prey to GFC animals. In a natural ecosystem, some animals like cockroaches and crows are omnivores. These natural interconnections of food chains make it a food web.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:12:12.4:8",
+            "order": 8,
+            "title": "Trophic Levels",
+            "content_text": "Organisms occupy a specific place in their community according to their feeding relationship with other organisms, known as their trophic level. Producers belong to the first trophic level, herbivores (primary consumers) to the second, and carnivores (secondary consumers) to the third, with top carnivores at the fourth level.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 12.2",
+                "description": "Diagrammatic representation of trophic levels in an ecosystem. It shows four levels: 1. First Trophic level (Plants: Phytoplankton, grass, trees), 2. Second trophic level (Herbivore: Zooplankton, grasshopper and cow), 3. Third trophic level (Carnivore: Birds, fishes, wolf), and 4. Fourth Trophic level (Top Carnivore: Man, lion).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:12:12.4:9",
+            "order": 9,
+            "title": "Standing Crop",
+            "content_text": "The amount of energy decreases at successive trophic levels. When an organism dies, it is converted to detritus or dead biomass, which serves as an energy source for decomposers. Organisms at each trophic level depend on those at the lower trophic level for their energy demands. Each trophic level has a certain mass of living material at a particular time called the standing crop. The standing crop is measured as the mass of living organisms (biomass) or the number in a unit area. The biomass of a species is expressed in terms of fresh or dry weight. Measurement of biomass in terms of dry weight is considered more accurate because it excludes the variable water content of the organisms.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:12:12.4:10",
+            "order": 10,
+            "title": "The 10 Per Cent Law",
+            "content_text": "The number of trophic levels in a grazing food chain (GFC) is restricted because the transfer of energy follows the 10 per cent law. According to this law, only $10\\%$ of the energy is transferred to each trophic level from the lower trophic level. In nature, it is common to have multiple levels such as producer, herbivore, primary carnivore, and secondary carnivore in a grazing food chain. This energy loss limits the number of trophic levels possible in an ecosystem.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 12.3",
+                "description": "A diagram showing energy flow through different trophic levels. It depicts the Sun providing energy to the first trophic level (producers/plants). Energy then flows to the second trophic level (primary consumers/herbivores), then to the third (secondary consumers/carnivores), and finally to the fourth (tertiary consumers/top carnivores). At each transfer, energy is lost as heat. Additionally, dead organic matter from all levels flows to decomposers, who also release energy as heat.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:12:12.5",
+        "number": "12.5",
+        "title": "Ecological Pyramids",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:12:12.5:1",
+            "order": 1,
+            "title": "Structure of Ecological Pyramids",
+            "content_text": "Ecological pyramids represent the food or energy relationship between organisms at different trophic levels. The shape of these pyramids is broad at the base and narrows towards the apex. The base of each pyramid represents the producers (first trophic level), while the apex represents the tertiary or top-level consumers. These relationships can be expressed in terms of number, biomass, or energy. The three types of ecological pyramids usually studied are: (a) pyramid of number, (b) pyramid of biomass, and (c) pyramid of energy.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:12:12.5:2",
+            "order": 2,
+            "title": "Pyramid of Numbers",
+            "content_text": "The pyramid of numbers represents the total number of individuals at each trophic level. In a typical grassland ecosystem, the pyramid is upright, meaning the number of producers is significantly higher than the number of consumers. For example, an ecosystem based on nearly 6 million plants may support only three top-carnivores.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 12.4 (a)",
+                "description": "Pyramid of numbers in a grassland ecosystem showing: Producers (P) = 5,842,000; Primary Consumers (PC) = 708,000; Secondary Consumers (SC) = 354,000; and Tertiary Consumers (TC) = 3.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:12:12.5:3",
+            "order": 3,
+            "title": "Pyramid of Biomass",
+            "content_text": "The pyramid of biomass represents the total dry weight of organisms at each trophic level. In most terrestrial ecosystems, the pyramid of biomass is upright, showing a sharp decrease in biomass at higher trophic levels. However, in aquatic ecosystems, the pyramid of biomass is often inverted. For instance, the biomass of fishes (consumers) far exceeds that of phytoplankton (producers) because the standing crop of phytoplankton is small but has a high turnover rate.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 12.4 (b)",
+                "description": "Upright pyramid of biomass showing dry weight ($kg\\ m^{-2}$): P = 809, PC = 37, SC = 11, TC = 1.5.",
+                "image_url": null
+              },
+              {
+                "label": "Figure 12.4 (c)",
+                "description": "Inverted pyramid of biomass where a small standing crop of phytoplankton (P = 4) supports a larger standing crop of zooplankton (PC = 21).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:12:12.5:4",
+            "order": 4,
+            "title": "Pyramid of Energy",
+            "content_text": "The pyramid of energy is always upright and can never be inverted. This is because when energy flows from one trophic level to the next, a significant amount of energy is always lost as heat at each step. Each bar in the energy pyramid indicates the amount of energy present at each trophic level in a given time or annually per unit area. Primary producers typically convert only about $1\\%$ of the energy in the sunlight available to them into Net Primary Productivity (NPP).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 12.4 (d)",
+                "description": "An ideal pyramid of energy showing energy levels: Producers (P) = 10,000 J; Primary Consumers (PC) = 1,000 J; Secondary Consumers (SC) = 100 J; and Tertiary Consumers (TC) = 10 J, derived from 1,000,000 J of sunlight.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:12:12.5:5",
+            "order": 5,
+            "title": "Trophic Level as a Functional Level",
+            "content_text": "A trophic level represents a functional level in an ecosystem, not a specific species. A single species may occupy more than one trophic level in the same ecosystem simultaneously depending on its food source. For example, a sparrow is a primary consumer when it eats seeds, fruits, and peas, but it becomes a secondary consumer when it eats insects and worms. Therefore, any calculation of energy content, biomass, or numbers must include all organisms at that specific trophic level to be accurate.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:12:12.5:6",
+            "order": 6,
+            "title": "Limitations and Exceptions of Ecological Pyramids",
+            "content_text": "While most pyramids are upright, there are notable exceptions. In addition to the inverted biomass pyramid in the sea, the pyramid of numbers can also be inverted or spindle-shaped, such as when many insects feed on a single large tree. Furthermore, ecological pyramids have limitations: they do not take into account the same species belonging to two or more trophic levels, they assume a simple food chain (which rarely exists in nature), and they do not accommodate saprophytes (decomposers) even though they play a vital role in the ecosystem.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:12:12.5:7",
+            "order": 7,
+            "title": "Limitations of Ecological Pyramids",
+            "content_text": "There are several significant limitations to the use of ecological pyramids in representing ecosystem dynamics: \n1. Trophic Level Overlap: Ecological pyramids do not account for species that belong to two or more trophic levels simultaneously.\n2. Simple Food Chain Assumption: They assume a simple, linear food chain, which is a condition that almost never exists in nature. Consequently, they do not accommodate the complexities of a food web.\n3. Exclusion of Saprophytes: Saprophytes (decomposers) are not assigned a place in ecological pyramids, despite the fact that they play a vital and indispensable role in the functioning of any ecosystem.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:12:Summary",
+        "number": "Summary",
+        "title": "Chapter Summary",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:12:Summary:1",
+            "order": 1,
+            "title": "Ecosystem Structure and Components",
+            "content_text": "An ecosystem is the structural and functional unit of nature, comprising abiotic (inorganic materials like air, water, and soil) and biotic (producers, consumers, and decomposers) components. The interaction between these components results in a characteristic physical structure defined by species composition and stratification. Every organism occupies a specific place in the ecosystem based on its source of nutrition.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:12:Summary:2",
+            "order": 2,
+            "title": "Productivity and Decomposition",
+            "content_text": "Productivity, decomposition, energy flow, and nutrient cycling are the four important components of an ecosystem. \n- Primary Productivity: The rate of solar energy capture or biomass production by producers. It is divided into Gross Primary Productivity (GPP), the total production of organic matter, and Net Primary Productivity (NPP), which is the biomass remaining after utilization by producers.\n- Secondary Productivity: The rate of assimilation of food energy by consumers.\n- Decomposition: The process where decomposers convert complex organic compounds of detritus into carbon dioxide ($CO_2$), water, and inorganic nutrients. This involves fragmentation of detritus, leaching, and catabolism.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:12:Summary:3",
+            "order": 3,
+            "title": "Energy Flow and Nutrient Cycling",
+            "content_text": "Energy flow in an ecosystem is unidirectional, moving from producers to consumers and then to decomposers. Organisms are connected through food or energy relationships forming food chains. \nNutrient cycling is the storage and movement of nutrient elements through ecosystem components, allowing them to be repeatedly used. It is of two types:\n1. Gaseous Cycles: Reservoirs are in the atmosphere or hydrosphere (e.g., carbon).\n2. Sedimentary Cycles: Reservoirs are in the Earth's crust (e.g., phosphorus).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:12:Summary:4",
+            "order": 4,
+            "title": "Ecosystem Services",
+            "content_text": "Products of ecosystem processes are named as ecosystem services. Examples include the purification of air and water by forests.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:biology:12:12:ex:1",
+          "number": 1,
+          "problem": "Fill in the blanks.\n(a) Plants are called as ________ because they fix carbon dioxide.\n(b) In an ecosystem dominated by trees, the pyramid (of numbers) is ________ type.\n(c) In aquatic ecosystems, the limiting factor for the productivity is ________.\n(d) Common detritivores in our ecosystem are ________.\n(e) The major reservoir of carbon on earth is ________.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:12:ex:2",
+          "number": 2,
+          "problem": "Which one of the following has the largest population in a food chain?\n(a) Producers\n(b) Primary consumers\n(c) Secondary consumers\n(d) Decomposers",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:12:ex:3",
+          "number": 3,
+          "problem": "The second trophic level in a lake is\n(a) Phytoplankton\n(b) Zooplankton\n(c) Benthos\n(d) Fishes",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:12:ex:4",
+          "number": 4,
+          "problem": "Secondary producers are\n(a) Herbivores\n(b) Producers\n(c) Carnivores\n(d) None of the above",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:12:ex:5",
+          "number": 5,
+          "problem": "What is the percentage of photosynthetically active radiation (PAR) in the incident solar radiation?\n(a) 100%\n(b) 50%\n(c) 1-5%\n(d) 2-10%",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:12:ex:6",
+          "number": 6,
+          "problem": "Distinguish between\n(a) Grazing food chain and detritus food chain\n(b) Production and decomposition\n(c) Upright and inverted pyramid\n(d) Food chain and Food web\n(e) Litter and detritus\n(f) Primary and secondary productivity",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:12:ex:7",
+          "number": 7,
+          "problem": "Describe the components of an ecosystem.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:12:ex:8",
+          "number": 8,
+          "problem": "Define ecological pyramids and describe with examples, pyramids of number and biomass.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:12:ex:9",
+          "number": 9,
+          "problem": "What is primary productivity? Give brief description of factors that affect primary productivity.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:12:ex:10",
+          "number": 10,
+          "problem": "Define decomposition and describe the processes and products of decomposition.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:12:ex:11",
+          "number": 11,
+          "problem": "Give an account of energy flow in an ecosystem.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        }
+      ]
+    }
+  }
+}

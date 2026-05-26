@@ -1,0 +1,1409 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_physics_12_ch14.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:physics:12:14",
+  "curriculum": "ncert",
+  "subject": "physics",
+  "grade": 12,
+  "textbook_name": "Physics Part II",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:physics:12:14",
+    "number": 14,
+    "title": "Semiconductor Electronics: Materials, Devices and Simple Circuits",
+    "summary": "This chapter introduces semiconductor electronics, starting with a comparison to vacuum tubes and the advantages of solid-state devices. It classifies materials as metals, insulators, and semiconductors based on conductivity and energy band structure, defining valence and conduction bands, and the energy gap. Silicon and Germanium are introduced as elemental semiconductors. The chapter then delves into intrinsic semiconductors, explaining covalent bonding, the generation and movement of electrons and holes, and the concept of intrinsic carrier concentration (n_i). Extrinsic semiconductors (n-type and p-type) are discussed, highlighting the process of doping with pentavalent or trivalent impurities to increase conductivity. The concept of charge neutrality is also explained. The formation and characteristics of the p-n junction are introduced, including diffusion and drift currents, barrier potential, and depletion region. The semiconductor diode is explained along with its forward and reverse bias characteristics. Finally, the chapter explores the application of a diode as a rectifier, demonstrating half-wave and full-wave rectification, and the use of filter circuits. The key principle is using the diode's unidirectional current flow for AC to DC conversion. The chapter progressively builds from basic material properties to device function, providing the foundation for understanding more complex electronic circuits. The principles learned are vital to the design and use of diodes in rectifiers and other fundamental electronic devices.",
+    "sections": [
+      {
+        "id": "ncert:physics:12:14:14.1",
+        "number": "14.1",
+        "title": "Introduction",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:14:14.1:1",
+            "order": 1,
+            "title": "Vacuum Tu b e s a n d t h e i r Limitations",
+            "content_text": "Before the discovery of the transistor in 1948, electronic devices relied on vacuum tu b e s (also calle d valves). The s e include d the vacuum diode (two electrodes: anode and cathode), triode (three electrodes: cathode, plate, and grid), tetrode, and pentode. In the s e devices, electrons are supplie d by a heate d cathode and the ir flow is controlle d in a vacuum by varying the voltage betwee n electrodes. Vacuum is essential to preven t electrons from losing energy throug h collision s with air molecules. However, vacuum tu b e s are bulky, consume hig h power, operate at hig h voltage s (~100 V), and have limite d life span s and low reliability.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:14.1:2",
+            "order": 2,
+            "title": "Evolution to Solid-State Semiconductor Electronics",
+            "content_text": "The developmen t of modern solid-state semiconductor electronics began in the 1930s. Unlike vacuum tu b e s, semiconductor devices allow the control of the numbe r and direction of charge carrie r flow withi n the solid itsel f. The s e devices are small, consume low power, operate at low voltage s, and offe r hig h reliability and lon g life. Early application s include d the use of galen a (Lea d sulphide, PbS) crystal s as radio wave detectors. Modern electronic s utilize junctio n diodes and bipola r junctio n transistors to buil d com plex circ uits.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:14:14.2",
+        "number": "14.2",
+        "title": "Classificatio n of Metals, Cond uctor s and Semicond uctor s",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:14:14.2:1",
+            "order": 1,
+            "title": "Classificatio n on the Basis of Cond uctivity",
+            "content_text": "Solid s can be broadl y classifie d base d on the ir relative val ue s of electric al cond uctivity ($\\s ig m a$) or resistiv it y ($\\r h o = 1/\\s ig m a$). Metals pos s e s s ver y low resistiv it y and hig h cond uctivity. Semicond uctor s have resistiv it y or cond uctivity inter med iat e betwee n metals and ins ulator s. Ins ulator s pos s e s s ver y hig h resistiv it y and low cond uctivity.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "null",
+                "caption": "Electric al Proper t ie s of Solid s",
+                "headers": [
+                  "Type of Solid",
+                  "Resistiv it y ($\\r h o$) in $\\O m e g a m$",
+                  "Cond uctivity ($\\s ig m a$) in $S m^{-1}$"
+                ],
+                "rows": [
+                  [
+                    "Metals",
+                    "$\\s im 10^{-2} - 10^{-8}$",
+                    "$\\s im 10^2 - 10^8$"
+                  ],
+                  [
+                    "Semicond uctor s",
+                    "$\\s im 10^{-5} - 10^6$",
+                    "$\\s im 10^5 - 10^{-6}$"
+                  ],
+                  [
+                    "Ins ulator s",
+                    "$\\s im 10^{11} - 10^{19}$",
+                    "$\\s im 10^{-11} - 10^{-19}$"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:physics:12:14:14.2:2",
+            "order": 2,
+            "title": "Type s of Semicond uctor s",
+            "content_text": "Semicond uctor s can be categ or i z e d into elemen t al and com p oun d type s. Elemen t al semicond uctor s incl ud e Sil ic o n (Si) and Ger m an i u m (Ge). Com p oun d semicond uctor s incl ud e: (i) Inor g an i c s uc h as Cd S, GaA s, Cd S e, In P; (ii) Or g an i c s uc h as an t h r ac e n e and dop e d p h t h al o c y an i n e s; and (iii) Or g an i c pol y m er s lik e pol y p y r r ol e, pol y an i l i n e, and pol y t h i o p h e n e. Mos t cur r en t device s ar e bas e d on elemen t al Si or Ge and inor g an i c com p oun d s.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:14.2:3",
+            "order": 3,
+            "title": "Ener g y Ban d For m at io n in Solid s",
+            "content_text": "In an is ol at e d at o m, electro n ener g y is deter m i n e d by it s or b i t. However, in a solid, at o m s ar e cl o s e to g e t h e r, cau s i n g out e r electro n or b i t s to over l a p. Th i s mod i f i e s th e electro n mot io n, res ul t i n g in a con t i n u o u s var i at io n of ener g y level s kn o w n as ener g y ban d s. Eac h electro n in a cr y s t al oc c u p i e s a un i q u e pos i t io n and ex p er i e n c e s a di f f e r en t pat t er n of sur r o u n d i n g ch ar g e s, lea d i n g to th e s e s p r ea d-ou t ener g y level s.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:14.2:4",
+            "order": 4,
+            "title": "Val en c e Ban d, Con d uc t io n Ban d, an d Ener g y Gap",
+            "content_text": "Th e ener g y ban d con t ai n i n g val en c e electro n s is th e val en c e ban d. Th e ban d ab o v e it is th e con d uc t io n ban d. In th e ab s e n c e of ex t er n al ener g y, val en c e electro n s rem ai n bo u n d in th e val en c e ban d. If a gap ex i s t s bet w e e n th e s e ban d s, it is cal l e d th e ener g y gap ($E_g$). If electro n s gai n ener g y to cr o s s th i s gap, th e y mov e in t o th e con d uc t io n ban d, bec o m i n g fr e e ch ar g e car r i e r s an d lea v i n g vac an t ener g y level s (vac an c i e s) in th e val en c e ban d.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:14.2:5",
+            "order": 5,
+            "title": "Ener g y Ban d St r uc t u r e of Sil ic o n an d Ger m an i u m",
+            "content_text": "Con s i d e r a cr y s t al of Si ($n=3$) or Ge ($n=4$) wi t h $N$ at o m s. Eac h at o m has 4 val en c e el e c t r o n s ($2s$ an d $2p$), to t al i n g $4N$ val en c e el e c t r o n s in th e cr y s t al. Th e to t al num b e r of av ai l a b l e en e r g y s t a t e s is $8N$ ($2s$ an d $6p$ s t a t e s). At th e at o m i c s p a c i n g in th e cr y s t al l a t t i c e, th e s e $8N$ s t a t e s s p l i t in t o tw o ban d s of $4N$ s t a t e s ea c h, se p a r a t e d by an en e r g y g a p $E_g$. At ab s o l u t e z e r o te m p e r a t u r e, th e lo w e r $4N$ s t a t e s (val e n c e ban d) ar e com p l e t e l y fil l e d by th e $4N$ el e c t r o n s, wh i l e th e up p e r $4N$ s t a t e s (con d u c t i o n ban d) ar e com p l e t e l y em p t y.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:14.2:6",
+            "order": 6,
+            "title": "Energy Levels and the Band Gap",
+            "content_text": "In the energy band diagram, the lowest energy level in the conduction band is denoted as $E_C$, and the highest energy level in the valence band is denoted as $E_V$. Above $E_C$ and below $E_V$, there are a large number of closely spaced energy levels. The energy difference between the top of the valence band and the bottom of the conduction band is defined as the energy band gap ($E_g$). The magnitude of this gap determines the electrical properties of the material. Depending on the size of $E_g$, materials are classified into three cases: metals, insulators, and semiconductors.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 14.1",
+                "description": "The energy band positions in a semiconductor at 0 K. It shows a filled valence band with 4N states below $E_V$ and an empty conduction band with 4N states above $E_C$, separated by an energy gap $E_g$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:14.2:7",
+            "order": 7,
+            "title": "Case I: Metals (Conductors)",
+            "content_text": "This case refers to materials where either the conduction band is partially filled and the valence band is partially empty, or the conduction and valence bands overlap. In the overlapping scenario, as shown in Fig. 14.2(a)(ii), the energy gap $E_g$ is approximately zero. Because of this overlap or partial filling, electrons from the valence band can easily move into the conduction band. This results in a large number of electrons being available for electrical conduction, leading to low resistance and high conductivity.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 14.2(a)",
+                "description": "Energy band diagrams for metals showing (i) a partially filled conduction band and (ii) overlapping conduction and valence bands where $E_g \\approx 0$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:14.2:8",
+            "order": 8,
+            "title": "Case II: Insulators",
+            "content_text": "In insulators, a large energy band gap exists, typically $E_g > 3$ eV. Due to this wide gap, there are no electrons in the conduction band at ordinary temperatures. Thermal excitation is insufficient to move electrons from the valence band across the large gap into the conduction band. Consequently, no electrical conduction is possible in these materials.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 14.2(b)",
+                "description": "Energy band diagram for an insulator showing a large energy gap $E_g > 3$ eV between the valence band and the empty conduction band.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:14.2:9",
+            "order": 9,
+            "title": "Case III: Semiconductors",
+            "content_text": "Semiconductors possess a finite but small energy band gap, typically $E_g < 3$ eV. At room temperature, some electrons in the valence band acquire enough thermal energy to cross the small energy gap and enter the conduction band. Although the number of such electrons is small, they allow for some conduction. Thus, the resistance of semiconductors is intermediate—not as high as insulators but not as low as metals.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 14.2(c)",
+                "description": "Energy band diagram for a semiconductor showing a small energy gap $E_g < 3$ eV between the valence band and the conduction band.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:14:14.3",
+        "number": "14.3",
+        "title": "Intrinsic Semiconductor",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:14:14.3:1",
+            "order": 1,
+            "title": "Crystal Structure and Covalent Bonding",
+            "content_text": "Pure semiconductors like Silicon (Si) and Germanium (Ge) have a diamond-like lattice structure. Each atom is surrounded by four nearest neighbors. Since Si and Ge have four valence electrons, each atom shares one of its valence electrons with each of its four neighbors. These shared electron pairs form covalent bonds. At low temperatures, all these bonds are intact, and no free electrons are available for conduction.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 14.3",
+                "description": "Three-dimensional diamond-like crystal structure for Carbon, Silicon, or Germanium with lattice spacing 'a'.",
+                "image_url": null
+              },
+              {
+                "label": "FIGURE 14.4",
+                "description": "Schematic two-dimensional representation of Si or Ge structure at low temperature showing all covalent bonds intact between +4 charged inner cores.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:14.3:2",
+            "order": 2,
+            "title": "Generation of Free Electrons and Holes",
+            "content_text": "As the temperature increases, thermal energy becomes available to the valence electrons. Some electrons may break away from their covalent bonds, becoming free electrons that contribute to conduction. When an electron leaves a bond, it creates a vacancy called a hole. This hole carries an effective positive charge ($+q$). The hole behaves as an apparent free particle with effective positive charge, representing the absence of an electron in the lattice.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:14.3:3",
+            "order": 3,
+            "title": "Intrinsic Carrier Concentration",
+            "content_text": "In an intrinsic (pure) semiconductor, the number of free electrons ($n_e$) is exactly equal to the number of holes ($n_h$). This common concentration is called the intrinsic carrier concentration, denoted by $n_i$. The relationship is expressed as: $$n_e = n_h = n_i$$ (Eq. 14.1).",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:14.3:4",
+            "order": 4,
+            "title": "Mechanism of Hole Motion",
+            "content_text": "Holes move through the crystal via a process where a valence electron from a neighboring covalent bond (e.g., at site 2) jumps to fill the vacancy (hole) at the original site (site 1). After this jump, the hole effectively moves from site 1 to site 2. It is important to note that hole motion is a convenient way to describe the movement of bound valence electrons. This movement is independent of the motion of free conduction electrons.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 14.5",
+                "description": "(a) Schematic model showing the generation of a hole at site 1 and a free conduction electron due to thermal energy. (b) Simplified representation of hole motion where an electron from site 2 moves to site 1, causing the hole to move from site 1 to site 2.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:14.3:5",
+            "order": 5,
+            "title": "Total Current in Intrinsic Semiconductors",
+            "content_text": "Under the influence of an applied electric field, free electrons move towards the positive potential, creating an electron current ($I_e$). Simultaneously, holes move towards the negative potential, creating a hole current ($I_h$). The total current ($I$) in the semiconductor is the sum of these two components: $$I = I_e + I_h$$ (Eq. 14.2).",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:14.3:6",
+            "order": 6,
+            "title": "Recombination Process",
+            "content_text": "In addition to the generation of electron-hole pairs, a simultaneous process of recombination occurs. Recombination happens when a free electron collides with a hole and falls back into the valence state. At thermal equilibrium, the rate of generation of charge carriers is equal to the rate of recombination.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:14.3:7",
+            "order": 7,
+            "title": "Temperature Dependence of Conductivity",
+            "content_text": "An intrinsic semiconductor behaves like an insulator at $T = 0$ K. At higher temperatures ($T > 0$ K), thermal energy excites some electrons from the valence band to the conduction band. These thermally excited electrons partially occupy the conduction band, while leaving an equal number of vacancies or 'holes' in the valence band. The energy-band diagram reflects this by showing electrons in the conduction band and holes in the valence band at $T > 0$ K.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 14.6",
+                "description": "(a) Energy band diagram of an intrinsic semiconductor at $T = 0$ K where it behaves as an insulator. (b) At $T > 0$ K, showing four thermally generated electron-hole pairs. Filled circles represent electrons and empty circles represent holes.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:14.3:8",
+            "order": 8,
+            "title": "Comparison of Carbon, Silicon, and Germanium",
+            "content_text": "Although Carbon (C), Silicon (Si), and Germanium (Ge) have the same lattice structure, their electrical properties differ significantly due to the energy required to liberate bonding electrons. The bonding electrons for C, Si, and Ge reside in the second, third, and fourth orbits respectively. Consequently, the ionization energy ($E_g$) is highest for C and least for Ge. This makes C an insulator, while Si and Ge are semiconductors.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 14.1",
+                "problem": "C, Si and Ge have same lattice structure. Why is C insulator while Si and Ge intrinsic semiconductors?",
+                "solution": "The 4 bonding electrons of C, Si or Ge lie, respectively, in the second, third and fourth orbit. Hence, energy required to take out an electron from these atoms (i.e., ionisation energy $E_g$) will be least for Ge, followed by Si and highest for C. Hence, number of free electrons for conduction in Ge and Si are significant but negligibly small for C."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:14:14.4",
+        "number": "14.4",
+        "title": "Extrinsic Semiconductor",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:14:14.4:1",
+            "order": 1,
+            "title": "Doping and Dopants",
+            "content_text": "The conductivity of intrinsic semiconductors is very low at room temperature, necessitating improvement for practical electronic devices. This is achieved by adding a small amount (a few parts per million) of suitable impurity atoms to the pure semiconductor, a process called doping. The resulting material is an extrinsic or impurity semiconductor, and the added atoms are dopants. A key condition for doping is that the dopant size must be nearly the same as the semiconductor atoms (Si or Ge) to avoid distorting the lattice.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Dopant Types",
+                "caption": "Types of dopants used for tetravalent Si or Ge",
+                "headers": [
+                  "Type",
+                  "Valency",
+                  "Examples"
+                ],
+                "rows": [
+                  [
+                    "Pentavalent",
+                    "5",
+                    "Arsenic (As), Antimony (Sb), Phosphorous (P)"
+                  ],
+                  [
+                    "Trivalent",
+                    "3",
+                    "Indium (In), Boron (B), Aluminium (Al)"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:physics:12:14:14.4:2",
+            "order": 2,
+            "title": "n-type Semiconductor",
+            "content_text": "When a tetravalent semiconductor (Si or Ge) is doped with a pentavalent impurity (valency 5), four of the impurity's electrons form covalent bonds with neighboring silicon atoms. The fifth electron remains weakly bound to its parent atom. The ionization energy required to free this fifth electron is very small ($\\sim 0.01$ eV for Ge and $0.05$ eV for Si), allowing it to move freely in the lattice even at room temperature. This is much less than the energy required to jump the forbidden band ($\\sim 0.72$ eV for Ge and $1.1$ eV for Si). Because the impurity 'donates' an electron, it is called a donor impurity. In n-type semiconductors, electrons are the majority carriers and holes are the minority carriers, such that $n_e \\gg n_h$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 14.7",
+                "description": "(a) Pentavalent donor atom (As, Sb, P, etc.) doped for tetravalent Si or Ge giving n-type semiconductor. (b) Schematic representation showing fixed cores of substituent donors with one additional effective positive charge and its associated extra electron.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:14.4:3",
+            "order": 3,
+            "title": "p-type Semiconductor",
+            "content_text": "A p-type semiconductor is created by doping Si or Ge with a trivalent impurity (valency 3). The impurity atom has only three valence electrons to form bonds with four neighboring Si atoms, leaving one bond with a vacancy or 'hole'. An electron from a neighboring atom can jump to fill this vacancy, creating a new hole at its original site. Thus, the hole is available for conduction. The trivalent atom becomes effectively negatively charged and is called an acceptor impurity. In p-type semiconductors, holes are the majority carriers and electrons are the minority carriers, such that $n_h \\gg n_e$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 14.8",
+                "description": "(a) Trivalent acceptor atom (In, Al, B etc.) doped in tetravalent Si or Ge lattice giving p-type semiconductor. (b) Schematic representation showing the fixed core of the substituent acceptor with one effective additional negative charge and its associated hole.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:14.4:4",
+            "order": 4,
+            "title": "Charge Neutrality and Carrier Concentration",
+            "content_text": "Despite the abundance of one type of charge carrier, the extrinsic semiconductor crystal maintains overall charge neutrality. The charge of the additional majority carriers is exactly balanced by the opposite charge of the ionized impurity cores in the lattice. In n-type materials, $n_e \\gg n_h$, and in p-type materials, $n_h \\gg n_e$. The presence of a large number of majority carriers increases the recombination rate, which further reduces the concentration of minority carriers compared to their intrinsic levels.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:14.4:5",
+            "order": 5,
+            "title": "Energy Band Structure of Extrinsic Semiconductors",
+            "content_text": "Doping introduces additional energy states within the forbidden gap. In n-type semiconductors, a donor energy level $E_D$ exists slightly below the bottom of the conduction band $E_C$. Electrons from this level can easily move into the conduction band with minimal energy. At room temperature, most donor atoms are ionized. Similarly, in p-type semiconductors, an acceptor energy level $E_A$ is created slightly above the top of the valence band $E_V$. In p-type semiconductors, an acceptor energy level $E_A$ is created slightly above the top $E_V$ of the valence band. With a very small supply of energy, an electron from the valence band can jump to the level $E_A$ and ionize the acceptor negatively. Alternatively, this can be viewed as a hole from level $E_A$ sinking down into the valence band. Electrons rise up and holes fall down when they gain external energy. At room temperature, most of the acceptor atoms are ionized, leaving holes in the valence band. Thus, at room temperature, the density of holes in the valence band is predominantly due to impurity in the extrinsic semiconductor. The electron and hole concentration in a semiconductor in thermal equilibrium is given by the mass action law: $$n_e n_h = n_i^2$$",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 14.9",
+                "description": "Energy bands of (a) n-type semiconductor at $T > 0K$ showing the donor energy level $E_D$ slightly below the conduction band $E_C$, and (b) p-type semiconductor at $T > 0K$ showing the acceptor energy level $E_A$ slightly above the valence band $E_V$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:14.4:6",
+            "order": 6,
+            "title": "Energy Gaps in Group IV Elements",
+            "content_text": "The difference in the resistivity of Group IV elements like Carbon (C), Silicon (Si), and Germanium (Ge) depends upon the energy gap between their conduction and valence bands. For C (in the form of diamond), Si, and Ge, the energy gaps ($E_g$) are 5.4 eV, 1.1 eV, and 0.7 eV, respectively. Tin (Sn) is also a group IV element, but it behaves as a metal because its energy gap is 0 eV.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:14.4:7",
+            "order": 7,
+            "title": "Example 14.2: Carrier Concentration in Doped Silicon",
+            "content_text": "This example demonstrates the calculation of electron and hole concentrations in a doped silicon crystal using the mass action law. It highlights that in heavily doped semiconductors, the majority carrier concentration is approximately equal to the dopant concentration, while the minority carrier concentration is significantly reduced.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 14.2",
+                "problem": "Suppose a pure Si crystal has $5 \\times 10^{28}$ atoms m$^{-3}$. It is doped by 1 ppm concentration of pentavalent As. Calculate the number of electrons and holes. Given that $n_i = 1.5 \\times 10^{16}$ m$^{-3}$.",
+                "solution": "Note that thermally generated electrons ($n_i \\sim 10^{16}$ m$^{-3}$) are negligibly small as compared to those produced by doping. The doping concentration $N_D$ is 1 ppm of $5 \\times 10^{28}$, which is $5 \\times 10^{22}$ m$^{-3}$. Therefore, $n_e \\approx N_D = 5 \\times 10^{22}$ m$^{-3}$. Since $n_e n_h = n_i^2$, the number of holes is: $n_h = (1.5 \\times 10^{16})^2 / (5 \\times 10^{22}) = (2.25 \\times 10^{32}) / (5 \\times 10^{22}) \\sim 4.5 \\times 10^9$ m$^{-3}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:14:14.5",
+        "number": "14.5",
+        "title": "p-n Junction",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:14:14.5:1",
+            "order": 1,
+            "title": "Introduction to p-n Junctions",
+            "content_text": "A p-n junction is the basic building block of many semiconductor devices like diodes and transistors. Understanding junction behavior is essential for analyzing the working of other semiconductor devices. A junction is formed when a p-type region and an n-type region are created within a single semiconductor wafer, resulting in a metallurgical junction between the two regions. The behavior of the junction under an external applied voltage is called bias.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 14.10",
+                "description": "Schematic of the p-n junction formation process. It shows the p-region and n-region, the diffusion of holes from p to n, the diffusion of electrons from n to p, the resulting depletion region containing immobile ionized donors and acceptors, and the drift of charge carriers due to the internal electric field.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:14.5:2",
+            "order": 2,
+            "title": "p-n Junction Formation: Diffusion and Drift",
+            "content_text": "Two important processes occur during the formation of a p-n junction: diffusion and drift. Due to the concentration gradient, holes diffuse from the p-side to the n-side ($p \\rightarrow n$) and electrons diffuse from the n-side to the p-side ($n \\rightarrow p$). This motion gives rise to a diffusion current. As electrons diffuse from $n \\rightarrow p$, they leave behind immobile ionized donors (positive charge) on the n-side. Similarly, holes diffusing from $p \\rightarrow n$ leave behind immobile ionized acceptors (negative charge) on the p-side. This creates a space-charge region on either side of the junction known as the depletion region, which is depleted of free charges and has a thickness of about one-tenth of a micrometre. An electric field directed from the n-side to the p-side develops, causing electrons on the p-side to move to the n-side and holes on the n-side to move to the p-side. This motion due to the electric field is called drift, creating a drift current opposite in direction to the diffusion current.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:14.5:3",
+            "order": 3,
+            "title": "Equilibrium and Barrier Potential",
+            "content_text": "Initially, diffusion current is large and drift current is small. As the process continues, the space-charge regions extend, increasing the electric field strength and the drift current until the diffusion current equals the drift current. At this equilibrium, there is no net current. The loss of electrons from the n-region and gain by the p-region causes a potential difference across the junction. The n-material becomes positive relative to the p-material. This potential opposes the further flow of majority carriers and is called the barrier potential ($V_0$).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 14.11",
+                "description": "(a) A p-n junction diode under equilibrium ($V = 0$) showing the depletion width $W$ and internal electric field $E$. (b) The barrier potential $V_0$ profile across the junction under no bias.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:14.5:4",
+            "order": 4,
+            "title": "Example 14.3: Physical Constraints in Junction Formation",
+            "content_text": "This example explains why a p-n junction cannot be created by simply pressing two separate semiconductor slabs together. The atomic-level contact required for carrier flow is prevented by surface roughness.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 14.3",
+                "problem": "Can we take one slab of p-type semiconductor and physically join it to another n-type semiconductor to get p-n junction?",
+                "solution": "No! Any slab, howsoever flat, will have roughness much larger than the inter-atomic crystal spacing (~2 to 3 $\\text{\\AA}$) and hence continuous contact at the atomic level will not be possible. The junction will behave as a discontinuity for the flowing charge carriers."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:14:14.6",
+        "number": "14.6",
+        "title": "Semiconductor Diode",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:14:14.6:1",
+            "order": 1,
+            "title": "Semiconductor Diode: Definition and Symbol",
+            "content_text": "A semiconductor diode is essentially a p-n junction with metallic contacts provided at the ends for the application of an external voltage. It is a two-terminal device. It is symbolically represented by an arrow pointing from the p-side to the n-side, indicating the conventional direction of current under forward bias. The equilibrium barrier potential can be altered by applying an external voltage $V$ across the diode.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 14.12",
+                "description": "(a) Physical structure of a semiconductor diode showing p and n regions, the depletion region, and metallic contacts. (b) The standard circuit symbol for a p-n junction diode.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:14.6:2",
+            "order": 2,
+            "title": "p-n Junction Diode under Forward Bias",
+            "content_text": "When an external voltage $V$ is applied across a semiconductor diode such that the p-side is connected to the positive terminal of the battery and the n-side to the negative terminal, it is said to be forward biased. The applied voltage mostly drops across the depletion region because its resistance is very high compared to the resistance of the n-side and p-side regions, which contain many free charges. The direction of the applied voltage ($V$) is opposite to the The applied voltage $V$ in a forward-biased diode is directed opposite to the built-in potential $V_0$. This opposition causes the depletion layer width to decrease and reduces the effective barrier height to $(V_0 - V)$. When the applied voltage is low, only a few high-energy carriers can cross the junction, resulting in a small current. Increasing the voltage further lowers the barrier, allowing more carriers to cross and significantly increasing the current flow.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 14.13",
+                "description": "(a) p-n junction diode under forward bias, (b) Barrier potential (1) without battery, (2) Low battery voltage, and (3) High voltage battery.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:14.6:3",
+            "order": 3,
+            "title": "Minority Carrier Injection and Forward Current",
+            "content_text": "Under forward bias, electrons from the n-side and holes from the p-side cross the junction, becoming minority carriers in the p-side and n-side respectively. This process, known as minority carrier injection, creates a concentration gradient that drives these carriers to diffuse away from the junction. The total forward current is the sum of the hole and electron diffusion currents, typically measured in milliamperes (mA). While drift current exists under forward bias, it is negligible compared to the current from injected carriers.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 14.14",
+                "description": "Forward bias minority carrier injection showing injected electrons and holes diffusing away from the junction boundary.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:14.6:4",
+            "order": 4,
+            "title": "p-n Junction Diode under Reverse Bias",
+            "content_text": "In a reverse-biased p-n junction, the n-side is connected to the positive terminal and the p-side to the negative terminal. The applied voltage $V$ aligns with the direction of the barrier potential, which increases the effective barrier height to $(V_0 + V)$ and widens the depletion region. This increased barrier suppresses the diffusion of majority carriers, causing the diffusion current to drop significantly compared to the forward-biased state.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 14.15",
+                "description": "(a) Diode under reverse bias, (b) Barrier potential under reverse bias showing the increased barrier height.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:14.6:5",
+            "order": 5,
+            "title": "Drift Current and Reverse Saturation Current",
+            "content_text": "The junction's electric field sweeps minority carriers (electrons from the p-side and holes from the n-side) across the junction, creating a drift current. This current is very small, typically in the microampere ($\\mu A$) range, because it depends on the low concentration of minority carriers. The reverse current is largely independent of the applied voltage because even a small bias is enough to sweep all available minority carriers across the junction, leading to a reverse saturation current.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:14.6:6",
+            "order": 6,
+            "title": "Junction Breakdown",
+            "content_text": "When the reverse bias reaches a critical threshold called the breakdown voltage ($V_{br}$), the reverse current increases sharply. If this current is not limited by an external circuit, the resulting heat can destroy the p-n junction. This risk of destruction due to overheating also exists in forward bias if the current exceeds the diode's rated value.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:14.6:7",
+            "order": 7,
+            "title": "Experimental Study of V-I Characteristics",
+            "content_text": "The V-I characteristics of a diode describe the relationship between the applied voltage and the resulting current. The experimental setup uses a potentiometer to vary the voltage. A milliammeter is used for forward bias measurements due to the higher current levels, while a microammeter is required for reverse bias measurements. The resulting data is plotted to visualize the diode's behavior in both biasing conditions.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 14.16",
+                "description": "Experimental circuit arrangement for studying V-I characteristics of a p-n junction diode in (a) forward bias and (b) reverse bias, along with (c) Typical V-I characteristics of a silicon diode.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:14.6:8",
+            "order": 8,
+            "title": "Analysis of V-I Characteristics",
+            "content_text": "In forward bias, the current remains negligible until the voltage reaches the threshold or cut-in voltage (approximately $0.2$ V for germanium and $0.7$ V for silicon), after which it increases exponentially. In reverse bias, the current is very small and stays nearly constant as the reverse saturation current until the breakdown voltage is reached, where it spikes suddenly. General-purpose diodes are typically not operated beyond the reverse saturation region.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:14.6:9",
+            "order": 9,
+            "title": "Dynamic Resistance",
+            "content_text": "Because the V-I relationship of a diode is non-linear, its resistance is not constant. Dynamic resistance ($r_d$) is used to describe the resistance at a specific operating point and is defined as the ratio of a small change in voltage ($\\Delta V$) to the corresponding small change in current ($\\Delta I$): $r_d = \\frac{\\Delta V}{\\Delta I}$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:14.6:10",
+            "order": 10,
+            "title": "Worked Example 14.4",
+            "content_text": "This example demonstrates how to calculate the resistance of a silicon diode from its V-I characteristic graph in both forward and reverse bias regions.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 14.4",
+                "problem": "The V-I characteristic of a silicon diode is shown in Fig. 14.17. Calculate the resistance of the diode at (a) $I_D = 15$ mA and (b) $V_D = -10$ V.",
+                "solution": "(a) For forward bias, we consider the characteristic as a straight line between $I = 10$ mA and $I = 20$ mA. From the curve, at $I = 20$ mA, $V = 0.8$ V; at $I = 10$ mA, $V = 0.7$ V. Thus, $\\Delta V = 0.8 - 0.7 = 0.1$ V and $\\Delta I = 20 - 10 = 10$ mA. The dynamic resistance is $r_{fb} = \\frac{\\Delta V}{\\Delta I} = \\frac{0.1 \\text{ V}}{10 \\text{ mA}} = 10 \\text{ } \\Omega$. (b) For reverse bias, at $V = -10$ V, the current is $I = -1 \\text{ } \\mu A$. The reverse resistance is $r_{rb} = \\frac{V}{I} = \\frac{10 \\text{ V}}{1 \\text{ } \\mu A} = 1.0 \\times 10^7 \\text{ } \\Omega$."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Figure 14.17",
+                "description": "V-I characteristic graph of a silicon diode used for calculation in Example 14.4.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:14:14.7",
+        "number": "14.7",
+        "title": "Application of Junction Diode as a Rectifier",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:14:14.7:1",
+            "order": 1,
+            "title": "Principle of Rectification and Half-wave Rectifier",
+            "content_text": "The $V-I$ characteristic of a junction diode indicates that it allows current to pass only when it is forward biased. This property is utilized to rectify alternating voltages, a process where an AC voltage is converted into a unidirectional (DC) voltage. A circuit designed for this purpose is called a rectifier. In a half-wave rectifier circuit, an alternating voltage is applied across a diode in series with a load resistor $R_L$. The secondary of a transformer provides the desired AC voltage. During the positive half-cycle of the AC input, terminal A is positive, the diode is forward biased, and it conducts current. During the negative half-cycle, terminal A is negative, the diode is reverse-biased, and it does not conduct. The reverse saturation current is negligible and considered zero for practical purposes. To prevent damage, the diode's reverse breakdown voltage must be higher than the peak AC voltage at the transformer's secondary. Consequently, output voltage appears across $R_L$ only during the positive half-cycles, resulting in a pulsating, unidirectional output.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 14.18",
+                "description": "(a) A half-wave rectifier circuit diagram showing a transformer connected to a single diode and a load resistor $R_L$. (b) Waveforms showing the sinusoidal input AC voltage and the corresponding output voltage pulses across $R_L$ which occur only during the positive half-cycles of the input.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:14.7:2",
+            "order": 2,
+            "title": "Full-wave Rectifier",
+            "content_text": "A full-wave rectifier circuit provides rectified output for both the positive and negative half-cycles of the AC input, making it more efficient than a half-wave rectifier. This circuit typically uses two diodes, $D_1$ and $D_2$, and a centre-tap transformer. The p-sides of the diodes are connected to the ends of the transformer secondary, while the n-sides are connected together. The output is taken between this common junction and the centre tap of the transformer. During the positive half-cycle, terminal A is positive relative to the centre tap, forward biasing $D_1$ while $D_2$ is reverse biased. During the negative half-cycle, terminal B becomes positive relative to the centre tap, forward biasing $D_2$ while $D_1$ is reverse biased. In both cases, current flows through the load resistor $R_L$ in the same direction. Note that an alternative full-wave rectifier design exists (bridge rectifier) that uses four diodes and does not require a centre-tap transformer.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 14.19",
+                "description": "(a) A full-wave rectifier circuit using a centre-tap transformer and two diodes $D_1$ and $D_2$. (b) Input waveforms at terminals A and B showing they are out of phase. (c) The resulting output waveform across the load $R_L$, showing rectified pulses for every half-cycle of the input AC.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:14.7:3",
+            "order": 3,
+            "title": "Filter Circuits and the Capacitor Filter",
+            "content_text": "The output from a rectifier is a series of pulses (half sinusoids) which, while unidirectional, do not have a steady value. To obtain steady DC output, filter circuits are employed to remove the AC ripple. This is commonly achieved by connecting a capacitor in parallel with the load $R_L$ or an inductor in series. In a capacitor filter, the capacitor charges to the peak voltage of the rectified output when the voltage is rising. If there is no load, it remains charged. With a load $R_L$, the capacitor discharges through it when the rectified voltage begins to fall. The rate of this voltage drop depends inversely on the time constant, defined as the product of capacitance $C$ and resistance $R_L$ ($RC$). By using a large capacitor to ensure a large time constant, the output voltage is maintained near the peak voltage, resulting in a purer DC voltage suitable for power supplies.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 14.20",
+                "description": "(a) Circuit diagram of a full-wave rectifier followed by a capacitor filter (capacitor $C$ in parallel with load $R_L$). (b) Waveforms comparing the input AC, the pulsating rectified output (dotted line), and the filtered DC output (solid line) which shows significantly reduced ripple and stays near the peak voltage.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:14:Summary",
+        "number": "Summary",
+        "title": "Summary of Semiconductor Physics",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:14:Summary:1",
+            "order": 1,
+            "title": "Classification and Materials",
+            "content_text": "Semiconductors are the fundamental materials for modern solid-state electronic devices like diodes, transistors, and integrated circuits (ICs). The classification of a material as an insulator, metal, or semiconductor depends on its lattice and atomic structure. Metals possess low resistivity ($10^{-2}$ to $10^{-8} \\Omega m$), insulators have very high resistivity ($>10^8 \\Omega m$), and semiconductors have intermediate values. Semiconductors can be elemental (such as Silicon and Germanium) or compound (such as Gallium Arsenide and Cadmium Sulfide).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:Summary:2",
+            "order": 2,
+            "title": "Intrinsic and Extrinsic Semiconductors",
+            "content_text": "Pure semiconductors are 'intrinsic,' where charge carriers (electrons and holes) are generated by thermal excitation, resulting in an equal number of electrons ($n_e$) and holes ($n_h$). Holes act as electron vacancies with an effective positive charge. The carrier concentration can be altered by 'doping' with impurities to create extrinsic semiconductors. In n-type semiconductors, doping with pentavalent atoms (donors like As, Sb, P) makes $n_e \\gg n_h$. In p-type semiconductors, doping with trivalent atoms (acceptors like B, Al, In) makes $n_h \\gg n_e$. In all cases, the relation $n_e n_h = n_i^2$ holds, and the material maintains overall charge neutrality.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:Summary:3",
+            "order": 3,
+            "title": "Energy Band Theory",
+            "content_text": "Electrons in a solid occupy two distinct energy bands: the lower-energy valence band and the higher-energy conduction band. Valence band levels are typically filled, while conduction band levels may be empty or partially filled. Electrons in the conduction band are free to move and contribute to electrical conductivity. The degree of conductivity is determined by the energy gap ($E_g$) between the top of the valence band ($E_v$) and the bottom of the conduction band ($E_c$).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:Summary:4",
+            "order": 4,
+            "title": "Energy Band Transitions and Conductivity",
+            "content_text": "External energy in the form of heat, light, or electrical energy can be supplied to electrons to move them to the conduction band, thereby producing a change in the current flowing through a semiconductor.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:Summary:5",
+            "order": 5,
+            "title": "Energy Gap Comparison",
+            "content_text": "The energy band gap ($E_g$) varies significantly between different classes of materials. For insulators, $E_g > 3$ eV. For semiconductors, $E_g$ typically ranges from $0.2$ eV to $3$ eV. In the case of metals, the energy gap is effectively zero ($E_g \\approx 0$).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:Summary:6",
+            "order": 6,
+            "title": "p-n Junction and Depletion Layer",
+            "content_text": "The p-n junction is the fundamental building block of semiconductor devices. When a junction is formed, a 'depletion layer' is created. This layer consists of immobile ion-cores that are devoid of their free electrons or holes. The presence of these immobile charges is responsible for the formation of a junction potential barrier.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:Summary:7",
+            "order": 7,
+            "title": "Biasing and Junction Barrier",
+            "content_text": "The junction potential barrier can be modified by applying an external voltage. In forward bias, where the n-side is connected to the negative terminal and the p-side to the positive terminal of a battery, the barrier height is decreased, resulting in a significant current flow (measured in mA). Conversely, in reverse bias, the barrier height increases, and the resulting current is extremely small (measured in $\\mu$A).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:Summary:8",
+            "order": 8,
+            "title": "Rectification",
+            "content_text": "Semiconductor diodes can be utilized to rectify an AC voltage, effectively restricting the voltage to a single direction. By incorporating a capacitor or an appropriate filter circuit, a steady DC voltage can be derived from the rectified AC signal.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:14:Points to Ponder",
+        "number": "Points to Ponder",
+        "title": "Points to Ponder",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:14:Points to Ponder:1",
+            "order": 1,
+            "title": "Delocalisation of Energy Bands",
+            "content_text": "Energy bands ($E_c$ or $E_v$) in semiconductors are space delocalised, meaning they are not confined to specific locations within the solid. The energy values represented are overall averages. In graphical representations where $E_c$ or $E_v$ are shown as straight lines, they should be interpreted as the bottom of the conduction band energy levels and the top of the valence band energy levels, respectively.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:Points to Ponder:2",
+            "order": 2,
+            "title": "Defects and Stoichiometry in Semiconductors",
+            "content_text": "In elemental semiconductors like Silicon (Si) or Germanium (Ge), n-type or p-type characteristics are achieved by introducing 'dopants' which act as defects. In compound semiconductors, the semiconductor type can also be altered by changing the relative stoichiometric ratio. For instance, while ideal Gallium Arsenide (GaAs) has a 1:1 ratio, Ga-rich GaAs might be represented as $Ga_{1.1} As_{0.9}$ and As-rich GaAs as $Ga_{0.9} As_{1.1}$. Generally, the presence of such defects is a primary factor in controlling the electronic properties of semiconductors.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:14:Appendix",
+        "number": "Appendix",
+        "title": "Appendices",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:14:Appendix:1",
+            "order": 1,
+            "title": "Appendix A 1: The Greek Alphabet",
+            "content_text": "The Greek alphabet is extensively used in physics to represent various physical quantities, constants, and variables. This appendix provides a reference for both uppercase and lowercase Greek letters. The following table lists the names and symbols of the Greek alphabet:",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Appendix A 1",
+                "caption": "The Greek Alphabet",
+                "headers": [
+                  "Name",
+                  "Capital",
+                  "Small",
+                  "Name",
+                  "Capital",
+                  "Small",
+                  "Name",
+                  "Capital",
+                  "Small"
+                ],
+                "rows": [
+                  [
+                    "Alpha",
+                    "A",
+                    "$\\alpha$",
+                    "Iota",
+                    "I",
+                    "$\\iota$",
+                    "Rho",
+                    "P",
+                    "$\\rho$"
+                  ],
+                  [
+                    "Beta",
+                    "B",
+                    "$\\beta$",
+                    "Kappa",
+                    "K",
+                    "$\\kappa$",
+                    "Sigma",
+                    "$\\Sigma$",
+                    "$\\sigma$"
+                  ],
+                  [
+                    "Gamma",
+                    "$\\Gamma$",
+                    "$\\gamma$",
+                    "Lambda",
+                    "$\\Lambda$",
+                    "$\\lambda$",
+                    "Tau",
+                    "T",
+                    "$\\tau$"
+                  ],
+                  [
+                    "Delta",
+                    "$\\Delta$",
+                    "$\\delta$",
+                    "Mu",
+                    "M",
+                    "$\\mu$",
+                    "Upsilon",
+                    "Y",
+                    "$\\upsilon$"
+                  ],
+                  [
+                    "Epsilon",
+                    "E",
+                    "$\\epsilon$",
+                    "Nu",
+                    "N",
+                    "$\\nu$",
+                    "Phi",
+                    "$\\Phi$",
+                    "$\\phi, \\varphi$"
+                  ],
+                  [
+                    "Zeta",
+                    "Z",
+                    "$\\zeta$",
+                    "Xi",
+                    "$\\Xi$",
+                    "$\\xi$",
+                    "Chi",
+                    "X",
+                    "$\\chi$"
+                  ],
+                  [
+                    "Eta",
+                    "H",
+                    "$\\eta$",
+                    "Omicron",
+                    "O",
+                    "o",
+                    "Psi",
+                    "$\\Psi$",
+                    "$\\psi$"
+                  ],
+                  [
+                    "Theta",
+                    "$\\Theta$",
+                    "$\\theta$",
+                    "Pi",
+                    "$\\Pi$",
+                    "$\\pi$",
+                    "Omega",
+                    "$\\Omega$",
+                    "$\\omega$"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:physics:12:14:Appendix:2",
+            "order": 2,
+            "title": "Appendix A 2: Common SI Prefixes",
+            "content_text": "SI prefixes are used to form decimal multiples and sub-multiples of SI units. This appendix lists the factors, prefixes, and symbols for both multiples (positive powers of 10) and sub-multiples (negative powers of 10).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Appendix A 2",
+                "caption": "Common SI Prefixes and Symbols for Multiples and Sub-multiples",
+                "headers": [
+                  "Factor",
+                  "Prefix",
+                  "Symbol",
+                  "Factor",
+                  "Prefix",
+                  "Symbol"
+                ],
+                "rows": [
+                  [
+                    "$10^{18}$",
+                    "Exa",
+                    "E",
+                    "$10^{-18}$",
+                    "atto",
+                    "a"
+                  ],
+                  [
+                    "$10^{15}$",
+                    "Peta",
+                    "P",
+                    "$10^{-15}$",
+                    "femto",
+                    "f"
+                  ],
+                  [
+                    "$10^{12}$",
+                    "Tera",
+                    "T",
+                    "$10^{-12}$",
+                    "pico",
+                    "p"
+                  ],
+                  [
+                    "$10^9$",
+                    "Giga",
+                    "G",
+                    "$10^{-9}$",
+                    "nano",
+                    "n"
+                  ],
+                  [
+                    "$10^6$",
+                    "Mega",
+                    "M",
+                    "$10^{-6}$",
+                    "micro",
+                    "$\\mu$"
+                  ],
+                  [
+                    "$10^3$",
+                    "kilo",
+                    "k",
+                    "$10^{-3}$",
+                    "milli",
+                    "m"
+                  ],
+                  [
+                    "$10^2$",
+                    "Hecto",
+                    "h",
+                    "$10^{-2}$",
+                    "centi",
+                    "c"
+                  ],
+                  [
+                    "$10^1$",
+                    "Deca",
+                    "da",
+                    "$10^{-1}$",
+                    "deci",
+                    "d"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:physics:12:14:Appendix:3",
+            "order": 3,
+            "title": "Appendix A 3: Some Important Constants",
+            "content_text": "This appendix lists fundamental physical constants used across various branches of physics, including the speed of light, electron charge, and Planck's constant. These values are essential for numerical calculations in physics.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Appendix A 3",
+                "caption": "Some Important Constants",
+                "headers": [
+                  "Name",
+                  "Symbol",
+                  "Value"
+                ],
+                "rows": [
+                  [
+                    "Speed of light in vacuum",
+                    "$c$",
+                    "$2.9979 \\times 10^8$ m s$^{-1}$"
+                  ],
+                  [
+                    "Charge of electron",
+                    "$e$",
+                    "$1.602 \\times 10^{-19}$ C"
+                  ],
+                  [
+                    "Gravitational constant",
+                    "$G$",
+                    "$6.673 \\times 10^{-11}$ N m$^2$ kg$^{-2}$"
+                  ],
+                  [
+                    "Planck constant",
+                    "$h$",
+                    "$6.626 \\times 10^{-34}$ J s"
+                  ],
+                  [
+                    "Boltzmann constant",
+                    "$k$",
+                    "$1.381 \\times 10^{-23}$ J K$^{-1}$"
+                  ],
+                  [
+                    "Avogadro number",
+                    "$N_A$",
+                    "$6.022 \\times 10^{23}$ mol$^{-1}$"
+                  ],
+                  [
+                    "Universal gas constant",
+                    "$R$",
+                    "$8.314$ J mol$^{-1}$ K$^{-1}$"
+                  ],
+                  [
+                    "Mass of electron",
+                    "$m_e$",
+                    "$9.110 \\times 10^{-31}$ kg"
+                  ],
+                  [
+                    "Mass of neutron",
+                    "$m_n$",
+                    "$1.675 \\times 10^{-27}$ kg"
+                  ],
+                  [
+                    "Mass of proton",
+                    "$m_p$",
+                    "$1.673 \\times 10^{-27}$ kg"
+                  ],
+                  [
+                    "Electron-charge to mass ratio",
+                    "$e/m_e$",
+                    "$1.759 \\times 10^{11}$ C/kg"
+                  ],
+                  [
+                    "Faraday constant",
+                    "$F$",
+                    "$9.648 \\times 10^4$ C/mol"
+                  ],
+                  [
+                    "Rydberg constant",
+                    "$R$",
+                    "$1.097 \\times 10^7$ m$^{-1}$"
+                  ],
+                  [
+                    "Bohr radius",
+                    "$a_0$",
+                    "$5.292 \\times 10^{-11}$ m"
+                  ],
+                  [
+                    "Stefan-Boltzmann constant",
+                    "$\\sigma$",
+                    "$5.670 \\times 10^{-8}$ W m$^{-2}$ K$^{-4}$"
+                  ],
+                  [
+                    "Wien's Constant",
+                    "$b$",
+                    "$2.898 \\times 10^{-3}$ m K"
+                  ],
+                  [
+                    "Permittivity of free space",
+                    "$\\epsilon_0$",
+                    "$8.854 \\times 10^{-12}$ C$^2$ N$^{-1}$ m$^{-2}$"
+                  ],
+                  [
+                    "",
+                    "1/4$\\pi \\epsilon_0$",
+                    "$8.987 \\times 10^9$ N m$^2$ C$^{-2}$"
+                  ],
+                  [
+                    "Permeability of free space",
+                    "$\\mu_0$",
+                    "$4\\pi \\times 10^{-7}$ T m A$^{-1} \\cong 1.257 \\times 10^{-6}$ Wb A$^{-1}$ m$^{-1}$"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:physics:12:14:Appendix:4",
+            "order": 4,
+            "title": "Other Useful Constants",
+            "content_text": "This table provides additional constants and conversion factors frequently used in physics problems, such as the mechanical equivalent of heat and standard atmospheric pressure.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "null",
+                "caption": "Other Useful Constants",
+                "headers": [
+                  "Name",
+                  "Symbol",
+                  "Value"
+                ],
+                "rows": [
+                  [
+                    "Mechanical equivalent of heat",
+                    "$J$",
+                    "$4.186$ J cal$^{-1}$"
+                  ],
+                  [
+                    "Standard atmospheric pressure",
+                    "1 atm",
+                    "$1.013 \\times 10^5$ Pa"
+                  ],
+                  [
+                    "Absolute zero",
+                    "0 K",
+                    "$-273.15$ $^\\circ$C"
+                  ],
+                  [
+                    "Electron volt",
+                    "1 eV",
+                    "$1.602 \\times 10^{-19}$ J"
+                  ],
+                  [
+                    "Unified Atomic mass unit",
+                    "1 u",
+                    "$1.661 \\times 10^{-27}$ kg"
+                  ],
+                  [
+                    "Electron rest energy",
+                    "$mc^2$",
+                    "$0.511$ MeV"
+                  ],
+                  [
+                    "Energy equivalent of 1 u",
+                    "1 u $c^2$",
+                    "$931.5$ MeV"
+                  ],
+                  [
+                    "Volume of ideal gas ($0^\\circ$C and 1 atm)",
+                    "$V$",
+                    "$22.4$ L mol$^{-1}$"
+                  ],
+                  [
+                    "Acceleration due to gravity (sea level, at equator)",
+                    "$g$",
+                    "$9.78049$ m s$^{-2}$"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:14:Answers",
+        "number": "Answers",
+        "title": "Answers",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:14:Answers:1",
+            "order": 1,
+            "title": "Chapter 9: Ray Optics and Optical Instruments",
+            "content_text": "This section provides the solutions and numerical answers for the exercises in Chapter 9. 9.1: $v = -54$ cm. The image is real, inverted and magnified. The size of the image is $5.0$ cm. As $u \\to f$, $v \\to \\infty$; for $u < f$, image is virtual. 9.2: $v = 6.7$ cm. Magnification $= 5/9$, i.e., the size of the image is $2.5$ cm. As $u \\to \\infty$; $v \\to f$ (but never beyond) while $m \\to 0$. 9.3: $1.33$; $1.7$ cm. 9.4: $n_{ga} = 1.51$; $n_{wa} = 1.32$; $n_{gw} = 1.144$; which gives $\\sin r = 0.6181$ i.e., $r \\simeq 38^\\circ$. 9.5: $r = 0.8 \\times \\tan i_c$ and $\\sin i_c = 1/1.33 \\cong 0.75$, where $r$ is the radius (in m) of the largest circle from which light comes out and $i_c$ is the critical angle for water-air interface, Area $= 2.6$ m$^2$. 9.6: $n \\cong 1.53$ and $D_m$ for prism in water $\\cong 10^\\circ$. 9.7: $R = 22$ cm. 9.8: Here the object is virtual and the image is real. $u = +12$ cm (object on right; virtual). (a) $f = +20$ cm. Image is real and at $7.5$ cm from the lens on its right side. (b) $f = -16$ cm. Image is real and at $48$ cm from the lens on its right side. 9.9: $v = 8.4$ cm, image is erect and virtual. It is diminished to a size $1.8$ cm. As $u \\to \\infty$, $v \\to f$ (but never beyond $f$ while $m \\to 0$). Note that when the object is placed at the focus of the concave lens ($21$ cm), the image is located at $10.5$ cm (not at infinity as one might wrongly think). 9.10: A diverging lens of focal length $60$ cm. 9.11: (a) $v_e = -25$ cm and $f_e = 6.25$ cm give $u_e = -5$ cm; $v_o = (15 - 5)$ cm $= 10$ cm, $f_o = u_o = -2.5$ cm; Magnifying power $= 20$. (b) $u_o = -2.59$ cm. Magnifying power $= 13.5$. 9.12: Angular magnification of the eye-piece for image at $25$ cm $= \\frac{25}{2.5} + 1 = 11$; $|u_e| = \\frac{25}{11}$ cm $= 2.27$ cm; $v_o = 7.2$ cm. Separation $= 9.47$ cm; Magnifying power $= 88$. 9.13: $24$; $150$ cm. 9.14: (a) Angular magnification $= 1500$. (b) Diameter of the image $= 13.7$ cm.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:Answers:2",
+            "order": 2,
+            "title": "Mirror Equation and Image Formation Logic",
+            "content_text": "The mirror equation $\\frac{1}{v} + \\frac{1}{u} = \\frac{1}{f}$ and the sign convention are used to determine image characteristics. For a concave mirror ($f < 0$), if the object is between the pole and the focus ($f < u < 0$), the image is virtual and erect. If the object is beyond the focus ($u < f$), the image is real. For a convex mirror ($f > 0$), since $u < 0$, the image distance $v$ is always positive and less than $f$, meaning the image is always virtual, erect, and diminished. In the case of a pin placed under a glass slab, the apparent shift is independent of the slab's location for small angles of incidence.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:Answers:3",
+            "order": 3,
+            "title": "Total Internal Reflection in Optical Fibers",
+            "content_text": "Total internal reflection (TIR) occurs when light travels from a denser to a rarer medium at an angle of incidence greater than the critical angle $i_c$. In an optical fiber with core refractive index $\\mu_1 = 1.68$ and cladding $\\mu_2 = 1.44$, the critical angle at the core-cladding interface is given by $\\sin i'_c = \\frac{1.44}{1.68}$, which gives $i'_c = 59^\\circ$. For TIR to occur, the angle of incidence at the interface $i'$ must be greater than $59^\\circ$. This corresponds to a maximum angle of incidence at the end of the pipe $i_{max} \\simeq 60^\\circ$. If there is no outer coating (cladding), the critical angle becomes $\\sin^{-1}(1/1.68) = 36.5^\\circ$, and all incident rays in the range $53.5^\\circ < i < 90^\\circ$ will suffer TIR.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:Answers:4",
+            "order": 4,
+            "title": "Lens Systems and Effective Focal Length",
+            "content_text": "For a fixed distance $s$ between an object and a screen, the lens equation $\\frac{1}{v} - \\frac{1}{u} = \\frac{1}{f}$ yields real solutions for $u$ or $v$ only if the focal length $f \\le \\frac{s}{4}$. In a system of two lenses, the image formed by the first lens acts as a virtual or real object for the second lens. For a combination of a convex lens ($f_1 = 30$ cm) and a concave lens ($f_2 = -20$ cm) separated by $8$ cm, the final image position depends on which lens the light strikes first. The notion of an effective focal length is not meaningful for such systems where the separation is significant, as the answer depends on the side of incidence.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:Answers:5",
+            "order": 5,
+            "title": "Magnification and Magnifying Power",
+            "content_text": "Magnification ($m = v/u$) and magnifying power (angular magnification) are distinct concepts. Magnifying power is the ratio of the angular size of the image to the angular size of the object when placed at the near point ($25$ cm). These two are equal only when the image is located at the near point. For a simple magnifier, maximum magnifying power is obtained when the image is at the near point. The area magnification is the square of the linear magnification. For example, if $m = 10$, the area of each square in a virtual image increases by a factor of $100$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:Answers:6",
+            "order": 6,
+            "title": "Design Considerations for Optical Instruments",
+            "content_text": "In optical instruments like microscopes and telescopes, several factors limit performance. (a) A magnifier increases the angular size of the object, allowing it to be brought closer than the near point. (b) The angle subtended at the eye is slightly less than at the lens, but the difference is negligible for large distances. (c) Grinding lenses with very small focal lengths is difficult and increases aberrations (spherical and chromatic). (d) In a compound microscope, the angular magnification of the eyepiece is $(\\frac{25}{f_e} + 1)$, while the objective magnification is $\\frac{v_o}{|u_o|}$. (e) The 'eye-ring' is the image of the objective formed by the eyepiece; it is the ideal position for the eye to collect all refracted light and maximize the field of view.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:Answers:7",
+            "order": 7,
+            "title": "Calculations for Microscopes and Telescopes",
+            "content_text": "For a compound microscope with $f_o = 1.25$ cm and $f_e = 5$ cm, to achieve a total magnification of $30$ with the image at $25$ cm: the eyepiece magnification $m_e = \\frac{25}{5} + 1 = 6$, so the objective magnification must be $m_o = 30/6 = 5$. Using the lens formula, this requires $u_o = -1.5$ cm and $v_o = 7.5$ cm. The separation between lenses is $|v_o| + |u_e| = 7.5 + 4.17 = 11.67$ cm. For a telescope, the magnification is $m = f_o/f_e$ when the image is at infinity, and $m = \\frac{f_o}{f_e}(1 + \\frac{f_e}{25})$ when the image is at the near point.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:Answers:8",
+            "order": 8,
+            "title": "Chapter 9: Ray Optics and Optical Instruments (Continued)",
+            "content_text": "**9.28** (a) $f_o + f_e = 145$ cm. (b) Angle subtended by the tower = $(100/3000) = (1/30)$ rad. Angle subtended by the image produced by the objective $= \\frac{h}{f_o} = \\frac{h}{140}$. Equating the two, $h = 4.7$ cm. (c) Magnification (magnitude) of the eye-piece = 6. Height of the final image (magnitude) = 28 cm. **9.29** The image formed by the larger (concave) mirror acts as virtual object for the smaller (convex) mirror. Parallel rays coming from the object at infinity will focus at a distance of 110 mm from the larger mirror. The distance of virtual object for the smaller mirror = $(110 - 20) = 90$ mm. The focal length of smaller mirror is 70 mm. Using the mirror formula, image is formed at 315 mm from the smaller mirror. **9.30** The reflected rays get deflected by twice the angle of rotation of the mirror. Therefore, $d/1.5 = \\tan 7^\\circ$. Hence $d = 18.4$ cm. **9.31** $n = 1.33$",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:Answers:9",
+            "order": 9,
+            "title": "Chapter 10: Wave Optics",
+            "content_text": "**10.1** (a) Reflected light: (wavelength, frequency, speed same as incident light) $\\lambda = 589$ nm, $\\nu = 5.09 \\times 10^{14}$ Hz, $c = 3.00 \\times 10^8$ m s$^{-1}$. (b) Refracted light: (frequency same as the incident frequency) $\\nu = 5.09 \\times 10^{14}$ Hz, $v = (c/n) = 2.26 \\times 10^8$ m s$^{-1}$, $\\lambda = (v/\\nu) = 444$ nm. **10.2** (a) Spherical (b) Plane (c) Plane (a small area on the surface of a large sphere is nearly planar). **10.3** (a) $2.0 \\times 10^8$ m s$^{-1}$. (b) No. The refractive index, and hence the speed of light in a medium, depends on wavelength. [When no particular wavelength or colour of light is specified, we may take the given refractive index to refer to yellow colour.] Now we know violet colour deviates more than red in a glass prism, i.e. $n_v > n_r$. Therefore, the violet component of white light travels slower than the red component. **10.4** $\\lambda = \\frac{1.2 \\times 10^{-2} \\times 0.28 \\times 10^{-3}}{4 \\times 1.4}$ m = 600 nm. **10.5** K/4. **10.6** (a) 1.17 mm (b) 1.56 mm. **10.7** 0.15°. **10.8** $\\tan^{-1}(1.5) \\simeq 56.3^\\circ$. **10.9** 5000 Å, $6 \\times 10^{14}$ Hz; 45°. **10.10** 40m.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:Answers:10",
+            "order": 10,
+            "title": "Chapter 11: Dual Nature of Radiation and Matter",
+            "content_text": "**11.1** (a) $7.24 \\times 10^{18}$ Hz (b) 0.041 nm. **11.2** (a) 0.34 eV = $0.54 \\times 10^{-19}$ J (b) 0.34 V (c) 344 km/s. **11.3** 1.5 eV = $2.4 \\times 10^{-19}$ J. **11.4** (a) $3.14 \\times 10^{-19}$ J, $1.05 \\times 10^{-27}$ kg m/s (b) $3 \\times 10^{16}$ photons/s (c) 0.63 m/s. **11.5** $6.59 \\times 10^{-34}$ Js. **11.6** 2.0 V. **11.7** No, because $\\nu < \\nu_o$. **11.8** $4.73 \\times 10^{14}$ Hz. **11.9** 2.16 eV = $3.46 \\times 10^{-19}$ J. **11.10** (a) $1.7 \\times 10^{-35}$ m (b) $1.1 \\times 10^{-32}$ m (c) $3.0 \\times 10^{-23}$ m. **11.11** $\\lambda = h/p = h/(h\\nu/c) = c/\\nu$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:Answers:11",
+            "order": 11,
+            "title": "Chapter 12: Atoms",
+            "content_text": "**12.1** (a) No different from (b) Thomson’s model; Rutherford’s model (c) Rutherford’s model (d) Thomson’s model; Rutherford’s model (e) Both the models. **12.2** The nucleus of a hydrogen atom is a proton. The mass of it is $1.67 \\times 10^{-27}$ kg, whereas the mass of an incident $\\alpha$-particle is $6.64 \\times 10^{-27}$ kg. Because the scattering particle is more massive than the target nuclei (proton), the $\\alpha$-particle won’t bounce back in even in a head-on collision. It is similar to a football colliding with a tennis ball at rest. Thus, there would be no large-angle scattering. **12.3** $5.6 \\times 10^{14}$ Hz. **12.4** 13.6 eV; -27.2 eV. **12.5** $9.7 \\times 10^{-8}$ m; $3.1 \\times 10^{15}$ Hz. **12.6** (a) $2.18 \\times 10^6$ m/s; $1.09 \\times 10^6$ m/s; $7.27 \\times 10^5$ m/s (b) $1.52 \\times 10^{-16}$ s; $1.22 \\times 10^{-15}$ s; $4.11 \\times 10^{-15}$ s. **12.7** $2.12 \\times 10^{-10}$ m; $4.77 \\times 10^{-10}$ m. **12.8** Lyman series: 103 nm and 122 nm; Balmer series: 656 nm. **12.9** $2.6 \\times 10^{74}$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:14:Answers:12",
+            "order": 12,
+            "title": "Chapter 13: Nuclei",
+            "content_text": "**13.1** 104.7 MeV. **13.2** 8.79 MeV, 7.84 MeV. **13.3** $1.584 \\times 10^{25}$ MeV or $2.535 \\times 10^{12}$ J. **13.4** 1.23. **13.5** (i) $Q = -4.03$ MeV; endothermic (ii) $Q = 4.62$ MeV; exothermic. **13.6** $Q = m({}^{56}_{26}\\text{Fe}) - 2m({}^{28}_{13}\\text{Al}) = 26.90$ MeV; not possible. **13.7** $4.536 \\times 10^{26}$ MeV. **13.8** About $4.9 \\times 10^4$ y. **13.9** 360 KeV.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:physics:12:14:ex:1",
+          "number": 1,
+          "problem": "In an n-type silicon, which of the following statement is true: (a) Electrons are majority carriers and trivalent atoms are the dopants. (b) Electrons are minority carriers and pentavalent atoms are the dopants. (c) Holes are minority carriers and pentavalent atoms are the dopants. (d) Holes are majority carriers and trivalent atoms are the dopants.",
+          "solution": "(c) In n-type silicon, electrons are the majority carriers and holes are the minority carriers. Pentavalent atoms (like Phosphorus) are used as dopants to provide extra electrons.",
+          "difficulty": "easy",
+          "exercise_type": "mcq"
+        },
+        {
+          "id": "ncert:physics:12:14:ex:2",
+          "number": 2,
+          "problem": "Which of the statements given in Exercise 14.1 is true for p-type semiconductors.",
+          "solution": "(d) In p-type silicon, holes are the majority carriers and electrons are the minority carriers. Trivalent atoms (like Boron) are used as dopants to create holes.",
+          "difficulty": "easy",
+          "exercise_type": "mcq"
+        },
+        {
+          "id": "ncert:physics:12:14:ex:3",
+          "number": 3,
+          "problem": "Carbon, silicon and germanium have four valence electrons each. These are characterised by valence and conduction bands separated by energy band gap respectively equal to $(E_g)_C$, $(E_g)_{Si}$ and $(E_g)_{Ge}$. Which of the following statements is true? (a) $(E_g)_{Si} < (E_g)_{Ge} < (E_g)_C$ (b) $(E_g)_C < (E_g)_{Ge} > (E_g)_{Si}$ (c) $(E_g)_C > (E_g)_{Si} > (E_g)_{Ge}$ (d) $(E_g)_C = (E_g)_{Si} = (E_g)_{Ge}$",
+          "solution": "(c) The energy gap decreases as we move down the group in the periodic table. Carbon (in the form of diamond) is an insulator with a large gap, Silicon has a smaller gap, and Germanium has an even smaller gap.",
+          "difficulty": "easy",
+          "exercise_type": "mcq"
+        },
+        {
+          "id": "ncert:physics:12:14:ex:4",
+          "number": 4,
+          "problem": "In an unbiased p-n junction, holes diffuse from the p-region to n-region because (a) free electrons in the n-region attract them. (b) they move across the junction by the potential difference. (c) hole concentration in p-region is more as compared to n-region. (d) All the above.",
+          "solution": "(c) Diffusion occurs due to the concentration gradient. Holes move from the p-region (where their concentration is high) to the n-region (where their concentration is low).",
+          "difficulty": "easy",
+          "exercise_type": "mcq"
+        },
+        {
+          "id": "ncert:physics:12:14:ex:5",
+          "number": 5,
+          "problem": "When a forward bias is applied to a p-n junction, it (a) raises the potential barrier. (b) reduces the majority carrier current to zero. (c) lowers the potential barrier. (d) None of the above.",
+          "solution": "(c) Forward bias opposes the built-in potential barrier, thereby lowering its height and allowing majority carriers to cross the junction more easily.",
+          "difficulty": "easy",
+          "exercise_type": "mcq"
+        },
+        {
+          "id": "ncert:physics:12:14:ex:6",
+          "number": 6,
+          "problem": "In half-wave rectification, what is the output frequency if the input frequency is 50 Hz. What is the output frequency of a full-wave rectifier for the same input frequency.",
+          "solution": "In half-wave rectification, the output frequency is the same as the input frequency, which is 50 Hz. In full-wave rectification, the output frequency is twice the input frequency, which is $2 \\times 50 = 100$ Hz.",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        }
+      ]
+    }
+  }
+}

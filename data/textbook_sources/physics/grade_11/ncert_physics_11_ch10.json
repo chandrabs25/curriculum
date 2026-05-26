@@ -1,0 +1,1542 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_physics_11_ch10.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:physics:11:10",
+  "curriculum": "ncert",
+  "subject": "physics",
+  "grade": 11,
+  "textbook_name": "Physics Part II",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:physics:11:10",
+    "number": 10,
+    "title": "Thermal Properties of Matter",
+    "summary": "This chapter delves into the thermal properties of matter, starting with the fundamental definitions of temperature and heat, and explaining how temperature is measured using different scales (Celsius, Fahrenheit, Kelvin) and gas thermometers. The concept of thermal equilibrium and heat transfer is introduced, leading to the ideal gas equation (PV = μRT) and the definition of absolute zero.\n\nThe chapter then examines thermal expansion in solids, liquids, and gases, defining linear and volume expansion coefficients and highlighting the anomalous expansion of water. It introduces the concepts of heat capacity and specific heat, explaining how these properties affect heat absorption. Calorimetry is explored as a method for measuring heat transfer, including the principle of mixtures.\n\nNext, the chapter discusses changes of state (solid, liquid, gas), including melting, vaporization, and sublimation, explaining latent heat and triple points. Finally, it explores the three modes of heat transfer: conduction, convection, and radiation, defining thermal conductivity and introducing Stefan-Boltzmann Law and Wien's Displacement Law for radiation. The chapter concludes with Newton's Law of Cooling, which describes the rate of heat loss of a body.\n\nEach section builds on the previous one, starting from basic definitions and culminating in complex phenomena. The chapter has practical applications in understanding everyday occurrences, such as the use of water in cooling systems and the design of thermos flasks, and in estimating the temperatures of celestial bodies.",
+    "sections": [
+      {
+        "id": "ncert:physics:11:10:10.1",
+        "number": "10.1",
+        "title": "Introduction",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:10:10.1:1",
+            "order": 1,
+            "title": "Overview of Thermal Properties",
+            "content_text": "We have common sense notions of heat and temperature. Temperature is a measure of 'hotness' of a body; for instance, a kettle with boiling water is hotter than a box containing ice. In physics, we define these notions more carefully. This chapter explores what heat is, how it is measured, and the various processes by which heat flows from one body to another. It addresses practical phenomena such as why blacksmiths heat iron rings before fitting them on wooden wheels, why sea breezes reverse direction after sunset, and why the temperature of water remains constant during boiling or freezing despite continuous heat flow.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:10:10.2",
+        "number": "10.2",
+        "title": "Temperature and Heat",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:10:10.2:1",
+            "order": 1,
+            "title": "Definitions of Temperature and Heat",
+            "content_text": "Temperature is a relative measure or indication of hotness or coldness. A hot utensil has a high temperature, while an ice cube has a low temperature. However, the human sense of touch is unreliable and limited for scientific measurement. Heat is defined as the form of energy transferred between two (or more) systems or a system and its surroundings by virtue of temperature difference. The SI unit of heat energy is the joule (J), while the SI unit of temperature is the Kelvin (K). Degree Celsius ($^\\circ$C) is also a commonly used unit for temperature.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.2:2",
+            "order": 2,
+            "title": "Thermal Equilibrium and Heat Transfer",
+            "content_text": "Experience shows that a glass of ice-cold water on a table in summer eventually warms up, while a cup of hot tea cools down. This indicates that when the temperature of a body and its surrounding medium are different, heat transfer occurs until they reach the same temperature. In the case of the cold water, heat flows from the environment to the glass; for hot tea, heat flows from the cup to the environment. When an object is heated, it may experience a rise in temperature, expansion, or a change in state.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:10:10.3",
+        "number": "10.3",
+        "title": "Measurement of Temperature",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:10:10.3:1",
+            "order": 1,
+            "title": "Principles of Thermometry and Calibration",
+            "content_text": "Temperature is measured using a thermometer, which utilizes physical properties that change sufficiently with temperature. A common property is the variation of liquid volume with temperature, as seen in mercury-in-glass or alcohol-in-glass thermometers. To calibrate a thermometer, two fixed reference points are needed where physical phenomena occur at constant temperatures: the ice point (where pure water freezes) and the steam point (where pure water boils) under standard pressure.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.3:2",
+            "order": 2,
+            "title": "Temperature Scales and Conversion",
+            "content_text": "On the Celsius scale, the ice and steam points are $0^\\circ$C and $100^\\circ$C, respectively, with 100 equal intervals. On the Fahrenheit scale, these points are $32^\\circ$F and $212^\\circ$F, with 180 equal intervals. The relationship for converting between Fahrenheit temperature ($t_F$) and Celsius temperature ($t_C$) is given by a linear equation: $$\\frac{t_F - 32}{180} = \\frac{t_C}{100}$$ This relationship is illustrated in Fig. 10.1, showing a straight-line graph between the two scales.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 10.1",
+                "description": "A graph showing the linear relationship between Fahrenheit temperature (t_F) on the y-axis and Celsius temperature (t_C) on the x-axis. The line passes through (0, 32) and (100, 212), indicating the ice and steam points respectively. The intervals are marked as 180 degrees for Fahrenheit and 100 degrees for Celsius.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:10:10.4",
+        "number": "10.4",
+        "title": "Ideal-Gas Equation and Absolute Temperature",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:10:10.4:1",
+            "order": 1,
+            "title": "Gas Laws and the Ideal Gas Equation",
+            "content_text": "Liquid-in-glass thermometers can give different readings due to varying expansion properties of liquids. However, gas thermometers provide consistent readings regardless of the gas used at low densities. The behavior of a gas is described by pressure ($P$), volume ($V$), and temperature ($T$). Boyle's Law states that at constant temperature, $PV = \\text{constant}$. Charles' Law states that at constant pressure, $V/T = \\text{constant}$. Combining these for a given quantity of low-density gas leads to the ideal-gas equation: $$PV = \\mu RT$$ where $\\mu$ is the number of moles and $R$ is the universal gas constant, $R = 8.31 \\text{ J mol}^{-1} \\text{ K}^{-1}$.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.4:2",
+            "order": 2,
+            "title": "Constant Volume Gas Thermometers",
+            "content_text": "In a constant-volume gas thermometer, pressure is directly proportional to temperature ($P \\propto T$). A plot of pressure versus temperature yields a straight line (Fig. 10.2). While real gases deviate at low temperatures, the relationship remains linear over a large range. If the straight line is extrapolated to the axis where pressure would theoretically reach zero, it intersects at $-273.15^\\circ$C (Fig. 10.3).",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 10.2",
+                "description": "A plot of Pressure versus temperature for a low-density gas kept at constant volume, showing a linear increase of pressure with temperature.",
+                "image_url": null
+              },
+              {
+                "label": "Fig. 10.3",
+                "description": "A plot showing pressure versus temperature for three different gases (A, B, and C). When the linear portions are extrapolated backwards, they all converge at the same point on the temperature axis: -273.15 degrees Celsius, which is absolute zero.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.4:3",
+            "order": 3,
+            "title": "Absolute Zero and the Kelvin Scale",
+            "content_text": "The temperature $-273.15^\\circ$C is designated as absolute zero and forms the foundation of the Kelvin temperature scale (absolute scale), named after Lord Kelvin. On this scale, $0$ K corresponds to $-273.15^\\circ$C. The size of the unit (degree) is the same for both Kelvin and Celsius scales. The relationship between the Kelvin scale ($T$) and Celsius scale ($t_C$) is: $$T = t_C + 273.15$$ Fig. 10.4 compares the Kelvin, Celsius, and Fahrenheit scales at key points like absolute zero, the ice point, and the steam point.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 10.4",
+                "description": "A comparison chart of three temperature scales: Kelvin, Celsius, and Fahrenheit. It marks the Steam point (373.15 K, 100 C, 212 F), Ice point (273.15 K, 0 C, 32 F), and Absolute Zero (0 K, -273.15 C, -459.69 F).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:10:10.5",
+        "number": "10.5",
+        "title": "Thermal Expansion",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:10:10.5:1",
+            "order": 1,
+            "title": "Introduction to Thermal Expansion",
+            "content_text": "Thermal expansion is a common observation. For example, sealed bottles with metallic lids are often placed in hot water to allow the lid to expand and loosen. Similarly, mercury in a thermometer rises when placed in warm water. These examples show that matter generally expands when heated. When a thermometer is placed in warm water, the mercury rises, and when placed in cold water, the level of mercury falls again. Similarly, in the case of gases, a balloon partially inflated in a cool room may expand to full size when placed in warm water. Conversely, a fully inflated balloon immersed in cold water will start shrinking due to the contraction of the air inside. These common experiences show that most substances expand on heating and contract on cooling.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.5:2",
+            "order": 2,
+            "title": "Definition and Types of Thermal Expansion",
+            "content_text": "A change in the temperature of a body causes a change in its dimensions. The increase in the dimensions of a body due to the increase in its temperature is called thermal expansion. Depending on the dimension affected, it is classified into three types: (1) Linear expansion: expansion in length. (2) Area expansion: expansion in area. (3) Volume expansion: expansion in volume. These types are illustrated in Fig. 10.5.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 10.5",
+                "description": "Diagram illustrating (a) linear expansion of a rod with formula $\\frac{\\Delta l}{l} = \\alpha_l \\Delta T$, (b) area expansion of a square sheet with formula $\\frac{\\Delta A}{A} = 2\\alpha_l \\Delta T$, and (c) volume expansion of a cube with formula $\\frac{\\Delta V}{V} = 3\\alpha_l \\Delta T$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.5:3",
+            "order": 3,
+            "title": "Linear Expansion and Coefficient of Linear Expansion",
+            "content_text": "If a substance is in the form of a long rod, then for a small change in temperature $\\Delta T$, the fractional change in length $\\Delta l/l$ is directly proportional to $\\Delta T$. This is expressed as $\\frac{\\Delta l}{l} = \\alpha_l \\Delta T$, where $\\alpha_l$ is known as the coefficient of linear expansion (or linear expansivity). It is a characteristic of the material. Metals generally expand more and have relatively high values of $\\alpha_l$. For example, copper expands about five times more than glass for the same rise in temperature. Table 10.1 provides typical average values of $\\alpha_l$ for various materials in the range $0^\\circ\\text{C}$ to $100^\\circ\\text{C}$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 10.1",
+                "caption": "Values of coefficient of linear expansion for some material",
+                "headers": [
+                  "Material",
+                  "$\\alpha_l (10^{-5} \\text{ K}^{-1})$"
+                ],
+                "rows": [
+                  [
+                    "Aluminium",
+                    "2.5"
+                  ],
+                  [
+                    "Brass",
+                    "1.8"
+                  ],
+                  [
+                    "Iron",
+                    "1.2"
+                  ],
+                  [
+                    "Copper",
+                    "1.7"
+                  ],
+                  [
+                    "Silver",
+                    "1.9"
+                  ],
+                  [
+                    "Gold",
+                    "1.4"
+                  ],
+                  [
+                    "Glass (pyrex)",
+                    "0.32"
+                  ],
+                  [
+                    "Lead",
+                    "0.29"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:physics:11:10:10.5:4",
+            "order": 4,
+            "title": "Volume Expansion and Coefficient of Volume Expansion",
+            "content_text": "The fractional change in volume $\\Delta V/V$ for a temperature change $\\Delta T$ defines the coefficient of volume expansion (or volume expansivity), $\\alpha_V$, as $\\alpha_V = \\left(\\frac{\\Delta V}{V}\\right) \\frac{1}{\\Delta T}$. Like $\\alpha_l$, $\\alpha_V$ is a characteristic of the substance but is not strictly constant; it depends on temperature, as shown for copper in Fig. 10.6, becoming constant only at high temperatures. Table 10.2 gives values for common substances. Thermal expansion of solids and liquids is generally small, with materials like pyrex glass and invar having particularly low values. Liquids like alcohol expand significantly more than mercury for the same temperature rise.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 10.6",
+                "description": "A graph showing the coefficient of volume expansion of copper ($\\alpha_V$) as a function of temperature ($T$ in Kelvin), showing it increases and then levels off at higher temperatures.",
+                "image_url": null
+              }
+            ],
+            "tables": [
+              {
+                "label": "Table 10.2",
+                "caption": "Values of coefficient of volume expansion for some substances",
+                "headers": [
+                  "Material",
+                  "$\\alpha_V (\\text{K}^{-1})$"
+                ],
+                "rows": [
+                  [
+                    "Aluminium",
+                    "7 \\times 10^{-5}"
+                  ],
+                  [
+                    "Brass",
+                    "6 \\times 10^{-5}"
+                  ],
+                  [
+                    "Iron",
+                    "3.55 \\times 10^{-5}"
+                  ],
+                  [
+                    "Paraffin",
+                    "58.8 \\times 10^{-5}"
+                  ],
+                  [
+                    "Glass (ordinary)",
+                    "2.5 \\times 10^{-5}"
+                  ],
+                  [
+                    "Glass (pyrex)",
+                    "1 \\times 10^{-5}"
+                  ],
+                  [
+                    "Hard rubber",
+                    "2.4 \\times 10^{-4}"
+                  ],
+                  [
+                    "Invar",
+                    "2 \\times 10^{-6}"
+                  ],
+                  [
+                    "Mercury",
+                    "18.2 \\times 10^{-5}"
+                  ],
+                  [
+                    "Water",
+                    "20.7 \\times 10^{-5}"
+                  ],
+                  [
+                    "Alcohol (ethanol)",
+                    "110 \\times 10^{-5}"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:physics:11:10:10.5:5",
+            "order": 5,
+            "title": "Anomalous Expansion of Water",
+            "content_text": "Water exhibits anomalous behaviour: it contracts on heating between $0^\\circ\\text{C}$ and $4^\\circ\\text{C}$. Its volume decreases as it is cooled from room temperature until it reaches $4^\\circ\\text{C}$, below which the volume increases and density decreases (Fig. 10.7). Thus, water has maximum density at $4^\\circ\\text{C}$. This property is crucial for aquatic life; as a lake cools toward $4^\\circ\\text{C}$, surface water becomes denser and sinks, but once surface water cools below $4^\\circ\\text{C}$, it remains at the surface and freezes first. This ice layer insulates the water below, preventing the entire body of water from freezing and preserving plant and animal life.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 10.7",
+                "description": "Two graphs showing the thermal expansion of water: (a) Volume of $1\\text{ kg}$ of water vs temperature ($^\\circ\\text{C}$) showing a minimum at $4^\\circ\\text{C}$, and (b) Density vs temperature ($^\\circ\\text{C}$) showing a maximum at $4^\\circ\\text{C}$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.5:6",
+            "order": 6,
+            "title": "Thermal Expansion of Gases",
+            "content_text": "Gases expand much more than solids and liquids. For an ideal gas, the coefficient of volume expansion at constant pressure can be derived from the ideal gas equation $PV = \\mu RT$. At constant pressure $P$, $P\\Delta V = \\mu R \\Delta T$. Dividing this by the original equation gives $\\frac{\\Delta V}{V} = \\frac{\\Delta T}{T}$, which implies $\\alpha_V = \\frac{1}{T}$ for an ideal gas. At $0^\\circ\\text{C}$, $\\alpha_V \\approx 3.7 \\times 10^{-3} \\text{ K}^{-1}$, which is much larger than for solids and liquids. For a gas at room temperature and constant pressure, $\\alpha_V$ is about $3300 \\times 10^{-6} \\text{ K}^{-1}$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.5:7",
+            "order": 7,
+            "title": "Relation between Volume and Linear Expansion Coefficients",
+            "content_text": "For an isotropic solid, there is a simple relation: $\\alpha_V = 3\\alpha_l$. Consider a cube of length $l$ that expands equally in all directions. When temperature increases by $\\Delta T$, $\\Delta l = \\alpha_l l \\Delta T$. The new volume is $V + \\Delta V = (l + \\Delta l)^3 = l^3 + 3l^2\\Delta l + 3l(\\Delta l)^2 + (\\Delta l)^3$. Neglecting higher-order terms of $\\Delta l$ (since $\\Delta l \\ll l$), we get $\\Delta V \\approx 3l^2\\Delta l$. Substituting $\\Delta l = \\alpha_l l \\Delta T$ and $V = l^3$, we find $\\Delta V = 3V \\alpha_l \\Delta T$, which gives $\\alpha_V = 3\\alpha_l$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.5:8",
+            "order": 8,
+            "title": "Thermal Stress",
+            "content_text": "If the thermal expansion of a rod is prevented by fixing its ends rigidly, the rod acquires a compressive strain due to external forces from the supports. The corresponding stress is called thermal stress. For a steel rail of length $5\\text{ m}$ and area $40\\text{ cm}^2$ prevented from expanding during a $10^\\circ\\text{C}$ rise, the compressive strain is $\\frac{\\Delta l}{l} = \\alpha_{l(\\text{steel})} \\Delta T = 1.2 \\times 10^{-5} \\times 10 = 1.2 \\times 10^{-4}$. With Young's modulus $Y_{\\text{steel}} = 2 \\times 10^{11} \\text{ N m}^{-2}$, the thermal stress is $\\frac{\\Delta F}{A} = Y_{\\text{steel}} \\left(\\frac{\\Delta l}{l}\\right) = 2.4 \\times 10^7 \\text{ N m}^{-2}$. The resulting force $\\Delta F = Y A \\alpha_l \\Delta T \\approx 10^5 \\text{ N}$ can easily bend the rails.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.5:9",
+            "order": 9,
+            "title": "Example 10.1: Area Expansion Relation",
+            "content_text": "This example derives the relationship between the coefficient of area expansion and linear expansivity. For a rectangular sheet, the fractional change in area per unit temperature change is shown to be approximately $2\\alpha_l$.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 10.1",
+                "problem": "Show that the coefficient of area expansion, $(\\Delta A/A)/\\Delta T$, of a rectangular sheet of the solid is twice its linear expansivity, $\\alpha_l$.",
+                "solution": "Consider a rectangular sheet of length $a$ and breadth $b$ (Fig. 10.8). When the temperature increases by $\\Delta T$, $a$ increases by $\\Delta a = \\alpha_l a \\Delta T$ and $b$ increases by $\\Delta b = \\alpha_l b \\Delta T$. The increase in area $\\Delta A = \\Delta A_1 + \\Delta A_2 + \\Delta A_3 = a \\Delta b + b \\Delta a + (\\Delta a)(\\Delta b) = a(\\alpha_l b \\Delta T) + b(\\alpha_l a \\Delta T) + (\\alpha_l a \\Delta T)(\\alpha_l b \\Delta T) = \\alpha_l ab \\Delta T (2 + \\alpha_l \\Delta T) = \\alpha_l A \\Delta T (2 + \\alpha_l \\Delta T)$. Since $\\alpha_l \\approx 10^{-5} \\text{ K}^{-1}$, the product $\\alpha_l \\Delta T$ is small compared to 2 and may be neglected. Hence, $\\frac{\\Delta A}{A} \\frac{1}{\\Delta T} \\approx 2\\alpha_l$."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Fig. 10.8",
+                "description": "Geometric representation of area expansion for a rectangular sheet of dimensions $a \\times b$, showing area increments $\\Delta A_1$, $\\Delta A_2$, and $\\Delta A_",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:10:10.6",
+        "number": "10.6",
+        "title": "SPECIFIC HEAT CAPACITY",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:10:10.6:1",
+            "order": 1,
+            "title": "Factors Affecting Heat Absorption",
+            "content_text": "The quantity of heat required to raise the temperature of a substance depends on several factors. Through experimental observation, it is found that: 1. For a given mass of water, doubling the temperature rise (e.g., from 20 °C to 40 °C) requires twice the amount of heat. 2. Doubling the mass of water for the same temperature rise also requires twice the amount of heat. 3. Heating different substances of the same mass (e.g., water vs. mustard oil) by the same temperature interval requires different amounts of heat. Thus, the heat required depends on the mass $m$, the change in temperature $\\Delta T$, and the nature of the substance.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.6:2",
+            "order": 2,
+            "title": "Heat Capacity",
+            "content_text": "The change in temperature of a substance when a given quantity of heat is absorbed or rejected by it is characterized by a quantity called the heat capacity, $S$. It is defined as: $$S = \\frac{\\Delta Q}{\\Delta T}$$ where $\\Delta Q$ is the amount of heat supplied to the substance to change its temperature from $T$ to $T + \\Delta T$. Every substance has a unique value for the amount of heat absorbed or given off to change the temperature of a unit mass of it by one unit.\nSpecific heat capacity, $s$, is the property of a substance that determines the change in its temperature when a given quantity of heat is absorbed or rejected, per unit mass. It is defined as the amount of heat per unit mass absorbed or given off by the substance to change its temperature by one unit. It depends on the nature of the substance and its temperature. The formula is: $$s = \\frac{S}{m} = \\frac{1}{m} \\frac{\\Delta Q}{\\Delta T}$$ The SI unit of specific heat capacity is J kg$^{-1}$ K$^{-1}$.\nIf the amount of substance is specified in terms of moles $\\mu$ instead of mass $m$ in kg, we define the molar specific heat capacity $C$ as: $$C = \\frac{S}{\\mu} = \\frac{1}{\\mu} \\frac{\\Delta Q}{\\Delta T}$$ Like $s$, $C$ depends on the nature of the substance and its temperature. The SI unit of molar specific heat capacity is J mol$^{-1}$ K$^{-1}$.\nFor gases, additional conditions are needed to define specific heat capacity because heat transfer can occur at constant pressure or constant volume. 1. Molar specific heat capacity at constant pressure ($C_p$): The heat transfer occurs while the gas is held under constant pressure. 2. Molar specific heat capacity at constant volume ($C_v$): The heat transfer occurs while the volume of the gas is maintained constant.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.6:3",
+            "order": 3,
+            "title": "Applications of Water's High Specific Heat",
+            "content_text": "Water has an exceptionally high specific heat capacity ($4186.0$ J kg$^{-1}$ K$^{-1}$) compared to most other substances. This property makes it an excellent coolant for automobile radiators and ideal for use in hot water bags. Environmentally, water warms up and cools down more slowly than land; during summer, wind from the sea provides a cooling effect to coastal areas. Conversely, in deserts, the low specific heat of the sand causes the surface to heat up rapidly during the day and cool quickly at night. Table 10.3 and 10.4 provide comparative data for various substances and gases.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 10.3",
+                "caption": "Specific heat capacity of some substances at room temperature and atmospheric pressure",
+                "headers": [
+                  "Substance",
+                  "Specific heat capacity (J kg$^{-1}$ K$^{-1}$)"
+                ],
+                "rows": [
+                  [
+                    "Aluminium",
+                    "900.0"
+                  ],
+                  [
+                    "Carbon",
+                    "506.5"
+                  ],
+                  [
+                    "Copper",
+                    "386.4"
+                  ],
+                  [
+                    "Lead",
+                    "127.7"
+                  ],
+                  [
+                    "Silver",
+                    "236.1"
+                  ],
+                  [
+                    "Tungesten",
+                    "134.4"
+                  ],
+                  [
+                    "Water",
+                    "4186.0"
+                  ],
+                  [
+                    "Ice",
+                    "2060"
+                  ],
+                  [
+                    "Glass",
+                    "840"
+                  ],
+                  [
+                    "Iron",
+                    "450"
+                  ],
+                  [
+                    "Kerosene",
+                    "2118"
+                  ],
+                  [
+                    "Edible oil",
+                    "1965"
+                  ],
+                  [
+                    "Mercury",
+                    "140"
+                  ]
+                ]
+              },
+              {
+                "label": "Table 10.4",
+                "caption": "Molar specific heat capacities of some gases",
+                "headers": [
+                  "Gas",
+                  "$C_p$ (J mol$^{-1}$ K$^{-1}$)",
+                  "$C_v$ (J mol$^{-1}$ K$^{-1}$)"
+                ],
+                "rows": [
+                  [
+                    "He",
+                    "20.8",
+                    "12.5"
+                  ],
+                  [
+                    "H$_2$",
+                    "28.8",
+                    "20.4"
+                  ],
+                  [
+                    "N$_2$",
+                    "29.1",
+                    "20.8"
+                  ],
+                  [
+                    "O$_2$",
+                    "29.4",
+                    "21.1"
+                  ],
+                  [
+                    "CO$_2$",
+                    "37.0",
+                    "28.5"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:10:10.7",
+        "number": "10.7",
+        "title": "CALORIMETRY",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:10:10.7:1",
+            "order": 1,
+            "title": "Principle of Calorimetry",
+            "content_text": "Calorimetry means the measurement of heat. When two bodies at different temperatures are brought into contact in an isolated system (where no heat is exchanged with the surroundings), heat transfers from the body at a higher temperature to the body at a lower temperature. According to the law of conservation of energy, the heat lost by the hot body is equal to the heat gained by the colder body, provided no heat escapes to the surroundings.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.7:2",
+            "order": 2,
+            "title": "The Calorimeter",
+            "content_text": "A calorimeter is a device used to measure heat. It typically consists of a metallic vessel and a stirrer made of the same material (usually copper or aluminium). This vessel is placed inside a wooden jacket filled with insulating material like glass wool to minimize heat loss. An opening in the outer jacket allows a thermometer to be inserted to monitor temperature changes.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.7:3",
+            "order": 3,
+            "title": "Worked Example: Specific Heat of Aluminium",
+            "content_text": "The following example demonstrates how the principle of calorimetry is used to determine the specific heat capacity of a solid by equating heat lost to heat gained.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 10.3",
+                "problem": "A sphere of 0.047 kg aluminium is placed for sufficient time in a vessel containing boiling water, so that the sphere is at 100 °C. It is then immediately transferred to 0.14 kg copper calorimeter containing 0.25 kg water at 20 °C. The temperature of water rises and attains a steady state at 23 °C. Calculate the specific heat capacity of aluminium.",
+                "solution": "At steady state, heat lost by the aluminium sphere = heat gained by water + heat gained by calorimeter. \n1. Heat lost by Al sphere: $Q_1 = m_1 s_{Al} (T_i - T_f) = 0.047 \\times s_{Al} \\times (100 - 23) = 3.619 s_{Al}$. \n2. Heat gained by water: $Q_2 = m_2 s_w (T_f - T_{w,i}) = 0.25 \\times 4.18 \\times 10^3 \\times (23 - 20) = 3135$ J. \n3. Heat gained by calorimeter: $Q_3 = m_3 s_{cu} (T_f - T_{cu,i}) = 0.14 \\times 0.386 \\times 10^3 \\times (23 - 20) = 162.12$ J. \nTotal heat gained = $3135 + 162.12 = 3297.12$ J. \nEquating: $3.619 s_{Al} = 3297.12 \\implies s_{Al} = 911.05$ J kg$^{-1}$ K$^{-1} \\approx 0.911$ kJ kg$^{-1}$ K$^{-1}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:10:10.8",
+        "number": "10.8",
+        "title": "CHANGE OF STATE",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:10:10.8:1",
+            "order": 1,
+            "title": "Introduction to States of Matter",
+            "content_text": "Matter normally exists in three states: solid, liquid, and gas. A transition from one state to another is called a change of state. These transitions occur when heat is exchanged between a substance and its surroundings. Common changes include solid to liquid (melting), liquid to gas (vaporization), and their reverses.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.8:2",
+            "order": 2,
+            "title": "Melting and Freezing",
+            "content_text": "The change of state from solid to liquid is called melting or fusion; the reverse is freezing. During melting, the temperature of the system remains constant even as heat is continuously supplied, as the energy is used to change the state rather than increase kinetic energy. The temperature at which the solid and liquid states coexist in thermal equilibrium is the melting point. The melting point at standard atmospheric pressure is the normal melting point. This process is illustrated in the heating curve of ice (Fig. 10.9).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 10.9",
+                "description": "A plot of temperature versus time for ice being heated. It shows a linear rise in temperature for ice, a horizontal plateau at 0 °C during melting (fusion), a subsequent rise in temperature for liquid water, and another horizontal plateau at 100 °C during boiling (vaporization).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.8:3",
+            "order": 3,
+            "title": "Regelation",
+            "content_text": "Regelation is the phenomenon where ice melts under increased pressure and refreezes once the pressure is reduced. This can be demonstrated by hanging heavy weights from a wire draped over an ice slab; the wire passes through the ice without splitting it because the ice melts directly under the wire's pressure and refreezes above it. This property acts as a lubricant, making activities like ice skating possible as a thin layer of water forms under the skates due to pressure.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.8:4",
+            "order": 4,
+            "title": "Vaporisation and Boiling Point",
+            "content_text": "The change of state from liquid to vapour (or gas) is called vaporisation. During this process, the temperature of the substance remains constant until the entire liquid is converted into vapour. In this state, the liquid and vapour phases coexist in thermal equilibrium. The specific temperature at which this coexistence occurs is known as the boiling point of the substance. After all ice has melted into water, further heating causes the temperature to rise until it reaches approximately $100^\\circ\\text{C}$ (for water at standard pressure), where it becomes steady again as the heat is utilized for the phase change from liquid to vapour.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.8:5",
+            "order": 5,
+            "title": "Triple Point and Phase Diagrams",
+            "content_text": "A phase diagram, or $P-T$ diagram, is a graph showing the relationship between pressure $P$ and temperature $T$ for a substance. It divides the $P-T$ plane into regions representing solid, liquid, and vapour phases. These regions are separated by three curves: the sublimation curve (BO), the fusion curve (AO), and the vaporisation curve (CO). Points on these curves represent states where two phases coexist in equilibrium. The unique temperature and pressure at which all three curves meet—and thus all three phases (solid, liquid, and gas) coexist in equilibrium—is called the triple point. For water, the triple point occurs at $273.16\\text{ K}$ ($0.01^\\circ\\text{C}$) and a pressure of $6.11 \\times 10^{-3}\\text{ Pa}$ ($0.006\\text{ atm}$). For $CO_2$, the triple point is at $-56.6^\\circ\\text{C}$ and $5.11\\text{ atm}$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure: Phase Diagrams",
+                "description": "Pressure-temperature phase diagrams for (a) water and (b) $CO_2$. Diagram (a) shows the triple point of water at $0.01^\\circ\\text{C}$ and $0.006\\text{ atm}$, with the fusion curve having a slightly negative slope. Diagram (b) shows the triple point of $CO_2$ at $-56.6^\\circ\\text{C}$ and $5.11\\text{ atm}$, with a sublimation point of $-78.5^\\circ\\text{C}$ at $1\\text{ atm}$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.8:6",
+            "order": 6,
+            "title": "Boiling Process and Pressure Dependence",
+            "content_text": "The boiling point of a liquid depends significantly on the external pressure. In a closed flask, increasing the pressure by closing the steam outlet causes boiling to stop; more heat is then required to raise the temperature further before boiling resumes, demonstrating that boiling point increases with pressure. Conversely, reducing the pressure (e.g., by cooling an inverted flask with ice-cold water to condense internal steam) allows water to boil at temperatures lower than $100^\\circ\\text{C}$. This explains why cooking is difficult at high altitudes (lower atmospheric pressure leads to a lower boiling point) and why pressure cookers speed up cooking (higher pressure leads to a higher boiling point). The boiling point at standard atmospheric pressure is defined as the normal boiling point.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 10.11",
+                "description": "Experimental setup for the boiling process using a round-bottom flask filled with water, a thermometer, and a steam outlet, heated by a burner to demonstrate the effect of pressure on boiling.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.8:7",
+            "order": 7,
+            "title": "Sublimation",
+            "content_text": "Sublimation is the process where a substance transitions directly from the solid state to the vapour state (and vice versa) without passing through the intermediate liquid state. During this process, the solid and vapour phases coexist in thermal equilibrium. Common examples of substances that sublime include dry ice (solid $CO_2$) and iodine.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.8:8",
+            "order": 8,
+            "title": "Latent Heat",
+            "content_text": "Latent heat is the amount of heat energy transferred per unit mass of a substance during a change of state, during which the temperature remains constant. If a mass $m$ of a substance undergoes a phase change, the total heat required is $Q = mL$, where $L$ is the latent heat. The SI unit for latent heat is $\\text{J kg}^{-1}$. The value of $L$ is a characteristic of the substance but also depends on the pressure at which the phase change occurs. For example, when heat is added to ice at $0^\\circ\\text{C}$, the temperature does not rise until all the ice has melted into water.\nThe latent heat required for a solid-to-liquid transition is called the latent heat of fusion ($L_f$), while the heat required for a liquid-to-gas transition is called the latent heat of vaporisation ($L_v$). For water, $L_f \\approx 3.33 \\times 10^5\\text{ J kg}^{-1}$ and $L_v \\approx 22.6 \\times 10^5\\text{ J kg}^{-1}$. Because $L_v$ is much larger than $L_f$, steam at $100^\\circ\\text{C}$ contains significantly more energy than boiling water at the same temperature, which is why steam burns are more severe than water burns.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 10.5",
+                "caption": "Temperatures of the change of state and latent heats for various substances at $1\\text{ atm}$ pressure",
+                "headers": [
+                  "Substance",
+                  "Melting Point ($^\\circ$C)",
+                  "$L_f$ ($10^5\\text{ J kg}^{-1}$)",
+                  "Boiling Point ($^\\circ$C)",
+                  "$L_v$ ($10^5\\text{ J kg}^{-1}$)"
+                ],
+                "rows": [
+                  [
+                    "Ethanol",
+                    "-114",
+                    "1.0",
+                    "78",
+                    "8.5"
+                  ],
+                  [
+                    "Gold",
+                    "1063",
+                    "0.645",
+                    "2660",
+                    "15.8"
+                  ],
+                  [
+                    "Lead",
+                    "328",
+                    "0.25",
+                    "1744",
+                    "8.67"
+                  ],
+                  [
+                    "Mercury",
+                    "-39",
+                    "0.12",
+                    "357",
+                    "2.7"
+                  ],
+                  [
+                    "Nitrogen",
+                    "-210",
+                    "0.26",
+                    "-196",
+                    "2.0"
+                  ],
+                  [
+                    "Oxygen",
+                    "-219",
+                    "0.14",
+                    "-183",
+                    "2.1"
+                  ],
+                  [
+                    "Water",
+                    "0",
+                    "3.33",
+                    "100",
+                    "22.6"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:physics:11:10:10.8:9",
+            "order": 9,
+            "title": "Temperature-Heat Graph for Water",
+            "content_text": "A plot of temperature versus heat for water illustrates the different stages of heating and phase changes. The horizontal segments of the graph represent phase changes (melting and boiling) where heat is added but temperature remains constant. The sloped segments represent the heating of a single phase (solid ice, liquid water, or gaseous steam). The differing slopes of these lines indicate that the specific heat capacities of the different phases of water are not equal.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 10.12",
+                "description": "A graph of Temperature ($^\\circ$C) vs Heat for water. It shows a linear rise for solid ice, a plateau at $0^\\circ\\text{C}$ for melting (latent heat of fusion), a linear rise for liquid water, a plateau at $100^\\circ\\text{C}$ for boiling (latent heat of vaporisation), and a final rise for steam.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.8:10",
+            "order": 10,
+            "title": "Calorimetry with Phase Change",
+            "content_text": "When substances at different temperatures are mixed and a phase change occurs, the principle of calorimetry (heat lost = heat gained) must account for both the sensible heat (temperature change) and latent heat (phase change).",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 10.4",
+                "problem": "When $0.15\\text{ kg}$ of ice at $0^\\circ\\text{C}$ is mixed with $0.30\\text{ kg}$ of water at $50^\\circ\\text{C}$ in a container, the resulting temperature is $6.7^\\circ\\text{C}$. Calculate the heat of fusion of ice. ($s_{water} = 4186\\text{ J kg}^{-1}\\text{ K}^{-1}$)",
+                "solution": "Heat lost by water: $Q_1 = m_w s_w (\\theta_i - \\theta_f) = (0.30\\text{ kg})(4186\\text{ J kg}^{-1}\\text{ K}^{-1})(50.0^\\circ\\text{C} - 6.7^\\circ\\text{C}) = 54376.14\\text{ J}$. Heat gained by ice to melt: $Q_2 = m_{ice} L_f = (0.15\\text{ kg}) L_f$. Heat gained by melted ice to reach final temperature: $Q_3 = m_{ice} s_w (\\theta_f - 0^\\circ\\text{C}) = (0.15\\text{ kg})(4186\\text{ J kg}^{-1}\\text{ K}^{-1})(6.7^\\circ\\text{C}) = 4206.93\\text{ J}$. According to the principle of calorimetry, Heat lost = Heat gained: $54376.14 = 0.15 L_f + 4206.93$. Solving for $L_f$: $0.15 L_f = 50169.21 \\Rightarrow L_f = 3.34 \\times 10^5\\text{ J kg}^{-1}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.8:11",
+            "order": 11,
+            "title": "Example 10.5: Multi-Phase Heat Calculation",
+            "content_text": "This example demonstrates the calculation of total heat required for a substance to undergo multiple temperature changes and phase transitions. To convert ice at a sub-zero temperature to steam at $100^{\\circ}C$, one must account for: 1. Heating the ice to its melting point ($0^{\\circ}C$), 2. Melting the ice into water at $0^{\\circ}C$ (latent heat of fusion), 3. Heating the water to its boiling point ($100^{\\circ}C$), and 4. Converting the water to steam (latent heat of vaporization). The total heat $Q$ is the sum of these individual heat components: $Q = Q_1 + Q_2 + Q_3 + Q_4$.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 10.5",
+                "problem": "Calculate the heat required to convert 3 kg of ice at $-12^{\\circ}C$ kept in a calorimeter to steam at $100^{\\circ}C$ at atmospheric pressure. Given specific heat capacity of ice $= 2100\\,J\\,kg^{-1}\\,K^{-1}$, specific heat capacity of water $= 4186\\,J\\,kg^{-1}\\,K^{-1}$, latent heat of fusion of ice $= 3.35 \\times 10^5\\,J\\,kg^{-1}$ and latent heat of steam $= 2.256 \\times 10^6\\,J\\,kg^{-1}$.",
+                "solution": "Mass of ice, $m = 3\\,kg$. \\n$Q_1$ = heat required to convert ice at $-12^{\\circ}C$ to ice at $0^{\\circ}C$ = $m s_{ice} \\Delta T_1 = (3\\,kg)(2100\\,J\\,kg^{-1}\\,K^{-1})[0 - (-12)]^{\\circ}C = 75600\\,J$. \\n$Q_2$ = heat required to melt ice at $0^{\\circ}C$ to water at $0^{\\circ}C$ = $m L_{f ice} = (3\\,kg)(3.35 \\times 10^5\\,J\\,kg^{-1}) = 1005000\\,J$. \\n$Q_3$ = heat required to convert water at $0^{\\circ}C$ to water at $100^{\\circ}C$ = $m s_w \\Delta T_2 = (3\\,kg)(4186\\,J\\,kg^{-1}\\,K^{-1})(100^{\\circ}C) = 1255800\\,J$. \\n$Q_4$ = heat required to convert water at $100^{\\circ}C$ to steam at $100^{\\circ}C$ = $m L_{steam} = (3\\,kg)(2.256 \\times 10^6\\,J\\,kg^{-1}) = 6768000\\,J$. \\nTotal heat $Q = Q_1 + Q_2 + Q_3 + Q_4 = 75600 + 1005000 + 1255800 + 6768000 = 9.1 \\times 10^6\\,J$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:10:10.9",
+        "number": "10.9",
+        "title": "HEAT TRANSFER",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:10:10.9:1",
+            "order": 1,
+            "title": "Modes of Heat Transfer",
+            "content_text": "Heat is energy in transit from one system to another or between parts of a system due to a temperature difference. There are three distinct modes by which this energy transfer takes place: conduction, convection, and radiation. Conduction involves transfer through direct contact or within a solid; convection involves the movement of fluids (liquids or gases); and radiation involves electromagnetic waves and does not require a medium.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 10.13",
+                "description": "A diagram showing a hand holding a metallic rod in a flame (conduction), air rising above the flame (convection), and hands feeling warmth from the side of the flame (radiation).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.9:2",
+            "order": 2,
+            "title": "Conduction Mechanism",
+            "content_text": "Conduction is the mechanism of heat transfer between two adjacent parts of a body because of their temperature difference. In a metallic rod, if one end is heated in a flame, the heat transfers from the hot end through the different parts to the cooler end. Generally, gases are poor thermal conductors, while liquids have conductivities intermediate between solids and gases. Metals are typically excellent conductors.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.9:3",
+            "order": 3,
+            "title": "Quantitative Description of Conduction",
+            "content_text": "Heat conduction can be described as the time rate of heat flow in a material for a given temperature difference. Consider a metallic bar of length $L$ and uniform cross-section $A$ with ends maintained at temperatures $T_C$ and $T_D$ ($T_C > T_D$). If the sides are fully insulated, a steady state is reached where the temperature decreases uniformly from $T_C$ to $T_D$. In this steady state, the rate of flow of heat (heat current) $H$ is proportional to the temperature difference $(T_C - T_D)$ and the area of cross-section $A$, and inversely proportional to the length $L$: $$H = KA \\frac{T_C - T_D}{L}$$ where $K$ is the thermal conductivity of the material.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 10.14",
+                "description": "Steady state heat flow by conduction in a bar of length L and cross-section A, connected between two reservoirs at temperatures Tc and Td.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.9:4",
+            "order": 4,
+            "title": "Thermal Conductivity",
+            "content_text": "The constant of proportionality $K$ is called the thermal conductivity. A larger value of $K$ indicates that the material conducts heat more rapidly. The SI unit of $K$ is $J\\,s^{-1}\\,m^{-1}\\,K^{-1}$ or $W\\,m^{-1}\\,K^{-1}$. Thermal conductivity varies slightly with temperature but is often considered constant over normal ranges. Metals like silver and copper have very high conductivities, while materials like glass wool, wood, and air have very low conductivities, making them good insulators.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 10.6",
+                "caption": "Thermal conductivities of some materials",
+                "headers": [
+                  "Material",
+                  "Thermal conductivity ($J\\,s^{-1}\\,m^{-1}\\,K^{-1}$)"
+                ],
+                "rows": [
+                  [
+                    "Silver",
+                    "406"
+                  ],
+                  [
+                    "Copper",
+                    "385"
+                  ],
+                  [
+                    "Aluminium",
+                    "205"
+                  ],
+                  [
+                    "Brass",
+                    "109"
+                  ],
+                  [
+                    "Steel",
+                    "50.2"
+                  ],
+                  [
+                    "Lead",
+                    "34.7"
+                  ],
+                  [
+                    "Mercury",
+                    "8.3"
+                  ],
+                  [
+                    "Insulating brick",
+                    "0.15"
+                  ],
+                  [
+                    "Concrete",
+                    "0.8"
+                  ],
+                  [
+                    "Body fat",
+                    "0.20"
+                  ],
+                  [
+                    "Felt",
+                    "0.04"
+                  ],
+                  [
+                    "Glass",
+                    "0.8"
+                  ],
+                  [
+                    "Ice",
+                    "1.6"
+                  ],
+                  [
+                    "Glass wool",
+                    "0.04"
+                  ],
+                  [
+                    "Wood",
+                    "0.12"
+                  ],
+                  [
+                    "Water",
+                    "0.8"
+                  ],
+                  [
+                    "Air",
+                    "0.024"
+                  ],
+                  [
+                    "Argon",
+                    "0.016"
+                  ],
+                  [
+                    "Hydrogen",
+                    "0.14"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:physics:11:10:10.9:5",
+            "order": 5,
+            "title": "Applications of Thermal Conduction",
+            "content_text": "Thermal conductivity properties are utilized in various practical applications. Cooking pots often have copper bottoms because copper's high conductivity promotes uniform heat distribution. Plastic foams and glass wool are used as insulators because they contain pockets of air, which is a poor conductor. In construction, concrete roofs can get very hot, so layers of earth or foam insulation are used to reduce heat transfer into the building. In nuclear reactors, high heat transfer rates are critical to prevent the core from overheating.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.9:6",
+            "order": 6,
+            "title": "Example 10.6: Junction Temperature in Steady State",
+            "content_text": "In a system consisting of two different rods joined together (like steel and copper), the steady state implies that the heat current flowing into the junction from one rod must equal the heat current flowing out through the second rod. By equating the heat flow equations for both rods, the temperature at the junction can be determined.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 10.6",
+                "problem": "What is the temperature of the steel-copper junction in the steady state of the system shown in Fig. 10.15? Length of the steel rod $= 15.0\\,cm$, length of the copper rod $= 10.0\\,cm$, temperature of the furnace $= 300^{\\circ}C$, temperature of the other end $= 0^{\\circ}C$. The area of cross section of the steel rod is twice that of the copper rod. ($K_{steel} = 50.2\\,J\\,s^{-1}\\,m^{-1}\\,K^{-1}$; $K_{copper} = 385\\,J\\,s^{-1}\\,m^{-1}\\,K^{-1}$).",
+                "solution": "Let $T$ be the junction temperature. In steady state, heat flow through steel = heat flow through copper. \\n$\\frac{K_1 A_1 (300 - T)}{L_1} = \frac{K_2 A_2 (T - 0)}{L_2}$. \\nGiven $A_1 = 2 A_2$, $L_1 = 15\\,cm$, $L_2 = 10\\,cm$, $K_1 = 50.2$, $K_2 = 385$. \\n$\\frac{50.2 \\times 2 A_2 (300 - T)}{15} = \\frac{385 A_2 T}{10}$. \\n$6.69(300 - T) = 38.5 T \\Rightarrow 2007 - 6.69 T = 38.5 T \\Rightarrow 45.19 T = 2007$. \\n$T = 44.4^{\\circ}C$."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Fig. 10.15",
+                "description": "A composite rod of steel and copper connected between a furnace at 300 C and an ice box at 0 C, surrounded by insulating material.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.9:7",
+            "order": 7,
+            "title": "Example 10.7: Compound Bars and Equivalent Conductivity",
+            "content_text": "When two bars are soldered end-to-end, they form a compound bar. The junction temperature $T_0$ can be found by equating heat currents. The equivalent thermal conductivity $K'$ of the compound bar is the conductivity of a single uniform bar of the same total length and area that would conduct the same heat current under the same total temperature difference. For two bars of equal length $L$ and area $A$, the junction temperature is $T_0 = \\frac{K_1 T_1 + K_2 T_2}{K_1 + K_2}$ and the equivalent conductivity is $K' = \\frac{2 K_1 K_2}{K_1 + K_2}$.",
+            "content_type": "derivation",
+            "worked_examples": [
+              {
+                "label": "Example 10.7",
+                "problem": "An iron bar ($L_1 = 0.1\\,m, A_1 = 0.02\\,m^2, K_1 = 79\\,W\\,m^{-1}\\,K^{-1}$) and a brass bar ($L_2 = 0.1\\,m, A_2 = 0.02\\,m^2, K_2 = 109\\,W\\,m^{-1}\\,K^{-1}$) are soldered end to end. The free ends are maintained at $373\\,K$ and $273\\,K$. Compute (i) the junction temperature, (ii) equivalent thermal conductivity, and (iii) the heat current through the compound bar.",
+                "solution": "(i) $T_0 = \\frac{(K_1 T_1 + K_2 T_2)}{(K_1 + K_2)} = \\frac{(79 \\times 373) + (109 \\times 273)}{79 + 109} = \\frac{29467 + 29757}{188} = 315\\,K$. \\n(ii) $K' = \\frac{2 K_1 K_2}{K_1 + K_2} = \\frac{2 \\times 79 \\times 109}{79 + 109} = 91.6\\,W\\,m^{-1}\\,K^{-1}$. \\n(iii) $H = \\frac{K_1 A (T_1 - T_0)}{L} = \\frac{79 \\times 0.02 \\times (373 - 315)}{0.1} = 916.4\\,W$."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Fig. 10.16",
+                "description": "Iron and Brass bars joined end-to-end with ends at 373 K and 273 K, showing junction temperature T0.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.9:8",
+            "order": 8,
+            "title": "Continuation of Example 10.7",
+            "content_text": "The calculation for the heat flow rate in the compound bar system is completed as follows:\n(iii) $H' = H = \\frac{K' A (T_1 - T_2)}{2 L} = \\frac{(91.6 \\text{ W m}^{-1} \\text{ K}^{-1}) \\times (0.02 \\text{ m}^2) \\times (373 \\text{ K} - 273 \\text{ K})}{2 \\times (0.1 \\text{ m})} = 916.1 \\text{ W}$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.9:9",
+            "order": 9,
+            "title": "Convection",
+            "content_text": "Convection is a mode of heat transfer by actual motion of matter, possible only in fluids (liquids and gases). In natural convection, gravity plays a crucial role. When a fluid is heated from below, it expands and becomes less dense. Due to buoyancy, the warmer, less dense fluid rises, and the cooler, denser fluid from the surroundings moves in to replace it. This process creates a continuous cycle of fluid motion that transports heat. Unlike conduction, convection involves the bulk transport of different parts of the fluid.\nIn forced convection, material is forced to move by a pump, fan, or other physical means. Common examples include forced-air heating systems in homes, the human circulatory system (where the heart acts as a pump), and the cooling system of an automobile engine. In the human body, the heart circulates blood through different parts, transferring heat by forced convection and maintaining a uniform body temperature.\nNatural convection is responsible for many atmospheric phenomena. During the day, the ground heats up faster than large bodies of water because water has a greater specific heat capacity and mixing currents disperse the absorbed heat throughout the great volume of water. The air above the warm ground heats by conduction, expands, becomes less dense, and rises. Cooler air from the sea moves in to fill the space, creating a sea breeze. At night, the ground loses heat more quickly than the water, reversing the cycle and creating a land breeze (Fig. 10.17).\nAnother example of natural convection is the steady surface wind blowing from the north-east towards the equator, known as the trade wind. The equatorial regions receive more solar heat than the polar regions. Hot air at the equator rises and moves towards the poles, while cooler air from the poles streams towards the equator. The Earth's rotation modifies this current: air close to the equator has an eastward speed of $1600 \\text{ km/h}$, while it is zero close to the poles. As a result, the air descends not at the poles but at $30^\\circ \\text{ N}$ (North) latitude and returns to the equator, forming the trade winds.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 10.17",
+                "description": "Convection cycles. The left panel shows the 'DAY' cycle where land is warmer than water, leading to an air current (sea breeze) from the sea to the land. The right panel shows the 'NIGHT' cycle where water is warmer than land, leading to an air current (land breeze) from the land to the sea.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.9:10",
+            "order": 10,
+            "title": "Radiation",
+            "content_text": "Radiation is the third mechanism of heat transfer and requires no medium; it can occur through a vacuum. Energy is transferred by electromagnetic waves, called radiant energy. These waves consist of oscillating electric and magnetic fields and travel at the speed of light ($c \\approx 3 \\times 10^8 \\text{ m s}^{-1}$). All bodies, whether solid, liquid, or gas, emit electromagnetic radiation due to their temperature, known as thermal radiation. Examples include the warmth felt from a nearby fire or the heat received from the Sun across the vacuum of space.\nWhen thermal radiation falls on a body, it is partly reflected and partly absorbed. The amount of heat absorbed depends on the body's color and surface properties. Black bodies are excellent absorbers and emitters of radiant energy compared to lighter-colored bodies. This principle is applied in daily life: we wear white or light-colored clothes in summer to absorb less heat from the Sun, and dark-colored clothes in winter to absorb more heat. Similarly, the bottoms of cooking utensils are often blackened to maximize heat absorption from the fire.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.9:11",
+            "order": 11,
+            "title": "The Dewar Flask",
+            "content_text": "A Dewar flask (or thermos bottle) is designed to minimize heat transfer between its contents and the outside environment. It consists of a double-walled glass vessel with the inner and outer walls coated with silver. This silver coating reflects radiation back to the source. The space between the walls is evacuated to eliminate heat loss through conduction and convection. The flask is supported on an insulator like cork to further reduce conduction. This device is effective for keeping hot contents hot and cold contents cold.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.9:12",
+            "order": 12,
+            "title": "Blackbody Radiation Spectrum",
+            "content_text": "Thermal radiation emitted by a body consists of a continuous spectrum of wavelengths. The energy distribution across these wavelengths varies with temperature. Fig. 10.18 shows experimental curves for radiation energy per unit area per unit wavelength emitted by a blackbody at different temperatures. As the temperature increases, the total energy emitted increases, and the peak of the distribution shifts toward shorter wavelengths. These curves are universal, depending only on temperature and not on the size, shape, or material of the blackbody.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 10.18",
+                "description": "Energy emitted versus wavelength for a blackbody at different temperatures. The graph plots radiation energy per unit area per unit wavelength against wavelength $\\lambda$. Curves are shown for Sunlight (6000 K), an Arc (3000 K), and a Lamp filament (2000 K), illustrating how the peak wavelength $\\lambda_m$ shifts to smaller values as temperature increases.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.9:13",
+            "order": 13,
+            "title": "Wien's Displacement Law",
+            "content_text": "Wien's Displacement Law states that the wavelength $\\lambda_m$ at which the energy emission is maximum is inversely proportional to the absolute temperature $T$ of the body. The relationship is given by: $$\\lambda_m T = \\text{constant}$$ The value of Wien's constant is approximately $2.9 \\times 10^{-3} \\text{ m K}$. This law explains why a heated object first glows dull red, then reddish-yellow, and finally white-hot as its temperature increases. It is also used to estimate the surface temperatures of celestial bodies.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.9:14",
+            "order": 14,
+            "title": "Example: Estimating Temperatures of Celestial Bodies",
+            "content_text": "Wien's law allows us to estimate the surface temperatures of stars and the moon based on their emission spectra.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Temperature of the Moon and Sun",
+                "problem": "Estimate the surface temperatures of the Moon and the Sun given that their maximum intensity wavelengths are $14 \\text{ \\mu m}$ and $4753 \\text{ \\AA}$ respectively.",
+                "solution": "Using Wien's Law: $T = \\frac{\\text{constant}}{\\lambda_m}$\n1. For the Moon: $\\lambda_m = 14 \\text{ \\mu m} = 14 \\times 10^{-6} \\text{ m}$. The estimated surface temperature is $T \\approx 200 \\text{ K}$.\n2. For the Sun: $\\lambda_m = 4753 \\text{ \\AA} = 4753 \\times 10^{-10} \\text{ m}$. The estimated surface temperature is $T \\approx 6060 \\text{ K}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.9:15",
+            "order": 15,
+            "title": "Stefan-Boltzmann Law",
+            "content_text": "The total electromagnetic energy radiated by a body per unit time ($H$) is proportional to its surface area $A$ and the fourth power of its absolute temperature $T$. This relation was obtained experimentally by Stefan and later proved theoretically by Boltzmann. For a perfect radiator (blackbody), the law is: $$H = A \\sigma T^4$$ where $\\sigma$ is the Stefan-Boltzmann constant, $\\sigma \\approx 5.67 \\times 10^{-8} \\text{ W m}^{-2} \\text{ K}^{-4}$. For most bodies, the relation is modified by a dimensionless fraction $e$ called emissivity ($0 < e < 1$): $$H = A e \\sigma T^4$$ For a perfect radiator, $e = 1$. For a substance like lamp black, $e$ is close to 1.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.9:16",
+            "order": 16,
+            "title": "Example: Radiation from a Tungsten Lamp",
+            "content_text": "We can calculate the radiation rate of a lamp filament using the Stefan-Boltzmann law.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Tungsten Lamp Radiation",
+                "problem": "Calculate the radiation rate of a tungsten lamp at a temperature of $3000 \\text{ K}$ with a surface area of $0.3 \\text{ cm}^2$ and emissivity $0.4$.",
+                "solution": "Given: $A = 0.3 \\text{ cm}^2 = 0.3 \\times 10^{-4} \\text{ m}^2$, $T = 3000 \\text{ K}$, $e = 0.4$, $\\sigma = 5.67 \\times 10^{-8} \\text{ W m}^{-2} \\text{ K}^{-4}$.\n$H = A e \\sigma T^4$\n$H = (0.3 \\times 10^{-4}) \\times 0.4 \\times (5.67 \\times 10^{-8}) \\times (3000)^4$\n$H = 60 \\text{ W}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.9:17",
+            "order": 17,
+            "title": "Net Rate of Radiant Energy Loss",
+            "content_text": "A body at temperature $T$ in surroundings at temperature $T_s$ both emits and receives radiant energy. For a body with emissivity $e$, the net rate of loss of radiant energy is: $$H = e \\sigma A (T^4 - T_s^4)$$ This formula accounts for the simultaneous emission of energy by the body and the absorption of energy from its surroundings.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.9:18",
+            "order": 18,
+            "title": "Example: Heat Loss from the Human Body",
+            "content_text": "This calculation demonstrates the significance of radiant heat loss even at room temperature and explains the design of specialized clothing for extreme environments.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Human Body Heat Loss",
+                "problem": "Estimate the net rate of heat loss from a person's body if the surface area is $1.9 \\text{ m}^2$, skin temperature is $28^\\circ\\text{C}$, and emissivity is $0.97$. The room temperature is $22^\\circ\\text{C}$.",
+                "solution": "Given: $A = 1.9 \\text{ m}^2$, $T = 301 \\text{ K}$, $T_s = 295 \\text{ K}$, $e = 0.97$.\n$H = e \\sigma A (T^4 - T_s^4)$\n$H = 0.97 \\times 5.67 \\times 10^{-8} \\times 1.9 \\times \\{(301)^4 - (295)^4\\}$\n$H = 66.4 \\text{ W}$.\nThis loss is more than half the rate of energy production by a body at rest (approx $120 \\text{ W}$). Modern arctic clothing often includes a thin shiny metallic layer to reflect this radiation back to the skin."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:10:10.10",
+        "number": "10.10",
+        "title": "NEWTON'S LAW OF COOLING",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:10:10.10:1",
+            "order": 1,
+            "title": "Introduction and Experimental Setup",
+            "content_text": "Newton's Law of Cooling describes how the temperature of a body changes as it exchanges heat with its surroundings. To study this, consider an experiment using a calorimeter containing about $300 \\text{ mL}$ of water, equipped with a stirrer and a thermometer. The water is heated to about $40^\\circ\\text{C}$ above the surrounding temperature ($T_1$). After removing the heat source, the temperature of the water ($T_2$) is recorded at regular intervals (e.g., every minute) while stirring gently, until it reaches about $5^\\circ\\text{C}$ above the surroundings. A graph is plotted by taking each value of temperature $\\Delta T = T_2 - T_1$ along the y-axis and the corresponding value of time $t$ along the x-axis (Fig. 10.19). From the graph, it can be inferred that the cooling of hot water depends on the difference of its temperature from that of the surroundings. Initially, the rate of cooling is higher and decreases as the temperature of the body falls. This activity demonstrates that a hot body loses heat to its surroundings in the form of heat radiation, and the rate of loss depends on the temperature difference between the body and its surroundings.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 10.19",
+                "description": "A graph showing the exponential decay of temperature difference $\\Delta T$ (in $^\\circ\\text{C}$) over time (in minutes) for hot water cooling in an enclosure.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.10:2",
+            "order": 2,
+            "title": "Newton's Law of Cooling Statement",
+            "content_text": "Newton was the first to systematically study the relation between the heat lost by a body in a given enclosure and its temperature. According to Newton's law of cooling, the rate of loss of heat, $-dQ/dt$, of a body is directly proportional to the difference of temperature $\\Delta T = (T_2 - T_1)$ of the body and the surroundings. This law holds good only for small differences of temperature. Additionally, the loss of heat by radiation depends upon the nature of the surface of the body and the area of the exposed surface. Mathematically, it is expressed as: $-\\frac{dQ}{dt} = k(T_2 - T_1)$ (Eq. 10.19), where $k$ is a positive constant depending upon the area and nature of the surface of the body.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.10:3",
+            "order": 3,
+            "title": "Mathematical Derivation of the Cooling Equation",
+            "content_text": "Consider a body of mass $m$ and specific heat capacity $s$ at temperature $T_2$. Let $T_1$ be the temperature of the surroundings. If the temperature falls by a small amount $dT_2$ in time $dt$, the amount of heat lost is $dQ = ms dT_2$. Therefore, the rate of loss of heat is given by $\\frac{dQ}{dt} = ms \\frac{dT_2}{dt}$ (Eq. 10.20). Combining this with Newton's law of cooling, we have: $-ms \\frac{dT_2}{dt} = k(T_2 - T_1)$. This can be rearranged as: $\\frac{dT_2}{T_2 - T_1} = -\\frac{k}{ms} dt = -K dt$ (Eq. 10.21), where $K = k/ms$. On integrating both sides, we get: $\\log_e (T_2 - T_1) = -Kt + c$ (Eq. 10.22), or $T_2 = T_1 + C' e^{-Kt}$ (Eq. 10.23), where $C' = e^c$. Equation (10.23) enables the calculation of the time of cooling of a body through a particular range of temperature. For small temperature differences, the rate of cooling due to conduction, convection, and radiation combined is proportional to the temperature difference. This is a valid approximation for heat transfer from a radiator to a room, heat loss through walls, or the cooling of a cup of tea.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.10:4",
+            "order": 4,
+            "title": "Experimental Verification of Newton's Law of Cooling",
+            "content_text": "Newton's law of cooling can be verified using the experimental set-up shown in Fig. 10.20(a). The set-up consists of a double-walled vessel (V) containing water between the two walls. A copper calorimeter (C) containing hot water is placed inside the double-walled vessel. Two thermometers are used to note the temperatures $T_2$ of water in the calorimeter and $T_1$ of the hot water in the double walls, respectively. The temperature of the hot water in the calorimeter is noted after equal intervals of time. A graph is plotted between $\\log_e (T_2 - T_1)$ [or $\\ln(T_2 - T_1)$] and time ($t$). The nature of the graph is observed to be a straight line having a negative slope, as shown in Fig. 10.20(b). This observation is in support of Eq. 10.22.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 10.20",
+                "description": "(a) Experimental set-up showing a calorimeter C inside a double-walled vessel V with thermometers measuring $T_1$ and $T_2$. (b) A linear graph of $\\log_e (T_2 - T_1)$ versus time $t$ with a negative slope.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.10:5",
+            "order": 5,
+            "title": "Application: Cooling Time Calculation",
+            "content_text": "Newton's law of cooling can be applied to calculate the time taken for a body to cool between two temperatures by using the average temperature approximation. For a small temperature range, the rate of cooling is proportional to the difference between the average temperature of the body and the room temperature.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 10.8",
+                "problem": "A pan filled with hot food cools from $94^\\circ\\text{C}$ to $86^\\circ\\text{C}$ in 2 minutes when the room temperature is at $20^\\circ\\text{C}$. How long will it take to cool from $71^\\circ\\text{C}$ to $69^\\circ\\text{C}$?",
+                "solution": "The average temperature of $94^\\circ\\text{C}$ and $86^\\circ\\text{C}$ is $90^\\circ\\text{C}$, which is $70^\\circ\\text{C}$ above the room temperature. Under these conditions, the pan cools $8^\\circ\\text{C}$ in 2 minutes. Using Eq. (10.21) in the form $\\frac{\\text{Change in temperature}}{\\text{Time}} = K \\Delta T$, we have: $\\frac{8^\\circ\\text{C}}{2 \\text{ min}} = K(70^\\circ\\text{C})$. For the second case, the average of $69^\\circ\\text{C}$ and $71^\\circ\\text{C}$ is $70^\\circ\\text{C}$, which is $50^\\circ\\text{C}$ above room temperature. Let the time be $t$. Then: $\\frac{2^\\circ\\text{C}}{t} = K(50^\\circ\\text{C})$. Dividing the two equations: $\\frac{8^\\circ\\text{C} / 2 \\text{ min}}{2^\\circ\\text{C} / t} = \\frac{K(70^\\circ\\text{C})}{K(50^\\circ\\text{C})}$. This simplifies to $\\frac{4}{2/t} = \\frac{7}{5} \\Rightarrow 2t = 1.4 \\Rightarrow t = 0.7 \\text{ min}$. Thus, Time = 0.7 min = 42 s."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:10:Summary",
+        "number": "Summary",
+        "title": "Summary",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:10:Summary:1",
+            "order": 1,
+            "title": "Fundamental Concepts of Heat and Temperature",
+            "content_text": "Heat is a form of energy that flows between a body and its surrounding medium by virtue of temperature difference. Temperature quantitatively represents the degree of hotness. Thermometers use thermometric properties that change with temperature to measure it. Temperature scales are constructed using two fixed points with assigned arbitrary values. The Celsius ($t_c$) and Fahrenheit ($t_F$) scales are related by $t_F = (9/5) t_c + 32$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:Summary:2",
+            "order": 2,
+            "title": "Ideal Gas and Absolute Temperature",
+            "content_text": "The ideal gas equation relates pressure ($P$), volume ($V$), and absolute temperature ($T$) as $PV = \\mu RT$, where $\\mu$ is the number of moles and $R$ is the universal gas constant. In the absolute temperature scale (Kelvin), zero corresponds to the temperature where every substance has the least possible molecular activity. The Kelvin scale ($T$) and Celsius scale ($T_c$) are related by $T_c = T - 273.15$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:Summary:3",
+            "order": 3,
+            "title": "Thermal Expansion and Specific Heat",
+            "content_text": "Thermal expansion is defined by coefficients of linear ($\\alpha_l$) and volume ($\\alpha_v$) expansion: $\\frac{\\Delta l}{l} = \\alpha_l \\Delta T$ and $\\frac{\\Delta V}{V} = \\alpha_v \\Delta T$. For a change in temperature $\\Delta T$, the relation between them is $\\alpha_v = 3 \\alpha_l$. Specific heat capacity ($s$) is the heat required to change the temperature of a mass $m$ by $\\Delta T$: $s = \\frac{1}{m} \\frac{\\Delta Q}{\\Delta T}$. Molar specific heat capacity ($C$) is defined for $\\mu$ moles: $C = \\frac{1}{\\mu} \\frac{\\Delta Q}{\\Delta T}$. Latent heat of fusion ($L_f$) and vaporisation ($L_v$) are the heat per unit mass required to change state without a change in temperature and pressure.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:Summary:4",
+            "order": 4,
+            "title": "Heat Transfer and Newton's Law of Cooling",
+            "content_text": "Heat transfer occurs via conduction, convection, and radiation. In conduction, the rate of heat flow $H$ through a bar of length $L$ and cross-section $A$ with ends at $T_C$ and $T_D$ is $H = KA \\frac{T_C - T_D}{L}$, where $K$ is thermal conductivity. Newton's Law of Cooling states that the rate of cooling of a body is proportional to the excess temperature of the body over the surroundings: $\\frac{dQ}{dt} = -k(T_2 - T_1)$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:Summary:5",
+            "order": 5,
+            "title": "Summary of Physical Quantities",
+            "content_text": "The following table summarizes the key physical quantities related to the thermal properties of matter, including their symbols, dimensions, and SI units.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 10.1",
+                "caption": "Physical Quantities in Thermal Properties of Matter",
+                "headers": [
+                  "Quantity",
+                  "Symbol",
+                  "Dimensions",
+                  "Unit",
+                  "Remark"
+                ],
+                "rows": [
+                  [
+                    "Amount of substance",
+                    "$\\mu$",
+                    "[mol]",
+                    "mol",
+                    ""
+                  ],
+                  [
+                    "Celsius temperature",
+                    "$t_c$",
+                    "[K]",
+                    "$^\\circ\\text{C}$",
+                    ""
+                  ],
+                  [
+                    "Kelvin absolute temperature",
+                    "$T$",
+                    "[K]",
+                    "K",
+                    "$t_c = T - 273.15$"
+                  ],
+                  [
+                    "Co-efficient of linear expansion",
+                    "$\\alpha_l$",
+                    "[K$^{-1}$]",
+                    "K$^{-1}$",
+                    ""
+                  ],
+                  [
+                    "Co-efficient of volume expansion",
+                    "$\\alpha_v$",
+                    "[K$^{-1}$]",
+                    "K$^{-1}$",
+                    "$\\alpha_v = 3 \\alpha_l$"
+                  ],
+                  [
+                    "Heat supplied to a system",
+                    "$\\Delta Q$",
+                    "[ML$^2$ T$^{-2}$]",
+                    "J",
+                    "$\\mathcal{Q}$ is not a state variable"
+                  ],
+                  [
+                    "Specific heat capacity",
+                    "$s$",
+                    "[L$^2$ T$^{-2}$ K$^{-1}$]",
+                    "J kg$^{-1}$ K$^{-1}$",
+                    ""
+                  ],
+                  [
+                    "Thermal Conductivity",
+                    "$K$",
+                    "[M LT$^{-3}$ K$^{-1}$]",
+                    "J s$^{-1}$ K$^{-1}$",
+                    "$H = -KA \\frac{dT}{dx}$"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:10:10.11",
+        "number": "10.11",
+        "title": "Points to Ponder",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:10:10.11:1",
+            "order": 1,
+            "title": "Temperature Scales and the Triple Point of Water",
+            "content_text": "The relation connecting Kelvin temperature ($T$) and the Celsius temperature $t_c$ is $T = t_c + 273.15$. The assignment $T = 273.16$ K for the triple point of water is an exact relation by choice. With this choice, the Celsius temperature of the melting point of water and boiling point of water (both at 1 atm pressure) are very close to, but not exactly equal to $0^\\circ$C and $100^\\circ$C respectively. In the original Celsius scale, these latter fixed points were exactly at $0^\\circ$C and $100^\\circ$C (by choice), but now the triple point of water is the preferred choice for the fixed point, because it has a unique temperature.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.11:2",
+            "order": 2,
+            "title": "Properties of Phases in Equilibrium",
+            "content_text": "A liquid in equilibrium with vapour has the same pressure and temperature throughout the system; the two phases in equilibrium differ in their molar volume (i.e. density). This is true for a system with any number of phases in equilibrium.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.11:3",
+            "order": 3,
+            "title": "Conditions for Heat Transfer",
+            "content_text": "Heat transfer always involves temperature difference between two systems or two parts of the same system. Any energy transfer that does not involve temperature difference in some way is not heat.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:10:10.11:4",
+            "order": 4,
+            "title": "Mechanism of Convection",
+            "content_text": "Convection involves flow of matter within a fluid due to unequal temperatures of its parts. A hot bar placed under a running tap loses heat by conduction between the surface of the bar and water and not by convection within water.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:physics:11:10:ex:1",
+          "number": 1,
+          "problem": "The triple points of neon and carbon dioxide are $24.57$ K and $216.55$ K respectively. Express these temperatures on the Celsius and Fahrenheit scales.",
+          "solution": "Not provided",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:10:ex:2",
+          "number": 2,
+          "problem": "Two absolute scales A and B have triple points of water defined to be $200$ A and $350$ B. What is the relation between $T_A$ and $T_B$?",
+          "solution": "Not provided",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:10:ex:3",
+          "number": 3,
+          "problem": "The electrical resistance in ohms of a certain thermometer varies with temperature according to the approximate law: $R = R_0 [1 + \\alpha (T - T_0)]$. The resistance is $101.6 \\Omega$ at the triple-point of water $273.16$ K, and $165.5 \\Omega$ at the normal melting point of lead ($600.5$ K). What is the temperature when the resistance is $123.4 \\Omega$?",
+          "solution": "Not provided",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:10:ex:4",
+          "number": 4,
+          "problem": "Answer the following: (a) The triple-point of water is a standard fixed point in modern thermometry. Why? What is wrong in taking the melting point of ice and the boiling point of water as standard fixed points (as was originally done in the Celsius scale)? (b) There were two fixed points in the original Celsius scale as mentioned above which were assigned the number $0^\\circ$C and $100^\\circ$C respectively. On the absolute scale, one of the fixed points is the triple-point of water, which on the Kelvin absolute scale is assigned the number $273.16$ K. What is the other fixed point on this (Kelvin) scale? (c) The absolute temperature (Kelvin scale) $T$ is related to the temperature $t_c$ on the Celsius scale by $t_c = T - 273.15$. Why do we have $273.15$ in this relation, and not $273.16$? (d) What is the temperature of the triple-point of water on an absolute scale whose unit interval size is equal to that of the Fahrenheit scale?",
+          "solution": "Not provided",
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:10:ex:5",
+          "number": 5,
+          "problem": "Two ideal gas thermometers A and B use oxygen and hydrogen respectively. The following observations are made: [Table: Triple-point of water: A=$1.250 \\times 10^5$ Pa, B=$0.200 \\times 10^5$ Pa; Normal melting point of sulphur: A=$1.797 \\times 10^5$ Pa, B=$0.287 \\times 10^5$ Pa]. (a) What is the absolute temperature of normal melting point of sulphur as read by thermometers A and B? (b) What do you think is the reason behind the slight difference in answers of thermometers A and B? What further procedure is needed in the experiment to reduce the discrepancy between the two readings?",
+          "solution": "Not provided",
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:10:ex:6",
+          "number": 6,
+          "problem": "A steel tape $1$ m long is correctly calibrated for a temperature of $27.0^\\circ$C. The length of a steel rod measured by this tape is found to be $63.0$ cm on a hot day when the temperature is $45.0^\\circ$C. What is the actual length of the steel rod on that day? What is the length of the same steel rod on a day when the temperature is $27.0^\\circ$C? Coefficient of linear expansion of steel $= 1.20 \\times 10^{-5}$ K$^{-1}$.",
+          "solution": "Not provided",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:10:ex:7",
+          "number": 7,
+          "problem": "A large steel wheel is to be fitted on to a shaft of the same material. At $27^\\circ$C, the outer diameter of the shaft is $8.70$ cm and the diameter of the central hole in the wheel is $8.69$ cm. The shaft is cooled using 'dry ice'. At what temperature of the shaft does the wheel slip on the shaft? Assume coefficient of linear expansion of the steel to be constant: $\\alpha_{steel} = 1.20 \\times 10^{-5}$ K$^{-1}$.",
+          "solution": "Not provided",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:10:ex:8",
+          "number": 8,
+          "problem": "A hole is drilled in a copper sheet. The diameter of the hole is $4.24$ cm at $27.0^\\circ$C. What is the change in the diameter of the hole when the sheet is heated to $227^\\circ$C? Coefficient of linear expansion of copper $= 1.70 \\times 10^{-5}$ K$^{-1}$.",
+          "solution": "Not provided",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:10:ex:9",
+          "number": 9,
+          "problem": "A brass wire $1.8$ m long at $27^\\circ$C is held taut with little tension between two rigid supports. If the wire is cooled to a temperature of $-39^\\circ$C, what is the tension developed in the wire, if its diameter is $2.0$ mm? Co-efficient of linear expansion of brass $= 2.0 \\times 10^{-5}$ K$^{-1}$; Young's modulus of brass $= 0.91 \\times 10^{11}$ Pa.",
+          "solution": "Not provided",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:10:ex:10",
+          "number": 10,
+          "problem": "A brass rod of length $50$ cm and diameter $3.0$ mm is joined to a steel rod of the same length and diameter. What is the change in length of the combined rod at $250^\\circ$C, if the original lengths are at $40.0^\\circ$C? Is there a 'thermal stress' developed at the junction? The ends of the rod are free to expand ($\\alpha_{brass} = 2.0 \\times 10^{-5}$ K$^{-1}$, $\\alpha_{steel} = 1.2 \\times 10^{-5}$ K$^{-1}$).",
+          "solution": "Not provided",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:10:ex:11",
+          "number": 11,
+          "problem": "The coefficient of volume expansion of glycerine is $49 \\times 10^{-5}$ K$^{-1}$. What is the fractional change in its density for a $30^\\circ$C rise in temperature?",
+          "solution": "Not provided",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:10:ex:12",
+          "number": 12,
+          "problem": "A $10$ kW drilling machine is used to drill a bore in a small aluminium block of mass $8.0$ kg. How much is the rise in temperature of the block in $2.5$ minutes, assuming $50\\%$ of power is used up in heating the machine itself or lost to the surroundings. Specific heat of aluminium $= 0.91$ J g$^{-1}$ K$^{-1}$.",
+          "solution": "Not provided",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:10:ex:13",
+          "number": 13,
+          "problem": "A copper block of mass $2.5$ kg is heated in a furnace to a temperature of $500^\\circ$C and then placed on a large ice block. What is the maximum amount of ice that can melt? (Specific heat of copper $= 0.39$ J g$^{-1}$ K$^{-1}$; heat of fusion of water $= 335$ J g$^{-1}$).",
+          "solution": "Not provided",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:10:ex:14",
+          "number": 14,
+          "problem": "In an experiment on the specific heat of a metal, a $0.20$ kg block of the metal at $150^\\circ$C is dropped in a copper calorimeter (of water equivalent $0.025$ kg) containing $150$ cm$^3$ of water at $27^\\circ$C. The final temperature is $40^\\circ$C. Compute the specific heat of the metal. If heat losses to the surroundings are not negligible, is your answer greater or smaller than the actual value?",
+          "solution": "Not provided",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:10:ex:15",
+          "number": 15,
+          "problem": "Given below are observations on molar specific heats at room temperature of some common gases: [Table: Hydrogen=4.87, Nitrogen=4.97, Oxygen=5.02, Nitric oxide=4.99, Carbon monoxide=5.01, Chlorine=6.17 cal mol$^{-1}$ K$^{-1}$]. The measured molar specific heats are markedly different from those for monatomic gases (typically $2.92$ cal/mol K). Explain this difference. What can you infer from the somewhat larger value for chlorine?",
+          "solution": "Not provided",
+          "difficulty": "hard",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:10:ex:16",
+          "number": 16,
+          "problem": "A child running a temperature of $101^\\circ$F is given an antipyrin which causes an increase in the rate of evaporation of sweat. If the fever is brought down to $98^\\circ$F in $20$ minutes, what is the average rate of extra evaporation caused? Mass of child $= 30$ kg. Specific heat of human body $\\approx$ water. Latent heat of evaporation $= 580$ cal g$^{-1}$.",
+          "solution": "Not provided",
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:10:ex:17",
+          "number": 17,
+          "problem": "A 'thermacole' icebox of side $30$ cm has a thickness of $5.0$ cm. If $4.0$ kg of ice is put in the box, estimate the amount of ice remaining after $6$ h. Outside temperature $= 45^\\circ$C, thermal conductivity of thermacole $= 0.01$ J s$^{-1}$ m$^{-1}$ K$^{-1}$. Heat of fusion of water $= 335 \\times 10^3$ J kg$^{-1}$.",
+          "solution": "Not provided",
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:10:ex:18",
+          "number": 18,
+          "problem": "A brass boiler has a base area of $0.15$ m$^2$ and thickness $1.0$ cm. It boils water at the rate of $6.0$ kg/min. Estimate the temperature of the part of the flame in contact with the boiler. Thermal conductivity of brass $= 109$ J s$^{-1}$ m$^{-1}$ K$^{-1}$; Heat of vaporisation of water $= 2256 \\times 10^3$ J kg$^{-1}$.",
+          "solution": "Not provided",
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:10:ex:19",
+          "number": 19,
+          "problem": "Explain why: (a) a body with large reflectivity is a poor emitter (b) a brass tumbler feels much colder than a wooden tray on a chilly day (c) an optical pyrometer calibrated for an ideal black body gives too low a value for red hot iron in the open, but correct in a furnace (d) the earth without its atmosphere would be inhospitably cold (e) steam heating systems are more efficient than hot water systems.",
+          "solution": "Not provided",
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:10:ex:20",
+          "number": 20,
+          "problem": "A body cools from $80^\\circ$C to $50^\\circ$C in $5$ minutes. Calculate the time it takes to cool from $60^\\circ$C to $30^\\circ$C. The temperature of the surroundings is $20^\\circ$C.",
+          "solution": "Not provided",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,697 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_physics_12_ch12.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:physics:12:12",
+  "curriculum": "ncert",
+  "subject": "physics",
+  "grade": 12,
+  "textbook_name": "Physics Part II",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:physics:12:12",
+    "number": 12,
+    "title": "Atoms",
+    "summary": "Chapter 12, \"Atoms,\" explores the evolution of atomic models and the development of quantum theory. It begins by discussing the discovery of electrons and Thomson's \"plum pudding\" model, then moves to Rutherford's gold foil experiment, which led to the nuclear model with a central, positively charged nucleus orbited by electrons. However, Rutherford's model had limitations, failing to explain atomic stability and discrete emission spectra.\n\nThese shortcomings paved the way for Bohr's model, which incorporates quantum concepts. Bohr's postulates state that electrons occupy specific energy levels without radiating energy and can only transition between these levels by absorbing or emitting photons with energy equal to the energy difference. Key formulas include the radius of the nth orbit,  r_n, and the energy of the nth orbit, E_n = -13.6/n^2 eV.\n\nThe chapter also connects Bohr's quantization postulate with de Broglie's wave-particle duality, explaining that electrons behave as standing waves in their orbits. The chapter concludes by acknowledging the limitations of Bohr's model, particularly its inability to accurately describe multi-electron atoms or spectral line intensities. The understanding of atomic structure and spectra is crucial in various fields, including spectroscopy, laser technology, and understanding the behavior of matter at its most fundamental level.",
+    "sections": [
+      {
+        "id": "ncert:physics:12:12:12.1",
+        "number": "12.1",
+        "title": "Introduction",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:12:12.1:1",
+            "order": 1,
+            "title": "The Discovery of Electrons and Thomson's Atomic Model",
+            "content_text": "By the late nineteenth century, evidence for the atomic hypothesis of matter had accumulated. In 1897, J. J. Thomson's experiments on electric discharge through gases revealed that atoms contain negatively charged constituents called electrons, which are identical for all atoms. Since atoms are electrically neutral, they must also contain positive charge to balance the electrons. In 1898, Thomson proposed the first model of the atom, known as the 'plum pudding model'. In this model, the positive charge is uniformly distributed throughout the volume of the atom, with electrons embedded in it like seeds in a watermelon. However, subsequent studies showed that the actual distribution of charges is very different from this model.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:12:12.1:2",
+            "order": 2,
+            "title": "Atomic Spectra and the Hydrogen Series",
+            "content_text": "Condensed matter and dense gases emit a continuous spectrum of electromagnetic radiation at all temperatures. In contrast, rarefied gases heated or excited electrically emit radiation at specific discrete wavelengths, appearing as a series of bright lines. This suggests that the radiation is due to individual atoms rather than inter-atomic interactions. Each element has a characteristic spectrum. For example, hydrogen always emits a specific set of lines. In 1885, Johann Jakob Balmer found a simple empirical formula for the wavelengths of lines emitted by atomic hydrogen, suggesting a deep link between an atom's internal structure and its emitted radiation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:12:12.1:3",
+            "order": 3,
+            "title": "Rutherford's Nuclear Model of the Atom",
+            "content_text": "Ernst Rutherford (1871–1937) proposed a classic experiment involving the scattering of $\\alpha$-particles by atoms to investigate atomic structure. Based on the results of experiments performed by Hans Geiger and Ernst Marsden in 1911, Rutherford proposed the nuclear model of the atom (also called the planetary model). In this model, the entire positive charge and most of the mass of the atom are concentrated in a tiny volume called the nucleus, with electrons revolving around it like planets around the sun. While a major step forward, this model faced difficulties explaining why atoms like hydrogen emit only discrete wavelengths of light.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:12:12.2",
+        "number": "12.2",
+        "title": "Alpha-particle Scattering and Rutherford's Nuclear Model of Atom",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:12:12.2:1",
+            "order": 1,
+            "title": "The Geiger-Marsden Experiment Setup",
+            "content_text": "In 1911, H. Geiger and E. Marsden performed experiments at Rutherford's suggestion. They directed a beam of $5.5$ MeV $\\alpha$-particles, emitted from a $^{214}_{83}\\text{Bi}$ radioactive source, at a thin gold foil of thickness $2.1 \\times 10^{-7}$ m. The $\\alpha$-particles were collimated into a narrow beam using lead bricks. The scattered $\\alpha$-particles were observed using a rotatable detector consisting of a zinc sulphide (ZnS) screen and a microscope. When $\\alpha$-particles struck the screen, they produced tiny flashes of light called scintillations, which were counted to study the distribution of scattered particles as a function of the scattering angle $\\theta$.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 12.1",
+                "description": "A 3D representation of the Geiger-Marsden scattering experiment showing the alpha-particle source, the thin gold foil surrounded by a circular screen, and the scattered paths of particles.",
+                "image_url": null
+              },
+              {
+                "label": "Figure 12.2",
+                "description": "A schematic diagram of the experiment showing the lead bricks used for collimation, the beam of alpha particles hitting the thin gold foil, and the scattering at various angles (small angles, large angles, and backward scattering) toward the ZnS screen and detector microscope.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:12:12.2:2",
+            "order": 2,
+            "title": "Observations and Statistical Analysis of Scattering",
+            "content_text": "The experiment revealed that most $\\alpha$-particles pass through the foil without significant deflection. Only about $0.14\\%$ of the incident $\\alpha$-particles scatter by more than $1^{\\circ}$. Remarkably, about $1$ in $8000$ $\\alpha$-particles deflect by more than $90^{\\circ}$, including some that scatter almost backward. Rutherford argued that for an $\\alpha$-particle to be deflected backwards, it must experience an extremely large repulsive force. This force could The large-angle scattering of alpha particles could be provided if the greater part of the mass of the atom and its positive charge were concentrated tightly at its centre. Then the incoming $\\alpha$-particle could get very close to the positive charge without penetrating it, and such a close encounter would result in a large deflection. This agreement supported the hypothesis of the nuclear atom. This is why Rutherford is credited with the discovery of the nucleus.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:12:12.2:3",
+            "order": 3,
+            "title": "Rutherford's Nuclear Model and Atomic Dimensions",
+            "content_text": "In Rutherford’s nuclear model of the atom, the entire positive charge and most of the mass of the atom are concentrated in the nucleus with the electrons some distance away. The electrons would be moving in orbits about the nucleus just as the planets do around the sun. Rutherford’s experiments suggested the size of the nucleus to be about $10^{-15}$ m to $10^{-14}$ m. From kinetic theory, the size of an atom was known to be $10^{-10}$ m, about 10,000 to 100,000 times larger than the size of the nucleus. Thus, the electrons would seem to be at a distance from the nucleus of about 10,000 to 100,000 times the size of the nucleus itself. Consequently, most of an atom is empty space. This explains why most $\\alpha$-particles go right through a thin metal foil. However, when an $\\alpha$-particle happens to come near a nucleus, the intense electric field there scatters it through a large angle. The atomic electrons, being so light, do not appreciably affect the $\\alpha$-particles.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:12:12.2:4",
+            "order": 4,
+            "title": "Electrostatic Force and Scattering Analysis",
+            "content_text": "The scattering data shown in Fig. 12.3 can be analysed by employing Rutherford’s nuclear model. As the gold foil is very thin, it is assumed that $\\alpha$-particles suffer no more than one scattering. $\\alpha$-particles are helium nuclei carrying $2e$ positive charge. The gold nucleus has charge $Ze$, where $Z=79$. Since the gold nucleus is about 50 times heavier than an $\\alpha$-particle, it is assumed to remain stationary. The trajectory is computed using Newton’s second law and Coulomb’s law for electrostatic repulsion. The magnitude of this force is given by: $$F = \\frac{1}{4\\pi\\epsilon_0} \\frac{(2e)(Ze)}{r^2}$$ where $r$ is the distance between the $\\alpha$-particle and the nucleus. The force is directed along the line joining them, and its magnitude and direction change continuously as the particle moves.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 12.3",
+                "description": "A graph of the number of scattered particles detected versus the scattering angle $\\theta$ in degrees. Dots represent experimental data from Geiger and Marsden, while the solid curve represents the prediction of Rutherford's nuclear model, showing a high degree of agreement.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:12:12.2.1",
+        "number": "12.2.1",
+        "title": "Alpha-particle trajectory",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:12:12.2.1:1",
+            "order": 1,
+            "title": "Impact Parameter and Scattering Angle",
+            "content_text": "The trajectory traced by an $\\alpha$-particle depends on the impact parameter, $b$. The impact parameter is defined as the perpendicular distance of the initial velocity vector of the $\\alpha$-particle from the centre of the nucleus (Fig. 12.4). A beam of $\\alpha$-particles has a distribution of impact parameters, leading to scattering in various directions. Particles with a small impact parameter (close to the nucleus) suffer large scattering. In a head-on collision, the impact parameter is minimum and the particle rebounds ($\\theta \\cong \\pi$). For large impact parameters, the particle goes nearly undeviated ($\\theta \\cong 0$).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 12.4",
+                "description": "Diagram showing the trajectories of $\\alpha$-particles in the Coulomb field of a target nucleus. It illustrates the impact parameter $b$ as the vertical offset from the nucleus and the resulting scattering angle $\\theta$ for different paths.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:12:12.2.1:2",
+            "order": 2,
+            "title": "Determining Nuclear Size Limits",
+            "content_text": "The fact that only a small fraction of incident particles rebound indicates that head-on collisions are rare, implying the mass and positive charge are concentrated in a very small volume. Rutherford scattering is thus a powerful method to determine an upper limit to the size of the nucleus.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:12:12.2.1:3",
+            "order": 3,
+            "title": "Example 12.1: Atomic vs Solar System Proportions",
+            "content_text": "This example compares the relative scale of an atom and its nucleus to the solar system, demonstrating that atoms contain a much greater fraction of empty space than our solar system.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 12.1",
+                "problem": "In the Rutherford’s nuclear model of the atom, the nucleus (radius about $10^{-15}$ m) is analogous to the sun about which the electron move in orbit (radius $\\approx 10^{-10}$ m) like the earth orbits around the sun. If the dimensions of the solar system had the same proportions as those of the atom, would the earth be closer to or farther away from the sun than actually it is? The radius of earth’s orbit is about $1.5 \\times 10^{11}$ m. The radius of sun is taken as $7 \\times 10^8$ m.",
+                "solution": "The ratio of the radius of electron’s orbit to the radius of nucleus is $(10^{-10} \\text{ m})/(10^{-15} \\text{ m}) = 10^5$. If the radius of the earth’s orbit around the sun were $10^5$ times larger than the radius of the sun, the radius of the earth’s orbit would be $10^5 \\times 7 \\times 10^8 \\text{ m} = 7 \\times 10^{13} \\text{ m}$. This is more than 100 times greater than the actual orbital radius of earth ($1.5 \\times 10^{11}$ m). Thus, the earth would be much farther away from the sun."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:12:12.2.1:4",
+            "order": 4,
+            "title": "Example 12.2: Distance of Closest Approach",
+            "content_text": "The distance of closest approach $d$ is found by equating the initial kinetic energy $K$ of the $\\alpha$-particle to the electric potential energy $U$ at the point where it momentarily stops. Conservation of energy gives: $$K = \\frac{1}{4\\pi\\epsilon_0} \\frac{(2e)(Ze)}{d}$$ Solving for $d$: $$d = \\frac{2Ze^2}{4\\pi\\epsilon_0 K}$$ For a 7.7 MeV particle and gold ($Z=79$), $d \\approx 30$ fm.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 12.2",
+                "problem": "In a Geiger-Marsden experiment, what is the distance of closest approach to the nucleus of a 7.7 MeV $\\alpha$-particle before it comes momentarily to rest and reverses its direction?",
+                "solution": "Initial energy $E_i = K = 7.7$ MeV $= 1.2 \\times 10^{-12}$ J. At the stopping point, $E_f = U = \\frac{1}{4\\pi\\epsilon_0} \\frac{2Ze^2}{d}$. Equating $E_i = E_f$: $d = \\frac{2Ze^2}{4\\pi\\epsilon_0 K}$. Using $\\frac{1}{4\\pi\\epsilon_0} = 9.0 \\times 10^9 \\text{ Nm}^2/\\text{C}^2$ and $e = 1.6 \\times 10^{-19}$ C, we get $d = 3.84 \\times 10^{-16} Z$ m. For gold ($Z=79$), $d = 3.0 \\times 10^{-14}$ m $= 30$ fm. Since the actual radius of a gold nucleus is 6 fm, the particle reverses motion without touching the nucleus."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:12:12.2.2",
+        "number": "12.2.2",
+        "title": "Electron orbits",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:12:12.2.2:1",
+            "order": 1,
+            "title": "Stability of Electron Orbits",
+            "content_text": "The Rutherford nuclear model pictures the atom as an electrically neutral sphere with a small, massive, positively charged nucleus surrounded by electrons in dynamically stable orbits. The electrostatic force of attraction ($F_e$) between the revolving electrons and the nucleus provides the requisite centripetal force ($F_c$) to keep them in their orbits. For a hydrogen atom: $$F_e = F_c$$ $$\\frac{1}{4\\pi\\epsilon_0} \\frac{e^2}{r^2} = \\frac{mv^2}{r}$$ The relation between the orbit radius $r$ and the electron velocity $v$ is derived by equating the electrostatic force of attraction to the centripetal force. For a hydrogen atom, this is expressed as: $$r = \\frac{e^2}{4\\pi\\epsilon_0 mv^2}$$ (Equation 12.3). This formula shows that the radius of the electron's orbit is inversely proportional to the square of its velocity.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:12:12.2.2:2",
+            "order": 2,
+            "title": "Kinetic and Potential Energy",
+            "content_text": "The kinetic energy ($K$) and electrostatic potential energy ($U$) of the electron in a hydrogen atom are given by: $$K = \\frac{1}{2}mv^2 = \\frac{e^2}{8\\pi\\epsilon_0 r}$$ and $$U = -\\frac{e^2}{4\\pi\\epsilon_0 r}$$. The negative sign in the expression for $U$ signifies that the electrostatic force is attractive and directed towards the nucleus (in the $-r$ direction).",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:12:12.2.2:3",
+            "order": 3,
+            "title": "Total Energy and Bound State",
+            "content_text": "The total energy $E$ of the electron is the sum of its kinetic and potential energies: $$E = K + U = \\frac{e^2}{8\\pi\\epsilon_0 r} - \\frac{e^2}{4\\pi\\epsilon_0 r} = -\\frac{e^2}{8\\pi\\epsilon_0 r}$$ (Equation 12.4). The total energy of the electron is negative, which implies that the electron is bound to the nucleus. If $E$ were positive, the electron would not follow a closed orbit around the nucleus and would instead escape.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:12:12.2.2:4",
+            "order": 4,
+            "title": "Example 12.3: Orbital Radius and Velocity",
+            "content_text": "This example demonstrates how to calculate the orbital radius and velocity of an electron in a hydrogen atom using its experimental ionization energy.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 12.3",
+                "problem": "It is found experimentally that 13.6 eV energy is required to separate a hydrogen atom into a proton and an electron. Compute the orbital radius and the velocity of the electron in a hydrogen atom.",
+                "solution": "Total energy of the electron in hydrogen atom is $-13.6 \\text{ eV} = -13.6 \\times 1.6 \\times 10^{-19} \\text{ J} = -2.2 \\times 10^{-18} \\text{ J}$. Thus from Eq. (12.4), we have $E = -\\frac{e^2}{8\\pi\\epsilon_0 r} = -2.2 \\times 10^{-18} \\text{ J}$. This gives the orbital radius $r = -\\frac{e^2}{8\\pi\\epsilon_0 E} = -\\frac{(9 \\times 10^9 \\text{ N m}^2/\\text{C}^2)(1.6 \\times 10^{-19} \\text{ C})^2}{(2)(-2.2 \\times 10^{-18} \\text{ J})} = 5.3 \\times 10^{-11} \\text{ m}$. The velocity of the revolving electron can be computed from Eq. (12.3) with $m = 9.1 \\times 10^{-31} \\text{ kg}$, $v = \\frac{e}{\\sqrt{4\\pi\\epsilon_0 mr}} = 2.2 \\times 10^6 \\text{ m/s}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:12:12.3",
+        "number": "12.3",
+        "title": "Atomic Spectra",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:12:12.3:1",
+            "order": 1,
+            "title": "Emission Line Spectra",
+            "content_text": "Each element emits a characteristic spectrum of radiation. When an atomic gas or vapour is excited at low pressure, usually by passing an electric current through it, the emitted radiation contains only specific wavelengths. This is termed an emission line spectrum and consists of bright lines on a dark background. As shown in Fig. 12.5, the spectrum of atomic hydrogen contains distinct series of lines (Lyman, Balmer, and Paschen). These spectra serve as a 'fingerprint' for identifying elements.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 12.5",
+                "description": "Emission lines in the spectrum of hydrogen showing the Lyman series (91 nm to 122 nm), Balmer series (365 nm to 656 nm), and Paschen series (820 nm to 1875 nm) as vertical lines on a wavelength scale.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:12:12.3:2",
+            "order": 2,
+            "title": "Absorption Spectra",
+            "content_text": "When white light passes through a gas and is analyzed with a spectrometer, the transmitted light shows dark lines. These dark lines correspond precisely to the wavelengths found in the emission line spectrum of the same gas. This is called the absorption spectrum of the material.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:12:12.4",
+        "number": "12.4",
+        "title": "Bohr Model of the Hydrogen Atom",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:12:12.4:1",
+            "order": 1,
+            "title": "Limitations of Rutherford's Model: Stability",
+            "content_text": "Rutherford's model faces a stability paradox. An electron in circular motion undergoes centripetal acceleration. According to classical electromagnetic theory, an accelerating charged particle must emit radiation. This loss of energy would cause the electron to spiral inward and eventually fall into the nucleus, as shown in Fig. 12.6. Thus, the Rutherford atom would be unstable.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 12.6",
+                "description": "A diagram showing an electron spiraling into the nucleus (proton) as it loses energy, illustrating the instability predicted by classical electromagnetic theory for the Rutherford model.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:12:12.4:2",
+            "order": 2,
+            "title": "Limitations of Rutherford's Model: Continuous Spectrum",
+            "content_text": "Classical theory also predicts that the frequency of emitted electromagnetic waves equals the frequency of the electron's revolution. As the electron spirals inward, its frequency would change continuously, resulting in a continuous spectrum of light. This contradicts the observed discrete line spectra, indicating that classical ideas are insufficient to explain atomic structure.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:12:12.4:3",
+            "order": 3,
+            "title": "Biography of Niels Bohr",
+            "content_text": "Niels Henrik David Bohr (1885–1962) was a Danish physicist who explained the hydrogen spectrum using quantum ideas. He proposed the liquid-drop model of the nucleus and contributed to the theory of nuclear fission. He is also known for the complementarity principle in quantum mechanics.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:12:12.4:4",
+            "order": 4,
+            "title": "Example 12.4: Classical Frequency of Emitted Light",
+            "content_text": "This example calculates the initial frequency of light that would be emitted by a revolving electron according to classical electromagnetic theory.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 12.4",
+                "problem": "According to the classical electromagnetic theory, calculate the initial frequency of the light emitted by the electron revolving around a proton in hydrogen atom.",
+                "solution": "From Example 12.3, $v = 2.2 \\times 10^6 \\text{ m/s}$ and $r = 5.3 \\times 10^{-11} \\text{ m}$. The frequency of revolution $\\nu$ is $\\nu = \\frac{v}{2\\pi r} = \\frac{2.2 \\times 10^6 \\text{ m s}^{-1}}{2\\pi(5.3 \\times 10^{-11} \\text{ m})} \\approx 6.6 \\times 10^{15} \\text{ Hz}$. According to classical electromagnetic theory, the frequency of the electromagnetic waves emitted is equal to the frequency of revolution. Thus, the initial frequency of the light emitted is $6.6 \\times 10^{15} \\text{ Hz}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:12:12.4:5",
+            "order": 5,
+            "title": "Bohr's First Postulate",
+            "content_text": "Niels Bohr modified the atomic model by incorporating quantum concepts. Bohr's first postulate states that an electron in an atom could revolve in certain stable orbits without the emission of radiant energy, contrary to the predictions of electromagnetic theory. According to this postulate, each atom has certain definite stable states in which it Continuing from the first postulate, Bohr proposed that atoms exist in specific stable states with definite total energy. These states are known as stationary states, where the electron does not radiate energy despite being in motion.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:12:12.4:6",
+            "order": 6,
+            "title": "Bohr's Second Postulate",
+            "content_text": "The second postulate defines the condition for stable orbits. It states that an electron can only revolve in orbits where its angular momentum ($L$) is an integral multiple of $h/2\\pi$, where $h$ is Planck's constant ($6.6 \\times 10^{-34}$ J s). This implies that angular momentum is quantized and can be expressed as $L = nh/2\\pi$, where $n$ is an integer.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:12:12.4:7",
+            "order": 7,
+            "title": "Bohr's Third Postulate",
+            "content_text": "The third postulate explains the emission of radiation. It states that an electron can transition from a higher energy non-radiating orbit to a lower energy one. During this transition, a photon is emitted with energy equal to the difference between the initial ($E_i$) and final ($E_f$) states. The frequency ($\\nu$) of the emitted photon is given by $h\\nu = E_i - E_f$.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:12:12.4:8",
+            "order": 8,
+            "title": "Radius of the nth Orbit",
+            "content_text": "By applying the angular momentum quantization condition to the orbital equations, the radius of the $n^{th}$ possible orbit ($r_n$) for a hydrogen atom is derived as $r_n = \\left(\\frac{n^2}{m}\\right) \\left(\\frac{h}{2\\pi}\\right)^2 \\frac{4\\pi\\epsilon_0}{e^2}$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:12:12.4:9",
+            "order": 9,
+            "title": "Energy of the nth Orbit",
+            "content_text": "The total energy ($E_n$) of an electron in a stationary state is found by substituting the orbital radius into the energy expression: $E_n = -\\left(\\frac{e^2}{8\\pi\\epsilon_0}\\right) \\left(\\frac{m}{n^2}\\right) \\left(\\frac{2\\pi}{h}\\right)^2 \\left(\\frac{e^2}{4\\pi\\epsilon_0}\\right)$. This simplifies to the general formula $E_n = -\\frac{me^4}{8n^2\\epsilon_0^2h^2}$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:12:12.4:10",
+            "order": 10,
+            "title": "Binding Energy and Electron Volts",
+            "content_text": "Substituting physical constants into the energy formula yields $E_n = -\\frac{2.18 \\times 10^{-18}}{n^2}$ J. In atomic physics, energy is typically expressed in electron volts (eV), where $1$ eV $= 1.6 \\times 10^{-19}$ J, leading to $E_n = -\\frac{13.6}{n^2}$ eV. The negative sign indicates the electron is bound to the nucleus; energy must be supplied to move the electron to an infinite distance (ionization).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:12:12.4.1",
+        "number": "12.4.1",
+        "title": "Energy levels",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:12:12.4.1:1",
+            "order": 1,
+            "title": "Ground State and Ionization",
+            "content_text": "The lowest energy state of an atom is the ground state ($n=1$), where the electron is closest to the nucleus. For hydrogen, $E_1 = -13.6$ eV. The minimum energy required to free the electron from this state is $13.6$ eV, known as the ionization energy. This theoretical value aligns closely with experimental observations.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:12:12.4.1:2",
+            "order": 2,
+            "title": "Excited States and Transitions",
+            "content_text": "At room temperature, most hydrogen atoms are in the ground state. If an atom absorbs energy (e.g., through collisions), the electron can jump to higher energy levels ($n=2, 3, ...$), called excited states. For instance, moving an electron to the first excited state ($n=2$) requires $10.2$ eV ($E_2 - E_1$). Electrons in excited states eventually fall back to lower levels, emitting photons in the process.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:12:12.4.1:3",
+            "order": 3,
+            "title": "Energy Level Diagram",
+            "content_text": "The energy level diagram (Fig 12.7) visually represents the stationary states. The principal quantum number $n$ labels these states. As $n$ increases, the energy levels become progressively closer. At $n = \\infty$, the energy is $0$ eV, representing a free electron at rest. Above $0$ eV, there is a continuum of energy states where the electron is unbound.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 12.7",
+                "description": "An energy level diagram for the hydrogen atom showing the ground state at -13.6 eV, excited states (n=2 to n=5) at increasing energy levels, and the unbound/ionized state at 0 eV. Horizontal lines represent allowed energy levels, which cluster closer together as they approach the 0 eV limit.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:12:12.5",
+        "number": "12.5",
+        "title": "The Line Spectra of the Hydrogen Atom",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:12:12.5:1",
+            "order": 1,
+            "title": "Emission and Absorption Spectra",
+            "content_text": "Bohr's third postulate explains that transitions between levels $n_i$ and $n_f$ result in photons of specific frequencies: $h\\nu_{if} = E_{ni} - E_{nf}$. This leads to discrete emission lines. Conversely, absorption lines occur when an atom absorbs specific frequencies from a continuous spectrum to move an electron to a higher state. Bohr's successful explanation of these spectra earned him the Nobel Prize in 1922.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:12:12.6",
+        "number": "12.6",
+        "title": "De Broglie's Explanation of Bohr's Second Postulate of Quantisation",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:12:12.6:1",
+            "order": 1,
+            "title": "Wave Nature of Orbiting Electrons",
+            "content_text": "Louis de Broglie provided a theoretical basis for Bohr's second postulate by applying the wave-particle duality of matter. He proposed that electrons in circular orbits behave like standing waves. Just as a plucked string only supports specific resonant wavelengths, an electron orbit only persists if it can sustain a standing wave.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 12.8",
+                "description": "A diagram illustrating a standing wave on a circular orbit. It shows a nucleus at the center and a wave pattern superimposed on the circular path of radius r, where exactly four de Broglie wavelengths fit into the circumference.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:12:12.6:2",
+            "order": 2,
+            "title": "Standing Wave Condition and Quantization Derivation",
+            "content_text": "For a standing wave to form on a circular orbit, the circumference must be an integral multiple of the de Broglie wavelength: $2\\pi r_n = n\\lambda$. Substituting de Broglie's relation $\\lambda = h/mv$, the condition becomes $2\\pi r_n = n(h/mv)$. Rearranging this gives $mvr_n = nh/2\\pi$, which is exactly Bohr's quantization of angular momentum. Thus Thus, de Broglie's hypothesis provided an explanation for Bohr's second postulate for the quantisation of angular momentum of the orbiting electron. The quantised electron orbits and energy states are due to the wave nature of the electron and only resonant standing waves can persist. For a circular orbit of radius $r_n$, the condition for a standing wave is that the circumference must be an integral multiple of the wavelength: $2\\pi r_n = n\\lambda$, where $n = 1, 2, 3...$ (Eq. 12.12). Figure 12.8 illustrates this for $n=4$, where $2\\pi r_n = 4\\lambda$. Using de Broglie's relation $\\lambda = h/p$, where $p$ is the magnitude of the electron's momentum ($p = mv_n$ for non-relativistic speeds), the condition becomes $2\\pi r_n = n(h/mv_n)$. Rearranging this gives $m v_n r_n = nh/2\\pi$, which is exactly Bohr's quantization of angular momentum. This equation is the basis for explaining the discrete orbits and energy levels in the hydrogen atom.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 12.8",
+                "description": "A diagram illustrating a standing particle wave on a circular orbit for $n=4$. It shows a circular path with a wave superimposed on it, having four complete wavelengths ($2\\pi r_n = 4\\lambda$) fitting into the circumference.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:12:12.6:3",
+            "order": 3,
+            "title": "Limitations of the Bohr Model: Multi-electron Atoms",
+            "content_text": "Bohr's model, involving a classical trajectory picture (planet-like electron orbiting the nucleus), correctly predicts the gross features of hydrogenic atoms. Hydrogenic atoms are those consisting of a nucleus with positive charge $+Ze$ and a single electron, where $Z$ is the proton number (e.g., hydrogen, singly ionised helium, doubly ionised lithium). However, the model cannot be extended to atoms with more than one electron, such as helium. The difficulty lies in the fact that each electron interacts not only with the positively charged nucleus but also with all other electrons. The Bohr model formulation involves electrical forces between the nucleus and electron but does not account for the complex electron-electron interactions that necessarily appear in multi-electron atoms.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:12:12.6:4",
+            "order": 4,
+            "title": "Limitations of the Bohr Model: Spectral Intensities",
+            "content_text": "While the Bohr's model correctly predicts the frequencies of the light emitted by hydrogenic atoms, it is unable to explain the relative intensities of the frequencies in the spectrum. In the emission spectrum of hydrogen, some visible frequencies have weak intensity while others are strong. Experimental observations depict that some transitions are more favoured than others, but Bohr's model is unable to account for these intensity variations. Bohr's model presents an elegant picture of an atom but cannot be generalised to complex atoms. For complex atoms, a new theory based on Quantum Mechanics is required to provide a more complete picture of atomic structure.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:12:Summary",
+        "number": "Summary",
+        "title": "Chapter Summary",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:12:Summary:1",
+            "order": 1,
+            "title": "Fundamental Atomic Models and Rutherford's Limitations",
+            "content_text": "The atom is electrically neutral, containing equal amounts of positive and negative charges. Thomson's model described the atom as a spherical cloud of positive charges with electrons embedded in it. Rutherford's nuclear model proposed that most of the mass and all positive charge are concentrated in a tiny nucleus, with electrons revolving around it. However, Rutherford's model faced two main difficulties: (a) it predicted atoms are unstable as accelerated electrons should spiral into the nucleus, and (b) it could not explain the characteristic line spectra of different elements. Atoms of most elements are stable and emit characteristic spectra consisting of isolated parallel lines termed as line spectra.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:12:Summary:2",
+            "order": 2,
+            "title": "Bohr's Postulates for the Hydrogen Atom",
+            "content_text": "To explain line spectra and atomic stability, Niels Bohr proposed a model for hydrogenic (single electron) atoms based on three postulates: (a) Electrons revolve in certain stable 'stationary orbits' without emitting radiant energy. (b) Stationary orbits are those for which the angular momentum $L$ is an integral multiple of $h/2\\pi$, i.e., $L = nh/2\\pi$, where $n$ is an integer called the principal quantum number. (c) An electron transition from a higher energy state ($E_i$) to a lower energy state ($E_f$) results in the emission of a photon with frequency $\\nu$ given by $h\\nu = E_i - E_f$. Conversely, an atom absorbs radiation of the same frequency when an electron is transferred to an orbit with a higher value of $n$: $E_i + h\\nu = E_f$.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:12:Summary:3",
+            "order": 3,
+            "title": "Quantization of Radii and Energy",
+            "content_text": "As a result of the quantization of angular momentum, electron orbits occur only at specific radii. For a hydrogen atom, the radius of the $n^{th}$ orbit is given by $r_n = \\left(\\frac{n^2}{m}\\right) \\left(\\frac{h}{2\\pi}\\right)^2 \\frac{4\\pi\\epsilon_0}{e^2}$. The total energy is also quantised: $E_n = -\\frac{me^4}{8n^2\\epsilon_0^2h^2} = -13.6 \\text{ eV}/n^2$. The $n=1$ state is called the ground state with energy $-13.6$ eV. Higher values of $n$ correspond to excited states ($n > 1$). Atoms are excited to these higher states by collisions with other atoms or electrons, or by absorption of a photon of the right frequency.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:12:Summary:4",
+            "order": 4,
+            "title": "Wave Nature and Model Limitations",
+            "content_text": "de Broglie's hypothesis that electrons have a wavelength $\\lambda = h/mv$ provided an explanation for Bohr's quantised orbits by showing that the circumference of the orbit must equal a whole number of wavelengths. Bohr's model is applicable only to hydrogenic (single electron) atoms and cannot be extended to multi-electron atoms like helium. It also fails to explain the relative intensities of the frequencies emitted even by hydrogenic atoms.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:12:Points to Ponder",
+        "number": "Points to Ponder",
+        "title": "Points to Ponder",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:12:Points to Ponder:1",
+            "order": 1,
+            "title": "Stability and Classical vs. Quantum Mechanics",
+            "content_text": "Both Thomson's and Rutherford's models constitute unstable systems; Thomson's is electrostatically unstable, while Rutherford's is unstable because of electromagnetic radiation from orbiting electrons. Bohr's second postulate quantizes angular momentum ($L$), which has the same dimensions as Planck's constant $h$. While Bohr's model uses a classical trajectory picture, it is inconsistent with the uncertainty principle. Modern quantum mechanics replaces orbits with regions where the electron may be found with high probability.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:12:Points to Ponder:2",
+            "order": 2,
+            "title": "Comparison of Forces and Quantum Numbers",
+            "content_text": "Unlike the solar system where gravitational forces are small compared to the sun's mass, in atoms, the electron-electron electric force interaction is comparable in magnitude to the electron-nucleus electrical force. This is why Bohr's model is not applicable to many-electron atoms. Bohr's model uses one quantum number $n$, but quantum mechanics uses four ($n, l, m, s$). In a pure Coulomb potential (as in hydrogen atom), the energy depends only on $n$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:12:Points to Ponder:3",
+            "order": 3,
+            "title": "Frequency and the Correspondence Principle",
+            "content_text": "In the Bohr model, the frequency of revolution of an electron in its orbit is not connected to the frequency of the spectral line. The latter is the difference between two orbital energies divided by $h$. However, for transitions between large quantum numbers ($n$ to $n-1$, with $n$ very large), the two frequencies coincide as expected. Bohr's semiclassical model provides a bridge between classical and modern physics but does not provide a true picture of even the simplest hydrogenic atoms, which requires quantum mechanics.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:12:Points to Ponder:4",
+            "order": 4,
+            "title": "Synthesis and Methodology of the Bohr Model",
+            "content_text": "The Bohr model of the atom represents a pivotal synthesis in physics, characterized by its ability to explain complex phenomena through a minimal set of assumptions. Firstly, although the model is founded on only three primary postulates, it successfully accounts for nearly all the general features observed in the hydrogen spectrum, demonstrating the power of concise theoretical frameworks. Secondly, the model does not entirely discard classical physics; rather, it strategically incorporates established classical concepts, such as electrostatic forces and circular motion, while layering them with new quantum conditions. Finally, the development of the Bohr model illustrates a common practice in theoretical physics: the necessity of temporarily setting aside certain fundamental contradictions—such as the classical prediction of radiative collapse for orbiting charges—to explore the predictive potential of a new model. When such a model's predictions align closely with experimental data, it provides a justification for the initial 'leap of faith,' prompting later efforts to rationalize or resolve the underlying theoretical conflicts.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:physics:12:12:ex:1",
+          "number": 1,
+          "problem": "Choose the correct alternative from the clues given at the end of each statement: (a) The size of the atom in Thomson’s model is ......... the atomic size in Rutherford’s model. (much greater than/no different from/much less than.) (b) In the ground state of ......... electrons are in stable equilibrium, while in ......... electrons always experience a net force. (Thomson’s model/ Rutherford’s model.) (c) A classical atom based on ......... is doomed to collapse. (Thomson’s model/ Rutherford’s model.) (d) An atom has a nearly continuous mass distribution in a ......... but has a highly non-uniform mass distribution in ......... (Thomson’s model/ Rutherford’s model.) (e) The positively charged part of the atom possesses most of the mass in ......... (Rutherford’s model/both the models.)",
+          "solution": "(a) no different from (b) Thomson’s model; Rutherford’s model (c) Rutherford’s model (d) Thomson’s model; Rutherford’s model (e) both the models.",
+          "difficulty": "easy",
+          "exercise_type": "mcq"
+        },
+        {
+          "id": "ncert:physics:12:12:ex:2",
+          "number": 2,
+          "problem": "Suppose you are given a chance to repeat the alpha-particle scattering experiment using a thin sheet of solid hydrogen in place of the gold foil. (Hydrogen is a solid at temperatures below 14 K.) What results do you expect?",
+          "solution": "In the alpha-particle scattering experiment, the scattering is caused by the Coulombic repulsion between the positive charge of the nucleus and the alpha particle. For significant backscattering, the mass of the target nucleus must be much larger than the mass of the alpha particle. Since a hydrogen nucleus (proton) has a mass of approximately $1$ u, which is much smaller than the mass of an alpha particle (approximately $4$ u), the alpha particle will not be scattered back. Instead, the hydrogen nuclei would be knocked forward. Thus, no large-angle scattering would be observed.",
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:12:12:ex:3",
+          "number": 3,
+          "problem": "A difference of 2.3 eV separates two energy levels in an atom. What is the frequency of radiation emitted when the atom make a transition from the upper level to the lower level?",
+          "solution": "Given the energy difference $\\Delta E = 2.3$ eV. We use the relation $\\Delta E = h\\nu$. Converting energy to Joules: $\\Delta E = 2.3 \\times 1.6 \\times 10^{-19}$ J. The frequency is $\\nu = \\frac{\\Delta E}{h} = \\frac{2.3 \\times 1.6 \\times 10^{-19}}{6.63 \\times 10^{-34}} \\approx 5.55 \\times 10^{14}$ Hz.",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:12:ex:4",
+          "number": 4,
+          "problem": "The ground state energy of hydrogen atom is -13.6 eV. What are the kinetic and potential energies of the electron in this state?",
+          "solution": "For an electron in a Bohr orbit, the total energy $E$, kinetic energy $K$, and potential energy $U$ are related by: $K = -E$ and $U = 2E$. Given $E = -13.6$ eV, we have: $K = -(-13.6) = 13.6$ eV and $U = 2(-13.6) = -27.2$ eV.",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:12:ex:5",
+          "number": 5,
+          "problem": "A hydrogen atom initially in the ground level absorbs a photon, which excites it to the $n = 4$ level. Determine the wavelength and frequency of photon.",
+          "solution": "Energy of ground state ($n=1$), $E_1 = -13.6$ eV. Energy of $n=4$ level, $E_4 = \\frac{-13.6}{4^2} = -0.85$ eV. The energy of the absorbed photon is $\\Delta E = E_4 - E_1 = -0.85 - (-13.6) = 12.75$ eV. Frequency $\\nu = \\frac{\\Delta E}{h} = \\frac{12.75 \\times 1.6 \\times 10^{-19}}{6.63 \\times 10^{-34}} \\approx 3.08 \\times 10^{15}$ Hz. Wavelength $\\lambda = \\frac{c}{\\nu} = \\frac{3 \\times 10^8}{3.08 \\times 10^{15}} \\approx 9.7 \\times 10^{-8}$ m or 97 nm.",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:12:ex:6",
+          "number": 6,
+          "problem": "(a) Using the Bohr’s model calculate the speed of the electron in a hydrogen atom in the $n = 1, 2,$ and $3$ levels. (b) Calculate the orbital period in each of these levels.",
+          "solution": "(a) Speed $v_n = \\frac{e^2}{2\\epsilon_0 nh} = \\frac{v_1}{n}$. For $n=1$, $v_1 \\approx 2.18 \\times 10^6$ m/s. For $n=2$, $v_2 = \\frac{v_1}{2} \\approx 1.09 \\times 10^6$ m/s. For $n=3$, $v_3 = \\frac{v_1}{3} \\approx 0.73 \\times 10^6$ m/s. (b) Orbital period $T_n = \\frac{2\\pi r_n}{v_n}$. Since $r_n \\propto n^2$ and $v_n \\propto 1/n$, $T_n \\propto n^3$. For $n=1$, $T_1 = \\frac{2\\pi \\times 5.3 \\times 10^{-11}}{2.18 \\times 10^6} \\approx 1.53 \\times 10^{-16}$ s. For $n=2$, $T_2 = 2^3 T_1 \\approx 1.22 \\times 10^{-15}$ s. For $n=3$, $T_3 = 3^3 T_1 \\approx 4.13 \\times 10^{-15}$ s.",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:12:ex:7",
+          "number": 7,
+          "problem": "The radius of the innermost electron orbit of a hydrogen atom is $5.3 \\times 10^{-11}$ m. What are the radii of the $n = 2$ and $n = 3$ orbits?",
+          "solution": "In Bohr's model, the radius of the $n^{th}$ orbit is $r_n = n^2 r_1$. Given $r_1 = 5.3 \\times 10^{-11}$ m. For $n=2$, $r_2 = 2^2 \\times 5.3 \\times 10^{-11} = 2.12 \\times 10^{-10}$ m. For $n=3$, $r_3 = 3^2 \\times 5.3 \\times 10^{-11} = 4.77 \\times 10^{-10}$ m.",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:12:ex:8",
+          "number": 8,
+          "problem": "A 12.5 eV electron beam is used to bombard gaseous hydrogen at room temperature. What series of wavelengths will be emitted?",
+          "solution": "At room temperature, hydrogen atoms are in the ground state ($n=1$, $E_1 = -13.6$ eV). The electron beam can excite the atom to a state $n$ if the excitation energy $E_n - E_1 \\le 12.5$ eV. Calculating excitation energies: $E_2 - E_1 = 10.2$ eV, $E_3 - E_1 = 12.09$ eV, and $E_4 - E_1 = 12.75$ eV. Thus, the atom can be excited up to the $n=3$ level. Possible transitions are $n=3 \\to 2$ (Balmer series), $n=3 \\to 1$ (Lyman series), and $n=2 \\to 1$ (Lyman series). Therefore, wavelengths from the Lyman and Balmer series will be emitted.",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:12:ex:9",
+          "number": 9,
+          "problem": "In accordance with the Bohr’s model, find the quantum number that characterises the earth’s revolution around the sun in an orbit of radius $1.5 \\times 10^{11}$ m with orbital speed $3 \\times 10^4$ m/s. (Mass of earth $= 6.0 \\times 10^{24}$ kg.)",
+          "solution": "According to Bohr's quantization condition, $mvr = n\\frac{h}{2\\pi}$. Solving for $n$: $n = \\frac{2\\pi mvr}{h}$. Substituting the given values: $n = \\frac{2 \\times 3.14 \\times 6.0 \\times 10^{24} \\times 3 \\times 10^4 \\times 1.5 \\times 10^{11}}{6.63 \\times 10^{-34}} \\approx 2.57 \\times 10^{74}$. This extremely large value of $n$ indicates that for macroscopic systems, the quantization of orbits is not observable.",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1895 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_chemistry_11_ch5.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:chemistry:11:5",
+  "curriculum": "ncert",
+  "subject": "chemistry",
+  "grade": 11,
+  "textbook_name": "Chemistry Part I",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:chemistry:11:5",
+    "number": 5,
+    "title": "Thermodynamics",
+    "summary": "This chapter introduces thermodynamics, the study of energy transformations in chemical and physical processes. It begins by defining thermodynamic terms like system, surroundings, state functions (internal energy, enthalpy), and types of systems (open, closed, isolated). The First Law of Thermodynamics ($\\Delta U = q + w$) is introduced, linking internal energy change to heat and work.\n\nThe chapter then explores pressure-volume work, enthalpy ($H = U + pV$), heat capacity, and calorimetry for measuring $\\Delta U$ and $\\Delta H$. Hess’s Law is presented as a tool for calculating reaction enthalpies using different reaction pathways. Concepts of bond enthalpies, lattice enthalpy, and enthalpy of solution are discussed for various reaction types.\n\nThe concept of spontaneity is introduced, leading to a discussion of entropy ($S$) as a measure of disorder and the Second Law of Thermodynamics ($\\Delta S_{total} > 0$ for spontaneous processes in isolated systems). Finally, Gibbs Free Energy ($G = H - TS$) is defined as a criterion for spontaneity at constant temperature and pressure ($\\Delta G < 0$), and its relationship to the equilibrium constant ($K$) is explored ($\\Delta G^\\ominus = -RT \\ln K$). The chapter concludes by examining the effect of temperature on spontaneity and the applications of Gibbs energy in predicting equilibrium conditions. The chapter progresses from defining fundamental concepts and laws to applying them for quantitative calculations of thermodynamic properties and predictions of reaction spontaneity.",
+    "sections": [
+      {
+        "id": "ncert:chemistry:11:5:5.1",
+        "number": "5.1",
+        "title": "Thermodynamic Terms",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:5:5.1:1",
+            "order": 1,
+            "title": "Introduction to Thermodynamics",
+            "content_text": "Thermodynamics is the study of energy transformations. Chemical energy stored in molecules (like methane or coal) can be released as heat during reactions or used to do mechanical or electrical work. The laws of thermodynamics deal with energy changes of macroscopic systems involving a large number of molecules rather than microscopic systems. Thermodynamics is not concerned with the rate or mechanism of energy transformations, but focuses on the initial and final states of a system undergoing change. These laws apply only when a system is in equilibrium or moves from one equilibrium state to another. Macroscopic properties like pressure and temperature do not change with time for a system in equilibrium.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.1:2",
+            "order": 2,
+            "title": "The System and the Surroundings",
+            "content_text": "A system in thermodynamics refers to that part of the universe in which observations are made, and the remaining universe constitutes the surroundings. The surroundings include everything other than the system that can interact with it. Usually, the region of space in the neighborhood of the system constitutes its surroundings. The relationship is expressed as: Universe = System + Surroundings. The system is separated from the surroundings by a boundary, which can be real or imaginary, designed to control and track the movement of matter and energy.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 5.1",
+                "description": "A diagram showing a beaker containing a reaction mixture as the 'System', with the surrounding space labeled as 'Surroundings', separated by the beaker's wall.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.1:3",
+            "order": 3,
+            "title": "Types of Systems: Open and Closed",
+            "content_text": "Systems are classified according to the movement of matter and energy: \n1. Open System: There is an exchange of both energy and matter between the system and surroundings. An example is reactants in an open beaker where the boundary is an imaginary surface enclosing the beaker.\n2. Closed System: There is no exchange of matter, but exchange of energy is possible between the system and surroundings. An example is a closed vessel made of conducting material like copper or steel.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 5.2 (a) and (b)",
+                "description": "Diagram (a) shows an open system with arrows indicating both matter and energy (heat/work) crossing the boundary. Diagram (b) shows a closed system where only energy crosses the boundary, while matter remains inside.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.1:4",
+            "order": 4,
+            "title": "Isolated System",
+            "content_text": "In an isolated system, there is no exchange of energy or matter between the system and the surroundings. The presence of reactants in a thermos flask or any other closed insulated vessel is an example of an isolated system.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 5.2 (c)",
+                "description": "Diagram (c) shows an isolated system where neither matter nor energy can cross the boundary into the surroundings.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.1:5",
+            "order": 5,
+            "title": "The State of the System",
+            "content_text": "The state of a thermodynamic system is described by its measurable macroscopic (bulk) properties. These include pressure ($p$), volume ($V$), temperature ($T$), and amount ($n$) of substance. These variables are called state variables or state functions because their values depend only on the current state of the system and not on how that state was reached. To define the state of a system completely, it is not necessary to define all properties, as a certain minimum number of independent properties can fix the values of others.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.1:6",
+            "order": 6,
+            "title": "Internal Energy as a State Function",
+            "content_text": "Internal energy ($U$) represents the total energy of a system, which may be chemical, electrical, mechanical, or any other type. It is a state function. The internal energy of a system changes when: \n1. Heat passes into or out of the system.\n2. Work is done on or by the system.\n3. Matter enters or leaves the system.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.1:7",
+            "order": 7,
+            "title": "Work and Adiabatic Processes",
+            "content_text": "Consider a change in internal energy by doing work. If a system is contained in an insulated vessel (like a thermos flask) that does not allow exchange of heat between the system and surroundings, the boundary is called an adiabatic wall and the process is called an adiabatic process. In an adiabatic process, the heat exchange $q = 0$. Let the initial state of the system be state A with temperature $T_A$ and internal energy $U_A$. We can change the state of the system in two different ways One way: We do some mechanical work, say $1\\text{ kJ}$, by rotating a set of small paddles and thereby churning water. Let the new state be called B state and its temperature, as $T_B$. It is found that $T_B > T_A$ and the change in temperature, $\\Delta T = T_B - T_A$. Let the internal energy of the system in state B be $U_B$ and the change in internal energy, $\\Delta U = U_B - U_A$. Second way: We now do an equal amount (i.e., $1\\text{ kJ}$) electrical work with the help of an immersion rod and note down the temperature change. We find that the change in temperature is same as in the earlier case, say, $T_B - T_A$. In fact, the experiments in the above manner were done by J. P. Joule between 1840-50 and he was able to show that a given amount of work done on the system, no matter how it was done (irrespective of path) produced the same change of state, as measured by the change in the temperature of the system.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 5.3",
+                "description": "An adiabatic system depicted as a cylinder with insulated walls, showing matter and energy inside with an arrow indicating $q=0$, meaning no heat transfer through the boundary.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.1:8",
+            "order": 8,
+            "title": "Internal Energy as a State Function",
+            "content_text": "Based on Joule's experiments, it is appropriate to define a quantity, the internal energy $U$, whose value is characteristic of the state of a system. The adiabatic work, $w_{ad}$, required to bring about a change of state is equal to the difference between the value of $U$ in one state and that in another state, $\\Delta U$ i.e., $\\Delta U = U_2 - U_1 = w_{ad}$. Therefore, internal energy, $U$, of the system is a state function.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.1:9",
+            "order": 9,
+            "title": "IUPAC Sign Convention for Work",
+            "content_text": "By conventions of IUPAC in chemical thermodynamics, the positive sign expresses that $w_{ad}$ is positive when work is done on the system and the internal energy of system increases. Similarly, if the work is done by the system, $w_{ad}$ will be negative because internal energy of the system decreases. Note: Earlier, a negative sign was assigned when the work is done on the system and a positive sign when the work is done by the system. This is still followed in physics books, although IUPAC has recommended the use of the new sign convention.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.1:10",
+            "order": 10,
+            "title": "Temperature and Volume as State Functions",
+            "content_text": "Other familiar state functions include $V, p$, and $T$. For example, if we bring a change in temperature of the system from $25^\\circ\\text{C}$ to $35^\\circ\\text{C}$, the change in temperature is $35^\\circ\\text{C} - 25^\\circ\\text{C} = +10^\\circ\\text{C}$, whether we go straight up to $35^\\circ\\text{C}$ or we cool the system for a few degrees, then take the system to the final temperature. Thus, $T$ is a state function and the change in temperature is independent of the route taken. Similarly, the volume of water in a pond is a state function, because change in volume of its water is independent of the route by which water is filled in the pond, either by rain or by tubewell or by both.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.1:11",
+            "order": 11,
+            "title": "Heat as a Mode of Energy Transfer",
+            "content_text": "We can also change the internal energy of a system by transfer of heat from the surroundings to the system or vice-versa without expenditure of work. This exchange of energy, which is a result of temperature difference, is called heat, $q$. Consider bringing about the same change in temperature by transfer of heat through thermally conducting walls instead of adiabatic walls. For example, water at temperature $T_A$ in a container made of copper is enclosed in a huge heat reservoir at temperature $T_B$. The heat absorbed by the system (water), $q$, can be measured in terms of temperature difference, $T_B - T_A$. In this case change in internal energy, $\\Delta U = q$, when no work is done at constant volume.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 5.4",
+                "description": "A schematic diagram of a thermodynamic system containing matter, enclosed by a boundary that allows energy transfer as heat from the surroundings. An arrow labeled 'energy as heat' points from the surroundings into the system.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.1:12",
+            "order": 12,
+            "title": "IUPAC Sign Convention for Heat",
+            "content_text": "By conventions of IUPAC in chemical thermodynamics, $q$ is positive when heat is transferred from the surroundings to the system and the internal energy of the system increases. Conversely, $q$ is negative when heat is transferred from the system to the surroundings, resulting in a decrease of the internal energy of the system.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.1:13",
+            "order": 13,
+            "title": "The First Law of Thermodynamics",
+            "content_text": "In the general case where a change of state is brought about both by doing work and by transfer of heat, the change in internal energy is: $\\Delta U = q + w$ (Eq. 5.1). For a given change in state, $q$ and $w$ can vary depending on the path, but their sum $\\Delta U$ depends only on the initial and final states. If there is no transfer of energy as heat or work (isolated system), then $w = 0, q = 0$, and $\\Delta U = 0$. Equation 5.1 is the mathematical statement of the first law of thermodynamics, which states: 'The energy of an isolated system is constant.' It is also known as the law of conservation of energy. Note: Unlike volume, which has an absolute value, we can only measure changes in internal energy, $\\Delta U$.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.1:14",
+            "order": 14,
+            "title": "Worked Example: Internal Energy Changes",
+            "content_text": "This subsection applies the first law of thermodynamics to determine internal energy changes and system types based on heat and work interactions.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Problem 5.1",
+                "problem": "Express the change in internal energy of a system when (i) No heat is absorbed by the system from the surroundings, but work (w) is done on the system. What type of wall does the system have? (ii) No work is done on the system, but q amount of heat is taken out from the system and given to the surroundings. What type of wall does the system have? (iii) w amount of work is done by the system and q amount of heat is supplied to the system. What type of system would it be?",
+                "solution": "(i) $\\Delta U = w_{ad}$, wall is adiabatic. (ii) $\\Delta U = -q$, thermally conducting walls. (iii) $\\Delta U = q - w$, closed system."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:5:5.2",
+        "number": "5.2",
+        "title": "Applications",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:5:5.2:1",
+            "order": 1,
+            "title": "Pressure-Volume Work",
+            "content_text": "Many chemical reactions involve mechanical work, specifically pressure-volume ($PV$) work. Consider a cylinder containing one mole of an ideal gas fitted with a frictionless piston. The initial volume is $V_i$ and internal pressure is $p$. If external pressure $p_{ex}$ is greater than $p$, the piston moves inward until the internal pressure equals $p_{ex}$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 5.5 (a)",
+                "description": "A pV-plot and a cylinder diagram illustrating work done during compression at constant external pressure $p_{ex}$. The graph shows a shaded rectangular area representing work $w = p_{ex} \\Delta V$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.2:2",
+            "order": 2,
+            "title": "Derivation of Work in Compression",
+            "content_text": "If the piston moves a distance $l$ with cross-sectional area $A$, the volume change is $\\Delta V = (V_f - V_i)$. Force on the piston is $F = p_{ex} \\cdot A$. Work done $w = \\text{force} \\times \\text{distance} = p_{ex} \\cdot A \\cdot l$. Since $A \\cdot l = -\\Delta V$, we get $w = -p_{ex} \\Delta V = -p_{ex}(V_f - V_i)$ (Eq. 5.2). The negative sign ensures $w$ is positive for compression (where $\\Delta V$ is negative), consistent with work being done on the system.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.2:3",
+            "order": 3,
+            "title": "Work in Non-constant Pressure (Finite Steps)",
+            "content_text": "If the external pressure is not constant but changes in finite steps, the total work done on the gas is the sum of work in each step: $w = -\\sum p \\Delta V$. This is represented by the shaded area in a $pV$-plot showing multiple rectangular steps.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 5.5 (b)",
+                "description": "A pV-plot showing work done when pressure is not constant but changes in finite steps during compression. The work is represented by the sum of the areas of several shaded rectangles.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.2:4",
+            "order": 4,
+            "title": "Reversible Processes and Work Integration",
+            "content_text": "A process is reversible if it can be reversed at any moment by an infinitesimal change, proceeding through a series of equilibrium states. For such a process, $p_{ex} = p_{in} \\pm dp$. The work done is calculated by integration: $w = -\\int_{V_i}^{V_f} p_{ex} dV$ (Eq. 5.3). A reversible process proceeds infinitely slowly such that the system and surroundings are always in near equilibrium.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 5.5 (c)",
+                "description": "A pV-plot showing work done under reversible conditions where pressure changes in infinite steps. The work is represented by the shaded area under a smooth curve.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.2:5",
+            "order": 5,
+            "title": "Irreversible Processes and Work Relation",
+            "content_text": "In chemistry, many problems are solved by relating the work term to the internal pressure of the system. Under reversible conditions, the work done can be related to the internal pressure ($p_{in}$) by expressing the external pressure as $p_{ex} = p_{in} \\pm dp$. The work is then given by: $$w_{rev} = -\\int_{V_i}^{V_f} p_{ex} dV = -\\int_{V_i}^{V_f} (p_{in} \\pm dp) dV$$ Since the product of two infinitesimal quantities ($dp \\times dV$) is extremely small, it can be neglected, simplifying the expression to: $$w_{rev} = -\\int_{V_i}^{V_f} p_{in} dV$$",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.2:6",
+            "order": 6,
+            "title": "Reversible Work Derivation for Ideal Gas",
+            "content_text": "For $n$ moles of an ideal gas, the internal pressure $p_{in}$ (simply written as $p$) can be expressed using the ideal gas equation $pV = nRT$, which gives $p = \\frac{nRT}{V}$. At a constant temperature (isothermal process), the work done during a reversible expansion or compression is: $$w_{rev} = -\\int_{V_i}^{V_f} nRT \\frac{dV}{V} = -nRT \\ln \\frac{V_f}{V_i}$$ Converting the natural logarithm to base 10, the formula becomes: $$w_{rev} = -2.303 nRT \\log \\frac{V_f}{V_i}$$",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.2:7",
+            "order": 7,
+            "title": "Free Expansion",
+            "content_text": "Free expansion is defined as the expansion of a gas into a vacuum, where the external pressure ($p_{ex}$) is zero. Since $w = -p_{ex} \\Delta V$, no work is done during free expansion ($w = 0$), regardless of whether the process is reversible or irreversible.\nFor the isothermal expansion ($T = \\text{constant}$) of an ideal gas into a vacuum, $w = 0$ because $p_{ex} = 0$. Joule determined experimentally that $q = 0$ for such a process; therefore, according to the first law ($\\Delta U = q + w$), $\\Delta U = 0$. The first law equation $\\Delta U = q + w$ can be expressed for different isothermal conditions as follows: 1. For isothermal irreversible change: $q = -w = p_{ex}(V_f - V_i)$. 2. For isothermal reversible change: $q = -w = nRT \\ln \\frac{V_f}{V_i} = 2.303 nRT \\log \\frac{V_f}{V_i}$. For an adiabatic change, $q = 0$, and thus $\\Delta U = w_{ad}$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.2:8",
+            "order": 8,
+            "title": "Worked Examples: Isothermal Expansion",
+            "content_text": "The following examples demonstrate the calculation of heat and work for an ideal gas undergoing expansion under different conditions: into a vacuum, against a constant external pressure, and reversibly.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Problem 5.2",
+                "problem": "Two litres of an ideal gas at a pressure of 10 atm expands isothermally at $25 ^\\circ\\text{C}$ into a vacuum until its total volume is 10 litres. How much heat is absorbed and how much work is done in the expansion?",
+                "solution": "We have $q = -w = p_{ex}(10 - 2) = 0(8) = 0$. No work is done; no heat is absorbed."
+              },
+              {
+                "label": "Problem 5.3",
+                "problem": "Consider the same expansion, but this time against a constant external pressure of 1 atm.",
+                "solution": "We have $q = -w = p_{ex}(8) = 8 \\text{ litre-atm}$."
+              },
+              {
+                "label": "Problem 5.4",
+                "problem": "Consider the expansion given in problem 5.2, for 1 mol of an ideal gas conducted reversibly.",
+                "solution": "We have $q = -w = 2.303 nRT \\log \\frac{V_f}{V_i} = 2.303 \\times 1 \\times 0.8206 \\times 298 \\times \\log \\frac{10}{2} = 2.303 \\times 0.8206 \\times 298 \\times \\log 5 = 2.303 \\times 0.8206 \\times 298 \\times 0.6990 = 393.66 \\text{ L atm}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:5:5.2.2",
+        "number": "5.2.2",
+        "title": "Enthalpy, H",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:5:5.2.2:1",
+            "order": 1,
+            "title": "Enthalpy as a State Function",
+            "content_text": "Most chemical reactions are performed in open vessels at constant atmospheric pressure. Under these conditions, the heat absorbed ($q_p$) is equal to the change in a new state function called enthalpy ($H$). The term enthalpy comes from the Greek word 'enthalpien', meaning to warm or heat content. It is defined as: $$H = U + pV$$ Since internal energy ($U$), pressure ($p$), and volume ($V$) are all state functions, enthalpy ($H$) is also a state function. Consequently, the change in enthalpy ($\\Delta H$) is independent of the path taken between states.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.2.2:2",
+            "order": 2,
+            "title": "Derivation of Enthalpy Change at Constant Pressure",
+            "content_text": "At constant pressure, the first law of thermodynamics can be written as $\\Delta U = q_p - p\\Delta V$. For a change from state 1 to state 2: $$U_2 - U_1 = q_p - p(V_2 - V_1)$$ Rearranging the terms gives: $$q_p = (U_2 + pV_2) - (U_1 + pV_1)$$ Substituting $H = U + pV$, we get: $$q_p = H_2 - H_1 = \\Delta H$$ Thus, the heat absorbed by the system at constant pressure is equal to the enthalpy change. For finite changes at constant pressure, the relation is: $$\\Delta H = \\Delta U + p\\Delta V$$",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.2.2:3",
+            "order": 3,
+            "title": "Exothermic and Endothermic Reactions",
+            "content_text": "The enthalpy change $\\Delta H$ characterizes the heat flow in chemical reactions. $\\Delta H$ is negative for exothermic reactions, which release heat to the surroundings. Conversely, $\\Delta H$ is positive for endothermic reactions, which absorb heat from the surroundings. It is important to note that at constant volume ($\\Delta V = 0$), $\\Delta U = q_v$, and the enthalpy change becomes $\\Delta H = \\Delta U = q_v$. The subscript $v$ in $q_v$ denotes that heat is supplied at constant volume.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.2.2:4",
+            "order": 4,
+            "title": "Enthalpy Change for Gaseous Reactions",
+            "content_text": "For reactions involving gases, volume changes can be significant. If $V_A$ is the total volume of gaseous reactants and $V_B$ is the total volume of gaseous products, with $n_A$ and $n_B$ being their respective mole counts, the ideal gas law at constant temperature and pressure gives: $$pV_A = n_A RT \\text{ and } pV_B = n_B RT$$ Subtracting these gives: $$p(V_B - V_A) = (n_B - n_A)RT$$ $$p\\Delta V = \\Delta n_g RT$$ where $\\Delta n_g$ is the number of moles of gaseous products minus the number of moles of gaseous reactants. Substituting this into the enthalpy equation: $$\\Delta H = \\Delta U + \\Delta n_g RT$$ This equation is used to calculate $\\Delta H$ from $\\Delta U$ and vice versa.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.2.2:5",
+            "order": 5,
+            "title": "Worked Example: Enthalpy of Vaporization",
+            "content_text": "This example illustrates how to calculate the internal energy change from the molar enthalpy change for a phase transition involving a gas.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Problem 5.5",
+                "problem": "If water vapour is assumed to be a perfect gas, molar enthalpy change for vapourisation of 1 mol of water at 1 bar and $100 ^\\circ\\text{C}$ is $41 \\text{ kJ mol}^{-1}$. Calculate the internal energy change, when 1 mol of water is vapourised at 1 bar pressure and $100 ^\\circ\\text{C}$.",
+                "solution": "The change is $\\text{H}_2\\text{O}(l) \\to \\text{H}_2\\text{O}(g)$. $\\Delta H = \\Delta U + \\Delta n_g RT$ or $\\Delta U = \\Delta H - \\Delta n_g RT$. Substituting the values: $\\Delta n_g = 1 - 0 = 1$. $\\Delta U = 41.00 \\text{ kJ mol}^{-1} - 1 \\times 8.3 \\text{ J mol}^{-1} \\text{ K}^{-1} \\times 373 \\text{ K} = 41.00 \\text{ kJ mol}^{-1} - 3.096 \\text{ kJ mol}^{-1} = 37.904 \\text{ kJ mol}^{-1}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:5:5.2.3",
+        "number": "5.2.3",
+        "title": "Extensive and Intensive Properties",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:5:5.2.3:1",
+            "order": 1,
+            "title": "Definitions and Examples",
+            "content_text": "Thermodynamic properties are divided into two categories: extensive and intensive. An extensive property is one whose value depends on the quantity or size of matter present in the system. Examples include mass, volume, internal energy, enthalpy, and heat capacity. An intensive property is independent of the amount of matter present. Examples include temperature, density, and pressure.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.2.3:2",
+            "order": 2,
+            "title": "Molar Properties and System Partitioning",
+            "content_text": "A molar property, $\\chi_m = \\frac{\\chi}{n}$, is the value of an extensive property $\\chi$ for 1 mole of the substance and is an intensive property. For example, molar volume ($V_m$) and molar heat capacity ($C_m$) are intensive. The distinction is clear when considering a gas at volume $V$ and temperature $T$. If the system is partitioned into two equal parts, the volume of each part is $V/2$ (extensive), but the temperature remains $T$ (intensive).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 5.6(a)",
+                "description": "A rectangular container representing a gas system with volume V and temperature T.",
+                "image_url": null
+              },
+              {
+                "label": "Fig 5.6(b)",
+                "description": "The same container divided by a central partition into two equal halves, each with volume V/2 and temperature T, illustrating that volume is extensive and temperature is intensive.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:5:5.2.4",
+        "number": "5.2.4",
+        "title": "Heat Capacity",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:5:5.2.4:1",
+            "order": 1,
+            "title": "Definition and Heat Transfer Relation",
+            "content_text": "Heat capacity ($C$) is a measure of the heat required to raise the temperature of a system. The heat transferred ($q$) is proportional to the temperature change ($\\Delta T$), expressed as: $$q = \\text{coeff} \\times \\Delta T$$ The coefficient $C$ is called the heat capacity. Its magnitude depends on the size, composition, and nature of the system. We can write: $$q = C \\Delta T$$ A large heat capacity means a given amount of heat results in only a small temperature rise.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.2.4:2",
+            "order": 2,
+            "title": "Molar and Specific Heat Capacity",
+            "content_text": "Heat capacity is directly proportional to the amount of substance. Molar heat capacity ($C_m$) is the heat capacity for one mole of a substance, defined as $C_m = \\frac{C}{n}$. It is the quantity of heat needed to raise the temperature of one mole by one degree Celsius (or one Kelvin). Specific heat, also called specific heat capacity is the quantity of heat required to raise the temperature of one unit mass of a substance by one degree celsius (or one kelvin). For finding out the heat, $q$, required to raise the temperatures of a sample, we multiply the specific heat of the substance, $c$, by the mass $m$, and temperatures change, $\\Delta T$ as $q = c \\times m \\times \\Delta T = C \\Delta T$. This relationship allows for the calculation of heat exchange based on the measurable temperature change and the known thermal properties of the material.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.2.4:3",
+            "order": 3,
+            "title": "The Relationship between $C_p$ and $C_v$ for an Ideal Gas",
+            "content_text": "At constant volume, the heat capacity is denoted by $C_v$, and at constant pressure, it is denoted by $C_p$. We can write the equations for heat, $q$, as $q_v = C_v \\Delta T = \\Delta U$ at constant volume, and $q_p = C_p \\Delta T = \\Delta H$ at constant pressure. For one mole of an ideal gas, the relationship between enthalpy and internal energy is $\\Delta H = \\Delta U + \\Delta(pV)$. Since $pV = RT$ for one mole, this becomes $\\Delta H = \\Delta U + \\Delta(RT) = \\Delta U + R \\Delta T$. Substituting the heat capacity expressions, we get $C_p \\Delta T = C_v \\Delta T + R \\Delta T$. Dividing by $\\Delta T$ yields $C_p = C_v + R$, or $C_p - C_v = R$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:5:5.3",
+        "number": "5.3",
+        "title": "MEASUREMENT OF $\\Delta U$ AND $\\Delta H$: CALORIMETRY",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:5:5.3:1",
+            "order": 1,
+            "title": "Introduction to Calorimetry",
+            "content_text": "Energy changes associated with chemical or physical processes can be measured using an experimental technique called calorimetry. In calorimetry, the process is carried out in a vessel called a calorimeter, which is immersed in a known volume of a liquid. By knowing the heat capacity of the liquid and the calorimeter, the heat evolved in the process can be determined by measuring temperature changes. Measurements are typically made under two conditions: i) at constant volume ($q_v$) and ii) at constant pressure ($q_p$).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.3:2",
+            "order": 2,
+            "title": "$\\Delta U$ Measurements",
+            "content_text": "For chemical reactions, heat absorbed at constant volume is measured in a bomb calorimeter. A steel vessel (the bomb) is immersed in a water bath to ensure no heat is lost to the surroundings. A combustible substance is burnt in pure dioxygen supplied in the steel bomb. Heat evolved during the reaction is transferred to the water around the bomb and its temperature is monitored. Since the bomb calorimeter is sealed, its volume does not change ($\\Delta V = 0$), meaning no work is done. Thus, the energy changes measured at constant volume correspond to $q_v = \\Delta U$. The temperature change is converted to $q_v$ using the known heat capacity of the calorimeter.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 5.7",
+                "description": "A schematic diagram of a bomb calorimeter showing a steel bomb containing a sample and oxygen under pressure, immersed in a water bath. The setup includes a stirrer, a thermometer, firing leads for ignition, and an oxygen inlet.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.3:3",
+            "order": 3,
+            "title": "$\\Delta H$ Measurements",
+            "content_text": "Measurement of heat change at constant pressure (generally under atmospheric pressure) can be done in a simpler calorimeter. We know that $\\Delta H = q_p$ at constant pressure. In an exothermic reaction, heat is evolved and the system loses heat to the surroundings, making $q_p$ and $\\Delta_r H$ negative. Conversely, in an endothermic reaction, heat is absorbed, making $q_p$ and $\\Delta_r H$ positive.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 5.8",
+                "description": "A simple calorimeter for measuring heat changes at constant pressure, consisting of a foamed polystyrene cup containing a reaction mixture, equipped with a thermometer and a stirrer.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.3:4",
+            "order": 4,
+            "title": "Worked Example: Combustion of Graphite",
+            "content_text": "This example demonstrates how to calculate the enthalpy change of a reaction using data from a bomb calorimeter experiment.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 5.6",
+                "problem": "1g of graphite is burnt in a bomb calorimeter in excess of oxygen at 298 K and 1 atmospheric pressure according to the equation $C (graphite) + O_2 (g) \\rightarrow CO_2 (g)$. During the reaction, temperature rises from 298 K to 299 K. If the heat capacity of the bomb calorimeter is 20.7 kJ/K, what is the enthalpy change for the above reaction at 298 K and 1 atm?",
+                "solution": "Suppose $q$ is the quantity of heat from the reaction mixture and $C_v$ is the heat capacity of the calorimeter. The quantity of heat absorbed by the calorimeter is $q = C_v \\times \\Delta T$. The heat from the reaction will have the same magnitude but opposite sign: $q = -C_v \\times \\Delta T = -20.7 \\text{ kJ/K} \\times (299 - 298) \\text{ K} = -20.7 \\text{ kJ}$. This is $\\Delta U$ for the combustion of 1g of graphite. For combustion of 1 mol of graphite (12.0 g/mol): $\\Delta U = \\frac{12.0 \\text{ g mol}^{-1} \\times (-20.7 \\text{ kJ})}{1 \\text{ g}} = -2.48 \\times 10^2 \\text{ kJ mol}^{-1}$. Since $\\Delta n_g = 0$ for the reaction $C(s) + O_2(g) \\rightarrow CO_2(g)$, $\\Delta H = \\Delta U = -2.48 \\times 10^2 \\text{ kJ mol}^{-1}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:5:5.4",
+        "number": "5.4",
+        "title": "ENTHALPY CHANGE, $\\Delta_r H$ OF A REACTION – REACTION ENTHALPY",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:5:5.4:1",
+            "order": 1,
+            "title": "Reaction Enthalpy Definition",
+            "content_text": "In a chemical reaction, reactants are converted into products. The enthalpy change accompanying a chemical reaction is called the reaction enthalpy, denoted by $\\Delta_r H$. It is calculated as the difference between the sum of enthalpies of products and the sum of enthalpies of reactants: $\\Delta_r H = \\sum_i a_i H_{products} - \\sum_i b_i H_{reactants}$, where $a_i$ and $b_i$ are the stoichiometric coefficients of the products and reactants respectively in the balanced chemical equation.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.4:2",
+            "order": 2,
+            "title": "Standard Enthalpy of Reactions",
+            "content_text": "The enthalpy of a reaction depends on the conditions under which it is carried out. The standard enthalpy of reaction ($\\Delta_r H^\\ominus$) is the enthalpy change for a reaction when all the participating substances are in their standard states. The standard state of a substance at a specified temperature is its pure form at 1 bar. For example, the standard state of liquid ethanol at 298 K is pure liquid ethanol at 1 bar. Standard conditions are denoted by the superscript $\\ominus$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.4:3",
+            "order": 3,
+            "title": "Enthalpy Changes during Phase Transformations",
+            "content_text": "Phase transformations involve energy changes. The enthalpy change that accompanies the melting of one mole of a solid substance in its standard state is called the standard enthalpy of fusion or molar enthalpy of fusion, $\\Delta_{fus} H^\\ominus$. For example, $H_2O(s) \\rightarrow H_2O(l); \\Delta_{fus} H^\\ominus = 6.00 \\text{ kJ mol}^{-1}$. Melting is an endothermic process, so all enthalpies of fusion are positive. Similarly, vaporization and other phase changes have characteristic standard enthalpy changes.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 5.1",
+                "caption": "Standard Enthalpy Changes of Fusion and Vaporisation",
+                "headers": [
+                  "Substance",
+                  "$T_f/K$",
+                  "$\\Delta_{fus} H^\\ominus/(kJ mol^{-1})$",
+                  "$T_b/K$",
+                  "$\\Delta_{vap} H^\\ominus/(kJ mol^{-1})$"
+                ],
+                "rows": [
+                  [
+                    "$N_2$",
+                    "63.15",
+                    "0.72",
+                    "77.35",
+                    "5.59"
+                  ],
+                  [
+                    "$NH_3$",
+                    "195.40",
+                    "5.65",
+                    "239.73",
+                    "23.35"
+                  ],
+                  [
+                    "$HCl$",
+                    "159.0",
+                    "1.992",
+                    "188.0",
+                    "16.15"
+                  ],
+                  [
+                    "$CO$",
+                    "68.0",
+                    "6.836",
+                    "82.0",
+                    "6.04"
+                  ],
+                  [
+                    "$CH_3COCH_3$",
+                    "177.8",
+                    "5.72",
+                    "329.4",
+                    "29.1"
+                  ],
+                  [
+                    "$CCl_4$",
+                    "250.16",
+                    "2.5",
+                    "349.69",
+                    "30.0"
+                  ],
+                  [
+                    "$H_2O$",
+                    "273.15",
+                    "6.01",
+                    "373.15",
+                    "40.79"
+                  ],
+                  [
+                    "$NaCl$",
+                    "1081.0",
+                    "28.8",
+                    "1665.0",
+                    "170.0"
+                  ],
+                  [
+                    "$C_6H_6$",
+                    "278.65",
+                    "9.83",
+                    "353.25",
+                    "30.8"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.4:4",
+            "order": 4,
+            "title": "Standard Enthalpy of Vaporization",
+            "content_text": "The process of vaporization requires heat to overcome intermolecular forces in the liquid phase. At a constant temperature (the boiling point $T_b$) and constant pressure, the enthalpy change for the conversion of a liquid to its gas is known as the enthalpy of vaporization. For example, the vaporization of water is represented as: $H_2O(l) \\rightarrow H_2O(g); \\Delta_{vap}H^\\ominus = + 40.79 \\text{ kJ mol}^{-1}$.\\n\\n**Definition:** The amount of heat required to vaporize one mole of a liquid at constant temperature and under standard pressure (1 bar) is called its **standard enthalpy of vaporization** or **molar enthalpy of vaporization**, $\\Delta_{vap}H^\\ominus$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.4:5",
+            "order": 5,
+            "title": "Standard Enthalpy of Sublimation",
+            "content_text": "Sublimation is the direct conversion of a solid into its vapor without passing through the liquid state. Examples include the sublimation of solid $CO_2$ ('dry ice') at 195 K ($\\Delta_{sub}H^\\ominus = 25.2 \\text{ kJ mol}^{-1}$) and the slow sublimation of naphthalene ($\\Delta_{sub}H^\\ominus = 73.0 \\text{ kJ mol}^{-1}$).\\n\\n**Definition:** The **standard enthalpy of sublimation**, $\\Delta_{sub}H^\\ominus$, is the change in enthalpy when one mole of a solid substance sublimes at a constant temperature and under standard pressure (1 bar).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.4:6",
+            "order": 6,
+            "title": "Factors Influencing Enthalpy of Phase Transformations",
+            "content_text": "The magnitude of the enthalpy change during phase transformations depends significantly on the strength of the intermolecular interactions within the substance. For instance, water molecules are held together by strong hydrogen bonds in the liquid phase, requiring more heat to vaporize compared to organic liquids like acetone, where intermolecular dipole-dipole interactions are much weaker. Consequently, the enthalpy of vaporization for water is higher than that for acetone.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.4:7",
+            "order": 7,
+            "title": "Worked Example: Heat of Evaporation and Internal Energy",
+            "content_text": "This example demonstrates the calculation of heat required to evaporate a specific mass of water and the determination of the corresponding internal energy change using the relationship between enthalpy and internal energy.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 5.7",
+                "problem": "A swimmer coming out from a pool is covered with a film of water weighing about 18g. How much heat must be supplied to evaporate this water at 298 K? Calculate the internal energy of vaporisation at 298K. $\\Delta_{vap}H^\\ominus$ for water at 298K = $44.01 \\text{ kJ mol}^{-1}$.",
+                "solution": "We can represent the process of evaporation as: $H_2O(l) \\xrightarrow{\\text{vaporisation}} H_2O(g)$. Number of moles in 18 g $H_2O(l)$ is: $n = \\frac{18 \\text{ g}}{18 \\text{ g mol}^{-1}} = 1 \\text{ mol}$. Heat supplied to evaporate 18g water at 298 K: $q = n \\times \\Delta_{vap}H^\\ominus = (1 \\text{ mol}) \\times (44.01 \\text{ kJ mol}^{-1}) = 44.01 \\text{ kJ}$. Assuming steam behaves as an ideal gas, the internal energy change is: $\\Delta_{vap}U = \\Delta_{vap}H^\\ominus - p\\Delta V = \\Delta_{vap}H^\\ominus - \\Delta n_g RT$. $\\Delta_{vap}U = 44.01 \\text{ kJ} - (1)(8.314 \\text{ J K}^{-1} \\text{ mol}^{-1})(298 \\text{ K})(10^{-3} \\text{ kJ J}^{-1}) = 44.01 \\text{ kJ} - 2.48 \\text{ kJ} = 41.53 \\text{ kJ}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.4:8",
+            "order": 8,
+            "title": "Worked Example: Enthalpy and Internal Energy Change in Phase Transition",
+            "content_text": "This example illustrates how to calculate the total enthalpy change for a multi-step process involving cooling and freezing, and how to relate it to the internal energy change when volume changes are negligible.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 5.8",
+                "problem": "Assuming the water vapour to be a perfect gas, calculate the internal energy change when 1 mol of water at 100°C and 1 bar pressure is converted to ice at 0°C. Given the enthalpy of fusion of ice is $6.00 \\text{ kJ mol}^{-1}$ and heat capacity of water is $4.2 \\text{ J/g}^\\circ\\text{C}$.",
+                "solution": "The change takes place in two steps: Step 1: Cooling 1 mol $H_2O(l)$ from 100°C to 0°C. Enthalpy change $\\Delta H_1 = -(18 \\text{ g} \\times 4.2 \\text{ J/g}^\\circ\\text{C} \\times 100^\\circ\\text{C}) = -7560 \\text{ J mol}^{-1} = -7.56 \\text{ kJ mol}^{-1}$. Step 2: Freezing 1 mol $H_2O(l)$ at 0°C to ice at 0°C. Enthalpy change $\\Delta H_2 = -6.00 \\text{ kJ mol}^{-1}$ (negative because heat is released during freezing). Total enthalpy change: $\\Delta H = \\Delta H_1 + \\Delta H_2 = -7.56 \\text{ kJ mol}^{-1} + (-6.00 \\text{ kJ mol}^{-1}) = -13.56 \\text{ kJ mol}^{-1}$. Since there is negligible change in volume during the transition from liquid to solid, $p\\Delta V = \\Delta n_g RT = 0$. Therefore, $\\Delta H = \\Delta U = -13.56 \\text{ kJ mol}^{-1}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.4:9",
+            "order": 9,
+            "title": "Standard Enthalpy of Formation",
+            "content_text": "The **Standard Molar Enthalpy of Formation** ($\\Delta_f H^\\ominus$) is the enthalpy change for the formation of one mole of a compound from its constituent elements in their most stable states of aggregation, known as **reference states**. The reference state of an element is its most stable state at 25°C (298.15 K) and 1 bar pressure. For example, the reference state for dihydrogen is $H_2$ gas, for dioxygen is $O_2$ gas, for carbon is $C_{graphite}$, and for sulphur is $S_{rhombic}$. By convention, the standard enthalpy of formation ($\\Delta_f H^\\ominus$) of an element in its reference state is taken as zero. Some examples of formation reactions are: 1. $H_2(g) + \\frac{1}{2}O_2(g) \\rightarrow H_2O(l); \\Delta_f H^\\ominus = -285.8 \\text{ kJ mol}^{-1}$. 2. $C(graphite, s) + 2H_2(g) \\rightarrow CH_4(g); \\Delta_f H^\\ominus = -74.81 \\text{ kJ mol}^{-1}$. 3. $2C(graphite, s) + 3H_2(g) + \\frac{1}{2}O_2(g) \\rightarrow C_2H_5OH(l); \\Delta_f H^\\ominus = -277.7 \\text{ kJ mol}^{-1}$. It is important to note that $\\Delta_f H^\\ominus$ is a special case of reaction enthalpy where exactly one mole of the compound is formed from its elements.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 5.2",
+                "caption": "Standard Molar Enthalpies of Formation (Δf H°) at 298K of a Few Selected Substances",
+                "headers": [
+                  "Substance",
+                  "$\\Delta_f H^\\ominus / (\\text{kJ mol}^{-1})$",
+                  "Substance",
+                  "$\\Delta_f H^\\ominus / (\\text{kJ mol}^{-1})$"
+                ],
+                "rows": [
+                  [
+                    "$Al_2O_3(s)$",
+                    "-1675.7",
+                    "$HI(g)$",
+                    "+26.48"
+                  ],
+                  [
+                    "$BaCO_3(s)$",
+                    "-1216.3",
+                    "$KCl(s)$",
+                    "-436.75"
+                  ],
+                  [
+                    "$Br_2(l)$",
+                    "0",
+                    "$KBr(s)$",
+                    "-393.8"
+                  ],
+                  [
+                    "$Br_2(g)$",
+                    "+30.91",
+                    "$MgO(s)$",
+                    "-601.70"
+                  ],
+                  [
+                    "$CaCO_3(s)$",
+                    "-1206.92",
+                    "$Mg(OH)_2(s)$",
+                    "-924.54"
+                  ],
+                  [
+                    "$C(diamond)$",
+                    "+1.89",
+                    "$NaF(s)$",
+                    "-573.65"
+                  ],
+                  [
+                    "$C(graphite)$",
+                    "0",
+                    "$NaCl(s)$",
+                    "-411.15"
+                  ],
+                  [
+                    "$CaO(s)$",
+                    "-635.09",
+                    "$NaBr(s)$",
+                    "-361.06"
+                  ],
+                  [
+                    "$CH_4(g)$",
+                    "-74.81",
+                    "$NaI(s)$",
+                    "-287.78"
+                  ],
+                  [
+                    "$C_2H_4(g)$",
+                    "52.26",
+                    "$NH_3(g)$",
+                    "-46.11"
+                  ],
+                  [
+                    "$CH_3OH(l)$",
+                    "-238.86",
+                    "$NO(g)$",
+                    "+90.25"
+                  ],
+                  [
+                    "$C_2H_5OH(l)$",
+                    "-277.69",
+                    "$NO_2(g)$",
+                    "+33.18"
+                  ],
+                  [
+                    "$C_6H_6(l)$",
+                    "+49.0",
+                    "$PCl_3(l)$",
+                    "-319.70"
+                  ],
+                  [
+                    "$CO(g)$",
+                    "-110.53",
+                    "$PCl_5(s)$",
+                    "-443.5"
+                  ],
+                  [
+                    "$CO_2(g)$",
+                    "-393.51",
+                    "$SiO_2(s) \\text{ (quartz)}$",
+                    "-910.94"
+                  ],
+                  [
+                    "$C_2H_6(g)$",
+                    "-84.68",
+                    "$SnCl_2(s)$",
+                    "-325.1"
+                  ],
+                  [
+                    "$Cl_2(g)$",
+                    "0",
+                    "$SnCl_4(l)$",
+                    "-511.3"
+                  ],
+                  [
+                    "$C_3H_8(g)$",
+                    "-103.85",
+                    "$SO_2(g)$",
+                    "-296.83"
+                  ],
+                  [
+                    "$n-C_4H_{10}(g)$",
+                    "-126.15",
+                    "$SO_3(g)$",
+                    "-395.72"
+                  ],
+                  [
+                    "$HgS(s) \\text{ red}$",
+                    "-58.2",
+                    "$SiH_4(g)$",
+                    "+34"
+                  ],
+                  [
+                    "$H_2(g)$",
+                    "0",
+                    "$SiCl_4(g)$",
+                    "-657.0"
+                  ],
+                  [
+                    "$H_2O(g)$",
+                    "-241.82",
+                    "$C(g)$",
+                    "+716.68"
+                  ],
+                  [
+                    "$H_2O(l)$",
+                    "-285.83",
+                    "$H(g)$",
+                    "+217.97"
+                  ],
+                  [
+                    "$HF(g)$",
+                    "-271.1",
+                    "$Cl(g)$",
+                    "+121.68"
+                  ],
+                  [
+                    "$HCl(g)$",
+                    "-92.31",
+                    "$Fe_2O_3(s)$",
+                    "-824.2"
+                  ],
+                  [
+                    "$HBr(g)$",
+                    "-36.40",
+                    "",
+                    ""
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.4:10",
+            "order": 10,
+            "title": "Calculating Reaction Enthalpy from Enthalpies of Formation",
+            "content_text": "The standard enthalpy of any reaction can be calculated if the standard enthalpies of formation of all reactants and products are known. The general equation is: $\\Delta_r H^\\ominus = \\sum_i a_i \\Delta_f H^\\ominus(\\text{products}) - \\sum_i b_i \\Delta_f H^\\ominus(\\text{reactants})$ (5.15), where $a_i$ and $b_i$ represent the stoichiometric coefficients of the products and reactants in the balanced chemical equation.",
+            "content_type": "derivation",
+            "worked_examples": [
+              {
+                "label": "Example: Decomposition of Calcium Carbonate",
+                "problem": "Calculate the standard enthalpy change for the decomposition of calcium carbonate into lime and carbon dioxide: $CaCO_3(s) \\rightarrow CaO(s) + CO_2(g)$ using the data from Table 5.2.",
+                "solution": "Using the equation $\\Delta_r H^\\ominus = \\sum a_i \\Delta_f H^\\ominus(\\text{products}) - \\sum b_i \\Delta_f H^\\ominus(\\text{reactants})$: $\\Delta_r H^\\ominus = [\\Delta_f H^\\ominus(CaO(s)) + \\Delta_f H^\\ominus(CO_2(g))] - [\\Delta_f H^\\ominus(CaCO_3(s))]$. From Table 5.2: $\\Delta_f H^\\ominus(CaO(s)) = -635.1 \\text{ kJ mol}^{-1}$, $\\Delta_f H^\\ominus(CO_2(g)) = -393.5 \\text{ kJ mol}^{-1}$, $\\Delta_f H^\\ominus(CaCO_3(s)) = -1206.9 \\text{ kJ mol}^{-1}$. $\\Delta_r H^\\ominus = [1(-635.1) + 1(-393.5)] - 1(-1206.9) = -1028.6 + 1206.9 = 178.3 \\text{ kJ mol}^{-1}$. Thus, the decomposition is an endothermic process."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.4:11",
+            "order": 11,
+            "title": "Thermochemical Equations",
+            "content_text": "A balanced chemical equation that includes the value of its enthalpy change ($\\Delta_r H$) is called a **thermochemical equation**. It specifies the physical state (and allotropic state, if applicable) of each substance. For example: $C_2H_5OH(l) + 3O_2(g) \\rightarrow 2CO_2(g) + 3H_2O(l); \\Delta_r H^\\ominus = -1367 \\text{ kJ mol}^{-1}$. This equation describes the combustion of liquid ethanol. The negative sign indicates an exothermic reaction.\\n\\n**Conventions for Thermochemical Equations:**\\n1. The coefficients in a balanced thermochemical equation refer to the number of moles of reactants and products involved in the reaction.\\n2. The numerical value of $\\Delta_r H^\\ominus$ refers to the number of moles of substances specified by the equation. Standard enthalpy change $\\Delta_r H^\\ominus$ will have units as $\\text{kJ mol}^{-1}$. The value of $\\Delta_r H^\\ominus$ refers to the number of moles of substances specified by the equation. Standard enthalpy change $\\Delta_r H^\\ominus$ will have units as $\\text{kJ mol}^{-1}$. To illustrate the concept, consider the calculation of heat of reaction for the following reaction: $Fe_2O_3(s) + 3H_2(g) \\rightarrow 2Fe(s) + 3H_2O(l)$. From the standard enthalpy of formation ($\\Delta_f H^\\ominus$) values, we find: $\\Delta_f H^\\ominus(H_2O, l) = -285.83 \\text{ kJ mol}^{-1}$ and $\\Delta_f H^\\ominus(Fe_2O_3, s) = -824.2 \\text{ kJ mol}^{-1}$. By convention, $\\Delta_f H^\\ominus(Fe, s) = 0$ and $\\Delta_f H^\\ominus(H_2, g) = 0$. Then, $\\Delta_r H^\\ominus = 3(-285.83 \\text{ kJ mol}^{-1}) - 1(-824.2 \\text{ kJ mol}^{-1}) = (-857.5 + 824.2) \\text{ kJ mol}^{-1} = -33.3 \\text{ kJ mol}^{-1}$.\nThe coefficients used in thermochemical calculations are pure numbers equal to the respective stoichiometric coefficients. The unit for $\\Delta_r H^\\ominus$ is $\\text{kJ mol}^{-1}$, which means 'per mole of reaction'. Balancing a chemical equation in a particular way defines the mole of reaction. If the equation is balanced differently, for example, $\\frac{1}{2} Fe_2O_3(s) + \\frac{3}{2} H_2(g) \\rightarrow Fe(s) + \\frac{3}{2} H_2O(l)$, then $\\Delta_r H^\\ominus$ would be $\\frac{1}{2} \\Delta_r H_1^\\ominus = -16.6 \\text{ kJ mol}^{-1}$, showing that enthalpy is an extensive quantity. Additionally, when a chemical equation is reversed, the value of $\\Delta_r H^\\ominus$ is reversed in sign. For example, $N_2(g) + 3H_2(g) \\rightarrow 2NH_3(g)$ has $\\Delta_r H^\\ominus = -91.8 \\text{ kJ}$, while $2NH_3(g) \\rightarrow N_2(g) + 3H_2(g)$ has $\\Delta_r H^\\ominus = +91.8 \\text{ kJ}$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.4:12",
+            "order": 12,
+            "title": "Hess’s Law of Constant Heat Summation",
+            "content_text": "Enthalpy is a state function, so the change in enthalpy is independent of the path between the initial state (reactants) and final state (products). Hess’s Law states: 'If a reaction takes place in several steps then its standard reaction enthalpy is the sum of the standard enthalpies of the intermediate reactions into which the overall reaction may be divided at the same temperature.' This law is crucial for calculating enthalpy changes that cannot be measured directly.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.4:13",
+            "order": 13,
+            "title": "Application of Hess’s Law: Formation of Carbon Monoxide",
+            "content_text": "Consider the enthalpy change for $C(graphite, s) + \\frac{1}{2} O_2(g) \\rightarrow CO(g)$. Since $CO_2$ is always produced alongside $CO$, direct measurement is difficult. However, using related reactions: (i) $C(graphite, s) + O_2(g) \\rightarrow CO_2(g); \\Delta_r H^\\ominus = -393.5 \\text{ kJ mol}^{-1}$ and (ii) $CO(g) + \\frac{1}{2} O_2(g) \\rightarrow CO_2(g); \\Delta_r H^\\ominus = -283.0 \\text{ kJ mol}^{-1}$. To get the desired equation, we reverse (ii) to get (iii) $CO_2(g) \\rightarrow CO(g) + \\frac{1}{2} O_2(g); \\Delta_r H^\\ominus = +283.0 \\text{ kJ mol}^{-1}$. Adding (i) and (iii) gives the target reaction with $\\Delta_r H^\\ominus = (-393.5 + 283.0) = -110.5 \\text{ kJ mol}^{-1}$.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.4:14",
+            "order": 14,
+            "title": "Generalization and Diagrammatic Representation of Hess’s Law",
+            "content_text": "In general, if enthalpy of an overall reaction $A \\rightarrow B$ along one route is $\\Delta_r H$ and along another route via intermediates $C$ and $D$ is $\\Delta_r H_1, \\Delta_r H_2, \\Delta_r H_3$, then $\\Delta_r H = \\Delta_r H_1 + \\Delta_r H_2 + \\Delta_r H_3$. This relationship is often represented in a cycle or path diagram showing that the total enthalpy change is the same regardless of the steps taken.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 5.x",
+                "description": "A schematic diagram showing two paths from state A to state B. Path 1 is a direct arrow from A to B labeled $\\Delta_r H$. Path 2 consists of three steps: A to C ($\\Delta H_1$), C to D ($\\Delta H_2$), and D to B ($\\Delta H_3$). The diagram illustrates that the sum of enthalpies in Path 2 equals the enthalpy of Path 1.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:5:5.5",
+        "number": "5.5",
+        "title": "ENTHALPIES FOR DIFFERENT TYPES OF REACTIONS",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:5:5.5:1",
+            "order": 1,
+            "title": "Standard Enthalpy of Combustion ($\\Delta_c H^\\ominus$)",
+            "content_text": "Standard enthalpy of combustion is defined as the enthalpy change per mole (or per unit amount) of a substance when it undergoes complete combustion and all the reactants and products being in their standard states at the specified temperature. Combustion reactions are exothermic. For example, the combustion of butane ($C_4H_{10}$) releases $2658 \\text{ kJ}$ of heat: $C_4H_{10}(g) + \\frac{13}{2} O_2(g) \\rightarrow 4CO_2(g) + 5H_2O(l); \\Delta_c H^\\ominus = -2658.0 \\text{ kJ mol}^{-1}$. Similarly, combustion of glucose gives out $2802.0 \\text{ kJ/mol}$ of heat. Our body also generates energy from food by the same overall process as combustion, although the final products are produced after a series of complex bio-chemical reactions involving enzymes.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.5:2",
+            "order": 2,
+            "title": "Worked Example: Standard Enthalpy of Formation of Benzene",
+            "content_text": "This example demonstrates how to calculate the standard enthalpy of formation of benzene using its enthalpy of combustion and the enthalpies of formation of its combustion products ($CO_2$ and $H_2O$). The process involves setting up thermochemical equations for each known value and combining them using Hess's Law to match the target formation reaction: $6C(graphite) + 3H_2(g) \\rightarrow C_6H_6(l)$.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 5.9",
+                "problem": "The combustion of one mole of benzene takes place at $298 \\text{ K}$ and $1 \\text{ atm}$. After combustion, $CO_2(g)$ and $H_2O(l)$ are produced and $3267.0 \\text{ kJ}$ of heat is liberated. Calculate the standard enthalpy of formation, $\\Delta_f H^\\ominus$ of benzene. Standard enthalpies of formation of $CO_2(g)$ and $H_2O(l)$ are $-393.5 \\text{ kJ mol}^{-1}$ and $-285.83 \\text{ kJ mol}^{-1}$ respectively.",
+                "solution": "The formation reaction of benzene is: $6C(graphite) + 3H_2(g) \\rightarrow C_6H_6(l); \\Delta_f H^\\ominus = ?$ ... (i). The enthalpy of combustion of 1 mol of benzene is: $C_6H_6(l) + \\frac{15}{2} O_2 \\rightarrow 6CO_2(g) + 3H_2O(l); \\Delta_c H^\\ominus = -3267 \\text{ kJ mol}^{-1}$ ... (ii). The enthalpy of formation of 1 mol of $CO_2(g)$ is: $C(graphite) + O_2(g) \\rightarrow CO_2(g); \\Delta_f H^\\ominus = -393.5 \\text{ kJ mol}^{-1}$ ... (iii). The enthalpy of formation of 1 mol of $H_2O(l)$ is: $H_2(g) + \\frac{1}{2} O_2(g) \\rightarrow H_2O(l); \\Delta_c H^\\ominus = -285.83 \\text{ kJ mol}^{-1}$ ... (iv). Multiplying eqn. (iii) by 6 and eqn. (iv) by 3 we get: $6C(graphite) + 6O_2(g) \\rightarrow 6CO_2(g); \\Delta_f H^\\ominus = -2361 \\text{ kJ mol}^{-1}$ and $3H_2(g) + \\frac{3}{2} O_2(g) \\rightarrow 3H_2O(l); \\Delta_f H^\\ominus = -857.49 \\text{ kJ mol}^{-1}$. Summing these two equations: $6C(graphite) + 3H_2(g) + \\frac{15}{2} O_2(g) \\rightarrow 6CO_2(g) + 3H_2O(l); \\Delta_r H^\\ominus = -3218.49 \\text{ kJ mol}^{-1}$ ... (v). Reversing equation (ii): $6CO_2(g) + 3H_2O(l) \\rightarrow C_6H_6(l) + \\frac{15}{2} O_2; \\Delta_r H^\\ominus = +3267.0 \\text{ kJ mol}^{-1}$ ... (vi). Adding equations (v) and (vi), we get: $6C(graphite) + 3H_2(g) \\rightarrow C_6H_6(l); \\Delta_f H^\\ominus = +48.51 \\text{ kJ mol}^{-1}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.5:3",
+            "order": 3,
+            "title": "Enthalpy of Atomization ($\\Delta_a H^\\ominus$)",
+            "content_text": "Enthalpy of atomization is the enthalpy change on breaking one mole of bonds completely to obtain atoms in the gas phase. For example, in the atomization of dihydrogen: $H_2(g) \\rightarrow 2H(g); \\Delta_a H^\\ominus = 435.0 \\text{ kJ mol}^{-1}$. Here, H atoms are formed by breaking H-H bonds. For polyatomic molecules like methane: $CH_4(g) \\rightarrow C(g) + 4H(g); \\Delta_a H^\\ominus = 1665 \\text{ kJ mol}^{-1}$. For metals, the enthalpy of atomization is the same as the enthalpy of sublimation, e.g., $Na(s) \\rightarrow Na(g); \\Delta_a H^\\ominus = 108.4 \\text{ kJ mol}^{-1}$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.5:4",
+            "order": 4,
+            "title": "Bond Enthalpy ($\\Delta_{bond} H^\\ominus$): Diatomic Molecules",
+            "content_text": "Chemical reactions involve breaking and making chemical bonds. Energy is required to break a bond and released when one is formed. Two terms are used in thermodynamics: (i) Bond dissociation enthalpy and (ii) Mean bond enthalpy. For diatomic molecules, bond dissociation enthalpy is the enthalpy change when one mole of covalent bonds of a gaseous covalent compound is broken to form products in the gas phase. For example: $Cl_2(g) \\rightarrow 2Cl(g); \\Delta_{Cl-Cl} H^\\ominus = 242 \\text{ kJ mol}^{-1}$ and $O_2(g) \\rightarrow 2O(g); \\Delta_{O=O} H^\\ominus = 428 \\text{ kJ mol}^{-1}$. For diatomic molecules, bond dissociation enthalpy is identical to the enthalpy of atomization.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.5:5",
+            "order": 5,
+            "title": "Bond Enthalpy: Polyatomic Molecules",
+            "content_text": "In polyatomic molecules, bond dissociation enthalpy can differ for different bonds within the same molecule. For methane ($CH_4$), the overall thermochemical equation for its atomization is: $CH_4(g) \\rightarrow C(g) + 4H(g); \\Delta_a H^\\ominus = 1665 \\text{ kJ mol}^{-1}$. Although all four C-H bonds in methane are identical in length and energy, the energies required to break the individual C-H bonds in each successive step differ : In polyatomic molecules, the energy required to break identical bonds in successive steps can differ. For example, in methane ($CH_4$), the four C-H bonds are identical in length and energy, but the bond dissociation enthalpy for each step is different:\n1. $CH_4(g) \rightarrow CH_3(g) + H(g); \\Delta_{bond}H^\\ominus = +427 \\text{ kJ mol}^{-1}$\n2. $CH_3(g) \rightarrow CH_2(g) + H(g); \\Delta_{bond}H^\\ominus = +439 \\text{ kJ mol}^{-1}$\n3. $CH_2(g) \rightarrow CH(g) + H(g); \\Delta_{bond}H^\\ominus = +452 \\text{ kJ mol}^{-1}$\n4. $CH(g) \rightarrow C(g) + H(g); \\Delta_{bond}H^\\ominus = +347 \\text{ kJ mol}^{-1}$\n\nThe total enthalpy change for the atomization of methane is the sum of these steps: $CH_4(g) \\rightarrow C(g) + 4H(g); \\Delta_a H^\\ominus = 1665 \\text{ kJ mol}^{-1}$. In such cases, we use the **mean bond enthalpy** (also called average bond enthalpy), calculated as the average of the individual bond dissociation enthalpies. For the C-H bond in methane: $\\Delta_{C-H}H^\\ominus = \\frac{1}{4} (1665 \\text{ kJ mol}^{-1}) = 416 \\text{ kJ mol}^{-1}$. Mean bond enthalpies for the same bond type can vary slightly between different compounds (e.g., $CH_3CH_2Cl$ vs $CH_3NO_2$) but are generally consistent enough for predictive calculations.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.5:6",
+            "order": 6,
+            "title": "Reaction Enthalpy from Bond Enthalpies",
+            "content_text": "Reaction enthalpies are critical quantities arising from the breaking of old bonds and the formation of new ones. In the gas phase, the standard enthalpy of reaction, $\\Delta_r H^\\ominus$, can be predicted if the bond enthalpies of all reactants and products are known. The relationship is given by:\n$$\\Delta_r H^\\ominus = \\sum \\text{bond enthalpies}_{reactants} - \\sum \\text{bond enthalpies}_{products}$$\nThis relationship is particularly useful when standard enthalpies of formation ($\\Delta_f H^\\ominus$) are unavailable. It is based on the principle that the net enthalpy change is the energy required to break all reactant bonds minus the energy released when product bonds are formed. Note that this relationship is an approximation and is strictly valid only when all substances (reactants and products) are in the gaseous state.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 5.3(a)",
+                "caption": "Some Mean Single Bond Enthalpies in kJ mol⁻¹ at 298 K",
+                "headers": [
+                  " ",
+                  "H",
+                  "C",
+                  "N",
+                  "O",
+                  "F",
+                  "Si",
+                  "P",
+                  "S",
+                  "Cl",
+                  "Br",
+                  "I"
+                ],
+                "rows": [
+                  [
+                    "H",
+                    "435.8",
+                    "414",
+                    "389",
+                    "464",
+                    "569",
+                    "293",
+                    "318",
+                    "339",
+                    "431",
+                    "368",
+                    "297"
+                  ],
+                  [
+                    "C",
+                    " ",
+                    "347",
+                    "293",
+                    "351",
+                    "439",
+                    "289",
+                    "264",
+                    "259",
+                    "330",
+                    "276",
+                    "238"
+                  ],
+                  [
+                    "N",
+                    " ",
+                    " ",
+                    "159",
+                    "201",
+                    "272",
+                    " ",
+                    " ",
+                    " ",
+                    "201",
+                    "243",
+                    " "
+                  ],
+                  [
+                    "O",
+                    " ",
+                    " ",
+                    " ",
+                    "138",
+                    "184",
+                    "368",
+                    "351",
+                    " ",
+                    "205",
+                    " ",
+                    "201"
+                  ],
+                  [
+                    "F",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    "155",
+                    "540",
+                    "490",
+                    "327",
+                    "255",
+                    "197",
+                    " "
+                  ],
+                  [
+                    "Si",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    "176",
+                    "213",
+                    "226",
+                    "360",
+                    "289",
+                    "213"
+                  ],
+                  [
+                    "P",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    "213",
+                    "230",
+                    "331",
+                    "272",
+                    "213"
+                  ],
+                  [
+                    "S",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    "213",
+                    "251",
+                    "213",
+                    " "
+                  ],
+                  [
+                    "Cl",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    "243",
+                    "218",
+                    "209"
+                  ],
+                  [
+                    "Br",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    "192",
+                    "180"
+                  ],
+                  [
+                    "I",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    "151"
+                  ]
+                ]
+              },
+              {
+                "label": "Table 5.3(b)",
+                "caption": "Some Mean Multiple Bond Enthalpies in kJ mol⁻¹ at 298 K",
+                "headers": [
+                  "Bond",
+                  "Enthalpy",
+                  "Bond",
+                  "Enthalpy",
+                  "Bond",
+                  "Enthalpy"
+                ],
+                "rows": [
+                  [
+                    "$N=N$",
+                    "418",
+                    "$C=C$",
+                    "611",
+                    "$O=O$",
+                    "498"
+                  ],
+                  [
+                    "$N \\equiv N$",
+                    "946",
+                    "$C \\equiv C$",
+                    "837",
+                    " ",
+                    " "
+                  ],
+                  [
+                    "$C=N$",
+                    "615",
+                    "$C=O$",
+                    "741",
+                    " ",
+                    " "
+                  ],
+                  [
+                    "$C \\equiv N$",
+                    "891",
+                    "$C \\equiv O$",
+                    "1070",
+                    " ",
+                    " "
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.5:7",
+            "order": 7,
+            "title": "Lattice Enthalpy",
+            "content_text": "The lattice enthalpy of an ionic compound is defined as the enthalpy change that occurs when one mole of an ionic compound dissociates into its constituent ions in the gaseous state. For example:\n$NaCl(s) \\rightarrow Na^+(g) + Cl^-(g); \\Delta_{lattice}H^\\ominus = +788 \\text{ kJ mol}^{-1}$\nSince it is impossible to determine lattice enthalpies directly by experiment, an indirect method called the **Born-Haber Cycle** is used. This cycle constructs an enthalpy diagram based on Hess's Law to calculate the lattice enthalpy from other measurable thermodynamic quantities.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.5:8",
+            "order": 8,
+            "title": "The Born-Haber Cycle for Sodium Chloride",
+            "content_text": "To calculate the lattice enthalpy of $NaCl(s)$, we follow these steps:\n1. **Sublimation of sodium metal**: $Na(s) \\rightarrow Na(g); \\Delta_{sub}H^\\ominus = 108.4 \\text{ kJ mol}^{-1}$\n2. **Ionization of sodium atoms**: $Na(g) \\rightarrow Na^+(g) + e^-; \\Delta_i H^\\ominus = 496 \\text{ kJ mol}^{-1}$\n3. **Dissociation of chlorine gas**: $\\frac{1}{2} Cl_2(g) \\rightarrow Cl(g); \\frac{1}{2} \\Delta_{bond}H^\\ominus = 121 \\text{ kJ mol}^{-1}$\n4. **Electron gain by chlorine atoms**: $Cl(g) + e^- \\rightarrow Cl^-(g); \\Delta_{eg}H^\\ominus = -348.6 \\text{ kJ mol}^{-1}$\n5. **Formation of NaCl from ions**: $Na^+(g) + Cl^-(g) \\rightarrow NaCl(s)$. This is the reverse of lattice enthalpy.\n\nAccording to Hess's Law, the sum of enthalpy changes around a cycle is zero. For the formation of $NaCl(s)$ from its elements ($\\Delta_f H^\\ominus = -411.2 \\text{ kJ mol}^{-1}$), we have:\n$\\Delta_f H^\\ominus = \\Delta_{sub}H^\\ominus + \\Delta_i H^\\ominus + \\frac{1}{2} \\Delta_{bond}H^\\ominus + \\Delta_{eg}H^\\ominus - \\Delta_{lattice}H^\\ominus$\nRearranging gives: $\\Delta_{lattice}H^\\ominus = 411.2 + 108.4 + 121 + 496 - 348.6 = +788 \\text{ kJ mol}^{-1}$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 5.9",
+                "description": "Enthalpy diagram (Born-Haber Cycle) for the lattice enthalpy of NaCl. It shows the energy levels for solid sodium and chlorine gas, gaseous sodium and chlorine atoms, gaseous sodium ions and chlorine atoms, gaseous sodium and chloride ions, and finally the solid NaCl crystal lattice. The arrows indicate the enthalpy changes for sublimation, ionization, bond dissociation, electron gain, and lattice formation.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.5:9",
+            "order": 9,
+            "title": "Ionization Energy and Electron Affinity",
+            "content_text": "Ionization energy and electron affinity are defined at absolute zero ($0 \\text{ K}$). At any other temperature $T$, the heat capacities of reactants and products must be considered. For the ionization reaction $M(g) \\rightarrow M^+(g) + e^-$, the enthalpy change is:\n$$\\Delta_i H^\\ominus(T) = \\Delta_i H^\\ominus(0) + \\int_0^T \\Delta_r C_p^\\ominus dT$$\nAssuming monoatomic gases where $C_p = \\frac{5}{2} R$, for ionization $\\Delta_r C_p^\\ominus = \\frac{5}{2} R$. Thus, $\\Delta_i H^\\ominus = E_0 (\\text{ionization energy}) + \\frac{5}{2} RT$. Similarly, for electron gain, $\\Delta_{eg} H^\\ominus = -A (\\text{electron affinity}) - \\frac{5}{2} RT$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.5:10",
+            "order": 10,
+            "title": "Enthalpy of Solution",
+            "content_text": "The enthalpy of solution ($\\Delta_{sol}H^\\ominus$) is the enthalpy change when one mole of a substance dissolves in a specified amount of solvent. The enthalpy of solution at infinite dilution is the change observed when the substance is dissolved in such a large amount of solvent that further dilution causes no further heat change. For an ionic compound $AB(s)$, the dissolution process can be viewed in two steps:\n1. Dissociation of the crystal lattice into gaseous ions: $AB(s) \\rightarrow A^+(g) + B^-(g)$ (Lattice Enthalpy, $\\Delta_{lattice}H^\\ominus$)\n2. Hydration of gaseous ions: $A^+(g) + B^-(g) \\rightarrow A^+(aq) + B^-(aq)$ (Hydration Enthalpy, $\\Delta_{hyd}H^\\ominus$)\n\nThus, $\\Delta_{sol}H^\\ominus = \\Delta_{lattice}H^\\ominus + \\Delta_{hyd}H^\\ominus$. For $NaCl$, $\\Delta_{sol}H^\\ominus = +788 \\text{ kJ mol}^{-1} - 784 \\text{ kJ mol}^{-1} = +4 \\text{ kJ mol}^{-1}$. Since $\\Delta_{sol}H^\\ominus$ is positive but small, the dissolution is slightly endothermic, and solubility increases with temperature.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Enthalpy of Solution Cycle",
+                "description": "A thermodynamic cycle showing the dissolution of ionic compound AB(s). One path shows direct dissolution to aqueous ions (Enthalpy of Solution). The alternative path shows dissociation into gaseous ions (Lattice Enthalpy) followed by hydration of those ions (Hydration Enthalpy).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.5:11",
+            "order": 11,
+            "title": "Enthalpy of Dilution",
+            "content_text": "Enthalpy of dilution is the enthalpy change associated with adding more solvent to a solution of a specified concentration. It depends on the initial and final concentrations. For example, dissolving one mole of $HCl(g)$ in different amounts of water results in different enthalpy changes:\n- $HCl(g) + 25 \\text{ aq.} \\rightarrow HCl.25 \\text{ aq.}; \\Delta H = -72.03 \\text{ kJ mol}^{-1}$\n- $HCl(g) + 40 \\text{ aq.} \\rightarrow HCl.40 \\text{ aq.}; \\Delta H = -72.79 \\text{ kJ mol}^{-1}$\n- $HCl(g) + \\infty \\text{ aq.} \\rightarrow HCl. \\infty \\text{ aq.}; \\Delta H = -74.85 \\text{ kJ mol}^{-1}$\n\nThe enthalpy of dilution for adding water to change the concentration from 25 aq. to 40 aq. is the difference: $(-72.79) - (-72.03) = -0.76 \\text{ kJ mol}^{-1}$. As more solvent is added, the enthalpy of solution approaches a limiting value known as the enthalpy of solution at infinite dilution.\nThe enthalpy of dilution can be calculated by taking the difference between the enthalpies of solution at different concentrations. For example, subtracting the enthalpy of solution for $HCl$ in 25 parts water from that in 40 parts water: $HCl.25 \\text{ aq.} + 15 \\text{ aq.} \\rightarrow HCl.40 \\text{ aq.}$, where $\\Delta H = [-72.79 - (-72.03)] \\text{ kJ/mol} = -0.76 \\text{ kJ/mol}$. This value is the enthalpy of dilution, representing the heat withdrawn from the surroundings when additional solvent is added. It depends on the original concentration of the solution and the amount of solvent added.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:5:5.6",
+        "number": "5.6",
+        "title": "SPONTANEITY",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:5:5.6:1",
+            "order": 1,
+            "title": "Introduction to Spontaneity",
+            "content_text": "The first law of thermodynamics relates heat absorbed and work performed but does not restrict the direction of heat flow. Naturally occurring processes, whether physical or chemical, tend to proceed spontaneously in one direction only. For instance, a gas expands to fill a volume, and carbon burns in oxygen to form carbon dioxide. Conversely, heat does not flow from a colder to a warmer body spontaneously, nor does a gas spontaneously contract. Spontaneity means 'having the potential to proceed without the assistance of external agency'. It does not describe the rate of the reaction, which may be extremely slow.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.6:2",
+            "order": 2,
+            "title": "Definition of a Spontaneous Process",
+            "content_text": "A spontaneous process is an irreversible process and may only be reversed by some external agency. It is a process that has a natural tendency to occur in a particular direction under a given set of conditions.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.6:3",
+            "order": 3,
+            "title": "Enthalpy Change as a Criterion for Spontaneity",
+            "content_text": "By analogy with mechanical systems where potential energy decreases (e.g., water flowing downhill), it was initially postulated that chemical reactions are spontaneous if they lead to a decrease in energy (exothermic reactions). Examples include: \n1. $\\frac{1}{2} N_2(g) + \\frac{3}{2} H_2(g) \\rightarrow NH_3(g); \\Delta_r H^\\ominus = -46.1 \\text{ kJ mol}^{-1}$\n2. $\\frac{1}{2} H_2(g) + \\frac{1}{2} Cl_2(g) \\rightarrow HCl(g); \\Delta_r H^\\ominus = -92.32 \\text{ kJ mol}^{-1}$\n3. $H_2(g) + \\frac{1}{2} O_2(g) \\rightarrow H_2O(l); \\Delta_r H^\\ominus = -285.8 \\text{ kJ mol}^{-1}$\nIn these cases, the decrease in enthalpy from reactants to products acts as a driving force.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 5.10 (a)",
+                "description": "Enthalpy diagram for exothermic reactions showing the total enthalpy of reactants ($H_R$) being higher than the total enthalpy of products ($H_P$), with $\\Delta_r H$ representing the net heat evolved in the reaction.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.6:4",
+            "order": 4,
+            "title": "Limitations of the Enthalpy Criterion",
+            "content_text": "While many spontaneous reactions are exothermic, some endothermic reactions also proceed spontaneously. For example:\n1. $\\frac{1}{2} N_2(g) + O_2(g) \\rightarrow NO_2(g); \\Delta_r H^\\ominus = +33.2 \\text{ kJ mol}^{-1}$\n2. $C(\\text{graphite, s}) + 2 S(l) \\rightarrow CS_2(l); \\Delta_r H^\\ominus = +128.5 \\text{ kJ mol}^{-1}$\nThese reactions show that while a decrease in enthalpy may be a contributory factor, it is not the sole criterion for spontaneity.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 5.10 (b)",
+                "description": "Enthalpy diagram for endothermic reactions showing the total enthalpy of products ($H_P$) being higher than the total enthalpy of reactants ($H_R$), with $\\Delta_r H$ representing the net heat absorbed from the surroundings.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.6:5",
+            "order": 5,
+            "title": "Entropy and Spontaneity",
+            "content_text": "To understand spontaneity in cases where $\\Delta H = 0$, consider the diffusion of two gases in an isolated container. When a partition is removed, the gases mix spontaneously until the system becomes more chaotic and less predictable. This suggests that in an isolated system, there is a tendency for the system's energy to become more disordered. This disorder is manifested as a thermodynamic function called entropy, denoted as $S$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 5.11",
+                "description": "Diffusion of two gases: (a) shows two different gases separated by a movable partition in a container; (b) shows the gases mixed together after the partition is withdrawn, representing a more disordered state.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.6:6",
+            "order": 6,
+            "title": "Entropy as a Measure of Randomness",
+            "content_text": "Entropy is a measure of the degree of randomness or disorder in a system. The greater the disorder in an isolated system, the higher the entropy. In chemical reactions, entropy changes are attributed to the rearrangement of atoms or ions. A decrease in regularity (e.g., transition from crystalline solid to liquid or gas) means an increase in entropy. The crystalline solid state is the state of lowest entropy (most ordered), while the gaseous state is the state of highest entropy.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.6:7",
+            "order": 7,
+            "title": "Quantitative Definition of Entropy",
+            "content_text": "Entropy ($S$) is a state function, and its change $\\Delta S$ is independent of the path. Heat ($q$) has a randomising influence on the system, but this effect depends on the temperature. Temperature is the measure of average chaotic motion of particles. Adding heat at a lower temperature causes greater randomness than adding the same amount of heat at a higher temperature. Thus, $\\Delta S$ is inversely proportional to temperature. For a reversible reaction, the entropy change is defined as: $$\\Delta S = \\frac{q_{rev}}{T}$$",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.6:8",
+            "order": 8,
+            "title": "Total Entropy Change and Spontaneity",
+            "content_text": "The total entropy change ($\\Delta S_{total}$) for a spontaneous process in an isolated system (system + surroundings) is given by: $$\\Delta S_{total} = \\Delta S_{system} + \\Delta S_{surr} > 0$$ When a system is in equilibrium, the entropy is maximum and the change in entropy is zero ($\\Delta S = 0$). For a spontaneous process, entropy increases until it reaches a maximum. While $\\Delta U$ does not discriminate between reversible and irreversible processes (especially in isothermal expansion of an ideal gas where $\\Delta U = 0$), $\\Delta S$ does, as $\\Delta S_{total}$ is non-zero for irreversible processes.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.6:9",
+            "order": 9,
+            "title": "Worked Example: Predicting Entropy Changes",
+            "content_text": "Predicting whether entropy increases or decreases in various physical and chemical processes based on the change in state and number of particles.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 5.10",
+                "problem": "Predict in which of the following, entropy increases/decreases: (i) A liquid crystallizes into a solid. (ii) Temperature of a crystalline solid is raised from 0 K to 115 K. (iii) $2NaHCO_3(s) \\rightarrow Na_2CO_3(s) + CO_2(g) + H_2O(g)$ (iv) $H_2(g) \\rightarrow 2H(g)$",
+                "solution": "(i) After freezing, the molecules attain an ordered state and therefore, entropy decreases. (ii) At 0 K, the constituent particles are static and entropy is minimum. If temperature is raised to 115 K, these begin to move and oscillate"
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.6:10",
+            "order": 10,
+            "title": "Continuation: Predicting Entropy Changes",
+            "content_text": "In the continuation of predicting entropy changes for specific chemical processes: (iii) In the reaction involving $NaHCO_3(s)$, the reactant is a solid with low entropy, while the products include one solid and two gases ($CO_2$ and $H_2O$), representing a condition of significantly higher entropy. (iv) In the dissociation of a dihydrogen molecule into two atoms ($H_2 \\rightarrow 2H$), the number of particles increases, leading to a more disordered state. Consequently, two moles of $H$ atoms possess higher entropy than one mole of $H_2$ molecules.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.6:11",
+            "order": 11,
+            "title": "Worked Example: Spontaneity of Iron Oxidation",
+            "content_text": "This example demonstrates how to determine the spontaneity of a reaction by calculating the total entropy change of the universe (system + surroundings). Even if the system's entropy decreases, a large enough increase in the surroundings' entropy (due to heat release) can make the overall process spontaneous.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 5.11",
+                "problem": "For oxidation of iron, $4Fe(s) + 3O_2(g) \\rightarrow 2Fe_2O_3(s)$, entropy change is $-549.4 J K^{-1} mol^{-1}$ at $298 K$. In spite of negative entropy change of this reaction, why is the reaction spontaneous? ($\\Delta_r H^\\ominus$ for this reaction is $-1648 \\times 10^3 J mol^{-1}$)",
+                "solution": "One decides the spontaneity of a reaction by considering $\\Delta S_{total} (\\Delta S_{sys} + \\Delta S_{surr})$. For calculating $\\Delta S_{surr}$, we have to consider the heat absorbed by the surroundings which is equal to $-\\Delta_r H^\\ominus$. At temperature $T$, entropy change of the surroundings is: $\\Delta S_{surr} = -\\frac{\\Delta_r H^\\ominus}{T}$ (at constant pressure) $= -\\frac{(-1648 \\times 10^3 J mol^{-1})}{298 K} = 5530 J K^{-1} mol^{-1}$. Thus, total entropy change for this reaction $\\Delta_r S_{total} = 5530 J K^{-1} mol^{-1} + (-549.4 J K^{-1} mol^{-1}) = 4980.6 J K^{-1} mol^{-1}$. This shows that the above reaction is spontaneous."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.6:12",
+            "order": 12,
+            "title": "Gibbs Energy and Spontaneity",
+            "content_text": "For most chemical reactions occurring in closed or open systems, changes occur in both enthalpy and entropy. Neither a decrease in enthalpy nor an increase in entropy alone can determine the direction of spontaneous change for these systems. To address this, we define a new thermodynamic function called the Gibbs energy or Gibbs function, $G$, as: $G = H - TS$. Gibbs energy is an extensive property and a state function.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.6:13",
+            "order": 13,
+            "title": "The Gibbs Equation",
+            "content_text": "The change in Gibbs energy for a system, $\\Delta G_{sys}$, can be written as: $\\Delta G_{sys} = \\Delta H_{sys} - T\\Delta S_{sys} - S_{sys}\\Delta T$. At constant temperature ($\\Delta T = 0$), this simplifies to: $\\Delta G_{sys} = \\Delta H_{sys} - T\\Delta S_{sys}$. Usually, the subscript 'system' is dropped and we simply write this equation as: $\\Delta G = \\Delta H - T\\Delta S$ (Equation 5.21). This is referred to as the Gibbs equation, one of the most important equations in chemistry. It considers both energy (in terms of $\\Delta H$) and entropy ($\\Delta S$, a measure of disorder) together for spontaneity. Dimensionally, $\\Delta G$ has units of energy because both $\\Delta H$ and the $T\\Delta S$ are energy terms, since $T\\Delta S = (K) (J/K) = J$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.6:14",
+            "order": 14,
+            "title": "Gibbs Energy as a Criterion for Spontaneity",
+            "content_text": "We know that $\\Delta S_{total} = \\Delta S_{sys} + \\Delta S_{surr}$. If the system is in thermal equilibrium with the surroundings, then $T_{surr} = T_{sys}$. The increase in enthalpy of the surroundings is equal to the decrease in enthalpy of the system, so $\\Delta S_{surr} = \\frac{\\Delta H_{surr}}{T} = -\\frac{\\Delta H_{sys}}{T}$. Thus, $\\Delta S_{total} = \\Delta S_{sys} + (-\\frac{\\Delta H_{sys}}{T})$. Rearranging this gives $T\\Delta S_{total} = T\\Delta S_{sys} - \\Delta H_{sys}$. For a spontaneous process, $\\Delta S_{total} > 0$, so $T\\Delta S_{sys} - \\Delta H_{sys} > 0$, which implies $-(\\Delta H_{sys} - T\\Delta S_{sys}) > 0$. Using the Gibbs equation, this can be written as $-\\Delta G > 0$ or $\\Delta G = \\Delta H - T\\Delta S < 0$ (Equation 5.22). $\\Delta G$ gives a criteria for spontaneity at constant pressure and temperature: (i) If $\\Delta G$ is negative ($< 0$), the process is spontaneous. (ii) If $\\Delta G$ is positive ($> 0$), the process is non-spontaneous. $\\Delta G$ is the net energy available to do useful work and is thus a measure of the 'free energy' of the reaction. Note: If a reaction has a positive enthalpy change and positive entropy change, it can be spontaneous when $T\\Delta S$ is large enough to outweigh $\\Delta H$. This happens at high temperatures if the entropy change is small, or potentially at lower temperatures if the entropy change is large.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.6:15",
+            "order": 15,
+            "title": "Entropy and the Second Law of Thermodynamics",
+            "content_text": "For an isolated system, the change in energy remains constant. Therefore, an increase in entropy in such systems is the natural direction of a spontaneous change. This is the second law of thermodynamics. It explains why spontaneous exothermic reactions are common: the heat released by the reaction increases the disorder of the surroundings, making the overall entropy change positive and the reaction spontaneous.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.6:16",
+            "order": 16,
+            "title": "Absolute Entropy and the Third Law of Thermodynamics",
+            "content_text": "Molecules exhibit translational, rotational, and vibrational motions that become more vigorous as temperature rises, increasing entropy. Conversely, as temperature is lowered, entropy decreases. The third law of thermodynamics states: The entropy of any pure crystalline substance approaches zero as the temperature approaches absolute zero. This is because there is perfect order in a crystal at absolute zero. This statement is confined to pure crystalline solids; entropy of solutions and supercooled liquids is not zero at $0 K$. The importance of the third law lies in the fact that it permits the calculation of absolute values of entropy ($S$) of pure substances from thermal data alone by summing $\\frac{q_{rev}}{T}$ increments from $0 K$ to a given temperature. Standard entropies can be used to calculate standard entropy changes by a Hess’s law type of calculation.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:5:5.7",
+        "number": "5.7",
+        "title": "GIBBS ENERGY CHANGE AND EQUILIBRIUM",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:5:5.7:1",
+            "order": 1,
+            "title": "Gibbs Energy in Reversible Reactions",
+            "content_text": "Knowledge of the sign and magnitude of the free energy change allows for the prediction of reaction spontaneity and the useful work that could be extracted from it. In 'reversible' thermodynamic processes, the system is at all times in perfect equilibrium with its surroundings. In a chemical reaction, this means the reaction can proceed in either direction simultaneously, setting up a dynamic equilibrium. This occurs at the point where the free energy of the system is at a minimum. If it were not, the system would spontaneously change to a configuration of lower free energy.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.7:2",
+            "order": 2,
+            "title": "Relation between Standard Gibbs Energy and Equilibrium Constant",
+            "content_text": "For a reaction $A + B \\rightleftharpoons C + D$, the criterion for equilibrium is $\\Delta_r G = 0$. The standard Gibbs energy change, $\\Delta_r G^\\ominus$, is related to the equilibrium constant $K$ as follows: $0 = \\Delta_r G^\\ominus + RT \\ln K$, or $\\Delta_r G^\\ominus = -RT \\ln K$ (Equation 5.23), which can also be written as $\\Delta_r G^\\ominus = -2.303 RT \\log K$. We also know that $\\Delta_r G^\\ominus = \\Delta_r H^\\ominus - T\\Delta_r S^\\ominus = -RT \\ln K$ (Equation 5.24). For strongly endothermic reactions (large positive $\\Delta_r H^\\ominus$), $K$ will be much smaller than 1, and the reaction is unlikely to form much product. In strongly exothermic reactions (large negative $\\Delta_r H^\\ominus$), $K$ will be much larger than 1, and the reaction can go to near completion. $\\Delta_r G^\\ominus$ also depends upon $\\Delta_r S^\\ominus$; if entropy changes are considered, the value of $K$ will be affected depending on whether $\\Delta_r S^\\ominus$ is positive or negative.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.7:3",
+            "order": 3,
+            "title": "Effect of Temperature on Spontaneity",
+            "content_text": "The spontaneity of a reaction depends on the signs of enthalpy and entropy changes as well as the temperature. Table 5.4 summarizes these effects. Note that 'low temperature' and 'high temperature' are relative terms; for a particular reaction, high temperature could even mean room temperature.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 5.4",
+                "caption": "Effect of Temperature on Spontaneity of Reactions",
+                "headers": [
+                  "$\\Delta_r H^\\ominus$",
+                  "$\\Delta_r S^\\ominus$",
+                  "$\\Delta_r G^\\ominus$",
+                  "Description*"
+                ],
+                "rows": [
+                  [
+                    "-",
+                    "+",
+                    "-",
+                    "Reaction spontaneous at all temperatures"
+                  ],
+                  [
+                    "-",
+                    "-",
+                    "- (at low T)",
+                    "Reaction spontaneous at low temperature"
+                  ],
+                  [
+                    "-",
+                    "-",
+                    "+ (at high T)",
+                    "Reaction nonspontaneous at high temperature"
+                  ],
+                  [
+                    "+",
+                    "+",
+                    "+ (at low T)",
+                    "Reaction nonspontaneous at low temperature"
+                  ],
+                  [
+                    "+",
+                    "+",
+                    "- (at high T)",
+                    "Reaction spontaneous at high temperature"
+                  ],
+                  [
+                    "+",
+                    "-",
+                    "+ (at all T)",
+                    "Reaction nonspontaneous at all temperatures"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.7:4",
+            "order": 4,
+            "title": "Applications of the Relationship between Gibbs Energy and Equilibrium Constant",
+            "content_text": "The relationship between the standard Gibbs energy change and the equilibrium constant, $\\Delta_r G^\\ominus = -RT \\ln K$, provides two significant practical applications: (i) It allows for the estimation of $\\Delta_r G^\\ominus$ from measurements of $\\Delta H^\\ominus$ and $\\Delta S^\\ominus$. From this, the equilibrium constant $K$ can be calculated at any temperature, which is essential for predicting the economic yields of products in industrial processes. (ii) Conversely, if the equilibrium constant $K$ is measured directly in a laboratory setting, the value of $\\Delta_r G^\\ominus$ at that temperature, and potentially others, can be determined.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.7:5",
+            "order": 5,
+            "title": "Worked Example 5.12: Calculation of Standard Gibbs Energy",
+            "content_text": "This example illustrates the calculation of the standard Gibbs energy change for the conversion of oxygen to ozone at 298 K, given the equilibrium constant $K_p$. It uses the formula $\\Delta_r G^\\ominus = -2.303 RT \\log K_p$.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 5.12",
+                "problem": "Calculate $\\Delta_r G^\\ominus$ for conversion of oxygen to ozone, $3/2 O_2(g) \\rightarrow O_3(g)$ at 298 K. if $K_p$ for this conversion is $2.47 \\times 10^{-29}$.",
+                "solution": "We know $\\Delta_r G^\\ominus = - 2.303 RT \\log K_p$ and $R = 8.314 \\text{ J K}^{-1} \\text{ mol}^{-1}$. Therefore, $\\Delta_r G^\\ominus = - 2.303 (8.314 \\text{ J K}^{-1} \\text{ mol}^{-1}) \\times (298 \\text{ K}) (\\log 2.47 \\times 10^{-29}) = 163000 \\text{ J mol}^{-1} = 163 \\text{ kJ mol}^{-1}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.7:6",
+            "order": 6,
+            "title": "Worked Example 5.13: Calculation of Equilibrium Constant",
+            "content_text": "This example demonstrates how to find the equilibrium constant for the synthesis of urea from ammonia and carbon dioxide at 298 K, given the standard Gibbs energy change. The calculation involves rearranging the Gibbs energy equation to solve for $\\log K$.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 5.13",
+                "problem": "Find out the value of equilibrium constant for the following reaction at 298 K. $2NH_3 (g) + CO_2 (g) \\rightleftharpoons NH_2CONH_2 (aq) + H_2O (l)$. Standard Gibbs energy change, $\\Delta_r G^\\ominus$ at the given temperature is $-13.6 \\text{ kJ mol}^{-1}$.",
+                "solution": "We know, $\\log K = \\frac{-\\Delta_r G^\\ominus}{2.303 RT} = \\frac{-(-13.6 \\times 10^3 \\text{ J mol}^{-1})}{2.303(8.314 \\text{ J K}^{-1} \\text{ mol}^{-1}) (298 \\text{ K})} = 2.38$. Hence $K = \\text{antilog } 2.38 = 2.4 \\times 10^2$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:5.7:7",
+            "order": 7,
+            "title": "Worked Example 5.14: Gibbs Energy Change for Dissociation Reactions",
+            "content_text": "This example calculates the standard free energy change for the dissociation of dinitrogen tetroxide ($N_2O_4$) at 60°C and 1 atm, where the substance is 50% dissociated. It involves calculating mole fractions and partial pressures to find the equilibrium constant $K_p$ first, then applying the Gibbs energy formula.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 5.14",
+                "problem": "At 60°C, dinitrogen tetroxide is 50 per cent dissociated. Calculate the standard free energy change at this temperature and at one atmosphere.",
+                "solution": "$N_2O_4(g) \\rightleftharpoons 2NO_2(g)$. If $N_2O_4$ is 50% dissociated, the mole fraction of both the substances is given by $x_{N_2O_4} = \\frac{1 - 0.5}{1 + 0.5} ; x_{NO_2} = \\frac{2 \\times 0.5}{1 + 0.5}$. $p_{N_2O_4} = \\frac{0.5}{1.5} \\times 1 \\text{ atm}, p_{NO_2} = \\frac{1}{1.5} \\times 1 \\text{ atm}$. The equilibrium constant $K_p$ is given by $K_p = \\frac{(p_{NO_2})^2}{p_{N_2O_4}} = \\frac{1.5}{(1.5)^2 (0.5)} = 1.33 \\text{ atm}$. Since $\\Delta_r G^\\ominus = -RT \\ln K_p$, $\\Delta_r G^\\ominus = (- 8.314 \\text{ J K}^{-1} \\text{ mol}^{-1}) \\times (333 \\text{ K}) \\times (2.303) \\times (0.1239) = - 763.8 \\text{ kJ mol}^{-1}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:5:Summary",
+        "number": "Summary",
+        "title": "Summary",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:5:Summary:1",
+            "order": 1,
+            "title": "Thermodynamics and the First Law",
+            "content_text": "Thermodynamics deals with energy changes in chemical or physical processes. The universe is divided into the system and the surroundings. Processes lead to the evolution or absorption of heat ($q$) and work ($w$), related by the first law of thermodynamics: $\\Delta U = q + w$. Internal energy change ($\\Delta U$) is a state function, while $q$ and $w$ are path functions.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:Summary:2",
+            "order": 2,
+            "title": "Internal Energy, Enthalpy, and Heat Capacity",
+            "content_text": "Heat capacity ($C$) relates heat transfer to temperature change: $q = C\\Delta T$. Work is defined as $w = -p_{ex}\\Delta V$, and for reversible processes, $w_{rev} = -\\int p dV$. At constant volume, $\\Delta U = q_v$. At constant pressure, enthalpy change ($\\Delta H$) is used, where $\\Delta H = \\Delta U + \\Delta n_g RT$ and $\\Delta H = q_p$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:Summary:3",
+            "order": 3,
+            "title": "Hess's Law and Bond Enthalpies",
+            "content_text": "Enthalpy changes for phase transitions occur at constant temperature. Hess's law states that the enthalpy change for a chemical reaction is independent of the path: $\\Delta_r H = \\sum (a_i \\Delta_f H_{\\text{products}}) - \\sum (b_i \\Delta_f H_{\\text{reactions}})$. For gaseous reactions, $\\Delta_r H^\\ominus = \\sum \\text{bond enthalpies of reactants} - \\sum \\text{bond enthalpies of products}$.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:Summary:4",
+            "order": 4,
+            "title": "Entropy and Spontaneity",
+            "content_text": "Entropy ($S$) measures disorder or randomness. For spontaneous changes in isolated systems, $\\Delta S > 0$. Entropy change for a reversible process is $\\Delta S = \\frac{q_{rev}}{T}$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:5:Summary:5",
+            "order": 5,
+            "title": "Gibbs Energy and Equilibrium",
+            "content_text": "Gibbs energy ($G$) is defined as $G = H - TS$. At constant pressure, $\\Delta G = \\Delta H - T\\Delta S$. For spontaneous changes, $\\Delta G_{sys} < 0$, and at equilibrium, $\\Delta G_{sys} = 0$. Standard Gibbs energy change relates to the equilibrium constant by $\\Delta_r G^\\ominus = -RT \\ln K$. Temperature influences spontaneity; reactions non-spontaneous at low temperatures can become spontaneous at high temperatures if they have a positive entropy of reaction.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:chemistry:11:5:ex:1",
+          "number": 1,
+          "problem": "Choose the correct answer. A thermodynamic state function is a quantity (i) used to determine heat changes (ii) whose value is independent of path (iii) used to determine pressure volume work (iv) whose value depends on temperature only.",
+          "solution": "(ii) whose value is independent of path",
+          "difficulty": "easy",
+          "exercise_type": "mcq"
+        },
+        {
+          "id": "ncert:chemistry:11:5:ex:2",
+          "number": 2,
+          "problem": "For the process to occur under adiabatic conditions, the correct condition is: (i) $\\Delta T = 0$ (ii) $\\Delta p = 0$ (iii) $q = 0$ (iv) $w = 0$",
+          "solution": "(iii) $q = 0$",
+          "difficulty": "easy",
+          "exercise_type": "mcq"
+        },
+        {
+          "id": "ncert:chemistry:11:5:ex:3",
+          "number": 3,
+          "problem": "The enthalpies of all elements in their standard states are: (i) unity (ii) zero (iii) < 0 (iv) different for each element",
+          "solution": "(ii) zero",
+          "difficulty": "easy",
+          "exercise_type": "mcq"
+        },
+        {
+          "id": "ncert:chemistry:11:5:ex:4",
+          "number": 4,
+          "problem": "$\\Delta U^\\ominus$ of combustion of methane is $- X \\text{ kJ mol}^{-1}$. The value of $\\Delta H^\\ominus$ is (i) $= \\Delta U^\\ominus$ (ii) $> \\Delta U^\\ominus$ (iii) $< \\Delta U^\\ominus$ (iv) $= 0$",
+          "solution": "(iii) $< \\Delta U^\\ominus$. For the combustion of methane: $CH_4(g) + 2O_2(g) \\rightarrow CO_2(g) + 2H_2O(l)$, the change in moles of gas is $\\Delta n_g = 1 - 3 = -2$. Since $\\Delta H^\\ominus = \\Delta U^\\ominus + \\Delta n_g RT$, $\\Delta H^\\ominus = -X - 2RT$, which is less than $-X$.",
+          "difficulty": "medium",
+          "exercise_type": "mcq"
+        },
+        {
+          "id": "ncert:chemistry:11:5:ex:5",
+          "number": 5,
+          "problem": "The enthalpy of combustion of methane, graphite and dihydrogen at 298 K are, $-890.3 \\text{ kJ mol}^{-1}$, $-393.5 \\text{ kJ mol}^{-1}$, and $-285.8 \\text{ kJ mol}^{-1}$ respectively. Enthalpy of formation of $CH_4(g)$ will be (i) $-74.8 \\text{ kJ mol}^{-1}$ (ii) $-52.27 \\text{ kJ mol}^{-1}$ (iii) $+74.8 \\text{ kJ mol}^{-1}$ (iv) $+52.26 \\text{ kJ mol}^{-1}$.",
+          "solution": "(i) $-74.8 \\text{ kJ mol}^{-1}$. Using Hess's Law: $\\Delta_f H(CH_4) = \\Delta_c H(C) + 2\\Delta_c H(H_2) - \\Delta_c H(CH_4) = -393.5 + 2(-285.8) - (-890.3) = -74.8 \\text{ kJ mol}^{-1}$.",
+          "difficulty": "medium",
+          "exercise_type": "mcq"
+        },
+        {
+          "id": "ncert:chemistry:11:5:ex:6",
+          "number": 6,
+          "problem": "A reaction, $A + B \\rightarrow C + D + q$ is found to have a positive entropy change. The reaction will be (i) possible at high temperature (ii) possible only at low temperature (iii) not possible at any temperature (iv) possible at any temperature",
+          "solution": "(iv) possible at any temperature. The reaction is exothermic ($\\Delta H < 0$) and has a positive entropy change ($\\Delta S > 0$). Thus, $\\Delta G = \\Delta H - T\\Delta S$ will always be negative.",
+          "difficulty": "medium",
+          "exercise_type": "mcq"
+        },
+        {
+          "id": "ncert:chemistry:11:5:ex:7",
+          "number": 7,
+          "problem": "In a process, 701 J of heat is absorbed by a system and 394 J of work is done by the system. What is the change in internal energy for the process?",
+          "solution": "Using the first law of thermodynamics, $\\Delta U = q + w$. Here, $q = +701 \\text{ J}$ (heat absorbed) and $w = -394 \\text{ J}$ (work done by the system). $\\Delta U = 701 - 394 = 307 \\text{ J}$.",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:5:ex:8",
+          "number": 8,
+          "problem": "The reaction of cyanamide, $NH_2CN (s)$, with dioxygen was carried out in a bomb calorimeter, and $\\Delta U$ was found to be $-742.7 \\text{ kJ mol}^{-1}$ at 298 K. Calculate enthalpy change for the reaction at 298 K. $NH_2CN(g) + \\frac{3}{2} O_2(g) \\rightarrow N_2(g) + CO_2(g) + H_2O(l)$",
+          "solution": "$\\Delta H = \\Delta U + \\Delta n_g RT$. For the reaction as written with $NH_2CN(s)$, $\\Delta n_g = (1 + 1) - 1.5 = 0.5$. $\\Delta H = -742.7 \\text{ kJ mol}^{-1} + (0.5 \\times 8.314 \\times 10^{-3} \\text{ kJ K}^{-1} \\text{ mol}^{-1} \\times 298 \\text{ K}) = -742.7 + 1.238 = -741.46 \\text{ kJ mol}^{-1}$.",
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:5:ex:9",
+          "number": 9,
+          "problem": "Calculate the number of kJ of heat necessary to raise the temperature of $60.0\\text{ g}$ of aluminium from $35^\\circ\\text{C}$ to $55^\\circ\\text{C}$. Molar heat capacity of Al is $24\\text{ J mol}^{-1}\\text{ K}^{-1}$.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:5:ex:10",
+          "number": 10,
+          "problem": "Calculate the enthalpy change on freezing of $1.0\\text{ mol}$ of water at $10.0^\\circ\\text{C}$ to ice at $-10.0^\\circ\\text{C}$. $\\Delta_{\\text{fus}}H = 6.03\\text{ kJ mol}^{-1}$ at $0^\\circ\\text{C}$. $C_p [\\text{H}_2\\text{O(l)}] = 75.3\\text{ J mol}^{-1}\\text{ K}^{-1}$; $C_p [\\text{H}_2\\text{O(s)}] = 36.8\\text{ J mol}^{-1}\\text{ K}^{-1}$",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:5:ex:11",
+          "number": 11,
+          "problem": "Enthalpy of combustion of carbon to $\\text{CO}_2$ is $-393.5\\text{ kJ mol}^{-1}$. Calculate the heat released upon formation of $35.2\\text{ g}$ of $\\text{CO}_2$ from carbon and dioxygen gas.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:5:ex:12",
+          "number": 12,
+          "problem": "Enthalpies of formation of $\\text{CO(g)}$, $\\text{CO}_2\\text{(g)}$, $\\text{N}_2\\text{O(g)}$ and $\\text{N}_2\\text{O}_4\\text{(g)}$ are $-110$, $-393$, $81$ and $9.7\\text{ kJ mol}^{-1}$ respectively. Find the value of $\\Delta_r H$ for the reaction: $\\text{N}_2\\text{O}_4\\text{(g)} + 3\\text{CO(g)} \\rightarrow \\text{N}_2\\text{O(g)} + 3\\text{CO}_2\\text{(g)}$",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:5:ex:13",
+          "number": 13,
+          "problem": "Given $\\text{N}_2\\text{(g)} + 3\\text{H}_2\\text{(g)} \\rightarrow 2\\text{NH}_3\\text{(g)}; \\Delta_r H^\\ominus = -92.4\\text{ kJ mol}^{-1}$. What is the standard enthalpy of formation of $\\text{NH}_3$ gas?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:5:ex:14",
+          "number": 14,
+          "problem": "Calculate the standard enthalpy of formation of $\\text{CH}_3\\text{OH(l)}$ from the following data: $\\text{CH}_3\\text{OH (l)} + \\frac{3}{2} \\text{O}_2\\text{(g)} \\rightarrow \\text{CO}_2\\text{(g)} + 2\\text{H}_2\\text{O(l)}; \\Delta_r H^\\ominus = -726\\text{ kJ mol}^{-1}$; $\\text{C(graphite)} + \\text{O}_2\\text{(g)} \\rightarrow \\text{CO}_2\\text{(g)}; \\Delta_c H^\\ominus = -393\\text{ kJ mol}^{-1}$; $\\text{H}_2\\text{(g)} + \\frac{1}{2} \\text{O}_2\\text{(g)} \\rightarrow \\text{H}_2\\text{O(l)}; \\Delta_f H^\\ominus = -286\\text{ kJ mol}^{-1}$.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:5:ex:15",
+          "number": 15,
+          "problem": "Calculate the enthalpy change for the process $\\text{CCl}_4\\text{(g)} \\rightarrow \\text{C(g)} + 4 \\text{Cl(g)}$ and calculate bond enthalpy of $\\text{C} - \\text{Cl}$ in $\\text{CCl}_4\\text{(g)}$. $\\Delta_{\\text{vap}}H^\\ominus(\\text{CCl}_4) = 30.5\\text{ kJ mol}^{-1}$; $\\Delta_f H^\\ominus(\\text{CCl}_4) = -135.5\\text{ kJ mol}^{-1}$; $\\Delta_a H^\\ominus (\\text{C}) = 715.0\\text{ kJ mol}^{-1}$, where $\\Delta_a H^\\ominus$ is enthalpy of atomisation; $\\Delta_a H^\\ominus (\\text{Cl}_2) = 242\\text{ kJ mol}^{-1}$",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:5:ex:16",
+          "number": 16,
+          "problem": "For an isolated system, $\\Delta U = 0$, what will be $\\Delta S$?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:5:ex:17",
+          "number": 17,
+          "problem": "For the reaction at $298\\text{ K}$, $2\\text{A} + \\text{B} \\rightarrow \\text{C}$, $\\Delta H = 400\\text{ kJ mol}^{-1}$ and $\\Delta S = 0.2\\text{ kJ K}^{-1}\\text{ mol}^{-1}$. At what temperature will the reaction become spontaneous considering $\\Delta H$ and $\\Delta S$ to be constant over the temperature range.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:5:ex:18",
+          "number": 18,
+          "problem": "For the reaction, $2\\text{Cl(g)} \\rightarrow \\text{Cl}_2\\text{(g)}$, what are the signs of $\\Delta H$ and $\\Delta S$?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:5:ex:19",
+          "number": 19,
+          "problem": "For the reaction $2\\text{A(g)} + \\text{B(g)} \\rightarrow 2\\text{D(g)}$, $\\Delta U^\\ominus = -10.5\\text{ kJ}$ and $\\Delta S^\\ominus = -44.1\\text{ J K}^{-1}$. Calculate $\\Delta G^\\ominus$ for the reaction, and predict whether the reaction may occur spontaneously.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:5:ex:20",
+          "number": 20,
+          "problem": "The equilibrium constant for a reaction is $10$. What will be the value of $\\Delta G^\\ominus$? $R = 8.314\\text{ J K}^{-1}\\text{ mol}^{-1}$, $T = 300\\text{ K}$.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:5:ex:21",
+          "number": 21,
+          "problem": "Comment on the thermodynamic stability of $\\text{NO(g)}$, given $\\frac{1}{2} \\text{N}_2\\text{(g)} + \\frac{1}{2} \\text{O}_2\\text{(g)} \\rightarrow \\text{NO(g)}; \\Delta_r H^\\ominus = 90\\text{ kJ mol}^{-1}$; $\\text{NO(g)} + \\frac{1}{2} \\text{O}_2\\text{(g)} \\rightarrow \\text{NO}_2\\text{(g)}; \\Delta_r H^\\ominus = -74\\text{ kJ mol}^{-1}$",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:5:ex:22",
+          "number": 22,
+          "problem": "Calculate the entropy change in surroundings when $1.00\\text{ mol}$ of $\\text{H}_2\\text{O(l)}$ is formed under standard conditions. $\\Delta_f H^\\ominus = -286\\text{ kJ mol}^{-1}$.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        }
+      ]
+    }
+  }
+}

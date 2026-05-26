@@ -1,0 +1,915 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_physics_11_ch11.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:physics:11:11",
+  "curriculum": "ncert",
+  "subject": "physics",
+  "grade": 11,
+  "textbook_name": "Physics Part II",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:physics:11:11",
+    "number": 11,
+    "title": "Thermodynamics",
+    "summary": "Thermodynamics, the study of heat and energy transformations, is introduced in this chapter. It begins by defining thermal equilibrium and establishing the concept of temperature through the Zeroth Law. The chapter distinguishes between heat, internal energy, and work, crucial for understanding the First Law of Thermodynamics, which states that heat added to a system equals the change in its internal energy plus the work done by the system.\n\nSpecific heat capacity is then defined, leading to Mayer's relation for ideal gases. Thermodynamic state variables and the equation of state describe the system's condition. Various thermodynamic processes are examined, including isothermal, adiabatic, isochoric, isobaric, and cyclic processes. Work done in each process is calculated, utilizing the First Law.\n\nThe Second Law of Thermodynamics is introduced via the Kelvin-Planck and Clausius statements, limiting the conversion of heat to work and heat flow direction. Reversible and irreversible processes are distinguished, highlighting the idealized nature of reversible processes. The Carnot engine, a theoretical reversible engine, is discussed to determine the maximum possible efficiency of heat engines. The chapter concludes by defining thermodynamic temperature scales. The understanding developed in this chapter has far-reaching practical applications from designing efficient engines to analyzing chemical reactions.",
+    "sections": [
+      {
+        "id": "ncert:physics:11:11:11.1",
+        "number": "11.1",
+        "title": "Introduction",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:11:11.1:1",
+            "order": 1,
+            "title": "Overview of Thermodynamics",
+            "content_text": "Thermodynamics is the branch of physics that deals with the concepts of heat and temperature and the inter-conversion of heat and other forms of energy. It is a macroscopic science that deals with bulk systems and does not go into the molecular constitution of matter. In thermodynamics, we study the processes where work is converted into heat and vice versa. For example, in winter, rubbing our palms together produces heat through work. Conversely, in a steam engine, the heat of the steam is used to do useful work in moving pistons to rotate wheels.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:11:11.1:2",
+            "order": 2,
+            "title": "Historical Perspective and the Nature of Heat",
+            "content_text": "Historically, heat was regarded as a 'caloric'—a fine invisible fluid filling the pores of a substance that flowed from hotter bodies to colder bodies until temperatures equalized. This view was challenged by Benjamin Thomson (Count Rumford) in 1798. He observed that boring a brass cannon generated enough heat to boil water, and the amount of heat produced depended on the work done by the horses turning the drill, rather than the sharpness of the drill. This experiment demonstrated that heat is a form of energy and that energy can be converted from one form (work) to another (heat).",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:11:11.1:3",
+            "order": 3,
+            "title": "Macroscopic vs. Microscopic Descriptions",
+            "content_text": "A thermodynamic description involves relatively few macroscopic variables of the system, such as pressure ($P$), volume ($V$), temperature ($T$), mass, and composition. These variables are suggested by common sense and are usually measurable. In contrast, a microscopic description (like kinetic theory) would involve specifying the coordinates and velocities of a huge number of molecules. Thermodynamics avoids the molecular description altogether and focuses on variables felt by our sense perceptions. Other macroscopic variables include entropy, enthalpy (a measure of total heat content), and internal energy.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:11:11.1:4",
+            "order": 4,
+            "title": "Distinction Between Mechanics and Thermodynamics",
+            "content_text": "In mechanics, the focus is on the motion of particles or bodies under the action of forces and torques. Thermodynamics is not concerned with the motion of the system as a whole, but with the internal macroscopic state of the body. For example, when a bullet is fired and hits a target, its mechanical kinetic energy is converted into heat. This heat represents the energy of the internal disordered motion of the bullet's molecules and the surrounding wood, rather than the ordered motion of the bullet as a whole.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:11:11.2",
+        "number": "11.2",
+        "title": "Thermal Equilibrium",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:11:11.2:1",
+            "order": 1,
+            "title": "Definition of Thermodynamic Equilibrium",
+            "content_text": "In mechanics, equilibrium means the net external force and torque on a system are zero. In thermodynamics, a system is in an equilibrium state if the macroscopic variables that characterize the system (such as pressure, volume, temperature, mass, and composition) do not change in time. For example, a gas inside a closed rigid container, completely insulated from its surroundings, with fixed values of $P, V, T$, mass, and composition, is in a state of thermodynamic equilibrium.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:11:11.2:2",
+            "order": 2,
+            "title": "Adiabatic and Diathermic Walls",
+            "content_text": "The state of equilibrium depends on the surroundings and the nature of the wall separating the system from them. An adiabatic wall is an insulating wall (which can be movable) that does not allow the flow of energy (heat) from one system to another. A diathermic wall is a conducting wall that allows the flow of energy (heat) from one system to another.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 11.1",
+                "description": "(a) Systems A and B (two gases) separated by an adiabatic wall—an insulating wall that does not allow flow of heat. (b) The same systems A and B separated by a diathermic wall—a conducting wall that allows heat to flow from one to another. In this case, thermal equilibrium is attained in due course.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:11:11.2:3",
+            "order": 3,
+            "title": "Attaining Thermal Equilibrium",
+            "content_text": "Consider two systems $A$ and $B$ with initial states $(P_A, V_A)$ and $(P_B, V_B)$. If separated by an adiabatic wall, they remain in their respective states regardless of the other. However, if separated by a diathermic wall, heat flows spontaneously between them until their macroscopic variables stop changing. At this point, the systems reach new states $(P'_A, V'_A)$ and $(P'_B, V'_B)$ such that they are in equilibrium with each other. We then say system $A$ is in thermal equilibrium with system $B$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:11:11.3",
+        "number": "11.3",
+        "title": "Zeroth Law of Thermodynamics",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:11:11.3:1",
+            "order": 1,
+            "title": "The Zeroth Law Statement",
+            "content_text": "The Zeroth Law of Thermodynamics states that 'two systems in thermal equilibrium with a third system separately are in thermal equilibrium with each other'. This law was formulated by R.H. Fowler in 1931, long after the first and second laws were established. To demonstrate this, imagine systems $A$ and $B$ separated by an adiabatic wall, but both in contact with a third system $C$ via a diathermic wall. $A$ and $B$ will both reach thermal equilibrium with $C$. If the adiabatic wall between $A$ and $B$ is then replaced by a diathermic wall, no further change in their states occurs, proving they were already in equilibrium with each other.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 11.2",
+                "description": "(a) Systems A and B are separated by an adiabatic wall, while each is in contact with a third system C via a conducting wall. (b) The adiabatic wall between A and B is replaced by a conducting wall, while C is insulated from A and B by an adiabatic wall.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:11:11.3:2",
+            "order": 2,
+            "title": "Concept of Temperature",
+            "content_text": "The Zeroth Law suggests that for systems in thermal equilibrium, there must be a physical quantity that has the same value for all of them. This thermodynamic variable is called temperature ($T$). Thus, if $A$ and $B$ are separately in equilibrium with $C$, then $T_A = T_C$ and $T_B = T_C$, which implies $T_A = T_B$. The Zeroth Law provides the formal basis for the concept of temperature and the construction of temperature scales, a field known as thermometry.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:11:11.4",
+        "number": "11.4",
+        "title": "Heat, Internal Energy and Work",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:11:11.4:1",
+            "order": 1,
+            "title": "Heat and Temperature",
+            "content_text": "The Zeroth Law of Thermodynamics establishes the concept of temperature as a marker of the 'hotness' of a body. It determines the direction of heat flow when two bodies are in thermal contact: heat flows from the body at a higher temperature to the one at a lower temperature. This flow continues until the temperatures equalize and the bodies reach thermal equilibrium. Heat is thus energy in transit due to a temperature difference.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:11:11.4:2",
+            "order": 2,
+            "title": "Concept of Internal Energy",
+            "content_text": "Internal energy ($U$) of a system is the sum of the kinetic and potential energies of its constituent molecules. In thermodynamics, the kinetic energy of the system as a whole (bulk motion) is not relevant; $U$ only includes the disordered energy associated with the random motion of molecules in the frame of reference where the center of mass is at rest. This motion includes translational, rotational, and vibrational components. For a gas, if intermolecular forces are neglected, internal energy is primarily the sum of the kinetic energies of its molecules.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 11.3",
+                "description": "(a) Internal energy $U$ of a gas is the sum of the kinetic and potential energies of its molecules when the box is at rest. Kinetic energy due to various types of motion (translational, rotational, vibrational) is included in $U$. (b) If the same box is moving as a whole with some velocity, the kinetic energy of the box is not to be included in $U$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:11:11.4:3",
+            "order": 3,
+            "title": "Internal Energy as a State Variable",
+            "content_text": "Internal energy $U$ is a macroscopic 'state variable' of the system. Its value depends only on the current state of the system (defined by variables like pressure $P$, volume $V$, and temperature $T$) and not on the history or the 'path' taken to arrive at that state. For a given mass of gas, $U$ is determined by specific values of $P, V,$ and $T$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:11:11.4:4",
+            "order": 4,
+            "title": "Modes of Changing Internal Energy",
+            "content_text": "There are two distinct modes of changing the internal energy of a system: heat and work. Consider a gas in a cylinder with a movable piston. The internal energy can be increased by: (1) bringing the cylinder into contact with a body at a higher temperature, causing heat to flow into the gas; or (2) doing work on the system by pushing the piston down. Conversely, the system can lose internal energy by transferring heat to the surroundings or by doing work on the surroundings (e.g., the gas pushing the piston up).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 11.4",
+                "description": "Heat and work are two distinct modes of energy transfer to a system that results in change in its internal energy. (a) Heat is energy transfer due to temperature difference between the system and the surroundings. (b) Work is energy transfer brought about by means (e.g. moving the piston by raising or lowering some weight connected to it) that do not involve such a temperature difference.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:11:11.4:5",
+            "order": 5,
+            "title": "Distinction Between Heat, Work, and Internal Energy",
+            "content_text": "It is crucial to distinguish between energy in transit (heat and work) and energy stored in a system (internal energy). A system 'has' internal energy, but it does not 'have' heat or work. Statements like 'a gas has a certain amount of heat' are meaningless. Instead, we speak of 'heat supplied to the system' or 'work done by the system'. Heat and work are not state variables, whereas internal energy is.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:11:11.5",
+        "number": "11.5",
+        "title": "First Law of Thermodynamics",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:11:11.5:1",
+            "order": 1,
+            "title": "Statement of the First Law",
+            "content_text": "The First Law of Thermodynamics is a statement of the general law of conservation of energy applied to a thermodynamic system. It states that the energy supplied to a system in the form of heat ($\\Delta Q$) is partly used to increase the internal energy of the system ($\\Delta U$) and the rest is used by the system to do work on the environment ($\\Delta W$). Mathematically: $$\\Delta Q = \\Delta U + \\Delta W \\quad (11.1)$$ This can also be written as: $$\\Delta Q - \\Delta W = \\Delta U \\quad (11.2)$$",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:11:11.5:2",
+            "order": 2,
+            "title": "Path Independence of Internal Energy Change",
+            "content_text": "While $\\Delta Q$ and $\\Delta W$ individually depend on the path taken to transition from an initial state to a final state, their difference $\\Delta Q - \\Delta W$ (which equals $\\Delta U$) depends only on the initial and final states. This confirms that internal energy is a state variable. In a process where $\\Delta U = 0$ (such as an isothermal expansion of an ideal gas), the heat supplied is entirely used to do work: $\\Delta Q = \\Delta W$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:11:11.5:3",
+            "order": 3,
+            "title": "Work Done by a Gas",
+            "content_text": "For a gas in a cylinder with a movable piston, if the gas expands against a constant pressure $P$ and changes its volume by $\\Delta V$, the work done by the system is: $$\\Delta W = P \\Delta V$$ Substituting this into the First Law gives: $$\\Delta Q = \\Delta U + P \\Delta V \\quad (11.3)$$",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:11:11.5:4",
+            "order": 4,
+            "title": "Application: Internal Energy Change in Phase Transition",
+            "content_text": "The First Law can be applied to calculate the change in internal energy during phase changes, such as water turning into vapor. Most of the heat supplied during this transition goes into increasing the internal energy of the substance, while a smaller portion is used for expansion work against atmospheric pressure.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example: Water to Vapour Phase Change",
+                "problem": "Consider the change in internal energy for $1$ g of water when it goes from its liquid to vapour phase. The measured latent heat of water is $2256$ J/g. At atmospheric pressure ($1.013 \\times 10^5$ Pa), $1$ g of water has a volume of $1$ cm$^3$ in liquid phase and $1671$ cm$^3$ in vapour phase. Calculate $\\Delta U$.",
+                "solution": "Heat supplied $\\Delta Q = 2256$ J. \nWork done $\\Delta W = P(V_g - V_l) = 1.013 \\times 10^5 \\text{ Pa} \\times (1671 - 1) \\times 10^{-6} \\text{ m}^3 = 169.2$ J. \nUsing the First Law: $\\Delta U = \\Delta Q - \\Delta W = 2256 - 169.2 = 2086.8$ J. \nMost of the heat goes into increasing the internal energy."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:11:11.6",
+        "number": "11.6",
+        "title": "Specific Heat Capacity",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:11:11.6:1",
+            "order": 1,
+            "title": "Heat Capacity",
+            "content_text": "Heat capacity ($S$) of a substance is defined as the amount of heat $\\Delta Q$ supplied to the substance to change its temperature by $\\Delta T$: $$S = \\frac{\\Delta Q}{\\Delta T} \\quad (11.4)$$ $S$ depends on the mass and nature of the substance.\nTo define a constant characteristic of a substance independent of its amount, we divide heat capacity by the mass $m$ of the substance. This is called specific heat capacity ($s$): $$s = \\frac{S}{m} = \\left(\\frac{1}{m}\\right) \\frac{\\Delta Q}{\\Delta T} \\quad (11.5)$$ The SI unit of specific heat capacity is J kg$^{-1}$ K$^{-1}$. It depends on the nature of the substance and its temperature.\nIf the amount of substance is specified in moles ($\\mu$), we define molar specific heat capacity ($C$): $$C = \\frac{S}{\\mu} = \\frac{1}{\\mu} \\frac{\\Delta Q}{\\Delta T} \\quad (11.6)$$ The unit of $C$ is J mol$^{-1}$ K$^{-1}$. Like $s$, $C$ depends on the nature of the substance and the conditions (like pressure or volume) under which heat is supplied.\nUsing the law of equipartition of energy, we can predict the molar specific heat of solids. In a solid of $N$ atoms, each atom vibrates in three dimensions. The average energy for each dimension is $k_B T$, so the total energy per atom is $3 k_B T$. For one mole ($N_A$ atoms), the total internal energy is: $$U = 3 k_B T \\times N_A = 3 RT$$ At constant pressure, since $\\Delta V$ is negligible for solids, $\\Delta Q \\approx \\Delta U$. Thus: $$C = \\frac{\\Delta Q}{\\Delta T} = \\frac{\\Delta U}{\\Delta T} = 3R \\quad (11.7)$$ As Table 11.1 shows, the experimentally measured values which generally agrees with The experimentally measured values of specific heat capacity for solids generally agree with the predicted value of $3R$ at ordinary temperatures, as previously noted in Table 11.1. However, carbon is a notable exception to this rule. Furthermore, the agreement between experimental values and the $3R$ prediction is known to break down at low temperatures.\nThe calorie was historically defined as the amount of heat required to raise the temperature of $1\\text{ g}$ of water by $1^\\circ\\text{C}$. With more precise measurements, it was found that the specific heat of water varies slightly with temperature, as shown in Fig. 11.5. For a precise definition, one calorie is defined as the heat required to raise the temperature of $1\\text{ g}$ of water from $14.5^\\circ\\text{C}$ to $15.5^\\circ\\text{C}$. In SI units, the specific heat capacity of water is $4186\\text{ J kg}^{-1}\\text{ K}^{-1}$ (or $4.186\\text{ J g}^{-1}\\text{ K}^{-1}$). The 'mechanical equivalent of heat' is defined as the amount of work needed to produce $1\\text{ cal}$ of heat; however, since the joule is now the standard SI unit for all forms of energy, this term is considered superfluous and need not be used.\nSpecific heat capacity depends on the process or conditions under which heat transfer occurs. For gases, two distinct specific heats are defined: specific heat capacity at constant volume ($C_v$) and specific heat capacity at constant pressure ($C_p$).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 11.5",
+                "description": "A graph showing the variation of the specific heat capacity of water (in $\\text{cal/g }^\\circ\\text{C}$) with temperature ranging from $0^\\circ\\text{C}$ to $100^\\circ\\text{C}$. The curve shows a slight decrease to a minimum near $40^\\circ\\text{C}$ before rising again.",
+                "image_url": null
+              }
+            ],
+            "tables": [
+              {
+                "label": "Table 11.1",
+                "caption": "Specific and molar heat capacities of some solids at room temperature and atmospheric pressure",
+                "headers": [
+                  "Substance",
+                  "Specific heat (J kg$^{-1}$ K$^{-1}$)",
+                  "Molar specific heat (J mol$^{-1}$ K$^{-1}$)"
+                ],
+                "rows": [
+                  [
+                    "Aluminium",
+                    "900.0",
+                    "24.4"
+                  ],
+                  [
+                    "Carbon",
+                    "506.5",
+                    "6.1"
+                  ],
+                  [
+                    "Copper",
+                    "386.4",
+                    "24.5"
+                  ],
+                  [
+                    "Lead",
+                    "127.7",
+                    "26.5"
+                  ],
+                  [
+                    "Silver",
+                    "236.1",
+                    "25.5"
+                  ],
+                  [
+                    "Tungsten",
+                    "134.4",
+                    "24.9"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:physics:11:11:11.6:2",
+            "order": 2,
+            "title": "Relation between Molar Specific Heat Capacities (Mayer's Relation)",
+            "content_text": "For an ideal gas, there is a simple relation between molar specific heats: $$C_p - C_v = R \\quad (11.8)$$ where $R$ is the universal gas constant. To derive this, we start with the First Law of Thermodynamics for $1$ mole of gas: $\\Delta Q = \\Delta U + P\\Delta V$. If heat is absorbed at constant volume ($\\Delta V = 0$), then: $$C_v = \\left(\\frac{\\Delta Q}{\\Delta T}\\right)_v = \\left(\\frac{\\Delta U}{\\Delta T}\\right)_v = \\frac{\\Delta U}{\\Delta T} \\quad (11.9)$$ The subscript $v$ is dropped in the final step because the internal energy $U$ of an ideal gas depends only on temperature. If heat is absorbed at constant pressure: $$C_p = \\left(\\frac{\\Delta Q}{\\Delta T}\\right)_p = \\left(\\frac{\\Delta U}{\\Delta T}\\right)_p + P\\left(\\frac{\\Delta V}{\\Delta T}\\right)_p \\quad (11.10)$$ Again, the subscript $p$ can be dropped from the first term since $U$ depends only on $T$. For $1$ mole of an ideal gas, $PV = RT$, which implies: $$P\\left(\\frac{\\Delta V}{\\Delta T}\\right)_p = R \\quad (11.11)$$ Substituting equations (11.9) and (11.11) into (11.10) yields the relation $C_p = C_v + R$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:11:11.7",
+        "number": "11.7",
+        "title": "Thermodynamic State Variables and Equation of State",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:11:11.7:1",
+            "order": 1,
+            "title": "Equilibrium States and State Variables",
+            "content_text": "Every equilibrium state of a thermodynamic system is described by specific values of macroscopic variables, also called state variables. For a gas, these include pressure ($P$), volume ($V$), temperature ($T$), and mass ($m$). A system is not always in equilibrium; for example, a gas expanding freely into a vacuum or a mixture undergoing an explosive chemical reaction are non-equilibrium states where pressure and temperature are not uniform throughout, as shown in Fig. 11.6. Eventually, such systems attain a uniform temperature and pressure and come to thermal and mechanical equilibrium with their surroundings.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 11.6",
+                "description": "(a) Depicts the free expansion of a gas when a partition in a box is suddenly removed. (b) Shows a mixture of gases undergoing an explosive chemical reaction in a cylinder with a piston. In both cases, the system is not in equilibrium and cannot be described by state variables.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:11:11.7:2",
+            "order": 2,
+            "title": "Equation of State",
+            "content_text": "The connection between state variables is known as the equation of state. For an ideal gas, this is the ideal gas relation: $PV = \\mu RT$. For a fixed amount of gas (fixed $\\mu$), there are only two independent variables, such as $P$ and $V$, or $T$ and $V$. The pressure-volume curve for a fixed temperature is called an isotherm. Real gases may have more complicated equations of state.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:11:11.7:3",
+            "order": 3,
+            "title": "Extensive and Intensive Variables",
+            "content_text": "Thermodynamic state variables are of two kinds: extensive and intensive. Extensive variables indicate the 'size' of the system. If a system in equilibrium is imagined to be divided into two equal parts, variables whose values are halved (such as internal energy $U$, volume $V$, and total mass $M$) are extensive. Variables that remain unchanged for each part (such as pressure $P$, temperature $T$, and density $\\rho$) are intensive. It is useful to check the consistency of thermodynamic equations using this classification; for example, in $\\Delta Q = \\Delta U + P\\Delta V$, all terms are extensive (note that while $Q$ is not a state variable, $\\Delta Q$ is proportional to mass and thus extensive).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:11:11.8",
+        "number": "11.8",
+        "title": "Thermodynamic Processes",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:11:11.8:1",
+            "order": 1,
+            "title": "Quasi-static Process",
+            "content_text": "A quasi-static process is an idealized, infinitely slow process where the system remains in thermal and mechanical equilibrium with its surroundings at every stage. The state variables ($P, T, V$) change so slowly that the difference in pressure and temperature between the system and the surroundings is infinitesimal. While a hypothetical construct, processes that are sufficiently slow and do not involve rapid changes (like accelerated piston motion or large temperature gradients) are reasonable approximations of quasi-static processes. Fig. 11.7 illustrates this concept.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 11.7",
+                "description": "A diagram showing a gas in a cylinder with a piston, where the external pressure $P + \\Delta P$ and reservoir temperature $T + \\Delta T$ differ only infinitesimally from the system's pressure $P$ and temperature $T$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:11:11.8:2",
+            "order": 2,
+            "title": "Types of Thermodynamic Processes",
+            "content_text": "Thermodynamic processes are categorized based on the conditions maintained during the change. An isothermal process is one where the temperature of the system is kept fixed. An isobaric process occurs at constant pressure, while an isochoric process occurs at constant volume. An adiabatic process is one where no heat flows between the system and the surroundings ($\\Delta Q = 0$). These processes are summarized in Table 11.2. An example of an isothermal process is the expansion of a gas in a metallic cylinder placed in a large reservoir of fixed temperature.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 11.2",
+                "caption": "Some special thermodynamic processes",
+                "headers": [
+                  "Type of processes",
+                  "Feature"
+                ],
+                "rows": [
+                  [
+                    "Isothermal",
+                    "Temperature constant"
+                  ],
+                  [
+                    "Isobaric",
+                    "Pressure constant"
+                  ],
+                  [
+                    "Isochoric",
+                    "Volume constant"
+                  ],
+                  [
+                    "Adiabatic",
+                    "No heat flow between the system and the surroundings ($\\Delta Q = 0$)"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:physics:11:11:11.8:3",
+            "order": 3,
+            "title": "Isothermal Process and Work Done",
+            "content_text": "For an isothermal process where temperature $T$ is fixed, the ideal gas equation gives $PV = \\text{constant}$, which is Boyle's Law. To calculate the work done ($W$) as an ideal gas goes from an initial state $(P_1, V_1)$ to a final state $(P_2, V_2)$, we consider the work done during an infinitesimal volume change $\\Delta V$: $\\Delta W = P \\Delta V$. Summing this over the entire process (as $\\Delta V \\to 0$): $$W = \\int_{V_1}^{V_2} P dV$$ Substituting $P = \\frac{\\mu RT}{V}$ from the ideal gas law: $$W = \\mu RT \\int_{V_1}^{V_2} \\frac{dV}{V} = \\mu RT \\ln \\frac{V_2}{V_1} \\quad (11.12)$$ This equation gives the work done by an ideal gas during an isothermal expansion or compression.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:11:11.8:4",
+            "order": 4,
+            "title": "Isothermal Process (Conclusion)",
+            "content_text": "In the final steps of calculating work done in an isothermal process, we use the ideal gas equation $PV = \\mu RT$ to substitute for $P$ in the integral $\\int P dV$. Since temperature $T$ is constant, it is taken out of the integral. For an ideal gas, the internal energy $U$ depends only on temperature. Consequently, in an isothermal process where $\\Delta T = 0$, there is no change in the internal energy of the gas ($\\Delta U = 0$). According to the First Law of Thermodynamics ($Q = \\Delta U + W$), the heat supplied to the gas equals the work done by the gas ($Q = W$). In an isothermal expansion ($V_2 > V_1$), the work $W$ is positive, meaning the gas absorbs heat and performs work. Conversely, in an isothermal compression ($V_2 < V_1$), $W$ is negative, indicating work is done on the gas by the environment and heat is released.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:11:11.8:5",
+            "order": 5,
+            "title": "Adiabatic Process",
+            "content_text": "In an adiabatic process, the system is thermally insulated from its surroundings, meaning no heat is exchanged ($Q = 0$). According to the First Law of Thermodynamics, any work done by the gas results in a decrease in its internal energy ($W = -\\Delta U$), which for an ideal gas leads to a drop in temperature. For an ideal gas undergoing an adiabatic process, the relationship between pressure and volume is given by $P V^\\gamma = \\text{constant}$, where $\\gamma$ is the ratio of specific heats at constant pressure and constant volume ($\\gamma = C_p / C_v$). For a change from state $(P_1, V_1)$ to $(P_2, V_2)$, the relation is $P_1 V_1^\\gamma = P_2 V_2^\\gamma$.\nThe work done during an adiabatic change of an ideal gas from state $(P_1, V_1, T_1)$ to state $(P_2, V_2, T_2)$ is calculated as:\n$$W = \\int_{V_1}^{V_2} P dV$$\nSubstituting $P = \\text{constant} / V^\\gamma$, we get:\n$$W = \\text{constant} \\times \\int_{V_1}^{V_2} \\frac{dV}{V^\\gamma} = \\text{constant} \\times \\left[ \\frac{V^{-\\gamma+1}}{1-\\gamma} \\right]_{V_1}^{V_2}$$\n$$W = \\frac{\\text{constant}}{(1-\\gamma)} \\times \\left[ \\frac{1}{V_2^{\\gamma-1}} - \\frac{1}{V_1^{\\gamma-1}} \\right]$$\nUsing the relation $\\text{constant} = P_1 V_1^\\gamma = P_2 V_2^\\gamma$, this simplifies to:\n$$W = \\frac{1}{1-\\gamma} [P_2 V_2 - P_1 V_1] = \\frac{\\mu R(T_1 - T_2)}{\\gamma - 1}$$\nIf work is done by the gas ($W > 0$), then $T_2 < T_1$, and the temperature falls. If work is done on the gas ($W < 0$), then $T_2 > T_1$, and the temperature of the gas rises.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 11.8",
+                "description": "P-V curves for isothermal and adiabatic processes of an ideal gas. The diagram shows two isotherms at different temperatures and two adiabatic curves connecting them. The adiabatic curves are steeper than the isotherms, indicating a more rapid change in pressure with volume.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:11:11.8:6",
+            "order": 6,
+            "title": "Isochoric Process",
+            "content_text": "In an isochoric process, the volume $V$ of the system remains constant. Since $dV = 0$, no work is done by or on the gas ($W = 0$). From the First Law of Thermodynamics, the heat absorbed by the gas ($Q$) goes entirely into changing its internal energy ($\\Delta U$) and thus its temperature. The change in temperature for a given amount of heat is determined by the specific heat of the gas at constant volume ($C_v$).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:11:11.8:7",
+            "order": 7,
+            "title": "Isobaric Process",
+            "content_text": "In an isobaric process, the pressure $P$ is fixed. The work done by the gas is given by:\n$$W = P(V_2 - V_1) = \\mu R(T_2 - T_1)$$\nSince the temperature changes, the internal energy also changes. The heat absorbed by the system is used partly to increase the internal energy and partly to perform work. The change in temperature for a given amount of heat is determined by the specific heat of the gas at constant pressure ($C_p$).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:11:11.8:8",
+            "order": 8,
+            "title": "Cyclic Process",
+            "content_text": "In a cyclic process, the system eventually returns to its initial state. Since internal energy $U$ is a state variable, the total change in internal energy over a complete cycle is zero ($\\Delta U = 0$). Consequently, according to the First Law of Thermodynamics, the total heat absorbed by the system during the cycle equals the net work done by the system ($Q = W$).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:11:11.9",
+        "number": "11.9",
+        "title": "Second Law of Thermodynamics",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:11:11.9:1",
+            "order": 1,
+            "title": "Introduction to the Second Law",
+            "content_text": "The First Law of Thermodynamics is a statement of the conservation of energy, but it does not explain why certain energy-conserving processes never occur in nature. For example, a book on a table never spontaneously jumps up by converting its internal thermal energy into mechanical energy, even though such a process would conserve energy. The Second Law of Thermodynamics provides a fundamental limitation on the efficiency of heat engines and the co-efficient of performance of refrigerators. It establishes that the efficiency of a heat engine can never be unity (100%) and the coefficient of performance of a refrigerator can never be infinite.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:11:11.9:2",
+            "order": 2,
+            "title": "Kelvin-Planck Statement",
+            "content_text": "The Kelvin-Planck statement of the Second Law of Thermodynamics states: 'No process is possible whose sole result is the absorption of heat from a reservoir and the complete conversion of the heat into work.' This implies that it is impossible to construct a heat engine that extracts heat from a single reservoir and converts it entirely into work without any other effect.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:11:11.9:3",
+            "order": 3,
+            "title": "Clausius Statement",
+            "content_text": "The Clausius statement of the Second Law of Thermodynamics states: 'No process is possible whose sole result is the transfer of heat from a colder object to a hotter object.' This means that heat cannot spontaneously flow from a body at a lower temperature to a body at a higher temperature without the performance of external work. These two statements of the Second Law are completely equivalent.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:11:11.10",
+        "number": "11.10",
+        "title": "Reversible and Irreversible Processes",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:11:11.10:1",
+            "order": 1,
+            "title": "Irreversible Processes",
+            "content_text": "A thermodynamic process is irreversible if it cannot be reversed to restore both the system and its surroundings to their original states. Most spontaneous processes in nature are irreversible. Examples include the transfer of heat from a hot body to a cold body, the free expansion of a gas, combustion reactions, and the diffusion of gases. Irreversibility is a rule rather than an exception in nature.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:11:11.10:2",
+            "order": 2,
+            "title": "Causes of Irreversibility",
+            "content_text": "Irreversibility arises mainly from two causes: 1. Many processes (like free expansion or explosive chemical reactions) take the system through non-equilibrium states. 2. Most processes involve dissipative effects such as friction, viscosity, and other dissipative forces that convert mechanical energy into internal energy. While these effects can be minimized, they cannot be fully eliminated, making real-world processes irreversible.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:11:11.10:3",
+            "order": 3,
+            "title": "Reversible Processes",
+            "content_text": "A process is reversible if it can be turned back such that both the system and the surroundings return to their original states with no other change anywhere in the universe. A reversible process is an idealized concept. For a process to be reversible, it must be quasi-static (passing through a sequence of equilibrium states) and non-dissipative (no friction or viscosity). For example, a quasi-static isothermal expansion of an ideal gas in a cylinder with a frictionless movable piston is a reversible process.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:11:11.11",
+        "number": "11.11",
+        "title": "Carnot Engine",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:11:11.11:1",
+            "order": 1,
+            "title": "Introduction to Carnot Engine",
+            "content_text": "In 1824, Sadi Carnot proposed an idealized heat engine to determine the maximum possible efficiency. A Carnot engine operates between a hot reservoir at temperature $T_1$ and a cold reservoir at temperature $T_2$. To achieve maximum efficiency, the engine must be reversible, meaning it must be quasi-static and non-dissipative. Any engine involving irreversibility will have a lower efficiency than a Carnot engine operating between the same two temperatures.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:11:11.11:2",
+            "order": 2,
+            "title": "The Carnot Cycle",
+            "content_text": "A reversible heat engine (Carnot engine) must follow a specific cycle of processes to ensure it remains quasi-static. Since heat transfer between the system and a reservoir at different temperatures is irreversible, heat must be absorbed and released isothermally at the temperatures of the reservoirs ($T_1$ and $T_2$). To change the temperature of the working substance between $T_1$ and $T_2$ without heat exchange with a reservoir (which would be irreversible), the process must be adiabatic. Thus, a Carnot cycle consists of two isothermal and two adiabatic processes. The sequence of steps constituting one The sequence of steps constituting one cycle, called the Carnot cycle, shown in Fig. 11.9. We have taken the working substance of the Carnot engine to be an ideal gas. (a) Step 1 → 2: Isothermal expansion of the gas taking its state from $(P_1, V_1, T_1)$ to $(P_2, V_2, T_1)$. The heat absorbed by the gas ($Q_1$) from the reservoir at temperature $T_1$ is given by $W_{1 \to 2} = Q_1 = μ R T_1 \\ln \\left( \\frac{V_2}{V_1} \\right)$. This is also the work done by the gas on the environment. (b) Step 2 → 3: Adiabatic expansion of the gas from $(P_2, V_2, T_1)$ to $(P_3, V_3, T_2)$. Work done by the gas is $W_{2 \to 3} = \\frac{μ R(T_1 - T_2)}{\\gamma - 1}$. (c) Step 3 → 4: Isothermal compression of the gas from $(P_3, V_3, T_2)$ to $(P_4, V_4, T_2)$. Heat released ($Q_2$) by the gas to the reservoir at temperature $T_2$ is $W_{3 \to 4} = Q_2 = μ R T_2 \\ln \\left( \\frac{V_3}{V_4} \\right)$. This is the work done on the gas by the environment. (d) Step 4 → 1: Adiabatic compression of the gas from $(P_4, V_4, T_2)$ to $(P_1, V_1, T_1)$. Work done on the gas is $W_{4 \to 1} = μ R \\frac{T_1 - T_2}{\\gamma - 1}$. The total work done by the gas in one complete cycle is $W = W_{1 \to 2} + W_{2 \to 3} - W_{3 \to 4} - W_{4 \to 1} = μ R T_1 \\ln \\left( \\frac{V_2}{V_1} \\right) - μ R T_2 \\ln \\left( \\frac{V_3}{V_4} \\right)$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 11.9",
+                "description": "Carnot cycle for a heat engine with an ideal gas as the working substance. The P-V diagram shows four stages: (1) Isothermal expansion at $T_1$ from $(P_1, V_1)$ to $(P_2, V_2)$, (2) Adiabatic expansion from $(P_2, V_2, T_1)$ to $(P_3, V_3, T_2)$, (3) Isothermal compression at $T_2$ from $(P_3, V_3)$ to $(P_4, V_4)$, and (4) Adiabatic compression from $(P_4, V_4, T_2)$ back to $(P_1, V_1, T_1)$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:11:11.11:3",
+            "order": 3,
+            "title": "Efficiency of the Carnot Engine",
+            "content_text": "The efficiency $\\eta$ of the Carnot engine is defined as $\\eta = \\frac{W}{Q_1} = 1 - \\frac{Q_2}{Q_1} = 1 - \\left( \\frac{T_2}{T_1} \\right) \\frac{\\ln(V_3/V_4)}{\\ln(V_2/V_1)}$. Since step 2 → 3 is an adiabatic process, $T_1 V_2^{\\gamma-1} = T_2 V_3^{\\gamma-1}$, which implies $\\frac{V_2}{V_3} = \\left( \\frac{T_2}{T_1} \\right)^{1/(\\gamma-1)}$. Similarly, for the adiabatic process 4 → 1, $T_2 V_4^{\\gamma-1} = T_1 V_1^{\\gamma-1}$, implying $\\frac{V_1}{V_4} = \\left( \\frac{T_2}{T_1} \\right)^{1/(\\gamma-1)}$. From these relations, we find $\\frac{V_3}{V_4} = \\frac{V_2}{V_1}$. Substituting this into the efficiency equation, we obtain the final result for a Carnot engine: $\\eta = 1 - \\frac{T_2}{T_1}$. This shows that the efficiency of a Carnot engine depends only on the temperatures of the hot and cold reservoirs.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:11:11.11:4",
+            "order": 4,
+            "title": "Carnot's Theorem",
+            "content_text": "Carnot's theorem establishes two important results: (a) working between two given temperatures $T_1$ and $T_2$ of the hot and cold reservoirs respectively, no engine can have efficiency more than that of the Carnot engine and (b) the efficiency of the Carnot engine is independent of the nature of the working substance. To prove (a), imagine a reversible Carnot engine $R$ and an irreversible engine $I$ working between the same reservoirs. If we assume $\\eta_I > \\eta_R$, and couple them such that $I$ acts as an engine and $R$ acts as a refrigerator, the coupled system would extract heat from the cold reservoir and convert it entirely into work without any other change, which contradicts the Second Law of Thermodynamics (Kelvin-Planck statement). Thus, the assertion $\\eta_I > \\eta_R$ is wrong. Similarly, it can be shown that all reversible engines working between the same two temperatures have the same efficiency, regardless of the working substance.",
+            "content_type": "theorem",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 11.10",
+                "description": "A schematic diagram showing an irreversible engine (I) coupled to a reversible refrigerator (R) between a hot reservoir at temperature T1 and a cold reservoir at temperature T2. The diagram illustrates the flow of heat Q1 and Q2 and the work W and W' involved in the proof of Carnot's theorem.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:11:11.11:5",
+            "order": 5,
+            "title": "Thermodynamic Temperature Scale",
+            "content_text": "The efficiency of a Carnot engine is independent of the nature of the system and depends only on the temperatures of the reservoirs. The relation $\\frac{Q_1}{Q_2} = \\frac{T_1}{T_2}$ is a universal relation. This can be used to define a truly universal thermodynamic temperature scale that is independent of the properties of any particular substance. For an ideal gas used as a working substance, this universal temperature is the same as the ideal gas temperature introduced earlier.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:11:Summary",
+        "number": "Summary",
+        "title": "Chapter Summary",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:11:Summary:1",
+            "order": 1,
+            "title": "Fundamental Laws and Internal Energy",
+            "content_text": "The Zeroth Law of Thermodynamics states that two systems in thermal equilibrium with a third system separately are in thermal equilibrium with each other, leading to the concept of temperature. Internal energy is the sum of kinetic and potential energies of the molecular constituents; it does not include the overall kinetic energy of the system. Heat and work are modes of energy transfer. Heat is energy transfer due to temperature difference, while work is energy transfer brought about by other means, such as moving a piston. The First Law of Thermodynamics is the general law of conservation of energy: $\\Delta Q = \\Delta U + \\Delta W$, where $\\Delta Q$ is heat supplied, $\\Delta W$ is work done by the system, and $\\Delta U$ is the change in internal energy.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:11:Summary:2",
+            "order": 2,
+            "title": "Specific Heat Capacities",
+            "content_text": "Specific heat capacity is defined as $s = \\frac{1}{m} \\frac{\\Delta Q}{\\Delta T}$. Molar specific heat capacity is $C = \\frac{1}{\\mu} \\frac{\\Delta Q}{\\Delta T}$. For solids, the law of equipartition of energy gives $C = 3R$ at ordinary temperatures. A calorie is the heat required to raise 1 g of water from 14.5 °C to 15.5 °C ($1 \\text{ cal} = 4.186 \\text{ J}$). For an ideal gas, molar specific heat capacities at constant pressure ($C_p$) and volume ($C_v$) satisfy Mayer's relation: $C_p - C_v = R$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:11:Summary:3",
+            "order": 3,
+            "title": "State Variables and Thermodynamic Processes",
+            "content_text": "Equilibrium states are described by state variables like pressure ($P$), volume ($V$), temperature ($T$), and mass ($m$). Heat and work are not state variables. An Equation of State (e.g., $PV = μ RT$) connects these variables. A quasi-static process is infinitely slow, keeping the system in equilibrium with surroundings. In isothermal expansion of an ideal gas, $Q = W = μ RT \\ln \\left( \\frac{V_2}{V_1} \\right)$. In an adiabatic process, $PV^{\\gamma} = \\text{constant}$, where $\\gamma = C_p/C_v$. The work done in an adiabatic change from $(P_1, V_1, T_1)$ to $(P_2, V_2, T_2)$ is $W = \\frac{μ R(T_1 - T_2)}{\\gamma - 1}$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:11:Summary:4",
+            "order": 4,
+            "title": "Second Law of Thermodynamics",
+            "content_text": "The second law of thermodynamics disallows some processes consistent with the First Law of Thermodynamics. It is expressed through two primary statements: \n1. **Kelvin-Planck statement**: No process is possible whose sole result is the absorption of heat from a reservoir and complete conversion of the heat into work. \n2. **Clausius statement**: No process is possible whose sole result is the transfer of heat from a colder object to a hotter object. \nIn practical terms, the Second Law implies that no heat engine can have an efficiency $\\eta$ equal to 1, and no refrigerator can have a co-efficient of performance $\\alpha$ equal to infinity.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:11:Summary:5",
+            "order": 5,
+            "title": "Reversible and Irreversible Processes",
+            "content_text": "A process is reversible if it can be reversed such that both the system and the surroundings return to their original states, with no other change anywhere else in the universe. Spontaneous processes occurring in nature are generally irreversible. An idealised reversible process is a quasi-static process that occurs without any dissipative factors such as friction, viscosity, etc.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:11:Summary:6",
+            "order": 6,
+            "title": "Carnot Engine",
+            "content_text": "A Carnot engine is a theoretical reversible engine operating between two temperatures $T_1$ (source) and $T_2$ (sink). The Carnot cycle consists of four stages: two isothermal processes connected by two adiabatic processes. The efficiency of a Carnot engine is given by the formula: $$\\eta = 1 - \\frac{T_2}{T_1}$$ No engine operating between two given temperatures can have an efficiency greater than that of the Carnot engine.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:11:Summary:7",
+            "order": 7,
+            "title": "Sign Convention for Heat and Work",
+            "content_text": "The following sign conventions are used in thermodynamics:\n- If $Q > 0$, heat is added to the system.\n- If $Q < 0$, heat is removed from the system.\n- If $W > 0$, work is done by the system.\n- If $W < 0$, work is done on the system.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:11:Summary:8",
+            "order": 8,
+            "title": "Thermodynamic Quantities and Units",
+            "content_text": "The following table summarizes key thermodynamic quantities, their symbols, dimensions, units, and relevant remarks.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 11.1",
+                "caption": "Thermodynamic Quantities",
+                "headers": [
+                  "Quantity",
+                  "Symbol",
+                  "Dimensions",
+                  "Unit",
+                  "Remark"
+                ],
+                "rows": [
+                  [
+                    "Co-efficient of volume expansion",
+                    "$\\alpha_v$",
+                    "$[K^{-1}]$",
+                    "$K^{-1}$",
+                    "$\\alpha_v = 3 \\alpha_l$"
+                  ],
+                  [
+                    "Heat supplied to a system",
+                    "$\\Delta Q$",
+                    "$[ML^2 T^{-2}]$",
+                    "$J$",
+                    "$Q$ is not a state variable"
+                  ],
+                  [
+                    "Specific heat capacity",
+                    "$s$",
+                    "$[L^2 T^{-2} K^{-1}]$",
+                    "$J kg^{-1} K^{-1}$",
+                    ""
+                  ],
+                  [
+                    "Thermal Conductivity",
+                    "$K$",
+                    "$[MLT^{-3} K^{-1}]$",
+                    "$J s^{-1} K^{-1}$",
+                    "$H = -KA \\frac{dt}{dx}$"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:11:Points to Ponder",
+        "number": "Points to Ponder",
+        "title": "Points to Ponder",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:11:Points to Ponder:1",
+            "order": 1,
+            "title": "Temperature and Internal Energy",
+            "content_text": "The temperature of a body is related to its average internal energy, specifically the random motion of its constituents, and not to the kinetic energy of motion of its centre of mass. For example, a bullet fired from a gun is not at a higher temperature simply because of its high macroscopic speed.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:11:Points to Ponder:2",
+            "order": 2,
+            "title": "Thermodynamic vs Mechanical Equilibrium",
+            "content_text": "Equilibrium in thermodynamics refers to a state where macroscopic variables (like pressure, volume, temperature) describing the system do not depend on time. In contrast, equilibrium in mechanics means the net external force and torque on the system are zero. In a state of thermodynamic equilibrium, the microscopic constituents of a system are not in equilibrium in the mechanical sense.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:11:Points to Ponder:3",
+            "order": 3,
+            "title": "Heat Capacity and Process Dependence",
+            "content_text": "Heat capacity is not a fixed property of a substance but depends on the specific process the system undergoes when heat is supplied (e.g., constant volume vs. constant pressure).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:11:Points to Ponder:4",
+            "order": 4,
+            "title": "Isothermal Quasi-static Processes",
+            "content_text": "In isothermal quasi-static processes, heat is absorbed or given out by the system even though at every stage the gas has the same temperature as that of the surrounding reservoir. This exchange is possible because of the infinitesimal difference in temperature between the system and the reservoir.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:physics:11:11:ex:1",
+          "number": 1,
+          "problem": "A geyser heats water flowing at the rate of 3.0 litres per minute from $27 ^\\circ C$ to $77 ^\\circ C$. If the geyser operates on a gas burner, what is the rate of consumption of the fuel if its heat of combustion is $4.0 \\times 10^4 J/g$?",
+          "solution": "Heat required per minute $Q = m s \\Delta T = 3.0 kg \\times 4184 J/kg K \\times (77-27) K = 627600 J/min$. Rate of fuel consumption = $Q / \\text{Heat of combustion} = 627600 / 40000 = 15.69 g/min$.",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:11:ex:2",
+          "number": 2,
+          "problem": "What amount of heat must be supplied to $2.0 \\times 10^{-2} kg$ of nitrogen (at room temperature) to raise its temperature by $45 ^\\circ C$ at constant pressure? (Molecular mass of $N_2 = 28$; $R = 8.3 J mol^{-1} K^{-1}$.)",
+          "solution": "Number of moles $n = 20g / 28g/mol = 0.714 mol$. For diatomic $N_2$ at constant pressure, $C_p = \\frac{7}{2}R$. Heat $Q = n C_p \\Delta T = 0.714 \\times 3.5 \\times 8.3 \\times 45 = 933.4 J$.",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:11:ex:3",
+          "number": 3,
+          "problem": "Explain why: (a) Two bodies at different temperatures $T_1$ and $T_2$ if brought in thermal contact do not necessarily settle to the mean temperature $(T_1 + T_2)/2$. (b) The coolant in a chemical or a nuclear plant should have high specific heat. (c) Air pressure in a car tyre increases during driving. (d) The climate of a harbour town is more temperate than that of a town in a desert at the same latitude.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:11:ex:4",
+          "number": 4,
+          "problem": "A cylinder with a movable piston contains 3 moles of hydrogen at standard temperature and pressure. The walls of the cylinder are made of a heat insulator, and the piston is insulated by having a pile of sand on it. By what factor does the pressure of the gas increase if the gas is compressed to half its original volume?",
+          "solution": "For adiabatic compression, $P V^\\gamma = \\text{constant}$. For $H_2$, $\\gamma = 1.4$. $P_2/P_1 = (V_1/V_2)^\\gamma = 2^{1.4} \\approx 2.64$.",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:11:ex:5",
+          "number": 5,
+          "problem": "In changing the state of a gas adiabatically from an equilibrium state $A$ to another equilibrium state $B$, an amount of work equal to $22.3 J$ is done on the system. If the gas is taken from state $A$ to $B$ via a process in which the net heat absorbed by the system is $9.35 cal$, how much is the net work done by the system in the latter case? (Take $1 cal = 4.19 J$)",
+          "solution": "Adiabatic: $\\Delta U = -W = -(-22.3) = 22.3 J$. Second process: $Q = 9.35 \\times 4.19 = 39.18 J$. $W = Q - \\Delta U = 39.18 - 22.3 = 16.88 J$.",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:11:ex:6",
+          "number": 6,
+          "problem": "Two cylinders $A$ and $B$ of equal capacity are connected to each other via a stopcock. $A$ contains a gas at standard temperature and pressure. $B$ is completely evacuated. The entire system is thermally insulated. The stopcock is suddenly opened. Answer the following: (a) What is the final pressure of the gas in $A$ and $B$? (b) What is the change in internal energy of the gas? (c) What is the change in the temperature of the gas? (d) Do the intermediate states of the system lie on its $P-V-T$ surface?",
+          "solution": "(a) $P_f = P_i/2 = 0.5 atm$. (b) $\\Delta U = 0$ (free expansion). (c) $\\Delta T = 0$. (d) No, intermediate states are non-equilibrium states.",
+          "difficulty": "hard",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:11:ex:7",
+          "number": 7,
+          "problem": "An electric heater supplies heat to a system at a rate of $100W$. If system performs work at a rate of $75$ joules per second. At what rate is the internal energy increasing?",
+          "solution": "$\\frac{dU}{dt} = \\frac{dQ}{dt} - \\frac{dW}{dt} = 100W - 75W = 25W$.",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:11:ex:8",
+          "number": 8,
+          "problem": "A thermodynamic system is taken from an original state to an intermediate state by the linear process shown in Fig. 11.11. Its volume is then reduced to the original value from $E$ to $F$ by an isobaric process. Calculate the total work done by the gas from $D$ to $E$ to $F$.",
+          "solution": "Work $D \\to E$ (area of trapezium) = $0.5 \\times (600+300) \\times (5.0-2.0) = 1350 J$. Work $E \\to F$ (isobaric compression) = $300 \\times (2.0-5.0) = -900 J$. Total work = $1350 - 900 = 450 J$.",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        }
+      ]
+    }
+  }
+}

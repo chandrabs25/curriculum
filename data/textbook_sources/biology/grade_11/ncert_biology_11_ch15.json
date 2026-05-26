@@ -1,0 +1,585 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_biology_11_ch15.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:biology:11:15",
+  "curriculum": "ncert",
+  "subject": "biology",
+  "grade": 11,
+  "textbook_name": "Biology",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:biology:11:15",
+    "number": 15,
+    "title": "Body Fluids and Circulation",
+    "summary": "This chapter explores the critical processes of body fluids and circulation. It begins by detailing the composition of blood, including plasma and formed elements (erythrocytes, leukocytes, and platelets), and their respective functions in oxygen transport, immunity, and blood clotting. The chapter then explains blood groups (ABO and Rh), Rh incompatibility, and the mechanism of blood coagulation. Next, it discusses lymph, its formation, and its role in the lymphatic system for immune responses.\n\nThe circulatory system is described, differentiating between open and closed systems and outlining the evolutionary changes in vertebrate hearts. A deep dive into the human circulatory system covers heart anatomy, including chambers, valves, nodal tissue, and the cardiac cycle, emphasizing the roles of systole and diastole. Key concepts like cardiac output and stroke volume are introduced. The ECG and its interpretation are explained, followed by a description of double circulation (pulmonary and systemic) and the hepatic portal system. The regulation of cardiac activity by neural and hormonal mechanisms is also discussed.\n\nFinally, the chapter examines circulatory system disorders, including hypertension, coronary artery disease (CAD), angina, and heart failure. The understanding of these concepts is crucial for comprehending human physiology and diagnosing/treating cardiovascular diseases. This chapter provides a foundational knowledge for advanced studies in medical and biological sciences.",
+    "sections": [
+      {
+        "id": "ncert:biology:11:15:15.1",
+        "number": "15.1",
+        "title": "Blood",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:15:15.1:1",
+            "order": 1,
+            "title": "Introduction to Body Fluids and Circulation",
+            "content_text": "All living cells must be provided with nutrients, $O_2$, and other essential substances, while waste or harmful substances produced must be removed continuously for healthy tissue functioning. Efficient mechanisms for the movement of these substances to and from cells are essential. Simple organisms like sponges and coelenterates circulate water from their surroundings through their body cavities to facilitate substance exchange. More complex organisms use special fluids within their bodies for transport. Blood is the most commonly used body fluid by higher organisms, including humans. Another body fluid, lymph (tissue fluid), also helps in the transport of certain substances.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:15:15.1:2",
+            "order": 2,
+            "title": "Plasma: Composition and Functions",
+            "content_text": "Blood is a special connective tissue consisting of a fluid matrix, plasma, and formed elements. Plasma is a straw-coloured, viscous fluid constituting nearly $55$ per cent of the blood. It is composed of $90-92$ per cent water and $6-8$ per cent proteins. The major proteins are: 1. Fibrinogen: Needed for clotting or coagulation of blood. 2. Globulins: Primarily involved in the body's defense mechanisms. 3. Albumins: Help in maintaining osmotic balance. Plasma also contains small amounts of minerals such as $Na^+$, $Ca^{++}$, $Mg^{++}$, $HCO_3^-$, and $Cl^-$. Nutrients like glucose, amino acids, and lipids are also present as they are in transit. Factors for coagulation are present in an inactive form. Plasma without the clotting factors is called serum.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:15:15.1:3",
+            "order": 3,
+            "title": "Formed Elements: Erythrocytes (RBCs)",
+            "content_text": "Formed elements constitute nearly $45$ per cent of the blood and include erythrocytes, leucocytes, and platelets. Erythrocytes or red blood cells (RBC) are the most abundant cells in blood. A healthy adult man has an average of $5$ millions to $5.5$ millions of RBCs per $mm^{-3}$ of blood. They are formed in the red bone marrow in adults. Most mammalian RBCs are biconcave in shape and devoid of a nucleus. They contain a red-coloured, iron-containing complex protein called haemoglobin. A healthy individual has $12-16$ gms of haemoglobin in every $100$ ml of blood, which is vital for transporting respiratory gases. RBCs have an average life span of $120$ days, after which they are destroyed in the spleen, known as the graveyard of RBCs.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 15.1",
+                "description": "Diagrammatic representation of formed elements in blood showing RBC (red biconcave disc), Platelets (small fragments), Eosinophil (bilobed nucleus), Basophil (granulated), Neutrophil (multi-lobed nucleus), Monocyte (kidney-shaped nucleus), T lymphocyte, and B lymphocyte.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:15:15.1:4",
+            "order": 4,
+            "title": "Formed Elements: Leucocytes (WBCs)",
+            "content_text": "Leucocytes or white blood cells (WBC) are colourless due to the lack of haemoglobin. They are nucleated and relatively fewer in number, averaging $6000-8000$ per $mm^{-3}$ of blood. They are generally short-lived and categorized into: 1. Granulocytes: Neutrophils, eosinophils, and basophils. 2. Agranulocytes: Lymphocytes and monocytes. Neutrophils are the most abundant ($60-65$ per cent) and, along with monocytes ($6-8$ per cent), are phagocytic cells that destroy foreign organisms. Basophils ($0.5-1$ per cent) secrete histamine, serotonin, and heparin, and are involved in inflammatory reactions. Eosinophils ($2-3$ per cent) resist infections and are associated with allergic reactions. Lymphocytes ($20-25$ per cent) exist as 'B' and 'T' forms, both responsible for immune responses.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:15:15.1:5",
+            "order": 5,
+            "title": "Formed Elements: Platelets (Thrombocytes)",
+            "content_text": "Platelets, also called thrombocytes, are cell fragments produced from megakaryocytes (special cells in the bone marrow). Blood normally contains $1,500,00-3,500,00$ platelets per $mm^{-3}$. They release various substances involved in blood coagulation or clotting. A reduction in platelet count can lead to clotting disorders, resulting in excessive blood loss from the body.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:15:15.1:6",
+            "order": 6,
+            "title": "Blood Groups: ABO Grouping and Compatibility",
+            "content_text": "Human blood differs in certain aspects, leading to various grouping systems, primarily ABO and Rh. ABO grouping is based on the presence or absence of two surface antigens on RBCs: A and B. Plasma contains natural antibodies (anti-A or anti-B) produced in response to these antigens. During transfusion, donor blood must be matched with the recipient's to avoid clumping (RBC destruction). Group 'O' individuals are 'universal donors' because their blood can be donated to any group. Group 'AB' individuals are 'universal recipients' as they can accept blood from any group.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 15.1",
+                "caption": "Blood Groups and Donor Compatibility",
+                "headers": [
+                  "Blood Group",
+                  "Antigens on RBCs",
+                  "Antibodies in Plasma",
+                  "Donor's Group"
+                ],
+                "rows": [
+                  [
+                    "A",
+                    "A",
+                    "anti-B",
+                    "A, O"
+                  ],
+                  [
+                    "B",
+                    "B",
+                    "anti-A",
+                    "B, O"
+                  ],
+                  [
+                    "AB",
+                    "A, B",
+                    "nil",
+                    "AB, A, B, O"
+                  ],
+                  [
+                    "O",
+                    "nil",
+                    "anti-A, B",
+                    "O"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:biology:11:15:15.1:7",
+            "order": 7,
+            "title": "Rh Grouping",
+            "content_text": "The Rh antigen, which is similar to the one found in Rhesus monkeys, is present on the surface of RBCs in approximately 80 percent of the human population. Individuals possessing this antigen are termed Rh positive ($Rh+ve$), while those lacking it are Rh negative ($Rh-ve$). If an $Rh-ve$ person is exposed to $Rh+ve$ blood, their immune system will produce specific antibodies against the Rh antigens. Therefore, Rh group compatibility is a critical factor to consider before performing blood transfusions.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:15:15.1:8",
+            "order": 8,
+            "title": "Rh Incompatibility and Erythroblastosis Foetalis",
+            "content_text": "A significant medical concern arises from Rh incompatibility between an $Rh-ve$ pregnant mother and her $Rh+ve$ foetus. While the maternal and foetal blood are typically separated by the placenta during the first pregnancy, the delivery process may cause the mother to be exposed to small amounts of $Rh+ve$ foetal blood. This exposure triggers the mother's body to produce anti-Rh antibodies. In subsequent pregnancies, these antibodies can cross the placenta into the foetal bloodstream, destroying the foetal RBCs. This condition, known as erythroblastosis foetalis, can lead to severe jaundice and anaemia in the newborn and may even be fatal. It is preventable by administering anti-Rh antibodies to the mother immediately following the birth of the first $Rh+ve$ child.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:15:15.1:9",
+            "order": 9,
+            "title": "Coagulation of Blood",
+            "content_text": "Blood coagulation, or clotting, is a vital physiological response to injury that prevents excessive blood loss. When a wound occurs, a dark reddish-brown coagulum or clot forms, consisting of a network of fibrin threads that trap damaged blood cells. This process involves a complex cascade of enzymatic reactions. Inactive prothrombin in the plasma is converted into active thrombin by the enzyme complex thrombokinase. Thrombin then facilitates the conversion of inactive fibrinogen into fibrins. The process is initiated by factors released from platelets and injured tissues, and calcium ions ($Ca^{2+}$) are essential for the successful completion of the clotting mechanism.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:15:15.2",
+        "number": "15.2",
+        "title": "Lymph (Tissue Fluid)",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:15:15.2:1",
+            "order": 1,
+            "title": "Formation and Composition of Tissue Fluid",
+            "content_text": "As blood circulates through tissue capillaries, water and small soluble substances leak into the spaces between cells, while larger proteins and most formed elements remain in the vessels. This leaked fluid is known as interstitial fluid or tissue fluid. It maintains a mineral balance similar to plasma and acts as a medium for the exchange of nutrients and gases between the blood and the cells.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:15:15.2:2",
+            "order": 2,
+            "title": "The Lymphatic System and Functions of Lymph",
+            "content_text": "The lymphatic system is a specialized network of vessels that collects tissue fluid and returns it to the major veins. The fluid within this system is called lymph. Lymph is a colourless liquid containing specialized lymphocytes that play a key role in the body's immune responses. Additionally, lymph serves as a transport medium for nutrients and hormones; for example, fats are absorbed into the lymph through lacteals located in the intestinal villi.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:15:15.3",
+        "number": "15.3",
+        "title": "Circulatory Pathways",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:15:15.3:1",
+            "order": 1,
+            "title": "Open and Closed Circulatory Systems",
+            "content_text": "Animals exhibit two primary types of circulatory patterns: open and closed. In an open circulatory system, common in arthropods and molluscs, the heart pumps blood into large open cavities called sinuses. In contrast, annelids and chordates possess a closed circulatory system where blood is confined to a continuous network of vessels. The closed system is considered more efficient as it allows for the precise regulation of blood flow to specific tissues.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:15:15.3:2",
+            "order": 2,
+            "title": "Evolutionary Diversity of Vertebrate Hearts",
+            "content_text": "Vertebrates possess muscular hearts with varying numbers of chambers. Fishes have a two-chambered heart (one atrium and one ventricle) and exhibit single circulation. Amphibians and most reptiles have a three-chambered heart (two atria and one ventricle), leading to incomplete double circulation where oxygenated and deoxygenated blood mix in the single ventricle. Crocodiles, birds, and mammals have a four-chambered heart (two atria and two ventricles), which ensures complete double circulation by keeping oxygenated and deoxygenated blood entirely separate.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:15:15.3.1",
+        "number": "15.3.1",
+        "title": "Human Circulatory System",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:15:15.3.1:1",
+            "order": 1,
+            "title": "Anatomy and Protection of the Heart",
+            "content_text": "The human heart is a mesodermally derived organ located in the thoracic cavity between the lungs, slightly offset to the left. Roughly the size of a clenched fist, it is protected by the pericardium, a double-walled membranous sac containing pericardial fluid that cushions the organ.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 15.2",
+                "description": "A detailed longitudinal section of the human heart showing internal and external structures. Labeled parts include the Vena cava, Sino-atrial node (SAN), Right atrium, Atrio-ventricular node (AVN), Chordae tendinae, Right ventricle, Aorta, Pulmonary artery, Pulmonary veins, Left atrium, Bundle of His, Left ventricle, Interventricular septum, and the Apex.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:15:15.3.1:2",
+            "order": 2,
+            "title": "Internal Chambers and Septa",
+            "content_text": "The heart is divided into four chambers: two small upper atria and two larger lower ventricles. A thin muscular wall called the inter-atrial septum separates the right and left atria, while a thick-walled inter-ventricular septum separates the right and left ventricles. The atrium and ventricle on the same side are separated by a thick fibrous tissue known as the atrio-ventricular septum, which contains openings to allow blood flow between them.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:15:15.3.1:3",
+            "order": 3,
+            "title": "Heart Valves and Ventricular Openings",
+            "content_text": "The openings between the heart chambers are regulated by valves to ensure one-way blood flow. The tricuspid valve, consisting of three muscular flaps, guards the opening between the right atrium and right ventricle. The bicuspid or mitral valve guards the opening between the left atrium and left ventricle. The openings of the right and the left ventricles into the The openings of the right and the left ventricles into the pulmonary artery and the aorta respectively are provided with the semilunar valves. These valves ensure that blood moves strictly in one direction—from the atria to the ventricles and then into the major arteries—while preventing any reverse flow.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:15:15.3.1:4",
+            "order": 4,
+            "title": "Cardiac Musculature and Nodal System",
+            "content_text": "The heart is primarily composed of cardiac muscle, with the ventricular walls being significantly thicker than the atrial walls. A specialized system of auto-excitable cardiac muscle, known as nodal tissue, is distributed throughout the heart. This includes the sino-atrial node (SAN) in the upper right corner of the right atrium and the atrio-ventricular node (AVN) in the lower left corner of the right atrium. The AV bundle extends from the AVN through the septa, dividing into right and left branches that form Purkinje fibres across the ventricular walls.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:15:15.3.1:5",
+            "order": 5,
+            "title": "The Pacemaker and Heart Rate",
+            "content_text": "Nodal tissue is auto-excitable, meaning it generates electrical impulses without external stimulation. The SAN produces the highest frequency of action potentials, approximately $70-75 \\text{ min}^{-1}$, and is responsible for initiating and maintaining the heart's rhythmic contraction. Consequently, it is known as the pacemaker. The average human heart rate is $72 \\text{ beats min}^{-1}$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:15:15.3.2",
+        "number": "15.3.2",
+        "title": "Cardiac Cycle",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:15:15.3.2:1",
+            "order": 1,
+            "title": "Initiation of the Cardiac Cycle",
+            "content_text": "The cardiac cycle begins with all four chambers in a relaxed state, known as joint diastole. During this phase, blood flows from the pulmonary veins and vena cava into the ventricles because the tricuspid and bicuspid valves are open. The SAN then generates an action potential that triggers atrial systole, which forces the remaining $30\\%$ of blood into the ventricles. The impulse is then conducted to the ventricles via the AVN and AV bundle.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:15:15.3.2:2",
+            "order": 2,
+            "title": "Ventricular Systole and Diastole",
+            "content_text": "Ventricular contraction (systole) increases pressure, closing the tricuspid and bicuspid valves to prevent backflow into the atria. As pressure rises further, the semilunar valves open, allowing blood to flow into the pulmonary artery and aorta. Subsequently, the ventricles relax (ventricular diastole), causing ventricular pressure to fall. This leads to the closure of the semilunar valves and the reopening of the tricuspid and bicuspid valves as atrial pressure becomes higher, allowing the cycle to repeat.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:15:15.3.2:3",
+            "order": 3,
+            "title": "Cardiac Output and Stroke Volume",
+            "content_text": "The cardiac cycle is the sequential event of systole and diastole that repeats cyclically. With a heart rate of $72 \\text{ beats per minute}$, a single cycle lasts $0.8 \\text{ seconds}$. During each cycle, each ventricle pumps out approximately $70 \\text{ mL}$ of blood, known as the stroke volume. Cardiac output is the volume of blood pumped by each ventricle per minute, calculated as stroke volume multiplied by heart rate, averaging $5000 \\text{ mL}$ or $5 \\text{ litres}$ in a healthy individual.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:15:15.3.2:4",
+            "order": 4,
+            "title": "Heart Sounds",
+            "content_text": "During each cardiac cycle, two distinct sounds are produced that can be heard with a stethoscope. The first heart sound, 'lub', is associated with the closure of the tricuspid and bicuspid valves at the start of ventricular systole. The second heart sound, 'dub', is associated with the closure of the semilunar valves at the start of ventricular diastole. These sounds are clinically significant for diagnosing heart health.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:15:15.3.3",
+        "number": "15.3.3",
+        "title": "Electrocardiogram (ECG)",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:15:15.3.3:1",
+            "order": 1,
+            "title": "Electrocardiogram (ECG) Basics",
+            "content_text": "An electrocardiogram (ECG) is a graphical representation of the heart's electrical activity during a cardiac cycle, obtained using an electro-cardiograph machine. To record a standard ECG, a patient is connected to the machine with three electrical leads—one on each wrist and one on the left ankle—to monitor heart activity. Additional leads may be attached to the chest for a more detailed evaluation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 15.3",
+                "description": "A graphical representation of a standard electrocardiogram (ECG) showing the voltage changes over time. It identifies the P wave, the QRS complex (consisting of Q, R, and S peaks), and the T wave, which correspond to different electrical events in the heart cycle.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:15:15.3.3:2",
+            "order": 2,
+            "title": "Interpretation of ECG Waves",
+            "content_text": "A standard ECG features specific peaks labeled $P$ through $T$. The $P$-wave represents atrial depolarization, leading to atrial contraction. The $QRS$ complex represents ventricular depolarization, which initiates ventricular contraction (systole). The $T$-wave represents ventricular repolarization, marking the return of the ventricles to a relaxed state and the end of systole. Counting the number of $QRS$ complexes allows for the determination of a person's heart rate.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:15:15.4",
+        "number": "15.4",
+        "title": "Double Circulation",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:15:15.4:1",
+            "order": 1,
+            "title": "Anatomy of Blood Vessels",
+            "content_text": "Blood flows through a closed system of arteries and veins. These vessels consist of three layers: the inner tunica intima (squamous endothelium), the middle tunica media (smooth muscle and elastic fibers), and the outer tunica externa (fibrous connective tissue with collagen). The tunica media is characteristically thinner in veins than in arteries.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:15:15.4:2",
+            "order": 2,
+            "title": "Pulmonary and Systemic Circulation",
+            "content_text": "The heart drives two distinct circulatory pathways. In pulmonary circulation, deoxygenated blood from the right ventricle is pumped to the lungs via the pulmonary artery and returns oxygenated to the left atrium via pulmonary veins. In systemic circulation, oxygenated blood from the left ventricle is pumped through the aorta to all body tissues, where nutrients and $O_2$ are delivered and $CO_2$ and wastes are collected. This deoxygenated blood then returns to the right atrium via the vena cava.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:15:15.4:3",
+            "order": 3,
+            "title": "Hepatic Portal System",
+            "content_text": "A specialized vascular link is present between the digestive system and the liver, which is referred to as the The hepatic portal system is a specialized vascular connection where the hepatic portal vein carries blood from the intestine to the liver before it enters the systemic circulation. Additionally, the coronary system of blood vessels is uniquely designed to circulate blood to and from the cardiac musculature.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 15.4",
+                "description": "A schematic diagram showing the plan of blood circulation in humans. It illustrates the heart with four chambers (RA, RV, LA, LV), the pulmonary circulation involving the lungs and pulmonary artery/vein, and the systemic circulation involving the dorsal aorta, body parts, and vena cava. It also shows cross-sections of an artery and a vein, highlighting the lumen and smooth muscle layers.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:15:15.5",
+        "number": "15.5",
+        "title": "Regulation of Cardiac Activity",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:15:15.5:1",
+            "order": 1,
+            "title": "Myogenic Regulation and Neural Control",
+            "content_text": "The heart's normal activities are auto-regulated by specialized nodal tissue, classifying the heart as myogenic. A neural center in the medulla oblongata can modulate cardiac function via the autonomic nervous system (ANS). Neural signals from sympathetic nerves can increase the heart rate, the strength of ventricular contraction, and the overall cardiac output. Conversely, parasympathetic neural signals decrease the heart rate, the speed of action potential conduction, and the cardiac output. Additionally, hormones from the adrenal medulla can increase cardiac output.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:15:15.6",
+        "number": "15.6",
+        "title": "Disorders of Circulatory System",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:15:15.6:1",
+            "order": 1,
+            "title": "Hypertension (High Blood Pressure)",
+            "content_text": "Hypertension is defined as blood pressure consistently exceeding the normal range of $120/80$ mmHg. In this measurement, $120$ mmHg is the systolic (pumping) pressure and $80$ mmHg is the diastolic (resting) pressure. Repeated readings of $140/90$ mmHg or higher indicate hypertension, which can lead to heart disease and affect vital organs like the brain and kidneys.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:15:15.6:2",
+            "order": 2,
+            "title": "Coronary Artery Disease (CAD) and Angina",
+            "content_text": "Coronary Artery Disease (CAD), also known as atherosclerosis, occurs when the lumen of the arteries supplying the heart muscle becomes narrower due to deposits of calcium, fat, cholesterol, and fibrous tissues. Angina, or angina pectoris, is characterized by acute chest pain when the heart muscle does not receive enough oxygen. It is more common in middle-aged and elderly individuals and is caused by conditions affecting blood flow.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:15:15.6:3",
+            "order": 3,
+            "title": "Heart Failure",
+            "content_text": "Heart failure is a state where the heart fails to pump blood effectively enough to meet the body's requirements. It is often called congestive heart failure because lung congestion is a primary symptom. It is distinct from cardiac arrest (where the heart stops) and heart attack (where the muscle is damaged by inadequate blood supply).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:biology:11:15:ex:1",
+          "number": 1,
+          "problem": "Name the components of the formed elements in the blood and mention one major function of each of them.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:15:ex:2",
+          "number": 2,
+          "problem": "What is the importance of plasma proteins?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:15:ex:3",
+          "number": 3,
+          "problem": "Match Column I with Column II: (a) Eosinophils - (i) Coagulation; (b) RBC - (ii) Universal Recipient; (c) AB Group - (iii) Resist Infections; (d) Platelets - (iv) Contraction of Heart; (e) Systole - (v) Gas transport",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:15:ex:4",
+          "number": 4,
+          "problem": "Why do we consider blood as a connective tissue?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:15:ex:5",
+          "number": 5,
+          "problem": "What is the difference between lymph and blood?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:15:ex:6",
+          "number": 6,
+          "problem": "What is meant by double circulation? What is its significance?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:15:ex:7",
+          "number": 7,
+          "problem": "Write the differences between: (a) Blood and Lymph (b) Open and Closed system of circulation (c) Systole and Diastole (d) P-wave and T-wave",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:15:ex:8",
+          "number": 8,
+          "problem": "Describe the evolutionary change in the pattern of heart among the vertebrates.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:15:ex:9",
+          "number": 9,
+          "problem": "Why do we call our heart myogenic?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:15:ex:10",
+          "number": 10,
+          "problem": "Sino-atrial node is called the pacemaker of our heart. Why?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:15:ex:11",
+          "number": 11,
+          "problem": "What is the significance of atrio-ventricular node and atrio-ventricular bundle in the functioning of heart?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:15:ex:12",
+          "number": 12,
+          "problem": "Define a cardiac cycle and the cardiac output.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:15:ex:13",
+          "number": 13,
+          "problem": "Explain heart sounds.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:15:ex:14",
+          "number": 14,
+          "problem": "Draw a standard ECG and explain the different segments in it.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        }
+      ]
+    }
+  }
+}

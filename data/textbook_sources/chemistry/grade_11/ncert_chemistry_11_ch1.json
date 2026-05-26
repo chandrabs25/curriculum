@@ -1,0 +1,1727 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_chemistry_11_ch1.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:chemistry:11:1",
+  "curriculum": "ncert",
+  "subject": "chemistry",
+  "grade": 11,
+  "textbook_name": "Chemistry Part I",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:chemistry:11:1",
+    "number": 1,
+    "title": "Some Basic Concepts of Chemistry",
+    "summary": "This chapter, \"Some Basic Concepts of Chemistry,\" introduces fundamental ideas in chemistry, beginning with its historical development from ancient practices to modern science. It defines chemistry as the study of matter's composition, structure, properties, and reactions. The chapter explores the nature of matter, classifying it into mixtures and pure substances (elements and compounds), and differentiating between homogeneous and heterogeneous mixtures.\n\nA crucial focus is on measurement in chemistry, emphasizing the International System of Units (SI) and the importance of accuracy and precision. Concepts like scientific notation, significant figures, and dimensional analysis are introduced to handle uncertainty in measurements and perform accurate conversions.\n\nThe chapter then presents the laws of chemical combination: conservation of mass, definite proportions, multiple proportions, Gay-Lussac's law of gaseous volumes, and Avogadro's law. These laws led to Dalton's atomic theory, which postulates that matter consists of indivisible atoms. Atomic and molecular masses, along with the mole concept and molar masses, are defined, providing the basis for quantitative analysis.\n\nFinally, the chapter delves into stoichiometry, demonstrating how to use balanced chemical equations to calculate reactant and product quantities. The concept of limiting reagents and methods for expressing solution concentrations (mass percent, mole fraction, molarity, and molality) are explained. The chapter's content builds from basic definitions to practical calculations, providing essential tools for understanding chemical reactions and their quantitative aspects. This knowledge is vital for various applications in science, industry, health, and environmental studies.",
+    "sections": [
+      {
+        "id": "ncert:chemistry:11:1:1.0",
+        "number": "1.0",
+        "title": "DEVELOPMENT OF CHEMISTRY",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:1:1.0:1",
+            "order": 1,
+            "title": "Definition of Science and Chemistry",
+            "content_text": "Science is a continuing human effort to systematise knowledge for describing and understanding nature. Chemistry is the branch of science that studies the preparation, properties, structure, and reactions of material substances. It is often described as the science of molecules and their transformations, focusing not just on the hundred or so elements but on the infinite variety of molecules that may be built from them. Common examples of chemical changes in daily life include curd formation from milk, formation of vinegar from sugarcane juice, and the rusting of iron.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.0:2",
+            "order": 2,
+            "title": "Historical Roots: Alchemy and Iatrochemistry",
+            "content_text": "Modern chemistry is not a very old discipline, but it evolved from ancient searches for the Philosopher's stone (Paras), which was believed to convert base metals like iron and copper into gold, and the 'Elixir of life', which was sought to grant immortality. Chemistry developed mainly in the form of Alchemy and Iatrochemistry during 1300-1600 CE. Modern chemistry took shape in 18th-century Europe after alchemical traditions were introduced there by the Arabs.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.0:3",
+            "order": 3,
+            "title": "Ancient Indian Chemistry: Rasayan Shastra and Archaeological Evidence",
+            "content_text": "In ancient India, chemistry was known as 'Rasayan Shastra', 'Rastantra', 'Ras Kriya', or 'Rasvidya'. Archaeological excavations at Mohenjodaro in Sindh and Harappa in Punjab prove that chemical processes were used very early. Findings show that baked bricks were used in construction and gypsum cement, containing lime, sand, and traces of $CaCO_3$, was employed. The remains of glazed pottery found in Mohenjodaro indicate the earliest chemical processes where materials were mixed, moulded, and subjected to heat to achieve desired qualities.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.0:4",
+            "order": 4,
+            "title": "Metallurgy and Glass Production in Ancient India",
+            "content_text": "Ancient Indians were proficient in metallurgy and glass production. Copper metallurgy dates back to the beginning of chalcolithic cultures. Archaeological findings in Maski in South India (1000-900 BCE) and Hastinapur and Taxila in the North (1000-200 BCE) include glass objects and glazes coloured by the addition of metal oxides. They melted and forged objects from metals such as lead, silver, gold, and copper, and improved the hardness of copper by adding tin and arsenic.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.0:5",
+            "order": 5,
+            "title": "Chemical Knowledge in Ancient Indian Literature",
+            "content_text": "Ancient texts like the 'Rigveda' mention the tanning of leather and dyeing of cotton (1000-400 BCE). Kautilya's 'Arthashastra' describes the production of salt from the sea. The 'Sushruta Samhita' explains the importance of Alkalies, while the 'Charaka Samhita' mentions ancient Indians who knew how to prepare sulphuric acid, nitric acid, and oxides of copper, tin, and zinc, as well as the sulphates of copper, zinc, and iron, and the carbonates of lead and iron.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.0:6",
+            "order": 6,
+            "title": "Contributions of Nagarjuna and Chakrapani",
+            "content_text": "Significant contributions were made by scientists like Nagarjuna, a reputed chemist and alchemist whose work 'Rasratnakar' deals with the formulation of mercury compounds and the extraction of metals like gold, silver, tin, and copper. His book 'Rsarnavam' (c. 800 CE) discusses the uses of various furnaces, ovens, and crucibles. Chakrapani is credited with the discovery of mercury sulphide and the invention of soap, using mustard oil and alkalies. By the 18th century, Indians were making soap using 'Eranda' oil, 'Mahua' seeds, and calcium carbonate.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.0:7",
+            "order": 7,
+            "title": "Industrial Chemistry: Soap, Dyes, Ink, and Construction Materials",
+            "content_text": "Industrial chemistry in ancient India included the production of dyes, ink, and construction materials. The 'Atharvaveda' (1000 BCE) mentions dyes like turmeric, madder, sunflower, and lac. Ink was used from the 4th century BCE, made from chalk, red lead, and minimum. Varahmihir's 'Brihat Samhita' provides recipes for perfumes, cosmetics, and a glutinous material for walls and roofs made from plant extracts and resins. The process of fermentation for making 'Asavas' is also mentioned in the Vedas and 'Arthashastra'.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.0:8",
+            "order": 8,
+            "title": "Ancient Indian Atomic Theory: Acharya Kanda",
+            "content_text": "Acharya Kanda, also known as Kashyap (born 600 BCE), was the first proponent of the 'atomic theory'. In his text 'Vaisheshika Sutras', he proposed that matter is made of indivisible particles called 'Paramānu', which are eternal, indestructible, spherical, suprasensible, and in constant motion in their original state. He suggested that different substances have different varieties of atoms and that these atoms could form pairs or triplets through combinations driven by unseen forces, conceptualising these ideas 2500 years before John Dalton.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.0:9",
+            "order": 9,
+            "title": "Nanotechnology in Ancient India: Bhasmas",
+            "content_text": "The 'Charaka Samhita' describes the reduction of metal particle size for medicinal use, a process now recognized as nanotechnology. These reduced metal particles, called 'bhasmas', have been scientifically proven to contain nanoparticles. This application of chemistry was used in the treatment of various diseases by reducing the particle size of metals to extreme levels.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.0:10",
+            "order": 10,
+            "title": "Transition to Modern Chemistry and the Study of Matter",
+            "content_text": "Modern chemistry took shape in India during the 18th and 19th centuries, following the decline of alchemy and Iatrochemistry and the introduction of Western medicinal systems. Chemistry is defined as the study of the composition, structure, properties, and interaction of matter, focusing on atoms and molecules. This unit explores the quantitative relationships between these particles and the numerical description of physical properties using suitable units. [CONTINUES]",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:1:1.1",
+        "number": "1.1",
+        "title": "IMPORTANCE OF CHEMISTRY",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:1:1.1:1",
+            "order": 1,
+            "title": "Role of Chemistry in Science and Industry",
+            "content_text": "Chemistry plays a central role in science and is often intertwined with other branches such as physics, biology, and geology. The principles of chemistry are applicable in diverse areas including weather patterns, the functioning of the brain, and the operation of computers. In the industrial sector, chemistry is essential for the production of fertilizers, alkalis, acids, salts, dyes, polymers, drugs, soaps, detergents, metals, and alloys. It contributes significantly to the national economy and helps meet human needs for food, healthcare products, and other materials aimed at improving the quality of life.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.1:2",
+            "order": 2,
+            "title": "Chemistry in Health, Environment, and National Economy",
+            "content_text": "Chemistry provides methods for the isolation of life-saving drugs from natural sources and enables the synthetic production of such drugs. Notable examples include cisplatin and taxol, which are effective in cancer therapy, and the drug AZT (Azidothymidine), used for helping AIDS patients. Furthermore, chemistry has enabled the synthesis of new materials with specific magnetic, electric, and optical properties, leading to the production of superconducting ceramics, conducting polymers, and optical fibers. It also addresses environmental challenges by developing safer alternatives to hazardous refrigerants like CFCs (chlorofluorocarbons), which are responsible for ozone depletion. However, management of greenhouse gases like methane and carbon dioxide remains a significant challenge for future chemists.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:1:1.2",
+        "number": "1.2",
+        "title": "NATURE OF MATTER",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:1:1.2:1",
+            "order": 1,
+            "title": "Definition of Matter",
+            "content_text": "Matter is defined as anything which has mass and occupies space. Everything around us, such as books, pens, water, air, and all living beings, is composed of matter. Matter is characterized by its physical states and its classification at the macroscopic level.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.2:2",
+            "order": 2,
+            "title": "States of Matter",
+            "content_text": "Matter can exist in three physical states: solid, liquid, and gas. The characteristics of these states are determined by the arrangement and movement of their constituent particles:\n(i) Solids: Particles are held very close to each other in an orderly fashion with very little freedom of movement. Solids have a definite volume and a definite shape.\n(ii) Liquids: Particles are close to each other but can move around. Liquids have a definite volume but do not have a definite shape; they take the shape of the container in which they are placed.\n(iii) Gases: Particles are far apart compared to those in solid or liquid states, and their movement is easy and fast. Gases have neither a definite volume nor a definite shape, completely occupying the space of the container in which they are placed.\nThe three states of matter are interconvertible by changing the conditions of temperature and pressure. On heating, a solid usually changes to a liquid, and the liquid on further heating changes to a gas (or vapour). In the reverse process, a gas on cooling liquefies to a liquid, and the liquid on further cooling freezes to a solid.\n$$\\text{Solid} \\xrightarrow{\\text{heat}} \\text{Liquid} \\xrightarrow{\\text{heat}} \\text{Gas}$$\n$$\\text{Gas} \\xrightarrow{\\text{cool}} \\text{Liquid} \\xrightarrow{\\text{cool}} \\text{Solid}$$",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 1.1",
+                "description": "Arrangement of particles in solid, liquid and gaseous state. The solid shows particles in a tight, regular grid. The liquid shows particles close together but disordered. The gas shows particles far apart and moving freely.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.2:3",
+            "order": 3,
+            "title": "Classification of Matter: Mixtures and Pure Substances",
+            "content_text": "At the macroscopic or bulk level, matter can be classified as a mixture or a pure substance. A mixture contains particles of two or more pure substances which may be present in it in any ratio, meaning their composition is variable. Pure substances, however, have a fixed composition and their constituent particles are of the same chemical nature. Pure substances can be further classified into elements and compounds.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 1.2",
+                "description": "Classification of matter flowchart. Matter is divided into Mixtures and Pure Substances. Mixtures are subdivided into Homogeneous and Heterogeneous Mixtures. Pure Substances are subdivided into Elements and Compounds.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.2:4",
+            "order": 4,
+            "title": "Homogeneous and Heterogeneous Mixtures",
+            "content_text": "Mixtures are categorized based on the uniformity of their composition:\n1. Homogeneous Mixture: The components completely mix with each other, and the composition is uniform throughout the bulk. Examples include sugar solution and air.\n2. Heterogeneous Mixture: The composition is not uniform throughout, and sometimes different components are visible. Examples include mixtures of salt and sugar, or grains and pulses mixed with dirt.\nComponents of a mixture can be separated using physical methods such as simple hand-picking, filtration, crystallization, and distillation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.2:5",
+            "order": 5,
+            "title": "Pure Substances: Elements",
+            "content_text": "An element consists of only one type of particles, which may be atoms or molecules. For example, sodium (Na), copper (Cu), silver (Ag), hydrogen (H), and oxygen (O) are elements. While some elements like sodium or copper consist of single atoms, others exist as molecules where two or more atoms combine. For instance, hydrogen, nitrogen, and oxygen gases consist of molecules ($H_2$, $N_2$, $O_2$) formed by the combination of two respective atoms.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 1.3",
+                "description": "A representation of atoms and molecules. It shows individual atoms of H, O, N, Cu, and Na, and the formation of $H_2$ and $O_2$ molecules from their respective atoms.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.2:6",
+            "order": 6,
+            "title": "Pure Substances: Compounds",
+            "content_text": "A compound is formed when two or more atoms of different elements combine together in a definite ratio. The molecules of a compound, such as water ($H_2O$), ammonia ($NH_3$), carbon dioxide ($CO_2$), and sugar, have a fixed composition. The properties of a compound are different from those of its constituent elements. For example, hydrogen (a combustible gas) and oxygen (a supporter of combustion) combine to form water, which is a liquid used as a fire extinguisher. The constituents of a compound cannot be separated by simple physical methods but require chemical methods for separation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 1.4",
+                "description": "A depiction of molecules of water ($H_2O$) and carbon dioxide ($CO_2$). Water is shown as one oxygen atom bonded to two hydrogen atoms. Carbon dioxide is shown as one carbon atom bonded to two oxygen atoms.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:1:1.3",
+        "number": "1.3",
+        "title": "PROPERTIES OF MATTER AND THEIR MEASUREMENT",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:1:1.3:1",
+            "order": 1,
+            "title": "Physical and Chemical Properties",
+            "content_text": "Every substance has unique or characteristic properties, which can be classified into two categories:\n1. Physical Properties: These can be measured or observed without changing the identity or the composition of the substance. Examples include color, odor, melting point, boiling point, and density.\n2. Chemical Properties: The measurement or observation of these properties requires a chemical change to occur. Examples include characteristic reactions such as acidity, basicity, and combustibility.\nChemists describe, interpret, and predict the behavior of substances based on these properties, which are determined by careful measurement and experimentation. In the following section, we will learn about the measurement of physical properties. Quantitative measurement of properties is required for scientific investigation. Many properties of matter, such as length, area, volume, etc., are quantitative in nature. Any quantitative observation or measurement is represented by a number followed by units in which it is measured. For example, length of a room can be represented as $6\\text{ m}$; here, $6$ is the number and $\\text{m}$ denotes metre, the unit in which the length is measured. Earlier, two different systems of measurement, i.e., the English System and the Metric System were being used in different parts of the world. The metric system, which originated in France in late eighteenth century, was more convenient as it was based on the decimal system. Late, need of a common standard system was felt by the scientific community. Such a system was established in 1960 and is discussed in detail below.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.3:2",
+            "order": 2,
+            "title": "The International System of Units (SI)",
+            "content_text": "The International System of Units (in French Le Systeme International d'Unités — abbreviated as SI) was established by the $11^{\\text{th}}$ General Conference on Weights and Measures (CGPM from Conference Generale des Poids et Measures). The CGPM is an inter-governmental treaty organisation created by a diplomatic treaty known as Metre Convention, which was signed in Paris in 1875. The SI system has seven base units and they are listed in Table 1.1. These units pertain to the seven fundamental scientific quantities. The other physical quantities, such as speed, volume, density, etc., can be derived from these quantities.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 1.1",
+                "caption": "Base Physical Quantities and their Units",
+                "headers": [
+                  "Base Physical Quantity",
+                  "Symbol for Quantity",
+                  "Name of SI Unit",
+                  "Symbol for SI Unit"
+                ],
+                "rows": [
+                  [
+                    "Length",
+                    "$l$",
+                    "metre",
+                    "m"
+                  ],
+                  [
+                    "Mass",
+                    "$m$",
+                    "kilogram",
+                    "kg"
+                  ],
+                  [
+                    "Time",
+                    "$t$",
+                    "second",
+                    "s"
+                  ],
+                  [
+                    "Electric current",
+                    "$I$",
+                    "ampere",
+                    "A"
+                  ],
+                  [
+                    "Thermodynamic temperature",
+                    "$T$",
+                    "kelvin",
+                    "K"
+                  ],
+                  [
+                    "Amount of substance",
+                    "$n$",
+                    "mole",
+                    "mol"
+                  ],
+                  [
+                    "Luminous intensity",
+                    "$I_v$",
+                    "candela",
+                    "cd"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.3:3",
+            "order": 3,
+            "title": "Maintaining the National Standards of Measurement",
+            "content_text": "The system of units, including unit definitions, keeps on changing with time. Whenever the accuracy of measurement of a particular unit was enhanced substantially by adopting new principles, member nations of metre treaty (signed in 1875), agreed to change the formal definition of that unit. Each modern industrialised country, including India, has a National Metrology Institute (NMI), which maintains standards of measurements. This responsibility has been given to the National Physical Laboratory (NPL), New Delhi. This laboratory establishes experiments to realise the base units and derived units of measurement and maintains National Standards of Measurement. These standards are periodically inter-compared with standards maintained at other National Metrology Institutes in the world, as well as those, established at the International Bureau of Standards in Paris.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.3:4",
+            "order": 4,
+            "title": "Definitions of SI Base Units",
+            "content_text": "The definitions of the SI base units are given in Table 1.2. These definitions are based on fixed numerical values of physical constants such as the speed of light ($c$), the Planck constant ($h$), the elementary charge ($e$), the Boltzmann constant ($k$), the Avogadro constant ($N_A$), and the luminous efficacy ($K_{cd}$).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 1.2",
+                "caption": "Definitions of SI Base Units",
+                "headers": [
+                  "Unit of...",
+                  "SI Unit Name",
+                  "Definition"
+                ],
+                "rows": [
+                  [
+                    "Unit of length",
+                    "metre",
+                    "The metre, symbol m is the SI unit of length. It is defined by taking the fixed numerical value of the speed of light in vacuum $c$ to be $299792458$ when expressed in the unit $\\text{ms}^{-1}$, where the second is defined in terms of the caesium frequency $\\Delta\\nu_{\\text{Cs}}$."
+                  ],
+                  [
+                    "Unit of mass",
+                    "kilogram",
+                    "The kilogram, symbol kg. is the SI unit of mass. It is defined by taking the fixed numerical value of the Planck constant $h$ to be $6.62607015 \\times 10^{-34}$ when expressed in the unit $\\text{Js}$, which is equal to $\\text{kgm}^2\\text{s}^{-1}$, where the metre and the second are defined in terms of $c$ and $\\Delta\\nu_{\\text{Cs}}$."
+                  ],
+                  [
+                    "Unit of time",
+                    "second",
+                    "The second symbol s, is the SI unit of time. It is defined by taking the fixed numerical value of the caesium frequency $\\Delta\\nu_{\\text{Cs}}$, the unperturbed ground-state hyperfine transition frequency of the caesium-133 atom, to be $9192631770$ when expressed in the unit $\\text{Hz}$, which is equal to $\\text{s}^{-1}$."
+                  ],
+                  [
+                    "Unit of electric current",
+                    "ampere",
+                    "The ampere, symbol A, is the SI unit of electric current. It is defined by taking the fixed numerical value of the elementary charge $e$ to be $1.602176634 \\times 10^{-19}$ when expressed in the unit $\\text{C}$, which is equal to $\\text{As}$, where the second is defined in terms of $\\Delta\\nu_{\\text{Cs}}$."
+                  ],
+                  [
+                    "Unit of thermodynamic temperature",
+                    "kelvin",
+                    "The Kelvin, symbol k, is the SI unit of thermodynamic temperature. It is defined by taking the fixed numerical value of the Boltzmann constant $k$ to be $1.380649 \\times 10^{-23}$ when expressed in the unit $\\text{JK}^{-1}$, which is equal to $\\text{kgm}^2\\text{s}^{-2}\\text{K}^{-1}$ where the kilogram, metre and second are defined in terms of $h$, $c$ and $\\Delta\\nu_{\\text{Cs}}$."
+                  ],
+                  [
+                    "Unit of amount of substance",
+                    "mole",
+                    "The mole, symbol mol, is the SI unit of amount of substance. One mole contains exactly $6.02214076 \\times 10^{23}$ elementary entities. This number is the fixed numerical value of the Avogadro constant, $N_A$, when expressed in the unit $\\text{mol}^{-1}$ and is called the Avogadro number. The amount of substance, $n$, of a system is a measure of the number of specified elementary entities. An elementary entity may be an atom, a molecule, an ion, an electron, any other particle or specified group of particles."
+                  ],
+                  [
+                    "Unit of luminous Intensity",
+                    "Candela",
+                    "The candela, symbol cd is the SI unit of luminous intensity in a given direction. It is defined by taking the fixed numerical value of the luminous efficacy of monochromatic radiation of frequency $540 \\times 10^{12} \\text{ Hz}$, $K_{cd}$, to be $683$ when expressed in the unit $\\text{lm}\\cdot\\text{W}^{-1}$, which is equal to $\\text{cd}\\cdot\\text{sr}\\cdot\\text{W}^{-1}$, or $\\text{cd}\\cdot\\text{sr}\\cdot\\text{kg}^{-1}\\text{m}^{-2}\\text{s}^3$, where the kilogram, metre and second are defined in terms of $h$, $c$ and $\\Delta\\nu_{\\text{Cs}}$."
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.3:5",
+            "order": 5,
+            "title": "SI Prefixes",
+            "content_text": "The SI system allows the use of prefixes to indicate the multiples or submultiples of a unit. These prefixes are listed in Table 1.3. They range from $10^{-24}$ (yocto) to $10^{24}$ (yotta).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 1.3",
+                "caption": "Prefixes used in the SI System",
+                "headers": [
+                  "Multiple",
+                  "Prefix",
+                  "Symbol"
+                ],
+                "rows": [
+                  [
+                    "$10^{-24}$",
+                    "yocto",
+                    "y"
+                  ],
+                  [
+                    "$10^{-21}$",
+                    "zepto",
+                    "z"
+                  ],
+                  [
+                    "$10^{-18}$",
+                    "atto",
+                    "a"
+                  ],
+                  [
+                    "$10^{-15}$",
+                    "femto",
+                    "f"
+                  ],
+                  [
+                    "$10^{-12}$",
+                    "pico",
+                    "p"
+                  ],
+                  [
+                    "$10^{-9}$",
+                    "nano",
+                    "n"
+                  ],
+                  [
+                    "$10^{-6}$",
+                    "micro",
+                    "$\\mu$"
+                  ],
+                  [
+                    "$10^{-3}$",
+                    "milli",
+                    "m"
+                  ],
+                  [
+                    "$10^{-2}$",
+                    "centi",
+                    "c"
+                  ],
+                  [
+                    "$10^{-1}$",
+                    "deci",
+                    "d"
+                  ],
+                  [
+                    "$10$",
+                    "deca",
+                    "da"
+                  ],
+                  [
+                    "$10^2$",
+                    "hecto",
+                    "h"
+                  ],
+                  [
+                    "$10^3$",
+                    "kilo",
+                    "k"
+                  ],
+                  [
+                    "$10^6$",
+                    "mega",
+                    "M"
+                  ],
+                  [
+                    "$10^9$",
+                    "giga",
+                    "G"
+                  ],
+                  [
+                    "$10^{12}$",
+                    "tera",
+                    "T"
+                  ],
+                  [
+                    "$10^{15}$",
+                    "peta",
+                    "P"
+                  ],
+                  [
+                    "$10^{18}$",
+                    "exa",
+                    "E"
+                  ],
+                  [
+                    "$10^{21}$",
+                    "zeta",
+                    "Z"
+                  ],
+                  [
+                    "$10^{24}$",
+                    "yotta",
+                    "Y"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.3:6",
+            "order": 6,
+            "title": "Mass and Weight",
+            "content_text": "Mass of a substance is the amount of matter present in it, while weight is the force exerted by gravity on an object. The mass of a substance is constant, whereas, its weight may vary from one place to another due to change in gravity. You should be careful in using these terms. The mass of a substance can be determined accurately in the laboratory by using an analytical balance (Fig. 1.5). The SI unit of mass as given in Table 1.1 is kilogram. However, its fraction named as gram ($1 \\text{ kg} = 1000 \\text{ g}$), is used in laboratories due to the smaller amounts of chemicals used in chemical reactions.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 1.5",
+                "description": "An analytical balance used for precise mass measurement. It features a beam, rider carrier, rider carrier knob, pans, levelling screws, pan release, beam release, and a pointer and scale.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.3:7",
+            "order": 7,
+            "title": "Volume",
+            "content_text": "Volume is the amount of space occupied by a substance. It has the units of $(\\text{length})^3$. So in SI system, volume has units of $\\text{m}^3$. But again, in chemistry laboratories, smaller volumes are used. Hence, volume is often denoted in $\\text{cm}^3$ or $\\text{dm}^3$ units. A common unit, litre (L) which is not an SI unit, is used for measurement of volume of liquids. $1 \\text{ L} = 1000 \\text{ mL}$, $1000 \\text{ cm}^3 = 1 \\text{ dm}^3$. Fig. 1.6 helps to visualise these relations.\nIn the laboratory, the volume of liquids or solutions is measured using specialized glassware. Common devices include graduated cylinders, burettes, and pipettes. For preparing a solution of a precisely known volume, a volumetric flask is used. These devices allow for different levels of precision depending on the experimental requirements.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 1.6",
+                "description": "A diagram illustrating different units used to express volume. It shows a large cube with dimensions $10\\text{ cm} = 1\\text{ dm}$, representing a volume of $1000\\text{ cm}^3$, $1000\\text{ mL}$, $1\\text{ dm}^3$, or $1\\text{ L}$. A smaller unit cube of $1\\text{ cm}^3$ ($1\\text{ mL}$) is shown for comparison.",
+                "image_url": null
+              },
+              {
+                "label": "Fig. 1.7",
+                "description": "Illustrations of common laboratory volume measuring devices: a burette with a stopcock and markings from 0 to 50 mL, a 25mL pipette, a 100 mL graduated cylinder, and a 1 litre volumetric flask.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.3:8",
+            "order": 8,
+            "title": "Density",
+            "content_text": "Density is a physical property that relates the mass of a substance to its volume. It is defined as the amount of mass per unit volume: $$\\text{Density} = \\frac{\text{Mass}}{\text{Volume}}$$ The SI unit of density is derived from the SI units of mass (kg) and volume ($m^3$), resulting in $\\text{kg m}^{-3}$. However, because this unit is quite large, chemists frequently use $\\text{g cm}^{-3}$, where mass is in grams and volume is in cubic centimeters. Density serves as an indicator of how closely particles are packed within a substance; a higher density indicates more closely packed particles.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.3:9",
+            "order": 9,
+            "title": "Temperature",
+            "content_text": "Temperature is commonly measured using three scales: Celsius ($^\\circ\\text{C}$), Fahrenheit ($^\\circ\\text{F}$), and Kelvin (K). Kelvin is the SI unit of temperature. On the Celsius scale, the freezing point of water is $0^\\circ$ and the boiling point is $100^\\circ$. On the Fahrenheit scale, these points correspond to $32^\\circ$ and $212^\\circ$ respectively. The scales are related by the following formulas: $$^\\circ\\text{F} = \\frac{9}{5}(^\\circ\\text{C}) + 32$$ $$K = ^\\circ\\text{C} + 273.15$$ It is important to note that while negative temperatures are possible on the Celsius scale, the Kelvin scale starts at absolute zero and does not have negative values.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 1.8",
+                "description": "A comparison of the Kelvin, Celsius, and Fahrenheit scales showing key temperatures: Boiling point of water (373 K, 100 °C, 212 °F), Human body temperature (310 K, 37 °C, 98.6 °F), Room temperature (298 K, 25 °C, 77 °F), and Freezing point of water (273.15 K, 0 °C, 32 °F).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.3:10",
+            "order": 10,
+            "title": "Reference Standards for Measurement",
+            "content_text": "To ensure measurement reliability, scientists use reference standards. The mass standard is the kilogram, defined since 1889 by a platinum-iridium (Pt-Ir) cylinder kept at the International Bureau of Weights and Measures in France. Pt-Ir was chosen for its high resistance to chemical attack. The metre was originally defined by marks on a Pt-Ir bar, then in 1960 by the wavelength of light from a krypton laser, and finally in 1983 as the length of the path travelled by light in vacuum during a time interval of $1/299,792,458$ of a second. Scientists continue to search for even more precise standards, such as those based on the Avogadro constant.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:1:1.4",
+        "number": "1.4",
+        "title": "UNCERTAINTY IN MEASUREMENT",
+        "content_text": "",
+        "subsections": []
+      },
+      {
+        "id": "ncert:chemistry:11:1:1.4.1",
+        "number": "1.4.1",
+        "title": "Scientific Notation",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:1:1.4.1:1",
+            "order": 1,
+            "title": "Exponential Representation",
+            "content_text": "Chemistry deals with numbers ranging from the extremely large (e.g., $602,200,000,000,000,000,000,000$ molecules in 2g of hydrogen) to the extremely small (e.g., $0.00000000000000000000000166$ g for a hydrogen atom). Scientific notation, or exponential notation, represents any number in the form $N \\times 10^n$, where $n$ is an exponent (positive or negative) and $N$ is a number (digit term) between $1.000...$ and $9.999...$. For example, $232.508$ is written as $2.32508 \\times 10^2$ by moving the decimal two places to the left. Conversely, $0.00016$ is written as $1.6 \\times 10^{-4}$ by moving the decimal four places to the right.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.4.1:2",
+            "order": 2,
+            "title": "Multiplication and Division in Scientific Notation",
+            "content_text": "In multiplication, the digit terms are multiplied and the exponents are added: $$(5.6 \\times 10^5) \\times (6.9 \\times 10^8) = (5.6 \\times 6.9)(10^{5+8}) = 38.64 \\times 10^{13} = 3.864 \\times 10^{14}$$ In division, the digit terms are divided and the exponents are subtracted: $$\\frac{2.7 \\times 10^{-3}}{5.5 \\times 10^4} = (2.7 \\div 5.5)(10^{-3-4}) = 0.4909 \\times 10^{-7} = 4.909 \\times 10^{-8}$$",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.4.1:3",
+            "order": 3,
+            "title": "Addition and Subtraction in Scientific Notation",
+            "content_text": "For addition and subtraction, numbers must first be converted so they have the same exponent. Then, the digit terms are added or subtracted. For example, to add $6.65 \\times 10^4$ and $8.95 \\times 10^3$, we rewrite the second number: $$(6.65 \\times 10^4) + (0.895 \\times 10^4) = (6.65 + 0.895) \\times 10^4 = 7.545 \\times 10^4$$ For subtraction: $$(2.5 \\times 10^{-2}) - (4.8 \\times 10^{-3}) = (2.5 \\times 10^{-2}) - (0.48 \\times 10^{-2}) = (2.5 - 0.48) \\times 10^{-2} = 2.02 \\times 10^{-2}$$",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:1:1.4.2",
+        "number": "1.4.2",
+        "title": "Significant Figures",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:1:1.4.2:1",
+            "order": 1,
+            "title": "Definition of Significant Figures",
+            "content_text": "Every experimental measurement involves some uncertainty due to the limitations of the measuring instrument and the skill of the observer. Significant figures are the meaningful digits in a measured or calculated quantity which are known with certainty plus one digit that is estimated or uncertain. For example, in a measurement of $11.2$ mL, the '11' is certain while the '2' is uncertain. Unless stated otherwise, an uncertainty of $\\pm 1$ in the last digit is always understood.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.4.2:2",
+            "order": 2,
+            "title": "Rules for Determining Significant Figures",
+            "content_text": "The following rules are used to determine the number of significant figures:\n1. All non-zero digits are significant (e.g., $285$ cm has three, $0.25$ mL has two).\n2. Zeros preceding the first non-zero digit are not significant; they only indicate the position of the decimal point (e.g., $0.03$ has one, $0.0052$ has two).\n3. Zeros between two non-zero digits are significant (e.g., $2.005$ has four).\n4. Zeros at the end or right of a number are significant if they are to the right of the decimal point (e.g., $0.200$ g has three). If there is no decimal point, terminal zeros are not necessarily significant (e.g., $100$ could have one, two, or three). Scientific notation is used to remove this ambiguity: $1 \\times 10^2$ (one sig fig), $1.0 \\times 10^2$ (two sig figs), or $1.00 \\times 10^2$ (three sig figs).",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.4.2:3",
+            "order": 3,
+            "title": "Significant Figures in Exact Numbers",
+            "content_text": "Counting the numbers of objects, for example, 2 balls or 20 eggs, have infinite significant figures as these are exact numbers and can be represented by writing infinite number of zeros after placing a decimal i.e., $2 = 2.000000$ or $20 = 20.000000$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.4.2:4",
+            "order": 4,
+            "title": "Significant Figures in Scientific Notation",
+            "content_text": "In numbers written in scientific notation, all digits are significant. For example, $4.01 \\times 10^2$ has three significant figures, and $8.256 \\times 10^{-3}$ has four significant figures.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.4.2:5",
+            "order": 5,
+            "title": "Precision and Accuracy",
+            "content_text": "Precision refers to the closeness of various measurements for the same quantity. Accuracy is the agreement of a particular value to the true value of the result. For example, if the true value for a result is $2.00$ g and student 'A' takes two measurements and reports the results as $1.95$ g and $1.93$ g, these values are precise as they are close to each other but are not accurate. Student 'B' obtains $1.94$ g and $2.05$ g; these are neither precise nor accurate. Student 'C' reports $2.01$ g and $1.99$ g; these values are both precise and accurate as they are close to each other and close to the true value.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 1.4",
+                "caption": "Data to Illustrate Precision and Accuracy",
+                "headers": [
+                  "",
+                  "1",
+                  "2",
+                  "Average (g)"
+                ],
+                "rows": [
+                  [
+                    "Student A",
+                    "1.95",
+                    "1.93",
+                    "1.940"
+                  ],
+                  [
+                    "Student B",
+                    "1.94",
+                    "2.05",
+                    "1.995"
+                  ],
+                  [
+                    "Student C",
+                    "2.01",
+                    "1.99",
+                    "2.000"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.4.2:6",
+            "order": 6,
+            "title": "Addition and Subtraction of Significant Figures",
+            "content_text": "The result of addition or subtraction cannot have more digits to the right of the decimal point than either of the original numbers. For example, adding $12.11$, $18.0$, and $1.012$ gives $31.122$. However, since $18.0$ has only one digit after the decimal point, the result should be reported as $31.1$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.4.2:7",
+            "order": 7,
+            "title": "Multiplication and Division of Significant Figures",
+            "content_text": "In these operations, the result must be reported with no more significant figures than in the measurement with the fewest significant figures. For example, $2.5 \\times 1.25 = 3.125$. Since $2.5$ has two significant figures, the result should be rounded to $3.1$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.4.2:8",
+            "order": 8,
+            "title": "Rules for Rounding Off",
+            "content_text": "1. If the rightmost digit to be removed is more than 5, the preceding number is increased by one (e.g., $1.386$ rounds to $1.39$). 2. If the rightmost digit to be removed is less than 5, the preceding number is not changed (e.g., $4.334$ rounds to $4.33$). 3. If the rightmost digit to be removed is 5, the preceding number is not changed if it is an even number but is increased by one if it is an odd number. For example, $6.35$ rounds to $6.4$, while $6.25$ rounds to $6.2$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:1:1.4.3",
+        "number": "1.4.3",
+        "title": "Dimensional Analysis",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:1:1.4.3:1",
+            "order": 1,
+            "title": "The Factor Label Method",
+            "content_text": "Often while calculating, there is a need to convert units from one system to the other. The method used to accomplish this is called factor label method or unit factor method or dimensional analysis. It relies on using unit factors (ratios equal to 1) to convert units without changing the physical quantity.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.4.3:2",
+            "order": 2,
+            "title": "Example: Length Conversion",
+            "content_text": "To convert 3 inches to centimeters, we use the equivalence $1 \\text{ in} = 2.54 \\text{ cm}$. The unit factor is $\\frac{2.54 \\text{ cm}}{1 \\text{ in}} = 1$. Multiplying the given value by this factor: $3 \\text{ in} \\times \\frac{2.54 \\text{ cm}}{1 \\text{ in}} = 7.62 \\text{ cm}$.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example",
+                "problem": "A piece of metal is 3 inch (represented by in) long. What is its length in cm?",
+                "solution": "We know that $1 \\text{ in} = 2.54 \\text{ cm}$. From this equivalence, we can write $\\frac{1 \\text{ in}}{2.54 \\text{ cm}} = 1 = \\frac{2.54 \\text{ cm}}{1 \\text{ in}}$. These are called unit factors. $3 \\text{ in} = 3 \\text{ in} \\times \\frac{2.54 \\text{ cm}}{1 \\text{ in}} = 3 \\times 2.54 \\text{ cm} = 7.62 \\text{ cm}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.4.3:3",
+            "order": 3,
+            "title": "Example: Volume Conversion",
+            "content_text": "To convert liters to cubic meters, we use the relationships $1 \\text{ L} = 1000 \\text{ cm}^3$ and $1 \\text{ m} = 100 \\text{ cm}$. The unit factor for length is cubed to get the volume factor: $(\\frac{1 \\text{ m}}{100 \\text{ cm}})^3 = \\frac{1 \\text{ m}^3}{10^6 \\text{ cm}^3} = 1$.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example",
+                "problem": "A jug contains 2L of milk. Calculate the volume of the milk in $m^3$.",
+                "solution": "Since $1 \\text{ L} = 1000 \\text{ cm}^3$ and $1 \\text{ m} = 100 \\text{ cm}$, we have the unit factor $\\frac{1 \\text{ m}}{100 \\text{ cm}} = 1$. Cubing it: $(\\frac{1 \\text{ m}}{100 \\text{ cm}})^3 = \\frac{1 \\text{ m}^3}{10^6 \\text{ cm}^3} = 1$. Now $2 \\text{ L} = 2 \\times 1000 \\text{ cm}^3$. Multiplying by the unit factor: $2 \\times 1000 \\text{ cm}^3 \\times \\frac{1 \\text{ m}^3}{10^6 \\text{ cm}^3} = \\frac{2 \\text{ m}^3}{10^3} = 2 \\times 10^{-3} \\text{ m}^3$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.4.3:4",
+            "order": 4,
+            "title": "Example: Time Conversion",
+            "content_text": "Converting days to seconds involves multiple unit factors: days to hours, hours to minutes, and minutes to seconds. These can be multiplied in a single step.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example",
+                "problem": "How many seconds are there in 2 days?",
+                "solution": "Using unit factors: $1 \\text{ day} = 24 \\text{ h}$, $1 \\text{ h} = 60 \\text{ min}$, $1 \\text{ min} = 60 \\text{ s}$. $2 \\text{ days} \\times \\frac{24 \\text{ h}}{1 \\text{ day}} \\times \\frac{60 \\text{ min}}{1 \\text{ h}} \\times \\frac{60 \\text{ s}}{1 \\text{ min}} = 2 \\times 24 \\times 60 \\times 60 \\text{ s} = 172800 \\text{ s}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:1:1.5",
+        "number": "1.5",
+        "title": "LAWS OF CHEMICAL COMBINATIONS",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:1:1.5:1",
+            "order": 1,
+            "title": "Introduction to Chemical Laws",
+            "content_text": "The combination of elements to form compounds is governed by five basic laws.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:1:1.5.1",
+        "number": "1.5.1",
+        "title": "Law of Conservation of Mass",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:1:1.5.1:1",
+            "order": 1,
+            "title": "Definition and Origin",
+            "content_text": "This law was put forth by Antoine Lavoisier in 1789. He performed careful experimental studies for combustion reactions and reached to the conclusion that in all physical and chemical changes, there is no net change in mass during the process. Hence, he reached to the conclusion that matter can neither be created nor destroyed. This is called 'Law of Conservation of Mass'. This law formed the basis for several later developments in chemistry.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Portrait",
+                "description": "Portrait of Antoine Lavoisier (1743–1794), who established the Law of Conservation of Mass.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:1:1.5.2",
+        "number": "1.5.2",
+        "title": "Law of Definite Proportions",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:1:1.5.2:1",
+            "order": 1,
+            "title": "Definition and Proust's Experiment",
+            "content_text": "This law was given by a French chemist, Joseph Proust. He stated that a given compound always contains exactly the same proportion of elements by weight. Proust worked with two samples of cupric carbonate — one of which was of natural origin and the other was synthetic. He found that the composition of elements present in it was same for both the samples as shown in the table. Thus, he concluded that irrespective of the source, a given compound always contains same elements combined together in the same proportion by mass. It is sometimes also referred to as Law of Definite Composition.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Portrait",
+                "description": "Portrait of Joseph Proust (1754–1826), who proposed the Law of Definite Proportions.",
+                "image_url": null
+              }
+            ],
+            "tables": [
+              {
+                "label": "Cupric Carbonate Composition",
+                "caption": "Comparison of Natural and Synthetic Cupric Carbonate",
+                "headers": [
+                  "",
+                  "% of copper",
+                  "% of carbon",
+                  "% of oxygen"
+                ],
+                "rows": [
+                  [
+                    "Natural Sample",
+                    "51.35",
+                    "9.74",
+                    "38.91"
+                  ],
+                  [
+                    "Synthetic Sample",
+                    "51.35",
+                    "9.74",
+                    "38.91"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:1:1.5.3",
+        "number": "1.5.3",
+        "title": "Law of Multiple Proportions",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:1:1.5.3:1",
+            "order": 1,
+            "title": "Definition and Dalton's Proposal",
+            "content_text": "This law was proposed by Dalton in 1803. According to this law, if two elements can combine to form more than one compound, the masses of one element that combine with a fixed mass of the other element, are in the ratio of small whole numbers. For example, hydrogen combines with oxygen to form two compounds, namely, water and hydrogen peroxide. In water, $2$ g hydrogen combines with $16$ g oxygen. In hydrogen peroxide, $2$ g hydrogen combines with $32$ g oxygen. The masses of oxygen ($16$ g and $32$ g) which combine with a fixed mass of hydrogen ($2$ g) bear a simple ratio, i.e., $16:32$ or $1:2$.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:1:1.5.4",
+        "number": "1.5.4",
+        "title": "Gay Lussac’s Law of Gaseous Volumes",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:1:1.5.4:1",
+            "order": 1,
+            "title": "Definition and Gaseous Ratios",
+            "content_text": "This law was given by Gay Lussac in 1808. He observed that when gases combine or are produced in a chemical reaction they do so in a simple ratio by volume, provided all gases are at the same temperature and pressure. Thus, $100$ mL of hydrogen combine with $50$ mL of oxygen to give $100$ mL of water vapour. The volumes of hydrogen and oxygen which combine (i.e., $100$ mL and $50$ mL) bear a simple ratio of $2:1$. Gay Lussac’s discovery of integer ratio in volume relationship is actually the law of definite proportions by volume.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Portrait",
+                "description": "Portrait of Joseph Louis Gay Lussac, who formulated the law of gaseous volumes.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:1:1.5.5",
+        "number": "1.5.5",
+        "title": "Avogadro’s Law",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:1:1.5.5:1",
+            "order": 1,
+            "title": "Definition and Molecular Theory",
+            "content_text": "In 1811, Avogadro proposed that equal volumes of all gases at the same temperature and pressure should contain equal number of molecules. Avogadro made a distinction between atoms and molecules which is quite understandable in present times. If we consider again the reaction of hydrogen and oxygen to produce water, we see that two volumes of hydrogen combine with one volume of oxygen to give two volumes of water without leaving any unreacted oxygen. Avogadro could explain the above result by considering the molecules to be polyatomic. If hydrogen and oxygen were considered as diatomic as recognised now, then the above results are easily understandable. However, Dalton and others believed at that time that atoms of the same kind cannot combine and molecules of oxygen or hydrogen containing two atoms did not exist. Avogadro’s proposal was published in the French Journal de Physique. In spite of being correct, it did not gain much support. After about 50 years, in 1860, the first international conference on chemistry was held in Karlsruhe, Germany, to resolve various ideas. At the meeting, Stanislao Cannizaro presented a sketch of a course of chemical philosophy, which emphasised on the importance of Avogadro’s work.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Portrait",
+                "description": "Portrait of Lorenzo Romano Amedeo Carlo Avogadro di Quareqa edi Carreto (1776–1856).",
+                "image_url": null
+              },
+              {
+                "label": "Fig. 1.9",
+                "description": "Two volumes of hydrogen react with one volume of oxygen to give two volumes of water vapour. The diagram shows three boxes: two containing hydrogen molecules (pairs of small blue spheres) and one containing oxygen molecules (pairs of larger orange spheres). These react to form two boxes of water vapour (each containing molecules with one orange sphere and two blue spheres).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:1:1.6",
+        "number": "1.6",
+        "title": "DALTON’S ATOMIC THEORY",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:1:1.6:1",
+            "order": 1,
+            "title": "Origin and Postulates",
+            "content_text": "Although the origin of the idea that matter is composed of small indivisible particles called ‘a-tomio’ (meaning, indivisible), dates back to the time of Democritus, a Greek Philosopher (460–370 BC), it again started emerging as a result of several experimental studies which led to the laws of chemical combination. In 1808, Dalton published ‘A New System of Chemical Philosophy’, in which he proposed the following: 1. Matter consists of indivisible atoms. 2. All atoms of a given element have identical properties, including identical mass. Atoms of different elements differ in mass. 3. Compounds are formed when atoms of different elements combine in a fixed ratio. 4. Chemical reactions involve reorganisation of atoms. These are neither created nor destroyed in a chemical reaction.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.6:2",
+            "order": 2,
+            "title": "Success and Limitations",
+            "content_text": "Dalton’s theory could explain the laws of chemical combination. However, it could not explain the laws of gaseous volumes. It could not provide the reason for combining of atoms, which was answered later by other scientists.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:1:1.7",
+        "number": "1.7",
+        "title": "ATOMIC AND MOLECULAR MASSES",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:1:1.7:1",
+            "order": 1,
+            "title": "Atomic Mass",
+            "content_text": "The atomic mass or the mass of an atom is actually very-very small because atoms are extremely small. Today, we have sophisticated techniques e.g., mass spectrometry for determining the atomic masses fairly accurately. But in the nineteenth century, scientists could determine the mass of one atom relative to another by experimental means. Hydrogen, being the lightest atom was arbitrarily assigned a mass of 1 (without any units) and other elements were assigned masses relative to it. However, the present system of atomic masses is based on carbon-12 as the standard and has been agreed upon in 1961. Here, Carbon-12 is one of the isotopes of carbon and can be represented as $^{12}C$. In this system, $^{12}C$ is assigned a mass of exactly 12 atomic mass unit (amu) and masses of all other atoms are given relative to this standard. One atomic mass unit is defined as a mass exactly equal to one-twelfth of the mass of one carbon-12 atom. And $1 \\text{ amu} = 1.66056 \\times 10^{-24} \\text{ g}$. Mass of an atom of hydrogen $= 1.6736 \\times 10^{-24} \\text{ g}$. Thus, in terms of amu, the mass of hydrogen atom $= \\frac{1.6736 \\times 10^{-24} \\text{ g}}{1.66056 \\times 10^{-24} \\text{ g}} = 1.0078 \\text{ amu} \\approx 1.0080 \\text{ amu}$. Similarly, the mass of oxygen-16 ($^{16}O$) atom would be 15.995 amu. At present, ‘amu’ has been replaced by ‘u’, which is known as unified mass.\nMany naturally occurring elements exist as more than one isotope. When we take into account the existence of these isotopes and their relative abundance (per cent occurrence), the average atomic mass of that element can be computed. For example, carbon has three isotopes ($^{12}C$, $^{13}C$, $^{14}C$) with relative abundances and masses as shown in the table. From the data, the average atomic mass of carbon will come out to be: $(0.98892)(12 \\text{ u}) + (0.01108)(13.00335 \\text{ u}) + (2 \\times 10^{-12})(14.00317 \\text{ u}) = 12.011 \\text{ u}$. Similarly, average atomic masses for other elements can be calculated. In the periodic table of elements, the atomic masses mentioned for different elements actually represent their average atomic masses.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 1.1",
+                "caption": "Isotopes of Carbon with their relative abundance and atomic mass",
+                "headers": [
+                  "Isotope",
+                  "Relative Abundance (%)",
+                  "Atomic Mass (amu)"
+                ],
+                "rows": [
+                  [
+                    "$^{12}C$",
+                    "98.892",
+                    "12"
+                  ],
+                  [
+                    "$^{13}C$",
+                    "1.108",
+                    "13.00335"
+                  ],
+                  [
+                    "$^{14}C$",
+                    "$2 \\times 10^{-12}$",
+                    "14.00317"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.7:2",
+            "order": 2,
+            "title": "Molecular Mass",
+            "content_text": "Molecular mass is the sum of atomic masses of the elements present in a molecule. It is obtained by multiplying the atomic mass of each element by the number of its atoms and adding them together. For example, molecular mass of methane ($CH_4$) $= (12.011 \\text{ u}) + 4(1.008 \\text{ u}) = 16.043 \\text{ u}$. Similarly, molecular mass of water ($H_2O$) $= 2 \\times \\text{atomic mass of hydrogen} + 1 \\times \\text{atomic mass of oxygen} = 2(1.008 \\text{ u}) + 16.00 \\text{ u} = 18.02 \\text{ u}$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.7:3",
+            "order": 3,
+            "title": "Formula Mass",
+            "content_text": "Some substances, such as sodium chloride, do not contain discrete molecules as their constituent units. In such compounds, positive (sodium ion) and negative (chloride ion) entities are arranged in a three-dimensional structure. In sodium chloride, one $Na^+$ ion is surrounded by six $Cl^-$ ion and vice-versa. The formula, such as $NaCl$, is used to calculate the formula mass instead of molecular mass as in the solid state sodium chloride does not exist as a single entity. Thus, the formula mass of sodium chloride is atomic mass of sodium + atomic mass of chlorine $= 23.0 \\text{ u} + 35.5 \\text{ u} = 58.5 \\text{ u}$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 1.10",
+                "description": "Packing of $Na^+$ and $Cl^-$ ions in sodium chloride. The diagram shows a three-dimensional cubic lattice structure where larger blue spheres (representing $Cl^-$ ions) and smaller orange spheres (representing $Na^+$ ions) are arranged in an alternating pattern.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.7:4",
+            "order": 4,
+            "title": "Worked Example: Molecular Mass of Glucose",
+            "content_text": "The molecular mass of a complex molecule like glucose is calculated by summing the atomic masses of all its constituent atoms (carbon, hydrogen, and oxygen) multiplied by their respective counts.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 1.1",
+                "problem": "Calculate the molecular mass of glucose ($C_6H_{12}O_6$) molecule.",
+                "solution": "Molecular mass of glucose ($C_6H_{12}O_6$) $= 6(12.011 \\text{ u}) + 12(1.008 \\text{ u}) + 6(16.00 \\text{ u}) = (72.066 \\text{ u}) + (12.096 \\text{ u}) + (96.00 \\text{ u}) = 180.162 \\text{ u}$"
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:1:1.8",
+        "number": "1.8",
+        "title": "MOLE CONCEPT AND MOLAR MASSES",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:1:1.8:1",
+            "order": 1,
+            "title": "The Mole as a Counting Unit",
+            "content_text": "Atoms and molecules are extremely small in size and their numbers in even a small amount of any substance is really very large. To handle such large numbers, a unit of convenient magnitude is required. Just as we denote one dozen for 12 items, score for 20 items, gross for 144 items, we use the idea of mole to count entities at the microscopic level (i.e., atoms, molecules, particles, electrons, ions, etc.). In SI system, mole (symbol, mol) was introduced as seventh base quantity for the amount of a substance.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.8:2",
+            "order": 2,
+            "title": "Definition and Avogadro Constant",
+            "content_text": "The mole, symbol mol, is the SI unit of amount of substance. One mole contains exactly $6.02214076 \\times 10^{23}$ elementary entities. This number is the fixed numerical value of the Avogadro constant, $N_A$, when expressed in the unit $\\text{mol}^{-1}$ and is called the Avogadro number. The amount of substance, symbol $n$, of a system is a measure of the number of specified elementary entities. An elementary entity may be an atom, a molecule, an ion, an electron, any other particle or specified group of particles. It may be emphasised that the mole of a substance always contains the same number of entities, no matter what the substance may be.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.8:3",
+            "order": 3,
+            "title": "Derivation of the Avogadro Number",
+            "content_text": "In order to determine this number precisely, the mass of a carbon-12 atom was determined by a mass spectrometer and found to be equal to $1.992648 \\times 10^{-23} \\text{ g}$. Knowing that one mole of carbon weighs $12 \\text{ g}$, the number of atoms in it is equal to: $\\frac{12 \\text{ g/mol }^{12}C}{1.992648 \\times 10^{-23} \\text{ g/}^{12}C \\text{ atom}} = 6.0221367 \\times 10^{23} \\text{ atoms/mol}$. This number of entities in 1 mol is so important that it is given a separate name and symbol. It is known as ‘Avogadro constant’, or Avogadro number denoted by $N_A$ in honour of Amedeo Avogadro. To appreciate the largeness of this number, let us write it with all zeroes without using any powers of ten: 602213670000000000000000. Hence, so many entities (atoms, molecules or any other particle) constitute one mole of a particular substance. Examples: 1 mol of hydrogen atoms $= 6.022 \\times 10^{23}$ atoms; 1 mol of water molecules $= 6.022 \\times 10^{23}$ water molecules; 1 mol of sodium chloride $= 6.022 \\times 10^{23}$ formula units of sodium chloride.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 1.11",
+                "description": "One mole of various substances. A photograph showing different chemical samples in beakers and watch glasses, each representing one mole of that substance.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.8:4",
+            "order": 4,
+            "title": "Molar Mass",
+            "content_text": "Having defined the mole, it is easier to know the mass of one mole of a substance or the constituent entities. The mass of one mole of a substance in grams is called its molar mass. The molar mass in grams is numerically equal to atomic/molecular/formula mass in u. Molar mass of water $= 18.02 \\text{ g mol}^{-1}$. Molar mass of sodium chloride $= 58.5 \\text{ g mol}^{-1}$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:1:1.9",
+        "number": "1.9",
+        "title": "PERCENTAGE COMPOSITION",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:1:1.9:1",
+            "order": 1,
+            "title": "Introduction to Percentage Composition",
+            "content_text": "So far, we were dealing with the number of entities present in a given sample. But many a time, information regarding the percentage of a particular element present in a compound is required. Suppose, an unknown or new compound is given to you, the first question you would ask is: what is its formula or what are its constituents and in what ratio are they present in the given compound? For known compounds also, such information provides a check whether the given sample contains the same percentage of elements as present in a pure sample. In other words, one can check the purity of a given sample by analysing this data. Let us understand it by taking the example of water ($H_2O$). Since water contains hydrogen and oxygen, the percentage composition of both these elements can be calculated as follows: $\\text{Mass \\% of an element} = \\frac{\\text{mass of that element in the compound} \\times 100}{\\text{molar mass of the compound}}$. Molar mass of water = 18.02 g. $\\text{Mass \\% of hydrogen} = \\frac{2 \\times 1.008}{18.02} \\times 100 = 11.18$. $\\text{Mass \\% of oxygen} = \\frac{16.00}{18.02} \\times 100 = 88.79$. Let us take one more example. What is the percentage of carbon, hydrogen and oxygen in ethanol? Molecular formula of ethanol is: $C_2H_5OH$. Molar mass of ethanol is: $(2 \\times 12.01 + 6 \\times 1.008 + 16.00) \\text{ g} = 46.068 \\text{ g}$. $\\text{Mass per cent of carbon} = \\frac{24.02 \\text{ g}}{46.068 \\text{ g}} \\times 100 = 52.14\\%$. $\\text{Mass per cent of hydrogen} = \\frac{6.048 \\text{ g}}{46.068 \\text{ g}} \\times 100 = 13.13\\%$. $\\text{Mass per cent of oxygen} = \\frac{16.00 \\text{ g}}{46.068 \\text{ g}} \\times 100 = 34.73\\%$. After understanding the calculation of per cent of mass, let us now see what information can be obtained from the per cent composition data.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:1:1.9.1",
+        "number": "1.9.1",
+        "title": "Empirical Formula for Molecular Formula",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:1:1.9.1:1",
+            "order": 1,
+            "title": "Definitions and Determination of Formulas",
+            "content_text": "An empirical formula represents the simplest whole number ratio of various atoms present in a compound, whereas, the molecular formula shows the exact number of different types of atoms present in a molecule of a compound. If the mass per cent of various elements present in a compound is known, its empirical formula can be determined. Molecular formula can further be obtained if the molar mass is known. The following example illustrates this sequence.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.9.1:2",
+            "order": 2,
+            "title": "Worked Example: Determining Empirical and Molecular Formulas",
+            "content_text": "This subsection demonstrates the step-by-step process of determining the empirical and molecular formulas of a compound using its mass percentage composition and molar mass.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 1.2",
+                "problem": "A compound contains 4.07% hydrogen, 24.27% carbon and 71.65% chlorine. Its molar mass is 98.96 g. What are its empirical and molecular formulas?",
+                "solution": "Step 1. Conversion of mass per cent to grams: Since we are having mass per cent, it is convenient to use 100 g of the compound as the starting material. Thus, in the 100 g sample of the above compound, 4.07g hydrogen, 24.27g carbon and 71.65g chlorine are present. Step 2. Convert into number moles of each element: Divide the masses obtained above by respective atomic masses of various elements. Moles of hydrogen = $\\frac{4.07 \\text{ g}}{1.008 \\text{ g}} = 4.04$; Moles of carbon = $\\frac{24.27 \\text{ g}}{12.01 \\text{ g}} = 2.021$; Moles of chlorine = $\\frac{71.65 \\text{ g}}{35.453 \\text{ g}} = 2.021$. Step 3. Divide each of the mole values obtained above by the smallest number amongst them: Since 2.021 is smallest value, division by it gives a ratio of 2:1:1 for H:C:Cl. Step 4. Write down the empirical formula: $CH_2Cl$ is, thus, the empirical formula of the above compound. Step 5. Writing molecular formula: (a) Determine empirical formula mass: For $CH_2Cl$, empirical formula mass is $12.01 + (2 \\times 1.008) + 35.453 = 49.48 \\text{ g}$. (b) Divide Molar mass by empirical formula mass: $\\frac{98.96 \\text{ g}}{49.48 \\text{ g}} = 2 = (n)$. (c) Multiply empirical formula by $n$ to get the molecular formula: $2 \\times CH_2Cl = C_2H_4Cl_2$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:1:1.10",
+        "number": "1.10",
+        "title": "STOICHIOMETRY AND STOICHIOMETRIC CALCULATIONS",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:1:1.10:1",
+            "order": 1,
+            "title": "Introduction to Stoichiometry",
+            "content_text": "The word ‘stoichiometry’ is derived from two Greek words — stoicheion (meaning, element) and metron (meaning, measure). Stoichiometry, thus, deals with the calculation of masses (sometimes volumes also) of the reactants and the products involved in a chemical reaction. Before understanding how to calculate the amounts of reactants required or the products produced in a chemical reaction, let us study what information is available from the balanced chemical equation of a given reaction.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.10:2",
+            "order": 2,
+            "title": "Information from Balanced Chemical Equations",
+            "content_text": "Consider the combustion of methane: $CH_4 (g) + 2O_2 (g) \\rightarrow CO_2 (g) + 2H_2O (g)$. Here, methane and dioxygen are called reactants and carbon dioxide and water are called products. The letters (g), (s), and (l) indicate gas, solid, and liquid states respectively. The coefficients 2 for $O_2$ and $H_2O$ are called stoichiometric coefficients. They represent the number of molecules (and moles) taking part in the reaction or formed. According to the reaction: 1. One mole of $CH_4(g)$ reacts with two moles of $O_2(g)$ to give one mole of $CO_2(g)$ and two moles of $H_2O(g)$. 2. One molecule of $CH_4(g)$ reacts with 2 molecules of $O_2(g)$ to give one molecule of $CO_2(g)$ and 2 molecules of $H_2O(g)$. 3. 22.7 L of $CH_4(g)$ reacts with 45.4 L of $O_2(g)$ to give 22.7 L of $CO_2(g)$ and 45.4 L of $H_2O(g)$. 4. 16 g of $CH_4(g)$ reacts with $2 \\times 32$ g of $O_2(g)$ to give 44 g of $CO_2(g)$ and $2 \\times 18$ g of $H_2O(g)$. These relationships allow interconversion between mass, moles, and number of molecules. Density is given by $\\frac{\\text{Mass}}{\\text{Volume}} = \\text{Density}$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Stoichiometric Interconversions",
+                "description": "A flowchart showing the interconversion between mass, moles, and number of molecules.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.10:3",
+            "order": 3,
+            "title": "Balancing a Chemical Equation",
+            "content_text": "According to the law of conservation of mass, a balanced chemical equation has the same number of atoms of each element on both sides of the equation. Many chemical equations can be balanced by trial and error. For example: (a) $4 Fe(s) + 3 O_2(g) \\rightarrow 2 Fe_2O_3(s)$ (balanced), (b) $2 Mg(s) + O_2(g) \\rightarrow 2 MgO(s)$ (balanced), (c) $P_4(s) + O_2(g) \\rightarrow P_4O_{10}(s)$ (unbalanced). To balance (c), place coefficient 5 on the left of oxygen: $P_4(s) + 5 O_2(g) \\rightarrow P_4O_{10}(s)$. For propane ($C_3H_8$) combustion: Step 1: $C_3H_8(g) + O_2(g) \\rightarrow CO_2(g) + H_2O(l)$ (unbalanced). Step 2: Balance C atoms: $C_3H_8(g) + O_2(g) \\rightarrow 3 CO_2(g) + H_2O(l)$. Step 3: Balance H atoms: $C_3H_8(g) + O_2(g) \\rightarrow 3 CO_2(g) + 4 H_2O(l)$. Step 4: Balance O atoms (10 on right): $C_3H_8(g) + 5 O_2(g) \\rightarrow 3 CO_2(g) + 4 H_2O(l)$. Step 5: Verify all atoms are balanced. Subscripts in formulas cannot be changed to balance an equation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.10:4",
+            "order": 4,
+            "title": "Worked Examples on Stoichiometric Calculations",
+            "content_text": "Stoichiometric calculations are used to determine the amounts of reactants required or products formed in a chemical reaction based on the balanced chemical equation. These calculations often involve converting between mass and moles using molar mass. For example, in the combustion of methane ($CH_4$), the balanced equation $CH_4 (g) + 2O_2 (g) \\rightarrow CO_2 (g) + 2H_2O (g)$ shows that 1 mole of methane reacts with 2 moles of oxygen to produce 1 mole of carbon dioxide and 2 moles of water. By knowing the molar masses, we can calculate the mass of water produced from a given mass of methane, or the moles of methane needed to produce a specific mass of carbon dioxide.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 1.3",
+                "problem": "Calculate the amount of water (g) produced by the combustion of 16 g of methane.",
+                "solution": "The balanced equation for the combustion of methane is: $CH_4 (g) + 2O_2 (g) \\rightarrow CO_2 (g) + 2H_2O (g)$. (i) 16 g of $CH_4$ corresponds to one mole. (ii) From the above equation, 1 mol of $CH_4 (g)$ gives 2 mol of $H_2O (g)$. 2 mol of water ($H_2O$) = $2 \\times (2 + 16) = 2 \\times 18 = 36 \\text{ g}$. Alternatively, using the unit factor method: $1 \\text{ mol } H_2O = 18 \\text{ g } H_2O \\Rightarrow \\frac{18 \\text{ g } H_2O}{1 \\text{ mol } H_2O} = 1$. Hence, $2 \\text{ mol } H_2O \\times \\frac{18 \\text{ g } H_2O}{1 \\text{ mol } H_2O} = 2 \\times 18 \\text{ g } H_2O = 36 \\text{ g } H_2O$."
+              },
+              {
+                "label": "Problem 1.4",
+                "problem": "How many moles of methane are required to produce 22g $CO_2$ (g) after combustion?",
+                "solution": "According to the chemical equation, $CH_4 (g) + 2O_2 (g) \\rightarrow CO_2 (g) + 2H_2O (g)$. 44g $CO_2$ (g) is obtained from 16 g $CH_4$ (g) [since 1 mol $CO_2$ (g) is obtained from 1 mol of $CH_4$(g)]. Number of moles of $CO_2$ (g) = $22 \\text{ g } CO_2 (g) \\times \\frac{1 \\text{ mol } CO_2 (g)}{44 \\text{ g } CO_2 (g)} = 0.5 \\text{ mol } CO_2 (g)$. Hence, 0.5 mol $CO_2$ (g) would be obtained from 0.5 mol $CH_4$ (g) or 0.5 mol of $CH_4$ (g) would be required to produce 22 g $CO_2$ (g)."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:1:1.10.1",
+        "number": "1.10.1",
+        "title": "Limiting Reagent",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:1:1.10.1:1",
+            "order": 1,
+            "title": "Concept of Limiting Reagent",
+            "content_text": "Many a time, reactions are carried out with the amounts of reactants that are different than the amounts as required by a balanced chemical reaction. In such situations, one reactant is in more amount than the amount required by balanced chemical reaction. The reactant which is present in the least amount gets consumed after sometime and after that further reaction does not take place whatever be the amount of the other reactant. Hence, the reactant, which gets consumed first, limits the amount of product formed and is, therefore, called the limiting reagent. In performing stoichiometric calculations, this aspect is also to be kept in mind.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.10.1:2",
+            "order": 2,
+            "title": "Worked Example on Limiting Reagent",
+            "content_text": "The limiting reagent is the reactant that is completely consumed in a reaction and limits the amount of product formed. Identifying it involves calculating the moles of each reactant and comparing them to the stoichiometric ratios required by the balanced equation.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 1.5",
+                "problem": "50.0 kg of $N_2$ (g) and 10.0 kg of $H_2$ (g) are mixed to produce $NH_3$ (g). Calculate the amount of $NH_3$ (g) formed. Identify the limiting reagent in the production of $NH_3$ in this situation.",
+                "solution": "A balanced equation for the reaction is: $N_2 (g) + 3H_2 (g) \\rightleftharpoons 2NH_3 (g)$. Calculation of moles: Number of moles of $N_2 = 50.0 \\text{ kg } N_2 \\times \\frac{1000 \\text{ g } N_2}{1 \\text{ kg } N_2} \\times \\frac{1 \\text{ mol } N_2}{28.0 \\text{ g } N_2} = 17.86 \\times 10^2 \\text{ mol}$. Number of moles of $H_2 = 10.00 \\text{ kg } H_2 \\times \\frac{1000 \\text{ g } H_2}{1 \\text{ kg } H_2} \\times \\frac{1 \\text{ mol } H_2}{2.016 \\text{ g } H_2} = 4.96 \\times 10^3 \\text{ mol}$. According to the equation, 1 mol $N_2 (g)$ requires 3 mol $H_2 (g)$. For $17.86 \\times 10^2 \\text{ mol}$ of $N_2$, the $H_2$ required is $17.86 \\times 10^2 \\times 3 = 5.36 \\times 10^3 \\text{ mol}$. Since only $4.96 \\times 10^3 \\text{ mol } H_2$ is available, $H_2$ is the limiting reagent. Amount of $NH_3$ formed = $4.96 \\times 10^3 \\text{ mol } H_2 \\times \\frac{2 \\text{ mol } NH_3}{3 \\text{ mol } H_2} = 3.30 \\times 10^3 \\text{ mol } NH_3$. Mass of $NH_3 = 3.30 \\times 10^3 \\text{ mol} \\times 17.0 \\text{ g/mol} = 56.1 \\times 10^3 \\text{ g} = 56.1 \\text{ kg}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:1:1.10.2",
+        "number": "1.10.2",
+        "title": "Reactions in Solutions",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:1:1.10.2:1",
+            "order": 1,
+            "title": "Expressing Concentration in Solutions",
+            "content_text": "A majority of reactions in the laboratories are carried out in solutions. Therefore, it is important to understand as how the amount of substance is expressed when it is present in the solution. The concentration of a solution or the amount of substance present in its given volume can be expressed in any of the following ways: 1. Mass per cent or weight per cent (w/w %), 2. Mole fraction, 3. Molarity, 4. Molality. Let us now study each one of them in detail.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.10.2:2",
+            "order": 2,
+            "title": "Mass Percent",
+            "content_text": "Mass per cent (w/w %) is defined as the mass of the solute divided by the total mass of the solution, multiplied by 100: $$\\text{Mass per cent} = \\frac{\\text{Mass of solute}}{\\text{Mass of solution}} \\times 100$$",
+            "content_type": "definition",
+            "worked_examples": [
+              {
+                "label": "Problem 1.6",
+                "problem": "A solution is prepared by adding 2 g of a substance A to 18 g of water. Calculate the mass per cent of the solute.",
+                "solution": "Mass per cent of A = $\\frac{2 \\text{ g}}{2 \\text{ g} + 18 \\text{ g}} \\times 100 = \\frac{2}{20} \\times 100 = 10\\%$"
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.10.2:3",
+            "order": 3,
+            "title": "Mole Fraction",
+            "content_text": "Mole fraction is the ratio of the number of moles of a particular component to the total number of moles of the solution. For a binary solution of A and B: $$\\text{Mole fraction of A} (x_A) = \\frac{n_A}{n_A + n_B}$$ $$\\text{Mole fraction of B} (x_B) = \\frac{n_B}{n_A + n_B}$$",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.10.2:4",
+            "order": 4,
+            "title": "Molarity",
+            "content_text": "Molarity (M) is the number of moles of solute in 1 litre of solution: $$\\text{Molarity (M)} = \\frac{\\text{No. of moles of solute}}{\\text{Volume of solution in litres}}$$ For dilution, the formula $M_1V_1 = M_2V_2$ is used. This is based on the principle that the number of moles of solute remains constant during dilution; only the amount of solvent changes. A solution of higher concentration used for dilution is called a stock solution. Molarity is temperature-dependent because volume changes with temperature.",
+            "content_type": "definition",
+            "worked_examples": [
+              {
+                "label": "Problem 1.7",
+                "problem": "Calculate the molarity of NaOH in the solution prepared by dissolving its 4 g in enough water to form 250 mL of the solution.",
+                "solution": "Molarity = $\\frac{4 \\text{ g} / 40 \\text{ g mol}^{-1}}{0.250 \\text{ L}} = \\frac{0.1 \\text{ mol}}{0.250 \\text{ L}} = 0.4 \\text{ mol L}^{-1} = 0.4 \\text{ M}$"
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:1.10.2:5",
+            "order": 5,
+            "title": "Molality",
+            "content_text": "Molality (m) is the number of moles of solute per 1 kg of solvent: $$\\text{Molality (m)} = \\frac{\\text{No. of moles of solute}}{\\text{Mass of solvent in kg}}$$ Unlike molarity, molality is independent of temperature as mass does not change with temperature. This makes it a preferred unit in experiments where temperature varies.",
+            "content_type": "definition",
+            "worked_examples": [
+              {
+                "label": "Problem 1.8",
+                "problem": "The density of 3 M solution of NaCl is 1.25 g $mL^{-1}$. Calculate the molality of the solution.",
+                "solution": "Mass of 1 L solution = 1250 g. Mass of NaCl = $3 \\text{ mol} \\times 58.5 \\text{ g/mol} = 175.5 \\text{ g}$. Mass of water = $1250 - 175.5 = 1074.5 \\text{ g} = 1.0745 \\text{ kg}$. Molality = $3 \\text{ mol} / 1.0745 \\text{ kg} = 2.79 \\text{ m}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:1:Summary",
+        "number": "Summary",
+        "title": "Summary",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:1:Summary:1",
+            "order": 1,
+            "title": "Measurement and SI Units",
+            "content_text": "Measurements in chemistry involve recording data associated with uncertainty. The scientific community uses the International System of Units (SI) for uniformity. Quantities range from $10^{-31}$ to $10^{+23}$, necessitating scientific notation. Uncertainty is managed via significant figures, and dimensional analysis allows for interconversion between different unit systems.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:Summary:2",
+            "order": 2,
+            "title": "Laws of Chemical Combination and Atomic Theory",
+            "content_text": "Chemical combinations are governed by five basic laws: the Law of Conservation of Mass, the Law of Definite Proportions, the Law of Multiple Proportions, Gay Lussac’s Law of Gaseous Volumes, and Avogadro Law. These laws form the basis of Dalton’s atomic theory, which identifies atoms as the fundamental building blocks of matter.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:Summary:3",
+            "order": 3,
+            "title": "Atomic and Molecular Masses",
+            "content_text": "Atomic mass is measured relative to the $^{12}C$ isotope (assigned a value of $12u$). Average atomic mass accounts for isotopic abundance. Molecular mass is the sum of atomic masses in a molecule. Mass percentage data, combined with molecular mass, allows for the determination of a compound's molecular formula.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:1:Summary:4",
+            "order": 4,
+            "title": "The Mole Concept and Stoichiometry",
+            "content_text": "The mole (1 mol) represents $6.022 \\times 10^{23}$ particles (Avogadro constant). Chemical reactions are described by balanced equations where coefficients represent molar ratios. Stoichiometry involves calculating the amounts of reactants and products. In solutions, concentration is expressed as mass per cent, mole fraction, molarity, or molality. The limiting reagent is the reactant that is completely consumed first, limiting the amount of product formed.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:chemistry:11:1:ex:1",
+          "number": 1,
+          "problem": "Calculate the molar mass of the following: (i) $H_2O$ (ii) $CO_2$ (iii) $CH_4$",
+          "solution": "(i) $18.016$ u, (ii) $44.01$ u, (iii) $16.042$ u",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:1:ex:2",
+          "number": 2,
+          "problem": "Calculate the mass per cent of different elements present in sodium sulphate ($Na_2SO_4$).",
+          "solution": "$Na = 32.37\\%$, $S = 22.57\\%$, $O = 45.06\\%$",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:1:ex:3",
+          "number": 3,
+          "problem": "Determine the empirical formula of an oxide of iron, which has $69.9\\%$ iron and $30.1\\%$ dioxygen by mass.",
+          "solution": "$Fe_2O_3$",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:1:ex:4",
+          "number": 4,
+          "problem": "Calculate the amount of carbon dioxide that could be produced when (i) 1 mole of carbon is burnt in air. (ii) 1 mole of carbon is burnt in $16$ g of dioxygen. (iii) 2 moles of carbon are burnt in $16$ g of dioxygen.",
+          "solution": "(i) $44$ g, (ii) $22$ g, (iii) $22$ g",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:1:ex:5",
+          "number": 5,
+          "problem": "Calculate the mass of sodium acetate ($CH_3COONa$) required to make $500$ mL of $0.375$ molar aqueous solution. Molar mass of sodium acetate is $82.0245$ g mol$^{-1}$.",
+          "solution": "$15.38$ g",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:1:ex:6",
+          "number": 6,
+          "problem": "Calculate the concentration of nitric acid in moles per litre in a sample which has a density, $1.41$ g mL$^{-1}$ and the mass per cent of nitric acid in it being $69\\%$.",
+          "solution": "$15.44$ M",
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:1:ex:7",
+          "number": 7,
+          "problem": "How much copper can be obtained from $100$ g of copper sulphate ($CuSO_4$)?",
+          "solution": "$39.81$ g",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:1:ex:8",
+          "number": 8,
+          "problem": "Determine the molecular formula of an oxide of iron, in which the mass per cent of iron and oxygen are $69.9$ and $30.1$, respectively.",
+          "solution": "$Fe_2O_3$",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:1:ex:9",
+          "number": 9,
+          "problem": "Calculate the atomic mass (average) of chlorine using the following data: $^{35}Cl$ ($75.77\\%$ abundance, $34.9689$ u), $^{37}Cl$ ($24.23\\%$ abundance, $36.9659$ u).",
+          "solution": "$35.45$ u",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:1:ex:10",
+          "number": 10,
+          "problem": "In three moles of ethane ($C_2H_6$), calculate the following: (i) Number of moles of carbon atoms. (ii) Number of moles of hydrogen atoms. (iii) Number of molecules of ethane.",
+          "solution": "(i) $6$ mol, (ii) $18$ mol, (iii) $1.806 \\times 10^{24}$ molecules",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:1:ex:11",
+          "number": 11,
+          "problem": "What is the concentration of sugar ($C_{12}H_{22}O_{11}$) in mol L$^{-1}$ if its $20$ g are dissolved in enough water to make a final volume up to $2$ L?",
+          "solution": "$0.029$ M",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:1:ex:12",
+          "number": 12,
+          "problem": "If the density of methanol is $0.793$ kg L$^{-1}$, what is its volume needed for making $2.5$ L of its $0.25$ M solution?",
+          "solution": "$25.22$ mL",
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:1:ex:13",
+          "number": 13,
+          "problem": "Pressure is determined as force per unit area of the surface. The SI unit of pressure, pascal is as shown below: $1 \\text{ Pa} = 1 \\text{ N m}^{-2}$. If mass of air at sea level is $1034$ g cm$^{-2}$, calculate the pressure in pascal.",
+          "solution": "$1.01332 \\times 10^5$ Pa",
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:1:ex:14",
+          "number": 14,
+          "problem": "What is the SI unit of mass? How is it defined?",
+          "solution": "Kilogram (kg). It is defined by taking the fixed numerical value of the Planck constant $h$ to be $6.62607015 \\times 10^{-34}$ when expressed in the unit J s.",
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:1:ex:15",
+          "number": 15,
+          "problem": "Match the following prefixes with their multiples: (i) micro ($10^6$), (ii) deca ($10^9$), (iii) mega ($10^{-6}$), (iv) giga ($10^{-15}$), (v) femto ($10$).",
+          "solution": "(i) micro - $10^{-6}$, (ii) deca - $10$, (iii) mega - $10^6$, (iv) giga - $10^9$, (v) femto - $10^{-15}$",
+          "difficulty": "easy",
+          "exercise_type": "mcq"
+        },
+        {
+          "id": "ncert:chemistry:11:1:ex:16",
+          "number": 16,
+          "problem": "What do you mean by significant figures?",
+          "solution": "Significant figures are meaningful digits which are known with certainty plus one which is estimated or uncertain.",
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:1:ex:17",
+          "number": 17,
+          "problem": "A sample of drinking water was found to be severely contaminated with chloroform, $CHCl_3$, supposed to be carcinogenic in nature. The level of contamination was $15$ ppm (by mass). (i) Express this in per cent by mass. (ii) Determine the molality of chloroform in the water sample.",
+          "solution": "(i) $1.5 \\times 10^{-3} \\%$, (ii) $1.25 \\times 10^{-4}$ m",
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:1:ex:18",
+          "number": 18,
+          "problem": "Express the following in the scientific notation: (i) $0.0048$ (ii) $234,000$ (iii) $8008$ (iv) $500.0$ (v) $6.0012$",
+          "solution": "(i) $4.8 \\times 10^{-3}$, (ii) $2.34 \\times 10^5$, (iii) $8.008 \\times 10^3$, (iv) $5.000 \\times 10^2$, (v) $6.0012 \\times 10^0$",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:1:ex:19",
+          "number": 19,
+          "problem": "How many significant figures are present in the following? (i) $0.0025$ (ii) $208$ (iii) $5005$ (iv) $126,000$ (v) $500.0$ (vi) $2.0034$",
+          "solution": "(i) $2$, (ii) $3$, (iii) $4$, (iv) $3$, (v) $4$, (vi) $5$",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:1:ex:20",
+          "number": 20,
+          "problem": "Round up the following upto three significant figures: (i) $34.216$ (ii) $10.4107$ (iii) $0.04597$ (iv) $2808$",
+          "solution": "(i) $34.2$, (ii) $10.4$, (iii) $0.0460$, (iv) $2810$",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:1:ex:21",
+          "number": 21,
+          "problem": "The following data are obtained when dinitrogen and dioxygen react together to form different compounds: (i) $14$ g N, $16$ g O; (ii) $14$ g N, $32$ g O; (iii) $28$ g N, $32$ g O; (iv) $28$ g N, $80$ g O. (a) Which law of chemical combination is obeyed? (b) Fill in the blanks: (i) $1$ km = ... mm = ... pm (ii) $1$ mg = ... kg = ... ng (iii) $1$ mL = ... L = ... dm$^3$",
+          "solution": "(a) Law of Multiple Proportions. (b) (i) $10^6$ mm, $10^{15}$ pm; (ii) $10^{-6}$ kg, $10^6$ ng; (iii) $10^{-3}$ L, $10^{-3}$ dm$^3$",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:1:ex:22",
+          "number": 22,
+          "problem": "If the speed of light is $3.0 \\times 10^8$ m s$^{-1}$, calculate the distance covered by light in $2.00$ ns.",
+          "solution": "$0.600$ m",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:1:ex:23",
+          "number": 23,
+          "problem": "In a reaction $A + B_2 \\rightarrow AB_2$, identify the limiting reagent, if any, in the following reaction mixtures: (i) $300$ atoms of A + $200$ molecules of B (ii) $2$ mol A + $3$ mol B (iii) $100$ atoms of A + $100$ molecules of B (iv) $5$ mol A + $2.5$ mol B (v) $2.5$ mol A + $5$ mol B",
+          "solution": "(i) $B_2$, (ii) A, (iii) None, (iv) $B_2$, (v) A",
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:1:ex:24",
+          "number": 24,
+          "problem": "Dinitrogen and dihydrogen react with each other to produce ammonia according to the following chemical equation: $N_2 (g) + H_2 (g) \\rightarrow 2NH_3 (g)$. (i) Calculate the mass of ammonia produced if $2.00 \\times 10^3$ g dinitrogen reacts with $1.00 \\times 10^3$ g of dihydrogen. (ii) Will any of the two reactants remain unreacted? (iii) If yes, which one and what would be its mass?",
+          "solution": "(i) $2431.2$ g, (ii) Yes, dihydrogen, (iii) $568.3$ g",
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:1:ex:25",
+          "number": 25,
+          "problem": "How are $0.50$ mol $Na_2CO_3$ and $0.50$ M $Na_2CO_3$ different?",
+          "solution": "$0.50$ mol $Na_2CO_3$ is an amount of substance (mass), while $0.50$ M $Na_2CO_3$ is a concentration (molarity).",
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:1:ex:26",
+          "number": 26,
+          "problem": "If $10$ volumes of dihydrogen gas reacts with five volumes of dioxygen gas, how many volumes of water vapour would be produced?",
+          "solution": "$10$ volumes",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:1:ex:27",
+          "number": 27,
+          "problem": "Convert the following into basic units: (i) $28.7$ pm (ii) $15.15$ pm (iii) $25365$ mg",
+          "solution": "(i) $2.87 \\times 10^{-11}$ m, (ii) $1.515 \\times 10^{-11}$ m, (iii) $2.5365 \\times 10^{-2}$ kg",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:1:ex:28",
+          "number": 28,
+          "problem": "Which one of the following will have the largest number of atoms? (i) 1 g Au (s) (ii) 1 g Na (s) (iii) 1 g Li (s) (iv) 1 g of $Cl_2(g)$",
+          "solution": "",
+          "difficulty": "easy",
+          "exercise_type": "mcq"
+        },
+        {
+          "id": "ncert:chemistry:11:1:ex:29",
+          "number": 29,
+          "problem": "Calculate the molarity of a solution of ethanol in water, in which the mole fraction of ethanol is 0.040 (assume the density of water to be one).",
+          "solution": "",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:1:ex:30",
+          "number": 30,
+          "problem": "What will be the mass of one $^{12}C$ atom in g?",
+          "solution": "",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:1:ex:31",
+          "number": 31,
+          "problem": "How many significant figures should be present in the answer of the following calculations? (i) $\\frac{0.02856 \\times 298.15 \\times 0.112}{0.5785}$ (ii) $5 \\times 5.364$ (iii) $0.0125 + 0.7864 + 0.0215$",
+          "solution": "",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:1:ex:32",
+          "number": 32,
+          "problem": "Use the data given in the following table to calculate the molar mass of naturally occurring argon isotopes: (Isotope, Isotopic molar mass, Abundance) ($^{36}Ar$, $35.96755 \\text{ g mol}^{-1}$, $0.337\\%$), ($^{38}Ar$, $37.96272 \\text{ g mol}^{-1}$, $0.063\\%$), ($^{40}Ar$, $39.9624 \\text{ g mol}^{-1}$, $99.600\\%$)",
+          "solution": "",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:1:ex:33",
+          "number": 33,
+          "problem": "Calculate the number of atoms in each of the following (i) 52 moles of Ar (ii) 52 u of He (iii) 52 g of He.",
+          "solution": "",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:1:ex:34",
+          "number": 34,
+          "problem": "A welding fuel gas contains carbon and hydrogen only. Burning a small sample of it in oxygen gives 3.38 g carbon dioxide, 0.690 g of water and no other products. A volume of 10.0 L (measured at STP) of this welding gas is found to weigh 11.6 g. Calculate (i) empirical formula, (ii) molar mass of the gas, and (iii) molecular formula.",
+          "solution": "",
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:1:ex:35",
+          "number": 35,
+          "problem": "Calcium carbonate reacts with aqueous HCl to give $CaCl_2$ and $CO_2$ according to the reaction, $CaCO_3 (s) + 2 HCl (aq) \\rightarrow CaCl_2 (aq) + CO_2(g) + H_2O(l)$. What mass of $CaCO_3$ is required to react completely with 25 mL of 0.75 M HCl?",
+          "solution": "",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:1:ex:36",
+          "number": 36,
+          "problem": "Chlorine is prepared in the laboratory by treating manganese dioxide ($MnO_2$) with aqueous hydrochloric acid according to the reaction: $4 HCl (aq) + MnO_2(s) \\rightarrow 2H_2O (l) + MnCl_2(aq) + Cl_2 (g)$. How many grams of HCl react with 5.0 g of manganese dioxide?",
+          "solution": "",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        }
+      ]
+    }
+  }
+}

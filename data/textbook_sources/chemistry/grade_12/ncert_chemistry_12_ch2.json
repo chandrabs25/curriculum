@@ -1,0 +1,1761 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_chemistry_12_ch2.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:chemistry:12:2",
+  "curriculum": "ncert",
+  "subject": "chemistry",
+  "grade": 12,
+  "textbook_name": "Chemistry",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:chemistry:12:2",
+    "number": 2,
+    "title": "Electrochemistry",
+    "summary": "Electrochemistry, a core topic in Class 12 Chemistry, explores the relationship between electrical and chemical energy. The chapter begins with electrochemical cells, differentiating galvanic (spontaneous reactions generating electricity) from electrolytic cells (electrical energy driving non-spontaneous reactions). The Daniell cell serves as an example. Electrode potential, its measurement using the Standard Hydrogen Electrode (SHE), and the concept of cell EMF are discussed.\n\nThe Nernst equation is introduced to quantify the concentration dependence of electrode potentials, linking cell potential to Gibbs energy and the equilibrium constant. Conductance in electrolytic solutions, including resistance, resistivity, conductivity, and molar conductivity, is explained. Kohlrausch's law outlines the independent migration of ions, essential for determining limiting molar conductivities, especially for weak electrolytes, and calculating their degree of dissociation.\n\nElectrolysis principles and Faraday's laws, quantifying the relationship between electricity and chemical change, are covered. The chapter then shifts to practical applications with primary and secondary batteries (dry cell, mercury cell, lead storage battery, nickel-cadmium cell) and fuel cells (hydrogen-oxygen), before addressing corrosion, its electrochemical mechanism, and prevention. The concepts connect as follows: starting with basic electrochemical cells, it builds to understanding electrode potential, then quantifies with Nernst and explores conductance and electrolysis and finally to application of electrochemistry such as batteries and corrosion, its prevention. The concepts provide practical applications in energy production, storage, and material protection.",
+    "sections": [
+      {
+        "id": "ncert:chemistry:12:2:2.1",
+        "number": "2.1",
+        "title": "Electrochemical Cells",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:2:2.1:1",
+            "order": 1,
+            "title": "Introduction to Electrochemistry",
+            "content_text": "Electrochemistry is the study of the production of electricity from energy released during spontaneous chemical reactions and the use of electrical energy to bring about non-spontaneous chemical transformations. This field is significant for both theoretical and practical reasons. Many chemicals, such as sodium hydroxide, chlorine, and fluorine, as well as various metals, are produced using electrochemical methods. Batteries and fuel cells utilize electrochemical principles to convert chemical energy into electrical energy for use in instruments and devices. Furthermore, electrochemical reactions are often more energy-efficient and less polluting, contributing to the development of eco-friendly technologies. Biological processes, such as the transmission of sensory signals between cells and the brain, also have an electrochemical origin.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.1:2",
+            "order": 2,
+            "title": "The Daniell Cell",
+            "content_text": "The Daniell cell is a specific type of electrochemical cell that converts the chemical energy liberated during a spontaneous redox reaction into electrical energy. The overall redox reaction occurring in this cell is: $$Zn(s) + Cu^{2+}(aq) \\rightarrow Zn^{2+}(aq) + Cu(s)$$ (2.1). When the concentrations of $Zn^{2+}$ and $Cu^{2+}$ ions are both unity ($1 \\text{ mol dm}^{-3}$), the cell has an electrical potential equal to $1.1 \\text{ V}$. Such a device is generally referred to as a galvanic or voltaic cell.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 2.1",
+                "description": "A diagram of a Daniell cell showing a zinc electrode in a solution containing zinc salt and a copper electrode in a solution containing copper salt. The two solutions are connected by a salt bridge. An external circuit connects the electrodes, showing electron flow from the zinc (anode) to the copper (cathode) and current flow in the opposite direction.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.1:3",
+            "order": 3,
+            "title": "Effect of External Opposite Potential",
+            "content_text": "The behavior of a galvanic cell changes when an external opposite potential ($E_{ext}$) is applied. \n1. If $E_{ext} < 1.1 \\text{ V}$: The reaction continues as normal. Electrons flow from the Zn rod to the Cu rod, and current flows from Cu to Zn. Zinc dissolves at the anode, and copper deposits at the cathode.\n2. If $E_{ext} = 1.1 \\text{ V}$: The external potential balances the cell potential. No flow of electrons or current occurs, and no chemical reaction takes place.\n3. If $E_{ext} > 1.1 \\text{ V}$: The reaction is reversed. The cell now functions as an electrolytic cell, using electrical energy to drive a non-spontaneous chemical reaction. Electrons flow from Cu to Zn, and current flows from Zn to Cu. Zinc is deposited at the zinc electrode, and copper dissolves at the copper electrode.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 2.2",
+                "description": "Three panels (a, b, c) illustrating the functioning of a Daniell cell under different external voltages. Panel (a) shows $E_{ext} < 1.1 \\text{ V}$ with normal galvanic operation. Panel (b) shows $E_{ext} = 1.1 \\text{ V}$ with no current flow. Panel (c) shows $E_{ext} > 1.1 \\text{ V}$ where the cell acts as an electrolytic cell with reversed electron and current flow.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:2:2.2",
+        "number": "2.2",
+        "title": "Galvanic Cells",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:2:2.2:1",
+            "order": 1,
+            "title": "Energy Conversion in Galvanic Cells",
+            "content_text": "A galvanic cell is an electrochemical cell that converts the Gibbs energy of a spontaneous redox reaction into electrical work. This electrical work can be harnessed to power motors or other electrical devices like heaters, fans, and geysers.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.2:2",
+            "order": 2,
+            "title": "Half-Reactions and Redox Couples",
+            "content_text": "The overall reaction in a Daniell cell is a combination of two half-reactions occurring in different portions of the cell:\n(i) $Cu^{2+} + 2e^- \\rightarrow Cu(s)$ (reduction half reaction) (2.2)\n(ii) $Zn(s) \\rightarrow Zn^{2+} + 2e^-$ (oxidation half reaction) (2.3)\nThese portions are called half-cells or redox couples. In the Daniell cell, the copper electrode acts as the reduction half-cell, and the zinc electrode acts as the oxidation half-cell.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.2:3",
+            "order": 3,
+            "title": "Construction of Galvanic Cells",
+            "content_text": "A galvanic cell is constructed by dipping metallic electrodes into their respective electrolytes. These half-cells are connected externally by a metallic wire through a voltmeter and a switch. Internally, the electrolytes are connected through a salt bridge. In some cases, both electrodes may dip into the same electrolyte solution, eliminating the need for a salt bridge.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.2:4",
+            "order": 4,
+            "title": "Electrode Potential",
+            "content_text": "At the interface between an electrode and its electrolyte, there is a tendency for metal ions from the solution to deposit on the electrode (making it positive) and for metal atoms from the electrode to enter the solution as ions (leaving electrons behind and making the electrode negative). At equilibrium, a separation of charges results in a potential difference between the electrode and the electrolyte, known as the electrode potential. When the concentrations of all species involved in a half-cell are unity, the electrode potential is called the standard electrode potential. According to IUPAC convention, standard reduction potentials are now called standard electrode potentials.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.2:5",
+            "order": 5,
+            "title": "Anode and Cathode Identification",
+            "content_text": "In a galvanic cell, the half-cell where oxidation occurs is called the anode; it has a negative potential relative to the solution. The half-cell where reduction occurs is called the cathode; it has a positive potential relative to the solution. Consequently, there exists a potential difference between the two electrodes. When the switch is in the 'on' position, electrons flow from the negative electrode (anode) to the positive electrode (cathode) through the external circuit. The direction of conventional current flow is opposite to the direction of electron flow.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.2:6",
+            "order": 6,
+            "title": "Cell Potential and Electromotive Force (emf)",
+            "content_text": "The potential difference between the two electrodes of a galvanic cell is called the cell potential and is measured in volts. The cell potential is the difference between the electrode potentials (reduction potentials) of the cathode and anode. It is called the cell electromotive force (emf) of the cell when no current is drawn through the cell. By convention, the anode is kept on the left and the cathode on the right while representing the galvanic cell. The emf of the cell is positive and is given by the potential of the half-cell on the right hand side minus the potential of the half-cell on the left hand side, i.e., $$E_{cell} = E_{right} - E_{left}$$",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.2:7",
+            "order": 7,
+            "title": "Cell Representation Convention",
+            "content_text": "A galvanic cell is generally represented by putting a vertical line between metal and electrolyte solution and putting a double vertical line between the two electrolytes connected by a salt bridge. For example, in a cell involving copper and silver, the cell reaction is: $$Cu(s) + 2Ag^+(aq) \\longrightarrow Cu^{2+}(aq) + 2 Ag(s)$$ The half-cell reactions are: Cathode (reduction): $$2Ag^+(aq) + 2e^- \\rightarrow 2Ag(s)$$ Anode (oxidation): $$Cu(s) \\rightarrow Cu^{2+}(aq) + 2e^-$$ The cell can be represented as: $$Cu(s) | Cu^{2+}(aq) || Ag^+(aq) | Ag(s)$$ and the emf is calculated as: $$E_{cell} = E_{right} - E_{left} = E_{Ag^+|Ag} - E_{Cu^{2+}|Cu}$$",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:2:2.2.1",
+        "number": "2.2.1",
+        "title": "Measurement of Electrode Potential",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:2:2.2.1:1",
+            "order": 1,
+            "title": "The Standard Hydrogen Electrode (SHE)",
+            "content_text": "The potential of an individual half-cell cannot be measured; only the difference between two half-cell potentials can be measured. To determine the potential of a single electrode, it is measured against a reference electrode. According to convention, the standard hydrogen electrode (SHE), represented by $Pt(s) | H_2(g) | H^+(aq)$, is assigned a zero potential at all temperatures. The reaction corresponding to this electrode is: $$H^+(aq) + e^- \\rightarrow \\frac{1}{2} H_2(g)$$ The SHE consists of a platinum electrode coated with platinum black, dipped in an acidic solution through which pure hydrogen gas is bubbled. The concentration of both reduced and oxidised forms of hydrogen is maintained at unity, implying a hydrogen gas pressure of 1 bar and a hydrogen ion concentration of 1 molar.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 2.3",
+                "description": "A diagram of the Standard Hydrogen Electrode (SHE) showing a glass tube containing a platinum wire, ending in a finely divided platinum-coated platinum foil. Hydrogen gas at 1 bar is bubbled into a solution containing 1.00 M H+ ions.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.2.1:2",
+            "order": 2,
+            "title": "Measuring Standard Electrode Potentials",
+            "content_text": "At 298 K, the emf of a cell constructed with a SHE as the anode (reference) and another half-cell as the cathode gives the reduction potential of that half-cell. If the concentrations of the species in the right-hand half-cell are unity, the cell potential equals the standard electrode potential, $E^\\circ_R$, of the given half-cell: $$E^\\circ = E^\\circ_R - E^\\circ_L$$ Since $E^\\circ_L$ for SHE is zero, $E^\\circ = E^\\circ_R - 0 = E^\\circ_R$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.2.1:3",
+            "order": 3,
+            "title": "Electrode Potential Examples: Copper and Zinc",
+            "content_text": "For a cell represented as $Pt(s) | H_2(g, 1 \\text{ bar}) | H^+(aq, 1 \\text{ M}) || Cu^{2+}(aq, 1 \\text{ M}) | Cu$, the measured emf is 0.34 V, which is the standard electrode potential for the reaction: $$Cu^{2+}(aq, 1M) + 2e^- \\rightarrow Cu(s)$$ Similarly, for the cell $Pt(s) | H_2(g, 1 \\text{ bar}) | H^+(aq, 1 \\text{ M}) || Zn^{2+}(aq, 1 \\text{ M}) | Zn$, the measured emf is -0.76 V, corresponding to the reaction: $$Zn^{2+}(aq, 1M) + 2e^- \\rightarrow Zn(s)$$ A positive value indicates that $Cu^{2+}$ ions are reduced more easily than $H^+$ ions, while a negative value indicates that $H^+$ ions can oxidize the metal (or the metal can reduce $H^+$ ions).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.2.1:4",
+            "order": 4,
+            "title": "Calculation of Daniell Cell EMF",
+            "content_text": "Using the standard electrode potentials, the emf of the Daniell cell can be calculated. The half-reactions are: Left electrode: $Zn(s) \\rightarrow Zn^{2+}(aq, 1 M) + 2e^-$ and Right electrode: $Cu^{2+}(aq, 1 M) + 2e^- \\rightarrow Cu(s)$. The overall reaction is: $$Zn(s) + Cu^{2+}(aq) \\rightarrow Zn^{2+}(aq) + Cu(s)$$ The emf is: $$E^\\circ_{cell} = E^\\circ_R - E^\\circ_L = 0.34V - (-0.76)V = 1.10 V$$",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.2.1:5",
+            "order": 5,
+            "title": "Inert Electrodes",
+            "content_text": "Metals like platinum or gold are used as inert electrodes. They do not participate in the chemical reaction but provide a surface for oxidation or reduction reactions and for the conduction of electrons. Examples include the hydrogen electrode: $Pt(s)|H_2(g)|H^+(aq)$ with reaction $H^+(aq) + e^- \\rightarrow \\frac{1}{2} H_2(g)$, and the bromine electrode: $Pt(s)|Br_2(aq)|Br^-(aq)$ with reaction $\\frac{1}{2} Br_2(aq) + e^- \\rightarrow Br^-(aq)$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.2.1:6",
+            "order": 6,
+            "title": "Significance of Standard Electrode Potentials",
+            "content_text": "Standard electrode potentials provide information about the relative strength of oxidising and reducing agents. A higher standard electrode potential indicates a greater tendency for the species to be reduced. For instance, fluorine gas ($F_2$) has the highest potential, making it the strongest oxidising agent, while lithium has the lowest, making it the strongest reducing agent. These potentials are used to determine pH, solubility products, equilibrium constants, and other thermodynamic properties.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:2:2.3",
+        "number": "2.3",
+        "title": "Nernst Equation",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:2:2.3:1",
+            "order": 1,
+            "title": "Concentration Dependence of Electrode Potential",
+            "content_text": "The Nernst equation describes how electrode potential depends on the concentration of the species involved. For a general electrode reaction: $$M^{n+}(aq) + ne^- \\rightarrow M(s)$$ the electrode potential at any concentration measured with respect to the standard hydrogen electrode is given by: $$E_{(M^{n+}/M)} = E^\\circ_{(M^{n+}/M)} - \\frac{RT}{nF} \\ln \\frac{[M]}{[M^{n+}]}$$ Since the concentration of solid metal $[M]$ is taken as unity, the equation becomes: $$E_{(M^{n+}/M)} = E^\\circ_{(M^{n+}/M)} - \\frac{RT}{nF} \\ln \\frac{1}{[M^{n+}]} \\quad (2.8)$$ where $R$ is the gas constant ($8.314 \\text{ JK}^{-1} \\text{mol}^{-1}$), $F$ is the Faraday constant ($96487 \\text{ C mol}^{-1}$), $T$ is the temperature in Kelvin, and $[M^{n+}]$ is the molar concentration of the species.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.3:2",
+            "order": 2,
+            "title": "Standard Electrode Potentials Table",
+            "content_text": "Table 2.1 provides the standard electrode potentials ($E^\\circ$) at 298 K for various redox couples, measured relative to the standard hydrogen electrode. The reactions are written as reduction half-reactions: Oxidised form + $ne^-$ $\\rightarrow$ Reduced form. A positive $E^\\circ$ value indicates that the redox couple is a weaker reducing agent than the $H^+/H_2$ couple, while a negative $E^\\circ$ value indicates it is a stronger reducing agent. Fluorine gas ($F_2$) has the highest $E^\\circ$ (2.87 V), making it the strongest oxidizing agent, whereas Lithium ($Li^+$) has the lowest $E^\\circ$ (-3.05 V), making Lithium metal the strongest reducing agent in aqueous solution. Key notes: 1. A negative $E^\\circ$ means the redox couple is a stronger reducing agent than the $H^+/H_2$ couple. 2. A positive $E^\\circ$ means the redox couple is a weaker reducing agent than the $H^+/H_2$ couple.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Table 2.1 Trends",
+                "description": "The table includes vertical arrows indicating trends: an upward arrow on the left labeled 'Increasing strength of oxidising agent' and a downward arrow on the right labeled 'Increasing strength of reducing agent'.",
+                "image_url": null
+              }
+            ],
+            "tables": [
+              {
+                "label": "Table 2.1",
+                "caption": "Standard Electrode Potentials at 298 K",
+                "headers": [
+                  "Reaction (Oxidised form + $ne^-$ $\\rightarrow$ Reduced form)",
+                  "E^\\circ/V"
+                ],
+                "rows": [
+                  [
+                    "$F_2(g) + 2e^-$ $\\rightarrow$ $2F^-$",
+                    "2.87"
+                  ],
+                  [
+                    "$Co^{3+} + e^-$ $\\rightarrow$ $Co^{2+}$",
+                    "1.81"
+                  ],
+                  [
+                    "$H_2O_2 + 2H^+ + 2e^-$ $\\rightarrow$ $2H_2O$",
+                    "1.78"
+                  ],
+                  [
+                    "$MnO_4^- + 8H^+ + 5e^-$ $\\rightarrow$ $Mn^{2+} + 4H_2O$",
+                    "1.51"
+                  ],
+                  [
+                    "$Au^{3+} + 3e^-$ $\\rightarrow$ $Au(s)$",
+                    "1.40"
+                  ],
+                  [
+                    "$Cl_2(g) + 2e^-$ $\\rightarrow$ $2Cl^-$",
+                    "1.36"
+                  ],
+                  [
+                    "$Cr_2O_7^{2-} + 14H^+ + 6e^-$ $\\rightarrow$ $2Cr^{3+} + 7H_2O$",
+                    "1.33"
+                  ],
+                  [
+                    "$O_2(g) + 4H^+ + 4e^-$ $\\rightarrow$ $2H_2O$",
+                    "1.23"
+                  ],
+                  [
+                    "$MnO_2(s) + 4H^+ + 2e^-$ $\\rightarrow$ $Mn^{2+} + 2H_2O$",
+                    "1.23"
+                  ],
+                  [
+                    "$Br_2 + 2e^-$ $\\rightarrow$ $2Br^-$",
+                    "1.09"
+                  ],
+                  [
+                    "$NO_3^- + 4H^+ + 3e^-$ $\\rightarrow$ $NO(g) + 2H_2O$",
+                    "0.97"
+                  ],
+                  [
+                    "$2Hg^{2+} + 2e^-$ $\\rightarrow$ $Hg_2^{2+}$",
+                    "0.92"
+                  ],
+                  [
+                    "$Ag^+ + e^-$ $\\rightarrow$ $Ag(s)$",
+                    "0.80"
+                  ],
+                  [
+                    "$Fe^{3+} + e^-$ $\\rightarrow$ $Fe^{2+}$",
+                    "0.77"
+                  ],
+                  [
+                    "$O_2(g) + 2H^+ + 2e^-$ $\\rightarrow$ $H_2O_2$",
+                    "0.68"
+                  ],
+                  [
+                    "$I_2 + 2e^-$ $\\rightarrow$ $2I^-$",
+                    "0.54"
+                  ],
+                  [
+                    "$Cu^+ + e^-$ $\\rightarrow$ $Cu(s)$",
+                    "0.52"
+                  ],
+                  [
+                    "$Cu^{2+} + 2e^-$ $\\rightarrow$ $Cu(s)$",
+                    "0.34"
+                  ],
+                  [
+                    "$AgCl(s) + e^-$ $\\rightarrow$ $Ag(s) + Cl^-$",
+                    "0.22"
+                  ],
+                  [
+                    "$AgBr(s) + e^-$ $\\rightarrow$ $Ag(s) + Br^-$",
+                    "0.10"
+                  ],
+                  [
+                    "$2H^+ + 2e^-$ $\\rightarrow$ $H_2(g)$",
+                    "0.00"
+                  ],
+                  [
+                    "$Pb^{2+} + 2e^-$ $\\rightarrow$ $Pb(s)$",
+                    " -0.13"
+                  ],
+                  [
+                    "$Sn^{2+} + 2e^-$ $\\rightarrow$ $Sn(s)$",
+                    " -0.14"
+                  ],
+                  [
+                    "$Ni^{2+} + 2e^-$ $\\rightarrow$ $Ni(s)$",
+                    " -0.25"
+                  ],
+                  [
+                    "$Fe^{2+} + 2e^-$ $\\rightarrow$ $Fe(s)$",
+                    " -0.44"
+                  ],
+                  [
+                    "$Cr^{3+} + 3e^-$ $\\rightarrow$ $Cr(s)$",
+                    " -0.74"
+                  ],
+                  [
+                    "$Zn^{2+} + 2e^-$ $\\rightarrow$ $Zn(s)$",
+                    " -0.76"
+                  ],
+                  [
+                    "$2H_2O + 2e^-$ $\\rightarrow$ $H_2(g) + 2OH^-(aq)$",
+                    " -0.83"
+                  ],
+                  [
+                    "$Al^{3+} + 3e^-$ $\\rightarrow$ $Al(s)$",
+                    " -1.66"
+                  ],
+                  [
+                    "$Mg^{2+} + 2e^-$ $\\rightarrow$ $Mg(s)$",
+                    " -2.36"
+                  ],
+                  [
+                    "$Na^+ + e^-$ $\\rightarrow$ $Na(s)$",
+                    " -2.71"
+                  ],
+                  [
+                    "$Ca^{2+} + 2e^-$ $\\rightarrow$ $Ca(s)$",
+                    " -2.87"
+                  ],
+                  [
+                    "$K^+ + e^-$ $\\rightarrow$ $K(s)$",
+                    " -2.93"
+                  ],
+                  [
+                    "$Li^+ + e^-$ $\\rightarrow$ $Li(s)$",
+                    " -3.05"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.3:3",
+            "order": 3,
+            "title": "Nernst Equation for the Daniell Cell",
+            "content_text": "In a Daniell cell, the electrode potential for any given concentration of $Cu^{2+}$ and $Zn^{2+}$ ions can be written as follows. For the Cathode: $E_{(Cu^{2+}/Cu)} = E^\\circ_{(Cu^{2+}/Cu)} - \\frac{RT}{2F} \\ln \\frac{1}{[Cu^{2+}(aq)]}$ (Eq. 2.9). For the Anode: $E_{(Zn^{2+}/Zn)} = E^\\circ_{(Zn^{2+}/Zn)} - \\frac{RT}{2F} \\ln \\frac{1}{[Zn^{2+}(aq)]}$ (Eq. 2.10). The cell potential is $E_{(cell)} = E_{(Cu^{2+}/Cu)} - E_{(Zn^{2+}/Zn)}$. Substituting the expressions: $E_{(cell)} = E^\\circ_{(Cu^{2+}/Cu)} - \\frac{RT}{2F} \\ln \\frac{1}{[Cu^{2+}(aq)]} - (E^\\circ_{(Zn^{2+}/Zn)} - \\frac{RT}{2F} \\ln \\frac{1}{[Zn^{2+}(aq)]})$. This simplifies to $E_{(cell)} = E^\\circ_{(cell)} - \\frac{RT}{2F} \\ln \\frac{[Zn^{2+}]}{[Cu^{2+}]}$ (Eq. 2.11). $E_{(cell)}$ depends on the concentration of both ions; it increases with higher $[Cu^{2+}]$ and decreases with higher $[Zn^{2+}]$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.3:4",
+            "order": 4,
+            "title": "Simplified Nernst Equation and General Form",
+            "content_text": "By converting the natural logarithm to base 10 and substituting $R = 8.314 \\, J \\, K^{-1} \\, mol^{-1}$, $F = 96487 \\, C \\, mol^{-1}$, and $T = 298 \\, K$, the equation for the Daniell cell reduces to $E_{(cell)} = E^\\circ_{(cell)} - \\frac{0.059}{2} \\log \\frac{[Zn^{2+}]}{[Cu^{2+}]}$ (Eq. 2.12). It is essential to use the same number of electrons ($n$) for both electrodes. For example, in the cell $Ni(s) | Ni^{2+}(aq) || Ag^+(aq) | Ag$, the reaction is $Ni(s) + 2Ag^+(aq) \\rightarrow Ni^{2+}(aq) + 2Ag(s)$, and the Nernst equation is $E_{(cell)} = E^\\circ_{(cell)} - \\frac{RT}{2F} \\ln \\frac{[Ni^{2+}]}{[Ag^+]^2}$. For a general reaction $aA + bB \\xrightarrow{ne^-} cC + dD$, the Nernst equation is $E_{(cell)} = E^\\circ_{(cell)} - \\frac{RT}{nF} \\ln \\frac{[C]^c [D]^d}{[A]^a [B]^b}$ (Eq. 2.13).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.3:5",
+            "order": 5,
+            "title": "Worked Example 2.1",
+            "content_text": "This example demonstrates the calculation of cell potential for a magnesium-silver cell with specific molar concentrations using the Nernst equation.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 2.1",
+                "problem": "Represent the cell in which the following reaction takes place: $Mg(s) + 2Ag^+(0.0001M) \\rightarrow Mg^{2+}(0.130M) + 2Ag(s)$. Calculate its $E_{(cell)}$ if $E^\\circ_{(cell)} = 3.17 \\, V$.",
+                "solution": "The cell is represented as $Mg | Mg^{2+}(0.130M) || Ag^+(0.0001M) | Ag$. Using the Nernst equation: $E_{(cell)} = E^\\circ_{(cell)} - \\frac{RT}{2F} \\ln \\frac{[Mg^{2+}]}{[Ag^+]^2} = 3.17 \\, V - \\frac{0.059V}{2} \\log \\frac{0.130}{(0.0001)^2} = 3.17 \\, V - 0.21 \\, V = 2.96 \\, V$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:2:2.3.1",
+        "number": "2.3.1",
+        "title": "Equilibrium Constant from Nernst Equation",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:2:2.3.1:1",
+            "order": 1,
+            "title": "Derivation of Equilibrium Constant from Standard Potential",
+            "content_text": "In a closed Daniell cell circuit, the reaction $Zn(s) + Cu^{2+}(aq) \\rightarrow Zn^{2+}(aq) + Cu(s)$ proceeds until equilibrium is reached. At equilibrium, the concentrations of ions stop changing and the voltmeter reads zero ($E_{(cell)} = 0$). The Nernst equation at equilibrium becomes: $0 = E^\\circ_{(cell)} - \\frac{2.303RT}{2F} \\log \\frac{[Zn^{2+}]}{[Cu^{2+}]}$. Since $\\frac{[Zn^{2+}]}{[Cu^{2+}]} = K_c$ at equilibrium, $E^\\circ_{(cell)} = \\frac{2.303RT}{2F} \\log K_c$. For the Daniell cell at 298 K ($E^\\circ_{(cell)} = 1.1 \\, V$), $1.1 \\, V = \\frac{0.059V}{2} \\log K_c$, which gives $\\log K_c = 37.288$ and $K_c = 2 \\times 10^{37}$. In general, $E^\\circ_{(cell)} = \\frac{2.303RT}{nF} \\log K_c$ (Eq. 2.14). This allows the calculation of equilibrium constants from standard cell potentials.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.3.1:2",
+            "order": 2,
+            "title": "Worked Example: Equilibrium Constant Calculation",
+            "content_text": "This example demonstrates how to calculate the equilibrium constant ($K_c$) for a redox reaction using the standard cell potential ($E^o_{cell}$) and the Nernst equation at equilibrium.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 2.2",
+                "problem": "Calculate the equilibrium constant of the reaction: $Cu(s) + 2Ag^+(aq) \\rightarrow Cu^{2+}(aq) + 2Ag(s)$, $E^o_{(cell)} = 0.46 V$",
+                "solution": "$E^o_{(cell)} = \\frac{0.059 V}{2} \\log K_C = 0.46 V$ or $\\log K_C = \\frac{0.46 V \\times 2}{0.059 V} = 15.6$. $K_C = 3.92 \\times 10^{15}$"
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:2:2.3.2",
+        "number": "2.3.2",
+        "title": "Electrochemical Cell and Gibbs Energy of the Reaction",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:2:2.3.2:1",
+            "order": 1,
+            "title": "Relationship between Electrical Work and Gibbs Energy",
+            "content_text": "Electrical work done in one second is equal to electrical potential multiplied by total charge passed. To obtain maximum work from a galvanic cell, the charge must be passed reversibly. The reversible work done by a galvanic cell is equal to the decrease in its Gibbs energy. If the emf of the cell is $E$ and $nF$ is the amount of charge passed, then the Gibbs energy of the reaction, $\\Delta_r G$, is given by: $$\\Delta_r G = -nFE_{(cell)}$$ (2.15)",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.3.2:2",
+            "order": 2,
+            "title": "Intensive vs Extensive Properties in Cells",
+            "content_text": "It is important to note that $E_{(cell)}$ is an intensive parameter, meaning its value does not depend on the amount of substance. However, $\\Delta_r G$ is an extensive thermodynamic property, and its value depends on $n$ (the number of electrons transferred in the balanced equation). For example, in the reaction: $Zn(s) + Cu^{2+}(aq) \\rightarrow Zn^{2+}(aq) + Cu(s)$, $\\Delta_r G = -2FE_{(cell)}$. If the reaction is written as $2 Zn(s) + 2 Cu^{2+}(aq) \\rightarrow 2 Zn^{2+}(aq) + 2 Cu(s)$, then $\\Delta_r G = -4FE_{(cell)}$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.3.2:3",
+            "order": 3,
+            "title": "Standard Gibbs Energy and Equilibrium Constant",
+            "content_text": "If the concentration of all reacting species is unity (standard state), then $E_{(cell)} = E^o_{(cell)}$ and the standard Gibbs energy of the reaction is: $$\\Delta_r G^o = -nFE^o_{(cell)}$$ (2.16). From the measurement of $E^o_{(cell)}$, we can obtain the standard Gibbs energy, which further allows the calculation of the equilibrium constant $K$ using the thermodynamic relation: $$\\Delta_r G^o = -RT \\ln K$$",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.3.2:4",
+            "order": 4,
+            "title": "Worked Example: Standard Gibbs Energy Calculation",
+            "content_text": "Calculation of standard Gibbs energy for a Daniell cell using its standard electrode potential.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 2.3",
+                "problem": "The standard electrode potential for Daniell cell is 1.1V. Calculate the standard Gibbs energy for the reaction: $Zn(s) + Cu^{2+}(aq) \\rightarrow Zn^{2+}(aq) + Cu(s)$",
+                "solution": "$\\Delta_r G^o = -nFE^o_{(cell)}$. Here $n=2$, $F = 96487 C mol^{-1}$ and $E^o_{(cell)} = 1.1 V$. Therefore, $\\Delta_r G^o = -2 \\times 1.1 V \\times 96487 C mol^{-1} = -21227 J mol^{-1} = -212.27 kJ mol^{-1}$"
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:2:2.4",
+        "number": "2.4",
+        "title": "Conductance of Electrolytic Solutions",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:2:2.4:1",
+            "order": 1,
+            "title": "Electrical Resistance and Resistivity",
+            "content_text": "Electrical resistance ($R$) is measured in ohms ($\\Omega$). In SI base units, it is $(kg m^2)/(S^3 A^2)$. Resistance is directly proportional to the length ($l$) of an object and inversely proportional to its cross-sectional area ($A$): $$R = \\rho \\frac{l}{A}$$ (2.17). The constant $\\rho$ (rho) is called resistivity (specific resistance). Its SI unit is ohm metre ($\\Omega m$). Physically, resistivity is the resistance of a substance when it is 1 metre long with a cross-sectional area of $1 m^2$. Note: $1 \\Omega m = 100 \\Omega cm$ or $1 \\Omega cm = 0.01 \\Omega m$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.4:2",
+            "order": 2,
+            "title": "Conductance and Conductivity",
+            "content_text": "The inverse of resistance is called conductance ($G$): $$G = \\frac{1}{R} = \\frac{A}{\\rho l} = \\kappa \\frac{A}{l}$$ (2.18). The SI unit of conductance is siemens ($S$), also known as $ohm^{-1}$ or mho. The inverse of resistivity is called conductivity (specific conductance), represented by $\\kappa$ (kappa). The SI unit of conductivity is $S m^{-1}$, but $S cm^{-1}$ is also frequently used. Conductivity is the conductance of a material that is 1 m long with a cross-sectional area of $1 m^2$. Note: $1 S cm^{-1} = 100 S m^{-1}$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.4:3",
+            "order": 3,
+            "title": "Classification of Materials by Conductivity",
+            "content_text": "Materials are classified into conductors, insulators, and semiconductors based on the magnitude of their conductivity. Metals and their alloys have very large conductivities and are known as conductors. Certain non-metals like carbon-black and graphite are also electronically conducting. Substances like glass and ceramics have very low conductivity and are called insulators. Semiconductors like silicon and germanium have conductivities between those of conductors and insulators. Table 2.2 provides specific values for various materials at 298.15 K.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 2.2",
+                "caption": "The values of Conductivity of some Selected Materials at 298.15 K",
+                "headers": [
+                  "Material",
+                  "Conductivity/ $S m^{-1}$",
+                  "Material",
+                  "Conductivity/ $S m^{-1}$"
+                ],
+                "rows": [
+                  [
+                    "**Conductors**",
+                    "",
+                    "**Aqueous Solutions**",
+                    ""
+                  ],
+                  [
+                    "Sodium",
+                    "$2.1 \\times 10^3$",
+                    "Pure water",
+                    "$3.5 \\times 10^{-5}$"
+                  ],
+                  [
+                    "Copper",
+                    "$5.9 \\times 10^3$",
+                    "0.1 M HCl",
+                    "3.91"
+                  ],
+                  [
+                    "Silver",
+                    "$6.2 \\times 10^3$",
+                    "0.01 M KCl",
+                    "0.14"
+                  ],
+                  [
+                    "Gold",
+                    "$4.5 \\times 10^3$",
+                    "0.01 M NaCl",
+                    "0.12"
+                  ],
+                  [
+                    "Iron",
+                    "$1.0 \\times 10^3$",
+                    "0.1 M HAc",
+                    "0.047"
+                  ],
+                  [
+                    "Graphite",
+                    "$1.2 \\times 10$",
+                    "0.01 M HAc",
+                    "0.016"
+                  ],
+                  [
+                    "**Insulators**",
+                    "",
+                    "**Semiconductors**",
+                    ""
+                  ],
+                  [
+                    "Glass",
+                    "$1.0 \\times 10^{-16}$",
+                    "CuO",
+                    "$1 \\times 10^{-7}$"
+                  ],
+                  [
+                    "Teflon",
+                    "$1.0 \\times 10^{-18}$",
+                    "Si",
+                    "$1.5 \\times 10^{-2}$"
+                  ],
+                  [
+                    "",
+                    "",
+                    "Ge",
+                    "2.0"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.4:4",
+            "order": 4,
+            "title": "Electronic Conductance",
+            "content_text": "Electrical conductance through metals is called metallic or electronic conductance and is due to the movement of electrons. It depends on: (i) the nature and structure of the metal, (ii) the number of valence electrons per atom, and (iii) temperature (it decreases with an increase in temperature).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.4:5",
+            "order": 5,
+            "title": "Superconductors and Conducting Polymers",
+            "content_text": "Superconductors have zero resistivity or infinite conductivity. Originally, only metals at very low temperatures (0-15 K) were known to be superconductors, but now ceramic materials show superconductivity up to 150 K. Additionally, certain organic polymers like polyacetylene, polyaniline, polypyrrole, and polythiophene can be made electronically conducting. These polymers are lighter than metals and can be used for flexible electronic devices. The discovery of conducting polymers earned MacDiarmid, Heeger, and Shirakawa the Nobel Prize in Chemistry in 2000.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.4:6",
+            "order": 6,
+            "title": "Mechanism of Conductance and Water Conductivity",
+            "content_text": "As the electrons enter at one end and go out through the other end, the composition of the metallic conductor remains unchanged. The mechanism of conductance through semiconductors is more complex. Even very pure water has small amounts of hydrogen and hydroxyl ions ($\\sim 10^{-7}$ M) which lend it very low conductivity ($3.5 \\times 10^{-5} \\text{ S m}^{-1}$). When electrolytes are dissolved in water, they furnish their own ions in the solution hence its conductivity also increases.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.4:7",
+            "order": 7,
+            "title": "Ionic Conductance and Factors Affecting It",
+            "content_text": "The conductance of electricity by ions present in the solutions is called electrolytic or ionic conductance. The conductivity of electrolytic (ionic) solutions depends on: (i) the nature of the electrolyte added, (ii) size of the ions produced and their solvation, (iii) the nature of the solvent and its viscosity, (iv) concentration of the electrolyte, and (v) temperature (it increases with the increase of temperature).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.4:8",
+            "order": 8,
+            "title": "Effect of Direct Current on Ionic Solutions",
+            "content_text": "Passage of direct current through ionic solution over a prolonged period can lead to change in its composition due to electrochemical reactions (Section 2.4.1). This phenomenon presents a challenge for measuring the resistance of electrolytic solutions.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:2:2.4.1",
+        "number": "2.4.1",
+        "title": "Measurement of the Conductivity of Ionic Solutions",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:2:2.4.1:1",
+            "order": 1,
+            "title": "Challenges in Measuring Ionic Resistance",
+            "content_text": "Accurate measurement of an unknown resistance can be performed on a Wheatstone bridge. However, for measuring the resistance of an ionic solution we face two problems. Firstly, passing direct current (DC) changes the composition of the solution. Secondly, a solution cannot be connected to the bridge like a metallic wire or other solid conductor.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.4.1:2",
+            "order": 2,
+            "title": "Solutions: AC Source and Conductivity Cell",
+            "content_text": "The first difficulty in measuring ionic resistance is resolved by using an alternating current (AC) source of power. The second problem is solved by using a specially designed vessel called a conductivity cell. It is available in several designs, two of which are shown in Fig. 2.4.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 2.4",
+                "description": "Two different types of conductivity cells. One design is a horizontal glass tube with electrodes at each end, and the other is a vertical tube with electrodes dipped into the solution. Both feature platinized Pt electrodes and connecting wires.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.4.1:3",
+            "order": 3,
+            "title": "Conductivity Cell Design and Resistance Equation",
+            "content_text": "A conductivity cell basically consists of two platinum electrodes coated with platinum black (finely divided metallic Pt is deposited on the electrodes electrochemically). These have area of cross section equal to '$A$' and are separated by distance '$l$'. Therefore, the solution confined between these electrodes is a column of length $l$ and area of cross section $A$. The resistance of such a column of solution is then given by the equation: $$R = \\rho \\frac{l}{A} = \\frac{l}{\\kappa A}$$ (2.17)",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.4.1:4",
+            "order": 4,
+            "title": "The Cell Constant ($G^*$)",
+            "content_text": "The quantity $l/A$ is called the cell constant, denoted by the symbol $G^*$. It depends on the distance between the electrodes and their area of cross-section and has the dimension of length$^{-1}$. While it can be calculated if $l$ and $A$ are known, their measurement is often inconvenient and unreliable. Instead, the cell constant is usually determined by measuring the resistance of the cell containing a solution whose conductivity is already known accurately, such as KCl solutions (Table 2.3). The cell constant is given by: $$G^* = \\frac{l}{A} = R \\kappa$$ (2.18)",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 2.3",
+                "caption": "Conductivity and Molar conductivity of KCl solutions at 298.15K",
+                "headers": [
+                  "Concentration/Molarity (mol L$^{-1}$)",
+                  "Concentration/Molarity (mol m$^{-3}$)",
+                  "Conductivity (S cm$^{-1}$)",
+                  "Conductivity (S m$^{-1}$)",
+                  "Molar Conductivity (S cm$^2$ mol$^{-1}$)",
+                  "Molar Conductivity (S m$^2$ mol$^{-1}$)"
+                ],
+                "rows": [
+                  [
+                    "1.000",
+                    "1000",
+                    "0.1113",
+                    "11.13",
+                    "111.3",
+                    "111.3 $\\times 10^{-4}$"
+                  ],
+                  [
+                    "0.100",
+                    "100.0",
+                    "0.0129",
+                    "1.29",
+                    "129.0",
+                    "129.0 $\\times 10^{-4}$"
+                  ],
+                  [
+                    "0.010",
+                    "10.00",
+                    "0.00141",
+                    "0.141",
+                    "141.0",
+                    "141.0 $\\times 10^{-4}$"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.4.1:5",
+            "order": 5,
+            "title": "Wheatstone Bridge Arrangement for Resistance Measurement",
+            "content_text": "Once the cell constant is determined, it can be used to measure the resistance or conductivity of any solution. The setup, shown in Fig. 2.5, consists of two fixed resistances $R_3$ and $R_4$, a variable resistance $R_1$, and the conductivity cell with unknown resistance $R_2$. The bridge is fed by an oscillator O (AC power source, 550 to 5000 cycles per second). P is a detector (e.g., a headphone). The bridge is balanced when no current passes through the detector, satisfying: $$R_2 = \\frac{R_1 R_4}{R_3}$$ (2.19)",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 2.5",
+                "description": "Arrangement for measurement of resistance of a solution of an electrolyte using a Wheatstone bridge. The circuit includes a variable resistance R1, the conductivity cell R2, fixed resistances R3 and R4, a detector P, and an AC oscillator O.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.4.1:6",
+            "order": 6,
+            "title": "Calculation of Conductivity from Resistance",
+            "content_text": "Inexpensive conductivity meters can directly read the conductance or resistance. Once the cell constant ($G^*$) and the resistance ($R$) of the solution are determined, the conductivity ($\\kappa$) is calculated as: $$\\kappa = \\frac{\\text{cell constant}}{R} = \\frac{G^*}{R}$$ (2.20)",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.4.1:7",
+            "order": 7,
+            "title": "Molar Conductivity ($\\Lambda_m$)",
+            "content_text": "The conductivity of solutions differs based on the electrolyte's nature, ion size, concentration, and mobility. To compare electrolytes, we define molar conductivity ($\\Lambda_m$), related to conductivity by: $$\\Lambda_m = \\frac{\\kappa}{c}$$ (2.21) where $\\kappa$ is conductivity and $c$ is concentration.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.4.1:8",
+            "order": 8,
+            "title": "Units and Conversions for Molar Conductivity",
+            "content_text": "If $\\kappa$ is in $\\text{S m}^{-1}$ and $c$ in $\\text{mol m}^{-3}$, $\\Lambda_m$ is in $\\text{S m}^2 \\text{ mol}^{-1}$. Note that $1 \\text{ mol m}^{-3} = 1000 (\\text{L/m}^3) \\times \\text{molarity (mol/L)}$. Thus: $$\\Lambda_m (\\text{S cm}^2 \\text{ mol}^{-1}) = \\frac{\\kappa (\\text{S cm}^{-1})}{1000 \\text{ L m}^{-3} \\times \\text{molarity (mol L}^{-1})}$$ Alternatively, using $\\text{S cm}^{-1}$ and $\\text{mol/L}$: $$\\Lambda_m (\\text{S cm}^2 \\text{ mol}^{-1}) = \\frac{\\kappa (\\text{S cm}^{-1}) \\times 1000 (\\text{cm}^3/\\text{L})}{\\text{molarity (mol/L)}}$$ Conversion: $1 \\text{ S m}^2 \\text{ mol}^{-1} = 10^4 \\text{ S cm}^2 \\text{ mol}^{-1}$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.4.1:9",
+            "order": 9,
+            "title": "Worked Example 2.4: Conductivity and Molar Conductivity Calculation",
+            "content_text": "This example illustrates the two-step process of finding the cell constant using a standard solution and then calculating the properties of a test solution.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 2.4",
+                "problem": "Resistance of a conductivity cell filled with $0.1 \\text{ mol L}^{-1}$ KCl solution is $100 \\Omega$. If the resistance of the same cell when filled with $0.02 \\text{ mol L}^{-1}$ KCl solution is $520 \\Omega$, calculate the conductivity and molar conductivity of $0.02 \\text{ mol L}^{-1}$ KCl solution. The conductivity of $0.1 \\text{ mol L}^{-1}$ KCl solution is $1.29 \\text{ S/m}$.",
+                "solution": "1. Calculate Cell Constant ($G^*$): $G^* = \\text{conductivity} \\times \\text{resistance} = 1.29 \\text{ S/m} \\times 100 \\Omega = 129 \\text{ m}^{-1} = 1.29 \\text{ cm}^{-1}$. 2. Calculate Conductivity ($\\kappa$) of $0.02 \\text{ M}$ solution: $\\kappa = G^* / R = 129 \\text{ m}^{-1} / 520 \\Omega = 0.248 \\text{ S m}^{-1}$. 3. Calculate Molar Conductivity ($\\Lambda_m$): Concentration $c = 0.02 \\text{ mol L}^{-1} = 20 \\text{ mol m}^{-3}$. $\\Lambda_m = \\kappa / c = 0.248 \\text{ S m}^{-1} / 20 \\text{ mol m}^{-3} = 124 \\times 10^{-4} \\text{ S m}^2 \\text{ mol}^{-1}$. Alternatively, in cm units: $\\kappa = 1.29 \\text{ cm}^{-1} / 520 \\Omega = 0.248 \\times 10^{-2} \\text{ S cm}^{-1}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.4.1:10",
+            "order": 10,
+            "title": "Conclusion of Worked Example 2.4",
+            "content_text": "The calculation for molar conductivity ($\\Lambda_m$) is completed using the formula $\\Lambda_m = \\kappa \\times 1000 \\text{ cm}^3 \\text{ L}^{-1} / \\text{molarity}$. For a conductivity $\\kappa = 0.248 \\times 10^{-2} \\text{ S cm}^{-1}$ and a concentration of $0.02 \\text{ mol L}^{-1}$, the molar conductivity is calculated as: $$\\Lambda_m = \\frac{0.248 \\times 10^{-2} \\text{ S cm}^{-1} \\times 1000 \\text{ cm}^3 \\text{ L}^{-1}}{0.02 \\text{ mol L}^{-1}} = 124 \\text{ S cm}^2 \\text{ mol}^{-1}$$",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.4.1:11",
+            "order": 11,
+            "title": "Worked Example 2.5: Resistance, Resistivity, and Conductivity of NaOH Solution",
+            "content_text": "This example demonstrates how to calculate the resistivity, conductivity, and molar conductivity of an electrolytic solution given its resistance, concentration, and the dimensions of the column. It provides calculations in both centimeter and meter units to show consistency across different unit systems.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 2.5",
+                "problem": "The electrical resistance of a column of $0.05 \\text{ mol L}^{-1}$ NaOH solution of diameter $1 \\text{ cm}$ and length $50 \\text{ cm}$ is $5.55 \\times 10^3 \\text{ ohm}$. Calculate its resistivity, conductivity and molar conductivity.",
+                "solution": "$A = \\pi r^2 = 3.14 \\times 0.5^2 \\text{ cm}^2 = 0.785 \\text{ cm}^2 = 0.785 \\times 10^{-4} \\text{ m}^2$\n$l = 50 \\text{ cm} = 0.5 \\text{ m}$\n$R = \\frac{\\rho l}{A}$ or $\\rho = \\frac{RA}{l} = \\frac{5.55 \\times 10^3 \\Omega \\times 0.785 \\text{ cm}^2}{50 \\text{ cm}} = 87.135 \\Omega \\text{ cm}$\nConductivity $= \\kappa = \\frac{1}{\\rho} = \\left( \\frac{1}{87.135} \\right) \\text{ S cm}^{-1} = 0.01148 \\text{ S cm}^{-1}$\nMolar conductivity, $\\Lambda_m = \\frac{\\kappa \\times 1000}{c} \\text{ cm}^3 \\text{ L}^{-1} = \\frac{0.01148 \\text{ S cm}^{-1} \\times 1000 \\text{ cm}^3 \\text{ L}^{-1}}{0.05 \\text{ mol L}^{-1}} = 229.6 \\text{ S cm}^2 \\text{ mol}^{-1}$\n\nIn terms of SI units (meters):\n$\\rho = \\frac{RA}{l} = \\frac{5.55 \\times 10^3 \\Omega \\times 0.785 \\times 10^{-4} \\text{ m}^2}{0.5 \\text{ m}} = 87.135 \\times 10^{-2} \\Omega \\text{ m}$\n$\\kappa = \\frac{1}{\\rho} = \\frac{100}{87.135} \\Omega \\text{ m} = 1.148 \\text{ S m}^{-1}$\n$\\Lambda_m = \\frac{\\kappa}{c} = \\frac{1.148 \\text{ S m}^{-1}}{50 \\text{ mol m}^{-3}} = 229.6 \\times 10^{-4} \\text{ S m}^2 \\text{ mol}^{-1}$"
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:2:2.4.2",
+        "number": "2.4.2",
+        "title": "Variation of Conductivity and Molar Conductivity with Concentration",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:2:2.4.2:1",
+            "order": 1,
+            "title": "Variation of Conductivity with Concentration",
+            "content_text": "Both conductivity and molar conductivity change with the concentration of the electrolyte. Conductivity always decreases with a decrease in concentration (dilution) for both weak and strong electrolytes. This is explained by the fact that the number of ions per unit volume that carry the current in a solution decreases upon dilution. The conductivity of a solution at any given concentration is defined as the conductance of one unit volume of solution kept between two platinum electrodes with unit area of cross-section and at a distance of unit length. This is expressed by the equation: $G = \\frac{\\kappa A}{l} = \\kappa$, where both $A$ and $l$ are unity.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.4.2:2",
+            "order": 2,
+            "title": "Definition and Volume Relationship of Molar Conductivity",
+            "content_text": "Molar conductivity ($\\Lambda_m$) of a solution at a given concentration is the conductance of the volume $V$ of solution containing one mole of electrolyte kept between two electrodes with area of cross-section $A$ and distance of unit length. Therefore, $\\Lambda_m = \\frac{\\kappa A}{l}$. Since $l = 1$ and $A = V$ (the volume containing 1 mole of electrolyte), the relationship becomes: $$\\Lambda_m = \\kappa V$$",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.4.2:3",
+            "order": 3,
+            "title": "Variation of Molar Conductivity with Dilution",
+            "content_text": "Molar conductivity increases with a decrease in concentration (dilution). This occurs because the total volume $V$ of solution containing one mole of electrolyte increases upon dilution. It has been found that the decrease in conductivity ($\\kappa$) on dilution is more than compensated by the increase in its volume $V$. Physically, $\\Lambda_m$ at a given concentration is the conductance of the electrolytic solution kept between electrodes at unit distance but with an area large enough to accommodate the volume containing one mole of electrolyte.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 2.6",
+                "description": "A graph showing the variation of molar conductivity ($\\Lambda_m$) against the square root of concentration ($c^{1/2}$). It compares a strong electrolyte (KCl), which shows a linear decrease, and a weak electrolyte (CH3COOH), which shows a steep, non-linear increase at low concentrations.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.4.2:4",
+            "order": 4,
+            "title": "Limiting Molar Conductivity",
+            "content_text": "When the concentration of an electrolyte approaches zero, the molar conductivity is known as the limiting molar conductivity, represented by the symbol $\\Lambda_m^\\circ$. The variation of $\\Lambda_m$ with concentration differs significantly between strong and weak electrolytes.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.4.2:5",
+            "order": 5,
+            "title": "Strong Electrolytes and the Kohlrausch Equation",
+            "content_text": "For strong electrolytes, $\\Lambda_m$ increases slowly with dilution. This relationship can be represented by the equation: $$\\Lambda_m = \\Lambda_m^\\circ - A c^{1/2}$$ A plot of $\\Lambda_m$ against $c^{1/2}$ yields a straight line where the intercept is $\\Lambda_m^\\circ$ and the slope is $-A$. The value of the constant $A$ for a given solvent and temperature depends on the type of electrolyte (the charges on the cation and anion). For example, NaCl is a 1-1 electrolyte, $CaCl_2$ is a 2-1 electrolyte, and $MgSO_4$ is a 2-2 electrolyte. All electrolytes of a particular type share the same value for $A$.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.4.2:6",
+            "order": 6,
+            "title": "Worked Example 2.6: Determination of Limiting Molar Conductivity for KCl",
+            "content_text": "This example uses experimental data for KCl at various concentrations to verify the linear relationship between $\\Lambda_m$ and $c^{1/2}$ and to determine the limiting molar conductivity and the constant $A$.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 2.6",
+                "problem": "The molar conductivity of KCl solutions at different concentrations at 298 K are given below:\n$c/\\text{mol L}^{-1}$: 0.000198, 0.000309, 0.000521, 0.000989\n$\\Lambda_m/\\text{S cm}^2 \\text{ mol}^{-1}$: 148.61, 148.29, 147.81, 147.09\nShow that a plot between $\\Lambda_m$ and $c^{1/2}$ is a straight line. Determine the values of $\\Lambda_m^\\circ$ and A for KCl.",
+                "solution": "Taking the square root of concentration we obtain:\n$c^{1/2}/(\\text{mol L}^{-1})^{1/2}$: 0.01407, 0.01758, 0.02283, 0.03145\n$\\Lambda_m/\\text{S cm}^2 \\text{ mol}^{-1}$: 148.61, 148.29, 147.81, 147.09\nA plot of $\\Lambda_m$ (y-axis) and $c^{1/2}$ (x-axis) is shown in Fig. 2.7. It is nearly a straight line. From the intercept ($c^{1/2} = 0$), we find:\n$\\Lambda_m^\\circ = 150.0 \\text{ S cm}^2 \\text{ mol}^{-1}$\n$A = -\\text{slope} = 87.46 \\text{ S cm}^2 \\text{ mol}^{-1} / (\\text{mol/L})^{1/2}$"
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Fig. 2.7",
+                "description": "A plot of molar conductivity ($\\Lambda_m$) against the square root of concentration ($c^{1/2}$) for KCl, showing a linear relationship with data points plotted from Example 2.6.",
+                "image_url": null
+              }
+            ],
+            "tables": [
+              {
+                "label": "Example 2.6 Data",
+                "caption": "Molar conductivity of KCl at different concentrations",
+                "headers": [
+                  "$c/\\text{mol L}^{-1}$",
+                  "$\\Lambda_m/\\text{S cm}^2 \\text{ mol}^{-1}$"
+                ],
+                "rows": [
+                  [
+                    "0.000198",
+                    "148.61"
+                  ],
+                  [
+                    "0.000309",
+                    "148.29"
+                  ],
+                  [
+                    "0.000521",
+                    "147.81"
+                  ],
+                  [
+                    "0.000989",
+                    "147.09"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.4.2:7",
+            "order": 7,
+            "title": "Kohlrausch's Observations on Strong Electrolytes",
+            "content_text": "By studying the limiting molar conductivity ($\\Lambda_m^\\circ$) of various strong electrolytes, Kohlrausch identified specific patterns. He observed that the difference in $\\Lambda_m^\\circ$ values for pairs of salts sharing a common ion (such as $KCl$ and $NaCl$, or $KBr$ and $NaBr$) remains constant regardless of the common ion's identity. For instance, at 298 K, the difference between potassium and sodium salts is consistently around $23.4\\ S\\ cm^2\\ mol^{-1}$. This consistency implies that each individual ion makes a fixed, independent contribution to the total molar conductivity of the electrolyte.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.4.2:8",
+            "order": 8,
+            "title": "Kohlrausch Law of Independent Migration of Ions",
+            "content_text": "This law states that the limiting molar conductivity of an electrolyte can be expressed as the sum of the individual limiting molar conductivities of its constituent anions and cations. For a general electrolyte that dissociates into $\\nu_+$ cations and $\\nu_-$ anions, the limiting molar conductivity is given by the formula: $$\\Lambda_m^\\circ = \\nu_+ \\lambda_+^\\circ + \\nu_- \\lambda_-^\\circ$$ where $\\lambda_+^\\circ$ and $\\lambda_-^\\circ$ represent the limiting molar conductivities of the cation and anion, respectively. Specific values for various ions in water at 298 K are provided in Table 2.4.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 2.4",
+                "caption": "Limiting Molar Conductivity for some Ions in Water at 298 K",
+                "headers": [
+                  "Ion",
+                  "$\\lambda^\\circ / (S\\ cm^2\\ mol^{-1})$",
+                  "Ion",
+                  "$\\lambda^\\circ / (S\\ cm^2\\ mol^{-1})$"
+                ],
+                "rows": [
+                  [
+                    "$H^+$",
+                    "349.6",
+                    "$OH^-$",
+                    "199.1"
+                  ],
+                  [
+                    "$Na^+$",
+                    "50.1",
+                    "$Cl^-$",
+                    "76.3"
+                  ],
+                  [
+                    "$K^+$",
+                    "73.5",
+                    "$Br^-$",
+                    "78.1"
+                  ],
+                  [
+                    "$Ca^{2+}$",
+                    "119.0",
+                    "$CH_3COO^-$",
+                    "40.9"
+                  ],
+                  [
+                    "$Mg^{2+}$",
+                    "106.0",
+                    "$SO_4^{2-}$",
+                    "160.0"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.4.2:9",
+            "order": 9,
+            "title": "Molar Conductivity of Weak Electrolytes",
+            "content_text": "Weak electrolytes, such as acetic acid, exhibit a low degree of dissociation at higher concentrations. As these solutions are diluted, the degree of dissociation increases, leading to a higher number of ions in the solution volume containing one mole of electrolyte. Consequently, $\\Lambda_m$ increases sharply at low concentrations. Unlike strong electrolytes, the $\\Lambda_m^\\circ$ for weak electrolytes cannot be determined by extrapolating $\\Lambda_m$ to zero concentration. Instead, it must be calculated using Kohlrausch's law.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.4.2:10",
+            "order": 10,
+            "title": "Calculation of Degree of Dissociation",
+            "content_text": "At any given concentration $c$, the degree of dissociation ($\\alpha$) of a weak electrolyte can be approximated as the ratio of its molar conductivity at that concentration to its limiting molar conductivity: $$\\alpha = \\frac{\\Lambda_m}{\\Lambda_m^\\circ}$$ This relationship assumes that the electrolyte dissociates completely at infinite dilution ($\\alpha = 1$).",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.4.2:11",
+            "order": 11,
+            "title": "Determination of Dissociation Constant",
+            "content_text": "The dissociation constant ($K_a$) for a weak electrolyte can be calculated using the degree of dissociation ($\\alpha$). For a concentration $c$, the formula is: $$K_a = \\frac{c\\alpha^2}{(1-\\alpha)}$$ By substituting the expression for $\\alpha$ from the molar conductivity ratio, the dissociation constant is expressed as: $$K_a = \\frac{c \\Lambda_m^2}{\\Lambda_m^\\circ (\\Lambda_m^\\circ - \\Lambda_m)}$$",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.4.2:12",
+            "order": 12,
+            "title": "Applications of Kohlrausch Law",
+            "content_text": "Kohlrausch's law is primarily used to calculate the limiting molar conductivity ($\\Lambda_m^\\circ$) for any electrolyte by summing the $\\lambda^\\circ$ values of its individual ions. It is particularly useful for weak electrolytes where direct measurement is impossible. Additionally, it enables the determination of the degree of dissociation and the dissociation constant for weak electrolytes at specific concentrations.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.4.2:13",
+            "order": 13,
+            "title": "Worked Example 2.7: Calculating Limiting Molar Conductivity",
+            "content_text": "This example demonstrates the direct application of Kohlrausch's law to calculate the limiting molar conductivity of salts using ionic conductivity data from Table 2.4.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 2.7",
+                "problem": "Calculate $\\Lambda_m^\\circ$ for $CaCl_2$ and $MgSO_4$ from the data given in Table 2.4.",
+                "solution": "Using Kohlrausch law: $\\Lambda_{m(CaCl_2)}^\\circ = \\lambda_{Ca^{2+}}^\\circ + 2\\lambda_{Cl^-}^\\circ = 119.0\\ S\\ cm^2\\ mol^{-1} + 2(76.3)\\ S\\ cm^2\\ mol^{-1} = (119.0 + 152.6)\\ S\\ cm^2\\ mol^{-1} = 271.6\\ S\\ cm^2\\ mol^{-1}$. For magnesium sulphate: $\\Lambda_{m(MgSO_4)}^\\circ = \\lambda_{Mg^{2+}}^\\circ + \\lambda_{SO_4^{2-}}^\\circ = 106.0\\ S\\ cm^2\\ mol^{-1} + 160.0\\ S\\ cm^2\\ mol^{-1} = 266\\ S\\ cm^2\\ mol^{-1}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.4.2:14",
+            "order": 14,
+            "title": "Worked Example 2.8: Determining Limiting Molar Conductivity for Weak Electrolytes",
+            "content_text": "This example shows how to calculate the $\\Lambda_m^\\circ$ of a weak acid (acetic acid) by combining the $\\Lambda_m^\\circ$ values of strong electrolytes that share its constituent ions.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 2.8",
+                "problem": "$\\Lambda_m^\\circ$ for $NaCl$, $HCl$ and $NaAc$ are $126.4$, $425.9$ and $91.0\\ S\\ cm^2\\ mol^{-1}$ respectively. Calculate $\\Lambda^\\circ$ for $HAc$.",
+                "solution": "$\\Lambda_{m(HAc)}^\\circ = \\lambda_{H^+}^\\circ + \\lambda_{Ac^-}^\\circ = \\lambda_{H^+}^\\circ + \\lambda_{Cl^-}^\\circ + \\lambda_{Ac^-}^\\circ + \\lambda_{Na^+}^\\circ - \\lambda_{Cl^-}^\\circ - \\lambda_{Na^+}^\\circ = \\Lambda_{m(HCl)}^\\circ + \\Lambda_{m(NaAc)}^\\circ - \\Lambda_{m(NaCl)}^\\circ = (425.9 + 91.0 - 126.4)\\ S\\ cm^2\\ mol^{-1} = 390.5\\ S\\ cm^2\\ mol^{-1}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.4.2:15",
+            "order": 15,
+            "title": "Worked Example 2.9: Calculating Dissociation Constant",
+            "content_text": "This example illustrates the process of finding the dissociation constant of a weak acid by first calculating its molar conductivity and degree of dissociation.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 2.9",
+                "problem": "The conductivity of $0.001028\\ mol\\ L^{-1}$ acetic acid is $4.95 \\times 10^{-5}\\ S\\ cm^{-1}$. Calculate dissociation constant if $\\Lambda_m^\\circ$ for acetic acid is $390.5\\ S\\ cm^2\\ mol^{-1}$.",
+                "solution": "First, calculate molar conductivity: $\\Lambda_m = \\frac{\\kappa}{c} = \\frac{4.95 \\times 10^{-5}\\ S\\ cm^{-1}}{0.001028\\ mol\\ L^{-1}} \\times \\frac{1000\\ cm^3}{L} = 48.15\\ S\\ cm^2\\ mol^{-1}$. Next, find the degree of dissociation: $\\alpha = \\frac{\\Lambda_m}{\\Lambda_m^\\circ} = \\frac{48.15\\ S\\ cm^2\\ mol^{-1}}{390.5\\ S\\ cm^2\\ mol^{-1}} = 0.1233$. Finally, calculate the dissociation constant: $k = \\frac{c\\alpha^2}{(1-\\alpha)} = \\frac{0.001028\\ mol\\ L^{-1} \\times (0.1233)^2}{1 - 0.1233} = 1.78 \\times 10^{-5}\\ mol\\ L^{-1}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:2:2.5",
+        "number": "2.5",
+        "title": "Electrolytic Cells and Electrolysis",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:2:2.5:1",
+            "order": 1,
+            "title": "Principles of Electrolytic Cells",
+            "content_text": "In an electrolytic cell, an external voltage source is applied to drive a non-spontaneous chemical reaction. This is the reverse of a galvanic cell. These cells consist of two electrodes immersed in an electrolyte solution or melt. When a direct current (DC) is applied, ions migrate toward the electrodes to undergo oxidation or reduction.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.5:2",
+            "order": 2,
+            "title": "Electrolysis of Copper Sulphate",
+            "content_text": "A simple electrolytic cell can be constructed using two copper strips in an aqueous solution of copper sulphate. Upon applying a DC voltage, $Cu^{2+}$ ions are reduced and deposited as copper metal at the cathode (negative electrode): $Cu^{2+}(aq) + 2e^- \\rightarrow Cu(s)$. Simultaneously, copper metal at the anode (positive electrode) is oxidized into $Cu^{2+}$ ions: $Cu(s) \\rightarrow Cu^{2+}(aq) + 2e^-$. This process results in the transfer of copper from the anode to the cathode.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.5:3",
+            "order": 3,
+            "title": "Industrial Applications of Electrolysis",
+            "content_text": "Electrolysis is fundamental to several industrial processes. It is used to refine impure copper by making it the anode and depositing pure copper on the cathode. It is also the primary method for producing highly reactive metals like sodium and magnesium from their molten chlorides, and aluminium from aluminium oxide mixed with cryolite.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.5:4",
+            "order": 4,
+            "title": "Faraday's First Law of Electrolysis",
+            "content_text": "Michael Faraday established the quantitative relationship between electricity and chemical change. His first law states that the mass of a substance produced or consumed at any electrode during electrolysis is directly proportional to the quantity of electricity (charge) that passes through the electrolyte.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.5:5",
+            "order": 5,
+            "title": "Faraday's Second Law of Electrolysis",
+            "content_text": "Faraday's second law states that when the same quantity of electricity is passed through different electrolytic solutions, the masses of the various substances liberated are proportional to their respective chemical equivalent weights. The equivalent weight is defined as the atomic mass of the metal divided by the number of electrons required to reduce its cation.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.5:6",
+            "order": 6,
+            "title": "Quantity of Electricity and the Faraday Constant",
+            "content_text": "In the early days of electrochemistry, a coulometer (a standard electrolytic cell) was used to determine the quantity of electricity passed by measuring the amount of metal deposited or consumed. Today, constant current ($I$) sources are used, and the quantity of electricity ($Q$) passed is calculated as $Q = It$, where $Q$ is in coulombs, $I$ is in amperes, and $t$ is in seconds. The charge required for an electrode reaction depends on its stoichiometry. For example, the reduction of one mole of silver ions, $Ag^+(aq) + e^- \\rightarrow Ag(s)$, requires one mole of electrons. The charge on a single electron is $1.6021 \\times 10^{-19}$ C. Therefore, the charge on one mole of electrons is $N_A \\times 1.6021 \\times 10^{-19}$ C $\\approx 96487$ C mol$^{-1}$. This quantity is known as the Faraday constant, represented by the symbol $F$. For approximate calculations, $1F \\approx 96500$ C mol$^{-1}$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.5:7",
+            "order": 7,
+            "title": "Stoichiometry of Electrode Reactions",
+            "content_text": "The amount of substance produced at an electrode is directly proportional to the moles of electrons required by the balanced half-reaction. For the reaction $Mg^{2+}(l) + 2e^- \\rightarrow Mg(s)$, one mole of $Mg^{2+}$ requires 2 moles of electrons ($2F$). Similarly, for $Al^{3+}(l) + 3e^- \\rightarrow Al(s)$, 3 moles of electrons ($3F$) are required. In industrial metal production, currents as high as 50,000 amperes are utilized, which corresponds to approximately 0.518 F per second.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.5:8",
+            "order": 8,
+            "title": "Worked Example: Copper Deposition",
+            "content_text": "This example demonstrates how to calculate the mass of a metal deposited during electrolysis using current, time, and the stoichiometry of the reduction reaction.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 2.10",
+                "problem": "A solution of $CuSO_4$ is electrolysed for 10 minutes with a current of 1.5 amperes. What is the mass of copper deposited at the cathode?",
+                "solution": "$t = 600$ s; charge $Q = current \\times time = 1.5 \\text{ A} \\times 600 \\text{ s} = 900 \\text{ C}$. According to the reaction: $Cu^{2+}(aq) + 2e^- = Cu(s)$. We require $2F$ or $2 \\times 96487$ C to deposit 1 mol or 63 g of Cu. For 900 C, the mass of Cu deposited $= (63 \\text{ g mol}^{-1} \\times 900 \\text{ C}) / (2 \\times 96487 \\text{ C mol}^{-1}) = 0.2938$ g."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:2:2.5.1",
+        "number": "2.5.1",
+        "title": "Products of Electrolysis",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:2:2.5.1:1",
+            "order": 1,
+            "title": "Factors Influencing Electrolysis Products",
+            "content_text": "The products of electrolysis depend on several factors: 1. The nature of the material being electrolysed. 2. The type of electrodes used; inert electrodes (like platinum or gold) do not participate in the chemical reaction, while reactive electrodes participate in the electrode reaction. 3. The standard electrode potentials of the different oxidizing and reducing species present. 4. Kinetic factors; some processes are so slow that they require an extra potential, known as 'overpotential', to occur at a significant rate.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.5.1:2",
+            "order": 2,
+            "title": "Electrolysis of Sodium Chloride",
+            "content_text": "In molten NaCl, the products are sodium metal and $Cl_2$ gas. At the cathode, $Na^+ + e^- \\rightarrow Na$, and at the anode, $Cl^- \\rightarrow \\frac{1}{2}Cl_2 + e^-$. However, in aqueous NaCl, there is competition. At the cathode, both $Na^+(aq)$ and $H^+(aq)$ (from water) can be reduced. Since $E^\\circ$ for $H^+(aq)$ ($0.00$ V) is higher than for $Na^+(aq)$ ($-2.71$ V), $H^+$ is preferred. The net cathode reaction is $H_2O(l) + e^- \\rightarrow \\frac{1}{2}H_2(g) + OH^-(aq)$. At the anode, $Cl^-(aq)$ and $H_2O(l)$ compete. Although $H_2O$ has a lower $E^\\circ$ ($1.23$ V) than $Cl^-$ ($1.36$ V), $Cl^-$ is oxidized to $Cl_2$ due to the overpotential required for oxygen evolution. The net reaction for aqueous NaCl electrolysis is: $NaCl(aq) + H_2O(l) \\rightarrow Na^+(aq) + OH^-(aq) + \\frac{1}{2}H_2(g) + \\frac{1}{2}Cl_2(g)$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.5.1:3",
+            "order": 3,
+            "title": "Electrolysis of Sulfuric Acid",
+            "content_text": "During the electrolysis of sulfuric acid, the following processes are possible at the anode: 1. $2H_2O(l) \\rightarrow O_2(g) + 4H^+(aq) + 4e^-$, $E^\\circ_{(cell)} = +1.23$ V. 2. $2SO_4^{2-}(aq) \\rightarrow S_2O_8^{2-}(aq) + 2e^-$, $E^\\circ_{(cell)} = 1.96$ V. For dilute sulfuric acid, reaction (1) is preferred, leading to oxygen evolution. However, at higher concentrations of $H_2SO_4$, reaction (2) is preferred, producing the peroxodisulphate ion.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:2:2.6",
+        "number": "2.6",
+        "title": "Batteries",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:2:2.6:1",
+            "order": 1,
+            "title": "General Principles of Batteries",
+            "content_text": "A battery consists of one or more electrochemical cells connected in series. It acts as a source of electrical energy by converting the chemical energy of a redox reaction into electrical energy. For practical use, a battery should be reasonably light, compact, and its voltage should not vary significantly during use. Batteries are categorized into two main types: primary and secondary.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:2:2.6.1",
+        "number": "2.6.1",
+        "title": "Primary Batteries",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:2:2.6.1:1",
+            "order": 1,
+            "title": "The Dry Cell (Leclanche Cell)",
+            "content_text": "In primary batteries, the reaction occurs only once, and the battery cannot be reused. The most common example is the dry cell (Leclanche cell). It consists of a zinc container (anode) and a carbon (graphite) rod (cathode) surrounded by powdered manganese dioxide ($MnO_2$) and carbon. The space is filled with a moist paste of ammonium chloride ($NH_4Cl$) and zinc chloride ($ZnCl_2$). The electrode reactions are: Anode: $Zn(s) \\rightarrow Zn^{2+} + 2e^-$; Cathode: $MnO_2 + NH_4^+ + e^- \\rightarrow MnO(OH) + NH_3$. Manganese is reduced from +4 to +3. Ammonia forms a complex with $Zn^{2+}$ as $[Zn(NH_3)_4]^{2+}$. The cell potential is approximately 1.5 V.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 2.8",
+                "description": "A cross-section of a commercial dry cell showing a central carbon rod (cathode) surrounded by a paste of $MnO_2$, carbon black, and $NH_4Cl$. The outer casing is a zinc cup which acts as the anode.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.6.1:2",
+            "order": 2,
+            "title": "The Mercury Cell",
+            "content_text": "The mercury cell is suitable for low-current devices like hearing aids and watches. It consists of a zinc-mercury amalgam as the anode and a paste of $HgO$ and carbon as the cathode. The electrolyte is a paste of $KOH$ and $ZnO$. The electrode reactions are: Anode: $Zn(Hg) + 2OH^- \\rightarrow ZnO(s) + H_2O + 2e^-$; Cathode: $HgO + H_2O + 2e^- \\rightarrow Hg(l) + 2OH^-$. The overall reaction is $Zn(Hg) + HgO(s) \\rightarrow ZnO(s) + Hg(l)$. The cell potential is approximately 1.35 V and remains constant during its life because the overall reaction does not involve any ions in solution whose concentration can change.\nThe overall reaction in a mercury cell is represented by: $$Zn(Hg) + HgO(s) \\rightarrow ZnO(s) + Hg(l)$$ The cell potential is approximately 1.35 V and remains constant during its life. This constancy is due to the fact that the overall reaction does not involve any ion in solution whose concentration can change during its lifetime, ensuring a stable voltage output until the reactants are exhausted.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 2.9",
+                "description": "A cross-sectional diagram of a commonly used mercury cell showing the anode, anode cap, gasket, separator, cathode, and cell can. The reducing agent is zinc and the oxidising agent is mercury (II) oxide.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:2:2.6.2",
+        "number": "2.6.2",
+        "title": "Secondary Batteries",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:2:2.6.2:1",
+            "order": 1,
+            "title": "Introduction to Secondary Batteries and the Lead Storage Battery",
+            "content_text": "A secondary cell can be recharged after use by passing current through it in the opposite direction, allowing it to be used repeatedly. A high-quality secondary cell can undergo numerous discharging and charging cycles. The most significant secondary cell is the lead storage battery, commonly used in automobiles and inverters. It consists of a lead anode and a grid of lead packed with lead dioxide ($PbO_2$) as the cathode. A 38% solution of sulphuric acid ($H_2SO_4$) serves as the electrolyte.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 2.10",
+                "description": "A diagram of a lead storage battery showing the arrangement of positive plates (lead grids filled with $PbO_2$) and negative plates (lead grids filled with spongy lead) immersed in a 38% sulphuric acid solution.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.6.2:2",
+            "order": 2,
+            "title": "Lead Storage Battery Reactions",
+            "content_text": "When the battery is in use (discharging), the following cell reactions occur:\nAnode: $$Pb(s) + SO_4^{2-}(aq) \\rightarrow PbSO_4(s) + 2e^-$$\nCathode: $$PbO_2(s) + SO_4^{2-}(aq) + 4H^+(aq) + 2e^- \\rightarrow PbSO_4(s) + 2H_2O(l)$$\nThe overall cell reaction is: $$Pb(s) + PbO_2(s) + 2H_2SO_4(aq) \\rightarrow 2PbSO_4(s) + 2H_2O(l)$$\nOn charging the battery, the reaction is reversed, and $PbSO_4(s)$ on the anode and cathode is converted back into $Pb$ and $PbO_2$, respectively.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.6.2:3",
+            "order": 3,
+            "title": "The Nickel-Cadmium Cell",
+            "content_text": "Another important secondary cell is the nickel-cadmium cell. It has a longer life than the lead storage battery but is more expensive to manufacture. It features a jelly roll arrangement where layers are separated by a layer soaked in moist sodium or potassium hydroxide. The overall reaction during discharge is: $$Cd(s) + 2Ni(OH)_3(s) \\rightarrow CdO(s) + 2Ni(OH)_2(s) + H_2O(l)$$ Details of the specific electrode reactions during charging and discharging are complex and typically not covered at this level.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 2.11",
+                "description": "A diagram of a rechargeable nickel-cadmium cell in a jelly roll arrangement, showing the positive plate, separator, and negative plate layers.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:2:2.7",
+        "number": "2.7",
+        "title": "Fuel Cells",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:2:2.7:1",
+            "order": 1,
+            "title": "Concept and Efficiency of Fuel Cells",
+            "content_text": "Production of electricity by thermal plants is inefficient (~40%) and a major source of pollution, as it involves converting chemical energy of fossil fuels into heat, then steam, then mechanical energy, and finally electricity. Galvanic cells designed to convert the energy of combustion of fuels like hydrogen, methane, or methanol directly into electrical energy are called fuel cells. They are highly efficient and can run continuously as long as reactants are supplied.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.7:2",
+            "order": 2,
+            "title": "The Hydrogen-Oxygen Fuel Cell",
+            "content_text": "One of the most successful fuel cells uses the reaction of hydrogen with oxygen to form water. This cell provided electrical power for the Apollo space programme, and the water vapour produced was condensed for the astronauts' drinking supply. In this cell, $H_2$ and $O_2$ are bubbled through porous carbon electrodes into a concentrated aqueous sodium hydroxide solution. Catalysts like finely divided platinum or palladium are incorporated into the electrodes. The electrode reactions are:\nCathode: $$O_2(g) + 2H_2O(l) + 4e^- \\rightarrow 4OH^-(aq)$$\nAnode: $$2H_2(g) + 4OH^-(aq) \\rightarrow 4H_2O(l) + 4e^-$$\nOverall reaction: $$2H_2(g) + O_2(g) \\rightarrow 2H_2O(l)$$\nFuel cells operate with an efficiency of about 70% and are pollution-free.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 2.12",
+                "description": "A schematic of a fuel cell using $H_2$ and $O_2$ to produce electricity. It shows the inlet for $H_2$ at the anode, $O_2$ at the cathode, the aqueous electrolyte, and the outlet for $H_2O$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:2:2.8",
+        "number": "2.8",
+        "title": "Corrosion",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:2:2.8:1",
+            "order": 1,
+            "title": "Introduction to Corrosion",
+            "content_text": "Corrosion is the process where the surfaces of metallic objects are slowly coated with oxides or other salts of the metal. Common examples include the rusting of iron, tarnishing of silver, and the development of green coatings on copper and bronze. It causes significant economic damage to buildings, bridges, ships, and vehicles, especially those made of iron.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.8:2",
+            "order": 2,
+            "title": "Electrochemical Mechanism of Rusting",
+            "content_text": "Corrosion is essentially an electrochemical phenomenon. In the rusting of iron, a particular spot on the object behaves as an anode where oxidation occurs:\nAnode: $$2Fe(s) \\rightarrow 2Fe^{2+}(aq) + 4e^-$$ ($E^\\circ_{(Fe^{2+}/Fe)} = -0.44 V$)\nElectrons released move through the metal to another spot which behaves as a cathode. There, oxygen is reduced in the presence of $H^+$ ions (derived from $H_2CO_3$ formed by dissolved $CO_2$ or other acidic oxides):\nCathode: $$O_2(g) + 4H^+(aq) + 4e^- \\rightarrow 2H_2O(l)$$ ($E^\\circ_{H^+|O_2|H_2O} = 1.23 V$)\nThe overall reaction is: $$2Fe(s) + O_2(g) + 4H^+(aq) \\rightarrow 2Fe^{2+}(aq) + 2H_2O(l)$$ ($E^\\circ_{cell} = 1.67 V$)\nThe $Fe^{2+}$ ions are further oxidised by atmospheric oxygen to $Fe^{3+}$ ions, which form rust as hydrated ferric oxide ($Fe_2O_3 \\cdot xH_2O$).",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 2.13",
+                "description": "A diagram illustrating the corrosion of iron in the atmosphere as an electrochemical cell. It shows the anodic site where $Fe$ oxidises to $Fe^{2+}$, the movement of electrons through the metal, and the cathodic site where $O_2$ is reduced to $H_2O$ in the presence of $H^+$ ions.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.8:3",
+            "order": 3,
+            "title": "Prevention of Corrosion",
+            "content_text": "Preventing corrosion is vital for safety and economic reasons. Methods include:\n1. Barrier Protection: Covering the surface with paint or chemicals (e.g., bisphenol).\n2. Metal Coating: Covering the surface with inert metals or more reactive metals like Tin ($Sn$) or Zinc ($Zn$).\n3. Sacrificial Protection: Providing a sacrificial electrode of another metal (like $Mg$ or $Zn$) which corrodes itself to save the primary object.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Problem 2.13",
+                "problem": "Write the chemistry of recharging the lead storage battery, highlighting all the materials that are involved during recharging.",
+                "solution": "During recharging, the cell is operated as an electrolytic cell. The reactions are reversed: $PbSO_4$ at the anode is converted back to $PbO_2$ and $PbSO_4$ at the cathode is converted back to $Pb$. The overall recharging reaction is: $2PbSO_4(s) + 2H_2O(l) \\rightarrow Pb(s) + PbO_2(s) + 2H_2SO_4(aq)$. Materials involved: lead sulphate, water, lead, lead dioxide, and sulphuric acid."
+              },
+              {
+                "label": "Problem 2.14",
+                "problem": "Suggest two materials other than hydrogen that can be used as fuels in fuel cells.",
+                "solution": "Methanol and methane can be used as fuels in fuel cells."
+              },
+              {
+                "label": "Problem 2.15",
+                "problem": "Explain how rusting of iron is envisaged as setting up of an electrochemical cell.",
+                "solution": "During rusting, the iron surface acts as an anode where oxidation occurs: $Fe(s) \\rightarrow Fe^{2+}(aq) + 2e^-$. Another spot acts as a cathode where oxygen is reduced: $O_2(g) + 4H^+(aq) + 4e^- \\rightarrow 2H_2O(l)$. The $Fe^{2+}$ ions are further oxidised to $Fe^{3+}$ which form hydrated ferric oxide ($Fe_2O_3 \\cdot xH_2O$), i.e., rust."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:2.8:4",
+            "order": 4,
+            "title": "The Hydrogen Economy",
+            "content_text": "At present the main source of energy driving our economy is fossil fuels such as coal, oil and gas. As more people aspire to improve their standard of living, energy requirements will increase. The per capita consumption of energy is a measure of development. Carbon dioxide produced by the combustion of fossil fuels results in the 'Greenhouse Effect', leading to a rise in Earth's surface temperature, causing polar ice to melt and ocean levels to rise. To avoid such a catastrophe, we need to limit our use of carbonaceous fuels. Hydrogen provides an ideal alternative as its combustion results in water only. Hydrogen production must come from splitting water using solar energy. Therefore, hydrogen can be used as a renewable and non-polluting source of energy — this is the vision of the Hydrogen Economy. Both the production of hydrogen by electrolysis of water and hydrogen combustion in a fuel cell are important technologies for the future, and both are based on electrochemical principles.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:2:Summary",
+        "number": "Summary",
+        "title": "Summary",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:2:Summary:1",
+            "order": 1,
+            "title": "Electrochemical Cells and Potentials",
+            "content_text": "An electrochemical cell consists of two metallic electrodes dipping in electrolytic solution(s). Electrochemical cells are of two types: in a galvanic cell, the chemical energy of a spontaneous redox reaction is converted into electrical work; in an electrolytic cell, electrical energy is used to carry out a non-spontaneous redox reaction. The standard electrode potential is defined with respect to the standard hydrogen electrode (taken as zero). The standard potential of the cell is obtained by: $E_{cell}^\\circ = E^\\circ_{cathode} - E^\\circ_{anode}$. Standard cell potentials are related to standard Gibbs energy ($\\Delta_r G^\\circ = -nFE_{cell}^\\circ$) and the equilibrium constant ($\\Delta_r G^\\circ = -RT \\ln K$). Concentration dependence of potentials is given by the Nernst equation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:2:Summary:2",
+            "order": 2,
+            "title": "Conductance and Electrolysis",
+            "content_text": "The conductivity $\\kappa$ of an electrolytic solution depends on the concentration of the electrolyte, nature of solvent and temperature. Molar conductivity $\\Lambda_m = \\kappa / c$. Conductivity decreases but molar conductivity increases with decrease in concentration. Kohlrausch's law of independent migration of ions states that molar conductivity at infinite dilution is the sum of contributions of individual ions. Batteries and fuel cells are useful forms of galvanic cells. Corrosion of metals is essentially an electrochemical phenomenon. Electrochemical principles are relevant to the Hydrogen Economy.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:chemistry:12:2:ex:1",
+          "number": 1,
+          "problem": "How would you determine the standard electrode potential of the system $Mg^{2+}|Mg$?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "short_answer"
+        },
+        {
+          "id": "ncert:chemistry:12:2:ex:2",
+          "number": 2,
+          "problem": "Can you store copper sulphate solutions in a zinc pot?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:2:ex:3",
+          "number": 3,
+          "problem": "Consult the table of standard electrode potentials and suggest three substances that can oxidise ferrous ions under suitable conditions.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:2:ex:4",
+          "number": 4,
+          "problem": "Calculate the potential of hydrogen electrode in contact with a solution whose pH is 10.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:2:ex:5",
+          "number": 5,
+          "problem": "Calculate the emf of the cell in which the following reaction takes place: $Ni(s) + 2Ag^+(0.002 M) \\rightarrow Ni^{2+}(0.160 M) + 2Ag(s)$. Given that $E^o_{cell} = 1.05 V$.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:2:ex:6",
+          "number": 6,
+          "problem": "The cell in which the following reaction occurs: $2Fe^{3+}(aq) + 2I^-(aq) \\rightarrow 2Fe^{2+}(aq) + I_2(s)$ has $E^o_{cell} = 0.236 V$ at 298 K. Calculate the standard Gibbs energy and the equilibrium constant of the cell reaction.",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:2:ex:7",
+          "number": 7,
+          "problem": "Why does the conductivity of a solution decrease with dilution?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:2:ex:8",
+          "number": 8,
+          "problem": "Suggest a way to determine the $\\Lambda_m^\\circ$ value of water.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:2:ex:9",
+          "number": 9,
+          "problem": "The molar conductivity of $0.025\\ mol\\ L^{-1}$ methanoic acid is $46.1\\ S\\ cm^2\\ mol^{-1}$. Calculate its degree of dissociation and dissociation constant. Given $\\lambda^\\circ(H^+) = 349.6\\ S\\ cm^2\\ mol^{-1}$ and $\\lambda^\\circ(HCOO^-) = 54.6\\ S\\ cm^2\\ mol^{-1}$.",
+          "solution": "$\\Lambda_m^\\circ(HCOOH) = 349.6 + 54.6 = 404.2\\ S\\ cm^2\\ mol^{-1}$. $\\alpha = 46.1 / 404.2 = 0.114$. $K_a = (0.025 \\times 0.114^2) / (1 - 0.114) = 3.67 \\times 10^{-4}$.",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:2:ex:10",
+          "number": 10,
+          "problem": "If a current of 0.5 ampere flows through a metallic wire for 2 hours, then how many electrons would flow through the wire?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:2:ex:11",
+          "number": 11,
+          "problem": "Suggest a list of metals that are extracted electrolytically.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "short_answer"
+        },
+        {
+          "id": "ncert:chemistry:12:2:ex:12",
+          "number": 12,
+          "problem": "Consider the reaction: $Cr_2O_7^{2-} + 14H^+ + 6e^- \\rightarrow 2Cr^{3+} + 7H_2O$. What is the quantity of electricity in coulombs needed to reduce 1 mol of $Cr_2O_7^{2-}$?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:2:ex:13",
+          "number": 13,
+          "problem": "Arrange the following metals in the order in which they displace each other from the solution of their salts. Al, Cu, Fe, Mg and Zn.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:2:ex:14",
+          "number": 14,
+          "problem": "Given the standard electrode potentials, $K^+/K = -2.93$ V, $Ag^+/Ag = 0.80$ V, $Hg^{2+}/Hg = 0.79$ V, $Mg^{2+}/Mg = -2.37$ V, $Cr^{3+}/Cr = -0.74$ V. Arrange these metals in their increasing order of reducing power.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:2:ex:15",
+          "number": 15,
+          "problem": "Depict the galvanic cell in which the reaction $Zn(s) + 2Ag^+(aq) \\rightarrow Zn^{2+}(aq) + 2Ag(s)$ takes place. Further show: (i) Which of the electrode is negatively charged? (ii) The carriers of the current in the cell. (iii) Individual reaction at each electrode.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:2:ex:16",
+          "number": 16,
+          "problem": "Calculate the standard cell potentials of galvanic cell in which the following reactions take place: (i) $2Cr(s) + 3Cd^{2+}(aq) \\rightarrow 2Cr^{3+}(aq) + 3Cd$ (ii) $Fe^{2+}(aq) + Ag^+(aq) \\rightarrow Fe^{3+}(aq) + Ag(s)$. Calculate the $\\Delta_r G^\\circ$ and equilibrium constant of the reactions.",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:2:ex:17",
+          "number": 17,
+          "problem": "Write the Nernst equation and emf of the following cells at 298 K: (i) $Mg(s)|Mg^{2+}(0.001M)||Cu^{2+}(0.0001 M)|Cu(s)$ (ii) $Fe(s)|Fe^{2+}(0.001M)||H^+(1M)|H_2(g)(1bar)|Pt(s)$ (iii) $Sn(s)|Sn^{2+}(0.050 M)||H^+(0.020 M)|H_2(g)(1 bar)|Pt(s)$ (iv) $Pt(s)|Br^-(0.010 M)|Br_2(l)||H^+(0.030 M)|H_2(g)(1 bar)|Pt(s)$",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:2:ex:18",
+          "number": 18,
+          "problem": "In the button cells widely used in watches and other devices the following reaction takes place: $Zn(s) + Ag_2O(s) + H_2O(l) \\rightarrow Zn^{2+}(aq) + 2Ag(s) + 2OH^-(aq)$. Determine $\\Delta_r G^\\circ$ and $E^\\circ$ for the reaction.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:2:ex:19",
+          "number": 19,
+          "problem": "Define conductivity and molar conductivity for the solution of an electrolyte. Discuss their variation with concentration.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:2:ex:20",
+          "number": 20,
+          "problem": "The conductivity of 0.20 M solution of KCl at 298 K is 0.0248 S cm$^{-1}$. Calculate its molar conductivity.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:2:ex:21",
+          "number": 21,
+          "problem": "The resistance of a conductivity cell containing 0.001 M KCl solution at 298 K is 1500 $\\Omega$. What is the cell constant if conductivity of 0.001 M KCl solution at 298 K is $0.146 \\times 10^{-3}$ S cm$^{-1}$.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:2:ex:22",
+          "number": 22,
+          "problem": "The conductivity of sodium chloride at 298 K has been determined at different concentrations. Calculate $\\Lambda_m$ for all concentrations and draw a plot between $\\Lambda_m$ and $c^{1/2}$. Find the value of $\\Lambda_m^\\circ$.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:2:ex:23",
+          "number": 23,
+          "problem": "Conductivity of 0.00241 M acetic acid is $7.896 \\times 10^{-5}$ S cm$^{-1}$. Calculate its molar conductivity. If $\\Lambda_m^\\circ$ for acetic acid is 390.5 S cm$^2$ mol$^{-1}$, what is its dissociation constant?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:2:ex:24",
+          "number": 24,
+          "problem": "How much charge is required for the following reductions: (i) 1 mol of $Al^{3+}$ to Al? (ii) 1 mol of $Cu^{2+}$ to Cu? (iii) 1 mol of $MnO_4^-$ to $Mn^{2+}$?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:2:ex:25",
+          "number": 25,
+          "problem": "How much electricity in terms of Faraday is required to produce (i) 20.0 g of Ca from molten $CaCl_2$? (ii) 40.0 g of Al from molten $Al_2O_3$?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:2:ex:26",
+          "number": 26,
+          "problem": "How much electricity is required in coulomb for the oxidation of (i) 1 mol of $H_2O$ to $O_2$? (ii) 1 mol of FeO to $Fe_2O_3$?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:2:ex:27",
+          "number": 27,
+          "problem": "A solution of $Ni(NO_3)_2$ is electrolysed between platinum electrodes using a current of 5 amperes for 20 minutes. What mass of Ni is deposited at the cathode?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:2:ex:28",
+          "number": 28,
+          "problem": "Three electrolytic cells A, B, C containing solutions of $ZnSO_4$, $AgNO_3$ and $CuSO_4$, respectively are connected in series. A steady current of 1.5 amperes was passed through them until 1.45 g of silver deposited at the cathode of cell B. How long did the current flow? What mass of copper and zinc were deposited?",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:2:ex:29",
+          "number": 29,
+          "problem": "Using the standard electrode potentials, predict if the reaction between the following is feasible: (i) $Fe^{3+}(aq)$ and $I^-(aq)$ (ii) $Ag^+(aq)$ and $Cu(s)$ (iii) $Fe^{3+}(aq)$ and $Br^-(aq)$ (iv) $Ag(s)$ and $Fe^{3+}(aq)$ (v) $Br_2(aq)$ and $Fe^{2+}(aq)$.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:2:ex:30",
+          "number": 30,
+          "problem": "Predict the products of electrolysis in each of the following: (i) An aqueous solution of $AgNO_3$ with silver electrodes. (ii) An aqueous solution of $AgNO_3$ with platinum electrodes. (iii) A dilute solution of $H_2SO_4$ with platinum electrodes. (iv) An aqueous solution of $CuCl_2$ with platinum electrodes.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        }
+      ]
+    }
+  }
+}

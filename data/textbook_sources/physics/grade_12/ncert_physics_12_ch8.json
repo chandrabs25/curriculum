@@ -1,0 +1,646 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_physics_12_ch8.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:physics:12:8",
+  "curriculum": "ncert",
+  "subject": "physics",
+  "grade": 12,
+  "textbook_name": "Physics Part I",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:physics:12:8",
+    "number": 8,
+    "title": "Electromagnetic Waves",
+    "summary": "Chapter 8, Electromagnetic Waves, begins by introducing Maxwell's displacement current, addressing an inconsistency in Ampere's Law and showing that a changing electric field generates a magnetic field. This leads to Maxwell's equations, the foundation of electromagnetism, which predict the existence of electromagnetic (EM) waves. The chapter then discusses how accelerating charges produce EM waves, experimentally verified by Hertz, demonstrating that oscillating electric and magnetic fields propagate together.\n\nKey formulas include the displacement current, `i_d = ε₀ dΦ_E/dt`, and the speed of light in vacuum, `c = 1/√(μ₀ε₀)`. The relationships between electric and magnetic field magnitudes (B₀ = E₀/c) and the wave number and angular frequency (ω/k = c) are also vital.\n\nBuilding on these principles, the chapter explores the transverse nature of EM waves and their mathematical representation using sinusoidal functions. It then delves into the electromagnetic spectrum, categorizing EM waves by frequency and wavelength, including radio waves, microwaves, infrared, visible light, ultraviolet, X-rays, and gamma rays, discussing their sources, properties, and applications.\n\nThe significance of this chapter lies in understanding the fundamental nature of light and other forms of electromagnetic radiation, enabling technologies from radio communication and medical imaging to energy transfer from the sun.",
+    "sections": [
+      {
+        "id": "ncert:physics:12:8:8.1",
+        "number": "8.1",
+        "title": "Introduction",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:8:8.1:1",
+            "order": 1,
+            "title": "Historical Context and Maxwell's Hypothesis",
+            "content_text": "In previous chapters, it was established that an electric current produces a magnetic field and that a magnetic field changing with time gives rise to an electric field (Faraday's Law). James Clerk Maxwell (1831-1879) argued for the converse: that a time-varying electric field must also generate a magnetic field. While applying Ampere’s circuital law to find the magnetic field at a point outside a capacitor connected to a time-varying current, Maxwell noticed a fundamental inconsistency. To resolve this, he suggested the existence of an additional current term, which he termed the 'displacement current'.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:8:8.1:2",
+            "order": 2,
+            "title": "Maxwell's Equations and the Prediction of EM Waves",
+            "content_text": "Maxwell formulated a set of equations involving electric and magnetic fields, along with charge and current densities, known as Maxwell’s equations. Together with the Lorentz force formula, these equations mathematically express all basic laws of electromagnetism. The most significant prediction from these equations is the existence of electromagnetic waves—coupled, time-varying electric and magnetic fields that propagate through space. Maxwell calculated the speed of these waves to be approximately $3 \\times 10^8$ m/s, matching the measured speed of light. This led to the landmark conclusion that light is an electromagnetic wave. This theoretical work was later experimentally verified by Heinrich Hertz in 1885.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:8:8.2",
+        "number": "8.2",
+        "title": "Displacement Current",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:8:8.2:1",
+            "order": 1,
+            "title": "Inconsistency in Ampere's Circuital Law",
+            "content_text": "Consider the process of charging a capacitor $C$ with a time-dependent current $i(t)$. To find the magnetic field $B$ at a point $P$ outside the capacitor, we apply Ampere's circuital law: $$\\oint \\mathbf{B} \\cdot d\\mathbf{l} = \\mu_0 i(t)$$ (Eq. 8.1). For a plane circular loop of radius $r$ perpendicular to the wire, symmetry dictates the magnetic field is directed along the circumference and is uniform in magnitude. Thus, the left side of the equation becomes $B(2\\pi r)$, leading to: $$B(2\\pi r) = \\mu_0 i(t)$$ (Eq. 8.2). However, if we consider a different surface with the same boundary—such as a pot-shaped surface [Fig 8.1(b)] or a tiffin-box shaped surface [Fig 8.1(c)] that passes between the capacitor plates—no conduction current passes through it. In this case, Ampere's law suggests $B(2\\pi r) = 0$. This contradiction indicates that Ampere's circuital law is incomplete and requires an additional term.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 8.1",
+                "description": "A parallel plate capacitor C as part of a circuit with current i(t). (a) A flat circular loop of radius r used to determine the magnetic field at point P. (b) A pot-shaped surface passing through the interior between the capacitor plates with the same circular rim. (c) A tiffin-shaped surface with the circular loop as its rim and a flat bottom S between the plates. Arrows show the uniform electric field between the plates.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:8:8.2:2",
+            "order": 2,
+            "title": "Derivation of Displacement Current",
+            "content_text": "The missing term in Ampere's law is related to the changing electric field between the capacitor plates. If the plates have area $A$ and total charge $Q$, the magnitude of the electric field $\\mathbf{E}$ is $E = \\frac{Q/A}{\\epsilon_0}$. The electric flux $\\Phi_E$ through the surface $S$ between the plates is: $$\\Phi_E = |\\mathbf{E}| A = \\frac{1}{\\epsilon_0} \\frac{Q}{A} A = \\frac{Q}{\\epsilon_0}$$ (Eq. 8.3). If the charge $Q$ changes with time, the rate of change of flux is: $$\\frac{d\\Phi_E}{dt} = \\frac{d}{dt} \\left( \\frac{Q}{\\epsilon_0} \\right) = \\frac{1}{\\epsilon_0} \\frac{dQ}{dt}$$. Since $i = \\frac{dQ}{dt}$ is the current in the circuit, we find: $$\\epsilon_0 \\left( \\frac{d\\Phi_E}{dt} \\right) = i$$ (Eq. 8.4). This term, $\\epsilon_0 \\frac{d\\Phi_E}{dt}$, is the missing component required for consistency in Ampere's law.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:8:8.2:3",
+            "order": 3,
+            "title": "Conduction and Displacement Current",
+            "content_text": "The current carried by conductors due to the flow of charges is called 'conduction current'. The new term, $i_d = \\epsilon_0 \\frac{d\\Phi_E}{dt}$, which arises due to a changing electric field (or electric displacement), is called the 'displacement current' or 'Maxwell’s displacement current'. Maxwell generalized Ampere's law by stating that the total current is the sum of the conduction current and the displacement current. This ensures that the magnetic field $B$ at point $P$ is the same regardless of the surface used for the calculation. The source of a magnetic field is not just the conduction electric current due to flowing The source of a magnetic field is not just the conduction electric current due to flowing charges, but also the time rate of change of electric field. More precisely, the total current $i$ is the sum of the conduction current denoted by $i_c$, and the displacement current denoted by $i_d = \\epsilon_0 (d\\Phi_E/dt)$. The total current is given by: $$i = i_c + i_d = i_c + \\epsilon_0 \\frac{d\\Phi_E}{dt}$$ Outside the capacitor plates, we have only conduction current $i_c = i$, and no displacement current ($i_d = 0$). Conversely, inside the capacitor, there is no conduction current ($i_c = 0$), and there is only displacement current, so that $i_d = i$. The generalised Ampere’s circuital law, known as the Ampere-Maxwell law, states that the line integral of the magnetic field around a closed loop is proportional to the sum of the conduction and displacement currents: $$\\oint \\mathbf{B} \\cdot d\\mathbf{l} = \\mu_0 i_c + \\mu_0 \\epsilon_0 \\frac{d\\Phi_E}{dt}$$",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:8:8.2:4",
+            "order": 4,
+            "title": "Physical Effects of Displacement Current",
+            "content_text": "In all respects, the displacement current has the same physical effects as the conduction current. For steady electric fields in a conducting wire, the displacement current may be zero since the electric field $\\mathbf{E}$ does not change with time. However, in cases like a charging capacitor, both conduction and displacement currents may be present in different regions of space. In most cases, they both may be present in the same region of space, as there exist no perfectly conducting or perfectly insulating medium. There may be large regions of space where there is no conduction current, but there is only a displacement current due to time-varying electric fields. In such a region, we expect a magnetic field. This prediction can be verified experimentally; for example, a magnetic field between the plates of a capacitor can be measured and is seen to be the same as that just outside.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 8.2",
+                "description": "(a) The electric and magnetic fields E and B between the capacitor plates, at the point M. (b) A cross-sectional view of Fig. (a) showing the magnetic field B at radius r from the center.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:8:8.2:5",
+            "order": 5,
+            "title": "Symmetry in Electromagnetism",
+            "content_text": "The existence of displacement current makes the laws of electricity and magnetism more symmetrical. Faraday’s law of induction states that a changing magnetic field gives rise to an electric field. Symmetrically, the Ampere-Maxwell law implies that a changing electric field gives rise to a magnetic field. Thus, time-dependent electric and magnetic fields give rise to each other. A very important consequence of this symmetry is the existence of electromagnetic waves.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:8:8.2:6",
+            "order": 6,
+            "title": "Maxwell’s Equations in Vacuum",
+            "content_text": "The basic laws of electromagnetism can be summarized by four fundamental equations known as Maxwell's equations. These equations describe how electric and magnetic fields are generated and altered by each other and by charges and currents. The following table summarizes these equations in vacuum.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Maxwell’s Equations",
+                "caption": "Maxwell’s Equations in Vacuum",
+                "headers": [
+                  "Equation",
+                  "Name"
+                ],
+                "rows": [
+                  [
+                    "$\\oint \\mathbf{E} \\cdot d\\mathbf{A} = Q/\\epsilon_0$",
+                    "Gauss’s Law for electricity"
+                  ],
+                  [
+                    "$\\oint \\mathbf{B} \\cdot d\\mathbf{A} = 0$",
+                    "Gauss’s Law for magnetism"
+                  ],
+                  [
+                    "$\\oint \\mathbf{E} \\cdot d\\mathbf{l} = \\frac{-d\\Phi_B}{dt}$",
+                    "Faraday’s Law"
+                  ],
+                  [
+                    "$\\oint \\mathbf{B} \\cdot d\\mathbf{l} = \\mu_0 i_c + \\mu_0 \\epsilon_0 \\frac{d\\Phi_E}{dt}$",
+                    "Ampere – Maxwell Law"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:8:8.3",
+        "number": "8.3",
+        "title": "Electromagnetic Waves",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:8:8.3:1",
+            "order": 1,
+            "title": "Sources of Electromagnetic Waves",
+            "content_text": "Electromagnetic waves are produced by accelerated charges. Stationary charges produce only electrostatic fields, while charges in uniform motion (steady currents) produce magnetic fields that do not vary with time. According to Maxwell’s theory, accelerated charges radiate electromagnetic waves. An oscillating charge is a common example of an accelerating charge. It produces an oscillating electric field in space, which in turn produces an oscillating magnetic field. This process continues as the oscillating electric and magnetic fields regenerate each other, propagating the wave through space. The frequency of the electromagnetic wave equals the frequency of oscillation of the charge. The energy of the wave comes from the energy of the source (the accelerated charge).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:8:8.3:2",
+            "order": 2,
+            "title": "Experimental History of EM Waves",
+            "content_text": "Testing the prediction that light is an EM wave required high-frequency circuits. The frequency of yellow light is about $6 \\times 10^{14}$ Hz, while modern electronic circuits reach only about $10^{11}$ Hz. Heinrich Rudolf Hertz first successfully demonstrated EM waves in the low-frequency radio region in 1887. Later, Jagdish Chandra Bose in Calcutta succeeded in producing waves of much shorter wavelength (25 mm to 5 mm). Guglielmo Marconi followed Hertz's work and succeeded in transmitting electromagnetic waves over distances of many kilometres, marking the beginning of the field of wireless communication.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:8:8.3:3",
+            "order": 3,
+            "title": "Nature of Electromagnetic Waves",
+            "content_text": "Maxwell’s equations show that electric and magnetic fields in an electromagnetic wave are perpendicular to each other and to the direction of propagation. This indicates that EM waves are transverse in nature. For a wave propagating along the z-direction, the electric field $E_x$ might be along the x-axis and the magnetic field $B_y$ along the y-axis. Both fields vary sinusoidally with space ($z$) and time ($t$).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 8.3",
+                "description": "A linearly polarised electromagnetic wave propagating in the z-direction with the oscillating electric field E along the x-direction and the oscillating magnetic field B along the y-direction.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:8:8.3:4",
+            "order": 4,
+            "title": "Mathematical Description of EM Waves",
+            "content_text": "The electric and magnetic fields of a plane electromagnetic wave propagating in the z-direction can be written as: $$E_x = E_0 \\sin(kz - \\omega t)$$ $$B_y = B_0 \\sin(kz - \\omega t)$$ Here, $k$ is the magnitude of the propagation vector (or wave number), related to the wavelength $\\lambda$ by the equation: $$k = \\frac{2\\pi}{\\lambda}$$ The fields $E_x$ and $B_y$ are perpendicular to each other and to the direction of propagation $z$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:8:8.3:5",
+            "order": 5,
+            "title": "Relation between Wave Parameters",
+            "content_text": "The angular frequency $\\omega$ and the magnitude of the wave vector $k$ (or propagation vector) are fundamental to describing the electromagnetic wave. The direction of $\\mathbf{k}$ indicates the direction of wave propagation. The speed of propagation is given by the ratio $\\omega/k$. By applying Maxwell's equations to the wave expressions for $E_x$ and $B_y$, it is found that $\\omega = ck$, where $c = 1/\\sqrt{\\mu_0 \\epsilon_0}$ is the speed of light in vacuum. This relationship is commonly expressed using frequency $\\nu = \\omega/2\\pi$ and wavelength $\\lambda = 2\\pi/k$ as $2\\pi\\nu = c(2\\pi/\\lambda)$, which simplifies to the standard wave equation $\\nu\\lambda = c$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:8:8.3:6",
+            "order": 6,
+            "title": "Relation between Field Magnitudes",
+            "content_text": "Maxwell's equations also dictate a specific relationship between the magnitudes of the electric and magnetic fields in an electromagnetic wave. The peak magnitude of the magnetic field $B_0$ is related to the peak magnitude of the electric field $E_0$ by the equation $B_0 = E_0/c$. This implies that in SI units, the numerical value of the electric field is much larger than that of the magnetic field due to the high value of the speed of light.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:8:8.3:7",
+            "order": 7,
+            "title": "Propagation in Material Media",
+            "content_text": "Electromagnetic waves are self-sustaining oscillations of electric and magnetic fields that do not require a material medium for propagation, distinguishing them from mechanical waves. However, they can travel through matter, such as glass. In a material medium, the fields are influenced by the medium's permittivity $\\epsilon$ and magnetic permeability $\\mu$. Consequently, the velocity of light in a medium is given by $v = 1/\\sqrt{\\mu \\epsilon}$. This dependence on the medium's electromagnetic properties leads to the concept of the refractive index, which is defined as the ratio of the velocities of light in two different media.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:8:8.3:8",
+            "order": 8,
+            "title": "Speed of Light as a Fundamental Constant",
+            "content_text": "The velocity of electromagnetic waves in a vacuum is a critical fundamental constant. Experimental evidence across various wavelengths confirms that this velocity is constant at approximately $3 \\times 10^8$ m/s, independent of the wavelength. This constancy is so robustly established that the speed of light is now used as the basis for defining the standard unit of length (the metre).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:8:8.3:9",
+            "order": 9,
+            "title": "Energy Transport",
+            "content_text": "A key characteristic of electromagnetic waves is their ability to transport energy across space. This property underpins much of modern technology, such as the transmission of radio and television signals from broadcasting stations. On a planetary scale, the energy carried by light from the sun to the Earth is what makes life possible.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:8:8.3:10",
+            "order": 10,
+            "title": "Example 8.1: Calculating Magnetic Field from Electric Field",
+            "content_text": "This example demonstrates how to determine the magnetic field vector when the electric field vector and the direction of propagation of a plane electromagnetic wave are known.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 8.1",
+                "problem": "A plane electromagnetic wave of frequency 25 MHz travels in free space along the x-direction. At a particular point in space and time, $\\mathbf{E} = 6.3 \\hat{j}$ V/m. What is $\\mathbf{B}$ at this point?",
+                "solution": "Using the relation $B = E/c$, the magnitude of $\\mathbf{B}$ is $B = \\frac{6.3 \\text{ V/m}}{3 \\times 10^8 \\text{ m/s}} = 2.1 \\times 10^{-8}$ T. To find the direction, we note that $\\mathbf{E}$ is along the y-direction ($+\\hat{j}$) and the wave propagates along the x-axis ($+\\hat{i}$). Since the propagation direction is given by $\\mathbf{E} \\times \\mathbf{B}$, and $(+\\hat{j}) \\times (+\\hat{k}) = \\hat{i}$, the magnetic field $\\mathbf{B}$ must be along the z-direction. Thus, $\\mathbf{B} = 2.1 \\times 10^{-8} \\hat{k}$ T."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:8:8.3:11",
+            "order": 11,
+            "title": "Example 8.2: Analyzing Wave Equations",
+            "content_text": "This example illustrates the process of extracting physical parameters like wavelength and frequency from a given wave equation and deriving the corresponding field component.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 8.2",
+                "problem": "The magnetic field in a plane electromagnetic wave is given by $B_y = (2 \\times 10^{-7}) \\text{ T sin } (0.5 \\times 10^3 x + 1.5 \\times 10^{11} t)$. (a) What is the wavelength and frequency of the wave? (b) Write an expression for the electric field.",
+                "solution": "(a) Comparing the given equation with the standard form $B_y = B_0 \\sin[k x + \\omega t]$, we have $k = 0.5 \\times 10^3$ rad/m and $\\omega = 1.5 \\times 10^{11}$ rad/s. Wavelength $\\lambda = 2\\pi/k = 2\\pi / (0.5 \\times 10^3) \\approx 1.26$ cm. Frequency $\\nu = \\omega/2\\pi = (1.5 \\times 10^{11}) / 2\\pi \\approx 23.9$ GHz. (b) The amplitude of the electric field is $E_0 = B_0 c = (2 \\times 10^{-7} \\text{ T}) \\times (3 \\times 10^8 \\text{ m/s}) = 60$ V/m. Since the wave propagates along the x-axis and $\\mathbf{B}$ is along the y-axis, $\\mathbf{E}$ must be along the z-axis to satisfy the perpendicularity requirement. Thus, $E_z = 60 \\sin(0.5 \\times 10^3 x + 1.5 \\times 10^{11} t)$ V/m."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:8:8.4",
+        "number": "8.4",
+        "title": "Electromagnetic Spectrum",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:8:8.4:1",
+            "order": 1,
+            "title": "Overview of the Electromagnetic Spectrum",
+            "content_text": "The electromagnetic spectrum is the orderly classification of electromagnetic waves according to their frequency or wavelength. While Maxwell predicted their existence, only visible light was known initially. Discoveries in the late 19th century added X-rays and gamma rays to the known spectrum. Today, it encompasses a broad range including radio waves, microwaves, infrared, visible light, ultraviolet, X-rays, and gamma rays. There are no sharp physical boundaries between these regions; they are classified based on their production and detection methods. Figure 8.4 provides a visual representation of these regions and their overlapping nature.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 8.4",
+                "description": "A detailed diagram of the electromagnetic spectrum showing frequency in Hertz (from $10$ to $10^{23}$) and wavelength in metres (from $10^7$ to $10^{-14}$). It labels regions: Long radio waves, AM radio, Television and FM radio, Short radio waves, Microwaves, Infrared, Visible, Ultraviolet, X-rays, and Gamma rays. An expanded view of the visible spectrum shows wavelengths from 700 nm (Red) through Orange, Yellow, Green, Blue, and 400 nm (Violet).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:8:8.4:2",
+            "order": 2,
+            "title": "Radio Waves",
+            "content_text": "Radio waves are generated by the accelerated motion of electric charges within conducting wires. They are primarily utilized in communication systems for radio and television. Their frequency spectrum spans from approximately 500 kHz to 1000 MHz. Key allocations include the AM (amplitude modulated) band (530 kHz to 1710 kHz), short wave bands (up to 54 MHz), the TV wave band (54 MHz to 890 MHz), and the FM (frequency modulated) radio band (88 MHz to 108 MHz). Cellular telephony operates in the ultrahigh frequency (UHF) band.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:8:8.4:3",
+            "order": 3,
+            "title": "Microwaves",
+            "content_text": "Microwaves are short-wavelength radio waves with frequencies in the gigahertz (GHz) range. They are produced using specialized vacuum tubes such as klystrons, magnetrons, and Gunn diodes. Their short wavelengths make them ideal for radar systems used in aircraft navigation and speed detection. A common domestic application is the microwave oven, where the wave frequency is tuned to the resonant frequency of water molecules. This allows for efficient energy transfer to the kinetic energy of the molecules, heating the food from within.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:8:8.4:4",
+            "order": 4,
+            "title": "8.4.3 Infrared waves",
+            "content_text": "Infrared waves are produced by hot bodies and molecules. This band lies adjacent to the low-frequency or long-wavelength end of the visible spectrum. Infrared waves are often referred to as \"heat waves\" because water molecules and other molecules like $CO_2$ and $NH_3$ present in most materials readily absorb them. Upon absorption, the thermal motion of these molecules increases, causing the material and its surroundings to heat up. Infrared radiation is crucial for maintaining Earth's average temperature through the greenhouse effect: incoming visible light is absorbed by the Earth's surface and re-radiated as longer-wavelength infrared radiation, which is then trapped by greenhouse gases like carbon dioxide and water vapor. Applications include physical therapy, infrared lamps, and Earth satellites for military and agricultural monitoring. Electronic devices, such as semiconductor light-emitting diodes (LEDs), emit infrared for use in remote switches for TVs, video recorders, and hi-fi systems.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:8:8.4:5",
+            "order": 5,
+            "title": "8.4.4 Visible rays",
+            "content_text": "Visible light is the most familiar form of electromagnetic waves and is the only part of the spectrum detectable by the human eye. It spans frequencies from approximately $4 \\times 10^{14}$ Hz to $7 \\times 10^{14}$ Hz, corresponding to a wavelength range of about 700 nm to 400 nm. Visible light emitted or reflected from objects provides information about the world. Sensitivity to wavelengths varies among species; for instance, snakes can detect infrared waves, while the visible range for many insects extends into the ultraviolet spectrum.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:8:8.4:6",
+            "order": 6,
+            "title": "8.4.5 Ultraviolet rays",
+            "content_text": "Ultraviolet (UV) radiation covers wavelengths from about 400 nm ($4 \\times 10^{-7}$ m) down to 0.6 nm ($6 \\times 10^{-10}$ m). It is produced by special lamps and very hot bodies like the Sun. Most solar UV radiation is absorbed by the ozone layer in the atmosphere at an altitude of 40–50 km. While UV radiation induces melanin production (tanning), large quantities have harmful effects on humans. UV is absorbed by ordinary glass, meaning one cannot get tanned through a glass window. Welders use special glass goggles or face masks to protect their eyes from UV produced by welding arcs. Due to their short wavelengths, UV beams can be focused for high-precision applications like LASIK (Laser-assisted in situ keratomileusis) eye surgery. UV lamps are also used to kill germs in water purifiers. The depletion of the protective ozone layer by chlorofluorocarbons (CFCs) like freon is a significant international environmental concern.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:8:8.4:7",
+            "order": 7,
+            "title": "8.4.6 X-rays",
+            "content_text": "X-rays lie beyond the UV region and cover wavelengths from approximately $10^{-8}$ m (10 nm) down to $10^{-13}$ m ($10^{-4}$ nm). They are commonly generated by bombarding a metal target with high-energy electrons. X-rays are widely used as a diagnostic tool in medicine and as a treatment for certain forms of cancer. However, because they can damage or destroy living tissues and organisms, care must be taken to avoid unnecessary or overexposure.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:8:8.4:8",
+            "order": 8,
+            "title": "8.4.7 Gamma rays",
+            "content_text": "Gamma rays occupy the upper frequency range of the electromagnetic spectrum, with wavelengths ranging from about $10^{-10}$ m to less than $10^{-14}$ m. This high-frequency radiation is produced in nuclear reactions and emitted by radioactive nuclei. In medicine, gamma rays are utilized to destroy cancer cells.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:8:8.4:9",
+            "order": 9,
+            "title": "Summary of Electromagnetic Waves",
+            "content_text": "The electromagnetic spectrum consists of various types of waves classified by their wavelength and frequency. The demarcation between different regions is not sharp, and there are significant overlaps. The following table summarizes the different types of electromagnetic waves, their wavelength ranges, production methods, and detection techniques.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 8.1",
+                "caption": "Different Types of Electromagnetic Waves",
+                "headers": [
+                  "Type",
+                  "Wavelength range",
+                  "Production",
+                  "Detection"
+                ],
+                "rows": [
+                  [
+                    "Radio",
+                    "> 0.1 m",
+                    "Rapid acceleration and decelerations of electrons in aerials",
+                    "Receiver's aerials"
+                  ],
+                  [
+                    "Microwave",
+                    "0.1m to 1 mm",
+                    "Klystron valve or magnetron valve",
+                    "Point contact diodes"
+                  ],
+                  [
+                    "Infra-red",
+                    "1mm to 700 nm",
+                    "Vibration of atoms and molecules",
+                    "Thermopiles, Bolometer, Infrared photographic film"
+                  ],
+                  [
+                    "Light",
+                    "700 nm to 400 nm",
+                    "Electrons in atoms emit light when they move from one energy level to a lower energy level",
+                    "The eye, Photocells, Photographic film"
+                  ],
+                  [
+                    "Ultraviolet",
+                    "400 nm to 1nm",
+                    "Inner shell electrons in atoms moving from one energy level to a lower level",
+                    "Photocells, Photographic film"
+                  ],
+                  [
+                    "X-rays",
+                    "1nm to $10^{-3}$ nm",
+                    "X-ray tubes or inner shell electrons",
+                    "Photographic film, Geiger tubes, Ionisation chamber"
+                  ],
+                  [
+                    "Gamma rays",
+                    "<$10^{-3}$ nm",
+                    "Radioactive decay of the nucleus",
+                    "Photographic film, Geiger tubes, Ionisation chamber"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:8:Summary",
+        "number": "Summary",
+        "title": "Chapter Summary",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:8:Summary:1",
+            "order": 1,
+            "title": "Displacement Current",
+            "content_text": "Maxwell identified an inconsistency in Ampere's law and proposed the existence of displacement current ($i_d$) to resolve it. This current is produced by a time-varying electric field and is defined as: $$i_d = \\epsilon_0 \\frac{d\\Phi_E}{dt}$$ It acts as a source of magnetic field in the same manner as conduction current.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:8:Summary:2",
+            "order": 2,
+            "title": "Production of EM Waves",
+            "content_text": "Electromagnetic waves are produced by accelerating charges. A charge oscillating harmonically with frequency $\\nu$ generates electromagnetic waves of that same frequency. An electric dipole serves as a fundamental source of these waves.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:8:Summary:3",
+            "order": 3,
+            "title": "Hertz's Experimental Verification",
+            "content_text": "In 1887, Hertz successfully produced and detected electromagnetic waves with wavelengths of a few meters in a laboratory setting. This experiment verified the fundamental predictions of Maxwell's equations.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:8:Summary:4",
+            "order": 4,
+            "title": "Speed of Electromagnetic Waves",
+            "content_text": "The speed $c$ of an electromagnetic wave in a vacuum is determined by the free space permeability ($\\mu_0$) and permittivity ($\\epsilon_0$): $$c = 1/\\sqrt{\\mu_0 \\epsilon_0}$$ This value matches the speed of light measured optically, confirming light is an electromagnetic wave. In a material medium, the speed $v$ is given by: $$v = 1/\\sqrt{\\mu \\epsilon}$$ where $\\mu$ and $\\epsilon$ are the permeability and permittivity of the medium, respectively.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:8:Summary:5",
+            "order": 5,
+            "title": "EM Spectrum and Interaction with Matter",
+            "content_text": "The electromagnetic spectrum theoretically extends over an infinite range of wavelengths, from $10^{-2}$ Å ($10^{-12}$ m) to $10^6$ m. Regions include $\\gamma$-rays, X-rays, ultraviolet, visible, infrared, microwaves, and radio waves in order of increasing wavelength. These waves interact with matter through their electric and magnetic fields, which cause charges in matter to oscillate. The specific mechanisms of interaction, such as absorption and scattering, depend on the wave's wavelength and the nature of the atoms and molecules in the medium. [CONTINUES]",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:8:8.5",
+        "number": "8.5",
+        "title": "Points to Ponder",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:8:8.5:1",
+            "order": 1,
+            "title": "Nature and Interaction of Electromagnetic Waves",
+            "content_text": "The fundamental distinction between different types of electromagnetic (EM) waves is their wavelength or frequency. Despite these differences, all EM waves travel through a vacuum at the same constant speed, $c$. However, their interaction with matter varies significantly based on these parameters. For instance, the way a radio wave interacts with a conductor is vastly different from how an X-ray interacts with the same material, primarily due to the scale of the wavelength relative to the atomic or molecular structure of the matter.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:8:8.5:2",
+            "order": 2,
+            "title": "Sources and Characteristic Scales of Radiation",
+            "content_text": "Electromagnetic waves are radiated by accelerated charged particles. There is a strong correlation between the wavelength of the emitted radiation and the characteristic physical size of the radiating system. Gamma radiation, with extremely short wavelengths ($10^{-14}$ m to $10^{-15}$ m), typically originates from the atomic nucleus. X-rays are generally emitted by heavy atoms. Radio waves are produced by the macroscopic acceleration of electrons within a circuit. For efficient radiation, a transmitting antenna's size should be comparable to the wavelength it emits. Interestingly, visible radiation emitted by atoms has a wavelength much larger than the actual size of the atom.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:8:8.5:3",
+            "order": 3,
+            "title": "Infrared Waves and Thermal Energy",
+            "content_text": "Infrared waves have frequencies lower than those of visible light. When they interact with a substance, they cause not just the electrons but entire atoms or molecules to vibrate. This increased molecular vibration leads to an increase in the internal energy of the substance, which manifests as a rise in temperature. This specific interaction is why infrared waves are commonly referred to as 'heat waves'.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:8:8.5:4",
+            "order": 4,
+            "title": "Evolution of Human Vision",
+            "content_text": "The sensitivity of the human eye is not arbitrary; the center of our eyes' sensitivity distribution coincides with the peak of the sun's wavelength distribution. This is an evolutionary adaptation, as humans evolved to have vision most sensitive to the wavelengths that are most abundant and strongest in the solar radiation reaching Earth's surface.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:physics:12:8:ex:1",
+          "number": 1,
+          "problem": "Figure 8.5 shows a capacitor made of two circular plates each of radius 12 cm, and separated by 5.0 cm. The capacitor is being charged by an external source. The charging current is constant and equal to 0.15A. (a) Calculate the capacitance and the rate of change of potential difference between the plates. (b) Obtain the displacement current across the plates. (c) Is Kirchhoff’s first rule (junction rule) valid at each plate of the capacitor? Explain.",
+          "solution": "(a) $C = \\frac{\\epsilon_0 A}{d} = \\frac{\\epsilon_0 \\pi r^2}{d} = \\frac{8.854 \\times 10^{-12} \\times \\pi \\times (0.12)^2}{0.05} \\approx 8.0 \\times 10^{-12}$ F. Since $I = C \\frac{dV}{dt}$, $\\frac{dV}{dt} = \\frac{I}{C} = \\frac{0.15}{8.0 \\times 10^{-12}} = 1.87 \\times 10^{10}$ V/s. (b) $I_d = \\epsilon_0 \\frac{d\\Phi_E}{dt} = I_c = 0.15$ A. (c) Yes, Kirchhoff's first rule is valid if we consider the sum of conduction and displacement currents.",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:8:ex:2",
+          "number": 2,
+          "problem": "A parallel plate capacitor (Fig. 8.6) made of circular plates each of radius $R = 6.0$ cm has a capacitance $C = 100$ pF. The capacitor is connected to a 230 V ac supply with a (angular) frequency of 300 rad s$^{-1}$. (a) What is the rms value of the conduction current? (b) Is the conduction current equal to the displacement current? (c) Determine the amplitude of $\\mathbf{B}$ at a point 3.0 cm from the axis between the plates.",
+          "solution": "(a) $I_{rms} = \\frac{V_{rms}}{X_C} = V_{rms} \\omega C = 230 \\times 300 \\times 100 \\times 10^{-12} = 6.9 \\times 10^{-6}$ A. (b) Yes, $I_c = I_d$. (c) $B_0 = \\frac{\\mu_0 I_0 r}{2\\pi R^2}$ where $I_0 = \\sqrt{2} I_{rms}$. $B_0 = \\frac{4\\pi \\times 10^{-7} \\times \\sqrt{2} \\times 6.9 \\times 10^{-6} \\times 0.03}{2\\pi \\times (0.06)^2} \\approx 1.63 \\times 10^{-11}$ T.",
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:8:ex:3",
+          "number": 3,
+          "problem": "What physical quantity is the same for X-rays of wavelength $10^{-10}$ m, red light of wavelength 6800 Å and radiowaves of wavelength 500m?",
+          "solution": "The speed of light in vacuum ($c \\approx 3 \\times 10^8$ m/s) is the same for all electromagnetic waves.",
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:12:8:ex:4",
+          "number": 4,
+          "problem": "A plane electromagnetic wave travels in vacuum along z-direction. What can you say about the directions of its electric and magnetic field vectors? If the frequency of the wave is 30 MHz, what is its wavelength?",
+          "solution": "The electric and magnetic field vectors are in the $xy$ plane and are mutually perpendicular. $\\lambda = \\frac{c}{\\nu} = \\frac{3 \\times 10^8}{30 \\times 10^6} = 10$ m.",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:8:ex:5",
+          "number": 5,
+          "problem": "A radio can tune in to any station in the 7.5 MHz to 12 MHz band. What is the corresponding wavelength band?",
+          "solution": "$\\lambda_1 = \\frac{3 \\times 10^8}{7.5 \\times 10^6} = 40$ m; $\\lambda_2 = \\frac{3 \\times 10^8}{12 \\times 10^6} = 25$ m. The wavelength band is 25 m to 40 m.",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:8:ex:6",
+          "number": 6,
+          "problem": "A charged particle oscillates about its mean equilibrium position with a frequency of $10^9$ Hz. What is the frequency of the electromagnetic waves produced by the oscillator?",
+          "solution": "The frequency of the electromagnetic waves is equal to the frequency of oscillation of the charge, which is $10^9$ Hz.",
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:12:8:ex:7",
+          "number": 7,
+          "problem": "The amplitude of the magnetic field part of a harmonic electromagnetic wave in vacuum is $B_0 = 510$ nT. What is the amplitude of the electric field part of the wave?",
+          "solution": "$E_0 = c B_0 = 3 \\times 10^8 \\times 510 \\times 10^{-9} = 153$ V/m.",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:8:ex:8",
+          "number": 8,
+          "problem": "Suppose that the electric field amplitude of an electromagnetic wave is $E_0 = 120$ N/C and that its frequency is $\\nu = 50.0$ MHz. (a) Determine, $B_0, \\omega, k$, and $\\lambda$. (b) Find expressions for $\\mathbf{E}$ and $\\mathbf{B}$.",
+          "solution": "(a) $B_0 = \\frac{E_0}{c} = \\frac{120}{3 \\times 10^8} = 4 \\times 10^{-7}$ T; $\\omega = 2\\pi\\nu = 2\\pi \\times 50 \\times 10^6 = 3.14 \\times 10^8$ rad/s; $k = \\frac{\\omega}{c} = 1.05$ rad/m; $\\lambda = \\frac{c}{\\nu} = 6$ m. (b) Assuming propagation along $z$: $\\mathbf{E} = 120 \\sin(1.05z - 3.14 \\times 10^8 t) \\hat{i}$ N/C and $\\mathbf{B} = 4 \\times 10^{-7} \\sin(1.05z - 3.14 \\times 10^8 t) \\hat{j}$ T.",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:8:ex:9",
+          "number": 9,
+          "problem": "The terminology of different parts of the electromagnetic spectrum is given in the text. Use the formula $E = h\\nu$ (for energy of a quantum of radiation: photon) and obtain the photon energy in units of eV for different parts of the electromagnetic spectrum. In what way are the different scales of photon energies that you obtain related to the sources of electromagnetic radiation?",
+          "solution": "Energy $E$ in eV is $\\frac{h\\nu}{1.6 \\times 10^{-19}}$. Radio waves have very low photon energies ($~ 10^{-9}$ eV), visible light has energies of a few eV (matching atomic transitions), and X-rays/Gamma rays have high energies (keV to MeV, matching inner shell or nuclear transitions).",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:8:ex:10",
+          "number": 10,
+          "problem": "In a plane electromagnetic wave, the electric field oscillates sinusoidally at a frequency of $2.0 \\times 10^{10}$ Hz and amplitude 48 V m$^{-1}$. (a) What is the wavelength of the wave? (b) What is the amplitude of the oscillating magnetic field? (c) Show that the average energy density of the $\\mathbf{E}$ field equals the average energy density of the $\\mathbf{B}$ field. [$c = 3 \\times 10^8$ m s$^{-1}$]",
+          "solution": "(a) $\\lambda = \\frac{c}{\\nu} = \\frac{3 \\times 10^8}{2 \\times 10^{10}} = 1.5 \\times 10^{-2}$ m. (b) $B_0 = \\frac{E_0}{c} = \\frac{48}{3 \\times 10^8} = 1.6 \\times 10^{-7}$ T. (c) $u_E = \\frac{1}{4}\\epsilon_0 E_0^2$ and $u_B = \\frac{1}{4\\mu_0} B_0^2$. Since $E_0 = c B_0$ and $c^2 = \\frac{1}{\\mu_0 \\epsilon_0}$, $u_E = \\frac{1}{4}\\epsilon_0 (c B_0)^2 = \\frac{1}{4}\\epsilon_0 \\frac{1}{\\mu_0 \\epsilon_0} B_0^2 = \\frac{1}{4\\mu_0} B_0^2 = u_B$.",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        }
+      ]
+    }
+  }
+}

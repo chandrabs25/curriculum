@@ -1,0 +1,1760 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_chemistry_12_ch6.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:chemistry:12:6",
+  "curriculum": "ncert",
+  "subject": "chemistry",
+  "grade": 12,
+  "textbook_name": "Chemistry",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:chemistry:12:6",
+    "number": 6,
+    "title": "Haloalkanes and Haloarenes",
+    "summary": "This chapter, \"Haloalkanes and Haloarenes,\" explores the chemistry of compounds where halogens replace hydrogen atoms in hydrocarbons. It begins with classification based on the number of halogen atoms and the hybridization of the carbon-halogen bond, introducing alkyl halides and aryl halides. Nomenclature is covered, outlining IUPAC and common naming conventions.\n\nThe chapter details methods of preparation, including reactions from alcohols, hydrocarbons (halogenation, addition to alkenes), and halogen exchange reactions (Finkelstein, Swarts). For haloarenes, electrophilic substitution and Sandmeyer's reaction are discussed. The nature of the C-X bond, its polarity, and subsequent impact on physical properties like boiling point and solubility are examined.\n\nA significant portion focuses on chemical reactions, particularly nucleophilic substitution ($S_N1$ and $S_N2$) mechanisms, stereochemistry (inversion, retention, racemization, chirality, enantiomers), and elimination reactions influenced by Zaitsev's rule. The chapter explains the factors affecting the reactivity of haloalkanes and haloarenes in these reactions. Finally, it covers reactions with metals, forming Grignard reagents and highlighting the Wurtz and Fittig reactions. The practical significance lies in understanding organic synthesis, reaction mechanisms, and the environmental impact of polyhalogen compounds such as chloroform and DDT.",
+    "sections": [
+      {
+        "id": "ncert:chemistry:12:6:6",
+        "number": "6",
+        "title": "Haloalkanes and Haloarenes",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:6:6:1",
+            "order": 1,
+            "title": "Introduction to Haloalkanes and Haloarenes",
+            "content_text": "The replacement of hydrogen atom(s) in an aliphatic or aromatic hydrocarbon by halogen atom(s) results in the formation of alkyl halide (haloalkane) and aryl halide (haloarene), respectively. Haloalkanes contain halogen atom(s) attached to the $sp^3$ hybridised carbon atom of an alkyl group, whereas haloarenes contain halogen atom(s) attached to $sp^2$ hybridised carbon atom(s) of an aryl group. Many halogen-containing organic compounds occur in nature and some are clinically useful. These compounds find wide applications in industry and daily life, serving as solvents for relatively non-polar compounds and as starting materials for the synthesis of a wide range of organic compounds. Notably, halogenated compounds persist in the environment due to their resistance to breakdown by soil bacteria.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6:2",
+            "order": 2,
+            "title": "Biological and Medical Importance of Halogenated Compounds",
+            "content_text": "Several halogenated compounds have significant biological and medical roles: \n1. **Chloramphenicol**: A chlorine-containing antibiotic produced by microorganisms, highly effective for treating typhoid fever. \n2. **Thyroxine**: An iodine-containing hormone produced by the human body; its deficiency causes goiter. \n3. **Chloroquine**: A synthetic halogen compound used for the treatment of malaria. \n4. **Halothane**: Used as an anaesthetic during surgery. \n5. **Fluorinated compounds**: Certain fully fluorinated compounds are being considered as potential blood substitutes in surgery.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:6:6.1",
+        "number": "6.1",
+        "title": "Classification",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:6:6.1:1",
+            "order": 1,
+            "title": "6.1.1 On the Basis of Number of Halogen Atoms",
+            "content_text": "Haloalkanes and haloarenes may be classified as mono, di, or polyhalogen (tri-, tetra-, etc.) compounds depending on whether they contain one, two, or more halogen atoms in their structures. For example, $C_2H_5X$ is a monohaloalkane, $CH_2X-CH_2X$ is a dihaloalkane, and $CH_2X-CHX-CH_2X$ is a trihaloalkane. Similarly, haloarenes are classified based on the number of halogen atoms attached to the benzene ring.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Classification by Halogen Number",
+                "description": "Structural representations of monohaloalkane ($C_2H_5X$), dihaloalkane ($CH_2X-CH_2X$), and trihaloalkane ($CH_2X-CHX-CH_2X$), alongside monohaloarene, dihaloarene, and trihaloarene structures involving a benzene ring.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.1:2",
+            "order": 2,
+            "title": "6.1.2 Compounds Containing $sp^3$ C—X Bond (X= F, Cl, Br, I)",
+            "content_text": "This class includes compounds where the halogen atom is bonded to an $sp^3$ hybridised carbon atom. They are further categorized into:\n\n(a) **Alkyl halides or haloalkanes (R—X)**: The halogen atom is bonded to an alkyl group (R). They form a homologous series represented by $C_nH_{2n+1}X$. They are classified as primary ($1^\\circ$), secondary ($2^\\circ$), or tertiary ($3^\\circ$) according to the nature of the carbon to which the halogen is attached. If the halogen is attached to a carbon atom bonded to only one other carbon, it is a primary alkyl halide. If attached to a carbon bonded to two or three other carbons, it is a secondary or tertiary alkyl halide, respectively.\n\n(b) **Allylic halides**: These are compounds in which the halogen atom is bonded to an $sp^3$-hybridised carbon atom adjacent to a carbon-carbon double bond ($C=C$), known as an allylic carbon.\n\n(c) **Benzylic halides**: These are compounds in which the halogen atom is bonded to an $sp^3$-hybridised carbon atom attached to an aromatic ring. These can also be classified as primary, secondary, or tertiary depending on the substitution of the benzylic carbon.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Alkyl Halide Classification",
+                "description": "Structures showing primary ($1^\\circ$), secondary ($2^\\circ$), and tertiary ($3^\\circ$) alkyl halides based on the number of alkyl groups attached to the C-X carbon.",
+                "image_url": null
+              },
+              {
+                "label": "Allylic and Benzylic Halides",
+                "description": "Diagrams showing allylic halides (halogen on $sp^3$ C next to $C=C$) and benzylic halides (halogen on $sp^3$ C attached to a benzene ring, including $1^\\circ, 2^\\circ, 3^\\circ$ variations).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.1:3",
+            "order": 3,
+            "title": "6.1.3 Compounds Containing $sp^2$ C—X Bond",
+            "content_text": "This class includes:\n\n(a) **Vinylic halides**: These are compounds in which the halogen atom is bonded to an $sp^2$-hybridised carbon atom of a carbon-carbon double bond ($C=C$).\n\n(b) **Aryl halides**: These are compounds in which the halogen atom is directly bonded to the $sp^2$-hybridised carbon atom of an aromatic ring.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Vinylic and Aryl Halides",
+                "description": "Structural examples of vinylic halides (halogen on double-bonded carbon) and aryl halides (halogen directly on a benzene ring).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:6:6.2",
+        "number": "6.2",
+        "title": "Nomenclature",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:6:6.2:1",
+            "order": 1,
+            "title": "Naming Principles for Haloalkanes and Haloarenes",
+            "content_text": "Common names of alkyl halides are derived by naming the alkyl group followed by the name of the halide. In the IUPAC system, they are named as halosubstituted hydrocarbons. For mono-halogen substituted derivatives of benzene, common and IUPAC names are identical. For dihalogen derivatives, common names use prefixes $o-$, $m-$, $p-$, while IUPAC names use numerals 1,2; 1,3; and 1,4. Dihaloalkanes having the same type of halogen atoms are named as alkylidene or alkylene dihalides. They are classified as geminal halides (or gem-dihalides) when both halogen atoms are present on the same carbon atom of the Dihaloalkanes having the same type of halogen atoms are named as alkylidene or alkylene dihalides. They are classified as geminal halides (or gem-dihalides) when both halogen atoms are present on the same carbon atom of the chain and vicinal halides or vic-dihalides when halogen atoms are present on adjacent carbon atoms. In common name system, gem-dihalides are named as alkylidene halides and vic-dihalides are named as alkylene dihalides. In IUPAC system, they are named as dihaloalkanes. For example, $H_3C-CHCl_2$ is known as Ethylidene chloride (gem-dihalide) or 1,1-Dichloroethane, while $H_2C(Cl)-CH_2(Cl)$ is known as Ethylene dichloride (vic-dihalide) or 1,2-Dichloroethane.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Dihalide Structures",
+                "description": "Chemical structures of Ethylidene chloride ($H_3C-CHCl_2$) and Ethylene dichloride ($Cl-CH_2-CH_2-Cl$) showing the difference between geminal and vicinal halogen placement.",
+                "image_url": null
+              }
+            ],
+            "tables": [
+              {
+                "label": "Table 6.1",
+                "caption": "Common and IUPAC Names of Selected Halogen Compounds",
+                "headers": [
+                  "Structure",
+                  "Common Name",
+                  "IUPAC Name"
+                ],
+                "rows": [
+                  [
+                    "$CH_3CH_2CH_2Br$",
+                    "n-Propyl bromide",
+                    "1-Bromopropane"
+                  ],
+                  [
+                    "$CH_3CH(Cl)CH_3$",
+                    "Isopropyl chloride",
+                    "2-Chloropropane"
+                  ],
+                  [
+                    "$CH_3CH(CH_3)CH_2Cl$",
+                    "Isobutyl chloride",
+                    "1-Chloro-2-methylpropane"
+                  ],
+                  [
+                    "Benzene ring with -Br",
+                    "Bromobenzene",
+                    "Bromobenzene"
+                  ],
+                  [
+                    "Benzene ring with 1,3-Br",
+                    "m-Dibromobenzene",
+                    "1,3-Dibromobenzene"
+                  ],
+                  [
+                    "Benzene ring with 1,3,5-Br",
+                    "sym-Tribromobenzene",
+                    "1,3,5-Tribromobenzene"
+                  ],
+                  [
+                    "$CH_3C(CH_3)_2CH_2Cl$",
+                    "-",
+                    "1-Chloro-2,2-dimethylpropane"
+                  ],
+                  [
+                    "$CH_3CH(Br)CH_3$",
+                    "-",
+                    "2-Bromopropane"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.2:2",
+            "order": 2,
+            "title": "Common and IUPAC Names of some Halides",
+            "content_text": "The nomenclature of haloalkanes and haloarenes follows specific rules for common and IUPAC naming. Common names often use alkyl group names followed by the halide, while IUPAC names treat the halogen as a substituent on the longest carbon chain. Table 6.1 provides several examples of structures along with their common and IUPAC names, covering various types such as secondary, tertiary, vinyl, allyl, and aryl halides.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 6.1",
+                "caption": "Common and IUPAC Names of some Halides",
+                "headers": [
+                  "Structure",
+                  "Common name",
+                  "IUPAC name"
+                ],
+                "rows": [
+                  [
+                    "$CH_3CH_2CH(Cl)CH_3$",
+                    "sec-Butyl chloride",
+                    "2-Chlorobutane"
+                  ],
+                  [
+                    "$(CH_3)_3CCH_2Br$",
+                    "neo-Pentyl bromide",
+                    "1-Bromo-2,2-dimethylpropane"
+                  ],
+                  [
+                    "$(CH_3)_3CBr$",
+                    "tert-Butyl bromide",
+                    "2-Bromo-2-methylpropane"
+                  ],
+                  [
+                    "$CH_2 = CHCl$",
+                    "Vinyl chloride",
+                    "Chloroethene"
+                  ],
+                  [
+                    "$CH_2 = CHCH_2Br$",
+                    "Allyl bromide",
+                    "3-Bromopropene"
+                  ],
+                  [
+                    "o-Chlorotoluene structure",
+                    "o-Chlorotoluene",
+                    "1-Chloro-2-methylbenzene or 2-Chlorotoluene"
+                  ],
+                  [
+                    "Benzyl chloride structure",
+                    "Benzyl chloride",
+                    "Chlorophenylmethane"
+                  ],
+                  [
+                    "$CH_2Cl_2$",
+                    "Methylene chloride",
+                    "Dichloromethane"
+                  ],
+                  [
+                    "$CHCl_3$",
+                    "Chloroform",
+                    "Trichloromethane"
+                  ],
+                  [
+                    "$CHBr_3$",
+                    "Bromoform",
+                    "Tribromomethane"
+                  ],
+                  [
+                    "$CCl_4$",
+                    "Carbon tetrachloride",
+                    "Tetrachloromethane"
+                  ],
+                  [
+                    "$CH_3CH_2CH_2F$",
+                    "n-Propyl fluoride",
+                    "1-Fluoropropane"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.2:3",
+            "order": 3,
+            "title": "Example 6.1: Structural Isomers of Pentyl Bromide",
+            "content_text": "This example demonstrates how to identify and name all structural isomers for a given molecular formula ($C_5H_{11}Br$) and classify them based on the degree of the carbon atom to which the halogen is attached.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 6.1",
+                "problem": "Draw the structures of all the eight structural isomers that have the molecular formula $C_5H_{11}Br$. Name each isomer according to IUPAC system and classify them as primary, secondary or tertiary bromide.",
+                "solution": "1. $CH_3CH_2CH_2CH_2CH_2Br$ (1-Bromopentane, 1°); 2. $CH_3CH_2CH_2CH(Br)CH_3$ (2-Bromopentane, 2°); 3. $CH_3CH_2CH(Br)CH_2CH_3$ (3-Bromopentane, 2°); 4. $(CH_3)_2CHCH_2CH_2Br$ (1-Bromo-3-methylbutane, 1°); 5. $(CH_3)_2CHCH(Br)CH_3$ (2-Bromo-3-methylbutane, 2°); 6. $(CH_3)_2C(Br)CH_2CH_3$ (2-Bromo-2-methylbutane, 3°); 7. $CH_3CH_2CH(CH_3)CH_2Br$ (1-Bromo-2-methylbutane, 1°); 8. $(CH_3)_3CCH_2Br$ (1-Bromo-2,2-dimethylpropane, 1°)."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.2:4",
+            "order": 4,
+            "title": "Example 6.2: IUPAC Naming of Haloalkenes",
+            "content_text": "Naming haloalkenes requires identifying the longest chain containing the double bond and numbering it to give the double bond the lowest possible locant, then naming the halogen substituent.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 6.2",
+                "problem": "Write IUPAC names of the following: (i) $CH_3-CH=C(Br)-CH_2-CH_3$ (ii) $CH_2=C(CH_3)-CH(Br)-CH_3$ (iii) $CH_3-CH=C(CH_3)-CH(Br)-CH_3$ (iv) $CH_3-C(CH_3)=CH-CH_2Br$ (v) $CH_3-CH=CH-CH_2Br$ (vi) $CH_2=C(CH_3)-CH_2Br$",
+                "solution": "(i) 4-Bromopent-2-ene; (ii) 3-Bromo-2-methylbut-1-ene; (iii) 4-Bromo-3-methylpent-2-ene; (iv) 1-Bromo-2-methylbut-2-ene; (v) 1-Bromobut-2-ene; (vi) 3-Bromo-2-methylpropene."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:6:6.3",
+        "number": "6.3",
+        "title": "Nature of C-X Bond",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:6:6.3:1",
+            "order": 1,
+            "title": "Polarization and Bond Characteristics",
+            "content_text": "Halogen atoms are more electronegative than carbon, therefore, the carbon-halogen bond of alkyl halide is polarised; the carbon atom bears a partial positive charge ($\\delta+$) whereas the halogen atom bears a partial negative charge ($\\delta-$). As we go down the group in the periodic table, the size of halogen atom increases. Fluorine atom is the smallest and iodine atom is the largest. Consequently the carbon-halogen bond length also increases from C—F to C—I. Some typical bond lengths, bond enthalpies and dipole moments are given in Table 6.2.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Polarized C-X Bond",
+                "description": "A diagram showing a carbon atom bonded to a halogen atom X, with $\\delta+$ on carbon and $\\delta-$ on the halogen, indicating bond polarity.",
+                "image_url": null
+              }
+            ],
+            "tables": [
+              {
+                "label": "Table 6.2",
+                "caption": "Carbon-Halogen (C—X) Bond Lengths, Bond Enthalpies and Dipole Moments",
+                "headers": [
+                  "Bond",
+                  "Bond length/pm",
+                  "C-X Bond enthalpies/ $kJ mol^{-1}$",
+                  "Dipole moment/Debye"
+                ],
+                "rows": [
+                  [
+                    "$CH_3-F$",
+                    "139",
+                    "452",
+                    "1.847"
+                  ],
+                  [
+                    "$CH_3-Cl$",
+                    "178",
+                    "351",
+                    "1.860"
+                  ],
+                  [
+                    "$CH_3-Br$",
+                    "193",
+                    "293",
+                    "1.830"
+                  ],
+                  [
+                    "$CH_3-I$",
+                    "214",
+                    "234",
+                    "1.636"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:6:6.4",
+        "number": "6.4",
+        "title": "Methods of Preparation of Haloalkanes",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:6:6.4:1",
+            "order": 1,
+            "title": "Preparation from Alcohols",
+            "content_text": "Alkyl halides are best prepared from alcohols, which are easily accessible. The hydroxyl group of an alcohol is replaced by halogen on reaction with concentrated halogen acids, phosphorus halides or thionyl chloride. Thionyl chloride ($SOCl_2$) is preferred because in this reaction alkyl halide is formed along with gases $SO_2$ and $HCl$. The two gaseous products are escapable, hence, the reaction gives pure alkyl halides. The reactions of primary and secondary alcohols with $HCl$ require the presence of a catalyst, $ZnCl_2$. With tertiary alcohols, the reaction is conducted by simply shaking the alcohol with concentrated $HCl$ at room temperature. Constant boiling with $HBr$ (48%) is used for preparing alkyl bromide. Good yields of $R—I$ may be obtained by heating alcohols with sodium or potassium iodide in 95% orthophosphoric acid. The order of reactivity of alcohols with a given haloacid is $3^\\circ > 2^\\circ > 1^\\circ$. Phosphorus tribromide and triiodide are usually generated in situ (produced in the reaction mixture) by the reaction of red phosphorus with bromine and iodine respectively. These methods are not applicable for the preparation of aryl halides because the carbon-oxygen bond in phenols has a partial double bond character and is difficult to break being stronger than a single bond.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Reactions of Alcohols",
+                "description": "A series of chemical equations showing the conversion of $R-OH$ to $R-X$ using $HCl/ZnCl_2$, $NaBr/H_2SO_4$, $PX_3$, $PCl_5$, $red P/X_2$, and $SOCl_2$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.4:2",
+            "order": 2,
+            "title": "Preparation from Hydrocarbons",
+            "content_text": "Haloalkanes can be prepared from hydrocarbons through various methods. (I) From alkanes by free radical halogenation: Free radical chlorination or bromination of alkanes gives a complex mixture of isomeric mono- and polyhaloalkanes, which is difficult to Free radical chlorination or bromination of alkanes gives a complex mixture of isomeric mono- and polyhaloalkanes, which is difficult to separate as pure compounds. Consequently, the yield of any single compound is low. For example, the chlorination of butane in the presence of UV light or heat results in a mixture of 1-chlorobutane and 2-chlorobutane: $CH_3CH_2CH_2CH_3 \\xrightarrow{Cl_2/UV \\text{ light or heat}} CH_3CH_2CH_2CH_2Cl + CH_3CH_2CHClCH_3$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 6.4.1",
+                "description": "Chemical equation showing the free radical chlorination of butane yielding a mixture of 1-chlorobutane and 2-chlorobutane under UV light or heat.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.4:3",
+            "order": 3,
+            "title": "Addition of Hydrogen Halides to Alkenes",
+            "content_text": "An alkene is converted to the corresponding alkyl halide by reaction with hydrogen chloride, hydrogen bromide, or hydrogen iodide. The general reaction involves the addition of HX across the double bond: $\\text{C=C} + HX \\rightarrow \\text{C(H)-C(X)}$. For unsymmetrical alkenes like propene, the addition follows Markovnikov's rule, where the halogen attaches to the carbon with fewer hydrogen atoms. For example, propene reacts with hydrogen iodide to yield 2-iodopropane as the major product and 1-iodopropane as the minor product: $CH_3CH=CH_2 + H-I \\rightarrow CH_3CH_2CH_2I \\text{ (minor)} + CH_3CHICH_3 \\text{ (major)}$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 6.4.2",
+                "description": "General reaction scheme for the addition of hydrogen halide (HX) to an alkene to form an alkyl halide.",
+                "image_url": null
+              },
+              {
+                "label": "Fig 6.4.3",
+                "description": "Reaction of propene with hydrogen iodide showing the formation of minor (1-iodopropane) and major (2-iodopropane) products according to Markovnikov's rule.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.4:4",
+            "order": 4,
+            "title": "Addition of Halogens to Alkenes",
+            "content_text": "In the laboratory, the addition of bromine in carbon tetrachloride ($CCl_4$) to an alkene results in the discharge of the reddish-brown color of bromine. This reaction is a standard test for the detection of a double bond in a molecule. The addition results in the synthesis of vic-dibromides, which are colorless. For instance, ethene reacts with bromine in $CCl_4$ to form 1,2-dibromoethane (vic-dibromide): $CH_2=CH_2 + Br_2 \\xrightarrow{CCl_4} BrCH_2-CH_2Br$.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 6.4.4",
+                "description": "Reaction of ethene with bromine in carbon tetrachloride to produce vic-dibromide (1,2-dibromoethane).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.4:5",
+            "order": 5,
+            "title": "Worked Example: Monochlorination Isomers",
+            "content_text": "This subsection covers the identification of all possible monochloro structural isomers formed during the free radical monochlorination of an alkane. For $(CH_3)_2CHCH_2CH_3$, there are four distinct types of hydrogen atoms, leading to four different monochlorinated products.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 6.3",
+                "problem": "Identify all the possible monochloro structural isomers expected to be formed on free radical monochlorination of $(CH_3)_2CHCH_2CH_3$.",
+                "solution": "In the given molecule, there are four different types of hydrogen atoms. Replacement of these hydrogen atoms will give the following four structural isomers: (1) $(CH_3)_2CHCH_2CH_2Cl$, (2) $(CH_3)_2CHCH(Cl)CH_3$, (3) $(CH_3)_2C(Cl)CH_2CH_3$, and (4) $CH_3CH(CH_2Cl)CH_2CH_3$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:6:6.4.3",
+        "number": "6.4.3",
+        "title": "Halogen Exchange",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:6:6.4.3:1",
+            "order": 1,
+            "title": "Finkelstein Reaction",
+            "content_text": "Alkyl iodides are often prepared by the reaction of alkyl chlorides or bromides with sodium iodide (NaI) in dry acetone. This reaction is known as the Finkelstein reaction: $R-X + NaI \\rightarrow R-I + NaX$ (where $X = Cl, Br$). The NaCl or NaBr formed is precipitated in dry acetone, which facilitates the forward reaction according to Le Chatelier’s Principle.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.4.3:2",
+            "order": 2,
+            "title": "Swarts Reaction",
+            "content_text": "The synthesis of alkyl fluorides is best accomplished by heating an alkyl chloride or bromide in the presence of a metallic fluoride such as $AgF, Hg_2F_2, CoF_2$, or $SbF_3$. This reaction is termed the Swarts reaction. For example, methyl bromide reacts with silver fluoride to produce methyl fluoride and silver bromide: $H_3C-Br + AgF \\rightarrow H_3C-F + AgBr$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:6:6.5",
+        "number": "6.5",
+        "title": "Preparation of Haloarenes",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:6:6.5:1",
+            "order": 1,
+            "title": "Electrophilic Substitution of Arenes",
+            "content_text": "Aryl chlorides and bromides can be prepared by electrophilic substitution of arenes with chlorine and bromine in the presence of Lewis acid catalysts like iron ($Fe$) or iron(III) chloride ($FeCl_3$). For example, the reaction of toluene with $X_2$ ($X=Cl, Br$) in the dark with an iron catalyst yields a mixture of ortho-halotoluene and para-halotoluene. These isomers can be easily separated due to the large difference in their melting points. Reactions with iodine are reversible and require an oxidizing agent like $HNO_3$ or $HIO_4$ to remove the HI formed. Fluoro compounds are not prepared by this method due to the high reactivity of fluorine.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 6.5.1",
+                "description": "Electrophilic substitution of toluene with $X_2$ in the presence of iron catalyst to form o-halotoluene and p-halotoluene.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.5:2",
+            "order": 2,
+            "title": "Sandmeyer's Reaction",
+            "content_text": "When a primary aromatic amine is treated with sodium nitrite and aqueous mineral acid at 273-278 K, a benzene diazonium salt is formed. Mixing this freshly prepared diazonium salt with cuprous chloride ($Cu_2Cl_2$) or cuprous bromide ($Cu_2Br_2$) results in the replacement of the diazonium group by $-Cl$ or $-Br$, yielding aryl halides. To prepare aryl iodides, the diazonium salt is simply shaken with potassium iodide ($KI$), and cuprous halide is not required.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 6.5.2",
+                "description": "Two-step process: formation of benzene diazonium halide from aniline, followed by its reaction with cuprous halide to form an aryl halide.",
+                "image_url": null
+              },
+              {
+                "label": "Fig 6.5.3",
+                "description": "Reaction of benzene diazonium halide with potassium iodide to form aryl iodide and nitrogen gas.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.5:3",
+            "order": 3,
+            "title": "Worked Example: Addition and Substitution Products",
+            "content_text": "This subsection demonstrates the application of reaction rules (Markovnikov, Peroxide effect) to predict products for various alkene and alcohol reactions.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 6.4",
+                "problem": "Write the products of the following reactions: (i) Cyclohexene + HBr, (ii) $CH_3-CH_2-CH=CH_2 + HCl$, (iii) $C_6H_5-CH_2-CH=CH_2 + HBr \\xrightarrow{Peroxide}$.",
+                "solution": "(i) Bromocyclohexane (addition of HBr across the double bond). (ii) 2-chlorobutane (Markovnikov addition of HCl). (iii) 1-bromo-3-phenylpropane (Anti-Markovnikov addition of HBr due to the peroxide effect)."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:6:6.6",
+        "number": "6.6",
+        "title": "Physical Properties",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:6:6.6:1",
+            "order": 1,
+            "title": "General Physical Properties",
+            "content_text": "Alkyl halides are generally colorless when pure. However, bromides and iodides may develop color when exposed to light. Many volatile halogen compounds possess a characteristic sweet smell. Alkyl halides like methyl chloride, methyl bromide, and ethyl chloride are gases at room temperature, while higher members are liquids or solids. Due to the polar nature of organic halogen compounds and their higher molecular mass compared to parent hydrocarbons, the intermolecular forces of attraction (dipole-dipole and van der Waals) are stronger. Consequently, the boiling points of chlorides, bromides, and iodides are considerably higher than those of hydrocarbons of comparable molecular mass. For a given alkyl group, the boiling points of alkyl halides decrease in the order: $RI > RBr > RCl > RF$. This trend occurs because as the size and mass of the halogen atom increase, the magnitude of van der Waals forces increases. For isomeric haloalkanes, the boiling points decrease with an increase in branching; for example, 2-bromo-2-methylpropane has a lower boiling point than 1-bromobutane because branching decreases the surface area and thus the van der Waals forces. In the case of isomeric dihalobenzenes, the boiling points are nearly identical, but the para-isomers have significantly higher melting points than the ortho- and meta-isomers. This is attributed to the symmetry of para-isomers, which allows them to fit better into the crystal lattice.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 6.1",
+                "description": "A bar graph comparing the boiling points (in Kelvin) of various alkyl halides ($CH_3X$, $CH_3CH_2X$, and $CH_3CH_2CH_2X$) where X represents Cl (red), Br (blue), and I (yellow). It shows a clear increase in boiling point with increasing chain length and increasing atomic mass of the halogen.",
+                "image_url": null
+              },
+              {
+                "label": "Isomeric Haloalkanes",
+                "description": "Structural formulas and boiling points of three isomers of $C_4H_9Br$: 1-bromobutane (375 K), 2-bromobutane (364 K), and 2-bromo-2-methylpropane (346 K), illustrating the decrease in boiling point with branching.",
+                "image_url": null
+              },
+              {
+                "label": "Isomeric Dihalobenzenes",
+                "description": "Structures of ortho, meta, and para-dichlorobenzene with their respective boiling points (453 K, 446 K, 448 K) and melting points (256 K, 249 K, 323 K).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.6:2",
+            "order": 2,
+            "title": "Density",
+            "content_text": "Bromo, iodo, and polychloro derivatives of hydrocarbons are heavier than water. The density of these compounds increases with an increase in the number of carbon atoms, the number of halogen atoms, and the atomic mass of the halogen atoms. This trend is quantified in Table 6.3.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 6.3",
+                "caption": "Density of Some Haloalkanes",
+                "headers": [
+                  "Compound",
+                  "Density (g/mL)",
+                  "Compound",
+                  "Density (g/mL)"
+                ],
+                "rows": [
+                  [
+                    "$n-C_3H_7Cl$",
+                    "0.89",
+                    "$CH_2Cl_2$",
+                    "1.336"
+                  ],
+                  [
+                    "$n-C_3H_7Br$",
+                    "1.335",
+                    "$CHCl_3$",
+                    "1.489"
+                  ],
+                  [
+                    "$n-C_3H_7I$",
+                    "1.747",
+                    "$CCl_4$",
+                    "1.595"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.6:3",
+            "order": 3,
+            "title": "Solubility",
+            "content_text": "Haloalkanes are only very slightly soluble in water. Dissolving them requires energy to overcome the intermolecular attractions between haloalkane molecules and to break the hydrogen bonds between water molecules. Since the new attractions formed between haloalkanes and water molecules are not as strong as the original hydrogen bonds in water, less energy is released, resulting in low solubility. However, haloalkanes tend to dissolve readily in organic solvents because the new intermolecular attractions between the haloalkane and solvent molecules have similar strengths to those being broken.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:6:6.7",
+        "number": "6.7",
+        "title": "Chemical Reactions",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:6:6.7:1",
+            "order": 1,
+            "title": "Classification of Reactions",
+            "content_text": "The reactions of haloalkanes can be broadly categorized into three types: 1. Nucleophilic substitution, 2. Elimination reactions, and 3. Reaction with metals.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.7:2",
+            "order": 2,
+            "title": "Nucleophilic Substitution Reactions",
+            "content_text": "In a nucleophilic substitution reaction, a nucleophile (an electron-rich species) attacks the electron-deficient carbon atom of a haloalkane. The carbon atom is electron-deficient because it is bonded to a more electronegative halogen atom, creating a partial positive charge ($\\\\delta^+$) on the carbon and a partial negative charge ($\\\\delta^-$) on the halogen. During the reaction, the nucleophile replaces the halogen atom, which departs as a halide ion ($X^-$), known as the leaving group. This reaction is initiated by a nucleophile and is one of the most useful classes of organic reactions for alkyl halides, where the halogen is bonded to an $sp^3$ hybridized carbon. The general reaction is: $Nu^- + R-X \\\\rightarrow R-Nu + X^-$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Nucleophilic Substitution Mechanism",
+                "description": "A chemical equation showing a nucleophile ($Nu^-$) attacking the partial positive carbon of a C-X bond, leading to the formation of a C-Nu bond and the release of a halide ion ($X^-$).",
+                "image_url": null
+              }
+            ],
+            "tables": [
+              {
+                "label": "Table 6.4",
+                "caption": "Nucleophilic Substitution of Alkyl Halides (R-X)",
+                "headers": [
+                  "Reagent",
+                  "Nucleophile ($Nu^-$)",
+                  "Substitution product R-Nu",
+                  "Class of main product"
+                ],
+                "rows": [
+                  [
+                    "$NaOH$ ($KOH$)",
+                    "$HO^-$",
+                    "$ROH$",
+                    "Alcohol"
+                  ],
+                  [
+                    "$H_2O$",
+                    "$H_2O$",
+                    "$ROH$",
+                    "Alcohol"
+                  ],
+                  [
+                    "$NaOR'$",
+                    "$R'O^-$",
+                    "$ROR'$",
+                    "Ether"
+                  ],
+                  [
+                    "$NaI$",
+                    "$I^-$",
+                    "$R-I$",
+                    "Alkyl iodide"
+                  ],
+                  [
+                    "$NH_3$",
+                    "$NH_3$",
+                    "$RNH_2$",
+                    "Primary amine"
+                  ],
+                  [
+                    "$R'NH_2$",
+                    "$R'NH_2$",
+                    "$RNHR'$",
+                    "Sec. amine"
+                  ],
+                  [
+                    "$R'R''NH$",
+                    "$R'R''NH$",
+                    "$RNR'R''$",
+                    "Tert. amine"
+                  ],
+                  [
+                    "$KCN$",
+                    "$\\\\bar{C} \\\\equiv N:$",
+                    "$RCN$",
+                    "Nitrile (cyanide)"
+                  ],
+                  [
+                    "$AgCN$",
+                    "$Ag-CN:$",
+                    "$RNC$",
+                    "Isonitrile (isocyanide)"
+                  ],
+                  [
+                    "$KNO_2$",
+                    "$O=N-O$",
+                    "$R-O-N=O$",
+                    "Alkyl nitrite"
+                  ],
+                  [
+                    "$AgNO_2$",
+                    "$Ag-\\\\ddot{O}-N=O$",
+                    "$R-NO_2$",
+                    "Nitroalkane"
+                  ],
+                  [
+                    "$R'COOAg$",
+                    "$R'COO^-$",
+                    "$R'COOR$",
+                    "Ester"
+                  ],
+                  [
+                    "$LiAlH_4$",
+                    "$H^-$",
+                    "$RH$",
+                    "Hydrocarbon"
+                  ],
+                  [
+                    "$R'-M^+$",
+                    "$R'^-$",
+                    "$RR'$",
+                    "Alkane"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.7:3",
+            "order": 3,
+            "title": "Ambident Nucleophiles",
+            "content_text": "Groups that possess two nucleophilic centers are called ambident nucleophiles. A prominent example is the cyanide group, which can act as a nucleophile through either the carbon atom or the nitrogen atom ($[^{\\\\ominus}C \\\\equiv N \\\\leftrightarrow :C=N^{\\\\ominus}]$). Linking through the carbon atom results in alkyl cyanides (nitriles), while linking through the nitrogen atom yields isocyanides. Similarly, nitrite ions are ambident nucleophiles; they can link through oxygen to form alkyl nitrites ($-O-N=O$) or through nitrogen to form nitroalkanes ($-NO_2$).\nSimilarly to the cyanide ion, the nitrite ion also represents an ambident nucleophile with two different points of linkage: $[O-N=O]^-$. The linkage through the oxygen atom results in the formation of alkyl nitrites ($R-ONO$), while linkage through the nitrogen atom leads to the formation of nitroalkanes ($R-NO_2$).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.7:4",
+            "order": 4,
+            "title": "Nucleophilic Substitution: Example 6.5",
+            "content_text": "The reaction of haloalkanes with nucleophiles like cyanide can yield different products depending on the reagent used. KCN and AgCN provide different outcomes due to their bonding nature. KCN is predominantly ionic, providing cyanide ions where both C and N can donate electrons, but C-C bond formation is preferred. AgCN is covalent, leaving the nitrogen atom's lone pair as the primary site for attack.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 6.5",
+                "problem": "Haloalkanes react with KCN to form alkyl cyanides as main product while AgCN forms isocyanides as the chief product. Explain.",
+                "solution": "KCN is predominantly ionic and provides cyanide ions in solution. Although both carbon and nitrogen atoms are in a position to donate electron pairs, the attack takes place mainly through carbon atom and not through nitrogen atom since $C-C$ bond is more stable than $C-N$ bond. However, AgCN is mainly covalent in nature and nitrogen is free to donate electron pair forming isocyanide as the main product."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.7:5",
+            "order": 5,
+            "title": "Substitution Nucleophilic Bimolecular ($S_N2$): Kinetics",
+            "content_text": "The mechanism of nucleophilic substitution can proceed by two different paths. The first is Substitution nucleophilic bimolecular ($S_N2$). The reaction between $CH_3Cl$ and hydroxide ion to yield methanol and chloride ion follows second order kinetics, meaning the rate of reaction depends upon the concentration of both the reactants: the alkyl halide and the nucleophile. In 1937, Edward Davies Hughes and Sir Christopher Ingold proposed this mechanism.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 6.2",
+                "description": "Diagrammatic representation of an $S_N2$ reaction. A red ball (representing the incoming hydroxide ion) attacks the carbon atom from the side opposite to the green ball (representing the outgoing halide ion). The diagram shows the transition state where the carbon is simultaneously bonded to both the incoming nucleophile and the leaving group, followed by the formation of the product with inverted configuration.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.7:6",
+            "order": 6,
+            "title": "Mechanism and Stereochemistry of $S_N2$ Reactions",
+            "content_text": "In the $S_N2$ mechanism, the incoming nucleophile interacts with the alkyl halide, causing the carbon-halide bond to break and a new bond to form between the carbon and the attacking nucleophile simultaneously in a single step. No intermediate is formed. As the reaction progresses, the bond between the incoming nucleophile and the carbon starts forming, and the bond between the carbon atom and the leaving group weakens. In the transition state, the carbon atom is simultaneously bonded to five atoms (the incoming nucleophile, the leaving group, and three other substituents). Such structures are unstable and cannot be isolated. During this process, the three $C-H$ bonds of the substrate move away from the attacking nucleophile. In the transition state, all three $C-H$ bonds are in the same plane. As the nucleophile attaches and the leaving group departs, the configuration is inverted, much like an umbrella being turned inside out in a strong wind. This process is called inversion of configuration. In chemical diagrams, a solid wedge represents a bond coming out of the paper, a dashed line represents a bond going into the paper, and a straight line represents a bond in the plane of the paper.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.7:7",
+            "order": 7,
+            "title": "Definition of Configuration",
+            "content_text": "Configuration refers to the spatial arrangement of functional groups around a carbon atom. Two structures of the same compound may differ in their spatial arrangement, where one is the mirror image of the other. These different arrangements are referred to as different configurations.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Configuration Comparison",
+                "description": "Two structures (A) and (B) of the same compound (with Br, Cl, I, and H substituents) showing mirror image configurations. Structure (A) is the mirror image of Structure (B), demonstrating how spatial arrangement defines configuration.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.7:8",
+            "order": 8,
+            "title": "Steric Effects and Reactivity in $S_N2$ Reactions",
+            "content_text": "The reactivity of alkyl halides in $S_N2$ reactions is significantly affected by steric hindrance. Since the reaction requires the nucleophile to approach the carbon bearing the leaving group, the presence of bulky substituents on or near that carbon has a dramatic inhibiting effect. Methyl halides react most rapidly because they have only three small hydrogen atoms. Tertiary halides are the least reactive because bulky groups hinder the approaching nucleophiles. The order of reactivity followed is: Primary halide > Secondary halide > Tertiary halide.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 6.3",
+                "description": "Steric effects in $S_N2$ reaction showing the relative rates of reaction for different alkyl halides: Methyl (30), Ethyl $1^\\circ$ (1), Isopropyl $2^\\circ$ (0.02), and tert-butyl $3^\\circ$ (0). The diagram illustrates how increasing the number of alkyl groups around the reaction center increases steric hindrance and decreases the reaction rate.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.7:9",
+            "order": 9,
+            "title": "Substitution Nucleophilic Unimolecular ($S_N1$): Kinetics",
+            "content_text": "$S_N1$ reactions are generally carried out in polar protic solvents such as water, alcohol, or acetic acid. The reaction between tert-butyl bromide and hydroxide ion to yield tert-butyl alcohol follows first order kinetics, meaning the rate of reaction depends upon the concentration of only one reactant, which is tert-butyl bromide. The overall reaction is: $(CH_3)_3CBr + OH^- \\rightarrow (CH_3)_3COH + Br^-$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.7:10",
+            "order": 10,
+            "title": "Mechanism of $S_N1$ Reactions",
+            "content_text": "The $S_N1$ reaction occurs in two distinct steps. In Step I, the polarised $C-Br$ bond undergoes slow cleavage to produce a carbocation and a bromide ion. This step is the slowest and thus the rate-determining step. In Step II, the carbocation formed in the first step is rapidly attacked by the nucleophile to complete the substitution reaction. For example, in the hydrolysis of tert-butyl bromide:\nStep I: $(CH_3)_3CBr \\rightleftharpoons (CH_3)_3C^+ + Br^-$ (Slow)\nStep II: $(CH_3)_3C^+ + OH^- \\rightarrow (CH_3)_3COH$ (Fast)",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.7:11",
+            "order": 11,
+            "title": "$S_N1$ Kinetics and Reactivity Trends",
+            "content_text": "Step I of the $S_N1$ mechanism is the slowest and reversible. It involves the C–Br bond breaking for which the energy is obtained through solvation of halide ion with the proton of protic solvent. Since the rate of reaction depends upon the slowest step, the rate of reaction depends only on the concentration of alkyl halide and not on the concentration of hydroxide ion. Further, greater the stability of carbocation, greater will be its ease of formation from alkyl halide and faster will be the rate of reaction. In case of alkyl halides, $3^\\circ$ alkyl halides undergo $S_N1$ reaction very fast because of the high stability of $3^\\circ$ carbocations. The order of reactivity of alkyl halides towards $S_N1$ is: Tertiary halide > Secondary halide > Primary halide > $\\text{CH}_3\\text{X}$. Conversely, for $S_N2$ reactions, the order is: $\\text{CH}_3\\text{X}$ > Primary halide > Secondary halide > Tertiary halide.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 6.1",
+                "caption": "Reactivity Orders for Nucleophilic Substitution",
+                "headers": [
+                  "Reaction Type",
+                  "Reactivity Order"
+                ],
+                "rows": [
+                  [
+                    "For $S_N2$ reaction",
+                    "Tertiary halide < Secondary halide < Primary halide < $\\text{CH}_3\\text{X}$"
+                  ],
+                  [
+                    "For $S_N1$ reaction",
+                    "Tertiary halide > Secondary halide > Primary halide > $\\text{CH}_3\\text{X}$"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.7:12",
+            "order": 12,
+            "title": "Reactivity of Allylic and Benzylic Halides",
+            "content_text": "Allylic and benzylic halides show high reactivity towards the $S_N1$ reaction. The carbocation thus formed gets stabilised through resonance. In allylic carbocations, the positive charge is shared between two carbon atoms (delocalized between C1 and C3). In benzylic carbocations, the positive charge is delocalized over the benzene ring, specifically at the ortho and para positions, providing significant stabilization.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Resonance Stabilization",
+                "description": "Shows resonance structures of allylic carbocations where the positive charge is shared between two carbons, and benzylic carbocations where the positive charge is delocalized into the benzene ring.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.7:13",
+            "order": 13,
+            "title": "Effect of Halogen on Reactivity",
+            "content_text": "For a given alkyl group, the reactivity of the halide, R-X, follows the same order in both $S_N1$ and $S_N2$ mechanisms: $\\text{R-I} > \\text{R-Br} > \\text{R-Cl} >> \\text{R-F}$. This is because the bond strength decreases as the size of the halogen increases, making the C-I bond the easiest to break.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.7:14",
+            "order": 14,
+            "title": "Worked Example 6.6: $S_N2$ Reactivity Comparison",
+            "content_text": "This example compares the $S_N2$ reactivity of different halogen compounds based on steric hindrance and leaving group ability. Primary halides react faster than secondary ones due to less steric hindrance, and iodides react faster than chlorides because iodine is a better leaving group.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 6.6",
+                "problem": "In the following pairs of halogen compounds, which would undergo $S_N2$ reaction faster? (i) Cyclohexylmethyl chloride and Chlorocyclohexane; (ii) 1-Iodobutane and 1-Chlorobutane.",
+                "solution": "(i) Cyclohexylmethyl chloride is a primary halide and therefore undergoes $S_N2$ reaction faster. (ii) 1-Iodobutane is faster because iodine is a better leaving group because of its large size, it will be released at a faster rate in the presence of incoming nucleophile."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.7:15",
+            "order": 15,
+            "title": "Worked Example 6.7: $S_N1$ and $S_N2$ Reactivity Orders",
+            "content_text": "This example requires predicting the reactivity order for isomeric bromobutanes and various benzylic/phenyl-substituted halides in both $S_N1$ and $S_N2$ mechanisms. $S_N1$ reactivity is governed by carbocation stability, while $S_N2$ is governed by steric hindrance.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 6.7",
+                "problem": "Predict the order of reactivity of the following compounds in $S_N1$ and $S_N2$ reactions: (i) The four isomeric bromobutanes (ii) $\\text{C}_6\\text{H}_5\\text{CH}_2\\text{Br}$, $\\text{C}_6\\text{H}_5\\text{CH}(\\text{C}_6\\text{H}_5)\\text{Br}$, $\\text{C}_6\\text{H}_5\\text{CH}(\\text{CH}_3)\\text{Br}$, $\\text{C}_6\\text{H}_5\\text{C}(\\text{CH}_3)(\\text{C}_6\\text{H}_5)\\text{Br}$",
+                "solution": "(i) $S_N1$ order: $\\text{CH}_3\\text{CH}_2\\text{CH}_2\\text{CH}_2\\text{Br} < (\\text{CH}_3)_2\\text{CHCH}_2\\text{Br} < \\text{CH}_3\\text{CH}_2\\text{CH}(\\text{Br})\\text{CH}_3 < (\\text{CH}_3)_3\\text{CBr}$. $S_N2$ order: $\\text{CH}_3\\text{CH}_2\\text{CH}_2\\text{CH}_2\\text{Br} > (\\text{CH}_3)_2\\text{CHCH}_2\\text{Br} > \\text{CH}_3\\text{CH}_2\\text{CH}(\\text{Br})\\text{CH}_3 > (\\text{CH}_3)_3\\text{CBr}$. Explanation: $S_N1$ reactivity follows carbocation stability ($3^\\circ > 2^\\circ > 1^\\circ$). $S_N2$ reactivity follows the reverse order due to steric hindrance. (ii) $S_N1$ order: $\\text{C}_6\\text{H}_5\\text{C}(\\text{CH}_3)(\\text{C}_6\\text{H}_5)\\text{Br} > \\text{C}_6\\text{H}_5\\text{CH}(\\text{C}_6\\text{H}_5)\\text{Br} > \\text{C}_6\\text{H}_5\\text{CH}(\\text{CH}_3)\\text{Br} > \\text{C}_6\\text{H}_5\\text{CH}_2\\text{Br}$. $S_N2$ order: $\\text{C}_6\\text{H}_5\\text{CH}_2\\text{Br} > \\text{C}_6\\text{H}_5\\text{CH}(\\text{CH}_3)\\text{Br} > \\text{C}_6\\text{H}_5\\text{CH}(\\text{C}_6\\text{H}_5)\\text{Br} > \\text{C}_6\\text{H}_5\\text{C}(\\text{CH}_3)(\\text{C}_6\\text{H}_5)\\text{Br}$. Explanation: $S_N1$ reactivity is determined by the stability of the carbocation intermediate (stabilized by resonance with phenyl groups). $S_N2$ reactivity is determined by steric hindrance (phenyl groups are bulkier than methyl groups)."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.7:16",
+            "order": 16,
+            "title": "Stereochemical Aspects: Optical Activity",
+            "content_text": "To understand substitution reactions, one must learn stereochemical principles like optical activity. Plane polarised light, produced by a Nicol prism (developed by William Nicol), is rotated when passed through solutions of optically active compounds. This rotation is measured by a polarimeter. Clockwise rotation is called dextrorotatory ($d$-form or +), while anticlockwise rotation is laevorotatory ($l$-form or -). These are called optical isomers, and the phenomenon is optical isomerism.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.7:17",
+            "order": 17,
+            "title": "Molecular Asymmetry and Pasteur's Observations",
+            "content_text": "Louis Pasteur (1848) observed that crystals of certain compounds exist as mirror images. He demonstrated that aqueous solutions of both types of crystals showed optical rotation equal in magnitude but opposite in direction. He concluded that optical activity is associated with the three-dimensional arrangement of atoms (configurations) in the molecules.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.7:18",
+            "order": 18,
+            "title": "Asymmetric Carbon and Stereocentres",
+            "content_text": "J. Van’t Hoff and C. Le Bel (1874) argued that the spatial arrangement of four groups around a central carbon is tetrahedral. If all four substituents are different, the mirror image of the molecule is not superimposable on the molecule. Such a carbon is called an asymmetric carbon or stereocentre. The resulting molecule lacks symmetry and is an asymmetric molecule.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.7:19",
+            "order": 19,
+            "title": "Chirality and Achirality",
+            "content_text": "Molecular asymmetry and non-superimposability of mirror images cause optical activity. Objects that cannot be superimposed on their mirror images (like a pair of hands) are called chiral, and this property is chirality. Chiral molecules are optically active. Objects superimposable on their mirror images are achiral and optically inactive.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 6.4",
+                "description": "Illustrates chiral objects (non-superimposable mirror images like hands and feet) and achiral objects (superimposable mirror images like flasks and glasses).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.7:20",
+            "order": 20,
+            "title": "Case Study: Propan-2-ol Chirality Test",
+            "content_text": "Molecular chirality can be tested by attempting to superimpose a molecule on its mirror image. In propan-2-ol (A), the central carbon is not asymmetric because it is attached to two identical methyl groups. Rotating its mirror image (B) by $180^\\circ$ yields structure (C), which is completely superimposable on (A). Thus, propan-2-ol is an achiral molecule. Butan-2-ol has four different groups attached to the tetrahedral carbon and as expected is chiral. Some common examples of chiral molecules include 2-chlorobutane, 2,3-dihydroxypropanal ($OHC-CHOH-CH_2OH$), bromochloro-iodomethane ($BrClCHI$), and 2-bromopropanoic acid ($H_3C-CHBr-COOH$). As shown in Fig. 6.6, structure E is the mirror image of D. When E is rotated by $180^\\circ$ to get F, F is found to be non-superimposable on its mirror image D, confirming its chirality.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 6.5",
+                "description": "Shows the three-dimensional structure of propan-2-ol (A), its mirror image (B), and the $180^\\circ$ rotation of the mirror image (C) demonstrating superimposability.",
+                "image_url": null
+              },
+              {
+                "label": "Fig 6.6",
+                "description": "Mirror image relationship of Butan-2-ol. Structure D (Butan-2-ol) and its mirror image E. Rotation of E by 180 degrees results in F, which is non-superimposable on D.",
+                "image_url": null
+              },
+              {
+                "label": "Fig 6.7",
+                "description": "A ball-and-stick model representing a chiral molecule and its non-superimposable mirror image.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.7:21",
+            "order": 21,
+            "title": "Enantiomers",
+            "content_text": "The stereoisomers related to each other as non-superimposable mirror images are called enantiomers. Enantiomers possess identical physical properties such as melting point, boiling point, and refractive index. They only differ with respect to the rotation of plane polarised light. If one of the enantiomers is dextrorotatory ($+$), the other will be laevorotatory ($-$). It is important to note that the sign of optical rotation is not necessarily related to the absolute (actual) configuration of the molecule.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.7:22",
+            "order": 22,
+            "title": "Racemic Mixture and Racemisation",
+            "content_text": "A mixture containing two enantiomers in equal proportions will have zero optical rotation, as the rotation due to one isomer will be cancelled by the rotation due to the other isomer. Such a mixture is known as a racemic mixture or racemic modification. A racemic mixture is represented by prefixing $dl$ or $(\\pm)$ before the name, for example $(\\pm)$ butan-2-ol. The process of conversion of an enantiomer into a racemic mixture is known as racemisation.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.7:23",
+            "order": 23,
+            "title": "Worked Example: Identifying Chiral Molecules",
+            "content_text": "Identifying chirality involves checking for the presence of an asymmetric carbon atom (a carbon bonded to four different groups).",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 6.8",
+                "problem": "Identify chiral and achiral molecules in each of the following pair of compounds: (i) 2-bromobutane vs 1-bromobutane (ii) 2-bromopentane vs 3-bromopentane (iii) 2-bromobutane vs 1-bromobutane (structural formulas provided).",
+                "solution": "(i) The first molecule is chiral because the central carbon is attached to $H$, $CH_3$, $Br$, and $OH$. The second is achiral as it has two identical $Br$ atoms on the same carbon. (ii) The first molecule is chiral (carbon attached to $H$, $OH$, $CH_3$, and $C_3H_7$). The second is achiral (carbon attached to two identical ethyl groups). (iii) The first molecule is chiral (carbon attached to $H$, $Br$, $CH_3$, and $C_2H_5$). The second is achiral (primary halide)."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.7:24",
+            "order": 24,
+            "title": "Retention of Configuration",
+            "content_text": "Retention of configuration is the preservation of the spatial arrangement of bonds to an asymmetric centre during a chemical reaction or transformation. In general, if during a reaction, no bond to the stereocentre is broken, the product will have the same general configuration of groups around the stereocentre as that of the reactant. For example, the reaction of $(-)$-2-methylbutan-1-ol with concentrated hydrochloric acid yields $(+)$-1-chloro-2-methylbutane. Although the sign of rotation changes, the relative configuration remains the same because the bonds to the asymmetric carbon were not broken.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Retention Reaction",
+                "description": "Chemical equation showing $(-)$-2-methylbutan-1-ol reacting with $HCl$ under heat to form $(+)$-1-chloro-2-methylbutane and water, illustrating retention of configuration.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.7:25",
+            "order": 25,
+            "title": "Inversion, Retention, and Racemisation",
+            "content_text": "There are three outcomes for a reaction at an asymmetric carbon atom when a bond directly linked to it is broken: (i) Retention: If the relative spatial arrangement of groups in the product is the same as in the reactant (Compound A). (ii) Inversion: If the configuration is inverted (Compound B). (iii) Racemisation: If a 50:50 mixture of A and B is obtained, the process is called racemisation and the product is optically inactive.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Stereochemical Outcomes",
+                "description": "A general scheme showing a starting material with group X being replaced by Y. Path A leads to retention, Path B leads to inversion, and the middle path leads to a mixture A+B (racemisation).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.7:26",
+            "order": 26,
+            "title": "Stereochemistry of $S_N2$ and $S_N1$ Mechanisms",
+            "content_text": "In the case of optically active alkyl halides, the $S_N2$ mechanism results in the inverted configuration because the nucleophile attacks from the side opposite to the leaving group. For example, when $(-)$-2-bromooctane reacts with $NaOH$, $(+)$-octan-2-ol is formed. Conversely, $S_N1$ reactions are accompanied by racemisation. This occurs because the intermediate carbocation is $sp^2$ hybridised and planar (achiral), allowing the nucleophile to attack from either side with equal probability. For example, the hydrolysis of optically active 2-bromobutane results in the formation of $(\\pm)$-butan-2-ol.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "$S_N2$ Inversion",
+                "description": "Mechanism showing $OH^-$ attacking $(-)$-2-bromooctane from the back, leading to $(+)$-octan-2-ol with inversion.",
+                "image_url": null
+              },
+              {
+                "label": "$S_N1$ Racemisation",
+                "description": "Mechanism showing the formation of a planar carbocation from $(+)$-butan-2-ol, followed by $OH^-$ attack from both sides to yield a racemic mixture of butan-2-ol.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:6:6.7.2",
+        "number": "6.7.2",
+        "title": "Elimination Reactions",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:6:6.7.2:1",
+            "order": 1,
+            "title": "Introduction to $\\beta$-Elimination",
+            "content_text": "When a haloalkane with a $\\beta$-hydrogen atom is heated with an alcoholic solution of potassium hydroxide, there is an elimination of a hydrogen atom from the $\\beta$-carbon and a halogen atom from the $\\alpha$-carbon atom. As a result, a double bond is formed between the $\\alpha$ and $\\beta$ carbon atoms. This is also known as dehydrohalogenation.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Elimination Mechanism",
+                "description": "General reaction showing a base (B:) abstracting a $\\beta$-hydrogen while the halogen (X) leaves the $\\alpha$-carbon, forming an alkene, $B-H$, and $X^-$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.7.2:2",
+            "order": 2,
+            "title": "Location of $\\alpha$ and $\\beta$ Carbon",
+            "content_text": "The carbon atom to which the halogen atom is directly attached is called the $\\alpha$-carbon. The carbon atom adjacent to the $\\alpha$-carbon is called the $\\beta$-carbon. Hydrogens attached to the $\\beta$-carbon are referred to as $\\beta$-hydrogens.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.7.2:3",
+            "order": 3,
+            "title": "Zaitsev's Rule in Dehydrohalogenation",
+            "content_text": "In dehydrohalogenation reactions, if there is a possibility of forming more than one alkene due to the availability of multiple $\\beta$-hydrogen atoms, usually one alkene is formed as the major product. This pattern was first observed by the Russian chemist Alexander Zaitsev (also pronounced Saytzeff) in 1875. Zaitsev's rule states: 'in dehydrohalogenation reactions, the preferred product is that alkene which has the greater number of alkyl groups attached to the doubly bonded carbon atoms.' For example, the reaction of 2-bromopentane with ethoxide ion yields pent-2-ene (81%) as the major product and pent-1-ene (19%) as the minor product, because pent-2-ene is more highly substituted.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Reaction of 2-bromopentane",
+                "description": "Chemical equation showing 2-bromopentane reacting with hydroxide ion to produce pent-2-ene (81%) and pent-1-ene (19%).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.7.2:4",
+            "order": 4,
+            "title": "Elimination versus Substitution Competition",
+            "content_text": "A chemical reaction is often a competition between different pathways, such as substitution ($S_N1$ and $S_N2$) and elimination. The route taken depends on the nature of the alkyl halide, the strength and size of the base/nucleophile, and reaction conditions. A bulkier nucleophile will prefer to act as a base and abstract a $\\beta$-proton (elimination) rather than approach a tetravalent carbon atom due to steric hindrance. Conversely, a primary alkyl halide will typically prefer an $S_N2$ reaction. Secondary halides may undergo $S_N2$ or elimination depending on the strength of the base/nucleophile. Tertiary halides undergo $S_N1$ or elimination depending on the stability of the carbocation or the formation of a more substituted alkene.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Elimination vs Substitution",
+                "description": "Molecular models illustrating the competition between elimination (base abstracting a proton) and substitution (nucleophile attacking the carbon atom).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.7.2:5",
+            "order": 5,
+            "title": "Low Reactivity of Aryl Halides: Resonance Effect",
+            "content_text": "Aryl halides are extremely less reactive towards nucleophilic substitution reactions compared to haloalkanes. One primary reason is the resonance effect. In haloarenes, the electron pairs on the halogen atom are in conjugation with the $\\pi$-electrons of the benzene ring. This results in resonating structures where the $C-X$ bond acquires a partial double bond character. Consequently, the bond cleavage in haloarenes is much more difficult than in haloalkanes, leading to lower reactivity.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Resonance in Chlorobenzene",
+                "description": "Resonating structures of chlorobenzene showing the delocalization of lone pairs from the chlorine atom into the benzene ring, creating partial double bond character at the C-Cl bond.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.7.2:6",
+            "order": 6,
+            "title": "Low Reactivity of Aryl Halides: Hybridisation and Bond Length",
+            "content_text": "In haloalkanes, the carbon atom attached to the halogen is $sp^3$ hybridised, while in haloarenes, it is $sp^2$ hybridised. The $sp^2$ hybridised carbon has a greater s-character, making it more electronegative and capable of holding the electron pair of the $C-X$ bond more tightly than the $sp^3$ hybridised carbon in haloalkanes. This results in a shorter $C-Cl$ bond length in haloarenes (169 pm) compared to haloalkanes (177 pm). Since it is more difficult to break a shorter bond, haloarenes are less reactive towards nucleophilic substitution.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Hybridisation Comparison",
+                "description": "Diagram comparing the sp2 hybrid carbon in haloarenes with the sp3 hybrid carbon in haloalkanes, noting the difference in bond lengths.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.7.2:7",
+            "order": 7,
+            "title": "Low Reactivity of Aryl Halides: Phenyl Cation and Repulsion",
+            "content_text": "Two other factors contribute to the low reactivity of aryl halides. First, the instability of the phenyl cation: in haloarenes, the phenyl cation formed by self-ionisation would not be stabilised by resonance, which rules out the $S_N1$ mechanism. Second, because of the possible electronic repulsion, it is less likely for an electron-rich nucleophile to approach the electron-rich $\\pi$-system of the benzene ring.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.7.2:8",
+            "order": 8,
+            "title": "Replacement by Hydroxyl Group",
+            "content_text": "Chlorobenzene can be converted into phenol by heating in aqueous sodium hydroxide solution at a temperature of 623 K and a pressure of 300 atmospheres, followed by acidification. The reaction is: $C_6H_5Cl \\xrightarrow[300 \\text{ atm}]{(i) NaOH, 623K} \\xrightarrow{(ii) H^+} C_6H_5OH$.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.7.2:9",
+            "order": 9,
+            "title": "Effect of Electron Withdrawing Groups on Reactivity",
+            "content_text": "The presence of an electron-withdrawing group (EWG) like $-NO_2$ at the ortho- and para-positions significantly increases the reactivity of haloarenes towards nucleophilic substitution. For example, p-nitrochlorobenzene reacts with NaOH at 443 K, and 2,4-dinitrochlorobenzene reacts at 368 K to form the corresponding phenols. The reactivity increases as the number of electron-withdrawing groups at these positions increases.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Substitution in Nitro-substituted Haloarenes",
+                "description": "Reaction schemes showing the conversion of p-nitrochlorobenzene and 2,4-dinitrochlorobenzene to their respective phenols under milder conditions than chlorobenzene.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.7.2:10",
+            "order": 10,
+            "title": "Nucleophilic Substitution on Haloarenes: Mechanism",
+            "content_text": "The effect of electron withdrawing groups on the reactivity of haloarenes is pronounced when the $-NO_2$ group is introduced at ortho- and para- positions. However, no effect on reactivity is observed by the presence of an electron withdrawing group at the meta-position. The mechanism involves the formation of a Meisenheimer complex where the incoming nucleophile attacks the carbon bearing the halogen. For the p-isomer and o-isomer, the negative charge developed in the intermediate can be delocalised onto the nitro group through resonance, stabilising the intermediate and thus facilitating the reaction. In the case of the m-isomer, none of the resonating structures bear the negative charge on the carbon atom bearing the $-NO_2$ group. Therefore, the presence of a nitro group at the meta-position does not stabilise the negative charge and no effect on reactivity is observed.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Meisenheimer complex for p-nitrochlorobenzene",
+                "description": "Resonance structures showing nucleophilic substitution on p-nitrochlorobenzene with charge delocalisation onto the nitro group",
+                "image_url": null
+              },
+              {
+                "label": "Meisenheimer complex for o-nitrochlorobenzene",
+                "description": "Resonance structures for nucleophilic substitution on o-nitrochlorobenzene",
+                "image_url": null
+              },
+              {
+                "label": "Attempted substitution on m-nitrochlorobenzene",
+                "description": "Resonance structures showing that the negative charge cannot be delocalised onto the meta-nitro group",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.7.2:11",
+            "order": 11,
+            "title": "Electrophilic Substitution Reactions of Haloarenes",
+            "content_text": "Haloarenes undergo the usual electrophilic reactions of the benzene ring such as halogenation, nitration, sulphonation and Friedel-Crafts reactions. The halogen atom, besides being slightly deactivating, is ortho-, para-directing; therefore, further substitution occurs at ortho- and para-positions with respect to the halogen atom. The o,p-directing influence can be understood through resonance structures of halobenzenes, where electron density increases more at ortho- and para-positions than at meta-positions. Due to the $-I$ effect, the halogen atom has some tendency to withdraw electrons from the benzene ring, making the ring somewhat deactivated compared to benzene. Hence, electrophilic substitution reactions in haloarenes occur slowly and require more drastic conditions compared to benzene.\n\n(i) Halogenation: Chlorobenzene reacts with $Cl_2$ in the presence of anhydrous $FeCl_3$ to yield a mixture of 1,2-dichlorobenzene (minor) and 1,4-dichlorobenzene (major).\n\n(ii) Nitration: Chlorobenzene reacts with conc. $HNO_3$ and conc. $H_2SO_4$ to yield 1-chloro-2-nitrobenzene (minor) and 1-chloro-4-nitrobenzene (major).\n\n(iii) Sulphonation: Chlorobenzene reacts with conc. $H_2SO_4$ to yield 2-chlorobenzenesulphonic acid (minor) and 4-chlorobenzenesulphonic acid (major).\n\n(iv) Friedel-Crafts reaction: Chlorobenzene reacts with $CH_3Cl$ in the presence of anhydrous $AlCl_3$ to yield 1-chloro-2-methylbenzene (minor) and 1-chloro-4-methylbenzene (major). Similarly, Friedel-Crafts acylation with $CH_3COCl$ gives 2-chloroacetophenone (minor) and 4-chloroacetophenone (major).",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 6.9",
+                "problem": "Although chlorine is an electron withdrawing group, yet it is ortho-, para-directing in electrophilic aromatic substitution reactions. Why?",
+                "solution": "Chlorine withdraws electrons through inductive effect and releases electrons through resonance. Through inductive effect, chlorine destabilises the intermediate carbocation formed during the electrophilic substitution. Through resonance, the electron density increases more at ortho- and para-positions. The +M effect of chlorine stabilises the intermediate carbocation (Wheland intermediate) by donating a lone pair to form a new π-bond, placing the positive charge on the chlorine. The resonance effect (electron release) is stronger than the inductive effect at ortho- and para-positions, making chlorine an o,p-directing group despite being overall deactivating."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Resonance structures of chlorobenzene",
+                "description": "Four resonance structures showing electron density increase at ortho- and para-positions",
+                "image_url": null
+              },
+              {
+                "label": "Destabilisation by -I effect",
+                "description": "Diagram showing destabilisation of intermediate carbocation by the -I effect of chlorine",
+                "image_url": null
+              },
+              {
+                "label": "Stabilisation by +M effect",
+                "description": "Diagram showing stabilisation of intermediate carbocation by the +M effect of chlorine",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.7.2:12",
+            "order": 12,
+            "title": "Fittig Reaction",
+            "content_text": "Aryl halides also give analogous compounds when treated with sodium in dry ether, in which two aryl groups are joined together. It is called Fittig reaction. This is similar to the Wurtz reaction but involves aryl halides instead of alkyl halides. For example, two molecules of a haloarene react with sodium to form diphenyl: $2C_6H_5X + 2Na \\xrightarrow{\\text{Dry ether}} C_6H_5-C_6H_5 + 2NaX$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fittig Reaction",
+                "description": "Chemical equation showing two molecules of a haloarene (benzene ring with X) reacting with two sodium atoms (2Na) in dry ether to form diphenyl (two connected benzene rings) and two molecules of sodium halide (2NaX).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:6:6.7.3",
+        "number": "6.7.3",
+        "title": "Reaction with Metals",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:6:6.7.3:1",
+            "order": 1,
+            "title": "Grignard Reagents",
+            "content_text": "Most organic chlorides, bromides, and iodides react with certain metals to form organo-metallic compounds, which contain carbon-metal bonds. An important class discovered by Victor Grignard in 1900 is alkyl magnesium halide ($RMgX$), known as Grignard Reagents. These are obtained by the reaction of haloalkanes with magnesium metal in dry ether. For example: $CH_3CH_2Br + Mg \\xrightarrow{\\text{dry ether}} CH_3CH_2MgBr$ (Ethyl magnesium bromide). Victor Grignard was awarded the Nobel Prize in 1912 for this discovery, which he shared with Paul Sabatier.\nIn a Grignard reagent, the carbon-magnesium bond is covalent but highly polar, with carbon pulling electrons from the electropositive magnesium ($R^{\\delta-} - Mg^{\\delta+} - X$). The magnesium-halogen bond is essentially ionic. Grignard reagents are highly reactive and react with any source of protons (such as water, alcohols, or amines) to form hydrocarbons. For example: $RMgX + H_2O \\rightarrow RH + Mg(OH)X$. Due to this extreme reactivity with moisture, it is necessary to carry out these reactions in dry ether. This reaction can also be considered a method for converting halides to hydrocarbons.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.7.3:2",
+            "order": 2,
+            "title": "Wurtz Reaction",
+            "content_text": "Alkyl halides react with sodium metal in dry ether to give hydrocarbons containing double the number of carbon atoms present in the original halide. This reaction is known as the Wurtz reaction. The general equation is: $2RX + 2Na \\rightarrow RR + 2NaX$.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:6:6.8",
+        "number": "6.8",
+        "title": "Polyhalogen Compounds",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:6:6.8:1",
+            "order": 1,
+            "title": "Introduction to Polyhalogen Compounds",
+            "content_text": "Carbon atoms can accommodate more than one halogen atom bound to them, forming polyhalogen compounds. Many of these compounds have important industrial applications. Some notable examples include dichloromethane ($CH_2Cl_2$), trichloromethane (chloroform, $CHCl_3$), triiodomethane (iodoform, $CHI_3$), tetrachloromethane (carbon tetrachloride, $CCl_4$), and freons.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.8:2",
+            "order": 2,
+            "title": "Dichloromethane",
+            "content_text": "Dichloromethane ($CH_2Cl_2$) is widely used as a solvent as a paint remover, as a propellant in aerosols, and as a process solvent in the manufacture of drugs. It is also used as a metal cleaning and finishing solvent.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.8:3",
+            "order": 3,
+            "title": "Chloroform",
+            "content_text": "Chloroform ($CHCl_3$) was once widely used as an anaesthetic. It is slowly oxidised by air in the presence of light to form a poisonous gas, phosgene ($COCl_2$). Therefore, chloroform is stored in dark-coloured bottles completely filled so that air is kept out. It is used as a solvent for fats, alkaloids, iodine, and rubber. Chloroform is also used in the production of the refrigerant freon (R-22, $CHClF_2$).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.8:4",
+            "order": 4,
+            "title": "Iodoform",
+            "content_text": "Iodoform ($CHI_3$) was earlier used as an antiseptic but now it has been replaced by better antiseptics. Its antiseptic property is actually due to the liberation of free iodine.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.8:5",
+            "order": 5,
+            "title": "Carbon Tetrachloride",
+            "content_text": "Carbon tetrachloride ($CCl_4$) is produced by the reaction of methane with chlorine. It is used in the manufacture of refrigerants and propellants for aerosol cans. It was earlier used as a fire extinguisher under the name Pyrene but its use for this purpose has been discontinued as it produces toxic phosgene gas when brought in contact with fire. It is also used as a solvent for oils, fats, lacquers, varnishes, rubber waxes and resins, and as a cleaning agent.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:6.8:6",
+            "order": 6,
+            "title": "Freons and DDT",
+            "content_text": "Freons are chlorofluorocarbons (CFCs) such as freon-12 ($CCl_2F_2$). They are used as refrigerants in air conditioners and refrigerators, as propellants for aerosols and foams, and as cleaning solvents. Their use is being curtailed because they deplete the ozone layer.\n\nDDT (p,p'-dichlorodiphenyltrichloroethane) is the first chlorinated organic insecticide prepared (1873) by the reaction of trichloroacetaldehyde with chlorobenzene in the presence of sulphuric acid. Its insecticidal properties were discovered in 1939 by Paul Muller. DDT is not easily biodegradable and tends to accumulate in the food chain (biomagnification), which is harmful to organisms. Its use has been banned in many countries including India.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:6:Answers",
+        "number": "Answers",
+        "title": "Answers to In-text Questions",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:6:Answers:1",
+            "order": 1,
+            "title": "Isomeric Products from Halogenation of Alkanes (Question 6.4)",
+            "content_text": "The number of isomeric mono-haloalkanes formed during the halogenation of alkanes depends on the number of sets of equivalent hydrogen atoms in the molecule. (i) In neopentane ($H_3C-C(CH_3)_3$), all the hydrogen atoms are equivalent. Therefore, the replacement of any hydrogen atom will result in the same product, yielding only one isomeric mono-haloalkane. (ii) In n-pentane ($C^aH_3C^bH_2C^cH_2C^bH_2C^aH_3$), there are three sets of equivalent hydrogens, labeled as a, b, and c. Replacement of any hydrogen within a set gives the same product. Thus, three isomeric products are possible. (iii) In isopentane ($C^aH_3C^bH(CH_3^a)C^cH_2C^dH_3$), there are four sets of equivalent hydrogens, labeled as a, b, c, and d. Consequently, four isomeric products can be formed upon halogenation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:Answers:2",
+            "order": 2,
+            "title": "Structures of Organic Halides (Question 6.5)",
+            "content_text": "The following structures represent various haloalkanes and haloarenes: (i) Chlorocyclohexane: A cyclohexane ring with a chlorine atom attached. (ii) 1-(1-bromoethyl)-4-nitrobenzene: A benzene ring with a nitro group ($-NO_2$) at the para position relative to a 1-bromoethyl group ($-CH(Br)CH_3$). (iii) 4-(chloromethyl)phenol: A phenol molecule with a chloromethyl group ($-CH_2Cl$) at the para position relative to the hydroxyl group. (iv) 1-iodo-1-methylcyclohexane: A cyclohexane ring with both a methyl group and an iodine atom attached to the same carbon atom. (v) Iodoethane: $CH_3CH_2I$. (vi) 3-bromocyclohexene: A cyclohexene ring with a bromine atom at the allylic position (carbon 3).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "6.5 (i)-(vi)",
+                "description": "Structural formulas for chlorocyclohexane, 1-(1-bromoethyl)-4-nitrobenzene, 4-(chloromethyl)phenol, 1-iodo-1-methylcyclohexane, iodoethane, and 3-bromocyclohexene.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:Answers:3",
+            "order": 3,
+            "title": "Boiling Point Trends in Haloalkanes (Question 6.6)",
+            "content_text": "The boiling points of haloalkanes are influenced by molecular mass and the degree of branching. (i) For a series of haloalkanes with the same alkyl group but different halogens or number of halogens, the boiling point increases with an increase in molecular mass. Order: Chloromethane < Bromomethane < Dibromomethane < Bromoform. (ii) For isomeric haloalkanes, branching decreases the surface area and the strength of van der Waals forces, leading to a lower boiling point. For instance, isopropyl chloride (a branched isomer) has a lower boiling point than 1-chloropropane (a straight-chain isomer). The overall order for the given compounds is: Isopropyl chloride < 1-Chloropropane < 1-Chlorobutane.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:Answers:4",
+            "order": 4,
+            "title": "Steric Hindrance and Nucleophilic Substitution Reactivity (Question 6.7)",
+            "content_text": "In nucleophilic substitution reactions (specifically $S_N2$), the rate of reaction is significantly affected by steric hindrance around the carbon atom bearing the leaving group. (i) $CH_3CH_2CH_2CH_2Br$: This is a primary halide. Due to the absence of significant steric hindrance, it reacts relatively fast. (ii) $CH_3CH_2CH(Br)CH_3$: This is a secondary halide. It generally reacts faster than tertiary halides but slower than primary ones. (iii) $CH_3CH(CH_3)CH_2Br$: Although this is a primary halide, the presence of a methyl group on the $\\beta$-carbon (closer to the halide group) increases steric hindrance, thereby decreasing the reaction rate compared to unbranched primary halides.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:Answers:5",
+            "order": 5,
+            "title": "Carbocation Stability and Reactivity (Question 6.8)",
+            "content_text": "In reactions proceeding via a carbocation intermediate (such as $S_N1$), the reactivity is determined by the stability of the resulting carbocation. (i) Tertiary halides, such as 2-chloro-2-methylpropane, react faster than secondary halides like 2-chlorobutane because the tertiary carbocation formed is more stable than the secondary carbocation. (ii) Secondary halides, such as 2-chloropentane, react faster than primary halides like 1-chloropentane because the secondary carbocation is more stable than the primary carbocation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:Answers:6",
+            "order": 6,
+            "title": "Grignard Reagent Reaction Sequences (Question 6.9)",
+            "content_text": "Grignard reagents ($RMgX$) react with proton donors like water to form alkanes. The following sequence identifies the compounds in the given reactions: Compound A is cyclohexylmagnesium bromide (Cyclohexyl-MgBr), which reacts with water to form cyclohexane (Compound B). Compound C is an isopropylmagnesium halide, $RMgBr$, where $R$ is the isopropyl group ($CH_3CHCH_3$). For the second sequence, $R^1$ is the tert-butyl group ($H_3C-C(CH_3)_2-$). Compound D is tert-butylmagnesium halide ($H_3C-C(CH_3)_2-MgX$). Compound E is 2-methylpropane (isobutane, $H_3C-C(CH_3)_2-H$), formed by the reaction of D with water.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:6:Summary",
+        "number": "Summary",
+        "title": "Summary",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:6:Summary:1",
+            "order": 1,
+            "title": "Preparation and Properties",
+            "content_text": "Haloalkanes and haloarenes are hydrocarbons in which one or more hydrogen atoms are replaced by halogen atoms. These may be classified as mono, di, or polyhalogen compounds. They can be prepared from hydrocarbons by free-radical halogenation, from alcohols by the use of phosphorus halides, thionyl chloride or halogen acids. Aryl halides are prepared by electrophilic substitution to arenes. Fluorides and iodides are best prepared by halogen exchange method.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:Summary:2",
+            "order": 2,
+            "title": "Physical Properties and Reactions",
+            "content_text": "The boiling points of organohalogen compounds are comparatively higher than the corresponding hydrocarbons because of strong dipole-dipole and van der Waals forces of attraction. They are slightly soluble in water but completely soluble in organic solvents. The polarity of the carbon-halogen bond is responsible for their nucleophilic substitution, elimination and their reaction with metal atoms to form organometallic compounds. Nucleophilic substitution reactions are categorised into $S_N1$ and $S_N2$ on the basis of their kinetic properties. Chirality has a profound role in understanding the reaction mechanisms. $S_N2$ reactions of chiral alkyl halides are characterised by inversion of configuration while $S_N1$ reactions are characterised by racemisation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:6:Summary:3",
+            "order": 3,
+            "title": "Polyhalogen Compounds and Environmental Impact",
+            "content_text": "A number of polyhalogen compounds e.g., dichloromethane, chloroform, iodoform, carbon tetrachloride, freon and DDT have many industrial applications. However, some of these compounds cannot be easily decomposed and even cause depletion of the ozone layer and are proving to be environmental hazards.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:chemistry:12:6:ex:1",
+          "number": 1,
+          "problem": "Write structures of the following compounds: (i) 2-Chloro-3-methylpentane (ii) 1-Chloro-4-ethylcyclohexane (iii) 4-tert. Butyl-3-iodoheptane (iv) 1,4-Dibromobut-2-ene (v) 1-Bromo-4-sec. butyl-2-methylbenzene.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "short_answer"
+        },
+        {
+          "id": "ncert:chemistry:12:6:ex:2",
+          "number": 2,
+          "problem": "Why is sulphuric acid not used during the reaction of alcohols with KI?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:6:ex:3",
+          "number": 3,
+          "problem": "Write structures of different dihalogen derivatives of propane.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "short_answer"
+        },
+        {
+          "id": "ncert:chemistry:12:6:ex:4",
+          "number": 4,
+          "problem": "Among the isomeric alkanes of molecular formula $C_5H_{12}$, identify the one that on photochemical chlorination yields: (i) A single monochloride. (ii) Three isomeric monochlorides. (iii) Four isomeric monochlorides.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:6:ex:5",
+          "number": 5,
+          "problem": "Draw the structures of major monohalo products in each of the following reactions: (i) Cyclohexanol + $SOCl_2$, (ii) p-nitrotoluene + $Br_2$, heat or UV light, (iii) (4-hydroxymethyl)phenol + HCl, heat, (iv) 1-methylcyclohexene + HI, (v) $CH_3CH_2Br + NaI$, (vi) Cyclohexene + $Br_2$, heat or UV light.",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:6:ex:6",
+          "number": 6,
+          "problem": "Arrange each set of compounds in order of increasing boiling points. (i) Bromomethane, Bromoform, Chloromethane, Dibromomethane. (ii) 1-Chloropropane, Isopropyl chloride, 1-Chlorobutane.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:6:ex:7",
+          "number": 7,
+          "problem": "Name the following halides according to IUPAC system and classify them as alkyl, allyl, benzyl (primary, secondary, tertiary), vinyl or aryl halides: (i) $(CH_3)_2CHCH(Cl)CH_3$ (ii) $CH_3CH_2C(CH_3)_2CH_2I$ (iii) $CH_3CH(CH_3)CH(Br)CH_3$ (iv) $CH_3C(Cl)(C_2H_5)CH_2CH_3$ (v) $CH_3CH=CHC(Br)(CH_3)_2$ (vi) $m$-$ClCH_2C_6H_4CH_2C(CH_3)_3$ (vii) $p$-$ClC_6H_4CH_2CH(CH_3)_2$ (viii) $o$-$Br$-$C_6H_4CH(CH_3)CH_2CH_3$",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:6:ex:8",
+          "number": 8,
+          "problem": "Give the IUPAC names of the following compounds: (i) $CH_3CH(Cl)CH(Br)CH_3$ (ii) $CHF_2CBrClF$ (iii) $ClCH_2C \\equiv CCH_2Br$ (iv) $(CCl_3)_3CCl$ (v) $CH_3C(p$-$ClC_6H_4)_2CH(Br)CH_3$ (vi) $(CH_3)_3CCH=CClC_6H_4I$-$p$",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:6:ex:9",
+          "number": 9,
+          "problem": "Write the structures of the following organic halogen compounds: (i) 2-Chloro-3-methylpentane (ii) 1-Chloro-4-ethylcyclohexane (iii) 1-Bromo-4-sec-butyl-2-methylbenzene (iv) 1,4-Dibromobut-2-ene",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:6:ex:10",
+          "number": 10,
+          "problem": "Which one of the following has the highest dipole moment? (i) $CH_2Cl_2$ (ii) $CHCl_3$ (iii) $CCl_4$",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:6:ex:11",
+          "number": 11,
+          "problem": "A hydrocarbon $C_5H_{10}$ does not react with chlorine in dark but gives a single monochloro compound $C_5H_9Cl$ in bright sunlight. Identify the hydrocarbon.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:6:ex:12",
+          "number": 12,
+          "problem": "Write the isomers of the compound having formula $C_4H_9Br$.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:6:ex:13",
+          "number": 13,
+          "problem": "Write the equations for the preparation of 1-iodobutane from (i) 1-butanol (ii) 1-chlorobutane (iii) but-1-ene.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:6:ex:14",
+          "number": 14,
+          "problem": "What are ambident nucleophiles? Explain with an example.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:6:ex:15",
+          "number": 15,
+          "problem": "Which compound in each of the following pairs will react faster in $S_N2$ reaction with $OH^-$? (i) $CH_3Br$ or $CH_3I$ (ii) $(CH_3)_3CCl$ or $CH_3Cl$",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:6:ex:16",
+          "number": 16,
+          "problem": "Predict all the alkenes that would be formed by dehydrohalogenation of the following halides with sodium ethoxide in ethanol and identify the major alkene: (i) 1-Bromo-1-methylcyclohexane (ii) 2-Chloro-2-methylbutane (iii) 2,2,3-Trimethyl-3-bromopentane.",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:6:ex:17",
+          "number": 17,
+          "problem": "How will you bring about the following conversions? (i) Ethanol to but-1-yne (ii) Ethane to bromoethene (iii) Propene to 1-nitropropane (iv) Toluene to benzyl alcohol (v) Propene to propyne (vi) Ethanol to ethyl fluoride (vii) Bromomethane to propanone (viii) But-1-ene to but-2-ene (ix) 1-Chlorobutane to n-octane (x) Benzene to biphenyl.",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:6:ex:18",
+          "number": 18,
+          "problem": "Explain why (i) the dipole moment of chlorobenzene is lower than that of cyclohexyl chloride? (ii) alkyl halides, though polar, are immiscible with water? (iii) Grignard reagents should be prepared under anhydrous conditions?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:6:ex:19",
+          "number": 19,
+          "problem": "Give the uses of freon 12, DDT, carbon tetrachloride and iodoform.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:6:ex:20",
+          "number": 20,
+          "problem": "Write the structure of the major organic product in each of the following reactions: (i) $CH_3CH_2CH_2Cl + NaI \\xrightarrow{acetone}$ (ii) $(CH_3)_3CBr + KOH \\xrightarrow{ethanol}$ (iii) $CH_3CH(Br)CH_2CH_3 + NaOH \\xrightarrow{water}$ (iv) $CH_3CH_2Br + KCN \\rightarrow$ (v) $C_6H_5ONa + C_2H_5Cl \\rightarrow$ (vi) $CH_3CH_2CH_2OH + SOCl_2 \\rightarrow$ (vii) $CH_3CH_2CH=CH_2 + HBr \\rightarrow$ (viii) $CH_3CH=C(CH_3)_2 + HBr \\rightarrow$",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:6:ex:21",
+          "number": 21,
+          "problem": "Write the mechanism of the following reaction: $nBuBr + KCN \\xrightarrow{EtOH-H_2O} nBuCN$",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:6:ex:22",
+          "number": 22,
+          "problem": "Arrange the compounds of each set in order of reactivity towards $S_N2$ displacement: (i) 2-Bromo-2-methylbutane, 1-Bromopentane, 2-Bromopentane (ii) 1-Bromo-3-methylbutane, 2-Bromo-2-methylbutane, 2-Bromo-3-methylbutane (iii) 1-Bromobutane, 1-Bromo-2,2-dimethylpropane, 1-Bromo-2-methylbutane, 1-Bromo-3-methylbutane.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:6:ex:23",
+          "number": 23,
+          "problem": "Out of $C_6H_5CH_2Cl$ and $C_6H_5CHClC_6H_5$, which is more easily hydrolysed by aqueous KOH?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:6:ex:24",
+          "number": 24,
+          "problem": "p-Dichlorobenzene has higher m.p. than those of o- and m-isomers. Discuss.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:6:ex:25",
+          "number": 25,
+          "problem": "How the following conversions can be carried out? (i) Propene to propan-1-ol (ii) Ethanol to but-1-yne (iii) 1-Bromopropane to 2-bromopropane (iv) Toluene to benzyl alcohol (v) Benzene to 4-bromonitrobenzene (vi) Benzyl alcohol to 2-phenylethanoic acid (vii) Ethanol to propanenitrile (viii) Aniline to chlorobenzene (ix) 2-Chlorobutane to 3,4-dimethylhexane (x) 2-Methyl-1-propene to 2-chloro-2-methylpropane (xi) Ethyl chloride to propanoic acid (xii) But-1-ene to n-butyliodide (xiii) 2-Chloropropane to 1-propanol (xiv) Isopropyl alcohol to iodoform (xv) Chlorobenzene to p-nitrophenol (xvi) 2-Bromopropane to 1-bromopropane (xvii) Chloroethane to butane (xviii) Benzene to diphenyl (xix) tert-Butyl bromide to isobutyl bromide (xx) Aniline to phenylisocyanide",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:6:ex:26",
+          "number": 26,
+          "problem": "The treatment of alkyl chlorides with aqueous KOH leads to the formation of alcohols but in the presence of alcoholic KOH, alkenes are major products. Explain.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:6:ex:27",
+          "number": 27,
+          "problem": "Primary alkyl halide $C_4H_9Br$ (a) reacted with alcoholic KOH to give compound (b). Compound (b) is reacted with HBr to give (c) which is an isomer of (a). When (a) is reacted with sodium metal it gives compound (d), $C_8H_{18}$, which is different from the compound formed when n-butyl bromide is reacted with sodium. Give the structural formula of (a) and write the equations for all the reactions.",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:6:ex:28",
+          "number": 28,
+          "problem": "What happens when (i) n-butyl chloride is treated with alcoholic KOH, (ii) bromobenzene is treated with Mg in the presence of dry ether, (iii) chlorobenzene is subjected to hydrolysis, (iv) ethyl chloride is treated with aqueous KOH, (v) methyl bromide is treated with sodium in the presence of dry ether, (vi) methyl chloride is treated with KCN?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        }
+      ]
+    }
+  }
+}

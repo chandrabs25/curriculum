@@ -1,0 +1,438 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_biology_11_ch1.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:biology:11:1",
+  "curriculum": "ncert",
+  "subject": "biology",
+  "grade": 11,
+  "textbook_name": "Biology",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:biology:11:1",
+    "number": 1,
+    "title": "The Living World",
+    "summary": "This chapter, \"The Living World,\" introduces the fundamental concepts of biology, focusing on the diversity and classification of life. It begins by highlighting the vast range of living organisms and their habitats, emphasizing the need for a systematic approach to studying them. The chapter introduces the concept of biodiversity and the estimated number of species currently known.\n\nA key principle introduced is binomial nomenclature, the standardized two-part naming system (genus and species) developed by Linnaeus. The chapter outlines the universal rules governing biological nomenclature, ensuring clarity and consistency in scientific communication. Classification is presented as a method of grouping organisms into taxa based on shared characteristics. Taxonomy is defined as the science of classifying organisms, using external/internal structure, cell structure, developmental processes, and ecological information. Systematics builds upon taxonomy by incorporating evolutionary relationships.\n\nThe chapter then delves into taxonomic categories, forming a hierarchical system from species to kingdom. Each level (species, genus, family, order, class, phylum/division, and kingdom) is defined with examples. This hierarchy demonstrates how organisms are progressively grouped based on shared characteristics, becoming more general as one moves up the hierarchy. Ultimately, understanding these principles and classifications is crucial for biologists to effectively study, communicate about, and conserve the incredible diversity of life on Earth.",
+    "sections": [
+      {
+        "id": "ncert:biology:11:1:1",
+        "number": "1",
+        "title": "The Living World",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:1:1:1",
+            "order": 1,
+            "title": "The Nature of Life",
+            "content_text": "The natural world contains an extraordinary range of living types and habitats, from cold mountains and deciduous forests to oceans and hot springs. Observing biological phenomena, such as migrating birds or the molecular traffic within a cell, evokes a deep sense of wonder. This complexity raises two implicit questions: a technical one regarding the distinction between living and non-living, and a philosophical one concerning the purpose of life. This chapter focuses on the technical question of what defines living.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:1:1.1",
+        "number": "1.1",
+        "title": "Diversity in the Living World",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:1:1.1:1",
+            "order": 1,
+            "title": "Biodiversity and Species",
+            "content_text": "The environment is home to a vast variety of living organisms, including plants, insects, birds, and pets, as well as numerous microscopic entities. Each distinct type of organism represents a species. Currently, the number of known and described species ranges between 1.7 and 1.8 million. The term biodiversity refers to this collective variety and number of organisms on Earth, specifically the number and Given the vast number of organisms on Earth, there is a critical need to standardize naming so that each organism is recognized by the same name globally. This standardization process is known as nomenclature. For nomenclature to be effective, an organism must be accurately described so that the name can be correctly assigned, a process referred to as identification.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:1:1.1:2",
+            "order": 2,
+            "title": "Scientific Naming Codes",
+            "content_text": "To facilitate global scientific communication, biologists have established specific codes for naming. The International Code for Botanical Nomenclature (ICBN) provides the principles for naming plants, while the International Code of Zoological Nomenclature (ICZN) governs the naming of animals. These codes ensure that every organism has a unique name that is not used for any other known species.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:1:1.1:3",
+            "order": 3,
+            "title": "Binomial Nomenclature System",
+            "content_text": "Biologists use a universally accepted system called binomial nomenclature, popularized by Carolus Linnaeus. In this system, each scientific name consists of two parts: the generic name (genus) and the specific epithet (species). This two-word format is both concise and descriptive.",
+            "content_type": "definition",
+            "worked_examples": [
+              {
+                "label": "Example 1.1",
+                "problem": "Explain the binomial name of mango.",
+                "solution": "The scientific name for mango is $Mangifera$ $indica$. In this name, $Mangifera$ denotes the genus, and $indica$ represents the specific epithet or species."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:1:1.1:4",
+            "order": 4,
+            "title": "Universal Rules of Biological Nomenclature",
+            "content_text": "Biological naming follows four primary rules: 1. Names are typically in Latin and written in italics. 2. The first word represents the genus, and the second represents the specific epithet. 3. When handwritten, both words are separately underlined; when printed, they are italicized to show their Latin origin. 4. The genus name starts with a capital letter, while the specific epithet starts with a small letter. Additionally, the author's name may appear in abbreviated form at the end of the scientific name.",
+            "content_type": "law",
+            "worked_examples": [
+              {
+                "label": "Example 1.2",
+                "problem": "How is author citation represented in a scientific name?",
+                "solution": "The author's name is written in abbreviated form after the specific epithet. For example, $Mangifera$ $indica$ Linn. indicates that the species was first described by Linnaeus."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:1:1.1:5",
+            "order": 5,
+            "title": "Classification and the Concept of Taxa",
+            "content_text": "Because it is impossible to study every living organism individually, biologists use classification to group organisms into convenient categories based on observable characteristics. These scientific categories are termed taxa (singular: taxon). Taxa can represent different levels of organization, such as 'animals', 'mammals', or 'dogs', all of which are taxa at different hierarchical levels.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:1:1.1:6",
+            "order": 6,
+            "title": "Taxonomy and its Basis",
+            "content_text": "Taxonomy is the scientific process of classifying all living organisms into different taxa based on their characteristics. Modern taxonomic studies rely on several essential factors: external and internal structure, cell structure, developmental processes, and ecological information of the organisms. The core processes of taxonomy include characterization, identification, classification, and nomenclature.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:1:1.1:7",
+            "order": 7,
+            "title": "Systematics and Evolutionary Relationships",
+            "content_text": "Systematics is a branch of biology that deals with the diversity of organisms and their comparative and evolutionary relationships. The term is derived from the Latin word 'systema', meaning systematic arrangement. Carolus Linnaeus used 'Systema Naturae' as the title for his publication. Today, the scope of systematics includes identification, nomenclature, classification, and the consideration of evolutionary histories.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:1:1.2",
+        "number": "1.2",
+        "title": "Taxonomic Categories",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:1:1.2:1",
+            "order": 1,
+            "title": "Taxonomic Hierarchy and the Taxon",
+            "content_text": "Classification is a multi-step process involving a hierarchy of steps where each step represents a specific rank or category. These are called taxonomic categories, and together they constitute the taxonomic hierarchy. Each category represents a unit of classification and is commonly referred to as a taxon. For instance, insects form a taxon because they share common features like three pairs of jointed legs.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:1:1.2.1",
+        "number": "1.2.1",
+        "title": "Species",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:1:1.2.1:1",
+            "order": 1,
+            "title": "The Concept of Species",
+            "content_text": "In taxonomic studies, a species is considered a group of individual organisms that possess fundamental morphological similarities. One species can be distinguished from other closely related species based on distinct morphological differences. A genus may include one or more specific epithets representing different organisms that share certain similarities. For example, the genus $Panthera$ includes species like $leo$ (lion) and $tigris$ (tiger), while the genus $Solanum$ includes species like $nigrum$ and melongena. Human beings belong to the species $sapiens$ which is grouped in the genus $Homo$. The scientific name thus, for human being, is written as $Homo$ $sapiens$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:1:1.2.2",
+        "number": "1.2.2",
+        "title": "Genus",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:1:1.2.2:1",
+            "order": 1,
+            "title": "Definition and Examples of Genus",
+            "content_text": "Genus comprises a group of related species which has more characters in common in comparison to species of other genera. We can say that genera are aggregates of closely related species. For example, potato and brinjal are two different species but both belong to the genus $Solanum$. Lion ($Panthera$ $leo$), leopard ($P.$ $pardus$) and tiger ($P.$ $tigris$) with several common features, are all species of the genus $Panthera$. This genus differs from another genus $Felis$ which includes cats.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:1:1.2.3",
+        "number": "1.2.3",
+        "title": "Family",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:1:1.2.3:1",
+            "order": 1,
+            "title": "Definition and Examples of Family",
+            "content_text": "The next category, Family, has a group of related genera with still less number of similarities as compared to genus and species. Families are characterised on the basis of both vegetative and reproductive features of plant species. Among plants for example, three different genera $Solanum$, $Petunia$ and $Datura$ are placed in the family Solanaceae. Among animals for example, genus $Panthera$, comprising lion, tiger, leopard is put along with genus, $Felis$ (cats) in the family Felidae. Similarly, if you observe the features of a cat and a dog, you will find some similarities and some differences as well. They are separated into two different families – Felidae and Canidae, respectively.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:1:1.2.4",
+        "number": "1.2.4",
+        "title": "Order",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:1:1.2.4:1",
+            "order": 1,
+            "title": "Definition and Examples of Order",
+            "content_text": "Categories like species, genus and families are based on a number of similar characters. Generally, order and other higher taxonomic categories are identified based on the aggregates of characters. Order being a higher category, is the assemblage of families which exhibit a few similar characters. The similar characters are less in number as compared to different genera included in a family. Plant families like Convolvulaceae, Solanaceae are included in the order Polymoniales mainly based on the floral characters. The animal order, Carnivora, includes families like Felidae and Canidae.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:1:1.2.5",
+        "number": "1.2.5",
+        "title": "Class",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:1:1.2.5:1",
+            "order": 1,
+            "title": "Definition and Examples of Class",
+            "content_text": "This category includes related orders. For example, order Primata comprising monkey, gorilla and gibbon is placed in class Mammalia along with order Carnivora that includes animals like tiger, cat and dog. Class Mammalia has other orders also.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:1:1.2.6",
+        "number": "1.2.6",
+        "title": "Phylum",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:1:1.2.6:1",
+            "order": 1,
+            "title": "Phylum and Division",
+            "content_text": "Classes comprising animals like fishes, amphibians, reptiles, birds along with mammals constitute the next higher category called Phylum. All these, based on the common features like presence of notochord and dorsal hollow neural system, are included in phylum Chordata. In case of plants, classes with a few similar characters are assigned to a higher category called Division.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:1:1.2.7",
+        "number": "1.2.7",
+        "title": "Kingdom",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:1:1.2.7:1",
+            "order": 1,
+            "title": "Definition and Examples of Kingdom",
+            "content_text": "All animals belonging to various phyla are assigned to the highest category called Kingdom Animalia in the classification system of animals. The Kingdom Plantae, on the other hand, is distinct, and comprises all plants from various divisions. Henceforth, we will refer to these two groups as animal and plant kingdoms.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:1:1.2.8",
+        "number": "1.2.8",
+        "title": "Taxonomic Hierarchy",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:1:1.2.8:1",
+            "order": 1,
+            "title": "Hierarchical Arrangement and Trends",
+            "content_text": "The taxonomic categories from species to kingdom have been shown in ascending order starting with species in Figure 1.1. These are broad categories. However, taxonomists have also developed sub-categories in this hierarchy to facilitate more sound and scientific placement of various taxa. As we go higher from species to kingdom, the number of common characteristics goes on decreasing. Lower the taxa, more are the characteristics that the members within the taxon share. Higher the category, greater is the difficulty of determining the relationship to other taxa at the same level. Hence, the problem of classification becomes more complex. Table 1.1 indicates the taxonomic categories to which some common organisms like housefly, man, mango and wheat belong.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 1.1",
+                "description": "A vertical flow chart showing the taxonomic hierarchy in ascending order: Species at the base, followed by Genus, Family, Order, Class, Phylum or Division, and Kingdom at the top.",
+                "image_url": null
+              }
+            ],
+            "tables": [
+              {
+                "label": "Table 1.1",
+                "caption": "Organisms with their Taxonomic Categories",
+                "headers": [
+                  "Common Name",
+                  "Biological Name",
+                  "Genus",
+                  "Family",
+                  "Order",
+                  "Class",
+                  "Phylum/Division"
+                ],
+                "rows": [
+                  [
+                    "Man",
+                    "$Homo$ $sapiens$",
+                    "$Homo$",
+                    "Hominidae",
+                    "Primata",
+                    "Mammalia",
+                    "Chordata"
+                  ],
+                  [
+                    "Housefly",
+                    "$Musca$ $domestica$",
+                    "$Musca$",
+                    "Muscidae",
+                    "Diptera",
+                    "Insecta",
+                    "Arthropoda"
+                  ],
+                  [
+                    "Mango",
+                    "$Mangifera$ $indica$",
+                    "$Mangifera$",
+                    "Anacardiaceae",
+                    "Sapindales",
+                    "Dicotyledonae",
+                    "Angiospermae"
+                  ],
+                  [
+                    "Wheat",
+                    "$Triticum$ $aestivum$",
+                    "$Triticum$",
+                    "Poaceae",
+                    "Poales",
+                    "Monocotyledonae",
+                    "Angiospermae"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:biology:11:1:ex:1",
+          "number": 1,
+          "problem": "Why are living organisms classified?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:1:ex:2",
+          "number": 2,
+          "problem": "Why are the classification systems changing every now and then?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:1:ex:3",
+          "number": 3,
+          "problem": "What different criteria would you choose to classify people that you meet often?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:1:ex:4",
+          "number": 4,
+          "problem": "What do we learn from identification of individuals and populations?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:1:ex:5",
+          "number": 5,
+          "problem": "Given below is the scientific name of Mango. Identify the correctly written name. Mangifera Indica, Mangifera indica.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:1:ex:6",
+          "number": 6,
+          "problem": "Define a taxon. Give some examples of taxa at different hierarchical levels.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:1:ex:7",
+          "number": 7,
+          "problem": "Can you identify the correct sequence of taxonomical categories? (a) Species -> Order -> Phylum -> Kingdom (b) Genus -> Species -> Order -> Kingdom (c) Species -> Genus -> Order -> Phylum.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:1:ex:8",
+          "number": 8,
+          "problem": "Try to collect all the currently accepted meanings for the word 'species'. Discuss with your teacher the meaning of species in case of higher plants and animals on one hand, and bacteria on the other hand.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:1:ex:9",
+          "number": 9,
+          "problem": "Define and understand the following terms: (i) Phylum (ii) Class (iii) Family (iv) Order (v) Genus.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:1:ex:10",
+          "number": 10,
+          "problem": "Illustrate the taxonomical hierarchy with suitable examples of a plant and an animal.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        }
+      ]
+    }
+  }
+}

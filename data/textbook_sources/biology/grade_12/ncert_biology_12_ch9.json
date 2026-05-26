@@ -1,0 +1,681 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_biology_12_ch9.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:biology:12:9",
+  "curriculum": "ncert",
+  "subject": "biology",
+  "grade": 12,
+  "textbook_name": "Biology",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:biology:12:9",
+    "number": 9,
+    "title": "Biotechnology : Principles and Processes",
+    "summary": "This chapter on Biotechnology: Principles and Processes introduces the fundamental concepts and techniques of recombinant DNA technology. It begins by defining biotechnology, emphasizing the use of living organisms or enzymes to create products beneficial to humans, and outlining the core techniques: genetic engineering and bioprocess engineering.\n\nThe chapter then delves into the tools required for recombinant DNA technology, including restriction enzymes that cut DNA at specific sequences, cloning vectors like plasmids and bacteriophages that carry foreign DNA into host cells, and competent hosts capable of taking up the recombinant DNA. Key principles include the use of selectable markers to identify transformed cells and the origin of replication (ori) for DNA replication. The naming conventions of restriction enzymes and their action on palindromic sequences are also discussed.\n\nThe chapter further explains the processes involved in creating recombinant DNA, starting with the isolation of DNA, cutting it with restriction enzymes, amplifying the desired gene using PCR (Polymerase Chain Reaction), ligating the gene into a vector, and introducing it into a host cell. Finally, it covers obtaining the foreign gene product through large-scale production in bioreactors and downstream processing, including separation, purification, and quality control.\n\nEach section builds upon the previous one, providing a step-by-step understanding of how genes are manipulated and utilized to produce desired products. The practical significance lies in the ability to create genetically modified organisms for various applications, including medicine, agriculture, and industry.",
+    "sections": [
+      {
+        "id": "ncert:biology:12:9:9",
+        "number": "9",
+        "title": "Introduction to Biotechnology",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:9:9:1",
+            "order": 1,
+            "title": "Unit IX: Biotechnology Overview",
+            "content_text": "Since the 17th century, human knowledge, particularly in the natural sciences, has been directed toward developing technologies that enhance human comfort and value, leading to an anthropocentric approach to understanding natural phenomena. While physics and chemistry gave rise to engineering and industries focused on human welfare, the biological world was primarily viewed as a source of food. Biotechnology emerged in the 20th century as an off-shoot of modern biology, significantly impacting daily life by improving health and food production through qualitative advancements. This unit explores the basic principles and applications of biotechnological processes.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:9:9:2",
+            "order": 2,
+            "title": "Herbert Boyer and the Foundation of Biotechnology",
+            "content_text": "Herbert Boyer, born in 1936, made a pivotal discovery in 1969 while studying restriction enzymes of the E. coli bacterium. He observed that these enzymes have the capability of cutting DNA strands in a specific fashion, leaving what are known as 'sticky ends' on the strands. This discovery allowed for the precise 'pasting' together of DNA pieces. Boyer collaborated with Stanley Cohen, who was studying plasmids—small ringlets of DNA that float freely in the cytoplasm of certain bacterial cells and replicate independently of the chromosomal DNA. Cohen had developed a method for removing these plasmids and reinserting them into other cells. By combining Boyer's DNA splicing with Cohen's plasmid manipulation, they were able to recombine DNA segments and insert them into bacterial cells, which then acted as manufacturing plants for specific proteins. This breakthrough formed the basis upon which the discipline of biotechnology was founded.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Herbert Boyer (1936)",
+                "description": "A portrait of Herbert Boyer, a key scientist in the development of recombinant DNA technology.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:9:9:3",
+            "order": 3,
+            "title": "Defining Biotechnology",
+            "content_text": "Biotechnology refers to the techniques of using live organisms or enzymes from organisms to produce products and processes useful to humans. In a broad sense, traditional processes like making curd, bread, or wine—which are microbe-mediated—are forms of biotechnology. However, in the modern, restricted sense, biotechnology refers to processes that use genetically modified organisms (GMOs) to achieve similar goals on a larger scale. Modern biotechnology also includes techniques such as in vitro fertilisation (e.g., 'test-tube' baby), the synthesis and use of genes, the development of DNA vaccines, and the correction of defective genes.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Plasmid pBR322",
+                "description": "A schematic diagram of the pBR322 plasmid vector, showing key features such as ampicillin resistance ($amp^R$), tetracycline resistance ($tet^R$), the origin of replication ($ori$), and the $rop$ gene.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:9:9:4",
+            "order": 4,
+            "title": "The EFB Definition",
+            "content_text": "The European Federation of Biotechnology (EFB) provides a definition that encompasses both traditional and modern molecular biotechnology: 'The integration of natural science and organisms, cells, parts thereof, and molecular analogues for products and services.'",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:9:9.1",
+        "number": "9.1",
+        "title": "Principles of Biotechnology",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:9:9.1:1",
+            "order": 1,
+            "title": "Core Techniques: Genetic Engineering",
+            "content_text": "Modern biotechnology is based on two core techniques. The first is Genetic engineering: Techniques to alter the chemistry of genetic material (DNA and RNA), Techniques to alter the chemistry of genetic material (DNA and RNA), to introduce these into host organisms and thus change the phenotype of the host organism.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:9:9.1:2",
+            "order": 2,
+            "title": "Bioprocess Engineering",
+            "content_text": "Bioprocess engineering involves the maintenance of sterile (microbial contamination-free) ambience in chemical engineering processes. This is essential to enable the growth of only the desired microbe or eukaryotic cell in large quantities for the manufacture of biotechnological products such as antibiotics, vaccines, and enzymes.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:9:9.1:3",
+            "order": 3,
+            "title": "Conceptual Development: Sexual vs Asexual Reproduction",
+            "content_text": "Sexual reproduction provides opportunities for variations and the formulation of unique combinations of genetic setups, some of which may be beneficial to the organism as well as the population. Asexual reproduction preserves genetic information, while sexual reproduction permits variation. Traditional hybridisation procedures used in plant and animal breeding often lead to the inclusion and multiplication of undesirable genes along with the desired genes. Genetic engineering techniques—including the creation of recombinant DNA, use of gene cloning, and gene transfer—overcome this limitation and allow us to isolate and introduce only one or a set of desirable genes without introducing undesirable genes into the target organism.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:9:9.1:4",
+            "order": 4,
+            "title": "Fate of Alien DNA and the Origin of Replication",
+            "content_text": "An alien piece of DNA transferred into an organism usually cannot multiply itself in the progeny cells unless it integrates into the recipient's genome. Once integrated, it can multiply and be inherited along with the host DNA because it becomes part of a chromosome that has the ability to replicate. In a chromosome, there is a specific DNA sequence called the origin of replication, which is responsible for initiating replication. Therefore, for the multiplication of any alien piece of DNA in an organism, it needs to be a part of a chromosome(s) which has a specific sequence known as 'origin of replication'. Thus, an alien DNA is linked with the origin of replication, so that this alien piece of DNA can replicate and multiply itself in the host organism. This process is also called cloning, which involves making multiple identical copies of any template DNA.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:9:9.1:5",
+            "order": 5,
+            "title": "Construction of the First Artificial Recombinant DNA",
+            "content_text": "The first recombinant DNA molecule was constructed in 1972 by Stanley Cohen and Herbert Boyer. They isolated an antibiotic resistance gene from a native plasmid (autonomously replicating circular extra-chromosomal DNA) of Salmonella typhimurium. This was achieved by cutting the DNA at specific locations using 'molecular scissors' known as restriction enzymes. The cut DNA was then linked to a plasmid DNA which acted as a vector to deliver the alien DNA into a host organism, much like a mosquito acts as a vector for malarial parasites. The linking of the antibiotic resistance gene with the plasmid vector was made possible by the enzyme DNA ligase, which joins DNA molecules at their ends. This created a new combination of circular autonomously replicating DNA in vitro, known as recombinant DNA. When transferred into Escherichia coli, the DNA could replicate using the host's DNA polymerase, leading to the cloning of the antibiotic resistance gene.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:9:9.1:6",
+            "order": 6,
+            "title": "Basic Steps in Genetically Modifying an Organism",
+            "content_text": "There are three basic steps in genetically modifying an organism: (i) identification of DNA with desirable genes; (ii) introduction of the identified DNA into the host; and (iii) maintenance of introduced DNA in the host and transfer of the DNA to its progeny.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:9:9.2",
+        "number": "9.2",
+        "title": "Tools of Recombinant DNA Technology",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:9:9.2:1",
+            "order": 1,
+            "title": "Key Tools Overview",
+            "content_text": "Recombinant DNA technology (genetic engineering) can be accomplished only if we have the key tools: restriction enzymes, polymerase enzymes, ligases, vectors, and the host organism.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:9:9.2.1",
+        "number": "9.2.1",
+        "title": "Restriction Enzymes",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:9:9.2.1:1",
+            "order": 1,
+            "title": "Discovery and History of Restriction Enzymes",
+            "content_text": "In 1963, two enzymes responsible for restricting the growth of bacteriophage in Escherichia coli were isolated. One added methyl groups to DNA, while the other cut DNA; the latter was called restriction endonuclease. The first restriction endonuclease, Hind II, was characterized five years later. It was found that Hind II always cuts DNA molecules at a particular point by recognizing a specific sequence of six base pairs, known as the recognition sequence. Today, more than 900 restriction enzymes have been isolated from over 230 strains of bacteria, each recognizing different sequences.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:9:9.2.1:2",
+            "order": 2,
+            "title": "Naming Convention of Restriction Enzymes",
+            "content_text": "The naming convention for restriction enzymes uses the first letter of the genus and the next two letters from the species of the prokaryotic cell (e.g., EcoRI from Escherichia coli RY 13). The letter 'R' is derived from the strain name. Roman numbers indicate the order in which the enzymes were isolated from that strain.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:9:9.2.1:3",
+            "order": 3,
+            "title": "Nucleases: Exonucleases and Endonucleases",
+            "content_text": "Restriction enzymes belong to a larger class of enzymes called nucleases. Exonucleases remove nucleotides from the ends of the DNA, whereas endonucleases make cuts at specific positions within the DNA.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:9:9.2.1:4",
+            "order": 4,
+            "title": "Mechanism of Action and Palindromic Sequences",
+            "content_text": "Restriction endonucleases inspect DNA sequences and bind to specific recognition sequences, cutting each of the two strands of the double helix at specific points in their sugar-phosphate backbones (Figure 9.1). These enzymes recognize palindromic nucleotide sequences. In DNA, a palindrome is a sequence of base pairs that reads the same on the two strands when the orientation of reading is kept the same (e.g., $5' \\rightarrow 3'$). For example, the sequence $5' - \\text{GAATTC} - 3'$ reads the same as $3' - \\text{CTTAAG} - 5'$ in the opposite direction. This is different from word palindromes like 'MALAYALAM' where the same word is read in both directions. The palindrome in DNA is a sequence of base pairs that reads the same on the two strands when the orientation of reading is kept the same. For example, the following sequence reads the same on the two strands in the $5' \\rightarrow 3'$ direction. This is also true if read in the $3' \\rightarrow 5'$ direction:\n$5' - \\text{GAATTC} - 3'$\n$3' - \\text{CTTAAG} - 5'$\nRestriction enzymes cut the strand of DNA a little away from the centre of the palindrome sites, but between the same two bases on the opposite strands. This leaves single stranded portions at the ends called sticky ends. These are named so because they form hydrogen bonds with their complementary cut counterparts. This stickiness of the ends facilitates the action of the enzyme DNA ligase.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 9.1",
+                "description": "Diagram illustrating the steps in the formation of recombinant DNA by the action of the restriction endonuclease EcoRI. It shows a vector DNA and a foreign DNA both containing the recognition sequence GAATTC. EcoRI cuts both strands between G and A, creating overhanging 'sticky ends' (AATT). These sticky ends from different DNA sources can then join together via hydrogen bonding, and DNA ligase seals the gaps to form a single Recombinant DNA molecule.",
+                "image_url": null
+              },
+              {
+                "label": "Figure 9.2",
+                "description": "Diagrammatic representation of recombinant DNA technology: Foreign DNA and Vector DNA (plasmid) are cut by the same restriction enzyme at specific points. DNA ligases join the foreign DNA to the plasmid to form a Recombinant DNA Molecule. This molecule is then transformed into a cloning host (E. coli), where the cells divide to produce multiple copies.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:9:9.2.1:5",
+            "order": 5,
+            "title": "Formation of Recombinant DNA",
+            "content_text": "Restriction endonucleases are used in genetic engineering to form 'recombinant' molecules of DNA, which are composed of DNA from different sources or genomes. When cut by the same restriction enzyme, the resultant DNA fragments have the same kind of 'sticky-ends' and these can be joined together end-to-end using DNA ligases. This process is essential for creating the vector-insert constructs used in transformation.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:9:9.2.1:6",
+            "order": 6,
+            "title": "Separation and Isolation of DNA Fragments",
+            "content_text": "The cutting of DNA by restriction endonucleases results in fragments of DNA. These fragments can be separated by a technique known as gel electrophoresis. Since DNA fragments are negatively charged molecules, they can be separated by forcing them to move towards the anode (+) under an electric field through a medium or matrix. The most commonly used matrix is agarose, a natural polymer extracted from sea weeds. The DNA fragments separate (resolve) according to their size through the sieving effect provided by the agarose gel; the smaller the fragment size, the farther it moves. Looking at Figure 9.3, one can determine the loading end by identifying the wells where the largest fragments remain closest.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 9.3",
+                "description": "A typical agarose gel electrophoresis showing migration of undigested DNA (lane 1) and digested sets of DNA fragments (lanes 2 to 4). The DNA bands are visible, with the largest fragments near the wells and the smallest fragments having migrated the furthest.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:9:9.2.1:7",
+            "order": 7,
+            "title": "Visualization and Elution",
+            "content_text": "Separated DNA fragments can be visualised only after staining the DNA with a compound known as ethidium bromide followed by exposure to UV radiation. Pure DNA cannot be seen in visible light without staining. Under UV light, ethidium bromide-stained DNA appears as bright orange coloured bands. The separated bands of DNA are cut out from the agarose gel and extracted from the gel piece in a process known as elution. These purified DNA fragments are then used in constructing recombinant DNA by joining them with cloning vectors.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:9:9.2.2",
+        "number": "9.2.2",
+        "title": "Cloning Vectors",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:9:9.2.2:1",
+            "order": 1,
+            "title": "Characteristics of Cloning Vectors",
+            "content_text": "Plasmids and bacteriophages are used as vectors due to their ability to replicate within bacterial cells independent of chromosomal DNA control. Bacteriophages have very high copy numbers per cell. Plasmids may have 1-2 copies or 15-100 copies per cell, and sometimes even higher. By linking an alien piece of DNA with a vector, its numbers can be multiplied equal to the copy number of the vector. Modern vectors are engineered for easy linking of foreign DNA and efficient selection of recombinants from non-recombinants.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:9:9.2.2:2",
+            "order": 2,
+            "title": "Origin of Replication (ori)",
+            "content_text": "The origin of replication (ori) is a specific DNA sequence where replication starts. Any piece of DNA linked to this sequence can be made to replicate within the host cells. The ori is also responsible for controlling the copy number of the linked DNA. To recover many copies of a target DNA, it should be cloned in a vector whose origin supports a high copy number.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:9:9.2.2:3",
+            "order": 3,
+            "title": "Selectable Markers and Transformation",
+            "content_text": "A selectable marker helps in identifying and eliminating non-transformants and selectively permitting the growth of transformants. Transformation is a procedure through which a piece of DNA is introduced into a host bacterium. For E. coli, genes encoding resistance to antibiotics such as ampicillin, chloramphenicol, tetracycline, or kanamycin are useful selectable markers. Normal E. coli cells do not naturally carry resistance against any of these antibiotics.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:9:9.2.2:4",
+            "order": 4,
+            "title": "Cloning Sites and Recognition Sequences",
+            "content_text": "To link alien DNA, a vector needs recognition sites for restriction enzymes, preferably a single site for each enzyme. Multiple recognition sites generate several fragments, complicating gene cloning. Ligation of alien DNA is typically carried out at a restriction site located within one of the antibiotic resistance genes. For example, in the vector pBR322, foreign DNA can be ligated at the BamH I site of the tetracycline resistance ($tet^R$) gene.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 9.4",
+                "description": "E. coli cloning vector pBR322 showing restriction sites (Hind III, EcoR I, BamH I, Sal I, Pvu II, Pst I, Cla I), origin of replication (ori), and antibiotic resistance genes ($amp^R$ and $tet^R$). The rop gene codes for proteins involved in the replication of the plasmid.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:9:9.2.2:5",
+            "order": 5,
+            "title": "Selection of Recombinants via Antibiotic Resistance",
+            "content_text": "Recombinant plasmids lose resistance to a specific antibiotic (e.g., tetracycline) due to the insertion of foreign DNA into that gene (insertional inactivation). However, they can still be selected by plating transformants on a medium containing the other antibiotic (e.g., ampicillin). Transformants growing on ampicillin are then replica-plated onto tetracycline medium. Recombinants will grow on ampicillin but not on tetracycline, while non-recombinants will grow on both. In this case, one antibiotic resistance gene helps in selecting the transformants, whereas the other antibiotic resistance gene gets ‘inactivated due to insertion’ of alien DNA, and helps in selection of recombinants. Selection of recombinants due to inactivation of antibiotics is a cumbersome procedure because it requires simultaneous plating on two plates having different antibiotics.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:9:9.2.2:6",
+            "order": 6,
+            "title": "Alternative Selectable Markers and Insertional Inactivation",
+            "content_text": "Alternative selectable markers have been developed which differentiate recombinants from non-recombinants on the basis of their ability to produce colour in the presence of a chromogenic substrate. In this method, a recombinant DNA is inserted within the coding sequence of an enzyme, $\\beta$-galactosidase. This results in the inactivation of the gene for synthesis of this enzyme, a process referred to as insertional inactivation. The presence of a chromogenic substrate gives blue coloured colonies if the plasmid in the bacteria does not have an insert. However, the presence of an insert results in insertional inactivation of the $\\beta$-galactosidase gene, and the colonies do not produce any colour; these white colonies are identified as recombinant colonies.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:9:9.2.2:7",
+            "order": 7,
+            "title": "Vectors for Cloning Genes in Plants and Animals",
+            "content_text": "Bacteria and viruses have evolved mechanisms to deliver genes to transform eukaryotic cells. For example, Agrobacterium tumefaciens, a pathogen of several dicot plants, delivers a piece of DNA known as ‘T-DNA’ to transform normal plant cells into a tumor, directing them to produce chemicals required by the pathogen. Similarly, retroviruses in animals can transform normal cells into cancerous cells. These natural tools have been modified into useful vectors. The tumor-inducing (Ti) plasmid of Agrobacterium tumefaciens has been disarmed to serve as a cloning vector that is no longer pathogenic but can still deliver genes of interest into plants. Similarly, retroviruses have been disarmed to deliver desirable genes into animal cells. Once a DNA fragment is ligated into a suitable vector, it is transferred into a bacterial, plant, or animal host for multiplication.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:9:9.2.3",
+        "number": "9.2.3",
+        "title": "Competent Host (For Transformation with Recombinant DNA)",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:9:9.2.3:1",
+            "order": 1,
+            "title": "Chemical Treatment and Heat Shock",
+            "content_text": "Since DNA is a hydrophilic molecule, it cannot pass through cell membranes. To force bacteria to take up the plasmid, cells must first be made ‘competent’. This is achieved by treating them with a specific concentration of a divalent cation, such as calcium, which increases the efficiency with which DNA enters the bacterium through pores in its cell wall. Recombinant DNA is then forced into these cells by incubating them with the DNA on ice, followed by a brief heat shock at $42^\\circ\\text{C}$, and then returning them to ice. This sequence enables the bacteria to take up the recombinant DNA.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:9:9.2.3:2",
+            "order": 2,
+            "title": "Alternative Methods: Micro-injection and Biolistics",
+            "content_text": "Other methods to introduce alien DNA include micro-injection, where recombinant DNA is directly injected into the nucleus of an animal cell. For plant cells, biolistics or the gene gun method is used, where cells are bombarded with high-velocity micro-particles of gold or tungsten coated with DNA. Additionally, ‘disarmed pathogen’ vectors can be used to infect the cell and transfer the recombinant DNA into the host.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:9:9.3",
+        "number": "9.3",
+        "title": "Processes of Recombinant DNA Technology",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:9:9.3:1",
+            "order": 1,
+            "title": "Overview of the Recombinant DNA Process",
+            "content_text": "Recombinant DNA technology involves a specific sequence of steps: isolation of DNA, fragmentation of DNA by restriction endonucleases, isolation of a desired DNA fragment, ligation of the DNA fragment into a vector, transferring the recombinant DNA into the host, culturing the host cells in a medium at large scale, and finally, extraction of the desired product.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:9:9.3.1",
+        "number": "9.3.1",
+        "title": "Isolation of the Genetic Material (DNA)",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:9:9.3.1:1",
+            "order": 1,
+            "title": "Cell Lysis and DNA Purification",
+            "content_text": "To cut DNA with restriction enzymes, it must be in pure form, free from other macromolecules. Cells are broken open using enzymes like lysozyme (for bacteria), cellulase (for plant cells), or chitinase (for fungus). RNA is removed by treatment with ribonuclease, and proteins are removed by protease. After removing other molecules through appropriate treatments, purified DNA is precipitated by adding chilled ethanol. This appears as a collection of fine threads that can be removed by spooling (Figure 9.5).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 9.5",
+                "description": "A photograph showing the precipitation of DNA as fine white threads in a suspension after the addition of chilled ethanol. The DNA is being collected using a glass rod in a process called spooling.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:9:9.3.2",
+        "number": "9.3.2",
+        "title": "Cutting of DNA at Specific Locations",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:9:9.3.2:1",
+            "order": 1,
+            "title": "Restriction Digestion and Ligation",
+            "content_text": "Purified DNA is incubated with restriction enzymes at optimal conditions. Agarose gel electrophoresis is used to monitor the progression of the digestion; since DNA is negatively charged, it moves toward the positive electrode (anode). This process is repeated for the vector DNA. Once the source DNA and vector are cut, the 'gene of interest' and the cut vector are mixed with ligase to prepare the recombinant DNA.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:9:9.3.3",
+        "number": "9.3.3",
+        "title": "Amplification of Gene of Interest using PCR",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:9:9.3.3:1",
+            "order": 1,
+            "title": "The Polymerase Chain Reaction (PCR) Process",
+            "content_text": "PCR stands for Polymerase Chain Reaction. It is used to synthesize multiple copies of a DNA segment in vitro using two sets of primers (small chemically synthesized oligonucleotides) and the enzyme DNA polymerase. The process involves three main steps: (i) Denaturation, where high heat separates the DNA strands; (ii) Annealing, where primers bind to the strands; and (iii) Extension, where a thermostable DNA polymerase (Taq polymerase, isolated from Thermus aquaticus) extends the primers using deoxynucleotides. Repeating this cycle 30 times can amplify the DNA segment approximately 1 billion times. The amplified fragment can then be ligated with a vector for further cloning (Figure 9.6).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 9.6",
+                "description": "A schematic representation of the three steps of PCR: Denaturation (heating to separate strands), Annealing (primers binding to the $3'$ ends), and Extension (Taq polymerase adding nucleotides in the $5' \\rightarrow 3'$ direction). The diagram shows the exponential amplification resulting in ~1 billion copies after 30 cycles.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:9:9.3.3:2",
+            "order": 2,
+            "title": "Extension and Amplification in PCR",
+            "content_text": "The PCR process involves sets of primers (small chemically synthesised oligonucleotides complementary to DNA regions) and the enzyme DNA polymerase. The enzyme extends the primers using nucleotides provided in the reaction and genomic DNA as a template. If the replication process is repeated many times, the DNA segment can be amplified to approximately 1 billion copies. This repeated amplification is achieved using a thermostable DNA polymerase, specifically Taq polymerase isolated from the bacterium Thermus aquaticus. This enzyme remains active during the high-temperature induced denaturation of double-stranded DNA. The resulting amplified fragment can then be ligated with a vector for further cloning.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:9:9.3.4",
+        "number": "9.3.4",
+        "title": "Insertion of Recombinant DNA into the Host Cell/Organism",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:9:9.3.4:1",
+            "order": 1,
+            "title": "Transformation and Selection using Markers",
+            "content_text": "There are several methods for introducing ligated DNA into recipient cells. Once recipient cells are made 'competent', they take up DNA from their surroundings. For example, if a recombinant DNA bearing a gene for ampicillin resistance is transferred into E. coli cells, the host cells become transformed into ampicillin-resistant cells. When these cells are spread on agar plates containing ampicillin, only the transformants (resistant cells) will grow, while untransformed recipient cells die. In this context, the ampicillin resistance gene serves as a selectable marker, allowing for the identification and selection of transformed cells.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:9:9.3.5",
+        "number": "9.3.5",
+        "title": "Obtaining the Foreign Gene Product",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:9:9.3.5:1",
+            "order": 1,
+            "title": "Recombinant Protein Expression",
+            "content_text": "When alien DNA is inserted into a cloning vector and transferred into a bacterial, plant, or animal cell, it multiplies. The ultimate goal of recombinant technology is often the production of a desirable protein. The foreign gene must be expressed under appropriate conditions. If a protein-encoding gene is expressed in a heterologous host (a host different from its natural source), it is called a recombinant protein. These proteins can be produced on a small scale in laboratories for extraction and purification using various separation techniques.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:9:9.3.5:2",
+            "order": 2,
+            "title": "Continuous Culture Systems",
+            "content_text": "For large-scale production, cells can be multiplied in a continuous culture system. In this setup, used medium is drained from one side while fresh medium is added from the other. This maintains the cells in their physiologically most active log or exponential phase. This method produces a larger biomass, leading to higher yields of the desired protein compared to small-volume laboratory cultures.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:9:9.3.5:3",
+            "order": 3,
+            "title": "Bioreactors and Growth Conditions",
+            "content_text": "To produce products in large quantities (100-1000 litres), bioreactors are required. Bioreactors are vessels where raw materials are biologically converted into specific products, enzymes, etc., using microbial, plant, animal, or human cells. A bioreactor provides optimal conditions for achieving the desired product by regulating growth parameters such as temperature, pH, substrate, salts, vitamins, and oxygen.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:9:9.3.5:4",
+            "order": 4,
+            "title": "Stirred-tank Bioreactors",
+            "content_text": "The most commonly used bioreactors are of the stirring type. A stirred-tank reactor is usually cylindrical or has a curved base to facilitate the mixing of contents. The stirrer ensures even mixing and oxygen availability throughout the vessel. Alternatively, air can be bubbled through the reactor. These systems include an agitator system, an oxygen delivery system, a foam control system, temperature and pH control systems, and sampling ports for periodic withdrawal of small culture volumes.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 9.7",
+                "description": "(a) Simple stirred-tank bioreactor showing motor, foam breaker, flat bladed impeller, culture broth, sterile air inlet, and ports for acid/base pH control and steam for sterilisation. (b) Sparged stirred-tank bioreactor showing gas entrainment and bubbles dramatically increasing the oxygen transfer area.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:9:9.3.6",
+        "number": "9.3.6",
+        "title": "Downstream Processing",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:9:9.3.6:1",
+            "order": 1,
+            "title": "Separation, Purification, and Quality Control",
+            "content_text": "After the biosynthetic stage, the product must undergo a series of processes before it is ready for marketing as a finished product. These processes, collectively referred to as downstream processing, include separation and purification. The product is then formulated with suitable preservatives. For drugs, such formulations must undergo thorough clinical trials. Strict quality control testing is required for each product, and these processes vary depending on the nature of the product.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:9:9.4",
+        "number": "9.4",
+        "title": "Summary",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:9:9.4:1",
+            "order": 1,
+            "title": "Chapter Summary",
+            "content_text": "Biotechnology involves large-scale production and marketing of products using live organisms or enzymes. Modern biotechnology relies on altering DNA chemistry (genetic engineering) using tools like restriction endonucleases, DNA ligase, and vectors. The process includes isolating DNA, cutting it, amplifying the gene of interest, ligating it into a vector, transferring it to a host, expressing the gene, and finally purifying the product via downstream processing and bioreactors.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:biology:12:9:ex:1",
+          "number": 1,
+          "problem": "Can you list 10 recombinant proteins which are used in medical practice? Find out where they are used as therapeutics (use the internet).",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:9:ex:2",
+          "number": 2,
+          "problem": "Make a chart (with diagrammatic representation) showing a restriction enzyme, the substrate DNA on which it acts, the site at which it cuts DNA and the product it produces.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:9:ex:3",
+          "number": 3,
+          "problem": "From what you have learnt, can you tell whether enzymes are bigger or DNA is bigger in molecular size? How did you know?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:9:ex:4",
+          "number": 4,
+          "problem": "What would be the molar concentration of human DNA in a human cell? Consult your teacher.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:9:ex:5",
+          "number": 5,
+          "problem": "Do eukaryotic cells have restriction endonucleases? Justify your answer.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:9:ex:6",
+          "number": 6,
+          "problem": "Besides better aeration and mixing properties, what other advantages do stirred tank bioreactors have over shake flasks?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:9:ex:7",
+          "number": 7,
+          "problem": "Collect 5 examples of palindromic DNA sequences by consulting your teacher. Better try to create a palindromic sequence by following base-pair rules.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:9:ex:8",
+          "number": 8,
+          "problem": "Can you recall meiosis and indicate at what stage a recombinant DNA is made?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:9:ex:9",
+          "number": 9,
+          "problem": "Can you think and answer how a reporter enzyme can be used to monitor transformation of host cells by foreign DNA in addition to a selectable marker?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:9:ex:10",
+          "number": 10,
+          "problem": "Describe briefly the following: (a) Origin of replication (b) Bioreactors (c) Downstream processing",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:9:ex:11",
+          "number": 11,
+          "problem": "Explain briefly (a) PCR (b) Restriction enzymes and DNA (c) Chitinase",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:9:ex:12",
+          "number": 12,
+          "problem": "Discuss with your teacher and find out how to distinguish between (a) Plasmid DNA and Chromosomal DNA (b) RNA and DNA (c) Exonuclease and Endonuclease",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        }
+      ]
+    }
+  }
+}

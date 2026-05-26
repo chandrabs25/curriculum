@@ -1,0 +1,226 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_biology_11_ch7.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:biology:11:7",
+  "curriculum": "ncert",
+  "subject": "biology",
+  "grade": 11,
+  "textbook_name": "Biology",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:biology:11:7",
+    "number": 7,
+    "title": "Structural Organisation in Animals",
+    "summary": "Chapter 7, \"Structural Organisation in Animals,\" from the Class 11 Biology NCERT textbook, explores the organization of tissues into organs and organ systems, using the frog as a detailed example. The chapter begins by defining tissues as groups of similar cells performing specific functions, emphasizing that complex animals are built from four basic tissue types. The arrangement of tissues into organs and organ systems ensures efficient functioning.\n\nThe chapter then delves into the anatomy and physiology of the frog (Rana tigrina), a common amphibian, covering its morphology, digestive, respiratory, vascular, excretory, nervous, and reproductive systems. It highlights the frog's adaptations for both aquatic and terrestrial life, such as cutaneous respiration and its well-developed vascular system. Sexual dimorphism and reproductive strategies are also discussed. The chapter details the components and functions of each system within the frog, illustrating how organ systems work in coordination to maintain homeostasis.\n\nFinally, the chapter concludes by emphasizing the ecological and economic importance of frogs, highlighting their role in controlling insect populations and maintaining ecological balance in food chains. While no specific formulas are introduced, the chapter provides a strong foundation in animal anatomy and physiology, demonstrating how structure dictates function and underscoring the interconnectedness of biological systems.",
+    "sections": [
+      {
+        "id": "ncert:biology:11:7:7.1",
+        "number": "7.1",
+        "title": "Organ and Organ System",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:7:7.1:1",
+            "order": 1,
+            "title": "Introduction to Tissues and Organ Systems",
+            "content_text": "In multicellular organisms, cells do not work in isolation. A group of similar cells along with intercellular substances that perform a specific function is called a tissue. All complex animals consist of only four basic types of tissues. These tissues are organized in specific proportions and patterns to form organs such as the stomach, lung, heart, and kidney. When two or more organs perform a common function through their physical and/or chemical interaction, they together form an organ system (e.g., digestive system, respiratory system). This organization exhibits a division of labour, where cells, tissues, organs, and organ systems split up the work to contribute to the survival of the body as a whole.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:7:7.1:2",
+            "order": 2,
+            "title": "Complexity and Evolutionary Trends",
+            "content_text": "The organization of tissues into organs and organ systems is essential for the efficient and coordinated activities of the millions of cells in an organism. Each organ in the body is typically made of more than one type of tissue; for example, the human heart contains epithelial, connective, muscular, and neural tissues. There is a discernable evolutionary trend in the complexity of organ and organ systems. In biological studies, 'morphology' refers to the study of form or externally visible features. In animals, 'anatomy' is conventionally used for the study of the morphology of internal organs.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:7:7.2",
+        "number": "7.2",
+        "title": "Frogs",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:7:7.2:1",
+            "order": 1,
+            "title": "General Characteristics and Habitat",
+            "content_text": "Frogs are amphibians belonging to the phylum Chordata that can live both on land and in freshwater. The most common species found in India is Rana tigrina. They are poikilotherms (cold-blooded), meaning their body temperature varies with the environment. Frogs exhibit mimicry, a protective coloration where they change skin color to camouflage with their surroundings (e.g., grasses or dry land) to hide from enemies. To survive extreme environmental conditions, they take shelter in deep burrows during peak summer (aestivation or summer sleep) and peak winter (hibernation or winter sleep).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:7:7.2:2",
+            "order": 2,
+            "title": "Morphology: Skin and Body Divisions",
+            "content_text": "The skin of a frog is smooth and slippery due to the presence of mucus and is always maintained in a moist condition. The dorsal side is generally olive green with dark irregular spots, while the ventral side is uniformly pale yellow. Frogs do not drink water; instead, they absorb it through their skin. The body is divided into a head and a trunk; a neck and tail are absent. The head features a pair of nostrils above the mouth and bulged eyes covered by a nictitating membrane that protects them while in water. A membranous tympanum (ear) on either side of the eyes receives sound signals.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 7.1",
+                "description": "External features of a frog showing the head, eye, trunk, fore limb, and hind limb.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:7:7.2:3",
+            "order": 3,
+            "title": "Morphology: Appendages and Sexual Dimorphism",
+            "content_text": "Frogs possess forelimbs and hind limbs that assist in swimming, walking, leaping, and burrowing. Hind limbs end in five digits and are larger and more muscular than the forelimbs, which end in four digits. The digits of the feet are webbed to facilitate swimming. Frogs exhibit sexual dimorphism: male frogs can be distinguished by the presence of sound-producing vocal sacs and a copulatory pad on the first digit of the forelimbs, both of which are absent in female frogs.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:7:7.2:4",
+            "order": 4,
+            "title": "Anatomy: Digestive System",
+            "content_text": "The body cavity of frogs accommodates various organ systems with well-developed structures. The digestive system consists of the alimentary canal and digestive glands. Because frogs are carnivores, the alimentary canal is short, and the length of the intestine is reduced. The path of food is: Mouth → buccal cavity → pharynx → oesophagus (a short tube) → stomach → intestine → rectum → cloaca. The liver secretes bile, which is stored in the gall bladder, and the pancreas produces pancreatic juice containing digestive enzymes.\nThe digestive system continues with the secretion of digestive enzymes. Food is captured by the bilobed tongue. Digestion of food takes place by the action of HCl and gastric juices secreted from the walls of the stomach. Partially digested food, called chyme, is passed from the stomach to the first part of the small intestine, the duodenum. The duodenum receives bile from the gall bladder and pancreatic juices from the pancreas through a common bile duct. Bile emulsifies fat, while pancreatic juices digest carbohydrates and proteins. Final digestion takes place in the intestine. Digested food is absorbed by numerous finger-like folds in the inner wall of the intestine called villi and microvilli. The undigested solid waste moves into the rectum and passes out through the cloaca.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 7.2",
+                "description": "Diagrammatic representation of internal organs of a frog showing the complete digestive system, including the heart, lungs, liver, gall bladder, stomach, fat bodies, kidney, ureter, intestine, rectum, urinary bladder, and cloaca.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:7:7.2:5",
+            "order": 5,
+            "title": "Anatomy: Respiratory System",
+            "content_text": "Frogs respire on land and in the water using two different methods. In water, the skin acts as an aquatic respiratory organ, a process known as cutaneous respiration. Dissolved oxygen in the water is exchanged through the skin by diffusion. On land, the buccal cavity, skin, and lungs act as respiratory organs. Respiration by lungs is called pulmonary respiration. The lungs are a pair of elongated, pink-coloured sac-like structures located in the upper part of the trunk region (thorax). Air enters through the nostrils into the buccal cavity and then to the lungs. During periods of aestivation and hibernation, gaseous exchange takes place exclusively through the skin.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:7:7.2:6",
+            "order": 6,
+            "title": "Anatomy: Vascular System",
+            "content_text": "The vascular system of the frog is a well-developed closed type, supplemented by a lymphatic system. The blood vascular system includes the heart, blood vessels, and blood, while the lymphatic system consists of lymph, lymph channels, and lymph nodes. The heart is a muscular structure situated in the upper part of the body cavity, featuring three chambers: two atria and one ventricle. It is covered by a membrane called the pericardium. A triangular structure called the sinus venosus joins the right atrium and receives blood through major veins called the vena cava. The ventricle opens into a sac-like conus arteriosus on the ventral side of the heart. Blood is distributed to the body via the arterial system and collected by the venous system. Frogs possess special venous connections: the hepatic portal system (between liver and intestine) and the renal portal system (between kidney and lower parts of the body). Blood consists of plasma and cells, including nucleated RBCs (erythrocytes) containing haemoglobin, WBCs (leucocytes), and platelets. Lymph differs from blood as it lacks certain proteins and RBCs. Circulation is driven by the pumping action of the heart.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:7:7.2:7",
+            "order": 7,
+            "title": "Anatomy: Excretory System",
+            "content_text": "The excretory system eliminates nitrogenous wastes and consists of a pair of kidneys, ureters, cloaca, and urinary bladder. The kidneys are compact, dark red, bean-like structures located posteriorly on both sides of the vertebral column. They are composed of structural and functional units called uriniferous tubules or nephrons. In male frogs, two ureters emerge from the kidneys and act as a urinogenital duct opening into the cloaca. In females, the ureters and oviduct open separately into the cloaca. A thin-walled urinary bladder is present ventral to the rectum and also opens into the cloaca. The frog is a ureotelic animal, meaning it excretes urea, which is separated from the blood in the kidneys.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:7:7.2:8",
+            "order": 8,
+            "title": "Anatomy: Control and Coordination",
+            "content_text": "Control and coordination are achieved through the neural system and endocrine glands. Chemical coordination involves hormones secreted by glands such as the pituitary, thyroid, parathyroid, thymus, pineal body, pancreatic islets, adrenals, and gonads. The nervous system is divided into the central nervous system (brain and spinal cord), peripheral nervous system (10 pairs of cranial nerves and spinal nerves), and autonomic nervous system (sympathetic and parasympathetic). The brain is protected by a bony cranium and is divided into the fore-brain (olfactory lobes, cerebral hemispheres, and diencephalon), mid-brain (optic lobes), and hind-brain (cerebellum and medulla oblongata). The medulla oblongata passes through the foramen magnum to continue as the spinal cord within the vertebral column.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:7:7.2:9",
+            "order": 9,
+            "title": "Anatomy: Sense Organs",
+            "content_text": "Frogs possess various sense organs: touch (sensory papillae), taste (taste buds), smell (nasal epithelium), vision (eyes), and hearing (tympanum with internal ears). Eyes are spherical structures located in the skull's orbit; they are simple eyes consisting of a single unit. While external ears are absent, the tympanum is visible externally and serves for both hearing and maintaining equilibrium (balancing).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:7:7.2:10",
+            "order": 10,
+            "title": "Anatomy: Male Reproductive System",
+            "content_text": "The male reproductive system consists of a pair of yellowish ovoid testes adhered to the upper part of the kidneys by a double fold of peritoneum called the mesorchium. About 10-12 vasa efferentia arise from the testes, enter the kidneys, and open into Bidder's canal. This canal communicates with the urinogenital duct, which opens into the cloaca. The cloaca is a small median chamber used for the passage of faecal matter, urine, and sperms.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 7.3",
+                "description": "Anatomical diagram of the male reproductive system of a frog showing fat bodies, vasa efferentia, testis, adrenal gland, kidney, urino genital duct, rectum, urinary bladder, cloaca, and cloacal aperture.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:7:7.2:11",
+            "order": 11,
+            "title": "Anatomy: Female Reproductive System",
+            "content_text": "The female reproductive system includes a pair of ovaries situated near the kidneys, though they have no functional connection to them. A pair of oviducts opens separately into the cloaca. A mature female can lay 2500 to 3000 ova at one time. Fertilisation is external, occurring in water. Development includes a larval stage called a tadpole, which undergoes metamorphosis to become an adult.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 7.4",
+                "description": "Anatomical diagram of the female reproductive system of a frog showing the oviduct, ovary, ova, ureter, urinary bladder, cloaca, and cloacal aperture.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:7:7.2:12",
+            "order": 12,
+            "title": "Economic Importance",
+            "content_text": "Frogs are beneficial to humans as they consume insects, thereby protecting crops. They play a vital role in maintaining ecological balance as a key link in food chains and food webs. Additionally, in some regions, the muscular legs of frogs are used as a food source for humans.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:biology:11:7:ex:1",
+          "number": 1,
+          "problem": "Draw a neat diagram of digestive system of frog.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:7:ex:2",
+          "number": 2,
+          "problem": "Mention the function of the Ureters in frog.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        }
+      ]
+    }
+  }
+}

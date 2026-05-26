@@ -1,0 +1,1289 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_physics_11_ch14.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:physics:11:14",
+  "curriculum": "ncert",
+  "subject": "physics",
+  "grade": 11,
+  "textbook_name": "Physics Part II",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:physics:11:14",
+    "number": 14,
+    "title": "Waves",
+    "summary": "This chapter introduces the fundamental concepts of wave motion, a crucial mechanism for energy and information transfer. It begins by defining waves and differentiating between mechanical, electromagnetic, and matter waves, focusing primarily on mechanical waves. The chapter distinguishes between transverse and longitudinal waves based on particle motion relative to propagation direction. Mathematically, waves are described using sinusoidal functions involving amplitude, wavelength, period, wave number, and angular frequency.\n\nA key concept is the principle of superposition, explaining how waves combine and interfere, leading to constructive and destructive interference. The chapter then explores wave reflection at boundaries, introducing the concept of standing waves formed by the interference of incident and reflected waves. Nodes and antinodes are defined, and normal modes of vibration are discussed for strings and air columns, relating frequency to wavelength and length. The chapter derives formulas for wave speed in different media, considering tension and linear density for transverse waves on strings, and bulk modulus and density for longitudinal waves. The phenomenon of beats, arising from the superposition of waves with slightly different frequencies, is also explained. Key formulas include the wave equation, speed of sound equations (Newton's and Laplace's corrections), and relationships between frequency, wavelength, and speed. This chapter connects the fundamental properties of wave motion to observable phenomena, showcasing the practical applications in musical instruments and other systems.",
+    "sections": [
+      {
+        "id": "ncert:physics:11:14:14.1",
+        "number": "14.1",
+        "title": "INTRODUCTION",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:14:14.1:1",
+            "order": 1,
+            "title": "The Concept of Waves",
+            "content_text": "A wave is a pattern of disturbance that moves through a medium without the actual physical transfer or flow of matter as a whole. For example, when a pebble is dropped into a still pond, the water surface is disturbed. This disturbance propagates outward in circles. If cork pieces are placed on the water, they move up and down but do not move away from the center of disturbance, indicating that the water mass itself does not flow outward. Similarly, sound waves travel through air without a bulk flow of air from the source to the listener.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.1:2",
+            "order": 2,
+            "title": "Transport of Energy and Information",
+            "content_text": "Waves serve as a primary means for transporting energy and information from one point to another. All communication systems depend on the transmission of signals through waves. For instance, speech involves the production of sound waves in air. These can be converted into electric current signals, which may then generate electromagnetic waves for transmission via optical cables, satellites, or wires. The detection of the original signal involves these steps in reverse.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.1:3",
+            "order": 3,
+            "title": "Mechanical Waves",
+            "content_text": "Mechanical waves are the most familiar type of waves, including waves on a string, water waves, sound waves, and seismic waves. These waves require a material medium for propagation and cannot travel through a vacuum. Their propagation involves the oscillations of constituent particles and depends on the elastic properties of the medium.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.1:4",
+            "order": 4,
+            "title": "Electromagnetic Waves",
+            "content_text": "Electromagnetic waves do not necessarily require a medium and can travel through a vacuum. Examples include light, radiowaves, and X-rays. In a vacuum, all electromagnetic waves travel at the same speed $c$, where: $$c = 299, 792, 458 \\text{ ms}^{-1}$$",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.1:5",
+            "order": 5,
+            "title": "Matter Waves",
+            "content_text": "Matter waves are associated with the constituents of matter such as electrons, protons, neutrons, atoms, and molecules. They are described within the framework of quantum mechanics. While conceptually more abstract, they have practical applications in modern technology, such as in electron microscopes.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.1:6",
+            "order": 6,
+            "title": "Mechanism of Wave Propagation",
+            "content_text": "The propagation of a wave can be understood by considering a collection of springs connected to one another. If one end is pulled and released, the disturbance travels to the other end. Each spring executes small oscillations about its equilibrium position, passing the disturbance to the next. This is illustrated in Fig. 14.1. Similarly, in a train, a push given to one bogie is transmitted to the next through spring couplings without the entire train being bodily displaced.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 14.1",
+                "description": "A series of connected springs where a disturbance initiated at end A propagates through the chain as each spring oscillates about its equilibrium position.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.1:7",
+            "order": 7,
+            "title": "Propagation of Sound in Air",
+            "content_text": "As a sound wave passes through air, it compresses or expands small regions. This causes a change in density $\\delta \\rho$ and a corresponding change in pressure $\\delta p$. Because pressure is force per unit area, a restoring force proportional to the disturbance is created, similar to a spring. Regions of high density (compression) and low density (rarefaction) move from one region to another, enabling wave propagation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.1:8",
+            "order": 8,
+            "title": "Waves in Solids",
+            "content_text": "In crystalline solids, atoms are arranged in a periodic lattice. Displacing one atom while others are fixed leads to restoring forces from surrounding atoms, much like the spring model. This allows waves to propagate through the solid medium.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:14:14.2",
+        "number": "14.2",
+        "title": "TRANSVERSE AND LONGITUDINAL WAVES",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:14:14.2:1",
+            "order": 1,
+            "title": "Classification of Waves",
+            "content_text": "Mechanical waves are classified based on the direction of oscillation of the medium's constituents relative to the direction of wave propagation. If the constituents oscillate perpendicular to the direction of propagation, the wave is called a transverse wave. If they oscillate along the direction of propagation, the wave is called a longitudinal wave.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.2:2",
+            "order": 2,
+            "title": "Transverse Waves on a String",
+            "content_text": "A pulse traveling along a stretched string is a classic example of a transverse wave. As the pulse moves in the x-direction, the elements of the string oscillate up and down in the y-direction (perpendicular to the string). If an external agent provides a continuous periodic sinusoidal up-and-down motion, a harmonic wave is generated. In both cases, the string elements oscillate about their equilibrium mean positions as the wave passes.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 14.2",
+                "description": "A single pulse traveling along the x-direction of a stretched string, causing elements to oscillate in the y-direction.",
+                "image_url": null
+              },
+              {
+                "label": "Fig. 14.3",
+                "description": "A continuous harmonic (sinusoidal) wave traveling along a string, where elements oscillate perpendicular to the direction of propagation.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.2:3",
+            "order": 3,
+            "title": "Two Perspectives of Wave Motion",
+            "content_text": "Wave motion can be analyzed in two ways: 1. Fixing an instant of time to observe the shape of the wave in space. 2. Fixing a location to observe the oscillatory motion of a specific element of the medium over time.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.2:4",
+            "order": 4,
+            "title": "Longitudinal Waves in Air",
+            "content_text": "Sound waves in a pipe are the most familiar example of longitudinal waves. A piston at one end of a long air-filled pipe can generate a pulse of condensations (higher density) and rarefactions (lower density). If the piston's motion is continuous and periodic, a longitudinal harmonic wave is produced. Here, a volume element of air oscillates in the direction parallel to the direction of wave propagation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 14.4",
+                "description": "Longitudinal sound waves generated in an air-filled pipe by a moving piston. The air elements oscillate parallel to the direction of wave propagation, creating regions of compression and rarefaction.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.2:5",
+            "order": 5,
+            "title": "Progressive Waves",
+            "content_text": "Waves that travel from one part of the medium to another are called travelling or progressive waves. In these waves, the material medium as a whole does not move; instead, it is the disturbance that propagates. For example, in a water wave, the disturbance moves across the surface while the water molecules oscillate about their equilibrium positions. This is distinct from bulk motion, such as a stream of water or wind, where the medium itself moves as a whole. A sound wave is a propagation of disturbance (in pressure density) in air without the motion of the air medium as a whole.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.2:6",
+            "order": 6,
+            "title": "Medium Properties and Wave Propagation",
+            "content_text": "In transverse waves, particle motion is perpendicular to the direction of wave propagation, which subjects each element of the medium to shearing strain. Therefore, transverse waves can only propagate in media that can sustain shearing stress, such as solids. Fluids (liquids and gases) cannot sustain shearing stress and thus do not support transverse waves. In contrast, longitudinal waves involve compressive strain, which can be sustained by all elastic media, including solids, liquids, and gases. For instance, steel can support both transverse and longitudinal waves, while air can only sustain longitudinal waves.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.2:7",
+            "order": 7,
+            "title": "Waves on Water Surface",
+            "content_text": "Waves on the surface of water are of two types: capillary waves and gravity waves. Capillary waves are ripples with short wavelengths (not more than a few centimeters) where the restoring force is surface tension. Gravity waves have longer wavelengths (meters to hundreds of meters) where the restoring force is gravity. Water waves are complex because particle motion involves both up-and-down and back-and-forth movements, making them a combination of longitudinal and transverse waves. These waves are not confined to the surface but extend with diminishing amplitude to the bottom.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.2:8",
+            "order": 8,
+            "title": "Example 14.1: Identifying Wave Types",
+            "content_text": "This example requires identifying whether specific wave motions are transverse, longitudinal, or a combination of both based on the direction of particle displacement relative to wave propagation and the nature of the medium.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 14.1",
+                "problem": "Given below are some examples of wave motion. State in each case if the wave motion is transverse, longitudinal or a combination of both: (a) Motion of a kink in a longitudinal spring produced by displacing one end of the spring sideways. (b) Waves produced in a cylinder containing a liquid by moving its piston back and forth. (c) Waves produced by a motorboat sailing in water. (d) Ultrasonic waves in air produced by a vibrating quartz crystal.",
+                "solution": "(a) Transverse and longitudinal (b) Longitudinal (c) Transverse and longitudinal (d) Longitudinal"
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:14:14.3",
+        "number": "14.3",
+        "title": "DISPLACEMENT RELATION IN A PROGRESSIVE WAVE",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:14:14.3:1",
+            "order": 1,
+            "title": "Mathematical Description of a Travelling Wave",
+            "content_text": "To describe a travelling wave mathematically, we use a function of both position $x$ and time $t$. For a sinusoidal travelling wave, the displacement $y$ from the equilibrium position is given by: $$y(x, t) = a \\sin(kx - \\omega t + \\phi)$$ (Eq. 14.2). The term $\\phi$ indicates that we are considering a linear combination of sine and cosine functions: $$y(x, t) = A \\sin(kx - \\omega t) + B \\cos(kx - \\omega t)$$ (Eq. 14.3). The relationship between the constants is $a = \\sqrt{A^2 + B^2}$ and $\\phi = \\tan^{-1}(B/A)$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Fig. 14.5",
+                "caption": "The meaning of standard symbols in Eq. (14.2)",
+                "headers": [
+                  "Symbol",
+                  "Meaning"
+                ],
+                "rows": [
+                  [
+                    "$y(x, t)$",
+                    "displacement as a function of position x and time t"
+                  ],
+                  [
+                    "$a$",
+                    "amplitude of a wave"
+                  ],
+                  [
+                    "$\\omega$",
+                    "angular frequency of the wave"
+                  ],
+                  [
+                    "$k$",
+                    "angular wave number"
+                  ],
+                  [
+                    "$kx - \\omega t + \\phi$",
+                    "phase"
+                  ],
+                  [
+                    "$\\phi$",
+                    "initial phase angle (at $x=0, t=0$)"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:physics:11:14:14.3:2",
+            "order": 2,
+            "title": "Direction of Wave Propagation",
+            "content_text": "For a wave to maintain its shape as it travels, the argument of the sine function must remain constant. In the expression $y(x, t) = a \\sin(kx - \\omega t + \\phi)$, as time $t$ increases, $x$ must increase in the positive direction to keep the argument constant. Thus, this equation represents a wave travelling along the positive x-axis. Conversely, a wave travelling in the negative x-direction is represented by: $$y(x, t) = a \\sin(kx + \\omega t + \\phi)$$ (Eq. 14.4).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 14.6",
+                "description": "A series of five sinusoidal plots (a to e) showing a harmonic wave progressing along the positive x-axis at different time intervals. A cross (x) marks a crest moving forward, and a solid dot marks the oscillation of a single particle at the origin.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.3:3",
+            "order": 3,
+            "title": "Amplitude and Phase",
+            "content_text": "The amplitude $a$ is the maximum displacement of the constituents of the medium from their equilibrium position. Since the sine function varies between 1 and -1, the displacement $y(x, t)$ varies between $a$ and $-a$. The quantity $(kx - \\omega t + \\phi)$ is the phase of the wave, which determines the displacement at any position and time. The constant $\\phi$ is the initial phase angle, representing the phase at $x=0$ and $t=0$. By choosing the origin appropriately, $\\phi$ can often be set to zero.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.3:4",
+            "order": 4,
+            "title": "Wavelength and Angular Wave Number",
+            "content_text": "The wavelength $\\lambda$ is the minimum distance between two points having the same phase. At a fixed time $t=0$, the displacement is $y(x, 0) = a \\sin kx$. Since the sine function repeats every $2\\pi$, we have $\\sin kx = \\sin(kx + 2\\pi) = \\sin k(x + 2\\pi/k)$. Thus, the wavelength is: $$\\lambda = \\frac{2\\pi}{k} \\text{ or } k = \\frac{2\\pi}{\\lambda}$$ (Eq. 14.6). The quantity $k$ is the angular wave number or propagation constant, with SI unit rad $m^{-1}$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.3:5",
+            "order": 5,
+            "title": "Period, Angular Frequency and Frequency",
+            "content_text": "The period $T$ is the time it takes for an element of the medium to complete one full oscillation. For a fixed position, the displacement follows $-a \\sin \\omega t = -a \\sin \\omega(t + T)$. This implies $\\omega T = 2\\pi$, leading to: $$\\omega = \\frac{2\\pi}{T}$$ (Eq. 14.7). $\\omega$ is the angular frequency (rad $s^{-1}$). The frequency $\\nu$ is the number of oscillations per second: $$\\nu = \\frac{1}{T} = \\frac{\\omega}{2\\pi}$$ (Eq. 14.8). Frequency is measured in Hertz (Hz).",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 14.7",
+                "description": "A plot of displacement $y$ versus time $t$ for a fixed location, showing a sinusoidal oscillation with amplitude $a$ and time period $T$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.3:6",
+            "order": 6,
+            "title": "Displacement Function for Longitudinal Waves",
+            "content_text": "In a longitudinal wave, the displacement of an element is parallel to the direction of propagation. The displacement function $s(x, t)$ is written as: $$s(x, t) = a \\sin(kx - \\omega t + \\phi)$$ (Eq. 14.9). Here, $s(x, t)$ represents the displacement of an element at position $x$ and time $t$ in the direction of propagation. The parameters $a, k, \\omega,$ and $\\phi$ have the same physical meanings as in transverse waves.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.3:7",
+            "order": 7,
+            "title": "Example 14.2: Analyzing a Travelling Wave Equation",
+            "content_text": "This example demonstrates how to extract physical parameters from a given wave equation. A wave travelling along a string is described by $y(x, t) = 0.005 \\sin (80.0 x - 3.0 t)$, where all constants are in SI units. By comparing this with the standard form $y(x, t) = a \\sin (kx - \\omega t)$, we identify the amplitude $a = 0.005$ m (or 5 mm), the angular wave number $k = 80.0$ rad m$^{-1}$, and the angular frequency $\\omega = 3.0$ rad s$^{-1}$. From these, we calculate the wavelength $\\lambda = 2\\pi/k = 2\\pi/80.0 \\approx 7.85$ cm, the period $T = 2\\pi/\\omega = 2\\pi/3.0 \\approx 2.09$ s, and the frequency $\\nu = 1/T \\approx 0.48$ Hz. To find the displacement at $x = 30.0$ cm and $t = 20$ s, we substitute these values into the equation: $y = (0.005 \\text{ m}) \\sin (80.0 \\times 0.3 - 3.0 \\times 20) = (0.005 \\text{ m}) \\sin (-36)$. Adding $12\\pi$ to the phase to make it positive, we get $y = (0.005 \\text{ m}) \\sin (1.699 \\text{ rad}) \\approx 5$ mm.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 14.2",
+                "problem": "A wave travelling along a string is described by $y(x, t) = 0.005 \\sin (80.0 x - 3.0 t)$, in which the numerical constants are in SI units ($0.005$ m, $80.0$ rad m$^{-1}$, and $3.0$ rad s$^{-1}$). Calculate (a) the amplitude, (b) the wavelength, and (c) the period and frequency of the wave. Also, calculate the displacement $y$ of the wave at a distance $x = 30.0$ cm and time $t = 20$ s?",
+                "solution": "On comparing this displacement equation with $y(x, t) = a \\sin (kx - \\omega t)$, we find: (a) amplitude $a = 0.005$ m = 5 mm. (b) $k = 80.0$ m$^{-1}$ and $\\omega = 3.0$ s$^{-1}$. Wavelength $\\lambda = 2\\pi/k = 2\\pi / 80.0 \\text{ m}^{-1} = 7.85$ cm. (c) Period $T = 2\\pi/\\omega = 2\\pi / 3.0 \\text{ s}^{-1} = 2.09$ s; Frequency $\\nu = 1/T = 0.48$ Hz. Displacement at $x = 0.3$ m, $t = 20$ s: $y = (0.005 \\text{ m}) \\sin (80.0 \\times 0.3 - 3.0 \\times 20) = (0.005 \\text{ m}) \\sin (-36 + 12\\pi) = (0.005 \\text{ m}) \\sin (1.699) \\approx 5$ mm."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:14:14.4",
+        "number": "14.4",
+        "title": "THE SPEED OF A TRAVELLING WAVE",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:14:14.4:1",
+            "order": 1,
+            "title": "Concept of Wave Speed",
+            "content_text": "To determine the speed of propagation of a travelling wave, we focus on a point of constant phase, such as a wave crest. As the wave progresses, this point moves in space over time. If we look at the wave at two instants $t$ and $t + \\Delta t$, the entire pattern shifts by a distance $\\Delta x$. The speed of the wave $v$ is defined as the rate at which this phase point moves, given by $v = \\Delta x / \\Delta t$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 14.8",
+                "description": "Progression of a harmonic wave from time $t$ to $t + \\Delta t$, where $\\Delta t$ is a small interval. The wave pattern shifts to the right. A dot marks a crest moving a distance $\\Delta x$ in time $\\Delta t$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.4:2",
+            "order": 2,
+            "title": "Derivation of Wave Speed Formula",
+            "content_text": "For a wave described by a phase $\\phi = kx - \\omega t$, a point of fixed phase satisfies $kx - \\omega t = \\text{constant}$. As time $t$ changes, the position $x$ must change to keep the phase constant. Thus, $k(x + \\Delta x) - \\omega(t + \\Delta t) = kx - \\omega t$, which simplifies to $k \\Delta x - \\omega \\Delta t = 0$. In the limit of vanishingly small intervals, this yields the wave speed: $v = \\frac{dx}{dt} = \\frac{\\omega}{k}$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.4:3",
+            "order": 3,
+            "title": "General Relations for Wave Speed",
+            "content_text": "By relating angular frequency $\\omega$ to period $T$ ($\\omega = 2\\pi/T$) and wave number $k$ to wavelength $\\lambda$ ($k = 2\\pi/\\lambda$), the wave speed can be expressed as $v = \\frac{2\\pi\\nu}{2\bi/\\lambda} = \\lambda\\nu = \\frac{\\lambda}{T}$. This fundamental relation shows that a wave travels one wavelength in one period. The speed of a mechanical wave is determined by the medium's properties: its inertial property (like mass density) and its elastic property (like Young's modulus or Bulk modulus).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:14:14.4.1",
+        "number": "14.4.1",
+        "title": "Speed of a Transverse Wave on Stretched String",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:14:14.4.1:1",
+            "order": 1,
+            "title": "Factors Affecting Transverse Wave Speed",
+            "content_text": "The speed of a transverse wave on a string depends on the restoring force and the inertial properties of the string. The restoring force is provided by the tension $T$ in the string. The inertial property is characterized by the linear mass density $\\mu$, which is the mass $m$ per unit length $L$ ($\\mu = m/L$).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.4.1:2",
+            "order": 2,
+            "title": "Dimensional Analysis for String Wave Speed",
+            "content_text": "Using dimensional analysis, we can find the relationship between speed $v$, tension $T$, and linear mass density $\\mu$. The dimensions are $[v] = [LT^{-1}]$, $[T] = [MLT^{-2}]$, and $[\\mu] = [ML^{-1}]$. Combining $T$ and $\\mu$ to match the dimensions of $v$ gives the ratio $T/\\mu$, which has dimensions $[L^2T^{-2}]$. Thus, $v = C \\sqrt{T/\\mu}$, where $C$ is a dimensionless constant. Exact derivation using Newton's Laws shows that $C = 1$, leading to the formula: $v = \\sqrt{\\frac{T}{\\mu}}$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.4.1:3",
+            "order": 3,
+            "title": "Example 14.3: Speed on a Steel Wire",
+            "content_text": "This example calculates the speed of a transverse wave on a steel wire. Given a wire of length $0.72$ m and mass $5.0 \\times 10^{-3}$ kg under a tension of $60$ N, we first find the linear mass density $\\mu = (5.0 \\times 10^{-3} \\text{ kg}) / (0.72 \\text{ m}) \\approx 6.9 \\times 10^{-3}$ kg m$^{-1}$. Applying the formula $v = \\sqrt{T/\\mu}$, we find $v = \\sqrt{60 / (6.9 \\times 10^{-3})} \\approx 93$ m s$^{-1}$.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 14.3",
+                "problem": "A steel wire $0.72$ m long has a mass of $5.0 \\times 10^{-3}$ kg. If the wire is under a tension of $60$ N, what is the speed of transverse waves on the wire?",
+                "solution": "Mass per unit length of the wire, $\\mu = \\frac{5.0 \\times 10^{-3} \\text{ kg}}{0.72 \\text{ m}} = 6.9 \\times 10^{-3} \\text{ kg m}^{-1}$. Tension, $T = 60$ N. The speed of wave on the wire is given by $v = \\sqrt{\\frac{T}{\\mu}} = \\sqrt{\\frac{60 \\text{ N}}{6.9 \\times 10^{-3} \\text{ kg m}^{-1}}} = 93 \\text{ m s}^{-1}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:14:14.4.2",
+        "number": "14.4.2",
+        "title": "Speed of a Longitudinal Wave (Speed of Sound)",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:14:14.4.2:1",
+            "order": 1,
+            "title": "Elastic and Inertial Properties in Longitudinal Waves",
+            "content_text": "In longitudinal waves, constituents of the medium oscillate along the direction of propagation, creating compressions and rarefactions. The elastic property involved is the Bulk Modulus $B$, defined as $B = -\\frac{\\Delta P}{\\Delta V/V}$, which measures the stress under compressional strain. The inertial property is the mass density $\\rho$ of the medium.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.4.2:2",
+            "order": 2,
+            "title": "Dimensional Analysis for Longitudinal Wave Speed",
+            "content_text": "The dimensions of Bulk Modulus $B$ are $[ML^{-1}T^{-2}]$ and density $\\rho$ are $[ML^{-3}]$. The ratio $B/\\rho$ has dimensions $[L^2T^{-2}]$, which corresponds to the square of speed. Thus, the general formula for the speed of longitudinal waves in a medium is $v = \\sqrt{\\frac{B}{\\rho}}$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.4.2:3",
+            "order": 3,
+            "title": "Speed of Sound in Solids and Various Media",
+            "content_text": "For a long thin solid bar, the relevant elastic modulus is Young's modulus $Y$, as lateral expansion is negligible. The speed is $v = \\sqrt{Y/\\rho}$. Generally, solids and liquids have higher densities than gases, but their much higher bulk moduli result in sound travelling faster in them than in gases. Table 14.1 provides typical speeds of sound in various media.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 14.1",
+                "caption": "Speed of Sound in some Media",
+                "headers": [
+                  "Medium",
+                  "Speed (m s$^{-1}$)"
+                ],
+                "rows": [
+                  [
+                    "Gases",
+                    ""
+                  ],
+                  [
+                    "Air (0 °C)",
+                    "331"
+                  ],
+                  [
+                    "Air (20 °C)",
+                    "343"
+                  ],
+                  [
+                    "Helium",
+                    "965"
+                  ],
+                  [
+                    "Hydrogen",
+                    "1284"
+                  ],
+                  [
+                    "Liquids",
+                    ""
+                  ],
+                  [
+                    "Water (0 °C)",
+                    "1402"
+                  ],
+                  [
+                    "Water (20 °C)",
+                    "1482"
+                  ],
+                  [
+                    "Seawater",
+                    "1522"
+                  ],
+                  [
+                    "Solids",
+                    ""
+                  ],
+                  [
+                    "Aluminium",
+                    "6420"
+                  ],
+                  [
+                    "Copper",
+                    "3560"
+                  ],
+                  [
+                    "Steel",
+                    "5941"
+                  ],
+                  [
+                    "Granite",
+                    "6000"
+                  ],
+                  [
+                    "Vulcanised Rubber",
+                    "54"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:physics:11:14:14.4.2:4",
+            "order": 4,
+            "title": "Newton's Formula for Speed of Sound in Ideal Gases",
+            "content_text": "For an ideal gas, the relationship between pressure $P$, volume $V$, and temperature $T$ is $PV = Nk_BT$. Newton assumed that the pressure variations in a sound wave occur isothermally. For an isothermal process, $P \\Delta V + V \\Delta P = 0$, which implies the Bulk Modulus $B = -\\frac{\\Delta P}{\\Delta V/V} = P$. Substituting this into the speed formula gives Newton's formula: $v = \\sqrt{\\frac{P}{\\rho}}$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.4.2:5",
+            "order": 5,
+            "title": "Example 14.4: Estimating Speed of Sound in Air",
+            "content_text": "To estimate the speed of sound in air at STP using Newton's formula, we first find the density of air. One mole of any gas occupies $22.4$ litres at STP. Given the mass of 1 mole of air is $29.0 \\times 10^{-3}$ kg, the density $\\rho_0 = (29.0 \\times 10^{-3} \\text{ kg}) / (22.4 \\times 10^{-3} \\text{ m}^3) = 1.29$ kg m$^{-3}$. According to Newton’s formula for the speed of sound in a medium, the speed of sound in air at STP is calculated using the atmospheric pressure $P = 1.01 \\times 10^5 \\text{ N m}^{-2}$ and the density of air $\\rho_0 = 1.29 \\text{ kg m}^{-3}$. The calculation is as follows: $$v = \\left[ \\frac{1.01 \\times 10^5 \\text{ N m}^{-2}}{1.29 \\text{ kg m}^{-3}} \\right]^{1/2} = 280 \\text{ m s}^{-1}$$ This result is about 15% smaller than the experimental value of $331 \\text{ m s}^{-1}$. The discrepancy arises because Newton assumed that pressure variations in a medium during sound propagation are isothermal, which is incorrect for gases.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 14.4",
+                "problem": "Estimate the speed of sound in air at standard temperature and pressure. The mass of 1 mole of air is $29.0 \\times 10^{-3}$ kg.",
+                "solution": "We know that 1 mole of any gas occupies $22.4$ litres at STP. Therefore, density of air at STP is: $\\rho_0 = (\\text{mass of one mole of air}) / (\\text{volume of one mole of air at STP}) = \\frac{29.0 \\times 10^{-3} \\text{ kg}}{22.4 \\times 10^{-3} \\text{ m}^3} = 1.29 \\text{ kg m}^{-3}$. [CONTINUES]"
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.4.2:6",
+            "order": 6,
+            "title": "Laplace Correction for Speed of Sound",
+            "content_text": "Laplace pointed out that pressure variations in the propagation of sound waves occur so rapidly that there is insufficient time for heat flow to maintain a constant temperature. Therefore, these variations are adiabatic rather than isothermal. For an adiabatic process, the ideal gas satisfies the relation $PV^{\\gamma} = \\text{constant}$, where $\\gamma$ is the ratio of the two specific heats, $C_p/C_v$. Differentiating this relation gives $\\Delta(PV^{\\gamma}) = 0$, which leads to $P\\gamma V^{\\gamma-1} \\Delta V + V^{\\gamma} \\Delta P = 0$. The adiabatic bulk modulus is thus: $$B_{ad} = -\\frac{\\Delta P}{\\Delta V/V} = \\gamma P$$ Substituting this into the speed formula, we get: $$v = \\sqrt{\\frac{\\gamma P}{\\rho}}$$ This modification is known as the Laplace correction. For air, $\\gamma = 7/5$. Using this value at STP, the speed of sound is estimated as $331.3 \\text{ m s}^{-1}$, which matches the experimental value.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:14:14.5",
+        "number": "14.5",
+        "title": "THE PRINCIPLE OF SUPERPOSITION OF WAVES",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:14:14.5:1",
+            "order": 1,
+            "title": "Introduction to Superposition",
+            "content_text": "When two wave pulses travelling in opposite directions cross each other, they retain their individual identities after the encounter. However, during the time they overlap, the wave pattern is different from either of the individual pulses. The resultant displacement at any point in the region of overlap is the algebraic sum of the displacements due to each individual pulse. This is known as the principle of superposition of waves. According to this principle, each pulse moves as if the others are not present. The net displacement $y(x, t)$ is given by the sum of individual wave functions: $$y(x, t) = y_1(x, t) + y_2(x, t)$$ This principle applies to any number of waves moving in the medium.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 14.9",
+                "description": "A sequence of five snapshots (a to e) showing two pulses with equal and opposite displacements moving towards each other. In (c), the pulses overlap and cancel each other out to zero displacement. In (d) and (e), they emerge and continue their original paths.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.5:2",
+            "order": 2,
+            "title": "Superposition of Two Harmonic Waves",
+            "content_text": "Consider two harmonic travelling waves on a stretched string with the same angular frequency $\\omega$, wave number $k$, and amplitude $a$. They travel in the positive $x$-direction but differ in their initial phase $\\phi$. The wave functions are: $$y_1(x, t) = a \\sin(kx - \\omega t)$$ $$y_2(x, t) = a \\sin(kx - \\omega t + \\phi)$$ The net displacement is: $$y(x, t) = a \\sin(kx - \\omega t) + a \\sin(kx - \\omega t + \\phi)$$ Using the trigonometric identity $\\sin A + \\sin B = 2 \\sin\\left(\\frac{A+B}{2}\\right) \\cos\\left(\\frac{A-B}{2}\\right)$, we get: $$y(x, t) = \\left[ 2a \\cos \\frac{\\phi}{2} \\right] \\sin\\left(kx - \\omega t + \\frac{\\phi}{2}\\right)$$ This resultant wave is also a harmonic wave with the same frequency and wavelength, but with an amplitude $A(\\phi) = 2a \\cos(\\phi/2)$ and an initial phase angle of $\\phi/2$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 14.10",
+                "description": "Graphs showing the resultant of two harmonic waves. (a) Constructive interference where waves are in phase (phase difference 0), resulting in double amplitude. (b) Destructive interference where waves are out of phase (phase difference π), resulting in zero displacement.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.5:3",
+            "order": 3,
+            "title": "Constructive and Destructive Interference",
+            "content_text": "The amplitude of the resultant wave depends on the phase difference $\\phi$. If $\\phi = 0$, the waves are in phase, and the resultant wave is $y(x, t) = 2a \\sin(kx - \\omega t)$. The amplitude is $2a$, the largest possible value; this is called constructive interference. If $\\phi = \\pi$, the waves are completely out of phase, and the resultant displacement is $y(x, t) = 0$ everywhere at all times; this is called destructive interference.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:14:14.6",
+        "number": "14.6",
+        "title": "REFLECTION OF WAVES",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:14:14.6:1",
+            "order": 1,
+            "title": "Reflection at Rigid and Open Boundaries",
+            "content_text": "When a wave pulse or wave meets a boundary, it gets reflected. If the boundary is rigid, the pulse is reflected with a phase change of $\\pi$ (or $180^{\\circ}$). This occurs because the boundary is fixed and must have zero displacement at all times; the reflected wave must cancel the incident wave at the boundary. If the boundary is not rigid but completely free to move (an open boundary), the reflected pulse has the same phase and amplitude as the incident pulse. In this case, the net displacement at the boundary is twice the amplitude of each pulse. Examples include the open end of an organ pipe or a string tied to a freely moving ring on a rod.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 14.11",
+                "description": "A sequence of snapshots showing a pulse travelling along a stretched string towards a rigid boundary. The pulse is reflected and returns with its displacement inverted, indicating a phase change of π.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.6:2",
+            "order": 2,
+            "title": "Mathematical Representation of Reflected Waves",
+            "content_text": "Let the incident travelling wave be $y_i(x, t) = a \\sin(kx - \\omega t)$. At a rigid boundary, the reflected wave is given by: $$y_r(x, t) = a \\sin(kx + \\omega t + \\pi) = -a \\sin(kx + \\omega t)$$ At an open boundary, the reflected wave is given by: $$y_r(x, t) = a \\sin(kx + \\omega t + 0) = a \\sin(kx + \\omega t)$$ Note that for the reflected wave, the sign of $kx$ changes because it travels in the negative $x$-direction.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:14:14.6.1",
+        "number": "14.6.1",
+        "title": "Standing Waves and Normal Modes",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:14:14.6.1:1",
+            "order": 1,
+            "title": "Formation of Standing Waves",
+            "content_text": "When a wave is confined between two boundaries (such as a string fixed at both ends), reflection occurs at both ends. A wave travelling in one direction gets reflected at one end, travels back, and gets reflected again from the other end. This process continues until a steady wave pattern is set up on the string. Such wave patterns are called standing waves or stationary waves because they do not appear to travel in any direction. To analyze this mathematically, consider an incident wave $y_1(x, t) = a \\sin(kx - \\omega t)$ and a reflected wave $y_2(x, t) = a \\sin(kx + \\omega t)$ of the same amplitude and wavelength. The resultant wave on the string is the sum: $$y(x, t) = y_1(x, t) + y_2(x, t) [CONTINUES]$$ ",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.6.1:2",
+            "order": 2,
+            "title": "Mathematical Expression for Standing Waves",
+            "content_text": "The resultant displacement of two waves $y_1(x, t) = a \\sin(kx - \\omega t)$ and $y_2(x, t) = a \\sin(kx + \\omega t)$ is given by $y(x, t) = a [\\sin(kx - \\omega t) + \\sin(kx + \\omega t)]$. Using the trigonometric identity $\\sin(A+B) + \\sin(A-B) = 2 \\sin A \\cos B$, we obtain the standing wave equation: $$y(x, t) = 2a \\sin kx \\cos \\omega t \\quad (14.37)$$ In this wave pattern, the terms $kx$ and $\\omega t$ appear separately, unlike the combination $kx - \\omega t$ found in travelling waves. The amplitude of this wave is $2a \\sin kx$, which varies from point to point along the medium. Each element of the string oscillates with the same angular frequency $\\omega$ or time period, and there is no phase difference between oscillations of different elements.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.6.1:3",
+            "order": 3,
+            "title": "Characteristics of Standing Waves",
+            "content_text": "In a standing wave, the string as a whole vibrates in phase with differing amplitudes at different points. Because the wave pattern is neither moving to the right nor to the left, these waves are called standing or stationary waves. While the amplitude is fixed at a given location, it is different at different locations. Fig. 14.12 illustrates a stationary wave pattern resulting from the superposition of two travelling waves in opposite directions. The most significant feature of stationary waves is that the boundary conditions constrain the possible wavelengths or frequencies of vibration of the system. The system cannot oscillate with any arbitrary frequency but is characterised by a set of natural frequencies or normal modes of oscillation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 14.12",
+                "description": "A diagram showing stationary waves arising from the superposition of two harmonic waves (represented by dashed and dotted lines) travelling in opposite directions. The resultant wave (solid blue line) shows fixed positions of zero displacement called nodes (N).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.6.1:4",
+            "order": 4,
+            "title": "Nodes and Antinodes: Definitions and Positions",
+            "content_text": "The points at which the amplitude is zero (where there is no motion at all) are called nodes. The points at which the amplitude is the largest are called antinodes. From Eq. (14.37), the positions of nodes are given by $\\sin kx = 0$, which implies $kx = n\\pi$ for $n = 0, 1, 2, 3, \\dots$. Since $k = 2\\pi/\\lambda$, we get the node positions: $$x = \\frac{n\\lambda}{2} ; n = 0, 1, 2, 3, \\dots \\quad (14.38)$$ The distance between any two successive nodes is $\\lambda/2$. Similarly, the positions of antinodes (where amplitude is largest) are given by $|\\sin kx| = 1$, which implies $kx = (n + 1/2)\\pi$ for $n = 0, 1, 2, 3, \\dots$. This leads to: $$x = (n + 1/2) \\frac{\\lambda}{2} ; n = 0, 1, 2, 3, \\dots \\quad (14.39)$$ The distance between any two consecutive antinodes is also $\\lambda/2$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.6.1:5",
+            "order": 5,
+            "title": "Normal Modes of a Stretched String",
+            "content_text": "For a stretched string of length $L$ fixed at both ends, the boundary conditions require nodes at $x=0$ and $x=L$. The condition at $x=L$ requires that the length $L$ is related to $\\lambda$ by: $$L = n \\frac{\\lambda}{2} ; n = 1, 2, 3, \\dots \\quad (14.40)$$ Consequently, the possible wavelengths are constrained by: $$\\lambda = \\frac{2L}{n} ; n = 1, 2, 3, \\dots \\quad (14.41)$$ and the corresponding natural frequencies, or normal modes, are: $$\\nu = \\frac{nv}{2L} , \\text{for } n = 1, 2, 3, \\dots \\quad (14.42)$$ where $v$ is the speed of the wave determined by the properties of the medium. Fig. 14.13 shows the first six harmonics of a stretched string fixed at either end.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 14.13",
+                "description": "A series of diagrams (a to f) showing the first six harmonics of vibrations of a stretched string fixed at both ends. (a) Fundamental or first harmonic with one loop, (b) second harmonic with two loops, (c) third harmonic with three loops, (d) fourth harmonic with four loops, (e) fifth harmonic with five loops, and (f) sixth harmonic with six loops. Nodes (N) and Antinodes (A) are marked.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.6.1:6",
+            "order": 6,
+            "title": "Harmonics in Stretched Strings",
+            "content_text": "The lowest possible natural frequency of a system is called its fundamental mode or the first harmonic. For a stretched string fixed at both ends, it is given by $\\nu = v/2L$ (corresponding to $n=1$). The frequency for $n=2$ is called the second harmonic, $n=3$ is the third harmonic, and so on. Generally, a string's vibration is a superposition of different modes; some modes may be more strongly excited than others. Musical instruments like the sitar or violin are based on this principle, where plucking or bowing determines which modes are more prominent.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.6.1:7",
+            "order": 7,
+            "title": "Normal Modes of an Air Column (One End Closed)",
+            "content_text": "In an air column with one end closed (e.g., a glass tube partially filled with water), the end in contact with water is a node, while the open end is an antinode. At the node, pressure changes are largest and displacement is minimum (zero). At the open end, pressure change is least and displacement amplitude is maximum. If the tube length is $L$, the antinode condition at $x=L$ requires: $$L = (n + 1/2) \\frac{\\lambda}{2} , \\text{for } n = 0, 1, 2, 3, \\dots \\quad (14.43)$$ The possible wavelengths are $\\lambda = \\frac{2L}{n + 1/2}$ and the natural frequencies are: $$\\nu = (n + 1/2) \\frac{v}{2L} ; n = 0, 1, 2, 3, \\dots \\quad (14.44)$$ The fundamental frequency ($n=0$) is $\\nu = v/4L$. Higher frequencies are odd harmonics (odd multiples of the fundamental): $3(v/4L), 5(v/4L)$, etc.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 14.14",
+                "description": "Diagrams showing the first three odd harmonics of an air column with one end closed: (a) Fundamental or first harmonic, (b) third harmonic, and (c) fifth harmonic. The closed end is a node and the open end is an antinode.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.6.1:8",
+            "order": 8,
+            "title": "Normal Modes of an Air Column (Both Ends Open)",
+            "content_text": "For a pipe open at both ends, each end is an antinode. This configuration generates all harmonics (fundamental, second, third, etc.), similar to a stretched string. The fundamental frequency is $\\nu = v/2L$. Fig. 14.15 illustrates the first few modes of an open pipe, showing that an air column open at both ends generates all harmonics.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 14.15",
+                "description": "Diagrams showing the first three modes of an open pipe: (a) Fundamental or first harmonic, (b) second harmonic, and (c) third harmonic. Both ends are antinodes.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.6.1:9",
+            "order": 9,
+            "title": "Resonance and Complex Systems",
+            "content_text": "Resonance occurs when the frequency of an external driving force is close to one of the natural frequencies of a system, resulting in large amplitude oscillations. This principle applies to strings, air columns, and more complex systems like circular membranes (e.g., a tabla). In a tabla, the membrane is clamped at its circumference, creating a boundary condition where no point on the circumference vibrates. While such 2D systems have more complex frequency estimations, the underlying physics of normal modes remains consistent.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.6.1:10",
+            "order": 10,
+            "title": "Example 14.5: Resonance in an Open Pipe",
+            "content_text": "This example demonstrates how to identify the harmonic mode of an open pipe that resonates with a given source frequency.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 14.5",
+                "problem": "A pipe, 30.0 cm long, is open at both ends. Which harmonic mode of the pipe resonates a 1.1 kHz source? Will resonance with the same source be observed if one end of the pipe is closed? Take the speed of sound in air as 330 m s$^{-1}$.",
+                "solution": "The first harmonic frequency for an open pipe is given by $\\nu_1 = \\frac{v}{2L}$. The frequency of its $n$th harmonic is: $\\nu_n = \\frac{nv}{2L}$, for $n = 1, 2, 3, \\dots$ (open pipe). Given $L = 30.0$ cm = 0.3 m and $v = 330$ m s$^{-1}$, the harmonic frequencies are: $$\\nu_n = \\frac{n \\times 330 \\text{ m s}^{-1}}{2 \\times 0.3 \\text{ m}} = 550 n \\text{ s}^{-1}$$ For a source frequency of 1.1 kHz (1100 Hz): $$1100 = 550 n \\implies n = 2$$ Clearly, a source of frequency 1.1 kHz will resonate at $\\nu_2$, i.e., the second harmonic. [CONTINUES]"
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.6.1:11",
+            "order": 11,
+            "title": "Normal Modes in a Pipe Closed at One End",
+            "content_text": "When one end of a pipe is closed, the boundary conditions change such that a node is formed at the closed end and an antinode at the open end. The fundamental frequency for such a pipe is given by $\\nu_1 = \\frac{v}{\\lambda_1} = \\frac{v}{4L}$. In this configuration, only the odd-numbered harmonics are possible. The frequencies of the higher modes are given by $\\nu_3 = \\frac{3v}{4L}$, $\\nu_5 = \\frac{5v}{4L}$, and so on. For example, in a pipe of length $L = 30$ cm with sound speed $v = 330$ m s$^{-1}$, the fundamental frequency is 275 Hz. If a source frequency corresponds to an even harmonic (like the fourth harmonic), no resonance will be observed because that harmonic is not a possible mode for a pipe closed at one end.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 14.14",
+                "description": "Diagram showing the normal modes of an air column open at one end and closed at the other. It depicts the seventh, ninth, and eleventh harmonics, illustrating that only odd harmonics are present.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.6.1:12",
+            "order": 12,
+            "title": "Normal Modes in an Open Pipe",
+            "content_text": "In a pipe open at both ends, antinodes are formed at both openings. The fundamental frequency (or first harmonic) for an open pipe is $\\nu_1 = \\frac{v}{2L}$. Unlike the pipe closed at one end, an open pipe supports all harmonics—first, second, third, fourth, and so on. The displacement patterns show nodes and antinodes distributed along the length of the pipe to satisfy the open-end boundary conditions.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 14.15",
+                "description": "Standing waves in an open pipe showing the first four harmonics: fundamental (first harmonic), second harmonic, third harmonic, and fourth harmonic. Antinodes (A) are at the ends and nodes (N) are in between.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:14:14.7",
+        "number": "14.7",
+        "title": "BEATS",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:14:14.7:1",
+            "order": 1,
+            "title": "The Phenomenon of Beats",
+            "content_text": "'Beats' is an interesting phenomenon arising from the interference of two harmonic sound waves of close but not equal frequencies. When these waves are heard at the same time, we hear a sound of similar frequency (the average of the two) along with a distinct 'waxing and waning' of the sound's intensity. This periodic variation in loudness occurs at a frequency equal to the difference between the two close frequencies. Musicians often use beats to tune their instruments by adjusting them until the beats are no longer detectable by the ear.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.7:2",
+            "order": 2,
+            "title": "Mathematical Derivation of Beats",
+            "content_text": "To analyze beats mathematically, consider two harmonic sound waves of equal amplitude $a$ and nearly equal angular frequencies $\\omega_1$ and $\\omega_2$. Fixing the location at $x = 0$ and choosing a phase $\\phi = \\pi/2$ for convenience, the displacements are:\n$s_1 = a \\cos \\omega_1 t$ and $s_2 = a \\cos \\omega_2 t$\nBy the principle of superposition, the resultant displacement $s$ is:\n$s = s_1 + s_2 = a (\\cos \\omega_1 t + \\cos \\omega_2 t)$\nUsing the trigonometric identity $\\cos A + \\cos B = 2 \\cos \\frac{A-B}{2} \\cos \\frac{A+B}{2}$, we get:\n$s = 2 a \\cos \\frac{(\\omega_1 - \\omega_2)t}{2} \\cos \\frac{(\\omega_1 + \\omega_2)t}{2}$\nThis can be rewritten as:\n$s = [2 a \\cos \\omega_b t] \\cos \\omega_a t$\nwhere $\\omega_b = \\frac{\\omega_1 - \\omega_2}{2}$ and $\\omega_a = \\frac{\\omega_1 + \\omega_2}{2}$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.7:3",
+            "order": 3,
+            "title": "Beat Frequency and Intensity",
+            "content_text": "If $|\\omega_1 - \\omega_2| \\ll \\omega_1, \\omega_2$, then $\\omega_a \\gg \\omega_b$. The resultant wave oscillates with the average angular frequency $\\omega_a$, but its amplitude $[2 a \\cos \\omega_b t]$ is not constant; it varies slowly in time. The intensity of the sound is largest when the term $\\cos \\omega_b t$ is $+1$ or $-1$. Thus, the intensity waxes and wanes with a frequency that is twice the frequency of the amplitude term, which is $2\\omega_b = \\omega_1 - \\omega_2$. Since $\\omega = 2\\pi\\nu$, the beat frequency $\\nu_{beat}$ is given by:\n$\\nu_{beat} = \\nu_1 - \\nu_2$",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 14.16",
+                "description": "Superposition of two harmonic waves. (a) Wave of frequency 11 Hz. (b) Wave of frequency 9 Hz. (c) Resultant wave showing beats at a frequency of 2 Hz (11 Hz - 9 Hz).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.7:4",
+            "order": 4,
+            "title": "Example 14.6: Tuning Sitar Strings",
+            "content_text": "This example demonstrates how beat frequency changes with string tension. Increasing the tension of a string increases its frequency. By observing whether the beat frequency increases or decreases after a tension change, one can determine if the original frequency of the string was higher or lower than the reference frequency.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 14.6",
+                "problem": "Two sitar strings A and B playing the note 'Dha' are slightly out of tune and produce beats of frequency 5 Hz. The tension of the string B is slightly increased and the beat frequency is found to decrease to 3 Hz. What is the original frequency of B if the frequency of A is 427 Hz?",
+                "solution": "Increase in the tension of a string increases its frequency. If the original frequency of B ($\\nu_B$) were greater than that of A ($\\nu_A$), a further increase in $\\nu_B$ should have resulted in an increase in the beat frequency. But the beat frequency is found to decrease. This shows that $\\nu_B < \\nu_A$. Since $\\nu_A - \\nu_B = 5$ Hz, and $\\nu_A = 427$ Hz, we get $\\nu_B = 422$ Hz."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.7:5",
+            "order": 5,
+            "title": "Application: Musical Pillars",
+            "content_text": "Ancient Indian architecture utilized acoustic properties of stone. In temples like the Nellaiyappar temple in Tamil Nadu, 'Musical Pillars' were carved from single pieces of rock. These pillars produce the basic notes of Indian classical music (Sa, Re, Ga, Ma, Pa, Dha, Ni) when tapped. They are categorized into Shruti Pillars (basic notes), Gana Thoongal (basic tunes/ragas), and Laya Thoongal (beats/taal). The sound produced depends on the elasticity, density, and shape of the stone used.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Musical Pillars",
+                "description": "A photograph of the intricately carved musical pillars at Hampi, which are unique to southern India and produce musical notes when tapped.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:14:14.8",
+        "number": "14.8",
+        "title": "SUMMARY",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:14:14.8:1",
+            "order": 1,
+            "title": "Fundamental Wave Concepts",
+            "content_text": "1. Mechanical waves exist in material media and are governed by Newton’s Laws.\n2. Transverse waves involve particles oscillating perpendicular to the direction of wave propagation.\n3. Longitudinal waves involve particles oscillating along the direction of wave propagation.\n4. A progressive wave moves from one point of the medium to another.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.8:2",
+            "order": 2,
+            "title": "Mathematical Description of Sinusoidal Waves",
+            "content_text": "5. The displacement in a sinusoidal wave propagating in the positive x direction is: $y(x, t) = a \\sin (kx - \\omega t + \\phi)$, where $a$ is amplitude, $k$ is angular wave number, $\\omega$ is angular frequency, $(kx - \\omega t + \\phi)$ is phase, and $\\phi$ is phase constant.\n6. Wavelength $\\lambda$ is the distance between two consecutive points of the same phase. In a stationary wave, it is twice the distance between two consecutive nodes or antinodes.\n7. Period $T$ is the time for one complete oscillation: $T = \\frac{2\\pi}{\\omega}$.\n8. Frequency $\\nu$ is $1/T$: $\\nu = \\frac{\\omega}{2\\pi}$.\n9. Speed $v$ of a progressive wave: $v = \\frac{\\omega}{k} = \\frac{\\lambda}{T} = \\lambda \\nu$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.8:3",
+            "order": 3,
+            "title": "Wave Speed in Media",
+            "content_text": "10. The speed of a transverse wave on a stretched string with tension $T$ and linear mass density $\\mu$ is: $v = \\sqrt{\\frac{T}{\\mu}}$.\n11. Sound waves are longitudinal mechanical waves. The speed $v$ in a fluid with bulk modulus $B$ and density $\\rho$ is $v = \\sqrt{\\frac{B}{\\rho}}$. In a metallic bar with Young's modulus $Y$, $v = \\sqrt{\\frac{Y}{\\rho}}$. For gases, where $B = \\gamma P$, the speed of sound is $v = \\sqrt{\\frac{\\gamma P}{\\rho}}$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.8:4",
+            "order": 4,
+            "title": "The Principle of Superposition",
+            "content_text": "When two or more waves traverse simultaneously in the same medium, the displacement of any element of the medium is the algebraic sum of the displacements due to each wave. This is known as the principle of superposition of waves. Mathematically, the resultant displacement $y$ is given by the sum of individual wave functions: $$y = \\sum_{i=1}^{n} f_i(x - vt)$$ This principle is fundamental to understanding how waves interact, leading to phenomena such as interference, diffraction, and standing waves.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.8:5",
+            "order": 5,
+            "title": "Interference of Sinusoidal Waves",
+            "content_text": "Two sinusoidal waves on the same string exhibit interference, adding or cancelling according to the principle of superposition. If two waves are travelling in the same direction and have the same amplitude $a$ and frequency but differ in phase by a phase constant $\\phi$, the result is a single wave with the same frequency $\\omega$: $$y(x, t) = \\left[ 2a \\cos \\frac{1}{2}\\phi \\right] \\sin \\left( kx - \\omega t + \\frac{1}{2}\\phi \\right)$$ The nature of interference depends on the phase difference $\\phi$:\n1. Constructive Interference: Occurs if $\\phi = 0$ or an integral multiple of $2\\pi$. The waves are exactly in phase, and the resultant amplitude is maximized ($2a$).\n2. Destructive Interference: Occurs if $\\phi = \\pi$ (or odd multiples of $\\pi$). The waves are exactly out of phase, and the resultant amplitude is zero.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.8:6",
+            "order": 6,
+            "title": "Reflection of Waves",
+            "content_text": "A travelling wave is reflected when it reaches a boundary. The nature of reflection depends on whether the boundary is rigid or open:\n1. Rigid Boundary (Closed End): The wave is reflected with a phase reversal (phase change of $\\pi$). For an incident wave $y_i(x, t) = a \\sin(kx - \\omega t)$, the reflected wave is $y_r(x, t) = -a \\sin(kx + \\omega t)$.\n2. Open Boundary: Reflection takes place without any phase change. For the same incident wave, the reflected wave is $y_r(x, t) = a \\sin(kx + \\omega t)$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.8:7",
+            "order": 7,
+            "title": "Standing Waves and Normal Modes in Strings",
+            "content_text": "The interference of two identical waves moving in opposite directions produces standing waves. For a string with fixed ends, the standing wave is described by: $$y(x, t) = [2a \\sin kx] \\cos \\omega t$$ Standing waves are characterized by fixed locations of zero displacement called nodes and fixed locations of maximum displacements called antinodes. The separation between two consecutive nodes or antinodes is $\\lambda/2$. A stretched string of length $L$ fixed at both ends vibrates with specific frequencies called normal modes, given by: $$\\nu = \\frac{nv}{2L}, \\quad n = 1, 2, 3, \\dots$$ The oscillation mode with the lowest frequency ($n=1$) is called the fundamental mode or the first harmonic. The second harmonic corresponds to $n=2$, and so on.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.8:8",
+            "order": 8,
+            "title": "Normal Modes in Air Columns",
+            "content_text": "Air columns, such as those in pipes, also exhibit normal modes. For a pipe of length $L$ with one end closed and the other end open, the vibration frequencies are given by: $$\\nu = (n + 1/2) \\frac{v}{2L}, \\quad n = 0, 1, 2, 3, \\dots$$ The set of frequencies represented by this relation are the normal modes of oscillation for such a system. The lowest frequency, given by $v/4L$ (when $n=0$), is the fundamental mode or the first harmonic. Additionally, a string of length $L$ fixed at both ends or an air column closed at both ends (or open at both ends) vibrates at certain resonant frequencies called normal modes.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.8:9",
+            "order": 9,
+            "title": "Beats",
+            "content_text": "Beats arise when two waves having slightly different frequencies, $\\nu_1$ and $\\nu_2$, and comparable amplitudes are superposed. The resulting sound intensity fluctuates, and the frequency of these fluctuations is known as the beat frequency. The beat frequency is given by the absolute difference between the two individual frequencies: $$\\nu_{beat} = |\\nu_1 - \\nu_2|$$",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.8:10",
+            "order": 10,
+            "title": "Summary of Physical Quantities in Wave Motion",
+            "content_text": "The following table summarizes the key physical quantities associated with wave motion, including their symbols, dimensions, units, and defining remarks.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 14.1",
+                "caption": "Physical Quantities in Waves",
+                "headers": [
+                  "Physical quantity",
+                  "Symbol",
+                  "Dimensions",
+                  "Unit",
+                  "Remarks"
+                ],
+                "rows": [
+                  [
+                    "Wavelength",
+                    "$\\lambda$",
+                    "[L]",
+                    "m",
+                    "Distance between two consecutive points with the same phase."
+                  ],
+                  [
+                    "Propagation constant",
+                    "$k$",
+                    "[L$^{-1}$]",
+                    "m$^{-1}$",
+                    "$k = \\frac{2\\pi}{\\lambda}$"
+                  ],
+                  [
+                    "Wave speed",
+                    "$v$",
+                    "[LT$^{-1}$]",
+                    "m s$^{-1}$",
+                    "$v = \\nu \\lambda$"
+                  ],
+                  [
+                    "Beat frequency",
+                    "$\\nu_{beat}$",
+                    "[T$^{-1}$]",
+                    "s$^{-1}$",
+                    "Difference of two close frequencies of superposing waves."
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:14:14.9",
+        "number": "14.9",
+        "title": "POINTS TO PONDER",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:14:14.9:1",
+            "order": 1,
+            "title": "Nature of Wave Motion vs. Bulk Matter Motion",
+            "content_text": "A wave is not the motion of matter as a whole in a medium. For example, wind is the bulk motion of air from one place to another, whereas a sound wave in air involves the motion of air through local compressions and rarefactions of layers of air without net transport of the medium itself.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.9:2",
+            "order": 2,
+            "title": "Energy Transfer in Waves",
+            "content_text": "In a wave, energy is transferred from one point to another, but the matter itself is not transferred. In a mechanical wave, this energy transfer occurs because of the coupling through elastic forces between neighbouring oscillating parts of the medium.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.9:3",
+            "order": 3,
+            "title": "Propagation Requirements for Transverse and Longitudinal Waves",
+            "content_text": "Transverse waves can propagate only in media that possess a shear modulus of elasticity (typically solids). Longitudinal waves, however, require a bulk modulus of elasticity and are therefore possible in all media: solids, liquids, and gases.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.9:4",
+            "order": 4,
+            "title": "Phase and Amplitude in Progressive vs. Stationary Waves",
+            "content_text": "In a harmonic progressive wave of a given frequency, all particles oscillate with the same amplitude but have different phases at any given instant of time. Conversely, in a stationary (standing) wave, all particles between two consecutive nodes oscillate with the same phase at a given instant but have different amplitudes depending on their position.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:14:14.9:5",
+            "order": 5,
+            "title": "Wave Speed and Source Velocity",
+            "content_text": "Relative to an observer at rest in a medium, the speed of a mechanical wave ($v$) depends only on the elastic and inertial properties of the medium (such as mass density). It does not depend on the velocity of the source of the wave.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:physics:11:14:ex:1",
+          "number": 1,
+          "problem": "A string of mass 2.50 kg is under a tension of 200 N. The length of the stretched string is 20.0 m. If the transverse jerk is struck at one end of the string, how long does the disturbance take to reach the other end?",
+          "solution": "Mass $M = 2.50$ kg, Tension $T = 200$ N, Length $L = 20.0$ m. Linear mass density $\\mu = M/L = 2.50/20.0 = 0.125$ kg/m. Speed of transverse wave $v = \\sqrt{T/\\mu} = \\sqrt{200/0.125} = \\sqrt{1600} = 40$ m/s. Time taken $t = L/v = 20.0/40 = 0.5$ s.",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:14:ex:2",
+          "number": 2,
+          "problem": "A stone dropped from the top of a tower of height 300 m splashes into the water of a pond near the base of the tower. When is the splash heard at the top given that the speed of sound in air is 340 m s$^{-1}$? ($g = 9.8$ m s$^{-2}$)",
+          "solution": "Height $h = 300$ m. Time for stone to fall $t_1 = \\sqrt{2h/g} = \\sqrt{2 \\times 300 / 9.8} \\approx 7.82$ s. Time for sound to travel up $t_2 = h/v_s = 300/340 \\approx 0.88$ s. Total time $t = t_1 + t_2 = 7.82 + 0.88 = 8.7$ s.",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:14:ex:3",
+          "number": 3,
+          "problem": "A steel wire has a length of 12.0 m and a mass of 2.10 kg. What should be the tension in the wire so that speed of a transverse wave on the wire equals the speed of sound in dry air at 20 °C = 343 m s$^{-1}$.",
+          "solution": "$L = 12.0$ m, $M = 2.10$ kg, $v = 343$ m/s. $\\mu = M/L = 2.10/12.0 = 0.175$ kg/m. Since $v = \\sqrt{T/\\mu}$, $T = v^2 \\mu = (343)^2 \\times 0.175 \\approx 2.06 \\times 10^4$ N.",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:14:ex:4",
+          "number": 4,
+          "problem": "Use the formula $v = \\sqrt{\\frac{\\gamma P}{\\rho}}$ to explain why the speed of sound in air (a) is independent of pressure, (b) increases with temperature, (c) increases with humidity.",
+          "solution": "(a) From ideal gas law $P/\\rho = RT/M$. Thus $v = \\sqrt{\\gamma RT/M}$. At constant temperature, $v$ is independent of $P$. (b) $v \\propto \\sqrt{T}$, so speed increases with temperature. (c) Humidity decreases the density $\\rho$ of air. Since $v \\propto 1/\\sqrt{\\rho}$, speed increases.",
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:14:ex:5",
+          "number": 5,
+          "problem": "Examine if the following functions for $y$ can possibly represent a travelling wave: (a) $(x - vt)^2$, (b) $\\log [(x + vt)/x_0]$, (c) $1/(x + vt)$.",
+          "solution": "A function represents a physical wave only if it is finite and continuous for all $x$ and $t$. (a) $(x-vt)^2$ is not bounded as $x \\to \\infty$. (b) $\\log$ is not bounded. (c) $1/(x+vt)$ is singular at $x = -vt$. Thus, none represent a physical travelling wave.",
+          "difficulty": "hard",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:14:ex:6",
+          "number": 6,
+          "problem": "A bat emits ultrasonic sound of frequency 1000 kHz in air. If the sound meets a water surface, what is the wavelength of (a) the reflected sound, (b) the transmitted sound? Speed of sound in air is 340 m s$^{-1}$ and in water 1486 m s$^{-1}$.",
+          "solution": "Frequency $\\nu = 10^6$ Hz. (a) Reflected sound in air: $\\lambda_{air} = v_{air}/\\nu = 340/10^6 = 3.4 \\times 10^{-4}$ m. (b) Transmitted sound in water: $\\lambda_{water} = v_{water}/\\nu = 1486/10^6 = 1.486 \\times 10^{-3}$ m.",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:14:ex:7",
+          "number": 7,
+          "problem": "A hospital uses an ultrasonic scanner to locate tumours in a tissue. What is the wavelength of sound in the tissue in which the speed of sound is 1.7 km s$^{-1}$? The operating frequency of the scanner is 4.2 MHz.",
+          "solution": "$v = 1.7 \\times 10^3$ m/s, $\\nu = 4.2 \\times 10^6$ Hz. $\\lambda = v/\\nu = (1.7 \\times 10^3) / (4.2 \\times 10^6) \\approx 4.05 \\times 10^{-4}$ m.",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:14:ex:8",
+          "number": 8,
+          "problem": "A transverse harmonic wave on a string is described by $y(x, t) = 3.0 \\sin (36 t + 0.018 x + \\pi/4)$ where $x, y$ are in cm and $t$ in s. (a) Is this a travelling or stationary wave? Speed and direction? (b) Amplitude and frequency? (c) Initial phase at origin? (d) Least distance between successive crests?",
+          "solution": "(a) Travelling wave. Speed $v = \\omega/k = 36/0.018 = 2000$ cm/s. Direction: negative $x$. (b) $A = 3.0$ cm. $\\nu = 36/2\\pi \\approx 5.73$ Hz. (c) $\\phi = \\pi/4$. (d) $\\lambda = 2\\pi/0.018 \\approx 349$ cm.",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:14:ex:9",
+          "number": 9,
+          "problem": "For the wave in 14.8, plot $y$ vs $t$ for $x = 0, 2, 4$ cm. In which aspects does the oscillatory motion differ from one point to another: amplitude, frequency or phase?",
+          "solution": "The graphs are sinusoidal. Amplitude and frequency are identical for all points. The oscillatory motion differs only in phase from one point to another.",
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:14:ex:10",
+          "number": 10,
+          "problem": "For $y(x, t) = 2.0 \\cos 2\\pi (10t - 0.0080x + 0.35)$, calculate phase difference between points separated by (a) 4 m, (b) 0.5 m, (c) $\\lambda/2$, (d) $3\\lambda/4$.",
+          "solution": "$k = 2\\pi(0.0080)$ rad/cm. (a) $\\Delta x = 400$ cm: $\\Delta \\phi = 2\\pi(0.0080)(400) = 6.4\\pi$ rad. (b) $\\Delta x = 50$ cm: $\\Delta \\phi = 2\\pi(0.0080)(50) = 0.8\\pi$ rad. (c) $\\pi$ rad. (d) $3\\pi/2$ rad.",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:14:ex:11",
+          "number": 11,
+          "problem": "A string displacement is $y(x, t) = 0.06 \\sin (\\frac{2\\pi}{3} x) \\cos (120 \\pi t)$. (a) Travelling or stationary? (b) Interpret as superposition of two waves. Find wavelength, frequency, and speed of each.",
+          "solution": "(a) Stationary wave. (b) Superposition of $y_1 = 0.03 \\sin(\\frac{2\\pi}{3}x - 120\\pi t)$ and $y_2 = 0.03 \\sin(\\frac{2\\pi}{3}x + 120\\pi t)$. $\\lambda = 2\\pi/(2\\pi/3) = 3$ m. $\\nu = 120\\pi/2\\pi = 60$ Hz. $v = \\nu \\lambda = 180$ m/s.",
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:14:ex:12",
+          "number": 12,
+          "problem": "(i) For the wave on a string described in Exercise 15.11, do all the points on the string oscillate with the same (a) frequency, (b) phase, (c) amplitude? Explain your answers. (ii) What is the amplitude of a point 0.375 m away from one end?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:14:ex:13",
+          "number": 13,
+          "problem": "Given below are some functions of $x$ and $t$ to represent the displacement (transverse or longitudinal) of an elastic wave. State which of these represent (i) a travelling wave, (ii) a stationary wave or (iii) none at all: (a) $y = 2 \\cos (3x) \\sin (10t)$ (b) $y = 2\\sqrt{x - vt}$ (c) $y = 3 \\sin (5x - 0.5t) + 4 \\cos (5x - 0.5t)$ (d) $y = \\cos x \\sin t + \\cos 2x \\sin 2t$",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:14:ex:14",
+          "number": 14,
+          "problem": "A wire stretched between two rigid supports vibrates in its fundamental mode with a frequency of 45 Hz. The mass of the wire is $3.5 \\times 10^{-2}$ kg and its linear mass density is $4.0 \\times 10^{-2}$ kg m$^{-1}$. What is (a) the speed of a transverse wave on the string, and (b) the tension in the string?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:14:ex:15",
+          "number": 15,
+          "problem": "A metre-long tube open at one end, with a movable piston at the other end, shows resonance with a fixed frequency source (a tuning fork of frequency 340 Hz) when the tube length is 25.5 cm or 79.3 cm. Estimate the speed of sound in air at the temperature of the experiment. The edge effects may be neglected.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:14:ex:16",
+          "number": 16,
+          "problem": "A steel rod 100 cm long is clamped at its middle. The fundamental frequency of longitudinal vibrations of the rod are given to be 2.53 kHz. What is the speed of sound in steel?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:14:ex:17",
+          "number": 17,
+          "problem": "A pipe 20 cm long is closed at one end. Which harmonic mode of the pipe is resonantly excited by a 430 Hz source? Will the same source be in resonance with the pipe if both ends are open? (speed of sound in air is 340 m s$^{-1}$).",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:14:ex:18",
+          "number": 18,
+          "problem": "Two sitar strings A and B playing the note ‘Ga’ are slightly out of tune and produce beats of frequency 6 Hz. The tension in the string A is slightly reduced and the beat frequency is found to reduce to 3 Hz. If the original frequency of A is 324 Hz, what is the frequency of B?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:14:ex:19",
+          "number": 19,
+          "problem": "Explain why (or how): (a) in a sound wave, a displacement node is a pressure antinode and vice versa, (b) bats can ascertain distances, directions, nature, and sizes of the obstacles without any “eyes”, (c) a violin note and sitar note may have the same frequency, yet we can distinguish between the two notes, (d) solids can support both longitudinal and transverse waves, but only longitudinal waves can propagate in gases, and (e) the shape of a pulse gets distorted during propagation in a dispersive medium.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        }
+      ]
+    }
+  }
+}

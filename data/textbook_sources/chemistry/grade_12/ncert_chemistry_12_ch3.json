@@ -1,0 +1,1365 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_chemistry_12_ch3.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:chemistry:12:3",
+  "curriculum": "ncert",
+  "subject": "chemistry",
+  "grade": 12,
+  "textbook_name": "Chemistry",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:chemistry:12:3",
+    "number": 3,
+    "title": "Chemical Kinetics",
+    "summary": "Chemical Kinetics, the study of reaction rates and mechanisms, is explored in this chapter. It begins by defining reaction rates, differentiating between average and instantaneous rates, and expressing them mathematically, emphasizing the influence of stoichiometry. Factors affecting reaction rates, such as concentration, temperature, and catalysts, are then examined.\n\nThe rate law, determined experimentally, links reaction rate to reactant concentrations, introducing the concepts of reaction order, molecularity, and the rate constant. The chapter distinguishes between elementary and complex reactions and explains the rate-determining step. Integrated rate equations are derived for zero-order and first-order reactions, enabling calculation of reactant concentrations over time and defining the concept of half-life.\n\nTemperature's impact is quantified through the Arrhenius equation, relating rate constants to activation energy and temperature, and illustrating the role of catalysts in lowering activation energy. Finally, Collision Theory provides a microscopic view, explaining reaction rates based on collision frequency, energy, and molecular orientation. The chapter builds from basic definitions to complex theories, connecting macroscopic observations to molecular behavior. Understanding chemical kinetics is essential for controlling and optimizing chemical processes in various fields, including industry, medicine, and environmental science.",
+    "sections": [
+      {
+        "id": "ncert:chemistry:12:3:3",
+        "number": "3",
+        "title": "Chemical Kinetics",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:3:3:1",
+            "order": 1,
+            "title": "Introduction to Chemical Kinetics",
+            "content_text": "Chemical kinetics is the branch of chemistry that deals with the study of reaction rates and their mechanisms. While thermodynamics helps predict the feasibility of a chemical reaction (for example, a reaction with $\\Delta G < 0$ at constant temperature and pressure is feasible) and chemical equilibrium determines the extent to which a reaction proceeds, kinetics addresses the speed of the reaction and the time taken to reach equilibrium. The word kinetics is derived from the Greek word 'kinesis', meaning movement. A classic example is the conversion of diamond to graphite; although thermodynamic data indicates this change is feasible, the conversion rate is so slow in reality that the change is imperceptible, leading many to believe diamond is forever. Kinetic studies also help determine how reaction rates can be altered by factors such as concentration, temperature, pressure, and catalysts. At the macroscopic level, we are interested in the amounts reacted or formed and their rates, while at the molecular level, we discuss reaction mechanisms involving orientation and energy of colliding molecules.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:3:3.1",
+        "number": "3.1",
+        "title": "Rate of a Chemical Reaction",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:3:3.1:1",
+            "order": 1,
+            "title": "Classification of Chemical Reactions by Speed",
+            "content_text": "Chemical reactions can be classified based on their speed. Some reactions, such as ionic reactions, occur almost instantaneously. For example, the precipitation of silver chloride occurs immediately upon mixing aqueous solutions of silver nitrate and sodium chloride. Conversely, some reactions are extremely slow, such as the rusting of iron in the presence of air and moisture. There are also reactions that proceed at moderate speeds, such as the inversion of cane sugar and the hydrolysis of starch.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.1:2",
+            "order": 2,
+            "title": "Definition of Rate of a Chemical Reaction",
+            "content_text": "The speed or rate of a chemical reaction is defined as the change in concentration of a reactant or product in unit time. Specifically, it can be expressed as: (i) the rate of decrease in concentration of any one of the reactants, or (ii) the rate of increase in concentration of any one of the products. Consider a hypothetical reaction at constant volume: $R \\rightarrow P$. If $[R]_1$ and $[P]_1$ are the concentrations of reactant $R$ and product $P$ at time $t_1$, and $[R]_2$ and $[P]_2$ are their concentrations at time $t_2$, then the time interval is $\\Delta t = t_2 - t_1$. The change in reactant concentration is $\\Delta [R] = [R]_2 - [R]_1$ and the change in product concentration is $\\Delta [P] = [P]_2 - [P]_1$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.1:3",
+            "order": 3,
+            "title": "Mathematical Expression for Average Rate",
+            "content_text": "The average rate of disappearance of reactant $R$ is given by: $\\text{Rate of disappearance of } R = -\\frac{\\Delta [R]}{\\Delta t}$ (Equation 3.1). The average rate of appearance of product $P$ is given by: $\\text{Rate of appearance of } P = +\\frac{\\Delta [P]}{\\Delta t}$ (Equation 3.2). Since the concentration of reactants decreases over time, $\\Delta [R]$ is a negative quantity; it is multiplied by $-1$ to ensure the rate of the reaction is expressed as a positive value. These equations represent the average rate of a reaction, denoted as $r_{av}$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.1:4",
+            "order": 4,
+            "title": "Instantaneous Rate of Reaction",
+            "content_text": "The average rate depends on the time interval chosen. To determine the rate at a specific moment in time, we use the instantaneous rate ($r_{inst}$). This is obtained by taking the limit of the average rate as the time interval $\\Delta t$ approaches zero. Mathematically, $r_{inst} = -\\frac{d[R]}{dt} = \\frac{d[P]}{dt}$. Graphically, the instantaneous rate at any time $t$ is equal to the slope of the tangent to the concentration-time curve at that point. As shown in Fig. 3.1, for reactants, $r_{inst} = -\\text{slope}$, and for products, $r_{inst} = \\text{slope}$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 3.1",
+                "description": "Graphs showing the variation of concentration with time for (a) reactants and (b) products. Graph (a) shows the concentration of reactants $[R]$ decreasing over time, where the average rate $r_{av}$ is calculated over a time interval $\\Delta t$ and the instantaneous rate $r_{inst}$ is the negative slope of the tangent at time $t$. Graph (b) shows the concentration of products $[P]$ increasing over time, where $r_{av}$ is the change in product concentration over $\\Delta t$ and $r_{inst}$ is the slope of the tangent at time $t$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.1:5",
+            "order": 5,
+            "title": "Units of Reaction Rate",
+            "content_text": "From the mathematical expressions, it is clear that the units of reaction rate are $\\text{concentration} \\times \\text{time}^{-1}$. For example, if concentration is measured in $\\text{mol L}^{-1}$ and time in seconds, the units are $\\text{mol L}^{-1} \\text{s}^{-1}$. In gaseous reactions, where concentration is often expressed in terms of partial pressures, the units of the rate equation are $\\text{atm s}^{-1}$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.1:6",
+            "order": 6,
+            "title": "Calculation of Average Rate from Experimental Data",
+            "content_text": "The average rate of a reaction can be calculated by determining the change in concentration over a specific time interval. For the reaction of butyl chloride with water ($C_4H_9Cl + H_2O \\rightarrow C_4H_9OH + HCl$), we can use the difference in concentration of $C_4H_9Cl$ over different time intervals to find the average rate by dividing $-\\Delta [R]$ by $\\Delta t$.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 3.1",
+                "problem": "From the concentrations of $C_4H_9Cl$ (butyl chloride) at different times given below, calculate the average rate of the reaction: $C_4H_9Cl + H_2O \\rightarrow C_4H_9OH + HCl$ during different intervals of time.",
+                "solution": "We can determine the difference in concentration over different intervals of time and thus determine the average rate by dividing $-\\Delta [R]$ by $\\Delta t$ (Table 3.1). [CONTINUES]"
+              }
+            ],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 3.1",
+                "caption": "Concentration of butyl chloride at different times",
+                "headers": [
+                  "$t/s$",
+                  "0",
+                  "50",
+                  "100",
+                  "150",
+                  "200",
+                  "300",
+                  "400",
+                  "700",
+                  "800"
+                ],
+                "rows": [
+                  [
+                    "$[C_4H_9Cl]/\\text{mol L}^{-1}$",
+                    "0.100",
+                    "0.0905",
+                    "0.0820",
+                    "0.0741",
+                    "0.0671",
+                    "0.0549",
+                    "0.0439",
+                    "0.0210",
+                    "0.017"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.1:7",
+            "order": 7,
+            "title": "Instantaneous Rate",
+            "content_text": "As observed in Table 3.1, the average rate of a reaction decreases over time as the concentration of reactants falls. For example, the average rate of hydrolysis of butyl chloride falls from $1.90 \\times 10^{-4}$ mol L$^{-1}$s$^{-1}$ to $0.4 \\times 10^{-4}$ mol L$^{-1}$s$^{-1}$ over 800 seconds. However, the average rate cannot be used to predict the rate of a reaction at a specific instant because it remains constant for the entire time interval for which it is calculated. To express the rate at a particular moment of time, we determine the **instantaneous rate**. This is obtained by considering the average rate at an infinitesimally small time interval $dt$ (i.e., when $\\Delta t$ approaches zero).\nMathematically, for an infinitesimally small time interval $dt$, the instantaneous rate is given by the limit of the average rate as $\\Delta t$ approaches zero:\n$$r_{av} = \\frac{-\\Delta[R]}{\\Delta t} = \\frac{\\Delta[P]}{\\Delta t}$$\nAs $\\Delta t \\rightarrow 0$:\n$$r_{inst} = \\frac{-d[R]}{dt} = \\frac{d[P]}{dt}$$\nThe instantaneous rate can be determined graphically by drawing a tangent at time $t$ on the curve of concentration vs. time and calculating its slope. For the hydrolysis of butyl chloride, the instantaneous rate at $t = 600$ s is calculated by finding the slope of the tangent touching the curve at that point (Fig. 3.2):\n$$r_{inst} \\text{ at } 600 \\text{ s} = -\\left( \\frac{0.0165 - 0.037}{800 - 400} \\right) \\text{ mol L}^{-1} \\text{ s}^{-1} = 5.12 \\times 10^{-5} \\text{ mol L}^{-1} \\text{ s}^{-1}$$\nSimilarly, rates at other times can be calculated:\n- At $t = 250$ s, $r_{inst} = 1.22 \\times 10^{-4} \\text{ mol L}^{-1} \\text{ s}^{-1}$\n- At $t = 350$ s, $r_{inst} = 1.0 \\times 10^{-4} \\text{ mol L}^{-1} \\text{ s}^{-1}$\n- At $t = 450$ s, $r_{inst} = 6.4 \\times 10^{-5} \\text{ mol L}^{-1} \\text{ s}^{-1}$",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 3.2",
+                "description": "A graph showing the concentration of butyl chloride ($C_4H_9Cl$) in mol/L plotted against time in seconds. The curve shows a decrease in concentration over time. A tangent is drawn to the curve at $t = 600$ seconds, and a shaded triangle is used to calculate the slope, representing the instantaneous rate.",
+                "image_url": null
+              }
+            ],
+            "tables": [
+              {
+                "label": "Table 3.1",
+                "caption": "Average rates of hydrolysis of butyl chloride",
+                "headers": [
+                  "$[C_4H_9Cl]_{t_1} / \\text{mol L}^{-1}$",
+                  "$[C_4H_9Cl]_{t_2} / \\text{mol L}^{-1}$",
+                  "$t_1/s$",
+                  "$t_2/s$",
+                  "$r_{av} \\times 10^4 / \\text{mol L}^{-1}s^{-1}$"
+                ],
+                "rows": [
+                  [
+                    "0.100",
+                    "0.0905",
+                    "0",
+                    "50",
+                    "1.90"
+                  ],
+                  [
+                    "0.0905",
+                    "0.0820",
+                    "50",
+                    "100",
+                    "1.70"
+                  ],
+                  [
+                    "0.0820",
+                    "0.0741",
+                    "100",
+                    "150",
+                    "1.58"
+                  ],
+                  [
+                    "0.0741",
+                    "0.0671",
+                    "150",
+                    "200",
+                    "1.40"
+                  ],
+                  [
+                    "0.0671",
+                    "0.0549",
+                    "200",
+                    "300",
+                    "1.22"
+                  ],
+                  [
+                    "0.0549",
+                    "0.0439",
+                    "300",
+                    "400",
+                    "1.10"
+                  ],
+                  [
+                    "0.0439",
+                    "0.0335",
+                    "400",
+                    "500",
+                    "1.04"
+                  ],
+                  [
+                    "0.0210",
+                    "0.017",
+                    "700",
+                    "800",
+                    "0.4"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.1:8",
+            "order": 8,
+            "title": "Rate Expression and Stoichiometry",
+            "content_text": "In reactions where the stoichiometric coefficients of the reactants and products are the same, the rate of reaction is equal to the rate of disappearance of any reactant or the rate of appearance of any product. For example, in the reaction:\n$$Hg(l) + Cl_2(g) \\rightarrow HgCl_2(s)$$\nThe rate of reaction is given as:\n$$\\text{Rate of reaction} = -\\frac{\\Delta[Hg]}{\\Delta t} = -\\frac{\\Delta[Cl_2]}{\\Delta t} = \\frac{\\Delta[HgCl_2]}{\\Delta t}$$",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.1:9",
+            "order": 9,
+            "title": "Rate Expressions for Complex Stoichiometry",
+            "content_text": "When stoichiometric coefficients are not equal to one, the rate of disappearance of reactants or the rate of appearance of products is divided by their respective stoichiometric coefficients to make them equal. For the decomposition of hydrogen iodide:\n$$2HI(g) \\rightarrow H_2(g) + I_2(g)$$\nThe rate is given by:\n$$\\text{Rate of reaction} = -\\frac{1}{2} \\frac{\\Delta[HI]}{\\Delta t} = \\frac{\\Delta[H_2]}{\\Delta t} = \\frac{\\Delta[I_2]}{\\Delta t}$$\nSimilarly, for the reaction:\n$$5 Br^-(aq) + BrO_3^-(aq) + 6 H^+(aq) \\rightarrow 3 Br_2(aq) + 3 H_2O(l)$$\nThe rate is:\n$$\\text{Rate} = -\\frac{1}{5} \\frac{\\Delta[Br^-]}{\\Delta t} = -\\frac{\\Delta[BrO_3^-]}{\\Delta t} = -\\frac{1}{6} \\frac{\\Delta[H^+]}{\\Delta t} = \\frac{1}{3} \\frac{\\Delta[Br_2]}{\\Delta t} = \\frac{1}{3} \\frac{\\Delta[H_2O]}{\\Delta t}$$",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.1:10",
+            "order": 10,
+            "title": "Rate in Gaseous Reactions",
+            "content_text": "For a gaseous reaction at constant temperature, the concentration of a species is directly proportional to its partial pressure. Consequently, the rate of reaction can also be expressed as the rate of change in the partial pressure of the reactant or the product.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.1:11",
+            "order": 11,
+            "title": "Worked Example: Average Rate and Rate of Production",
+            "content_text": "This example illustrates how to calculate the average rate of reaction and the rate of production of a specific product using stoichiometric relationships and concentration changes over time.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 3.2",
+                "problem": "The decomposition of $N_2O_5$ in $CCl_4$ at 318K has been studied by monitoring the concentration of $N_2O_5$ in the solution. Initially the concentration of $N_2O_5$ is $2.33 \\text{ mol L}^{-1}$ and after 184 minutes, it is reduced to $2.08 \\text{ mol L}^{-1}$. The reaction takes place according to the equation: $2 N_2O_5 (g) \\rightarrow 4 NO_2 (g) + O_2 (g)$. Calculate the average rate of this reaction in terms of hours, minutes and seconds. What is the rate of production of $NO_2$ during this period?",
+                "solution": "Average Rate $= -\\frac{1}{2} \\left\\{ \\frac{\\Delta[N_2O_5]}{\\Delta t} \\right\\} = -\\frac{1}{2} \\left[ \\frac{(2.08 - 2.33) \\text{ mol L}^{-1}}{184 \\text{ min}} \\right] = 6.79 \\times 10^{-4} \\text{ mol L}^{-1} \\text{ min}^{-1}$.\nIn hours: $6.79 \\times 10^{-4} \\text{ mol L}^{-1} \\text{ min}^{-1} \\times (60 \\text{ min} / 1 \\text{ h}) = 4.07 \\times 10^{-2} \\text{ mol L}^{-1} \\text{ h}^{-1}$.\nIn seconds: $6.79 \\times 10^{-4} \\text{ mol L}^{-1} \\times (1 \\text{ min} / 60 \\text{ s}) = 1.13 \\times 10^{-5} \\text{ mol L}^{-1} \\text{ s}^{-1}$.\nRate of production of $NO_2 = \\frac{1}{4} \\left[ \\frac{\\Delta[NO_2]}{\\Delta t} \\right]$. Since the overall reaction rate is $6.79 \\times 10^{-4} \\text{ mol L}^{-1} \\text{ min}^{-1}$, then $\\frac{\\Delta[NO_2]}{\\Delta t} = 4 \\times 6.79 \\times 10^{-4} \\text{ mol L}^{-1} \\text{ min}^{-1} = 2.72 \\times 10^{-3} \\text{ mol L}^{-1} \\text{ min}^{-1}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:3:3.2",
+        "number": "3.2",
+        "title": "Factors Influencing Rate of a Reaction",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:3:3.2:1",
+            "order": 1,
+            "title": "Overview of Factors",
+            "content_text": "The rate of a chemical reaction depends upon various experimental conditions. These include the concentration of reactants (or pressure in the case of gases), the temperature of the system, and the presence of a catalyst.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.2:2",
+            "order": 2,
+            "title": "Dependence of Rate on Concentration (Rate Law)",
+            "content_text": "The rate of a chemical reaction at a given temperature may depend on the concentration of one or more reactants and products. The representation of the rate of reaction in terms of the concentration of the reactants is known as the **rate law**. It is also referred to as the rate equation or rate expression.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.2:3",
+            "order": 3,
+            "title": "Rate Expression and Rate Constant",
+            "content_text": "Experimental results, such as those in Table 3.1, demonstrate that the rate of a reaction decreases as the concentration of reactants decreases over time. Conversely, rates generally increase when reactant concentrations are increased. Thus, the rate of a reaction is fundamentally dependent upon the concentration of the reactants.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.2:4",
+            "order": 4,
+            "title": "General Rate Expression and Rate Law",
+            "content_text": "For a general reaction $aA + bB \\rightarrow cC + dD$, where $a, b, c$ and $d$ are the stoichiometric coefficients of reactants and products, the rate expression is given by $\\text{Rate} \\propto [A]^x [B]^y$ (3.4). In this expression, the exponents $x$ and $y$ may or may not be equal to the stoichiometric coefficients $a$ and $b$ of the reactants. This relationship can be expressed as an equation: $\\text{Rate} = k [A]^x [B]^y$ (3.4a), or in its differential form: $-\\frac{d[R]}{dt} = k [A]^x [B]^y$ (3.4b). This form is known as the differential rate equation, where $k$ is a proportionality constant called the rate constant. The rate law is defined as the expression in which reaction rate is given in terms of molar concentration of reactants with each term raised to some power, which may or may not be same as the stoichiometric coefficient of the reacting species in a balanced chemical equation.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.2:5",
+            "order": 5,
+            "title": "Experimental Determination of Rate Law",
+            "content_text": "The rate law for any reaction must be determined experimentally and cannot be predicted simply by looking at the balanced chemical equation. For example, in the reaction $2NO(g) + O_2(g) \\rightarrow 2NO_2(g)$, the rate can be measured as a function of initial concentrations (Table 3.2). Observations show that doubling the concentration of $NO$ while keeping $[O_2]$ constant increases the initial rate by a factor of four (from $0.096$ to $0.384 \\text{ mol L}^{-1}\\text{s}^{-1}$), indicating the rate depends on $[NO]^2$. Conversely, doubling $[O_2]$ while keeping $[NO]$ constant doubles the rate, indicating a first-power dependence on $[O_2]$. Thus, the rate equation is $\\text{Rate} = k [NO]^2 [O_2]$, and its differential form is $-\\frac{d[R]}{dt} = k [NO]^2 [O_2]$. While exponents match coefficients in this case, they often differ in others. For instance, the reaction $CHCl_3 + Cl_2 \\rightarrow CCl_4 + HCl$ has the rate law $\\text{Rate} = k [CHCl_3] [Cl_2]^{1/2}$, and the hydrolysis of ethyl acetate $CH_3COOC_2H_5 + H_2O \\rightarrow CH_3COOH + C_2H_5OH$ has the rate law $\\text{Rate} = k [CH_3COOC_2H_5]^1 [H_2O]^0$.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 3.2",
+                "caption": "Initial rate of formation of $NO_2$",
+                "headers": [
+                  "Experiment",
+                  "Initial $[NO]/ \\text{mol L}^{-1}$",
+                  "Initial $[O_2]/ \\text{mol L}^{-1}$",
+                  "Initial rate of formation of $NO_2/ \\text{mol L}^{-1}\\text{s}^{-1}$"
+                ],
+                "rows": [
+                  [
+                    "1.",
+                    "0.30",
+                    "0.30",
+                    "0.096"
+                  ],
+                  [
+                    "2.",
+                    "0.60",
+                    "0.30",
+                    "0.384"
+                  ],
+                  [
+                    "3.",
+                    "0.30",
+                    "0.60",
+                    "0.192"
+                  ],
+                  [
+                    "4.",
+                    "0.60",
+                    "0.60",
+                    "0.768"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:3:3.2.3",
+        "number": "3.2.3",
+        "title": "Order of a Reaction",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:3:3.2.3:1",
+            "order": 1,
+            "title": "Definition of Reaction Order",
+            "content_text": "In the rate equation $\\text{Rate} = k [A]^x [B]^y$, the exponents $x$ and $y$ indicate how sensitive the rate is to changes in the concentration of reactants $A$ and $B$. The sum of these exponents ($x + y$) is called the overall order of that chemical reaction. The order of a reaction can be $0, 1, 2, 3$ or even a fraction. A zero-order reaction means that the rate of reaction is independent of the concentration of reactants.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.2.3:2",
+            "order": 2,
+            "title": "Worked Example: Calculating Overall Order",
+            "content_text": "This example demonstrates how to calculate the overall order of a reaction given its rate expression by summing the exponents of the concentration terms.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 3.3",
+                "problem": "Calculate the overall order of a reaction which has the rate expression (a) $\\text{Rate} = k [A]^{1/2} [B]^{3/2}$ (b) $\\text{Rate} = k [A]^{3/2} [B]^{-1}$",
+                "solution": "(a) $\\text{Rate} = k [A]^x [B]^y$; order $= x + y$. So order $= 1/2 + 3/2 = 2$, i.e., second order. (b) order $= 3/2 + (-1) = 1/2$, i.e., half order."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.2.3:3",
+            "order": 3,
+            "title": "Elementary and Complex Reactions",
+            "content_text": "A balanced chemical equation rarely provides a complete picture of how a reaction occurs. Reactions that take place in a single step are called elementary reactions. When a sequence of elementary reactions (called a mechanism) occurs to yield products, the overall process is called a complex reaction. Complex reactions can involve consecutive steps (e.g., the oxidation of ethane to $CO_2$ and $H_2O$ through intermediate alcohols, aldehydes, and acids), reverse reactions, or side reactions (e.g., the nitration of phenol yielding both o-nitrophenol and p-nitrophenol).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.2.3:4",
+            "order": 4,
+            "title": "Units of the Rate Constant",
+            "content_text": "For a general reaction $aA + bB \\rightarrow cC + dD$, the rate constant $k$ is derived from the rate law: $k = \\frac{\\text{Rate}}{[A]^x [B]^y} = \\frac{\\text{concentration}}{\\text{time}} \\times \\frac{1}{(\\text{concentration})^n}$, where $n$ is the overall order of the reaction. Using SI units for concentration (mol L$^{-1}$) and time (s), the units for $k$ vary depending on the reaction order. For a zero-order reaction, the units are mol L$^{-1}$s$^{-1}$; for a first-order reaction, the units are s$^{-1}$; and for a second-order reaction, the units are mol$^{-1}$L s$^{-1}$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 3.3",
+                "caption": "Units of rate constant",
+                "headers": [
+                  "Reaction",
+                  "Order",
+                  "Units of rate constant"
+                ],
+                "rows": [
+                  [
+                    "Zero order reaction",
+                    "0",
+                    "$\\frac{\\text{mol L}^{-1}}{\\text{s}} \\times \\frac{1}{(\\text{mol L}^{-1})^0} = \\text{mol L}^{-1}\\text{s}^{-1}$"
+                  ],
+                  [
+                    "First order reaction",
+                    "1",
+                    "$\\frac{\\text{mol L}^{-1}}{\\text{s}} \\times \\frac{1}{(\\text{mol L}^{-1})^1} = \\text{s}^{-1}$"
+                  ],
+                  [
+                    "Second order reaction",
+                    "2",
+                    "$\\frac{\\text{mol L}^{-1}}{\\text{s}} \\times \\frac{1}{(\\text{mol L}^{-1})^2} = \\text{mol}^{-1}\\text{L s}^{-1}$"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.2.3:5",
+            "order": 5,
+            "title": "Worked Example: Identifying Order from Units",
+            "content_text": "This example shows how the units of the rate constant $k$ can be used to identify the order of a chemical reaction.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 3.4",
+                "problem": "Identify the reaction order from each of the following rate constants. (i) $k = 2.3 \\times 10^{-5} \\text{ L mol}^{-1} \\text{s}^{-1}$ (ii) $k = 3 \\times 10^{-4} \\text{ s}^{-1}$",
+                "solution": "(i) The unit of second order rate constant is $\\text{L mol}^{-1} \\text{s}^{-1}$, therefore $k = 2.3 \\times 10^{-5} \\text{ L mol}^{-1} \\text{s}^{-1}$ represents a second order reaction. (ii) The unit of a first order rate constant is $\\text{s}^{-1}$ therefore $k = 3 \\times 10^{-4} \\text{ s}^{-1}$ represents a first order reaction."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:3:3.2.4",
+        "number": "3.2.4",
+        "title": "Molecularity of a Reaction",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:3:3.2.4:1",
+            "order": 1,
+            "title": "Definition of Molecularity",
+            "content_text": "Molecularity is another property used to understand reaction mechanisms. It is defined as the number of reacting species (atoms, ions, or molecules) taking part in an elementary reaction, which must collide simultaneously in order to bring about a chemical reaction. A reaction is described as unimolecular when only one reacting species is involved, such as the decomposition of ammonium nitrite: $NH_4NO_2 \\rightarrow N_2 + 2H_2O$. Bimolecular reactions involve the simultaneous collision between two species. A classic example is the dissociation of hydrogen iodide: $2HI \\rightarrow H_2 + I_2$. Trimolecular or termolecular reactions involve the simultaneous collision between three reacting species, such as: $2NO + O_2 \\rightarrow 2NO_2$. The probability that more than three molecules can collide and react simultaneously is very small. Consequently, reactions with a molecularity of three are very rare and typically slow to proceed.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.2.4:2",
+            "order": 2,
+            "title": "Complex Reactions and the Rate Determining Step",
+            "content_text": "Complex reactions involving more than three molecules in the stoichiometric equation must take place in more than one step. For example, the reaction $KClO_3 + 6FeSO_4 + 3H_2SO_4 \\rightarrow KCl + 3Fe_2(SO_4)_3 + 3H_2O$ appears to be of tenth order but is actually a second-order reaction. This indicates the reaction occurs in several steps. The overall rate of such a reaction is controlled by the slowest step, known as the rate determining step. Consider the decomposition of hydrogen peroxide catalyzed by iodide ion in an alkaline medium: $2H_2O_2 \\xrightarrow[Alkaline\\ medium]{I^-} 2H_2O + O_2$. The rate equation is found to be: $Rate = \\frac{-d[H_2O_2]}{dt} = k[H_2O_2][I^-]$. This reaction is first order with respect to both $H_2O_2$ and $I^-$. The proposed mechanism involves two bimolecular elementary steps: (1) $H_2O_2 + I^- \\rightarrow H_2O + IO^-$ (Slow) and (2) $H_2O_2 + IO^- \\rightarrow H_2O + I^- + O_2$ (Fast). The species $IO^-$ is an intermediate. The first, slower step determines the overall rate.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.2.4:3",
+            "order": 3,
+            "title": "Comparison between Order and Molecularity",
+            "content_text": "From the preceding discussion, we can conclude the following differences: (i) Order of a reaction is an experimental quantity and can be zero or fractional, whereas molecularity cannot be zero or a non-integer. (ii) Order is applicable to both elementary and complex reactions, while molecularity is only applicable to elementary reactions; for complex reactions, molecularity has no meaning. (iii) For a complex reaction, the order is given by the slowest step, and the molecularity of the slowest step is the same as the order of the overall reaction.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:3:3.3",
+        "number": "3.3",
+        "title": "Integrated Rate Equations",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:3:3.3:1",
+            "order": 1,
+            "title": "Introduction to Integrated Rate Equations",
+            "content_text": "The concentration dependence of rate is expressed by the differential rate equation. However, it is not always convenient to determine the instantaneous rate by measuring the slope of the tangent at point 't' in a concentration vs time plot. To avoid this difficulty, we integrate the differential rate equation to obtain a relation between directly measured experimental data (concentrations at different times) and the rate constant. The integrated rate equations differ for reactions of different orders.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:3:3.3.1",
+        "number": "3.3.1",
+        "title": "Zero Order Reactions",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:3:3.3.1:1",
+            "order": 1,
+            "title": "Derivation of Integrated Rate Equation for Zero Order",
+            "content_text": "A zero order reaction means the rate of the reaction is proportional to the zero power of the concentration of reactants. Consider the reaction $R \\rightarrow P$. The rate is given by: $Rate = -\\frac{d[R]}{dt} = k[R]^0$. Since any quantity raised to the power zero is unity: $Rate = -\\frac{d[R]}{dt} = k \\times 1$, which simplifies to $d[R] = -k dt$. Integrating both sides gives: $[R] = -kt + I$, where $I$ is the constant of integration. At $t = 0$, the concentration of the reactant $R = [R]_0$, where $[R]_0$ is the initial concentration. Substituting these values: $[R]_0 = -k(0) + I$, so $I = [R]_0$. Substituting $I$ back into the equation yields the integrated rate equation: $[R] = -kt + [R]_0$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.3.1:2",
+            "order": 2,
+            "title": "Graphical Representation and Rate Constant",
+            "content_text": "The equation $[R] = -kt + [R]_0$ is in the form of a straight line, $y = mx + c$. If we plot $[R]$ against $t$, we get a straight line with slope equal to $-k$ and an intercept equal to $[R]_0$. From this, the rate constant $k$ can be calculated as: $k = \\frac{[R]_0 - [R]}{t}$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 3.3",
+                "description": "A graph showing the variation in the concentration of reactant [R] versus time (t) for a zero order reaction. The plot is a downward-sloping straight line starting from the y-intercept [R]₀. The slope of the line is equal to -k.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.3.1:3",
+            "order": 3,
+            "title": "Examples of Zero Order Reactions",
+            "content_text": "Zero order reactions are relatively uncommon and usually occur under special conditions, such as enzyme-catalyzed reactions or reactions on metal surfaces. A prominent example is the decomposition of gaseous ammonia on a hot platinum surface at high pressure: $2NH_3(g) \\xrightarrow[Pt\\ catalyst]{1130K} N_2(g) + 3H_2(g)$. In this reaction, the rate is $k[NH_3]^0 = k$. At high pressure, the metal surface becomes saturated with gas molecules, so further changes in concentration do not affect the rate. Another example is the thermal decomposition of HI on a gold surface.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:3:3.3.2",
+        "number": "3.3.2",
+        "title": "First Order Reactions",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:3:3.3.2:1",
+            "order": 1,
+            "title": "Derivation of Integrated Rate Equation for First Order",
+            "content_text": "In first order reactions, the rate of the reaction is proportional to the first power of the concentration of the reactant $R$. For the reaction $R \\rightarrow P$: $Rate = -\\frac{d[R]}{dt} = k[R]$, or $\\frac{d[R]}{[R]} = -kdt$. Integrating this equation gives: $\\ln[R] = -kt + I$. At $t = 0$, $R = [R]_0$, where $[R]_0$ is the initial concentration. Therefore, $\\ln[R]_0 = -k(0) + I$, which means $I = \\ln[R]_0$. Substituting the value of $I$ into the equation gives: $\\ln[R] = -kt + \\ln[R]_0$. Rearranging the equation $\\ln[R] = -kt + \\ln[R]_0$ gives $\\ln \\frac{[R]}{[R]_0} = -kt$ or $k = \\frac{1}{t} \\ln \\frac{[R]_0}{[R]}$ (Equation 3.10). At time $t_1$, the equation is $\\ln[R]_1 = -kt_1 + \\ln[R]_0$ (Equation 3.11), and at time $t_2$, it is $\\ln[R]_2 = -kt_2 + \\ln[R]_0$ (Equation 3.12), where $[R]_1$ and $[R]_2$ are the concentrations of the reactants at time $t_1$ and $t_2$ respectively. Subtracting Equation 3.12 from 3.11 yields $\\ln[R]_1 - \\ln[R]_2 = -kt_1 - (-kt_2)$, which simplifies to $\\ln \\frac{[R]_1}{[R]_2} = k(t_2 - t_1)$. Thus, the rate constant can be expressed as $k = \\frac{1}{(t_2 - t_1)} \\ln \\frac{[R]_1}{[R]_2}$ (Equation 3.13).",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.3.2:2",
+            "order": 2,
+            "title": "Exponential Form and Graphical Representation",
+            "content_text": "The equation $\\ln \\frac{[R]}{[R]_0} = -kt$ can be written in exponential form by taking the antilog of both sides, resulting in $[R] = [R]_0 e^{-kt}$ (Equation 3.14). Comparing the integrated rate equation $\\ln[R] = -kt + \\ln[R]_0$ with the linear equation $y = mx + c$, a plot of $\\ln[R]$ against time $t$ (Fig. 3.4) yields a straight line. The slope of this line is $-k$ and the y-intercept is $\\ln[R]_0$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 3.4",
+                "description": "A plot between $\\ln[R]$ and $t$ for a first order reaction. It shows a straight line with a negative slope, where the y-axis represents $\\ln[R]$ and the x-axis represents time $t$. The intercept on the y-axis is $\\ln[R]_0$ and the slope is $-k$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.3.2:3",
+            "order": 3,
+            "title": "Logarithmic Form (Base 10) and Graphical Representation",
+            "content_text": "The first order rate equation (Equation 3.10) can also be written using common logarithms (base 10) as $k = \\frac{2.303}{t} \\log \\frac{[R]_0}{[R]}$ (Equation 3.15). This can be rearranged to $\\log \\frac{[R]_0}{[R]} = \\frac{kt}{2.303}$. If we plot a graph between $\\log \\frac{[R]_0}{[R]}$ vs $t$ (Fig. 3.5), the slope is $k/2.303$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 3.5",
+                "description": "Plot of $\\log \\frac{[R]_0}{[R]}$ vs time for a first order reaction. It shows a straight line passing through the origin, where the y-axis represents $\\log \\frac{[R]_0}{[R]}$ and the x-axis represents time. The slope of the line is $k/2.303$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.3.2:4",
+            "order": 4,
+            "title": "Examples of First Order Reactions",
+            "content_text": "Several chemical and physical processes follow first order kinetics. Examples include the hydrogenation of ethene: $C_2H_4(g) + H_2(g) \\rightarrow C_2H_6(g)$, where the rate is $k[C_2H_4]$. Additionally, all natural and artificial radioactive decay of unstable nuclei follow first order kinetics. For example, the decay of Radium-226 ($^{226}_{88}Ra \\rightarrow ^4_2He + ^{222}_{86}Rn$) has a rate given by $k[Ra]$. Other examples include the decomposition of $N_2O_5$ and $N_2O$.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.3.2:5",
+            "order": 5,
+            "title": "Worked Example 3.5: Calculating Rate Constant",
+            "content_text": "This example demonstrates how to calculate the rate constant for a first-order reaction using concentration data at two different times. For a first order reaction, the formula $k = \\frac{2.303}{(t_2 - t_1)} \\log \\frac{[R]_1}{[R]_2}$ is used.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 3.5",
+                "problem": "The initial concentration of $N_2O_5$ in the following first order reaction $N_2O_5(g) \\rightarrow 2 NO_2(g) + 1/2 O_2(g)$ was $1.24 \\times 10^{-2}$ mol L$^{-1}$ at 318 K. The concentration of $N_2O_5$ after 60 minutes was $0.20 \\times 10^{-2}$ mol L$^{-1}$. Calculate the rate constant of the reaction at 318 K.",
+                "solution": "For a first order reaction: $\\log \\frac{[R]_1}{[R]_2} = \\frac{k(t_2 - t_1)}{2.303}$. $k = \\frac{2.303}{(t_2 - t_1)} \\log \\frac{[R]_1}{[R]_2} = \\frac{2.303}{(60 \\text{ min} - 0 \\text{ min})} \\log \\frac{1.24 \\times 10^{-2} \\text{ mol L}^{-1}}{0.20 \\times 10^{-2} \\text{ mol L}^{-1}} = \\frac{2.303}{60} \\log 6.2 \\text{ min}^{-1} = 0.0304 \\text{ min}^{-1}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.3.2:6",
+            "order": 6,
+            "title": "Integrated Rate Equation for Gas Phase Reactions",
+            "content_text": "For a typical first order gas phase reaction $A(g) \\rightarrow B(g) + C(g)$, let $p_i$ be the initial pressure of A and $p_t$ be the total pressure at time $t$. If $x$ atm is the decrease in pressure of A, then the partial pressures are $p_A = p_i - x$, $p_B = x$, and $p_C = x$. The total pressure is $p_t = p_A + p_B + p_C = (p_i - x) + x + x = p_i + x$. Solving for $x$ gives $x = p_t - p_i$. Substituting this into the expression for $p_A$ gives $p_A = p_i - (p_t - p_i) = 2p_i - p_t$. The integrated rate equation is then $k = \\frac{2.303}{t} \\log \\frac{p_i}{p_A} = \\frac{2.303}{t} \\log \\frac{p_i}{(2p_i - p_t)}$ (Equation 3.16).",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.3.2:7",
+            "order": 7,
+            "title": "Worked Example 3.6: Thermal Decomposition of Gas",
+            "content_text": "This example applies the gas-phase integrated rate equation to the thermal decomposition of $N_2O_5$. The total pressure data at different times is used to find the partial pressure of the reactant and subsequently the rate constant.\nThe final calculation for the rate constant in the thermal decomposition of $N_2O_5$ is as follows: The partial pressure of $N_2O_5$ at $t = 100 s$ is calculated as $p_{N_2O_5} = 1.5 - 2 \\times 0.512 = 0.476$ atm. Using the integrated rate equation for a first-order gas-phase reaction: $k = \\frac{2.303}{t} \\log \\frac{p_i}{p_A} = \\frac{2.303}{100 s} \\log \\frac{0.5 atm}{0.476 atm} = \\frac{2.303}{100 s} \\times 0.0216 = 4.98 \\times 10^{-4} s^{-1}$.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 3.6",
+                "problem": "The following data were obtained during the first order thermal decomposition of $N_2O_5 (g)$ at constant volume: $2N_2O_5(g) \\rightarrow 2N_2O_4(g) + O_2(g)$. S.No. 1: Time/s = 0, Total Pressure/(atm) = 0.5. S.No. 2: Time/s = 100, Total Pressure/(atm) = 0.512. Calculate the rate constant.",
+                "solution": "Let the pressure of $N_2O_5(g)$ decrease by $2x$ atm. As two moles of $N_2O_5$ decompose to give two moles of $N_2O_4(g)$ and one mole of $O_2(g)$, the pressure of $N_2O_4(g)$ increases by $2x$ atm and that of $O_2(g)$ increases by $x$ atm. At $t=0$, $p_{N_2O_5}=0.5, p_{N_2O_4}=0, p_{O_2}=0$. At time $t$, $p_{N_2O_5}=0.5-2x, p_{N_2O_4}=2x, p_{O_2}=x$. Total pressure $p_t = (0.5 - 2x) + 2x + x = 0.5 + x$. Thus $x = p_t - 0.5$. The partial pressure of $N_2O_5$ at time $t$ is $p_{N_2O_5} = 0.5 - 2(p_t - 0.5) = 1.5 - 2p_t$. At $t = 100$ s; $p_t = 0.512$ atm. [CONTINUES]"
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:3:3.3.3",
+        "number": "3.3.3",
+        "title": "Half-Life of a Reaction",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:3:3.3.3:1",
+            "order": 1,
+            "title": "Definition and Zero Order Reaction Half-Life",
+            "content_text": "The half-life of a reaction is the time in which the concentration of a reactant is reduced to one half of its initial concentration. It is represented as $t_{1/2}$. For a zero order reaction, the rate constant is given by the equation $k = \\frac{[R]_0 - [R]}{t}$. At $t = t_{1/2}$, the concentration $[R] = \\frac{1}{2}[R]_0$. Substituting these values into the rate equation: $k = \\frac{[R]_0 - 1/2[R]_0}{t_{1/2}}$, which simplifies to $t_{1/2} = \\frac{[R]_0}{2k}$. This shows that for a zero order reaction, $t_{1/2}$ is directly proportional to the initial concentration of the reactants ($t_{1/2} \\propto [R]_0$) and inversely proportional to the rate constant.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.3.3:2",
+            "order": 2,
+            "title": "First Order Reaction Half-Life",
+            "content_text": "For a first order reaction, the rate constant is given by $k = \\frac{2.303}{t} \\log \\frac{[R]_0}{[R]}$. At $t = t_{1/2}$, the concentration $[R] = \\frac{[R]_0}{2}$. Substituting these values: $k = \\frac{2.303}{t_{1/2}} \\log \\frac{[R]_0}{[R]_0/2} = \\frac{2.303}{t_{1/2}} \\log 2$. Since $\\log 2 \\approx 0.301$, the expression becomes $t_{1/2} = \\frac{2.303 \\times 0.301}{k} = \\frac{0.693}{k}$. For a first order reaction, the half-life period is constant; it is independent of the initial concentration of the reacting species. The half-life of a first order equation is readily calculated from the rate constant and vice versa.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.3.3:3",
+            "order": 3,
+            "title": "Worked Example 3.7: Calculating Half-Life",
+            "content_text": "This example demonstrates how to calculate the half-life of a first-order reaction given its rate constant.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 3.7",
+                "problem": "A first order reaction is found to have a rate constant, $k = 5.5 \\times 10^{-14} s^{-1}$. Find the half-life of the reaction.",
+                "solution": "Half-life for a first order reaction is $t_{1/2} = \\frac{0.693}{k} = \\frac{0.693}{5.5 \\times 10^{-14} s^{-1}} = 1.26 \\times 10^{13} s$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.3.3:4",
+            "order": 4,
+            "title": "Worked Example 3.8: Time for 99.9% Completion",
+            "content_text": "This example provides a proof regarding the time required for a specific percentage of completion in a first-order reaction relative to its half-life.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 3.8",
+                "problem": "Show that in a first order reaction, time required for completion of 99.9% is 10 times of half-life ($t_{1/2}$) of the reaction.",
+                "solution": "When reaction is completed 99.9%, $[R] = [R]_0 - 0.999[R]_0 = 0.001[R]_0$. $k = \\frac{2.303}{t} \\log \\frac{[R]_0}{[R]} = \\frac{2.303}{t} \\log \\frac{[R]_0}{0.001[R]_0} = \\frac{2.303}{t} \\log 10^3$. $t = \\frac{2.303 \\times 3}{k} = \\frac{6.909}{k}$. For half-life of the reaction, $t_{1/2} = \\frac{0.693}{k}$. Therefore, $\\frac{t}{t_{1/2}} = \\frac{6.909/k}{0.693/k} = 10$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.3.3:5",
+            "order": 5,
+            "title": "Summary of Integrated Rate Laws",
+            "content_text": "The mathematical features of integrated rate laws for zero and first order reactions are summarized in Table 3.4. This includes the differential rate law, integrated rate law, the type of straight-line plot produced, the expression for half-life, and the units of the rate constant $k$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 3.4",
+                "caption": "Integrated Rate Laws for the Reactions of Zero and First Order",
+                "headers": [
+                  "Order",
+                  "Reaction type",
+                  "Differential rate law",
+                  "Integrated rate law",
+                  "Straight line plot",
+                  "Half-life",
+                  "Units of $k$"
+                ],
+                "rows": [
+                  [
+                    "0",
+                    "R $\\rightarrow$ P",
+                    "d[R]/dt = -k",
+                    "kt = [R]$_0$ - [R]",
+                    "[R] vs t",
+                    "[R]$_0$/2k",
+                    "conc time$^{-1}$ or mol L$^{-1}$ s$^{-1}$"
+                  ],
+                  [
+                    "1",
+                    "R $\\rightarrow$ P",
+                    "d[R]/dt = -k[R]",
+                    "[R] = [R]$_0 e^{-kt}$ or kt = ln{[R]$_0$/[R]}",
+                    "ln[R] vs t",
+                    "ln 2/k",
+                    "time$^{-1}$ or s$^{-1}$"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.3.3:6",
+            "order": 6,
+            "title": "Pseudo First Order Reactions",
+            "content_text": "The order of a reaction is sometimes altered by conditions. Reactions which obey first order rate law although they are higher order reactions are called pseudo first order reactions. Consider the hydrolysis of ethyl acetate: $CH_3COOC_2H_5 + H_2O \\xrightarrow{H^+} CH_3COOH + C_2H_5OH$. In reality, it is a second order reaction, but water is taken in large excess. Therefore, the concentration of water is not altered significantly during the reaction. For example, in the hydrolysis of 0.01 mol of ethyl acetate with 10 mol of water, the amount of water at completion is 9.99 mol. The rate equation $Rate = k' [CH_3COOC_2H_5][H_2O]$ becomes $Rate = k [CH_3COOC_2H_5]$ where $k = k'[H_2O]$. Inversion of cane sugar is another example: $C_{12}H_{22}O_{11} + H_2O \\xrightarrow{H^+} C_6H_{12}O_6 + C_6H_{12}O_6$, where $Rate = k [C_{12}H_{22}O_{11}]$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:3:3.4",
+        "number": "3.4",
+        "title": "Temperature Dependence of the Rate of a Reaction",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:3:3.4:1",
+            "order": 1,
+            "title": "Effect of Temperature on Reaction Rate",
+            "content_text": "Most chemical reactions are accelerated by an increase in temperature. For example, in the decomposition of $N_2O_5$, the time taken for half of the original amount to decompose is 12 min at $50^\\circ C$, 5 h at $25^\\circ C$, and 10 days at $0^\\circ C$. Similarly, potassium permanganate ($KMnO_4$) gets decolourised faster by oxalic acid ($H_2C_2O_4$) at higher temperatures. It has been found that for a chemical reaction, with a rise in temperature by $10^\\circ$, the rate constant is nearly doubled.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.4:2",
+            "order": 2,
+            "title": "The Arrhenius Equation",
+            "content_text": "The temperature dependence of the rate of a chemical reaction can be accurately explained by the Arrhenius equation. It was first proposed by Dutch chemist J.H. van't Hoff, but Swedish chemist Arrhenius provided its physical justification and interpretation. ...ccurately explained by the Arrhenius equation. It was first proposed by Dutch chemist J.H. van't Hoff, but Swedish chemist Arrhenius provided its physical justification and interpretation. The equation is: $$k = A e^{-E_a / RT}$$ (3.18) where $A$ is the Arrhenius factor or the frequency factor. It is also called the pre-exponential factor. It is a constant specific to a particular reaction. $R$ is the gas constant and $E_a$ is the activation energy measured in joules/mole ($J \\text{ mol}^{-1}$).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.4:3",
+            "order": 3,
+            "title": "The Activated Complex and Activation Energy",
+            "content_text": "The Arrhenius equation can be understood clearly using the following simple reaction: $H_2(g) + I_2(g) \\rightarrow 2HI(g)$. According to Arrhenius, this reaction can take place only when a molecule of hydrogen and a molecule of iodine collide to form an unstable intermediate (Fig. 3.6). It exists for a very short time and then breaks up to form two molecules of hydrogen iodide. The energy required to form this intermediate, called the activated complex (C), is known as activation energy ($E_a$). Fig. 3.7 is obtained by plotting potential energy vs reaction coordinate. Reaction coordinate represents the profile of energy change when reactants change into products. Some energy is released when the complex decomposes to form products. So, the final enthalpy of the reaction depends upon the nature of reactants and products.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 3.6",
+                "description": "Formation of HI through the intermediate. It shows the collision of $H_2$ and $I_2$ molecules to form an unstable intermediate complex $H \\cdots I \\cdots H \\cdots I$ (represented as a square with dotted lines) which then dissociates into two $HI$ molecules.",
+                "image_url": null
+              },
+              {
+                "label": "Fig. 3.7",
+                "description": "Diagram showing plot of potential energy vs reaction coordinate. The x-axis is the reaction coordinate and the y-axis is potential energy. It shows the energy path from reactants ($H_2 + I_2$) at point A, up to the activated complex at point C (the peak), and down to products ($2HI$) at point B. The energy difference between reactants and the peak is the activation energy ($E_a$). The energy difference between reactants and products is $\\Delta H$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.4:4",
+            "order": 4,
+            "title": "Maxwell-Boltzmann Distribution of Kinetic Energy",
+            "content_text": "All the molecules in the reacting species do not have the same kinetic energy. Since it is difficult to predict the behaviour of any one molecule with precision, Ludwig Boltzmann and James Clark Maxwell used statistics to predict the behaviour of a large number of molecules. According to them, the distribution of kinetic energy may be described by plotting the fraction of molecules ($N_E/N_T$) with a given kinetic energy ($E$) vs kinetic energy (Fig. 3.8). Here, $N_E$ is the number of molecules with energy $E$ and $N_T$ is the total number of molecules. The peak of the curve corresponds to the most probable kinetic energy, i.e., the kinetic energy of the maximum fraction of molecules. There are decreasing numbers of molecules with energies higher or lower than this value.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 3.8",
+                "description": "Distribution curve showing energies among gaseous molecules. A plot of the fraction of molecules ($N_E/N_T$) against kinetic energy. The curve rises to a peak, which is labeled as the 'most probable kinetic energy', and then tapers off at higher energies.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.4:5",
+            "order": 5,
+            "title": "Temperature Dependence and the Distribution Curve",
+            "content_text": "When the temperature is raised, the maximum of the curve moves to the higher energy value (Fig. 3.9) and the curve broadens out, i.e., spreads to the right such that there is a greater proportion of molecules with much higher energies. The area under the curve must be constant since total probability must be one at all times. We can mark the position of $E_a$ on the Maxwell Boltzmann distribution curve (Fig. 3.9). Increasing the temperature of the substance increases the fraction of molecules which collide with energies greater than $E_a$. It is clear from the diagram that in the curve at $(t + 10)$, the area showing the fraction of molecules having energy equal to or greater than activation energy gets doubled leading to doubling the rate of a reaction.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 3.9",
+                "description": "Distribution curve showing temperature dependence of rate of a reaction. It compares two Maxwell-Boltzmann distribution curves at temperatures $t$ and $t+10$. The curve at $t+10$ is flatter and shifted to the right. The area under the curve representing molecules with energy $\\geq E_a$ is shaded for both temperatures, showing that the area for $t+10$ is significantly larger (approximately double) than for $t$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.4:6",
+            "order": 6,
+            "title": "Logarithmic Form and Graphical Analysis",
+            "content_text": "In the Arrhenius equation (3.18), the factor $e^{-E_a / RT}$ corresponds to the fraction of molecules that have kinetic energy greater than $E_a$. Taking the natural logarithm of both sides of equation (3.18): $$\\ln k = -\\frac{E_a}{RT} + \\ln A$$ (3.19). The plot of $\\ln k$ vs $1/T$ gives a straight line according to equation (3.19) as shown in Fig. 3.10. Thus, it has been found from the Arrhenius equation (3.18) that increasing the temperature or decreasing the activation energy will result in an increase in the rate of the reaction and an exponential increase in the rate constant. In Fig. 3.10, $\\text{slope} = -\\frac{E_a}{R}$ and $\\text{intercept} = \\ln A$. So we can calculate $E_a$ and $A$ using these values.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 3.10",
+                "description": "A plot between $\\ln k$ and $1/T$. It shows a straight line with a negative slope. The y-intercept is marked as $\\ln A$ and the slope is labeled as $-E_a/R$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.4:7",
+            "order": 7,
+            "title": "Arrhenius Equation at Different Temperatures",
+            "content_text": "At temperature $T_1$, equation (3.19) is: $\\ln k_1 = -\\frac{E_a}{RT_1} + \\ln A$ (3.20). At temperature $T_2$, equation (3.19) is: $\\ln k_2 = -\\frac{E_a}{RT_2} + \\ln A$ (3.21) (since $A$ is constant for a given reaction). $k_1$ and $k_2$ are the values of rate constants at temperatures $T_1$ and $T_2$ respectively. Subtracting equation (3.20) from (3.21), we obtain: $$\\ln k_2 - \\ln k_1 = \\frac{E_a}{RT_1} - \\frac{E_a}{RT_2}$$ $$\\ln \\frac{k_2}{k_1} = \\frac{E_a}{R} \\left[ \\frac{1}{T_1} - \\frac{1}{T_2} \\right]$$ Converting to common logarithm (base 10): $$\\log \\frac{k_2}{k_1} = \\frac{E_a}{2.303R} \\left[ \\frac{T_2 - T_1}{T_1 T_2} \\right]$$ (3.22).",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.4:8",
+            "order": 8,
+            "title": "Worked Example: Calculating Activation Energy and Frequency Factor",
+            "content_text": "This example demonstrates how to use the Arrhenius equation to calculate the activation energy ($E_a$) and the frequency factor ($A$) when rate constants are known at two different temperatures.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 3.9",
+                "problem": "The rate constants of a reaction at 500K and 700K are $0.02 \\text{ s}^{-1}$ and $0.07 \\text{ s}^{-1}$ respectively. Calculate the values of $E_a$ and $A$.",
+                "solution": "Using the formula: $\\log \\frac{k_2}{k_1} = \\frac{E_a}{2.303R} \\left[ \\frac{T_2 - T_1}{T_1 T_2} \\right]$. Substituting values: $\\log \\frac{0.07}{0.02} = \\left[ \\frac{E_a}{2.303 \\times 8.314 \\text{ J K}^{-1} \\text{ mol}^{-1}} \\right] \\left[ \\frac{700 - 500}{700 \\times 500} \\right]$. $0.544 = E_a \\times 5.714 \\times 10^{-4} / 19.15$. $E_a = 0.544 \\times 19.15 / 5.714 \\times 10^{-4} = 18230.8 \\text{ J}$. Since $k = A e^{-E_a/RT}$, $0.02 = A e^{-18230.8 / (8.314 \\times 500)}$. $A = 0.02 / 0.012 = 1.61$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.4:9",
+            "order": 9,
+            "title": "Worked Example: Calculating Rate Constant at a New Temperature",
+            "content_text": "This example shows the calculation of a rate constant at a specific temperature given the activation energy and the rate constant at another temperature. The calculation for the rate constant $k_2$ at $700 \\text{ K}$ is completed using the logarithmic form of the Arrhenius equation: $$\\log k_2 = \\log k_1 + \\frac{E_a}{2.303R} \\left[ \\frac{1}{T_1} - \\frac{1}{T_2} \\right]$$ Substituting the known values: $k_1 = 1.60 \\times 10^{-5} \\text{ s}^{-1}$, $E_a = 209000 \\text{ J mol}^{-1}$, $R = 8.314 \\text{ J mol}^{-1} \\text{ K}^{-1}$, $T_1 = 600 \\text{ K}$, and $T_2 = 700 \\text{ K}$. The equation becomes: $$\\log k_2 = \\log(1.60 \\times 10^{-5}) + \\frac{209000 \\text{ J mol}^{-1}}{2.303 \\times 8.314 \\text{ J mol}^{-1} \\text{ K}^{-1}} \\left[ \\frac{1}{600 \\text{ K}} - \\frac{1}{700 \\text{ K}} \\right]$$ $$\\log k_2 = -4.796 + 2.599 = -2.197$$ Taking the antilog of $-2.197$, we find: $$k_2 = 6.36 \\times 10^{-3} \\text{ s}^{-1}$$ This example demonstrates how a $100 \\text{ K}$ increase in temperature leads to a significant increase in the rate constant.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 3.10",
+                "problem": "The first order rate constant for the decomposition of ethyl iodide by the reaction $C_2H_5I(g) \\rightarrow C_2H_4(g) + HI(g)$ at 600K is $1.60 \\times 10^{-5} \\text{ s}^{-1}$. Its energy of activation is $209 \\text{ kJ/mol}$. Calculate the rate constant of the reaction at 700K.",
+                "solution": "We know that $\\log k_2 - \\log k_1 = \\frac{E_a}{2.303R} \\left[ \\frac{1}{T_1} - \\frac{1}{T_2} \\right]$ [CONTINUES]"
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:3:3.4.1",
+        "number": "3.4.1",
+        "title": "Effect of Catalyst",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:3:3.4.1:1",
+            "order": 1,
+            "title": "Definition and Function of a Catalyst",
+            "content_text": "A catalyst is a substance which increases the rate of a reaction without itself undergoing any permanent chemical change. For example, manganese dioxide ($MnO_2$) catalyses the decomposition of potassium chlorate ($KClO_3$) to increase its rate considerably: $$2KClO_3 \\xrightarrow{MnO_2} 2KCl + 3O_2$$ The term 'inhibitor' is used when an added substance reduces the rate of reaction, and the word catalyst should not be used in such cases.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.4.1:2",
+            "order": 2,
+            "title": "Intermediate Complex Theory",
+            "content_text": "The action of a catalyst can be explained by the intermediate complex theory. According to this theory, a catalyst participates in a chemical reaction by forming temporary bonds with the reactants, resulting in an intermediate complex. This complex has a transitory existence and decomposes to yield products while regenerating the catalyst. This process allows the reaction to proceed through a different mechanism with a lower energy requirement.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.4.1:3",
+            "order": 3,
+            "title": "Catalyst and Activation Energy",
+            "content_text": "It is believed that a catalyst provides an alternate pathway or reaction mechanism by reducing the activation energy between reactants and products. By lowering the potential energy barrier, a larger fraction of molecules can cross the barrier to form products. According to the Arrhenius equation, as the activation energy ($E_a$) decreases, the rate constant ($k$) and thus the rate of reaction increases. Fig. 3.11 illustrates the difference in the potential energy path for a reaction with and without a catalyst.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 3.11",
+                "description": "A potential energy diagram plotting potential energy against the reaction coordinate. It shows two curves: one for the reaction path without a catalyst (higher peak) and one for the reaction path with a catalyst (lower peak). The difference in peak heights represents the reduction in activation energy ($E_a$) provided by the catalyst.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.4.1:4",
+            "order": 4,
+            "title": "Thermodynamic and Equilibrium Considerations of Catalysis",
+            "content_text": "A catalyst has specific thermodynamic and equilibrium properties: 1. It does not alter the Gibbs energy ($\\Delta G$) of a reaction. 2. It catalyses spontaneous reactions but does not catalyse non-spontaneous reactions. 3. It does not change the equilibrium constant ($K$) of a reaction. Instead, it helps in attaining the equilibrium faster by catalysing both the forward and backward reactions to the same extent. This ensures that the equilibrium state remains the same but is reached in a shorter amount of time.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:3:3.5",
+        "number": "3.5",
+        "title": "Collision Theory of Chemical Reactions",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:3:3.5:1",
+            "order": 1,
+            "title": "Introduction to Collision Theory",
+            "content_text": "Collision theory, developed by Max Trautz and William Lewis in 1916-18, provides a greater insight into the energetic and mechanistic aspects of reactions. It is based on the kinetic theory of gases. In this theory, reactant molecules are assumed to be hard spheres, and a chemical reaction is postulated to occur only when these molecules collide with each other.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.5:2",
+            "order": 2,
+            "title": "Collision Frequency and the Rate Equation",
+            "content_text": "The number of collisions per second per unit volume of the reaction mixture is known as collision frequency ($Z$). For a bimolecular elementary reaction $A + B \\rightarrow \\text{Products}$, the rate of reaction can be expressed as: $$\\text{Rate} = Z_{AB} e^{-E_a/RT}$$ In this equation, $Z_{AB}$ represents the collision frequency of reactants A and B, and the term $e^{-E_a/RT}$ represents the fraction of molecules with kinetic energies equal to or greater than the activation energy $E_a$. This equation is similar in form to the Arrhenius equation, where the pre-exponential factor $A$ is related to the collision frequency.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.5:3",
+            "order": 3,
+            "title": "Effective Collisions and Threshold Energy",
+            "content_text": "Not all collisions between reactant molecules result in a chemical reaction. For a collision to be effective and lead to product formation, the colliding molecules must possess a minimum amount of energy called threshold energy. Threshold energy is defined as the sum of the activation energy and the energy already possessed by the reacting species. Collisions that meet this energy requirement and occur with the proper orientation are called effective collisions.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.5:4",
+            "order": 4,
+            "title": "Orientation Factor and Steric Factor",
+            "content_text": "Proper orientation of reactant molecules during a collision is crucial for bond breaking and bond formation. To account for this, a probability factor $P$, also known as the steric factor, is introduced into the rate equation. For example, in the reaction of bromomethane with hydroxide ion ($CH_3Br + OH^- \\rightarrow CH_3OH + Br^-$), the $OH^-$ ion must approach the carbon atom from the side opposite to the bromine atom for a reaction to occur. Improper orientation leads to the molecules simply bouncing back without forming products. Fig. 3.12 depicts these scenarios.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 3.12",
+                "description": "A molecular diagram illustrating the collision of $OH^-$ with $CH_3Br$. It shows two scenarios: 'Improper orientation' where the $OH^-$ approaches from the same side as the $Br$ atom, leading to no reaction; and 'Proper orientation' where $OH^-$ approaches from the opposite side, leading to the formation of an intermediate complex and finally the products $CH_3OH$ and $Br^-$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.5:5",
+            "order": 5,
+            "title": "Modified Rate Equation and Drawbacks of Collision Theory",
+            "content_text": "By incorporating the steric factor $P$, the rate equation is modified to: $$\\text{Rate} = P Z_{AB} e^{-E_a/RT}$$ Thus, the criteria for an effective collision, and consequently the rate of a chemical reaction, are determined by both the activation energy and the proper orientation of the molecules. A significant drawback of collision theory is that it treats atoms and molecules as hard spheres, ignoring their complex structural and electronic aspects.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:3:3.5:6",
+            "order": 6,
+            "title": "Answers to Intext Questions",
+            "content_text": "This subsection provides the numerical and conceptual answers to the in-text questions (3.1 through 3.9) presented throughout Chapter 3: Chemical Kinetics. These answers include average reaction rates, rate law expressions, reaction orders, time calculations for reaction completion, and activation energy values.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Answers to Some Intext Questions",
+                "caption": "Summary of answers for in-text questions 3.1 to 3.9",
+                "headers": [
+                  "Question Number",
+                  "Answer"
+                ],
+                "rows": [
+                  [
+                    "3.1",
+                    "r_{av} = 6.66 \\times 10^{-6} \\text{ Ms}^{-1}"
+                  ],
+                  [
+                    "3.2",
+                    "Rate of reaction = rate of disappearance of A = $0.005 \\text{ mol litre}^{-1}\\text{min}^{-1}$"
+                  ],
+                  [
+                    "3.3",
+                    "Order of the reaction is 2.5"
+                  ],
+                  [
+                    "3.4",
+                    "X \\rightarrow Y, Rate = $k[X]^2$. The rate will increase 9 times"
+                  ],
+                  [
+                    "3.5",
+                    "t = 444 \\text{ s}"
+                  ],
+                  [
+                    "3.6",
+                    "1.925 \\times 10^{-4} \\text{ s}^{-1}"
+                  ],
+                  [
+                    "3.8",
+                    "E_a = 52.897 \\text{ kJ mol}^{-1}"
+                  ],
+                  [
+                    "3.9",
+                    "1.471 \\times 10^{-19}"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:chemistry:12:3:ex:31",
+          "number": 31,
+          "problem": "For the reaction $R \\rightarrow P$, the concentration of a reactant changes from $0.03M$ to $0.02M$ in 25 minutes. Calculate the average rate of reaction using units of time both in minutes and seconds.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:3:ex:32",
+          "number": 32,
+          "problem": "In a reaction, $2A \\rightarrow \\text{Products}$, the concentration of A decreases from $0.5 \\text{ mol L}^{-1}$ to $0.4 \\text{ mol L}^{-1}$ in 10 minutes. Calculate the rate during this interval.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:3:ex:3",
+          "number": 3,
+          "problem": "For a reaction, $A + B \\rightarrow Product$; the rate law is given by, $r = k[A]^{1/2}[B]^2$. What is the order of the reaction?",
+          "solution": "The order of a reaction is the sum of the powers of the concentrations of the reactants in the rate law expression. Order = $1/2 + 2 = 2.5$.",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:3:ex:4",
+          "number": 4,
+          "problem": "The conversion of molecules X to Y follows second order kinetics. If concentration of X is increased to three times how will it affect the rate of formation of Y?",
+          "solution": "For a second order reaction, $Rate = k[X]^2$. If $[X]$ is increased to $3[X]$, the new rate $Rate' = k(3[X])^2 = 9k[X]^2$. Thus, the rate of formation of Y will increase by 9 times.",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:3:ex:7",
+          "number": 7,
+          "problem": "What will be the effect of temperature on rate constant?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:3:ex:8",
+          "number": 8,
+          "problem": "The rate of the chemical reaction doubles for an increase of $10\\text{K}$ in absolute temperature from $298\\text{K}$. Calculate $E_a$.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:3:ex:9",
+          "number": 9,
+          "problem": "The activation energy for the reaction $2 HI(g) \\rightarrow H_2 + I_2(g)$ is $209.5 \\text{ kJ mol}^{-1}$ at $581\\text{K}$. Calculate the fraction of molecules of reactants having energy equal to or greater than activation energy?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:3:ex:1",
+          "number": 1,
+          "problem": "3.1 From the rate expression for the following reactions, determine their order of reaction and the dimensions of the rate constants. (i) $3NO(g) \\rightarrow N_2O (g)$ Rate = $k[NO]^2$ (ii) $H_2O_2 (aq) + 3I^- (aq) + 2H^+ \\rightarrow 2H_2O (l) + I_3^-$ Rate = $k[H_2O_2][I^-]$ (iii) $CH_3CHO (g) \\rightarrow CH_4 (g) + CO(g)$ Rate = $k[CH_3CHO]^{3/2}$ (iv) $C_2H_5Cl (g) \\rightarrow C_2H_4 (g) + HCl (g)$ Rate = $k[C_2H_5Cl]$",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:3:ex:2",
+          "number": 2,
+          "problem": "3.2 For the reaction: $2A + B \\rightarrow A_2B$ the rate = $k[A][B]^2$ with $k = 2.0 \\times 10^{-6} \\text{ mol}^{-2} \\text{ L}^2 \\text{ s}^{-1}$. Calculate the initial rate of the reaction when $[A] = 0.1 \\text{ mol L}^{-1}$, $[B] = 0.2 \\text{ mol L}^{-1}$. Calculate the rate of reaction after $[A]$ is reduced to $0.06 \\text{ mol L}^{-1}$.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:3:ex:5",
+          "number": 5,
+          "problem": "3.5 Mention the factors that affect the rate of a chemical reaction.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:3:ex:6",
+          "number": 6,
+          "problem": "3.6 A reaction is second order with respect to a reactant. How is the rate affected if the concentration of the reactant is (i) doubled (ii) reduced to half?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:3:ex:10",
+          "number": 10,
+          "problem": "3.10 In a reaction between A and B, the initial rate of reaction ($r_0$) was measured for different initial concentrations of A and B as given below: [A/ mol L^-1: 0.20, 0.20, 0.40] [B/ mol L^-1: 0.30, 0.10, 0.05] [r0/ mol L^-1 s^-1: 5.07 x 10^-5, 5.07 x 10^-5, 1.43 x 10^-4]. What is the order of the reaction with respect to A and B?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:3:ex:11",
+          "number": 11,
+          "problem": "3.11 The following results have been obtained during the kinetic studies of the reaction: $2A + B \\rightarrow C + D$. [Exp I: A=0.1, B=0.1, Rate=6.0x10^-3] [Exp II: A=0.3, B=0.2, Rate=7.2x10^-2] [Exp III: A=0.3, B=0.4, Rate=2.88x10^-1] [Exp IV: A=0.4, B=0.1, Rate=2.40x10^-2]. Determine the rate law and the rate constant for the reaction.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:3:ex:12",
+          "number": 12,
+          "problem": "3.12 The reaction between A and B is first order with respect to A and zero order with respect to B. Fill in the blanks in the following table: [Exp I: A=0.1, B=0.1, Rate=2.0x10^-2] [Exp II: A=?, B=0.2, Rate=4.0x10^-2] [Exp III: A=0.4, B=0.4, Rate=?] [Exp IV: A=?, B=0.2, Rate=2.0x10^-2]",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:3:ex:13",
+          "number": 13,
+          "problem": "3.13 Calculate the half-life of a first order reaction from their rate constants given below: (i) $200 \\text{ s}^{-1}$ (ii) $2 \\text{ min}^{-1}$ (iii) $4 \\text{ years}^{-1}$",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:3:ex:14",
+          "number": 14,
+          "problem": "3.14 The half-life for radioactive decay of $^{14}C$ is 5730 years. An archaeological artifact containing wood had only 80% of the $^{14}C$ found in a living tree. Estimate the age of the sample.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:3:ex:15",
+          "number": 15,
+          "problem": "3.15 The experimental data for decomposition of $N_2O_5$ [$2N_2O_5 \\rightarrow 4NO_2 + O_2$] in gas phase at 318K are given: [t/s: 0, 400, 800, 1200, 1600, 2000, 2400, 2800, 3200] [10^2 x [N2O5]/ mol L^-1: 1.63, 1.36, 1.14, 0.93, 0.78, 0.64, 0.53, 0.43, 0.35]. (i) Plot $[N_2O_5]$ against $t$. (ii) Find the half-life period. (iii) Draw a graph between $\\log[N_2O_5]$ and $t$. (iv) What is the rate law? (v) Calculate the rate constant. (vi) Calculate the half-life period from $k$ and compare it with (ii).",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "long_answer"
+        },
+        {
+          "id": "ncert:chemistry:12:3:ex:16",
+          "number": 16,
+          "problem": "3.16 The rate constant for a first order reaction is $60 \\text{ s}^{-1}$. How much time will it take to reduce the initial concentration of the reactant to its $1/16^{th}$ value?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:3:ex:17",
+          "number": 17,
+          "problem": "3.17 During nuclear explosion, one of the products is $^{90}Sr$ with half-life of 28.1 years. If $1 \\mu g$ of $^{90}Sr$ was absorbed in the bones of a newly born baby instead of calcium, how much of it will remain after 10 years and 60 years if it is not lost metabolically.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:3:ex:18",
+          "number": 18,
+          "problem": "3.18 For a first order reaction, show that time required for 99% completion is twice the time required for the completion of 90% of reaction.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "derivation"
+        },
+        {
+          "id": "ncert:chemistry:12:3:ex:19",
+          "number": 19,
+          "problem": "3.19 A first order reaction takes 40 min for 30% decomposition. Calculate $t_{1/2}$.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:3:ex:20",
+          "number": 20,
+          "problem": "3.20 For the decomposition of azoisopropane to hexane and nitrogen at 543 K, the following data are obtained: [t(sec): 0, 360, 720] [P(mm of Hg): 35.0, 54.0, 63.0]. Calculate the rate constant.",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:3:ex:21",
+          "number": 21,
+          "problem": "3.21 The following data were obtained during the first order thermal decomposition of $SO_2Cl_2$ at a constant volume: $SO_2Cl_2 (g) \\rightarrow SO_2 (g) + Cl_2 (g)$. [Exp 1: Time=0, Total pressure=0.5] [Exp 2: Time=100, Total pressure=0.6]. Calculate the rate of the reaction when total pressure is 0.65 atm.",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:3:ex:22",
+          "number": 22,
+          "problem": "3.22 The rate constant for the decomposition of $N_2O_5$ at various temperatures is given: [T/C: 0, 20, 40, 60, 80] [10^5 x k/s^-1: 0.0787, 1.70, 25.7, 178, 2140]. Draw a graph between $\\ln k$ and $1/T$ and calculate the values of $A$ and $E_a$. Predict the rate constant at 30° and 50°C.",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "long_answer"
+        },
+        {
+          "id": "ncert:chemistry:12:3:ex:23",
+          "number": 23,
+          "problem": "3.23 The rate constant for the decomposition of hydrocarbons is $2.418 \\times 10^{-5} \\text{ s}^{-1}$ at 546 K. If the energy of activation is $179.9 \\text{ kJ/mol}$, what will be the value of pre-exponential factor.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:3:ex:24",
+          "number": 24,
+          "problem": "3.24 Consider a certain reaction $A \\rightarrow Products$ with $k = 2.0 \\times 10^{-2} \\text{ s}^{-1}$. Calculate the concentration of A remaining after 100 s if the initial concentration of A is $1.0 \\text{ mol L}^{-1}$.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:3:ex:25",
+          "number": 25,
+          "problem": "3.25 Sucrose decomposes in acid solution into glucose and fructose according to the first order rate law, with $t_{1/2} = 3.00$ hours. What fraction of sample of sucrose remains after 8 hours?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:3:ex:26",
+          "number": 26,
+          "problem": "3.26 The decomposition of hydrocarbon follows the equation $k = (4.5 \\times 10^{11} \\text{ s}^{-1}) e^{-28000K/T}$. Calculate $E_a$.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:3:ex:27",
+          "number": 27,
+          "problem": "The rate constant for the first order decomposition of $H_2O_2$ is given by the following equation: $\\log k = 14.34 - 1.25 \\times 10^4 \\text{ K}/T$. Calculate $E_a$ for this reaction and at what temperature will its half-period be 256 minutes?",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:3:ex:28",
+          "number": 28,
+          "problem": "The decomposition of A into product has value of $k$ as $4.5 \\times 10^3 \\text{ s}^{-1}$ at $10^\\circ\\text{C}$ and energy of activation $60 \\text{ kJ mol}^{-1}$. At what temperature would $k$ be $1.5 \\times 10^4 \\text{ s}^{-1}$?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:3:ex:29",
+          "number": 29,
+          "problem": "The time required for 10% completion of a first order reaction at 298K is equal to that required for its 25% completion at 308K. If the value of $A$ is $4 \\times 10^{10} \\text{ s}^{-1}$. Calculate $k$ at 318K and $E_a$.",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:3:ex:30",
+          "number": 30,
+          "problem": "The rate of a reaction quadruples when the temperature changes from 293 K to 313 K. Calculate the energy of activation of the reaction assuming that it does not change with temperature.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        }
+      ]
+    }
+  }
+}

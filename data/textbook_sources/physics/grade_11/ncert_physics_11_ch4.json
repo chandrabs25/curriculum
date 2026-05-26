@@ -1,0 +1,1317 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_physics_11_ch4.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:physics:11:4",
+  "curriculum": "ncert",
+  "subject": "physics",
+  "grade": 11,
+  "textbook_name": "Physics Part I",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:physics:11:4",
+    "number": 4,
+    "title": "Laws of Motion",
+    "summary": "This chapter introduces the laws of motion, shifting from describing motion (kinematics) to explaining its causes (dynamics). It begins by debunking Aristotle's idea that constant force is needed for constant motion, introducing Galileo's concept of inertia. Newton's First Law formalizes this: objects resist changes in their state of motion unless acted upon by a net external force.\n\nThe Second Law quantifies the relationship between force, mass, and acceleration, introducing momentum (p=mv) and stating that force is the rate of change of momentum (F=dp/dt=ma). Impulse, a large force acting for a short time, is defined as the change in momentum.\n\nNewton's Third Law highlights the paired nature of forces: for every action, there's an equal and opposite reaction. This law leads to the conservation of momentum in isolated systems. The chapter then explores equilibrium, where the net force on an object is zero, and delves into common forces like gravity, tension, and especially friction (static and kinetic).\n\nFinally, the chapter examines circular motion, introducing centripetal force, and culminating in problem-solving strategies using free-body diagrams. This chapter provides a comprehensive foundation in Newtonian mechanics, demonstrating how these laws govern motion and force interactions in various everyday scenarios.",
+    "sections": [
+      {
+        "id": "ncert:physics:11:4:4.1",
+        "number": "4.1",
+        "title": "INTRODUCTION",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:4:4.1:1",
+            "order": 1,
+            "title": "The Question of Dynamics",
+            "content_text": "In previous chapters, the focus was on describing the motion of a particle quantitatively using velocity and acceleration (kinematics). However, we must now ask what governs the motion of bodies. Common experience suggests that an external agency is required to change the state of a body. For instance, to move a football at rest, one must kick it; to throw a stone upwards, one must give it an upward push. Similarly, external agencies like a breeze can move tree branches, or a strong wind can move heavy objects. Conversely, an external force is also needed to retard or stop motion, such as applying a force against a ball rolling down an inclined plane.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.1:2",
+            "order": 2,
+            "title": "External Agencies and Force",
+            "content_text": "The external agency of force can be in contact with the object (like hands, wind, or a stream) or it can act from a distance. For example, a stone released from a height accelerates downward due to the gravitational pull of the earth, and a bar magnet can attract an iron nail from a distance. This demonstrates that external agencies (e.g., gravitational and magnetic forces) can exert force on a body even without physical contact. In summary, a force is required to put a stationary body in motion or stop a moving body, provided by an external agency that may or may not be in contact with the body.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:4:4.2",
+        "number": "4.2",
+        "title": "ARISTOTLE’S FALLACY",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:4:4.2:1",
+            "order": 1,
+            "title": "Aristotelian Law of Motion",
+            "content_text": "The Greek thinker Aristotle (384 B.C.– 322 B.C.) held the view that if a body is moving, something external is required to keep it moving. According to this view, an arrow shot from a bow keeps flying because the air behind it keeps pushing it. This was part of a broader framework of ideas on the motion of bodies in the universe. The Aristotelian law of motion can be phrased as: \"An external force is required to keep a body in motion.\"",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.2:2",
+            "order": 2,
+            "title": "The Flaw in Aristotle's Argument",
+            "content_text": "Aristotle's view is flawed because it fails to account for friction. In common experience, a toy car comes to rest because the external force of friction from the floor opposes its motion. To keep the car in uniform motion, a child must apply an external force that exactly cancels the frictional force, resulting in a net external force of zero. If there were no friction, no external force would be required to keep the toy car in uniform motion. Opposing forces like friction (for solids) and viscous forces (for fluids) are always present in the natural world, which is why external forces are often necessary just to overcome these resistances.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:4:4.3",
+        "number": "4.3",
+        "title": "THE LAW OF INERTIA",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:4:4.3:1",
+            "order": 1,
+            "title": "Galileo's Observations on Inclined Planes",
+            "content_text": "Galileo studied the motion of objects on inclined planes and observed that: (i) objects moving down an inclined plane accelerate, (ii) objects moving up an inclined plane retard, and (iii) motion on a horizontal plane is an intermediate situation. He concluded that an object moving on a frictionless horizontal plane should move with constant velocity, having neither acceleration nor retardation (Fig. 4.1(a)).",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 4.1(a)",
+                "description": "Three diagrams showing a ball on a plane: (i) accelerating while moving down an incline, (ii) retarding while moving up an incline, and (iii) moving with constant velocity on a horizontal plane.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.3:2",
+            "order": 2,
+            "title": "The Double Inclined Plane Experiment",
+            "content_text": "Galileo conducted another experiment involving a double inclined plane. A ball released from rest on one plane rolls down and climbs up the other. If the planes are smooth, the final height of the ball is nearly the same as the initial height. If the slope of the second plane is decreased, the ball travels a longer distance to reach the same height. In the limiting case where the slope of the second plane is zero (horizontal), the ball travels an infinite distance, meaning its motion never ceases (Fig. 4.1(b)). This is an idealized situation where friction is absent.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 4.1(b)",
+                "description": "Illustration of Galileo's double inclined plane experiment showing that as the angle of the upward slope decreases, the ball must travel a greater horizontal distance to reach its original height, leading to the inference of infinite motion on a horizontal plane.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.3:3",
+            "order": 3,
+            "title": "Definition of Inertia",
+            "content_text": "Galileo's insight was that the state of rest and the state of uniform linear motion (motion with constant velocity) are equivalent, as both involve no net force. The property of a body to resist change in its state of rest or uniform motion is called inertia. Inertia literally means 'resistance to change'.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:4:4.4",
+        "number": "4.4",
+        "title": "NEWTON’S FIRST LAW OF MOTION",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:4:4.4:1",
+            "order": 1,
+            "title": "Statement of the First Law",
+            "content_text": "Isaac Newton built upon Galileo's ideas to formulate the foundation of mechanics in three laws. The first law of motion states: \"Every body continues to be in its state of rest or of uniform motion in a straight line unless compelled by some external force to act otherwise.\"",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.4:2",
+            "order": 2,
+            "title": "Ideas on Motion in Ancient Indian Science",
+            "content_text": "Ancient Indian thinkers developed an elaborate system of ideas on motion. Force was categorized into types like 'nodan' (continuous pressure), 'abhighat' (impact), 'sanskara' (persistent tendency), and 'vega' (velocity/inertia). The Vaisesika theory suggested that 'vega' is a tendency to move in a straight line, opposed by contact with objects like the atmosphere (friction). They recognized translational, rotational, and vibrational motion. Bhaskara (1150 A.D.) introduced the concept of 'tatkaliki gati' (instantaneous motion), anticipating the modern concept of instantaneous velocity defined through Differential Calculus.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.4:3",
+            "order": 3,
+            "title": "Net External Force and Acceleration",
+            "content_text": "The first law of motion can be simplified: If the net external force on a body is zero, its acceleration is zero. Conversely, acceleration can be non-zero only if there is a net external force on the body. For example, a spaceship in interstellar space, far from all objects and with its rockets turned off, has no net external force acting on it. According to the first law, its acceleration must be zero; if it is in motion, it must continue to move with a uniform velocity.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.4:4",
+            "order": 4,
+            "title": "Inferring Forces from State of Motion",
+            "content_text": "When an object is known to be unaccelerated (either at rest or in uniform linear motion), we can infer from Newton's first law that the net external force acting on it must be zero. On Earth, objects are subject to gravity ($W$) and often experience friction or viscous drag. If an object remains at rest, it is because these external forces cancel each other out. For example, a book at rest on a table (Fig. 4.2(a)) is subject to downward gravity ($W$) and an upward normal force ($R$) from the table. Since the book is at rest, the net force is zero, meaning $R$ must be equal and opposite to $W$. It is incorrect to say the book is at rest because $W=R$; rather, because the book is observed to be at rest, we conclude $W=R$. Similarly, a car moving at a constant velocity (Fig. 4.2(b)) has zero net external force. While internal forces cannot accelerate the car, the external force of friction between the tires and the road is what allows the car to accelerate or maintain motion against other resistive forces.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 4.2",
+                "description": "(a) A book at rest on a table, where the downward weight $W$ is balanced by the upward normal force $R$. (b) A car moving with uniform velocity on a road. In both cases, the net external force is zero.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.4:5",
+            "order": 5,
+            "title": "Inertia in Daily Life",
+            "content_text": "The property of inertia is evident in common experiences like riding a bus. When a stationary bus starts suddenly, passengers are thrown backward. This happens because friction accelerates the feet along with the bus, but the rest of the body, being deformable and possessing inertia, tends to remain at its original position. Relative to the bus, the upper body moves backward until muscular forces pull it along. Conversely, when a moving bus stops suddenly, the feet stop due to friction with the floor, but the rest of the body continues moving forward due to inertia, throwing the passenger forward until muscular forces bring them to rest.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.4:6",
+            "order": 6,
+            "title": "Application of the First Law in Space",
+            "content_text": "Newton's first law can be applied to determine the motion of objects in environments where forces are minimal, such as interstellar space. If the net external force on an object is zero, its acceleration must be zero, regardless of its previous state of motion while attached to an accelerating body.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 4.1",
+                "problem": "An astronaut accidentally gets separated out of his small spaceship accelerating in inter stellar space at a constant rate of $100 \\text{ m s}^{-2}$. What is the acceleration of the astronaut the instant after he is outside the spaceship? (Assume that there are no nearby stars to exert gravitational force on him.)",
+                "solution": "Since there are no nearby stars to exert gravitational force on him and the small spaceship exerts negligible gravitational attraction on him, the net force acting on the astronaut, once he is out of the spaceship, is zero. By the first law of motion the acceleration of the astronaut is zero."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:4:4.5",
+        "number": "4.5",
+        "title": "NEWTON’S SECOND LAW OF MOTION",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:4:4.5:1",
+            "order": 1,
+            "title": "Introduction to the Second Law",
+            "content_text": "While the first law deals with cases where the net external force is zero, the second law of motion addresses the general situation where a net external force acts on a body. It provides a quantitative relationship between the net external force and the resulting acceleration of the body.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.5:2",
+            "order": 2,
+            "title": "Definition of Momentum",
+            "content_text": "Momentum of a body is defined as the product of its mass $m$ and velocity $\\mathbf{v}$. It is denoted by $\\mathbf{p}$ and is a vector quantity: $$\\mathbf{p} = m\\mathbf{v}$$ (4.1). The direction of momentum is the same as the direction of velocity.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.5:3",
+            "order": 3,
+            "title": "Qualitative Observations on Force and Momentum",
+            "content_text": "Several observations indicate that momentum is the relevant variable for motion: 1. Mass: A greater force is needed to push a heavy truck to a certain speed than a light car in the same time. 2. Speed: A high-speed bullet has a greater impact than a slow one of the same mass. 3. Time: A cricketer (Fig. 4.3) draws their hands back while catching a ball to increase the time of the catch, which reduces the force required to stop the ball. These observations show that the force depends on the rate of change of momentum. Furthermore, the same force applied for the same time causes the same change in momentum for different bodies, regardless of their mass.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 4.3",
+                "description": "A cricketer drawing back their hands during a catch. This increases the time taken for the ball's momentum to reach zero, thereby reducing the impact force on the hands.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.5:4",
+            "order": 4,
+            "title": "Momentum and Directional Change",
+            "content_text": "Momentum is a vector, meaning a change in its direction also requires a force, even if the magnitude (speed) remains constant. For example, rotating a stone in a horizontal circle at uniform speed (Fig. 4.4) requires a continuous force provided by the hand through the string to change the direction of the momentum vector. A higher speed or a smaller radius requires a greater force, corresponding to a greater rate of change in the momentum vector.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 4.4",
+                "description": "A person rotating a stone in a horizontal circle. A force is necessary to change the direction of momentum even if the speed is constant.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.5:5",
+            "order": 5,
+            "title": "Statement of Newton's Second Law",
+            "content_text": "The rate of change of momentum of a body is directly proportional to the applied force and takes place in the direction in which the force acts.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.5:6",
+            "order": 6,
+            "title": "Mathematical Derivation of F = ma",
+            "content_text": "If a force $\\mathbf{F}$ acts for a time interval $\\Delta t$ on a body of mass $m$, changing its velocity from $\\mathbf{v}$ to $\\mathbf{v} + \\Delta \\mathbf{v}$, the change in momentum is $\\Delta \\mathbf{p} = m\\Delta \\mathbf{v}$. According to the law: $$\\mathbf{F} \\propto \\frac{\\Delta \\mathbf{p}}{\\Delta t} \\text{ or } \\mathbf{F} = k \\frac{\\Delta \\mathbf{p}}{\\Delta t}$$ Taking the limit $\\Delta t \\to 0$, we get: $$\\mathbf{F} = k \\frac{d\\mathbf{p}}{dt}$$ (4.2). For a body of fixed mass $m$: $$\\frac{d\\mathbf{p}}{dt} = \\frac{d}{dt}(m\\mathbf{v}) = m\\frac{d\\mathbf{v}}{dt} = m\\mathbf{a}$$ (4.3). Thus, the law can be written as: $$\\mathbf{F} = k m\\mathbf{a}$$ (4.4).",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.5:7",
+            "order": 7,
+            "title": "The SI Unit of Force: Newton",
+            "content_text": "The constant of proportionality $k$ is chosen to be 1 for simplicity. This defines the unit of force. In SI units, the unit of force is the newton (N). One newton is the force that causes an acceleration of $1 \\text{ m s}^{-2}$ to a mass of $1 \\text{ kg}$. Thus: $$\\mathbf{F} = \\frac{d\\mathbf{p}}{dt} = m\\mathbf{a}$$ (4.5) and $1 \\text{ N} = 1 \\text{ kg m s}^{-2}$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.5:8",
+            "order": 8,
+            "title": "Vector Nature and Components of the Second Law",
+            "content_text": "Newton's second law is a vector law, implying: 1. If $\\mathbf{F} = 0$, then $\\mathbf{a} = 0$, which is consistent with the first law. 2. The vector equation is equivalent to three component equations: $$F_x = \\frac{dp_x}{dt} = ma_x$$, $$F_y = \\frac{dp_y}{dt} = ma_y$$, $$F_z = \\frac{dp_z}{dt} = ma_z$$ (4.6). This indicates that a force changes only the component of velocity along its direction of action. The component of velocity normal to the force remains unchanged. For example, in the motion of a projectile under the vertical gravitational force, the horizontal component of velocity remains unchanged (Fig. 4.5). This indicates that a force changes only the component of velocity along its direction of action.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 4.5",
+                "description": "Acceleration at an instant is determined by the force at that instant. The moment after a stone is dropped out of an accelerated train, it has no horizontal acceleration or force, if air resistance is neglected. The stone carries no memory of its acceleration with the train a moment ago.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.5:9",
+            "order": 9,
+            "title": "Application to Systems of Particles",
+            "content_text": "The second law of motion given by Eq. (4.5) is applicable to a single point particle. The force $\\mathbf{F}$ in the law stands for the net external force on the particle and $\\mathbf{a}$ stands for acceleration of the particle. It turns out, however, that the law in the same form applies to a rigid body or, even more generally, to a system of particles. In that case, $\\mathbf{F}$ refers to the total external force on the system and $\\mathbf{a}$ refers to the acceleration of the system as a whole. More precisely, $\\mathbf{a}$ is the acceleration of the centre of mass of the system. Any internal forces in the system are not to be included in $\\mathbf{F}$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.5:10",
+            "order": 10,
+            "title": "Locality of the Second Law",
+            "content_text": "The second law of motion is a local relation which means that force $\\mathbf{F}$ at a point in space (location of the particle) at a certain instant of time is related to $\\mathbf{a}$ at that point at that instant. Acceleration here and now is determined by the force here and now, not by any history of the motion of the particle.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.5:11",
+            "order": 11,
+            "title": "Example 4.2: Bullet Retardation",
+            "content_text": "This example demonstrates the calculation of average resistive force using the second law of motion and kinematic equations for constant retardation.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 4.2",
+                "problem": "A bullet of mass $0.04$ kg moving with a speed of $90$ m s$^{-1}$ enters a heavy wooden block and is stopped after a distance of $60$ cm. What is the average resistive force exerted by the block on the bullet?",
+                "solution": "The retardation '$a$' of the bullet (assumed constant) is given by $$a = \\frac{-u^2}{2s} = \\frac{-90 \\times 90}{2 \\times 0.6} \\text{ m s}^{-2} = -6750 \\text{ m s}^{-2}$$ The retarding force, by the second law of motion, is $$F = ma = 0.04 \\text{ kg} \\times 6750 \\text{ m s}^{-2} = 270 \\text{ N}$$ The actual resistive force, and therefore, retardation of the bullet may not be uniform. The answer therefore, only indicates the average resistive force."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.5:12",
+            "order": 12,
+            "title": "Example 4.3: Motion under Gravity",
+            "content_text": "This example shows how to find the force acting on a particle when its position coordinate as a function of time is known, using differentiation to find acceleration.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 4.3",
+                "problem": "The motion of a particle of mass $m$ is described by $y = ut + \\frac{1}{2}gt^2$. Find the force acting on the particle.",
+                "solution": "We know $y = ut + \\frac{1}{2}gt^2$. Now, velocity $v = \\frac{dy}{dt} = u + gt$ and acceleration $a = \\frac{dv}{dt} = g$. Then the force is given by $F = ma = mg$. Thus the given equation describes the motion of a particle under acceleration due to gravity and $y$ is the position coordinate in the direction of $g$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.5:13",
+            "order": 13,
+            "title": "Impulse and Impulsive Forces",
+            "content_text": "We sometimes encounter examples where a large force acts for a very short duration producing a finite change in momentum of the body. For example, when a ball hits a wall and bounces back, the force on the ball by the wall acts for a very short time when the two are in contact, yet the force is large enough to reverse the momentum of the ball. Often, in these situations, the force and the time duration are difficult to ascertain separately. However, the product of force and time, which is the change in momentum of the body, remains a measurable quantity. This product is called impulse: $$\\text{Impulse} = \\text{Force} \\times \\text{time duration} = \\text{Change in momentum} \\quad (4.7)$$ A large force acting for a short time to produce a finite change in momentum is called an impulsive force. Newtonian mechanics has no conceptual distinction between impulsive forces and ordinary forces; an impulsive force is like any other force except that it is large and acts for a short time.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.5:14",
+            "order": 14,
+            "title": "Example 4.4: Impulse on a Ball",
+            "content_text": "This example illustrates the calculation of impulse imparted to a ball when its direction of motion is reversed by a batsman.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 4.4",
+                "problem": "A batsman hits back a ball straight in the direction of the bowler without changing its initial speed of $12$ m s$^{-1}$. If the mass of the ball is $0.15$ kg, determine the impulse imparted to the ball. (Assume linear motion of the ball)",
+                "solution": "Change in momentum $= 0.15 \\times 12 - (-0.15 \\times 12) = 3.6 \\text{ N s}$. Impulse $= 3.6 \\text{ N s}$, in the direction from the batsman to the bowler. This is an example where the force on the ball by the batsman and the time of contact of the ball and the bat are difficult to know, but the impulse is readily calculated."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:4:4.6",
+        "number": "4.6",
+        "title": "NEWTON’S THIRD LAW OF MOTION",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:4:4.6:1",
+            "order": 1,
+            "title": "Origin of External Force and Interaction",
+            "content_text": "The second law relates the external force on a body to its acceleration. The origin of the external force on a body is always some other body. In Newtonian mechanics, the external force on a body always arises due to some other body. Forces never occur singly in nature; force is the mutual interaction between two bodies. Forces always occur in pairs.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.6:2",
+            "order": 2,
+            "title": "Statement of the Third Law",
+            "content_text": "Newton expressed the idea of mutual interaction in the form of the third law of motion: To every action, there is always an equal and opposite reaction. Newton’s wording of the third law is so crisp and beautiful that it has become a part of common language.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.6:3",
+            "order": 3,
+            "title": "Action and Reaction as Forces",
+            "content_text": "The terms action and reaction in the third law mean nothing else but 'force'. Using different terms for the same physical concept can sometimes be confusing. A simple and clear way of stating the third law is: Forces always occur in pairs. Force on a body A by B is equal and opposite to the force on the body B by A.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.6:4",
+            "order": 4,
+            "title": "Simultaneity and Cause-Effect",
+            "content_text": "The terms action and reaction in the third law may give a wrong impression that action comes before reaction i.e. action is the cause and reaction the effect. There is no cause-effect relation implied in the third law. The force on A by B and the force on B by A act at the same instant. By the same reasoning, any one of them may be called action and the other reaction.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.6:5",
+            "order": 5,
+            "title": "Different Bodies and Internal Forces",
+            "content_text": "Action and reaction forces act on different bodies, not on the same body. Consider a pair of bodies A and B. According to the third law, $$\\mathbf{F}_{AB} = -\\mathbf{F}_{BA} \\quad (4.8)$$ (force on A by B) = - (force on B by A). Thus if we are considering the motion of any one body (A or B), only one of the two forces is relevant. It is an error to add up the two forces and claim that the net force is zero. However, if you are considering the system of two bodies as a whole, $\\mathbf{F}_{AB}$ and $\\mathbf{F}_{BA}$ are internal forces of the system (A + B). They add up to give a null force. Internal forces in a body or a system of particles thus cancel away in pairs. This is an important fact that enables the second law to be applicable to a body or a system of particles.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.6:6",
+            "order": 6,
+            "title": "Example 4.5: Vector Nature of Impulse and Third Law",
+            "content_text": "This example examines the direction of force and impulse when a ball strikes a wall at different angles, using the third law to relate the force on the ball to the force on the wall.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 4.5",
+                "problem": "Two identical billiard balls strike a rigid wall with the same speed but at different angles, and get reflected without any change in speed, as shown in Fig. 4.6. What is (i) the direction of the force on the wall due to each ball? (ii) the ratio of the magnitudes of impulses imparted to the balls by the wall?",
+                "solution": "Case (a): $(p_x)_{initial} = mu$, $(p_y)_{initial} = 0$; $(p_x)_{final} = -mu$, $(p_y)_{final} = 0$. $x$-component of impulse $= -2mu$, $y$-component $= 0$. Impulse and force are in the same direction. The force on the ball due to the wall is normal to the wall, along the negative x-direction. Using Newton’s third law, the force on the wall due to the ball is normal to the wall along the positive x-direction. Case (b): $(p_x)_{initial} = mu \\cos 30^\\circ$, $(p_y)_{initial} = -mu \\sin 30^\\circ$; $(p_x)_{final} = -mu \\cos 30^\\circ$, $(p_y)_{final} = -mu \\sin 30^\\circ$. $x$-component of impulse $= -2mu \\cos 30^\\circ$, $y$-component $= 0$. The direction of impulse (and force) is normal to the wall along the negative x direction. The ratio of the magnitudes of the impulses imparted to the balls in (a) and (b) is $2mu / (2mu \\cos 30^\\circ) = \\frac{2}{\\sqrt{3}} \\approx 1.2$."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Fig. 4.6",
+                "description": "Diagram showing two cases of a ball striking a wall. (a) Ball strikes normally and reflects back. (b) Ball strikes at an angle of 30 degrees to the normal and reflects at the same angle.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:4:4.7",
+        "number": "4.7",
+        "title": "CONSERVATION OF MOMENTUM",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:4:4.7:1",
+            "order": 1,
+            "title": "Application to Collisions",
+            "content_text": "The\n\nThe law of conservation of momentum states that the total momentum of an isolated system of interacting particles is conserved. Consider the collision of two bodies A and B, with initial momenta $\\mathbf{p}_A$ and $\\mathbf{p}_B$. Upon collision, they separate with final momenta $\\mathbf{p}'_A$ and $\\mathbf{p}'_B$. According to Newton's Second Law, the change in momentum is given by the impulse: $\\mathbf{F}_{AB}\\Delta t = \\mathbf{p}'_A - \\mathbf{p}_A$ and $\\mathbf{F}_{BA}\\Delta t = \\mathbf{p}'_B - \\mathbf{p}_B$, where $\\Delta t$ is the common time interval of contact. By Newton's Third Law, $\\mathbf{F}_{AB} = -\\mathbf{F}_{BA}$. This implies $(\\mathbf{p}'_A - \\mathbf{p}_A) = -(\\mathbf{p}'_B - \\mathbf{p}_B)$, which simplifies to $\\mathbf{p}'_A + \\mathbf{p}'_B = \\mathbf{p}_A + \\mathbf{p}_B$. This result shows that the total final momentum equals the total initial momentum, regardless of whether the collision is elastic or inelastic.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:4:4.8",
+        "number": "4.8",
+        "title": "EQUILIBRIUM OF A PARTICLE",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:4:4.8:1",
+            "order": 1,
+            "title": "Definition of Equilibrium",
+            "content_text": "Equilibrium of a particle in mechanics refers to the situation when the net external force on the particle is zero. According to Newton's First Law, this means the particle is either at rest or in uniform motion. It is important to note that equilibrium of a body requires not only translational equilibrium (zero net external force) but also rotational equilibrium (zero net external torque).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.8:2",
+            "order": 2,
+            "title": "Equilibrium under Two and Three Forces",
+            "content_text": "If two forces $\\mathbf{F}_1$ and $\\mathbf{F}_2$ act on a particle, equilibrium requires $\\mathbf{F}_1 = -\\mathbf{F}_2$, meaning the forces must be equal and opposite. For three concurrent forces $\\mathbf{F}_1$, $\\mathbf{F}_2$, and $\\mathbf{F}_3$, equilibrium requires the vector sum to be zero: $\\mathbf{F}_1 + \\mathbf{F}_2 + \\mathbf{F}_3 = 0$. Geometrically, the resultant of any two forces must be equal and opposite to the third force. These three forces can be represented by the sides of a triangle with vector arrows taken in the same sense.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 4.7",
+                "description": "Diagram showing equilibrium under concurrent forces. It illustrates the parallelogram law where the resultant of F1 and F2 is equal and opposite to F3, and also shows the forces forming a closed triangle.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.8:3",
+            "order": 3,
+            "title": "Generalization to n Forces",
+            "content_text": "The condition for equilibrium can be generalized to any number of forces. A particle is in equilibrium under forces $\\mathbf{F}_1, \\mathbf{F}_2, \\dots, \\mathbf{F}_n$ if they can be represented by the sides of a closed n-sided polygon with arrows directed in the same sense. In terms of components along the $x, y,$ and $z$ axes, this implies: $\\sum F_{ix} = 0$, $\\sum F_{iy} = 0$, and $\\sum F_{iz} = 0$.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.8:4",
+            "order": 4,
+            "title": "Worked Example: Equilibrium of a Suspended Mass",
+            "content_text": "This example demonstrates how to solve equilibrium problems using free-body diagrams and resolving forces into components. We consider a mass suspended by a rope with a horizontal force applied at the midpoint.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 4.6",
+                "problem": "A mass of 6 kg is suspended by a rope of length 2 m from the ceiling. A force of 50 N in the horizontal direction is applied at the mid-point P of the rope, as shown. What is the angle the rope makes with the vertical in equilibrium? (Take $g = 10 \\text{ m s}^{-2}$). Neglect the mass of the rope.",
+                "solution": "Figures 4.8(b) and 4.8(c) are free-body diagrams. Fig. 4.8(b) is the free-body diagram of weight W. Clearly, $T_2 = 6 \\times 10 = 60 \\text{ N}$. Consider the equilibrium of the point P under the action of three forces - the tensions $T_1$ and $T_2$, and the horizontal force 50 N. The horizontal and vertical components of the resultant force must vanish separately: $T_1 \\cos \\theta = T_2 = 60 \\text{ N}$ and $T_1 \\sin \\theta = 50 \\text{ N}$. Dividing these gives $\\tan \\theta = \\frac{5}{6}$, which results in $\\theta = \\tan^{-1}(\\frac{5}{6}) \\approx 40^\\circ$."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Fig. 4.8",
+                "description": "A three-part diagram showing: (a) a mass suspended by a rope with a horizontal force at the midpoint, (b) the free-body diagram for the weight W, and (c) the free-body diagram for the midpoint P.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:4:4.9",
+        "number": "4.9",
+        "title": "COMMON FORCES IN MECHANICS",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:4:4.9:1",
+            "order": 1,
+            "title": "Gravitational and Contact Forces",
+            "content_text": "In mechanics, we encounter several kinds of forces. The gravitational force is pervasive; every object on Earth experiences it, and it governs celestial motion. It acts at a distance without a medium. Other common forces are contact forces, which arise when bodies are in contact (e.g., a book on a table). Contact forces include the normal reaction (perpendicular to the surface) and friction (parallel to the surface). Other examples include buoyant forces in fluids and viscous friction/air resistance.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 4.9",
+                "description": "Illustrations of various contact forces: a block on a table, a mass on a spring, a rod in a beaker of liquid, and a finger in a liquid.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.9:2",
+            "order": 2,
+            "title": "Spring Force and Tension",
+            "content_text": "When a spring is compressed or extended, a restoring force is generated, usually proportional to the displacement: $F = -kx$, where $x$ is the displacement and $k$ is the force constant. For an inextensible string, the restoring force is called tension ($T$). It is customary to assume constant tension throughout a string of negligible mass.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.9:3",
+            "order": 3,
+            "title": "Microscopic Origin of Forces",
+            "content_text": "While there are four fundamental forces in nature (gravitational, electromagnetic, strong, and weak), most contact forces in mechanics (friction, tension, normal force) fundamentally arise from electrical forces between the charged constituents (nuclei and electrons) of the atoms at the surfaces in contact.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:4:4.9.1",
+        "number": "4.9.1",
+        "title": "Friction",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:4:4.9.1:1",
+            "order": 1,
+            "title": "Static Friction",
+            "content_text": "Consider a body of mass $m$ at rest on a horizontal table. The force of gravity ($mg$) is cancelled by the normal reaction ($N$). If a small horizontal force $F$ is applied, the body may not move because an opposing force $f_s$, called static friction, acts parallel to the surface. Static friction does not exist by itself; it comes into play the moment an external force is applied. As $F$ increases, $f_s$ also increases, keeping the body at rest, up to a certain limit.\nThe limiting value of static friction $(f_s)_{max}$ is independent of the area of contact and varies with the normal force $N$ as: $(f_s)_{max} = \\mu_s N$, where $\\mu_s$ is the coefficient of static friction. The actual static friction $f_s$ satisfies the inequality $f_s \\leq \\mu_s N$. When the applied force exceeds $(f_s)_{max}$, the body begins to slide.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 4.10",
+                "description": "Two diagrams showing: (a) Impending motion where static friction fs opposes the applied force F, and (b) Kinetic friction fk opposing the motion once the body is moving.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.9.1:2",
+            "order": 2,
+            "title": "Kinetic Friction",
+            "content_text": "Once relative motion has started, the frictional force decreases from the static maximum value. This force, which opposes relative motion between surfaces in contact, is called kinetic or sliding friction ($f_k$). Kinetic friction is found to be independent of the area of contact and nearly independent of the velocity of the object.\nKinetic friction satisfies a law similar to static friction: $f_k = \\mu_k N$, where $\\mu_k$ is the coefficient of kinetic friction. Generally, $\\mu_k$ is less than $\\mu_s$. For a body moving with constant velocity, the applied force $F$ equals $f_k$. If the applied force is removed, the body's acceleration is $-f_k/m$, and it eventually comes to a stop. These laws are empirical relations rather than fundamental laws.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.9.1:3",
+            "order": 3,
+            "title": "Friction as a Component of Contact Force",
+            "content_text": "When two bodies are in contact, they experience a contact force from each other. Friction is defined as the component of this contact force that acts parallel to the surfaces in contact. Its primary role is to oppose impending or actual relative motion between the two surfaces. It is crucial to distinguish between motion and relative motion; friction specifically opposes the relative motion between the contacting surfaces, not necessarily the absolute motion of the object.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.9.1:4",
+            "order": 4,
+            "title": "Static Friction in Accelerating Frames",
+            "content_text": "Consider a box resting on the floor of an accelerating train. If the box remains stationary relative to the train, it is actually accelerating along with the train. The only horizontal force available to provide this acceleration is the force of static friction $f_s$. Without friction, the floor of the train would slip beneath the box, and the box would remain in its initial position due to inertia (eventually colliding with the back of the train). Thus, static friction provides the necessary acceleration to keep the box stationary relative to the train's frame.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.9.1:5",
+            "order": 5,
+            "title": "Example 4.7: Maximum Acceleration of a Train",
+            "content_text": "This example applies the concept of static friction to determine the limits of acceleration in a moving vehicle for an object to remain at rest relative to the vehicle floor.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 4.7",
+                "problem": "Determine the maximum acceleration of the train in which a box lying on its floor will remain stationary, given that the co-efficient of static friction between the box and the train’s floor is 0.15.",
+                "solution": "Since the acceleration of the box is due to the static friction, $ma = f_s \\le \\mu_s N = \\mu_s mg$. This implies $a \\le \\mu_s g$. Therefore, $a_{max} = \\mu_s g = 0.15 \\times 10 \\text{ m s}^{-2} = 1.5 \\text{ m s}^{-2}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.9.1:6",
+            "order": 6,
+            "title": "Forces on an Inclined Plane",
+            "content_text": "For a block of mass $m$ at rest on a plane inclined at an angle $\\theta$, three forces act: (i) weight $mg$ acting vertically downwards, (ii) normal force $N$ perpendicular to the plane, and (iii) static frictional force $f_s$ acting up the plane. Resolving the weight $mg$ into components parallel ($mg \\sin \\theta$) and perpendicular ($mg \\cos \\theta$) to the plane, equilibrium requires $mg \\sin \\theta = f_s$ and $mg \\cos \\theta = N$. As the angle $\\theta$ increases, the self-adjusting frictional force $f_s$ increases until it reaches its maximum value $(f_s)_{max} = \\mu_s N$. At the point where the block is about to slide, $\\tan \\theta_{max} = \\mu_s$. This maximum angle, often called the angle of repose, depends only on the coefficient of static friction $\\mu_s$ and is independent of the mass of the block.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 4.11",
+                "description": "A block of mass $m$ on a plane inclined at an angle $\\theta$. The weight $mg$ is resolved into $mg \\sin \\theta$ parallel to the plane and $mg \\cos \\theta$ perpendicular to the plane. The normal force $N$ balances $mg \\cos \\theta$, and static friction $f_s$ balances $mg \\sin \\theta$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.9.1:7",
+            "order": 7,
+            "title": "Example 4.8: Coefficient of Static Friction on an Incline",
+            "content_text": "This example demonstrates how to calculate the coefficient of static friction using the maximum angle of inclination before sliding occurs.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 4.8",
+                "problem": "See Fig. 4.11. A mass of 4 kg rests on a horizontal plane. The plane is gradually inclined until at an angle $\\theta = 15^\\circ$ with the horizontal, the mass just begins to slide. What is the coefficient of static friction between the block and the surface?",
+                "solution": "At the angle where the block just begins to slide, the static friction reaches its maximum value. From the derivation of forces on an inclined plane, we have $\\tan \\theta_{max} = \\mu_s$. For $\\theta_{max} = 15^\\circ$, $\\mu_s = \\tan 15^\\circ = 0.27$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.9.1:8",
+            "order": 8,
+            "title": "Example 4.9: Trolley and Block System",
+            "content_text": "This example analyzes a multi-body system involving a trolley on a horizontal surface and a hanging block, incorporating kinetic friction into the equations of motion.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 4.9",
+                "problem": "What is the acceleration of the block and trolley system shown in a Fig. 4.12(a), if the coefficient of kinetic friction between the trolley and the surface is 0.04? What is the tension in the string? (Take $g = 10 \\text{ m s}^{-2}$). Neglect the mass of the string.",
+                "solution": "As the string is inextensible and the pulley is smooth, both bodies have the same acceleration $a$. For the 3 kg block: $30 - T = 3a$. For the 20 kg trolley: $T - f_k = 20a$. Kinetic friction $f_k = \\mu_k N = 0.04 \\times (20 \\times 10) = 8$ N. Substituting $f_k$: $T - 8 = 20a$. Adding the two equations: $30 - 8 = 23a \\implies 22 = 23a \\implies a = 22/23 \\approx 0.96 \\text{ m s}^{-2}$. Tension $T = 8 + 20(0.96) = 27.1$ N."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Fig. 4.12",
+                "description": "(a) A 20 kg trolley on a horizontal surface connected to a 3 kg hanging block. (b) Free-body diagram of the 3 kg block showing tension $T$ and weight $30$ N. (c) Free-body diagram of the trolley showing tension $T$, kinetic friction $f_k$, and weight $W$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.9.1:9",
+            "order": 9,
+            "title": "Rolling Friction",
+            "content_text": "Ideally, a body like a sphere or ring rolling without slipping on a horizontal plane should experience no friction because the point of contact has no relative motion. However, real surfaces deform slightly, creating a contact area rather than a point, which results in rolling friction. Rolling friction opposes motion but is significantly smaller (by 2 to 3 orders of magnitude) than static or kinetic friction. This low resistance is why the invention of the wheel was a critical milestone in human history.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.9.1:10",
+            "order": 10,
+            "title": "Reducing Friction",
+            "content_text": "Friction is often undesirable because it opposes motion and dissipates energy as heat. Common methods to reduce friction include: (i) Lubricants, which reduce kinetic friction between moving parts. (ii) Ball bearings, which replace sliding friction with much smaller rolling friction. (iii) Air cushions, where a thin layer of compressed air is maintained between surfaces to prevent direct contact and minimize resistance.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 4.13",
+                "description": "(a) Ball bearings between moving machine parts. (b) A compressed air cushion created by an inflated balloon on a disc to reduce friction with the surface.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.9.1:11",
+            "order": 11,
+            "title": "Necessity of Friction",
+            "content_text": "Despite its negative effects, friction is essential. Kinetic friction is utilized in braking systems to stop vehicles. Static friction is necessary for walking; it provides the reaction force that allows us to push off the ground. It also provides the external force required for a car's tyres to accelerate the vehicle on a road surface.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:4:4.10",
+        "number": "4.10",
+        "title": "CIRCULAR MOTION",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:4:4.10:1",
+            "order": 1,
+            "title": "Centripetal Force",
+            "content_text": "A body moving in a circle of radius $R$ with uniform speed $v$ experiences an acceleration $v^2/R$ directed toward the center. According to Newton's second law, the force $f_c$ required to provide this acceleration is $f_c = \\frac{mv^2}{R}$. This force is called the centripetal force. It is not a new type of force but a requirement that must be met by existing forces like tension (for a stone on a string), gravity (for planets), or friction (for a car on a road).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.10:2",
+            "order": 2,
+            "title": "Motion of a Car on a Level Road",
+            "content_text": "When a car takes a circular turn on a horizontal road, three forces act: weight $mg$, normal reaction $N$, and friction $f$. Vertically, $N = mg$. The centripetal force is provided by static friction $f$ between the tyres and the road: $f = \\frac{mv^2}{R}$. Since static friction has a maximum limit $f \\le \\mu_s N$, we have $\\frac{mv^2}{R} \\le \\mu_s mg$. This leads to a maximum safe speed $v_{max} = \\sqrt{\\mu_s Rg}$. This speed is independent of the mass of the car.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 4.14(a)",
+                "description": "A car on a level circular road showing the normal force $N$, weight $mg$, and the frictional force $f$ acting toward the center of the circle.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.10:3",
+            "order": 3,
+            "title": "Motion of a Car on a Banked Road",
+            "content_text": "To reduce reliance on friction and allow higher speeds, roads are banked (tilted toward the center). For a car on a road banked at angle $\\theta$, the forces are $mg$, $N$, and $f$. Resolving forces: $N \\cos \\theta = mg + f \\sin \\theta$ (vertical equilibrium) and $N \\sin \\theta + f \\cos \\theta = \\frac{mv^2}{R}$ (centripetal force). To find the maximum speed $v_{max}$, we set $f = \\mu_s N$. The vertical equation becomes $N \\cos \\theta = mg + \\mu_s N \\sin \\theta$ (4.20a). The horizontal equation for the forces acting on a car on a banked road is given by $N \\sin \\theta + \\mu_s N \\cos \\theta = mv^2/R$ (4.20b), which represents the centripetal force. From the vertical equilibrium equation $N \\cos \\theta = mg + \\mu_s N \\sin \\theta$ (4.20a), we obtain the expression for the normal force: $N = \\frac{mg}{\\cos \\theta - \\mu_s \\sin \\theta}$. Substituting this value of $N$ into the horizontal equation (4.20b), we get $\\frac{mg(\\sin \\theta + \\mu_s \\cos \\theta)}{\\cos \\theta - \\mu_s \\sin \\theta} = \\frac{mv_{max}^2}{R}$. Solving for the maximum permissible speed $v_{max}$, we find $v_{max} = \\left( Rg \\frac{\\mu_s + \\tan \\theta}{1 - \\mu_s \\tan \\theta} \\right)^{1/2}$ (4.21). Comparing this with the expression for a flat road, it is evident that the maximum possible speed of a car on a banked road is significantly greater than that on a flat road.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 4.14(b)",
+                "description": "A car on a banked road showing the normal force $N$ and friction $f$ resolved into horizontal and vertical components to provide centripetal force and balance weight.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.10:4",
+            "order": 4,
+            "title": "Optimum Speed and Frictionless Case",
+            "content_text": "In the case where friction is negligible ($\\mu_s = 0$), the equation for maximum speed simplifies to $v_o = (Rg \\tan \\theta)^{1/2}$ (4.22). This is known as the optimum speed. At this specific speed, the horizontal component of the normal force alone provides the necessary centripetal force, and no frictional force is required to keep the car on its circular path. Driving at this speed on a banked road results in minimal wear and tear on the tyres. The equations also indicate that if the car's speed $v$ is less than $v_o$, the frictional force will act up the slope to prevent the car from sliding down. Furthermore, a car can be parked on a banked road only if the condition $\\tan \\theta \\le \\mu_s$ is satisfied.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.10:5",
+            "order": 5,
+            "title": "Example 4.10: Cyclist on a Level Road",
+            "content_text": "This example analyzes the motion of a cyclist on a level (unbanked) road. On such a road, the frictional force between the tyres and the road is the only source of centripetal force. The condition for the cyclist to negotiate the turn without slipping is $v^2 \\le \\mu_s Rg$. By comparing the square of the cyclist's speed with the product of the coefficient of friction, radius, and gravitational acceleration, we can determine if the turn is safe.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 4.10",
+                "problem": "A cyclist speeding at 18 km/h on a level road takes a sharp circular turn of radius 3 m without reducing the speed. The co-efficient of static friction between the tyres and the road is 0.1. Will the cyclist slip while taking the turn?",
+                "solution": "On an unbanked road, frictional force alone provides the centripetal force. The condition for not slipping is $v^2 \\le \\mu_s Rg$. Given $R = 3$ m, $g = 9.8$ m s$^{-2}$, and $\\mu_s = 0.1$, we find $\\mu_s Rg = 0.1 \\times 3 \\times 9.8 = 2.94$ m$^2$ s$^{-2}$. The cyclist's speed is $v = 18$ km/h = $18 \\times (5/18) = 5$ m s$^{-1}$, so $v^2 = 25$ m$^2$ s$^{-2}$. Since $v^2$ (25) is much greater than $\\mu_s Rg$ (2.94), the condition is not obeyed. The cyclist will slip while taking the turn."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.10:6",
+            "order": 6,
+            "title": "Example 4.11: Race-car on a Banked Racetrack",
+            "content_text": "This example demonstrates how to calculate the optimum and maximum speeds for a vehicle on a banked racetrack. It utilizes the derived formulas for $v_o$ and $v_{max}$ to show how banking allows for higher safe speeds compared to flat roads.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 4.11",
+                "problem": "A circular racetrack of radius 300 m is banked at an angle of 15°. If the coefficient of friction between the wheels of a race-car and the road is 0.2, what is the (a) optimum speed of the race-car to avoid wear and tear on its tyres, and (b) maximum permissible speed to avoid slipping?",
+                "solution": "On a banked road, the optimum speed $v_o$ (where friction is not needed) is given by $v_o = (Rg \\tan \\theta)^{1/2}$. Here $R = 300$ m, $\\theta = 15^\\circ$, and $g = 9.8$ m s$^{-2}$. Thus, $v_o = (300 \\times 9.8 \\times \\tan 15^\\circ)^{1/2} = 28.1$ m s$^{-1}$. The maximum permissible speed $v_{max}$ is given by $v_{max} = \\left( Rg \\frac{\\mu_s + \\tan \\theta}{1 - \\mu_s \\tan \\theta} \\right)^{1/2}$. With $\\mu_s = 0.2$, $v_{max} = \\left( 300 \\times 9.8 \\times \\frac{0.2 + \\tan 15^\\circ}{1 - 0.2 \\tan 15^\\circ} \\right)^{1/2} = 38.1$ m s$^{-1}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:4:4.11",
+        "number": "4.11",
+        "title": "SOLVING PROBLEMS IN MECHANICS",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:4:4.11:1",
+            "order": 1,
+            "title": "Introduction to Mechanics Problems",
+            "content_text": "The three laws of motion form the foundation of mechanics, allowing for the analysis of a wide variety of problems. A typical problem often involves an assembly of different bodies exerting forces on each other, in addition to external forces like gravity. To solve such problems, it is useful to choose a specific part of the assembly as the 'system' and treat the remaining parts as the 'environment'. The laws of motion are then applied to the chosen system, considering all forces exerted on it by the environment.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.11:2",
+            "order": 2,
+            "title": "Systematic Steps for Problem Solving",
+            "content_text": "To handle mechanics problems systematically, follow these steps: (i) Draw a schematic diagram showing all parts of the assembly (links, supports, etc.). (ii) Choose a convenient part of the assembly as the system. (iii) Draw a 'free-body diagram' (FBD) for this system, showing all external forces acting on it due to the environment (do not include forces exerted by the system on the environment). (iv) Include information about known force magnitudes and directions, and treat unknown forces as variables to be determined. (v) If necessary, repeat the procedure for other parts of the assembly, using Newton's third law to relate forces between interacting systems (e.g., if system A exerts force $\\mathbf{F}$ on B, then B exerts $-\\mathbf{F}$ on A).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.11:3",
+            "order": 3,
+            "title": "Example 4.12: Analysis of Forces and Acceleration",
+            "content_text": "This example illustrates the application of free-body diagrams and Newton's laws to a multi-body system. It considers a block and a cylinder on a yielding floor, calculating the normal forces in both static and accelerating conditions.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 4.12",
+                "problem": "A wooden block of mass 2 kg rests on a soft horizontal floor. When an iron cylinder of mass 25 kg is placed on top of the block, the floor yields steadily and the block and the cylinder together go down with an acceleration of 0.1 m s$^{-2}$. What is the action of the block on the floor (a) before and (b) after the floor yields? Take $g = 10$ m s$^{-2}$. Identify the action-reaction pairs in the problem.",
+                "solution": "(a) The block is at rest. Its FBD shows two forces: gravity ($2 \\times 10 = 20$ N) and the normal force $R$ from the floor. By the First Law, $R = 20$ N. By the Third Law, the action of the block on the floor is 20 N vertically downwards. (b) The system (block + cylinder) has mass $M = 27$ kg and accelerates downwards at $0.1$ m s$^{-2}$. The FBD of the system shows gravity ($270$ N) and normal force $R'$. Applying the Second Law: $270 - R' = 27 \\times 0.1$, which gives $R' = 267.3$ N. The action of the system on the floor is 267.3 N vertically downwards."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Fig. 4.15",
+                "description": "Schematic and free-body diagrams for Example 4.12. The first FBD shows a single block with an upward normal force R and a downward gravitational force of 20 N. The second FBD shows the combined block and cylinder system with an upward normal force R' and a downward gravitational force of 270 N, with an acceleration vector of 0.1 m/s² pointing downwards.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.11:4",
+            "order": 4,
+            "title": "Action-Reaction Pairs in Mechanics",
+            "content_text": "Identifying action-reaction pairs is essential for understanding force interactions. In Example 4.12, for the block at rest: (i) the force of gravity on the block by the Earth (action) and the gravitational force on the Earth by the block (reaction); (ii) the normal force on the block by the floor (action) and the force on the floor by the block (reaction). Note that for the accelerating system, the weight and the normal force are not action-reaction pairs because they act on the same body and are not equal in magnitude.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.11:5",
+            "order": 5,
+            "title": "Importance of Free-Body Diagrams",
+            "content_text": "The practice of drawing free-body diagrams is of great help in solving mechanics problems. It allows you to clearly define your system and consider all forces on the system due to objects that are not part of the system itself. This clarity is vital for correctly applying Newton's laws to complex physical situations.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:4:Summary",
+        "number": "Summary",
+        "title": "Summary",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:4:Summary:1",
+            "order": 1,
+            "title": "Aristotle's Fallacy and the Law of Inertia",
+            "content_text": "1. Aristotle's view that a force is necessary to keep a body in uniform motion is wrong; in practice, force is needed to counter friction. 2. Galileo extrapolated observations to arrive at the law of inertia. Newton's first law rephrases this: 'Every body continues to be in its state of rest or of uniform motion in a straight line, unless compelled by some external force to act otherwise.' Simply, if the net external force is zero, acceleration is zero.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:Summary:2",
+            "order": 2,
+            "title": "Momentum and Newton's Second Law",
+            "content_text": "3. Momentum ($\\mathbf{p}$) is the product of mass ($m$) and velocity ($\\mathbf{v}$): $\\mathbf{p} = m\\mathbf{v}$. 4. Newton's second law states the rate of change of momentum is proportional to the applied force and occurs in its direction: $\\mathbf{F} = \\frac{d\\mathbf{p}}{dt} = m\\mathbf{a}$. Key aspects: (a) It is consistent with the First Law. (b) It is a vector equation. (c) It applies to particles or systems of particles. (d) It is a local law relating force and acceleration at the same instant.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:Summary:3",
+            "order": 3,
+            "title": "Impulse and Newton's Third Law",
+            "content_text": "5. Impulse is the product of force and time, which equals the change in momentum. It is useful when a large force acts for a very short time. 6. Newton's third law states: 'To every action, there is always an equal and opposite reaction.' Action and reaction forces always act on different bodies and thus do not cancel each other out.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:4:Summary",
+        "number": "Summary",
+        "title": "Summary",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:4:Summary:1",
+            "order": 1,
+            "title": "Newton's Third Law - Key Properties",
+            "content_text": "Forces in nature always occur between pairs of bodies. The force on a body A by body B is equal and opposite to the force on the body B by A. Action and reaction forces are simultaneous; there is no cause-effect relation between them. Either of the two mutual forces can be called action and the other reaction. Crucially, action and reaction act on different bodies and therefore cannot cancel each other out. However, internal action and reaction forces between different parts of a single body do sum to zero.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:Summary:2",
+            "order": 2,
+            "title": "Law of Conservation of Momentum",
+            "content_text": "The total momentum of an isolated system of particles is conserved. This fundamental law is a direct consequence of Newton's second and third laws of motion.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:Summary:3",
+            "order": 3,
+            "title": "Friction",
+            "content_text": "Frictional force opposes the relative motion (impending or actual) between two surfaces in contact. It is the component of the contact force acting along the common tangent to the surfaces. Static friction $f_s$ opposes impending relative motion, while kinetic friction $f_k$ opposes actual relative motion. These forces are independent of the area of contact and follow approximate laws: $f_s \\le (f_s)_{max} = \\mu_s R$ and $f_k = \\mu_k R$, where $R$ is the normal reaction. The coefficients $\\mu_s$ (static) and $\\mu_k$ (kinetic) are constants specific to the pair of surfaces. Experimental evidence shows that $\\mu_k < \\mu_s$.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:Summary:4",
+            "order": 4,
+            "title": "Summary Table of Physical Quantities",
+            "content_text": "The following table summarizes the key physical quantities in mechanics, including their symbols, units, dimensions, and relevant remarks.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 4.1",
+                "caption": "Summary of Mechanical Quantities",
+                "headers": [
+                  "Quantity",
+                  "Symbol",
+                  "Units",
+                  "Dimensions",
+                  "Remarks"
+                ],
+                "rows": [
+                  [
+                    "Momentum",
+                    "$\\mathbf{p}$",
+                    "kg m s$^{-1}$ or N s",
+                    "[MLT$^{-1}$]",
+                    "Vector"
+                  ],
+                  [
+                    "Force",
+                    "$\\mathbf{F}$",
+                    "N",
+                    "[MLT$^{-2}$]",
+                    "$\\mathbf{F} = m \\mathbf{a}$ Second Law"
+                  ],
+                  [
+                    "Impulse",
+                    "",
+                    "kg m s$^{-1}$ or N s",
+                    "[MLT$^{-1}$]",
+                    "Impulse = force $\\times$ time = change in momentum"
+                  ],
+                  [
+                    "Static friction",
+                    "$\\mathbf{f}_s$",
+                    "N",
+                    "[MLT$^{-2}$]",
+                    "$\\mathbf{f}_s \\le \\mu_s \\mathbf{N}$"
+                  ],
+                  [
+                    "Kinetic friction",
+                    "$\\mathbf{f}_k$",
+                    "N",
+                    "[MLT$^{-2}$]",
+                    "$\\mathbf{f}_k = \\mu_k \\mathbf{N}$"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:4:4.12",
+        "number": "4.12",
+        "title": "POINTS TO PONDER",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:4:4.12:1",
+            "order": 1,
+            "title": "Force, Motion, and Acceleration",
+            "content_text": "Force is not always in the direction of motion. Depending on the situation, the net force $\\mathbf{F}$ may be along the velocity $\\mathbf{v}$, opposite to it, normal to it, or at any other angle. However, $\\mathbf{F}$ is always parallel to the acceleration $\\mathbf{a}$. Furthermore, a zero velocity at an instant does not imply zero force or acceleration. For example, a ball at the peak of its upward throw has $\\mathbf{v} = 0$, but is still subject to the force of gravity $mg$ and acceleration $g$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.12:2",
+            "order": 2,
+            "title": "Locality and Instantaneous Nature of Force",
+            "content_text": "The force acting on a body at a specific time is determined solely by the conditions at its location at that exact moment. Force is not 'carried' by a body from its previous history. For instance, once a stone is released from an accelerating train, the horizontal force from the train vanishes immediately. Neglecting air resistance, the stone is then subject only to the vertical force of gravity.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.12:3",
+            "order": 3,
+            "title": "The Nature of Centripetal Force",
+            "content_text": "In the equation $\\mathbf{F} = m\\mathbf{a}$, $\\mathbf{F}$ represents the net force from all external material agencies; $m\\mathbf{a}$ is the resulting effect, not a separate force. Similarly, 'centripetal force' is not a distinct type of force but a label for whichever real force (tension, gravity, friction, etc.) provides the necessary inward radial acceleration for circular motion.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.12:4",
+            "order": 4,
+            "title": "Static Friction and Equilibrium",
+            "content_text": "Static friction is a self-adjusting force that only reaches its maximum value $\\mu_s N$ when motion is impending. One must not assume $f_s = \\mu_s N$ unless this condition is met. Additionally, the common equation $mg = R$ for a body on a surface only holds during equilibrium. If the surface is accelerating (e.g., in a lift), $mg$ and $R$ will differ. This equality is a condition of equilibrium, not an application of Newton's third law.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.12:5",
+            "order": 5,
+            "title": "Action-Reaction and Unified Concept of Force",
+            "content_text": "The terms 'action' and 'reaction' in the third law refer to simultaneous mutual forces; action does not cause reaction. For clarity in mechanics, various terms like 'tension', 'thrust', 'buoyancy', and 'weight' should all be understood simply as 'force'. Every such interaction should be conceptually reduced to the phrase 'force on body A by body B'.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:4:4.12:6",
+            "order": 6,
+            "title": "Force in Animate Objects and Subjective Perception",
+            "content_text": "Newton's laws apply equally to animate and inanimate objects. A human requires an external force, such as friction against the ground, to accelerate. Finally, the objective physical concept of force must be distinguished from the subjective 'feeling of force'. For example, on a merry-go-round, the body is objectively subject to an inward centripetal force, despite the subjective feeling of being pushed outward.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:physics:11:4:ex:1",
+          "number": 1,
+          "problem": "Give the magnitude and direction of the net force acting on (a) a drop of rain falling down with a constant speed, (b) a cork of mass 10 g floating on water, (c) a kite skillfully held stationary in the sky, (d) a car moving with a constant velocity of 30 km/h on a rough road, (e) a high-speed electron in space far from all material objects, and free of electric and magnetic fields.",
+          "solution": "(a) Zero (constant speed means zero acceleration). (b) Zero (weight is balanced by upthrust). (c) Zero (stationary means zero acceleration). (d) Zero (constant velocity means zero acceleration). (e) Zero (no external fields or material interactions).",
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:4:ex:2",
+          "number": 2,
+          "problem": "A pebble of mass 0.05 kg is thrown vertically upwards. Give the direction and magnitude of the net force on the pebble, (a) during its upward motion, (b) during its downward motion, (c) at the highest point where it is momentarily at rest. Do your answers change if the pebble was thrown at an angle of 45° with the horizontal direction? Ignore air resistance.",
+          "solution": "In all cases (a), (b), and (c), the net force is the weight of the pebble: $F = mg = 0.05 \\times 10 = 0.5$ N, directed vertically downwards. The answer does not change if thrown at 45°, as gravity is the only force acting throughout the flight.",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:4:ex:3",
+          "number": 3,
+          "problem": "Give the magnitude and direction of the net force acting on a stone of mass 0.1 kg, (a) just after it is dropped from the window of a stationary train, (b) just after it is dropped from the window of a train running at a constant velocity of 36 km/h, (c) just after it is dropped from the window of a train accelerating with 1 m s$^{-2}$, (d) lying on the floor of a train which is accelerating with 1 m s$^{-2}$, the stone being at rest relative to the train. Neglect air resistance throughout.",
+          "solution": "(a) 1 N vertically downwards ($mg$). (b) 1 N vertically downwards (horizontal velocity is constant, so no horizontal force). (c) 1 N vertically downwards (once dropped, horizontal contact force from train ceases). (d) 0.1 N in the direction of train's motion ($F = ma = 0.1 \\times 1$).",
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:4:ex:4",
+          "number": 4,
+          "problem": "One end of a string of length $l$ is connected to a particle of mass $m$ and the other to a small peg on a smooth horizontal table. If the particle moves in a circle with speed $v$ the net force on the particle (directed towards the centre) is: (i) $T$, (ii) $T - \\frac{mv^2}{l}$, (iii) $T + \\frac{mv^2}{l}$, (iv) 0. [$T$ is the tension in the string].",
+          "solution": "(i) $T$. The tension $T$ provides the necessary centripetal force $\\frac{mv^2}{l}$.",
+          "difficulty": "easy",
+          "exercise_type": "mcq"
+        },
+        {
+          "id": "ncert:physics:11:4:ex:5",
+          "number": 5,
+          "problem": "A constant retarding force of 50 N is applied to a body of mass 20 kg moving initially with a speed of 15 m s$^{-1}$. How long does the body take to stop?",
+          "solution": "$a = F/m = -50/20 = -2.5$ m s$^{-2}$. Using $v = u + at$: $0 = 15 - 2.5t \\implies t = 6$ s.",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:4:ex:6",
+          "number": 6,
+          "problem": "A constant force acting on a body of mass 3.0 kg changes its speed from 2.0 m s$^{-1}$ to 3.5 m s$^{-1}$ in 25 s. The direction of the motion of the body remains unchanged. What is the magnitude and direction of the force?",
+          "solution": "$a = (3.5 - 2.0)/25 = 0.06$ m s$^{-2}$. $F = ma = 3.0 \\times 0.06 = 0.18$ N, in the direction of motion.",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:4:ex:7",
+          "number": 7,
+          "problem": "A body of mass 5 kg is acted upon by two perpendicular forces 8 N and 6 N. Give the magnitude and direction of the acceleration of the body.",
+          "solution": "$F_{net} = \\sqrt{8^2 + 6^2} = 10$ N. $a = F_{net}/m = 10/5 = 2$ m s$^{-2}$. Direction is $\\tan^{-1}(6/8) \\approx 37^\\circ$ with the 8 N force.",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:4:ex:8",
+          "number": 8,
+          "problem": "The driver of a three-wheeler moving with a speed of 36 km/h sees a child standing in the middle of the road and brings his vehicle to rest in 4.0 s just in time to save the child. What is the average retarding force on the vehicle? The mass of the three-wheeler is 400 kg and the mass of the driver is 65 kg.",
+          "solution": "$u = 10$ m/s, $v = 0$, $t = 4$ s $\\implies a = -2.5$ m s$^{-2}$. Total mass $M = 465$ kg. $F = 465 \\times 2.5 = 1162.5$ N.",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:4:ex:9",
+          "number": 9,
+          "problem": "A rocket with a lift-off mass 20,000 kg is blasted upwards with an initial acceleration of 5.0 m s$^{-2}$. Calculate the initial thrust (force) of the blast.",
+          "solution": "$F_{net} = Thrust - Mg = Ma \\implies Thrust = M(g+a) = 20000(10+5) = 300,000$ N.",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:4:ex:10",
+          "number": 10,
+          "problem": "A body of mass 0.40 kg moving initially with a constant speed of 10 m s$^{-1}$ to the north is subject to a constant force of 8.0 N directed towards the south for 30 s. Take the instant the force is applied to be $t = 0$, the position of the body at that time to be $x = 0$, and predict its position at $t = -5$ s, 25 s, 100 s.",
+          "solution": "At $t = -5$ s: $x = 10(-5) = -50$ m. At $t = 25$ s: $a = -8/0.4 = -20$ m s$^{-2}$; $x = 10(25) + 0.5(-20)(25^2) = -6000$ m. At $t = 100$ s: For first 30s, $x_1 = 10(30) - 10(30^2) = -8700$ m, $v_{30} = 10 - 20(30) = -590$ m/s. For next 70s, $x_2 = -590(70) = -41300$ m. Total $x = -50000$ m.",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:4:ex:11",
+          "number": 11,
+          "problem": "A truck starts from rest and accelerates uniformly at 2.0 m s$^{-2}$. At $t = 10$ s, a stone is dropped by a person standing on the top of the truck (6 m high from the ground). What are the (a) velocity, and (b) acceleration of the stone at $t = 11$ s? (Neglect air resistance.)",
+          "solution": "(a) At $t=10$, $v_x = 20$ m/s. At $t=11$, $v_x = 20$ m/s and $v_y = 10(1) = 10$ m/s. $v = \\sqrt{20^2 + 10^2} \\approx 22.4$ m/s at $\\tan^{-1}(0.5)$ with horizontal. (b) $a = 10$ m s$^{-2}$ vertically downwards.",
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:4:ex:12",
+          "number": 12,
+          "problem": "A bob of mass 0.1 kg hung from the ceiling of a room by a string 2 m long is set into oscillation. The speed of the bob at its mean position is 1 m s$^{-1}$. What is the trajectory of the bob if the string is cut when the bob is (a) at one of its extreme positions, (b) at its mean position.",
+          "solution": "(a) Vertically downwards (velocity is zero). (b) Parabolic path (has horizontal velocity).",
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:4:ex:13",
+          "number": 13,
+          "problem": "A man of mass 70 kg stands on a weighing scale in a lift which is moving (a) upwards with a uniform speed of 10 m s$^{-1}$, (b) downwards with a uniform acceleration of 5 m s$^{-2}$, (c) upwards with a uniform acceleration of 5 m s$^{-2}$. What would be the readings on the scale in each case? (d) What would be the reading if the lift mechanism failed and it hurtled down freely under gravity?",
+          "solution": "(a) 700 N (70 kg). (b) $70(10-5) = 350$ N (35 kg). (c) $70(10+5) = 1050$ N (105 kg). (d) 0 N (0 kg).",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:4:ex:14",
+          "number": 14,
+          "problem": "Figure 4.16 shows the position-time graph of a particle of mass 4 kg. What is the (a) force on the particle for $t < 0, t > 4$ s, $0 < t < 4$ s? (b) impulse at $t = 0$ and $t = 4$ s? (Consider one-dimensional motion only).",
+          "solution": "(a) Force is zero in all three intervals because velocity is either zero or constant. (b) At $t=0$, $v$ changes from 0 to 0.75 m/s, so $I = 4(0.75) = 3$ kg m s$^{-1}$. At $t=4$, $v$ changes from 0.75 to 0, so $I = 4(0 - 0.75) = -3$ kg m s$^{-1}$.",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:4:ex:15",
+          "number": 15,
+          "problem": "Two bodies of masses 10 kg and 20 kg respectively kept on a smooth, horizontal surface are tied to the ends of a light string. A horizontal force F = 600 N is applied to (i) A, (ii) B along the direction of string. What is the tension in the string in each case?",
+          "solution": "Acceleration $a = 600/30 = 20$ m s$^{-2}$. (i) $600 - T = 10(20) \\implies T = 400$ N. (ii) $600 - T = 20(20) \\implies T = 200$ N.",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:4:ex:16",
+          "number": 16,
+          "problem": "Two masses 8 kg and 12 kg are connected at the two ends of a light inextensible string that goes over a frictionless pulley. Find the acceleration of the masses, and the tension in the string when the masses are released.",
+          "solution": "Given $m_1 = 8$ kg and $m_2 = 12$ kg. For a pulley system, the acceleration $a$ is given by $a = \\frac{m_2 - m_1}{m_1 + m_2}g = \\frac{12 - 8}{12 + 8} \\times 9.8 = \\frac{4}{20} \\times 9.8 = 1.96$ m/s$^2$. The tension $T$ in the string is $T = \\frac{2m_1 m_2}{m_1 + m_2}g = \\frac{2 \\times 8 \\times 12}{20} \\times 9.8 = 9.6 \\times 9.8 = 94.08$ N.",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:4:ex:17",
+          "number": 17,
+          "problem": "A nucleus is at rest in the laboratory frame of reference. Show that if it disintegrates into two smaller nuclei the products must move in opposite directions.",
+          "solution": "According to the law of conservation of linear momentum, the total momentum of an isolated system remains constant. Initially, the nucleus is at rest, so its initial momentum $\\vec{p}_i = 0$. After disintegration, let the masses of the two products be $m_1$ and $m_2$ with velocities $\\vec{v}_1$ and $\\vec{v}_2$ respectively. The final momentum is $\\vec{p}_f = m_1\\vec{v}_1 + m_2\\vec{v}_2$. Since $\\vec{p}_i = \\vec{p}_f$, we have $0 = m_1\\vec{v}_1 + m_2\\vec{v}_2$, which implies $m_1\\vec{v}_1 = -m_2\\vec{v}_2$. This shows that the momentum vectors are equal in magnitude but opposite in direction, meaning the two nuclei must move in opposite directions along the same line.",
+          "difficulty": "easy",
+          "exercise_type": "derivation"
+        },
+        {
+          "id": "ncert:physics:11:4:ex:18",
+          "number": 18,
+          "problem": "Two billiard balls each of mass 0.05 kg moving in opposite directions with speed 6 m s$^{-1}$ collide and rebound with the same speed. What is the impulse imparted to each ball due to the other ?",
+          "solution": "Mass of each ball $m = 0.05$ kg. Initial velocity of first ball $u = 6$ m/s. Final velocity after rebound $v = -6$ m/s. Impulse imparted to the ball is the change in its momentum: $I = \\Delta p = m(v - u) = 0.05(-6 - 6) = 0.05(-12) = -0.6$ kg m/s. The magnitude of the impulse imparted to each ball is $0.6$ kg m/s.",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:4:ex:19",
+          "number": 19,
+          "problem": "A shell of mass 0.020 kg is fired by a gun of mass 100 kg. If the muzzle speed of the shell is 80 m s$^{-1}$, what is the recoil speed of the gun ?",
+          "solution": "Using the law of conservation of momentum: $m_s v_s + m_g v_g = 0$, where $m_s = 0.020$ kg, $v_s = 80$ m/s, and $m_g = 100$ kg. Recoil speed $v_g = -\\frac{m_s v_s}{m_g} = -\\frac{0.020 \\times 80}{100} = -\\frac{1.6}{100} = -0.016$ m/s. The recoil speed is $0.016$ m/s.",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:4:ex:20",
+          "number": 20,
+          "problem": "A batsman deflects a ball by an angle of 45° without changing its initial speed which is equal to 54 km/h. What is the impulse imparted to the ball? (Mass of the ball is 0.15 kg.)",
+          "solution": "Initial speed $v = 54$ km/h $= 15$ m/s. Mass $m = 0.15$ kg. The ball is deflected by $45^\\circ$. Assuming the ball is incident at an angle $\\theta = 22.5^\\circ$ to the normal and reflected at the same angle, the impulse is the change in momentum along the normal: $I = 2mv \\cos \\theta = 2 \\times 0.15 \\times 15 \\times \\cos(22.5^\\circ) = 4.5 \\times 0.9239 \\approx 4.16$ kg m/s.",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:4:ex:21",
+          "number": 21,
+          "problem": "A stone of mass 0.25 kg tied to the end of a string is whirled round in a circle of radius 1.5 m with a speed of 40 rev./min in a horizontal plane. What is the tension in the string ? What is the maximum speed with which the stone can be whirled around if the string can withstand a maximum tension of 200 N ?",
+          "solution": "Given $m = 0.25$ kg, $r = 1.5$ m, and frequency $\\nu = 40$ rev/min $= \\frac{40}{60} = \\frac{2}{3}$ rev/s. Angular velocity $\\omega = 2\\pi\\nu = 2\\pi(\\frac{2}{3}) = \\frac{4\\pi}{3}$ rad/s. Tension $T = m\\omega^2 r = 0.25 \\times (\\frac{4\\pi}{3})^2 \\times 1.5 = 0.25 \\times \\frac{16\\pi^2}{9} \\times 1.5 \\approx 6.58$ N. For maximum speed $v_{max}$, $T_{max} = \\frac{mv_{max}^2}{r} \\implies v_{max} = \\sqrt{\\frac{T_{max}r}{m}} = \\sqrt{\\frac{200 \\times 1.5}{0.25}} = \\sqrt{1200} \\approx 34.6$ m/s.",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:4:ex:22",
+          "number": 22,
+          "problem": "If, in Exercise 4.21, the speed of the stone is increased beyond the maximum permissible value, and the string breaks suddenly, which of the following correctly describes the trajectory of the stone after the string breaks : (a) the stone moves radially outwards, (b) the stone flies off tangentially from the instant the string breaks, (c) the stone flies off at an angle with the tangent whose magnitude depends on the speed of the particle ?",
+          "solution": "The correct description is (b). When the string breaks, the centripetal force (tension) providing the circular motion vanishes. According to Newton's first law of motion (inertia), the stone will continue to move in the direction of its velocity at that instant, which is tangential to the circular path.",
+          "difficulty": "easy",
+          "exercise_type": "mcq"
+        },
+        {
+          "id": "ncert:physics:11:4:ex:23",
+          "number": 23,
+          "problem": "Explain why (a) a horse cannot pull a cart and run in empty space, (b) passengers are thrown forward from their seats when a speeding bus stops suddenly, (c) it is easier to pull a lawn mower than to push it, (d) a cricketer moves his hands backwards while holding a catch.",
+          "solution": "(a) To pull a cart, a horse must push the ground backwards with its feet; the ground then exerts an equal and opposite reaction force forward on the horse. In empty space, there is no ground to provide this reaction force. (b) Due to the inertia of motion, the upper part of the passengers' bodies continues to move forward at the bus's original speed even after the bus has stopped. (c) When pulling, the vertical component of the pulling force acts upwards, reducing the effective normal force and thus the frictional force. When pushing, the vertical component acts downwards, increasing the normal force and friction. (d) By moving hands backwards, the cricketer increases the time $\\Delta t$ over which the ball's momentum is reduced to zero. Since $F = \\frac{\\Delta p}{\\Delta t}$, a larger $\\Delta t$ results in a smaller impact force $F$ on the hands.",
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        }
+      ]
+    }
+  }
+}

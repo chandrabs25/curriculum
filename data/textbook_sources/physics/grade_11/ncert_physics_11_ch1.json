@@ -1,0 +1,885 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_physics_11_ch1.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:physics:11:1",
+  "curriculum": "ncert",
+  "subject": "physics",
+  "grade": 11,
+  "textbook_name": "Physics Part I",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:physics:11:1",
+    "number": 1,
+    "title": "Units and Measurement",
+    "summary": "This chapter introduces the fundamental concepts of Units and Measurement in physics. It begins by establishing the need for standardized units and introduces the International System of Units (SI), which defines seven base quantities and their corresponding units. It also introduces supplementary units for plane and solid angles. The chapter moves on to discuss significant figures, emphasizing the importance of expressing measurements with appropriate precision. Rules for arithmetic operations with significant figures and rounding off uncertain digits are presented to ensure accurate calculations.\n\nDimensional analysis is then explored as a tool to check the consistency of equations and derive relationships between physical quantities. The concepts of dimensional formulas and dimensional equations are introduced. The principle of homogeneity of dimensions is explained, which is critical for verifying the correctness of physical equations. While dimensional analysis has its limitations, it is valuable for ensuring consistency and guiding physical derivations.\n\nThe chapter sections build upon each other, starting with foundational concepts of units and measurements, progressing to precise handling of numerical data and culminating in dimensional analysis as a verification tool. Understanding these concepts is crucial for performing quantitative analysis in physics, ensuring accurate measurements, consistent calculations, and valid derivations. They provide a basis for understanding how physical quantities relate to each other, and for interpreting and presenting experimental data.",
+    "sections": [
+      {
+        "id": "ncert:physics:11:1:1.1",
+        "number": "1.1",
+        "title": "Introduction",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:1:1.1:1",
+            "order": 1,
+            "title": "Measurement and Units",
+            "content_text": "Measurement of any physical quantity involves comparison with a certain basic, arbitrarily chosen, internationally accepted reference standard called a unit. The result of a measurement of a physical quantity is expressed by a number (or numerical measure) accompanied by a unit. Although the number of physical quantities appears to be very large, we need only a limited number of units for expressing all the physical quantities, since they are inter-related with one another.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:1:1.1:2",
+            "order": 2,
+            "title": "Fundamental and Derived Units",
+            "content_text": "The units for the fundamental or base quantities are called fundamental or base units. The units of all other physical quantities can be expressed as combinations of the base units. Such units obtained for the derived quantities are called derived units. A complete set of these units, both the base units and derived units, is known as the system of units.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:1:1.2",
+        "number": "1.2",
+        "title": "The International System of Units",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:1:1.2:1",
+            "order": 1,
+            "title": "Historical Systems of Units",
+            "content_text": "In earlier times, scientists of different countries were using different systems of units for measurement. Three such systems, the CGS, the FPS (or British) system, and the MKS system, were in use extensively until recently. The base units for length, mass, and time in these systems were as follows: In the CGS system, they were centimetre, gram, and second respectively; in the FPS system, they were foot, pound, and second respectively; and in the MKS system, they were metre, kilogram, and second respectively.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:1:1.2:2",
+            "order": 2,
+            "title": "The SI System",
+            "content_text": "The system of units which is at present internationally accepted for measurement is the Système Internationale d’ Unites (French for International System of Units), abbreviated as SI. The SI, with its standard scheme of symbols, units, and abbreviations, was developed by the Bureau International des Poids et Mesures (BIPM) in 1971 and recently revised in 2018. Because the SI units use a decimal system, conversions within the system are quite simple and convenient.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:1:1.2:3",
+            "order": 3,
+            "title": "Supplementary Units: Plane and Solid Angles",
+            "content_text": "Besides the seven base units, there are two more units defined for (a) plane angle $d\\theta$ as the ratio of length of arc $ds$ to the radius $r$ and (b) solid angle $d\\Omega$ as the ratio of the intercepted area $dA$ of the spherical surface, described about the apex $O$ as the centre, to the square of its radius $r$. The unit for plane angle is radian with the symbol rad, and the unit for the solid angle is steradian with the symbol sr. Both these are dimensionless quantities.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 1.1",
+                "description": "Diagram (a) illustrates the plane angle $d\\theta = ds/r$ in radians. Diagram (b) illustrates the solid angle $d\\Omega = dA/r^2$ in steradians.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:1:1.2:4",
+            "order": 4,
+            "title": "SI Base Quantities and Definitions",
+            "content_text": "The SI is based on seven base units as given in Table 1.1. These definitions are based on fixed numerical values of fundamental constants like the speed of light $c$, the Planck constant $h$, and the elementary charge $e$. Note that these definitions are revised periodically to keep up with technological progress in measurement precision.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 1.1",
+                "caption": "SI Base Quantities and Units",
+                "headers": [
+                  "Base quantity",
+                  "Name",
+                  "Symbol",
+                  "Definition"
+                ],
+                "rows": [
+                  [
+                    "Length",
+                    "metre",
+                    "m",
+                    "The metre, symbol m, is the SI unit of length. It is defined by taking the fixed numerical value of the speed of light in vacuum $c$ to be 299792458 when expressed in the unit m s$^{-1}$, where the second is defined in terms of the caesium frequency $\\Delta \\nu_{Cs}$."
+                  ],
+                  [
+                    "Mass",
+                    "kilogram",
+                    "kg",
+                    "The kilogram, symbol kg, is the SI unit of mass. It is defined by taking the fixed numerical value of the Planck constant $h$ to be $6.62607015 \\times 10^{-34}$ when expressed in the unit J s, which is equal to kg m$^2$ s$^{-1}$, where the metre and the second are defined in terms of $c$ and $\\Delta \\nu_{Cs}$."
+                  ],
+                  [
+                    "Time",
+                    "second",
+                    "s",
+                    "The second, symbol s, is the SI unit of time. It is defined by taking the fixed numerical value of the caesium frequency $\\Delta \\nu_{Cs}$, the unperturbed ground-state hyperfine transition frequency of the caesium-133 atom, to be 9192631770 when expressed in the unit Hz, which is equal to s$^{-1}$."
+                  ],
+                  [
+                    "Electric current",
+                    "ampere",
+                    "A",
+                    "The ampere, symbol A, is the SI unit of electric current. It is defined by taking the fixed numerical value of the elementary charge $e$ to be $1.602176634 \\times 10^{-19}$ when expressed in the unit C, which is equal to A s, where the second is defined in terms of $\\Delta \\nu_{Cs}$."
+                  ],
+                  [
+                    "Thermodynamic Temperature",
+                    "kelvin",
+                    "K",
+                    "The kelvin, symbol K, is the SI unit of thermodynamic temperature. It is defined by taking the fixed numerical value of the Boltzmann constant $k$ to be $1.380649 \\times 10^{-23}$ when expressed in the unit J K$^{-1}$, which is equal to kg m$^2$ s$^{-2}$ K$^{-1}$, where the kilogram, metre and second are defined in terms of $h$, $c$ and $\\Delta \\nu_{Cs}$."
+                  ],
+                  [
+                    "Amount of substance",
+                    "mole",
+                    "mol",
+                    "The mole, symbol mol, is the SI unit of amount of substance. One mole contains exactly $6.02214076 \\times 10^{23}$ elementary entities. This number is the fixed numerical value of the Avogadro constant, $N_A$, when expressed in the unit mol$^{-1}$ and is called the Avogadro number."
+                  ],
+                  [
+                    "Luminous intensity",
+                    "candela",
+                    "cd",
+                    "The candela, symbol cd, is the SI unit of luminous intensity in a given direction. It is defined by taking the fixed numerical value of the luminous efficacy of monochromatic radiation of frequency $540 \\times 10^{12}$ Hz, $K_{cd}$, to be 683 when expressed in the unit lm W$^{-1}$, which is equal to cd sr W$^{-1}$, or cd sr kg$^{-1}$ m$^{-2}$ s$^3$, where the kilogram, metre and second are defined in terms of $h$, $c$ and $\\Delta \\nu_{Cs}$."
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:physics:11:1:1.2:5",
+            "order": 5,
+            "title": "Derived Units and Usage Notes",
+            "content_text": "Units for other physical quantities can be derived from the seven base units. Some derived units have special names. When the mole is used, the elementary entities must be specified; these may be atoms, molecules, ions, electrons, other particles, or specified groups of such particles. Common SI prefixes and symbols for multiples and sub-multiples are used for convenience.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:1:1.2:6",
+            "order": 6,
+            "title": "Non-SI Units Retained for General Use",
+            "content_text": "Certain units outside the SI are retained for general use because they are widely used or are important in specialized fields. These include units of time (minute, hour, day, year), angle (degree), volume (litre), and others like the bar, curie, and standard atmospheric pressure as shown in Table 1.2.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 1.2",
+                "caption": "Some units retained for general use (Though outside SI)",
+                "headers": [
+                  "Name",
+                  "Symbol",
+                  "Value in SI Unit"
+                ],
+                "rows": [
+                  [
+                    "minute",
+                    "min",
+                    "60 s"
+                  ],
+                  [
+                    "hour",
+                    "h",
+                    "60 min = 3600 s"
+                  ],
+                  [
+                    "day",
+                    "d",
+                    "24 h = 86400 s"
+                  ],
+                  [
+                    "year",
+                    "y",
+                    "365.25 d = $3.156 \\times 10^7$ s"
+                  ],
+                  [
+                    "degree",
+                    "°",
+                    "$1^\\circ = (\\pi/180)$ rad"
+                  ],
+                  [
+                    "litre",
+                    "L",
+                    "1 dm$^3 = 10^{-3}$ m$^3$"
+                  ],
+                  [
+                    "tonne",
+                    "t",
+                    "$10^3$ kg"
+                  ],
+                  [
+                    "carat",
+                    "c",
+                    "200 mg"
+                  ],
+                  [
+                    "bar",
+                    "bar",
+                    "0.1 MPa = $10^5$ Pa"
+                  ],
+                  [
+                    "curie",
+                    "Ci",
+                    "$3.7 \\times 10^{10}$ s$^{-1}$"
+                  ],
+                  [
+                    "roentgen",
+                    "R",
+                    "$2.58 \\times 10^{-4}$ C/kg"
+                  ],
+                  [
+                    "quintal",
+                    "q",
+                    "100 kg"
+                  ],
+                  [
+                    "barn",
+                    "b",
+                    "100 fm$^2 = 10^{-28}$ m$^2$"
+                  ],
+                  [
+                    "are",
+                    "a",
+                    "1 dam$^2 = 10^2$ m$^2$"
+                  ],
+                  [
+                    "hectare",
+                    "ha",
+                    "1 hm$^2 = 10^4$ m$^2$"
+                  ],
+                  [
+                    "standard atmospheric pressure",
+                    "atm",
+                    "101325 Pa = $1.013 \\times 10^5$ Pa"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:1:1.3",
+        "number": "1.3",
+        "title": "Significant Figures",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:1:1.3:1",
+            "order": 1,
+            "title": "Concept of Significant Figures",
+            "content_text": "Every measurement involves errors, and the result should be reported in a way that indicates the precision of measurement. Normally, the reported result is a number that includes all digits in the number that are known reliably plus the first digit that is uncertain. The reliable digits plus the first uncertain digit are known as significant digits or significant figures. For example, if the period of oscillation of a simple pendulum is 1.62 s, the digits 1 and 6 are reliable and certain, while the digit 2 is uncertain.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:1:1.3:2",
+            "order": 2,
+            "title": "Rules for Significant Figures and Unit Conversion",
+            "content_text": "Significant figures indicate the precision of measurement which depends on the least count of the measuring instrument. A choice of change of different units does not change the number of significant digits or figures in a measurement. For example, the length 2.308 cm has four significant figures. In different units, the same value can be written as 0.02308 m, 23.08 mm, or 23080 $\\mu$m. All these numbers have the same number of significant figures (digits 2, 3, 0, 8), namely four.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:1:1.3:3",
+            "order": 3,
+            "title": "Rules for Significant Figures (Continued)",
+            "content_text": "The location of the decimal point is of no consequence in determining the number of significant figures. The following rules apply: 1. All non-zero digits are significant. 2. All zeros between two non-zero digits are significant, regardless of where the decimal point is. 3. For numbers less than 1, zeros to the right of the decimal point but to the left of the first non-zero digit are not significant (e.g., in $0.002308$, the leading zeros are not significant). 4. Terminal or trailing zeros in a number without a decimal point are not significant (e.g., $123\\text{ m} = 12300\\text{ cm} = 123000\\text{ mm}$ has only three significant figures). 5. Trailing zeros in a number with a decimal point are significant (e.g., $3.500$ or $0.06900$ have four significant figures each). Additionally, the digit 0 conventionally placed to the left of a decimal for a number less than 1 (like $0.1250$) is never significant, but the zeros at the end of such a number are significant.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:1:1.3:4",
+            "order": 4,
+            "title": "Scientific Notation and Ambiguity",
+            "content_text": "To remove ambiguities in determining the number of significant figures, the best practice is to report every measurement in scientific notation (powers of 10). In this notation, every number is expressed as $a \\times 10^b$, where $a$ is a number between 1 and 10, and $b$ is any power of 10. The power of 10 is irrelevant to the determination of significant figures. However, all zeros appearing in the base number $a$ are significant. For example, a length reported as $4.700\\text{ m}$ can be written as $4.700 \\times 10^2\\text{ cm}$, $4.700 \\times 10^3\\text{ mm}$, or $4.700 \\times 10^{-3}\\text{ km}$, all of which clearly show four significant figures.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:1:1.3:5",
+            "order": 5,
+            "title": "Order of Magnitude",
+            "content_text": "The order of magnitude provides an approximate idea of a number. To determine it, the number $a$ in $a \\times 10^b$ is rounded to 1 if $a \\le 5$, and to 10 if $5 < a \\le 10$. The resulting power of 10 is the order of magnitude. For example, the diameter of the Earth ($1.28 \\times 10^7\\text{ m}$) has an order of magnitude of $10^7$, while the diameter of a hydrogen atom ($1.06 \\times 10^{-10}\\text{ m}$) has an order of magnitude of $10^{-10}$. Thus, the Earth is 17 orders of magnitude larger than a hydrogen atom.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:1:1.3:6",
+            "order": 6,
+            "title": "Exact Numbers and Constants",
+            "content_text": "Multiplying or dividing factors that are neither rounded numbers nor measured values are considered exact and possess an infinite number of significant digits. For example, in the formula for radius $r = \\frac{d}{2}$ or circumference $s = 2\\pi r$, the factor 2 is an exact number and can be written as $2.0, 2.00,$ or $2.0000$ as required. Similarly, in $T = \\frac{t}{n}$, $n$ is an exact number.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:1:1.3:7",
+            "order": 7,
+            "title": "Rounding Errors in Multi-step Computations",
+            "content_text": "In multi-step calculations, rounding off intermediate results to the same number of significant figures as the least precise measurement can lead to the accumulation of rounding errors. For example, the reciprocal of $9.58$ (three significant figures) is $0.10438...$. If rounded to three figures ($0.104$) and then its reciprocal is taken, we get $9.62$. However, if we retain an extra digit ($0.1044$) and then take the reciprocal, we retrieve the original value of $9.58$. This justifies the rule to retain one more extra digit than the number of digits in the least precise measurement during intermediate steps of complex calculations to avoid additional errors.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:1:1.3.1",
+        "number": "1.3.1",
+        "title": "Rules for Arithmetic Operations with Significant Figures",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:1:1.3.1:1",
+            "order": 1,
+            "title": "Multiplication and Division Rule",
+            "content_text": "In multiplication or division, the final result should retain as many significant figures as are present in the original number with the least number of significant figures. For example, if mass is $4.237\\text{ g}$ (4 sig figs) and volume is $2.51\\text{ cm}^3$ (3 sig figs), the density should be reported to three significant figures: $\\text{Density} = \\frac{4.237\\text{ g}}{2.51\\text{ cm}^3} = 1.69\\text{ g cm}^{-3}$.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:1:1.3.1:2",
+            "order": 2,
+            "title": "Addition and Subtraction Rule",
+            "content_text": "In addition or subtraction, the final result should retain as many decimal places as are present in the number with the least decimal places. For example, the sum of $436.32\\text{ g}$ (2 decimal places), $227.2\\text{ g}$ (1 decimal place), and $0.301\\text{ g}$ (3 decimal places) is $663.821\\text{ g}$, which must be rounded to $663.8\\text{ g}$. Similarly, $0.307\\text{ m} - 0.304\\text{ m} = 0.003\\text{ m}$, which is $3 \\times 10^{-3}\\text{ m}$. Note that these rules for addition/subtraction focus on decimal places, not total significant figures.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:1:1.3.2",
+        "number": "1.3.2",
+        "title": "Rounding off the Uncertain Digits",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:1:1.3.2:1",
+            "order": 1,
+            "title": "General Rounding Rules",
+            "content_text": "The result of a computation with approximate numbers must be rounded off to the appropriate number of significant figures. The convention is: 1. If the digit to be dropped is more than 5, the preceding digit is raised by 1. 2. If the digit to be dropped is less than 5, the preceding digit is left unchanged. For example, $2.746$ rounded to three significant figures is $2.75$, while $1.743$ becomes $1.74$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:1:1.3.2:2",
+            "order": 2,
+            "title": "Rounding when the Digit is 5",
+            "content_text": "If the insignificant digit to be dropped is exactly 5, the convention is: 1. If the preceding digit is even, the insignificant digit is simply dropped. 2. If the preceding digit is odd, the preceding digit is raised by 1. For example, $2.745$ rounded to three significant figures becomes $2.74$ (since 4 is even), whereas $2.735$ becomes $2.74$ (since 3 is odd).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:1:1.3.2:3",
+            "order": 3,
+            "title": "Rounding in Multi-step Calculations",
+            "content_text": "In any complex multi-step calculation, one should retain one extra digit (one more than the significant digits) in intermediate steps and round off to the proper significant figures only at the end of the calculation. This avoids cumulative rounding errors. Constants like $\\pi$ or exact numbers in formulas (e.g., $2\\pi$ in $T = 2\\pi \\sqrt{\\frac{L}{g}}$) have an infinite number of significant figures and should be used with sufficient precision.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:1:1.3.3",
+        "number": "1.3.3",
+        "title": "Rules for Determining the Uncertainty in the Results of Arithmetic Calculations",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:1:1.3.3:1",
+            "order": 1,
+            "title": "Uncertainty Propagation in Products",
+            "content_text": "Uncertainties in measured values propagate through arithmetic operations. Consider a rectangular sheet with length $l = 16.2 \\pm 0.1\\text{ cm}$ and breadth $b = 10.1 \\pm 0.1\\text{ cm}$. Both have three significant figures. The relative error in $l$ is $0.6\\%$ and in $b$ is $1\\%$. The relative error of the product $lb$ is the sum of these errors ($1.6\\%$). $lb = 163.62\\text{ cm}^2 \\pm 1.6\\%$, which equals $163.62 \\pm 2.6\\text{ cm}^2$. Rounding to the appropriate uncertainty, the result is $164 \\pm 3\\text{ cm}^2$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:1:1.3.3:2",
+            "order": 2,
+            "title": "Worked Example: Cube Dimensions",
+            "content_text": "This example demonstrates rounding area and volume based on the significant figures of the measured side length.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 1.1",
+                "problem": "Each side of a cube is measured to be $7.203\\text{ m}$. What are the total surface area and the volume of the cube to appropriate significant figures?",
+                "solution": "The number of significant figures in the measured length is 4. Surface area of the cube $= 6(7.203)^2\\text{ m}^2 = 311.299254\\text{ m}^2$. Rounded to 4 significant figures, it is $311.3\\text{ m}^2$. Volume of the cube $= (7.203)^3\\text{ m}^3 = 373.714754\\text{ m}^3$. Rounded to 4 significant figures, it is $373.7\\text{ m}^3$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:1:1.3.3:3",
+            "order": 3,
+            "title": "Worked Example: Density Calculation",
+            "content_text": "This example illustrates the rule for multiplication and division where the result is limited by the least precise input.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 1.2",
+                "problem": "$5.74\\text{ g}$ of a substance occupies $1.2\\text{ cm}^3$. Express its density by keeping the significant figures in view.",
+                "solution": "There are 3 significant figures in the mass ($5.74\\text{ g}$) and 2 significant figures in the volume ($1.2\\text{ cm}^3$). Density $= \\frac{5.74}{1.2}\\text{ g cm}^{-3} = 4.7833...\\text{ g cm}^{-3}$. Rounding to 2 significant figures, the density is $4.8\\text{ g cm}^{-3}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:1:1.3.3:4",
+            "order": 4,
+            "title": "Validity of Significant Figures in Combined Data",
+            "content_text": "If experimental data are specified to $n$ significant figures, a result obtained by combining them is generally valid to $n$ significant figures. However, subtraction can reduce the number of significant figures. For example, $12.9\\text{ g} - 7.06\\text{ g} = 5.84\\text{ g}$. Since $12.9$ has only one decimal place, the result must be reported as $5.8\\text{ g}$, reducing the significant figures from three to two.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:1:1.3.3:5",
+            "order": 5,
+            "title": "Relative Error and Numerical Magnitude",
+            "content_text": "The relative error of a value depends not only on the number of significant figures ($n$) but also on the magnitude of the number itself. For example, a measurement of $1.02\\text{ g}$ has an uncertainty of $\\pm 0.01\\text{ g}$ (relative error $\\approx 1\\%$), while a measurement of $9.89\\text{ g}$ with the same absolute uncertainty has a relative error of only $\\approx 0.1\\%$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:1:1.3.3:6",
+            "order": 6,
+            "title": "Rule for Intermediate Results in Multi-step Computations",
+            "content_text": "Intermediate results in a multi-step computation should be calculated to one more significant figure in every measurement than the number of digits in the least precise measurement. This ensures that the final rounded result is justified by the precision of the original data.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:1:1.4",
+        "number": "1.4",
+        "title": "Dimensions of Physical Quantities",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:1:1.4:1",
+            "order": 1,
+            "title": "Definition of Dimensions",
+            "content_text": "The nature of a physical quantity is described by its dimensions. All physical quantities represented by derived units can be expressed as a combination of seven fundamental or base quantities. These base quantities are called the seven dimensions of the physical world, denoted with square brackets $[ ]$: length $[L]$, mass $[M]$, time $[T]$, electric current $[A]$, thermodynamic temperature $[K]$, luminous intensity $[cd]$, and amount of substance $[mol]$. The dimensions of a physical quantity are the powers (or exponents) to which the base quantities are raised to represent that quantity.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:1:1.4:2",
+            "order": 2,
+            "title": "Dimensions of Mechanical Quantities",
+            "content_text": "In mechanics, physical quantities are written in terms of $[L]$, $[M]$, and $[T]$. For example, volume is the product of length, breadth, and height, so its dimensions are $[L] \\times [L] \\times [L] = [L^3]$. It has zero dimension in mass $[M^0]$, zero dimension in time $[T^0]$, and three dimensions in length. Similarly, force is the product of mass and acceleration. Since acceleration is length divided by time squared, force has dimensions $[M] [L] / [T]^2 = [M L T^{-2}]$. This means force has one dimension in mass, one in length, and $-2$ in time.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:1:1.4:3",
+            "order": 3,
+            "title": "Qualitative Nature of Dimensions",
+            "content_text": "Dimensions represent the quality of the type of physical quantity, not its magnitude. Therefore, a change in velocity, initial velocity, average velocity, final velocity, and speed are all equivalent in terms of dimensions; they are all expressed as length/time, and their dimensions are $[L]/[T]$ or $[L T^{-1}]$. Dimensions in all other base quantities for these examples are zero.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:1:1.5",
+        "number": "1.5",
+        "title": "Dimensional Formulae and Dimensional Equations",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:1:1.5:1",
+            "order": 1,
+            "title": "Dimensional Formula",
+            "content_text": "The expression which shows how and which of the base quantities represent the dimensions of a physical quantity is called the dimensional formula of that quantity. For example, the dimensional formula of volume is $[M^0 L^3 T^0]$, and that of speed or velocity is $[M^0 L T^{-1}]$. Acceleration is represented as $[M^0 L T^{-2}]$ and mass density as $[M L^{-3} T^0]$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:1:1.5:2",
+            "order": 2,
+            "title": "Dimensional Equation",
+            "content_text": "An equation obtained by equating a physical quantity with its dimensional formula is called the dimensional equation of the physical quantity. These equations represent the dimensions of a physical quantity in terms of base quantities. Examples include: $[V] = [M^0 L^3 T^0]$ for volume, $[v] = [M^0 L T^{-1}]$ for speed, $[F] = [M L T^{-2}]$ for force, and $[\\rho] = [M L^{-3} T^0]$ for mass density.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:1:1.6",
+        "number": "1.6",
+        "title": "Dimensional Analysis and its Applications",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:1:1.6:1",
+            "order": 1,
+            "title": "Introduction to Dimensional Analysis",
+            "content_text": "Dimensional analysis is a tool used to guide the description of physical behavior. It is based on the principle that only physical quantities with the same dimensions can be added or subtracted. It helps in deducing relations among different physical quantities and checking the derivation, accuracy, and dimensional consistency (homogeneity) of mathematical expressions. When magnitudes are multiplied or divided, their units and dimensions are treated as ordinary algebraic symbols.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:1:1.6.1",
+        "number": "1.6.1",
+        "title": "Checking the Dimensional Consistency of Equations",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:1:1.6.1:1",
+            "order": 1,
+            "title": "The Principle of Homogeneity of Dimensions",
+            "content_text": "The principle of homogeneity of dimensions states that the magnitudes of physical quantities may be added together or subtracted from one another only if they have the same dimensions. For instance, velocity cannot be added to force, nor can electric current be subtracted from thermodynamic temperature. If the dimensions of all terms in an equation are not the same, the equation is wrong.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:1:1.6.1:2",
+            "order": 2,
+            "title": "Testing Dimensional Consistency",
+            "content_text": "To test the consistency of an equation like $x = x_0 + v_0 t + (1/2) a t^2$, we check the dimensions of each term. Here, $[x] = [L]$, $[x_0] = [L]$, $[v_0 t] = [L T^{-1}] [T] = [L]$, and $[(1/2) a t^2] = [L T^{-2}] [T^2] = [L]$. Since every term has the dimension of length, the equation is dimensionally correct. Note that arguments of special functions like trigonometric, logarithmic, and exponential functions must be dimensionless. Pure numbers and ratios of similar quantities (like angle or refractive index) are also dimensionless.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:1:1.6.1:3",
+            "order": 3,
+            "title": "Limitations of Dimensional Consistency",
+            "content_text": "A test of consistency of dimensions is essentially a test of consistency of units. While it ensures we don't need to worry about unit conversions between multiples and sub-multiples, it has a major limitation: if an equation fails the consistency test, it is proved wrong; but if it passes, it is not necessarily proved right. A dimensionally correct equation might still be numerically incorrect due to dimensionless constants or functions.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:1:1.6.1:4",
+            "order": 4,
+            "title": "Worked Example: Kinetic and Potential Energy",
+            "content_text": "This subsection demonstrates checking the dimensional consistency of the energy equation $\\frac{1}{2} m v^2 = m g h$.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 1.3",
+                "problem": "Let us consider an equation $\\frac{1}{2} m v^2 = m g h$ where $m$ is the mass of the body, $v$ its velocity, $g$ is the acceleration due to gravity and $h$ is the height. Check whether this equation is dimensionally correct.",
+                "solution": "The dimensions of LHS are $[M] [L T^{-1}]^2 = [M] [L^2 T^{-2}] = [M L^2 T^{-2}]$. The dimensions of RHS are $[M] [L T^{-2}] [L] = [M] [L^2 T^{-2}] = [M L^2 T^{-2}]$. The dimensions of LHS and RHS are the same and hence the equation is dimensionally correct."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:1:1.6.1:5",
+            "order": 5,
+            "title": "Worked Example: Ruling out Formulae",
+            "content_text": "This subsection shows how dimensional analysis can be used to rule out incorrect physical formulae.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 1.4",
+                "problem": "The SI unit of energy is $J = kg \\, m^2 \\, s^{-2}$; that of speed $v$ is $m \\, s^{-1}$ and of acceleration $a$ is $m \\, s^{-2}$. Which of the formulae for kinetic energy ($K$) given below can you rule out on the basis of dimensional arguments ($m$ stands for the mass of the body):\n(a) $K = m^2 v^3$\n(b) $K = (1/2)mv^2$\n(c) $K = ma$\n(d) $K = (3/16)mv^2$\n(e) $K = (1/2)mv^2 + ma$",
+                "solution": "The dimensions of kinetic energy $K$ are $[M L^2 T^{-2}]$. \n(a) $[m^2 v^3] = [M^2 L^3 T^{-3}]$ (Incorrect)\n(b) $[(1/2)mv^2] = [M L^2 T^{-2}]$ (Correct dimensions)\n(c) $[ma] = [M L T^{-2}]$ (Incorrect)\n(d) $[(3/16)mv^2] = [M L^2 T^{-2}]$ (Correct dimensions)\n(e) $[(1/2)mv^2 + ma]$ involves adding terms with different dimensions ($[M L^2 T^{-2}]$ and $[M L T^{-2}]$), which is impossible (Incorrect).\nDimensional analysis cannot distinguish between (b) and (d) because of the dimensionless constants. From the actual definition, (b) is the correct formula."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:1:1.6.2",
+        "number": "1.6.2",
+        "title": "Deducing Relation among the Physical Quantities",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:1:1.6.2:1",
+            "order": 1,
+            "title": "Method of Deducing Relations",
+            "content_text": "The method of dimensions can be used to deduce relations among physical quantities if we know the quantities on which a particular physical quantity depends. We assume the dependence is of a product type (powers of base quantities) and then use the principle of homogeneity to find the exponents.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:1:1.6.2:2",
+            "order": 2,
+            "title": "Worked Example: Simple Pendulum",
+            "content_text": "This subsection illustrates the derivation of the time period of a simple pendulum using dimensional analysis.",
+            "content_type": "derivation",
+            "worked_examples": [
+              {
+                "label": "Example 1.5",
+                "problem": "Consider a simple pendulum, having a bob attached to a string, that oscillates under the action of the force of gravity. Suppose that the period of oscillation of the simple pendulum depends on its length ($l$), mass of the bob ($m$) and acceleration due to gravity ($g$). Derive the expression for its time period using method of dimensions.",
+                "solution": "The dependence of time period $T$ on $l, g$ and $m$ as a product may be written as: $T = k \\, l^x g^y m^z$ where $k$ is a dimensionless constant and $x, y, z$ are exponents. \nTaking dimensions on both sides: $[L^0 M^0 T^1] = [L]^x [L T^{-2}]^y [M]^z = L^{x+y} T^{-2y} M^z$. \nEquating dimensions: \n$x + y = 0$; \n$-2y = 1 \\implies y = -1/2$; \n$z = 0$. \nSubstituting $y$ in the first equation: $x - 1/2 = 0 \\implies x = 1/2$. \nSo, $T = k \\, l^{1/2} g^{-1/2} \\implies T = k \\sqrt{l/g}$. \nThe value of $k$ cannot be found by this method. Experimentally, $k = 2\\pi$, so $T = 2\\pi \\sqrt{l/g}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:1:1.6.2:3",
+            "order": 3,
+            "title": "Limitations of Dimensional Analysis in Deducing Relations",
+            "content_text": "Dimensional analysis is very useful but has limitations: dimensionless constants cannot be obtained by this method. It can only test dimensional validity, not the exact relationship if multiple physical quantities have the same dimensions. It also cannot distinguish between physical quantities having the same dimensions.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:1:Summary",
+        "number": "Summary",
+        "title": "Summary of Units and Measurement",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:1:Summary:1",
+            "order": 1,
+            "title": "Foundations of Measurement and Units",
+            "content_text": "Physics is a quantitative science, based on the measurement of physical quantities. Certain physical quantities have been chosen as fundamental or base quantities, which include length, mass, time, electric current, thermodynamic temperature, amount of substance, and luminous intensity. Each base quantity is defined in terms of a certain basic, arbitrarily chosen but properly standardised reference standard called a unit. Examples include the metre, kilogram, second, ampere, kelvin, mole, and candela. The units for these fundamental quantities are called fundamental or base units. Other physical quantities, derived from these base quantities, can be expressed as a combination of the base units and are called derived units. A complete set of units, comprising both fundamental and derived units, is referred to as a system of units.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:1:Summary:2",
+            "order": 2,
+            "title": "The International System of Units (SI)",
+            "content_text": "The International System of Units (SI), based on seven base units, is the currently internationally accepted unit system and is widely used throughout the world. SI units are used in all physical measurements for both base and derived quantities. Certain derived units are expressed using SI units with special names, such as the joule ($J$), newton ($N$), and watt ($W$). The SI units have well-defined and internationally accepted symbols, such as $m$ for metre, $kg$ for kilogram, $s$ for second, $A$ for ampere, and $N$ for newton.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:1:Summary:3",
+            "order": 3,
+            "title": "Scientific Notation and Algebraic Treatment",
+            "content_text": "Physical measurements are usually expressed in scientific notation using powers of $10$. This notation, along with SI prefixes, simplifies measurement notation and numerical computation while indicating the precision of the numbers. General rules and guidelines must be followed for using notations for physical quantities and standard symbols for SI units and prefixes. In computing any physical quantity, the units for derived quantities involved in the relationships are treated as algebraic quantities until the desired units are obtained.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:1:Summary:4",
+            "order": 4,
+            "title": "Significant Figures and Dimensional Analysis",
+            "content_text": "In measured and computed quantities, only proper significant figures should be retained. Specific rules must be followed for determining the number of significant figures, performing arithmetic operations, and rounding off uncertain digits. The dimensions of base quantities and their combinations describe the nature of physical quantities. Dimensional analysis is a powerful tool used to check the dimensional consistency of equations and to deduce relations among physical quantities. It is important to note that while a dimensionally consistent equation may not necessarily be correct, a dimensionally inconsistent equation is definitely wrong.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises (Note: In stating numerical answers, take care of significant figures.)",
+      "items": [
+        {
+          "id": "ncert:physics:11:1:ex:1",
+          "number": 1,
+          "problem": "Fill in the blanks: (a) The volume of a cube of side $1\\text{ cm}$ is equal to $.....\\text{m}^3$. (b) The surface area of a solid cylinder of radius $2.0\\text{ cm}$ and height $10.0\\text{ cm}$ is equal to $...(\\text{mm})^2$. (c) A vehicle moving with a speed of $18\\text{ km h}^{-1}$ covers $....\\text{m}$ in $1\\text{ s}$. (d) The relative density of lead is $11.3$. Its density is $....\\text{g cm}^{-3}$ or $....\\text{kg m}^{-3}$.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:1:ex:2",
+          "number": 2,
+          "problem": "Fill in the blanks by suitable conversion of units: (a) $1\\text{ kg m}^2\\text{ s}^{-2} = ....\\text{g cm}^2\\text{ s}^{-2}$. (b) $1\\text{ m} = .....\\text{ ly}$. (c) $3.0\\text{ m s}^{-2} = ....\\text{ km h}^{-2}$. (d) $G = 6.67 \\times 10^{-11}\\text{ N m}^2\\text{ (kg)}^{-2} = ....\\text{ (cm)}^3\\text{ s}^{-2}\\text{ g}^{-1}$.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:1:ex:3",
+          "number": 3,
+          "problem": "A calorie is a unit of heat (energy in transit) and it equals about $4.2\\text{ J}$ where $1\\text{ J} = 1\\text{ kg m}^2\\text{ s}^{-2}$. Suppose we employ a system of units in which the unit of mass equals $\\alpha\\text{ kg}$, the unit of length equals $\\beta\\text{ m}$, the unit of time is $\\gamma\\text{ s}$. Show that a calorie has a magnitude $4.2\\alpha^{-1}\\beta^{-2}\\gamma^2$ in terms of the new units.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "derivation"
+        },
+        {
+          "id": "ncert:physics:11:1:ex:4",
+          "number": 4,
+          "problem": "Explain this statement clearly: \"To call a dimensional quantity 'large' or 'small' is meaningless without specifying a standard for comparison\". In view of this, reframe the following statements wherever necessary: (a) atoms are very small objects (b) a jet plane moves with great speed (c) the mass of Jupiter is very large (d) the air inside this room contains a large number of molecules (e) a proton is much more massive than an electron (f) the speed of sound is much smaller than the speed of light.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:1:ex:5",
+          "number": 5,
+          "problem": "A new unit of length is chosen such that the speed of light in vacuum is unity. What is the distance between the Sun and the Earth in terms of the new unit if light takes $8\\text{ min}$ and $20\\text{ s}$ to cover this distance?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:1:ex:6",
+          "number": 6,
+          "problem": "Which of the following is the most precise device for measuring length: (a) a vernier callipers with $20$ divisions on the sliding scale (b) a screw gauge of pitch $1\\text{ mm}$ and $100$ divisions on the circular scale (c) an optical instrument that can measure length to within a wavelength of light?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:1:ex:7",
+          "number": 7,
+          "problem": "A student measures the thickness of a human hair by looking at it through a microscope of magnification $100$. He makes $20$ observations and finds that the average width of the hair in the field of view of the microscope is $3.5\\text{ mm}$. What is the estimate on the thickness of hair?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:1:ex:8",
+          "number": 8,
+          "problem": "Answer the following: (a) You are given a thread and a metre scale. How will you estimate the diameter of the thread? (b) A screw gauge has a pitch of $1.0\\text{ mm}$ and $200$ divisions on the circular scale. Do you think it is possible to increase the accuracy of the screw gauge arbitrarily by increasing the number of divisions on the circular scale? (c) The mean diameter of a thin brass rod is to be measured by vernier callipers. Why is a set of $100$ measurements of the diameter expected to yield a more reliable estimate than a set of $5$ measurements only?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:1:ex:9",
+          "number": 9,
+          "problem": "The photograph of a house occupies an area of $1.75\\text{ cm}^2$ on a $35\\text{ mm}$ slide. The slide is projected on to a screen, and the area of the house on the screen is $1.55\\text{ m}^2$. What is the linear magnification of the projector-screen arrangement.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:1:ex:10",
+          "number": 10,
+          "problem": "State the number of significant figures in the following: (a) $0.007\\text{ m}^2$ (b) $2.64 \\times 10^{24}\\text{ kg}$ (c) $0.2370\\text{ g cm}^{-3}$ (d) $6.320\\text{ J}$ (e) $6.032\\text{ N m}^{-2}$ (f) $0.0006032\\text{ m}^2$",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:1:ex:11",
+          "number": 11,
+          "problem": "The length, breadth and thickness of a rectangular sheet of metal are $4.234\\text{ m}$, $1.005\\text{ m}$, and $2.01\\text{ cm}$ respectively. Give the area and volume of the sheet to correct significant figures.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:1:ex:12",
+          "number": 12,
+          "problem": "The mass of a box measured by a grocer's balance is $2.30\\text{ kg}$. Two gold pieces of masses $20.15\\text{ g}$ and $20.17\\text{ g}$ are added to the box. What is (a) the total mass of the box, (b) the difference in the masses of the pieces to correct significant figures?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:1:ex:13",
+          "number": 13,
+          "problem": "A famous relation in physics relates 'moving mass' $m$ to the 'rest mass' $m_0$ of a particle in terms of its speed $v$ and the speed of light, $c$. (This relation first arose as a consequence of special relativity due to Albert Einstein). A boy recalls the relation almost correctly but forgets where to put the constant $c$. He writes: $m = \\frac{m_0}{(1-v^2)^{1/2}}$. Guess where to put the missing $c$.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "derivation"
+        },
+        {
+          "id": "ncert:physics:11:1:ex:14",
+          "number": 14,
+          "problem": "The unit of length convenient on the atomic scale is known as an angstrom and is denoted by $\\text{\\AA}$: $1\\text{ \\AA} = 10^{-10}\\text{ m}$. The size of a hydrogen atom is about $0.5\\text{ \\AA}$. What is the total atomic volume in $\\text{m}^3$ of a mole of hydrogen atoms?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:1:ex:15",
+          "number": 15,
+          "problem": "One mole of an ideal gas at standard temperature and pressure occupies $22.4\\text{ L}$ (molar volume). What is the ratio of molar volume to the atomic volume of a mole of hydrogen? (Take the size of hydrogen molecule to be about $1\\text{ \\AA}$). Why is this ratio so large?",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:1:ex:16",
+          "number": 16,
+          "problem": "Explain this common observation clearly: If you look out of the window of a fast moving train, the nearby trees, houses etc. seem to move rapidly in a direction opposite to the train's motion, but the distant objects (hill tops, the Moon, the stars etc.) seem to be stationary. (In fact, since you are aware that you are moving, these distant objects seem to move with you).",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:1:ex:17",
+          "number": 17,
+          "problem": "The Sun is a hot plasma (ionized matter) with its inner core at a temperature exceeding $10^7\\text{ K}$, and its outer surface at a temperature of about $6000\\text{ K}$. At these high temperatures, no substance remains in a solid or liquid phase. In what range do you expect the mass density of the Sun to be, in the range of densities of solids and liquids or gases? Check if your guess is correct from the following data: mass of the Sun $= 2.0 \\times 10^{30}\\text{ kg}$, radius of the Sun $= 7.0 \\times 10^8\\text{ m}$.",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        }
+      ]
+    }
+  }
+}

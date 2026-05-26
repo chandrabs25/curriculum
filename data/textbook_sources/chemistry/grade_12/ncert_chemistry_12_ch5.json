@@ -1,0 +1,1287 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_chemistry_12_ch5.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:chemistry:12:5",
+  "curriculum": "ncert",
+  "subject": "chemistry",
+  "grade": 12,
+  "textbook_name": "Chemistry",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:chemistry:12:5",
+    "number": 5,
+    "title": "Coordination Compounds",
+    "summary": "Chapter 5, Coordination Compounds, introduces complex chemical species where a central metal atom or ion is bonded to ligands. It begins with Werner's Theory, defining primary and secondary valences and laying the groundwork for understanding coordination entities. This understanding allows for accurate nomenclature, guided by IUPAC rules, covering formula writing and naming conventions for various complex types. Isomerism in coordination compounds is then explored, including geometrical, optical, linkage, ionization, and solvate isomerism, highlighting how different spatial arrangements affect properties.\n\nThe chapter then delves into bonding theories, starting with the Valence Bond Theory (VBT), discussing hybridization and magnetic properties. However, VBT's limitations lead to the introduction of Crystal Field Theory (CFT), which explains the splitting of d-orbitals in octahedral and tetrahedral fields, the spectrochemical series, and the origin of color in coordination compounds due to d-d transitions. Metal carbonyls are briefly introduced. Finally, the chapter highlights the numerous practical applications of coordination compounds in analytical chemistry, metallurgy, biology (chlorophyll, hemoglobin, Vitamin B12), industry (catalysis), and medicine (chelate therapy, anti-cancer drugs). The sections build upon each other, moving from basic definitions and theories to more advanced explanations of bonding and applications, showcasing the crucial role these compounds play in diverse fields.",
+    "sections": [
+      {
+        "id": "ncert:chemistry:12:5:5.1",
+        "number": "5.1",
+        "title": "Werner's Theory of Coordination Compounds",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:5:5.1:1",
+            "order": 1,
+            "title": "Introduction to Coordination Compounds",
+            "content_text": "Coordination compounds are complex compounds in which metal atoms are bound to a number of anions or neutral molecules by sharing of electrons. These compounds are considered the backbone of modern inorganic and bio-inorganic chemistry and the chemical industry. They play vital roles in biological systems; for instance, chlorophyll, haemoglobin, and vitamin $B_{12}$ are coordination compounds of magnesium, iron, and cobalt, respectively. They also find extensive applications in metallurgical processes, industrial catalysis, analytical reagents, electroplating, textile dyeing, and medicinal chemistry.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.1:2",
+            "order": 2,
+            "title": "Werner's Experimental Observations",
+            "content_text": "Alfred Werner was the first to formulate ideas regarding the structures of coordination compounds. By studying the physical and chemical behavior of these compounds through simple experimental techniques, he proposed the concepts of primary valence and secondary valence for metal ions. In binary compounds like $\\text{CrCl}_3$, $\\text{CoCl}_2$, or $\\text{PdCl}_2$, the primary valences are 3, 2, and 2, respectively. Werner investigated a series of cobalt(III) chloride compounds with ammonia and observed that when excess silver nitrate solution was added in the cold, varying amounts of chloride ions precipitated as $\\text{AgCl}$, while some remained in solution. For example, $1 \\text{ mol}$ of $\\text{CoCl}_3 \\cdot 6\\text{NH}_3$ (yellow) yielded $3 \\text{ mol AgCl}$, whereas $1 \\text{ mol}$ of $\\text{CoCl}_3 \\cdot 5\\text{NH}_3$ (purple) yielded $2 \\text{ mol AgCl}$. These results suggested that some groups are more tightly bound to the metal than others.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 5.1",
+                "caption": "Formulation of Cobalt(III) Chloride-Ammonia Complexes",
+                "headers": [
+                  "Colour",
+                  "Formula",
+                  "Solution conductivity corresponds to"
+                ],
+                "rows": [
+                  [
+                    "Yellow",
+                    "$[\\text{Co}(\\text{NH}_3)_6]^{3+}3\\text{Cl}^-$",
+                    "1:3 electrolyte"
+                  ],
+                  [
+                    "Purple",
+                    "$[\\text{CoCl}(\\text{NH}_3)_5]^{2+}2\\text{Cl}^-$",
+                    "1:2 electrolyte"
+                  ],
+                  [
+                    "Green",
+                    "$[\\text{CoCl}_2(\\text{NH}_3)_4]^+\\text{Cl}^-$",
+                    "1:1 electrolyte"
+                  ],
+                  [
+                    "Violet",
+                    "$[\\text{CoCl}_2(\\text{NH}_3)_4]^+\\text{Cl}^-$",
+                    "1:1 electrolyte"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.1:3",
+            "order": 3,
+            "title": "Postulates of Werner's Theory",
+            "content_text": "Werner propounded his theory of coordination compounds in 1898 with the following main postulates: 1. In coordination compounds, metals show two types of linkages (valences): primary and secondary. 2. Primary valences are normally ionisable and are satisfied by negative ions. 3. Secondary valences are non-ionisable and are satisfied by neutral molecules or negative ions. The secondary valence is equal to the coordination number and is fixed for a metal. 4. The ions or groups bound by secondary linkages to the metal have characteristic spatial arrangements corresponding to different coordination numbers.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.1:4",
+            "order": 4,
+            "title": "Coordination Polyhedra and Modern Formulations",
+            "content_text": "In modern terminology, the spatial arrangements of groups bound by secondary linkages are called coordination polyhedra. The species within square brackets are known as coordination entities or complexes, while the ions outside the square brackets are called counter ions. Common geometrical shapes include octahedral, tetrahedral, and square planar. For example, $[\\text{Co}(\\text{NH}_3)_6]^{3+}$, $[\\text{CoCl}(\\text{NH}_3)_5]^{2+}$, and $[\\text{CoCl}_2(\\text{NH}_3)_4]^+$ are octahedral entities, while $[\\text{Ni}(\\text{CO})_4]$ is tetrahedral and $[\\text{PtCl}_4]^{2-}$ is square planar.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.1:5",
+            "order": 5,
+            "title": "Worked Example: Assigning Secondary Valences",
+            "content_text": "Secondary valences can be determined by observing the number of moles of precipitate formed when a complex reacts with a reagent like silver nitrate. The chloride ions that do not precipitate are part of the secondary valence (coordination sphere).",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 5.1",
+                "problem": "On the basis of the following observations made with aqueous solutions, assign secondary valences to metals in the following compounds: (i) $\\text{PdCl}_2 \\cdot 4\\text{NH}_3$ (2 moles $\\text{AgCl}$ precipitated); (ii) $\\text{NiCl}_2 \\cdot 6\\text{H}_2\\text{O}$ (2 moles $\\text{AgCl}$); (iii) $\\text{PtCl}_4 \\cdot 2\\text{HCl}$ (0 moles $\\text{AgCl}$); (iv) $\\text{CoCl}_3 \\cdot 4\\text{NH}_3$ (1 mole $\\text{AgCl}$); (v) $\\text{PtCl}_2 \\cdot 2\\text{NH}_3$ (0 moles $\\text{AgCl}$).",
+                "solution": "(i) Secondary 4; (ii) Secondary 6; (iii) Secondary 6; (iv) Secondary 6; (v) Secondary 4."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.1:6",
+            "order": 6,
+            "title": "Difference between a Double Salt and a Complex",
+            "content_text": "Both double salts and complexes are formed by combining two or more stable compounds in stoichiometric ratios. However, they differ in their behavior in water. Double salts, such as carnallite ($\\text{KCl} \\cdot \\text{MgCl}_2 \\cdot 6\\text{H}_2\\text{O}$), Mohr's salt ($\\text{FeSO}_4 \\cdot (\\text{NH}_4)_2\\text{SO}_4 \\cdot 6\\text{H}_2\\text{O}$), and potash alum ($\\text{KAl}(\\text{SO}_4)_2 \\cdot 12\\text{H}_2\\text{O}$), dissociate completely into simple ions when dissolved in water. In contrast, complex ions, such as the $[\\text{Fe}(\\text{CN})_6]^{4-}$ ion in $\\text{K}_4[\\text{Fe}(\\text{CN})_6]$, do not dissociate into their constituent ions (e.g., $\\text{Fe}^{2+}$ and $\\text{CN}^-$) in solution.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.1:7",
+            "order": 7,
+            "title": "Biography of Alfred Werner",
+            "content_text": "Alfred Werner (1866-1919) was a Swiss chemist born in Mülhouse. He began his chemistry studies in Karlsruhe and continued in Zurich, where he earned his doctorate in 1890. He explained the properties of nitrogen-containing organic substances based on isomerism and extended van't Hoff's theory of tetrahedral carbon. Werner's revolutionary ideas on how atoms and molecules are linked in coordination compounds were formulated between 1890 and 1893. He was the first to discover optical activity in certain coordination compounds and was awarded the Nobel Prize in 1913 for his work on the linkage of atoms and coordination theory.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Portrait",
+                "description": "A black and white portrait of Alfred Werner (1866-1919), the Swiss chemist who developed the theory of coordination compounds.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:5:5.2",
+        "number": "5.2",
+        "title": "Definitions of Some Important Terms Pertaining to Coordination Compounds",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:5:5.2:1",
+            "order": 1,
+            "title": "Coordination Entity",
+            "content_text": "A coordination entity constitutes a central metal atom or ion bonded to a fixed number of ions or molecules. For example, $[CoCl_3(NH_3)_3]$ is a coordination entity in which the cobalt ion is surrounded by three ammonia molecules and three chloride ions. Other examples are $[Ni(CO)_4]$, $[PtCl_2(NH_3)_2]$, $[Fe(CN)_6]^{4-}$, and $[Co(NH_3)_6]^{3+}$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.2:2",
+            "order": 2,
+            "title": "Central Atom/Ion",
+            "content_text": "In a coordination entity, the atom/ion to which a fixed number of ions/groups are bound in a definite geometrical arrangement around it, is called the central atom or ion. For example, the central atom/ion in the coordination entities: $[NiCl_2(H_2O)_4]$, $[CoCl(NH_3)_5]^{2+}$ and $[Fe(CN)_6]^{3-}$ are $Ni^{2+}$, $Co^{3+}$ and $Fe^{3+}$, respectively. These central atoms/ions are also referred to as Lewis acids.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.2:3",
+            "order": 3,
+            "title": "Ligands and Denticity",
+            "content_text": "The ions or molecules bound to the central atom/ion in the coordination entity are called ligands. These may be simple ions such as $Cl^-$, small molecules such as $H_2O$ or $NH_3$, larger molecules such as $H_2NCH_2CH_2NH_2$ or $N(CH_2CH_2NH_2)_3$ or even macromolecules, such as proteins. When a ligand is bound to a metal ion through a single donor atom, as with $Cl^-$, $H_2O$ or $NH_3$, the ligand is said to be unidentate. When a ligand can bind through two donor atoms as in $H_2NCH_2CH_2NH_2$ (ethane-1,2-diamine) or $C_2O_4^{2-}$ (oxalate), the ligand is said to be didentate and when several donor atoms are present in a single ligand as in $N(CH_2CH_2NH_2)_3$, the ligand is said to be polydentate. Ethylenediaminetetraacetate ion ($EDTA^{4-}$) is an important hexadentate ligand. It can bind through two nitrogen and four oxygen atoms to a central metal ion.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "EDTA Structure",
+                "description": "Chemical structure of the hexadentate ligand Ethylenediaminetetraacetate ion (EDTA4-) showing two nitrogen atoms and four acetate groups (CH2COO-) as potential donor sites.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.2:4",
+            "order": 4,
+            "title": "Chelate and Ambidentate Ligands",
+            "content_text": "When a di- or polydentate ligand uses its two or more donor atoms simultaneously to bind a single metal ion, it is said to be a chelate ligand. The number of such ligating groups is called the denticity of the ligand. Such complexes, called chelate complexes, tend to be more stable than similar complexes containing unidentate ligands. A ligand which has two different donor atoms and either of the two ligates in the complex is called an ambidentate ligand. Examples of such ligands are the $NO_2^-$ and $SCN^-$ ions. The $NO_2^-$ ion can coordinate either through nitrogen (nitrito-N) or through oxygen (nitrito-O) to a central atom/ion. Similarly, the $SCN^-$ ion can coordinate through the sulphur (thiocyanato-S) or nitrogen (thiocyanato-N) atom.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Ambidentate Coordination Modes",
+                "description": "Structural diagrams showing the bonding of NO2- through Nitrogen (nitrito-N) and Oxygen (nitrito-O), and SCN- through Sulphur (thiocyanato-S) and Nitrogen (thiocyanato-N).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.2:5",
+            "order": 5,
+            "title": "Coordination Number",
+            "content_text": "The coordination number (CN) of a metal ion in a complex can be defined as the number of ligand donor atoms to which the metal is directly bonded. For example, in the complex ions $[PtCl_6]^{2-}$ and $[Ni(NH_3)_4]^{2+}$, the coordination number of $Pt$ and $Ni$ are 6 and 4 respectively. Similarly, in the complex ions $[Fe(C_2O_4)_3]^{3-}$ and $[Co(en)_3]^{3+}$, the coordination number of both $Fe$ and $Co$ is 6 because $C_2O_4^{2-}$ and $en$ (ethane-1,2-diamine) are didentate ligands. It is important to note that the coordination number is determined only by the number of sigma bonds formed by the ligand with the central atom/ion. Pi bonds, if formed, are not counted for this purpose.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.2:6",
+            "order": 6,
+            "title": "Coordination Sphere",
+            "content_text": "The central atom/ion and the ligands attached to it are enclosed in square brackets and are collectively termed as the coordination sphere. The ionisable groups are written outside the bracket and are called counter ions. For example, in the complex $K_4[Fe(CN)_6]$, the coordination sphere is $[Fe(CN)_6]^{4-}$ and the counter ion is $K^+$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.2:7",
+            "order": 7,
+            "title": "Coordination Polyhedron",
+            "content_text": "The spatial arrangement of the ligand atoms which are directly attached to the central atom/ion defines a coordination polyhedron about the central atom. The most common coordination polyhedra are octahedral, square planar and tetrahedral. For example, $[Co(NH_3)_6]^{3+}$ is octahedral, $[Ni(CO)_4]$ is tetrahedral and $[PtCl_4]^{2-}$ is square planar. Fig. 5.1 shows the shapes of different coordination polyhedra.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 5.1",
+                "description": "Shapes of different coordination polyhedra: Octahedral (6 ligands), Tetrahedral (4 ligands), Square planar (4 ligands), Trigonal bipyramidal (5 ligands), and Square pyramidal (5 ligands). M represents the central atom/ion and L represents a unidentate ligand.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.2:8",
+            "order": 8,
+            "title": "Oxidation Number of Central Atom",
+            "content_text": "The oxidation number of the central atom in a complex is defined as the charge it would carry if all the ligands are removed along with the electron pairs that are shared with the central atom. The oxidation number is represented by a Roman numeral in parenthesis following the name of the coordination entity. For example, the oxidation number of copper in $[Cu(CN)_4]^{3-}$ is $+1$ and it is written as $Cu(I)$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.2:9",
+            "order": 9,
+            "title": "Homoleptic and Heteroleptic Complexes",
+            "content_text": "Complexes in which a metal is bound to only one kind of donor groups, e.g., $[Co(NH_3)_6]^{3+}$, are known as homoleptic. Complexes in which a metal is bound to more than one kind of donor groups, e.g., $[Co(NH_3)_4Cl_2]^+$, are known as heteroleptic.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:5:5.3",
+        "number": "5.3",
+        "title": "Nomenclature of Coordination Compounds",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:5:5.3:1",
+            "order": 1,
+            "title": "Introduction to Nomenclature",
+            "content_text": "Nomenclature is important in Coordination Chemistry to provide an unambiguous method of describing formulas and writing systematic names, particularly for isomers. The formulas and names adopted are based on the recommendations of the International Union of Pure and Applied Chemistry (IUPAC).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.3:2",
+            "order": 2,
+            "title": "Formulas of Mononuclear Coordination Entities",
+            "content_text": "The formula of a compound provides basic information about its constitution. Mononuclear coordination entities contain a single central metal atom. Rules for writing formulas include: (i) The central atom is listed first. (ii) Ligands are listed in alphabetical order, irrespective of charge. (iii) Polydentate ligands are also listed alphabetically; for abbreviated ligands, the first letter of the abbreviation determines the position. (iv) The entire coordination entity is enclosed in square brackets. Polyatomic ligands and abbreviations are enclosed in parentheses. (v) No space is left between ligands and the metal. (vi) For charged entities without counter ions, the charge is indicated outside the square brackets as a right superscript (e.g., $[Co(CN)_6]^{3-}$). (vii) The charge of the cation(s) is balanced by the charge of the anion(s).",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.3:3",
+            "order": 3,
+            "title": "Naming of Mononuclear Coordination Compounds",
+            "content_text": "The names are derived following additive nomenclature principles: (i) The cation is named first. (ii) Ligands are named in alphabetical order before the central atom. (iii) Anionic ligands end in $-o$ (or $-ido$ per 2004 IUPAC recommendations, e.g., chlorido). Neutral/cationic ligands use their usual names except: aqua ($H_2O$), ammine ($NH_3$), carbonyl ($CO$), and nitrosyl ($NO$). (iv) Prefixes mono, di, tri, etc., indicate ligand quantity. If the ligand name includes a numerical prefix, bis, tris, tetrakis are used with the ligand in parentheses (e.g., $[NiCl_2(PPh_3)_2]$ is dichloridobis(triphenylphosphine)nickel(II)). (v) The metal's oxidation state is indicated by a Roman numeral in parentheses. (vi) If the complex is a cation or neutral, the metal name is unchanged. If it is an anion, the metal name ends in $-ate$ (e.g., cobaltate). Latin names are used for some metals in anions (e.g., ferrate for $Fe$).",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.3:4",
+            "order": 4,
+            "title": "Naming Neutral Coordination Complexes",
+            "content_text": "Neutral coordination complexes follow a naming convention similar to that of complex cations. The ligands are named first in alphabetical order, followed by the name of the central metal atom with its oxidation state indicated in Roman numerals within parentheses.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.3:5",
+            "order": 5,
+            "title": "Illustrative Examples of Nomenclature",
+            "content_text": "The nomenclature rules are applied to various compounds. For $[Cr(NH_3)_3(H_2O)_3]Cl_3$, the name is triamminetriaquachromium(III) chloride. The ammine ligands precede aqua alphabetically. The $+3$ oxidation state of chromium is determined by the three chloride counter ions. In $[Co(en)_3]_2(SO_4)_3$, named tris(ethane-1,2-diamine)cobalt(III) sulphate, the prefix 'tris' is used for the polydentate ligand. Note that the number of counter ions (sulphate) is not specified in the name. For double complex salts like $[Ag(NH_3)_2][Ag(CN)_2]$, both the cationic and anionic parts are named, resulting in diamminesilver(I)dicyanidoargentate(I).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.3:6",
+            "order": 6,
+            "title": "Worked Example: Writing Formulas from Names",
+            "content_text": "This subsection demonstrates how to translate IUPAC names into chemical formulas by identifying the central metal, ligands, and calculating the necessary counter ions to balance the charge based on the provided oxidation state.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 5.2",
+                "problem": "Write the formulas for the following coordination compounds: (a) tetraammineaquachloridocobalt(III) chloride (b) potassium tetrahydroxidozincate(II) (c) potassium trioxalatoaluminate(III) (d) dichloridobis(ethane-1,2-diamine)cobalt(III) (e) tetracarbonylnickel(0)",
+                "solution": "(a) $[Co(NH_3)_4(H_2O)Cl]Cl_2$ (b) $K_2[Zn(OH)_4]$ (c) $K_3[Al(C_2O_4)_3]$ (d) $[CoCl_2(en)_2]^+$ (e) $[Ni(CO)_4]$"
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.3:7",
+            "order": 7,
+            "title": "Worked Example: Assigning IUPAC Names",
+            "content_text": "This subsection provides practice in naming coordination compounds from their formulas, requiring the identification of ligands, their alphabetical order, and the calculation of the metal's oxidation state.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 5.3",
+                "problem": "Write the IUPAC names of the following coordination compounds: (a) $[Pt(NH_3)_2Cl(NO_2)]$ (b) $K_3[Cr(C_2O_4)_3]$ (c) $[CoCl_2(en)_2]Cl$ (d) $[Co(NH_3)_5(CO_3)]Cl$ (e) $Hg[Co(SCN)_4]$",
+                "solution": "(a) diamminechloridonitrito-N-platinum(II) (b) potassium trioxalatochromate(III) (c) dichloridobis(ethane-1,2-diamine)cobalt(III) chloride (d) pentaamminecarbonatocobalt(III) chloride (e) mercury (I) tetrathiocyanato-S-cobaltate(III)"
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:5:5.4",
+        "number": "5.4",
+        "title": "Isomerism in Coordination Compounds",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:5:5.4:1",
+            "order": 1,
+            "title": "Introduction to Isomerism",
+            "content_text": "Isomers are compounds with identical chemical formulas but different spatial arrangements of atoms, leading to distinct physical and chemical properties. Isomerism is broadly categorized into two types: Stereoisomerism and Structural isomerism. Stereoisomerism includes Geometrical and Optical isomerism, where atoms have the same bonds but different spatial orientations. Structural isomerism involves different bonding patterns and includes Linkage, Coordination, Ionisation, and Solvate isomerism.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.4:2",
+            "order": 2,
+            "title": "Geometric Isomerism in Square Planar Complexes",
+            "content_text": "Geometric isomerism occurs in heteroleptic complexes due to different possible spatial arrangements of ligands. In square planar complexes of the type $[MX_2L_2]$, ligands $X$ can be adjacent (cis isomer) or opposite (trans isomer). Complexes of the type $[MABXL]$ can form three distinct isomers (two cis and one trans). Tetrahedral complexes do not exhibit geometric isomerism because all four positions are equivalent relative to each other.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 5.2",
+                "description": "Geometrical isomers (cis and trans) of square planar platinum complex $[Pt(NH_3)_2Cl_2]$ showing Cl ligands adjacent in cis and opposite in trans.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.4:3",
+            "order": 3,
+            "title": "Geometric Isomerism in Octahedral Complexes",
+            "content_text": "Octahedral complexes of the type $[MX_2L_4]$ also show cis and trans isomerism depending on whether the two $X$ ligands are adjacent or opposite. This also applies to complexes with didentate ligands, such as $[MX_2(L-L)_2]$. For example, in $[CoCl_2(en)_2]^+$, the chloride ions can be positioned in a cis or trans configuration.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 5.3",
+                "description": "Geometrical isomers (cis and trans) of octahedral complex $[Co(NH_3)_4Cl_2]^+$.",
+                "image_url": null
+              },
+              {
+                "label": "Fig. 5.4",
+                "description": "Geometrical isomers (cis and trans) of octahedral complex $[CoCl_2(en)_2]$ involving didentate ethylenediamine ligands.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.4:4",
+            "order": 4,
+            "title": "Facial and Meridional Isomerism",
+            "content_text": "A specific type of geometric isomerism occurs in octahedral coordination entities of the type $[Ma_3b_3]$, such as $[Co(NH_3)_3(NO_2)_3]$. If three donor atoms of the same ligand occupy adjacent corners of an octahedral face, it is called the facial (fac) isomer. If these three donor atoms are arranged around the meridian of the octahedron, it is called the meridional (mer) isomer.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 5.5",
+                "description": "The facial (fac) and meridional (mer) isomers of $[Co(NH_3)_3(NO_2)_3]$ showing the triangular face arrangement vs the meridional plane arrangement.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.4:5",
+            "order": 5,
+            "title": "Absence of Geometric Isomerism in Tetrahedral Complexes",
+            "content_text": "Tetrahedral complexes do not show geometric isomerism because the relative positions of the unidentate ligands attached to the central metal atom are the same with respect to each other; there are no 'adjacent' or 'opposite' positions in a regular tetrahedron.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 5.4",
+                "problem": "Why is geometrical isomerism not possible in tetrahedral complexes having two different types of unidentate ligands coordinated with the central metal ion?",
+                "solution": "Tetrahedral complexes do not show geometrical isomerism because the relative positions of the unidentate ligands attached to the central metal atom are the same with respect to each other."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.4:6",
+            "order": 6,
+            "title": "Optical Isomerism",
+            "content_text": "Optical isomers, or enantiomers, are mirror images that cannot be superimposed on each other. Molecules that lack a plane of symmetry and are non-superimposable on their mirror images are called chiral. These isomers are distinguished by the direction in which they rotate plane-polarized light: dextro ($d$) rotates to the right, and laevo ($l$) rotates to the left. Optical isomerism is common in octahedral complexes containing didentate ligands, such as $[Co(en)_3]^{3+}$. In complexes like $[PtCl_2(en)_2]^{2+}$, only the cis-isomer is optically active, while the trans-isomer is achiral due to its symmetry.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 5.6",
+                "description": "Optical isomers (d and l) of $[Co(en)_3]^{3+}$ showing non-superimposable mirror images.",
+                "image_url": null
+              },
+              {
+                "label": "Fig. 5.7",
+                "description": "Optical isomers (d and l) of the cis-isomer of $[PtCl_2(en)_2]^{2+}$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.4:7",
+            "order": 7,
+            "title": "Worked Example: Geometrical Isomers",
+            "content_text": "This subsection provides a practical application of drawing geometrical isomers for a coordination entity with a coordination number of 6, specifically for the complex $[Fe(NH_3)_2(CN)_4]^-$.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 5.5",
+                "problem": "Draw structures of geometrical isomers of $[Fe(NH_3)_2(CN)_4]^-$",
+                "solution": "The complex $[Fe(NH_3)_2(CN)_4]^-$ exhibits cis and trans isomerism. In the cis isomer, the two $NH_3$ ligands are adjacent to each other. In the trans isomer, the two $NH_3$ ligands are opposite to each other (at an angle of $180^\\circ$). [Refer to diagrams for visual representation]"
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Example 5.5 Structures",
+                "description": "Structural diagrams of cis and trans isomers of $[Fe(NH_3)_2(CN)_4]^-$. The cis form shows $NH_3$ groups at adjacent positions of the octahedron, while the trans form shows them at opposite axial positions.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.4:8",
+            "order": 8,
+            "title": "Worked Example: Optical Activity and Chirality",
+            "content_text": "This subsection explores the concept of chirality in coordination compounds by comparing cis and trans isomers of a specific complex to determine which is optically active.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 5.6",
+                "problem": "Out of the following two coordination entities which is chiral (optically active)? (a) $cis-[CrCl_2(ox)_2]^{3-}$ (b) $trans-[CrCl_2(ox)_2]^{3-}$",
+                "solution": "The two entities are represented in the diagrams. Out of the two, (a) $cis-[CrCl_2(ox)_2]^{3-}$ is chiral (optically active) because it lacks a plane of symmetry and its mirror image is non-superimposable. The trans isomer is achiral as it possesses a plane of symmetry."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Example 5.6 Structures",
+                "description": "Diagrams showing the octahedral structures of (a) cis and (b) trans isomers of $[CrCl_2(ox)_2]^{3-}$. The cis isomer shows the bidentate oxalate (ox) ligands in a configuration that results in chirality.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.4:9",
+            "order": 9,
+            "title": "Linkage Isomerism",
+            "content_text": "Linkage isomerism arises in a coordination compound containing an ambidentate ligand. These ligands have two different donor atoms and can bind to the metal through either one. A simple example is provided by complexes containing the thiocyanate ligand, $NCS^-$, which may bind through the nitrogen to give $M-NCS$ (isothiocyanate) or through sulphur to give $M-SCN$ (thiocyanate). Jørgensen discovered such behaviour in the complex $[Co(NH_3)_5(NO_2)]Cl_2$, which is obtained as the red form, in which the nitrite ligand is bound through oxygen ($-ONO$), and as the yellow form, in which the nitrite ligand is bound through nitrogen ($-NO_2$).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.4:10",
+            "order": 10,
+            "title": "Coordination Isomerism",
+            "content_text": "This type of isomerism arises from the interchange of ligands between cationic and anionic entities of different metal ions present in a complex. An example is provided by $[Co(NH_3)_6][Cr(CN)_6]$, in which the $NH_3$ ligands are bound to $Co^{3+}$ and the $CN^-$ ligands to $Cr^{3+}$. In its coordination isomer $[Cr(NH_3)_6][Co(CN)_6]$, the $NH_3$ ligands are bound to $Cr^{3+}$ and the $CN^-$ ligands to $Co^{3+}$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.4:11",
+            "order": 11,
+            "title": "Ionisation Isomerism",
+            "content_text": "This form of isomerism arises when the counter ion in a complex salt is itself a potential ligand and can displace a ligand which can then become the counter ion. An example is provided by the ionisation isomers $[Co(NH_3)_5(SO_4)]Br$ and $[Co(NH_3)_5Br]SO_4$. In the first case, the sulphate ion is inside the coordination sphere, while in the second, the bromide ion is the ligand.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.4:12",
+            "order": 12,
+            "title": "Solvate Isomerism",
+            "content_text": "This form of isomerism is known as 'hydrate isomerism' in cases where water is involved as a solvent. This is similar to ionisation isomerism. Solvate isomers differ by whether or not a solvent molecule is directly bonded to the metal ion or merely present as free solvent molecules in the crystal lattice. An example is provided by the aqua complex $[Cr(H_2O)_6]Cl_3$ (violet) and its solvate isomer $[Cr(H_2O)_5Cl]Cl_2 \\cdot H_2O$ (grey-green).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:5:5.5",
+        "number": "5.5",
+        "title": "Bonding in Coordination Compounds",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:5:5.5:1",
+            "order": 1,
+            "title": "Limitations of Werner's Theory and Modern Approaches",
+            "content_text": "Werner was the first to describe the bonding features in coordination compounds, but his theory could not answer basic questions such as: (i) Why only certain elements possess the remarkable property of forming coordination compounds? (ii) Why the bonds in coordination compounds have directional properties? (iii) Why coordination compounds have characteristic magnetic and optical properties? Many approaches have been put forth to explain the nature of bonding in coordination compounds viz. Valence Bond Theory (VBT), Crystal Field Theory (CFT), Ligand Field Theory (LFT) and Molecular Orbital Theory (MOT). We shall focus on elementary treatment of the application of VBT and CFT to coordination compounds.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.5:2",
+            "order": 2,
+            "title": "Valence Bond Theory (VBT)",
+            "content_text": "According to this theory, the metal atom or ion under the influence of ligands can use its $(n-1)d, ns, np$ or $ns, np, nd$ orbitals for hybridisation to yield a set of equivalent orbitals of definite geometry such as octahedral, tetrahedral, square planar and so on. These hybridised orbitals are allowed to overlap with ligand orbitals that can donate electron pairs for bonding. The geometry of the complex depends on the coordination number and the type of hybridisation involved, as summarized in Table 5.2.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 5.2",
+                "caption": "Number of Orbitals and Types of Hybridisations",
+                "headers": [
+                  "Coordination number",
+                  "Type of hybridisation",
+                  "Distribution of hybrid orbitals in space"
+                ],
+                "rows": [
+                  [
+                    "4",
+                    "$sp^3$",
+                    "Tetrahedral"
+                  ],
+                  [
+                    "4",
+                    "$dsp^2$",
+                    "Square planar"
+                  ],
+                  [
+                    "5",
+                    "$sp^3d$",
+                    "Trigonal bipyramidal"
+                  ],
+                  [
+                    "6",
+                    "$sp^3d^2$",
+                    "Octahedral"
+                  ],
+                  [
+                    "6",
+                    "$d^2sp^3$",
+                    "Octahedral"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.5:3",
+            "order": 3,
+            "title": "VBT: Octahedral Complexes (Inner and Outer Orbital)",
+            "content_text": "It is usually possible to predict the geometry of a complex from the knowledge of its magnetic behaviour on the basis of the valence bond theory. \n\nIn the diamagnetic octahedral complex $[Co(NH_3)_6]^{3+}$, the cobalt ion is in $+3$ oxidation state with electronic configuration $3d^6$. Six pairs of electrons, one from each $NH_3$ molecule, occupy the six $d^2sp^3$ hybrid orbitals. Since the inner $d$ orbital ($3d$) is used in hybridisation, the complex is called an inner orbital or low spin or spin paired complex. \n\nThe paramagnetic octahedral complex $[CoF_6]^{3-}$ uses outer orbital ($4d$) in hybridisation ($sp^3d^2$). It is thus called an outer orbital or high spin or spin free complex. This complex has four unpaired electrons, making it paramagnetic.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Hybridisation of $[Co(NH_3)_6]^{3+}$",
+                "description": "Orbital diagrams showing $Co^{3+}$ ion ($3d^6$), $d^2sp^3$ hybridised orbitals, and the final complex where six pairs of electrons from $NH_3$ occupy the hybrid orbitals, leaving no unpaired electrons.",
+                "image_url": null
+              },
+              {
+                "label": "Hybridisation of $[CoF_6]^{3-}$",
+                "description": "Orbital diagrams showing $Co^{3+}$ ion ($3d^6$), $sp^3d^2$ hybridised orbitals (using $4d$), and the final complex where six pairs of electrons from $F^-$ occupy the hybrid orbitals, leaving four unpaired electrons in the $3d$ subshell.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.5:4",
+            "order": 4,
+            "title": "VBT: Tetrahedral Complexes",
+            "content_text": "In tetrahedral complexes, one $s$ and three $p$ orbitals are hybridised to form four equivalent orbitals oriented tetrahedrally. For example, in $[NiCl_4]^{2-}$, nickel is in $+2$ oxidation state with the electronic configuration $3d^8$. The $Cl^-$ ions donate four pairs of electrons to the $sp^3$ hybrid orbitals. The compound is paramagnetic since it contains two unpaired electrons in the $3d$ orbitals. Similarly, $[Ni(CO)_4]$ has tetrahedral geometry but is diamagnetic since nickel is in zero oxidation state and contains no unpaired electron. Square planar complexes utilize $dsp^2$ hybridization, as seen in $[Ni(CN)_4]^{2-}$. In this complex, $Ni^{2+}$ ($3d^8$) pairs its electrons to vacate one $3d$ orbital, which then hybridizes with the $4s$ and two $4p$ orbitals. This results in a diamagnetic, low-spin complex. It is important to note that hybrid orbitals are mathematical constructs derived from wave equations rather than physical entities.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Hybridisation of $[NiCl_4]^{2-}$",
+                "description": "Orbital diagrams showing $Ni^{2+}$ ion ($3d^8$), $sp^3$ hybrid orbitals, and the final complex where four pairs of electrons from $Cl^-$ occupy the hybrid orbitals, leaving two unpaired electrons in the $3d$ subshell.",
+                "image_url": null
+              },
+              {
+                "label": "Hybridisation scheme for [Ni(CN)4]2-",
+                "description": "Diagram showing the orbital occupancy for $Ni^{2+}$ ion ($3d^8$), the $dsp^2$ hybridised orbitals, and the final low-spin complex $[Ni(CN)_4]^{2-}$ where four pairs of electrons from $CN^-$ groups occupy one $3d$, one $4s$, and two $4p$ orbitals.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.5:5",
+            "order": 5,
+            "title": "Magnetic Properties of Coordination Compounds",
+            "content_text": "Magnetic susceptibility measurements are used to determine the magnetic moment of coordination compounds, providing data on the number of unpaired electrons. This information is crucial for inferring the electronic structure and geometry of the metal complex. For $d^1-d^3$ ions, two vacant $d$ orbitals are always available for octahedral hybridization, making their magnetic behavior similar to free ions.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.5:6",
+            "order": 6,
+            "title": "Magnetic Data and Orbital Complexes",
+            "content_text": "For ions with $d^4-d^6$ configurations, the required pair of $3d$ orbitals for octahedral hybridization is not naturally available due to Hund's rule. Depending on the ligand, electrons may pair up to create the necessary vacant $3d$ orbitals for $d^2sp^3$ (inner orbital) hybridization, or remain unpaired in $sp^3d^2$ (outer orbital) hybridization. For instance, $[Fe(CN)_6]^{3-}$ is an inner orbital complex with one unpaired electron, whereas $[FeF_6]^{3-}$ is an outer orbital complex with five.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.5:7",
+            "order": 7,
+            "title": "Predicting Geometry from Magnetic Data",
+            "content_text": "The geometry of a complex can be predicted if its magnetic moment is known. For example, a coordination number 4 complex with a high magnetic moment suggesting five unpaired electrons must be tetrahedral ($sp^3$) because square planar ($dsp^2$) geometry would require electron pairing.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 5.7",
+                "problem": "The spin only magnetic moment of $[MnBr_4]^{2-}$ is 5.9 BM. Predict the geometry of the complex ion?",
+                "solution": "The magnetic moment of 5.9 BM indicates the presence of five unpaired electrons in the $d$ orbitals of $Mn^{2+}$. Since the coordination number is 4, the geometry could be tetrahedral ($sp^3$) or square planar ($dsp^2$). Square planar geometry would require pairing of electrons to vacate a $d$ orbital, which contradicts the presence of five unpaired electrons. Therefore, the complex must have tetrahedral geometry involving $sp^3$ hybridization."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.5:8",
+            "order": 8,
+            "title": "Limitations of Valence Bond Theory",
+            "content_text": "Valence Bond Theory has several drawbacks: it relies on many assumptions, fails to provide quantitative interpretations of magnetic and stability data, does not explain the color of complexes, cannot reliably predict between tetrahedral and square planar geometries for coordination number 4, and does not distinguish between weak and strong ligands.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.5:9",
+            "order": 9,
+            "title": "Introduction to Crystal Field Theory",
+            "content_text": "Crystal Field Theory (CFT) is an electrostatic model that treats the metal-ligand bond as purely ionic, resulting from interactions between point charges (anions) or dipoles (neutral molecules). It focuses on how the approach of ligands lifts the degeneracy of the five $d$ orbitals in a metal ion. In an isolated gaseous state, the $d$ orbitals are degenerate, but an asymmetrical field of ligands removes this degeneracy.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.5:10",
+            "order": 10,
+            "title": "Crystal Field Splitting in Octahedral Entities",
+            "content_text": "In an octahedral field, ligands approach along the axes. This causes greater repulsion for the $d_{x^2-y^2}$ and $d_{z^2}$ orbitals (the $e_g$ set), raising their energy. The $d_{xy}, d_{yz},$ and $d_{xz}$ orbitals (the $t_{2g}$ set), which point between the axes, experience less repulsion and are lowered in energy relative to the average field. This separation of degenerate levels is called crystal field splitting.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 5.8",
+                "description": "Energy level diagram showing the splitting of five degenerate d-orbitals into two sets ($t_{2g}$ and $e_g$) in an octahedral crystal field. The $e_g$ set ($d_{x^2-y^2}, d_{z^2}$) is raised by $3/5 \\Delta_o$ and the $t_{2g}$ set ($d_{xy}, d_{yz}, d_{xz}$) is lowered by $2/5 \\Delta_o$ relative to the barycentre.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.5:11",
+            "order": 11,
+            "title": "The Spectrochemical Series",
+            "content_text": "The energy difference between the $t_{2g}$ and $e_g$ sets is the crystal field splitting energy, $\\Delta_o$. Ligands are categorized by their ability to split these orbitals into a spectrochemical series: $I^- < Br^- < SCN^- < Cl^- < S^{2-} < F^- < OH^- < C_2O_4^{2-} < H_2O < NCS^- < edta^{4-} < NH_3 < en < CN^- < CO$. Strong-field ligands cause large splitting, while weak-field ligands cause small splitting.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.5:12",
+            "order": 12,
+            "title": "Electron Distribution in Octahedral Fields",
+            "content_text": "For $d^4$ ions in an octahedral field, the fourth electron's placement depends on the relative magnitude of $\\Delta_o$ and the pairing energy ($P$). If $\\Delta_o < P$ (weak field), the electron enters the $e_g$ level, forming a high-spin complex ($t_{2g}^3 e_g^1$). If $\\Delta_o > P$ (strong field), the electron pairs in the $t_{2g}$ level, forming a low-spin complex ($t_{2g}^4 e_g^0$). Calculations show $d^4$ to $d^7$ entities are more stable in strong fields. In tetrahedral coordination entity formation, the $d$ orbital splitting is inverted and is smaller as compared to the octahedral field splitting. For the same metal, the same ligands, and metal-ligand distances, it can be shown that $\\Delta_t = \\frac{4}{9} \\Delta_o$. Consequently, the orbital splitting energies are not sufficiently large for forcing pairing and, therefore, low-spin configurations are rarely observed. The 'g' subscript, which denotes 'gerade' (even symmetry), is used for octahedral and square planar complexes because they possess a centre of symmetry. Since tetrahedral complexes lack a centre of symmetry, the 'g' subscript is not used with their energy levels ($e$ and $t_2$).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 5.9",
+                "description": "Diagram showing d orbital splitting in a tetrahedral crystal field. The five degenerate d orbitals of the free ion rise in energy in a spherical crystal field. In a tetrahedral field, they split into a lower energy doublet (e level: $d_{x^2-y^2}, d_{z^2}$) and a higher energy triplet ($t_2$ level: $d_{xy}, d_{yz}, d_{xz}$). The energy difference is $\\Delta_t$, with the $t_2$ level raised by $\\frac{2}{5}\\Delta_t$ and the e level lowered by $\\frac{3}{5}\\Delta_t$ from the average energy.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.5:13",
+            "order": 13,
+            "title": "Colour in Coordination Compounds",
+            "content_text": "One of the most distinctive properties of transition metal complexes is their wide range of colours. This phenomenon occurs because some of the visible spectrum is removed from white light as it passes through the sample. The light that emerges is no longer white, and its colour is complementary to the wavelength of light absorbed. The complementary colour is generated from the wavelengths left over; for instance, if green light is absorbed, the complex appears red. The relationship between the wavelength absorbed and the observed colour is detailed in Table 5.3.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 5.3",
+                "caption": "Relationship between the Wavelength of Light absorbed and the Colour observed in some Coordination Entities",
+                "headers": [
+                  "Coordination entity",
+                  "Wavelength of light absorbed (nm)",
+                  "Colour of light absorbed",
+                  "Colour of coordination entity"
+                ],
+                "rows": [
+                  [
+                    "$[CoCl(NH_3)_5]^{2+}$",
+                    "535",
+                    "Yellow",
+                    "Violet"
+                  ],
+                  [
+                    "$[Co(NH_3)_5(H_2O)]^{3+}$",
+                    "500",
+                    "Blue Green",
+                    "Red"
+                  ],
+                  [
+                    "$[Co(NH_3)_6]^{3+}$",
+                    "475",
+                    "Blue",
+                    "Yellow Orange"
+                  ],
+                  [
+                    "$[Co(CN)_6]^{3-}$",
+                    "310",
+                    "Ultraviolet (Not in visible region)",
+                    "Pale Yellow"
+                  ],
+                  [
+                    "$[Cu(H_2O)_4]^{2+}$",
+                    "600",
+                    "Red",
+                    "Blue"
+                  ],
+                  [
+                    "$[Ti(H_2O)_6]^{3+}$",
+                    "498",
+                    "Blue Green",
+                    "Violet"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.5:14",
+            "order": 14,
+            "title": "Explanation of Colour via d-d Transitions",
+            "content_text": "The colour of coordination compounds is explained by Crystal Field Theory through $d-d$ transitions. Consider $[Ti(H_2O)_6]^{3+}$, a violet octahedral complex with a $3d^1$ configuration. In the ground state, the single electron occupies the $t_{2g}$ level. When light in the blue-green region is absorbed, the electron is excited to the higher $e_g$ level ($t_{2g}^1 e_g^0 \\rightarrow t_{2g}^0 e_g^1$). The energy of the absorbed photon corresponds to the crystal field splitting energy $\\Delta_o$. Because blue-green light is absorbed, the complex transmits its complementary colour, violet.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 5.10",
+                "description": "Energy level diagram illustrating the transition of an electron in an octahedral field. In the ground state, an electron is in the $t_{2g}$ level. Upon absorption of light energy ($h\\nu$), the electron moves to the $e_g$ level, representing an excited state.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.5:15",
+            "order": 15,
+            "title": "Role of Ligands in Crystal Field Splitting and Colour",
+            "content_text": "Crystal field splitting, and thus colour, depends entirely on the presence of ligands. In the absence of ligands, the $d$ orbitals remain degenerate, splitting does not occur, and the substance is colourless. For example, anhydrous $CuSO_4$ is white, but hydrated $CuSO_4 \\cdot 5H_2O$ is blue. Similarly, heating $[Ti(H_2O)_6]Cl_3$ removes the water ligands, rendering the compound colourless.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.5:16",
+            "order": 16,
+            "title": "Influence of Ligand Substitution on Colour",
+            "content_text": "The effect of different ligands on colour can be observed by progressively substituting weak field ligands with stronger ones. When ethane-1,2-diamine (en) is added to a green aqueous solution of $[Ni(H_2O)_6]^{2+}$, the following colour changes occur due to the changing $\\Delta_o$:\n1. $[Ni(H_2O)_6]^{2+}(aq)$ (green) + en $\\rightarrow [Ni(H_2O)_4(en)]^{2+}(aq)$ (pale blue) + $2H_2O$\n2. $[Ni(H_2O)_4(en)]^{2+}(aq)$ + en $\\rightarrow [Ni(H_2O)_2(en)_2]^{2+}(aq)$ (blue/purple) + $2H_2O$\n3. $[Ni(H_2O)_2(en)_2]^{2+}(aq)$ + en $\\rightarrow [Ni(en)_3]^{2+}(aq)$ (violet) + $2H_2O$",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 5.11",
+                "description": "A series of four test tubes showing the colour progression of nickel(II) complexes as water ligands are replaced by ethane-1,2-diamine: from green to pale blue, then blue/purple, and finally violet.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.5:17",
+            "order": 17,
+            "title": "Colour of Gem Stones",
+            "content_text": "The colours of gemstones like ruby and emerald are due to $d-d$ transitions of $Cr^{3+}$ ions in octahedral sites. In ruby, $Cr^{3+}$ ions (0.5-1%) are distributed in the $Al_2O_3$ lattice, replacing $Al^{3+}$. In emerald, $Cr^{3+}$ ions occupy octahedral sites in the mineral beryl ($Be_3Al_2Si_6O_{18}$). The different chemical environments in these minerals cause the absorption bands to shift; ruby absorbs in the green-yellow region (appearing red), while emerald transmits light in the green region.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 5.12",
+                "description": "Photographs of (a) a Ruby gemstone from Myanmar and (b) an Emerald gemstone from Columbia.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.5:18",
+            "order": 18,
+            "title": "Limitations of Crystal Field Theory",
+            "content_text": "While CFT successfully explains structures, colours, and magnetic properties, it has significant weaknesses: 1. It assumes ligands are point charges, which implies anionic ligands should cause the largest splitting; however, many anions are at the low end of the spectrochemical series. 2. It ignores the covalent character of metal-ligand bonding. These limitations are addressed by more advanced theories like Ligand Field Theory (LFT) and Molecular Orbital Theory.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:5:5.6",
+        "number": "5.6",
+        "title": "Bonding in Metal Carbonyls",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:5:5.6:1",
+            "order": 1,
+            "title": "Structures of Homoleptic Metal Carbonyls",
+            "content_text": "Homoleptic carbonyls contain only carbonyl ($CO$) ligands and are formed by most transition metals. These compounds have well-defined structures: Tetracarbonylnickel(0) $[Ni(CO)_4]$ is tetrahedral; Pentacarbonyliron(0) $[Fe(CO)_5]$ is trigonal bipyramidal; Hexacarbonylchromium(0) $[Cr(CO)_6]$ is octahedral. More complex structures include Decacarbonyldimanganese(0) $[Mn_2(CO)_{10}]$, which consists of two square pyramidal $Mn(CO)_5$ units joined by a $Mn-Mn$ bond, and Octacarbonyldicobalt(0) $[Co_2(CO)_8]$, which features a $Co-Co$ bond bridged by two $CO$ groups. The metal-carbon bond in metal carbonyls possesses both $\\sigma$ and $\\pi$ character. The $M-C$ $\\sigma$ bond is formed by the donation of a lone pair of electrons on the carbonyl carbon into a vacant orbital of the metal. The $M-C$ $\\pi$ bond is formed by the donation of a pair of electrons from a filled $d$ orbital of the metal into the vacant antibonding $\\pi^*$ orbital of carbon monoxide. This metal-to-ligand bonding creates a synergic effect which strengthens the bond between $CO$ and the metal, providing stability to the metal carbonyl complexes.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 5.13",
+                "description": "Structures of representative homoleptic metal carbonyls: $Ni(CO)_4$ (Tetrahedral), $Fe(CO)_5$ (Trigonal bipyramidal), $Cr(CO)_6$ (Octahedral), $[Mn_2(CO)_{10}]$ (two square pyramidal $Mn(CO)_5$ units joined by a $Mn-Mn$ bond), and $[Co_2(CO)_8]$ (two $Co$ atoms joined by a $Co-Co$ bond and bridged by two $CO$ groups).",
+                "image_url": null
+              },
+              {
+                "label": "Fig. 5.14",
+                "description": "Diagram of synergic bonding in a carbonyl complex showing the $\\sigma$ bond formed by $C \\rightarrow M$ lone pair donation and the $\\pi$ bond formed by $M \\rightarrow C$ back-donation into the $\\pi^*$ orbital.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:5:5.7",
+        "number": "5.7",
+        "title": "Importance and Applications of Coordination Compounds",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:5:5.7:1",
+            "order": 1,
+            "title": "Applications in Analytical Chemistry and Water Hardness",
+            "content_text": "Coordination compounds are vital in qualitative and quantitative chemical analysis. Many metal ions react with ligands (especially chelating ligands) to form colored coordination entities, which serve as the basis for their detection and estimation. Common reagents include EDTA, DMG (dimethylglyoxime), $\\alpha$-nitroso-$\\beta$-naphthol, and cupron. Additionally, the hardness of water is estimated by titration with $Na_2EDTA$. $Ca^{2+}$ and $Mg^{2+}$ ions form stable complexes with EDTA, and their selective estimation is possible due to the difference in the stability constants of their respective complexes.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.7:2",
+            "order": 2,
+            "title": "Metallurgical Processes and Metal Purification",
+            "content_text": "Complex formation is utilized in the extraction of precious metals like silver and gold. For instance, gold combines with cyanide in the presence of oxygen and water to form the coordination entity $[Au(CN)_2]^-$ in aqueous solution, from which gold is later recovered by adding zinc. Similarly, the purification of metals can be achieved through the formation and subsequent decomposition of coordination compounds. An example is the purification of nickel, where impure nickel is converted to the volatile $[Ni(CO)_4]$, which is then decomposed to yield pure nickel.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.7:3",
+            "order": 3,
+            "title": "Biological Importance of Coordination Compounds",
+            "content_text": "Coordination compounds play critical roles in biological systems. Chlorophyll, the pigment for photosynthesis, is a coordination compound of magnesium. Haemoglobin, the oxygen carrier in blood, is a coordination compound of iron. Vitamin $B_{12}$ (cyanocobalamine), the anti-pernicious anaemia factor, is a coordination compound of cobalt. Furthermore, several enzymes like carboxypeptidase A and carbonic anhydrase, which act as biological catalysts, are coordination compounds of metal ions.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.7:4",
+            "order": 4,
+            "title": "Industrial and Miscellaneous Applications",
+            "content_text": "In industry, coordination compounds are used as catalysts. A notable example is the Wilkinson catalyst, $[(Ph_3P)_3RhCl]$, used for the hydrogenation of alkenes. In electroplating, articles are plated with silver or gold more smoothly and evenly from solutions of complexes like $[Ag(CN)_2]^-$ and $[Au(CN)_2]^-$ than from simple metal ion solutions. In black and white photography, the developed film is fixed using 'hypo' (sodium thiosulphate) solution, which dissolves undecomposed $AgBr$ by forming the complex ion $[Ag(S_2O_3)_2]^{3-}$.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.7:5",
+            "order": 5,
+            "title": "Medicinal Chemistry and Chelate Therapy",
+            "content_text": "Chelate therapy is used to treat metal poisoning. Excess copper and iron are removed by chelating ligands like D-penicillamine and desferrioxime B. EDTA is commonly used in the treatment of lead poisoning. Additionally, coordination compounds of platinum, such as cis-platin and related compounds, are effectively used to inhibit the growth of tumors.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:5:5.8",
+        "number": "5.8",
+        "title": "Answers to Intext Questions",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:5:5.8:1",
+            "order": 1,
+            "title": "Nomenclature and Formulae of Coordination Compounds",
+            "content_text": "The formulation and naming of coordination compounds follow specific IUPAC conventions. For example, the formulas for complexes like hexaamminecobalt(III) chloride and potassium hexacyanidoferrate(III) are $[Co(NH_3)_6]Cl_3$ and $K_3[Fe(CN)_6]$ respectively. Intext answers provide specific examples: (i) $[Co(NH_3)_4(H_2O)_2]Cl_3$, (ii) $K_2[Ni(CN)_4]$, (iii) $[Cr(en)_3]Cl_3$, (iv) $[Pt(NH_3)BrCl(NO_2)]^-$, (v) $[PtCl_2(en)_2](NO_3)_2$, and (vi) $Fe_4[Fe(CN)_6]_3$. The corresponding IUPAC names are: (i) Hexaamminecobalt(III) chloride, (ii) Pentaamminechloridocobalt(III) chloride, (iii) Potassium hexacyanidoferrate(III), (iv) Potassium trioxalatoferrate(III), (v) Potassium tetrachloridopalladate(II), and (vi) Diamminechlorido(methanamine)platinum(II) chloride.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.8:2",
+            "order": 2,
+            "title": "Isomerism and Chemical Identification",
+            "content_text": "Coordination compounds exhibit various forms of isomerism, including geometrical, optical, and ionisation isomerism. Ionisation isomers can be distinguished through chemical tests. For example, $[Co(NH_3)_5Br]SO_4$ and $[Co(NH_3)_5SO_4]Br$ react differently with reagents: $[Co(NH_3)_5Br]SO_4 + Ba^{2+} \\rightarrow BaSO_4 (s)$ (white precipitate), while $[Co(NH_3)_5SO_4]Br$ shows no reaction with $Ba^{2+}$. Conversely, $[Co(NH_3)_5SO_4]Br + Ag^+ \\rightarrow AgBr (s)$ (pale yellow precipitate), while $[Co(NH_3)_5Br]SO_4$ shows no reaction with $Ag^+$. Geometrical isomers like cis and trans forms are common in octahedral and square planar complexes.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:5:5.8:3",
+            "order": 3,
+            "title": "Bonding and Magnetic Properties in Complexes",
+            "content_text": "The magnetic properties and geometry of coordination entities are explained by the nature of the metal ion and the strength of the ligands. In $Ni(CO)_4$, Ni is in the zero oxidation state; the strong field $CO$ ligand causes pairing of $3d$ electrons, leading to $sp^3$ hybridisation and diamagnetism. In $NiCl_4^{2-}$, $Ni^{2+}$ has a $d^8$ configuration, and $Cl^-$ is a weak field ligand that cannot pair electrons, resulting in paramagnetism. Similarly, $CN^-$ is a strong ligand that pairs electrons in $Fe^{3+}$ to form inner orbital complexes ($d^2sp^3$), whereas $H_2O$ is a weak ligand forming outer orbital complexes ($sp^3d^2$). For square planar complexes, $dsp^2$ hybridisation is observed, which involves the pairing of unpaired electrons in the $d$ orbitals to vacate one $d$ orbital for bonding.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:chemistry:12:5:ex:51",
+          "number": 51,
+          "problem": "Write the formulas for the following coordination compounds: (i) tetraamminediaquacobalt(III) chloride (ii) potassium tetracyanidonickelate(II) (iii) tris(ethane-1,2-diamine) chromium(III) chloride (iv) amminebromidochloridonitrito-N-platinate(II) (v) dichloridobis(ethane-1,2-diamine)platinum(IV) nitrate (vi) iron(III) hexacyanidoferrate(II)",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:5:ex:52",
+          "number": 52,
+          "problem": "Write the IUPAC names of the following coordination compounds: (i) $[Co(NH_3)_6]Cl_3$ (ii) $[Co(NH_3)_5Cl]Cl_2$ (iii) $K_3[Fe(CN)_6]$ (iv) $K_3[Fe(C_2O_4)_3]$ (v) $K_2[PdCl_4]$ (vi) $[Pt(NH_3)_2Cl(NH_2CH_3)]Cl$",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:5:ex:53",
+          "number": 53,
+          "problem": "Indicate the types of isomerism exhibited by the following complexes and draw the structures for these isomers: (i) $K[Cr(H_2O)_2(C_2O_4)_2]$ (ii) $[Co(en)_3]Cl_3$ (iii) $[Co(NH_3)_5(NO_2)](NO_3)_2$ (iv) $[Pt(NH_3)(H_2O)Cl_2]$",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:5:ex:54",
+          "number": 54,
+          "problem": "Give evidence that $[Co(NH_3)_5Cl]SO_4$ and $[Co(NH_3)_5(SO_4)]Cl$ are ionisation isomers.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:5:ex:5",
+          "number": 5,
+          "problem": "Explain on the basis of valence bond theory that $[Ni(CN)_4]^{2-}$ ion with square planar structure is diamagnetic and the $[NiCl_4]^{2-}$ ion with tetrahedral geometry is paramagnetic.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:5:ex:6",
+          "number": 6,
+          "problem": "$[NiCl_4]^{2-}$ is paramagnetic while $[Ni(CO)_4]$ is diamagnetic though both are tetrahedral. Why?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:5:ex:7",
+          "number": 7,
+          "problem": "$[Fe(H_2O)_6]^{3+}$ is strongly paramagnetic whereas $[Fe(CN)_6]^{3-}$ is weakly paramagnetic. Explain.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:5:ex:8",
+          "number": 8,
+          "problem": "Explain $[Co(NH_3)_6]^{3+}$ is an inner orbital complex whereas $[Ni(NH_3)_6]^{2+}$ is an outer orbital complex.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:5:ex:9",
+          "number": 9,
+          "problem": "Predict the number of unpaired electrons in the square planar $[Pt(CN)_4]^{2-}$ ion.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:5:ex:10",
+          "number": 10,
+          "problem": "The hexaquo manganese(II) ion contains five unpaired electrons, while the hexacyanoion contains only one unpaired electron. Explain using Crystal Field Theory.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:5:ex:1",
+          "number": 1,
+          "problem": "Explain the bonding in coordination compounds in terms of Werner's postulates.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:5:ex:2",
+          "number": 2,
+          "problem": "$FeSO_4$ solution mixed with $(NH_4)_2SO_4$ solution in 1:1 molar ratio gives the test of $Fe^{2+}$ ion but $CuSO_4$ solution mixed with aqueous ammonia in 1:4 molar ratio does not give the test of $Cu^{2+}$ ion. Explain why?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:5:ex:3",
+          "number": 3,
+          "problem": "Explain with two examples each of the following: coordination entity, ligand, coordination number, coordination polyhedron, homoleptic and heteroleptic.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:5:ex:4",
+          "number": 4,
+          "problem": "What is meant by unidentate, didentate and ambidentate ligands? Give two examples for each.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:5:ex:11",
+          "number": 11,
+          "problem": "Draw all the isomers (geometrical and optical) of: (i) $[CoCl_2(en)_2]^+$, (ii) $[Co(NH_3)Cl(en)_2]^{2+}$, (iii) $[Co(NH_3)_2Cl_2(en)]^+$.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:5:ex:12",
+          "number": 12,
+          "problem": "Write all the geometrical isomers of $[Pt(NH_3)(Br)(Cl)(py)]$ and how many of these will exhibit optical isomers?",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:5:ex:13",
+          "number": 13,
+          "problem": "Aqueous copper sulphate solution (blue in colour) gives: (i) a green precipitate with aqueous potassium fluoride and (ii) a bright green solution with aqueous potassium chloride. Explain these experimental results.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:5:ex:14",
+          "number": 14,
+          "problem": "What is the coordination entity formed when excess of aqueous KCN is added to an aqueous solution of copper sulphate? Why is it that no precipitate of copper sulphide is obtained when $H_2S(g)$ is passed through this solution?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:5:ex:15",
+          "number": 15,
+          "problem": "Discuss the nature of bonding in the following coordination entities on the basis of valence bond theory: (i) $[Fe(CN)_6]^{4-}$, (ii) $[FeF_6]^{3-}$, (iii) $[Co(C_2O_4)_3]^{3-}$, (iv) $[CoF_6]^{3-}$.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "derivation"
+        },
+        {
+          "id": "ncert:chemistry:12:5:ex:16",
+          "number": 16,
+          "problem": "Draw figure to show the splitting of $d$ orbitals in an octahedral crystal field.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:5:ex:17",
+          "number": 17,
+          "problem": "What is spectrochemical series? Explain the difference between a weak field ligand and a strong field ligand.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:5:ex:18",
+          "number": 18,
+          "problem": "What is crystal field splitting energy? How does the magnitude of $\\Delta_o$ decide the actual configuration of $d$ orbitals in a coordination entity?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:5:ex:19",
+          "number": 19,
+          "problem": "$[Cr(NH_3)_6]^{3+}$ is paramagnetic while $[Ni(CN)_4]^{2-}$ is diamagnetic. Explain why?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:5:ex:20",
+          "number": 20,
+          "problem": "A solution of $[Ni(H_2O)_6]^{2+}$ is green but a solution of $[Ni(CN)_4]^{2-}$ is colourless. Explain.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:5:ex:21",
+          "number": 21,
+          "problem": "$[Fe(CN)_6]^{4-}$ and $[Fe(H_2O)_6]^{2+}$ are of different colours in dilute solutions. Why?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:5:ex:22",
+          "number": 22,
+          "problem": "Discuss the nature of bonding in metal carbonyls.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:5:ex:23",
+          "number": 23,
+          "problem": "Give the oxidation state, $d$ orbital occupation and coordination number of the central metal ion in the following complexes: (i) $K_3[Co(C_2O_4)_3]$, (ii) $cis-[CrCl_2(en)_2]Cl$, (iii) $(NH_4)_2[CoF_4]$, (iv) $[Mn(H_2O)_6]SO_4$.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:5:ex:24",
+          "number": 24,
+          "problem": "Write down the IUPAC name for each of the following complexes and indicate the oxidation state, electronic configuration and coordination number. Also give stereochemistry and magnetic moment of the complex: (i) $K[Cr(H_2O)_2(C_2O_4)_2] \\cdot 3H_2O$, (ii) $[Co(NH_3)_5Cl]Cl_2$, (iii) $[CrCl_3(py)_3]$, (iv) $Cs[FeCl_4]$, (v) $K_4[Mn(CN)_6]$.",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:5:ex:25",
+          "number": 25,
+          "problem": "Explain the violet colour of the complex $[Ti(H_2O)_6]^{3+}$ on the basis of crystal field theory.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:5:ex:26",
+          "number": 26,
+          "problem": "What is meant by chelate effect? Give an example.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:5:ex:27",
+          "number": 27,
+          "problem": "Discuss briefly giving an example in each case the role of coordination compounds in: (i) biological systems, (ii) medicinal chemistry, (iii) analytical chemistry, (iv) extraction/metallurgy of metals.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:5:ex:28",
+          "number": 28,
+          "problem": "How many ions are produced from the complex $Co(NH_3)_6Cl_2$ in solution? (i) 6, (ii) 4, (iii) 3, (iv) 2.",
+          "solution": "The complex $[Co(NH_3)_6]Cl_2$ dissociates into one $[Co(NH_3)_6]^{2+}$ ion and two $Cl^-$ ions. Total ions = 1 + 2 = 3. Correct option is (iii).",
+          "difficulty": "easy",
+          "exercise_type": "mcq"
+        },
+        {
+          "id": "ncert:chemistry:12:5:ex:29",
+          "number": 29,
+          "problem": "Amongst the following ions which one has the highest magnetic moment value? (i) $[Cr(H_2O)_6]^{3+}$, (ii) $[Fe(H_2O)_6]^{2+}$, (iii) $[Zn(H_2O)_6]^{2+}$.",
+          "solution": "(i) $Cr^{3+}$ is $d^3$ (3 unpaired electrons), (ii) $Fe^{2+}$ is $d^6$ (4 unpaired electrons in weak field), (iii) $Zn^{2+}$ is $d^{10}$ (0 unpaired electrons). $[Fe(H_2O)_6]^{2+}$ has the highest magnetic moment.",
+          "difficulty": "easy",
+          "exercise_type": "mcq"
+        },
+        {
+          "id": "ncert:chemistry:12:5:ex:30",
+          "number": 30,
+          "problem": "Amongst the following, the most stable complex is: (i) $[Fe(H_2O)_6]^{3+}$, (ii) $[Fe(NH_3)_6]^{3+}$, (iii) $[Fe(C_2O_4)_3]^{3-}$, (iv) $[FeCl_6]^{3-}$.",
+          "solution": "$[Fe(C_2O_4)_3]^{3-}$ is the most stable because oxalate ($C_2O_4^{2-}$) is a chelating ligand, and chelation increases stability. Correct option is (iii).",
+          "difficulty": "medium",
+          "exercise_type": "mcq"
+        },
+        {
+          "id": "ncert:chemistry:12:5:ex:31",
+          "number": 31,
+          "problem": "What will be the correct order for the wavelengths of absorption in the visible region for the following: $[Ni(NO_2)_6]^{4-}$, $[Ni(NH_3)_6]^{2+}$, $[Ni(H_2O)_6]^{2+}$?",
+          "solution": "Ligand strength order: $NO_2^- > NH_3 > H_2O$. Crystal field splitting energy ($\\Delta_o$) order: $[Ni(NO_2)_6]^{4-} > [Ni(NH_3)_6]^{2+} > [Ni(H_2O)_6]^{2+}$. Since $E = hc/\\lambda$, wavelength $\\lambda$ is inversely proportional to energy. Order of wavelength: $[Ni(H_2O)_6]^{2+} > [Ni(NH_3)_6]^{2+} > [Ni(NO_2)_6]^{4-}$.",
+          "difficulty": "hard",
+          "exercise_type": "conceptual"
+        }
+      ]
+    }
+  }
+}

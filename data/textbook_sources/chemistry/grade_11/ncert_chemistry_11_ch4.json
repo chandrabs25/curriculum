@@ -1,0 +1,2407 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_chemistry_11_ch4.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:chemistry:11:4",
+  "curriculum": "ncert",
+  "subject": "chemistry",
+  "grade": 11,
+  "textbook_name": "Chemistry Part I",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:chemistry:11:4",
+    "number": 4,
+    "title": "Chemical Bonding and Molecular Structure",
+    "summary": "This chapter, \"Chemical Bonding and Molecular Structure,\" explores the fundamental principles governing how atoms combine to form molecules. It begins with the Kössel-Lewis approach, introducing ionic and covalent bonding based on the octet rule and Lewis structures, emphasizing valence electrons and their role in bonding. Formal charge is introduced to aid in selecting the most stable Lewis structure. Limitations of the octet rule are also discussed.\n\nThe chapter then delves into the energetics of ionic bond formation, defining lattice enthalpy and its significance. Bond parameters such as bond length, bond angle, and bond enthalpy are described, along with the concept of bond order and resonance. The polarity of bonds and dipole moments are introduced to quantify unequal sharing of electrons. Fajans' rules explain the partial covalent character in ionic bonds.\n\nVSEPR theory is presented as a tool for predicting molecular shapes based on electron pair repulsions. Valence Bond (VB) theory explains covalent bonding through atomic orbital overlap, while the concept of hybridization (sp, sp2, sp3, and with d orbitals) refines VB theory to explain molecular geometries. Finally, Molecular Orbital (MO) theory describes bonding by combining atomic orbitals to form molecular orbitals, leading to bond order calculations and predictions about molecular stability and magnetic properties. The chapter concludes with an explanation of hydrogen bonding and its types. Each section builds upon the previous, culminating in a comprehensive understanding of chemical bonding principles and their applications. This knowledge is crucial for predicting molecular properties and understanding chemical reactions.",
+    "sections": [
+      {
+        "id": "ncert:chemistry:11:4:4.1",
+        "number": "4.1",
+        "title": "KÖSSEL-LEWIS APPROACH TO CHEMICAL BONDING",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:4:4.1:1",
+            "order": 1,
+            "title": "Introduction to Chemical Bonding",
+            "content_text": "Matter is composed of elements. Under normal conditions, noble gases are the only elements that exist as independent atoms in nature. Other atoms group together as molecules, which are species with characteristic properties. The attractive force which holds various constituents (atoms, ions, etc.) together in different chemical species is called a chemical bond. Atoms combine in various ways to form chemical compounds, raising questions about why they combine and why only certain combinations are possible. Every system tends toward stability, and bonding is nature’s way of lowering the energy of the system to attain this state. Key theories developed to explain these phenomena include the Kössel-Lewis approach, Valence Shell Electron Pair Repulsion (VSEPR) Theory, Valence Bond (VB) Theory, and Molecular Orbital (MO) Theory.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.1:2",
+            "order": 2,
+            "title": "Lewis's Atomic Model and the Octet",
+            "content_text": "In 1916, G.N. Lewis and Walther Kössel independently provided explanations for valence based on the inertness of noble gases. Lewis pictured the atom as a positively charged 'Kernel' (consisting of the nucleus and inner electrons) surrounded by an outer shell that could accommodate a maximum of eight electrons. He envisioned these eight electrons occupying the corners of a cube around the Kernel. For instance, the single outer shell electron of sodium would occupy one corner, while in noble gases, all eight corners are occupied, representing a particularly stable electronic arrangement. Lewis postulated that atoms achieve the stable octet when they are linked by chemical bonds. This can occur through the transfer of electrons (as in the formation of $Na^+$ and $Cl^-$) or by the sharing of electron pairs (as in $Cl_2$, $H_2$, and $F_2$).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.1:3",
+            "order": 3,
+            "title": "Lewis Symbols and Valence Electrons",
+            "content_text": "During the formation of a molecule, only the outer shell electrons, known as valence electrons, participate in chemical combination. The inner shell electrons are well-protected and generally do not participate. G.N. Lewis introduced simple notations to represent these valence electrons, known as Lewis symbols. For example, the Lewis symbols for the elements of the second period are represented by the element's symbol surrounded by a number of dots equal to its valence electrons.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Lewis Symbols",
+                "description": "Lewis symbols for second-period elements: Li (one dot), Be (two dots), B (three dots), C (four dots), N (five dots), O (six dots), F (seven dots), and Ne (eight dots).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.1:4",
+            "order": 4,
+            "title": "Significance of Lewis Symbols and Group Valence",
+            "content_text": "The number of dots in a Lewis symbol represents the number of valence electrons in the atom. This count is used to calculate the common or group valence of the element. The group valence is generally either equal to the number of dots in the Lewis symbol or equal to $8$ minus the number of dots.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.1:5",
+            "order": 5,
+            "title": "Kössel's Postulates on Ionic Bonding",
+            "content_text": "Kössel's approach to chemical bonding focused on several key facts: 1) Highly electronegative halogens and highly electropositive alkali metals are separated in the periodic table by noble gases. 2) The formation of a negative ion from a halogen and a positive ion from an alkali metal involves the gain and loss of an electron, respectively. 3) The resulting ions attain stable noble gas configurations ($ns^2 np^6$, except for Helium which has a duet). 4) These negative and positive ions are stabilized by electrostatic attraction.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.1:6",
+            "order": 6,
+            "title": "Formation of Ionic Compounds: NaCl and CaF2",
+            "content_text": "The formation of $NaCl$ from sodium and chlorine is explained by electron transfer: $Na \\rightarrow Na^+ + e^-$ ($[Ne] 3s^1 \\rightarrow [Ne]$); $Cl + e^- \\rightarrow Cl^-$ ($[Ne] 3s^2 3p^5 \\rightarrow [Ne] 3s^2 3p^6$ or $[Ar]$); $Na^+ + Cl^- \\rightarrow NaCl$ or $Na^+Cl^-$. Similarly, the formation of $CaF_2$ involves: $Ca \\rightarrow Ca^{2+} + 2e^-$ ($[Ar] 4s^2 \\rightarrow [Ar]$); $F + e^- \\rightarrow F^-$ ($[He] 2s^2 2p^5 \\rightarrow [He] 2s^2 2p^6$ or $[Ne]$); $Ca^{2+} + 2F^- \\rightarrow CaF_2$ or $Ca^{2+}(F^-)_2$.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.1:7",
+            "order": 7,
+            "title": "Electrovalent Bond and Electrovalence",
+            "content_text": "The bond formed as a result of the electrostatic attraction between positive and negative ions is termed an electrovalent bond. The electrovalence is equal to the number of unit charges on the ion. For example, calcium has a positive electrovalence of two ($+2$), while chlorine has a negative electrovalence of one ($-1$). Kössel's postulates are fundamental to understanding the formation of ionic crystalline compounds.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:4:4.1.1",
+        "number": "4.1.1",
+        "title": "Octet Rule",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:4:4.1.1:1",
+            "order": 1,
+            "title": "Electronic Theory of Chemical Bonding",
+            "content_text": "The electronic theory of chemical bonding, developed by Kössel and Lewis in 1916, states that atoms combine either by the transfer of valence electrons (gaining or losing) or by the sharing of valence electrons to achieve an octet in their valence shells. This principle is known as the octet rule.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:4:4.1.2",
+        "number": "4.1.2",
+        "title": "Covalent Bond",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:4:4.1.2:1",
+            "order": 1,
+            "title": "Lewis-Langmuir Theory and the Chlorine Molecule",
+            "content_text": "In 1919, Langmuir refined Lewis's postulates by introducing the term covalent bond and moving away from the stationary cubical arrangement model. The theory is illustrated by the formation of the chlorine molecule, $Cl_2$. A chlorine atom ($[Ne] 3s^2 3p^5$) needs one electron to reach the argon configuration. In $Cl_2$, two chlorine atoms share one pair of electrons, with each atom contributing one electron to the pair. This sharing allows both atoms to attain a stable octet.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Covalent bond in Cl2",
+                "description": "Lewis dot structure showing two chlorine atoms sharing a single pair of electrons, represented by two dots between the symbols, with each atom surrounded by six additional non-bonding electrons to complete their octets.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.1.2:2",
+            "order": 2,
+            "title": "Lewis Dot Structures for Simple Molecules",
+            "content_text": "Lewis dot structures represent molecules using dots for electrons. Key conditions for these structures include: 1) Each bond results from sharing an electron pair. 2) Each combining atom contributes at least one electron to the shared pair. 3) Atoms attain noble gas configurations through sharing. In water ($H_2O$), the oxygen atom shares electrons with two hydrogen atoms, allowing hydrogen to attain a duplet and oxygen an octet. In carbon tetrachloride ($CCl_4$), the central carbon atom shares electron pairs with four chlorine atoms, resulting in octets for all five atoms.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Lewis Dot Structures for H2O and CCl4",
+                "description": "Diagrams showing the sharing of electron pairs in H2O (O sharing with two H) and CCl4 (C sharing with four Cl), with circles drawn around each atom to indicate the attainment of duplets or octets.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.1.2:3",
+            "order": 3,
+            "title": "Multiple Bonds: Double Bonds",
+            "content_text": "When two atoms share one electron pair, they form a single covalent bond. Multiple bonds occur when atoms share more than one pair. If two atoms share two pairs of electrons, the bond is called a double bond. For example, in carbon dioxide ($CO_2$), the central carbon atom forms double bonds with two oxygen atoms ($O=C=O$). Similarly, in the ethene molecule ($C_2H_4$), the two carbon atoms are joined by a double bond. When combining atoms share three electron pairs, a triple bond is formed. This is observed in the nitrogen molecule ($N_2$) and the ethyne molecule ($C_2H_2$). In the $N_2$ molecule, each nitrogen atom (valence configuration $2s^2 2p^3$) contributes three electrons to form three shared pairs, allowing both atoms to satisfy the octet rule. In the ethyne molecule ($C_2H_2$), the two carbon atoms are joined by a triple bond, and each carbon atom is also bonded to a hydrogen atom by a single bond ($H-C\\equiv C-H$).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Double bonds in CO2",
+                "description": "Lewis dot structure of CO2 showing the carbon atom sharing four electrons (two pairs) with each oxygen atom, and each oxygen atom retaining two lone pairs to complete its octet.",
+                "image_url": null
+              },
+              {
+                "label": "C2H4 molecule",
+                "description": "Lewis dot and dash structures of ethene showing a double bond between carbon atoms.",
+                "image_url": null
+              },
+              {
+                "label": "N2 molecule",
+                "description": "Lewis dot and dash structures of nitrogen showing a triple bond between nitrogen atoms.",
+                "image_url": null
+              },
+              {
+                "label": "C2H2 molecule",
+                "description": "Lewis dot and dash structures of ethyne showing a triple bond between carbon atoms.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:4:4.1.3",
+        "number": "4.1.3",
+        "title": "Lewis Representation of Simple Molecules (the Lewis Structures)",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:4:4.1.3:1",
+            "order": 1,
+            "title": "Introduction to Lewis Structures",
+            "content_text": "Lewis dot structures provide a picture of bonding in molecules and ions in terms of shared pairs of electrons and the octet rule. While such a picture may not explain the bonding and behaviour of a molecule completely, it helps significantly in understanding the formation and properties of molecules. Writing Lewis dot structures is a systematic process involving the distribution of valence electrons to satisfy the octet rule for all constituent atoms.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.1.3:2",
+            "order": 2,
+            "title": "Step 1: Total Valence Electrons",
+            "content_text": "The total number of electrons required for writing the structures is obtained by adding the valence electrons of the combining atoms. For example, in the $CH_4$ molecule, there are eight valence electrons available for bonding: 4 from the carbon atom ($2s^2 2p^2$) and 4 from the four hydrogen atoms ($1s^1$).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.1.3:3",
+            "order": 3,
+            "title": "Step 2: Accounting for Ionic Charges",
+            "content_text": "For anions, each negative charge indicates the addition of one electron to the total number of valence electrons. For example, for the $CO_3^{2-}$ ion, two additional electrons are added. For cations, each positive charge indicates the subtraction of one electron from the total. For the $NH_4^+$ ion, one electron is subtracted from the group of neutral atoms.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.1.3:4",
+            "order": 4,
+            "title": "Step 3: Skeletal Structure and Central Atom",
+            "content_text": "Knowing the chemical symbols and the skeletal structure (known or guessed intelligently), the total electrons are distributed as bonding shared pairs. In general, the least electronegative atom occupies the central position. For example, in $NF_3$ and $CO_3^{2-}$, nitrogen and carbon are the central atoms, while fluorine and oxygen occupy terminal positions. Hydrogen and fluorine usually occupy terminal positions.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.1.3:5",
+            "order": 5,
+            "title": "Step 4: Electron Distribution and Octet Rule",
+            "content_text": "After accounting for shared pairs for single bonds, the remaining electron pairs are utilized for multiple bonding or remain as lone pairs. The basic requirement is that each bonded atom gets an octet of electrons. Hydrogen is an exception, as it attains the configuration of helium (a duplet of electrons).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.1.3:6",
+            "order": 6,
+            "title": "Lewis Representations of Common Molecules",
+            "content_text": "Lewis representations for several molecules and ions are provided in Table 4.1, illustrating the application of the octet rule and the distribution of bonding and lone pairs.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 4.1",
+                "caption": "The Lewis Representation of Some Molecules",
+                "headers": [
+                  "Molecule/Ion",
+                  "Lewis Representation"
+                ],
+                "rows": [
+                  [
+                    "$H_2$",
+                    "H : H or H - H (Each H attains a duplet)"
+                  ],
+                  [
+                    "$O_2$",
+                    "$: \\ddot{O} :: \\ddot{O} :$ or $: \\ddot{O} = \\ddot{O} :$"
+                  ],
+                  [
+                    "$O_3$",
+                    "$\\ddot{O}^+ = \\ddot{O} - \\ddot{O}^-$ (with lone pairs)"
+                  ],
+                  [
+                    "$NF_3$",
+                    "Central N with one lone pair, single bonded to three F atoms each with three lone pairs"
+                  ],
+                  [
+                    "$CO_3^{2-}$",
+                    "$[O=C(O)_2]^{2-}$ where C is central, double bonded to one O and single bonded to two O atoms"
+                  ],
+                  [
+                    "$HNO_3$",
+                    "$\\ddot{O}=\\overset{+}{N}(\\ddot{O}^-)-O-H$ where N is central and bonded to three O atoms, one of which is bonded to H"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.1.3:7",
+            "order": 7,
+            "title": "Worked Example: Lewis Structure of Carbon Monoxide (CO)",
+            "content_text": "To write the Lewis structure of $CO$: 1. Total valence electrons = $4 + 6 = 10$. 2. Skeletal structure: C O. 3. A single bond $:C : \\ddot{O}:$ leaves carbon with only 4 electrons. 4. To satisfy the octet for carbon, a triple bond is formed by sharing two more pairs from oxygen: $:C \\equiv O:$.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 4.1",
+                "problem": "Write the Lewis dot structure of CO molecule.",
+                "solution": "Step 1. Count total valence electrons: $4 + 6 = 10$. Step 2. Skeletal structure: C O. Step 3. Single bond $:C : \\ddot{O}:$ or $:C - \\ddot{O}:$ does not complete the octet on carbon. Step 4. Resort to triple bond: $:C \\equiv O:$. This satisfies the octet rule for both atoms."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.1.3:8",
+            "order": 8,
+            "title": "Worked Example: Lewis Structure of Nitrite Ion (NO2-)",
+            "content_text": "To write the Lewis structure of $NO_2^-$: 1. Total valence electrons = $5 + (2 \\times 6) + 1 = 18$. 2. Skeletal structure: O N O. 3. Single bonds $[\\ddot{O}-\\ddot{N}-\\ddot{O}]^-$ leave nitrogen with only 6 electrons. 4. Form a double bond with one oxygen to complete the nitrogen octet: $[\\ddot{O}=\\ddot{N}-\\ddot{O}]^-$.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 4.2",
+                "problem": "Write the Lewis structure of the nitrite ion, $NO_2^-$.",
+                "solution": "Step 1. Total valence electrons = $5 + 12 + 1 = 18$. Step 2. Skeletal structure: O N O. Step 3. Single bonds $[\\ddot{O}-\\ddot{N}-\\ddot{O}]^-$ leave N with 6 electrons. Step 4. Form double bond: $[\\ddot{O}=\\ddot{N}-\\ddot{O}]^-$ or $[\\ddot{O}-\\ddot{N}=\\ddot{O}]^-$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:4:4.1.4",
+        "number": "4.1.4",
+        "title": "Formal Charge",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:4:4.1.4:1",
+            "order": 1,
+            "title": "Definition and Mathematical Expression",
+            "content_text": "Formal charge (F.C.) is assigned to atoms in a Lewis structure to track valence electrons. It is defined as the difference between the number of valence electrons in the free atom and the number of electrons assigned to it in the Lewis structure: $F.C. = [V] - [L] - \\frac{1}{2}[S]$, where $V$ is the total number of valence electrons in the free atom, $L$ is the total number of non-bonding (lone pair) electrons, and $S$ is the total number of bonding (shared) electrons.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.1.4:2",
+            "order": 2,
+            "title": "Calculation Example: Ozone (O3)",
+            "content_text": "In the ozone molecule ($O_3$), atoms are numbered 1 (central), 2 (double-bonded), and 3 (single-bonded). 1. Central O (1): $F.C. = 6 - 2 - \\frac{1}{2}(6) = +1$. 2. Double-bonded O (2): $F.C. = 6 - 4 - \\frac{1}{2}(4) = 0$. 3. Single-bonded O (3): $F.C. = 6 - 6 - \\frac{1}{2}(2) = -1$. The structure is represented as $O_3$ with these charges.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "O3 Formal Charge",
+                "description": "Lewis structure of ozone with atoms numbered 1, 2, and 3 showing formal charges of +1, 0, and -1 respectively.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.1.4:3",
+            "order": 3,
+            "title": "Significance of Formal Charge",
+            "content_text": "Formal charges help in selecting the lowest energy structure from multiple possible Lewis structures. Generally, the structure with the smallest formal charges is the most stable. It is based on a pure covalent view where electrons are shared equally.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:4:4.1.5",
+        "number": "4.1.5",
+        "title": "Limitations of the Octet Rule",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:4:4.1.5:1",
+            "order": 1,
+            "title": "General Overview",
+            "content_text": "The octet rule is not universal and has three main types of exceptions: incomplete octets, odd-electron molecules, and expanded octets.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.1.5:2",
+            "order": 2,
+            "title": "The Incomplete Octet of the Central Atom",
+            "content_text": "In some compounds, the central atom has fewer than eight electrons. This occurs in elements with fewer than four valence electrons, such as $Li$ (in $LiCl$), $Be$ (in $BeH_2$), and $B$ (in $BCl_3$). Other examples include $AlCl_3$ and $BF_3$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Incomplete Octet Examples",
+                "description": "Lewis structures of LiCl, BeH2, and BCl3 showing central atoms with 2, 4, and 6 electrons respectively.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.1.5:3",
+            "order": 3,
+            "title": "Odd-electron Molecules",
+            "content_text": "Molecules with an odd number of electrons, like nitric oxide ($NO$) and nitrogen dioxide ($NO_2$), cannot satisfy the octet rule for all atoms.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Odd-electron Molecules",
+                "description": "Lewis structures of NO and NO2 showing unpaired electrons on nitrogen.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.1.5:4",
+            "order": 4,
+            "title": "The Expanded Octet",
+            "content_text": "Elements in and beyond the third period have $3d$ orbitals available for bonding. In compounds like $PF_5$, $SF_6$, and $H_2SO_4$, the central atom has more than eight valence electrons (10, 12, and 12 respectively). This is known as the expanded octet.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Expanded Octet Examples",
+                "description": "Lewis structures of PF5 (10e), SF6 (12e), and H2SO4 (12e) showing expanded octets.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.1.5:5",
+            "order": 5,
+            "title": "Other Drawbacks of the Octet Theory",
+            "content_text": "While the octet rule is a useful guide, it has several significant limitations. Firstly, sulphur forms compounds like sulphur dichloride ($SCl_2$) where the octet rule is obeyed, but it also forms expanded octet compounds. Secondly, the rule is based on the chemical inertness of noble gases; however, some noble gases like xenon and krypton react with oxygen and fluorine to form compounds such as $XeF_2$, $KrF_2$, and $XeOF_2$. Thirdly, the theory does not account for the three-dimensional shapes of molecules. Finally, it fails to explain the relative stability of molecules, as it provides no information about the energy of a molecule.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Lewis structure of SCl2",
+                "description": "Lewis dot structure of sulphur dichloride showing the central sulphur atom with two lone pairs and two single bonds to chlorine atoms, each chlorine having three lone pairs, satisfying the octet for all atoms.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:4:4.2",
+        "number": "4.2",
+        "title": "IONIC OR ELECTROVALENT BOND",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:4:4.2:1",
+            "order": 1,
+            "title": "Formation of Ionic Bonds",
+            "content_text": "The formation of an ionic bond depends primarily on two factors: (1) The ease of formation of positive and negative ions from neutral atoms, and (2) The arrangement of these ions in a solid lattice. Ionic bonds are formed most easily between elements with low ionization enthalpies (typically metals) and elements with high negative electron gain enthalpies (typically non-metals). While most cations are metallic, the ammonium ion ($NH_4^+$) is a notable exception as it is composed of non-metallic elements but forms the cation in many ionic compounds.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.2:2",
+            "order": 2,
+            "title": "Energy Considerations in Ionization and Electron Gain",
+            "content_text": "The formation of a positive ion involves ionization (removal of electrons), which is always an endothermic process: $M(g) \\rightarrow M^+(g) + e^-$. The formation of a negative ion involves the addition of electrons, characterized by the electron gain enthalpy ($\\Delta_{eg}H$): $X(g) + e^- \\rightarrow X^-(g)$. This process can be exothermic or endothermic. For example, the formation of $Na^+(g)$ requires $495.8 \\text{ kJ mol}^{-1}$, while the electron gain for $Cl(g)$ releases $-348.7 \\text{ kJ mol}^{-1}$. The net energy difference ($147.1 \\text{ kJ mol}^{-1}$) is compensated by the energy released during lattice formation.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.2:3",
+            "order": 3,
+            "title": "Structure of Ionic Solids",
+            "content_text": "Ionic compounds in the crystalline state consist of orderly three-dimensional arrangements of cations and anions held together by coulombic interaction energies. These compounds crystallize in different structures determined by ion size, packing arrangements, and other factors. For instance, sodium chloride ($NaCl$) adopts the rock salt structure. The stability of an ionic compound is qualitatively measured by its enthalpy of lattice formation rather than just achieving an octet of electrons.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Rock salt structure",
+                "description": "A 3D cubic lattice model of Sodium Chloride (NaCl) showing the alternating arrangement of $Na^+$ (smaller blue spheres) and $Cl^-$ (larger red spheres) ions.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:4:4.2.1",
+        "number": "4.2.1",
+        "title": "Lattice Enthalpy",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:4:4.2.1:1",
+            "order": 1,
+            "title": "Definition and Significance of Lattice Enthalpy",
+            "content_text": "The Lattice Enthalpy of an ionic solid is defined as the energy required to completely separate one mole of a solid ionic compound into gaseous constituent ions. For example, the lattice enthalpy of $NaCl$ is $788 \\text{ kJ mol}^{-1}$, meaning this much energy is needed to separate one mole of solid $NaCl$ into $Na^+(g)$ and $Cl^-(g)$ to an infinite distance. This value accounts for both attractive forces between opposite charges and repulsive forces between like charges. It is a key factor in determining the stability of ionic crystals.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:4:4.3",
+        "number": "4.3",
+        "title": "BOND PARAMETERS",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:4:4.3:1",
+            "order": 1,
+            "title": "Bond Length",
+            "content_text": "Bond length is defined as the equilibrium distance between the nuclei of two bonded atoms in a molecule. It is measured using spectroscopic, X-ray diffraction, and electron-diffraction techniques. In a covalent bond, each atom contributes to the bond length. The covalent radius is measured as the radius of an atom's core which is in contact with the core of an adjacent atom in a bonded situation, effectively half the distance between two similar atoms joined by a covalent bond.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 4.1",
+                "description": "The bond length $R$ in a covalent molecule $AB$ is the sum of the covalent radii $r_A$ and $r_B$ ($R = r_A + r_B$).",
+                "image_url": null
+              }
+            ],
+            "tables": [
+              {
+                "label": "Table 4.2",
+                "caption": "Average Bond Lengths for Some Single, Double and Triple Bonds",
+                "headers": [
+                  "Bond Type",
+                  "Covalent Bond Length (pm)"
+                ],
+                "rows": [
+                  [
+                    "O-H",
+                    "96"
+                  ],
+                  [
+                    "C-H",
+                    "107"
+                  ],
+                  [
+                    "N-O",
+                    "136"
+                  ],
+                  [
+                    "C-O",
+                    "143"
+                  ],
+                  [
+                    "C-N",
+                    "143"
+                  ],
+                  [
+                    "C-C",
+                    "154"
+                  ],
+                  [
+                    "C=O",
+                    "121"
+                  ],
+                  [
+                    "N=O",
+                    "122"
+                  ],
+                  [
+                    "C=C",
+                    "133"
+                  ],
+                  [
+                    "C≡N",
+                    "138"
+                  ],
+                  [
+                    "C≡N",
+                    "116"
+                  ],
+                  [
+                    "C≡C",
+                    "120"
+                  ]
+                ]
+              },
+              {
+                "label": "Table 4.3",
+                "caption": "Bond Lengths in Some Common Molecules",
+                "headers": [
+                  "Molecule",
+                  "Bond Length (pm)"
+                ],
+                "rows": [
+                  [
+                    "$H_2 (H-H)$",
+                    "74"
+                  ],
+                  [
+                    "$F_2 (F-F)$",
+                    "144"
+                  ],
+                  [
+                    "$Cl_2 (Cl-Cl)$",
+                    "199"
+                  ],
+                  [
+                    "$Br_2 (Br-Br)$",
+                    "228"
+                  ],
+                  [
+                    "$I_2 (I-I)$",
+                    "267"
+                  ],
+                  [
+                    "$N_2 (N≡N)$",
+                    "109"
+                  ],
+                  [
+                    "$O_2 (O=O)$",
+                    "121"
+                  ],
+                  [
+                    "$HF (H-F)$",
+                    "92"
+                  ],
+                  [
+                    "$HCl (H-Cl)$",
+                    "127"
+                  ],
+                  [
+                    "$HBr (H-Br)$",
+                    "141"
+                  ],
+                  [
+                    "$HI (H-I)$",
+                    "160"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.3:2",
+            "order": 2,
+            "title": "Van der Waals Radius",
+            "content_text": "The van der Waals radius represents the overall size of the atom, including its valence shell in a nonbonded situation. It is defined as half of the distance between two similar atoms in separate molecules in a solid. The van der Waals radius is always larger than the covalent radius. For example, in chlorine, the covalent radius ($r_c$) is $99 \\text{ pm}$, while the van der Waals radius ($r_{vdw}$) is $180 \\text{ pm}$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 4.2",
+                "description": "Comparison of covalent and van der Waals radii in a chlorine molecule. Covalent radius $r_c = 99 \\text{ pm}$ (half the bond length of $198 \\text{ pm}$) and van der Waals radius $r_{vdw} = 180 \\text{ pm}$ (half the distance of $360 \\text{ pm}$ between non-bonded atoms).",
+                "image_url": null
+              }
+            ],
+            "tables": [
+              {
+                "label": "Table 4.4",
+                "caption": "Covalent Radii, $r_{cov}/(pm)$",
+                "headers": [
+                  "Element",
+                  "Radius (pm)"
+                ],
+                "rows": [
+                  [
+                    "H",
+                    "37"
+                  ],
+                  [
+                    "C",
+                    "77(1), 67(2), 60(3)"
+                  ],
+                  [
+                    "N",
+                    "74(1), 65(2), 55(3)"
+                  ],
+                  [
+                    "O",
+                    "66(1), 57(2)"
+                  ],
+                  [
+                    "F",
+                    "64"
+                  ],
+                  [
+                    "Cl",
+                    "99"
+                  ],
+                  [
+                    "P",
+                    "110"
+                  ],
+                  [
+                    "S",
+                    "104(1), 95(2)"
+                  ],
+                  [
+                    "Br",
+                    "114"
+                  ],
+                  [
+                    "As",
+                    "121"
+                  ],
+                  [
+                    "Se",
+                    "104"
+                  ],
+                  [
+                    "I",
+                    "133"
+                  ],
+                  [
+                    "Sb",
+                    "141"
+                  ],
+                  [
+                    "Te",
+                    "137"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.3:3",
+            "order": 3,
+            "title": "Bond Angle",
+            "content_text": "Bond angle is defined as the angle between the orbitals containing bonding electron pairs around the central atom in a molecule or complex ion. It is expressed in degrees and is determined experimentally using spectroscopic methods. Bond angles help in determining the shape of a molecule. For example, the $H-O-H$ bond angle in water is $104.5^\\circ$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.3:4",
+            "order": 4,
+            "title": "Bond Enthalpy",
+            "content_text": "Bond enthalpy is defined as the amount of energy required to break one mole of bonds of a particular type between two atoms in a gaseous state. The unit is $\\text{kJ mol}^{-1}$. For diatomic molecules, the bond enthalpy is equal to the bond dissociation enthalpy. For example, the $H-H$ bond enthalpy is $435.8 \\text{ kJ mol}^{-1}$. For molecules with multiple bonds, bond enthalpy is higher; for $O_2 (O=O)$ it is $498 \\text{ kJ mol}^{-1}$ and for $N_2 (N≡N)$ it is $946.0 \\text{ kJ mol}^{-1}$. In polyatomic molecules, the measurement is more complex as the enthalpy to break successive identical bonds (like the two $O-H$ bonds in $H_2O$) is not the same. In polyatomic molecules, the measurement of bond enthalpy is more complex as the enthalpy to break successive identical bonds is not the same. For example, in water ($H_2O$), the first $O-H$ bond dissociation enthalpy is $502 \\text{ kJ mol}^{-1}$: $$H_2O(g) \\rightarrow H(g) + OH(g); \\Delta_a H_1^\\ominus = 502 \\text{ kJ mol}^{-1}$$ The second $O-H$ bond dissociation enthalpy is $427 \\text{ kJ mol}^{-1}$: $$OH(g) \\rightarrow H(g) + O(g); \\Delta_a H_2^\\ominus = 427 \\text{ kJ mol}^{-1}$$ The difference in these values shows that the second $O-H$ bond undergoes change due to the altered chemical environment. This also explains why the same bond (like $O-H$) has different energies in different molecules, such as ethanol ($C_2H_5OH$) versus water. In such cases, the term mean or average bond enthalpy is used, obtained by dividing the total bond dissociation enthalpy by the number of bonds broken. For water, the average bond enthalpy is: $$\\text{Average bond enthalpy} = \\frac{502 + 427}{2} = 464.5 \\text{ kJ mol}^{-1}$$",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.3:5",
+            "order": 5,
+            "title": "4.3.4 Bond Order",
+            "content_text": "In the Lewis description of covalent bonds, the Bond Order is defined as the number of bonds between two atoms in a molecule. For example, the bond order in $H_2$ (one shared electron pair) is 1, in $O_2$ (two shared pairs) is 2, and in $N_2$ (three shared pairs) is 3. Similarly, in $CO$ (three shared pairs), the bond order is 3. For $N_2$, the bond order is 3 and its $\\Delta_a H^\\ominus$ is $946 \\text{ kJ mol}^{-1}$, which is one of the highest for a diatomic molecule. Isoelectronic molecules and ions (those with the same number of electrons) have identical bond orders; for instance, $F_2$ and $O_2^{2-}$ have bond order 1, while $N_2$, $CO$, and $NO^+$ have bond order 3. A general correlation for understanding molecular stability is that as bond order increases, bond enthalpy increases and bond length decreases.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.3:6",
+            "order": 6,
+            "title": "4.3.5 Resonance Structures",
+            "content_text": "A single Lewis structure is often inadequate to represent a molecule accurately in conformity with its experimentally determined parameters. For example, the ozone ($O_3$) molecule can be represented by two Lewis structures (I and II). In these structures, there is one $O-O$ single bond (normal length 148 pm) and one $O=O$ double bond (normal length 121 pm). However, experimental measurements show that both oxygen-oxygen bond lengths in $O_3$ are identical at 128 pm. This value is intermediate between a single and a double bond, meaning neither structure I nor II accurately depicts the molecule. According to the concept of resonance, whenever a single Lewis structure cannot describe a molecule accurately, a number of structures with similar energy, positions of nuclei, bonding and non-bonding pairs of electrons are taken as the canonical structures (or resonance structures). The actual molecule is described by a resonance hybrid (structure III for $O_3$). Resonance is represented by a double-headed arrow ($\\leftrightarrow$).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 4.3",
+                "description": "Resonance in the $O_3$ molecule. Structures I and II represent the two canonical forms with alternating single and double bonds (148 pm and 121 pm), while structure III is the resonance hybrid showing equal bond lengths of 128 pm.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.3:7",
+            "order": 7,
+            "title": "Resonance in Carbonate Ion",
+            "content_text": "The carbonate ion ($CO_3^{2-}$) provides another example where resonance is necessary. A single Lewis structure showing two single bonds and one double bond between carbon and oxygen atoms is inadequate because experimental evidence shows all three $C-O$ bonds are equivalent. Therefore, the carbonate ion is best described as a resonance hybrid of three canonical forms (I, II, and III).",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 4.3",
+                "problem": "Explain the structure of $CO_3^{2-}$ ion in terms of resonance.",
+                "solution": "The single Lewis structure based on the presence of two single bonds and one double bond between carbon and oxygen atoms is inadequate to represent the molecule accurately as it represents unequal bonds. According to the experimental findings, all carbon to oxygen bonds in $CO_3^{2-}$ are equivalent. Therefore the carbonate ion is best described as a resonance hybrid of the canonical forms I, II, and III."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Fig. 4.4",
+                "description": "Resonance in $CO_3^{2-}$. Structures I, II, and III represent the three canonical forms where the double bond is distributed among the three oxygen atoms.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.3:8",
+            "order": 8,
+            "title": "Resonance in Carbon Dioxide",
+            "content_text": "In the carbon dioxide ($CO_2$) molecule, the experimentally determined $C-O$ bond length is 115 pm. This value lies between the typical lengths of a $C=O$ double bond (121 pm) and a $C \\equiv O$ triple bond (110 pm). Consequently, a single Lewis structure cannot depict this position, and $CO_2$ is best described as a hybrid of three canonical resonance forms.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 4.4",
+                "problem": "Explain the structure of $CO_2$ molecule.",
+                "solution": "The experimentally determined carbon to oxygen bond length in $CO_2$ is 115 pm. The lengths of a normal carbon to oxygen double bond ($C=O$) and carbon to oxygen triple bond ($C \\equiv O$) are 121 pm and 110 pm respectively. The carbon-oxygen bond lengths in $CO_2$ (115 pm) lie between the values for $C=O$ and $C \\equiv O$. Obviously, a single Lewis structure cannot depict this position and it becomes necessary to write more than one Lewis structures and to consider that the structure of $CO_2$ is best described as a hybrid of the canonical or resonance forms I, II and III."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Fig. 4.5",
+                "description": "Resonance in $CO_2$ molecule. Structures I, II, and III represent the three canonical forms, including structures with triple bonds and formal charges.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.3:9",
+            "order": 9,
+            "title": "Stability and Misconceptions of Resonance",
+            "content_text": "Resonance stabilizes the molecule because the energy of the resonance hybrid is less than the energy of any single canonical structure. Resonance also averages the bond characteristics as a whole. It is important to dispel common misconceptions: 1. Canonical forms have no real existence. 2. The molecule does not exist for a fraction of time in one canonical form and for other fractions in others. 3. There is no equilibrium between canonical forms (unlike tautomerism). 4. The molecule exists as a single structure—the resonance hybrid—which cannot be depicted by a single Lewis structure.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.3:10",
+            "order": 10,
+            "title": "4.3.6 Polarity of Bonds",
+            "content_text": "The existence of a 100 percent ionic or covalent bond is an ideal situation; in reality, no bond is purely one or the other. In homonuclear diatomic molecules like $H_2, O_2, Cl_2, N_2,$ or $F_2$, the shared electron pair is equally attracted by the two identical nuclei, resulting in a nonpolar covalent bond. In contrast, in heteronuclear molecules like $HF$, the shared electron pair is displaced more towards the more electronegative atom (Fluorine). This polarization results in a polar covalent bond.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.3:11",
+            "order": 11,
+            "title": "Dipole Moment",
+            "content_text": "As a result of polarization, a molecule possesses a dipole moment ($\\mu$), defined as the product of the magnitude of the charge ($Q$) and the distance of separation ($r$) between the centers of positive and negative charge: $$\\mu = Q \\times r$$ Dipole moment is expressed in Debye units ($D$), where $1 D = 3.33564 \\times 10^{-30} \\text{ C m}$. It is a vector quantity represented by a crossed arrow ($\\mapsto$) placed over the Lewis structure. The cross is on the positive end, and the arrow head points towards the negative end, symbolizing the shift of electron density. This convention is opposite to the conventional direction of the dipole moment vector in physics. The unit is named after Peter Debye, who received the Nobel Prize in 1936 for his work on dipole moments.\nIn polyatomic molecules, the net dipole moment depends on individual bond dipoles and their spatial arrangement (vector sum). \n- **Water ($H_2O$):** Has a bent structure (angle $104.5^\\circ$). The net dipole moment is $1.85 D$ ($6.17 \\times 10^{-30} \\text{ C m}$), the resultant of two $O-H$ bond dipoles. \n- **Beryllium Fluoride ($BeF_2$):** The net dipole moment is zero because the two equal bond dipoles point in opposite directions and cancel each other. \n- **Boron Trifluoride ($BF_3$):** The net dipole moment is zero. The three $B-F$ bond moments at $120^\\circ$ to each other give a net sum of zero. \n\nConsider the case of $NH_3$ and $NF_3$ molecules. Both have a pyramidal shape with a lone pair of electrons on the nitrogen atom. Although fluorine is more electronegative than nitrogen, the resultant The resultant dipole moment of $NH_3$ ($4.90 \\times 10^{-30}$ C m) is greater than that of $NF_3$ ($0.8 \\times 10^{-30}$ C m). This is because, in case of $NH_3$ the orbital dipole due to lone pair is in the same direction as the resultant dipole moment of the three $N-H$ bonds, whereas in $NF_3$ the orbital dipole is in the direction opposite to the resultant dipole moment of the three $N-F$ bonds. The orbital dipole because of lone pair decreases the effect of the resultant $N-F$ bond moments, which results in the low dipole moment of $NF_3$. Dipole moments of some molecules are shown in Table 4.5.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Dipole Moment in H2O",
+                "description": "Diagram (a) shows individual O-H bond dipoles in water; diagram (b) shows the resultant dipole moment vector pointing towards oxygen.",
+                "image_url": null
+              },
+              {
+                "label": "Dipole Moment in BeF2",
+                "description": "Diagram showing two equal and opposite bond dipoles in the linear BeF2 molecule, resulting in a total dipole moment of zero.",
+                "image_url": null
+              },
+              {
+                "label": "Dipole Moment in BF3",
+                "description": "Diagram (a) shows three B-F bond dipoles at 120 degree angles; diagram (b) shows the total dipole moment is zero.",
+                "image_url": null
+              },
+              {
+                "label": "Dipole Moment Comparison",
+                "description": "Two diagrams comparing $NH_3$ and $NF_3$. In $NH_3$, the lone pair dipole and bond dipoles point in the same direction (upwards), resulting in a high net dipole. In $NF_3$, the lone pair dipole points up while the $N-F$ bond dipoles point down, resulting in a low net dipole.",
+                "image_url": null
+              }
+            ],
+            "tables": [
+              {
+                "label": "Table 4.5",
+                "caption": "Dipole Moments of Selected Molecules",
+                "headers": [
+                  "Type of Molecule",
+                  "Example",
+                  "Dipole Moment, $\\mu(D)$",
+                  "Geometry"
+                ],
+                "rows": [
+                  [
+                    "Molecule ($AB$)",
+                    "HF",
+                    "1.78",
+                    "linear"
+                  ],
+                  [
+                    "",
+                    "HCl",
+                    "1.07",
+                    "linear"
+                  ],
+                  [
+                    "",
+                    "HBr",
+                    "0.79",
+                    "linear"
+                  ],
+                  [
+                    "",
+                    "HI",
+                    "0.38",
+                    "linear"
+                  ],
+                  [
+                    "",
+                    "H_2",
+                    "0",
+                    "linear"
+                  ],
+                  [
+                    "Molecule ($AB_2$)",
+                    "H_2O",
+                    "1.85",
+                    "bent"
+                  ],
+                  [
+                    "",
+                    "H_2S",
+                    "0.95",
+                    "bent"
+                  ],
+                  [
+                    "",
+                    "CO_2",
+                    "0",
+                    "linear"
+                  ],
+                  [
+                    "Molecule ($AB_3$)",
+                    "NH_3",
+                    "1.47",
+                    "trigonal-pyramidal"
+                  ],
+                  [
+                    "",
+                    "NF_3",
+                    "0.23",
+                    "trigonal-pyramidal"
+                  ],
+                  [
+                    "",
+                    "BF_3",
+                    "0",
+                    "trigonal-planar"
+                  ],
+                  [
+                    "Molecule ($AB_4$)",
+                    "CH_4",
+                    "0",
+                    "tetrahedral"
+                  ],
+                  [
+                    "",
+                    "CHCl_3",
+                    "1.04",
+                    "tetrahedral"
+                  ],
+                  [
+                    "",
+                    "CCl_4",
+                    "0",
+                    "tetrahedral"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.3:12",
+            "order": 12,
+            "title": "Fajans' Rules: Partial Covalent Character of Ionic Bonds",
+            "content_text": "Just as all covalent bonds have some partial ionic character, ionic bonds also have partial covalent character. The partial covalent character of ionic bonds was discussed by Fajans in terms of the following rules: 1. The smaller the size of the cation and the larger the size of the anion, the greater the covalent character of an ionic bond. 2. The greater the charge on the cation, the greater the covalent character of the ionic bond. 3. For cations of the same size and charge, the one with electronic configuration $(n-1)d^n ns^0$, typical of transition metals, is more polarising than the one with a noble gas configuration, $ns^2 np^6$, typical of alkali and alkaline earth metal cations. The cation polarises the anion, pulling the electronic charge toward itself and thereby increasing the electronic charge between the two. This buildup of electron charge density between the nuclei is precisely what happens in a covalent bond. The polarising power of the cation, the polarisability of the anion, and the extent of distortion (polarisation) of the anion determine the percent covalent character of the ionic bond.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:4:4.4",
+        "number": "4.4",
+        "title": "THE VALENCE SHELL ELECTRON PAIR REPULSION (VSEPR) THEORY",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:4:4.4:1",
+            "order": 1,
+            "title": "Introduction to VSEPR Theory",
+            "content_text": "The Lewis concept is unable to explain the shapes of molecules. VSEPR theory provides a simple procedure to predict the shapes of covalent molecules. Sidgwick and Powell in 1940 proposed a simple theory based on the repulsive interactions of the electron pairs in the valence shell of the atoms. It was further developed and redefined by Nyholm and Gillespie (1957).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.4:2",
+            "order": 2,
+            "title": "Postulates of VSEPR Theory",
+            "content_text": "The main postulates of VSEPR theory are: 1. The shape of a molecule depends upon the number of valence shell electron pairs (bonded or nonbonded) around the central atom. 2. Pairs of electrons in the valence shell repel one another since their electron clouds are negatively charged. 3. These pairs of electrons tend to occupy such positions in space that minimise repulsion and thus maximise distance between them. 4. The valence shell is taken as a sphere with the electron pairs localising on the spherical surface at maximum distance from one another. 5. A multiple bond is treated as if it is a single electron pair and the two or three electron pairs of a multiple bond are treated as a single super pair. 6. Where two or more resonance structures can represent a molecule, the VSEPR model is applicable to any such structure.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.4:3",
+            "order": 3,
+            "title": "Repulsive Interaction of Electron Pairs",
+            "content_text": "The repulsive interaction of electron pairs decreases in the order: Lone pair (lp) – Lone pair (lp) > Lone pair (lp) – Bond pair (bp) > Bond pair (bp) – Bond pair (bp). Nyholm and Gillespie (1957) refined the VSEPR model by explaining the important difference between lone pairs and bonding pairs. While lone pairs are localised on the central atom, each bonded pair is shared between two atoms. As a result, lone pair electrons occupy more space as compared to bonding pairs, leading to greater repulsion. These repulsion effects result in deviations from idealised shapes and alterations in bond angles. The theoretical basis regarding the effects of electron pair repulsions on molecular shapes continues to be a subject of discussion.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.4:4",
+            "order": 4,
+            "title": "Classification of Molecules for Geometry Prediction",
+            "content_text": "For the prediction of geometrical shapes of molecules with VSEPR theory, it is convenient to divide molecules into two categories: (i) molecules in which the central atom has no lone pair and (ii) molecules in which the central atom has one or more lone pairs. Table 4.6 shows the arrangement of electron pairs about a central atom A (without any lone pairs) and geometries of some molecules/ions of the type $AB$. Table 4.7 (page 115) shows shapes where the central atom has lone pairs, and Table 4.8 (page 116) explains the reasons for distortions.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.4:5",
+            "order": 5,
+            "title": "Geometry of Molecules with No Lone Pairs",
+            "content_text": "In compounds of $AB_2, AB_3, AB_4, AB_5$ and $AB_6$, the arrangement of electron pairs and the B atoms around the central atom A are: linear, trigonal planar, tetrahedral, trigonal-bipyramidal and octahedral, respectively. Such arrangements can be seen in molecules like $BF_3$ ($AB_3$), $CH_4$ ($AB_4$) and $PCl_5$ ($AB_5$) as depicted in Fig. 4.6.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 4.6",
+                "description": "Ball-and-stick models for $BeCl_2$ (linear, 180°), $BF_3$ (trigonal planar, 120°), $CH_4$ (tetrahedral, 109.5°), and $PCl_5$ (trigonal bipyramidal, 90° and 120°).",
+                "image_url": null
+              }
+            ],
+            "tables": [
+              {
+                "label": "Table 4.6",
+                "caption": "Geometry of Molecules in which the Central Atom has No Lone Pair of Electrons",
+                "headers": [
+                  "Number of electron pairs",
+                  "Arrangement of electron pairs",
+                  "Molecular geometry",
+                  "Examples"
+                ],
+                "rows": [
+                  [
+                    "2",
+                    "Linear (180°)",
+                    "Linear",
+                    "BeCl_2, HgCl_2"
+                  ],
+                  [
+                    "3",
+                    "Trigonal planar (120°)",
+                    "Trigonal planar",
+                    "BF_3"
+                  ],
+                  [
+                    "4",
+                    "Tetrahedral (109.5°)",
+                    "Tetrahedral",
+                    "CH_4, NH_4^+"
+                  ],
+                  [
+                    "5",
+                    "Trigonal bipyramidal (90°, 120°)",
+                    "Trigonal bipyramidal",
+                    "PCl_5"
+                  ],
+                  [
+                    "6",
+                    "Octahedral (90°)",
+                    "Octahedral",
+                    "SF_6"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.4:6",
+            "order": 6,
+            "title": "Geometry of Molecules with Lone Pairs",
+            "content_text": "The presence of one or more lone pairs on the central atom distorts the ideal geometry of a molecule. Table 4.7 summarizes the shapes and geometries of simple molecules or ions where the central atom has lone pairs (represented as E). In these cases, the arrangement of electron pairs (including lone pairs) follows the basic geometries (trigonal planar, tetrahedral, etc.), but the actual molecular shape is determined only by the positions of the atoms. For instance, an $AB_2E$ molecule has a trigonal planar arrangement of electron pairs but a bent molecular shape due to the lone pair.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 4.7",
+                "caption": "Shape (geometry) of Some Simple Molecules/Ions with Central Ions having One or More Lone Pairs of Electrons(E).",
+                "headers": [
+                  "Molecule type",
+                  "No. of bonding pairs",
+                  "No. of lone pairs",
+                  "Arrangement of electron pairs",
+                  "Shape",
+                  "Examples"
+                ],
+                "rows": [
+                  [
+                    "$AB_2E$",
+                    "2",
+                    "1",
+                    "Trigonal planar",
+                    "Bent",
+                    "$SO_2$, $O_3$"
+                  ],
+                  [
+                    "$AB_3E$",
+                    "3",
+                    "1",
+                    "Tetrahedral",
+                    "Trigonal pyramidal",
+                    "$NH_3$"
+                  ],
+                  [
+                    "$AB_2E_2$",
+                    "2",
+                    "2",
+                    "Tetrahedral",
+                    "Bent",
+                    "$H_2O$"
+                  ],
+                  [
+                    "$AB_4E$",
+                    "4",
+                    "1",
+                    "Trigonal bi-pyramidal",
+                    "See saw",
+                    "$SF_4$"
+                  ],
+                  [
+                    "$AB_3E_2$",
+                    "3",
+                    "2",
+                    "Trigonal bi-pyramidal",
+                    "T-shape",
+                    "$ClF_3$"
+                  ],
+                  [
+                    "$AB_5E$",
+                    "5",
+                    "1",
+                    "Octahedral",
+                    "Square pyramid",
+                    "$BrF_5$"
+                  ],
+                  [
+                    "$AB_4E_2$",
+                    "4",
+                    "2",
+                    "Octahedral",
+                    "Square planar",
+                    "$XeF_4$"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.4:7",
+            "order": 7,
+            "title": "Detailed Analysis of Shape Distortion due to Lone Pairs",
+            "content_text": "The VSEPR theory explains the specific shapes acquired by molecules by considering the relative magnitudes of electron pair repulsions: $lp-lp > lp-bp > bp-bp$. These repulsions cause deviations from ideal bond angles. For example, in $NH_3$, the lone pair-bond pair repulsion is stronger than bond pair-bond pair repulsion, pushing the $N-H$ bonds closer and reducing the angle from $109.5^\\circ$ to $107^\\circ$. In $H_2O$, with two lone pairs, the $lp-lp$ repulsion is even stronger, reducing the angle further to $104.5^\\circ$. For molecules with five electron pairs like $SF_4$ and $ClF_3$, lone pairs preferentially occupy equatorial positions to minimize $90^\\circ$ repulsions with bond pairs.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 4.8.1",
+                "description": "Bent shape of $SO_2$ showing a lone pair on Sulfur and a bond angle of $119.5^\\circ$.",
+                "image_url": null
+              },
+              {
+                "label": "Fig 4.8.2",
+                "description": "Trigonal pyramidal structure of $NH_3$ with one lone pair on Nitrogen and $H-N-H$ bond angles of $107^\\circ$.",
+                "image_url": null
+              },
+              {
+                "label": "Fig 4.8.3",
+                "description": "Bent/Angular structure of $H_2O$ with two lone pairs on Oxygen and an $H-O-H$ bond angle of $104.5^\\circ$.",
+                "image_url": null
+              },
+              {
+                "label": "Fig 4.8.4",
+                "description": "Comparison of lone pair positions in $SF_4$: (a) axial position with three $90^\\circ$ $lp-bp$ repulsions, and (b) equatorial position with two $90^\\circ$ $lp-bp$ repulsions. Arrangement (b) is more stable, resulting in a see-saw shape.",
+                "image_url": null
+              },
+              {
+                "label": "Fig 4.8.5",
+                "description": "Comparison of lone pair arrangements in $ClF_3$: (a) both lone pairs in equatorial positions (most stable, T-shape), (b) one axial and one equatorial, and (c) both axial.",
+                "image_url": null
+              }
+            ],
+            "tables": [
+              {
+                "label": "Table 4.8",
+                "caption": "Shapes of Molecules containing Bond Pair and Lone Pair",
+                "headers": [
+                  "Molecule type",
+                  "No. of bonding pairs",
+                  "No. of lone pairs",
+                  "Arrangement of electrons",
+                  "Shape",
+                  "Reason for the shape acquired"
+                ],
+                "rows": [
+                  [
+                    "$AB_2E$",
+                    "4",
+                    "1",
+                    "Bent",
+                    "Bent",
+                    "Theoretically the shape should have been triangular planar but actually it is found to be bent or v-shaped. The reason being the lone pair-bond pair repulsion is much more as compared to the bond pair-bond pair repulsion. So the angle is reduced to $119.5^\\circ$ from $120^\\circ$."
+                  ],
+                  [
+                    "$AB_3E$",
+                    "3",
+                    "1",
+                    "Trigonal pyramidal",
+                    "Trigonal pyramidal",
+                    "Had there been a bp in place of lp the shape would have been tetrahedral but one lone pair is present and due to the repulsion between lp-bp (which is more than bp-bp repulsion) the angle between bond pairs is reduced to $107^\\circ$ from $109.5^\\circ$."
+                  ],
+                  [
+                    "$AB_2E_2$",
+                    "2",
+                    "2",
+                    "Bent",
+                    "Bent",
+                    "The shape should have been tetrahedral if there were all bp but two lp are present so the shape is distorted tetrahedral or angular. The reason is lp-lp repulsion is more than lp-bp repulsion which is more than bp-bp repulsion. Thus, the angle is reduced to $104.5^\\circ$ from $109.5^\\circ$."
+                  ],
+                  [
+                    "$AB_4E$",
+                    "4",
+                    "1",
+                    "See-saw",
+                    "See-saw",
+                    "In (a) the lp is present at axial position so there are three lp—bp repulsions at $90^\\circ$. In (b) the lp is in an equatorial position, and there are two lp—bp repulsions. Hence, arrangement (b) is more stable. The shape shown in (b) is described as a distorted tetrahedron, a folded square or a see-saw."
+                  ],
+                  [
+                    "$AB_3E_2$",
+                    "3",
+                    "2",
+                    "T-shape",
+                    "T-shape",
+                    "In (a) the lp are at equatorial position so there are less lp-bp repulsions as compared to others in which the lp are at axial positions. So structure (a) is most stable. (T-shaped)."
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:4:4.5",
+        "number": "4.5",
+        "title": "VALENCE BOND THEORY",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:4:4.5:1",
+            "order": 1,
+            "title": "Limitations of Lewis and VSEPR Theories",
+            "content_text": "While the Lewis approach helps in writing molecular structures, it fails to explain the actual formation of chemical bonds. It does not provide reasons for differences in bond dissociation enthalpies and bond lengths, such as those between $H_2$ ($435.8 \\text{ kJ mol}^{-1}, 74 \\text{ pm}$) and $F_2$ ($155 \\text{ kJ mol}^{-1}, 144 \\text{ pm}$), despite both having single covalent bonds. Furthermore, it offers no insight into the shapes of polyatomic molecules. Similarly, VSEPR theory predicts geometries but lacks a theoretical explanation for them and has limited applications.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.5:2",
+            "order": 2,
+            "title": "Introduction to Valence Bond (VB) Theory",
+            "content_text": "To overcome the limitations of earlier models, theories based on quantum mechanical principles were introduced: Valence Bond (VB) theory and Molecular Orbital (MO) theory. VB theory was first introduced by Heitler and London in 1927 and further developed by Pauling and others. It is based on the knowledge of atomic orbitals, electronic configurations of elements, overlap criteria of atomic orbitals, and the principles of variation and superposition.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.5:3",
+            "order": 3,
+            "title": "Formation of the Hydrogen Molecule: Force Analysis",
+            "content_text": "Consider the formation of the simplest molecule, $H_2$, from two hydrogen atoms A and B. These atoms have nuclei $N_A, N_B$ and electrons $e_A, e_B$. When the atoms are far apart, there is no interaction. As they approach, new attractive and repulsive forces begin to operate. Attractive forces arise between: (i) the nucleus of one atom and its own electron (i.e., $N_A - e_A$ and $N_B - e_B$). In addition to the forces between a nucleus and its own electron, new attractive forces develop between the nucleus of one atom and the electron of the other ($N_A - e_B$ and $N_B - e_A$). Conversely, repulsive forces arise between the electrons of the two atoms ($e_A - e_B$) and between their nuclei ($N_A - N_B$). Attractive forces act to bring the atoms together, while repulsive forces act to separate them.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 4.7",
+                "description": "Illustration of attractive and repulsive forces during the formation of a hydrogen molecule. Attractive forces are shown between the nucleus of one atom and the electron of the other, while repulsive forces are shown between the two electrons and between the two nuclei.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.5:4",
+            "order": 4,
+            "title": "Potential Energy and Bond Enthalpy",
+            "content_text": "As two hydrogen atoms approach, the net attractive force exceeds the repulsive force, causing the potential energy of the system to decrease. A state of minimum energy is reached when these forces balance, resulting in a stable $H_2$ molecule with a bond length of 74 pm. The energy released during this formation is the bond enthalpy (435.8 kJ/mol for $H_2$). This same amount of energy is required to dissociate one mole of $H_2$ molecules into individual atoms: $H_2(g) + 435.8 \\text{ kJ mol}^{-1} \\rightarrow H(g) + H(g)$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 4.8",
+                "description": "A potential energy curve for the formation of an $H_2$ molecule as a function of the internuclear distance. The curve shows a minimum point at a distance of 74 pm, which corresponds to the most stable state and the bond energy of 435.8 kJ/mol.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.5:5",
+            "order": 5,
+            "title": "Orbital Overlap Concept",
+            "content_text": "A covalent bond is formed when the atomic orbitals of two atoms partially interpenetrate, a process known as overlapping. This overlap leads to the pairing of electrons with opposite spins in the valence shell. The strength of the resulting covalent bond is determined by the extent of the overlap; generally, a greater overlap results in a stronger bond.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.5:6",
+            "order": 6,
+            "title": "Directional Properties of Bonds",
+            "content_text": "Covalent bonds are formed by the overlap of atomic orbitals, which gives them directional character. While this explains simple diatomic molecules like $H_2$, polyatomic molecules such as $CH_4$, $NH_3$, and $H_2$O have specific geometries (tetrahedral, pyramidal, and bent) and bond angles (e.g., $109.5^\\circ$ for $CH_4$) that require further explanation through valence bond theory and hybridisation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.5:7",
+            "order": 7,
+            "title": "Overlapping of Atomic Orbitals: Phase and Orientation",
+            "content_text": "The overlap of atomic orbitals can be positive, negative, or zero, depending on the phase (sign) and spatial orientation of the orbital wave functions. Positive or 'in-phase' overlap occurs when the signs of the orbital lobes match, leading to bond formation. Negative or 'out-of-phase' overlap occurs when signs are opposite. Zero overlap occurs when orbitals have different orientations, preventing effective interaction. The criterion of overlap applies to both homonuclear and heteronuclear molecules.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 4.9",
+                "description": "Diagrams showing positive, negative, and zero overlaps of s and p atomic orbitals. Positive overlaps include $p_z-p_z$, $p_z-s$, $p_x-p_x$, and $p_y-p_y$ in-phase. Negative overlaps show the same combinations out-of-phase. Zero overlap is shown for $p_x-s$ and $p_x-p_y$ due to perpendicular orientations.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.5:8",
+            "order": 8,
+            "title": "Limitations of Simple Orbital Overlap in Polyatomic Molecules",
+            "content_text": "Simple orbital overlap fails to account for the observed bond angles in polyatomic molecules. For methane ($CH_4$), carbon's excited state configuration is $[He] 2s^1 2p_x^1 2p_y^1 2p_z^1$. Overlapping these with hydrogen's 1s orbitals would predict three bonds at $90^\\circ$ angles and one bond with no specific direction, which contradicts the experimental tetrahedral geometry with $109.5^\\circ$ angles. Similar discrepancies are found in $NH_3$ and $H_2$O, where predicted $90^\\circ$ angles differ from the actual $107^\\circ$ and $104.5^\\circ$ respectively.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.5:9",
+            "order": 9,
+            "title": "Sigma (\\sigma) Bond",
+            "content_text": "A sigma (\\sigma) bond is a type of covalent bond formed by the end-to-end or axial overlap of atomic orbitals along the internuclear axis. This can occur through three types of combinations: s-s overlapping (two s-orbitals), s-p overlapping (one s-orbital and one p-orbital), or p-p overlapping (two p-orbitals meeting head-on).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Diagram: s-s overlapping",
+                "description": "Two spherical s-orbitals merging along the internuclear axis to form a sigma bond.",
+                "image_url": null
+              },
+              {
+                "label": "Diagram: s-p overlapping",
+                "description": "A spherical s-orbital and a dumbbell-shaped p-orbital merging along the internuclear axis to form a sigma bond.",
+                "image_url": null
+              },
+              {
+                "label": "Diagram: p-p overlapping (sigma)",
+                "description": "Two dumbbell-shaped p-orbitals merging head-on along the internuclear axis to form a sigma bond.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.5:10",
+            "order": 10,
+            "title": "Pi (\\pi) Bond",
+            "content_text": "A pi (\\pi) bond is formed by the sidewise or lateral overlap of atomic orbitals such that their axes remain parallel to each other and perpendicular to the internuclear axis. This results in the formation of two saucer-shaped electron clouds, one located above and the other below the plane of the participating atoms.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Diagram: p-p overlapping (pi)",
+                "description": "Two parallel p-orbitals overlapping sidewise to form a pi bond, showing electron density above and below the internuclear plane.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.5:11",
+            "order": 11,
+            "title": "Strength of Sigma and Pi Bonds",
+            "content_text": "The strength of a covalent bond depends on the extent of orbital overlap. Sigma bonds are stronger than pi bonds because axial overlap allows for a greater degree of interpenetration compared to sidewise overlap. In molecules with multiple bonds, a pi bond is always formed in addition to a primary sigma bond.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:4:4.6",
+        "number": "4.6",
+        "title": "HYBRIDISATION",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:4:4.6:1",
+            "order": 1,
+            "title": "Concept of Hybridisation",
+            "content_text": "To explain the characteristic geometries of polyatomic molecules like $CH_4$, $NH_3$, and $H_2$O, Pauling introduced the concept of hybridisation. It is defined as the process of intermixing atomic orbitals of slightly different energies within an atom to redistribute their energies, resulting in a new set of equivalent orbitals known as hybrid orbitals. For example, one 2s and three 2p orbitals of carbon hybridise to form four equivalent $sp^3$ hybrid orbitals.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.6:2",
+            "order": 2,
+            "title": "Salient Features of Hybridisation",
+            "content_text": "The primary features of hybridisation include: 1. The number of hybrid orbitals produced is exactly equal to the number of atomic orbitals that undergo hybridisation. 2. All hybrid orbitals in a set are equivalent in terms of energy and shape. 3. The hybrid orbitals are more effective in forming stable bonds than the pure atomic orbitals. 4. These hybrid orbitals are directed in space in some preferred direction to have minimum repulsion between electron pairs and thus a stable arrangement. Therefore, the type of hybridisation indicates the geometry of the molecules.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.6:3",
+            "order": 3,
+            "title": "Important conditions for hybridisation",
+            "content_text": "The following conditions must be met for hybridisation to occur: (i) The orbitals present in the valence shell of the atom are hybridised. (ii) The orbitals undergoing hybridisation should have almost equal energy. (iii) Promotion of electron is not an essential condition prior to hybridisation. (iv) It is not necessary that only half-filled orbitals participate in hybridisation. In some cases, even filled orbitals of the valence shell take part in hybridisation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:4:4.6.1",
+        "number": "4.6.1",
+        "title": "Types of Hybridisation",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:4:4.6.1:1",
+            "order": 1,
+            "title": "sp hybridisation",
+            "content_text": "This type of hybridisation involves the mixing of one $s$ and one $p$ orbital resulting in the formation of two equivalent $sp$ hybrid orbitals. The suitable orbitals for $sp$ hybridisation are $s$ and $p_z$, if the hybrid orbitals are to lie along the $z$-axis. Each $sp$ hybrid orbital has 50% $s$-character and 50% $p$-character. Such a molecule in which the central atom is $sp$-hybridised and linked directly to two other central atoms possesses linear geometry. This type of hybridisation is also known as diagonal hybridisation. The two $sp$ hybrids point in the opposite direction along the $z$-axis with projecting positive lobes and very small negative lobes, which provides more effective overlapping resulting in the formation of stronger bonds.\nIn $BeCl_2$, the ground state electronic configuration of $Be$ is $1s^2 2s^2$. In the excited state, one of the $2s$-electrons is promoted to a vacant $2p$ orbital to account for its bivalency. One $2s$ and one $2p$-orbital get hybridised to form two $sp$ hybridised orbitals. These two $sp$ hybrid orbitals are oriented in opposite directions forming an angle of $180^\\circ$. Each of the $sp$ hybridised orbitals overlaps with the $2p$-orbital of chlorine axially to form two $Be-Cl$ sigma bonds.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 4.10 (a)",
+                "description": "Formation of $sp$ hybrids from $s$ and $p$ orbitals showing the combination of an $s$ orbital and a $p_z$ orbital to form two linear $sp$ hybrid orbitals oriented at $180^\\circ$.",
+                "image_url": null
+              },
+              {
+                "label": "Fig. 4.10 (b)",
+                "description": "Formation of the linear $BeCl_2$ molecule showing the overlap of $sp$ hybrid orbitals of Beryllium with the $2p_z$ orbitals of two Chlorine atoms.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.6.1:2",
+            "order": 2,
+            "title": "sp2 hybridisation",
+            "content_text": "In this hybridisation, there is involvement of one $s$ and two $p$-orbitals in order to form three equivalent $sp^2$ hybridised orbitals. For example, in $BCl_3$ molecule, the ground state electronic configuration of the central boron atom is $1s^2 2s^2 2p^1$. In the excited state, one of the $2s$ electrons is promoted to a vacant $2p$ orbital, resulting in boron having three unpaired electrons. These three orbitals (one $2s$ and two $2p$) hybridise to form three $sp^2$ hybrid orbitals. The three hybrid orbitals so formed are oriented in a trigonal planar arrangement and overlap with $2p$ orbitals of chlorine to form three $B-Cl$ bonds. The geometry is trigonal planar with a $Cl-B-Cl$ bond angle of $120^\\circ$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 4.11",
+                "description": "Formation of $sp^2$ hybrids from $s, p_x, p_y$ orbitals and the resulting trigonal planar $BCl_3$ molecule with $120^\\circ$ angles.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.6.1:3",
+            "order": 3,
+            "title": "sp3 hybridisation",
+            "content_text": "This type of hybridisation involves the mixing of one $s$-orbital and three $p$-orbitals of the valence shell to form four $sp^3$ hybrid orbitals of equivalent energies and shape. There is 25% $s$-character and 75% $p$-character in each $sp^3$ hybrid orbital. The four $sp^3$ hybrid orbitals are directed towards the four corners of a tetrahedron. The angle between $sp^3$ hybrid orbitals is $109.5^\\circ$. In $CH_4$, carbon forms four such orbitals that overlap with $1s$ orbitals of hydrogen.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 4.12",
+                "description": "Formation of $sp^3$ hybrids by the combination of $s, p_x, p_y$ and $p_z$ atomic orbitals of carbon and the formation of the tetrahedral $CH_4$ molecule.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.6.1:4",
+            "order": 4,
+            "title": "Structure of NH3 molecule",
+            "content_text": "In $NH_3$, the valence shell electronic configuration of nitrogen in the ground state is $2s^2 2p_x^1 2p_y^1 2p_z^1$. It undergoes $sp^3$ hybridisation to form four hybrid orbitals. Three of these contain unpaired electrons which overlap with $1s$ orbitals of hydrogen to form three $N-H$ sigma bonds, while the fourth contains a lone pair. The repulsion between the lone pair and bond pairs is greater than between bond pairs, distorting the molecule and reducing the bond angle from $109.5^\\circ$ to $107^\\circ$. The geometry is pyramidal.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 4.13",
+                "description": "Formation of $NH_3$ molecule showing the $sp^3$ hybrid orbitals of Nitrogen, one containing a lone pair (lp) and three forming bonds with Hydrogen, resulting in a pyramidal shape.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.6.1:5",
+            "order": 5,
+            "title": "Structure of H2O molecule",
+            "content_text": "In the $H_2O$ molecule, the four oxygen orbitals (one $2s$ and three $2p$) undergo $sp^3$ hybridisation forming four $sp^3$ hybrid orbitals. Two of these contain one electron each (forming bonds with Hydrogen) and the other two contain lone pairs. These orbitals acquire a tetrahedral geometry, but with two corners occupied by lone pairs, the bond angle is reduced to $104.5^\\circ$. The molecule acquires a V-shape or angular geometry.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 4.14",
+                "description": "Formation of $H_2O$ molecule showing the $sp^3$ hybrid orbitals of Oxygen with two lone pairs (lp) and two $O-H$ bonds, resulting in an angular geometry.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:4:4.6.2",
+        "number": "4.6.2",
+        "title": "Other Examples of sp3, sp2 and sp Hybridisation",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:4:4.6.2:1",
+            "order": 1,
+            "title": "sp3 Hybridisation in C2H6 molecule",
+            "content_text": "In the ethane ($C_2H_6$) molecule, both carbon atoms are in the $sp^3$ hybrid state. One $sp^3$ hybrid orbital from each carbon atom overlaps axially to form a $C-C$ sigma ($\\sigma$) bond. The remaining three $sp^3$ hybrid orbitals on each carbon form $sp^3-s$ sigma bonds with hydrogen atoms. The $C-C$ bond length is 154 pm and the $C-H$ bond length is 109 pm.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.6.2:2",
+            "order": 2,
+            "title": "sp2 Hybridisation in C2H4 molecule",
+            "content_text": "In ethene ($C_2H_4$), each carbon atom is $sp^2$ hybridised. One $sp^2$ hybrid orbital from each carbon overlaps axially to form a $C-C$ sigma bond. Two other $sp^2$ orbitals on each carbon form $sp^2-s$ sigma bonds with hydrogen. The unhybridised $2p$ orbital (e.g., $2p_x$ or $2p_y$) of one carbon overlaps sidewise with the corresponding orbital of the other carbon to form a pi ($\\pi$) bond. This $\\pi$ bond consists of two electron clouds above and below the plane of the molecule. The $C=C$ bond length is 134 pm, $C-H$ is 108 pm, the $H-C-H$ angle is $117.6^\\circ$, and the $H-C-C$ angle is $121^\\circ$. In the formation of ethyne ($C_2H_2$) molecule, both the carbon atoms undergo $sp$-hybridisation having two unhybridised orbital i.e., $2p_y$ and $2p_x$. One $sp$ hybrid orbital of one carbon atom overlaps axially with $sp$ hybrid orbital of the other carbon atom to form $C-C$ sigma bond, while the other hybridised orbital of each carbon atom overlaps axially with the half filled $s$ orbital of hydrogen atoms forming $\\sigma$ bonds. Each of the two unhybridised $p$ orbitals of both the carbon atoms overlaps sidewise to form two $\\pi$ bonds between the carbon atoms. So the triple bond between the two carbon atoms is made up of one sigma and two pi bonds as shown in Fig. 4.16.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 4.15",
+                "description": "Detailed multi-part diagram showing the formation of sigma and pi bonds in ethene, including the orbital overlaps and the final planar structure with electron clouds above and below the C-C axis.",
+                "image_url": null
+              },
+              {
+                "label": "Fig. 4.16",
+                "description": "Formation of sigma and pi bonds in ethyne: (a) shows the sigma bond framework formed by axial overlap of sp-sp and sp-1s orbitals; (b) shows the orientation of unhybridised 2px and 2py orbitals; (c) shows the final triple bond structure with two pi electron clouds.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:4:4.6.3",
+        "number": "4.6.3",
+        "title": "Hybridisation of Elements involving d Orbitals",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:4:4.6.3:1",
+            "order": 1,
+            "title": "Introduction to d-orbital Hybridisation",
+            "content_text": "The elements present in the third period contain $d$ orbitals in addition to $s$ and $p$ orbitals. The energy of the $3d$ orbitals are comparable to the energy of the $3s$ and $3p$ orbitals. The energy of $3d$ orbitals are also comparable to those of $4s$ and $4p$ orbitals. As a consequence the hybridisation involving either $3s, 3p$ and $3d$ or $3d, 4s$ and $4p$ is possible. However, since the difference in energies of $3p$ and $4s$ orbitals is significant, no hybridisation involving $3p, 3d$ and $4s$ orbitals is possible. The important hybridisation schemes involving $s, p$ and $d$ orbitals are summarised in the following table.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 4.x",
+                "caption": "Hybridisation schemes involving s, p and d orbitals",
+                "headers": [
+                  "Shape of molecules/ ions",
+                  "Hybridisation type",
+                  "Atomic orbitals",
+                  "Examples"
+                ],
+                "rows": [
+                  [
+                    "Square planar",
+                    "$dsp^2$",
+                    "$d+s+p(2)$",
+                    "$[Ni(CN)_4]^{2-}, [Pt(Cl)_4]^{2-}$"
+                  ],
+                  [
+                    "Trigonal bipyramidal",
+                    "$sp^3d$",
+                    "$s+p(3)+d$",
+                    "$PF_5, PCl_5$"
+                  ],
+                  [
+                    "Square pyramidal",
+                    "$sp^3d^2$",
+                    "$s+p(3)+d(2)$",
+                    "$BrF_5$"
+                  ],
+                  [
+                    "Octahedral",
+                    "$sp^3d^2$ or $d^2sp^3$",
+                    "$s+p(3)+d(2)$ or $d(2)+s+p(3)$",
+                    "$SF_6, [CrF_6]^{3-}, [Co(NH_3)_6]^{3+}$"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.6.3:2",
+            "order": 2,
+            "title": "Formation of PCl5 (sp3d hybridisation)",
+            "content_text": "The ground state and the excited state outer electronic configurations of phosphorus ($Z=15$) involve the promotion of an electron from the $3s$ to a $3d$ orbital. In the excited state, one $s$, three $p$ and one $d$ orbitals are available for hybridisation to yield a set of five $sp^3d$ hybrid orbitals which are directed towards the five corners of a trigonal bipyramidal as depicted in Fig. 4.17. In $PCl_5$, the five $sp^3d$ orbitals of phosphorus overlap with the singly occupied $p$ orbitals of chlorine atoms to form five $P-Cl$ sigma bonds. Three $P-Cl$ bonds lie in one plane and make an angle of $120^\\circ$ with each other; these are termed as equatorial bonds. The remaining two $P-Cl$ bonds—one lying above and the other lying below the equatorial plane, make an angle of $90^\\circ$ with the plane. These are called axial bonds. As the axial bond pairs suffer more repulsive interaction from the equatorial bond pairs, axial bonds are slightly longer and hence slightly weaker than the equatorial bonds, making $PCl_5$ more reactive.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 4.17",
+                "description": "Trigonal bipyramidal geometry of PCl5 molecule showing axial and equatorial P-Cl bonds.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.6.3:3",
+            "order": 3,
+            "title": "Formation of SF6 (sp3d2 hybridisation)",
+            "content_text": "In $SF_6$, the central sulphur atom has the ground state outer electronic configuration $3s^2 3p^4$. In the excited state, the available six orbitals i.e., one $s$, three $p$ and two $d$ are singly occupied by electrons. These orbitals hybridise to form six new $sp^3d^2$ hybrid orbitals, which are projected towards the six corners of a regular octahedron. These six $sp^3d^2$ hybrid orbitals overlap with singly occupied orbitals of fluorine atoms to form six $S-F$ sigma bonds. Thus $SF_6$ molecule has a regular octahedral geometry as shown in Fig. 4.18.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 4.18",
+                "description": "Octahedral geometry of SF6 molecule showing the central sulfur atom bonded to six fluorine atoms at the corners of an octahedron.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:4:4.7",
+        "number": "4.7",
+        "title": "MOLECULAR ORBITAL THEORY",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:4:4.7:1",
+            "order": 1,
+            "title": "Salient Features of Molecular Orbital Theory",
+            "content_text": "Molecular orbital (MO) theory was developed by F. Hund and R.S. Mulliken in 1932. The salient features are: (i) Electrons in a molecule are present in various molecular orbitals just as electrons in atoms are in atomic orbitals. (ii) Atomic orbitals of comparable energies and proper symmetry combine to form molecular orbitals. (iii) While an electron in an atomic orbital is influenced by one nucleus (monocentric), in a molecular orbital it is influenced by two or more nuclei (polycentric). (iv) The number of molecular orbitals formed is equal to the number of combining atomic orbitals. When two atomic orbitals combine, two molecular orbitals are formed: one bonding molecular orbital and one antibonding molecular orbital. (v) The bonding molecular orbital has lower energy and hence greater stability than the corresponding antibonding molecular orbital. (vi) The electron probability distribution around a group of nuclei in a molecule is given by a molecular orbital. (vii) Molecular orbitals are filled in accordance with the aufbau principle, obeying the Pauli’s exclusion principle and the Hund’s rule.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:4:4.7.1",
+        "number": "4.7.1",
+        "title": "Formation of Molecular Orbitals - Linear Combination of Atomic Orbitals (LCAO)",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:4:4.7.1:1",
+            "order": 1,
+            "title": "LCAO Method and Wave Functions",
+            "content_text": "According to wave mechanics, atomic orbitals are expressed by wave functions ($\\psi$’s) representing electron wave amplitudes, obtained from the Schrödinger equation. Since the equation cannot be solved exactly for multi-electron systems, the Linear Combination of Atomic Orbitals (LCAO) is used as an approximate method. For a homonuclear diatomic hydrogen molecule with atoms A and B, the atomic orbitals are $\\psi_A$ and $\\psi_B$. The formation of molecular orbitals occurs by addition and subtraction of these wave functions: $\\psi_{MO} = \\psi_A \\pm \\psi_B$. This results in two molecular orbitals: the bonding orbital $\\sigma = \\psi_A + \\psi_B$ and the antibonding orbital $\\sigma^* = \\psi_A - \\psi_B$. Qualitatively, bonding orbitals result from constructive interference (reinforcement) of electron waves, while antibonding orbitals result from destructive interference. As a result, the electron density in a bonding molecular orbital is located between the nuclei of the bonded atoms because of which the repulsion between the nuclei is very less while in case of an antibonding molecular orbital, most of the electron density is located away from the space between the nuclei. In fact, there is a nodal plane (on which the electron density is zero) between the nuclei and hence the repulsion between the nuclei is high. Electrons placed in a bonding molecular orbital tend to hold the nuclei together and stabilise a molecule. Therefore, a bonding molecular orbital always possesses lower energy than either of the atomic orbitals that have combined to form it. In contrast, the electrons placed in the antibonding molecular orbital destabilise the molecule. This is because the mutual repulsion of the electrons in this orbital is more than the attraction between the electrons and the nuclei, which causes a net increase in energy. It may be noted that the energy of the antibonding orbital is raised above the energy of the parent atomic orbitals that have combined and the energy of the bonding orbital has been lowered than the parent orbitals. The total energy of two molecular orbitals, however, remains the same as that of two original atomic orbitals.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 4.19",
+                "description": "Energy level diagram showing the formation of bonding (sigma) and antibonding (sigma*) molecular orbitals from the linear combination of two atomic orbitals psi_A and psi_B.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:4:4.7.2",
+        "number": "4.7.2",
+        "title": "Conditions for the Combination of Atomic Orbitals",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:4:4.7.2:1",
+            "order": 1,
+            "title": "Requirements for LCAO",
+            "content_text": "The linear combination of atomic orbitals to form molecular orbitals takes place only if the following conditions are satisfied: 1. The combining atomic orbitals must have the same or nearly the same energy. This means that $1s$ orbital can combine with another $1s$ orbital but not with $2s$ orbital because the energy of $2s$ orbital is appreciably higher than that of $1s$ orbital. This is not true if the atoms are very different. 2. The combining atomic orbitals must have the same symmetry about the molecular axis. By convention z-axis is taken as the molecular axis. It is important to note that atomic orbitals having same or nearly the same energy will not combine if they do not have the same symmetry. For example, $2p_z$ orbital of one atom can combine with $2p_z$ orbital of the other atom but not with the $2p_x$ or $2p_y$ orbitals because of their different symmetries. 3. The combining atomic orbitals must overlap to the maximum extent. Greater the extent of overlap, the greater will be the electron-density between the nuclei of a molecular orbital.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:4:4.7.3",
+        "number": "4.7.3",
+        "title": "Types of Molecular Orbitals",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:4:4.7.3:1",
+            "order": 1,
+            "title": "Sigma and Pi Molecular Orbitals",
+            "content_text": "Molecular orbitals of diatomic molecules are designated as $\\sigma$ (sigma), $\\pi$ (pi), $\\delta$ (delta), etc. In this nomenclature, the sigma ($\\sigma$) molecular orbitals are symmetrical around the bond-axis while pi ($\\pi$) molecular orbitals are not symmetrical. For example, the linear combination of $1s$ orbitals centered on two nuclei produces two molecular orbitals which are symmetrical around the bond-axis. Such molecular orbitals are of the $\\sigma$ type and are designated as $\\sigma 1s$ and $\\sigma^* 1s$ [Fig. 4.20(a)]. If internuclear axis is taken to be in the z-direction, it can be seen that a linear combination of $2p_z$ orbitals of two atoms also produces two sigma molecular orbitals designated as $\\sigma 2p_z$ and $\\sigma^* 2p_z$ [Fig. 4.20(b)]. Molecular orbitals obtained from $2p_x$ and $2p_y$ orbitals are not symmetrical around the bond axis because of the presence of positive lobes above and negative lobes below the molecular plane. Such molecular orbitals, are labelled as $\\pi$ and $\\pi^*$ [Fig. 4.20(c)]. A $\\pi$ bonding MO has larger electron density above and below the inter-nuclear axis. The $\\pi^*$ antibonding MO has a node between the nuclei.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:4:4.7.4",
+        "number": "4.7.4",
+        "title": "Energy Level Diagram for Molecular Orbitals",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:4:4.7.4:1",
+            "order": 1,
+            "title": "Molecular Orbitals from 2s and 2p Atomic Orbitals",
+            "content_text": "We have seen that $1s$ atomic orbitals on two atoms form two molecular orbitals designated as $\\sigma 1s$ and $\\sigma^* 1s$. In the same manner, the $2s$ and $2p$ atomic orbitals (eight atomic orbitals on two atoms) give rise to the following eight molecular orbitals: Antibonding MOs: $\\sigma^* 2s, \\sigma^* 2p_z, \\pi^* 2p_x, \\pi^* 2p_y$; Bonding MOs: $\\sigma 2s, \\sigma 2p_z, \\pi 2p_x, \\pi 2p_y$. The energy levels of these molecular orbitals have been determined experimentally from spectroscopic data for homonuclear diatomic molecules of second row elements of the periodic table.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 4.20",
+                "description": "Contours and energies of bonding and antibonding molecular orbitals. (a) Two 1s orbitals combine to form bonding $\\sigma 1s$ and antibonding $\\sigma^* 1s$ orbitals. (b) Two $2p_z$ orbitals combine along the bond axis to form $\\sigma 2p_z$ and $\\sigma^* 2p_z$. (c) Two $2p_x$ orbitals combine side-on to form $\\pi 2p_x$ and $\\pi^* 2p_x$ orbitals, showing electron density above and below the internuclear axis and nodal planes in antibonding orbitals.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.7.4:2",
+            "order": 2,
+            "title": "Energy Order of Molecular Orbitals",
+            "content_text": "The increasing order of energies of various molecular orbitals for $O_2$ and $F_2$ is given below: $\\sigma 1s < \\sigma^* 1s < \\sigma 2s < \\sigma^* 2s < \\sigma 2p_z < (\\pi 2p_x = \\pi 2p_y) < (\\pi^* 2p_x = \\pi^* 2p_y) < \\sigma^* 2p_z$. However, this sequence of energy levels of molecular orbitals is not correct for the remaining molecules $Li_2, Be_2, B_2, C_2, N_2$. For instance, it has been observed experimentally that for molecules such as $B_2, C_2, N_2$, etc. the increasing order of energies of various molecular orbitals is: $\\sigma 1s < \\sigma^* 1s < \\sigma 2s < \\sigma^* 2s < (\\pi 2p_x = \\pi 2p_y) < \\sigma 2p_z < (\\pi^* 2p_x = \\pi^* 2p_y) < \\sigma^* 2p_z$. The important characteristic feature of this order is that the energy of $\\sigma 2p_z$ molecular orbital is higher than that of $\\pi 2p_x$ and $\\pi 2p_y$ molecular orbitals.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:4:4.7.5",
+        "number": "4.7.5",
+        "title": "Electronic Configuration and Molecular Behaviour",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:4:4.7.5:1",
+            "order": 1,
+            "title": "Stability of Molecules",
+            "content_text": "The distribution of electrons among various molecular orbitals is called the electronic configuration of the molecule. From the electronic configuration of the molecule, it is possible to get important information about the molecule as discussed below: Stability of Molecules: If $N_b$ is the number of electrons occupying bonding orbitals and $N_a$ the number occupying the antibonding orbitals, then (i) the molecule is stable if $N_b$ is greater than $N_a$, and (ii) the molecule is unstable if $N_b$ is less than $N_a$. In (i) more bonding orbitals are occupied and so the bonding influence is stronger and a stable molecule results. In (ii) the antibonding influence is stronger and therefore the molecule is unstable.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.7.5:2",
+            "order": 2,
+            "title": "Bond Order",
+            "content_text": "Bond order (b.o.) is defined as one half the difference between the number of electrons present in the bonding and the antibonding orbitals i.e., Bond order (b.o.) = $\\frac{1}{2}(N_b - N_a)$. The rules discussed above regarding the stability of the molecule can be restated in terms of bond order as follows: A positive bond order (i.e., $N_b > N_a$) means a stable molecule while a negative (i.e., $N_b < N_a$) or zero (i.e., $N_b = N_a$) bond order means an unstable molecule.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.7.5:3",
+            "order": 3,
+            "title": "Nature, Length, and Magnetic Properties",
+            "content_text": "Nature of the bond: Integral bond order values of 1, 2 or 3 correspond to single, double or triple bonds respectively as studied in the classical concept. Bond-length: The bond order between two atoms in a molecule may be taken as an approximate measure of the bond length. The bond length decreases as bond order increases. Magnetic nature: If all the molecular orbitals in a molecule are doubly occupied, the substance is diamagnetic (repelled by magnetic field). However if one or more molecular orbitals are singly occupied it is paramagnetic (attracted by magnetic field), e.g., $O_2$ molecule.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:4:4.8",
+        "number": "4.8",
+        "title": "BONDING IN SOME HOMONUCLEAR DIATOMIC MOLECULES",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:4:4.8:1",
+            "order": 1,
+            "title": "Hydrogen Molecule (H2)",
+            "content_text": "In this section we shall discuss bonding in some homonuclear diatomic molecules. 1. Hydrogen molecule ($H_2$): It is formed by the combination of two hydrogen atoms. Each hydrogen atom has one electron in $1s$ orbital. Therefore, in all there are two electrons in hydrogen molecule which are present in $\\sigma 1s$ molecular orbital. So electronic configuration of hydrogen molecule is $H_2 : (\\sigma 1s)^2$. The bond order of $H_2$ molecule can be calculated as given below: Bond order = $\\frac{N_b - N_a}{2} = \\frac{2 - 0}{2} = 1$. This means that the two hydrogen atoms are bonded together by a single covalent bond. The bond dissociation energy of hydrogen molecule has been found to be 438 kJ mol$^{-1}$ and bond length equal to 74 pm. Since no Since no unpaired electron is present in hydrogen molecule, therefore, it is diamagnetic.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.8:2",
+            "order": 2,
+            "title": "Helium molecule (He2)",
+            "content_text": "The electronic configuration of helium atom is $1s^2$. Each helium atom contains 2 electrons, therefore, in $He_2$ molecule there would be 4 electrons. These electrons will be accommodated in $\\sigma 1s$ and $\\sigma^* 1s$ molecular orbitals leading to electronic configuration: $He_2 : (\\sigma 1s)^2 (\\sigma^* 1s)^2$. The bond order of $He_2$ is $\\frac{1}{2}(2 - 2) = 0$. $He_2$ molecule is therefore unstable and does not exist. Similarly, it can be shown that $Be_2$ molecule with configuration $(\\sigma 1s)^2 (\\sigma^* 1s)^2 (\\sigma 2s)^2 (\\sigma^* 2s)^2$ also does not exist.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.8:3",
+            "order": 3,
+            "title": "Lithium molecule (Li2)",
+            "content_text": "The electronic configuration of lithium is $1s^2 2s^1$. There are six electrons in $Li_2$. The electronic configuration of $Li_2$ molecule, therefore, is $Li_2 : (\\sigma 1s)^2 (\\sigma^* 1s)^2 (\\sigma 2s)^2$. The above configuration is also written as $KK(\\sigma 2s)^2$ where $KK$ represents the closed K shell structure $(\\sigma 1s)^2 (\\sigma^* 1s)^2$. From the electronic configuration of $Li_2$ molecule it is clear that there are four electrons present in bonding molecular orbitals and two electrons present in antibonding molecular orbitals. Its bond order, therefore, is $\\frac{1}{2}(4 - 2) = 1$. It means that $Li_2$ molecule is stable and since it has no unpaired electrons it should be diamagnetic. Indeed diamagnetic $Li_2$ molecules are known to exist in the vapour phase.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.8:4",
+            "order": 4,
+            "title": "Carbon molecule (C2)",
+            "content_text": "The electronic configuration of carbon is $1s^2 2s^2 2p^2$. There are twelve electrons in $C_2$. The electronic configuration of $C_2$ molecule, therefore, is $C_2 : (\\sigma 1s)^2 (\\sigma^* 1s)^2 (\\sigma 2s)^2 (\\sigma^* 2s)^2 (\\pi 2p_x^2 = \\pi 2p_y^2)$ or $KK (\\sigma 2s)^2 (\\sigma^* 2s)^2 (\\pi 2p_x^2 = \\pi 2p_y^2)$. The bond order of $C_2$ is $\\frac{1}{2}(8 - 4) = 2$ and $C_2$ should be diamagnetic. Diamagnetic $C_2$ molecules have indeed been detected in vapour phase. It is important to note that double bond in $C_2$ consists of both pi bonds because of the presence of four electrons in two pi molecular orbitals. In most of the other molecules a double bond is made up of a sigma bond and a pi bond. In a similar fashion the bonding in $N_2$ molecule can be discussed.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.8:5",
+            "order": 5,
+            "title": "Oxygen molecule (O2)",
+            "content_text": "The electronic configuration of oxygen atom is $1s^2 2s^2 2p^4$. Each oxygen atom has 8 electrons, hence, in $O_2$ molecule there are 16 electrons. The electronic configuration of $O_2$ molecule, therefore, is $O_2 : (\\sigma 1s)^2 (\\sigma^* 1s)^2 (\\sigma 2s)^2 (\\sigma^* 2s)^2 (\\sigma 2p_z)^2 (\\pi 2p_x^2 = \\pi 2p_y^2) (\\pi^* 2p_x^1 = \\pi^* 2p_y^1)$. From the electronic configuration of $O_2$ molecule it is clear that ten electrons are present in bonding molecular orbitals and six electrons are present in antibonding molecular orbitals. Its bond order, therefore, is $\\text{Bond order} = \\frac{1}{2} [N_b - N_a] = \\frac{1}{2} [10 - 6] = 2$. So in oxygen molecule, atoms are held by a double bond. Moreover, it may be noted that it contains two unpaired electrons in $\\pi^* 2p_x$ and $\\pi^* 2p_y$ molecular orbitals, therefore, $O_2$ molecule should be paramagnetic, a prediction that corresponds to experimental observation. In this way, the theory successfully explains the paramagnetic nature of oxygen.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.8:6",
+            "order": 6,
+            "title": "Molecular Orbital Occupancy and Properties for Second Row Diatomic Molecules",
+            "content_text": "The electronic configurations of other homonuclear diatomic molecules of the second row of the periodic table can be written similarly. Fig. 4.21 provides the molecular orbital occupancy and molecular properties for $B_2$ through $Ne_2$. The sequence of MOs and their electron population are shown. The bond energy, bond length, bond order, magnetic properties and valence electron configuration appear below the orbital diagrams. Note that for $B_2, C_2,$ and $N_2$, there is 2s-2p mixing which changes the energy order of $\\sigma 2p_z$ and $\\pi 2p$ orbitals, whereas for $O_2, F_2,$ and $Ne_2$, there is no such mixing.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 4.21",
+                "description": "Molecular orbital occupancy and molecular properties for $B_2$ through $Ne_2$. The diagram shows energy levels for molecular orbitals, highlighting the difference in energy ordering between molecules with 2s-2p mixing ($B_2, C_2, N_2$) and those without ($O_2, F_2, Ne_2$). Below the energy levels, bar charts represent bond energy (kJ/mol) and bond length (pm), followed by a table of bond order, magnetic properties, and valence electron configurations.",
+                "image_url": null
+              }
+            ],
+            "tables": [
+              {
+                "label": "Table 4.1",
+                "caption": "Molecular properties for $B_2$ through $Ne_2$",
+                "headers": [
+                  "Molecule",
+                  "Bond Order",
+                  "Magnetic Properties",
+                  "Valence Electron Configuration",
+                  "Bond Energy (kJ/mol)",
+                  "Bond Length (pm)"
+                ],
+                "rows": [
+                  [
+                    "$B_2$",
+                    "1",
+                    "Paramagnetic",
+                    "$(\\sigma_{2s})^2 (\\sigma^*_{2s})^2 (\\pi_{2p})^2$",
+                    "290",
+                    "159"
+                  ],
+                  [
+                    "$C_2$",
+                    "2",
+                    "Diamagnetic",
+                    "$(\\sigma_{2s})^2 (\\sigma^*_{2s})^2 (\\pi_{2p})^4$",
+                    "620",
+                    "131"
+                  ],
+                  [
+                    "$N_2$",
+                    "3",
+                    "Diamagnetic",
+                    "$(\\sigma_{2s})^2 (\\sigma^*_{2s})^2 (\\pi_{2p})^4 (\\sigma_{2p})^2$",
+                    "945",
+                    "110"
+                  ],
+                  [
+                    "$O_2$",
+                    "2",
+                    "Paramagnetic",
+                    "$(\\sigma_{2s})^2 (\\sigma^*_{2s})^2 (\\sigma_{2p})^2 (\\pi_{2p})^4 (\\pi^*_{2p})^2$",
+                    "498",
+                    "121"
+                  ],
+                  [
+                    "$F_2$",
+                    "1",
+                    "Diamagnetic",
+                    "$(\\sigma_{2s})^2 (\\sigma^*_{2s})^2 (\\sigma_{2p})^2 (\\pi_{2p})^4 (\\pi^*_{2p})^4$",
+                    "159",
+                    "143"
+                  ],
+                  [
+                    "$Ne_2$",
+                    "0",
+                    "-",
+                    "$(\\sigma_{2s})^2 (\\sigma^*_{2s})^2 (\\sigma_{2p})^2 (\\pi_{2p})^4 (\\pi^*_{2p})^4 (\\sigma^*_{2p})^2$",
+                    "-",
+                    "-"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:4:4.9",
+        "number": "4.9",
+        "title": "HYDROGEN BONDING",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:4:4.9:1",
+            "order": 1,
+            "title": "Definition of Hydrogen Bonding",
+            "content_text": "Nitrogen, oxygen and fluorine are highly electronegative elements. When they are attached to a hydrogen atom to form a covalent bond, the electrons of the covalent bond are shifted towards the more electronegative atom. This partially positively charged hydrogen atom forms a bond with another more electronegative atom. This bond is known as a hydrogen bond and is weaker than a covalent bond. For example, in HF molecule, the hydrogen bond exists between the hydrogen atom of one molecule and the fluorine atom of another molecule: $--- H^{\\delta+} - F^{\\delta-} --- H^{\\delta+} - F^{\\delta-} --- H^{\\delta+} - F^{\\delta-}$. Here, the hydrogen bond acts as a bridge between two atoms, holding one by a covalent bond and the other by a hydrogen bond. It is represented by a dotted line ($---$) while a solid line represents the covalent bond. Thus, hydrogen bond can be defined as the attractive force which binds a hydrogen atom of one molecule with the electronegative atom (F, O or N) of another molecule.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.9:2",
+            "order": 2,
+            "title": "Cause of Formation of Hydrogen Bond",
+            "content_text": "When hydrogen is bonded to a strongly electronegative element 'X', the electron pair shared between the two atoms moves far away from the hydrogen atom. As a result, the hydrogen atom becomes highly electropositive with respect to the other atom 'X'. Since there is a displacement of electrons towards X, the hydrogen acquires a fractional positive charge ($\\delta^+$) while 'X' attains a fractional negative charge ($\\delta^-$). This results in the formation of a polar molecule having an electrostatic force of attraction which can be represented as: $H^{\\delta+} - X^{\\delta-} --- H^{\\delta+} - X^{\\delta-} --- H^{\\delta+} - X^{\\delta-}$. The magnitude of H-bonding depends on the physical state of the compound; it is maximum in the solid state and minimum in the gaseous state. Thus, hydrogen bonds have a strong influence on the structure and properties of compounds.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:4.9:3",
+            "order": 3,
+            "title": "Types of H-Bonds",
+            "content_text": "There are two types of H-bonds: (i) Intermolecular hydrogen bond and (ii) Intramolecular hydrogen bond. (1) Intermolecular hydrogen bond: It is formed between two different molecules of the same or different compounds. Examples include H-bonds in HF, alcohol, or water molecules. (2) Intramolecular hydrogen bond: It is formed when a hydrogen atom is in between two highly electronegative (F, O, N) atoms present within the same molecule. For example, in o-nitrophenol, the hydrogen is between the two oxygen atoms.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 4.22",
+                "description": "Intramolecular hydrogen bonding in an o-nitrophenol molecule, showing the hydrogen atom forming a bridge between the oxygen of the hydroxyl group and an oxygen of the nitro group within the same molecule.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:4:Summary",
+        "number": "Summary",
+        "title": "Summary of Chemical Bonding and Molecular Structure",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:4:Summary:1",
+            "order": 1,
+            "title": "Core Concepts of Bonding",
+            "content_text": "Kössel’s first insight into the mechanism of formation of electropositive and electronegative ions related the process to the attainment of noble gas configurations by the respective ions. Electrostatic attraction between ions is the cause for their stability, giving the concept of electrovalency. The first description of covalent bonding was provided by Lewis in terms of the sharing of electron pairs between atoms to attain noble gas configurations. Lewis dot symbols show valence electrons, and Lewis dot structures show pictorial representations of bonding. An ionic compound is a three-dimensional aggregation of ions in a crystal lattice, stabilized by the enthalpy of lattice formation. Covalent bonds can be single or multiple (double/triple). Lone-pairs are valence electrons not involved in bonding. Important parameters include bond length, bond angle, bond enthalpy, bond order, and bond polarity. Resonance occurs when a single Lewis structure cannot accurately describe a molecule; the resonance hybrid represents the actual structure. The VSEPR model is a tool for predicting molecular geometry based on the repulsion between electron pairs. It posits that electron pairs around a central atom arrange themselves as far apart as possible to minimize repulsion. The strength of these repulsions follows a specific hierarchy: lone pair-lone pair interactions are the strongest, followed by lone pair-bond pair, and finally bond pair-bond pair interactions.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:Summary:2",
+            "order": 2,
+            "title": "Valence Bond Theory",
+            "content_text": "Valence Bond (VB) theory explains covalent bonding through the lens of atomic orbital overlap and system energetics. It describes how the potential energy of a system decreases as two atoms approach each other, reaching a minimum at the bond length. If atoms are forced closer than this equilibrium distance, repulsive forces dominate, causing a sharp energy increase and destabilizing the bond.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:Summary:3",
+            "order": 3,
+            "title": "Hybridisation",
+            "content_text": "Pauling introduced hybridisation to account for the observed shapes of polyatomic molecules. This process involves the mathematical mixing of atomic orbitals to create new, equivalent hybrid orbitals like $sp$, $sp^2$, and $sp^3$. This concept explains the geometry of simple molecules like methane and water, as well as the formation of multiple bonds in unsaturated hydrocarbons.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:Summary:4",
+            "order": 4,
+            "title": "Molecular Orbital Theory",
+            "content_text": "Molecular Orbital (MO) theory views bonding as the combination of atomic orbitals to form molecular orbitals that encompass the entire molecule. The number of resulting MOs equals the number of initial atomic orbitals. Bonding MOs concentrate electron density between nuclei and are lower in energy, while antibonding MOs have a nodal region between nuclei and are higher in energy.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:Summary:5",
+            "order": 5,
+            "title": "Molecular Electronic Configuration",
+            "content_text": "Electrons are assigned to molecular orbitals in order of increasing energy, following the Pauli exclusion principle and Hund's rule. The stability of a molecule is determined by the relative number of electrons in bonding ($N_b$) versus antibonding ($N_a$) orbitals; a molecule is stable only if $N_b > N_a$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:4:Summary:6",
+            "order": 6,
+            "title": "Hydrogen Bonding",
+            "content_text": "Hydrogen bonding occurs when a hydrogen atom is covalently bonded to a highly electronegative atom (like F, O, or N) and experiences an attraction to another electronegative atom. These bonds can occur between different molecules (intermolecular) or within a single molecule (intramolecular), significantly impacting the physical properties of the substance.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:chemistry:11:4:ex:1",
+          "number": 1,
+          "problem": "Explain the formation of a chemical bond.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:4:ex:2",
+          "number": 2,
+          "problem": "Write Lewis dot symbols for atoms of the following elements: Mg, Na, B, O, N, Br.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:4:ex:3",
+          "number": 3,
+          "problem": "Write Lewis symbols for the following atoms and ions: S and $S^{2-}$; Al and $Al^{3+}$; H and $H^-$.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:4:ex:4",
+          "number": 4,
+          "problem": "Draw the Lewis structures for the following molecules and ions: $H_2S$, $SiCl_4$, $BeF_2$, $CO_3^{2-}$, $HCOOH$.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:4:ex:5",
+          "number": 5,
+          "problem": "Define octet rule. Write its significance and limitations.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:4:ex:6",
+          "number": 6,
+          "problem": "Write the favourable factors for the formation of ionic bond.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:4:ex:7",
+          "number": 7,
+          "problem": "Discuss the shape of the following molecules using the VSEPR model: $BeCl_2$, $BCl_3$, $SiCl_4$, $AsF_5$, $H_2S$, $PH_3$.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:4:ex:8",
+          "number": 8,
+          "problem": "Although geometries of $NH_3$ and $H_2O$ molecules are distorted tetrahedral, bond angle in water is less than that of ammonia. Discuss.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:4:ex:9",
+          "number": 9,
+          "problem": "How do you express the bond strength in terms of bond order?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:4:ex:10",
+          "number": 10,
+          "problem": "Define the bond length.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:4:ex:11",
+          "number": 11,
+          "problem": "Explain the important aspects of resonance with reference to the $CO_3^{2-}$ ion.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:4:ex:12",
+          "number": 12,
+          "problem": "$H_3PO_3$ can be represented by structures 1 and 2 shown below. Can these two structures be taken as the canonical forms of the resonance hybrid representing $H_3PO_3$? If not, give reasons for the same. (Structure 1 shows H-O-P(OH)-O-H with a P=O bond; Structure 2 shows H-P(OH)2=O with H directly bonded to P).",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:4:ex:13",
+          "number": 13,
+          "problem": "Write the resonance structures for $SO_3$, $NO_2$ and $NO_3^-$.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:4:ex:14",
+          "number": 14,
+          "problem": "Use Lewis symbols to show electron transfer between the following atoms to form cations and anions: (a) K and S (b) Ca and O (c) Al and N.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:4:ex:15",
+          "number": 15,
+          "problem": "Although both $CO_2$ and $H_2O$ are triatomic molecules, the shape of $H_2O$ molecule is bent while that of $CO_2$ is linear. Explain this on the basis of dipole moment.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:4:ex:16",
+          "number": 16,
+          "problem": "Write the significance/applications of dipole moment.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:4:ex:17",
+          "number": 17,
+          "problem": "Define electronegativity. How does it differ from electron gain enthalpy?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:4:ex:18",
+          "number": 18,
+          "problem": "Explain with the help of suitable example polar covalent bond.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:4:ex:19",
+          "number": 19,
+          "problem": "Arrange the bonds in order of increasing ionic character in the molecules: $LiF$, $K_2O$, $N_2$, $SO_2$ and $ClF_3$.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:4:ex:20",
+          "number": 20,
+          "problem": "The skeletal structure of $CH_3COOH$ as shown below is correct, but some of the bonds are shown incorrectly. Write the correct Lewis structure for acetic acid. (The diagram shows $H=C-C-O-H$ with H atoms on the first C).",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:4:ex:21",
+          "number": 21,
+          "problem": "Apart from tetrahedral geometry, another possible geometry for $CH_4$ is square planar with the four H atoms at the corners of the square and the C atom at its centre. Explain why $CH_4$ is not square planar?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:4:ex:22",
+          "number": 22,
+          "problem": "Explain why $BeH_2$ molecule has a zero dipole moment although the Be-H bonds are polar.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:4:ex:23",
+          "number": 23,
+          "problem": "Which out of $NH_3$ and $NF_3$ has higher dipole moment and why?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:4:ex:24",
+          "number": 24,
+          "problem": "What is meant by hybridisation of atomic orbitals? Describe the shapes of $sp$, $sp^2$, $sp^3$ hybrid orbitals.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:4:ex:25",
+          "number": 25,
+          "problem": "Describe the change in hybridisation (if any) of the Al atom in the following reaction: $AlCl_3 + Cl^- \\rightarrow AlCl_4^-$.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:4:ex:26",
+          "number": 26,
+          "problem": "Is there any change in the hybridisation of B and N atoms as a result of the following reaction? $BF_3 + NH_3 \\rightarrow F_3B.NH_3$.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:4:ex:27",
+          "number": 27,
+          "problem": "Draw diagrams showing the formation of a double bond and a triple bond between carbon atoms in $C_2H_4$ and $C_2H_2$ molecules.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:4:ex:28",
+          "number": 28,
+          "problem": "What is the total number of sigma and pi bonds in the following molecules? (a) $C_2H_2$ (b) $C_2H_4$.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:4:ex:29",
+          "number": 29,
+          "problem": "Considering x-axis as the internuclear axis which out of the following will not form a sigma bond and why? (a) $1s$ and $1s$ (b) $1s$ and $2p_x$ (c) $2p_y$ and $2p_y$ (d) $1s$ and $2s$.",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:4:ex:30",
+          "number": 30,
+          "problem": "Which hybrid orbitals are used by carbon atoms in the following molecules? (a) $CH_3-CH_3$; (b) $CH_3-CH=CH_2$; (c) $CH_3-CH_2-OH$; (d) $CH_3-CHO$ (e) $CH_3COOH$.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:4:ex:31",
+          "number": 31,
+          "problem": "What do you understand by bond pairs and lone pairs of electrons? Illustrate by giving one example of each type.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:4:ex:32",
+          "number": 32,
+          "problem": "Distinguish between a sigma and a pi bond.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:4:ex:33",
+          "number": 33,
+          "problem": "Explain the formation of $H_2$ molecule on the basis of valence bond theory.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:4:ex:34",
+          "number": 34,
+          "problem": "Write the important conditions required for the linear combination of atomic orbitals to form molecular orbitals.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:4:ex:35",
+          "number": 35,
+          "problem": "Use molecular orbital theory to explain why the $Be_2$ molecule does not exist.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:4:ex:36",
+          "number": 36,
+          "problem": "Compare the relative stability of the following species and indicate their magnetic properties: $O_2$, $O_2^+$, $O_2^-$ (superoxide), $O_2^{2-}$ (peroxide).",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:4:ex:37",
+          "number": 37,
+          "problem": "Write the significance of a plus and a minus sign shown in representing the orbitals.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:4:ex:38",
+          "number": 38,
+          "problem": "Describe the hybridisation in case of $PCl_5$. Why are the axial bonds longer as compared to equatorial bonds?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:4:ex:39",
+          "number": 39,
+          "problem": "Define hydrogen bond. Is it weaker or stronger than the van der Waals forces?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:4:ex:40",
+          "number": 40,
+          "problem": "What is meant by the term bond order? Calculate the bond order of: $N_2$, $O_2$, $O_2^+$ and $O_2^-$.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        }
+      ]
+    }
+  }
+}

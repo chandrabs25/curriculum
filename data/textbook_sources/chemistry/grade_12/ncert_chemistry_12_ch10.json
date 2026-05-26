@@ -1,0 +1,1283 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_chemistry_12_ch10.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:chemistry:12:10",
+  "curriculum": "ncert",
+  "subject": "chemistry",
+  "grade": 12,
+  "textbook_name": "Chemistry",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:chemistry:12:10",
+    "number": 10,
+    "title": "Biomolecules",
+    "summary": "This chapter on Biomolecules explores the fundamental organic compounds essential for life. It begins with carbohydrates, defining them as hydrates of carbon and classifying them into monosaccharides, oligosaccharides, and polysaccharides based on hydrolysis. Glucose and fructose are discussed in detail, including their structure, preparation, and cyclic forms. The concept of reducing and non-reducing sugars is introduced. Disaccharides like sucrose, maltose, and lactose are examined, highlighting their glycosidic linkages. Polysaccharides such as starch, cellulose, and glycogen are presented as storage and structural components.\n\nThe chapter then transitions to proteins, defining them as polymers of amino acids and exploring their primary, secondary, tertiary, and quaternary structures. The denaturation of proteins is also described. Enzymes, the biocatalysts, are introduced and their mechanism of action is explained.\n\nNext, the importance of vitamins for health and growth is explored along with their classification based on solubility. The final section discusses nucleic acids – DNA and RNA – their composition, structure, and role in heredity. The chapter concludes with an overview of hormones as intercellular messengers, emphasizing their chemical diversity and physiological functions. The chapter emphasizes how these biomolecules' structure dictates function, highlighting their significance in biological systems and practical applications in various industries.",
+    "sections": [
+      {
+        "id": "ncert:chemistry:12:10:10.1",
+        "number": "10.1",
+        "title": "Carbohydrates",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:10:10.1:1",
+            "order": 1,
+            "title": "Introduction to Biomolecules",
+            "content_text": "A living system grows, sustains, and reproduces itself. It is composed of non-living atoms and molecules. The pursuit of knowledge regarding the chemical processes within a living system falls under the domain of biochemistry. Living systems are made up of various complex biomolecules such as carbohydrates, proteins, nucleic acids, and lipids. Proteins and carbohydrates are essential constituents of our food and interact to constitute the molecular logic of life processes. Additionally, simple molecules like vitamins and mineral salts play important roles in the functions of organisms.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:10:10.1:2",
+            "order": 2,
+            "title": "Definition and General Formula of Carbohydrates",
+            "content_text": "Carbohydrates are primarily produced by plants and form a large group of naturally occurring organic compounds, such as cane sugar, glucose, and starch. Most carbohydrates were originally considered hydrates of carbon, fitting the general formula $C_x(H_2O)_y$. For example, glucose ($C_6H_{12}O_6$) fits this formula as $C_6(H_2O)_6$. However, not all compounds fitting this formula are carbohydrates (e.g., acetic acid, $CH_3COOH$ or $C_2(H_2O)_2$), and some carbohydrates do not fit it (e.g., rhamnose, $C_6H_{12}O_5$). Chemically, carbohydrates are defined as optically active polyhydroxy aldehydes or ketones, or compounds that produce such units on hydrolysis. Some carbohydrates sweet in taste are called sugars. The most common sugar used at home is sucrose, while the sugar in milk is lactose. Carbohydrates are also known as saccharides (from Greek 'sakcharon' meaning sugar).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:10:10.1:3",
+            "order": 3,
+            "title": "Classification of Carbohydrates",
+            "content_text": "Carbohydrates are classified into three groups based on their behavior on hydrolysis:\n1. Monosaccharides: Carbohydrates that cannot be hydrolyzed further into simpler units of polyhydroxy aldehyde or ketone. About 20 monosaccharides occur in nature, including glucose, fructose, and ribose.\n2. Oligosaccharides: Carbohydrates that yield two to ten monosaccharide units on hydrolysis. They are further classified as disaccharides, trisaccharides, etc. For example, sucrose yields one molecule of glucose and one of fructose upon hydrolysis, while maltose yields two molecules of glucose.\n3. Polysaccharides: Carbohydrates that yield a large number of monosaccharide units on hydrolysis. Examples include starch, cellulose, and glycogen. These are generally not sweet and are called non-sugars.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:10:10.1:4",
+            "order": 4,
+            "title": "Reducing and Non-reducing Sugars",
+            "content_text": "Carbohydrates are also classified as reducing or non-reducing sugars. Carbohydrates that reduce Fehling's solution and Tollens' reagent are referred to as reducing sugars. All monosaccharides, whether aldoses or ketoses, are reducing sugars.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:10:10.1:5",
+            "order": 5,
+            "title": "Classification of Monosaccharides",
+            "content_text": "Monosaccharides are further classified based on the number of carbon atoms and the functional group they contain. If a monosaccharide contains an aldehyde group, it is an aldose; if it contains a keto group, it is a ketose. The number of carbon atoms is also incorporated into the name as shown in Table 10.1.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 10.1",
+                "caption": "Different Types of Monosaccharides",
+                "headers": [
+                  "Carbon atoms",
+                  "General term",
+                  "Aldehyde",
+                  "Ketone"
+                ],
+                "rows": [
+                  [
+                    "3",
+                    "Triose",
+                    "Aldotriose",
+                    "Ketotriose"
+                  ],
+                  [
+                    "4",
+                    "Tetrose",
+                    "Aldotetrose",
+                    "Ketotetrose"
+                  ],
+                  [
+                    "5",
+                    "Pentose",
+                    "Aldopentose",
+                    "Ketopentose"
+                  ],
+                  [
+                    "6",
+                    "Hexose",
+                    "Aldohexose",
+                    "Ketohexose"
+                  ],
+                  [
+                    "7",
+                    "Heptose",
+                    "Aldoheptose",
+                    "Ketoheptose"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:12:10:10.1:6",
+            "order": 6,
+            "title": "Preparation of Glucose",
+            "content_text": "Glucose occurs freely in nature (sweet fruits, honey, ripe grapes) and in combined forms. It is prepared in the following ways:\n1. From Sucrose (Cane sugar): Boiling sucrose with dilute $HCl$ or $H_2SO_4$ in alcoholic solution yields glucose and fructose in equal amounts:\n$$C_{12}H_{22}O_{11} + H_2O \\xrightarrow{H^+} C_6H_{12}O_6 + C_6H_{12}O_6$$\n2. From Starch: Commercially, glucose is obtained by the hydrolysis of starch by boiling it with dilute $H_2SO_4$ at 393 K under 2-3 atm pressure:\n$$(C_6H_{10}O_5)_n + nH_2O \\xrightarrow[393 K; 2-3 atm]{H^+} nC_6H_{12}O_6$$",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:10:10.1:7",
+            "order": 7,
+            "title": "Structure of Glucose: Straight Chain Evidence",
+            "content_text": "Glucose is an aldohexose and is also known as dextrose. Its structure was assigned based on several pieces of evidence:\n1. Molecular formula: $C_6H_{12}O_6$.\n2. Straight chain evidence: Prolonged heating with $HI$ results in the formation of n-hexane, suggesting that all six carbon atoms are linked in a straight chain:\n$$CHO-(CHOH)_4-CH_2OH \\xrightarrow{HI, \\Delta} CH_3-CH_2-CH_2-CH_2-CH_2-CH_3$$",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Glucose to n-Hexane",
+                "description": "Chemical reaction showing the reduction of glucose structure to a straight-chain n-hexane using Hydrogen Iodide and heat.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:10:10.1:8",
+            "order": 8,
+            "title": "Structure of Glucose: Carbonyl and Aldehyde Group Evidence",
+            "content_text": "3. Carbonyl group evidence: Glucose reacts with hydroxylamine ($NH_2OH$) to form an oxime and adds a molecule of hydrogen cyanide ($HCN$) to give cyanohydrin. These reactions confirm the presence of a carbonyl group ($>C=O$) in glucose.\n4. Aldehyde group evidence: Glucose is oxidized to a six-carbon carboxylic acid (gluconic acid) upon reaction with a mild oxidizing agent like bromine water. This indicates that the carbonyl group is present as an aldehydic group:\n$$CHO-(CHOH)_4-CH_2OH \\xrightarrow{Br_2 \\text{ water}} COOH-(CHOH)_4-CH_2OH$$",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Carbonyl Group Reactions",
+                "description": "Structural diagrams showing glucose reacting with NH2OH to form an oxime and with HCN to form a cyanohydrin.",
+                "image_url": null
+              },
+              {
+                "label": "Oxidation to Gluconic Acid",
+                "description": "Chemical equation showing the conversion of the aldehyde group in glucose to a carboxyl group in gluconic acid using bromine water.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:10:10.1:9",
+            "order": 9,
+            "title": "Structure of Glucose: Hydroxyl Group Evidence",
+            "content_text": "5. Five hydroxyl groups evidence: Acetylation of glucose with acetic anhydride yields glucose pentaacetate. This confirms the presence of five $-OH$ groups. Since glucose is a stable compound, these five $-OH$ groups must be attached to different carbon atoms:\n$$CHO-(CHOH)_4-CH_2OH \\xrightarrow{\\text{Acetic anhydride}} CHO-(CH(OCOCH_3))_4-CH_2OCOCH_3$$",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Acetylation of Glucose",
+                "description": "Structural diagram showing the reaction of glucose with acetic anhydride to form glucose pentaacetate, where all five hydroxyl groups are acetylated.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:10:10.1:10",
+            "order": 10,
+            "title": "Evidence for Primary Alcoholic Group in Glucose",
+            "content_text": "On oxidation with nitric acid, both glucose and gluconic acid yield a dicarboxylic acid known as saccharic acid. This reaction indicates the presence of a primary alcoholic ($-OH$) group at the end of the carbon chain in glucose, as the primary alcohol group is oxidized to a carboxyl group along with the aldehyde group.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Reaction Scheme",
+                "description": "Chemical reaction showing the oxidation of Glucose and Gluconic acid with nitric acid to form Saccharic acid, a dicarboxylic acid.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:10:10.1:11",
+            "order": 11,
+            "title": "Fischer's Configuration of Glucose",
+            "content_text": "The exact spatial arrangement of the different hydroxyl ($-OH$) groups in glucose was determined by Emil Fischer after studying various properties. The configuration of glucose is correctly represented by structure I. Consequently, gluconic acid is represented as structure II and saccharic acid as structure III, maintaining the same relative spatial arrangement of the hydroxyl groups.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fischer Projections",
+                "description": "Fischer projection formulas for Glucose (I), Gluconic acid (II), and Saccharic acid (III) showing the spatial arrangement of H and OH groups.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:10:10.1:12",
+            "order": 12,
+            "title": "D and L Notations in Carbohydrates",
+            "content_text": "Glucose is correctly named as D-(+)-glucose. The 'D' before the name represents the relative configuration of the molecule, while '(+)' represents its dextrorotatory nature (optical activity). It is important to note that 'D' and 'L' notations indicate relative configuration with respect to a reference compound and have no direct relation to the optical activity (dextrorotatory or laevorotatory) of the compound. In carbohydrates, these notations refer to their relation with glyceraldehyde. Glyceraldehyde contains one asymmetric carbon atom and exists in two enantiomeric forms: (+) and (-). The (+) isomer of glyceraldehyde is assigned the 'D' configuration, where the $-OH$ group lies on the right-hand side in the Fischer projection. The (-) isomer is assigned the 'L' configuration, with the $-OH$ group on the left-hand side.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Glyceraldehyde Enantiomers",
+                "description": "Fischer projections of (+)-Glyceraldehyde (D-configuration) and (-)-Glyceraldehyde (L-configuration).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:10:10.1:13",
+            "order": 13,
+            "title": "Assigning D/L Configuration to Monosaccharides",
+            "content_text": "For assigning the D or L configuration to monosaccharides, the configuration of the lowest asymmetric carbon atom (the chiral center furthest from the carbonyl group) is compared to that of glyceraldehyde. In the case of (+)-glucose, the $-OH$ group on the lowest asymmetric carbon (C5) is on the right side, which matches the configuration of D-(+)-glyceraldehyde. Therefore, (+)-glucose is assigned the D-configuration. When writing these structures, the most oxidized carbon (the aldehyde group $-CHO$ in glucose) is placed at the top.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "D-Configuration Comparison",
+                "description": "Comparison of the Fischer projections of D-(+)-Glyceraldehyde and D-(+)-Glucose, highlighting the identical configuration at the lowest asymmetric carbon.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:10:10.1:14",
+            "order": 14,
+            "title": "Limitations of the Open Chain Structure of Glucose",
+            "content_text": "While the open chain structure (I) explains many properties of glucose, it fails to account for several experimental facts: 1. Despite having an aldehyde group, glucose does not give Schiff's test and does not form the hydrogensulphite addition product with $NaHSO_3$. 2. The pentaacetate of glucose does not react with hydroxylamine, which indicates the absence of a free $-CHO$ group in the acetylated form. 3. Glucose exists in two different crystalline forms, $\\alpha$ and $\\beta$. The $\\alpha$-form (m.p. 419 K) is obtained by crystallization from a concentrated solution of glucose at 303 K, while the $\\beta$-form (m.p. 423 K) is obtained by crystallization from a hot and saturated aqueous solution at 371 K. This behavior suggests that the aldehyde group is not always free.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:10:10.1:15",
+            "order": 15,
+            "title": "Cyclic Structure of Glucose (Hemiacetal)",
+            "content_text": "To explain the limitations of the open chain structure, it was proposed that one of the $-OH$ groups adds to the $-CHO$ group to form a cyclic hemiacetal structure. Specifically, the $-OH$ group at C5 is involved in ring formation with the C1 aldehyde carbon, resulting in a six-membered ring. This explains the absence of a free $-CHO$ group and the existence of glucose in two forms. These two cyclic forms exist in equilibrium with the open chain structure in aqueous solution.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Glucose Cyclic Equilibrium",
+                "description": "Structural representation showing the equilibrium between alpha-D-(+)-Glucose, the open chain form, and beta-D-(+)-Glucose.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:10:10.1:16",
+            "order": 16,
+            "title": "Anomers and Pyranose Structure of Glucose",
+            "content_text": "The two cyclic hemiacetal forms of glucose differ only in the configuration of the hydroxyl group at C1, which is known as the anomeric carbon (the original aldehyde carbon). Such isomers are called anomers. The six-membered cyclic structure of glucose is referred to as the pyranose structure, in analogy with pyran, a cyclic organic compound containing one oxygen atom and five carbon atoms in the ring. These cyclic structures are more accurately represented by Haworth structures, which show the ring in a perspective view.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Pyranose and Haworth Structures",
+                "description": "Diagram of Pyran and the Haworth projections for alpha-D-(+)-Glucopyranose and beta-D-(+)-Glucopyranose.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:10:10.1.2.2",
+        "number": "10.1.2.2",
+        "title": "Fructose",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:10:10.1.2.2:1",
+            "order": 1,
+            "title": "Introduction and Open Chain Structure of Fructose",
+            "content_text": "Fructose ($C_6H_{12}O_6$) is an important ketohexose obtained along with glucose by the hydrolysis of sucrose. It is a natural monosaccharide found in fruits, honey, and vegetables, and is used as a sweetener in its pure form. Fructose contains a ketonic functional group at carbon number 2 and has six carbons in a straight chain. It belongs to the D-series and is a laevorotatory compound, hence it is written as D-(-)-fructose. Its open chain structure reflects these features.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Open Chain Fructose",
+                "description": "Fischer projection of the open chain structure of D-(-)-Fructose showing the ketone group at C2.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:10:10.1.2.2:2",
+            "order": 2,
+            "title": "Cyclic Structure and Haworth Projections of Fructose",
+            "content_text": "Fructose exists in two cyclic forms obtained by the addition of the $-OH$ group at C5 to the ketonic ($>C=O$) group at C2. This results in a five-membered ring called a furanose structure, named after its similarity to furan (a five-membered cyclic compound with one oxygen and four carbon atoms). The two anomers, $\\alpha$ and $\\beta$, differ in the configuration at the anomeric carbon (C2). These are represented by Haworth structures as $\\alpha$-D-(-)-fructofuranose and $\\beta$-D-(-)-fructofuranose.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Furanose and Haworth Structures",
+                "description": "Diagram of Furan and the Haworth projections for alpha-D-(-)-Fructofuranose and beta-D-(-)-Fructofuranose.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:10:10.1.3",
+        "number": "10.1.3",
+        "title": "Disaccharides",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:10:10.1.3:1",
+            "order": 1,
+            "title": "Definition and Glycosidic Linkage",
+            "content_text": "Disaccharides are carbohydrates that, upon hydrolysis with dilute acids or enzymes, yield two molecules of monosaccharides, which may be the same or different. These two monosaccharide units are joined together by an oxide linkage formed by the loss of a water molecule. This specific linkage between two monosaccharide units through an oxygen atom is known as a glycosidic linkage.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:10:10.1.3:2",
+            "order": 2,
+            "title": "Reducing and Non-reducing Sugars",
+            "content_text": "Disaccharides are classified based on the availability of their reducing groups (aldehydic or ketonic). If these groups are involved in the glycosidic bond, the sugar is non-reducing, such as sucrose. If these functional groups remain free, the sugar is a reducing sugar, such as maltose and lactose.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:10:10.1.3:3",
+            "order": 3,
+            "title": "Sucrose and Invert Sugar",
+            "content_text": "Sucrose ($C_{12}H_{22}O_{11}$) is a common disaccharide that yields equimolar D-(+)-glucose and D-(-)-fructose upon hydrolysis: $$C_{12}H_{22}O_{11} + H_2O \\rightarrow C_6H_{12}O_6 (\\text{D-(+)-Glucose}) + C_6H_{12}O_6 (\\text{D-(-)-Fructose})$$. The linkage is between C1 of $\\alpha$-D-glucose and C2 of $\\beta$-D-fructose. Since both reducing groups are bonded, sucrose is a non-reducing sugar. Sucrose is dextrorotatory ($+66.5^\\circ$), but hydrolysis produces dextrorotatory glucose ($+52.5^\\circ$) and more strongly laevorotatory fructose ($-92.4^\\circ$). The resulting mixture is laevorotatory, and this change in the sign of rotation from dextro (+) to laevo (-) leads to the product being called invert sugar.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Sucrose",
+                "description": "Chemical structure of sucrose showing the glycosidic linkage between C1 of $\\alpha$-D-glucose and C2 of $\\beta$-D-fructose.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:10:10.1.3:4",
+            "order": 4,
+            "title": "Maltose",
+            "content_text": "Maltose is composed of two $\\alpha$-D-glucose units. The C1 of one glucose unit (I) is linked to the C4 of another glucose unit (II). Because a free aldehyde group can be produced at C1 of the second glucose unit in solution, maltose exhibits reducing properties and is classified as a reducing sugar.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Maltose",
+                "description": "Chemical structure of maltose showing the $\\alpha$-1,4-glycosidic linkage between two $\\alpha$-D-glucose units.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:10:10.1.3:5",
+            "order": 5,
+            "title": "Lactose",
+            "content_text": "Lactose, or milk sugar, is found in milk and consists of $\\beta$-D-galactose and $\\beta$-D-glucose. The glycosidic linkage occurs between C1 of galactose and C4 of glucose. It is a reducing sugar because a free aldehyde group can be produced at the C1 position of the glucose unit.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Lactose",
+                "description": "Chemical structure of lactose showing the $\\beta$-1,4-glycosidic linkage between $\\beta$-D-galactose and $\\beta$-D-glucose.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:10:10.1.4",
+        "number": "10.1.4",
+        "title": "Polysaccharides",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:10:10.1.4:1",
+            "order": 1,
+            "title": "Introduction to Polysaccharides",
+            "content_text": "Polysaccharides consist of a large number of monosaccharide units joined by glycosidic linkages. They are the most common carbohydrates in nature, serving primarily as food storage or structural materials.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:10:10.1.4:2",
+            "order": 2,
+            "title": "Starch: Amylose and Amylopectin",
+            "content_text": "Starch is the main storage polysaccharide of plants and a vital dietary source for humans. It is a polymer of $\\alpha$-glucose and consists of two components: Amylose and Amylopectin. Amylose (15-20%) is water-soluble and forms a long unbranched chain of 200-1000 $\\alpha$-D-(+)-glucose units held by C1-C4 glycosidic linkages. Amylopectin (80-85%) is water-insoluble and is a branched chain polymer where the main chain has C1-C4 linkages and branching occurs via C1-C6 glycosidic linkages.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Amylose",
+                "description": "Structure of amylose showing a linear chain of $\\alpha$-D-glucose units with $\\alpha$-1,4-glycosidic linkages.",
+                "image_url": null
+              },
+              {
+                "label": "Amylopectin",
+                "description": "Structure of amylopectin showing a branched chain of $\\alpha$-D-glucose units with $\\alpha$-1,4-linkages and $\\alpha$-1,6-branch points.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:10:10.1.4:3",
+            "order": 3,
+            "title": "Cellulose",
+            "content_text": "Cellulose is the most abundant organic substance in the plant kingdom and a major constituent of plant cell walls. It is a straight-chain polysaccharide composed of $\\beta$-D-glucose units joined by glycosidic linkages between C1 of one unit and C4 of the next.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Cellulose",
+                "description": "Structure of cellulose showing a linear chain of $\\beta$-D-glucose units with $\\beta$-1,4-glycosidic linkages.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:10:10.1.4:4",
+            "order": 4,
+            "title": "Glycogen",
+            "content_text": "Glycogen, known as 'animal starch', is the storage form of carbohydrates in animals, found in the liver, muscles, and brain. Its structure is similar to amylopectin but more highly branched. It is also found in yeast and fungi and is broken down into glucose by enzymes when needed.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:10:10.1.5",
+        "number": "10.1.5",
+        "title": "Importance of Carbohydrates",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:10:10.1.5:1",
+            "order": 1,
+            "title": "Biological and Industrial Significance",
+            "content_text": "Carbohydrates are essential for life. They are a major food source and provide instant energy (e.g., honey in Ayurveda). They serve as storage molecules (starch in plants, glycogen in animals) and structural components (cellulose in cell walls). Industrially, cellulose is used for furniture (wood), clothing (cotton), paper, and materials like lacquers.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:10:10.1.5:2",
+            "order": 2,
+            "title": "Industrial and Biological Roles (Continued)",
+            "content_text": "Carbohydrates like cellulose, obtained from wood and cotton fibre, are essential for clothing and provide raw materials for industries such as textiles, paper, lacquers, and breweries. Additionally, specific aldopentoses like D-ribose and 2-deoxy-D-ribose are fundamental components of nucleic acids. In biological systems, carbohydrates are often found in combination with proteins and lipids, forming complex biomolecules.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:10:10.2",
+        "number": "10.2",
+        "title": "Proteins",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:10:10.2:1",
+            "order": 1,
+            "title": "Introduction to Proteins",
+            "content_text": "Proteins are the most abundant biomolecules in living systems and are essential for the structure and function of life. They are found in various food sources such as milk, cheese, pulses, peanuts, fish, and meat. Proteins are required for the growth and maintenance of the body. The term 'protein' is derived from the Greek word 'proteios', meaning 'primary' or 'of prime importance'. Chemically, all proteins are polymers of $\\alpha$-amino acids.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:10:10.2:2",
+            "order": 2,
+            "title": "Globular Proteins",
+            "content_text": "Globular proteins result when the chains of polypeptides coil around to give a spherical shape. These proteins are usually soluble in water. Common examples of globular proteins include insulin and albumins.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:10:10.2:3",
+            "order": 3,
+            "title": "Primary Structure of Proteins",
+            "content_text": "Proteins may consist of one or more polypeptide chains. Each polypeptide has amino acids linked in a specific sequence. This specific sequence of amino acids is defined as the primary structure of the protein. Any change in this sequence creates a different protein.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:10:10.2:4",
+            "order": 4,
+            "title": "Secondary Structure of Proteins",
+            "content_text": "The secondary structure refers to the shape in which a long polypeptide chain exists, arising from regular folding of the backbone due to hydrogen bonding between the $-NH-$ and $>C=O$ groups of the peptide bond. There are two main types: $\\alpha$-helix and $\\beta$-pleated sheet. In an $\\alpha$-helix, the polypeptide chain twists into a right-handed screw with the $-NH$ group of each amino acid residue hydrogen bonded to the $>C=O$ of an adjacent turn. In a $\\beta$-pleated sheet, peptide chains are stretched to maximum extension and laid side by side, held by intermolecular hydrogen bonds, resembling the pleated folds of drapery.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 10.1",
+                "description": "Diagram of the $\\alpha$-Helix structure of proteins showing the helical coil stabilized by hydrogen bonds between the amide and carbonyl groups.",
+                "image_url": null
+              },
+              {
+                "label": "Fig. 10.2",
+                "description": "Diagram of the $\\beta$-Pleated sheet structure of proteins showing parallel polypeptide chains held together by intermolecular hydrogen bonds.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:10:10.2:5",
+            "order": 5,
+            "title": "Tertiary Structure of Proteins",
+            "content_text": "The tertiary structure represents the overall folding of the polypeptide chains, which is a further folding of the secondary structure. This folding gives rise to major molecular shapes such as fibrous and globular. These structures are stabilized by various forces including hydrogen bonds, disulphide linkages, van der Waals forces, and electrostatic forces of attraction.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:10:10.2:6",
+            "order": 6,
+            "title": "Quaternary Structure of Proteins",
+            "content_text": "Some proteins are composed of two or more polypeptide chains, known as sub-units. The spatial arrangement of these subunits with respect to each other is called the quaternary structure. A diagrammatic representation of all four levels of protein structure is shown in Fig. 10.3, and the specific case of haemoglobin is shown in Fig. 10.4.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 10.3",
+                "description": "Diagrammatic representation of protein structure showing the progression from primary (linear) to secondary (helices), tertiary (folded), and quaternary (multi-subunit) levels.",
+                "image_url": null
+              },
+              {
+                "label": "Fig. 10.4",
+                "description": "Detailed structural model of haemoglobin showing its primary, secondary, tertiary, and quaternary structures, including the haeme groups.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:10:10.2.1",
+        "number": "10.2.1",
+        "title": "Amino Acids",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:10:10.2.1:1",
+            "order": 1,
+            "title": "Structure and Nomenclature of Amino Acids",
+            "content_text": "Amino acids are organic compounds containing both an amino ($-NH_2$) and a carboxyl ($-COOH$) functional group. They are classified as $\\alpha, \\beta, \\gamma, \\delta$, etc., based on the position of the amino group relative to the carboxyl group. Proteins are composed exclusively of $\\alpha$-amino acids. These acids often have trivial names reflecting their properties or sources; for instance, glycine is named for its sweet taste (Greek 'glykos'), and tyrosine was first isolated from cheese (Greek 'tyros'). They are commonly represented by three-letter or one-letter symbols. The general structure of an $\\alpha$-amino acid is $R-CH(NH_2)-COOH$, where $R$ is a side chain.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 10.1",
+                "description": "General structure of an alpha-amino acid showing the central alpha-carbon bonded to an amino group, a carboxyl group, a hydrogen atom, and a variable side chain R.",
+                "image_url": null
+              }
+            ],
+            "tables": [
+              {
+                "label": "Table 10.2",
+                "caption": "Natural Amino Acids",
+                "headers": [
+                  "Name of the amino acids",
+                  "Characteristic feature of side chain, R",
+                  "Three letter symbol",
+                  "One letter code"
+                ],
+                "rows": [
+                  [
+                    "1. Glycine",
+                    "H",
+                    "Gly",
+                    "G"
+                  ],
+                  [
+                    "2. Alanine",
+                    "$-CH_3$",
+                    "Ala",
+                    "A"
+                  ],
+                  [
+                    "3. Valine*",
+                    "$(H_3C)_2CH-$",
+                    "Val",
+                    "V"
+                  ],
+                  [
+                    "4. Leucine*",
+                    "$(H_3C)_2CH-CH_2-$",
+                    "Leu",
+                    "L"
+                  ],
+                  [
+                    "5. Isoleucine*",
+                    "$H_3C-CH_2-CH(CH_3)-$",
+                    "Ile",
+                    "I"
+                  ],
+                  [
+                    "6. Arginine*",
+                    "$(H_2N)_2C=N-(CH_2)_3-$",
+                    "Arg",
+                    "R"
+                  ],
+                  [
+                    "7. Lysine*",
+                    "$H_2N-(CH_2)_4-$",
+                    "Lys",
+                    "K"
+                  ],
+                  [
+                    "8. Glutamic acid",
+                    "$HOOC-CH_2-CH_2-$",
+                    "Glu",
+                    "E"
+                  ],
+                  [
+                    "9. Aspartic acid",
+                    "$HOOC-CH_2-$",
+                    "Asp",
+                    "D"
+                  ],
+                  [
+                    "10. Glutamine",
+                    "$H_2N-C(=O)-CH_2-CH_2-$",
+                    "Gln",
+                    "Q"
+                  ],
+                  [
+                    "11. Asparagine",
+                    "$H_2N-C(=O)-CH_2-$",
+                    "Asn",
+                    "N"
+                  ],
+                  [
+                    "12. Threonine*",
+                    "$H_3C-CH(OH)-",
+                    "Thr",
+                    "T"
+                  ],
+                  [
+                    "13. Serine",
+                    "$HO-CH_2-$",
+                    "Ser",
+                    "S"
+                  ],
+                  [
+                    "14. Cysteine",
+                    "$HS-CH_2-$",
+                    "Cys",
+                    "C"
+                  ],
+                  [
+                    "15. Methionine*",
+                    "$H_3C-S-CH_2-CH_2-$",
+                    "Met",
+                    "M"
+                  ],
+                  [
+                    "16. Phenylalanine*",
+                    "$C_6H_5-CH_2-$",
+                    "Phe",
+                    "F"
+                  ],
+                  [
+                    "17. Tyrosine",
+                    "$(p)HO-C_6H_4-CH_2-$",
+                    "Tyr",
+                    "Y"
+                  ],
+                  [
+                    "18. Tryptophan*",
+                    "Indole-3-ylmethyl",
+                    "Trp",
+                    "W"
+                  ],
+                  [
+                    "19. Histidine*",
+                    "Imidazol-4-ylmethyl",
+                    "His",
+                    "H"
+                  ],
+                  [
+                    "20. Proline",
+                    "Pyrrolidine-2-carboxylic acid (entire structure)",
+                    "Pro",
+                    "P"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:10:10.2.4",
+        "number": "10.2.4",
+        "title": "Denaturation of Proteins",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:10:10.2.4:1",
+            "order": 1,
+            "title": "Process and Effects of Denaturation",
+            "content_text": "A protein in its biological system with a unique 3D structure and biological activity is called a native protein. When subjected to physical changes (like temperature) or chemical changes (like pH), the hydrogen bonds are disturbed, causing globules to unfold and helices to uncoil. The protein loses its biological activity in a process called denaturation. During this process, secondary and tertiary structures are destroyed, but the primary structure remains intact. Common examples include the coagulation of egg white on boiling and the curdling of milk due to lactic acid formation by bacteria.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:10:10.3",
+        "number": "10.3",
+        "title": "Enzymes",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:10:10.3:1",
+            "order": 1,
+            "title": "Introduction and Nomenclature of Enzymes",
+            "content_text": "Enzymes are biocatalysts that coordinate chemical reactions in living organisms. Almost all enzymes are globular proteins. They are highly specific for particular reactions and substrates. Enzymes are typically named after the compound they act upon (e.g., maltase for maltose hydrolysis) or the type of reaction they catalyze (e.g., oxidoreductase). The names generally end with the suffix '-ase'. For example, the hydrolysis of maltose into glucose is catalyzed by maltase: $$C_{12}H_{22}O_{11} \\xrightarrow{\\text{Maltase}} 2 C_6H_{12}O_6$$",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:10:10.3.1",
+        "number": "10.3.1",
+        "title": "Mechanism of Enzyme Action",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:10:10.3.1:1",
+            "order": 1,
+            "title": "Activation Energy and Enzyme Efficiency",
+            "content_text": "Enzymes are required in small quantities and function by reducing the magnitude of activation energy for a reaction. For instance, the activation energy for the acid hydrolysis of sucrose is $6.22 \\text{ kJ mol}^{-1}$, but it drops to only $2.15 \\text{ kJ mol}^{-1}$ when catalyzed by the enzyme sucrase.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:10:10.4",
+        "number": "10.4",
+        "title": "Vitamins",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:10:10.4:1",
+            "order": 1,
+            "title": "Definition and Importance of Vitamins",
+            "content_text": "Vitamins are organic compounds required in the diet in small amounts to perform specific biological functions for the normal maintenance of optimum growth and health. Most vitamins cannot be synthesized by the human body (though plants can synthesize almost all of them), making them essential food factors. Their deficiency leads to specific diseases.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:10:10.4:2",
+            "order": 2,
+            "title": "Origin of the Term 'Vitamin'",
+            "content_text": "The term 'Vitamin' was coined from the word vital + amine since the earlier identified compounds had amino groups. Later work showed that most of them did not contain amino groups, so the letter 'e' was dropped and the term vitamin is used these days. Vitamins are designated by alphabets A, B, C, D, etc. Some of them are further named as sub-groups e.g. $B_1$, $B_2$, $B_6$, $B_{12}$, etc. Excess of vitamins is also harmful and vitamin pills should not be taken without the advice of a doctor.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:10:10.4:3",
+            "order": 3,
+            "title": "Classification of Vitamins",
+            "content_text": "Vitamins are classified into two groups depending upon their solubility in water or fat.\n\n(i) Fat soluble vitamins: Vitamins which are soluble in fat and oils but insoluble in water are kept in this group. These are vitamins A, D, E and K. They are stored in liver and adipose (fat storing) tissues.\n\n(ii) Water soluble vitamins: B group vitamins and vitamin C are soluble in water so they are grouped together. Water soluble vitamins must be supplied regularly in diet because they are readily excreted in urine and cannot be stored (except vitamin $B_{12}$) in our body.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": null,
+                "caption": null,
+                "headers": [
+                  "Name of Vitamin",
+                  "Source",
+                  "Deficiency Diseases"
+                ],
+                "rows": [
+                  [
+                    "Vitamin A",
+                    "Fish liver oil, carrots, butter, milk",
+                    "Xerophthalmia (hardening of cornea), Night blindness"
+                  ],
+                  [
+                    "Vitamin B₁ (Thiamine)",
+                    "Yeast, milk, green vegetables, cereals",
+                    "Beri beri (loss of appetite, retarded growth)"
+                  ],
+                  [
+                    "Vitamin B₂ (Riboflavin)",
+                    "Milk, eggwhite, liver, kidney",
+                    "Cheilosis (fissuring at corners of mouth and lips), digestive disorders"
+                  ],
+                  [
+                    "Vitamin B₆ (Pyridoxine)",
+                    "Yeast, milk, egg yolk, cereals",
+                    "Convulsions"
+                  ],
+                  [
+                    "Vitamin B₁₂",
+                    "Meat, fish, egg, curd",
+                    "Pernicious anaemia (RBC deficient in haemoglobin)"
+                  ],
+                  [
+                    "Vitamin C (Ascorbic acid)",
+                    "Citrus fruits, amla, green leafy vegetables",
+                    "Scurvy (bleeding gums)"
+                  ],
+                  [
+                    "Vitamin D",
+                    "Exposure to sunlight, fish and egg yolk",
+                    "Rickets (bone deformities in children), Osteomalacia (soft bones in adults)"
+                  ],
+                  [
+                    "Vitamin E",
+                    "Vegetable oils like wheat germ oil, sunflower oil",
+                    "Increased fragility of RBCs and muscular weakness"
+                  ],
+                  [
+                    "Vitamin K",
+                    "Green leafy vegetables",
+                    "Increased blood clotting time"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:10:10.5",
+        "number": "10.5",
+        "title": "Nucleic Acids",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:10:10.5:1",
+            "order": 1,
+            "title": "Introduction to Nucleic Acids",
+            "content_text": "Every generation of each and every species resembles its ancestors in many ways. The nucleus of a living cell is responsible for this transmission of inherent characters, also called heredity. The particles in the nucleus of the cell, responsible for heredity, are called chromosomes which are made up of proteins and another type of biomolecules called nucleic acids. These are mainly of two types, the deoxyribonucleic acid (DNA) and ribonucleic acid (RNA). Since nucleic acids are long chain polymers of nucleotides, they are also called polynucleotides.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:10:10.5:2",
+            "order": 2,
+            "title": "Chemical Composition of Nucleic Acids",
+            "content_text": "Complete hydrolysis of DNA (or RNA) yields a pentose sugar, phosphoric acid and nitrogen containing heterocyclic compounds (called bases). In DNA molecules, the sugar moiety is $\\beta$-D-2-deoxyribose whereas in RNA molecule, it is $\\beta$-D-ribose. DNA contains four bases viz. adenine (A), guanine (G), cytosine (C) and thymine (T). RNA also contains four bases, the first three bases are same as in DNA but the fourth one is uracil (U).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Pentose sugars in nucleic acids",
+                "description": "Chemical structures of β-D-ribose (in RNA) and β-D-2-deoxyribose (in DNA), both as furanose rings.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:10:10.5:3",
+            "order": 3,
+            "title": "Nucleosides and Nucleotides",
+            "content_text": "A unit formed by the attachment of a base to 1' position of sugar is known as a nucleoside. In nucleosides, the sugar carbons are numbered as 1', 2', 3', etc. in order to distinguish these from the bases. When a nucleoside is linked to phosphoric acid at 5'-position of sugar moiety, we get a nucleotide. Nucleotides are joined together by phosphodiester linkage between 5' and 3' carbon atoms of the pentose sugar.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Nucleoside and nucleotide structure",
+                "description": "Diagram (a) shows a nucleoside: ribose sugar connected to adenine. Diagram (b) shows a nucleotide: nucleoside with phosphate group at 5' carbon.",
+                "image_url": null
+              },
+              {
+                "label": "Dinucleotide formation",
+                "description": "Two nucleotides linked by a phosphodiester bond between 3' of first and 5' of second sugar.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:10:10.5:4",
+            "order": 4,
+            "title": "Structure of Nucleic Acids",
+            "content_text": "Nucleotides are joined together by phosphodiester linkage between $5'$ and $3'$ carbon atoms of the pentose sugar. The formation of a dinucleotide is illustrated in Fig. 10.6, where the phosphate group connects the $3'$ hydroxyl of one sugar to the $5'$ hydroxyl of the next. Information regarding the sequence of nucleotides in the chain of a nucleic acid is called its primary structure. Nucleic acids also possess a secondary structure. James Watson and Francis Crick proposed a double strand helix structure for DNA (Fig. 10.7). In this model, two nucleic acid chains are wound about each other and held together by hydrogen bonds between specific pairs of bases. Adenine forms hydrogen bonds with thymine ($A=T$), whereas cytosine forms hydrogen bonds with guanine ($G \\equiv C$). These two strands are complementary because the hydrogen bonds are formed between these specific pairs. In contrast, the secondary structure of RNA typically consists of single-stranded helices, which sometimes fold back on themselves. RNA molecules are classified into three types based on their functions: messenger RNA (m-RNA), ribosomal RNA (r-RNA), and transfer RNA (t-RNA).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 10.6",
+                "description": "Diagram showing the formation of a dinucleotide through a phosphodiester linkage. It depicts two nucleotide units where the phosphate group at the $5'$ position of one sugar molecule reacts with the hydroxyl group at the $3'$ position of another sugar molecule, creating a bridge. The resulting chain has a $5'$ end and a $3'$ end.",
+                "image_url": null
+              },
+              {
+                "label": "Fig. 10.7",
+                "description": "A representation of the double strand helix structure for DNA. It shows two antiparallel strands twisting around a common axis, with horizontal bars representing base pairs ($G \\equiv C$, $A=T$, $T=A$, $C \\equiv G$) held together by hydrogen bonds.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:10:10.5:5",
+            "order": 5,
+            "title": "Har Gobind Khorana",
+            "content_text": "Har Gobind Khorana (1922–2011) was an Indian-American biochemist who made significant contributions to the field of genetics. He obtained his M.Sc. from Punjab University and later worked with Professor Vladimir Prelog and Professor A.R. Todd. His research focused on proteins and nucleic acids. Khorana shared the Nobel Prize for Medicine and Physiology in 1968 with Marshall Nirenberg and Robert Holley for their work in cracking the genetic code, specifically for demonstrating how the order of nucleotides in nucleic acids determines the sequence of amino acids in proteins.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:10:10.5:6",
+            "order": 6,
+            "title": "DNA Fingerprinting",
+            "content_text": "Every individual has a unique sequence of bases in their DNA, which serves as a biological identifier similar to physical fingerprints. This unique sequence is known as DNA fingerprinting. Unlike physical fingerprints, DNA fingerprints are identical for every cell in an individual's body and cannot be altered by surgery or treatment. DNA fingerprinting is currently utilized in: (i) forensic laboratories to identify criminals, (ii) determining the paternity of an individual, (iii) identifying bodies in accidents by comparing DNA with relatives, and (iv) identifying racial groups to study biological evolution.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:10:10.5:7",
+            "order": 7,
+            "title": "Biological Functions of Nucleic Acids",
+            "content_text": "DNA is the chemical basis of heredity and acts as the reserve of genetic information. It is exclusively responsible for maintaining the identity of different species over millions of years. A DNA molecule is capable of self-duplication during cell division, ensuring that identical DNA strands are transferred to daughter cells. Another critical function of nucleic acids is protein synthesis. Although proteins are synthesized by various RNA molecules in the cell, the blueprint or message for the synthesis of a specific protein is stored within the DNA.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:10:10.5:8",
+            "order": 8,
+            "title": "Summary of Nucleic Acids",
+            "content_text": "Nucleic acids are the polymers of nucleotides which in turn consist of a base, a pentose sugar and phosphate moiety. Nucleic acids are responsible for the transfer of characters from parents to offsprings. There are two types of nucleic acids — DNA and RNA. DNA contains a five carbon sugar molecule called 2-deoxyribose whereas RNA contains ribose. Both DNA and RNA contain adenine, guanine and cytosine. The fourth base is thymine in DNA and uracil in RNA. The structure of DNA is a double strand whereas RNA is a single strand molecule. DNA is the chemical basis of heredity and have the coded message for proteins to be synthesised in the cell. There are three types of RNA — mRNA, rRNA and tRNA which actually carry out the protein synthesis in the cell.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:10:10.6",
+        "number": "10.6",
+        "title": "Hormones",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:10:10.6:1",
+            "order": 1,
+            "title": "Introduction and Chemical Nature of Hormones",
+            "content_text": "Hormones are molecules that function as intercellular messengers. They are produced by endocrine glands in the body and are secreted directly into the bloodstream, which transports them to their specific sites of action. Chemically, hormones are diverse: some are steroids (e.g., estrogens and androgens), some are polypeptides (e.g., insulin and endorphins), and others are amino acid derivatives (e.g., epinephrine and norepinephrine).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:10:10.6:2",
+            "order": 2,
+            "title": "Physiological Functions and Examples",
+            "content_text": "Hormones perform several vital functions to maintain the balance of biological activities. For instance, insulin is released by the pancreas in response to a rapid rise in blood glucose levels to keep it within narrow limits. Conversely, the hormone glucagon tends to increase glucose levels in the blood; together, they regulate glucose homeostasis. Epinephrine and norepinephrine mediate the body's responses to external stimuli. Growth hormones and sex hormones play essential roles in physical growth and sexual development.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:10:10.6:3",
+            "order": 3,
+            "title": "Thyroid and Steroid Hormones",
+            "content_text": "Thyroxine, produced in the thyroid gland, is an iodinated derivative of the amino acid tyrosine. Abnormally low levels of thyroxine lead to hypothyroidism, characterized by lethargy and obesity. Low dietary iodine can lead to hypothyroidism and enlargement of the thyroid gland (goitre), a condition often controlled by using iodized table salt. Steroid hormones are produced by the adrenal cortex and gonads (testes in males, ovaries in females). Adrenal cortex hormones include glucocorticoids, which control carbohydrate metabolism and inflammatory reactions, and mineralocorticoids, which regulate water and salt excretion by the kidneys. Dysfunction of the adrenal cortex can lead to Addison's disease. Gonadal hormones include testosterone (male secondary sex characters) and estradiol/progesterone (female secondary sex characters and pregnancy preparation).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:chemistry:12:10:ex:1",
+          "number": 1,
+          "problem": "Glucose or sucrose are soluble in water but cyclohexane or benzene (simple six membered ring compounds) are insoluble in water. Explain.",
+          "solution": "Glucose and sucrose contain multiple hydroxyl (-OH) groups that can form extensive hydrogen bonds with water molecules, leading to high solubility. In contrast, cyclohexane and benzene are non-polar hydrocarbons that cannot form hydrogen bonds with water, making them insoluble.",
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:10:ex:2",
+          "number": 2,
+          "problem": "What are the expected products of hydrolysis of lactose?",
+          "solution": "Lactose is a disaccharide composed of D-galactose and D-glucose. Upon hydrolysis, it yields equimolar amounts of $\\beta$-D-galactose and $\\beta$-D-glucose.",
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:10:ex:3",
+          "number": 3,
+          "problem": "How do you explain the absence of aldehyde group in the pentaacetate of D-glucose?",
+          "solution": "The absence of an aldehyde group in glucose pentaacetate (as evidenced by its failure to react with hydroxylamine) suggests that the cyclic hemiacetal structure of glucose is locked in the acetate form and cannot readily open to provide a free aldehyde group.",
+          "difficulty": "hard",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:10:ex:4",
+          "number": 4,
+          "problem": "The melting points and solubility in water of amino acids are generally higher than that of the corresponding halo acids. Explain.",
+          "solution": "Amino acids exist as zwitterions (dipolar ions) which results in strong electrostatic forces of attraction between molecules, similar to ionic salts. This leads to higher melting points and better solubility in polar solvents like water compared to halo acids, which are simple covalent molecules.",
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:10:ex:5",
+          "number": 5,
+          "problem": "Where does the water present in the egg go after boiling the egg?",
+          "solution": "When an egg is boiled, the proteins (like albumin) undergo denaturation and coagulation. During this process, the protein globules unfold and form a cross-linked network that traps the water molecules within the solid matrix.",
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:10:ex:6",
+          "number": 6,
+          "problem": "Why cannot vitamin C be stored in our body?",
+          "solution": "Vitamin C is a water-soluble vitamin. Unlike fat-soluble vitamins, water-soluble vitamins are readily excreted in urine and cannot be stored in the body for long periods (with the exception of Vitamin B12). Therefore, they must be supplied regularly in the diet.",
+          "difficulty": "easy",
+          "exercise_type": "short_answer"
+        },
+        {
+          "id": "ncert:chemistry:12:10:ex:7",
+          "number": 7,
+          "problem": "What products would be formed when a nucleotide from DNA containing thymine is hydrolysed?",
+          "solution": "The complete hydrolysis of a DNA nucleotide containing thymine yields three products: the nitrogenous base thymine, the pentose sugar 2-deoxy-D-ribose, and phosphoric acid ($H_3PO_4$).",
+          "difficulty": "medium",
+          "exercise_type": "short_answer"
+        },
+        {
+          "id": "ncert:chemistry:12:10:ex:8",
+          "number": 8,
+          "problem": "When RNA is hydrolysed, there is no relationship among the quantities of different bases obtained. What does this fact suggest about the structure of RNA?",
+          "solution": "In double-stranded DNA, the base-pairing rule ($A=T$ and $G=C$) dictates that the molar amounts of adenine and thymine are equal, as are those of guanine and cytosine. The absence of such a fixed relationship in the products of RNA hydrolysis suggests that RNA is typically a single-stranded molecule and does not possess the complementary double-helical structure characteristic of DNA.",
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:10:ex:9",
+          "number": 9,
+          "problem": "What is glycogen? How is it different from starch?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:10:ex:10",
+          "number": 10,
+          "problem": "What are the hydrolysis products of (i) sucrose and (ii) lactose?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:10:ex:11",
+          "number": 11,
+          "problem": "What is the basic structural difference between starch and cellulose?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:10:ex:12",
+          "number": 12,
+          "problem": "What happens when D-glucose is treated with the following reagents? (i) HI (ii) Bromine water (iii) $HNO_3$",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:10:ex:13",
+          "number": 13,
+          "problem": "Enumerate the reactions of D-glucose which cannot be explained by its open chain structure.",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "long_answer"
+        },
+        {
+          "id": "ncert:chemistry:12:10:ex:14",
+          "number": 14,
+          "problem": "What are essential and non-essential amino acids? Give two examples of each type.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:10:ex:15",
+          "number": 15,
+          "problem": "Define the following as related to proteins (i) Peptide linkage (ii) Primary structure (iii) Denaturation.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:10:ex:16",
+          "number": 16,
+          "problem": "What are the common types of secondary structure of proteins?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:10:ex:17",
+          "number": 17,
+          "problem": "What type of bonding helps in stabilising the $\\alpha$-helix structure of proteins?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:10:ex:18",
+          "number": 18,
+          "problem": "Differentiate between globular and fibrous proteins.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:10:ex:19",
+          "number": 19,
+          "problem": "How do you explain the amphoteric behaviour of amino acids?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:10:ex:20",
+          "number": 20,
+          "problem": "What are enzymes?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:10:ex:21",
+          "number": 21,
+          "problem": "What is the effect of denaturation on the structure of proteins?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:10:ex:22",
+          "number": 22,
+          "problem": "How are vitamins classified? Name the vitamin responsible for the coagulation of blood.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:10:ex:23",
+          "number": 23,
+          "problem": "Why are vitamin A and vitamin C essential to us? Give their important sources.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "short_answer"
+        },
+        {
+          "id": "ncert:chemistry:12:10:ex:24",
+          "number": 24,
+          "problem": "What are nucleic acids? Mention their two important functions.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:10:ex:25",
+          "number": 25,
+          "problem": "What is the difference between a nucleoside and a nucleotide?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:10:ex:26",
+          "number": 26,
+          "problem": "The two strands in DNA are not identical but are complementary. Explain.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:10:ex:27",
+          "number": 27,
+          "problem": "Write the important structural and functional differences between DNA and RNA.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "long_answer"
+        },
+        {
+          "id": "ncert:chemistry:12:10:ex:28",
+          "number": 28,
+          "problem": "What are the different types of RNA found in the cell?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        }
+      ]
+    }
+  }
+}

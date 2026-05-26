@@ -1,0 +1,1728 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_chemistry_12_ch7.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:chemistry:12:7",
+  "curriculum": "ncert",
+  "subject": "chemistry",
+  "grade": 12,
+  "textbook_name": "Chemistry",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:chemistry:12:7",
+    "number": 7,
+    "title": "Alcohols, Phenols and Ethers",
+    "summary": "This chapter on Alcohols, Phenols, and Ethers introduces three important classes of organic compounds, focusing on their classification, nomenclature (common and IUPAC), structure, methods of preparation, physical properties, and chemical reactions.\n\nThe chapter begins by classifying these compounds based on the number of hydroxyl groups (mono-, di-, tri-hydric) and the hybridization of the carbon atom bonded to the -OH group. Nomenclature rules are explained, emphasizing IUPAC naming conventions, including using \"ol\" as a suffix for alcohols and \"alkoxyalkane\" for ethers. The structure section discusses the geometry and bond angles related to these functional groups, linking structure to properties.\n\nPreparation methods for alcohols involve hydration of alkenes (acid-catalyzed and hydroboration-oxidation), reduction of carbonyl compounds, and Grignard reactions. Phenol synthesis includes processes starting from haloarenes, benzenesulfonic acid, diazonium salts, and cumene. Key reactions include Lucas Test to distinguish alcohol types, esterification, dehydration to form alkenes, and oxidation. Phenols undergo electrophilic aromatic substitution reactions like nitration, halogenation, Kolbe's reaction, and Reimer-Tiemann reaction. Ethers are formed via dehydration of alcohols and Williamson synthesis. The chapter concludes with some commercially important alcohols such as methanol and ethanol and ethers.\n\nThe chapter systematically builds knowledge, connecting structure to reactivity and synthesis to applications, showcasing the versatility and importance of alcohols, phenols, and ethers in various chemical processes. Understanding these compounds is crucial in fields like medicine, industry, and research.",
+    "sections": [
+      {
+        "id": "ncert:chemistry:12:7:7",
+        "number": "7",
+        "title": "Alcohols, Phenols and Ethers",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:7:7:1",
+            "order": 1,
+            "title": "Introduction to Alcohols, Phenols, and Ethers",
+            "content_text": "Alcohols and phenols are formed when a hydrogen atom in a hydrocarbon, aliphatic and aromatic respectively, is replaced by a hydroxyl ($-OH$) group. These classes of compounds find wide applications in industry and daily life. For example, ethanol is used for polishing wooden furniture, and compounds containing hydroxyl groups make up sugar, cotton, and paper. An alcohol contains one or more hydroxyl ($-OH$) group(s) directly attached to carbon atom(s) of an aliphatic system ($CH_3OH$), while a phenol contains $-OH$ group(s) directly attached to carbon atom(s) of an aromatic system ($C_6H_5OH$). The substitution of a hydrogen atom in a hydrocarbon by an alkoxy or aryloxy group ($R-O/Ar-O$) yields ethers, such as dimethyl ether ($CH_3OCH_3$). Ethers can also be visualized as compounds formed by substituting the hydrogen atom of the hydroxyl group of an alcohol or phenol with an alkyl or aryl group. Alcohols, phenols, and ethers are basic compounds for the formation of detergents, antiseptics, and fragrances, respectively.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:7:7.1",
+        "number": "7.1",
+        "title": "Classification",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:7:7.1:1",
+            "order": 1,
+            "title": "Classification by Hydricity",
+            "content_text": "Alcohols and phenols may be classified as mono-, di-, tri- or polyhydric compounds depending on whether they contain one, two, three or many hydroxyl groups respectively in their structures. For example, $C_2H_5OH$ is monohydric, $CH_2OH-CH_2OH$ is dihydric, and $CH_2OH-CHOH-CH_2OH$ is trihydric.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 7.1",
+                "description": "Structures of monohydric, dihydric, and trihydric alcohols showing one, two, and three hydroxyl groups respectively.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.1:2",
+            "order": 2,
+            "title": "Classification of Monohydric Alcohols: $C_{sp^3}-OH$ Bond",
+            "content_text": "Monohydric alcohols are further classified based on the hybridization of the carbon atom to which the hydroxyl group is attached. In the first class, the $-OH$ group is attached to an $sp^3$ hybridised carbon atom of an alkyl group. These are further divided into: 1. Primary ($1^\\circ$), secondary ($2^\\circ$) and tertiary ($3^\\circ$) alcohols: In these types, the $-OH$ group is attached to a primary, secondary, or tertiary carbon atom respectively. 2. Allylic alcohols: The $-OH$ group is attached to an $sp^3$ hybridised carbon adjacent to a carbon-carbon double bond (an allylic carbon). These can also be primary, secondary, or tertiary. 3. Benzylic alcohols: The $-OH$ group is attached to an $sp^3$ hybridised carbon atom next to an aromatic ring. These can also be primary, secondary, or tertiary.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 7.2",
+                "description": "General structures for primary ($-CH_2-OH$), secondary ($>CH-OH$), and tertiary ($\\equiv C-OH$) alcohols.",
+                "image_url": null
+              },
+              {
+                "label": "Fig 7.3",
+                "description": "Examples of primary, secondary, and tertiary allylic alcohols.",
+                "image_url": null
+              },
+              {
+                "label": "Fig 7.4",
+                "description": "Examples of primary, secondary, and tertiary benzylic alcohols.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.1:3",
+            "order": 3,
+            "title": "Classification of Monohydric Alcohols: $C_{sp^2}-OH$ Bond",
+            "content_text": "In this class, the $-OH$ group is bonded to a carbon-carbon double bond, i.e., to a vinylic carbon or to an aryl carbon. These are known as vinylic alcohols. An example is $CH_2=CH-OH$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 7.5",
+                "description": "Structure of vinylic alcohol showing the hydroxyl group attached to a double-bonded carbon.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.1:4",
+            "order": 4,
+            "title": "Classification of Phenols",
+            "content_text": "Phenols are classified as monohydric, dihydric, or trihydric based on the number of hydroxyl groups attached to the benzene ring.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 7.6",
+                "description": "Structures of monohydric (phenol), dihydric (catechol), and trihydric (pyrogallol) phenols.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.1:5",
+            "order": 5,
+            "title": "Classification of Ethers",
+            "content_text": "Ethers are classified as simple or symmetrical if the alkyl or aryl groups attached to the oxygen atom are the same. They are classified as mixed or unsymmetrical if the two groups are different. For example, diethyl ether ($C_2H_5OC_2H_5$) is symmetrical, while ethyl methyl ether ($C_2H_5OCH_3$) and ethyl phenyl ether ($C_2H_5OC_6H_5$) are unsymmetrical.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:7:7.2",
+        "number": "7.2",
+        "title": "Nomenclature",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:7:7.2:1",
+            "order": 1,
+            "title": "Common Nomenclature of Alcohols",
+            "content_text": "The common name of an alcohol is derived from the common name of the alkyl group followed by the word 'alcohol'. For example, $CH_3OH$ is known as methyl alcohol. According to the IUPAC system, the name of an alcohol is derived from the name of the alkane from which the alcohol is derived, by substituting the ‘e’ of the alkane with the suffix ‘ol’. The position of substituents is indicated by numerals. For this, the longest carbon chain (parent chain) is numbered starting at the end nearest to the hydroxyl group. The positions of the –OH group and other substituents are indicated by using the numbers of carbon atoms to which these are attached. For naming polyhydric alcohols, the ‘e’ of the alkane is retained and the ending ‘ol’ is added. The number of –OH groups is indicated by adding the multiplicative prefix, di, tri, etc., before ‘ol’. The positions of –OH groups are indicated by appropriate locants, e.g., $HO–CH_2–CH_2–OH$ is named as ethane-1, 2-diol. Table 7.1 provides common and IUPAC names of several alcohols as examples.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 7.1",
+                "caption": "Common and IUPAC Names of Some Alcohols",
+                "headers": [
+                  "Compound",
+                  "Common name",
+                  "IUPAC name"
+                ],
+                "rows": [
+                  [
+                    "$CH_3 - OH$",
+                    "Methyl alcohol",
+                    "Methanol"
+                  ],
+                  [
+                    "$CH_3 - CH_2 - CH_2 - OH$",
+                    "n-Propyl alcohol",
+                    "Propan-1-ol"
+                  ],
+                  [
+                    "$CH_3 - CH(OH) - CH_3$",
+                    "Isopropyl alcohol",
+                    "Propan-2-ol"
+                  ],
+                  [
+                    "$CH_3 - CH_2 - CH_2 - CH_2 - OH$",
+                    "n-Butyl alcohol",
+                    "Butan-1-ol"
+                  ],
+                  [
+                    "$CH_3 - CH(OH) - CH_2 - CH_3$",
+                    "sec-Butyl alcohol",
+                    "Butan-2-ol"
+                  ],
+                  [
+                    "$CH_3 - CH(CH_3) - CH_2 - OH$",
+                    "Isobutyl alcohol",
+                    "2-Methylpropan-1-ol"
+                  ],
+                  [
+                    "$(CH_3)_3C - OH$",
+                    "tert-Butyl alcohol",
+                    "2-Methylpropan-2-ol"
+                  ],
+                  [
+                    "$HO-H_2C-CH_2-OH$",
+                    "Ethylene glycol",
+                    "Ethane-1,2-diol"
+                  ],
+                  [
+                    "$CH_2(OH) - CH(OH) - CH_2(OH)$",
+                    "Glycerol",
+                    "Propane -1, 2, 3-triol"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.2:2",
+            "order": 2,
+            "title": "Nomenclature of Cyclic Alcohols",
+            "content_text": "Cyclic alcohols are named using the prefix 'cyclo' and considering the —OH group attached to the C–1 position. Other substituents are then numbered relative to this position. Examples include cyclohexanol and 2-methylcyclopentanol.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Cyclic Alcohols",
+                "description": "Chemical structures of Cyclohexanol (a six-membered ring with an -OH group) and 2-Methylcyclopentanol (a five-membered ring with an -OH group at C-1 and a methyl group at C-2).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.2:3",
+            "order": 3,
+            "title": "Nomenclature of Phenols",
+            "content_text": "The simplest hydroxy derivative of benzene is phenol, which is both its common and accepted IUPAC name. In substituted phenols, the positions of substituents are indicated by the terms ortho (1,2-disubstituted), meta (1,3-disubstituted), and para (1,4-disubstituted) in common names. In the IUPAC system, numerical locants are used. Dihydroxy derivatives of benzene are named as benzenediols, specifically benzene-1,2-diol (Catechol), benzene-1,3-diol (Resorcinol), and benzene-1,4-diol (Hydroquinone or quinol).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Phenol Derivatives",
+                "description": "Structures and names of Phenol, o-Cresol (2-Methylphenol), m-Cresol (3-Methylphenol), p-Cresol (4-Methylphenol), Catechol (Benzene-1,2-diol), Resorcinol (Benzene-1,3-diol), and Hydroquinone (Benzene-1,4-diol).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.2:4",
+            "order": 4,
+            "title": "Nomenclature of Ethers",
+            "content_text": "Common names of ethers are derived by listing the names of the alkyl or aryl groups in alphabetical order followed by the word 'ether'. For symmetrical ethers, the prefix 'di' is used (e.g., diethyl ether). In the IUPAC system, ethers are named as alkoxyalkanes, where the smaller alkyl group forms the alkoxy part and the larger group forms the parent alkane chain. For example, $CH_3OC_2H_5$ is methoxyethane. Table 7.2 lists common and IUPAC names for various ethers.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 7.2",
+                "caption": "Common and IUPAC Names of Some Ethers",
+                "headers": [
+                  "Compound",
+                  "Common name",
+                  "IUPAC name"
+                ],
+                "rows": [
+                  [
+                    "$CH_3OCH_3$",
+                    "Dimethyl ether",
+                    "Methoxymethane"
+                  ],
+                  [
+                    "$C_2H_5OC_2H_5$",
+                    "Diethyl ether",
+                    "Ethoxyethane"
+                  ],
+                  [
+                    "$CH_3OCH_2CH_2CH_3$",
+                    "Methyl n-propyl ether",
+                    "1-Methoxypropane"
+                  ],
+                  [
+                    "$C_6H_5OCH_3$",
+                    "Methyl phenyl ether (Anisole)",
+                    "Methoxybenzene (Anisole)"
+                  ],
+                  [
+                    "$C_6H_5OCH_2CH_3$",
+                    "Ethyl phenyl ether (Phenetole)",
+                    "Ethoxybenzene"
+                  ],
+                  [
+                    "$C_6H_5O(CH_2)_6 - CH_3$",
+                    "Heptyl phenyl ether",
+                    "1-Phenoxyheptane"
+                  ],
+                  [
+                    "$CH_3O - CH(CH_3)_2$",
+                    "Methyl isopropyl ether",
+                    "2-Methoxypropane"
+                  ],
+                  [
+                    "$C_6H_5 - O - CH_2 - CH_2 - CH(CH_3)_2$",
+                    "Phenyl isopentyl ether",
+                    "3-Methylbutoxybenzene"
+                  ],
+                  [
+                    "$CH_3 - O - CH_2 - CH_2 - OCH_3$",
+                    "—",
+                    "1,2-Dimethoxyethane"
+                  ],
+                  [
+                    "Cyclohexane ring with 1,1-dimethyl and 2-ethoxy substituents",
+                    "—",
+                    "2-Ethoxy-1,1-dimethylcyclohexane"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.2:5",
+            "order": 5,
+            "title": "Worked Example: IUPAC Nomenclature",
+            "content_text": "This example demonstrates the application of IUPAC rules to name complex alcohols, phenols, and ethers, including those with multiple substituents and cyclic structures.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 7.1",
+                "problem": "Give IUPAC names of the following compounds: (i) $CH_3 - CH(Cl) - CH(CH_3) - CH(CH_3) - CH_2OH$ (ii) $CH_3 - CH(CH_3) - O - CH_2CH_3$ (iii) A benzene ring with an -OH group at position 1 and methyl groups at positions 2 and 6. (iv) A cyclohexane ring with an ethoxy group ($-OC_2H_5$) at position 1 and a nitro group ($-NO_2$) at position 2.",
+                "solution": "(i) 4-Chloro-2,3-dimethylpentan-1-ol (ii) 2-Ethoxypropane (iii) 2,6-Dimethylphenol (iv) 1-Ethoxy-2-nitrocyclohexane"
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:7:7.3",
+        "number": "7.3",
+        "title": "Structures of Functional Groups",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:7:7.3:1",
+            "order": 1,
+            "title": "Bonding and Geometry in Alcohols, Phenols, and Ethers",
+            "content_text": "In alcohols, the oxygen of the –OH group is attached to carbon by a sigma ($\\sigma$) bond formed by the overlap of a $sp^3$ hybridised orbital of carbon with a $sp^3$ hybridised orbital of oxygen. In methanol, the C–O–H bond angle is $108.9^\\circ$, which is slightly less than the tetrahedral angle ($109.5^\\circ$) due to repulsion between the unshared electron pairs of oxygen. In phenols, the –OH group is attached to a $sp^2$ hybridised carbon. The C–O bond length in phenol ($136$ pm) is shorter than in methanol ($142$ pm) due to partial double bond character from conjugation and the $sp^2$ hybridisation of carbon. In ethers, the oxygen atom is also $sp^3$ hybridised. The C–O–C bond angle (e.g., $111.7^\\circ$ in methoxymethane) is slightly larger than the tetrahedral angle due to repulsive interactions between bulky alkyl groups. The C–O bond length in ethers ($141$ pm) is similar to that in alcohols.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 7.1",
+                "description": "Structural diagrams of methanol, phenol, and methoxymethane showing bond lengths (C-O, O-H) and bond angles (C-O-H, C-O-C). Methanol: C-O = 142 pm, O-H = 96 pm, angle = 108.9°. Phenol: C-O = 136 pm, O-H = 96 pm, angle = 109°. Methoxymethane: C-O = 141 pm, angle = 111.7°.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.3:2",
+            "order": 2,
+            "title": "Structural Comparison of Alcohols, Phenols, and Ethers",
+            "content_text": "The bond angle $\\angle C-O-H$ in alcohols is slightly less than the tetrahedral angle ($109^\\circ 28'$). This deviation is attributed to the repulsion between the unshared electron pairs (lone pairs) of oxygen. In phenols, the $-OH$ group is attached to an $sp^2$ hybridised carbon of an aromatic ring. The carbon-oxygen bond length in phenol (136 pm) is slightly less than that in methanol. This shortening is due to: (i) partial double bond character resulting from the conjugation of the unshared electron pair of oxygen with the aromatic ring, and (ii) the $sp^2$ hybridised state of the carbon atom to which oxygen is attached. In ethers, the four electron pairs (two bond pairs and two lone pairs) on oxygen are arranged approximately in a tetrahedral arrangement. However, the bond angle is slightly greater than the tetrahedral angle due to the repulsive interaction between the two bulky alkyl ($-R$) groups. The $C-O$ bond length in ethers (141 pm) is almost the same as observed in alcohols.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Structural Parameters",
+                "description": "Comparison of bond angles and bond lengths: Methanol (C-O 142 pm, O-H 96 pm, angle 108.9°), Phenol (C-O 136 pm, angle 109°), and Methoxymethane (C-O 141 pm, angle 111.7°).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:7:7.4.1",
+        "number": "7.4.1",
+        "title": "Preparation of Alcohols",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:7:7.4.1:1",
+            "order": 1,
+            "title": "Preparation from Alkenes: Acid Catalysed Hydration",
+            "content_text": "Alkenes react with water in the presence of an acid catalyst to form alcohols. For unsymmetrical alkenes, the addition reaction follows Markovnikov’s rule, where the negative part of the addendum (hydroxyl group) attaches to the carbon atom with the fewer hydrogen atoms. The general reaction is: $\\text{>C=C<} + H_2O \\xrightarrow{H^+} \\text{>C(H)-C(OH)<}$. For example, propene reacts with water to form propan-2-ol: $CH_3CH=CH_2 + H_2O \\xrightarrow{H^+} CH_3-CH(OH)-CH_3$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.4.1:2",
+            "order": 2,
+            "title": "Mechanism of Acid Catalysed Hydration",
+            "content_text": "The mechanism of the acid-catalysed hydration of alkenes involves three main steps: \nStep 1: Protonation of the alkene to form a carbocation through the electrophilic attack of $H_3O^+$. \n$H_2O + H^+ \\rightarrow H_3O^+$ \n$\\text{>C=C<} + H-O^+(H)-H \\rightleftharpoons \\text{>C^+-C(H)<} + H_2O$ \nStep 2: Nucleophilic attack of water on the carbocation to form a protonated alcohol. \n$\\text{>C^+-C(H)<} + H_2O \\rightleftharpoons \\text{>C(O^+H_2)-C(H)<}$ \nStep 3: Deprotonation to form the final alcohol. \n$\\text{>C(O^+H_2)-C(H)<} + H_2O \\rightarrow \\text{>C(OH)-C(H)<} + H_3O^+$",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.4.1:3",
+            "order": 3,
+            "title": "Preparation from Alkenes: Hydroboration-Oxidation",
+            "content_text": "Diborane $(BH_3)_2$ reacts with alkenes to give trialkyl boranes as addition products. These are then oxidised to alcohols by hydrogen peroxide in the presence of aqueous sodium hydroxide. The boron atom attaches to the $sp^2$ carbon carrying the greater number of hydrogen atoms. The overall result is the addition of water to the alkene in a manner opposite to Markovnikov’s rule (anti-Markovnikov addition). This method provides alcohols in excellent yields. Hydroboration-oxidation was first reported by H.C. Brown in 1959, who shared the 1979 Nobel Prize in Chemistry for his work on boron compounds. \nReaction: $CH_3-CH=CH_2 + (H-BH_2)_2 \\rightarrow CH_3-CH(H)-CH_2(BH_2) \\xrightarrow{CH_3-CH=CH_2} (CH_3-CH_2-CH_2)_2BH \\xrightarrow{CH_3-CH=CH_2} (CH_3-CH_2-CH_2)_3B \\xrightarrow{H_2O, 3H_2O_2, OH^-} 3CH_3-CH_2-CH_2-OH + B(OH)_3$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.4.1:4",
+            "order": 4,
+            "title": "Preparation from Carbonyl Compounds: Reduction",
+            "content_text": "Alcohols can be prepared by the reduction of aldehydes, ketones, carboxylic acids, and esters. \n(i) Reduction of Aldehydes and Ketones: Aldehydes and ketones are reduced to primary and secondary alcohols, respectively, by catalytic hydrogenation (using $H_2$ with Pt, Pd, or Ni) or by chemical reducing agents like sodium borohydride ($NaBH_4$) or lithium aluminium hydride ($LiAlH_4$). \n$RCHO + H_2 \\xrightarrow{Pd} RCH_2OH$ \n$RCOR' \\xrightarrow{NaBH_4} R-CH(OH)-R'$ \n(ii) Reduction of Carboxylic Acids and Esters: Carboxylic acids are reduced to primary alcohols in excellent yields using $LiAlH_4$, a strong reducing agent. Since $LiAlH_4$ is expensive, commercial production often involves converting acids to esters followed by catalytic hydrogenation. \n$RCOOH \\xrightarrow{(i) LiAlH_4 / (ii) H_2O} RCH_2OH$ \n$RCOOH \\xrightarrow{R'OH, H^+} RCOOR' \\xrightarrow{H_2, Catalyst} RCH_2OH + R'OH$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.4.1:5",
+            "order": 5,
+            "title": "Preparation from Grignard Reagents",
+            "content_text": "Alcohols are produced by the nucleophilic addition of Grignard reagents ($RMgX$) to the carbonyl group of aldehydes and ketones, followed by hydrolysis. \nStep 1: Nucleophilic addition of the Grignard reagent to the carbonyl group to form an adduct. \n$\\text{>C=O} + R-MgX \\rightarrow \\text{>C(OMgX)-R}$ \nStep 2: Hydrolysis of the adduct to yield the alcohol. \n$\\text{>C(OMgX)-R} + H_2O \\rightarrow \\text{>C(OH)-R} + Mg(OH)X$ \nThe type of alcohol produced depends on the carbonyl compound used: \n- Methanal ($HCHO$) yields primary alcohols. \n- Other aldehydes ($RCHO$) yield secondary alcohols. \n- Ketones ($RCOR'$) yield tertiary alcohols.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.4.1:6",
+            "order": 6,
+            "title": "Worked Example: Predicting Products of Alcohol Synthesis",
+            "content_text": "This example demonstrates how to predict the structures and IUPAC names of products formed from various synthesis reactions including reduction, hydration, and Grignard addition.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 7.2",
+                "problem": "Give the structures and IUPAC names of the products expected from the following reactions: (a) Catalytic reduction of butanal. (b) Hydration of propene in the presence of dilute sulphuric acid. (c) Reaction of propanone with methylmagnesium bromide followed by hydrolysis.",
+                "solution": "(a) Catalytic reduction of butanal ($CH_3CH_2CH_2CHO$) yields Butan-1-ol: $CH_3-CH_2-CH_2-CH_2-OH$. (b) Acid-catalysed hydration of propene ($CH_3CH=CH_2$) yields Propan-2-ol: $CH_3-CH(OH)-CH_3$. (c) Reaction of propanone ($CH_3COCH_3$) with $CH_3MgBr$ followed by hydrolysis yields 2-Methylpropan-2-ol: $(CH_3)_3C-OH$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:7:7.4.2",
+        "number": "7.4.2",
+        "title": "Preparation of Phenols",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:7:7.4.2:1",
+            "order": 1,
+            "title": "Introduction to Phenol Synthesis",
+            "content_text": "Phenol, also known as carbolic acid, was first isolated in the early nineteenth century from coal tar. In modern times, phenol is commercially produced synthetically. In the laboratory, phenols are prepared from benzene derivatives through various methods.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.4.2:2",
+            "order": 2,
+            "title": "Preparation from Haloarenes",
+            "content_text": "Chlorobenzene is fused with NaOH at 623 K and 320 atmospheric pressure. Phenol is obtained by acidification of sodium phenoxide so produced.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Preparation of phenol from chlorobenzene",
+                "description": "Chlorobenzene reacts with NaOH at 623 K and high pressure (300-320 atm) to form sodium phenoxide, then acidified with HCl to yield phenol.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.4.2:3",
+            "order": 3,
+            "title": "Preparation from Benzenesulphonic Acid",
+            "content_text": "Benzene is sulphonated with oleum and benzenesulphonic acid so formed is converted to sodium phenoxide on heating with molten sodium hydroxide. Acidification of the sodium salt gives phenol.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Preparation of phenol from benzene via benzenesulphonic acid",
+                "description": "Benzene reacts with oleum to form benzenesulphonic acid, treated with NaOH (fusion) to give sodium phenoxide, then acidified to yield phenol.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.4.2:4",
+            "order": 4,
+            "title": "Preparation from Diazonium Salts",
+            "content_text": "A diazonium salt is formed by treating an aromatic primary amine with nitrous acid ($NaNO_2 + HCl$) at 273-278 K. Diazonium salts are hydrolysed to phenols by warming with water or by treating with dilute acids.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Preparation of phenol from aniline via diazonium salt",
+                "description": "Aniline reacts with NaNO₂ and HCl to form benzenediazonium chloride, which is warmed with water to hydrolyse to phenol.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.4.2:5",
+            "order": 5,
+            "title": "Preparation from Cumene",
+            "content_text": "Most of the worldwide production of phenol is from cumene. Phenol is manufactured from the hydrocarbon cumene (isopropylbenzene). Cumene is oxidised in the presence of air to cumene hydroperoxide. It is converted to phenol and acetone by treating it with dilute acid. Acetone, a by-product of this reaction, is also obtained in large quantities by this method.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Preparation of phenol from cumene",
+                "description": "Cumene is oxidised by air to cumene hydroperoxide, then treated with dilute acid to yield phenol and acetone.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.4.2:6",
+            "order": 6,
+            "title": "In-text Exercises 7.4-7.5",
+            "content_text": "",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Exercise 7.4",
+                "problem": "Show how are the following alcohols prepared by the reaction of a suitable Grignard reagent on methanal?",
+                "solution": null
+              },
+              {
+                "label": "Exercise 7.5",
+                "problem": "Write structures of the products of the following reactions: (i) $CH_3-CH=CH_2 \\xrightarrow{H_2O/H^+}$ (ii) Reduction of a ketone with $NaBH_4$ (iii) Reduction of an aldehyde with $NaBH_4$",
+                "solution": null
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:7:7.4.3",
+        "number": "7.4.3",
+        "title": "Physical Properties",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:7:7.4.3:1",
+            "order": 1,
+            "title": "Boiling Points",
+            "content_text": "Alcohols and phenols consist of two parts, an alkyl/aryl group and a hydroxyl group. The properties of alcohols and phenols are chiefly due to the hydroxyl group. The nature of alkyl and aryl groups simply modify these properties. The boiling points of alcohols and phenols increase with increase in the number of carbon atoms (increase in van der Waals forces). In alcohols, the boiling points decrease with increase of branching in the carbon chain (because of decrease in van der Waals forces with decrease in surface area). The $-OH$ group in alcohols and phenols is involved in intermolecular hydrogen bonding. It is interesting to note that boiling points of alcohols and phenols are higher in comparison to other classes of compounds, namely hydrocarbons, ethers, haloalkanes and haloarenes of comparable molecular masses. The high boiling points of alcohols are mainly due to the presence of intermolecular hydrogen bonding in them which is lacking in ethers and hydrocarbons.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Intermolecular hydrogen bonding in alcohols",
+                "description": "Diagram showing hydrogen bonding between alcohol molecules: R-O-H···O-H···O-H chain/network.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.4.3:2",
+            "order": 2,
+            "title": "Solubility",
+            "content_text": "Solubility of alcohols and phenols in water is due to their ability to form hydrogen bonds with water molecules. The solubility decreases with increase in size of alkyl/aryl (hydrophobic) groups. Several of the lower molecular mass alcohols are miscible with water in all proportions.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 7.3",
+                "problem": "Arrange the following sets of compounds in order of their increasing boiling points: (a) Pentan-1-ol, butan-1-ol, butan-2-ol, ethanol, propan-1-ol, methanol. (b) Pentan-1-ol, n-butane, pentanal, ethoxyethane.",
+                "solution": "(a) Methanol, ethanol, propan-1-ol, butan-2-ol, butan-1-ol, pentan-1-ol. (b) n-Butane, ethoxyethane, pentanal and pentan-1-ol."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:7:7.4.4",
+        "number": "7.4.4",
+        "title": "Chemical Reactions",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:7:7.4.4:1",
+            "order": 1,
+            "title": "Reactions involving cleavage of O-H bond: Acidity",
+            "content_text": "Alcohols and phenols react with active metals such as sodium, potassium, and aluminium to yield corresponding alkoxides or phenoxides and hydrogen gas. For example, ethanol reacts with sodium to form sodium ethoxide, and tert-butyl alcohol reacts with aluminium to form aluminium tert-butoxide. Phenols also react with sodium to form sodium phenoxide. Additionally, phenols react with aqueous sodium hydroxide to form sodium phenoxide and water, a reaction that alcohols do not undergo. These reactions demonstrate that alcohols and phenols are acidic in nature. Specifically, they act as Brönsted acids by donating a proton to a stronger base ($B: + H-O-R \\rightarrow B-H + O-R^-$).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 7.1",
+                "description": "Chemical equations showing the reaction of sodium with alcohols and phenols, and the reaction of aluminium with tert-butyl alcohol.",
+                "image_url": null
+              },
+              {
+                "label": "Fig 7.2",
+                "description": "Reaction of phenol with aqueous sodium hydroxide to form sodium phenoxide.",
+                "image_url": null
+              },
+              {
+                "label": "Fig 7.3",
+                "description": "General mechanism of a Brönsted acid (alcohol/phenol) reacting with a base to form a conjugate acid and a conjugate base (alkoxide/phenoxide).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.4.4:2",
+            "order": 2,
+            "title": "Acidity of Alcohols",
+            "content_text": "The acidic character of alcohols is due to the polar nature of the O-H bond. The presence of electron-releasing groups (alkyl groups like $-CH_3$, $-C_2H_5$) increases the electron density on the oxygen atom, which tends to decrease the polarity of the O-H bond and consequently decreases the acid strength. For this reason, the acid strength of alcohols decreases in the order: Primary ($R-CH_2OH$) > Secondary ($R_2CHOH$) >> Tertiary ($R_3COH$). Alcohols are generally weaker acids than water, as illustrated by the reaction of water with an alkoxide ion ($R-O^- + H-O-H \\rightarrow R-OH + OH^-$), where water acts as a better proton donor. This also implies that alkoxide ions are stronger bases than hydroxide ions. Furthermore, alcohols can act as Brönsted bases due to the presence of unshared electron pairs on oxygen, making them proton acceptors.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 7.4",
+                "description": "Comparison of inductive effects in primary, secondary, and tertiary alcohols, showing the decrease in acidity with increasing alkyl substitution.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.4.4:3",
+            "order": 3,
+            "title": "Acidity of Phenols",
+            "content_text": "Phenols are stronger acids than alcohols and water. This is because the hydroxyl group in phenol is attached to an $sp^2$ hybridised carbon of the benzene ring, which is more electronegative than the $sp^3$ hybridised carbon in alcohols. This electron-withdrawing effect decreases electron density on oxygen, increasing the polarity of the O-H bond and facilitating proton release. Resonance structures of phenol also show that the oxygen atom acquires a positive charge, further enhancing O-H polarity. The ionisation of phenol produces a phenoxide ion and a proton ($C_6H_5OH \\rightleftharpoons C_6H_5O^- + H^+$).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 7.5",
+                "description": "Resonance structures of phenol showing the delocalization of lone pairs from oxygen into the benzene ring, resulting in a positive charge on oxygen.",
+                "image_url": null
+              },
+              {
+                "label": "Fig 7.6",
+                "description": "Ionization equilibrium of alcohols and phenols into their respective ions and protons.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.4.4:4",
+            "order": 4,
+            "title": "Stability of Phenoxide Ion",
+            "content_text": "The stability of the phenoxide ion compared to the alkoxide ion explains the higher acidity of phenols. In an alkoxide ion, the negative charge is localised on the oxygen atom. In a phenoxide ion, the negative charge is delocalised over the ortho and para positions of the benzene ring through resonance. Although phenol itself has resonance structures, they involve charge separation, making the phenol molecule less stable than the phenoxide ion where the charge is simply delocalised. This delocalisation stabilizes the phenoxide ion and favours the ionisation of phenol.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 7.7",
+                "description": "Resonance structures (I-V) of the phenoxide ion showing the delocalization of the negative charge over the ortho and para positions of the benzene ring.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.4.4:5",
+            "order": 5,
+            "title": "Effect of Substituents on Phenol Acidity",
+            "content_text": "In substituted phenols, electron-withdrawing groups (EWG) like the nitro group ($-NO_2$) enhance acidic strength by effectively delocalising the negative charge in the phenoxide ion, especially at ortho and para positions. Conversely, electron-releasing groups (ERG) like alkyl groups decrease acid strength as they do not favour phenoxide ion formation. For example, cresols are less acidic than phenol. Acid strength is often compared using $pK_a$ values; a lower $pK_a$ indicates a stronger acid. Phenol ($pK_a \\approx 10$) is significantly more acidic than ethanol ($pK_a \\approx 15.9$).",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 7.4",
+                "problem": "Arrange the following compounds in increasing order of their acid strength: Propan-1-ol, 2,4,6-trinitrophenol, 3-nitrophenol, 3,5-dinitrophenol, phenol, 4-methylphenol.",
+                "solution": "Propan-1-ol, 4-methylphenol, phenol, 3-nitrophenol, 3,5-dinitrophenol, 2,4,6-trinitrophenol."
+              }
+            ],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 7.3",
+                "caption": "$pK_a$ Values of some Phenols and Ethanol",
+                "headers": [
+                  "Compound",
+                  "Formula",
+                  "pK_a"
+                ],
+                "rows": [
+                  [
+                    "o-Nitrophenol",
+                    "o-O_2N-C_6H_4-OH",
+                    "7.2"
+                  ],
+                  [
+                    "m-Nitrophenol",
+                    "m-O_2N-C_6H_4-OH",
+                    "8.3"
+                  ],
+                  [
+                    "p-Nitrophenol",
+                    "p-O_2N-C_6H_4-OH",
+                    "7.1"
+                  ],
+                  [
+                    "Phenol",
+                    "C_6H_5-OH",
+                    "10.0"
+                  ],
+                  [
+                    "o-Cresol",
+                    "o-CH_3-C_6H_4-OH",
+                    "10.2"
+                  ],
+                  [
+                    "m-Cresol",
+                    "m-CH_3-C_6H_4-OH",
+                    "10.1"
+                  ],
+                  [
+                    "p-Cresol",
+                    "p-CH_3-C_6H_4-OH",
+                    "10.2"
+                  ],
+                  [
+                    "Ethanol",
+                    "C_2H_5OH",
+                    "15.9"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.4.4:6",
+            "order": 6,
+            "title": "Esterification",
+            "content_text": "Alcohols and phenols react with carboxylic acids, acid chlorides, and acid anhydrides to form esters. Alcohols and phenols react with carboxylic acids, acid anhydrides, and acid chlorides to form esters. The reaction with carboxylic acid and acid anhydride is carried out in the presence of a small amount of concentrated sulphuric acid. The reaction is reversible, and therefore, water is removed as soon as it is formed. The reaction with acid chloride is carried out in the presence of a base (pyridine) so as to neutralise $HCl$ which is formed during the reaction, shifting the equilibrium to the right hand side. The introduction of an acetyl ($CH_3CO$) group in alcohols or phenols is known as acetylation. Acetylation of salicylic acid produces aspirin (acetylsalicylic acid). Aspirin possesses analgesic, anti-inflammatory, and antipyretic properties.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Aspirin Synthesis",
+                "description": "Chemical reaction showing Salicylic acid reacting with acetic anhydride in the presence of $H^+$ to form Acetylsalicylic acid (Aspirin) and acetic acid.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.4.4:7",
+            "order": 7,
+            "title": "Reactions involving cleavage of carbon – oxygen (C–O) bond in alcohols",
+            "content_text": "The reactions involving cleavage of the $C-O$ bond take place only in alcohols. Phenols show this type of reaction only with zinc. These reactions include the reaction with hydrogen halides, phosphorus trihalides, and dehydration processes.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.4.4:8",
+            "order": 8,
+            "title": "Reaction with hydrogen halides and Lucas Test",
+            "content_text": "Alcohols react with hydrogen halides to form alkyl halides: $ROH + HX \\rightarrow R-X + H_2O$. The difference in reactivity of the three classes of alcohols with $HCl$ distinguishes them from one another via the Lucas test. Alcohols are soluble in Lucas reagent (concentrated $HCl$ and $ZnCl_2$) while their halides are immiscible and produce turbidity in solution. Tertiary alcohols produce turbidity immediately as they form halides easily. Secondary alcohols produce turbidity after some time, while primary alcohols do not produce turbidity at room temperature.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.4.4:9",
+            "order": 9,
+            "title": "Reaction with phosphorus trihalides",
+            "content_text": "Alcohols are converted to alkyl bromides by reaction with phosphorus tribromide ($PBr_3$). This is a standard method for substituting the hydroxyl group with a halogen.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.4.4:10",
+            "order": 10,
+            "title": "Dehydration of Alcohols",
+            "content_text": "Alcohols undergo dehydration (removal of a molecule of water) to form alkenes on treating with a protic acid (e.g., concentrated $H_2SO_4$ or $H_3PO_4$) or catalysts such as anhydrous zinc chloride or alumina. Ethanol undergoes dehydration by heating it with concentrated $H_2SO_4$ at $443\\text{ K}$: $C_2H_5OH \\xrightarrow[443\\text{ K}]{H_2SO_4} CH_2=CH_2 + H_2O$. Secondary and tertiary alcohols are dehydrated under milder conditions. For example, secondary alcohols use $85\\% H_3PO_4$ at $440\\text{ K}$, and tertiary alcohols use $20\\% H_3PO_4$ at $358\\text{ K}$. The relative ease of dehydration follows the order: Tertiary > Secondary > Primary.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.4.4:11",
+            "order": 11,
+            "title": "Mechanism of Dehydration of Ethanol",
+            "content_text": "The mechanism involves three steps: \nStep 1: Formation of protonated alcohol (fast). The alcohol acts as a Lewis base.\nStep 2: Formation of carbocation (slow). This is the rate-determining step. The $C-O$ bond breaks to release a water molecule.\nStep 3: Formation of ethene by elimination of a proton. The acid used in step 1 is released. \nTertiary carbocations are more stable and therefore easier to form than secondary and primary carbocations; hence, tertiary alcohols are the easiest to dehydrate.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Dehydration Mechanism",
+                "description": "Three-step mechanism showing the protonation of ethanol to ethyl oxonium ion, followed by the slow formation of a carbocation, and finally the elimination of a proton to form ethene.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.4.4:12",
+            "order": 12,
+            "title": "Oxidation of Alcohols",
+            "content_text": "Oxidation of alcohols involves the formation of a carbon-oxygen double bond with cleavage of an $O-H$ and $C-H$ bond. These are also known as dehydrogenation reactions. Depending on the oxidising agent, a primary alcohol is oxidised to an aldehyde, which in turn is oxidised to a carboxylic acid. Strong oxidising agents like acidified potassium permanganate ($KMnO_4$) yield carboxylic acids directly. $CrO_3$ in anhydrous medium is used for the isolation of aldehydes. A better reagent for oxidation of primary alcohols to aldehydes in good yield is pyridinium chlorochromate (PCC). Secondary alcohols are oxidised to ketones by chromic anhydride ($CrO_3$). Tertiary alcohols do not undergo oxidation easily; under strong conditions, cleavage of $C-C$ bonds occurs to form a mixture of carboxylic acids with fewer carbon atoms.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.4.4:13",
+            "order": 13,
+            "title": "Dehydrogenation using Copper",
+            "content_text": "When the vapours of a primary or a secondary alcohol are passed over heated copper at $573\\text{ K}$, dehydrogenation takes place: primary alcohols form aldehydes and secondary alcohols form ketones. However, tertiary alcohols undergo dehydration to form alkenes under these conditions.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.4.4:14",
+            "order": 14,
+            "title": "Biological Oxidation of Alcohols",
+            "content_text": "Biological oxidation of methanol and ethanol in the body produces the corresponding aldehyde followed by the acid. Methanol is oxidised first to methanal and then to methanoic acid, which may cause blindness and death. A methanol-poisoned patient is treated by giving intravenous infusions of diluted ethanol. The enzyme responsible for oxidation of aldehyde ($HCHO$) to acid is swamped, allowing time for kidneys to excrete methanol.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.4.4:15",
+            "order": 15,
+            "title": "Reactions of Phenols",
+            "content_text": "Following reactions are shown by phenols only. In phenols, the reactions that take place on the aromatic ring are electrophilic substitution reactions (Unit 9, Class XI). The $-OH$ group attached to the benzene ring activates it towards electrophilic substitution. Also, it directs the incoming group to $ortho$ and $para$ positions in the ring as these positions become electron rich due to the resonance effect caused by $-OH$ group. The resonance structures are shown under acidity of phenols.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.4.4:16",
+            "order": 16,
+            "title": "Nitration of Phenol with Dilute Nitric Acid",
+            "content_text": "With dilute nitric acid ($HNO_3$) at low temperature ($298\\text{ K}$), phenol yields a mixture of $ortho$ and $para$ nitrophenols.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Nitration Reaction",
+                "description": "Chemical equation showing phenol reacting with dilute $HNO_3$ to produce a mixture of $o$-nitrophenol and $p$-nitrophenol.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.4.4:17",
+            "order": 17,
+            "title": "Separation and Properties of Nitrophenols",
+            "content_text": "The $ortho$ and $para$ isomers can be separated by steam distillation. $o$-Nitrophenol is steam volatile due to intramolecular hydrogen bonding while $p$-nitrophenol is less volatile due to intermolecular hydrogen bonding which causes the association of molecules.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Hydrogen Bonding in Nitrophenols",
+                "description": "Structural diagrams illustrating intramolecular hydrogen bonding in $o$-nitrophenol (forming a six-membered ring) and intermolecular hydrogen bonding between multiple $p$-nitrophenol molecules.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.4.4:18",
+            "order": 18,
+            "title": "Synthesis of Picric Acid",
+            "content_text": "With concentrated nitric acid, phenol is converted to $2,4,6$-trinitrophenol. The product is commonly known as picric acid. The yield of the reaction product is poor. $2,4,6$-Trinitrophenol is a strong acid due to the presence of three electron withdrawing $-NO_2$ groups which facilitate the release of hydrogen ion. Nowadays picric acid is prepared by treating phenol first with concentrated sulphuric acid which converts it to phenol-$2,4$-disulphonic acid, and then with concentrated nitric acid to get $2,4,6$-trinitrophenol.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Picric Acid Formation",
+                "description": "Reaction of phenol with concentrated $HNO_3$ to form $2,4,6$-trinitrophenol (picric acid).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.4.4:19",
+            "order": 19,
+            "title": "Halogenation in Low Polarity Solvents",
+            "content_text": "On treating phenol with bromine, different reaction products are formed under different experimental conditions. When the reaction is carried out in solvents of low polarity such as $CHCl_3$ or $CS_2$ and at low temperature ($273\\text{ K}$), monobromophenols are formed. The usual halogenation of benzene takes place in the presence of a Lewis acid, such as $FeBr_3$ (Unit 6, Class XII), which polarises the halogen molecule. In case of phenol, the polarisation of bromine molecule takes place even in the absence of Lewis acid due to the highly activating effect of $-OH$ group attached to the benzene ring.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Monobromination of Phenol",
+                "description": "Reaction of phenol with $Br_2$ in $CS_2$ at $273\\text{ K}$ yielding $o$-bromophenol (minor) and $p$-bromophenol (major).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.4.4:20",
+            "order": 20,
+            "title": "Halogenation with Bromine Water",
+            "content_text": "When phenol is treated with bromine water, $2,4,6$-tribromophenol is formed as a white precipitate. The reaction involves the substitution of bromine at both $ortho$ and the $para$ positions simultaneously.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Bromine Water Reaction",
+                "description": "Reaction of phenol with $3 Br_2$ in water to form $2,4,6$-tribromophenol and $3 HBr$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.4.4:21",
+            "order": 21,
+            "title": "Worked Example 7.5: Predicting Substitution Products",
+            "content_text": "This example illustrates how to determine the major products of electrophilic substitution when multiple directing groups are present on the benzene ring.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 7.5",
+                "problem": "Write the structures of the major products expected from the following reactions: (a) Mononitration of 3-methylphenol (b) Dinitration of 3-methylphenol (c) Mononitration of phenyl methanoate.",
+                "solution": "The combined influence of $-OH$ and $-CH_3$ groups determine the position of the incoming group. (a) The products are 3-methyl-4-nitrophenol and 3-methyl-6-nitrophenol. (b) The product is 3-methyl-4,6-dinitrophenol. (c) The product is 4-nitrophenyl methanoate."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.4.4:22",
+            "order": 22,
+            "title": "Kolbe's Reaction",
+            "content_text": "Phenoxide ion generated by treating phenol with sodium hydroxide is even more reactive than phenol towards electrophilic aromatic substitution. Hence, it undergoes electrophilic substitution with carbon dioxide, a weak electrophile. $Ortho$ hydroxybenzoic acid (Salicylic acid) is formed as the main reaction product.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Kolbe's Reaction Mechanism",
+                "description": "Reaction sequence: Phenol reacts with $NaOH$ to form sodium phenoxide, which then reacts with $CO_2$ followed by acidification ($H^+$) to yield $2$-hydroxybenzoic acid (salicylic acid).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.4.4:23",
+            "order": 23,
+            "title": "Reimer-Tiemann Reaction",
+            "content_text": "On treating phenol with chloroform in the presence of sodium hydroxide, a $-CHO$ group is introduced at $ortho$ position of benzene ring. This reaction is known as Reimer-Tiemann reaction. The intermediate substituted benzal chloride is hydrolysed in the presence of alkali to produce salicylaldehyde.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Reimer-Tiemann Reaction Path",
+                "description": "Phenol reacts with $CHCl_3$ and aqueous $NaOH$ to form an intermediate sodium phenoxide with a $-CHCl_2$ group at the $ortho$ position. Further treatment with $NaOH$ and $H^+$ yields salicylaldehyde.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.4.4:24",
+            "order": 24,
+            "title": "Reaction of Phenol with Zinc Dust",
+            "content_text": "Phenol is converted to benzene on heating with zinc dust. The reaction is: $C_6H_5OH + Zn \\rightarrow C_6H_6 + ZnO$.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Reduction with Zinc",
+                "description": "Chemical equation showing phenol reacting with $Zn$ and heat to produce benzene and zinc oxide.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.4.4:25",
+            "order": 25,
+            "title": "Oxidation of Phenol",
+            "content_text": "Oxidation of phenol with chromic acid produces a conjugated diketone known as benzoquinone. In the presence of air, phenols are slowly oxidised to dark coloured mixtures containing quinones.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Oxidation Reaction",
+                "description": "Reaction of phenol with $Na_2Cr_2O_7$ and $H_2SO_4$ to form benzoquinone.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:7:7.5",
+        "number": "7.5",
+        "title": "Some Commercially Important Alcohols",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:7:7.5:1",
+            "order": 1,
+            "title": "Methanol (Wood Spirit)",
+            "content_text": "Methanol, $CH_3OH$, historically known as 'wood spirit', was originally produced by the destructive distillation of wood. In modern industrial practice, it is primarily produced through the catalytic hydrogenation of carbon monoxide. This reaction occurs at high pressures ($200-300$ atm) and temperatures ($573-673$ K) in the presence of a mixed catalyst of zinc oxide and chromium oxide ($ZnO-Cr_2O_3$):\n$$CO + 2H_2 \\xrightarrow[200-300 \\text{ atm}, 573-673 \\text{ K}]{ZnO-Cr_2O_3} CH_3OH$$\nMethanol is a colourless liquid with a boiling point of $337$ K. It is highly toxic; ingestion of small quantities can lead to blindness, while larger amounts can be fatal. It is extensively used as a solvent in paints and varnishes and is a key precursor for the production of formaldehyde.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.5:2",
+            "order": 2,
+            "title": "Ethanol Production via Fermentation",
+            "content_text": "Ethanol, $C_2H_5OH$, is commercially obtained through fermentation, an ancient biochemical process. Sugars from molasses, sugarcane, or fruits like grapes are converted into glucose and fructose (both $C_6H_{12}O_6$) by the enzyme invertase. These monosaccharides then undergo fermentation in the presence of another enzyme, zymase (found in yeast), to produce ethanol and carbon dioxide:\n$$C_{12}H_{22}O_{11} + H_2O \\xrightarrow{Invertase} C_6H_{12}O_6 (\\text{Glucose}) + C_6H_{12}O_6 (\\text{Fructose})$$\n$$C_6H_{12}O_6 \\xrightarrow{Zymase} 2C_2H_5OH + 2CO_2$$\nIn winemaking, yeast grows on the skin of grapes. When crushed, the sugar and enzymes interact under anaerobic conditions. Fermentation is inhibited once the alcohol concentration exceeds $14\\%$. If air enters the mixture, oxygen oxidises ethanol to ethanoic acid, spoiling the taste.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.5:3",
+            "order": 3,
+            "title": "Properties and Denaturation of Ethanol",
+            "content_text": "Ethanol is a colourless liquid with a boiling point of $351$ K. It is used as a solvent in the paint industry and as a starting material for various carbon compounds. Ingestion of ethanol affects the central nervous system; in moderate amounts, it impairs judgment and lowers inhibitions, while high concentrations cause nausea, loss of consciousness, and can interfere with respiration, potentially becoming fatal. To prevent the misuse of industrial ethanol for drinking, it is 'denatured' by adding copper sulphate (to impart a blue colour) and pyridine (a foul-smelling liquid). Additionally, large quantities of ethanol are now produced industrially by the hydration of ethene.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:7:7.6",
+        "number": "7.6",
+        "title": "Ethers",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:7:7.6:1",
+            "order": 1,
+            "title": "Preparation of Ethers by Dehydration of Alcohols",
+            "content_text": "Alcohols undergo dehydration in the presence of protic acids like $H_2SO_4$ or $H_3PO_4$. The outcome of the reaction depends strictly on the temperature and conditions. For example, ethanol yields ethene at $443$ K, but at the lower temperature of $413$ K, ethoxyethane (diethyl ether) is the primary product:\n$$CH_3CH_2OH \\xrightarrow[443 \\text{ K}]{H_2SO_4} CH_2=CH_2$$\n$$2CH_3CH_2OH \\xrightarrow[413 \\text{ K}]{H_2SO_4} C_2H_5OC_2H_5$$\nHistorically, diethyl ether was widely used as an inhalation anaesthetic, though it has been largely replaced due to its slow effect and unpleasant recovery period.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.6:2",
+            "order": 2,
+            "title": "Mechanism of Ether Formation from Alcohols",
+            "content_text": "The formation of ether from an alcohol is a nucleophilic bimolecular reaction ($S_N2$) involving the attack of an alcohol molecule on a protonated alcohol. The mechanism proceeds in three steps:\n(i) Protonation of the alcohol: $CH_3-CH_2-\\ddot{O}-H + H^+ \\rightarrow CH_3-CH_2-\\overset{+}{O}H_2$\n(ii) Nucleophilic attack by another alcohol molecule: $CH_3CH_2-\\ddot{O}H + CH_3-CH_2-\\overset{+}{O}H_2 \\rightarrow CH_3CH_2-\\overset{+}{O}(H)-CH_2CH_3 + H_2O$\n(iii) Deprotonation to form the ether: $CH_3CH_2-\\overset{+}{O}(H)-CH_2CH_3 \\rightarrow CH_3CH_2-O-CH_2CH_3 + H^+$\nThis method is suitable only for primary alkyl groups. Secondary or tertiary alcohols tend to undergo elimination to form alkenes because the $S_N1$ pathway or steric hindrance makes substitution difficult.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Mechanism 7.6.1",
+                "description": "Three-step reaction mechanism showing the protonation of ethanol, the nucleophilic attack of a second ethanol molecule on the protonated species, and the final loss of a proton to yield diethyl ether.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.6:3",
+            "order": 3,
+            "title": "Williamson Synthesis",
+            "content_text": "Williamson synthesis is a versatile laboratory method for preparing both symmetrical and unsymmetrical ethers. It involves the reaction of an alkyl halide with a sodium alkoxide:\n$$R-X + R'-\\ddot{O}^- Na^+ \\rightarrow R-\\ddot{O}-R' + NaX$$\nThe reaction proceeds via an $S_N2$ attack of the alkoxide ion on the primary alkyl halide. This method was developed by Alexander William Williamson ($1824–1904$). Ethers containing substituted alkyl groups (secondary or tertiary) can also be prepared, provided the alkoxide is the hindered species and the halide is primary.\nIn Williamson synthesis, the choice of reagents is critical. Better yields of ethers are obtained if the alkyl halide is primary. If a secondary or tertiary alkyl halide is used, elimination competes with substitution because alkoxides are not only nucleophiles but also strong bases. For instance, the reaction of sodium methoxide with tert-butyl bromide yields exclusively 2-methylpropene (an alkene) rather than an ether:\n$$(CH_3)_3C-Br + NaOCH_3 \\rightarrow CH_3-C(CH_3)=CH_2 + NaBr + CH_3OH$$\nTo prepare tert-butyl methyl ether, one must react sodium tert-butoxide with methyl bromide.",
+            "content_type": "law",
+            "worked_examples": [
+              {
+                "label": "Example 7.6",
+                "problem": "The following is not an appropriate reaction for the preparation of t-butyl ethyl ether: $C_2H_5ONa + (CH_3)_3C-Cl \\rightarrow (CH_3)_3C-OC_2H_5$. (i) What would be the major product of this reaction? (ii) Write a suitable reaction for the preparation of t-butylethyl ether.",
+                "solution": "(i) The major product of the given reaction is 2-methylprop-1-ene. This is because sodium ethoxide is a strong base as well as a nucleophile; with a tertiary alkyl halide, elimination predominates over substitution. (ii) A suitable reaction involves the use of a primary alkyl halide and a tertiary alkoxide: $(CH_3)_3C-O^-Na^+ + CH_3CH_2Cl \\rightarrow (CH_3)_3C-O-CH_2CH_3 + NaCl$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.6:4",
+            "order": 4,
+            "title": "Preparation of Alkyl Phenyl Ethers",
+            "content_text": "Phenols can be converted into ethers using the Williamson method. Phenol is first reacted with sodium hydroxide to form sodium phenoxide, which then acts as the nucleophile (phenoxide moiety) to react with an alkyl halide:\n$$C_6H_5OH + NaOH \\rightarrow C_6H_5O^-Na^+ \\xrightarrow{R-X} C_6H_5OR + NaX$$",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Phenolic Ether Synthesis",
+                "description": "Reaction scheme showing phenol reacting with NaOH to form sodium phenoxide, followed by reaction with an alkyl halide (R-X) to produce an alkyl phenyl ether.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:7:7.6.2",
+        "number": "7.6.2",
+        "title": "Physical Properties",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:7:7.6.2:1",
+            "order": 1,
+            "title": "Boiling Points of Ethers",
+            "content_text": "The C-O bonds in ethers are polar, and thus, ethers have a net dipole moment. The weak polarity of ethers does not appreciably affect their boiling points, which are comparable to those of the alkanes of comparable molecular masses but are much lower than the boiling points of alcohols. For example, n-pentane (b.p. 309.1 K) and ethoxyethane (b.p. 307.6 K) have similar boiling points, while butan-1-ol has a much higher boiling point of 390 K. The large difference in boiling points between alcohols and ethers is due to the presence of intermolecular hydrogen bonding in alcohols, which is absent in ethers.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 7.6.2",
+                "caption": "Comparison of Boiling Points of Alkanes, Ethers, and Alcohols",
+                "headers": [
+                  "Formula",
+                  "Name",
+                  "b.p./K"
+                ],
+                "rows": [
+                  [
+                    "$CH_3(CH_2)_3CH_3$",
+                    "n-Pentane",
+                    "309.1"
+                  ],
+                  [
+                    "$C_2H_5-O-C_2H_5$",
+                    "Ethoxyethane",
+                    "307.6"
+                  ],
+                  [
+                    "$CH_3(CH_2)_3-OH$",
+                    "Butan-1-ol",
+                    "390"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.6.2:2",
+            "order": 2,
+            "title": "Solubility of Ethers",
+            "content_text": "The miscibility of ethers with water resembles those of alcohols of the same molecular mass. Both ethoxyethane and butan-1-ol are miscible to almost the same extent (7.5 and 9 g per 100 mL water, respectively), while pentane is essentially immiscible. This is due to the fact that just like alcohols, the oxygen atom of an ether can form hydrogen bonds with water molecules.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 7.6.2",
+                "description": "Diagram showing hydrogen bonding between an ether molecule (R-O-R) and a water molecule (H-O-H), where the lone pair on the ether oxygen interacts with the hydrogen of water.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:7:7.6.3",
+        "number": "7.6.3",
+        "title": "Chemical Reactions",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:7:7.6.3:1",
+            "order": 1,
+            "title": "Cleavage of C-O bond in ethers",
+            "content_text": "Ethers are the least reactive of the functional groups. The cleavage of the C-O bond in ethers takes place under drastic conditions with an excess of hydrogen halides (HX). The reaction of a dialkyl ether gives two alkyl halide molecules: $R-O-R + HX \\rightarrow RX + R-OH$, and the formed alcohol further reacts with HX to give $R-X + H_2O$. Alkyl aryl ethers are cleaved at the alkyl-oxygen bond due to the more stable aryl-oxygen bond, yielding phenol and an alkyl halide. Ethers with two different alkyl groups are also cleaved in the same manner: $R-O-R' + HX \\rightarrow R-X + R'-OH$. The order of reactivity of hydrogen halides is $HI > HBr > HCl$. Cleavage typically requires concentrated HI or HBr at high temperatures.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.6.3:2",
+            "order": 2,
+            "title": "Mechanism of Ether Cleavage (Primary and Secondary Alkyl Groups)",
+            "content_text": "The reaction of an ether with concentrated HI starts with the protonation of the ether molecule to form an oxonium ion (Step 1). In Step 2, the iodide ion, being a good nucleophile, attacks the least substituted carbon of the oxonium ion and displaces an alcohol molecule via an $S_N2$ mechanism. In the cleavage of mixed ethers with primary or secondary alkyl groups, the lower alkyl group forms the alkyl iodide. If HI is in excess and the reaction is carried out at high temperature, the alcohol formed in Step 2 reacts with another molecule of HI to be converted into a second alkyl iodide (Step 3).",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Mechanism Steps",
+                "description": "Chemical equations showing Step 1: Protonation of ethoxyethane by HI; Step 2: SN2 attack of I- on the methyl group of the oxonium ion; Step 3: Conversion of the resulting ethanol into ethyl iodide by excess HI.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.6.3:3",
+            "order": 3,
+            "title": "Cleavage with Tertiary Alkyl Groups",
+            "content_text": "When one of the alkyl groups in an ether is a tertiary group, the halide formed is a tertiary halide. This occurs because the departure of the leaving group (alcohol) creates a more stable tertiary carbocation, and the reaction follows an $S_N1$ mechanism rather than $S_N2$. For example, the reaction of tert-butyl methyl ether with HI yields tert-butyl iodide and methanol.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "SN1 Mechanism",
+                "description": "Reaction scheme showing the protonation of tert-butyl methyl ether followed by the slow cleavage of the C-O bond to form a stable tert-butyl carbocation and methanol, then the fast attack of I- on the carbocation to form tert-butyl iodide.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.6.3:4",
+            "order": 4,
+            "title": "Cleavage of Alkyl Aryl Ethers (Anisole)",
+            "content_text": "In the case of anisole, protonation forms the methylphenyl oxonium ion. The bond between the oxygen and the methyl group ($O-CH_3$) is weaker than the bond between the oxygen and the phenyl group ($O-C_6H_5$). The aryl-oxygen bond has partial double bond character because the carbon of the phenyl group is $sp^2$ hybridised and involved in resonance. Therefore, the attack by $I^-$ ion breaks the $O-CH_3$ bond to form $CH_3I$ and phenol. Phenols do not react further to give aryl halides because the $sp^2$ hybridised carbon cannot undergo the nucleophilic substitution reaction required.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.6.3:5",
+            "order": 5,
+            "title": "Worked Example: Products of Ether Cleavage with HI",
+            "content_text": "This example demonstrates how to predict the major products of the reaction between various ethers and HI based on the mechanisms discussed ($S_N1$ vs $S_N2$).",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 7.7",
+                "problem": "Give the major products that are formed by heating each of the following ethers with HI: (i) $CH_3-CH_2-CH(CH_3)-CH_2-O-CH_2-CH_3$, (ii) $CH_3-CH_2-CH_2-O-C(CH_3)_2-CH_2-CH_3$, (iii) Benzyl phenyl ether.",
+                "solution": "(i) $CH_3-CH_2-CH(CH_3)-CH_2OH + CH_3CH_2I$ (SN2 attack on smaller ethyl group); (ii) $CH_3CH_2CH_2OH + (CH_3)_2C(I)CH_2CH_3$ (SN1 mechanism due to tertiary group); (iii) $C_6H_5CH_2I + C_6H_5OH$ (Benzyl carbocation is stable, or SN2 at benzyl position is favored over aryl)."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:7:7.6.3.2",
+        "number": "7.6.3.2",
+        "title": "Electrophilic substitution",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:7:7.6.3.2:1",
+            "order": 1,
+            "title": "Resonance and Directing Effect of Alkoxy Group",
+            "content_text": "The alkoxy group (-OR) is ortho, para directing and activates the aromatic ring towards electrophilic substitution in the same way as the hydroxyl group in phenol. Resonance structures of alkoxybenzene show that the electron density increases at the ortho and para positions due to the delocalization of lone pairs from the oxygen atom into the ring.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Resonance Structures",
+                "description": "Five resonance structures of alkoxybenzene showing the lone pair on oxygen forming a double bond with the ring and creating negative charges at the two ortho and one para positions.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.6.3.2:2",
+            "order": 2,
+            "title": "Halogenation of Ethers",
+            "content_text": "Phenylalkyl ethers undergo usual halogenation in the benzene ring. For example, anisole undergoes bromination with bromine in ethanoic acid even in the absence of an iron (III) bromide catalyst. This is due to the activation of the benzene ring by the methoxy group. The para isomer (p-bromoanisole) is obtained as the major product in 90% yield, while the ortho isomer (o-bromoanisole) is the minor product.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Bromination of Anisole",
+                "description": "Chemical equation showing Anisole reacting with Br2 in ethanoic acid to produce p-Bromoanisole (Major) and o-Bromoanisole (Minor).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.6.3.2:3",
+            "order": 3,
+            "title": "Friedel-Crafts reaction",
+            "content_text": "Anisole undergoes Friedel-Crafts reaction, where alkyl and acyl groups are introduced at the ortho and para positions. This occurs by reaction with an alkyl halide or acyl halide in the presence of anhydrous aluminium chloride ($AlCl_3$), which acts as a Lewis acid catalyst. In the alkylation reaction, anisole reacts with methyl chloride ($CH_3Cl$) in carbon disulfide ($CS_2$) to yield 2-methoxytoluene as the minor product and 4-methoxytoluene as the major product. In the acetylation reaction, anisole reacts with ethanoyl chloride ($CH_3COCl$) to yield 2-methoxyacetophenone as the minor product and 4-methoxyacetophenone as the major product.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Friedel-Crafts Alkylation",
+                "description": "Chemical equation showing anisole reacting with $CH_3Cl$ in the presence of anhydrous $AlCl_3$ and $CS_2$ to form 2-methoxytoluene (minor) and 4-methoxytoluene (major).",
+                "image_url": null
+              },
+              {
+                "label": "Friedel-Crafts Acetylation",
+                "description": "Chemical equation showing anisole reacting with $CH_3COCl$ in the presence of anhydrous $AlCl_3$ to form 2-methoxyacetophenone (minor) and 4-methoxyacetophenone (major).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.6.3.2:4",
+            "order": 4,
+            "title": "Nitration",
+            "content_text": "Anisole reacts with a nitrating mixture consisting of concentrated sulphuric acid ($H_2SO_4$) and nitric acid ($HNO_3$). This electrophilic substitution reaction yields a mixture of ortho and para nitroanisole. Specifically, the products are 2-nitroanisole (the minor product) and 4-nitroanisole (the major product).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Nitration of Anisole",
+                "description": "Chemical equation showing anisole reacting with $H_2SO_4$ and $HNO_3$ to produce 2-nitroanisole (minor) and 4-nitroanisole (major).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.6.3.2:5",
+            "order": 5,
+            "title": "Intext Questions",
+            "content_text": "7.10 Write the reactions of Williamson synthesis of 2-ethoxy-3-methylpentane starting from ethanol and 3-methylpentan-2-ol. 7.11 Which of the following is an appropriate set of reactants for the preparation of 1-methoxy-4-nitrobenzene and why? (i) 4-Nitro-1-bromobenzene + $CH_3ONa$ (ii) Sodium 4-nitrophenoxide + $CH_3Br$. 7.12 Predict the products of the following reactions: (i) $CH_3-CH_2-CH_2-O-CH_3 + HBr \\rightarrow$ (ii) $C_6H_5OC_2H_5 + HBr \\rightarrow$ (iii) $C_6H_5OC_2H_5$ reacted with Conc. $H_2SO_4$ and Conc. $HNO_3$ (iv) $(CH_3)_3C-OC_2H_5 + HI \\rightarrow$",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Intext 7.11 Reactants",
+                "description": "Structural diagrams for the two sets of reactants: (i) 4-nitro-1-bromobenzene with sodium methoxide and (ii) sodium 4-nitrophenoxide with methyl bromide.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:7:Summary",
+        "number": "Summary",
+        "title": "Summary",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:7:Summary:1",
+            "order": 1,
+            "title": "Classification and Preparation of Alcohols, Phenols, and Ethers",
+            "content_text": "Alcohols and phenols are classified based on the number of hydroxyl groups and the hybridisation ($sp^3$ or $sp^2$) of the carbon atom to which the $-OH$ group is attached. Ethers are classified based on the groups attached to the oxygen atom. Alcohols are prepared by: (1) hydration of alkenes (acid-catalyzed or hydroboration-oxidation), and (2) reduction of carbonyl compounds (catalytic reduction or Grignard reagents). Phenols are prepared by: (1) substitution of halogen in haloarenes or sulphonic acid groups in aryl sulphonic acids, (2) hydrolysis of diazonium salts, and (3) industrial production from cumene.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:Summary:2",
+            "order": 2,
+            "title": "Physical and Chemical Properties",
+            "content_text": "Alcohols have higher boiling points than hydrocarbons, ethers, and haloalkanes of similar mass due to intermolecular hydrogen bonding. They are soluble in water for the same reason. Alcohols and phenols are acidic; electron-withdrawing groups increase phenol acidity, while electron-releasing groups decrease it. Alcohols react with hydrogen halides to form alkyl halides, dehydrate to form alkenes, and oxidize to form aldehydes, ketones, or carboxylic acids depending on the alcohol type and reagent. Tertiary alcohols resist oxidation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:Summary:3",
+            "order": 3,
+            "title": "Reactions of Phenols and Ethers",
+            "content_text": "The $-OH$ group in phenols activates the ring for electrophilic substitution at ortho and para positions. Key reactions include Reimer-Tiemann (forming salicylaldehyde) and Kolbe's reaction (forming salicylic acid via phenoxide ion). Ethers are prepared by alcohol dehydration or Williamson synthesis. Their boiling points resemble alkanes, but solubility is similar to alcohols. Ethers undergo $C-O$ bond cleavage by hydrogen halides and electrophilic substitution where the alkoxy group directs to ortho and para positions.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:12:7:7.7",
+        "number": "7.7",
+        "title": "Answers to Some Intext Questions",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:12:7:7.7:1",
+            "order": 1,
+            "title": "Classification and Nomenclature Answers",
+            "content_text": "This subsection provides the answers to intext questions regarding the classification and nomenclature of alcohols. 7.1: Alcohols are classified as primary, secondary, or tertiary based on the carbon atom to which the hydroxyl group is attached. Primary alcohols: (i), (ii), (iii). Secondary alcohols: (iv) and (v). Tertiary alcohols: (vi). 7.2: Allylic alcohols are those where the -OH group is attached to an $sp^3$ hybridized carbon atom next to a carbon-carbon double bond. Examples: (ii) and (vi). 7.3: IUPAC names for the given compounds: (i) 4-Chloro-3-ethyl-2-(1-methylethyl)-butan-1-ol, (ii) 2, 5-Dimethylhexane-1,3-diol, (iii) 3-Bromocyclohexanol, (iv) Hex-1-en-3-ol, (v) 2-Bromo-3-methylbut-2-en-1-ol.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.7:2",
+            "order": 2,
+            "title": "Preparation of Alcohols Answers",
+            "content_text": "This subsection details the preparation methods for specific alcohols as answered in the intext questions. 7.4: (i) The reaction of isopropyl magnesium bromide with formaldehyde followed by hydrolysis yields 2-methylpropan-1-ol. (ii) The reaction of cyclohexyl magnesium bromide with formaldehyde followed by hydrolysis yields cyclohexylmethanol. 7.5: Structures for the given alcohols: (i) 2-methylpropan-2-ol, (ii) 1-methylcyclohexanol, (iii) 3-methylbutan-2-ol.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "7.4 (i)",
+                "description": "Reaction scheme showing $CH_3-CH(CH_3)-MgBr$ reacting with $HCHO$ to form an adduct $CH_3-CH(CH_3)-CH_2-OMgBr$, which is then hydrolyzed with $H_2O$ to form $CH_3-CH(CH_3)-CH_2OH$ and $Mg(OH)Br$.",
+                "image_url": null
+              },
+              {
+                "label": "7.4 (ii)",
+                "description": "Reaction scheme showing cyclohexyl magnesium bromide reacting with formaldehyde to form (cyclohexylmethyl)magnesium bromide adduct, which is then hydrolyzed to cyclohexylmethanol.",
+                "image_url": null
+              },
+              {
+                "label": "7.5 (ii)",
+                "description": "Chemical structure of 1-methylcyclohexanol, showing a cyclohexane ring with a methyl group and a hydroxyl group attached to the same carbon atom.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.7:3",
+            "order": 3,
+            "title": "Reactions and Conversions Answers",
+            "content_text": "This subsection covers the answers related to chemical reactions and multi-step syntheses. 7.7: (i) Acid-catalyzed hydration of 1-methylcyclohexene yields 1-methylcyclohexanol. (ii) Acid-catalyzed hydration of but-1-ene or but-2-ene yields butan-2-ol as the major product due to the formation of a more stable secondary carbocation intermediate. 7.10: The synthesis of 2-ethoxy-3-methylpentane from ethanol and 3-methylpentan-2-ol involves: (1) Reaction of 3-methylpentan-2-ol with sodium to form sodium 3-methylpentan-2-olate. (2) Conversion of ethanol to ethyl bromide using $HBr$. (3) Williamson ether synthesis between the sodium alkoxide and ethyl bromide to yield 2-ethoxy-3-methylpentane.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "7.10 Synthesis",
+                "description": "A three-step reaction sequence: 1. $CH_3-CH_2-CH(CH_3)-CH(OH)-CH_3 + Na \\rightarrow CH_3-CH_2-CH(CH_3)-CH(ONa)-CH_3$. 2. $C_2H_5OH + HBr \\rightarrow C_2H_5Br$. 3. Reaction of the sodium alkoxide from step 1 with $C_2H_5Br$ to form 2-ethoxy-3-methylpentane.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:12:7:7.7:4",
+            "order": 4,
+            "title": "Answers to Intext Questions (Continued)",
+            "content_text": "This subsection concludes the answers to the intext questions for Chapter 7. \n\n7.11 (ii): [No content provided for this item on the page].\n\n7.12 (i): The reaction products are propan-1-ol and methyl bromide: $CH_3CH_2CH_2OH + CH_3Br$.\n\n7.12 (ii): The reaction products are phenol and ethyl bromide: $C_6H_5OH + C_2H_5Br$.\n\n7.12 (iii): The reaction yields a mixture of 2-nitroethoxybenzene (ortho-isomer) and 4-nitroethoxybenzene (para-isomer).\n\n7.12 (iv): The reaction products are tert-butyl iodide and ethanol: $(CH_3)_3C-I + C_2H_5OH$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Answer 7.12 (ii)",
+                "description": "Chemical structures of Phenol (a benzene ring with a hydroxyl group) and Ethyl bromide ($C_2H_5Br$).",
+                "image_url": null
+              },
+              {
+                "label": "Answer 7.12 (iii)",
+                "description": "Chemical structures of 2-Nitroethoxybenzene (benzene ring with an ethoxy group $-OC_2H_5$ and a nitro group $-NO_2$ in the ortho position) and 4-Nitroethoxybenzene (benzene ring with an ethoxy group and a nitro group in the para position).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:chemistry:12:7:ex:1",
+          "number": 1,
+          "problem": "Classify the following as primary, secondary and tertiary alcohols: (i) $CH_3-C(CH_3)_2-CH_2OH$ (ii) $H_2C=CH-CH_2OH$ (iii) $CH_3-CH_2-CH_2-OH$ (iv) Benzene ring attached to $-CH(OH)-CH_3$ (v) Cyclohex-2-en-1-ol with a methyl group at C2 (vi) Benzene ring attached to $-CH=C(CH_3)-OH$",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:7:ex:2",
+          "number": 2,
+          "problem": "Identify allylic alcohols in the above examples.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:7:ex:3",
+          "number": 3,
+          "problem": "Name the following compounds according to IUPAC system: (i) $CH_3 - CH_2 - CH(CH_2Cl) - CH(CH_2OH) - CH(CH_3) - CH_3$ (ii) $CH_3 - CH(CH_3) - CH_2 - CH(OH) - CH(CH_2OH) - CH_3$ (iii) A cyclohexane ring with an -OH group at position 1 and a -Br atom at position 3. (iv) $H_2C = CH - CH(OH) - CH_2 - CH_2 - CH_3$ (v) $CH_3 - C(CH_3) = C(Br) - CH_2OH$",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:7:ex:4",
+          "number": 4,
+          "problem": "Give structures of the products you would expect when each of the following alcohol reacts with (a) $HCl-ZnCl_2$ (b) $HBr$ and (c) $SOCl_2$. (i) Butan-1-ol (ii) 2-Methylbutan-2-ol",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:7:ex:5",
+          "number": 5,
+          "problem": "Explain why propanol has higher boiling point than that of the hydrocarbon, butane?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:7:ex:6",
+          "number": 6,
+          "problem": "Alcohols are comparatively more soluble in water than hydrocarbons of comparable molecular masses. Explain this fact.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:7:ex:7",
+          "number": 7,
+          "problem": "What is meant by hydroboration-oxidation reaction? Illustrate it with an example.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:7:ex:8",
+          "number": 8,
+          "problem": "While separating a mixture of ortho and para nitrophenols by steam distillation, name the isomer which will be steam volatile. Give reason.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:7:ex:9",
+          "number": 9,
+          "problem": "Give the equations of reactions for the preparation of phenol from cumene.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:7:ex:10",
+          "number": 10,
+          "problem": "Write chemical reaction for the preparation of phenol from chlorobenzene.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:7:ex:11",
+          "number": 11,
+          "problem": "Write the mechanism of hydration of ethene to yield ethanol.",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "derivation"
+        },
+        {
+          "id": "ncert:chemistry:12:7:ex:12",
+          "number": 12,
+          "problem": "You are given benzene, conc. $H_2SO_4$ and $NaOH$. Write the equations for the preparation of phenol using these reagents. Show how will you synthesise: (i) 1-phenylethanol from a suitable alkene. (ii) cyclohexylmethanol using an alkyl halide by an $S_N2$ reaction. (iii) pentan-1-ol using a suitable alkyl halide?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:7:ex:13",
+          "number": 13,
+          "problem": "Give two reactions that show the acidic nature of phenol. Compare acidity of phenol with that of ethanol.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:7:ex:14",
+          "number": 14,
+          "problem": "Explain why is ortho nitrophenol more acidic than ortho methoxyphenol?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:7:ex:15",
+          "number": 15,
+          "problem": "Explain how does the -OH group attached to a carbon of benzene ring activate it towards electrophilic substitution?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:7:ex:16",
+          "number": 16,
+          "problem": "Give equations of the following reactions: (i) Oxidation of propan-1-ol with alkaline $KMnO_4$ solution. (ii) Bromine in $CS_2$ with phenol. (iii) Dilute $HNO_3$ with phenol. (iv) Treating phenol with chloroform in presence of aqueous $NaOH$.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:7:ex:17",
+          "number": 17,
+          "problem": "Explain the following with an example. (i) Kolbe’s reaction. (ii) Reimer-Tiemann reaction. (iii) Williamson ether synthesis. (iv) Unsymmetrical ether.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:7:ex:18",
+          "number": 18,
+          "problem": "Write the mechanism of acid dehydration of ethanol to yield ethene.",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "derivation"
+        },
+        {
+          "id": "ncert:chemistry:12:7:ex:19",
+          "number": 19,
+          "problem": "How are the following conversions carried out? (i) Propene $\\rightarrow$ Propan-2-ol. (ii) Benzyl chloride $\\rightarrow$ Benzyl alcohol. (iii) Ethyl magnesium chloride $\\rightarrow$ Propan-1-ol. (iv) Methyl magnesium bromide $\\rightarrow$ 2-Methylpropan-2-ol.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:7:ex:20",
+          "number": 20,
+          "problem": "Name the reagents used in the following reactions: (i) Oxidation of a primary alcohol to carboxylic acid. (ii) Oxidation of a primary alcohol to aldehyde. (iii) Bromination of phenol to 2,4,6-tribromophenol. (iv) Benzyl alcohol to benzoic acid. (v) Dehydration of propan-2-ol to propene. (vi) Butan-2-one to butan-2-ol.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "short_answer"
+        },
+        {
+          "id": "ncert:chemistry:12:7:ex:21",
+          "number": 21,
+          "problem": "Give reason for the higher boiling point of ethanol in comparison to methoxymethane.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:7:ex:22",
+          "number": 22,
+          "problem": "Give IUPAC names of the following ethers: (i) $C_2H_5OCH_2-CH(CH_3)-CH_3$ (ii) $CH_3OCH_2CH_2Cl$ (iii) $O_2N-C_6H_4-OCH_3(p)$ (iv) $CH_3CH_2CH_2OCH_3$ (v) 1-ethoxy-4,4-dimethylcyclohexane (vi) ethoxybenzene",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:7:ex:23",
+          "number": 23,
+          "problem": "Write the names of reagents and equations for the preparation of the following ethers by Williamson’s synthesis: (i) 1-Propoxypropane (ii) Ethoxybenzene (iii) 2-Methoxy-2-methylpropane (iv) 1-Methoxyethane.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:7:ex:24",
+          "number": 24,
+          "problem": "Illustrate with examples the limitations of Williamson synthesis for the preparation of certain types of ethers.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:7:ex:25",
+          "number": 25,
+          "problem": "How is 1-propoxypropane synthesised from propan-1-ol? Write mechanism of this reaction.",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "derivation"
+        },
+        {
+          "id": "ncert:chemistry:12:7:ex:26",
+          "number": 26,
+          "problem": "Preparation of ethers by acid dehydration of secondary or tertiary alcohols is not a suitable method. Give reason.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:7:ex:27",
+          "number": 27,
+          "problem": "Write the equation of the reaction of hydrogen iodide with: (i) 1-propoxypropane (ii) methoxybenzene and (iii) benzyl ethyl ether.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:7:ex:28",
+          "number": 28,
+          "problem": "Explain the fact that in aryl alkyl ethers (i) the alkoxy group activates the benzene ring towards electrophilic substitution and (ii) it directs the incoming substituents to ortho and para positions in benzene ring.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:12:7:ex:29",
+          "number": 29,
+          "problem": "Write the mechanism of the reaction of HI with methoxymethane.",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "derivation"
+        },
+        {
+          "id": "ncert:chemistry:12:7:ex:30",
+          "number": 30,
+          "problem": "Write equations of the following reactions: (i) Friedel-Crafts reaction – alkylation of anisole. (ii) Nitration of anisole. (iii) Bromination of anisole in ethanoic acid medium. (iv) Friedel-Crafts acetylation of anisole.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:7:ex:31",
+          "number": 31,
+          "problem": "Show how would you synthesise the following alcohols from appropriate alkenes? (i) 1-methylcyclohexanol (ii) 4-methylheptan-4-ol (iii) 1-cyclohexylpentan-1-ol (iv) 1-cyclohexylethanol",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:12:7:ex:32",
+          "number": 32,
+          "problem": "When 3-methylbutan-2-ol is treated with HBr, the following reaction takes place: $CH_3-CH(CH_3)-CH(OH)-CH_3 \\xrightarrow{HBr} CH_3-C(Br)(CH_3)-CH_2-CH_3$. Give a mechanism for this reaction. (Hint : The secondary carbocation formed in step II rearranges to a more stable tertiary carbocation by a hydride ion shift from 3rd carbon atom).",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "derivation"
+        }
+      ]
+    }
+  }
+}

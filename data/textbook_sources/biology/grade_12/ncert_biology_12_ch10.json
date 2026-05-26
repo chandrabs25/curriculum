@@ -1,0 +1,569 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_biology_12_ch10.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:biology:12:10",
+  "curriculum": "ncert",
+  "subject": "biology",
+  "grade": 12,
+  "textbook_name": "Biology",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:biology:12:10",
+    "number": 10,
+    "title": "Biotechnology and Its Applications",
+    "summary": "Chapter 10, \"Biotechnology and Its Applications,\" explores the vast potential of biotechnology across various fields. It begins by outlining the critical research areas for improving biotechnological processes. The chapter then delves into agricultural applications, highlighting the limitations of traditional methods like the Green Revolution and introducing tissue culture techniques, including micro-propagation, meristem culture, and somatic hybridization. Genetically Modified Organisms (GMOs), specifically Bt cotton and RNA interference for pest resistance, are discussed with their mechanisms of action explained.\n\nThe chapter moves to medical applications, focusing on the production of genetically engineered insulin for diabetes treatment and the principles of gene therapy, exemplified by the ADA deficiency case study. Molecular diagnosis using PCR, probes, and ELISA are presented as crucial tools for early disease detection. Transgenic animals, their creation, and their applications in studying disease, producing biological products, and testing vaccine and chemical safety are thoroughly examined.\n\nFinally, the chapter addresses ethical considerations surrounding biotechnology, including the need for regulation of genetic modification, patenting issues, and the problem of biopiracy. It emphasizes the growing awareness of injustice in the exploitation of biological resources and the legislative efforts being made to address these concerns. The sections build upon each other, showcasing how biotechnology progresses from improving food production to treating diseases and ultimately raising ethical questions about its responsible use. The chapter emphasizes the practical significance of biotechnology in addressing global challenges in food security, healthcare, and environmental sustainability.",
+    "sections": [
+      {
+        "id": "ncert:biology:12:10:10",
+        "number": "10",
+        "title": "Introduction",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:10:10:1",
+            "order": 1,
+            "title": "Overview of Biotechnology Applications",
+            "content_text": "Biotechnology essentially deals with the industrial-scale production of biopharmaceuticals and biologicals. This is achieved by using genetically modified microbes, fungi, plants, and animals. The scope of biotechnological applications is broad, encompassing fields such as therapeutics (medical treatments), diagnostics (disease identification), genetically modified crops for agriculture, processed food production, bioremediation (using organisms to clean up pollutants), waste treatment, and energy production.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Chapter 10 Opening Image",
+                "description": "A photograph showing cotton bolls, with one fully open displaying white cotton fibers and others in various stages of development.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:10:10:2",
+            "order": 2,
+            "title": "Critical Research Areas of Biotechnology",
+            "content_text": "There are three critical research areas in the field of biotechnology: (i) Providing the best catalyst: This involves identifying or creating an improved organism, typically a microbe or a pure enzyme, to perform a specific biological process. (ii) Creating optimal conditions: This involves using engineering principles to create the best possible environment (such as temperature, $pH$, and nutrient levels) for the catalyst to function effectively. (iii) Downstream processing: These are the technologies used to purify the resulting protein or organic compound from the mixture after the biological reaction is complete.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:10:10.1",
+        "number": "10.1",
+        "title": "Biotechnological Applications in Agriculture",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:10:10.1:1",
+            "order": 1,
+            "title": "Strategies for Increasing Food Production",
+            "content_text": "To meet the food demands of a growing population, three main approaches to agriculture can be considered: (i) agro-chemical based agriculture, which relies heavily on chemical fertilizers and pesticides; (ii) organic agriculture, which avoids synthetic chemicals; and (iii) genetically engineered crop-based agriculture, which uses biotechnology to modify the genetic makeup of crops for better performance.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:10:10.1:2",
+            "order": 2,
+            "title": "The Green Revolution and its Limitations",
+            "content_text": "The Green Revolution succeeded in tripling the food supply, yet it remained insufficient to feed the rapidly growing human population. The increase in yields was primarily attributed to the use of improved crop varieties, but more significantly to better management practices and the intensive use of agrochemicals like fertilizers and pesticides. However, for farmers in developing nations, these agrochemicals are often prohibitively expensive. Furthermore, conventional breeding techniques have reached a limit where further significant increases in yield with existing varieties are difficult to achieve using traditional methods.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:10:10.1:3",
+            "order": 3,
+            "title": "Tissue Culture and Totipotency",
+            "content_text": "As traditional breeding methods struggled to meet increasing food demands, tissue culture emerged in the 1950s as a powerful alternative for crop improvement. Tissue culture involves the regeneration of whole plants from 'explants'—which refers to any part of a plant (like a leaf, root, or cell) that is removed and grown in a test tube under sterile conditions. This process relies on a special nutrient medium that must contain a carbon source (such as sucrose), inorganic salts, vitamins, amino acids, and growth regulators like auxins and cytokinins. The inherent capacity of a single plant cell or explant to generate a whole new plant is known as totipotency.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:10:10.1:4",
+            "order": 4,
+            "title": "Micro-propagation and Somaclones",
+            "content_text": "Micro-propagation is a tissue culture technique used to produce thousands of plants in a very short period. Because these plants are grown from the same original plant tissue, they are genetically identical to the parent plant and to each other; such plants are called somaclones. This method has been successfully used for the commercial production of important food plants like tomato, banana, and apple.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:10:10.1:5",
+            "order": 5,
+            "title": "Meristem Culture for Virus-Free Plants",
+            "content_text": "Another significant application of tissue culture is the recovery of healthy, virus-free plants from infected ones. Even if a plant is infected with a virus, its meristem (both apical and axillary) usually remains free of the virus. By excising the meristem and culturing it in vitro, scientists can produce healthy plants. This technique has been successfully applied to crops like banana, sugarcane, and potato.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:10:10.1:6",
+            "order": 6,
+            "title": "Somatic Hybridisation and Protoplast Fusion",
+            "content_text": "Scientists can isolate single cells from plants and use enzymes to digest their cell walls, leaving behind 'naked' protoplasts surrounded only by plasma membranes. Protoplasts from two different plant varieties, each possessing a desirable trait, can be fused to create a hybrid protoplast. These hybrids can then be grown into new plants called somatic hybrids, and the entire process is known as somatic hybridisation. A famous example is the 'pomato', created by fusing tomato and potato protoplasts. Although the pomato was successfully grown, it unfortunately did not possess the ideal combination of characteristics required for commercial success.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:10:10.1:7",
+            "order": 7,
+            "title": "Genetically Modified Organisms (GMOs) and Their Benefits",
+            "content_text": "Organisms—including plants, bacteria, fungi, and animals—whose genetic material has been altered through genetic engineering are called Genetically Modified Organisms (GMOs). Genetically modified (GM) plants offer several advantages: (i) Increased tolerance to abiotic stresses such as cold, drought, salt, and heat. (ii) Reduced reliance on chemical pesticides through the development of pest-resistant crops. (iii) Reduction in post-harvest losses. (iv) Increased efficiency of mineral usage by plants, which prevents the early exhaustion of soil fertility. (v) Enhanced nutritional value, such as Vitamin A enriched 'Golden rice'. Additionally, GM technology is used to create 'tailor-made' plants that provide alternative resources to industries, such as starches, fuels, and pharmaceuticals.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:10:10.1:8",
+            "order": 8,
+            "title": "Bt Cotton: Introduction and Insecticidal Properties",
+            "content_text": "Bt toxin is a bio-pesticide produced by the bacterium Bacillus thuringiensis (Bt for short). The Bt toxin gene has been cloned from the bacteria and expressed in various plants to provide built-in resistance to insects, thereby reducing the need for external insecticides. Examples include Bt cotton, Bt corn, rice, tomato, potato, and soyabean. Specific strains of B. thuringiensis produce proteins that are lethal to certain groups of insects: Lepidopterans (e.g., tobacco budworm, armyworm), Coleopterans (beetles), and Dipterans (flies, mosquitoes).",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:10:10.1:9",
+            "order": 9,
+            "title": "Mechanism of Action of Bt Toxin",
+            "content_text": "Bacillus thuringiensis forms protein crystals during a specific phase of its growth. These crystals contain a toxic insecticidal protein. In the bacterium, the toxin exists as an inactive 'protoxin'. However, once an insect ingests the inactive toxin, it is converted into an active form due to the alkaline $pH$ of the insect's gut, which solubilises the crystals. The activated toxin then binds to the surface of the midgut epithelial cells and creates pores. These pores cause the cells to swell and eventually undergo lysis (bursting), which leads to the death of the insect. binds to the surface of the midgut epithelial cells and creates pores. These pores cause the cells to swell and eventually undergo lysis (bursting), which leads to the death of the insect. Specific Bt toxin genes were isolated from $Bacillus thuringiensis$ and incorporated into the several crop plants such as cotton (Figure 10.1). The choice of genes depends upon the crop and the targeted pest, as most Bt toxins are insect-group specific. The toxin is coded by a gene $cryIAc$ named cry. There are a number of them, for example, the proteins encoded by the genes $cryIAc$ and $cryIIAb$ control the cotton bollworms, that of $cryIAb$ controls corn borer.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 10.1",
+                "description": "Cotton boll: (a) destroyed by bollworms, showing a damaged, brownish boll with holes; (b) a fully mature, healthy white cotton boll.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:10:10.1:10",
+            "order": 10,
+            "title": "Pest Resistant Plants and RNA Interference",
+            "content_text": "Several nematodes parasitise a wide variety of plants and animals including human beings. A nematode $Meloidogyne incognita$ infects the roots of tobacco plants and causes a great reduction in yield. A novel strategy was adopted to prevent this infestation which was based on the process of RNA interference (RNAi). RNAi takes place in all eukaryotic organisms as a method of cellular defense. This method involves silencing of a specific mRNA due to a complementary dsRNA molecule that binds to and prevents translation of the mRNA (silencing). The source of this complementary RNA could be from an infection by viruses having RNA genomes or mobile genetic elements (transposons) that replicate via an RNA intermediate.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:10:10.1:11",
+            "order": 11,
+            "title": "Mechanism of RNAi in Plants",
+            "content_text": "Using $Agrobacterium$ vectors, nematode-specific genes were introduced into the host plant (Figure 10.2). The introduction of DNA was such that it produced both sense and anti-sense RNA in the host cells. These two RNA’s being complementary to each other formed a double stranded (dsRNA) that initiated RNAi and thus, silenced the specific mRNA of the nematode. The consequence was that the parasite could not survive in a transgenic host expressing specific interfering RNA. The transgenic plant therefore got itself protected from the parasite (Figure 10.2).",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 10.2",
+                "description": "Host plant-generated dsRNA triggers protection against nematode infestation. (a) Roots of a typical control plant showing significant gall formation due to nematode infection. (b) Transgenic plant roots 5 days after deliberate infection of nematode, showing healthy roots without galls, protected through the novel RNAi mechanism.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:10:10.2",
+        "number": "10.2",
+        "title": "Biotechnological Applications in Medicine",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:10:10.2:1",
+            "order": 1,
+            "title": "Overview of Medical Applications",
+            "content_text": "The recombinant DNA technological processes have made immense impact in the area of healthcare by enabling mass production of safe and more effective therapeutic drugs. Further, the recombinant therapeutics do not induce unwanted immunological responses as is common in case of similar products isolated from non-human sources. At present, about 30 recombinant therapeutics have been approved for human-use the world over. In India, 12 of these are presently being marketed.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:10:10.2.1",
+        "number": "10.2.1",
+        "title": "Genetically Engineered Insulin",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:10:10.2.1:1",
+            "order": 1,
+            "title": "Insulin Structure and Traditional Sources",
+            "content_text": "Management of adult-onset diabetes is possible by taking insulin at regular time intervals. If enough human-insulin was not available, one would have to isolate and use insulin from other animals. Insulin used for diabetes was earlier extracted from pancreas of slaughtered cattle and pigs. Insulin from an animal source, though caused some patients to develop allergy or other types of reactions to the foreign protein. Insulin consists of two short polypeptide chains: chain A and chain B, that are linked together by disulphide bridges. A conceptual challenge is whether insulin can be orally administered to diabetic people; students should consider why this might not be possible given its protein nature.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:10:10.2.1:2",
+            "order": 2,
+            "title": "Pro-insulin and Maturation",
+            "content_text": "In mammals, including humans, insulin is synthesised as a pro-hormone (like a pro-enzyme, the pro-hormone also needs to be processed before it becomes a fully mature and functional hormone) which contains an extra stretch called the C peptide. This C peptide is not present in the mature insulin and is removed during maturation into insulin. The maturation process (Figure 10.3) involves the removal of the C peptide to leave the A and B chains linked by disulfide bonds.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 10.3",
+                "description": "Maturation of pro-insulin into insulin (simplified). The diagram shows a proinsulin molecule with three parts: A peptide, B peptide, and C peptide. An arrow indicates the maturation process where the C peptide is removed, resulting in a mature insulin molecule consisting of A and B peptides linked by disulfide bonds, and a separate free C peptide.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:10:10.2.1:3",
+            "order": 3,
+            "title": "Production of Human Insulin using rDNA",
+            "content_text": "The main challenge for production of insulin using rDNA techniques was getting insulin assembled into a mature form. In 1983, Eli Lilly an American company prepared two DNA sequences corresponding to A and B, chains of human insulin and introduced them in plasmids of $E. coli$ to produce insulin chains. Chains A and B were produced separately, extracted and combined by creating disulfide bonds to form human insulin.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:10:10.2.2",
+        "number": "10.2.2",
+        "title": "Gene Therapy",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:10:10.2.2:1",
+            "order": 1,
+            "title": "Concept of Gene Therapy",
+            "content_text": "If a person is born with a hereditary disease, gene therapy can be an attempt to provide a corrective therapy. Gene therapy is a collection of methods that allows correction of a gene defect that has been diagnosed in a child/embryo. Here genes are inserted into a person’s cells and tissues to treat a disease. Correction of a genetic defect involves delivery of a normal gene into the individual or embryo to take over the function of and compensate for the non-functional gene.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:10:10.2.2:2",
+            "order": 2,
+            "title": "ADA Deficiency Case Study",
+            "content_text": "The first clinical gene therapy was given in 1990 to a 4-year old girl with adenosine deaminase (ADA) deficiency. This enzyme is crucial for the immune system to function. The disorder is caused due to the deletion of the gene for adenosine deaminase. In some children ADA deficiency can be cured by bone marrow transplantation; in others it can be treated by enzyme replacement therapy, in which functional ADA is given to the patient by injection. But the problem with both of these approaches that they are not completely curative.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:10:10.2.2:3",
+            "order": 3,
+            "title": "Gene Therapy Procedure and Permanent Cure",
+            "content_text": "As a first step towards gene therapy, lymphocytes from the blood of the patient are grown in a culture outside the body. A functional ADA cDNA (using a retroviral vector) is then introduced into these lymphocytes, which are subsequently returned to the patient. However, as these cells are not immortal, the patient requires periodic infusion of such genetically engineered lymphocytes. However, if the gene isolate from marrow cells producing ADA is introduced into cells at early embryonic stages, it could be a permanent cure.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:10:10.2.3",
+        "number": "10.2.3",
+        "title": "Molecular Diagnosis",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:10:10.2.3:1",
+            "order": 1,
+            "title": "Importance of Early Diagnosis",
+            "content_text": "For effective treatment of a disease, early diagnosis and understanding its pathophysiology is very important. Using conventional methods of diagnosis (serum and urine analysis, etc.) early detection is not always possible because by the time symptoms appear, the concentration of the pathogen is already very high in the body. not possible. Recombinant DNA technology, Polymerase Chain Reaction (PCR) and Enzyme Linked Immuno-sorbent Assay (ELISA) are some of the techniques that serve the purpose of early diagnosis.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:10:10.2.3:2",
+            "order": 2,
+            "title": "Polymerase Chain Reaction (PCR) in Diagnosis",
+            "content_text": "Presence of a pathogen (bacteria, viruses, etc.) is normally suspected only when the pathogen has produced a disease symptom. By this time the concentration of pathogen is already very high in the body. However, very low concentration of a bacteria or virus (at a time when the symptoms of the disease are not yet visible) can be detected by amplification of their nucleic acid by PCR. PCR is now routinely used to detect HIV in suspected AIDS patients. It is being used to detect mutations in genes in suspected cancer patients too. It is a powerful technique to identify many other genetic disorders.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:10:10.2.3:3",
+            "order": 3,
+            "title": "Autoradiography and Probes",
+            "content_text": "A single stranded DNA or RNA, tagged with a radioactive molecule (probe) is allowed to hybridise to its complementary DNA in a clone of cells followed by detection using autoradiography. The clone having the mutated gene will hence not appear on the photographic film, because the probe will not have complementarity with the mutated gene.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:10:10.2.3:4",
+            "order": 4,
+            "title": "Enzyme Linked Immuno-sorbent Assay (ELISA)",
+            "content_text": "ELISA is based on the principle of antigen-antibody interaction. Infection by pathogen can be detected by the presence of antigens (proteins, glycoproteins, etc.) or by detecting the antibodies synthesised against the pathogen.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:10:10.3",
+        "number": "10.3",
+        "title": "Transgenic Animals",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:10:10.3:1",
+            "order": 1,
+            "title": "Definition and Scope of Transgenic Animals",
+            "content_text": "Animals that have had their DNA manipulated to possess and express an extra (foreign) gene are known as transgenic animals. Transgenic rats, rabbits, pigs, sheep, cows and fish have been produced, although over 95 per cent of all existing transgenic animals are mice.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:10:10.3:2",
+            "order": 2,
+            "title": "Normal Physiology and Development",
+            "content_text": "Transgenic animals can be specifically designed to allow the study of how genes are regulated, and how they affect the normal functions of the body and its development, e.g., study of complex factors involved in growth such as insulin-like growth factor. By introducing genes from other species that alter the formation of this factor and studying the biological effects that result, information is obtained about the biological role of the factor in the body.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:10:10.3:3",
+            "order": 3,
+            "title": "Study of Disease",
+            "content_text": "Many transgenic animals are designed to increase our understanding of how genes contribute to the development of disease. These are specially made to serve as models for human diseases so that investigation of new treatments for diseases is made possible. Today transgenic models exist for many human diseases such as cancer, cystic fibrosis, rheumatoid arthritis and Alzheimer’s.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:10:10.3:4",
+            "order": 4,
+            "title": "Biological Products",
+            "content_text": "Medicines required to treat certain human diseases can contain biological products, but such products are often expensive to make. Transgenic animals that produce useful biological products can be created by the introduction of the portion of DNA (or genes) which codes for a particular product such as human protein ($\\alpha$-1-antitrypsin) used to treat emphysema. Similar attempts are being made for treatment of phenylketonuria (PKU) and cystic fibrosis. In 1997, the first transgenic cow, Rosie, produced human protein-enriched milk (2.4 grams per litre). The milk contained the human alpha-lactalbumin and was nutritionally a more balanced product for human babies than natural cow-milk.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:10:10.3:5",
+            "order": 5,
+            "title": "Vaccine Safety",
+            "content_text": "Transgenic mice are being developed for use in testing the safety of vaccines before they are used on humans. Transgenic mice are being used to test the safety of the polio vaccine. If successful and found to be reliable, they could replace the use of monkeys to test the safety of batches of the vaccine.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:10:10.3:6",
+            "order": 6,
+            "title": "Chemical Safety Testing",
+            "content_text": "This is known as toxicity/safety testing. The procedure is the same as that used for testing toxicity of drugs. Transgenic animals are made that carry genes which make them more sensitive to toxic substances than non-transgenic animals. They are then exposed to the toxic substances and the effects studied. Toxicity testing in such animals will allow us to obtain results in less time.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:10:10.4",
+        "number": "10.4",
+        "title": "Ethical Issues",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:10:10.4:1",
+            "order": 1,
+            "title": "Regulation of Genetic Modification",
+            "content_text": "The manipulation of living organisms by the human race cannot go on any further, without regulation. Some ethical standards are required to evaluate the morality of all human activities that might help or harm living organisms. Genetic modification of organisms can have unpredictable results when such organisms are introduced into the ecosystem. Therefore, the Indian Government has set up organisations such as GEAC (Genetic Engineering Approval Committee), which will make decisions regarding the validity of GM research and the safety of introducing GM-organisms for public services.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:10:10.4:2",
+            "order": 2,
+            "title": "Patents and Biological Resources",
+            "content_text": "The modification/usage of living organisms for public services has created problems with patents. There is growing public anger that certain companies are being granted patents for products and technologies that make use of genetic materials, plants, and other biological resources long used by farmers and indigenous people. For example, Basmati rice is an important food grain in Asia with an estimated 200,000 varieties in India alone. In 1997, an American company got patent rights on Basmati rice through the US Patent and Trademark Office, allowing them to sell a 'new' variety derived from Indian farmer's varieties. Indian Basmati was crossed with semi-dwarf varieties and claimed as an invention or novelty.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:10:10.4:3",
+            "order": 3,
+            "title": "Biopiracy",
+            "content_text": "Biopiracy is the term used to refer to the use of bio-resources by multinational companies and other organisations without proper authorisation from the countries and people concerned without compensatory payment. Most industrialised nations are rich financially but poor in biodiversity and traditional knowledge, whereas the developing world is rich in biodiversity and traditional knowledge related to bio-resources.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:10:10.4:4",
+            "order": 4,
+            "title": "Global Injustice and Legislative Response",
+            "content_text": "There has been growing realisation of the injustice, inadequate compensation, and benefit sharing between developed and developing countries. Therefore, some nations are developing laws to prevent such unauthorised exploitation. The Indian Parliament has recently cleared the second amendment of the Indian Patents Bill, which takes such issues into consideration, including patent terms of emergency provisions, research, and development initiatives.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:10:Summary",
+        "number": "Summary",
+        "title": "Summary",
+        "content_text": "Biotechnology has given to humans several useful products by using microbes, plant, animals and their metabolic machinery. Techniques of tissue culture and somatic hybridisation offer vast potential for manipulation of plants *in vitro* to produce new varieties. Recombinant DNA technology has made it possible to engineer microbes, plants and animals such that they have novel capabilities. Genetically Modified Organisms have been created by using methods other than natural methods to transfer one or more genes from one organism to another, generally using techniques such as recombinant DNA technology.\n\nGM plants have been useful in increasing crop yields, reduce post-harvest losses and make crops more tolerant of stresses. There are several GM crop plants with improved nutritional value of foods and reduced the reliance on chemical pesticides (pest-resistant crops).\n\nRecombinant DNA technological processes have made immense impact in the area of healthcare by enabling mass production of safe and more effective therapeutics. Since the recombinant therapeutics are identical to human proteins, they do not induce unwanted immunological responses and are free from risk of infection as was observed in case of similar products isolated from non-human sources. Human insulin is made in bacteria yet its structure is absolutely identical to that of the natural molecule.\n\nTransgenic animals are also used to understand how genes contribute to the development of a disease by serving as models for human diseases, such as cancer, cystic fibrosis, rheumatoid arthritis and Alzheimer's.\n\nGene therapy is the insertion of genes into an individual's cells and tissues to treat diseases especially hereditary diseases. It does so by replacing a defective mutant allele with a functional one or gene targeting which involves gene amplification. Viruses that attack their hosts and introduce their genetic material into the host cell as part of their replication cycle are used as vectors to transfer healthy genes or more recently portions of genes.\n\nThe current interest in the manipulation of microbes, plants, and animals has raised serious ethical questions.",
+        "subsections": []
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:biology:12:10:ex:1",
+          "number": 1,
+          "problem": "Which part of the plant is best suited for making virus-free plants and why?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:10:ex:2",
+          "number": 2,
+          "problem": "What is the major advantage of producing plants by micropropagation?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:10:ex:3",
+          "number": 3,
+          "problem": "Find out what the various components of the medium used for propagation of an explant *in vitro* are?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:10:ex:4",
+          "number": 4,
+          "problem": "Crystals of Bt toxin produced by some bacteria do not kill the bacteria themselves because – (a) bacteria are resistant to the toxin (b) toxin is immature; (c) toxin is inactive; (d) bacteria encloses toxin in a special sac.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:10:ex:5",
+          "number": 5,
+          "problem": "What are transgenic bacteria? Illustrate using any one example.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:10:ex:6",
+          "number": 6,
+          "problem": "Compare and contrast the advantages and disadvantages of production of genetically modified crops.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:10:ex:7",
+          "number": 7,
+          "problem": "What are Cry proteins? Name an organism that produce it. How has man exploited this protein to his benefit?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:10:ex:8",
+          "number": 8,
+          "problem": "What is gene therapy? Illustrate using the example of adenosine deaminase (ADA) deficiency.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:10:ex:9",
+          "number": 9,
+          "problem": "Diagrammatically represent the experimental steps in cloning and expressing a human gene (say the gene for growth hormone) into a bacterium like *E. coli*?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:10:ex:10",
+          "number": 10,
+          "problem": "Can you suggest a method to remove oil (hydrocarbon) from seeds based on your understanding of rDNA technology and chemistry of oil?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:10:ex:11",
+          "number": 11,
+          "problem": "Find out from internet what is golden rice.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:10:ex:12",
+          "number": 12,
+          "problem": "Does our blood have proteases and nucleases?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:10:ex:13",
+          "number": 13,
+          "problem": "Consult internet and find out how to make orally active protein pharmaceutical. What is the major problem to be encountered?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        }
+      ]
+    }
+  }
+}

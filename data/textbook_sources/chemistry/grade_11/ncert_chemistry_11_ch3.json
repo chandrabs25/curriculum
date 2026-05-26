@@ -1,0 +1,1892 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_chemistry_11_ch3.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:chemistry:11:3",
+  "curriculum": "ncert",
+  "subject": "chemistry",
+  "grade": 11,
+  "textbook_name": "Chemistry Part I",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:chemistry:11:3",
+    "number": 3,
+    "title": "Classification of Elements and Periodicity in Properties",
+    "summary": "This chapter explores the classification of elements and the periodic trends in their properties. It begins by explaining the necessity of classifying elements due to the increasing number of discoveries. The chapter then traces the genesis of the periodic table, highlighting contributions from Dobereiner, Newlands, Meyer, and culminating in Mendeleev's Periodic Law (properties are periodic functions of atomic weights).\n\nThe modern periodic table is introduced, based on Moseley's work establishing atomic number as the fundamental property (Modern Periodic Law: properties are periodic functions of atomic numbers). The long form of the periodic table, with periods and groups, is explained in terms of electronic configurations and quantum numbers. Elements are classified into s-, p-, d-, and f-blocks based on the orbitals being filled.\n\nThe chapter also details trends in physical and chemical properties, including atomic and ionic radii, ionization enthalpy, electron gain enthalpy, and electronegativity. These trends are explained by factors like effective nuclear charge and shielding. Finally, the chapter discusses the periodicity of valence, the anomalous properties of second-period elements, and trends in chemical reactivity, including reactivity with oxygen and the nature of oxides, along with the unique position of hydrogen. Understanding these trends allows for the prediction of element behavior and compound formation.",
+    "sections": [
+      {
+        "id": "ncert:chemistry:11:3:3.1",
+        "number": "3.1",
+        "title": "WHY DO WE NEED TO CLASSIFY ELEMENTS ?",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:3:3.1:1",
+            "order": 1,
+            "title": "The Necessity of Classification",
+            "content_text": "Elements are the basic units of all types of matter. The history of element discovery shows a rapid increase in the number of known elements: in 1800, only 31 elements were known; by 1865, this number doubled to 63; and at present, 114 elements are known. Some recently discovered elements are man-made, and efforts to synthesize new ones continue. With such a large number of elements, it is extremely difficult to study the chemistry of each element and its innumerable compounds individually. To solve this, scientists sought a systematic way to organize their knowledge by classifying elements. Classification not only rationalizes known chemical facts but also helps predict new ones for further study.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:3:3.2",
+        "number": "3.2",
+        "title": "GENESIS OF PERIODIC CLASSIFICATION",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:3:3.2:1",
+            "order": 1,
+            "title": "Dobereiner's Triads",
+            "content_text": "In the early 1800s, German chemist Johann Dobereiner was the first to consider trends among properties of elements. By 1829, he identified several groups of three elements, known as Triads, which showed similar physical and chemical properties. He observed that in each triad, the atomic weight of the middle element was approximately the arithmetic mean of the atomic weights of the other two elements. Furthermore, the properties of the middle element were intermediate between those of the other two members. This relationship is known as the Law of Triads. However, this law seemed to work only for a few elements and was initially dismissed as a coincidence.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 3.1",
+                "caption": "Dobereiner’s Triads",
+                "headers": [
+                  "Element",
+                  "Atomic weight",
+                  "Element",
+                  "Atomic weight",
+                  "Element",
+                  "Atomic weight"
+                ],
+                "rows": [
+                  [
+                    "Li",
+                    "7",
+                    "Ca",
+                    "40",
+                    "Cl",
+                    "35.5"
+                  ],
+                  [
+                    "Na",
+                    "23",
+                    "Sr",
+                    "88",
+                    "Br",
+                    "80"
+                  ],
+                  [
+                    "K",
+                    "39",
+                    "Ba",
+                    "137",
+                    "I",
+                    "127"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.2:2",
+            "order": 2,
+            "title": "Early Attempts: de Chancourtois and Newlands",
+            "content_text": "In 1862, French geologist A.E.B. de Chancourtois arranged elements in order of increasing atomic weights and created a cylindrical table to display the periodic recurrence of properties. In 1865, English chemist John Alexander Newlands proposed the Law of Octaves. He arranged elements in increasing order of their atomic weights and noted that every eighth element had properties similar to the first element, much like the eighth note in an octave of music. Newlands' Law of Octaves was found to be valid only for elements up to calcium. Despite its limitations, Newlands was later awarded the Davy Medal in 1887 by the Royal Society, London.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 3.2",
+                "caption": "Newlands’ Octaves",
+                "headers": [
+                  "Element",
+                  "Li",
+                  "Be",
+                  "B",
+                  "C",
+                  "N",
+                  "O",
+                  "F"
+                ],
+                "rows": [
+                  [
+                    "At. wt.",
+                    "7",
+                    "9",
+                    "11",
+                    "12",
+                    "14",
+                    "16",
+                    "19"
+                  ],
+                  [
+                    "Element",
+                    "Na",
+                    "Mg",
+                    "Al",
+                    "Si",
+                    "P",
+                    "S",
+                    "Cl"
+                  ],
+                  [
+                    "At. wt.",
+                    "23",
+                    "24",
+                    "27",
+                    "29",
+                    "31",
+                    "32",
+                    "35.5"
+                  ],
+                  [
+                    "Element",
+                    "K",
+                    "Ca",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "At. wt.",
+                    "39",
+                    "40",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.2:3",
+            "order": 3,
+            "title": "Lothar Meyer's Physical Property Plots",
+            "content_text": "In 1869, German chemist Lothar Meyer plotted physical properties such as atomic volume, melting point, and boiling point against atomic weight. He obtained a periodically repeated pattern. Unlike Newlands, Meyer observed a change in the length of that repeating pattern. By 1868, he had developed a table of elements that closely resembled the Modern Periodic Table. However, his work was not published until after the work of Dmitri Mendeleev.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.2:4",
+            "order": 4,
+            "title": "Mendeleev's Periodic Law",
+            "content_text": "Dmitri Mendeleev is credited with the development of the Modern Periodic Table. He published the Periodic Law for the first time, stating: \"The properties of the elements are a periodic function of their atomic weights.\" Mendeleev arranged elements in horizontal rows and vertical columns of a table in order of their increasing atomic weights. He ensured that elements with similar properties occupied the same vertical column or group. Mendeleev relied on similarities in empirical formulas and properties of compounds formed by elements to classify them, sometimes ignoring strict atomic weight order if it conflicted with property similarities (e.g., placing iodine with lower atomic weight than tellurium in Group VII).",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.2:5",
+            "order": 5,
+            "title": "Mendeleev's Predictions and Gaps",
+            "content_text": "Mendeleev's system was robust enough to predict the existence of undiscovered elements. He left gaps in his table for these elements and named them using the prefix 'Eka' (Sanskrit for 'one') followed by the name of the preceding element in the same group. For example, he predicted Eka-Aluminium and Eka-Silicon. When these elements (Gallium and Germanium) were discovered later, their properties closely matched Mendeleev's predictions. Mendeleev's Periodic Table published in 1905 became famous due to the boldness and accuracy of these quantitative predictions.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 3.3",
+                "caption": "Mendeleev’s Predictions for the Elements Eka-aluminium (Gallium) and Eka-silicon (Germanium)",
+                "headers": [
+                  "Property",
+                  "Eka-aluminium (predicted)",
+                  "Gallium (found)",
+                  "Eka-silicon (predicted)",
+                  "Germanium (found)"
+                ],
+                "rows": [
+                  [
+                    "Atomic weight",
+                    "68",
+                    "70",
+                    "72",
+                    "72.6"
+                  ],
+                  [
+                    "Density/($g/cm^3$)",
+                    "5.9",
+                    "5.94",
+                    "5.5",
+                    "5.36"
+                  ],
+                  [
+                    "Melting point/K",
+                    "Low",
+                    "302.93",
+                    "High",
+                    "1231"
+                  ],
+                  [
+                    "Formula of oxide",
+                    "$E_2O_3$",
+                    "$Ga_2O_3$",
+                    "$EO_2$",
+                    "$GeO_2$"
+                  ],
+                  [
+                    "Formula of chloride",
+                    "$ECl_3$",
+                    "$GaCl_3$",
+                    "$ECl_4$",
+                    "$GeCl_4$"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.2:6",
+            "order": 6,
+            "title": "Mendeleev's Periodic Table Structure",
+            "content_text": "Mendeleev's Periodic Table, as published earlier, organized elements into vertical columns called Groups (0 to VIII) and horizontal rows called Series (1 to 12). The table was based on the periodic law that properties are a function of atomic weights. It included specific formulas for 'Higher Saline Oxides' (e.g., $R_2O$, $RO$, $R_2O_3$) and 'Higher Gaseous Hydrogen Compounds' (e.g., $RH_4$, $RH_3$, $RH_2$) at the base of each group to show the valency trends. For example, Group IV elements form oxides of the type $RO_2$ and hydrides of the type $RH_4$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 3.1",
+                "description": "Mendeleev's Periodic Table showing elements arranged in 12 series and 9 groups (0 to VIII). It includes atomic weights and formulas for oxides and hydrides for each group.",
+                "image_url": null
+              }
+            ],
+            "tables": [
+              {
+                "label": "Fig. 3.1",
+                "caption": "Mendeleev's Periodic Table (Partial Representation)",
+                "headers": [
+                  "Series",
+                  "Group 0",
+                  "Group I",
+                  "Group II",
+                  "Group III",
+                  "Group IV",
+                  "Group V",
+                  "Group VI",
+                  "Group VII",
+                  "Group VIII"
+                ],
+                "rows": [
+                  [
+                    "1",
+                    "",
+                    "H (1.008)",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  [
+                    "2",
+                    "He (4.0)",
+                    "Li (7.03)",
+                    "Be (9.1)",
+                    "B (11.0)",
+                    "C (12.0)",
+                    "N (14.04)",
+                    "O (16.00)",
+                    "F (19.0)",
+                    ""
+                  ],
+                  [
+                    "3",
+                    "Ne (19.9)",
+                    "Na (23.5)",
+                    "Mg (24.3)",
+                    "Al (27.0)",
+                    "Si (28.4)",
+                    "P (31.0)",
+                    "S (32.06)",
+                    "Cl (35.45)",
+                    ""
+                  ],
+                  [
+                    "4",
+                    "Ar (38)",
+                    "K (39.1)",
+                    "Ca (40.1)",
+                    "Sc (44.1)",
+                    "Ti (48.1)",
+                    "V (51.4)",
+                    "Cr (52.1)",
+                    "Mn (55.0)",
+                    "Fe (55.9), Co (59), Ni (59)"
+                  ],
+                  [
+                    "Oxides",
+                    "R",
+                    "R_2O",
+                    "RO",
+                    "R_2O_3",
+                    "RO_2",
+                    "R_2O_5",
+                    "RO_3",
+                    "R_2O_7",
+                    "RO_4"
+                  ],
+                  [
+                    "Hydrides",
+                    "",
+                    "RH",
+                    "RH_2",
+                    "RH_3",
+                    "RH_4",
+                    "RH_3",
+                    "RH_2",
+                    "RH",
+                    ""
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:3:3.3",
+        "number": "3.3",
+        "title": "MODERN PERIODIC LAW AND THE PRESENT FORM OF THE PERIODIC TABLE",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:3:3.3:1",
+            "order": 1,
+            "title": "Henry Moseley and the Atomic Number",
+            "content_text": "In 1913, the English physicist Henry Moseley observed regularities in the characteristic X-ray spectra of elements. He discovered that a plot of $\\sqrt{\\nu}$ (where $\\nu$ is the frequency of X-rays emitted) against atomic number ($Z$) yielded a straight line, whereas a plot of $\\sqrt{\\nu}$ against atomic mass did not. This provided experimental evidence that the atomic number is a more fundamental property of an element than its atomic mass. Consequently, Mendeleev's Periodic Law was modified to reflect this discovery.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.3:2",
+            "order": 2,
+            "title": "The Modern Periodic Law",
+            "content_text": "The Modern Periodic Law is stated as: 'The physical and chemical properties of the elements are periodic functions of their atomic numbers.' This law revealed important analogies among the 94 naturally occurring elements. For instance, neptunium and plutonium, which are similar to actinium and protoactinium, were found in trace amounts in pitchblende (an ore of uranium). This law also stimulated the creation of artificially produced short-lived elements.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.3:3",
+            "order": 3,
+            "title": "Basis of Periodicity",
+            "content_text": "The atomic number is equal to the nuclear charge (number of protons) or the number of electrons in a neutral atom. Periodicity in the properties of elements is essentially the consequence of the periodic variation in electronic configurations. These configurations determine the physical and chemical properties of elements and their compounds as the electron shells are filled in a predictable sequence.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.3:4",
+            "order": 4,
+            "title": "The Long Form of the Periodic Table",
+            "content_text": "The most convenient and widely used version of the periodic table is the 'long form' (Fig. 3.2). In this arrangement, horizontal rows are called periods and vertical columns are called groups or families. Elements having similar outer electronic configurations in their atoms are arranged in the same vertical columns. According to the IUPAC recommendation, groups are numbered from 1 to 18, replacing older notations like IA-VIIA, VIII, IB-VIIB, and 0.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 3.2",
+                "description": "Long form of the Periodic Table showing 18 groups and 7 periods. It details atomic numbers, symbols, and ground state outer electronic configurations (e.g., Group 1: $ns^1$, Group 2: $ns^2$, Group 18: $ns^2np^6$). It also highlights blocks: s-block (Representative), p-block (Representative), d-block (Transition), and f-block (Inner transition elements: Lanthanoids and Actinoids).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.3:5",
+            "order": 5,
+            "title": "Periods and Quantum Numbers",
+            "content_text": "There are seven periods in the periodic table. The period number corresponds to the highest principal quantum number ($n$) of the elements in that period. The number of elements in each period is determined by the filling of electron shells:\n- First period: 2 elements ($n=1$)\n- Second and Third periods: 8 elements each ($n=2, 3$)\n- Fourth and Fifth periods: 18 elements each ($n=4, 5$)\n- Sixth period: 32 elements ($n=6$)\n- Seventh period: Incomplete, but theoretically would have a maximum of 32 elements based on quantum numbers.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.3:6",
+            "order": 6,
+            "title": "Lanthanoids, Actinoids, and Seaborg's Contribution",
+            "content_text": "In the long form of the Periodic Table, 14 elements from the sixth period (lanthanoids) and 14 elements from the seventh period (actinoids) are placed in separate panels at the bottom to maintain the table's symmetry. Glenn T. Seaborg's work in the mid-20th century, starting with the discovery of plutonium in 1940 and other transuranium elements (94 to 102), led to this reconfiguration. For his contributions, Seaborg was awarded the Nobel Prize in 1951, and element 106 was named Seaborgium (Sg) in his honor.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:3:3.4",
+        "number": "3.4",
+        "title": "NOMENCLATURE OF ELEMENTS WITH ATOMIC NUMBERS > 100",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:3:3.4:1",
+            "order": 1,
+            "title": "Introduction to Superheavy Element Naming",
+            "content_text": "The naming of new elements was traditionally the privilege of the discoverer, with the suggested name ratified by IUPAC. However, for elements with very high atomic numbers, controversy often arose because these elements are highly unstable and produced only in minute quantities, sometimes only The synthesis and characterization of superheavy elements are extremely challenging, requiring specialized equipment and often leading to competing discovery claims between international laboratories. For example, element 104 was historically claimed by both American and Soviet scientists, who proposed different names (Rutherfordium vs. Kurchatovium). To standardize this, IUPAC introduced a systematic nomenclature based on the element's atomic number. Numerical roots for each digit (0-9) are combined and followed by the suffix '-ium' to form a temporary name. This system, detailed in Tables 3.4 and 3.5, provides a consistent naming method and a three-letter symbol until a permanent name is officially ratified by IUPAC vote. Permanent names often honor a country, state, or notable scientist. Currently, elements up to atomic number 118 have been discovered and officially named.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 3.4",
+                "caption": "Notation for IUPAC Nomenclature of Elements",
+                "headers": [
+                  "Digit",
+                  "Name",
+                  "Abbreviation"
+                ],
+                "rows": [
+                  [
+                    "0",
+                    "nil",
+                    "n"
+                  ],
+                  [
+                    "1",
+                    "un",
+                    "u"
+                  ],
+                  [
+                    "2",
+                    "bi",
+                    "b"
+                  ],
+                  [
+                    "3",
+                    "tri",
+                    "t"
+                  ],
+                  [
+                    "4",
+                    "quad",
+                    "q"
+                  ],
+                  [
+                    "5",
+                    "pent",
+                    "p"
+                  ],
+                  [
+                    "6",
+                    "hex",
+                    "h"
+                  ],
+                  [
+                    "7",
+                    "sept",
+                    "s"
+                  ],
+                  [
+                    "8",
+                    "oct",
+                    "o"
+                  ],
+                  [
+                    "9",
+                    "enn",
+                    "e"
+                  ]
+                ]
+              },
+              {
+                "label": "Table 3.5",
+                "caption": "Nomenclature of Elements with Atomic Number Above 100",
+                "headers": [
+                  "Atomic Number",
+                  "Name according to IUPAC nomenclature",
+                  "Symbol",
+                  "IUPAC Official Name",
+                  "IUPAC Symbol"
+                ],
+                "rows": [
+                  [
+                    "101",
+                    "Unnilunium",
+                    "Unu",
+                    "Mendelevium",
+                    "Md"
+                  ],
+                  [
+                    "102",
+                    "Unnilbium",
+                    "Unb",
+                    "Nobelium",
+                    "No"
+                  ],
+                  [
+                    "103",
+                    "Unniltrium",
+                    "Unt",
+                    "Lawrencium",
+                    "Lr"
+                  ],
+                  [
+                    "104",
+                    "Unnilquadium",
+                    "Unq",
+                    "Rutherfordium",
+                    "Rf"
+                  ],
+                  [
+                    "105",
+                    "Unnilpentium",
+                    "Unp",
+                    "Dubnium",
+                    "Db"
+                  ],
+                  [
+                    "106",
+                    "Unnilhexium",
+                    "Unh",
+                    "Seaborgium",
+                    "Sg"
+                  ],
+                  [
+                    "107",
+                    "Unnilseptium",
+                    "Uns",
+                    "Bohrium",
+                    "Bh"
+                  ],
+                  [
+                    "108",
+                    "Unniloctium",
+                    "Uno",
+                    "Hassium",
+                    "Hs"
+                  ],
+                  [
+                    "109",
+                    "Unnilennium",
+                    "Une",
+                    "Meitnerium",
+                    "Mt"
+                  ],
+                  [
+                    "110",
+                    "Ununnillium",
+                    "Uun",
+                    "Darmstadtium",
+                    "Ds"
+                  ],
+                  [
+                    "111",
+                    "Unununnium",
+                    "Uuu",
+                    "Rontgenium",
+                    "Rg"
+                  ],
+                  [
+                    "112",
+                    "Ununbium",
+                    "Uub",
+                    "Copernicium",
+                    "Cn"
+                  ],
+                  [
+                    "113",
+                    "Ununtrium",
+                    "Uut",
+                    "Nihonium",
+                    "Nh"
+                  ],
+                  [
+                    "114",
+                    "Ununquadium",
+                    "Uuq",
+                    "Flerovium",
+                    "Fl"
+                  ],
+                  [
+                    "115",
+                    "Ununpentium",
+                    "Uup",
+                    "Moscovium",
+                    "Mc"
+                  ],
+                  [
+                    "116",
+                    "Ununhexium",
+                    "Uuh",
+                    "Livermorium",
+                    "Lv"
+                  ],
+                  [
+                    "117",
+                    "Ununseptium",
+                    "Uus",
+                    "Tennessine",
+                    "Ts"
+                  ],
+                  [
+                    "118",
+                    "Ununoctium",
+                    "Uuo",
+                    "Oganesson",
+                    "Og"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.4:2",
+            "order": 2,
+            "title": "Worked Example: Naming Element 120",
+            "content_text": "This subsection demonstrates the application of IUPAC nomenclature rules to predict the name and symbol of a hypothetical element with atomic number 120.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Problem 3.1",
+                "problem": "What would be the IUPAC name and symbol for the element with atomic number 120?",
+                "solution": "From Table 3.4, the roots for 1, 2 and 0 are un, bi and nil, respectively. Hence, the symbol and the name respectively are Ubn and unbinilium."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:3:3.5",
+        "number": "3.5",
+        "title": "ELECTRONIC CONFIGURATIONS OF ELEMENTS AND THE PERIODIC TABLE",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:3:3.5:1",
+            "order": 1,
+            "title": "Relationship between Electronic Configuration and Periodic Table",
+            "content_text": "The electronic configuration of an atom, which describes the distribution of electrons into various orbitals ($s, p, d, f$), is fundamentally linked to its position in the Periodic Table. The principal quantum number ($n$) identifies the main energy level or shell. As we move through the table, the filling of these orbitals follows specific patterns that define the structure of the long form of the Periodic Table. An element's location reflects the quantum numbers of the last orbital filled.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.5:2",
+            "order": 2,
+            "title": "Electronic Configurations in Periods",
+            "content_text": "The period number in the Periodic Table corresponds to the highest principal quantum number ($n$) of the elements in that period. Each period begins with the filling of a new principal energy level. The first period ($n=1$) fills the $1s$ orbital (H and He). The second period ($n=2$) fills $2s$ and $2p$ orbitals (8 elements). The third period ($n=3$) fills $3s$ and $3p$ orbitals (8 elements). In the fourth period ($n=4$), the $3d$ transition series begins after $4s$ is filled. The fifth period ($n=5$) includes the $4d$ transition series. The sixth period ($n=6$) contains 32 elements, including the $4f$-inner transition series (lanthanoids). The seventh period ($n=7$) includes the $5f$-inner transition series (actinoids) and ends at element 118. Lanthanoids and actinoids are placed separately to maintain the table's structure.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.5:3",
+            "order": 3,
+            "title": "Worked Example: Elements in the 5th Period",
+            "content_text": "This subsection justifies the number of elements present in a specific period based on available atomic orbitals.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Problem 3.2",
+                "problem": "How would you justify the presence of 18 elements in the $5^{th}$ period of the Periodic Table?",
+                "solution": "When $n = 5, l = 0, 1, 2, 3$. The order in which the energy of the available orbitals $4d, 5s$ and $5p$ increases is $5s < 4d < 5p$. The total number of orbitals available are 9. The maximum number of electrons that can be accommodated is 18; and therefore 18 elements are there in the $5^{th}$ period."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.5:4",
+            "order": 4,
+            "title": "Groupwise Electronic Configurations",
+            "content_text": "Elements within the same vertical column or group share similar valence shell electronic configurations, leading to comparable chemical properties. For example, all Group 1 alkali metals have an $ns^1$ configuration. This confirms that the properties of elements are a periodic function of their atomic numbers.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "null",
+                "caption": "Electronic Configurations of Group 1 Elements",
+                "headers": [
+                  "Atomic number",
+                  "Symbol",
+                  "Electronic configuration"
+                ],
+                "rows": [
+                  [
+                    "3",
+                    "Li",
+                    "1s^2 2s^1 (or) [He]2s^1"
+                  ],
+                  [
+                    "11",
+                    "Na",
+                    "1s^2 2s^2 2p^6 3s^1 (or) [Ne]3s^1"
+                  ],
+                  [
+                    "19",
+                    "K",
+                    "1s^2 2s^2 2p^6 3s^2 3p^6 4s^1 (or) [Ar]4s^1"
+                  ],
+                  [
+                    "37",
+                    "Rb",
+                    "1s^2 2s^2 2p^6 3s^2 3p^6 3d^{10} 4s^2 4p^6 5s^1 (or) [Kr]5s^1"
+                  ],
+                  [
+                    "55",
+                    "Cs",
+                    "1s^2 2s^2 2p^6 3s^2 3p^6 3d^{10} 4s^2 4p^6 4d^{10} 5s^2 5p^6 6s^1 (or) [Xe]6s^1"
+                  ],
+                  [
+                    "87",
+                    "Fr",
+                    "[Rn]7s^1"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:3:3.6",
+        "number": "3.6",
+        "title": "ELECTRONIC CONFIGURATIONS AND TYPES OF ELEMENTS: S-, P-, D-, F- BLOCKS",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:3:3.6:1",
+            "order": 1,
+            "title": "Classification into s, p, d, f Blocks",
+            "content_text": "Based on the Aufbau principle and the type of atomic orbitals being filled, elements are categorized into four blocks: $s, p, d,$ and $f$. This classification groups elements with similar outer electron distributions. Helium is an exception; despite its $s^2$ configuration, it is placed in the $p$-block (Group 18) due to its noble gas properties. Hydrogen is also unique, having one $s$-electron but often placed separately at the top of the table due to its distinct behavior.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.6:2",
+            "order": 2,
+            "title": "3.6.1 The s-Block Elements",
+            "content_text": "The $s$-block consists of Group 1 (alkali metals) and Group 2 (alkaline earth metals). These elements have $ns^1$ and $ns^2$ valence shell configurations, respectively. They are all The s-block elements are highly reactive metals characterized by low ionization enthalpies. They typically lose their outermost electrons to form $1+$ ions (alkali metals) or $2+$ ions (alkaline earth metals). Both metallic character and chemical reactivity increase as one moves down the group. Due to their high reactivity, these elements are never found in their pure state in nature. Most s-block compounds are predominantly ionic, with the exceptions of those formed by lithium and beryllium.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.6:3",
+            "order": 3,
+            "title": "The p-Block Elements",
+            "content_text": "The p-block includes elements from Groups 13 to 18. Together with the s-block, they are referred to as Representative Elements or Main Group Elements. Their valence shell configurations range from $ns^2 np^1$ to $ns^2 np^6$. Group 18 consists of noble gases, which possess stable, filled valence shells and exhibit very low reactivity. Groups 17 (halogens) and 16 (chalcogens) are highly reactive non-metals with high negative electron gain enthalpies. Across a period, non-metallic character increases from left to right, while metallic character increases down a group.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.6:4",
+            "order": 4,
+            "title": "The d-Block Elements (Transition Elements)",
+            "content_text": "Located in Groups 3 to 12, d-block elements are characterized by the filling of inner d-orbitals. Their general valence configuration is $(n-1)d^{1-10} ns^{0-2}$. These elements are all metals and typically form colored ions, show variable oxidation states, and exhibit paramagnetism. Many are used as catalysts. While Zn, Cd, and Hg have $(n-1)d^{10} ns^2$ configurations and lack typical transition properties, the block generally acts as a bridge between the highly reactive s-block metals and the less reactive elements of Groups 13 and 14.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.6:5",
+            "order": 5,
+            "title": "The f-Block Elements (Inner-Transition Elements)",
+            "content_text": "The f-block consists of two series at the bottom of the Periodic Table: Lanthanoids ($Z=58$ to $71$) and Actinoids ($Z=90$ to $103$). They have the general configuration $(n-2)f^{1-14} (n-1)d^{0-1} ns^2$. All are metals with similar properties within each series. Actinoids are radioactive and exhibit more complex chemistry than lanthanoids due to multiple possible oxidation states. Elements with atomic numbers greater than Uranium ($Z=92$) are known as Transuranium Elements.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.6:6",
+            "order": 6,
+            "title": "Predicting Position and Configuration of New Elements",
+            "content_text": "This subsection applies the principles of periodic classification to predict the properties of undiscovered elements based on their atomic numbers.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Problem 3.3",
+                "problem": "The elements $Z=117$ and $120$ have not yet been discovered. In which family/group would you place these elements and also give the electronic configuration in each case.",
+                "solution": "Element $Z=117$ would belong to the halogen family (Group 17) with the electronic configuration $[Rn] 5f^{14} 6d^{10} 7s^2 7p^5$. Element $Z=120$ would be placed in Group 2 (alkaline earth metals) and have the configuration $[Uuo] 8s^2$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.6:7",
+            "order": 7,
+            "title": "Metals, Non-metals and Metalloids",
+            "content_text": "Elements are broadly classified into metals and non-metals. Metals make up over 78% of elements and are found on the left side of the table. They are typically conductive, malleable, and ductile solids with high melting points (mercury is a notable liquid exception). Non-metals, found on the top right, are usually brittle solids or gases with low melting points. A diagonal zig-zag line separates these groups, populated by metalloids (semi-metals) like silicon and germanium, which exhibit properties of both metals and non-metals.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 3.3",
+                "description": "A color-coded Periodic Table showing the division into s-block (blue), p-block (pink), d-block (yellow), and f-block (purple). It highlights the broad classification of elements into metals, non-metals (green), and metalloids (pink zig-zag line).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.6:8",
+            "order": 8,
+            "title": "Trends in Metallic Character",
+            "content_text": "Metallic character is a periodic property that follows specific trends: it increases as one moves down a group and decreases as one moves from left to right across a period.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 3.4",
+                "problem": "Considering the atomic number and position in the periodic table, arrange the following elements in the increasing order of metallic character: Si, Be, Mg, Na, P.",
+                "solution": "Metallic character increases down a group and decreases along a period from left to right. Hence the order of increasing metallic character is: $P < Si < Be < Mg < Na$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:3:3.7",
+        "number": "3.7",
+        "title": "PERIODIC TRENDS IN PROPERTIES OF ELEMENTS",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:3:3.7:1",
+            "order": 1,
+            "title": "Introduction to Periodic Trends",
+            "content_text": "There are distinct patterns in the physical and chemical properties of elements as one moves across a period or down a group. For example, chemical reactivity is highest in Group 1 and Group 17, while it is lower in the middle of the table. These trends are explained by theories of atomic structure, focusing on the number of electrons and energy levels.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.7:2",
+            "order": 2,
+            "title": "Trends in Physical Properties",
+            "content_text": "Many physical properties, such as melting and boiling points or enthalpies of fusion, show periodic variations. Key trends discussed in this section include atomic and ionic radii, ionization enthalpy, electron gain enthalpy, and electronegativity.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.7:3",
+            "order": 3,
+            "title": "Atomic Radius",
+            "content_text": "Measuring the size of an atom is complex because atoms do not have sharp boundaries and are extremely small, with a radius of approximately $1.2 \\times 10^{-10}$ m ($1.2$ Å). The measurement of atomic size is imprecise because atoms lack sharp boundaries. Instead, it is estimated from the distance between atoms in a bonded state. The 'Covalent Radius' is half the distance between two non-metal atoms in a single-bonded molecule (e.g., 99 pm for chlorine), while the 'Metallic Radius' is half the distance between metal cores in a crystal (e.g., 128 pm for copper). Across a period, atomic radius decreases as increasing nuclear charge pulls electrons closer. Down a group, it increases because the addition of new energy levels and the shielding effect of inner electrons outweigh the nuclear charge. Noble gases have larger van der Waals radii compared to the covalent radii of other elements.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 3.4 (a)",
+                "description": "A line graph showing the decrease in atomic radius (in pm) as the atomic number increases for elements of the second period from Li to F.",
+                "image_url": null
+              },
+              {
+                "label": "Fig 3.4 (b)",
+                "description": "Two line graphs showing the increase in atomic radius (in pm) with increasing atomic number for alkali metals (Li to Cs) and halogens (F to At).",
+                "image_url": null
+              }
+            ],
+            "tables": [
+              {
+                "label": "Table 3.6(a)",
+                "caption": "Atomic Radii/pm Across the Periods",
+                "headers": [
+                  "Atom (Period II)",
+                  "Li",
+                  "Be",
+                  "B",
+                  "C",
+                  "N",
+                  "O",
+                  "F"
+                ],
+                "rows": [
+                  [
+                    "Atomic radius",
+                    "152",
+                    "111",
+                    "88",
+                    "77",
+                    "74",
+                    "66",
+                    "64"
+                  ],
+                  [
+                    "Atom (Period III)",
+                    "Na",
+                    "Mg",
+                    "Al",
+                    "Si",
+                    "P",
+                    "S",
+                    "Cl"
+                  ],
+                  [
+                    "Atomic radius",
+                    "186",
+                    "160",
+                    "143",
+                    "117",
+                    "110",
+                    "104",
+                    "99"
+                  ]
+                ]
+              },
+              {
+                "label": "Table 3.6(b)",
+                "caption": "Atomic Radii/pm Down a Family",
+                "headers": [
+                  "Atom (Group I)",
+                  "Atomic Radius",
+                  "Atom (Group 17)",
+                  "Atomic Radius"
+                ],
+                "rows": [
+                  [
+                    "Li",
+                    "152",
+                    "F",
+                    "64"
+                  ],
+                  [
+                    "Na",
+                    "186",
+                    "Cl",
+                    "99"
+                  ],
+                  [
+                    "K",
+                    "231",
+                    "Br",
+                    "114"
+                  ],
+                  [
+                    "Rb",
+                    "244",
+                    "I",
+                    "133"
+                  ],
+                  [
+                    "Cs",
+                    "262",
+                    "At",
+                    "140"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.7:4",
+            "order": 4,
+            "title": "Ionic Radius",
+            "content_text": "A cation is smaller than its parent atom due to increased effective nuclear charge on fewer electrons, while an anion is larger due to increased electron-electron repulsion. Isoelectronic species are atoms or ions that possess the same number of electrons (e.g., $O^{2-}, F^-, Na^+, Mg^{2+}$). For these species, the ionic radius decreases as the atomic number (nuclear charge) increases, as the nucleus exerts a greater attractive force on the electrons. This concept can also extend to species with the same number of atoms, valence electrons, and structure.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 3.5",
+                "problem": "Which of the following species will have the largest and the smallest size? $Mg, Mg^{2+}, Al, Al^{3+}$.",
+                "solution": "Atomic radii decrease across a period. Cations are smaller than their parent atoms. Among isoelectronic species, the one with the larger positive nuclear charge will have a smaller radius. Hence the largest species is $Mg$; the smallest one is $Al^{3+}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.7:5",
+            "order": 5,
+            "title": "Ionization Enthalpy: Definition and Successive Enthalpies",
+            "content_text": "Ionization Enthalpy ($\\Delta_i H$) is the energy required to remove the most loosely bound electron from an isolated gaseous atom in its ground state, expressed as $X(g) \\rightarrow X^+(g) + e^-$. It is measured in kJ mol$^{-1}$. Successive ionization enthalpies (second, third, etc.) are always higher than the first because removing an electron from a positively charged ion requires more energy. Unless otherwise specified, 'ionization enthalpy' refers to the first ionization enthalpy.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.7:6",
+            "order": 6,
+            "title": "Ionization Enthalpy: Trends and Shielding",
+            "content_text": "The effective nuclear charge experienced by a valence electron in an atom will be less than the actual charge on the nucleus because of 'shielding' or 'screening' of the valence electron from the nucleus by the intervening core electrons. For example, the 2s electron in lithium is shielded from the nucleus by the inner core of 1s electrons. As a result, the valence electron experiences a net positive charge which is less than the actual charge of +3. In general, shielding is effective when the orbitals in the inner shells are completely filled. This situation occurs in the case of alkali metals which have single outermost $ns$-electron preceded by a noble gas electronic configuration. When we move from lithium to fluorine across the second period, successive electrons are added to orbitals in the same principal quantum level and the shielding of the nuclear charge by the inner core of electrons does not increase very much to compensate for the increased attraction of the electron to the nucleus. Thus, across a period, increasing nuclear charge outweighs the shielding. Consequently, the outermost electrons are held more and more tightly and the ionization enthalpy increases across a period. As we go down a group, the outermost electron being increasingly farther from the nucleus, there is an increased shielding of the nuclear charge by the electrons in the inner levels. In this case, increase in shielding outweighs the increasing nuclear charge and the removal of the outermost electron requires less energy down a group.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 3.5",
+                "description": "A plot of first ionization enthalpies against atomic number (Z) from 1 to 60, showing periodic peaks at noble gases and troughs at alkali metals.",
+                "image_url": null
+              },
+              {
+                "label": "Fig 3.6 (a)",
+                "description": "A graph showing the general increase in first ionization enthalpy for second-period elements from Li to Ne.",
+                "image_url": null
+              },
+              {
+                "label": "Fig 3.6 (b)",
+                "description": "A graph showing the decrease in first ionization enthalpy for alkali metals from Li to Cs.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.7:7",
+            "order": 7,
+            "title": "Ionization Enthalpy: Anomalies (B vs Be, O vs N)",
+            "content_text": "From Fig. 3.6(a), the first ionization enthalpy of boron ($Z = 5$) is slightly less than that of beryllium ($Z = 4$) even though the former has a greater nuclear charge. When we consider the same principal quantum level, an $s$-electron is attracted to the nucleus more than a $p$-electron. In beryllium, the electron removed during the ionization is an $s$-electron whereas the electron removed during ionization of boron is a $p$-electron. The penetration of a $2s$-electron to the nucleus is more than that of a $2p$-electron; hence the $2p$ electron of boron is more shielded from the nucleus by the inner core of electrons than the $2s$ electrons of beryllium. Therefore, it is easier to remove the $2p$-electron from boron compared to the removal of a $2s$-electron from beryllium. Thus, boron has a smaller first ionization enthalpy than beryllium. Another anomaly is the smaller first ionization enthalpy of oxygen compared to nitrogen. This arises because in the nitrogen atom, three $2p$-electrons reside in different atomic orbitals (Hund's rule) whereas in the oxygen atom, two of the four $2p$-electrons must occupy the same $2p$-orbital resulting in an increased electron-electron repulsion. Consequently, it is easier to remove the fourth $2p$-electron from oxygen than it is to remove one of the three $2p$-electrons from nitrogen.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.7:8",
+            "order": 8,
+            "title": "Worked Example: Predicting Ionization Enthalpy of Al",
+            "content_text": "Prediction of the first ionization enthalpy of aluminium based on trends observed across the third period.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Problem 3.6",
+                "problem": "The first ionization enthalpy ($\\Delta_i H$) values of the third period elements, Na, Mg and Si are respectively 496, 737 and 786 kJ mol$^{-1}$. Predict whether the first $\\Delta_i H$ value for Al will be more close to 575 or 760 kJ mol$^{-1}$? Justify your answer.",
+                "solution": "It will be more close to 575 kJ mol$^{-1}$. The value for Al should be lower than that of Mg because of effective shielding of $3p$ electrons from the nucleus by $3s$-electrons."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.7:9",
+            "order": 9,
+            "title": "Electron Gain Enthalpy",
+            "content_text": "When an electron is added to a neutral gaseous atom ($X$) to convert it into a negative ion, the enthalpy change accompanying the process is defined as the Electron Gain Enthalpy ($\\Delta_{eg}H$). Electron gain enthalpy provides a measure of the ease with which an atom adds an electron to form an anion as represented by equation 3.3: $X(g) + e^- \\rightarrow X^-(g)$. Depending on the element, the process of adding an electron to the atom can be either endothermic or exothermic. For many elements energy is released when an electron is added to the atom and the electron gain enthalpy is negative. For example, group 17 elements (the halogens) have very high negative electron gain enthalpies because they can attain stable noble gas electronic configurations by picking up an electron. On the other hand, noble gases have large positive electron gain enthalpies because the electron has to enter the next higher principal quantum level leading to a very unstable electronic configuration. It may be noted that electron gain enthalpies have large negative values toward the upper right of the periodic table preceding the noble gases.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 3.7",
+                "caption": "Electron Gain Enthalpies (kJ mol$^{-1}$) of Some Main Group Elements",
+                "headers": [
+                  "Group 1",
+                  "$\\Delta_{eg}H$",
+                  "Group 16",
+                  "$\\Delta_{eg}H$",
+                  "Group 17",
+                  "$\\Delta_{eg}H$",
+                  "Group 0",
+                  "$\\Delta_{eg}H$"
+                ],
+                "rows": [
+                  [
+                    "H",
+                    "–73",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "He",
+                    "+48"
+                  ],
+                  [
+                    "Li",
+                    "–60",
+                    "O",
+                    "–141",
+                    "F",
+                    "–328",
+                    "Ne",
+                    "+116"
+                  ],
+                  [
+                    "Na",
+                    "–53",
+                    "S",
+                    "–200",
+                    "Cl",
+                    "–349",
+                    "Ar",
+                    "+96"
+                  ],
+                  [
+                    "K",
+                    "–48",
+                    "Se",
+                    "–195",
+                    "Br",
+                    "–325",
+                    "Kr",
+                    "+96"
+                  ],
+                  [
+                    "Rb",
+                    "–47",
+                    "Te",
+                    "–190",
+                    "I",
+                    "–295",
+                    "Xe",
+                    "+77"
+                  ],
+                  [
+                    "Cs",
+                    "–46",
+                    "Po",
+                    "–174",
+                    "At",
+                    "–270",
+                    "Rn",
+                    "+68"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.7:10",
+            "order": 10,
+            "title": "Electron Gain Enthalpy: Trends",
+            "content_text": "The variation in electron gain enthalpies of elements is less systematic than for ionization enthalpies. As a general rule, electron gain enthalpy becomes more negative with increase in the atomic number across a period. The effective nuclear charge increases from left to right across a period and consequently it will be easier to add an electron to a smaller atom since the added electron on an average would be closer to the positively charged nucleus. We should also expect electron gain enthalpy to become less negative as we go down a group because the size of the atom increases and the added electron would be farther from the nucleus. This is generally the case (Table 3.7). However, electron gain enthalpy of O or F is less negative than that of the succeeding element. This is because when an electron is added to O or F, the added electron goes to the smaller $n = 2$ quantum level and suffers significant repulsion from the other electrons present in this level. For the $n = 3$ quantum level (S or Cl), the added electron occupies a larger region of space and the electron-electron repulsion is much less.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.7:11",
+            "order": 11,
+            "title": "Worked Example: Electron Gain Enthalpy Comparison",
+            "content_text": "Comparison of electron gain enthalpies for elements in the same period and group.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Problem 3.7",
+                "problem": "Which of the following will have the most negative electron gain enthalpy and which the least negative? P, S, Cl, F. Explain your answer.",
+                "solution": "Electron gain enthalpy generally becomes more negative across a period as we move from left to right. Within a group, electron gain enthalpy becomes less negative down a group. However, adding an electron to the $2p$-orbital leads to greater repulsion than adding an electron to the larger $3p$-orbital. Hence the element with most negative electron gain enthalpy is chlorine; the one with the least negative electron gain enthalpy is phosphorus."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.7:12",
+            "order": 12,
+            "title": "Electronegativity",
+            "content_text": "A qualitative measure of the ability of an atom in a chemical compound to attract shared electrons to itself is called electronegativity. Unlike ionization enthalpy and electron gain enthalpy, it is not a measurable quantity. However, a number of numerical scales of electronegativity of elements viz., Pauling scale, Mulliken-Jaffe scale, Allred-Rochow scale have been developed. The one which is the most widely used is the Pauling scale. Linus Pauling, an American scientist, in 1932 assigned arbitrarily a value of 4.0 to fluorine, the element considered to have the greatest ability to attract electrons. Approximate values for the electronegativity of a few elements are given in Table 3.8(a). The electronegativity of any given element is not constant; it varies depending on the element to which it is bound. Though it is not a measurable quantity, it does provide a means of predicting the nature of force that holds a pair of atoms together. Electronegativity generally increases across a period from left to right (say from lithium to fluorine) and decreases down a group (say from fluorine to astatine) in the periodic table. The attraction between the outer (or valence) electrons and the nucleus increases as the atomic radius decreases in a period. The electronegativity also increases. On the same account electronegativity values decrease with the increase in atomic radii down a group. The trend is similar to that of ionization enthalpy. Electronegativity is directly related to the non-metallic properties of elements. Conversely, it is inversely related to metallic properties. Across a period, the increase in electronegativity is accompanied by an increase in non-metallic properties (or a decrease in metallic properties). Down a group, the decrease in electronegativity is accompanied by a decrease in non-metallic properties (or an increase in metallic properties). These trends are fundamental to understanding the chemical behavior of elements.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 3.7",
+                "description": "The periodic trends of elements in the periodic table showing electronegativity values on the Pauling scale.",
+                "image_url": null
+              }
+            ],
+            "tables": [
+              {
+                "label": "Table 3.8(a)",
+                "caption": "Electronegativity Values (on Pauling scale) Across the Periods",
+                "headers": [
+                  "Period",
+                  "Li/Na",
+                  "Be/Mg",
+                  "B/Al",
+                  "C/Si",
+                  "N/P",
+                  "O/S",
+                  "F/Cl"
+                ],
+                "rows": [
+                  [
+                    "Period II",
+                    "1.0",
+                    "1.5",
+                    "2.0",
+                    "2.5",
+                    "3.0",
+                    "3.5",
+                    "4.0"
+                  ],
+                  [
+                    "Period III",
+                    "0.9",
+                    "1.2",
+                    "1.5",
+                    "1.8",
+                    "2.1",
+                    "2.5",
+                    "3.0"
+                  ]
+                ]
+              },
+              {
+                "label": "Table 3.8(b)",
+                "caption": "Electronegativity Values (on Pauling scale) Down a Family",
+                "headers": [
+                  "Atom (Group 1)",
+                  "Electronegativity Value",
+                  "Atom (Group 17)",
+                  "Electronegativity Value"
+                ],
+                "rows": [
+                  [
+                    "Li",
+                    "1.0",
+                    "F",
+                    "4.0"
+                  ],
+                  [
+                    "Na",
+                    "0.9",
+                    "Cl",
+                    "3.0"
+                  ],
+                  [
+                    "K",
+                    "0.8",
+                    "Br",
+                    "2.8"
+                  ],
+                  [
+                    "Rb",
+                    "0.8",
+                    "I",
+                    "2.5"
+                  ],
+                  [
+                    "Cs",
+                    "0.7",
+                    "At",
+                    "2.2"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.7:13",
+            "order": 13,
+            "title": "Periodic Trends in Chemical Properties",
+            "content_text": "Most trends in chemical properties, such as diagonal relationships, the inert pair effect, and the effects of lanthanoid contraction, are discussed in detail in later units. This section focuses on the periodicity of the valence state shown by elements and the anomalous properties of the second-period elements (from lithium to fluorine).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.7:14",
+            "order": 14,
+            "title": "Periodicity of Valence or Oxidation States",
+            "content_text": "Valence is the most characteristic property of elements and is understood through their electronic configurations. For representative elements, valence is usually equal to the number of electrons in the outermost orbitals or equal to eight minus that number. The term 'oxidation state' is frequently used today. For example, in $OF_2$, fluorine (the most electronegative element) has an oxidation state of $-1$, while oxygen has $+2$. In $Na_2O$, oxygen is more electronegative and has an oxidation state of $-2$, while sodium has $+1$. The oxidation state of an element in a compound is defined as the charge acquired by its atom based on electronegative considerations from other atoms in the molecule. The following table summarizes valence trends across groups:",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 3.8 (Implicit)",
+                "caption": "Valence of Elements Based on Group Number",
+                "headers": [
+                  "Group",
+                  "1",
+                  "2",
+                  "13",
+                  "14",
+                  "15",
+                  "16",
+                  "17",
+                  "18"
+                ],
+                "rows": [
+                  [
+                    "Number of valence electron",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8"
+                  ],
+                  [
+                    "Valence",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "3, 5",
+                    "2, 6",
+                    "1, 7",
+                    "0, 8"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.7:15",
+            "order": 15,
+            "title": "Worked Example: Predicting Formulas",
+            "content_text": "Using the periodic table, we can predict the formulas of compounds formed by pairs of elements based on their group valences.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 3.8",
+                "problem": "Using the Periodic Table, predict the formulas of compounds which might be formed by the following pairs of elements; (a) silicon and bromine (b) aluminium and sulphur.",
+                "solution": "(a) Silicon is a group 14 element with a valence of 4; bromine belongs to the halogen family with a valence of 1. Hence the formula of the compound formed would be $SiBr_4$. (b) Aluminium belongs to group 13 with a valence of 3; sulphur belongs to group 16 elements with a valence of 2. Hence, the formula of the compound formed would be $Al_2S_3$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.7:16",
+            "order": 16,
+            "title": "Periodic Trends in Valence (Hydrides and Oxides)",
+            "content_text": "Periodic trends are observed in the formulas of hydrides and oxides formed by elements across different groups. Many elements, particularly transition and actinoid elements, exhibit variable valence.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 3.9",
+                "caption": "Periodic Trends in Valence of Elements as shown by the Formulas of Their Compounds",
+                "headers": [
+                  "Group",
+                  "1",
+                  "2",
+                  "13",
+                  "14",
+                  "15",
+                  "16",
+                  "17"
+                ],
+                "rows": [
+                  [
+                    "Formula of hydride",
+                    "LiH, NaH, KH",
+                    "$CaH_2$",
+                    "$B_2H_6, AlH_3$",
+                    "$CH_4, SiH_4, GeH_4, SnH_4$",
+                    "$NH_3, PH_3, AsH_3, SbH_3, BiH_3$",
+                    "$H_2O, H_2S, H_2Se, H_2Te$",
+                    "HF, HCl, HBr, HI"
+                  ],
+                  [
+                    "Formula of oxide",
+                    "$Li_2O, Na_2O, K_2O$",
+                    "MgO, CaO, SrO, BaO",
+                    "$B_2O_3, Al_2O_3, Ga_2O_3, In_2O_3$",
+                    "$CO_2, SiO_2, GeO_2, SnO_2, PbO_2$",
+                    "$N_2O_3, N_2O_5, P_4O_6, P_4O_{10}, As_2O_3, As_2O_5, Sb_2O_3, Sb_2O_5, Bi_2O_3$",
+                    "$SO_3, SeO_3, TeO_3$",
+                    "$Cl_2O_7$"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.7:17",
+            "order": 17,
+            "title": "Anomalous Properties of Second Period Elements",
+            "content_text": "The first element of groups 1, 2, and 13-17 differs significantly from other members of their respective groups. For example, Lithium and Beryllium form compounds with pronounced covalent character, whereas other members predominantly form ionic compounds. Lithium and Beryllium show similarities to the second element of the following group (Magnesium and Aluminium, respectively), a phenomenon known as the diagonal relationship. The anomalous behavior is attributed to their small size, large charge/radius ratio, and high electronegativity. Furthermore, second-period elements have only four valence orbitals ($2s$ and $2p$) available for bonding, limiting their maximum covalency to 4 (e.g., $[BF_4]^-$), whereas subsequent members can expand their valence shell using $d$-orbitals (e.g., $[AlF_6]^{3-}$). First members of p-block elements also show a greater ability to form $p_\\pi - p_\\pi$ multiple bonds to themselves (e.g., $C=C, C \\equiv C, N=N, N \\equiv N$) and other second-period elements.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Comparison Table",
+                "caption": "Comparison of Atomic and Ionic Radii (pm) showing Diagonal Relationship",
+                "headers": [
+                  "Property",
+                  "Li",
+                  "Be",
+                  "B",
+                  "Na",
+                  "Mg",
+                  "Al"
+                ],
+                "rows": [
+                  [
+                    "Metallic radius M/pm",
+                    "152",
+                    "111",
+                    "88",
+                    "186",
+                    "160",
+                    "143"
+                  ],
+                  [
+                    "Ionic radius $M^+$/pm",
+                    "76",
+                    "31",
+                    "null",
+                    "102",
+                    "72",
+                    "null"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.7:18",
+            "order": 18,
+            "title": "Worked Example: Oxidation State vs Covalency",
+            "content_text": "It is important to distinguish between the oxidation state and the covalency of an element in a complex ion.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 3.9",
+                "problem": "Are the oxidation state and covalency of Al in $[AlCl(H_2O)_5]^{2+}$ same?",
+                "solution": "No. The oxidation state of Al is $+3$ and the covalency is 6."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.7:19",
+            "order": 19,
+            "title": "Periodic Trends and Chemical Reactivity",
+            "content_text": "Chemical reactivity is a manifestation of electronic configuration. Atomic and ionic radii generally decrease across a period, while ionization enthalpies increase and electron gain enthalpies become more negative (excluding noble gases). Consequently, chemical reactivity is highest at the two extremes of a period and lowest in the center. Elements on the extreme left (alkali metals) react by losing an electron to form a cation, while elements on the extreme right (halogens) react by gaining an electron to form an anion. This relates to their reducing and oxidizing behavior.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.7:20",
+            "order": 20,
+            "title": "Reactivity with Oxygen and Nature of Oxides",
+            "content_text": "Elements at the extremes of a period combine with oxygen to form oxides. The normal oxide formed by elements on the extreme left is the most basic (e.g., $Na_2O$), while that formed by elements on the extreme right is the most acidic (e.g., $Cl_2O_7$). Oxides of elements in the center are often amphoteric (e.g., $Al_2O_3, As_2O_3$) or neutral (e.g., $CO, NO, N_2O$). Amphoteric oxides behave as acidic with bases and basic with acids, whereas neutral oxides have no acidic or basic properties.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.7:21",
+            "order": 21,
+            "title": "Worked Example: Nature of Oxides",
+            "content_text": "The basic or acidic nature of oxides can be demonstrated through their reactions with water and tested with litmus paper.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Problem 3.10",
+                "problem": "Show by a chemical reaction with water that $Na_2O$ is a basic oxide and $Cl_2O_7$ is an acidic oxide.",
+                "solution": "$Na_2O$ with water forms a strong base whereas $Cl_2O_7$ forms strong acid.\n$Na_2O + H_2O \\rightarrow 2NaOH$\n$Cl_2O_7 + H_2O \\rightarrow 2HClO_4$\nTheir basic or acidic nature can be qualitatively tested with litmus paper."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.7:22",
+            "order": 22,
+            "title": "Trends in Transition and Inner-transition Metals",
+            "content_text": "Among transition metals ($3d$ series), the change in atomic radii is much smaller compared to representative elements. The change is even smaller among inner-transition metals ($4f$ series). Their ionization enthalpies are intermediate between those of s- and p-blocks, making them less electropositive than group 1 and 2 metals.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.7:23",
+            "order": 23,
+            "title": "Group Trends in Metallic and Non-metallic Character",
+            "content_text": "In a group, the increase in atomic and ionic radii with an increase in atomic number generally results in a gradual decrease in ionization enthalpies. For main group elements, there is also a regular decrease in electron gain enthalpies (with exceptions in some third-period elements). Consequently, the metallic character increases down the group while the non-metallic character decreases. This trend is closely related to the reducing and oxidizing properties of the elements.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.7:24",
+            "order": 24,
+            "title": "Trends in Transition Elements",
+            "content_text": "In the case of transition elements, a reverse trend in metallic character is observed compared to main group elements. This deviation can be explained in terms of the specific variations in atomic size and ionization enthalpy within these series.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.7:25",
+            "order": 25,
+            "title": "Classification of Elements: Metals, Non-metals, and Metalloids",
+            "content_text": "Metals comprise more than 78% of the known elements and are located on the left side of the periodic table. Non-metals, which are fewer than twenty in number, are located at the top right. Elements that lie at the border line between metals and non-metals (e.g., Si, Ge, As) are called metalloids or semi-metals. Metallic character increases with atomic number in a group and decreases from left to right in a period.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:3:3.7:26",
+            "order": 26,
+            "title": "The Unique Position of Hydrogen",
+            "content_text": "Hydrogen, with a single electron in the $1s$ orbital ($1s^1$ configuration), occupies a unique position in the periodic table. Its properties allow it to be compared to both alkali metals and halogens, making its placement a distinct topic in periodic classification.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:chemistry:11:3:ex:1",
+          "number": 1,
+          "problem": "What is the basic theme of organisation in the periodic table?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:3:ex:2",
+          "number": 2,
+          "problem": "Which important property did Mendeleev use to classify the elements in his periodic table and did he stick to that?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:3:ex:3",
+          "number": 3,
+          "problem": "What is the basic difference in approach between the Mendeleev’s Periodic Law and the Modern Periodic Law?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:3:ex:4",
+          "number": 4,
+          "problem": "On the basis of quantum numbers, justify that the sixth period of the periodic table should have 32 elements.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:3:ex:5",
+          "number": 5,
+          "problem": "In terms of period and group where would you locate the element with $Z=114$?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:3:ex:6",
+          "number": 6,
+          "problem": "Write the atomic number of the element present in the third period and seventeenth group of the periodic table.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:3:ex:7",
+          "number": 7,
+          "problem": "Which element do you think would have been named by (i) Lawrence Berkeley Laboratory (ii) Seaborg’s group?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:3:ex:8",
+          "number": 8,
+          "problem": "Why do elements in the same group have similar physical and chemical properties?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:3:ex:9",
+          "number": 9,
+          "problem": "What does atomic radius and ionic radius really mean to you?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:3:ex:10",
+          "number": 10,
+          "problem": "How do atomic radius vary in a period and in a group? How do you explain the variation?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:3:ex:11",
+          "number": 11,
+          "problem": "What do you understand by isoelectronic species? Name a species that will be isoelectronic with each of the following atoms or ions. (i) $F^-$ (ii) $Ar$ (iii) $Mg^{2+}$ (iv) $Rb^+$",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:3:ex:12",
+          "number": 12,
+          "problem": "Consider the following species: $N^{3-}, O^{2-}, F^-, Na^+, Mg^{2+}$ and $Al^{3+}$. (a) What is common in them? (b) Arrange them in the order of increasing ionic radii.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:3:ex:13",
+          "number": 13,
+          "problem": "Explain why cation are smaller and anions larger in radii than their parent atoms?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:3:ex:14",
+          "number": 14,
+          "problem": "What is the significance of the terms — ‘isolated gaseous atom’ and ‘ground state’ while defining the ionization enthalpy and electron gain enthalpy?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:3:ex:15",
+          "number": 15,
+          "problem": "Energy of an electron in the ground state of the hydrogen atom is $-2.18 \\times 10^{-18} \\text{ J}$. Calculate the ionization enthalpy of atomic hydrogen in terms of $J \\text{ mol}^{-1}$.",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:3:ex:16",
+          "number": 16,
+          "problem": "Among the second period elements the actual ionization enthalpies are in the order $Li < B < Be < C < O < N < F < Ne$. Explain why (i) $Be$ has higher $\\Delta_i H$ than $B$ (ii) $O$ has lower $\\Delta_i H$ than $N$ and $F$?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:3:ex:17",
+          "number": 17,
+          "problem": "How would you explain the fact that the first ionization enthalpy of sodium is lower than that of magnesium but its second ionization enthalpy is higher than that of magnesium?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:3:ex:18",
+          "number": 18,
+          "problem": "What are the various factors due to which the ionization enthalpy of the main group elements tends to decrease down a group?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:3:ex:19",
+          "number": 19,
+          "problem": "The first ionization enthalpy values (in $kJ \\text{ mol}^{-1}$) of group 13 elements are: B (801), Al (577), Ga (579), In (558), Tl (589). How would you explain this deviation from the general trend?",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:3:ex:20",
+          "number": 20,
+          "problem": "Which of the following pairs of elements would have a more negative electron gain enthalpy? (i) $O$ or $F$ (ii) $F$ or $Cl$",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:3:ex:21",
+          "number": 21,
+          "problem": "Would you expect the second electron gain enthalpy of $O$ as positive, more negative or less negative than the first? Justify your answer.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:3:ex:22",
+          "number": 22,
+          "problem": "What is the basic difference between the terms electron gain enthalpy and electronegativity?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:3:ex:23",
+          "number": 23,
+          "problem": "How would you react to the statement that the electronegativity of $N$ on Pauling scale is 3.0 in all the nitrogen compounds?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:3:ex:24",
+          "number": 24,
+          "problem": "Describe the theory associated with the radius of an atom as it (a) gains an electron (b) loses an electron",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:3:ex:25",
+          "number": 25,
+          "problem": "Would you expect the first ionization enthalpies for two isotopes of the same element to be the same or different? Justify your answer.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:3:ex:26",
+          "number": 26,
+          "problem": "What are the major differences between metals and non-metals?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:3:ex:27",
+          "number": 27,
+          "problem": "Use the periodic table to answer the following questions. (a) Identify an element with five electrons in the outer subshell. (b) Identify an element that would tend to lose two electrons. (c) Identify an element that would tend to gain two electrons. (d) Identify the group having metal, non-metal, liquid as well as gas at the room temperature.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:3:ex:28",
+          "number": 28,
+          "problem": "The increasing order of reactivity among group 1 elements is $Li < Na < K < Rb < Cs$ whereas that among group 17 elements is $F > Cl > Br > I$. Explain.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:3:ex:29",
+          "number": 29,
+          "problem": "Write the general outer electronic configuration of $s$-, $p$-, $d$- and $f$- block elements.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:3:ex:30",
+          "number": 30,
+          "problem": "Assign the position of the element having outer electronic configuration (i) $ns^2 np^4$ for $n=3$ (ii) $(n-1)d^2 ns^2$ for $n=4$, and (iii) $(n-2)f^7 (n-1)d^1 ns^2$ for $n=6$, in the periodic table.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:3:ex:31",
+          "number": 31,
+          "problem": "The first ($Δ_i H_1$) and the second ($Δ_i H_2$) ionization enthalpies (in kJ mol$^{-1}$) and the ($Δ_{eg} H$) electron gain enthalpy (in kJ mol$^{-1}$) of a few elements are given below:\n\n| Elements | $Δ_i H_1$ | $Δ_i H_2$ | $Δ_{eg} H$ |\n| :--- | :--- | :--- | :--- |\n| I | 520 | 7300 | -60 |\n| II | 419 | 3051 | -48 |\n| III | 1681 | 3374 | -328 |\n| IV | 1008 | 1846 | -295 |\n| V | 2372 | 5251 | +48 |\n| VI | 738 | 1451 | -40 |\n\nWhich of the above elements is likely to be :\n(a) the least reactive element.\n(b) the most reactive metal.\n(c) the most reactive non-metal.\n(d) the least reactive non-metal.\n(e) the metal which can form a stable binary halide of the formula $MX_2$ (X=halogen).\n(f) the metal which can form a predominantly stable covalent halide of the formula $MX$ (X=halogen)?",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:3:ex:32",
+          "number": 32,
+          "problem": "Predict the formulas of the stable binary compounds that would be formed by the combination of the following pairs of elements.\n(a) Lithium and oxygen\n(b) Magnesium and nitrogen\n(c) Aluminium and iodine\n(d) Silicon and oxygen\n(e) Phosphorus and fluorine\n(f) Element 71 and fluorine",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:3:ex:33",
+          "number": 33,
+          "problem": "In the modern periodic table, the period indicates the value of :\n(a) atomic number\n(b) atomic mass\n(c) principal quantum number\n(d) azimuthal quantum number.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "mcq"
+        },
+        {
+          "id": "ncert:chemistry:11:3:ex:34",
+          "number": 34,
+          "problem": "Which of the following statements related to the modern periodic table is incorrect?\n(a) The $p$-block has 6 columns, because a maximum of 6 electrons can occupy all the orbitals in a $p$-shell.\n(b) The $d$-block has 8 columns, because a maximum of 8 electrons can occupy all the orbitals in a $d$-subshell.\n(c) Each block contains a number of columns equal to the number of electrons that can occupy that subshell.\n(d) The block indicates value of azimuthal quantum number ($l$) for the last subshell that received electrons in building up the electronic configuration.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "mcq"
+        },
+        {
+          "id": "ncert:chemistry:11:3:ex:35",
+          "number": 35,
+          "problem": "Anything that influences the valence electrons will affect the chemistry of the element. Which one of the following factors does not affect the valence shell?\n(a) Valence principal quantum number ($n$)\n(b) Nuclear charge ($Z$)\n(c) Nuclear mass\n(d) Number of core electrons.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "mcq"
+        },
+        {
+          "id": "ncert:chemistry:11:3:ex:36",
+          "number": 36,
+          "problem": "The size of isoelectronic species — $F^-$, $Ne$ and $Na^+$ is affected by\n(a) nuclear charge ($Z$)\n(b) valence principal quantum number ($n$)\n(c) electron-electron interaction in the outer orbitals\n(d) none of the factors because their size is the same.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "mcq"
+        },
+        {
+          "id": "ncert:chemistry:11:3:ex:37",
+          "number": 37,
+          "problem": "Which one of the following statements is incorrect in relation to ionization enthalpy?\n(a) Ionization enthalpy increases for each successive electron.\n(b) The greatest increase in ionization enthalpy is experienced on removal of electron from core noble gas configuration.\n(c) End of valence electrons is marked by a big jump in ionization enthalpy.\n(d) Removal of electron from orbitals bearing lower $n$ value is easier than from orbital having higher $n$ value.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "mcq"
+        },
+        {
+          "id": "ncert:chemistry:11:3:ex:38",
+          "number": 38,
+          "problem": "Considering the elements B, Al, Mg, and K, the correct order of their metallic character is :\n(a) B > Al > Mg > K\n(b) Al > Mg > B > K\n(c) Mg > Al > K > B\n(d) K > Mg > Al > B",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "mcq"
+        },
+        {
+          "id": "ncert:chemistry:11:3:ex:39",
+          "number": 39,
+          "problem": "Considering the elements B, C, N, F, and Si, the correct order of their non-metallic character is :\n(a) B > C > Si > N > F\n(b) Si > C > B > N > F\n(c) F > N > C > B > Si\n(d) F > N > C > Si > B",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "mcq"
+        },
+        {
+          "id": "ncert:chemistry:11:3:ex:40",
+          "number": 40,
+          "problem": "Considering the elements F, Cl, O and N, the correct order of their chemical reactivity in terms of oxidizing property is :\n(a) F > Cl > O > N\n(b) F > O > Cl > N\n(c) Cl > F > O > N\n(d) O > F > N > Cl",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "mcq"
+        }
+      ]
+    }
+  }
+}

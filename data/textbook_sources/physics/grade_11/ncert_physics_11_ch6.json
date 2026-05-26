@@ -1,0 +1,1731 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_physics_11_ch6.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:physics:11:6",
+  "curriculum": "ncert",
+  "subject": "physics",
+  "grade": 11,
+  "textbook_name": "Physics Part I",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:physics:11:6",
+    "number": 6,
+    "title": "Systems of Particles and Rotational Motion",
+    "summary": "This chapter delves into the mechanics of systems of particles and rigid body rotation, extending earlier concepts of motion. It introduces the concept of the center of mass (CM) as a representative point for a system, defining its position vector and showing that the CM moves as if the total mass were concentrated there and all external forces acted upon it. This is described by the formula M**A** = **F**ext. Linear momentum is also explored, leading to the law of conservation of linear momentum when external forces are absent.\n\nThe chapter then transitions to rotational motion, defining torque and angular momentum as vector products. The relationship between torque and angular momentum, d**L**/dt = **τ**ext, is established, leading to the conservation of angular momentum when external torque is zero. It covers the rotational analogue of Newton's Second Law. Moment of inertia (I = Σmr²) is introduced as the rotational analogue of mass, relating to kinetic energy and torque. The parallel axis theorem, not mentioned explicitly but implicitly present, is fundamental for calculations. Kinematics of rotational motion are presented in analogy to linear motion.\n\nFinally, the chapter addresses the equilibrium of rigid bodies, requiring both translational (Σ**F** = 0) and rotational (Σ**τ** = 0) equilibrium. The principle of moments and the concept of center of gravity are discussed. These concepts build upon each other, linking translational and rotational motion and demonstrating the practical applications of these principles in various scenarios, such as levers, flywheels, and analyzing static equilibrium of objects. Understanding these principles allows us to analyze the motion of complex systems and extended bodies, essential for engineering and physics.",
+    "sections": [
+      {
+        "id": "ncert:physics:11:6:6.1",
+        "number": "6.1",
+        "title": "Introduction",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:6:6.1:1",
+            "order": 1,
+            "title": "From Point Mass to Extended Bodies",
+            "content_text": "In previous studies of mechanics, motion was primarily considered for a single particle, which is ideally represented as a point mass having no size. While the results of such studies were applied to bodies of finite size by assuming their motion could be described in terms of the motion of a particle, real-world objects are extended bodies. An extended body is, in the first place, a system of particles. To understand the motion of these bodies, we must go beyond the idealized particle model and consider the system as a whole. A key concept in this study is the centre of mass of a system of particles, which helps in understanding the motion of extended bodies.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.1:2",
+            "order": 2,
+            "title": "Definition of a Rigid Body",
+            "content_text": "A large class of problems involving extended bodies can be solved by considering them as rigid bodies. Ideally, a rigid body is a body with a perfectly definite and unchanging shape. The distances between all pairs of particles of such a body do not change. While no real body is truly rigid because all bodies deform under the influence of forces, these deformations are often negligible in many practical situations. For example, wheels, tops, steel beams, molecules, and planets can often be treated as rigid bodies, ignoring any warping, bending, or vibration.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.1:3",
+            "order": 3,
+            "title": "Pure Translational Motion",
+            "content_text": "To explore the types of motion a rigid body can have, consider a rectangular block sliding down an inclined plane without any sidewise movement. In pure translational motion, at any instant of time, all particles of the body have the same velocity. As shown in Fig. 6.1, any point such as $P_1$ or $P_2$ of the block moves with the same velocity at any instant of time.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 6.1",
+                "description": "Translational (sliding) motion of a block down an inclined plane. The diagram shows a block on a slope of angle $\\theta$. Two points $P_1$ and $P_2$ are marked on the block, both having identical velocity vectors pointing down the slope.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.1:4",
+            "order": 4,
+            "title": "Rolling Motion",
+            "content_text": "Consider a solid metallic or wooden cylinder rolling down an inclined plane. While the cylinder shifts from the top to the bottom, suggesting translational motion, it is not in pure translational motion. As Fig. 6.2 illustrates, all particles of the rolling cylinder do not move with the same velocity at any instant. For instance, the velocity of the point of contact $P_3$ is zero at any instant if the cylinder rolls without slipping. Therefore, rolling motion is characterized as translational motion plus 'something else'.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 6.2",
+                "description": "Rolling motion of a cylinder down an inclined plane. Points $P_1, P_2, P_3$ and $P_4$ are shown with different velocity vectors. $P_3$ is the point of contact with the plane, and its velocity is zero if rolling without slipping.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.1:5",
+            "order": 5,
+            "title": "Pure Rotational Motion about a Fixed Axis",
+            "content_text": "When a rigid body is constrained such that it cannot have translational motion, it can only rotate. If the body is fixed along a straight line, the only possible motion is rotation about that line, which is called the axis of rotation. Common examples of rotation about a fixed axis include a ceiling fan, a potter's wheel, and a giant wheel in a fair. In these cases, every point on the body moves in a circular path around the axis.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 6.3",
+                "description": "Rotation about a fixed axis: (a) A ceiling fan rotating around its vertical suspension rod; (b) A potter's wheel rotating around its central vertical axis.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.1:6",
+            "order": 6,
+            "title": "Characteristics of Rotation about a Fixed Axis",
+            "content_text": "In the rotation of a rigid body about a fixed axis, every particle of the body moves in a circle. This circle lies in a plane perpendicular to the axis and has its centre on the axis. As shown in Fig. 6.4, for a body rotating about the z-axis, a particle $P_1$ describes a circle of radius $r_1$ with centre $C_1$ on the axis. Similarly, particle $P_2$ describes a circle of radius $r_2$ with centre $C_2$. Note that the circles may lie in different planes, but all these planes are perpendicular to the fixed axis. For any particle on the axis itself, such as $P_3$, the radius $r = 0$, and thus it remains stationary while the body rotates.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 6.4",
+                "description": "A rigid body rotating about the z-axis. Particles $P_1$ and $P_2$ are shown moving in circular paths with radii $r_1$ and $r_2$ and centres $C_1$ and $C_2$ on the axis. Point $P_3$ lies on the axis and is stationary.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.1:7",
+            "order": 7,
+            "title": "Rotation with a Non-Fixed Axis and Precession",
+            "content_text": "In some instances of rotation, the axis may not be fixed. A prominent example is a spinning top. While the point of contact $O$ with the ground is fixed, the axis of rotation of the top moves around the vertical, sweeping out a cone. This movement of the axis is termed precession. Another example is an oscillating table fan, where the axis of rotation of the blades itself oscillates. You may have observed that the The axis of rotation of such a fan has an oscillating (sidewise) movement in a horizontal plane about the vertical through the point at which the axis is pivoted (point O in Fig. 6.5(b)). While the fan rotates and its axis moves sidewise, this point is fixed. Thus, in more general cases of rotation, such as the rotation of a top or a pedestal fan, one point and not one line, of the rigid body is fixed. In this case the axis is not fixed, though it always passes through the fixed point. In our study, however, we mostly deal with the simpler and special case of rotation in which one line (i.e. the axis) is fixed.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 6.5",
+                "description": "Examples of rotation where the axis is not fixed: (a) A spinning top with its point of contact $O$ fixed, showing the axis of rotation precessing around the vertical; (b) An oscillating table fan where the axis of rotation of the blades is itself oscillating.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.1:8",
+            "order": 8,
+            "title": "Summary of Rigid Body Motion",
+            "content_text": "The rolling motion of a cylinder down an inclined plane is a combination of rotation about a fixed axis and translation. This 'something else' in the case of rolling motion is rotational motion. Fig. 6.6(a) and (b) illustrate this: in pure translation, all particles of the body have the same velocity at any instant, and the orientation of the body remains constant. In a combination of translation and rotation, velocities of different particles differ. Key observations: 1. The motion of a rigid body which is not pivoted or fixed is either pure translation or a combination of translation and rotation. 2. The motion of a rigid body which is pivoted or fixed is rotation, which can be about a fixed axis or a moving axis. This chapter focuses on rotation about a fixed axis.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 6.6(a)",
+                "description": "Motion of a rigid body which is pure translation. The body moves along a curved path $Tr_1$. At three different instants, the orientation of the body (represented by an arrow and points O and P) remains the same, and all particles have identical velocities.",
+                "image_url": null
+              },
+              {
+                "label": "Fig 6.6(b)",
+                "description": "Motion of a rigid body which is a combination of translation and rotation. The body moves along a curved path $Tr_2$. The orientation of the body changes as it moves (angles $\\alpha_1, \\alpha_2, \\alpha_3$ differ), and the velocities of points O and P are different at any instant.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:6:6.2",
+        "number": "6.2",
+        "title": "Centre of Mass",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:6:6.2:1",
+            "order": 1,
+            "title": "Definition and Two-Particle System",
+            "content_text": "The centre of mass of a system of particles is a specific point that represents the average position of the mass. For a two-particle system with masses $m_1$ and $m_2$ at distances $x_1$ and $x_2$ from an origin $O$ along the $x$-axis, the centre of mass $C$ is at distance $X$: $$X = \\frac{m_1 x_1 + m_2 x_2}{m_1 + m_2}$$ (Eq. 6.1). $X$ can be regarded as the mass-weighted mean of $x_1$ and $x_2$. If the two particles have the same mass $m_1 = m_2 = m$, then $X = \\frac{x_1 + x_2}{2}$, meaning the centre of mass lies exactly midway between them.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 6.7",
+                "description": "A two-particle system on the x-axis. Particles of masses $m_1$ and $m_2$ are at distances $x_1$ and $x_2$ from the origin O. The centre of mass C is located at distance X.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.2:2",
+            "order": 2,
+            "title": "n-Particle System in One Dimension",
+            "content_text": "For a system of $n$ particles with masses $m_1, m_2, \\dots, m_n$ located along a straight line (the $x$-axis) at distances $x_1, x_2, \\dots, x_n$ from the origin, the position of the centre of mass $X$ is defined as: $$X = \\frac{m_1 x_1 + m_2 x_2 + \\dots + m_n x_n}{m_1 + m_2 + \\dots + m_n} = \\frac{\\sum_{i=1}^n m_i x_i}{\\sum_{i=1}^n m_i} = \\frac{\\sum m_i x_i}{M}$$ (Eq. 6.2), where $M = \\sum m_i$ is the total mass of the system. The symbol $\\sum$ (the Greek letter sigma) denotes summation over $n$ particles.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.2:3",
+            "order": 3,
+            "title": "n-Particle System in Three Dimensions",
+            "content_text": "If particles are distributed in space, their positions are given by coordinates $(x_i, y_i, z_i)$. The centre of mass $(X, Y, Z)$ is defined by: $$X = \\frac{\\sum m_i x_i}{M}, Y = \\frac{\\sum m_i y_i}{M}, Z = \\frac{\\sum m_i z_i}{M}$$ (Eqs. 6.4a, 6.4b, 6.4c). For three particles of equal mass $m$, the centre of mass coincides with the centroid of the triangle formed by them: $X = \\frac{x_1 + x_2 + x_3}{3}, Y = \\frac{y_1 + y_2 + y_3}{3}$. These results generalize to $n$ particles in space.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.2:4",
+            "order": 4,
+            "title": "Vector Notation for Centre of Mass",
+            "content_text": "The position of the $i^{th}$ particle can be represented by a position vector $\\vec{r}_i = x_i \\hat{i} + y_i \\hat{j} + z_i \\hat{k}$. The position vector of the centre of mass $\\vec{R}$ is: $$\\vec{R} = X \\hat{i} + Y \\hat{j} + Z \\hat{k} = \\frac{\\sum m_i \\vec{r}_i}{M}$$ (Eq. 6.4d). This vector notation is more economical. If the origin of the coordinate system is chosen to be the centre of mass, then $\\vec{R} = 0$, which implies $\\sum m_i \\vec{r}_i = 0$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.2:5",
+            "order": 5,
+            "title": "Centre of Mass for Rigid Bodies",
+            "content_text": "A rigid body is a system of closely packed particles. Since the number of particles is very large and spacing is small, the body can be treated as a continuous distribution of mass. We subdivide the body into $n$ small elements of mass $\\Delta m_i$ at positions $(x_i, y_i, z_i)$. As $n \\to \\infty$ and $\\Delta m_i \\to 0$, the sums become integrals: $X = \\frac{1}{M} \\int x dm, Y = \\frac{1}{M} \\int y dm, Z = \\frac{1}{M} \\int z dm$ (Eq. 6.5a). In vector form: $$\\vec{R} = \\frac{1}{M} \\int \\vec{r} dm$$ (Eq. 6.5b). If the centre of mass is the origin, $\\int \\vec{r} dm = 0$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.2:6",
+            "order": 6,
+            "title": "Symmetry and Centre of Mass",
+            "content_text": "For homogeneous bodies (uniform mass distribution) of regular shapes, the centre of mass lies at their geometric centres. This is based on reflection symmetry. For a thin rod, for every element $dm$ at $x$, there is an element $dm$ at $-x$ relative to the geometric centre. Thus, $\\int x dm = 0$, making the geometric centre the centre of mass. This principle applies to homogeneous rings, discs, spheres, and cylinders.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 6.8",
+                "description": "Determining the CM of a thin rod. The rod is placed along the x-axis with its geometric centre at the origin O. Mass elements $dm$ at $x$ and $-x$ cancel each other out in the CM integral due to symmetry.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.2:7",
+            "order": 7,
+            "title": "Example 6.1: Centre of Mass of a Triangle",
+            "content_text": "This example demonstrates the calculation of the centre of mass for a system of three particles of different masses placed at the vertices of an equilateral triangle. This example demonstrates the calculation of the centre of mass for a system of three particles of different masses placed at the vertices of an equilateral triangle. With the $x$- and $y$-axes chosen such that the coordinates of points O, A and B forming the equilateral triangle are respectively $(0,0)$, $(0.5,0)$, and $(0.25, 0.25\\sqrt{3})$. Let the masses $100\\text{ g}$, $150\\text{ g}$ and $200\\text{ g}$ be located at O, A and B respectively. The $X$ coordinate is calculated as $X = \\frac{m_1x_1 + m_2x_2 + m_3x_3}{m_1 + m_2 + m_3} = \\frac{100(0) + 150(0.5) + 200(0.25)}{100 + 150 + 200} = \\frac{125}{450} = \\frac{5}{18}\\text{ m}$. The $Y$ coordinate is calculated as $Y = \\frac{100(0) + 150(0) + 200(0.25\\sqrt{3})}{450} = \\frac{50\\sqrt{3}}{450} = \\frac{1}{3\\sqrt{3}}\\text{ m}$. The centre of mass C is not the geometric centre of the triangle OAB because the masses are unequal.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 6.1",
+                "problem": "Find the centre of mass of three particles at the vertices of an equilateral triangle. The masses of the particles are 100g, 150g, and 200g respectively. Each side of the equilateral triangle is 0.5m long.",
+                "solution": "Let the vertices be $O, A, B$. Place $O$ at the origin $(0,0)$. $A$ is on the $x$-axis at $(0.5, 0)$. The coordinates of $B$ are $(0.5 \\cos 60^\\circ, 0.5 \\sin 60^\\circ) = (0.25, 0.25\\sqrt{3})$. Masses are $m_1=100g$ at $O$, $m_2=150g$ at $A$, $m_3=200g$ at $B$. Total mass $M = 100+150+200 = 450g$. $X = \\frac{100(0) + 150(0.5) + 200(0.25)}{450} = \\frac{125}{450} = \\frac{5}{18} m$. $Y = \\frac{100(0) + 150(0) + 200(0.25\\sqrt{3})}{450} = \\frac{50\\sqrt{3}}{450} = \\frac{\\sqrt{3}}{9} = \\frac{1}{3\\sqrt{3}} m$. The centre of mass is at $(\\frac{5}{18}, \\frac{1}{3\\sqrt{3}})$. [CONTINUES]"
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Fig 6.9",
+                "description": "Diagram for Example 6.1 showing an equilateral triangle in the xy-plane. Masses of 100g, 150g, and 200g are at vertices O(0,0), A(0.5,0), and B(0.25, 0.25$\\sqrt{3}$). The calculated centre of mass C is marked at (5/18, 1/3$\\sqrt{3}$).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.2:8",
+            "order": 8,
+            "title": "Example 6.2: Centre of Mass of a Triangular Lamina",
+            "content_text": "To find the centre of mass of a triangular lamina ($\\Delta LMN$), we can subdivide it into narrow strips each parallel to the base ($MN$). By symmetry, each strip has its centre of mass at its midpoint. Joining the midpoints of all such strips gives the median $LP$. The centre of mass of the triangle must lie on this median. Similarly, it must lie on the other medians $MQ$ and $NR$. Therefore, the centre of mass lies on the point of concurrence of the medians, which is the centroid $G$ of the triangle.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 6.2",
+                "problem": "Find the centre of mass of a triangular lamina.",
+                "solution": "The lamina ($\\Delta LMN$) may be subdivided into narrow strips each parallel to the base ($MN$). By symmetry each strip has its centre of mass at its midpoint. If we join the midpoint of all the strips we get the median $LP$. The centre of mass of the triangle as a whole therefore, has to lie on the median $LP$. Similarly, we can argue that it lies on the median $MQ$ and $NR$. This means the centre of mass lies on the point of concurrence of the medians, i.e. on the centroid $G$ of the triangle."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Fig. 6.10",
+                "description": "A triangular lamina LMN showing medians LP, MQ, and NR intersecting at the centroid G, which is the centre of mass.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.2:9",
+            "order": 9,
+            "title": "Example 6.3: Centre of Mass of an L-shaped Lamina",
+            "content_text": "For a uniform L-shaped lamina of mass $3\\text{ kg}$, we can consider it to consist of 3 squares each of side $1\\text{ m}$ and mass $1\\text{ kg}$. The centres of mass of these squares ($C_1, C_2, C_3$) are their geometric centres with coordinates $(1/2, 1/2)$, $(3/2, 1/2)$, and $(1/2, 3/2)$ respectively. The centre of mass $(X, Y)$ of the whole L-shape is the centre of mass of these three points: $X = \\frac{[1(1/2) + 1(3/2) + 1(1/2)]}{1+1+1} = \\frac{5}{6}\\text{ m}$ and $Y = \\frac{[1(1/2) + 1(1/2) + 1(3/2)]}{1+1+1} = \\frac{5}{6}\\text{ m}$. The centre of mass lies on the line $OD$.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 6.3",
+                "problem": "Find the centre of mass of a uniform L-shaped lamina (a thin flat plate) with dimensions as shown. The mass of the lamina is $3\\text{ kg}$.",
+                "solution": "Choosing the $X$ and $Y$ axes as shown in Fig. 6.11 we have the coordinates of the vertices of the L-shaped lamina as given in the figure. We can think of the L-shape to consist of 3 squares each of length $1\\text{ m}$. The mass of each square is $1\\text{ kg}$, since the lamina is uniform. The centres of mass $C_1, C_2$ and $C_3$ of the squares are, by symmetry, their geometric centres and have coordinates $(1/2, 1/2)$, $(3/2, 1/2)$, $(1/2, 3/2)$ respectively. We take the masses of the squares to be concentrated at these points. The centre of mass of the whole L shape $(X, Y)$ is the centre of mass of these mass points. $X = \\frac{[1(1/2) + 1(3/2) + 1(1/2)]\\text{ kg m}}{(1+1+1)\\text{ kg}} = \\frac{5}{6}\\text{ m}$, $Y = \\frac{[1(1/2) + 1(1/2) + 1(3/2)]\\text{ kg m}}{(1+1+1)\\text{ kg}} = \\frac{5}{6}\\text{ m}$."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Fig. 6.11",
+                "description": "An L-shaped lamina plotted on a Cartesian coordinate system. It is divided into three unit squares with their respective centres of mass C1, C2, and C3 marked. The vertices are labeled with coordinates.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:6:6.3",
+        "number": "6.3",
+        "title": "Motion of Centre of Mass",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:6:6.3:1",
+            "order": 1,
+            "title": "Velocity of the Centre of Mass",
+            "content_text": "The physical importance of the centre of mass for a system of $n$ particles can be understood by discussing its motion. Starting from the definition $M\\mathbf{R} = \\sum m_i\\mathbf{r}_i$, we differentiate both sides with respect to time to obtain the velocity relation: $M\\frac{d\\mathbf{R}}{dt} = m_1\\frac{d\\mathbf{r}_1}{dt} + m_2\\frac{d\\mathbf{r}_2}{dt} + \\dots + m_n\\frac{d\\mathbf{r}_n}{dt}$. This can be rewritten as $M\\mathbf{V} = m_1\\mathbf{v}_1 + m_2\\mathbf{v}_2 + \\dots + m_n\\mathbf{v}_n$, where $\\mathbf{V}$ is the velocity of the centre of mass and $\\mathbf{v}_i$ are the velocities of individual particles. We assume the masses $m_i$ do not change with time.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.3:2",
+            "order": 2,
+            "title": "Acceleration of the Centre of Mass",
+            "content_text": "Differentiating the velocity equation $M\\mathbf{V} = \\sum m_i\\mathbf{v}_i$ with respect to time gives the acceleration of the centre of mass: $M\\frac{d\\mathbf{V}}{dt} = m_1\\frac{d\\mathbf{v}_1}{dt} + m_2\\frac{d\\mathbf{v}_2}{dt} + \\dots + m_n\\frac{d\\mathbf{v}_n}{dt}$, which simplifies to $M\\mathbf{A} = m_1\\mathbf{a}_1 + m_2\\mathbf{a}_2 + \\dots + m_n\\mathbf{a}_n$. Here $\\mathbf{A}$ is the acceleration of the centre of mass and $\\mathbf{a}_i$ are the accelerations of the individual particles.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.3:3",
+            "order": 3,
+            "title": "Newton's Second Law for a System of Particles",
+            "content_text": "From Newton's second law, the force acting on the $i$-th particle is $\\mathbf{F}_i = m_i\\mathbf{a}_i$. Summing over all particles, we get $M\\mathbf{A} = \\mathbf{F}_1 + \\mathbf{F}_2 + \\dots + \\mathbf{F}_n$. The total force $\\mathbf{F}_i$ on any particle is the sum of external forces exerted by bodies outside the system and internal forces exerted by other particles within the system. According to Newton's third law, internal forces occur in equal and opposite pairs, so their contribution to the total sum is zero. Thus, only external forces contribute: $M\\mathbf{A} = \\mathbf{F}_{ext}$, where $\\mathbf{F}_{ext}$ is the vector sum of all external forces acting on the particles of the system.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.3:4",
+            "order": 4,
+            "title": "Physical Significance of Centre of Mass Motion",
+            "content_text": "The equation $M\\mathbf{A} = \\mathbf{F}_{ext}$ states that the centre of mass of a system of particles moves as if all the mass of the system was concentrated at the centre of mass and all the external forces were applied at that point. To determine the motion of the centre of mass, no knowledge of internal forces is required; only external forces matter. This applies regardless of whether the system is a collection of particles with internal motions or a rigid body in translational or rotational motion.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.3:5",
+            "order": 5,
+            "title": "Example: Projectile Explosion",
+            "content_text": "A projectile following a parabolic trajectory that explodes into fragments midway in the air illustrates this principle. The forces leading to the explosion are internal and do not affect the motion of the centre of mass. The only external force is gravity, which is the same before and after the explosion. Consequently, the centre of mass continues to follow the same parabolic trajectory it would have followed if there were no explosion.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 6.12",
+                "description": "A diagram showing the parabolic path of a projectile. At a point, it explodes into fragments. While fragments scatter, the centre of mass (CM) of the fragments continues along the original dashed parabolic path.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:6:6.4",
+        "number": "6.4",
+        "title": "Linear Momentum of a System of Particles",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:6:6.4:1",
+            "order": 1,
+            "title": "Total Linear Momentum of a System",
+            "content_text": "The linear momentum of a single particle is defined as $\\mathbf{p} = m\\mathbf{v}$. For a system of $n$ particles with masses $m_1, m_2, \\dots, m_n$ and velocities $\\mathbf{v}_1, \\mathbf{v}_2, \\dots, \\mathbf{v}_n$, the total linear momentum $\\mathbf{P}$ is the vector sum of individual momenta: $\\mathbf{P} = \\mathbf{p}_1 + \\mathbf{p}_2 + \\dots + \\mathbf{p}_n = m_1\\mathbf{v}_1 + m_2\\mathbf{v}_2 + \\dots + m_n\\mathbf{v}_n$. Comparing this with the centre of mass velocity relation, we find $\\mathbf{P} = M\\mathbf{V}$. Thus, the total momentum of a system of particles is equal to the product of the total mass of the system and the velocity of its centre of mass.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.4:2",
+            "order": 2,
+            "title": "Newton's Second Law in Terms of Total Momentum",
+            "content_text": "Differentiating the relation $\\mathbf{P} = M\\mathbf{V}$ with respect to time gives $\\frac{d\\mathbf{P}}{dt} = M\\frac{d\\mathbf{V}}{dt} = M\\mathbf{A}$. Since $M\\mathbf{A} = \\mathbf{F}_{ext}$, we have $\\frac{d\\mathbf{P}}{dt} = \\mathbf{F}_{ext}$. This is the statement of Newton's second law of motion extended to a system of particles: the rate of change of total linear momentum of a system is equal to the net external force acting on it.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.4:3",
+            "order": 3,
+            "title": "Conservation of Linear Momentum",
+            "content_text": "If the sum of external forces acting on a system is zero ($\\mathbf{F}_{ext} = 0$), then from $\\frac{d\\mathbf{P}}{dt} = \\mathbf{F}_{ext}$, it follows that $\\frac{d\\mathbf{P}}{dt} = 0$, which means $\\mathbf{P} = \\text{Constant}$. This is the law of conservation of the total linear momentum of a system of particles. It implies that when the total external force is zero, the velocity of the centre of mass remains constant. Note that internal forces may change the individual momenta of particles, but they cannot change the total momentum of the system.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.4:4",
+            "order": 4,
+            "title": "Scalar Components of Linear Momentum",
+            "content_text": "The vector equation for the conservation of linear momentum is equivalent to three scalar equations along the Cartesian axes: $P_x = c_1$, $P_y = c_2$, and $P_z = c_3$. Here $P_x, P_y$, and $P_z$ are the components of the total linear momentum vector $\\mathbf{P}$ along the $x$-, $y$-, and $z$-axes respectively, and $c_1, c_2, c_3$ are constants. This implies that if the total external force acting on the system is zero, the centre of mass moves with a constant velocity, moving uniformly in a straight line like a free particle.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.4:5",
+            "order": 5,
+            "title": "Application: Radioactive Decay of a Moving Nucleus",
+            "content_text": "Consider the radioactive decay of a moving unstable particle, such as a radium nucleus. The nucleus disintegrates into a radon nucleus and an alpha particle. Since the forces leading to decay are internal and external forces are negligible, the total linear momentum remains conserved. The two product particles move in different directions such that their centre of mass continues to move along the original path of the radium nucleus. In a frame of reference where the centre of mass is at rest, the product particles fly back to back, keeping the centre of mass stationary.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 6.13",
+                "description": "(a) A heavy radium nucleus splits into radon and an alpha particle with the CM in uniform motion. (b) The same decay viewed from the CM frame where particles fly back to back and CM is at rest.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.4:6",
+            "order": 6,
+            "title": "Application: Binary Star Systems",
+            "content_text": "In astronomy, binary (double) stars are common. If no external forces act, the centre of mass of a double star system moves like a free particle. While the individual trajectories of the stars can look complicated (as shown in Fig. 6.14a), in the centre of mass frame, the two stars move in circular orbits about the stationary centre of mass. The stars remain diametrically opposite to each other in these orbits. Thus, the motion is a combination of uniform linear motion of the CM and circular orbits of the stars about the CM. Separating the motion into 'motion of the CM' and 'motion about the CM' is a powerful technique for understanding complex systems.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 6.14",
+                "description": "(a) Trajectories of two stars S1 and S2 in a binary system with CM in uniform motion. (b) The same system in the CM frame showing circular orbits about a stationary CM.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:6:6.5",
+        "number": "6.5",
+        "title": "Vector Product of Two Vectors",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:6:6.5:1",
+            "order": 1,
+            "title": "Definition of Vector Product",
+            "content_text": "The vector product (or cross product) of two vectors $\\mathbf{a}$ and $\\mathbf{b}$ is a vector $\\mathbf{c}$ defined by: (i) Magnitude $c = ab \\sin \\theta$, where $a$ and $b$ are magnitudes and $\\theta$ is the angle between them ($0 \\le \\theta \\le 180^\\circ$). (ii) $\\mathbf{c}$ is perpendicular to the plane containing $\\mathbf{a}$ and $\\mathbf{b}$. (iii) The direction is determined by the right-handed screw rule: if a right-handed screw is turned from $\\mathbf{a}$ to $\\mathbf{b}$, the tip advances in the direction of $\\mathbf{c}$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 6.15",
+                "description": "(a) The right-handed screw rule showing vector c perpendicular to the plane of a and b. (b) The right-hand palm rule where curled fingers from a to b result in the thumb pointing towards c.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.5:2",
+            "order": 2,
+            "title": "Properties of Vector Product",
+            "content_text": "1. Non-commutativity: The vector product is not commutative, $\\mathbf{a} \\times \\mathbf{b} \\neq \\mathbf{b} \\times \\mathbf{a}$. In fact, $\\mathbf{a} \\times \\mathbf{b} = -(\\mathbf{b} \\times \\mathbf{a})$ because the direction of the cross product reverses when the order of vectors is swapped. 2. Reflection: Under reflection ($x \\to -x, y \\to -y, z \\to -z$), vectors $\\mathbf{a}$ and $\\mathbf{b}$ change sign, but their cross product $\\mathbf{a} \\times \\mathbf{b} \\to (-\\mathbf{a}) \\times (-\\mathbf{b}) = \\mathbf{a} \\times \\mathbf{b}$ does not change sign. 3. Distributivity: The vector product is distributive over addition: $\\mathbf{a} \\times (\\mathbf{b} + \\mathbf{c}) = \\mathbf{a} \\times \\mathbf{b} + \\mathbf{a} \\times \\mathbf{c}$.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.5:3",
+            "order": 3,
+            "title": "Vector Product of Unit Vectors",
+            "content_text": "For the orthogonal unit vectors $\\hat{\\mathbf{i}}, \\hat{\\mathbf{j}}, \\hat{\\mathbf{k}}$: (i) $\\hat{\\mathbf{i}} \\times \\hat{\\mathbf{i}} = \\mathbf{0}, \\hat{\\mathbf{j}} \\times \\hat{\\mathbf{j}} = \\mathbf{0}, \\hat{\\mathbf{k}} \\times \\hat{\\mathbf{k}} = \\mathbf{0}$ because the angle is $0^\\circ$. (ii) $\\hat{\\mathbf{i}} \\times \\hat{\\mathbf{j}} = \\hat{\\mathbf{k}}, \\hat{\\mathbf{j}} \\times \\hat{\\mathbf{k}} = \\hat{\\mathbf{i}}, \\hat{\\mathbf{k}} \\times \\hat{\\mathbf{i}} = \\hat{\\mathbf{j}}$. These follow the cyclic order. If the order is reversed, the sign changes: $\\hat{\\mathbf{j}} \\times \\hat{\\mathbf{i}} = -\\hat{\\mathbf{k}}, \\hat{\\mathbf{k}} \\times \\hat{\\mathbf{j}} = -\\hat{\\mathbf{i}}, \\hat{\\mathbf{i}} \\times \\hat{\\mathbf{k}} = -\\hat{\\mathbf{j}}$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.5:4",
+            "order": 4,
+            "title": "Component Form and Determinant Representation",
+            "content_text": "The vector product of $\\mathbf{a} = a_x\\hat{\\mathbf{i}} + a_y\\hat{\\mathbf{j}} + a_z\\hat{\\mathbf{k}}$ and $\\mathbf{b} = b_x\\hat{\\mathbf{i}} + b_y\\hat{\\mathbf{j}} + b_z\\hat{\\mathbf{k}}$ can be calculated by distributing the product and using unit vector identities. The result is: $\\mathbf{a} \\times \\mathbf{b} = (a_y b_z - a_z b_y)\\hat{\\mathbf{i}} + (a_z b_x - a_x b_z)\\hat{\\mathbf{j}} + (a_x b_y - a_y b_x)\\hat{\\mathbf{k}}$. This is easily remembered in determinant form: $$\\mathbf{a} \\times \\mathbf{b} = \\begin{vmatrix} \\hat{\\mathbf{i}} & \\hat{\\mathbf{j}} & \\hat{\\mathbf{k}} \\\\ a_x & a_y & a_z \\\\ b_x & b_y & b_z \\end{vmatrix}$$",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.5:5",
+            "order": 5,
+            "title": "Worked Example: Scalar and Vector Products",
+            "content_text": "Calculation of dot and cross products for two given vectors using component formulas.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 6.4",
+                "problem": "Find the scalar and vector products of two vectors. $\\mathbf{a} = (3\\hat{\\mathbf{i}} - 4\\hat{\\mathbf{j}} + 5\\hat{\\mathbf{k}})$ and $\\mathbf{b} = (-2\\hat{\\mathbf{i}} + \\hat{\\mathbf{j}} - 3\\hat{\\mathbf{k}})$",
+                "solution": "Scalar product: $\\mathbf{a} \\cdot \\mathbf{b} = (3)(-2) + (-4)(1) + (5)(-3) = -6 - 4 - 15 = -25$. Vector product: $\\mathbf{a} \\times \\mathbf{b} = \\begin{vmatrix} \\hat{\\mathbf{i}} & \\hat{\\mathbf{j}} & \\hat{\\mathbf{k}} \\\\ 3 & -4 & 5 \\\\ -2 & 1 & -3 \\end{vmatrix} = \\hat{\\mathbf{i}}[(-4)(-3) - (5)(1)] - \\hat{\\mathbf{j}}[(3)(-3) - (5)(-2)] + \\hat{\\mathbf{k}}[(3)(1) - (-4)(-2)] = \\hat{\\mathbf{i}}(12-5) - \\hat{\\mathbf{j}}(-9+10) + \\hat{\\mathbf{k}}(3-8) = 7\\hat{\\mathbf{i}} - \\hat{\\mathbf{j}} - 5\\hat{\\mathbf{k}}$. Note that $\\mathbf{b} \\times \\mathbf{a} = -7\\hat{\\mathbf{i}} + \\hat{\\mathbf{j}} + 5\\hat{\\mathbf{k}}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:6:6.6",
+        "number": "6.6",
+        "title": "Angular Velocity and its Relation with Linear Velocity",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:6:6.6:1",
+            "order": 1,
+            "title": "Motion of a Particle in a Rotating Rigid Body",
+            "content_text": "In the rotational motion of a rigid body about a fixed axis, every particle of the body moves in a circle. The center of this circle lies on the axis of rotation. For a typical particle at point P, the circle lies in a plane perpendicular to the axis (taken as the z-axis). The radius of the circle is $r$, the perpendicular distance of P from the axis. For a particle moving in a circle, the average angular velocity over a time interval $\\Delta t$ is given by the ratio $\\Delta\\theta/\\Delta t$, where $\\Delta\\theta$ is the angular displacement. As $\\Delta t$ tends to zero, this ratio approaches a limit which is the instantaneous angular velocity, denoted by the Greek letter omega ($\\omega$). Thus, $\\omega = d\\theta/dt$. In circular motion, the magnitude of linear velocity $v$ is related to the angular velocity $\\omega$ by the simple relation $v = \\omega r$, where $r$ is the radius of the circle.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 6.16",
+                "description": "Rotation of a rigid body about a fixed z-axis. A particle P moves in a circle of radius r with center C on the axis.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.6:2",
+            "order": 2,
+            "title": "Angular Velocity of a Rigid Body",
+            "content_text": "In a rotating rigid body, the relation $v = \\omega r$ applies to every particle. For a particle at a perpendicular distance $r_i$ from the fixed axis, the linear velocity at a given instant is $v_i = \\omega r_i$. For particles located on the axis, $r = 0$, which implies $v = 0$; thus, particles on the axis are stationary, verifying that the axis is fixed. Since all particles of the rigid body share the same angular velocity $\\omega$ at any given instant, we refer to $\\omega$ as the angular velocity of the whole body. Pure rotation is characterized by all parts of the body having the same angular velocity at any instant of time.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.6:3",
+            "order": 3,
+            "title": "Angular Velocity as a Vector",
+            "content_text": "Angular velocity is a vector quantity. For rotation about a fixed axis, the angular velocity vector $\\boldsymbol{\\omega}$ lies along the axis of rotation. Its direction is determined by the right-handed screw rule: if the head of a right-handed screw is rotated with the body, the direction in which the screw advances is the direction of $\\boldsymbol{\\omega}$. If the sense of rotation (clockwise or anticlockwise) changes, the direction of $\\boldsymbol{\\omega}$ also reverses. The magnitude of this vector is $\\omega = d\\theta/dt$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 6.17 (a)",
+                "description": "Illustration of the right-handed screw rule where the screw advances in the direction of the angular velocity vector omega when rotated with the body.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.6:4",
+            "order": 4,
+            "title": "Relation between Linear and Angular Velocity Vectors",
+            "content_text": "The linear velocity $\\mathbf{v}$ of a particle at position $\\mathbf{r}$ is given by the vector product $\\mathbf{v} = \\boldsymbol{\\omega} \\times \\mathbf{r}$. Consider a particle at P with position vector $\\mathbf{r} = \\mathbf{OP}$ relative to origin O on the axis. We can write $\\mathbf{r} = \\mathbf{OC} + \\mathbf{CP}$, where C is the center of the particle's circular path. Then, $\\boldsymbol{\\omega} \\times \\mathbf{r} = \\boldsymbol{\\omega} \\times (\\mathbf{OC} + \\mathbf{CP}) = \\boldsymbol{\\omega} \\times \\mathbf{OC} + \\boldsymbol{\\omega} \\times \\mathbf{CP}$. Since $\\boldsymbol{\\omega}$ is directed along the axis (vector $\\mathbf{OC}$), the term $\\boldsymbol{\\omega} \\times \\mathbf{OC} = 0$. Thus, $\\mathbf{v} = \\boldsymbol{\\omega} \\times \\mathbf{CP}$. The magnitude is $\\omega(CP) = \\omega r_\\perp$, where $r_\\perp$ is the perpendicular distance from the axis. The vector $\\mathbf{v}$ is perpendicular to both $\\boldsymbol{\\omega}$ and $\\mathbf{r}$, pointing along the tangent to the circle.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 6.17 (b)",
+                "description": "Vector diagram showing the angular velocity vector omega along the z-axis, the position vector r from origin O to particle P, and the resulting linear velocity vector v as the cross product of omega and r.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.6:5",
+            "order": 5,
+            "title": "Angular Acceleration",
+            "content_text": "Angular acceleration $\\boldsymbol{\\alpha}$ is defined as the time rate of change of angular velocity: $\\boldsymbol{\\alpha} = \\frac{d\\boldsymbol{\\omega}}{dt}$. For rotation about a fixed axis, the direction of $\\boldsymbol{\\omega}$ is fixed, so $\\boldsymbol{\\alpha}$ also lies along the axis. In this case, the vector equation reduces to the scalar form $\\alpha = \\frac{d\\omega}{dt}$. However, for more general rotation, both the magnitude and direction of $\\boldsymbol{\\omega}$ may change over time, meaning $\\boldsymbol{\\alpha}$ may not be parallel to $\\boldsymbol{\\omega}$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:6:6.7",
+        "number": "6.7",
+        "title": "Torque and Angular Momentum",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:6:6.7:1",
+            "order": 1,
+            "title": "Introduction to Rotational Analogues",
+            "content_text": "In this section, we define torque (moment of force) and angular momentum, which are the rotational analogues of force and linear momentum, respectively. These quantities are defined as vector products and are essential for discussing the motion of systems of particles and rigid bodies.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.7:2",
+            "order": 2,
+            "title": "Moment of Force (Torque)",
+            "content_text": "Torque is the rotational analogue of force. Just as force is required to change the translational state of a body, torque is required to change its rotational state. For a door, a force applied at the hinges produces no rotation, while a force applied at right angles to the outer edge is most effective. This shows that the point of application and the direction of the force are critical. Torque is also referred to as a 'moment of force' or 'couple'.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.7:3",
+            "order": 3,
+            "title": "Mathematical Definition and Properties of Torque",
+            "content_text": "For a particle at position $\\mathbf{r}$ relative to an origin O, with a force $\\mathbf{F}$ acting on it, the torque $\\boldsymbol{\\tau}$ is defined as: $\\boldsymbol{\\tau} = \\mathbf{r} \\times \\mathbf{F}$. The magnitude of torque is $\\tau = r F \\sin \\theta$, where $\\theta$ is the angle between $\\mathbf{r}$ and $\\mathbf{F}$. This can be expressed as $\\tau = r_\\perp F$, where $r_\\perp = r \\sin \\theta$ is the perpendicular distance of the line of action of $\\mathbf{F}$ from the origin (moment arm), or as $\\tau = r F_\\perp$, where $F_\\perp = F \\sin \\theta$ is the component of force perpendicular to the position vector. Torque is a vector perpendicular to the plane of $\\mathbf{r}$ and $\\mathbf{F}$. Its SI unit is newton metre (N m) and its dimensions are $[M L^2 T^{-2}]$. Note that while torque has the same dimensions as work, it is a vector, whereas work is a scalar.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 6.18",
+                "description": "Diagram showing a force F acting on a particle at point P with position vector r. The torque tau is shown as a vector perpendicular to the plane containing r and F, following the right-handed screw rule.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.7:4",
+            "order": 4,
+            "title": "Angular Momentum of a Particle",
+            "content_text": "Angular momentum is the rotational analogue of linear momentum. For a particle of mass $m$ and linear momentum $\\mathbf{p}$ at position $\\mathbf{r}$ relative to origin O, the angular momentum $\\mathbf{l}$ is defined as: $\\mathbf{l} = \\mathbf{r} \\times \\mathbf{p}$. The magnitude is $l = r p \\sin \\theta$, where $\\theta$ is the angle between $\\mathbf{r}$ and $\\mathbf{p}$. It can be written as $l = r p_\\perp$ or $l = r_\\perp p$, where $r_\\perp = r \\sin \\theta$ is the perpendicular distance of the line of action of $\\mathbf{p}$ from the origin. Angular momentum is zero if the linear momentum is zero, if the particle is at the origin ($r=0$), or if the momentum vector passes through the origin ($\\theta = 0^\\circ$ or $180^\\circ$).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.7:5",
+            "order": 5,
+            "title": "Relation between Torque and Angular Momentum for a Particle",
+            "content_text": "The physical quantities, moment of a force (torque) and angular momentum, have an important relation between them, which is the rotational analogue of the relation between force and linear momentum. To derive this for a single particle, we differentiate the angular momentum $\\mathbf{l} = \\mathbf{r} \\times \\mathbf{p}$ with respect to time: $$\\frac{d\\mathbf{l}}{dt} = \\frac{d}{dt}(\\mathbf{r} \\times \\mathbf{p})$$ Applying the product rule for differentiation: $$\\frac{d}{dt}(\\mathbf{r} \\times \\mathbf{p}) = \\frac{d\\mathbf{r}}{dt} \\times \\mathbf{p} + \\mathbf{r} \\times \\frac{d\\mathbf{p}}{dt}$$ Since the velocity of the particle is $\\mathbf{v} = d\\mathbf{r}/dt$ and $\\mathbf{p} = m\\mathbf{v}$, the first term becomes $\\mathbf{v} \\times m\\mathbf{v} = 0$ because the vector product of two parallel vectors vanishes. Further, since $d\\mathbf{p}/dt = \\mathbf{F}$, the second term becomes $\\mathbf{r} \\times \\mathbf{F} = \\boldsymbol{\\tau}$. Thus, we obtain: $$\\frac{d\\mathbf{l}}{dt} = \\boldsymbol{\\tau}$$ This equation states that the time rate of change of the angular momentum of a particle is equal to the torque acting on it. This is the rotational analogue of Newton's second law for translational motion, $\\mathbf{F} = d\\mathbf{p}/dt$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.7:6",
+            "order": 6,
+            "title": "Experiment with the Bicycle Rim",
+            "content_text": "An experiment with a bicycle rim demonstrates the effects of torque and angular momentum. If a bicycle rim is extended with an axle on both sides and tied with two strings at ends A and B, it remains horizontal when held by both strings. If one string is released, the rim tilts. However, if the rim is put into fast rotation around the axle and then one string (say B) is released, the rim does not tilt down. Instead, it keeps rotating in a vertical plane, and the plane of rotation turns around the string A being held. The axis of rotation of the rim (or its angular momentum) precesses about the string A. The rotating rim gives rise to an angular momentum, and the effect of the torque generated is to make it precess around an axis perpendicular to both the angular momentum and the torque.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Bicycle Rim Experiment",
+                "description": "A bicycle rim with an axle held by two strings A and B. Initially, it is held by both. After being set into rotation and releasing string B, the rim precesses around string A instead of falling.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.7:7",
+            "order": 7,
+            "title": "Angular Momentum for a System of Particles",
+            "content_text": "To find the total angular momentum of a system of particles about a given point, we add vectorially the angular momenta of individual particles. For a system of $n$ particles: $$\\mathbf{L} = \\mathbf{l}_1 + \\mathbf{l}_2 + ... + \\mathbf{l}_n = \\sum_{i=1}^{n} \\mathbf{l}_i$$ The angular momentum of the $i^{th}$ particle is $\\mathbf{l}_i = \\mathbf{r}_i \\times \\mathbf{p}_i$, where $\\mathbf{r}_i$ is the position vector of the $i^{th}$ particle and $\\mathbf{p}_i = m_i \\mathbf{v}_i$ is its linear momentum. Thus, the total angular momentum is: $$\\mathbf{L} = \\sum_i \\mathbf{l}_i = \\sum_i \\mathbf{r}_i \\times \\mathbf{p}_i$$ This is a generalisation of the definition of angular momentum for a single particle to a system of particles.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.7:8",
+            "order": 8,
+            "title": "Relation between Total Torque and Total Angular Momentum",
+            "content_text": "Differentiating the total angular momentum $\\mathbf{L}$ with respect to time gives: $$\\frac{d\\mathbf{L}}{dt} = \\frac{d}{dt}(\\sum \\mathbf{l}_i) = \\sum_i \\frac{d\\mathbf{l}_i}{dt} = \\sum_i \\boldsymbol{\\tau}_i$$ where $\\boldsymbol{\\tau}_i$ is the torque acting on the $i^{th}$ particle. The force $\\mathbf{F}_i$ on the $i^{th}$ particle is the sum of external forces $\\mathbf{F}_i^{ext}$ and internal forces $\\mathbf{F}_i^{int}$. Consequently, the total torque is $\\boldsymbol{\\tau} = \\sum \\boldsymbol{\\tau}_i = \\sum \\mathbf{r}_i \\times \\mathbf{F}_i = \\boldsymbol{\\tau}_{ext} + \\boldsymbol{\\tau}_{int}$. Assuming Newton's third law and that internal forces act along the line joining the particles, the torque resulting from each action-reaction pair is zero, making $\\boldsymbol{\\tau}_{int} = 0$. Therefore, $\\boldsymbol{\\tau} = \\boldsymbol{\\tau}_{ext}$, and we get: $$\\frac{d\\mathbf{L}}{dt} = \\boldsymbol{\\tau}_{ext}$$ This means the time rate of change of the total angular momentum of a system of particles about a point is equal to the sum of the external torques acting on the system taken about the same point.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.7:9",
+            "order": 9,
+            "title": "Conservation of Angular Momentum",
+            "content_text": "If the total external torque on a system of particles is zero ($\\boldsymbol{\\tau}_{ext} = 0$), then from the relation $d\\mathbf{L}/dt = \\boldsymbol{\\tau}_{ext}$, it follows that: $$\\frac{d\\mathbf{L}}{dt} = 0 \\implies \\mathbf{L} = \\text{constant}$$ This is the law of conservation of angular momentum. It implies that if the total external torque is zero, the total angular momentum remains constant. This vector equation is equivalent to three scalar equations: $L_x = K_1, L_y = K_2, L_z = K_3$, where $K_1, K_2, K_3$ are constants. This is the rotational analogue of the conservation of linear momentum for a system of particles.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.7:10",
+            "order": 10,
+            "title": "Example 6.5: Calculating Torque",
+            "content_text": "This example demonstrates how to calculate the torque of a force about the origin using the determinant rule for vector products.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 6.5",
+                "problem": "Find the torque of a force $7\\hat{i} + 3\\hat{j} - 5\\hat{k}$ about the origin. The force acts on a particle whose position vector is $\\hat{i} - \\hat{j} + \\hat{k}$.",
+                "solution": "Here $\\mathbf{r} = \\hat{i} - \\hat{j} + \\hat{k}$ and $\\mathbf{F} = 7\\hat{i} + 3\\hat{j} - 5\\hat{k}$. We use the determinant rule to find the torque $\\boldsymbol{\\tau} = \\mathbf{r} \\times \\mathbf{F}$: $$\\boldsymbol{\\tau} = \\begin{vmatrix} \\hat{i} & \\hat{j} & \\hat{k} \\\\ 1 & -1 & 1 \\\\ 7 & 3 & -5 \\end{vmatrix} = (5 - 3)\\hat{i} - (-5 - 7)\\hat{j} + (3 - (-7))\\hat{k}$$ or $\\boldsymbol{\\tau} = 2\\hat{i} + 12\\hat{j} + 10\\hat{k}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.7:11",
+            "order": 11,
+            "title": "Example 6.6: Angular Momentum of a Particle with Constant Velocity",
+            "content_text": "This example proves that the angular momentum of a single particle moving with constant velocity remains constant throughout its motion.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 6.6",
+                "problem": "Show that the angular momentum about any point of a single particle moving with constant velocity remains constant throughout the motion.",
+                "solution": "Let the particle with velocity $\\mathbf{v}$ be at point P at some instant $t$. We want to calculate the angular momentum $\\mathbf{l}$ about an arbitrary point O. The angular momentum is $\\mathbf{l} = \\mathbf{r} \\times m\\mathbf{v}$. Its magnitude is $mvr \\sin \\theta$, where $\\theta$ is the angle between $\\mathbf{r}$ and $\\mathbf{v}$. From the geometry (Fig 6.19), $r \\sin \\theta = OM$, which is the perpendicular distance from the origin to the line of motion. Since the particle moves in a straight line with constant velocity, this distance $OM$ remains constant. The direction of $\\mathbf{l}$ is perpendicular to the plane of $\\mathbf{r}$ and $\\mathbf{v}$ (into the page), which also does not change. Thus, $\\mathbf{l}$ is conserved in both magnitude and direction."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Fig 6.19",
+                "description": "A particle moving along a straight line with velocity v. Point O is the origin. Position vector r connects O to the particle at P. The perpendicular distance from O to the line of motion is OM = r sin theta.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:6:6.8",
+        "number": "6.8",
+        "title": "Equilibrium of a Rigid Body",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:6:6.8:1",
+            "order": 1,
+            "title": "Mechanical Equilibrium",
+            "content_text": "A rigid body is said to be in mechanical equilibrium if both its linear momentum and angular momentum are not changing with time. This means the body has neither linear acceleration nor angular acceleration. This state requires two conditions to be met: (1) the total force (vector sum of all external forces) on the rigid body is zero, and (2) the total torque (vector sum of all external torques) on the rigid body is zero.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.8:2",
+            "order": 2,
+            "title": "Conditions for Equilibrium",
+            "content_text": "The conditions for the mechanical equilibrium of a rigid body are: \n1. Translational Equilibrium: The vector sum of external forces is zero: $$\\mathbf{F}_1 + \\mathbf{F}_2 + ... + \\mathbf{F}_n = \\sum_{i=1}^{n} \\mathbf{F}_i = 0 \\quad (6.30a)$$ \n2. Rotational Equilibrium: The vector sum of external torques is zero: $$\\boldsymbol{\\tau}_1 + \\boldsymbol{\\tau}_2 + ... + \\boldsymbol{\\tau}_n = \\sum_{i=1}^{n} \\boldsymbol{\\tau}_i = 0 \\quad (6.30b)$$ \nIf the translational equilibrium condition holds, the rotational equilibrium condition is independent of the choice of origin about which torques are calculated.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.8:3",
+            "order": 3,
+            "title": "Scalar Equations for Equilibrium",
+            "content_text": "The vector equations for equilibrium are equivalent to six scalar equations. For forces: $$\\sum_{i=1}^{n} F_{ix} = 0, \\sum_{i=1}^{n} F_{iy} = 0, \\sum_{i=1}^{n} F_{iz} = 0 \\quad (6.31a)$$ For torques: $$\\sum_{i=1}^{n} \\tau_{ix} = 0, \\sum_{i=1}^{n} \\tau_{iy} = 0, \\sum_{i=1}^{n} \\tau_{iz} = 0 \\quad (6.31b)$$ where $F_{ix}, F_{iy}, F_{iz}$ are components of force $\\mathbf{F}_i$ and $\\tau_{ix}, \\tau_{iy}, \\tau_{iz}$ are components of torque $\\boldsymbol{\\tau}_i$. These six independent conditions must be satisfied for a rigid body to be in mechanical equilibrium.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.8:4",
+            "order": 4,
+            "title": "Coplanar Forces and Mechanical Equilibrium",
+            "content_text": "In many practical problems, all the forces acting on a rigid body are coplanar (acting in the same plane). For such systems, only three conditions are necessary for mechanical equilibrium. Two of these conditions ensure translational equilibrium: the sum of the force components along any two perpendicular axes in the plane must be zero. The third condition ensures rotational equilibrium: the sum of the torque components along any axis perpendicular to the plane of the forces must be zero.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.8:5",
+            "order": 5,
+            "title": "Comparison with Particle Equilibrium",
+            "content_text": "The equilibrium conditions for a rigid body differ from those for a single particle. Since rotational motion does not apply to a particle, only the conditions for translational equilibrium are relevant. For a particle to be in equilibrium, the vector sum of all forces acting on it must be zero. Because all these forces act on a single point, they are necessarily concurrent. In contrast, forces on a rigid body may be non-concurrent, requiring the additional consideration of rotational equilibrium.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.8:6",
+            "order": 6,
+            "title": "Partial Equilibrium",
+            "content_text": "A rigid body can be in partial equilibrium, meaning it may satisfy the conditions for translational equilibrium but not rotational equilibrium, or vice versa. This occurs when the net force is zero but the net torque is non-zero, or when the net torque is zero but the net force is non-zero.\nConsider a light rod AB of length $2a$ with midpoint C. \n1. **Rotational but not Translational Equilibrium**: If two equal parallel forces $F$ are applied at ends A and B in the same direction (e.g., downwards), the net force is $\\sum F = 2F \\neq 0$. However, the moments about C are equal in magnitude ($aF$) but opposite in sense, resulting in a net torque of zero. The system is in rotational equilibrium but not translational equilibrium.\n2. **Translational but not Rotational Equilibrium**: If the force at B is reversed to act upwards, the net force becomes $F - F = 0$, satisfying translational equilibrium. However, the moments about C now act in the same sense (anticlockwise), resulting in a net torque of $2aF \\neq 0$. The rod undergoes pure rotation without translation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 6.20 (a)",
+                "description": "A light rod AB with midpoint C. Two equal forces F act downwards at both ends A and B, creating translational motion but no rotation about C.",
+                "image_url": null
+              },
+              {
+                "label": "Fig. 6.20 (b)",
+                "description": "The same rod AB where the force at B is reversed to act upwards. The net force is zero, but the forces create a net torque, causing pure rotation.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.8:7",
+            "order": 7,
+            "title": "The Concept of a Couple",
+            "content_text": "A pair of forces of equal magnitude but acting in opposite directions with different lines of action is known as a couple or torque. A couple is unique because it produces rotation without any linear translation, as the net force is always zero.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.8:8",
+            "order": 8,
+            "title": "Applications of Couples",
+            "content_text": "Common examples of couples include: \n1. **Opening a Bottle Lid**: Our fingers apply a couple to the lid to turn it without moving the bottle linearly.\n2. **Compass Needle**: In the Earth's magnetic field, the North and South poles experience equal and opposite forces. Unless the needle is aligned with the field, these forces have different lines of action, forming a couple that rotates the needle.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 6.21 (a)",
+                "description": "Illustration of fingers applying a couple to turn a bottle lid.",
+                "image_url": null
+              },
+              {
+                "label": "Fig. 6.21 (b)",
+                "description": "A compass needle in the Earth's magnetic field showing equal and opposite forces on the poles forming a couple.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.8:9",
+            "order": 9,
+            "title": "Moment of a Couple",
+            "content_text": "The moment of a couple is a vector quantity that is independent of the choice of origin. It is calculated as the vector product of the displacement vector between the points of application of the forces and the force vector itself.",
+            "content_type": "derivation",
+            "worked_examples": [
+              {
+                "label": "Example 6.7",
+                "problem": "Show that moment of a couple does not depend on the point about which you take the moments.",
+                "solution": "Consider a couple where forces $\\vec{F}$ and $-\\vec{F}$ act at points B and A respectively. Let their position vectors relative to an origin O be $\\vec{r}_2$ and $\\vec{r}_1$. The total moment $\\vec{\\tau}$ is the sum of individual moments: $\\vec{\\tau} = \\vec{r}_1 \\times (-\\vec{F}) + \\vec{r}_2 \\times \\vec{F} = (\\vec{r}_2 - \\vec{r}_1) \\times \\vec{F}$. Since $\\vec{r}_1 + \\vec{AB} = \\vec{r}_2$, we have $\\vec{AB} = \\vec{r}_2 - \\vec{r}_1$. Therefore, $\\vec{\\tau} = \\vec{AB} \\times \\vec{F}$. This expression depends only on the relative position of the two points A and B, not on the origin O."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Fig. 6.22",
+                "description": "Vector diagram showing forces F and -F at points B and A with position vectors r2 and r1 from origin O.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:6:6.8.1",
+        "number": "6.8.1",
+        "title": "Principle of moments",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:6:6.8.1:1",
+            "order": 1,
+            "title": "The Lever and Fulcrum",
+            "content_text": "An ideal lever is a light rod (negligible mass) pivoted at a fixed point called the fulcrum. It is a simple machine used to lift loads by applying effort at a different point on the rod.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.8.1:2",
+            "order": 2,
+            "title": "Equilibrium Conditions for a Lever",
+            "content_text": "Consider a lever with a reaction force $R$ at the fulcrum, a load $F_1$ at distance $d_1$, and an effort $F_2$ at distance $d_2$. For translational equilibrium: $R - F_1 - F_2 = 0$. For rotational equilibrium about the fulcrum: $d_1 F_1 - d_2 F_2 = 0$. Here, $d_1$ is the load arm and $d_2$ is the effort arm. Anticlockwise moments are typically taken as positive and clockwise as negative.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 6.23",
+                "description": "A lever AB pivoted at fulcrum O. Load F1 acts at distance d1 and effort F2 acts at distance d2. Reaction force R acts upwards at the fulcrum.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.8.1:3",
+            "order": 3,
+            "title": "Principle of Moments and Mechanical Advantage",
+            "content_text": "The principle of moments for a lever states that in equilibrium: $\\text{load arm} \\times \\text{load} = \\text{effort arm} \\times \\text{effort}$, or $d_1 F_1 = d_2 F_2$. The Mechanical Advantage (M.A.) is defined as the ratio of the load to the effort: $M.A. = \\frac{F_1}{F_2} = \\frac{d_2}{d_1}$. If the effort arm $d_2$ is larger than the load arm $d_1$, the M.A. is greater than one, meaning a small effort can lift a large load. This principle holds even if the forces are not perpendicular to the lever, provided they act at the same angle.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:6:6.8.2",
+        "number": "6.8.2",
+        "title": "Centre of gravity",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:6:6.8.2:1",
+            "order": 1,
+            "title": "Introduction to Centre of Gravity",
+            "content_text": "The centre of gravity (CG) of a body is the point where the entire weight of the body is considered to act. If a body is supported at its CG, it remains in mechanical equilibrium. For example, an irregular cardboard can be balanced on the tip of a pencil if the tip is placed exactly at the cardboard's CG. At this point, the upward reaction force from the pencil cancels the total weight $Mg$, and the net gravitational torque is zero.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 6.24",
+                "description": "An irregular cardboard balanced on a pencil tip at its centre of gravity G.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.8.2:2",
+            "order": 2,
+            "title": "Mathematical Definition of CG",
+            "content_text": "The CG is defined as the point about which the total gravitational torque on the body is zero. If $\\vec{r}_i$ is the position vector of the $i$th particle relative to the CG, the torque due to gravity on that particle is $\\vec{\\tau}_i = \\vec{r}_i \\times m_i \\vec{g}$. The total gravitational torque is: $\\vec{\\tau}_g = \\sum \\vec{\\tau}_i = \\sum \\vec{r}_i \\times m_i \\vec{g} = (\\sum m_i \\vec{r}_i) \\times \\vec{g} = 0$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.8.2:3",
+            "order": 3,
+            "title": "Relation between CG and Centre of Mass",
+            "content_text": "From the torque equation, since $\\vec{g}$ is non-zero, it follows that $\\sum m_i \\vec{r}_i = 0$. This is the condition for the origin to be the centre of mass (CM). Thus, the centre of gravity coincides with the centre of mass in a uniform gravitational field. However, if the body is so large that $\\vec{g}$ varies across its extent, the CG and CM will not coincide.",
+            "content_type": "theorem",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.8.2:4",
+            "order": 4,
+            "title": "Experimental Determination of CG",
+            "content_text": "The CG of an irregular flat body can be found by suspending it from several points. When suspended from a point A, the body will rest such that its CG lies on the vertical line passing through A. By repeating this for another point B, the intersection of the two vertical lines identifies the CG (point G).",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 6.25",
+                "description": "Determining the CG of an irregular shape by finding the intersection of vertical lines of suspension from points A, B, and C.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.8.2:5",
+            "order": 5,
+            "title": "Relationship between Centre of Gravity and Centre of Mass",
+            "content_text": "In free space, for a small body, the acceleration due to gravity $g$ does not vary significantly from one part of the body to another. In such cases, the centre of gravity (CG) and the centre of mass (CM) coincide. However, if the body is so extended that $g$ varies from part to part, the centre of gravity and centre of mass will not coincide. The centre of mass depends only on the distribution of mass of the body, whereas the centre of gravity depends on the gravitational field. For regular, homogeneous objects that are small enough, the method used to find the centre of mass also identifies the centre of gravity.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.8.2:6",
+            "order": 6,
+            "title": "Experimental Determination of CG (Continued)",
+            "content_text": "An irregular shaped body, like a cardboard, can have its CG determined by suspension. If the body is suspended from a point A, the vertical line through A passes through the CG. By marking this vertical line $AA_1$ and then repeating the process from other points like B and C, the intersection of these vertical lines identifies the CG. This method is effective for small bodies where the CG and CM are essentially the same.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 6.25",
+                "description": "A method to determine the CG of an irregular body by suspending it from different points and finding the intersection of vertical lines.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.8.2:7",
+            "order": 7,
+            "title": "Example 6.8: Equilibrium of a Supported Metal Bar",
+            "content_text": "This example demonstrates the application of translational and rotational equilibrium conditions to find reaction forces on a supported bar. For translational equilibrium, the sum of vertical forces (reactions $R_1, R_2$ and weights $W, W_1$) must be zero. For rotational equilibrium, the sum of moments about any point (conveniently the centre of gravity G) must be zero. The moments of $R_2$ and $W_1$ are anticlockwise (positive), while the moment of $R_1$ is clockwise (negative).",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 6.8",
+                "problem": "A metal bar 70 cm long and 4.00 kg in mass supported on two knife-edges placed 10 cm from each end. A 6.00 kg load is suspended at 30 cm from one end. Find the reactions at the knife-edges. (Assume the bar to be of uniform cross section and homogeneous.)",
+                "solution": "Let the rod be AB, knife edges at $K_1$ and $K_2$, CG at G, and load at P. $AB = 70$ cm, $AG = 35$ cm, $AP = 30$ cm, $PG = 5$ cm, $AK_1 = BK_2 = 10$ cm, and $K_1G = K_2G = 25$ cm. $W = 4.00g$ N, $W_1 = 6.00g$ N. For translational equilibrium: $R_1 + R_2 - W_1 - W = 0 \\implies R_1 + R_2 = 10.00g = 98.00$ N. For rotational equilibrium about G: $-R_1(K_1G) + W_1(PG) + R_2(K_2G) = 0 \\implies -0.25 R_1 + 0.05 W_1 + 0.25 R_2 = 0 \\implies R_1 - R_2 = 1.2g = 11.76$ N. Solving the equations: $R_1 = 54.88$ N and $R_2 = 43.12$ N. The reactions are approximately 55 N and 43 N."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Fig. 6.26",
+                "description": "A horizontal rod AB supported by knife-edges K1 and K2. A load W1 is at P, and the rod's weight W is at G. Upward reaction forces R1 and R2 are shown.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.8.2:8",
+            "order": 8,
+            "title": "Example 6.9: Equilibrium of a Leaning Ladder",
+            "content_text": "This example analyzes the forces on a ladder leaning against a frictionless wall. The forces include the weight $W$, floor normal reaction $N$, floor friction $F$, and wall reaction $F_1$. Friction $F$ prevents the ladder from sliding and is directed toward the wall. The resultant floor reaction $F_2$ is the vector sum of $N$ and $F$.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 6.9",
+                "problem": "A 3m long ladder weighing 20 kg leans on a frictionless wall. Its feet rest on the floor 1 m from the wall as shown in Fig. 6.27. Find the reaction forces of the wall and the floor.",
+                "solution": "$AC = 1$ m, $AB = 3$ m. By Pythagoras theorem, $BC = \\sqrt{3^2 - 1^2} = 2\\sqrt{2}$ m. Vertical equilibrium: $N - W = 0 \\implies N = W = 20 \\times 9.8 = 196$ N. Horizontal equilibrium: $F - F_1 = 0$. Rotational equilibrium about A: $F_1(BC) - W(AC/2) = 0 \\implies 2\\sqrt{2} F_1 - (1/2) W = 0 \\implies F_1 = W / (4\\sqrt{2}) = 196 / (4\\sqrt{2}) \\approx 34.6$ N. Thus $F = 34.6$ N. Resultant floor reaction $F_2 = \\sqrt{F^2 + N^2} = \\sqrt{34.6^2 + 196^2} \\approx 199$ N. The angle $\\alpha$ with the horizontal is $\\tan \\alpha = N/F = 4\\sqrt{2}$, so $\\alpha \\approx 80^\\circ$."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Fig. 6.27",
+                "description": "A ladder AB leaning against a wall. Point D is the center of gravity where weight W acts. N and F are floor reactions; F1 is the wall reaction.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:6:6.9",
+        "number": "6.9",
+        "title": "MOMENT OF INERTIA",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:6:6.9:1",
+            "order": 1,
+            "title": "Introduction to Rotational Analogue of Mass",
+            "content_text": "In rotational motion, we seek a parameter that serves as the analogue of mass in linear motion. Mass is a measure of inertia in translational motion; similarly, we define a parameter called the moment of inertia to characterize a rigid body's resistance to changes in its rotational motion about a fixed axis.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.9:2",
+            "order": 2,
+            "title": "Derivation of Rotational Kinetic Energy",
+            "content_text": "Consider a rigid body rotating about a fixed axis with angular velocity $\\omega$. Each particle $i$ of mass $m_i$ at a perpendicular distance $r_i$ from the axis moves with a linear velocity $v_i = r_i \\omega$. The kinetic energy of this particle is $k_i = \\frac{1}{2} m_i v_i^2 = \\frac{1}{2} m_i r_i^2 \\omega^2$. The total kinetic energy $K$ of the body is the sum of the kinetic energies of all particles: $K = \\sum_{i=1}^{n} k_i = \\sum_{i=1}^{n} \\frac{1}{2} m_i r_i^2 \\omega^2$. Since $\\omega$ is the same for all particles, $K = \\frac{1}{2} \\omega^2 (\\sum_{i=1}^{n} m_i r_i^2)$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.9:3",
+            "order": 3,
+            "title": "Definition of Moment of Inertia",
+            "content_text": "The moment of inertia $I$ of a rigid body about a given axis is defined as $I = \\sum_{i=1}^{n} m_i r_i^2$. Using this definition, the kinetic energy of rotation is expressed as $K = \\frac{1}{2} I \\omega^2$. This equation is analogous to the translational kinetic energy $K = \\frac{1}{2} m v^2$, identifying $I$ as the rotational analogue of mass. Unlike mass, $I$ depends on the axis of rotation.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.9:4",
+            "order": 4,
+            "title": "Moment of Inertia of a Thin Ring",
+            "content_text": "Consider a thin ring of radius $R$ and mass $M$ rotating in its own plane around its centre. Every mass element of the ring is at the same distance $R$ from the axis. Thus, the total kinetic energy is $K = \\frac{1}{2} M v^2 = \\frac{1}{2} M R^2 \\omega^2$. Comparing this with $K = \\frac{1}{2} I \\omega^2$, the moment of inertia for the ring is $I = MR^2$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.9:5",
+            "order": 5,
+            "title": "Moment of Inertia of a Light Rod with Two Masses",
+            "content_text": "Consider a light rod of length $l$ with a pair of small masses, each $M/2$, at its ends, rotating about an axis through its centre perpendicular to the rod. Each mass is at a distance $l/2$ from the axis. The moment of inertia is $I = (M/2)(l/2)^2 + (M/2)(l/2)^2 = M l^2 / 4$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 6.28",
+                "description": "A light rod of length l with masses M/2 at each end, rotating about a central axis perpendicular to the rod.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.9:6",
+            "order": 6,
+            "title": "Physical Significance and Factors Affecting Moment of Inertia",
+            "content_text": "The moment of inertia $I$ is a characteristic of the rigid body and the axis about which it rotates. It is independent of the magnitude of the angular velocity. It depends on the mass of the body, its shape, size, and the distribution of mass about the axis of rotation. As the mass of a body resists a change in its state of linear motion, the moment of inertia resists a change in its rotational motion; it is a measure of rotational inertia.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.9:7",
+            "order": 7,
+            "title": "Radius of Gyration",
+            "content_text": "The radius of gyration $k$ of a body about an axis is the distance from the axis at which a point mass, equal to the total mass of the body, would have the same moment of inertia as the body itself. It is defined by the relation $I = Mk^2$, or $k = \\sqrt{I/M}$. For a rod about its midpoint, $k = L/\\sqrt{12}$. For a circular disc about its diameter, $k = R/2$. The radius of gyration is a geometric property of the body and the axis of rotation.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.9:8",
+            "order": 8,
+            "title": "Dimensions, Units, and Applications",
+            "content_text": "The dimensions of moment of inertia are $[ML^2]$ and its SI units are kg m$^2$. A practical application is the flywheel used in engines. A flywheel is a disc with a large moment of inertia that resists sudden changes in rotational speed, ensuring smooth motion and preventing jerky movements in vehicles.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.9:9",
+            "order": 9,
+            "title": "Moments of Inertia of Regular Shaped Bodies",
+            "content_text": "The moment of inertia of a rigid body depends on its mass, its shape and size, and the distribution of mass about the axis of rotation. For regular shaped bodies, the moment of inertia about specific axes can be calculated using integration. Table 6.1 provides the moments of inertia for several common geometries such as rings, rods, discs, cylinders, and spheres about their principal axes.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 6.1",
+                "caption": "Moments of inertia of some regular shaped bodies about specific axes",
+                "headers": [
+                  "Z",
+                  "Body",
+                  "Axis",
+                  "I"
+                ],
+                "rows": [
+                  [
+                    "(1)",
+                    "Thin circular ring, radius $R$",
+                    "Perpendicular to plane, at centre",
+                    "$MR^2$"
+                  ],
+                  [
+                    "(2)",
+                    "Thin circular ring, radius $R$",
+                    "Diameter",
+                    "$MR^2/2$"
+                  ],
+                  [
+                    "(3)",
+                    "Thin rod, length $L$",
+                    "Perpendicular to rod, at mid point",
+                    "$ML^2/12$"
+                  ],
+                  [
+                    "(4)",
+                    "Circular disc, radius $R$",
+                    "Perpendicular to disc at centre",
+                    "$MR^2/2$"
+                  ],
+                  [
+                    "(5)",
+                    "Circular disc, radius $R$",
+                    "Diameter",
+                    "$MR^2/4$"
+                  ],
+                  [
+                    "(6)",
+                    "Hollow cylinder, radius $R$",
+                    "Axis of cylinder",
+                    "$MR^2$"
+                  ],
+                  [
+                    "(7)",
+                    "Solid cylinder, radius $R$",
+                    "Axis of cylinder",
+                    "$MR^2/2$"
+                  ],
+                  [
+                    "(8)",
+                    "Solid sphere, radius $R$",
+                    "Diameter",
+                    "$2MR^2/5$"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:6:6.10",
+        "number": "6.10",
+        "title": "KINEMATICS OF ROTATIONAL MOTION ABOUT A FIXED AXIS",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:6:6.10:1",
+            "order": 1,
+            "title": "Analogy between Rotational and Translational Kinematics",
+            "content_text": "There is a direct analogy between rotational motion about a fixed axis and translational motion. In rotation about a fixed axis, there is only one degree of freedom, meaning only one independent variable is needed to describe the motion. This corresponds to linear motion in one dimension. The angular velocity $\\omega$ plays the same role in rotation as the linear velocity $v$ plays in translation. Similarly, angular acceleration $\\alpha$ is analogous to linear acceleration $a$, and angular displacement $\\theta$ is analogous to linear displacement $x$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.10:2",
+            "order": 2,
+            "title": "Specifying Angular Position",
+            "content_text": "To specify the angular displacement of a rotating body, we consider a particle $P$ in the body. Its angular displacement $\\theta$ in the plane it moves is the angular displacement of the whole body. $\\theta$ is measured from a fixed direction in the plane of motion of $P$, typically taken as the $x'$-axis, chosen parallel to the $x$-axis. The axis of rotation is the $z$-axis, and the plane of motion is the $x-y$ plane. The angular displacement at $t=0$ is denoted as $\\theta_0$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 6.29",
+                "description": "A diagram showing a rigid body rotating about the z-axis. It illustrates the angular position of a particle P at time t, denoted by angle theta, and its initial position P0 at t=0, denoted by angle theta_0. The coordinate system shows x, y, and z axes with the rotation occurring in the x-y plane.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.10:3",
+            "order": 3,
+            "title": "Kinematic Equations for Rotational Motion",
+            "content_text": "For rotational motion with uniform angular acceleration ($\\alpha = \\text{constant}$), the kinematic equations are analogous to those for linear motion with uniform acceleration. The linear equations are:\n(a) $v = v_0 + at$\n(b) $x = x_0 + v_0t + \\frac{1}{2}at^2$\n(c) $v^2 = v_0^2 + 2ax$\n\nThe corresponding rotational equations are:\n$$\\omega = \\omega_0 + \\alpha t \\quad (6.36)$$\n$$\\theta = \\theta_0 + \\omega_0 t + \\frac{1}{2}\\alpha t^2 \\quad (6.37)$$\n$$\\omega^2 = \\omega_0^2 + 2\\alpha(\\theta - \\theta_0) \\quad (6.38)$$\nwhere $\\theta_0$ is the initial angular displacement and $\\omega_0$ is the initial angular velocity.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.10:4",
+            "order": 4,
+            "title": "Derivation of First Kinematic Equation",
+            "content_text": "To obtain the equation $\\omega = \\omega_0 + \\alpha t$ from first principles, we start with the definition of uniform angular acceleration:\n$$\\frac{d\\omega}{dt} = \\alpha = \\text{constant} \\quad (i)$$\nIntegrating this equation with respect to time:\n$$\\omega = \\int \\alpha dt + c = \\alpha t + c$$\nAt $t = 0$, $\\omega = \\omega_0$ (given). Substituting these values into the equation:\n$$\\omega_0 = \\alpha(0) + c \\implies c = \\omega_0$$\nThus, $\\omega = \\omega_0 + \\alpha t$.",
+            "content_type": "derivation",
+            "worked_examples": [
+              {
+                "label": "Example 6.10",
+                "problem": "Obtain Eq. (6.36) from first principles.",
+                "solution": "The angular acceleration is uniform, hence $\\frac{d\\omega}{dt} = \\alpha = \\text{constant}$. Integrating this equation, $\\omega = \\int \\alpha dt + c = \\alpha t + c$ (as $\\alpha$ is constant). At $t = 0$, $\\omega = \\omega_0$ (given). From the equation we get at $t = 0$, $\\omega = c = \\omega_0$. Thus, $\\omega = \\omega_0 + \\alpha t$ as required."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.10:5",
+            "order": 5,
+            "title": "Numerical Application of Rotational Kinematics",
+            "content_text": "This subsection demonstrates the application of rotational kinematic equations to find angular acceleration and displacement for a motor wheel.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 6.11",
+                "problem": "The angular speed of a motor wheel is increased from 1200 rpm to 3120 rpm in 16 seconds. (i) What is its angular acceleration, assuming the acceleration to be uniform? (ii) How many revolutions does the engine make during this time?",
+                "solution": "(i) We use $\\omega = \\omega_0 + \\alpha t$. Initial angular speed $\\omega_0 = 1200 \\text{ rpm} = \\frac{2\\pi \\times 1200}{60} \\text{ rad/s} = 40\\pi \\text{ rad/s}$. Final angular speed $\\omega = 3120 \\text{ rpm} = \\frac{2\\pi \\times 3120}{60} \\text{ rad/s} = 104\\pi \\text{ rad/s}$. Time $t = 16 \\text{ s}$. Angular acceleration $\\alpha = \\frac{\\omega - \\omega_0}{t} = \\frac{104\\pi - 40\\pi}{16} = \\frac{64\\pi}{16} = 4\\pi \\text{ rad/s}^2$. (ii) Angular displacement $\\theta = \\omega_0 t + \\frac{1}{2}\\alpha t^2 = (40\\pi \\times 16 + \\frac{1}{2} \\times 4\\pi \\times 16^2) \\text{ rad} = (640\\pi + 512\\pi) \\text{ rad} = 1152\\pi \\text{ rad}$. Number of revolutions $= \\frac{\\theta}{2\\pi} = \\frac{1152\\pi}{2\\pi} = 576$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:6:6.11",
+        "number": "6.11",
+        "title": "DYNAMICS OF ROTATIONAL MOTION ABOUT A FIXED AXIS",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:6:6.11:1",
+            "order": 1,
+            "title": "Analogues in Rotational Dynamics",
+            "content_text": "In rotational motion, moment of inertia and torque play the same roles as mass and force, respectively, in linear motion. For example, work done in linear motion is given by $F dx$. By analogy, work done in rotational motion about a fixed axis should be $\\tau d\\theta$, where $\\tau$ is the torque and $d\\theta$ is the angular displacement. This follows the correspondence $dx \\to d\\theta$ and $F \\to \\tau$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.11:2",
+            "order": 2,
+            "title": "Simplification for Fixed Axis Rotation",
+            "content_text": "When considering rotation about a fixed axis, only those components of torques which are along the direction of the fixed axis need to be considered. Components of torque perpendicular to the axis would tend to turn the axis from its position. We assume necessary forces of constraint exist to cancel these perpendicular components, maintaining the fixed position of the axis. Therefore, only forces in planes perpendicular to the axis (which give torques parallel to the axis) and components of position vectors perpendicular to the axis are relevant for calculating torque on the rigid body.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.11:3",
+            "order": 3,
+            "title": "Work Done by a Torque",
+            "content_text": "Consider a force $\\mathbf{F}_1$ acting on a particle $P_1$ of a body rotating about a fixed axis (z-axis). The particle describes a circular path with centre $C$ on the axis and radius $r_1$. In a small time interval, the particle moves from $P_1$ to $P_1'$, with a displacement $ds_1 = r_1 d\\theta$. The work done by the force is $dW = \\mathbf{F}_1 \\cdot d\\mathbf{s}_1$. In a small time interval, the particle moves from $P_1$ to $P_1'$, with a displacement $ds_1 = r_1 d\\theta$. The work done by the force is $dW = \\mathbf{F}_1 \\cdot d\\mathbf{s}_1$. Figure 6.30 shows a cross-section of a rigid body rotating about a fixed axis (z-axis). We consider forces $\\mathbf{F}_1$ acting in planes perpendicular to the axis. The displacement $d\\mathbf{s}_1$ is tangential at $P_1$. The work done is $dW_1 = \\mathbf{F}_1 \\cdot d\\mathbf{s}_1 = F_1 ds_1 \\cos \\phi_1 = F_1 (r_1 d\\theta) \\sin \\alpha_1$, where $\\phi_1$ is the angle between $\\mathbf{F}_1$ and the tangent, and $\\alpha_1$ is the angle between $\\mathbf{F}_1$ and the radius vector $\\mathbf{OP}_1$. Since $\\phi_1 + \\alpha_1 = 90^\\circ$, $\\cos \\phi_1 = \\sin \\alpha_1$. The effective torque due to $\\mathbf{F}_1$ is $\\tau_1 = r_1 F_1 \\sin \\alpha_1$, directed along the axis. Thus, $dW_1 = \\tau_1 d\\theta$. For multiple forces, the total work is $dW = (\\tau_1 + \\tau_2 + ...) d\\theta = \\tau d\\theta$, where $\\tau$ is the total external torque. Table 6.2 provides a comparison of translational and rotational motion variables.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 6.30",
+                "description": "A diagram illustrating the work done by a force F1 acting on a particle P1 of a body rotating about a fixed axis. The particle moves along a circular arc of radius r1 from P1 to P1' through an angular displacement d_theta. The displacement vector ds1 and the angle alpha1 between the force and the tangent are shown.",
+                "image_url": null
+              }
+            ],
+            "tables": [
+              {
+                "label": "Table 6.2",
+                "caption": "Comparison of Translational and Rotational Motion",
+                "headers": [
+                  "No.",
+                  "Linear Motion",
+                  "Rotational Motion about a Fixed Axis"
+                ],
+                "rows": [
+                  [
+                    "1",
+                    "Displacement $x$",
+                    "Angular displacement $\\theta$"
+                  ],
+                  [
+                    "2",
+                    "Velocity $v = dx/dt$",
+                    "Angular velocity $\\omega = d\\theta/dt$"
+                  ],
+                  [
+                    "3",
+                    "Acceleration $a = dv/dt$",
+                    "Angular acceleration $\\alpha = d\\omega/dt$"
+                  ],
+                  [
+                    "4",
+                    "Mass $M$",
+                    "Moment of inertia $I$"
+                  ],
+                  [
+                    "5",
+                    "Force $F = Ma$",
+                    "Torque $\\tau = I \\alpha$"
+                  ],
+                  [
+                    "6",
+                    "Work $dW = F ds$",
+                    "Work $W = \\tau d\\theta$"
+                  ],
+                  [
+                    "7",
+                    "Kinetic energy $K = Mv^2/2$",
+                    "Kinetic energy $K = I\\omega^2/2$"
+                  ],
+                  [
+                    "8",
+                    "Power $P = F v$",
+                    "Power $P = \\tau \\omega$"
+                  ],
+                  [
+                    "9",
+                    "Linear momentum $p = Mv$",
+                    "Angular momentum $L = I\\omega$"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:physics:11:6:6.11:4",
+            "order": 4,
+            "title": "Power in Rotational Motion",
+            "content_text": "The instantaneous power $P$ is the rate at which work is done. Dividing the work expression $dW = \\tau d\\theta$ by $dt$, we get $P = \\frac{dW}{dt} = \\tau \\frac{d\\theta}{dt} = \\tau \\omega$. This expression $P = \\tau \\omega$ for rotational motion is analogous to $P = F v$ for linear motion. In a perfectly rigid body, there is no internal motion, so work done by external torques is not dissipated and goes to increase the kinetic energy of the body.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.11:5",
+            "order": 5,
+            "title": "Newton's Second Law for Rotational Motion",
+            "content_text": "The rate of work done is $P = \\tau \\omega$. The rate of increase of kinetic energy is $\\frac{d}{dt}(\\frac{1}{2} I \\omega^2)$. Assuming the moment of inertia $I$ does not change with time (rigid body and fixed axis), $\\frac{d}{dt}(\\frac{1}{2} I \\omega^2) = I \\frac{(2\\omega)}{2} \\frac{d\\omega}{dt} = I \\omega \\alpha$. Equating the rate of work done to the rate of increase in kinetic energy, $\\tau \\omega = I \\omega \\alpha$, which gives $\\tau = I \\alpha$. This is the rotational analogue of Newton's second law $F = ma$. Torque produces angular acceleration $\\alpha$, which is directly proportional to the applied torque and inversely proportional to the moment of inertia $I$.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.11:6",
+            "order": 6,
+            "title": "Example 6.12: Flywheel Dynamics",
+            "content_text": "This example demonstrates the application of torque, moment of inertia, and the work-energy theorem to a rotating flywheel. It calculates angular acceleration, work done by a pulling force, and the resulting kinetic energy, showing that work done equals the energy gained.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 6.12",
+                "problem": "A cord of negligible mass is wound round the rim of a fly wheel of mass 20 kg and radius 20 cm. A steady pull of 25 N is applied on the cord as shown in Fig. 6.31. The flywheel is mounted on a horizontal axle with frictionless bearings. (a) Compute the angular acceleration of the wheel. (b) Find the work done by the pull, when 2m of the cord is unwound. (c) Find also the kinetic energy of the wheel at this point. Assume that the wheel starts from rest. (d) Compare answers to parts (b) and (c).",
+                "solution": "(a) Torque $\\tau = F \\times R = 25 \\text{ N} \\times 0.20 \\text{ m} = 5.0 \\text{ Nm}$. Moment of inertia $I = \\frac{MR^2}{2} = \\frac{20.0 \\times (0.2)^2}{2} = 0.4 \\text{ kg m}^2$. Angular acceleration $\\alpha = \\tau / I = 5.0 \\text{ Nm} / 0.4 \\text{ kg m}^2 = 12.5 \\text{ s}^{-2}$. (b) Work done $W = F \\times d = 25 \\text{ N} \\times 2 \\text{ m} = 50 \\text{ J}$. (c) Angular displacement $\\theta = \\text{length of unwound string} / \\text{radius} = 2 \\text{ m} / 0.2 \\text{ m} = 10 \\text{ rad}$. Final angular velocity $\\omega^2 = \\omega_0^2 + 2\\alpha\\theta = 0 + 2 \\times 12.5 \\times 10 = 250 \\text{ (rad/s)}^2$. Kinetic energy gained $K.E. = \\frac{1}{2} I \\omega^2 = \\frac{1}{2} \\times 0.4 \\times 250 = 50 \\text{ J}$. (d) The work done by the pull (50 J) is equal to the kinetic energy gained by the wheel (50 J). There is no loss of energy due to friction."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Fig. 6.31",
+                "description": "A flywheel of mass M and radius R with a cord wound around its rim. A force F is applied to the cord, causing the flywheel to rotate about its horizontal axle.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:6:6.12",
+        "number": "6.12",
+        "title": "ANGULAR MOMENTUM IN CASE OF ROTATION ABOUT A FIXED AXIS",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:6:6.12:1",
+            "order": 1,
+            "title": "Angular Momentum of a System of Particles",
+            "content_text": "The total angular momentum $\\mathbf{L}$ of a system of $n$ particles is the vector sum of the angular momenta of individual particles: $\\mathbf{L} = \\sum_{i=1}^N \\mathbf{r}_i \\times \\mathbf{p}_i$. For a rigid body rotating about a fixed axis, we analyze the contribution of a typical particle. The position vector $\\mathbf{r}$ can be expressed as $\\mathbf{r} = \\mathbf{OC} + \\mathbf{CP}$, where $C$ is the center of the particle's circular path on the axis. The velocity $\\mathbf{v}$ is tangential to the circle and perpendicular to both the axis and the radius vector $\\mathbf{CP}$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.12:2",
+            "order": 2,
+            "title": "Vector Analysis of Angular Momentum for a Particle",
+            "content_text": "The angular momentum of a particle is $\\mathbf{l} = \\mathbf{r} \\times m\\mathbf{v} = (\\mathbf{OC} \\times m\\mathbf{v}) + (\\mathbf{CP} \\times m\\mathbf{v})$. The term $\\mathbf{CP} \\times m\\mathbf{v}$ is parallel to the fixed axis (z-axis) and has magnitude $m r_\\perp^2 \\omega$, where $r_\\perp$ is the perpendicular distance from the axis. We denote this component as $\\mathbf{l}_z = m r_\\perp^2 \\omega \\mathbf{\\hat{k}}$. The term $\\mathbf{OC} \\times m\\mathbf{v}$ is perpendicular to the axis. Thus, $\\mathbf{l} = \\mathbf{l}_z + \\mathbf{OC} \\times m\\mathbf{v}$. Note that $\\mathbf{l}$ is not necessarily parallel to the axis of rotation, unlike linear momentum $\\mathbf{p}$ which is always parallel to velocity $\\mathbf{v}$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.12:3",
+            "order": 3,
+            "title": "Total Angular Momentum and its Components",
+            "content_text": "Summing over all particles, the total angular momentum is $\\mathbf{L} = \\mathbf{L}_z + \\mathbf{L}_\\perp$, where $\\mathbf{L}_z = (\\sum m_i r_i^2) \\omega \\mathbf{\\hat{k}} = I \\omega \\mathbf{\\hat{k}}$ and $\\mathbf{L}_\\perp = \\sum \\mathbf{OC}_i \\times m_i \\mathbf{v}_i$. The component $\\mathbf{L}_z$ is the part of the total angular momentum along the fixed axis of rotation, and its magnitude is the product of the moment of inertia $I$ and the angular velocity",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:6.12:4",
+            "order": 4,
+            "title": "Components of Torque and Angular Momentum",
+            "content_text": "When discussing rotation about a fixed axis, only the components of external torques along the axis of rotation are considered. We can represent the external torque as $\\boldsymbol{\\tau} = \\tau \\hat{\\mathbf{k}}$. The total angular momentum $\\mathbf{L}$ is composed of a component along the axis $\\mathbf{L}_z$ and a perpendicular component $\\mathbf{L}_\\perp$. Since the direction of $\\mathbf{L}_z$ (along $\\hat{\\mathbf{k}}$) is fixed for rotation about a fixed axis, the equations of motion are:\n$$\\frac{d\\mathbf{L}_z}{dt} = \\tau \\hat{\\mathbf{k}} \\quad (6.43a)$$\nand\n$$\\frac{d\\mathbf{L}_\\perp}{dt} = 0 \\quad (6.43b)$$\nThis implies that for rotation about a fixed axis, the component of angular momentum perpendicular to the fixed axis remains constant. Given that $\\mathbf{L}_z = I\\omega \\hat{\\mathbf{k}}$, substituting into Eq. (6.43a) yields:\n$$\\frac{d}{dt}(I\\omega) = \\tau \\quad (6.43c)$$\nIf the moment of inertia $I$ is constant over time, the equation simplifies to:\n$$\\frac{d}{dt}(I\\omega) = I \\frac{d\\omega}{dt} = I\\alpha$$\nThus, $\\tau = I\\alpha$ (Eq. 6.41), which is the rotational analogue of Newton's second law ($F = ma$).",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:6:Summary",
+        "number": "Summary",
+        "title": "Summary of Systems of Particles and Rotational Motion",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:6:Summary:1",
+            "order": 1,
+            "title": "Rigid Body Kinematics and Vector Products",
+            "content_text": "A rigid body is defined as one where the distances between its constituent particles remain unchanged despite external forces. When fixed at a point or along a line, it undergoes rotational motion; otherwise, it may exhibit pure translation or a combination of translation and rotation. In rotation about a fixed axis, every particle moves in a circle perpendicular to the axis with its center on the axis, and all particles share the same angular velocity $\\omega$ at any given time. The angular velocity $\\boldsymbol{\\omega}$ is a vector with magnitude $\\omega = d\\theta/dt$ directed along the axis of rotation. The vector product $\\mathbf{a} \\times \\mathbf{b}$ results in a vector of magnitude $ab \\sin \\theta$, with a direction determined by the right-hand screw rule. The linear velocity of a particle in a rotating rigid body is given by $\\mathbf{v} = \\boldsymbol{\\omega} \\times \\mathbf{r}$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:Summary:2",
+            "order": 2,
+            "title": "Centre of Mass and System Dynamics",
+            "content_text": "The centre of mass (CM) of a system of $n$ particles is the point whose position vector is $\\mathbf{R} = \\frac{\\sum m_i \\mathbf{r}_i}{M}$. The velocity of the CM is $\\mathbf{V} = \\mathbf{P}/M$, where $\\mathbf{P}$ is the total linear momentum. The CM moves as if the entire mass of the system were concentrated there and all external forces were applied to it. If the net external force is zero, the total linear momentum is conserved. The total angular momentum of the system is $\\mathbf{L} = \\sum \\mathbf{r}_i \\times \\mathbf{p}_i$, and the total torque is $\\boldsymbol{\\tau} = \\sum \\mathbf{r}_i \\times \\mathbf{F}_i$. The fundamental dynamic equation for rotation is $\\frac{d\\mathbf{L}}{dt} = \\boldsymbol{\\tau}_{ext}$, where internal torques cancel out due to Newton's third law.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:Summary:3",
+            "order": 3,
+            "title": "Equilibrium, Moment of Inertia, and Rotational Energy",
+            "content_text": "A rigid body is in mechanical equilibrium if it satisfies two conditions: (1) Translational equilibrium, where the sum of external forces is zero ($\\sum \\mathbf{F}_i = \\mathbf{0}$), and (2) Rotational equilibrium, where the sum of external torques is zero ($\\sum \\boldsymbol{\\tau}_i = \\mathbf{0}$). The centre of gravity is the point where the net gravitational torque on the body is zero. The moment of inertia $I$ about an axis is defined as $I = \\sum m_i r_i^2$, where $r_i$ is the perpendicular distance of the $i$-th particle from the axis. The kinetic energy of rotation is given by $K = \\frac{1}{2} I \\omega^2$. The following table summarizes key rotational quantities:",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 6.1",
+                "caption": "Rotational Motion Quantities",
+                "headers": [
+                  "Quantity",
+                  "Symbols",
+                  "Dimensions",
+                  "Units",
+                  "Remarks"
+                ],
+                "rows": [
+                  [
+                    "Angular velocity",
+                    "$\\omega$",
+                    "$[T^{-1}]$",
+                    "rad $s^{-1}$",
+                    "$v = \\omega \\times r$"
+                  ],
+                  [
+                    "Angular momentum",
+                    "$L$",
+                    "$[ML^2 T^{-1}]$",
+                    "J s",
+                    "$L = r \\times p$"
+                  ],
+                  [
+                    "Torque",
+                    "$\\boldsymbol{\\tau}$",
+                    "$[ML^2 T^{-2}]$",
+                    "N m",
+                    "$\\boldsymbol{\\tau} = r \\times F$"
+                  ],
+                  [
+                    "Moment of inertia",
+                    "$I$",
+                    "$[ML^2]$",
+                    "kg $m^2$",
+                    "$I = \\sum m_i r_i^2$"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:6:Points to Ponder",
+        "number": "Points to Ponder",
+        "title": "Conceptual Nuances in Rotational Motion",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:6:Points to Ponder:1",
+            "order": 1,
+            "title": "Advanced Concepts and Clarifications",
+            "content_text": "1. Determining the motion of the centre of mass requires only knowledge of external forces; internal forces are irrelevant for CM translation. 2. The total kinetic energy of a system can be separated into the kinetic energy of the centre of mass translation and the kinetic energy of motion relative to the centre of mass: $K = K' + \\frac{1}{2} MV^2$. 3. Newton's Second Law for finite bodies is derived from the laws governing individual particles. 4. The rate of change of total angular momentum depends solely on the total external torque. 5. The conditions for zero external force and zero external torque are independent; one can exist without the other (e.g., in a couple, net force is zero but torque is non-zero). 6. If the total external force is zero, the total torque is independent of the choice of origin. 7. The centre of gravity coincides with the centre of mass only if the gravitational field is uniform across the body.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:6:Points to Ponder:2",
+            "order": 2,
+            "title": "8. Relationship between Angular Momentum and Angular Velocity",
+            "content_text": "The angular momentum $\\mathbf{L}$ and the angular velocity $\\boldsymbol{\\omega}$ are not necessarily parallel vectors. However, for the simpler situations discussed in this chapter when rotation is about a fixed axis which is an axis of symmetry of the rigid body, the relation $\\mathbf{L} = I\\boldsymbol{\\omega}$ holds good, where $I$ is the moment of inertia of the body about the rotation axis. This relationship is crucial for understanding the dynamics of symmetric rigid bodies rotating about their symmetry axes.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 6.33",
+                "description": "A non-uniform bar of length 2 m is suspended horizontally by two strings. The string at the left end makes an angle of $36.9^\\circ$ with the vertical. The string at the right end makes an angle of $53.1^\\circ$ with the vertical. The weight $W$ of the bar acts vertically downwards at a distance $d$ from the left end.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:physics:11:6:ex:1",
+          "number": 1,
+          "problem": "6.1 Give the location of the centre of mass of a (i) sphere, (ii) cylinder, (iii) ring, and (iv) cube, each of uniform mass density. Does the centre of mass of a body necessarily lie inside the body?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:6:ex:2",
+          "number": 2,
+          "problem": "6.2 In the HCl molecule, the separation between the nuclei of the two atoms is about $1.27 \\text{ \\AA}$ ($1 \\text{ \\AA} = 10^{-10} \\text{ m}$). Find the approximate location of the CM of the molecule, given that a chlorine atom is about 35.5 times as massive as a hydrogen atom and nearly all the mass of an atom is concentrated in its nucleus.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:6:ex:3",
+          "number": 3,
+          "problem": "6.3 A child sits stationary at one end of a long trolley moving uniformly with a speed $V$ on a smooth horizontal floor. If the child gets up and runs about on the trolley in any manner, what is the speed of the CM of the (trolley + child) system?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:6:ex:4",
+          "number": 4,
+          "problem": "6.4 Show that the area of the triangle contained between the vectors $\\mathbf{a}$ and $\\mathbf{b}$ is one half of the magnitude of $\\mathbf{a} \\times \\mathbf{b}$.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "derivation"
+        },
+        {
+          "id": "ncert:physics:11:6:ex:5",
+          "number": 5,
+          "problem": "6.5 Show that $\\mathbf{a} \\cdot (\\mathbf{b} \\times \\mathbf{c})$ is equal in magnitude to the volume of the parallelepiped formed on the three vectors $\\mathbf{a}$, $\\mathbf{b}$ and $\\mathbf{c}$.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "derivation"
+        },
+        {
+          "id": "ncert:physics:11:6:ex:6",
+          "number": 6,
+          "problem": "6.6 Find the components along the $x, y, z$ axes of the angular momentum $\\mathbf{l}$ of a particle, whose position vector is $\\mathbf{r}$ with components $x, y, z$ and momentum is $\\mathbf{p}$ with components $p_x, p_y$ and $p_z$. Show that if the particle moves only in the $x$-$y$ plane the angular momentum has only a $z$-component.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "derivation"
+        },
+        {
+          "id": "ncert:physics:11:6:ex:7",
+          "number": 7,
+          "problem": "6.7 Two particles, each of mass $m$ and speed $v$, travel in opposite directions along parallel lines separated by a distance $d$. Show that the angular momentum vector of the two particle system is the same whatever be the point about which the angular momentum is taken.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "derivation"
+        },
+        {
+          "id": "ncert:physics:11:6:ex:8",
+          "number": 8,
+          "problem": "6.8 A non-uniform bar of weight $W$ is suspended at rest by two strings of negligible weight as shown in Fig. 6.33. The angles made by the strings with the vertical are $36.9^\\circ$ and $53.1^\\circ$ respectively. The bar is 2 m long. Calculate the distance $d$ of the centre of gravity of the bar from its left end.",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:6:ex:9",
+          "number": 9,
+          "problem": "6.9 A car weighs 1800 kg. The distance between its front and back axles is 1.8 m. Its centre of gravity is 1.05 m behind the front axle. Determine the force exerted by the level ground on each front wheel and each back wheel.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:6:ex:10",
+          "number": 10,
+          "problem": "6.10 Torques of equal magnitude are applied to a hollow cylinder and a solid sphere, both having the same mass and radius. The cylinder is free to rotate about its standard axis of symmetry, and the sphere is free to rotate about an axis passing through its centre. Which of the two will acquire a greater angular speed after a given time.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:6:ex:11",
+          "number": 11,
+          "problem": "6.11 A solid cylinder of mass 20 kg rotates about its axis with angular speed $100 \\text{ rad s}^{-1}$. The radius of the cylinder is 0.25 m. What is the kinetic energy associated with the rotation of the cylinder? What is the magnitude of angular momentum of the cylinder about its axis?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:6:ex:12",
+          "number": 12,
+          "problem": "6.12 (a) A child stands at the centre of a turntable with his two arms outstretched. The turntable is set rotating with an angular speed of $40 \\text{ rev/min}$. How much is the angular speed of the child if he folds his hands back and thereby reduces his moment of inertia to $2/5$ times the initial value? Assume that the turntable rotates without friction. (b) Show that the child's new kinetic energy of rotation is more than the initial kinetic energy of rotation. How do you account for this increase in kinetic energy?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:6:ex:13",
+          "number": 13,
+          "problem": "6.13 A rope of negligible mass is wound round a hollow cylinder of mass 3 kg and radius 40 cm. What is the angular acceleration of the cylinder if the rope is pulled with a force of 30 N? What is the linear acceleration of the rope? Assume that there is no slipping.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:6:ex:14",
+          "number": 14,
+          "problem": "6.14 To maintain a rotor at a uniform angular speed of $200 \\text{ rad s}^{-1}$, an engine needs to transmit a torque of 180 N m. What is the power required by the engine? (Note: uniform angular velocity in the absence of friction implies zero torque. In practice, applied torque is needed to counter frictional torque). Assume that the engine is 100% efficient.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:6:ex:15",
+          "number": 15,
+          "problem": "6.15 From a uniform disk of radius $R$, a circular hole of radius $R/2$ is cut out. The centre of the hole is at $R/2$ from the centre of the original disc. Locate the centre of gravity of the resulting flat body.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:6:ex:16",
+          "number": 16,
+          "problem": "6.16 A metre stick is balanced on a knife edge at its centre. When two coins, each of mass 5 g are put one on top of the other at the 12.0 cm mark, the stick is found to be balanced at 45.0 cm. What is the mass of the metre stick?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:6:ex:17",
+          "number": 17,
+          "problem": "6.17 The oxygen molecule has a mass of $5.30 \\times 10^{-26} \\text{ kg}$ and a moment of inertia of $1.94 \\times 10^{-46} \\text{ kg m}^2$ about an axis through its centre perpendicular to the lines joining the two atoms. Suppose the mean speed of such a molecule in a gas is 500 m/s and that its kinetic energy of rotation is two thirds of its kinetic energy of translation. Find the average angular velocity of the molecule.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        }
+      ]
+    }
+  }
+}

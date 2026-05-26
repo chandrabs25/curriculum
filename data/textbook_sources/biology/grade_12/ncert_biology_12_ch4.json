@@ -1,0 +1,1280 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_biology_12_ch4.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:biology:12:4",
+  "curriculum": "ncert",
+  "subject": "biology",
+  "grade": 12,
+  "textbook_name": "Biology",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:biology:12:4",
+    "number": 4,
+    "title": "Principles of Inheritance and Variation",
+    "summary": "This chapter, \"Principles of Inheritance and Variation,\" introduces the fundamental concepts of genetics, starting with Mendel's laws of inheritance. It explains how traits are passed down from parents to offspring, focusing on Mendel's experiments with pea plants and his discovery of dominant and recessive traits. Key concepts include homozygous and heterozygous genotypes, phenotypes, and the use of Punnett squares to predict inheritance patterns. Mendel's Laws of Dominance and Segregation are explained.\n\nThe chapter then expands on Mendelian genetics, introducing incomplete dominance and co-dominance, as well as multiple alleles like those found in ABO blood groups. The chromosomal theory of inheritance links genes to chromosomes, explaining how chromosomes segregate during meiosis and independent assortment of alleles during gamete formation. Linkage and recombination are explored, highlighting how genes located close together on a chromosome are inherited together, influencing variation in offspring.\n\nFinally, the chapter discusses sex determination, mutation, and genetic disorders. It covers different mechanisms of sex determination (XO, XY, ZW) and explores mutations, including point mutations and frame-shift mutations. It concludes by detailing various genetic disorders, categorized as Mendelian (e.g., color blindness, hemophilia, sickle-cell anemia) and chromosomal (e.g., Down's syndrome, Klinefelter's syndrome, Turner's syndrome), emphasizing the practical significance of understanding inheritance patterns for disease diagnosis and genetic counseling. The chapter progresses from basic principles to more complex phenomena, showcasing the connection between genotype, phenotype, and inherited traits.",
+    "sections": [
+      {
+        "id": "ncert:biology:12:4:4",
+        "number": "4",
+        "title": "Principles of Inheritance and Variation",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:4:4:1",
+            "order": 1,
+            "title": "Introduction to Genetics",
+            "content_text": "Genetics is the branch of biology that scientifically investigates the inheritance and variation of characters from parents to offspring. It addresses fundamental questions such as why offspring belong to the same species as their parents (e.g., elephants producing elephants, mango seeds producing mango plants) and why siblings may exhibit both similarities and differences in their characteristics.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Chapter 4 Illustration",
+                "description": "A Punnett square diagram showing the results of a dihybrid cross, with genotypes such as $RRYY$, $RrYy$, $rrYY$, and $rryy$ representing different seed traits.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4:2",
+            "order": 2,
+            "title": "Inheritance and Variation",
+            "content_text": "Inheritance is defined as the process by which characters are passed on from parent to progeny; it serves as the fundamental basis of heredity. Variation refers to the degree by which progeny differ from their parents.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4:3",
+            "order": 3,
+            "title": "Historical Perspective on Variation",
+            "content_text": "As early as 8000-1000 B.C., humans recognized that sexual reproduction was a primary cause of variation. They exploited naturally occurring variations in wild populations of plants and animals through artificial selection and domestication. By selectively breeding organisms with desirable characters from ancestral wild cows, we have well-known Indian breeds, e.g., Sahiwal cows in Punjab. We must, however, recognise that though our ancestors knew about the inheritance of characters and variation, they had very little idea about the scientific basis of these phenomena.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:4:4.1",
+        "number": "4.1",
+        "title": "Mendel’s Laws of Inheritance",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:4:4.1:1",
+            "order": 1,
+            "title": "Gregor Mendel's Experimental Approach",
+            "content_text": "It was during the mid-nineteenth century that headway was made in the understanding of inheritance. Gregor Mendel conducted hybridisation experiments on garden peas for seven years (1856-1863) and proposed the laws of inheritance in living organisms. During Mendel’s investigations into inheritance patterns, it was for the first time that statistical analysis and mathematical logic were applied to problems in biology. His experiments had a large sampling size, which gave greater credibility to the data that he collected. Also, the confirmation of his inferences from experiments on successive generations of his test plants proved that his results pointed to general rules of inheritance rather than being unsubstantiated ideas. Mendel investigated characters in the garden pea plant that were manifested as two opposing traits, e.g., tall or dwarf plants, yellow or green seeds. This allowed him to set up a basic framework of rules governing inheritance, which was expanded on by later scientists to account for all the diverse natural observations and the complexity inherent in them.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.1",
+                "description": "Seven pairs of contrasting traits in pea plant studied by Mendel: Seed shape (Round vs Wrinkled), Seed colour (Yellow vs Green), Flower colour (Violet vs White), Pod shape (Full vs Constricted), Pod colour (Green vs Yellow), Flower position (Axial vs Terminal), and Stem height (Tall vs Dwarf).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.1:2",
+            "order": 2,
+            "title": "True-Breeding Lines and Selected Traits",
+            "content_text": "Mendel conducted artificial pollination/cross pollination experiments using several true-breeding pea lines. A true-breeding line is one that, having undergone continuous self-pollination, shows the stable trait inheritance and expression for several generations. Mendel selected 14 true-breeding pea plant varieties, as pairs which were similar except for one character with contrasting traits. Some of the contrasting traits selected were smooth or wrinkled seeds, yellow or green seeds, inflated (full) or constricted green or yellow pods and tall or dwarf plants (Figure 4.1, Table 4.1).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 4.1",
+                "caption": "Contrasting Traits Studied by Mendel in Pea",
+                "headers": [
+                  "S.No.",
+                  "Characters",
+                  "Contrasting Traits"
+                ],
+                "rows": [
+                  [
+                    "1.",
+                    "Stem height",
+                    "Tall/dwarf"
+                  ],
+                  [
+                    "2.",
+                    "Flower colour",
+                    "Violet/white"
+                  ],
+                  [
+                    "3.",
+                    "Flower position",
+                    "Axial/terminal"
+                  ],
+                  [
+                    "4.",
+                    "Pod shape",
+                    "Inflated/constricted"
+                  ],
+                  [
+                    "5.",
+                    "Pod colour",
+                    "Green/yellow"
+                  ],
+                  [
+                    "6.",
+                    "Seed shape",
+                    "Round/wrinkled"
+                  ],
+                  [
+                    "7.",
+                    "Seed colour",
+                    "Yellow/green"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:4:4.2",
+        "number": "4.2",
+        "title": "Inheritance of One Gene",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:4:4.2:1",
+            "order": 1,
+            "title": "The Monohybrid Cross and F1 Generation",
+            "content_text": "Mendel crossed tall and dwarf pea plants to study the inheritance of one gene (Figure 4.2). He collected the seeds produced as a result of this cross and grew them to generate plants of the first hybrid generation, called the Filial$_1$ progeny or the $F_1$. Mendel observed that all the $F_1$ progeny plants were tall, like one of its parents; none were dwarf (Figure 4.3). He made similar observations for the other pairs of traits — he found that the $F_1$ always resembled either one of the parents, and that the trait of the other parent was not seen in them.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.2",
+                "description": "Steps in making a cross in pea: showing a flower with petals, stigma, anther, stamen, and carpel. It illustrates Emasculation (removal of anthers from the female parent) and Pollination (transfer of pollen from the male parent to the stigma of the female parent).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.2:2",
+            "order": 2,
+            "title": "The F2 Generation and Ratios",
+            "content_text": "Mendel then self-pollinated the tall $F_1$ plants and found that in the Filial$_2$ generation ($F_2$), some of the offspring were 'dwarf'; the character that was not seen in the $F_1$ generation was now expressed. The proportion of plants that were dwarf were $1/4$th of the $F_2$ plants while $3/4$ths of the $F_2$ plants were tall. The tall and dwarf traits were identical to their parental type and did not show any blending; that is, all the offspring were either tall or dwarf, none were of in-between height (Figure 4.3). Similar results were obtained with the other traits: only one of the parental traits was expressed in the $F_1$ generation while at the $F_2$ stage both the traits were expressed in the proportion 3:1. The contrasting traits did not show any blending at either $F_1$ or $F_2$ stage.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.2:3",
+            "order": 3,
+            "title": "Concept of Factors and Genes",
+            "content_text": "Based on these observations, Mendel proposed that something was being stably passed down, unchanged, from parent to offspring through the gametes, over successive generations. He called these things as 'factors'. Now we call them genes. Genes, therefore, are the units of inheritance. They contain the information that is required to express a particular trait in an organism.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.2:4",
+            "order": 4,
+            "title": "Alleles and Symbolic Representation",
+            "content_text": "Genes which code for a pair of contrasting traits are known as alleles, i.e., they are slightly different forms of the same gene. If we use alphabetical symbols for each gene, then the capital letter is used for the trait expressed at the $F_1$ stage and the small alphabet for the other trait. For example, in case of the character of height, T is used for the Tall trait and t for the 'dwarf', and T and t are alleles of each other. Hence, in plants the pair of alleles for height would be TT, Tt or tt.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.3",
+                "description": "Diagrammatic representation of a monohybrid cross: Parental generation (Tall TT x Dwarf tt) produces F1 generation (all Tall Tt). Selfing of F1 produces F2 generation with a phenotypic ratio of 3 Tall : 1 Dwarf.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.2:5",
+            "order": 5,
+            "title": "Genotype, Phenotype, and Zygosity",
+            "content_text": "Mendel proposed that in a true breeding, tall or dwarf pea variety the allelic pair of genes for height are identical or homozygous, TT and tt, respectively. TT and tt are called the genotype of the plant while the descriptive terms tall and dwarf are the phenotype. Alleles can be similar as in the case of homozygotes TT and tt or can be dissimilar as in the case of the heterozygote Tt.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.2:6",
+            "order": 6,
+            "title": "Concept of Dominance",
+            "content_text": "As Mendel found the phenotype of the $F_1$ heterozygote Tt to be exactly like the TT parent in appearance, he proposed that in a pair of dissimilar factors, one dominates the other (as in the $F_1$) and hence is called the dominant factor while the other factor is recessive. In this case T (for tallness) is dominant over t (for dwarfness), that is recessive. He observed identical behaviour for all the other characters/trait-pairs that he studied. It is convenient (and logical) to use the capital and lower case of an alphabetical symbol to remember this concept of dominance and recessiveness. Since the $Tt$ plant is heterozygous for genes controlling one character (height), it is a monohybrid and the cross between $TT$ and $tt$ is a monohybrid cross. Observations of the $F_2$ generation show that recessive traits reappear without blending. This indicates that during meiosis, the two alleles of a parent segregate, ensuring each gamete receives only one allele. This random process results in a 50% probability for a gamete to carry either allele. During fertilization, alleles from both parents unite to form zygotes. For example, a $T$ allele from pollen and a $t$ allele from an egg produce a $Tt$ hybrid, which is heterozygous because it contains alleles for contrasting traits.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.2:7",
+            "order": 7,
+            "title": "The Punnett Square",
+            "content_text": "The Punnett Square, developed by British geneticist Reginald C. Punnett, is a graphical tool used to calculate the probability of all possible genotypes in a genetic cross. Parental gametes are listed on the top row and left column, and their combinations are filled into the grid squares. This method clearly illustrates the formation of zygotes and the resulting $F_1$ and $F_2$ generations.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.4",
+                "description": "A Punnett square illustrating a monohybrid cross between true-breeding tall ($TT$) and dwarf ($tt$) pea plants. It shows the $F_1$ generation (all $Tt$) and the $F_2$ generation resulting from selfing, highlighting the $3:1$ phenotypic ratio (tall:dwarf) and the $1:2:1$ genotypic ratio ($TT:Tt:tt$).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.2:8",
+            "order": 8,
+            "title": "Analysis of F1 and F2 Progeny",
+            "content_text": "In a monohybrid cross, the $F_1$ generation consists of $Tt$ plants that appear tall. When these are self-pollinated, the $F_2$ generation displays a phenotypic ratio of $3/4$ tall to $1/4$ dwarf ($3:1$). However, the genotypic ratio is $1:2:1$, consisting of $1/4$ $TT$, $1/2$ $Tt$, and $1/4$ $tt$. Externally, $TT$ and $Tt$ plants are indistinguishable, demonstrating that the $T$ allele is dominant over the $t$ allele.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.2:9",
+            "order": 9,
+            "title": "Mathematical Basis of Genotypic Ratios",
+            "content_text": "The $1/4 : 1/2 : 1/4$ genotypic ratio of $TT:Tt:tt$ can be expressed mathematically using the binomial expansion $(ax + by)^2$. Since gametes $T$ and $t$ are produced in equal frequencies of $1/2$, the expansion is $(1/2 T + 1/2 t)^2 = (1/2 T + 1/2 t) \times (1/2 T + 1/2 t) = 1/4 TT + 1/2 Tt + 1/4 tt$. Mendel also observed that dwarf $F_2$ plants ($tt$), when self-pollinated, continued to produce only dwarf plants in subsequent generations, confirming their homozygous nature.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.2:10",
+            "order": 10,
+            "title": "The Test Cross",
+            "content_text": "Because the genotype of a plant with a dominant phenotype (like a tall plant) cannot be determined by visual inspection, Mendel used a test cross. In this procedure, the individual with the dominant phenotype is crossed with a homozygous recessive parent. If the unknown is homozygous dominant, all offspring will show the dominant trait; if it is heterozygous, the offspring will show a $1:1$ ratio of dominant to recessive traits.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.5",
+                "description": "A diagrammatic representation of a test cross for flower color. A violet flower (dominant phenotype, genotype unknown) is crossed with a white flower (homozygous recessive, $ww$). The results show two possibilities: if the unknown is $WW$, all offspring are violet; if the unknown is $Ww$, half are violet and half are white.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.2:11",
+            "order": 11,
+            "title": "Introduction to Mendel's Laws",
+            "content_text": "Based on his monohybrid cross results, Mendel formulated two general rules of inheritance. These are now known as the Principles or Laws of Inheritance: the First Law (Law of Dominance) and the Second Law (Law of Segregation).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:4:4.2.1",
+        "number": "4.2.1",
+        "title": "Law of Dominance",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:4:4.2.1:1",
+            "order": 1,
+            "title": "Principles of Dominance",
+            "content_text": "The Law of Dominance states that: (i) traits are controlled by discrete units called factors; (ii) these factors occur in pairs; and (iii) in a pair of dissimilar factors, one member (dominant) masks the expression of the other (recessive). This law explains why only one parental trait appears in the $F_1$ generation and why both traits appear in a $3:1$ ratio in the $F_2$ generation.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:4:4.2.2",
+        "number": "4.2.2",
+        "title": "Law of Segregation",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:4:4.2.2:1",
+            "order": 1,
+            "title": "Principles of Segregation",
+            "content_text": "This law is based on the fact that alleles do not blend; both traits are recovered in the $F_2$ generation even if one is hidden in $F_1$. During gamete formation, the factors or alleles of a pair segregate from each other so that each gamete receives only one of the two factors. Homozygous parents produce identical gametes, while heterozygous parents produce two types of gametes in equal proportions, each carrying one allele.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:4:4.2.2.1",
+        "number": "4.2.2.1",
+        "title": "Incomplete Dominance",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:4:4.2.2.1:1",
+            "order": 1,
+            "title": "Incomplete Dominance in Snapdragon",
+            "content_text": "In some experiments, it was found that the $F_1$ generation had a phenotype that did not resemble either of the two parents and was in between the two. A classic example is the inheritance of flower colour in the dog flower (snapdragon or Antirrhinum sp.). In a cross between true-breeding red-flowered (RR) and true-breeding white-flowered plants (rr), the $F_1$ (Rr) was pink. When the $F_1$ was self-pollinated, the $F_2$ resulted in the following ratio: 1 (RR) Red : 2 (Rr) Pink : 1 (rr) White. While the genotypic ratios were exactly as expected in a Mendelian monohybrid cross (1:2:1), the phenotypic ratio changed from the 3:1 dominant:recessive ratio to 1:2:1. This occurred because the R allele was not completely dominant over the r allele, making it possible to distinguish the heterozygote Rr (pink) from the homozygotes RR (red) and rr (white).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.6",
+                "description": "Results of monohybrid cross in the plant Snapdragon. P generation: Red (RR) x White (rr). Gametes: R and r. F1 generation: All pink (Rr). F2 generation Punnett square shows 1 Red (RR), 2 Pink (Rr), and 1 White (rr). Phenotypic ratio: red:pink:white is 1:2:1. Genotypic ratio: RR:Rr:rr is 1:2:1.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.2.2.1:2",
+            "order": 2,
+            "title": "Explanation of the Concept of Dominance",
+            "content_text": "Dominance is understood by examining what a gene does. Every gene contains information to express a particular trait. In diploid organisms, genes exist as a pair of alleles. These alleles may be identical or different (heterozygote). A difference in alleles often arises due to mutations that modify the information the allele contains. Consider a gene that produces an enzyme needed to transform a substrate S. The normal allele produces the functional enzyme. The modified allele could produce: (i) a normal or less efficient enzyme, (ii) a non-functional enzyme, or (iii) no enzyme at all. In the first case, the modified allele is equivalent to the unmodified allele and produces the same phenotype. However, if the allele produces a non-functional enzyme or no enzyme, the phenotype is affected. The unmodified (functioning) allele, representing the original phenotype, is the dominant allele, while the modified allele is the recessive allele. The recessive trait is seen when the enzyme is non-functional or absent.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:4:4.2.2.2",
+        "number": "4.2.2.2",
+        "title": "Co-dominance",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:4:4.2.2.2:1",
+            "order": 1,
+            "title": "ABO Blood Grouping in Humans",
+            "content_text": "In co-dominance, the $F_1$ generation resembles both parents. A prime example is ABO blood grouping in humans, controlled by gene $I$. The plasma membrane of red blood cells has sugar polymers protruding from its surface, the kind of which is controlled by gene $I$. The gene has three alleles: $I^A$, $I^B$, and $i$. Alleles $I^A$ and $I^B$ produce slightly different forms of the sugar, while allele $i$ does not produce any sugar. Humans are diploid, so each person possesses any two of these three alleles. $I^A$ and $I^B$ are completely dominant over $i$. However, when $I^A$ and $I^B$ are present together, they both express their own types of sugars; this is co-dominance. Consequently, red blood cells have both A and B types of sugars. There are six possible genotypes and four possible phenotypes (A, B, AB, and O) in the human ABO blood system.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 4.2",
+                "caption": "Table Showing the Genetic Basis of Blood Groups in Human Population",
+                "headers": [
+                  "Allele from Parent 1",
+                  "Allele from Parent 2",
+                  "Genotype of offspring",
+                  "Blood types of offspring"
+                ],
+                "rows": [
+                  [
+                    "$I^A$",
+                    "$I^A$",
+                    "$I^A I^A$",
+                    "A"
+                  ],
+                  [
+                    "$I^A$",
+                    "$I^B$",
+                    "$I^A I^B$",
+                    "AB"
+                  ],
+                  [
+                    "$I^A$",
+                    "$i$",
+                    "$I^A i$",
+                    "A"
+                  ],
+                  [
+                    "$I^B$",
+                    "$I^A$",
+                    "$I^A I^B$",
+                    "AB"
+                  ],
+                  [
+                    "$I^B$",
+                    "$I^B$",
+                    "$I^B I^B$",
+                    "B"
+                  ],
+                  [
+                    "$I^B$",
+                    "$i$",
+                    "$I^B i$",
+                    "B"
+                  ],
+                  [
+                    "$i$",
+                    "$i$",
+                    "$ii$",
+                    "O"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:biology:12:4:4.2.2.2:2",
+            "order": 2,
+            "title": "Multiple Alleles",
+            "content_text": "ABO blood grouping is also an example of multiple alleles, where more than two alleles (three in this case: $I^A$, $I^B$, and $i$) govern the same character. Since an individual can only have two alleles, multiple alleles can only be identified through population studies.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.2.2.2:3",
+            "order": 3,
+            "title": "Dominance as a Relative Feature",
+            "content_text": "A single gene product may produce more than one effect. For example, starch synthesis in pea seeds is controlled by one gene with two alleles (B and b). BB homozygotes produce large starch grains and round seeds, while bb homozygotes produce small starch grains and wrinkled seeds. Heterozygotes (Bb) produce round seeds but intermediate-sized starch grains. If seed shape is the phenotype, B is dominant. If starch grain size is the phenotype, the alleles show incomplete dominance. Thus, dominance is not an autonomous feature of a gene; it depends on the gene product and the specific phenotype chosen for examination.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:4:4.3",
+        "number": "4.3",
+        "title": "Inheritance of Two Genes",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:4:4.3:1",
+            "order": 1,
+            "title": "Dihybrid Crosses in Pea Plants",
+            "content_text": "Mendel crossed pea plants differing in two characters, such as seed colour (yellow vs. green) and seed shape (round vs. wrinkled). In a cross between a plant with yellow, round seeds (YYRR) and one with green, wrinkled seeds (yyrr), the $F_1$ generation produced only yellow, round seeds (YyRr). This showed that yellow colour is dominant over green and round shape is dominant over wrinkled. When the $F_1$ plants were self-hybridised, Mendel observed that the traits segregated independently. In the $F_2$ generation, yellow and green seeds segregated in a 3:1 ratio, and round and wrinkled seeds also segregated in a 3:1 ratio, just as they would in separate monohybrid crosses. In the $F_2$ generation of a dihybrid cross, yellow and green seeds segregated in a 3:1 ratio, and round and wrinkled seeds also segregated in a 3:1 ratio, just as they would in separate monohybrid crosses. This independent segregation of traits results in a combined phenotypic ratio of 9:3:3:1 for the four possible combinations: round yellow, round green, wrinkled yellow, and wrinkled green. This is illustrated in the Punnett square for a dihybrid cross (Figure 4.7), where the $F_1$ generation (RrYy) is selfed to produce the $F_2$ generation. The phenotypic ratio is specifically 9 round yellow : 3 round green : 3 wrinkled yellow : 1 wrinkled green.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.7",
+                "description": "Results of a dihybrid cross where the two parents differed in two pairs of contrasting traits: seed colour and seed shape. The diagram shows the P generation (Round Yellow RRYY x Wrinkled Green rryy), the gametes (RY and ry), the $F_1$ generation (Round Yellow RrYy), and the $F_2$ generation Punnett square with 16 combinations. The resulting phenotypic ratio is 9:3:3:1.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:4:4.3.1",
+        "number": "4.3.1",
+        "title": "Law of Independent Assortment",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:4:4.3.1:1",
+            "order": 1,
+            "title": "Derivation of the Dihybrid Ratio",
+            "content_text": "The ratio of 9:3:3:1 observed in dihybrid crosses can be derived as a combination series of two 3:1 monohybrid ratios. This derivation can be written as: $(3 \\text{ Round} : 1 \\text{ Wrinkled}) \\times (3 \\text{ Yellow} : 1 \\text{ Green}) = 9 \\text{ Round, Yellow} : 3 \\text{ Wrinkled, Yellow} : 3 \\text{ Round, Green} : 1 \\text{ Wrinkled, Green}$. This mathematical relationship confirms that the inheritance of one pair of characters is independent of the other pair.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.3.1:2",
+            "order": 2,
+            "title": "Statement of the Law of Independent Assortment",
+            "content_text": "Based upon observations on dihybrid crosses (crosses between plants differing in two traits), Mendel proposed the Law of Independent Assortment. The law states that 'when two pairs of traits are combined in a hybrid, segregation of one pair of characters is independent of the other pair of characters'.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.3.1:3",
+            "order": 3,
+            "title": "Mechanism of Independent Assortment in Gametes",
+            "content_text": "The Punnett square can be effectively used to understand the independent segregation of the two pairs of genes during meiosis and the production of eggs and pollen in the $F_1$ RrYy plant. Consider the segregation of one pair of genes R and r: 50 per cent of the gametes have the gene R and the other 50 per cent have r. Besides each gamete having either R or r, it should also have the allele Y or y. The important thing to remember is that segregation of 50 per cent R and 50 per cent r is independent from the segregation of 50 per cent Y and 50 per cent y. Therefore, 50 per cent of the r bearing gametes has Y and the other 50 per cent has y. Similarly, 50 per cent of the R bearing gametes has Y and the other 50 per cent has y. Thus there are four genotypes of gametes: RY, Ry, rY and ry, each with a frequency of 25 per cent or $1/4^{th}$ of the total gametes produced. Although there are 16 squares in the $F_2$ Punnett square, one must determine how many different types of genotypes and phenotypes are formed and whether the genotypic ratio is also 9:3:3:1.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 4.2",
+                "caption": "Genotypes and Phenotypes in F2 Generation",
+                "headers": [
+                  "S.No.",
+                  "Genotypes found in $F_2$",
+                  "Their expected Phenotypes"
+                ],
+                "rows": [
+                  [
+                    "",
+                    "",
+                    ""
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:4:4.3.2",
+        "number": "4.3.2",
+        "title": "Chromosomal Theory of Inheritance",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:4:4.3.2:1",
+            "order": 1,
+            "title": "Reasons for Mendel's Work Remaining Unrecognised",
+            "content_text": "Mendel published his work on inheritance of characters in 1865 but for several reasons, it remained unrecognised till 1900. Firstly, communication was not easy in those days and his work could not be widely publicised. Secondly, his concept of genes (or factors) as stable and discrete units that controlled the expression of traits and did not 'blend' with each other was not accepted by his contemporaries as an explanation for the apparently continuous variation seen in nature. Thirdly, Mendel's approach of using mathematics to explain biological phenomena was totally new and unacceptable to many of the biologists of his time. Finally, though Mendel's work suggested that factors (genes) were discrete units, he could not provide any physical proof for the existence of factors or say what they were made of.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.3.2:2",
+            "order": 2,
+            "title": "Rediscovery and the Discovery of Chromosomes",
+            "content_text": "In 1900, three Scientists (de Vries, Correns and von Tschermak) independently rediscovered Mendel's results on the inheritance of characters. Also, by this time due to advancements in microscopy that were taking place, scientists were able to carefully observe cell division. This led to the discovery of structures in the nucleus that appeared to double and divide just before each cell division. These were called chromosomes (colored bodies, as they were visualised by staining). By 1902, the chromosome movement during meiosis had been worked out.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.3.2:3",
+            "order": 3,
+            "title": "Parallelism Between Genes and Chromosomes",
+            "content_text": "Walter Sutton and Theodore Boveri noted that the behaviour of chromosomes was parallel to the behaviour of genes and used chromosome movement (Figure 4.8) to explain Mendel's laws. Recall that you have studied the behaviour of chromosomes during mitosis (equational division) and during meiosis (reduction division). The important things to remember are that chromosomes as well as genes occur in pairs. The two alleles of a gene pair are located on homologous sites on homologous chromosomes. The behaviou r of chromosome s parallel s the behaviou r of gene s. Both occu r in pair s an d segregate d urin g gamete formation such that onl y on e of each pai r is transmitte d to a gamete. Further more, in depen den t pair s of chromosome s (o r gene s) segregate in depen den tl y of each other. The followin g tabl e summarize s the s e parallel s.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.8",
+                "description": "Meiosis and germ cell formation in a cell with four chromosomes. The diagram shows stages $G_1$, $G_2$ (with bivalents), Meiosis I anaphase (segregation of homologous chromosomes), Meiosis II anaphase (segregation of sister chromatids), and the resulting four germ cells, each with two chromosomes.",
+                "image_url": null
+              }
+            ],
+            "tables": [
+              {
+                "label": "Tabl e 4.3",
+                "caption": "A Comparison between the Behaviou r of Chromosome s an d Gene s",
+                "headers": [
+                  "A",
+                  "B"
+                ],
+                "rows": [
+                  [
+                    "Occu r in pair s",
+                    "Occu r in pair s"
+                  ],
+                  [
+                    "Segregat e a t the tim e of gamet e formatio n suc h tha t onl y on e of eac h pai r i s transmitt e d t o a gamet e",
+                    "Segregat e a t gamet e formatio n an d onl y on e of eac h pai r i s transmitt e d t o a gamet e"
+                  ],
+                  [
+                    "In depen de n t pai r s segregat e in depen den tl y of eac h othe r",
+                    "On e pai r segregat e s in depen den tl y o f anoth e r pai r"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:biology:12:4:4.3.2:4",
+            "order": 4,
+            "title": "In depen den t Assortmen t of Chromosome s",
+            "content_text": "Durin g Anaphas e of meiosi s I, the tw o chromosom e pair s ca n alig n a t the metaphas e plat e in depen den tl y of each othe r. Thi s is demonstrate d by comparin g the segregatio n of chromosome s of differen t colou r s. In on e possibilit y, a lon g orang e an d shor t gree n chromosom e segregat e to the sam e pol e a s a lon g yello w an d shor t re d chromosom e. In a secon d possibilit y, the orang e chromosom e segregate s with the re d chromosom e. Thi s in depen den t alignmen t an d subsequen t segregatio n provi de the chromosoma l basi s fo r Men del's La w of In depen den t Assortmen t.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig ur e 4.9",
+                "description": "In depen den t assortmen t of chromosome s showin g tw o possibilitie s of alignmen t a t metaphas e I an d the resultin g ger m cell s afte r meiosi s I I. Possibilit y I show s orang e/gree n an d yello w/re d combination s. Possibilit y I I show s orang e/re d an d yello w/gree n combination s.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.3.2:5",
+            "order": 5,
+            "title": "Synthesi s of the Chromosoma l Theor y",
+            "content_text": "Sutto n an d Bover i argue d tha t the pairin g an d separatio n of a pai r of chromosome s woul d lea d to the segregatio n of a pai r of factor s the y carrie d. Sutto n unite d the knowledg e of chromosoma l segregatio n with Men delia n principle s an d calle d it the chromosoma l theor y of inheritanc e.",
+            "content_type": "theorem",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:4:4.3.3",
+        "number": "4.3.3",
+        "title": "Linkag e an d Recombinatio n",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:4:4.3.3:1",
+            "order": 1,
+            "title": "Experimen ta l Verificatio n by T.H. Morga n",
+            "content_text": "Thoma s Hun t Morga n an d hi s colleague s provi de d experimen ta l verificatio n of the chromosoma l theor y of inheritanc e. The i r wor k le d to discoverin g the basi s fo r variatio n produce d by sexua l reproductio n. Morga n worke d with the tin y frui t flie s, Drosophil a melanoga ste r.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig ur e 4.10",
+                "description": "Drosophil a melanoga ste r: (a) Mal e, whic h is smalle r in siz e; (b) Femal e, whic h is large r in siz e.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.3.3:2",
+            "order": 2,
+            "title": "Suitabilit y of Drosophil a fo r Geneti c Studie s",
+            "content_text": "Drosophil a melanoga ste r wer e foun d ver y suitabl e fo r geneti c studie s becau se: (i) The y coul d be grow n on sim pl e syntheti c mediu m in the laborator y. (ii) The y com plet e the i r lif e cycl e in abou t tw o week s. (iii) A sin gl e matin g coul d produc e a larg e numbe r of progen y flie s. (iv) The r e wa s a clea r differen tiatio n of the sexe s (mal e an d femal e ar e easil y distin guishabl e). (v) It ha s man y type s of here ditar y variatio n s tha t ca n be see n with lo w powe r microscope s.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.3.3:3",
+            "order": 3,
+            "title": "Discover y of Linkag e",
+            "content_text": "Morga n carrie d ou t dihybri d crosse s in Drosophil a to stud y gene s tha t wer e sex-linke d. Fo r exam pl e, he crosse d yello w-bodie d, whit e-eye d female s with brow n-bodie d, re d-eye d male s an d intercrosse d the i r $F_1$ progen y. He observe d tha t the tw o gene s di d no t segregat e in depen den tl y an d the $F_2$ rati o deviate d significan tl y from the expecte d 9:3:3:1 rati o. Morga n attribute d thi s to the physica l associatio n or linkag e of the tw o gene s on the sam e chromosom e.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.3.3:4",
+            "order": 4,
+            "title": "Definitio n of Linkag e an d Recombinatio n",
+            "content_text": "Morga n coine d the ter m 'linkag e' to descri be the physica l associatio n of gene s on a chromosom e an d the ter m 'recombinatio n' to descri be the generatio n of non-paren ta l gene combinatio n s. Gene s on the sam e chromosom e tha t ar e ver y tightl y linke d sho w ver y lo w recombinatio n, whil e thos e tha t ar e loosel y linke d sho w highe r recombinatio n.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.3.3:5",
+            "order": 5,
+            "title": "Geneti c Map pin g",
+            "content_text": "Alfre d Sturtev an t, a studen t of Morga n, use d the frequenc y of recombinatio n betwee n gen e pair s on the sam e chromosom e a s a measur e of the distanc e betwee n gene s an d 'map pe d' the i r positio n on the chromosom e. To day, geneti c map s ar e exten sivel y use d a s a startin g poin t in the sequencin g of whol e genome s, suc h a s in the Huma n Genom e Sequencin g Projec t.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.3.3:6",
+            "order": 6,
+            "title": "Analysi s of Morga n's Dihybri d Crosse s",
+            "content_text": "In Morga n's experimen t s, Cros s A in volve d gene s fo r bod y colou r (yello w, y) an d ey e colou r (whit e, w). The s e gene s wer e ver y tightl y linke d an d showe d onl y 1.3 pe r cen t recombinatio n. In Cros s B, gene s fo r ey e colou r (whit e, w) an d win g siz e (miniatur e, m) showe d 37.2 pe r cen t recombinatio n, in dicatin g the y ar e mor e loosel y linke d. Thi s demonstrate s tha t the stren gt h of linkag e varie s betwee n differen t gen e pair s.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig ur e 4.11",
+                "description": "Linkag e result s of tw o dihybri d crosse s by Morga n. Cros s A show s crossin g betwee n gen e y an d w (1.3% recombin an t s). Cros s B show s crossin g betwee n gen e w an d m (37.2% recombin an t s). Domin an t wil d typ e allele s ar e marke d with a (+) sig n.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:4:4.4",
+        "number": "4.4",
+        "title": "Polygenic Inheritance",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:4:4.4:1",
+            "order": 1,
+            "title": "Concept of Polygenic Inheritance",
+            "content_text": "Mendel’s studies mainly described those traits that have distinct alternate forms such as flower colour which are either purple or white. However, many traits are not so distinct in their occurrence and are spread across a gradient. For example, in humans, height is not just tall or short but exists as a whole range of possible heights. Such traits are generally controlled by three or more genes and are thus called as polygenic traits. Besides the involvement of multiple genes, polygenic inheritance also takes into account the influence of environment.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.4:2",
+            "order": 2,
+            "title": "Example: Human Skin Colour",
+            "content_text": "Human skin colour is a classic example of polygenic inheritance. In a polygenic trait, the phenotype reflects the contribution of each allele, meaning the effect of each allele is additive. For instance, if three genes $A, B, C$ control skin colour, the dominant forms $A, B$ and $C$ are responsible for dark skin colour and the recessive forms $a, b$ and $c$ for light skin colour. The genotype with all dominant alleles ($AABBCC$) results in the darkest skin colour, while the genotype with all recessive alleles ($aabbcc$) results in the lightest skin colour. A genotype with three dominant and three recessive alleles results in an intermediate skin colour. Thus, the number of each type of allele in the genotype determines the darkness or lightness of the skin.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:4:4.5",
+        "number": "4.5",
+        "title": "Pleiotropy",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:4:4.5:1",
+            "order": 1,
+            "title": "Mechanism and Example of Pleiotropy",
+            "content_text": "While most genes affect a single phenotype, a pleiotropic gene can exhibit multiple phenotypic expressions. The underlying mechanism of pleiotropy is usually the effect of a gene on metabolic pathways that contribute to different phenotypes. A key example is the disease phenylketonuria in humans, caused by a mutation in the gene coding for the enzyme phenylalanine hydroxylase. This single gene mutation manifests through multiple phenotypic expressions, including mental retardation and a reduction in hair and skin pigmentation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:4:4.6",
+        "number": "4.6",
+        "title": "Sex Determination",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:4:4.6:1",
+            "order": 1,
+            "title": "Historical Discovery of Sex Chromosomes",
+            "content_text": "The concept of a genetic or chromosomal basis for sex determination was developed through cytological observations in insects. Henking (1891) identified a specific nuclear structure during spermatogenesis in certain insects. He observed that $50$ per cent of the sperm received this structure, while the other $50$ per cent did not. He named this structure the $X$ body, which later investigations confirmed was a chromosome, subsequently named the $X$-chromosome.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.6:2",
+            "order": 2,
+            "title": "XO and XY Mechanisms of Sex Determination",
+            "content_text": "In many insects, sex determination is of the $XO$ type, where all eggs carry an $X$-chromosome, but only some sperms carry an $X$-chromosome. Eggs fertilized by $X$-carrying sperm become females ($XX$), while those fertilized by sperm without an $X$-chromosome become males ($XO$). In grasshoppers, males have only one $X$-chromosome besides autosomes, while females have a pair. In other species, including humans and Drosophila, the $XY$ type is observed. Here, both sexes have the same number of chromosomes, but males possess one $X$-chromosome and a smaller $Y$-chromosome, while females have a pair of $X$-chromosomes.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.12",
+                "description": "Determination of sex by chromosomal differences: (a) In humans, females are XX and males are XY; (b) In Drosophila, females are XX and males are XY; (c) In birds, females have dissimilar ZW chromosomes and males have similar ZZ chromosomes.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.6:3",
+            "order": 3,
+            "title": "Male and Female Heterogamety",
+            "content_text": "In $XO$ and $XY$ systems, males produce two different types of gametes (either with/without $X$, or with $X$/$Y$), a phenomenon called male heterogamety. Conversely, in some organisms like birds, the total number of chromosomes is the same in both sexes, but females produce two different types of gametes. This is called female heterogamety. In birds, the sex chromosomes are designated $Z$ and $W$; females are $ZW$ and males are $ZZ$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:4:4.6.1",
+        "number": "4.6.1",
+        "title": "Sex Determination in Humans",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:4:4.6.1:1",
+            "order": 1,
+            "title": "Mechanism of Human Sex Determination",
+            "content_text": "Humans follow the $XY$ type of sex determination. Out of $23$ pairs of chromosomes, $22$ pairs are autosomes and are identical in both sexes. The $23$rd pair consists of sex chromosomes: $XX$ in females and $XY$ in males. During spermatogenesis, $50$ per cent of sperms carry the $X$-chromosome and $50$ per cent carry the $Y$-chromosome. All ova produced by females carry an $X$-chromosome. There is an equal probability ($50$ per cent) of the ovum being fertilized by an $X$ or $Y$ carrying sperm, resulting in a female ($XX$) or male ($XY$) offspring respectively. Thus, the genetic makeup of the sperm determines the sex of the child.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:4:4.6.2",
+        "number": "4.6.2",
+        "title": "Sex Determination in Honey Bee",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:4:4.6.2:1",
+            "order": 1,
+            "title": "Haplodiploid Sex-Determination System",
+            "content_text": "Sex determination in honey bees is based on the number of sets of chromosomes received. Females (queens or workers) develop from the union of a sperm and an egg and are diploid ($32$ chromosomes). Males (drones) develop from unfertilized eggs via parthenogenesis and are haploid ($16$ chromosomes). This is the haplodiploid system. A unique feature is that males produce sperms by mitosis. Consequently, drones do not have a father and cannot have sons, but they do have a grandfather and can have grandsons.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.13",
+                "description": "Sex determination in honey bee: A diploid female (32) produces haploid gametes (16) via meiosis. A haploid male (16) produces haploid gametes (16) via mitosis. Fertilization leads to a diploid female (32), while parthenogenesis of an egg leads to a haploid male (16).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:4:4.7",
+        "number": "4.7",
+        "title": "Mutation",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:4:4.7:1",
+            "order": 1,
+            "title": "Definition and Impact of Mutation",
+            "content_text": "Mutation is a phenomenon which results in alteration of DNA sequences and consequently results in changes in the genotype and the phenotype of an organism. In addition to recombination, mutation is another phenomenon that leads to variation in DNA. DNA is the carrier of genetic information and is transmitted from one generation to the other without any change or alteration. However, changes or alteration do take place occasionally. Such an alteration or change in the genetic material is referred to as mutation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.7:2",
+            "order": 2,
+            "title": "Chromosomal Aberrations",
+            "content_text": "One DNA helix runs continuously from one end to the other in each chromatid, in a highly supercoiled form. Therefore loss (deletions) or gain (insertion/duplication) of a segment of DNA, result in alteration in chromosomes. Since genes are known to be located on chromosomes, alteration in chromosomes results in abnormalities or aberrations. Chromosomal aberrations are commonly observed in cancer cells.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.7:3",
+            "order": 3,
+            "title": "Point Mutation and Frame-shift Mutation",
+            "content_text": "Mutation also arise due to change in a single base pair of DNA. This is known as point mutation. A classical example of such a mutation is sickle cell anemia. Deletions and insertions of base pairs of DNA, causes frame-shift mutations (see Chapter 5).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.7:4",
+            "order": 4,
+            "title": "Mutagens",
+            "content_text": "The mechanism of mutation is beyond the scope of this discussion, at this level. However, there are many chemical and physical factors that induce mutations. These are referred to as mutagens. UV radiations can cause mutations in organisms – it is a physical mutagen.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:4:4.8",
+        "number": "4.8",
+        "title": "Genetic Disorders",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:4:4.8:1",
+            "order": 1,
+            "title": "Introduction to Genetic Disorders",
+            "content_text": "A number of disorders in human beings have been found to be associated with the inheritance of changed or altered genes or chromosomes. These genetic disorders arise from changes or alterations in the genetic material. As studied in this chapter, each and every feature in any organism is controlled by one or the other gene located on the DNA present in the chromosome.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.8:2",
+            "order": 2,
+            "title": "4.8.1 Pedigree Analysis",
+            "content_text": "The idea that disorders are inherited has been prevailing in the human society since long. This was based on the heritability of certain characteristic features in families. After the rediscovery of Mendel’s work the practice of analysing inheritance pattern of traits in human beings began. Since it is evident that control crosses that can be performed in pea plant or some other organisms, are not possible in case of human beings, study of the family history about inheritance of a particular trait provides an alternative. Such an analysis of traits in a several generations of a family is called the pedigree analysis. In the pedigree analysis the inheritance of a particular trait is represented in the family tree over generations. In human genetics, pedigree study provides a strong tool, which is utilised to trace the inheritance of a specific trait, abnormality or disease.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.8:3",
+            "order": 3,
+            "title": "Symbols in Pedigree Analysis",
+            "content_text": "Pedigree analysis uses standard symbols to represent individuals and their relationships. A square represents a male, a circle represents a female, and a diamond represents an unspecified sex. Shaded symbols indicate affected individuals. A horizontal line between a male and female indicates mating, while a double horizontal line indicates mating between relatives (consanguineous mating). Parents are shown above children, with children listed from left to right in order of birth. A symbol with a number inside (e.g., 5) indicates multiple unaffected offspring.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.13",
+                "description": "Standard symbols used in human pedigree analysis: square for male, circle for female, diamond for unspecified sex, shaded for affected, horizontal line for mating, double line for consanguineous mating, vertical lines for offspring, and numbered diamonds for multiple unaffected offspring.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.8:4",
+            "order": 4,
+            "title": "4.8.2 Mendelian Disorders",
+            "content_text": "Broadly, genetic disorders may be grouped into two categories – Mendelian disorders and Chromosomal disorders. Mendelian disorders are mainly determined by alteration or mutation in the single gene. These disorders are transmitted to the offspring on the same lines as studied in the principle of inheritance. The pattern of inheritance of such Mendelian disorders can be traced in a family by the pedigree analysis. Most common and prevalent Mendelian disorders are Haemophilia, Cystic fibrosis, Sickle-cell anaemia, Colour blindness, Phenylketonuria, Thalassemia, etc. It is important to mention here that such Mendelian disorders may be dominant or recessive.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.8:5",
+            "order": 5,
+            "title": "Pedigree Analysis of Mendelian Traits",
+            "content_text": "By pedigree analysis one can easily understand whether the trait in question is dominant or recessive. Similarly, the trait may also be linked to the sex chromosome as in case of haemophilia. It is evident that this X-linked recessive trait shows transmission from carrier female to male progeny. Representative pedigree analysis can distinguish between different modes of inheritance, such as autosomal dominant and autosomal recessive traits.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.14",
+                "description": "Representative pedigree analysis of (a) Autosomal dominant trait (for example: Myotonic dystrophy) showing affected individuals in every generation, and (b) Autosomal recessive trait (for example: Sickle-cell anaemia) showing affected individuals born to unaffected parents.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.8:6",
+            "order": 6,
+            "title": "Colour Blindness",
+            "content_text": "Colour Blindness is a sex-linked recessive disorder due to defect in either red or green cone of eye resulting in failure to discriminate between red and green colour. This defect is due to mutation in certain genes present in the X chromosome. It occurs in about 8 per cent of males and only about 0.4 per cent of females. This is because the genes that lead to red-green colour blindness are on the X chromosome. Males have only one X chromosome and females have two. The son of a woman who carries the gene has a 50 per cent chance of being colour blind. The mother is not herself colour blind because the gene is recessive, meaning its effect is suppressed by her matching dominant normal gene. A daughter will not normally be colour blind, unless her mother is a carrier and her father is colour blind.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.8:7",
+            "order": 7,
+            "title": "Haemophilia",
+            "content_text": "Haemophilia is a sex linked recessive disease, which shows its transmission from unaffected carrier female to some of the male progeny. In this disease, a single protein that is a part of the cascade of proteins involved in the clotting of blood is affected. Due to this, in an affected individual a simple cut will result in non-stop bleeding. The heterozygous female (carrier) for haemophilia may transmit the disease to sons. The possibility of a female becoming a haemophilic is extremely rare because mother of such a female has to be at least a carrier and the father should be haemophilic (unviable in the later stage of life). The family pedigree of Queen Victoria shows a number of haemophilic descendents as she was a carrier of the disease.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.8:8",
+            "order": 8,
+            "title": "Sickle-cell anaemia - Inheritance",
+            "content_text": "Sickle-cell anaemia is an autosome linked recessive trait that can be transmitted from parents to the offspring when both the partners are carrier for the gene (or heterozygous). The disease is controlled by a single pair of allele, $Hb^A$ and $Hb^S$. Out of the three possible genotypes only homozygous individuals for $Hb^S$ ($Hb^S Hb^S$) show the diseased phenotype. Heterozygous ($Hb^A Hb^S$) individuals appear apparently unaffected but they are carriers of the disease as there is a 50 per cent probability of transmission of the mutant gene to the progeny, thus exhibiting sickle-cell trait.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.8:9",
+            "order": 9,
+            "title": "Sickle-cell anaemia - Molecular Basis",
+            "content_text": "The molecular basis of sickle-cell anaemia involves the substitution of Glutamic acid (Glu) by Valine (Val) at the sixth position of the $\\beta$-chain of haemoglobin. This is caused by a single base substitution at the sixth codon of the $\\beta$-globin gene from GAG to GUG. The defect is caused by the substitution of Glutamic acid (Glu) by Valine (Val) at the sixth position of the beta globin chain of the haemoglobin molecule. The substitution of amino acid in the globin protein results due to the single base substitution at the sixth codon of the beta globin gene from GAG to GUG. The mutant haemoglobin molecule undergoes polymerisation under low oxygen tension causing the change in the shape of the RBC from biconcave disc to elongated sickle like structure.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.15",
+                "description": "Micrograph of the red blood cells and the amino acid composition of the relevant portion of $\\beta$-chain of haemoglobin: (a) From a normal individual showing biconcave RBCs and the GAG codon coding for Glutamic acid (Glu) at the 6th position; (b) From an individual with sickle-cell anaemia showing sickle-shaped RBCs and the GUG codon coding for Valine (Val) at the 6th position.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.8:10",
+            "order": 10,
+            "title": "Phenylketonuria",
+            "content_text": "Phenylketonuria is an inborn error of metabolism inherited as an autosomal recessive trait. The affected individual lacks an enzyme that converts the amino acid phenylalanine into tyrosine. Consequently, phenylalanine accumulates and is converted into phenylpyruvic acid and other derivatives. The accumulation of these substances in the brain results in mental retardation. These derivatives are also excreted through urine due to poor absorption by the kidney.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.8:11",
+            "order": 11,
+            "title": "Thalassemia",
+            "content_text": "Thalassemia is an autosome-linked recessive blood disease transmitted from parents to offspring when both partners are unaffected carriers (heterozygous) for the gene. The defect arises from mutation or deletion, leading to a reduced rate of synthesis of one of the globin chains ($\\alpha$ and $\\beta$ chains) that constitute haemoglobin. This results in the formation of abnormal haemoglobin molecules and subsequent anaemia. Thalassemia is classified based on the affected globin chain: $\\alpha$ Thalassemia affects the production of the $\\alpha$ globin chain, while $\\beta$ Thalassemia affects the production of the $\\beta$ globin chain.\n$\\alpha$ Thalassemia is controlled by two closely linked genes, $HBA1$ and $HBA2$, located on chromosome 16 of each parent. It occurs due to the mutation or deletion of one or more of these four genes; the severity increases with the number of genes affected. $\\beta$ Thalassemia is controlled by a single gene, $HBB$, on chromosome 11 of each parent and results from the mutation of one or both genes. Thalassemia is a quantitative problem (synthesising too few globin molecules), whereas sickle-cell anaemia is a qualitative problem (synthesising an incorrectly functioning globin).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:4:4.8.3",
+        "number": "4.8.3",
+        "title": "Chromosomal Disorders",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:4:4.8.3:1",
+            "order": 1,
+            "title": "Aneuploidy and Polyploidy",
+            "content_text": "Chromosomal disorders are caused by the absence, excess, or abnormal arrangement of one or more chromosomes. Aneuploidy is the gain or loss of a chromosome(s) due to the failure of chromatid segregation during the cell division cycle. Examples include Down’s syndrome (gain of an extra copy of chromosome 21) and Turner’s syndrome (loss of an X chromosome in females). Polyploidy is an increase in a whole set of chromosomes in an organism, often resulting from the failure of cytokinesis after the telophase stage of cell division. This condition is frequently observed in plants.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.8.3:2",
+            "order": 2,
+            "title": "Human Chromosome Composition and Abnormalities",
+            "content_text": "A normal human cell contains 46 chromosomes (23 pairs), consisting of 22 pairs of autosomes and one pair of sex chromosomes. Abnormalities occur when an individual has an additional copy of a chromosome (trisomy) or lacks one chromosome from a pair (monosomy). These conditions lead to serious consequences. Common examples of chromosomal disorders include Down’s syndrome, Turner’s syndrome, and Klinefelter’s syndrome.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.8.3:3",
+            "order": 3,
+            "title": "Down's Syndrome",
+            "content_text": "Down’s syndrome is caused by the presence of an additional copy of chromosome 21 (trisomy of 21). First described by Langdon Down in 1866, the disorder is characterised by short stature, a small round head, a furrowed tongue, and a partially open mouth. Affected individuals often have a broad palm with a characteristic palm crease. Physical, psychomotor, and mental development is typically retarded.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.16",
+                "description": "A representative figure showing an individual with Down’s syndrome, highlighting features like a flat back of the head, broad flat face, big and wrinkled tongue, and palm crease. It also includes a karyotype showing the trisomy of chromosome 21.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.8.3:4",
+            "order": 4,
+            "title": "Klinefelter's Syndrome",
+            "content_text": "Klinefelter’s syndrome is caused by an additional copy of the X-chromosome, resulting in a karyotype of 47, XXY. Individuals with this disorder exhibit overall masculine development, but also express feminine characteristics such as breast development (Gynaecomastia). Such individuals are sterile.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.17 (a)",
+                "description": "Diagrammatic representation of an individual with Klinefelter Syndrome, showing tall stature with feminised characters like gynaecomastia.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:4.8.3:5",
+            "order": 5,
+            "title": "Turner's Syndrome",
+            "content_text": "Turner’s syndrome is caused by the absence of one of the X chromosomes, resulting in a 45, X0 karyotype. Affected females are sterile due to rudimentary ovaries and lack other secondary sexual characters.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.17 (b)",
+                "description": "Diagrammatic representation of an individual with Turner’s Syndrome, showing short stature and underdeveloped feminine characters.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:4:Summary",
+        "number": "Summary",
+        "title": "Summary",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:4:Summary:1",
+            "order": 1,
+            "title": "Principles of Inheritance and Mendel's Laws",
+            "content_text": "Genetics deals with the principles of inheritance and variation. Gregor Mendel systematically studied inheritance in pea plants and proposed the 'Mendel’s Laws of Inheritance'. He identified 'factors' (genes) occurring in pairs called alleles. The Law of Dominance states that dominant characters are expressed in heterozygous conditions, while recessive characters are only expressed in homozygous conditions. The Law of Segregation states that characters do not blend and alleles segregate during gamete formation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:Summary:2",
+            "order": 2,
+            "title": "Extensions of Mendelian Genetics",
+            "content_text": "Post-Mendelian studies revealed phenomena like incomplete dominance and co-dominance. The Law of Independent Assortment describes how factors for different characters assort independently during gamete formation. Genetic combinations can be represented using a Punnett Square. The genetic makeup is the genotype, while the physical expression is the phenotype.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:Summary:3",
+            "order": 3,
+            "title": "Chromosomal Theory and Linkage",
+            "content_text": "The Chromosomal Theory of Inheritance correlates Mendel’s laws with the behavior of chromosomes during meiosis. However, genes located on the same chromosome (linked genes) do not follow independent assortment. Closely located genes tend to be inherited together (linkage), while distantly located genes may assort independently due to recombination. Linkage maps represent the arrangement of genes on a chromosome.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:4:Summary:4",
+            "order": 4,
+            "title": "Sex Determination and Genetic Mutations",
+            "content_text": "Sex-linked genes are located on sex chromosomes. In humans, females have XX and males have XY sex chromosomes, along with 22 pairs of autosomes. In birds (chickens), males are ZZ and females are ZW. Mutation is a change in genetic material; point mutations involve a single base pair change (e.g., Sickle-cell anaemia). Pedigree analysis is used to study inheritable mutations in families. Some mutations involve changes in whole set of chromosomes (polyploidy) or change in a subset of chromosome number (aneuploidy). This helped in understanding the mutational basis of genetic disorders. Down’s syndrome is due to trisomy of chromosome 21, where there is an extra copy of chromosome 21 and consequently the total number of chromosome becomes 47. In Turner’s syndrome, one X chromosome is missing and the sex chromosome is as XO, and in Klinefelter’s syndrome, the condition is XXY. These can be easily studied by analysis of Karyotypes.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "EXERCISES",
+      "items": [
+        {
+          "id": "ncert:biology:12:4:ex:1",
+          "number": 1,
+          "problem": "Mention the advantages of selecting pea plant for experiment by Mendel.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:4:ex:2",
+          "number": 2,
+          "problem": "Differentiate between the following – (a) Dominance and Recessive (b) Homozygous and Heterozygous (c) Monohybrid and Dihybrid.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:4:ex:3",
+          "number": 3,
+          "problem": "A diploid organism is heterozygous for 4 loci, how many types of gametes can be produced?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:4:ex:4",
+          "number": 4,
+          "problem": "Explain the Law of Dominance using a monohybrid cross.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:4:ex:5",
+          "number": 5,
+          "problem": "Define and design a test-cross.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:4:ex:6",
+          "number": 6,
+          "problem": "Using a Punnett Square, workout the distribution of phenotypic features in the first filial generation after a cross between a homozygous female and a heterozygous male for a single locus.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:4:ex:7",
+          "number": 7,
+          "problem": "When a cross in made between tall plant with yellow seeds ($TtYy$) and tall plant with green seed ($Ttyy$), what proportions of phenotype in the offspring could be expected to be (a) tall and green. (b) dwarf and green.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:4:ex:8",
+          "number": 8,
+          "problem": "Two heterozygous parents are crossed. If the two loci are linked what would be the distribution of phenotypic features in $F_1$ generation for a dibybrid cross?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:4:ex:9",
+          "number": 9,
+          "problem": "Briefly mention the contribution of T.H. Morgan in genetics.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:4:ex:10",
+          "number": 10,
+          "problem": "What is pedigree analysis? Suggest how such an analysis, can be useful.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:4:ex:11",
+          "number": 11,
+          "problem": "How is sex determined in human beings?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:4:ex:12",
+          "number": 12,
+          "problem": "A child has blood group O. If the father has blood group A and mother blood group B, work out the genotypes of the parents and the possible genotypes of the other offsprings.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:4:ex:13",
+          "number": 13,
+          "problem": "Explain the following terms with example (a) Co-dominance (b) Incomplete dominance",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:4:ex:14",
+          "number": 14,
+          "problem": "What is point mutation? Give one example.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:4:ex:15",
+          "number": 15,
+          "problem": "Who had proposed the chromosomal theory of the inheritance?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:4:ex:16",
+          "number": 16,
+          "problem": "Mention any two autosomal genetic disorders with their symptoms.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        }
+      ]
+    }
+  }
+}

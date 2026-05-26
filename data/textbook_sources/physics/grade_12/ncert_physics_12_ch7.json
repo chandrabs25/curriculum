@@ -1,0 +1,1145 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_physics_12_ch7.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:physics:12:7",
+  "curriculum": "ncert",
+  "subject": "physics",
+  "grade": 12,
+  "textbook_name": "Physics Part I",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:physics:12:7",
+    "number": 7,
+    "title": "Alternating Current",
+    "summary": "This chapter introduces Alternating Current (AC) circuits, contrasting them with Direct Current (DC). It begins by analyzing AC voltage applied to a resistor, defining RMS values for current and voltage to facilitate power calculations ($P = I^2R$). The chapter then introduces phasors as rotating vectors to represent AC quantities, simplifying analysis by considering phase relationships.\n\nNext, the text examines AC voltage applied to inductors and capacitors, introducing inductive reactance ($X_L = \\omega L$) and capacitive reactance ($X_C = 1/\\omega C$) as frequency-dependent resistances. It emphasizes that current lags voltage in an inductor and leads in a capacitor, with no average power dissipation in ideal components.\n\nBuilding upon these concepts, the chapter analyzes series LCR circuits, defining impedance ($Z = \\sqrt{R^2 + (X_L - X_C)^2}$) and the phase angle ($\\phi$) between voltage and current. Resonance, where $X_L = X_C$, is discussed, leading to maximum current and power dissipation. The power factor ($\\cos \\phi$) is introduced, highlighting power loss in AC circuits. Finally, transformers are explained, detailing their construction, operation based on electromagnetic induction, and their role in efficient long-distance power transmission through voltage step-up and step-down processes. This chapter provides a foundation for understanding AC circuit behavior and applications.",
+    "sections": [
+      {
+        "id": "ncert:physics:12:7:7.1",
+        "number": "7.1",
+        "title": "Introduction",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:7:7.1:1",
+            "order": 1,
+            "title": "Concept of Alternating Current (AC)",
+            "content_text": "In previous studies, we focused on direct current (dc) sources where the current does not change direction with time. However, alternating voltage (ac voltage) and alternating current (ac current) are more common in daily life. The electric mains supply in homes and offices provides a voltage that varies as a sine function of time. Most electrical devices require ac voltage because it can be efficiently transmitted and distributed over long distances. A key advantage of ac voltage is that it can be easily converted from one voltage level to another using transformers, which minimizes energy loss during transmission. AC circuits also exhibit unique characteristics, such as frequency-dependent behavior, which are utilized in devices like radio tuners.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:7:7.2",
+        "number": "7.2",
+        "title": "AC Voltage Applied to a Resistor",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:7:7.2:1",
+            "order": 1,
+            "title": "Circuit Analysis and Kirchhoff's Loop Rule",
+            "content_text": "Consider a circuit consisting of a resistor $R$ connected to an ac source that produces a sinusoidally varying potential difference across its terminals. The instantaneous ac voltage is given by: $$v = v_m \\sin \\omega t$$ (7.1), where $v_m$ is the amplitude (peak value) of the oscillating potential difference and $\\omega$ is the angular frequency. To find the instantaneous current $i$ through the resistor, we apply Kirchhoff's loop rule: $\\sum \\varepsilon(t) = 0$. For the circuit in Fig 7.1, this gives: $$v_m \\sin \\omega t = iR$$ or $$i = \\frac{v_m}{R} \\sin \\omega t$$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 7.1",
+                "description": "A circuit diagram showing an AC voltage source represented by a circle with a tilde symbol inside, connected in series with a resistor of resistance R.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.2:2",
+            "order": 2,
+            "title": "Current Amplitude and Phase Relationship",
+            "content_text": "Since resistance $R$ is a constant, the equation for current can be written as: $$i = i_m \\sin \\omega t$$ (7.2), where the current amplitude $i_m$ is defined by Ohm's law as: $$i_m = \\frac{v_m}{R}$$ (7.3). Comparing the equations for $v$ and $i$, we observe that both reach their zero, maximum, and minimum values at the same time. Therefore, in a pure resistor, the voltage and current are in phase with each other, as illustrated in the graph of Fig 7.2.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 7.2",
+                "description": "A graph showing the sinusoidal variation of voltage (v) and current (i) with respect to $\\omega t$. Both curves cross the zero axis and reach their peaks at the same points, indicating they are in phase.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.2:3",
+            "order": 3,
+            "title": "Power Dissipation in a Resistor",
+            "content_text": "While the average current over a complete cycle is zero (because the positive and negative halves cancel out), the average power consumed is not zero. Joule heating occurs regardless of the direction of current because it depends on $i^2$. The instantaneous power dissipated in the resistor is: $$p = i^2 R = i_m^2 R \\sin^2 \\omega t$$ (7.4). The average value of power $\\bar{p}$ over a cycle is: $$\\bar{p} = \\langle i_m^2 R \\sin^2 \\omega t \\rangle = i_m^2 R \\langle \\sin^2 \\omega t \\rangle$$. Using the trigonometric identity $\\sin^2 \\omega t = \\frac{1}{2}(1 - \\cos 2\\omega t)$ and the fact that the average of $\\cos 2\\omega t$ over a cycle is zero, we find: $$\\langle \\sin^2 \\omega t \\rangle = \\frac{1}{2}$$. Thus, the average power is: $$\\bar{p} = \\frac{1}{2} i_m^2 R$$ (7.5c).",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.2:4",
+            "order": 4,
+            "title": "Root Mean Square (RMS) Current",
+            "content_text": "To express ac power in a form similar to dc power ($P = I^2 R$), we define the root mean square (rms) current, also known as the effective current. It is denoted by $I_{rms}$ or simply $I$. The relationship between the rms current and the peak current $i_m$ is: $$I = \\frac{i_m}{\\sqrt{2}} \\approx 0.707 i_m$$. This value allows us to calculate the average power dissipation in an ac circuit using the same formula as dc: $P = I^2 R$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 7.3",
+                "description": "A graph of a sinusoidal current wave showing the peak current $i_m$ and the corresponding RMS current level $I$, which is approximately 70.7% of the peak value.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.2:5",
+            "order": 5,
+            "title": "RMS Current and Power",
+            "content_text": "The root mean square (rms) current, denoted by $I$, is defined as the peak current $i_m$ divided by $\\sqrt{2}$, which is approximately $0.707 i_m$. This value is significant because the average power dissipated in an AC resistor circuit can be expressed as $P = I^2 R$, which is identical in form to the power formula for DC circuits. The rms current represents the equivalent DC current that would produce the same average power loss as the alternating current.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.2:6",
+            "order": 6,
+            "title": "RMS Voltage and Ohm's Law for AC",
+            "content_text": "Similar to current, the rms voltage or effective voltage $V$ is defined as $v_m / \\sqrt{2} \\approx 0.707 v_m$. By using rms values, the relationship between voltage and current in an AC circuit follows Ohm's law: $V = IR$. It is standard practice to specify AC quantities by their rms values; for instance, a household supply of $220 V$ refers to the rms voltage, implying a peak voltage $v_m = \\sqrt{2} V \\approx 311 V$. Average power can also be calculated using $P = V^2 / R$ or $P = IV$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.2:7",
+            "order": 7,
+            "title": "Example 7.1: Power and Resistance in AC",
+            "content_text": "This example demonstrates how to calculate resistance, peak voltage, and rms current for a household appliance given its power rating and the supply voltage.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 7.1",
+                "problem": "A light bulb is rated at $100 W$ for a $220 V$ supply. Find (a) the resistance of the bulb; (b) the peak voltage of the source; and (c) the rms current through the bulb.",
+                "solution": "(a) Given $P = 100 W$ and $V = 220 V$. The resistance is $R = \\frac{V^2}{P} = \\frac{(220 V)^2}{100 W} = 484 \\Omega$. (b) The peak voltage is $v_m = \\sqrt{2}V = 1.414 \\times 220 V = 311 V$. (c) The rms current is $I = \\frac{P}{V} = \\frac{100 W}{220 V} = 0.454 A$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:7:7.3",
+        "number": "7.3",
+        "title": "Representation of AC Current and Voltage by Rotating Vectors — Phasors",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:7:7.3:1",
+            "order": 1,
+            "title": "Definition of Phasors",
+            "content_text": "A phasor is a vector that rotates about the origin with an angular speed $\\omega$. It is used to simplify the analysis of AC circuits where current and voltage may have different phases. The length of the phasor represents the amplitude (peak value) of the quantity ($v_m$ or $i_m$), while its projection onto the vertical axis represents the instantaneous value ($v$ or $i$) at a given time $t$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 7.4",
+                "description": "(a) A phasor diagram showing voltage (V) and current (I) vectors rotating at angular frequency $\\omega$. For a resistor, they are in the same direction. (b) A graph of instantaneous voltage $v$ and current $i$ plotted against $\\omega t$, showing they reach peaks and zeros simultaneously.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.3:2",
+            "order": 2,
+            "title": "Phasor Diagrams for Resistive Circuits",
+            "content_text": "In a purely resistive circuit, the voltage and current phasors are collinear because they are in phase, meaning the phase angle between them is zero. As these phasors rotate at frequency $\\omega$, their vertical projections $v_m \\sin \\omega t$ and $i_m \\sin \\omega t$ generate the sinusoidal curves observed in a standard voltage-current graph.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:7:7.4",
+        "number": "7.4",
+        "title": "AC Voltage Applied to an Inductor",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:7:7.4:1",
+            "order": 1,
+            "title": "Purely Inductive Circuit and Kirchhoff's Law",
+            "content_text": "A purely inductive circuit consists of an AC source connected to an inductor with negligible resistance. According to Kirchhoff's loop rule, the sum of the source voltage $v$ and the self-induced emf $-L(di/dt)$ must be zero: $v - L \\frac{di}{dt} = 0$. This implies that the source voltage must equal the back emf to maintain the current flow.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 7.5",
+                "description": "A circuit diagram showing an AC voltage source $\\varepsilon$ connected in a single loop to an inductor with inductance $L$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.4:2",
+            "order": 2,
+            "title": "Derivation of Current in an Inductor",
+            "content_text": "To find the current, we rearrange the loop equation to $\\frac{di}{dt} = \\frac{v_m}{L} \\sin \\omega t$. Integrating this with respect to time gives $i = -\\frac{v_m}{\\omega L} \\cos(\\omega t) + \\text{constant}$. Since the AC source oscillates symmetrically about zero, the average current is zero, making the integration constant zero. Using the identity $-\\cos \\omega t = \\sin(\\omega t - \\pi/2)$, the current is expressed as $i = i_m \\sin(\\omega t - \\pi/2)$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.4:3",
+            "order": 3,
+            "title": "Inductive Reactance",
+            "content_text": "The amplitude of the current is $i_m = v_m / (\\omega L)$. The quantity $\\omega L$ is known as the inductive reactance, denoted by $X_L$. It is measured in ohms ($\\Omega$) and represents the opposition offered by the inductor to the flow of AC. Unlike a resistor, $X_L$ depends on the frequency of the AC supply and the inductance value: $X_L = \\omega L$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.4:4",
+            "order": 4,
+            "title": "Phase Relationship in Inductive Circuits",
+            "content_text": "Comparing the voltage $v = v_m \\sin \\omega t$ and current $i = i_m \\sin(\\omega t - \\pi/2)$ shows that in a purely inductive circuit, the current lags the voltage by $\\pi/2$ radians (or $90^\\circ$). In a phasor diagram, the current phasor $I$ is drawn $90^\\circ$ clockwise from the voltage phasor $V$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.4:5",
+            "order": 5,
+            "title": "Phase Relationship and Phasor Representation for Inductive Circuits",
+            "content_text": "In an inductive circuit, the current reaches its maximum value later than the voltage by one-fourth of a period, which corresponds to a phase difference of $\\pi/2$ or $90^{\\circ}$. This relationship is represented in Figure 7.6. In the phasor diagram (a), the current phasor $\\mathbf{I}$ is shown lagging behind the voltage phasor $\\mathbf{V}$ by $\\pi/2$ as they rotate counterclockwise. The graph (b) shows the variation of voltage $v$ and current $i$ with $\\omega t$, illustrating that the current wave is shifted to the right relative to the voltage wave by a factor of $T/4 = (\\pi/2)/\\omega$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 7.6",
+                "description": "(a) A Phasor diagram for the inductive circuit showing voltage phasor V at angle $\\omega t_1$ and current phasor I at angle $\\omega t_1 - \\pi/2$. (b) Graph of instantaneous voltage $v = v_m \\sin \\omega t$ and current $i = i_m \\sin(\\omega t - \\pi/2)$ versus $\\omega t$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.4:6",
+            "order": 6,
+            "title": "Power Supplied to an Inductor",
+            "content_text": "The instantaneous power supplied to the inductor is the product of the instantaneous current and voltage: $p_L = iv = i_m \\sin\\left(\\omega t - \\frac{\\pi}{2}\\right) \\times v_m \\sin(\\omega t)$. Using the trigonometric identity $\\sin(\\omega t - \\pi/2) = -\\cos(\\omega t)$, we get $p_L = -i_m v_m \\cos(\\omega t) \\sin(\\omega t)$. This can be further simplified using the identity $\\sin(2\\omega t) = 2 \\sin(\\omega t) \\cos(\\omega t)$ to: $p_L = -\\frac{i_m v_m}{2} \\sin(2\\omega t)$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.4:7",
+            "order": 7,
+            "title": "Average Power in a Purely Inductive Circuit",
+            "content_text": "The average power $P_L$ over a complete cycle is the average of the instantaneous power: $P_L = \\langle -\\frac{i_m v_m}{2} \\sin(2\\omega t) \\rangle = -\\frac{i_m v_m}{2} \\langle \\sin(2\\omega t) \\rangle$. Since the average value of $\\sin(2\\omega t)$ over a complete cycle is zero, the average power supplied to an inductor over one complete cycle is zero. This means a pure inductor does not consume energy from the source over a full cycle; it alternately absorbs and returns energy.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.4:8",
+            "order": 8,
+            "title": "Worked Example: Inductive Reactance and RMS Current",
+            "content_text": "This example demonstrates how to calculate the inductive reactance and the root-mean-square (rms) current for a pure inductor connected to an AC source.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 7.2",
+                "problem": "A pure inductor of $25.0$ mH is connected to a source of $220$ V. Find the inductive reactance and rms current in the circuit if the frequency of the source is $50$ Hz.",
+                "solution": "The inductive reactance is: $X_L = 2\\pi\\nu L = 2 \\times 3.14 \\times 50 \\times 25 \\times 10^{-3} \\Omega = 7.85 \\Omega$. The rms current in the circuit is: $I = \\frac{V}{X_L} = \\frac{220 \\text{ V}}{7.85 \\Omega} = 28 \\text{ A}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:7:7.5",
+        "number": "7.5",
+        "title": "AC Voltage Applied to a Capacitor",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:7:7.5:1",
+            "order": 1,
+            "title": "Behavior of Capacitors in DC and AC Circuits",
+            "content_text": "When a capacitor is connected to a DC voltage source, current flows only for the short time required to charge the capacitor. As charge accumulates on the plates, the voltage across them increases, opposing the current until it falls to zero when fully charged. In contrast, when connected to an AC source (Fig 7.7), the capacitor limits or regulates the current but does not completely prevent the flow of charge because it is alternately charged and discharged as the current reverses every half cycle.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 7.7",
+                "description": "A circuit diagram showing an AC source $\\varepsilon$ generating voltage $v = v_m \\sin \\omega t$ connected to a capacitor $C$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.5:2",
+            "order": 2,
+            "title": "Derivation of Current in a Capacitive Circuit",
+            "content_text": "Let $q$ be the charge on the capacitor at any time $t$. The instantaneous voltage $v$ across the capacitor is $v = q/C$ (Eq. 7.15). According to Kirchhoff's loop rule, the voltage across the source and capacitor are equal: $v_m \\sin \\omega t = q/C$. To find the current $i$, we use $i = dq/dt$: $i = \\frac{d}{dt}(v_m C \\sin \\omega t) = \\omega C v_m \\cos(\\omega t)$. Using the relation $\\cos(\\omega t) = \\sin(\\omega t + \\pi/2)$, we obtain: $i = i_m \\sin(\\omega t + \\pi/2)$ (Eq. 7.16), where the amplitude of the oscillating current is $i_m = \\omega C v_m$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.5:3",
+            "order": 3,
+            "title": "Capacitive Reactance",
+            "content_text": "The amplitude of the current can be rewritten as $i_m = \\frac{v_m}{(1/\\omega C)}$. Comparing this to $i_m = v_m/R$ for a resistive circuit, the term $(1/\\omega C)$ plays the role of resistance and is called capacitive reactance, denoted by $X_C$: $X_C = 1/\\omega C$ (Eq. 7.17). The amplitude of the current is then $i_m = v_m/X_C$ (Eq. 7.18). The dimension of capacitive reactance is the same as resistance, and its SI unit is the ohm ($\\Omega$). $X_C$ limits the current amplitude and is inversely proportional to both the frequency of the AC source and the capacitance.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.5:4",
+            "order": 4,
+            "title": "Phase Relationship and Phasor Representation for Capacitive Circuits",
+            "content_text": "Comparing the current equation $i = i_m \\sin(\\omega t + \\pi/2)$ with the source voltage $v = v_m \\sin \\omega t$ shows that the current leads the voltage by $\\pi/2$. In the phasor diagram (Fig 7.8a), the current phasor $\\mathbf{I}$ is $\\pi/2$ ahead of the voltage phasor $\\mathbf{V}$ as they rotate counterclockwise. The graph (Fig 7.8b) shows that the current reaches its maximum value earlier than the voltage by one-fourth of a period.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 7.8",
+                "description": "(a) A Phasor diagram for the capacitive circuit showing voltage phasor V at angle $\\omega t_1$ and current phasor I at angle $\\omega t_1 + \\pi/2$. (b) Graph of instantaneous voltage $v$ and current $i$ versus $\\omega t$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.5:5",
+            "order": 5,
+            "title": "Power in a Capacitive Circuit",
+            "content_text": "The instantaneous power supplied to the capacitor is $p_C = iv = i_m \\cos(\\omega t) v_m \\sin(\\omega t) = \\frac{i_m v_m}{2} \\sin(2\\omega t)$ (Eq. 7.19). The average power over a complete cycle is $P_C = \\langle \\frac{i_m v_m}{2} \\sin(2\\omega t) \\rangle = \\frac{i_m v_m}{2} \\langle \\sin(2\\omega t) \\rangle = 0$. Similar to an inductor, the average power supplied to a capacitor over one complete cycle is zero.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.5:6",
+            "order": 6,
+            "title": "Worked Example: Capacitor in DC and AC Circuits",
+            "content_text": "This example explores the qualitative behavior of a lamp connected in series with a capacitor when the source type or capacitance is changed.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 7.3",
+                "problem": "A lamp is connected in series with a capacitor. Predict your observations for dc and ac connections. What happens in each case if the capacitance of the capacitor is reduced?",
+                "solution": "When a dc source is connected to a capacitor, the capacitor gets charged and after charging no current flows in the circuit and the lamp will not glow. There will be no change even if $C$ is reduced. With ac source, the capacitor offers capacitive reactance $(1/\\omega C)$ and current flows in the circuit. Consequently, the lamp will shine. Reducing $C$ will increase reactance and the lamp will shine less brightly than before."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.5:7",
+            "order": 7,
+            "title": "Worked Example: Calculating Capacitive Reactance and Current",
+            "content_text": "This example provides a numerical application for calculating reactance and current in a capacitive AC circuit.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 7.4",
+                "problem": "A $15.0 \\mu$F capacitor is connected to a $220$ V, $50$ Hz source. Find the capacitive reactance and the current (rms and peak) in the circuit. If the frequency is doubled, what happens to the capacitive reactance and the current?",
+                "solution": "The capacitive reactance is $X_C = \\frac{1}{2\\pi\\nu C} = \\frac{1}{2\\pi(50 \\text{Hz})(15.0 \\times 10^{-6} \\text{ F})} = 212 \\Omega$. The rms current is [CONTINUES]"
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.5:8",
+            "order": 8,
+            "title": "Worked Example: Calculating Peak Current and Frequency Effects",
+            "content_text": "In the continuation of the previous example, the rms current $I$ is calculated as $I = \\frac{V}{X_C} = \\frac{220\\text{ V}}{212\\text{ }\\Omega} = 1.04\\text{ A}$. The peak current is then determined using the relation $i_m = \\sqrt{2}I = (1.41)(1.04\\text{ A}) = 1.47\\text{ A}$. This current oscillates between $+1.47\\text{ A}$ and $-1.47\\text{ A}$ and leads the voltage by $\\pi/2$. If the frequency of the AC source is doubled, the capacitive reactance $X_C = 1/(\\omega C)$ is halved, which results in the current being doubled.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 7.4",
+                "problem": "Calculate the rms and peak current for a $15.0\\text{ }\\mu\\text{F}$ capacitor connected to a $220\\text{ V}, 50\\text{ Hz}$ source. What happens to the current if the frequency is doubled?",
+                "solution": "$I = \\frac{V}{X_C} = \\frac{220\\text{ V}}{212\\text{ }\\Omega} = 1.04\\text{ A}$. The peak current is $i_m = \\sqrt{2}I = (1.41)(1.04\\text{ A}) = 1.47\\text{ A}$. If the frequency is doubled, the capacitive reactance is halved and consequently, the current is doubled."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.5:9",
+            "order": 9,
+            "title": "Worked Example: Inductor and Light Bulb in AC Circuit",
+            "content_text": "When a light bulb and an open coil inductor are connected in series to an AC source, the brightness of the bulb depends on the total impedance of the circuit. If an iron rod is inserted into the interior of the inductor, the magnetic field inside the coil magnetizes the iron, which significantly increases the magnetic flux and thus the inductance $L$ of the coil. Consequently, the inductive reactance $X_L = \\omega L$ increases. This causes a larger fraction of the applied AC voltage to appear across the inductor, leaving less voltage for the light bulb. Therefore, the glow of the light bulb decreases.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 7.5",
+                "problem": "A light bulb and an open coil inductor are connected to an ac source through a key as shown in Fig. 7.9. The switch is closed and after sometime, an iron rod is inserted into the interior of the inductor. The glow of the light bulb (a) increases; (b) decreases; (c) is unchanged, as the iron rod is inserted. Give your answer with reasons.",
+                "solution": "As the iron rod is inserted, the magnetic field inside the coil magnetizes the iron increasing the magnetic field inside it. Hence, the inductance of the coil increases. Consequently, the inductive reactance of the coil increases. As a result, a larger fraction of the applied ac voltage appears across the inductor, leaving less voltage across the bulb. Therefore, the glow of the light bulb decreases."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Figure 7.9",
+                "description": "A circuit diagram showing a light bulb, an inductor coil, a switch (key), and an AC voltage source connected in series.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:7:7.6",
+        "number": "7.6",
+        "title": "AC Voltage Applied to a Series LCR Circuit",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:7:7.6:1",
+            "order": 1,
+            "title": "Kirchhoff's Loop Rule for Series LCR Circuit",
+            "content_text": "A series LCR circuit consists of a resistor $R$, an inductor $L$, and a capacitor $C$ connected in series to an AC source. Let the source voltage be $v = v_m \\sin \\omega t$. If $q$ is the charge on the capacitor and $i$ is the current at time $t$, Kirchhoff's loop rule gives the following differential equation: $$L \\frac{di}{dt} + iR + \\frac{q}{C} = v$$ (Eq. 7.20). To find the instantaneous current $i$ and its phase relationship with the voltage $v$, we can use either the phasor-diagram technique or an analytical method.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 7.10",
+                "description": "A circuit diagram of a series LCR circuit containing a resistor R, a capacitor C, and an inductor L connected in series to an AC voltage source epsilon.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.6:2",
+            "order": 2,
+            "title": "Phasor-diagram Solution for LCR Circuit",
+            "content_text": "In a series circuit, the current $i$ is the same at any time in all elements, having the same amplitude and phase: $i = i_m \\sin(\\omega t + \\phi)$ (Eq. 7.21). Let $\\mathbf{I}$ be the phasor representing this current. The voltage phasors across the components are: $\\mathbf{V}_R$ (parallel to $\\mathbf{I}$), $\\mathbf{V}_C$ ($\\pi/2$ behind $\\mathbf{I}$), and $\\mathbf{V}_L$ ($\\pi/2$ ahead of $\\mathbf{I}$). Their amplitudes are $v_{Rm} = i_m R$, $v_{Cm} = i_m X_C$, and $v_{Lm} = i_m X_L$ (Eq. 7.22). The phasor equation for the circuit is $\\mathbf{V}_L + \\mathbf{V}_R + \\mathbf{V}_C = \\mathbf{V}$ (Eq. 7.24). Since $\\mathbf{V}_C$ and $\\mathbf{V}_L$ are in opposite directions, they combine to a single phasor $(\\mathbf{V}_C + \\mathbf{V}_L)$ with magnitude $|v_{Cm} - v_{Lm}|$. Using the Pythagorean theorem on the resulting right-triangle: $v_m^2 = v_{Rm}^2 + (v_{Cm} - v_{Lm})^2$. Substituting the amplitudes: $v_m^2 = (i_m R)^2 + (i_m X_C - i_m X_L)^2 = i_m^2 [R^2 + (X_C - X_L)^2]$. Thus, the current amplitude is $i_m = \\frac{v_m}{\\sqrt{R^2 + (X_C - X_L)^2}}$ (Eq. 7.25a).",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 7.11",
+                "description": "Phasor diagrams for a series LCR circuit. (a) shows the individual phasors V_L, V_R, V_C and current I. (b) shows the vector addition of these phasors where V is the resultant of V_R and (V_C + V_L).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.6:3",
+            "order": 3,
+            "title": "Impedance and Phase Angle in LCR Circuits",
+            "content_text": "By analogy to resistance, we define the impedance $Z$ of an AC circuit as $Z = \\sqrt{R^2 + (X_C - X_L)^2}$ (Eq. 7.26). The current amplitude is then $i_m = \\frac{v_m}{Z}$ (Eq. 7.25b). The phase angle $\\phi$ between the current $\\mathbf{I}$ and voltage $\\mathbf{V}$ is determined from the impedance diagram: $\\tan \\phi = \\frac{v_{Cm} - v_{Lm}}{v_{Rm}} = \\frac{X_C - X_L}{R}$ (Eq. 7.27). The impedance diagram is a right-triangle with $R$ as the base, $(X_C - X_L)$ as the perpendicular, and $Z$ as the hypotenuse.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 7.12",
+                "description": "The impedance diagram: a right-angled triangle with sides R and (X_C - X_L), and hypotenuse Z. The angle between R and Z is the phase angle phi.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.6:4",
+            "order": 4,
+            "title": "Analysis of Phase Relationships",
+            "content_text": "The nature of the circuit depends on the relative values of $X_C$ and $X_L$: 1. If $X_C > X_L$, $\\phi$ is positive and the circuit is predominantly capacitive; the current leads the source voltage. 2. If $X_C < X_L$, $\\phi$ is negative and the circuit is predominantly inductive; the current lags the source voltage. Figure 7.13 illustrates the phasor diagram and the variation of $v$ and $i$ with $\\omega t$ for the capacitive case ($X_C > X_L$).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 7.13",
+                "description": "(a) Phasor diagram of V and I for X_C > X_L. (b) Graphs of voltage v and current i versus omega*t showing current leading voltage.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.6:5",
+            "order": 5,
+            "title": "Steady-state and Transient Solutions",
+            "content_text": "The phasor method provides the 'steady-state solution' for the LCR circuit, which describes the behavior after the circuit has been running for a sufficiently long time. However, there is also a 'transient solution' that exists when the circuit is first switched on (even if $v=0$). The general solution is the sum of the transient and steady-state solutions. In practical AC analysis, we usually focus on the steady-state solution as the transient effects die out quickly.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.6:6",
+            "order": 6,
+            "title": "Introduction to Resonance",
+            "content_text": "Resonance is a characteristic of series RLC circuits where the system oscillates with a large amplitude when driven by an energy source at a specific frequency called the 'natural frequency'. A common example is a child on a swing; if the child pulls on the ropes at the right frequency (the natural frequency of the swing), the amplitude of the oscillation increases significantly. Continuing the analogy of a swing, if the driving force is applied at regular intervals matching the natural frequency, the amplitude of oscillation becomes very large. In an $RLC$ circuit driven by an AC voltage of amplitude $v_m$ and frequency $\\omega$, the current amplitude is given by $i_m = \\frac{v_m}{Z} = \\frac{v_m}{\\sqrt{R^2 + (X_C - X_L)^2}}$. Resonance occurs at a specific frequency $\\omega_0$ where the capacitive reactance equals the inductive reactance ($X_C = X_L$). At this frequency, the impedance is at its minimum value ($Z = R$), and the current amplitude reaches its maximum value $i_m = v_m/R$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.6:7",
+            "order": 7,
+            "title": "Deriving the Resonant Frequency",
+            "content_text": "The condition for resonance is $X_C = X_L$, which can be written as $\\frac{1}{\\omega_0 C} = \\omega_0 L$. Solving for the resonant frequency gives $\\omega_0^2 = \\frac{1}{LC}$, or $\\omega_0 = \\frac{1}{\\sqrt{LC}}$. At this frequency, the current amplitude is maximized. The sharpness of the resonance peak depends on the resistance $R$; a smaller resistance leads to a higher and sharper peak in the current-frequency graph.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 7.14",
+                "description": "A graph showing the variation of current amplitude $i_m$ with angular frequency $\\omega$ for a series LCR circuit. Two curves are shown for different resistance values: (i) $R = 100 \\, \\Omega$ and (ii) $R = 200 \\, \\Omega$, with $L = 1.00 \\, \\text{mH}$. The peak occurs at the resonant frequency $\\omega_0$, with the $100 \\, \\Omega$ curve showing a much higher and sharper peak than the $200 \\, \\Omega$ curve.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.6:8",
+            "order": 8,
+            "title": "Applications of Resonance in Tuning",
+            "content_text": "Resonant circuits are fundamental to the tuning mechanisms of radios and televisions. An antenna receives signals from various stations simultaneously, acting as a source for the tuning circuit. By adjusting the capacitance of a variable capacitor in the circuit, the resonant frequency is changed to match the frequency of the desired station. When matched, the current amplitude for that specific signal becomes maximum, allowing it to be heard or viewed clearly.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.6:9",
+            "order": 9,
+            "title": "Requirements for Resonance",
+            "content_text": "It is crucial to note that resonance can only occur in circuits containing both an inductor ($L$) and a capacitor ($C$). This is because resonance relies on the voltages across $L$ and $C$ being $180^\\circ$ out of phase, thereby cancelling each other out so that the total source voltage appears only across the resistor $R$. Consequently, $RL$ and $RC$ circuits do not exhibit the phenomenon of resonance.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.6:10",
+            "order": 10,
+            "title": "Analysis of a Series RC Circuit",
+            "content_text": "This subsection examines a practical example of a series RC circuit to calculate impedance, current, and individual component voltages, highlighting why algebraic sums of AC voltages do not equal the source voltage due to phase differences.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 7.6",
+                "problem": "A resistor of $200 \\, \\Omega$ and a capacitor of $15.0 \\, \\mu\\text{F}$ are connected in series to a $220 \\, \\text{V}$, $50 \\, \\text{Hz}$ ac source. (a) Calculate the current in the circuit; (b) Calculate the voltage (rms) across the resistor and the capacitor. Is the algebraic sum of these voltages more than the source voltage? If yes, resolve the paradox.",
+                "solution": "Given: $R = 200 \\, \\Omega$, $C = 15.0 \\times 10^{-6} \\, \\text{F}$, $V = 220 \\, \\text{V}$, $\\nu = 50 \\, \\text{Hz}$.\n(a) Impedance $Z = \\sqrt{R^2 + X_C^2} = \\sqrt{R^2 + (2\\pi\\nu C)^{-2}}$.\n$X_C = \\frac{1}{2 \\times 3.14 \\times 50 \\times 15.0 \\times 10^{-6}} = 212.3 \\, \\Omega$.\n$Z = \\sqrt{200^2 + 212.3^2} = 291.67 \\, \\Omega$.\nCurrent $I = V/Z = 220/291.5 = 0.755 \\, \\text{A}$.\n(b) $V_R = IR = (0.755)(200) = 151 \\, \\text{V}$.\n$V_C = IX_C = (0.755)(212.3) = 160.3 \\, \\text{V}$.\nThe algebraic sum $V_R + V_C = 311.3 \\, \\text{V}$, which is greater than $220 \\, \\text{V}$. This is because the voltages are $90^\\circ$ out of phase and must be added vectorially: $V = \\sqrt{V_R^2 + V_C^2} = \\sqrt{151^2 + 160.3^2} = 220 \\, \\text{V}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:7:7.7",
+        "number": "7.7",
+        "title": "Power in AC Circuit: The Power Factor",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:7:7.7:1",
+            "order": 1,
+            "title": "Instantaneous and Average Power",
+            "content_text": "In a series $RLC$ circuit, the voltage is $v = v_m \\sin \\omega t$ and the current is $i = i_m \\sin(\\omega t + \\phi)$, where $\\phi$ is the phase angle. The instantaneous power $p$ supplied by the source is $p = vi = (v_m \\sin \\omega t) \\times [i_m \\sin(\\omega t + \\phi)]$. Using trigonometric identities, this simplifies to $p = \\frac{v_m i_m}{2} [\\cos \\phi - \\cos(2\\omega t + \\phi)]$. To find the average power $P$ over a complete cycle, we average these terms. The average of the second time-dependent term is zero, resulting in $P = \\frac{v_m i_m}{2} \\cos \\phi = \\frac{v_m}{\\sqrt{2}} \\frac{i_m}{\\sqrt{2}} \\cos \\phi = V I \\cos \\phi$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.7:2",
+            "order": 2,
+            "title": "The Power Factor Definition",
+            "content_text": "The average power dissipated in an AC circuit depends on the voltage, the current, and the cosine of the phase angle $\\phi$ between them. The term $\\cos \\phi$ is defined as the power factor. The average power can also be expressed as $P = I^2 Z \\cos \\phi$. This factor determines how much of the apparent power ($VI$) is actually converted into useful work or heat.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.7:3",
+            "order": 3,
+            "title": "Power Dissipation in Specific Circuit Cases",
+            "content_text": "The power dissipated varies by circuit type: (i) In a purely resistive circuit, $\\phi = 0$, so $\\cos \\phi = 1$, leading to maximum power dissipation $P = VI$. (ii) In purely inductive or capacitive circuits, $\\phi = \\pi/2$, so $\\cos \\phi = 0$, and no power is dissipated; the current is called 'wattless current'. (iii) In an $LCR$ series circuit, power is dissipated only through the resistor. (iv) At resonance in an $LCR$ circuit, $X_C - X_L = 0$, so $\\phi = 0$ and $\\cos \\phi = 1$. Maximum power $P = I^2 R$ is dissipated at resonance.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.7:4",
+            "order": 4,
+            "title": "Power Factor in Electrical Transmission",
+            "content_text": "This subsection discusses the importance of a high power factor in reducing energy losses during electricity transmission and how capacitors can be used to improve it.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 7.7",
+                "problem": "(a) For circuits used for transporting electric power, a low power factor implies large power loss in transmission. Explain. (b) Power factor can often be improved by the use of a capacitor of appropriate capacitance in the circuit. Explain.",
+                "solution": "(a) Average power is $P = VI \\cos \\phi$. To deliver a specific amount of power $P$ at a fixed voltage $V$, if the power factor $\\cos \\phi$ is small, the current $I$ must be large. A larger current leads to significantly higher ohmic power losses ($I^2 R$) in the transmission lines. (b) In many industrial circuits (which are often inductive), the current $I$ lags the voltage by an angle $\\phi$. By adding a capacitor in the circuit, we can make the total impedance $Z$ more resistive, bringing the power factor $\\cos \\phi = R/Z$ closer to 1, thereby reducing the required current and the associated losses."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.7:5",
+            "order": 5,
+            "title": "Improving Power Factor",
+            "content_text": "To optimize power delivery, the power factor of a circuit can be improved by neutralizing the reactive component of the current. The total current $I$ can be resolved into two components: $I_p$, which is in phase with the voltage $V$ and responsible for power dissipation, and $I_q$, which is perpendicular to the voltage and known as the wattless component. In circuits with inductive loads where current lags, the power factor is low. This can be corrected by connecting a capacitor in parallel, which provides a leading wattless current $I'_q$ to cancel out the lagging $I_q$, thereby making the total power $P$ effectively equal to $I_p V$.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 7.15",
+                "description": "A phasor diagram showing the resolution of current vector I into two components: Ip along the voltage vector V, and Iq perpendicular to V. It also shows the neutralizing current Iq' in the opposite direction of Iq.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.7:6",
+            "order": 6,
+            "title": "Analysis of a Series LCR Circuit",
+            "content_text": "This subsection demonstrates the calculation of impedance, phase relationship, and power dissipation in a specific series LCR circuit. It highlights how the inductive and capacitive reactances determine the overall impedance and whether the current leads or lags the voltage based on the sign of the phase angle.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 7.8",
+                "problem": "A sinusoidal voltage of peak value $283$ V and frequency $50$ Hz is applied to a series $LCR$ circuit in which $R = 3 \\Omega$, $L = 25.48$ mH, and $C = 796 \\mu$F. Find (a) the impedance of the circuit; (b) the phase difference between the voltage across the source and the current; (c) the power dissipated in the circuit; and (d) the power factor.",
+                "solution": "(a) First, calculate reactances: $X_L = 2 \\pi \\nu L = 2 \\times 3.14 \\times 50 \\times 25.48 \\times 10^{-3} \\Omega = 8 \\Omega$. $X_C = \\frac{1}{2 \\pi \\nu C} = \\frac{1}{2 \\times 3.14 \\times 50 \\times 796 \\times 10^{-6}} = 4 \\Omega$. Impedance $Z = \\sqrt{R^2 + (X_L - X_C)^2} = \\sqrt{3^2 + (8-4)^2} = 5 \\Omega$. (b) Phase difference $\\phi = \\tan^{-1} \\frac{X_C - X_L}{R} = \\tan^{-1} \\left( \\frac{4-8}{3} \\right) = -53.1^{\\circ}$. Since $\\phi$ is negative, current lags the voltage. (c) Power dissipated $P = I^2 R$. RMS current $I = \\frac{i_m}{\\sqrt{2} Z} = \\frac{283}{\\sqrt{2} \\times 5} = 40$ A. $P = (40)^2 \\times 3 = 4800$ W. (d) Power factor $= \\cos \\phi = \\cos(-53.1^{\\circ}) = 0.6$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.7:7",
+            "order": 7,
+            "title": "Resonance in LCR Circuits",
+            "content_text": "At a specific frequency known as the resonant frequency, the inductive and capacitive reactances cancel each other out, leading to minimum impedance and maximum power dissipation. This example explores how changing the source frequency to reach resonance affects the circuit's behavior compared to non-resonant conditions.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 7.9",
+                "problem": "Suppose the frequency of the source in the previous example can be varied. (a) What is the frequency of the source at which resonance occurs? (b) Calculate the impedance, the current, and the power dissipated at the resonant condition.",
+                "solution": "(a) Resonant angular frequency $\\omega_0 = \\frac{1}{\\sqrt{LC}} = \\frac{1}{\\sqrt{25.48 \\times 10^{-3} \\times 796 \\times 10^{-6}}} = 222.1$ rad/s. Frequency $\\nu_r = \\frac{\\omega_0}{2\\pi} = \\frac{222.1}{2 \\times 3.14} = 35.4$ Hz. (b) At resonance, $Z = R = 3 \\Omega$. RMS current $I = \\frac{V}{Z} = \\frac{283}{\\sqrt{2} \\times 3} = 66.7$ A. Power dissipated $P = I^2 R = (66.7)^2 \\times 3 = 13.35$ kW. Power at resonance is significantly higher than in the previous example."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.7:8",
+            "order": 8,
+            "title": "Application: Metal Detectors",
+            "content_text": "Metal detectors operate on the principle of resonance in AC circuits. A person walks through a coil that is part of a resonant circuit. If they carry metal, the metal changes the inductance of the coil, which shifts the circuit away from resonance. This change in impedance causes a detectable change in current, triggering an alarm.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 7.10",
+                "problem": "At an airport, a person is made to walk through the doorway of a metal detector, for security reasons. If she/he is carrying anything made of metal, the metal detector emits a sound. On what principle does this detector work?",
+                "solution": "The metal detector works on the principle of resonance in ac circuits. When you walk through the coil with metal, the impedance of the circuit changes, resulting in a significant change in current. This change is detected by electronic circuitry, causing an alarm sound."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:7:7.8",
+        "number": "7.8",
+        "title": "Transformers",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:7:7.8:1",
+            "order": 1,
+            "title": "Introduction to Transformers",
+            "content_text": "A transformer is a static electrical device designed to transfer electrical energy between circuits through electromagnetic induction, specifically to increase or decrease the voltage of an alternating current. It operates on the principle of mutual induction between two or more coils.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.8:2",
+            "order": 2,
+            "title": "Construction of a Transformer",
+            "content_text": "A standard transformer consists of two insulated coils wound onto a common soft-iron core. The coil connected to the input voltage source is the primary coil (with $N_p$ turns), and the coil providing the output is the secondary coil (with $N_s$ turns). The coils can be wound on top of each other or on separate limbs of the core to facilitate magnetic flux linkage.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 7.16",
+                "description": "Two diagrams of transformer windings: (a) shows primary and secondary coils wound on top of each other on the same limb of a soft-iron core; (b) shows primary and secondary coils wound on separate limbs of a rectangular soft-iron core.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.8:3",
+            "order": 3,
+            "title": "Principle of Operation and Induced EMF",
+            "content_text": "When an alternating voltage $v_p$ is applied to the primary coil, the resulting current creates a varying magnetic flux $\\phi$ in the core. This flux links with the secondary coil, inducing an electromotive force (emf) in it. In an ideal transformer with no flux leakage and negligible resistance, the flux per turn is the same for both coils.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.8:4",
+            "order": 4,
+            "title": "Mathematical Derivation of EMF",
+            "content_text": "According to Faraday's law, the induced emf in the secondary coil with $N_s$ turns is $\\epsilon_s = -N_s \\frac{d\\phi}{dt}$. Similarly, the changing flux induces a back emf in the primary coil given by $\\epsilon_p = -N_p \\frac{d\\phi}{dt}$. For an ideal transformer where the primary resistance is zero, the applied voltage $v_p$ must equal the back emf $\\epsilon_p$. If the secondary is an open circuit or the current is small, the secondary voltage $v_s$ is approximately equal to $\\epsilon_s$. If the secondary is an open circuit or the current is small, the secondary voltage $v_s$ is approximately equal to $\\epsilon_s$. Therefore, the equations for secondary and primary voltage can be written as $v_s = -N_s \\frac{d\\phi}{dt}$ and $v_p = -N_p \\frac{d\\phi}{dt}$. From these relations, we derive the fundamental transformer equation: $\\frac{v_s}{v_p} = \\frac{N_s}{N_p}$. This relation is obtained using three key assumptions: (i) the primary resistance and current are small; (ii) the same magnetic flux links both the primary and the secondary coils, as very little flux escapes from the core; and (iii) the secondary current is small.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.8:5",
+            "order": 5,
+            "title": "Efficiency and Current Relations",
+            "content_text": "In an ideal transformer assumed to be 100% efficient with no energy losses, the power input equals the power output: $p = i v$, so $i_p v_p = i_s v_s$. While some energy is always lost, well-designed transformers can achieve efficiencies greater than 95%. Combining the power and voltage equations, we find the relationship for currents: $\\frac{i_p}{i_s} = \\frac{v_s}{v_p} = \\frac{N_s}{N_p}$. Since both current and voltage oscillate at the same frequency as the AC source, this ratio also applies to their amplitudes and RMS values: $V_s = (\\frac{N_s}{N_p}) V_p$ and $I_s = (\\frac{N_p}{N_s}) I_p$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.8:6",
+            "order": 6,
+            "title": "Step-up and Step-down Transformers",
+            "content_text": "A transformer's effect on voltage and current depends on the turn ratio. If the secondary coil has more turns than the primary ($N_s > N_p$), the voltage is increased ($V_s > V_p$), and it is called a step-up transformer. In this arrangement, there is less current in the secondary than in the primary ($I_s < I_p$). For example, if $N_s/N_p = 2$, a 220V input at 10A is stepped up to 440V at 5.0A. Conversely, if the secondary coil has fewer turns than the primary ($N_s < N_p$), it is a step-down transformer where $V_s < V_p$ and $I_s > I_p$, meaning voltage is reduced and current is increased.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.8:7",
+            "order": 7,
+            "title": "Energy Losses in Actual Transformers",
+            "content_text": "Actual transformers experience small energy losses due to several physical factors: (i) Flux Leakage: Not all primary flux passes through the secondary due to core design or air gaps; this is reduced by winding coils over each other. (ii) Resistance of the windings: Energy is lost as heat ($I^2R$) in the wire; minimized by using thick wire for high-current windings. (iii) Eddy currents: The alternating magnetic flux induces currents in the iron core, causing heating; this effect is reduced by using a laminated core. (iv) Hysteresis: Energy is expended as the core's magnetization is repeatedly reversed; this is kept to a minimum by using magnetic materials with low hysteresis loss.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.8:8",
+            "order": 8,
+            "title": "Long-distance Power Transmission",
+            "content_text": "Transformers are essential for the large-scale transmission and distribution of electrical energy. To minimize $I^2R$ power losses during transmission over long distances, the voltage from the generator is stepped up to a high value, which reduces the current. The voltage is then transmitted and stepped down at area sub-stations near consumers, and further reduced at local distribution stations and utility poles before reaching homes at a standard supply of 240V.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:7:Summary",
+        "number": "Summary",
+        "title": "Summary of Alternating Current",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:7:Summary:1",
+            "order": 1,
+            "title": "AC Voltage Applied to a Resistor",
+            "content_text": "An alternating voltage $v = v_m \\sin \\omega t$ applied to a resistor $R$ drives a current $i = i_m \\sin \\omega t$, where $i_m = v_m/R$. In this case, the current is in phase with the applied voltage.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:Summary:2",
+            "order": 2,
+            "title": "RMS Current and Voltage",
+            "content_text": "For an alternating current $i = i_m \\sin \\omega t$ in a resistor $R$, the average power loss $P$ over a cycle is $(1/2) i_m^2 R$. To express this in the same form as DC power ($P = I^2 R$), the root mean square (rms) current $I$ is used, defined as $I = i_m/\\sqrt{2} \\approx 0.707 i_m$. Similarly, the rms voltage is $V = v_m/\\sqrt{2} \\approx 0.707 v_m$. The power relation is then $P = IV = I^2 R$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:Summary:3",
+            "order": 3,
+            "title": "AC Voltage Applied to an Inductor",
+            "content_text": "An AC voltage $v = v_m \\sin \\omega t$ applied to a pure inductor $L$ drives a current $i = i_m \\sin(\\omega t - \\pi/2)$, where $i_m = v_m/X_L$ and $X_L = \\omega L$ is the inductive reactance. The current in the inductor lags the voltage by $\\pi/2$. The average power supplied to an inductor over a complete cycle is zero.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:Summary:4",
+            "order": 4,
+            "title": "AC Voltage Applied to a Capacitor",
+            "content_text": "An AC voltage $v = v_m \\sin \\omega t$ applied to a capacitor $C$ drives a current $i = i_m \\sin(\\omega t + \\pi/2)$, where $i_m = v_m/X_C$ and $X_C = 1/(\\omega C)$ is the capacitive reactance. The current through the capacitor is $\\pi/2$ ahead of the applied voltage. The average power supplied to a capacitor over a complete cycle is zero.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:Summary:5",
+            "order": 5,
+            "title": "Series LCR Circuit and Impedance",
+            "content_text": "For a series RLC circuit driven by voltage $v = v_m \\sin \\omega t$, the current is $i = i_m \\sin(\\omega t + \\phi)$, where $i_m = \\frac{v_m}{\\sqrt{R^2 + (X_C - X_L)^2}}$ and $\\phi = \\tan^{-1} \\frac{X_C - X_L}{R}$. The quantity $Z = \\sqrt{R^2 + (X_C - X_L)^2}$ is called the impedance of the circuit. The average power loss over a cycle is $P = VI \\cos \\phi$, where $\\cos \\phi$ is the power factor.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:Summary:6",
+            "order": 6,
+            "title": "Power Factor and Wattless Current",
+            "content_text": "In a purely inductive or capacitive circuit, the phase angle results in $\\cos \\phi = 0$, meaning no power is dissipated even though a current flows. In such cases, the current is referred to as a wattless current.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:Summary:7",
+            "order": 7,
+            "title": "Phasors",
+            "content_text": "The phase relationship between current and voltage in an AC circuit is represented by rotating vectors called phasors. A phasor rotates about the origin with angular speed $\\omega$, and its magnitude represents the amplitude or peak value of the quantity (voltage or current). Phasor diagrams facilitate the analysis of AC circuits.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:Summary:8",
+            "order": 8,
+            "title": "Transformer Summary",
+            "content_text": "A transformer consists of an iron core with a primary coil ($N_p$ turns) and a secondary coil ($N_s$ turns). The primary and secondary voltages are related by $V_s = (N_s/N_p) V_p$, and the currents are related by $I_s = (N_p/N_s) I_p$. If $N_s > N_p$, it is a step-up transformer; if $N_s < N_p$, it is a step-down transformer.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:Summary:9",
+            "order": 9,
+            "title": "Physical Quantities in AC Circuits",
+            "content_text": "The following table provides a comprehensive summary of the physical quantities encountered in alternating current circuits. It includes the rms voltage and current, inductive and capacitive reactance, impedance, resonant frequency, quality factor, and power factor. Each entry specifies the symbol, dimensional formula, SI unit, and key remarks or governing equations. For instance, the rms voltage $V$ is related to the peak voltage $v_m$ by $V = v_m / \\sqrt{2}$, and the resonant frequency $\\omega_0$ for a series $RLC$ circuit is given by $1 / \\sqrt{LC}$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Physical Quantities Table",
+                "caption": "Summary of Physical Quantities in AC Circuits",
+                "headers": [
+                  "Physical quantity",
+                  "Symbol",
+                  "Dimensions",
+                  "Unit",
+                  "Remarks"
+                ],
+                "rows": [
+                  [
+                    "rms voltage",
+                    "$V$",
+                    "$[M L^2 T^{-3} A^{-1}]$",
+                    "V",
+                    "$V = \\frac{v_m}{\\sqrt{2}}$, $v_m$ is the amplitude of the ac voltage."
+                  ],
+                  [
+                    "rms current",
+                    "$I$",
+                    "$[A]$",
+                    "A",
+                    "$I = \\frac{i_m}{\\sqrt{2}}$, $i_m$ is the amplitude of the ac current."
+                  ],
+                  [
+                    "Reactance: Inductive",
+                    "$X_L$",
+                    "$[M L^2 T^{-3} A^{-2}]$",
+                    "",
+                    "$X_L = \\omega L$"
+                  ],
+                  [
+                    "Reactance: Capacitive",
+                    "$X_C$",
+                    "$[M L^2 T^{-3} A^{-2}]$",
+                    "",
+                    "$X_C = 1 / \\omega C$"
+                  ],
+                  [
+                    "Impedance",
+                    "$Z$",
+                    "$[M L^2 T^{-3} A^{-2}]$",
+                    "",
+                    "Depends on elements present in the circuit."
+                  ],
+                  [
+                    "Resonant frequency",
+                    "$\\omega_r$ or $\\omega_0$",
+                    "$[T^{-1}]$",
+                    "Hz",
+                    "$\\omega_0 = \\frac{1}{\\sqrt{LC}}$ for a series $RLC$ circuit."
+                  ],
+                  [
+                    "Quality factor",
+                    "$Q$",
+                    "Dimensionless",
+                    "",
+                    "$Q = \\frac{\\omega_0 L}{R} = \\frac{1}{\\omega_0 C R}$ for a series $RLC$ circuit."
+                  ],
+                  [
+                    "Power factor",
+                    "",
+                    "Dimensionless",
+                    "",
+                    "$= \\cos \\phi$, $\\phi$ is the phase difference between voltage applied and current in the circuit."
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:physics:12:7:Summary:10",
+            "order": 10,
+            "title": "Series LCR Circuit Diagram",
+            "content_text": "A standard series LCR circuit consists of an inductor ($L$), a capacitor ($C$), and a resistor ($R$) connected in series with an alternating voltage source. This configuration is fundamental for studying resonance and phase relationships in AC circuits.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 7.17",
+                "description": "A circuit diagram showing a series LCR circuit. It includes an AC voltage source $\\varepsilon$ connected in a single loop with a resistor $R$, an inductor $L$, and a capacitor $C$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:7:7.9",
+        "number": "7.9",
+        "title": "Points to Ponder",
+        "content_text": "",
+        "subsections": []
+      },
+      {
+        "id": "ncert:physics:12:7:7.9.1",
+        "number": "7.9.1",
+        "title": "RMS Values and Power Ratings",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:7:7.9.1:1",
+            "order": 1,
+            "title": "Standard AC Values",
+            "content_text": "When a value is given for ac voltage or current, it is ordinarily the rms value. For example, the 240 V voltage across terminals in a room refers to the rms value. The amplitude (peak value) of this voltage is $v_m = \\sqrt{2}V = \\sqrt{2}(240) = 340 V$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.9.1:2",
+            "order": 2,
+            "title": "Power Rating and Consumption",
+            "content_text": "The power rating of an element used in ac circuits refers to its average power rating. It is a fundamental property that the power consumed in an ac circuit is never negative.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.9.1:3",
+            "order": 3,
+            "title": "Defining the AC Ampere",
+            "content_text": "Both alternating and direct currents are measured in amperes. However, the ac ampere cannot be derived from the mutual attraction of two parallel wires (as the dc ampere is) because the attractive force would average to zero due to the changing direction of current. Instead, the ac ampere is defined in terms of Joule heating: one ampere of rms ac current produces the same average heating effect as one ampere of dc current would produce under the same conditions.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:7:7.9.2",
+        "number": "7.9.2",
+        "title": "Phasors and Circuit Dynamics",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:7:7.9.2:1",
+            "order": 1,
+            "title": "Phasor Addition of Voltages",
+            "content_text": "In an ac circuit, voltages across different elements must be added considering their phases. For instance, in an RC circuit, the total voltage $V_{RC}$ is not $V_R + V_C$ but $V_{RC} = \\sqrt{V_R^2 + V_C^2}$ because $V_C$ is $\\pi/2$ out of phase with $V_R$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.9.2:2",
+            "order": 2,
+            "title": "The Nature of Phasors",
+            "content_text": "Although phasors are represented as vectors in diagrams, they represent scalar quantities that vary harmonically. The 'rotating vectors' provide a simple way to add these quantities using the law of vector addition based on their amplitudes and phases.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.9.2:3",
+            "order": 3,
+            "title": "Energy Dissipation and Resonance",
+            "content_text": "Pure capacitances and pure inductances do not associate with power losses in an ac circuit; only the resistive element dissipates energy. In a series RLC circuit, resonance occurs when $X_L = X_C$, leading to $\\omega_0 = 1/\\sqrt{LC}$. Resonance requires the presence of both L and C elements to allow for voltage cancellation; without both, resonance is impossible.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:7:7.9.3",
+        "number": "7.9.3",
+        "title": "Power Factor and Machines",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:7:7.9.3:1",
+            "order": 1,
+            "title": "Power Factor and Energy Transformation",
+            "content_text": "The power factor in an RLC circuit measures how close the circuit is to expending maximum power. In electrical machines like generators and motors, the roles of input and output are reversed: motors convert electrical to mechanical energy, while generators convert mechanical to electrical energy. Both devices transform energy from one form to another.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:7:7.9.3:2",
+            "order": 2,
+            "title": "Transformers and Conservation of Energy",
+            "content_text": "A step-up transformer changes a low-voltage into a high-voltage. This does not violate the law of conservation of energy, as the current is reduced by the same proportion to maintain the power balance.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:physics:12:7:ex:1",
+          "number": 1,
+          "problem": "A $100 \\Omega$ resistor is connected to a $220 V, 50 Hz$ ac supply. (a) What is the rms value of current in the circuit? (b) What is the net power consumed over a full cycle?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:7:ex:2",
+          "number": 2,
+          "problem": "(a) The peak voltage of an ac supply is $300 V$. What is the rms voltage? (b) The rms value of current in an ac circuit is $10 A$. What is the peak current?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:7:ex:3",
+          "number": 3,
+          "problem": "A $44 mH$ inductor is connected to $220 V, 50 Hz$ ac supply. Determine the rms value of the current in the circuit.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:7:ex:4",
+          "number": 4,
+          "problem": "A $60 \\mu F$ capacitor is connected to a $110 V, 60 Hz$ ac supply. Determine the rms value of the current in the circuit.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:7:ex:5",
+          "number": 5,
+          "problem": "In Exercises 7.3 and 7.4, what is the net power absorbed by each circuit over a complete cycle? Explain your answer.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:12:7:ex:6",
+          "number": 6,
+          "problem": "A charged $30 \\mu F$ capacitor is connected to a $27 mH$ inductor. What is the angular frequency of free oscillations of the circuit?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:7:ex:7",
+          "number": 7,
+          "problem": "A series $LCR$ circuit with $R = 20 \\Omega, L = 1.5 H$ and $C = 35 \\mu F$ is connected to a variable-frequency $200 V$ ac supply. When the frequency of the supply equals the natural frequency of the circuit, what is the average power transferred to the circuit in one complete cycle?",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:7:ex:8",
+          "number": 8,
+          "problem": "Figure 7.17 shows a series $LCR$ circuit connected to a variable frequency $230 V$ source. $L = 5.0 H, C = 80 \\mu F, R = 40 \\Omega$. (a) Determine the source frequency which drives the circuit in resonance. (b) Obtain the impedance of the circuit and the amplitude of current at the resonating frequency. (c) Determine the rms potential drops across the three elements of the circuit. Show that the potential drop across the $LC$ combination is zero at the resonating frequency.",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        }
+      ]
+    }
+  }
+}

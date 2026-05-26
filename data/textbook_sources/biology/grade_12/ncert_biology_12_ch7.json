@@ -1,0 +1,930 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_biology_12_ch7.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:biology:12:7",
+  "curriculum": "ncert",
+  "subject": "biology",
+  "grade": 12,
+  "textbook_name": "Biology",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:biology:12:7",
+    "number": 7,
+    "title": "Human Health and Disease",
+    "summary": "This chapter on Human Health and Disease explores the concepts of health, disease, immunity, and substance abuse. It begins by defining health and differentiating between infectious and non-infectious diseases. Common diseases like typhoid, pneumonia, malaria, amoebiasis, ascariasis, filariasis, and ringworm are discussed, detailing their causative agents, symptoms, and prevention strategies, emphasizing personal and public hygiene.\n\nThe chapter then delves into immunity, explaining innate and acquired immunity, active and passive immunity, vaccination, allergies, and autoimmune diseases. The roles of B-lymphocytes, T-lymphocytes, and antibodies (IgA, IgM, IgE, IgG) are highlighted, alongside the importance of lymphoid organs in the immune response.\n\nThe chapter further discusses AIDS, caused by HIV, covering its transmission, mechanism of replication, and prevention. Cancer is also addressed, explaining the difference between benign and malignant tumors, causes like carcinogens and oncogenes, detection methods, and treatment options.\n\nFinally, the chapter focuses on drug and alcohol abuse, particularly during adolescence, discussing opioids, cannabinoids, cocaine, tobacco, and their effects on health. Addiction, dependence, withdrawal syndrome, and preventive measures are also explained. The practical significance lies in understanding disease mechanisms, preventative measures, and lifestyle choices that impact overall health and well-being, providing students with knowledge for making informed decisions.",
+    "sections": [
+      {
+        "id": "ncert:biology:12:7:7",
+        "number": "7",
+        "title": "Introduction to Human Health and Disease",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:7:7:1",
+            "order": 1,
+            "title": "Historical Perspectives on the Concept of Health",
+            "content_text": "For a long period, health was defined as a state of body and mind where there was a balance of certain 'humors'. This 'good humor' hypothesis was supported by early Greeks like Hippocrates and the Indian Ayurveda system. It was believed that individuals with 'blackbile' had a 'hot personality' and were prone to fevers, an idea based on pure reflective thought.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7:2",
+            "order": 2,
+            "title": "Scientific Disproof of the Humor Hypothesis",
+            "content_text": "The 'good humor' hypothesis was disproved by William Harvey through experimental methods. By discovering blood circulation and using a thermometer to demonstrate that persons with 'blackbile' had normal body temperatures, he provided scientific evidence against the old humor-based theory.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7:3",
+            "order": 3,
+            "title": "Modern Biological Understanding of Health",
+            "content_text": "Modern biology establishes that the mind influences the immune system through the neural and endocrine systems. Consequently, the immune system maintains our health, and our mental state can directly affect our physical well-being. An antibody molecule, a critical part of the immune response, is a Y-shaped protein consisting of two light chains and two heavy chains, with specific antigen-binding sites at the tips.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Structure of an Antibody Molecule",
+                "description": "A Y-shaped diagram representing an antibody molecule. It shows two identical heavy chains and two identical light chains. The tips of the Y-shaped arms are labeled as 'Antigen binding sites'. The shorter outer chains are 'Light chains' and the longer inner chains are 'Heavy chains'.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7:4",
+            "order": 4,
+            "title": "Factors Affecting Human Health",
+            "content_text": "Health is influenced by several key factors: (i) genetic disorders, which are deficiencies or defects inherited from parents at birth; (ii) infections; and (iii) lifestyle, which encompasses food and water intake, rest, exercise, and personal habits. Health is influenced by genetic disorders inherited from parents, infections, and lifestyle factors such as diet, rest, and exercise. It is defined as a state of complete physical, mental, and social well-being, rather than merely the absence of disease or physical fitness. Healthy individuals are more efficient at work, which enhances productivity and economic prosperity. Furthermore, good health increases longevity and reduces infant and maternal mortality rates.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7:5",
+            "order": 5,
+            "title": "Maintaining Good Health",
+            "content_text": "Achieving and maintaining good health requires a balanced diet, personal hygiene, and regular physical exercise. Ancient practices like Yoga are highly effective for mental and physical wellness. Other essential factors include awareness of various diseases and their effects, immunization against infectious diseases, proper waste disposal, control of disease vectors, and maintaining hygiene in food and water resources.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7:6",
+            "order": 6,
+            "title": "Definition and Classification of Diseases",
+            "content_text": "A disease is a condition where the functioning of one or more organs or systems is adversely affected, characterized by specific signs and symptoms. Diseases are broadly classified into two groups: infectious diseases, which are easily transmitted from one person to another (e.g., AIDS), and non-infectious diseases, which are not transmissible (e.g., cancer). Additionally, factors like drug and alcohol abuse can negatively impact health.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:7:7.1",
+        "number": "7.1",
+        "title": "Common Diseases in Humans",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:7:7.1:1",
+            "order": 1,
+            "title": "Pathogens and Adaptation",
+            "content_text": "A variety of organisms, including bacteria, viruses, fungi, protozoans, and helminths, can cause diseases in humans and are known as pathogens. Most parasites act as pathogens by living on or within a host, causing morphological and functional damage. To survive, pathogens must adapt to the host's environment; for example, those entering the gut must withstand the low pH of the stomach and resist digestive enzymes.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.1:2",
+            "order": 2,
+            "title": "Typhoid Fever",
+            "content_text": "Typhoid fever is caused by the bacterium *Salmonella typhi*. It typically enters the body through contaminated food and water, migrating from the small intestine to other organs via the blood. Symptoms include sustained high fever ($39^\\circ$ to $40^\\circ$C), weakness, stomach pain, constipation, headache, and loss of appetite. In severe cases, intestinal perforation and death can occur. The disease is confirmed using the Widal test. A famous historical case is Mary Mallon ('Typhoid Mary'), a cook who spread the disease as an asymptomatic carrier for years.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.1:3",
+            "order": 3,
+            "title": "Pneumonia",
+            "content_text": "Pneumonia is a bacterial disease caused by *Streptococcus pneumoniae* and *Haemophilus influenzae*. It infects the alveoli of the lungs, causing them to fill with fluid and leading to severe respiratory issues. Symptoms include fever, chills, cough, and headache. In extreme cases, the lips and fingernails may turn gray or bluish. The infection spreads by inhaling droplets or aerosols from an infected person or by sharing contaminated utensils. Other bacterial diseases include dysentery, plague, and diphtheria.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.1:4",
+            "order": 4,
+            "title": "Common Cold",
+            "content_text": "The common cold is caused by Rhino viruses, which infect the nose and respiratory passage but not the lungs. It is characterized by nasal congestion, discharge, sore throat, hoarseness, cough, headache, and tiredness, usually lasting 3-7 days. Transmission occurs through droplets from coughs or sneezes, or by touching contaminated objects like pens, books, or doorknobs.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.1:5",
+            "order": 5,
+            "title": "Malaria and Plasmodium",
+            "content_text": "Malaria is caused by protozoans of the genus *Plasmodium*, including *P. vivax*, *P. malaria*, and *P. falciparum*. Among these, *P. falciparum* causes the most serious and potentially fatal form of malignant malaria. The parasite enters the human body as infectious sporozoites through the bite of an infected female *Anopheles* mosquito.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.1:6",
+            "order": 6,
+            "title": "Life Cycle of Plasmodium",
+            "content_text": "The *Plasmodium* parasite follows a complex life cycle requiring two hosts: humans and mosquitoes. After entering a human, the parasites multiply in liver cells and then attack red blood cells (RBCs). The rupture of RBCs releases a toxic substance called haemozoin, which causes recurring chills and high fever every three to four days. When a female *Anopheles* mosquito bites an infected person, it takes up the parasite, which then undergoes further development in the mosquito's gut and salivary glands to form new sporozoites. The mosquito acts as the vector for transmission.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 7.1",
+                "description": "A detailed diagram showing the stages in the life cycle of Plasmodium. It illustrates the transition between the human host and the mosquito host. In humans, it shows the injection of sporozoites, their multiplication in the liver, the infection and rupture of red blood cells (releasing parasites and causing fever), and the formation of gametocytes. In the mosquito, it shows the ingestion of gametocytes, fertilization and development in the gut, and the migration of mature sporozoites to the salivary glands.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.1:7",
+            "order": 7,
+            "title": "Amoebiasis",
+            "content_text": "Amoebiasis, or amoebic dysentery, is caused by the protozoan parasite *Entamoeba histolytica*, which resides in the large intestine. Symptoms include constipation, abdominal pain, cramps, and stools with excess mucus and blood clots. Houseflies act as mechanical carriers, transmitting the parasite from the faeces of infected individuals to food. and food products, thereby contaminating them. Drinking water and food contaminated by the faecal matter are the main source of infection.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.1:8",
+            "order": 8,
+            "title": "Ascariasis",
+            "content_text": "Ascaris, the common round worm, and Wuchereria, the filarial worm, are some of the helminths which are known to be pathogenic to man. Ascaris, an intestinal parasite, causes ascariasis. Symptoms of this disease include internal bleeding, muscular pain, fever, anemia, and blockage of the intestinal passage. The eggs of the parasite are excreted along with the faeces of infected persons which contaminate soil, water, plants, etc. A healthy person acquires this infection through contaminated water, vegetables, fruits, etc.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.1:9",
+            "order": 9,
+            "title": "Filariasis (Elephantiasis)",
+            "content_text": "Wuchereria (W. bancrofti and W. malayi), the filarial worms, cause a slowly developing chronic inflammation of the organs in which they live for many years, usually the lymphatic vessels of the lower limbs and the disease is called elephantiasis or filariasis. The genital organs are also often affected, resulting in gross deformities. The pathogens are transmitted to a healthy person through the bite by the female mosquito vectors.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 7.2",
+                "description": "A diagram showing a person with significant swelling (inflammation) in the right leg and foot, illustrating the chronic inflammation of the lymphatic vessels characteristic of elephantiasis.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.1:10",
+            "order": 10,
+            "title": "Ringworms",
+            "content_text": "Many fungi belonging to the genera Microsporum, Trichophyton, and Epidermophyton are responsible for ringworms which is one of the most common infectious diseases in man. Appearance of dry, scaly lesions on various parts of the body such as skin, nails, and scalp are the main symptoms of the disease. These lesions are accompanied by intense itching. Heat and moisture help these fungi to grow, which makes them thrive in skin folds such as those in the groin or between the toes. Ringworms are generally acquired from soil or by using towels, clothes, or even the comb of infected individuals.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 7.3",
+                "description": "A photograph showing a dry, scaly, circular lesion on a person's skin, which is a typical symptom of ringworm infection.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.1:11",
+            "order": 11,
+            "title": "Prevention and Control of Infectious Diseases",
+            "content_text": "Maintenance of personal and public hygiene is very important for prevention and control of many infectious diseases. Measures for personal hygiene include keeping the body clean; consumption of clean drinking water, food, vegetables, fruits, etc. Public hygiene includes proper disposal of waste and excreta; periodic cleaning and disinfection of water reservoirs, pools, cesspools, and tanks and observing standard practices of hygiene in public catering. These measures are particularly essential where the infectious agents are transmitted through food and water such as typhoid, amoebiasis, and ascariasis. In cases of air-borne diseases such as pneumonia and common cold, in addition to the above measures, close contact with the infected persons or their belongings should be avoided.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.1:12",
+            "order": 12,
+            "title": "Vector Control and Modern Medicine",
+            "content_text": "For diseases such as malaria and filariasis that are transmitted through insect vectors, the most important measure is to control or eliminate the vectors and their breeding places. This can be achieved by avoiding stagnation of water in and around residential areas, regular cleaning of household coolers, use of mosquito nets, introducing fishes like Gambusia in ponds that feed on mosquito larvae, spraying of insecticides in ditches, drainage areas, and swamps, etc. In addition, doors and windows should be provided with wire mesh to prevent the entry of mosquitoes. Such precautions have become more important especially in the light of recent widespread incidences of the vector-borne (Aedes mosquitoes) diseases like dengue and chikungunya in many parts of India. The advancements made in biological science have armed us to effectively deal with many infectious diseases. The use of vaccines and immunisation programmes have enabled us to completely eradicate a deadly disease like smallpox. A large number of other infectious diseases like polio, diphtheria, pneumonia, and tetanus have been controlled to a large extent by the use of vaccines. Biotechnology is at the verge of making available newer and safer vaccines. Discovery of antibiotics and various other drugs has also enabled us to effectively treat infectious diseases.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:7:7.2",
+        "number": "7.2",
+        "title": "Immunity",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:7:7.2:1",
+            "order": 1,
+            "title": "Introduction to Immunity",
+            "content_text": "Everyday we are exposed to large number of infectious agents. However, only a few of these exposures result in disease. This is due to the fact that the body is able to defend itself from most of these foreign agents. This overall ability of the host to fight the disease-causing organisms, conferred by the immune system is called immunity. Immunity is of two types: (i) Innate immunity and (ii) Acquired immunity.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.2:2",
+            "order": 2,
+            "title": "Graft Rejection and Tissue Matching",
+            "content_text": "Grafts from any source – an animal, another primate, or any human beings – cannot be made since the grafts would be rejected sooner or later. Tissue matching and blood group matching are essential before undertaking any graft or transplant. Even after a successful transplant, the patient has to take immuno-suppressants for the rest of their life. The body is able to differentiate between 'self' and 'nonself' cells, and the cell-mediated immune response (CMI) is primarily responsible for the rejection of grafts.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.2:3",
+            "order": 3,
+            "title": "7.2.3 Active and Passive Immunity",
+            "content_text": "When a host is exposed to antigens, which may be in the form of living or dead microbes or other proteins, antibodies are produced in the host body. This type of immunity is called active immunity. Active immunity is slow and takes time to give its full effective response. Injecting microbes deliberately during immunisation or infectious organisms gaining access into the body during natural infection induce active immunity. When ready-made antibodies are directly given to protect the body against foreign agents, it is called passive immunity. Mother's milk is considered essential for the new-born infant because the yellowish fluid colostrum secreted by the mother during the initial days of lactation has abundant antibodies ($IgA$) to protect the infant. The foetus also receives some antibodies from their mother through the placenta during pregnancy. These are examples of passive immunity.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.2:4",
+            "order": 4,
+            "title": "7.2.4 Vaccination and Immunisation",
+            "content_text": "The principle of immunisation or vaccination is based on the property of 'memory' of the immune system. In vaccination, a preparation of antigenic proteins of a pathogen or inactivated/weakened pathogen (vaccine) is introduced into the body. The antibodies produced in the body against these antigens neutralise the pathogenic agents during actual infection. The vaccines also generate memory B and T-cells that recognise the pathogen quickly on subsequent exposure and overwhelm the invaders with a massive production of antibodies. If a person is infected with deadly microbes requiring a quick immune response, such as in tetanus, preformed antibodies or antitoxin (a preparation containing antibodies to the toxin) must be directly injected. Similarly, in cases of snakebites, the injection given to patients contains preformed antibodies against the snake venom; this is called passive immunisation. Recombinant DNA technology has allowed the production of antigenic polypeptides of pathogens in bacteria or yeast, enabling large-scale production of vaccines like the hepatitis B vaccine produced from yeast.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.2:5",
+            "order": 5,
+            "title": "7.2.5 Allergies",
+            "content_text": "Allergy is the exaggerated response of the immune system to certain antigens present in the environment. The substances to which such an immune response is produced are called allergens. The antibodies produced to these are of $IgE$ type. Common examples of allergens include mites in dust, pollens, and animal dander. Symptoms of allergic reactions include sneezing, watery eyes, running nose, and difficulty in breathing. Allergy is caused by the release of chemicals like histamine and serotonin from mast cells. To determine the cause of an allergy, the patient is exposed to or injected with very small doses of possible allergens to study the reactions. Drugs like anti-histamines, adrenalin, and steroids quickly reduce the symptoms of allergy. Modern-day lifestyle has resulted in lowering of immunity and increased sensitivity to allergens, leading to more children in metro cities of India suffering from allergies and asthma due to sensitivity to the environment, possibly because of the protected environment provided early in life.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.2:6",
+            "order": 6,
+            "title": "7.2.6 Auto Immunity",
+            "content_text": "Memory-based acquired immunity in higher vertebrates is based on the ability to differentiate foreign organisms (e.g., pathogens) from self-cells. While the exact basis is not fully understood, two corollaries exist: first, higher vertebrates can distinguish foreign molecules and organisms; second, sometimes due to genetic or unknown reasons, the body attacks its own self-cells. This results in damage to the body and is called an auto-immune disease. Rheumatoid arthritis, which affects many people, is a common example of an auto-immune disease.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.2:7",
+            "order": 7,
+            "title": "7.2.7 Immune System in the Body - Lymphoid Organs",
+            "content_text": "The human immune system consists of lymphoid organs, tissues, cells, and soluble molecules like antibodies. It is unique because it recognises foreign antigens, responds to them, and remembers them. It also plays a role in allergic reactions, auto-immune diseases, and organ transplantation. Lymphoid organs are where the origin, maturation, and proliferation of lymphocytes occur. The primary lymphoid organs are the bone marrow and thymus, where immature lymphocytes differentiate into antigen-sensitive lymphocytes. After maturation, lymphocytes migrate to secondary lymphoid organs like the spleen, lymph nodes, tonsils, Peyer’s patches of the small intestine, and the appendix. These secondary organs provide the sites for interaction of lymphocytes with the antigen, which then proliferate to become effector cells.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.2:8",
+            "order": 8,
+            "title": "Secondary Lymphoid Organs and MALT",
+            "content_text": "The bone marrow is the main lymphoid organ where all blood cells, including lymphocytes, are produced. The thymus is a lobed organ located near the heart and beneath the breastbone; it is large at birth but reduces in size with age, becoming very small by puberty. Both provide micro-environments for T-lymphocyte development. The spleen is a large bean-shaped organ containing lymphocytes and phagocytes; it filters the blood by trapping blood-borne micro-organisms and acts as a reservoir of erythrocytes. Lymph nodes are small solid structures along the lymphatic system that trap antigens from the lymph and tissue fluid, activating lymphocytes to cause an immune response. Additionally, lymphoid tissue called mucosa-associated lymphoid tissue (MALT) is located within the lining of major tracts (respiratory, digestive, and urogenital) and constitutes about $50\\%$ of the lymphoid tissue in the human body.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 7.5",
+                "description": "A diagrammatic representation of the human lymphatic system showing the locations of various lymph nodes, the thymus gland, and the network of lymphatic vessels throughout the body.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:7:7.2.1",
+        "number": "7.2.1",
+        "title": "Innate Immunity",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:7:7.2.1:1",
+            "order": 1,
+            "title": "Physical and Physiological Barriers",
+            "content_text": "Innate immunity is non-specific type of defence, that is present at the time of birth. This is accomplished by providing different types of barriers to the entry of the foreign agents into our body. Innate immunity consists of four types of barriers. (i) Physical barriers: Skin on our body is the main barrier which prevents entry of the micro-organisms. Mucus coating of the epithelium lining the respiratory, gastrointestinal, and urogenital tracts also help in trapping microbes entering our body. (ii) Physiological barriers: Acid in the stomach, saliva in the mouth, tears from eyes—all prevent microbial growth.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.2.1:2",
+            "order": 2,
+            "title": "Cellular and Cytokine Barriers",
+            "content_text": "(iii) Cellular barriers: Certain types of leukocytes (WBC) of our body like polymorpho-nuclear leukocytes (PMNL-neutrophils) and monocytes and natural killer (type of lymphocytes) in the blood as well as macrophages in tissues can phagocytose and destroy microbes. (iv) Cytokine barriers: Virus-infected cells secrete proteins called interferons which protect non-infected cells from further viral infection.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:7:7.2.2",
+        "number": "7.2.2",
+        "title": "Acquired Immunity",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:7:7.2.2:1",
+            "order": 1,
+            "title": "Primary and Secondary Responses",
+            "content_text": "Acquired immunity, on the other hand is pathogen specific. It is characterised by memory. This means when our body encounters a pathogen for the first time it produces a response called primary response which is of low intensity. Subsequent encounter with the same pathogen elicits a highly intensified secondary or anamnestic response. This is ascribed to the fact that our body appears to have memory of the first encounter.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.2.2:2",
+            "order": 2,
+            "title": "B-lymphocytes and T-lymphocytes",
+            "content_text": "The primary and secondary immune responses are carried out with the help of two special types of lymphocytes present in our blood, i.e., B-lymphocytes and T-lymphocytes. The B-lymphocytes produce an army of proteins in response to pathogens into our blood to fight with them. These proteins are called antibodies. The T-cells themselves do not secrete antibodies but help B cells to produce them.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.2.2:3",
+            "order": 3,
+            "title": "Structure of an Antibody",
+            "content_text": "Each antibody molecule has four peptide chains, two small called light chains and two longer called heavy chains. Hence, an antibody is represented as $H_2L_2$. Different types of antibodies are produced in our body. IgA, IgM, IgE, IgG are some of them. A cartoon of an antibody is given in Figure 7.4.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 7.4",
+                "description": "A schematic diagram of an antibody molecule showing its Y-shaped structure. It consists of two light chains and two heavy chains connected by disulfide bonds (-S-S-). The tips of the Y-shape are labeled as antigen binding sites. The N and C terminals of the peptide chains are also indicated.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.2.2:4",
+            "order": 4,
+            "title": "Humoral and Cell-mediated Immunity",
+            "content_text": "Because these antibodies are found in the blood, the response is also called as humoral immune response. This is one of the two types of our acquired immune response – antibody mediated. The second type is called cell-mediated immune response or cell-mediated immunity (CMI). The T-lymphocytes mediate CMI. Very often, when some human organs like heart, eye, liver, kidney fail to function satisfactorily, transplantation is the only remedy to enable the patient to live a normal life. Then a search begins – to find a suitable donor. Why is it that the organs cannot be taken from just anybody? What is it that the doctors check? Grafts from [CONTINUES]",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:7:7.3",
+        "number": "7.3",
+        "title": "AIDS",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:7:7.3:1",
+            "order": 1,
+            "title": "7.3 AIDS - Introduction and Transmission",
+            "content_text": "AIDS stands for Acquired Immuno Deficiency Syndrome, indicating a deficiency of the immune system acquired during an individual's lifetime rather than being congenital. 'Syndrome' refers to a group of symptoms. AIDS was first reported in 1981 and has since spread globally, killing more than 25 million people. It is caused by the Human Immuno deficiency Virus (HIV), a retrovirus with an envelope enclosing an RNA genome. Transmission of HIV occurs through: (a) sexual contact with an infected person, (b) transfusion of contaminated blood and blood products, (c) sharing infected needles (common among intravenous drug abusers), and (d) from an infected mother to her child through the placenta. People at high risk include individuals who have multiple sexual partners, drug addicts who take drugs intravenously, individuals who require repeated blood transfusions and children born to an HIV infected mother. Do you know-when do people need repeated blood transfusion? Find out and make a list of such conditions. It is important to note that HIV/AIDS is not spread by mere touch or physical contact; it spreads only through body fluids. It is, hence, imperative, for the physical and psychological well-being, that the HIV/AIDS infected persons are not isolated from family and society. There is always a time-lag between the infection and appearance of AIDS symptoms. This period may vary from a few months to many years (usually 5-10 years).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.3:2",
+            "order": 2,
+            "title": "Mechanism of HIV Replication",
+            "content_text": "After getting into the body of the person, the virus enters into macrophages where RNA genome of the virus replicates to form viral DNA with the help of the enzyme reverse transcriptase. This viral DNA gets incorporated into host cell’s DNA and directs the infected cells to produce virus particles (Figure 7.6). The macrophages continue to produce virus and in this way acts like a HIV factory. Simultaneously, HIV enters into helper T-lymphocytes ($T_H$), replicates and produce progeny viruses. The progeny viruses released in the blood attack other helper T-lymphocytes. This is repeated leading to a progressive decrease in the number of helper T-lymphocytes in the body of the infected person.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 7.6",
+                "description": "A schematic diagram showing the replication of a retrovirus (HIV) in an animal cell. 1. Retrovirus with viral RNA core and protein coat infects a normal cell. 2. Viral RNA is introduced into the cell. 3. Viral DNA is produced by reverse transcriptase. 4. Viral DNA incorporates into the host genome in the nucleus. 5. New viral RNA is produced by the infected cell. 6. New viruses are produced and released to infect other cells. A note indicates that the infected cell can survive while viruses are being replicated and released.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.3:3",
+            "order": 3,
+            "title": "Clinical Manifestations and Diagnosis",
+            "content_text": "During the period of infection, the person suffers from bouts of fever, diarrhoea and weight loss. Due to the progressive decrease in the number of helper T-lymphocytes, the person starts suffering from opportunistic infections that could have been otherwise overcome, such as those due to bacteria (especially Mycobacterium), viruses, fungi and even parasites like Toxoplasma. The patient becomes so immuno-deficient that he/she is unable to protect himself/herself against these infections. A widely used diagnostic test for AIDS is enzyme linked immuno-sorbent assay (ELISA). Treatment of AIDS with anti-retroviral drugs is only partially effective; they can only prolong the life of the patient but cannot prevent death, which is inevitable.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.3:4",
+            "order": 4,
+            "title": "Prevention and Social Aspects of AIDS",
+            "content_text": "As AIDS has no cure, prevention is the best option. HIV infection often spreads due to conscious behaviour patterns rather than inadvertently. In India, the National AIDS Control Organisation (NACO) and other non-governmental organisations (NGOs) work to educate people. WHO has initiated programmes such as making blood from blood banks safe from HIV, ensuring the use of only disposable needles and syringes, free distribution of condoms, controlling drug abuse, advocating safe sex, and promoting regular check-ups. It is crucial that HIV/AIDS-infected people are not shunned; they need help and sympathy. The disease can only be tackled by society and the medical fraternity acting together to prevent its spread.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:7:7.4",
+        "number": "7.4",
+        "title": "Cancer",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:7:7.4:1",
+            "order": 1,
+            "title": "Introduction to Cancer and Contact Inhibition",
+            "content_text": "Cancer is a major cause of death globally, with more than a million Indians suffering from it annually. In a healthy body, cell growth and differentiation are highly regulated. In cancer cells, these regulatory mechanisms break down. Normal cells exhibit 'contact inhibition', where contact with other cells inhibits uncontrolled growth. Cancer cells lose this property and continue to divide, forming masses of cells called tumors.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.4:2",
+            "order": 2,
+            "title": "Types of Tumors: Benign and Malignant",
+            "content_text": "Tumors are classified into two types: 1. Benign tumors: These remain confined to their original location, do not spread, and cause little damage. 2. Malignant tumors: These are masses of proliferating cells called neoplastic or tumor cells. They grow rapidly, invade, and damage surrounding tissues. They compete with normal cells for vital nutrients. Cells sloughed from malignant tumors can reach distant sites via blood and start new tumors; this property is known as metastasis, the most feared characteristic of malignant tumors.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.4:3",
+            "order": 3,
+            "title": "Causes of Cancer (Carcinogens and Oncogenes)",
+            "content_text": "Transformation of normal cells into cancerous ones is induced by physical, chemical, or biological agents called carcinogens. Physical agents include ionising radiations (X-rays, gamma rays) and non-ionising radiations (UV), which cause DNA damage. Chemical carcinogens, such as those in tobacco smoke, are major causes of lung cancer. Biological agents include oncogenic viruses which possess viral oncogenes. Additionally, normal cells contain cellular oncogenes ($c-onc$) or proto oncogenes which, when activated under certain conditions, lead to oncogenic transformation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.4:4",
+            "order": 4,
+            "title": "Cancer Detection and Diagnosis",
+            "content_text": "Early detection is essential for successful treatment. Detection is based on: 1. Biopsy and histopathological studies: A piece of suspected tissue is sectioned, stained, and examined under a microscope. 2. Blood and bone marrow tests: Used for increased cell counts in leukemias. 3. Radiography: Use of X-rays. 4. Computed Tomography (CT): Uses X-rays to generate 3D images of internal organs. 5. Magnetic Resonance Imaging (MRI): Uses strong magnetic fields and non-ionising radiations to detect pathological and physiological changes. 6. Immunological methods: Using antibodies against cancer-specific antigens. 7. Molecular biology techniques: These can be Molecular biology techniques are applied to identify genes in individuals who have an inherited susceptibility to specific cancers. Detecting these genes is a vital step in cancer prevention, as it allows medical professionals to advise at-risk individuals to avoid specific carcinogens, such as tobacco smoke in the case of lung cancer, to which they are genetically predisposed.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.4:5",
+            "order": 5,
+            "title": "Treatment of Cancer",
+            "content_text": "The primary methods for treating cancer include surgery, radiation therapy, and immunotherapy. In radiotherapy, tumor cells are targeted with lethal doses of radiation while ensuring the safety of surrounding healthy tissues. Chemotherapy involves the use of drugs to kill cancer cells, though many of these drugs have side effects like anemia and hair loss. Most treatment regimens utilize a combination of surgery, radiotherapy, and chemotherapy. Additionally, patients may receive biological response modifiers like $\\alpha$-interferon, which stimulate the immune system to help identify and destroy tumor cells.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:7:7.5",
+        "number": "7.5",
+        "title": "Drugs and Alcohol Abuse",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:7:7.5:1",
+            "order": 1,
+            "title": "Introduction to Drug Abuse",
+            "content_text": "Statistics indicate a concerning rise in drug and alcohol consumption, particularly among the youth. This trend necessitates proper education and guidance to help young people protect themselves and maintain healthy lifestyles. The most frequently abused substances include opioids, cannabinoids, and coca alkaloids, the majority of which are derived from flowering plants, with some obtained from fungi.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.5:2",
+            "order": 2,
+            "title": "Opioids",
+            "content_text": "Opioids are drugs that interact with specific receptors located in the central nervous system and the gastrointestinal tract. Heroin, often referred to as 'smack', is chemically known as diacetylmorphine. It is a white, bitter, odorless crystalline compound produced through the acetylation of morphine, which is extracted from the latex of the opium poppy, *Papaver somniferum*. Heroin acts as a depressant that slows down bodily functions and is typically administered via injection or snorting.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 7.7",
+                "description": "Chemical structure of Morphine showing its complex multi-ring system with hydroxyl groups.",
+                "image_url": null
+              },
+              {
+                "label": "Figure 7.8",
+                "description": "An illustration of the Opium poppy plant (*Papaver somniferum*) showing its flowers and seed pods.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.5:3",
+            "order": 3,
+            "title": "Cannabinoids",
+            "content_text": "Cannabinoids are a group of chemicals that interact with cannabinoid receptors, primarily in the brain. Natural cannabinoids are sourced from the inflorescences, leaves, and resin of the *Cannabis sativa* plant. These components are processed into various forms such as marijuana, hashish, charas, and ganja. Generally taken through inhalation or oral ingestion, these substances are known for their significant impact on the body's cardiovascular system.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 7.9",
+                "description": "Skeletal chemical structure of a cannabinoid molecule.",
+                "image_url": null
+              },
+              {
+                "label": "Figure 7.10",
+                "description": "A drawing of the characteristic serrated leaves of the *Cannabis sativa* plant.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.5:4",
+            "order": 4,
+            "title": "Cocaine and Hallucinogens",
+            "content_text": "Coca alkaloid, or cocaine, is derived from the *Erythroxylum coca* plant, native to South America. It functions by interfering with the transport of the neurotransmitter dopamine. Cocaine (also known as coke or crack) is a potent stimulant of the central nervous system, producing a sense of euphoria and increased energy, though high doses can cause hallucinations. Other plants with hallucinogenic properties include *Atropa belladona* and *Datura*. Additionally, some athletes have been known to abuse cannabinoids.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 7.11",
+                "description": "A botanical illustration of a flowering branch of the *Datura* plant.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.5:5",
+            "order": 5,
+            "title": "Other Abused Drugs",
+            "content_text": "Pharmaceutical drugs like barbiturates, amphetamines, and benzodiazepines, which are medically prescribed to treat mental illnesses such as depression and insomnia, are frequently subject to abuse. Morphine is a highly effective sedative and analgesic, particularly useful for patients recovering from surgery. Drug abuse is defined as the use of these substances for non-medicinal purposes or in frequencies and amounts that impair an individual's physical, physiological, or psychological health.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.5:6",
+            "order": 6,
+            "title": "Tobacco and Smoking",
+            "content_text": "Tobacco has been used for over 400 years and is consumed through smoking, chewing, or as snuff. It contains nicotine, an alkaloid that triggers the adrenal glands to release adrenaline and nor-adrenaline, which increases blood pressure and heart rate. Smoking is strongly associated with increased risks of lung, urinary bladder, and throat cancers, as well as respiratory diseases like emphysema and bronchitis. It also increases carbon monoxide (CO) levels in the blood, reducing oxygen-carrying capacity. Chewing tobacco is specifically linked to oral cancer.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:7:7.5.1",
+        "number": "7.5.1",
+        "title": "Adolescence and Drug/Alcohol Abuse",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:7:7.5.1:1",
+            "order": 1,
+            "title": "Defining Adolescence",
+            "content_text": "Adolescence is a transitional period and process between the ages of 12 and 18 during which a child matures into an adult with the attitudes and beliefs required for societal participation. This phase is marked by significant biological and behavioral changes, making it a highly vulnerable period for mental and psychological development.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.5.1:2",
+            "order": 2,
+            "title": "Factors Leading to Substance Abuse",
+            "content_text": "Common motivators for drug and alcohol use among youngsters include curiosity, a desire for adventure, and experimentation. Adolescents may also turn to these substances as a way to escape stress from academic pressures or unstable family environments. The perception of substance use as 'cool' or progressive, often promoted by media like television and the internet, along with peer pressure, are major factors that initiate these habits.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:7:7.5.2",
+        "number": "7.5.2",
+        "title": "Addiction and Dependence",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:7:7.5.2:1",
+            "order": 1,
+            "title": "Nature of Addiction and Tolerance",
+            "content_text": "Drugs are frequently used repeatedly due to their perceived benefits, such as euphoria and a temporary feeling of well-being. Addiction is a psychological attachment to these effects, which drives individuals to continue substance use even when it becomes self-destructive. A critical aspect of addiction is the inherent addictive nature of alcohol and drugs. With repeated use, the tolerance level of the receptors in our body increases. Consequently, these receptors respond only to higher doses of drugs or alcohol, leading to greater intake and further addiction. It is important to note that even a single use can be a forerunner to addiction, pulling the user into a vicious circle of abuse from which they may struggle to escape without guidance or counselling.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.5.2:2",
+            "order": 2,
+            "title": "Dependence and Withdrawal Syndrome",
+            "content_text": "Dependence is the tendency of the body to manifest a characteristic and unpleasant withdrawal syndrome if the regular dose of drugs or alcohol is abruptly discontinued. This syndrome is characterized by symptoms such as anxiety, shakiness, nausea, and sweating, which may be relieved when use is resumed. In some cases, withdrawal symptoms can be severe or even life-threatening, requiring medical supervision. Dependence often leads patients to ignore social norms to obtain funds for their needs, resulting in significant social adjustment problems.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:7:7.5.3",
+        "number": "7.5.3",
+        "title": "Effects of Drug/Alcohol Abuse",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:7:7.5.3:1",
+            "order": 1,
+            "title": "Immediate and Severe Health Consequences",
+            "content_text": "The immediate adverse effects of drug and alcohol abuse manifest as reckless behavior, vandalism, and violence. Excessive doses can lead to coma and death due to respiratory failure, heart failure, or cerebral hemorrhage. A combination of different drugs or their intake with alcohol is particularly dangerous, often resulting in fatal overdosing.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.5.3:2",
+            "order": 2,
+            "title": "Warning Signs and Social Impact",
+            "content_text": "Common warning signs of abuse among youth include a drop in academic performance, unexplained absence from school or college, lack of interest in personal hygiene, withdrawal, isolation, depression, fatigue, aggressive and rebellious behavior, deteriorating relationships with family and friends, loss of interest in hobbies, and fluctuations in weight and appetite. Far-reaching implications include turning to stealing to fund the habit, causing mental and financial distress to the entire family and friends.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.5.3:3",
+            "order": 3,
+            "title": "Risks of Intravenous Drug Use",
+            "content_text": "Individuals who take drugs intravenously (direct injection into the vein using a needle and syringe) are at a much higher risk of acquiring serious infections like AIDS and Hepatitis B. The viruses responsible for these diseases are transferred through the sharing of infected needles and syringes. Both AIDS and Hepatitis B are chronic, ultimately fatal infections that can also be transmitted through sexual contact or infected blood.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.5.3:4",
+            "order": 4,
+            "title": "Long-term Effects and Impact on Pregnancy",
+            "content_text": "Chronic use of drugs and alcohol can lead to long-term effects such as heavy drinking in adulthood, damage to the nervous system, and liver damage known as cirrhosis. Additionally, the use of drugs and alcohol during pregnancy is known to adversely affect the foetus.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.5.3:5",
+            "order": 5,
+            "title": "Misuse in Sports and Side Effects of Anabolic Steroids",
+            "content_text": "Sportspersons may misuse narcotic analgesics, anabolic steroids, diuretics, and certain hormones to enhance performance by increasing muscle strength, bulk, and aggressiveness. In females, side effects of anabolic steroids include masculinisation (features like males), increased aggressiveness, mood swings, depression, abnormal menstrual cycles, excessive hair growth on the face and body, enlargement of the clitoris, and deepening of the voice. In males, side effects include acne, increased aggressiveness, mood swings, depression, reduction in testicle size, decreased sperm production, potential for kidney and liver dysfunction, breast enlargement, premature baldness, and enlargement of the prostate gland. These effects may be permanent with prolonged use. In adolescents, severe facial and body acne and premature closure of the growth centres of long bones can result in stunted growth.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:7:7.5.4",
+        "number": "7.5.4",
+        "title": "Prevention and Control",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:7:7.5.4:1",
+            "order": 1,
+            "title": "General Approach and Parental Responsibility",
+            "content_text": "The principle 'prevention is better than cure' is vital, as habits like smoking and drug use are most likely to be adopted during adolescence. It is crucial to identify situations that push adolescents toward substance use and take remedial measures early. Parents and teachers have a special responsibility; parenting that combines high levels of nurturance with consistent discipline is associated with a lower risk of substance abuse.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:12:7:7.5.4:2",
+            "order": 2,
+            "title": "Specific Preventive Measures",
+            "content_text": "Key measures for prevention and control include: (i) Avoid undue peer pressure: Respect a child's personality and do not push them beyond their threshold limits in studies, sports, or other activities. (ii) Education and counselling: Help adolescents face problems and disappointments, and channel their energy into healthy pursuits like sports, reading, music, or yoga. (iii) Seeking help from parents and peers: Encourage youth to vent feelings of anxiety and guilt to trusted friends or family members to get appropriate advice. (iv) Looking for danger signs: Parents and teachers should stay alert for signs of abuse to diagnose the underlying causes and initiate remedial steps. (v) Seeking professional and medical help: Highly qualified psychologists, psychiatrists, and rehabilitation programs are available to help individuals overcome addiction and lead a healthy life.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:12:7:Summary",
+        "number": "Summary",
+        "title": "Summary",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:12:7:Summary:1",
+            "order": 1,
+            "title": "Chapter Overview: Health, Disease, and Immunity",
+            "content_text": "Health is defined as a state of complete physical, mental, social, and psychological well-being, rather than just the absence of disease. Various diseases such as typhoid, cholera, pneumonia, fungal skin infections, and malaria cause significant distress. Vector-borne diseases, particularly malaria caused by Plasmodium falciparum, can be fatal if untreated. Prevention relies on personal hygiene and public health measures like waste disposal, clean water, vector control, and immunisation. The immune system is central to preventing disease, utilizing innate defences (skin, mucous membranes, antimicrobial substances, phagocytic cells) and acquired immunity. Acquired immunity involves specific antibodies (humoral response) and cells (cell-mediated response) that kill pathogens. The immune system possesses memory, allowing for a rapid and intense response upon subsequent exposure to the same pathogen, which forms the basis of protection. The immune system possesses memory, allowing for a rapid and intense response upon subsequent exposure to the same pathogen, which forms the basis of protection afforded by vaccination and immunisation. Among other diseases, AIDS and cancer kill a large number of individuals worldwide. AIDS caused by the human immuno-deficiency virus (HIV) is fatal but can be prevented if certain precautions are taken. Many cancers are curable if detected early and appropriate therapeutic measures are taken. Of late, drug and alcohol abuse among youth and adolescents is becoming another cause of concern. Because of the addictive nature of alcohol and drugs, and their perceived benefits like relief from stress, a person may try taking these in the face of peer pressure, examinations-related and competition-related stresses. In doing so, he/she may get addicted to them. Education about their harmful effects, counselling and seeking immediate professional and medical help would totally relieve the individual from these evils.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "EXERCISES",
+      "items": [
+        {
+          "id": "ncert:biology:12:7:ex:1",
+          "number": 1,
+          "problem": "What are the various public health measures, which you would suggest as safeguard against infectious diseases?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:7:ex:2",
+          "number": 2,
+          "problem": "In which way has the study of biology helped us to control infectious diseases?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:7:ex:3",
+          "number": 3,
+          "problem": "How does the transmission of each of the following diseases take place? (a) Amoebiasis (b) Malaria (c) Ascariasis (d) Pneumonia",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:7:ex:4",
+          "number": 4,
+          "problem": "What measure would you take to prevent water-borne diseases?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:7:ex:5",
+          "number": 5,
+          "problem": "Discuss with your teacher what does ‘a suitable gene’ means, in the context of DNA vaccines.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:7:ex:6",
+          "number": 6,
+          "problem": "Name the primary and secondary lymphoid organs.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:7:ex:7",
+          "number": 7,
+          "problem": "The following are some well-known abbreviations, which have been used in this chapter. Expand each one to its full form: (a) MALT (b) CMI (c) AIDS (d) NACO (e) HIV",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:7:ex:8",
+          "number": 8,
+          "problem": "Differentiate the following and give examples of each: (a) Innate and acquired immunity (b) Active and passive immunity",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:7:ex:9",
+          "number": 9,
+          "problem": "Draw a well-labelled diagram of an antibody molecule.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:7:ex:10",
+          "number": 10,
+          "problem": "What are the various routes by which transmission of human immuno-deficiency virus takes place?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:7:ex:11",
+          "number": 11,
+          "problem": "What is the mechanism by which the AIDS virus causes deficiency of immune system of the infected person?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:7:ex:12",
+          "number": 12,
+          "problem": "How is a cancerous cell different from a normal cell?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:7:ex:13",
+          "number": 13,
+          "problem": "Explain what is meant by metastasis.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:7:ex:14",
+          "number": 14,
+          "problem": "List the harmful effects caused by alcohol/drug abuse.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:7:ex:15",
+          "number": 15,
+          "problem": "Do you think that friends can influence one to take alcohol/drugs? If yes, how may one protect himself/herself from such an influence?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:7:ex:16",
+          "number": 16,
+          "problem": "Why is that once a person starts taking alcohol or drugs, it is difficult to get rid of this habit? Discuss it with your teacher.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:12:7:ex:17",
+          "number": 17,
+          "problem": "In your view what motivates youngsters to take to alcohol or drugs and how can this be avoided?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        }
+      ]
+    }
+  }
+}

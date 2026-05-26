@@ -1,0 +1,997 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_biology_11_ch4.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:biology:11:4",
+  "curriculum": "ncert",
+  "subject": "biology",
+  "grade": 11,
+  "textbook_name": "Biology",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:biology:11:4",
+    "number": 4,
+    "title": "Animal Kingdom",
+    "summary": "This chapter on the Animal Kingdom explores the diversity of animal life and how scientists classify organisms within this kingdom. It begins by establishing the fundamental criteria used for classification, including levels of organization (cellular to organ system), body symmetry (asymmetrical, radial, or bilateral), embryonic layers (diploblastic and triploblastic), presence or absence of a coelom (body cavity), segmentation (metamerism), and the presence of a notochord.\n\nThe chapter then systematically details the characteristics of each major phylum, starting with non-chordates like Porifera (sponges), Coelenterata (cnidarians), Ctenophora, Platyhelminthes (flatworms), Aschelminthes (roundworms), Annelida (segmented worms), Arthropoda (insects, crustaceans), Mollusca (snails, clams), Echinodermata (starfish), and Hemichordata. For each phylum, the chapter highlights key features, body plans, organ systems, and examples.\n\nFinally, the chapter delves into Phylum Chordata, emphasizing the defining presence of a notochord, dorsal nerve cord, and pharyngeal slits. Chordata is further divided into subphyla and ultimately into Vertebrata, with detailed descriptions of the classes: Cyclostomata (jawless fishes), Chondrichthyes (cartilaginous fishes), Osteichthyes (bony fishes), Amphibia, Reptilia, Aves (birds), and Mammalia. The chapter’s structure progressively builds from basic organizational features to the unique characteristics that define each animal group, culminating in the most complex, the mammals.\n\nUnderstanding animal classification is crucial for comprehending evolutionary relationships and biodiversity. By classifying organisms, we can better study their biology, ecology, and conservation needs, allowing us to explore the interconnectedness of life on Earth.",
+    "sections": [
+      {
+        "id": "ncert:biology:11:4:4.1",
+        "number": "4.1",
+        "title": "Basis of Classification",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:4:4.1:1",
+            "order": 1,
+            "title": "Introduction to Basis of Classification",
+            "content_text": "When you look around, you will observe different animals with different structures and forms. As over a million species of animals have been described till now, the need for classification becomes all the more important. The classification also helps in assigning a systematic position to newly described species. Inspite of differences in structure and form of different animals, there are fundamental features common to various individuals in relation to the arrangement of cells, body symmetry, nature of coelom, patterns of digestive, circulatory or reproductive systems. These features are used as the basis of animal classification.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:4:4.1:2",
+            "order": 2,
+            "title": "Levels of Organisation",
+            "content_text": "Though all members of Animalia are multicellular, they do not all exhibit the same pattern of cell organisation. In sponges, cells are arranged as loose cell aggregates, representing the cellular level of organisation, where some division of labour occurs. In coelenterates, the arrangement is more complex; cells performing the same function form tissues, known as the tissue level of organisation. The organ level is seen in Platyhelminthes and higher phyla, where tissues group into organs for specific functions. In Annelids, Arthropods, Molluscs, Echinoderms, and Chordates, organs associate into functional systems, termed the organ system level of organisation. These systems vary in complexity. For instance, the digestive system in Platyhelminthes is incomplete, with a single opening for both mouth and anus, whereas a complete system has two distinct openings. The circulatory system is either open (blood pumped out of the heart directly bathes cells and tissues) or closed (blood circulates through a network of vessels like arteries, veins, and capillaries).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:4:4.1:3",
+            "order": 3,
+            "title": "Symmetry",
+            "content_text": "Animals are categorized by their body symmetry. Sponges are typically asymmetrical, meaning no plane passing through the centre can divide them into equal halves. Radial symmetry is found in coelenterates, ctenophores, and echinoderms, where any plane passing through the central axis divides the body into two identical halves. Bilateral symmetry is characteristic of animals like annelids and arthropods, where the body can be divided into identical left and right halves in only one specific plane.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.1",
+                "description": "(a) Radial symmetry illustrated by a sea anemone with multiple planes of symmetry. (b) Bilateral symmetry illustrated by a crab with a single median plane of symmetry.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:4:4.1:4",
+            "order": 4,
+            "title": "Diploblastic and Triploblastic Organisation",
+            "content_text": "Animals are classified by the number of embryonic layers formed during development. Diploblastic animals, such as coelenterates, have cells arranged in two layers: an external ectoderm and an internal endoderm, with an undifferentiated layer called mesoglea between them. Triploblastic animals, including those from Platyhelminthes to chordates, possess a third germinal layer, the mesoderm, situated between the ectoderm and endoderm.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.2",
+                "description": "Showing germinal layers: (a) Diploblastic showing ectoderm, endoderm, and mesoglea. (b) Triploblastic showing ectoderm, endoderm, and mesoderm.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:4:4.1:5",
+            "order": 5,
+            "title": "Coelom",
+            "content_text": "The presence or absence of a body cavity between the body wall and the gut wall, known as the coelom, is a vital classification feature. A true coelom is lined by mesoderm. Coelomates are animals that possess this cavity, such as annelids, molluscs, arthropods, echinoderms, hemichordates, and chordates. In pseudocoelomates, like aschelminthes, the body cavity is not lined by mesoderm; instead, the mesoderm exists as scattered pouches between the ectoderm and endoderm. Acoelomates, such as platyhelminthes, lack a body cavity entirely.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.3",
+                "description": "Diagrammatic sectional view of: (a) Coelomate with a true cavity. (b) Pseudocoelomate with scattered pouches. (c) Acoelomate with no cavity.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:4:4.1:6",
+            "order": 6,
+            "title": "Segmentation",
+            "content_text": "In certain animals, the body is divided both externally and internally into segments, often with a serial repetition of some organs. This pattern is known as metameric segmentation, and the phenomenon itself is called metamerism. A classic example is the earthworm, which displays this segmented body plan.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:4:4.1:7",
+            "order": 7,
+            "title": "Notochord",
+            "content_text": "The notochord is a rod-like structure derived from the mesoderm, formed on the dorsal side during embryonic development in some animals. Based on this, animals are divided into chordates (those possessing a notochord) and non-chordates (those lacking it, ranging from Porifera to Echinoderms).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:4:4.2",
+        "number": "4.2",
+        "title": "Classification of Animals",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:4:4.2:1",
+            "order": 1,
+            "title": "Overview of Animal Classification",
+            "content_text": "The broad classification of Animalia, based on common fundamental features as mentioned in the preceding sections, is given in Figure 4.4. The broad classification of Animalia, based on common fundamental features as mentioned in the preceding sections, is given in Figure 4.4. This classification categorizes animals based on levels of organization (cellular vs tissue/organ/organ system), symmetry (mostly asymmetrical, radial, or bilateral), and body cavity/coelom (acoelomates, pseudocoelomates, or coelomates). Note that Echinodermata exhibits radial or bilateral symmetry depending on the stage. The important characteristic features of the different phyla are described in the following sections.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.4",
+                "description": "A flowchart illustrating the broad classification of Kingdom Animalia based on fundamental features. It branches from Kingdom Animalia (multicellular) into Levels of Organisation (Cellular level leading to Porifera; Tissue/Organ/Organ system level leading to Symmetry). Symmetry branches into Radial (leading to Coelenterata and Ctenophora) and Bilateral. Bilateral branches into Body Cavity or Coelom: Acoelomates (Platyhelminthes), Pseudocoelomates (Aschelminthes), and Coelomates (Annelida, Arthropoda, Mollusca, Echinodermata, Hemichordata, Chordata). A note mentions Echinodermata exhibits radial or bilateral symmetry depending on the stage.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:4:4.2.1",
+        "number": "4.2.1",
+        "title": "Phylum - Porifera",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:4:4.2.1:1",
+            "order": 1,
+            "title": "General Characteristics and Water Transport System",
+            "content_text": "Members of this phylum are commonly known as sponges. They are generally marine and mostly asymmetrical animals. These are primitive multicellular animals and have cellular level of organisation. Sponges have a water transport or canal system. Water enters through minute pores (ostia) in the body wall into a central cavity, spongocoel, from where it goes out through the osculum. This pathway of water transport is helpful in food gathering, respiratory exchange and removal of waste. Choanocytes or collar cells line the spongocoel and the canals. Digestion is intracellular.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.5",
+                "description": "Illustrations of three examples of Phylum Porifera: (a) Sycon, showing a tubular structure with numerous ostia; (b) Euspongia, showing a dense, porous, rounded mass; (c) Spongilla, showing a branched, irregular structure.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:4:4.2.1:2",
+            "order": 2,
+            "title": "Structural Support, Reproduction, and Examples",
+            "content_text": "The body is supported by a skeleton made up of spicules or spongin fibres. Sexes are not separate (hermaphrodite), i.e., eggs and sperms are produced by the same individual. Sponges reproduce asexually by fragmentation and sexually by formation of gametes. Fertilisation is internal and development is indirect having a larval stage which is morphologically distinct from the adult. Examples include Sycon (Scypha), Spongilla (Fresh water sponge) and Euspongia (Bath sponge).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:4:4.2.2",
+        "number": "4.2.2",
+        "title": "Phylum - Coelenterata (Cnidaria)",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:4:4.2.2:1",
+            "order": 1,
+            "title": "General Characteristics and Cnidoblasts",
+            "content_text": "They are aquatic, mostly marine, sessile or free-swimming, radially symmetrical animals. The name cnidaria is derived from the cnidoblasts or cnidocytes (which contain the stinging capsules or nematocysts) present on the tentacles and the body. Cnidoblasts are used for anchorage, defense and for the capture of prey. Cnidarians exhibit tissue level of organisation and are diploblastic. They have a central gastro-vascular cavity with a single opening, mouth on hypostome. Digestion is extracellular and intracellular. Some of the cnidarians, e.g., corals have a skeleton composed of calcium carbonate.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.7",
+                "description": "A detailed diagram of a Cnidoblast, showing the internal stinging capsule (nematocyst) with a coiled thread and a trigger hair on the surface.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:4:4.2.2:2",
+            "order": 2,
+            "title": "Body Forms, Metagenesis, and Examples",
+            "content_text": "Cnidarians exhibit two basic body forms called polyp and medusa. The former is a sessile and cylindrical form like Hydra, Adamsia, etc. whereas, the latter is umbrella-shaped and free-swimming like Aurelia or jelly fish. Those cnidarians which exist in both forms exhibit alternation of generations (Metagenesis), i.e., polyps produce medusae asexually and medusae form the polyps sexually (e.g., Obelia). Examples: Physalia (Portuguese man-of-war), Adamsia (Sea anemone), Pennatula (Sea-pen), Gorgonia (Sea-fan) and Meandrina (Brain coral).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.6",
+                "description": "Outlines of two body forms in Coelenterata: (a) Aurelia (Medusa), showing an umbrella-like shape with tentacles hanging down; (b) Adamsia (Polyp), showing a cylindrical body attached to a substrate with tentacles at the top.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:4:4.2.3",
+        "number": "4.2.3",
+        "title": "Phylum - Ctenophora",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:4:4.2.3:1",
+            "order": 1,
+            "title": "Characteristics of Ctenophora",
+            "content_text": "Ctenophores, commonly known as sea walnuts or comb jellies are exclusively marine, radially symmetrical, diploblastic organisms with tissue level of organisation. The body bears eight external rows of ciliated comb plates, which help in locomotion. Digestion is both extracellular and intracellular. Bioluminescence (the property of a living organism to emit light) is well-marked in ctenophores. Sexes are not separate. Reproduction takes place only by sexual means. Fertilisation is external with indirect development. Examples: Pleurobrachia and Ctenoplana.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.8",
+                "description": "An illustration of Pleurobrachia, an example of Ctenophora, showing a spherical body with eight rows of ciliated comb plates and two long, trailing tentacles.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:4:4.2.4",
+        "number": "4.2.4",
+        "title": "Phylum - Platyhelminthes",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:4:4.2.4:1",
+            "order": 1,
+            "title": "Characteristics of Platyhelminthes",
+            "content_text": "They have dorso-ventrally flattened body, hence are called flatworms. These are mostly endoparasites found in animals including human beings. Flatworms are bilaterally symmetrical, triploblastic and acoelomate animals with organ level of organisation. Hooks and suckers are present in the parasitic forms. Some of them absorb nutrients from the host directly through their body surface. Specialised cells called flame cells help in osmoregulation and excretion. Sexes are not separate. Fertilisation is internal and development is through many larval stages. Some members like Planaria possess high regeneration capacity. Examples: Taenia (Tapeworm), Fasciola (Liver fluke).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.9",
+                "description": "Illustrations of two examples of Platyhelminthes: (a) Taenia (Tape worm), showing a long, ribbon-like, segmented body; (b) Fasciola (Liver fluke), showing a flat, leaf-shaped body with suckers.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:4:4.2.5",
+        "number": "4.2.5",
+        "title": "Phylum - Aschelminthes",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:4:4.2.5:1",
+            "order": 1,
+            "title": "General Characteristics of Aschelminthes",
+            "content_text": "The body of the aschelminthes is circular in cross-section, which gives them the common name roundworms (Figure 4.10). They exhibit a wide range of habitats, being free-living, aquatic, terrestrial, or parasitic in both plants and animals. Roundworms possess an organ-system level of body organisation. In terms of body plan, they are bilaterally symmetrical, triploblastic, and pseudocoelomate animals.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.10",
+                "description": "Illustration of male and female roundworms (Aschelminthes). The female is shown as significantly longer and straighter than the male, which has a curved posterior end.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:4:4.2.5:2",
+            "order": 2,
+            "title": "Anatomy and Physiology of Roundworms",
+            "content_text": "The digestive system features a complete alimentary canal equipped with a well-developed muscular pharynx. For waste removal, an excretory tube is present that eliminates body wastes from the body cavity through an excretory pore. Aschelminthes are dioecious, meaning sexes are separate and males and females are distinct. A notable sexual dimorphism is that females are often longer than males.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:4:4.2.5:3",
+            "order": 3,
+            "title": "Reproduction and Examples of Aschelminthes",
+            "content_text": "Fertilisation is internal. Development can be direct, where the young ones resemble the adult, or indirect through larval stages. Common examples of Phylum Aschelminthes include Ascaris (Roundworm), Wuchereria (Filaria worm), and Ancylostoma (Hookworm).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:4:4.2.6",
+        "number": "4.2.6",
+        "title": "Phylum - Annelida",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:4:4.2.6:1",
+            "order": 1,
+            "title": "Habitat and Body Plan of Annelids",
+            "content_text": "Annelids may be aquatic (found in both marine and fresh water) or terrestrial. They can be free-living or occasionally parasitic. They exhibit an organ-system level of body organisation and bilateral symmetry. They are triploblastic, metamerically segmented, and coelomate animals. A defining feature is that their body surface is distinctly marked out into segments or metameres; this characteristic gives the phylum its name, Annelida (derived from Latin 'annulus' meaning little ring) (Figure 4.11).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.11",
+                "description": "Examples of Annelida: (a) Nereis, showing a long segmented body with numerous lateral parapodia; (b) Hirudinaria (blood-sucking leech), showing a segmented, tapered body.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:4:4.2.6:2",
+            "order": 2,
+            "title": "Locomotion and Circulation in Annelids",
+            "content_text": "For movement, they possess longitudinal and circular muscles. Aquatic annelids like Nereis have lateral appendages called parapodia, which assist in swimming. The circulatory system in annelids is of the closed type.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:4:4.2.6:3",
+            "order": 3,
+            "title": "Excretion and Nervous System of Annelids",
+            "content_text": "Excretion and osmoregulation are handled by structures called nephridia (singular: nephridium). The neural system consists of paired ganglia (singular: ganglion) connected by lateral nerves to a double ventral nerve cord.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:4:4.2.6:4",
+            "order": 4,
+            "title": "Reproduction and Examples of Annelida",
+            "content_text": "Reproduction is sexual. Nereis, an aquatic form, is dioecious, whereas earthworms and leeches are monoecious. Examples include Nereis, Pheretima (Earthworm), and Hirudinaria (Blood sucking leech).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:4:4.2.7",
+        "number": "4.2.7",
+        "title": "Phylum - Arthropoda",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:4:4.2.7:1",
+            "order": 1,
+            "title": "General Features and Body Structure of Arthropods",
+            "content_text": "Phylum Arthropoda is the largest phylum of Animalia, encompassing over two-thirds of all named species on Earth, including insects (Figure 4.12). They have an organ-system level of organisation, bilateral symmetry, and are triploblastic, segmented, and coelomate. The body is protected by a chitinous exoskeleton and is divided into three regions: head, thorax, and abdomen. They are characterized by jointed appendages (arthros meaning joint, poda meaning appendages).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.12",
+                "description": "Examples of Arthropoda: (a) Locust, (b) Butterfly, (c) Scorpion, and (d) Prawn, illustrating diverse forms with jointed appendages and segmented bodies.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:4:4.2.7:2",
+            "order": 2,
+            "title": "Physiology of Arthropods",
+            "content_text": "Respiratory functions are carried out by various organs such as gills, book gills, book lungs, or a tracheal system. The circulatory system is of the open type. Sensory organs are well-developed, including antennae, eyes (both compound and simple), and statocysts or balancing organs.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:4:4.2.7:3",
+            "order": 3,
+            "title": "Excretion and Reproduction in Arthropods",
+            "content_text": "Excretion occurs through malpighian tubules. Arthropods are mostly dioecious. Fertilisation is usually internal, and they are mostly oviparous (egg-laying). Development may be direct or indirect.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:4:4.2.7:4",
+            "order": 4,
+            "title": "Classification of Arthropod Examples",
+            "content_text": "Examples are categorized as: Economically important insects like Apis (Honey bee), Bombyx (Silkworm), and Laccifer (Lac insect); Vectors such as Anopheles, Culex, and Aedes mosquitoes; Gregarious pests like Locusta (Locust); and Living fossils like Limulus (King crab).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:4:4.2.8",
+        "number": "4.2.8",
+        "title": "Phylum - Mollusca",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:4:4.2.8:1",
+            "order": 1,
+            "title": "General Features and Body Structure of Molluscs",
+            "content_text": "Mollusca is the second largest animal phylum (Figure 4.13). Molluscs are either terrestrial or aquatic (marine or fresh water). They exhibit an organ-system level of organisation, bilateral symmetry, triploblastic nature, and are coelomate. The body is typically covered by a calcareous shell and is unsegmented, with a distinct head, muscular foot, and visceral hump.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.13",
+                "description": "Examples of Mollusca: (a) Pila (apple snail) with its spiral shell, and (b) Octopus with its distinct head and tentacles.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:4:4.2.8:2",
+            "order": 2,
+            "title": "Physiology and Feeding in Molluscs",
+            "content_text": "A soft and spongy layer of skin forms a mantle over the visceral hump. The space between the hump and the mantle is the mantle cavity, which contains feather-like gills used for respiratory and excretory functions. The anterior head region has sensory tentacles. The mouth contains a file-like rasping organ for feeding called a radula.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:4:4.2.8:3",
+            "order": 3,
+            "title": "Reproduction and Examples of Mollusca",
+            "content_text": "They are usually dioecious and oviparous with indirect development. Examples include Pila (Apple snail), Pinctada (Pearl oyster), Sepia (Cuttlefish), Loligo (Squid), Octopus (Devil fish), Aplysia (Sea-hare), Dentalium (Tusk shell), and Chaetopleura (Chiton).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:4:4.2.9",
+        "number": "4.2.9",
+        "title": "Phylum - Echinodermata",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:4:4.2.9:1",
+            "order": 1,
+            "title": "General Features and Symmetry of Echinoderms",
+            "content_text": "Echinoderms possess an endoskeleton of calcareous ossicles, which gives them their name (Echinodermata means spiny bodied, Figure 4.14). All members are marine and have an organ-system level of organisation. A unique feature is their symmetry: adults are radially symmetrical, while larvae are bilaterally symmetrical. They are triploblastic and coelomate animals.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.14",
+                "description": "Examples of Echinodermata: (a) Asterias (starfish) showing five-fold radial symmetry, and (b) Ophiura (brittle star) with long, slender arms.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:4:4.2.9:2",
+            "order": 2,
+            "title": "Physiology of Echinoderms",
+            "content_text": "The digestive system is complete, with the mouth on the lower (ventral) side and the anus on the upper (dorsal) side. The most distinctive feature is the water vascular system, which aids in locomotion, capture and transport of food, and respiration. An excretory system is absent.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:4:4.2.9:3",
+            "order": 3,
+            "title": "Reproduction and Examples of Echinodermata",
+            "content_text": "Sexes are separate, and reproduction is sexual. Fertilisation is usually external. Development is indirect, involving a free-swimming larva. Examples include Asterias (Star fish), Echinus (Sea urchin), Antedon (Sea lily), Cucumaria (Sea cucumber), and Ophiura (Brittle star).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:4:4.2.10",
+        "number": "4.2.10",
+        "title": "Phylum - Hemichordata",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:4:4.2.10:1",
+            "order": 1,
+            "title": "Classification and Body Structure of Hemichordates",
+            "content_text": "Hemichordata was previously considered a sub-phylum under Chordata but is now classified as a separate phylum under non-chordata. They possess a rudimentary structure in the collar region called a stomochord, which is similar to a notochord. This phylum consists of a small group of worm-like marine animals with an organ-system level of organisation. They are bilaterally symmetrical, triploblastic, and coelomate. The body is cylindrical and composed of an anterior proboscis, a collar, and a long trunk (Figure 4.15).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.15",
+                "description": "Illustration of Balanoglossus, showing the distinct body regions: proboscis, collar, and trunk.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:4:4.2.10:2",
+            "order": 2,
+            "title": "Physiology and Reproduction in Hemichordates",
+            "content_text": "The circulatory system is of the open type. Respiration occurs through gills, and the excretory organ is the proboscis gland. Sexes are separate, fertilisation is external, and development is indirect. Examples: Balanoglossus and Saccoglossus.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:4:4.2.11",
+        "number": "4.2.11",
+        "title": "Phylum - Chordata",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:4:4.2.11:1",
+            "order": 1,
+            "title": "Fundamental Characteristics of Chordates",
+            "content_text": "Animals belonging to phylum Chordata are fundamentally characterised by the presence of a notochord, a dorsal hollow nerve cord and paired pharyngeal gill slits (Figure 4.16). These are bilaterally symmetrical, triploblastic, coelomate with organ-system level of organisation. They possess a post anal tail and a closed circulatory system.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.16",
+                "description": "A diagram showing the fundamental characteristics of chordates, including the nerve cord, notochord, gill slits, and post-anal part.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:4:4.2.11:2",
+            "order": 2,
+            "title": "Comparison of Chordates and Non-chordates",
+            "content_text": "Table 4.1 presents a comparison of salient features of chordates and non-chordates. Key differences include the presence of a notochord in chordates (absent in non-chordates), a dorsal, hollow, and single central nervous system in chordates (ventral, solid, and double in non-chordates), and the presence of a post-anal tail in chordates (absent in non-chordates).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 4.1",
+                "caption": "Comparison of Chordates and Non-chordates",
+                "headers": [
+                  "S.No.",
+                  "Chordates",
+                  "Non-chordates"
+                ],
+                "rows": [
+                  [
+                    "1.",
+                    "Notochord present.",
+                    "Notochord absent."
+                  ],
+                  [
+                    "2.",
+                    "Central nervous system is dorsal, hollow and single.",
+                    "Central nervous system is ventral, solid and double."
+                  ],
+                  [
+                    "3.",
+                    "Pharynx perforated by gill slits.",
+                    "Gill slits are absent."
+                  ],
+                  [
+                    "4.",
+                    "Heart is ventral.",
+                    "Heart is dorsal (if present)."
+                  ],
+                  [
+                    "5.",
+                    "A post-anal part (tail) is present.",
+                    "Post-anal tail is absent."
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:biology:11:4:4.2.11:3",
+            "order": 3,
+            "title": "Subphyla of Phylum Chordata",
+            "content_text": "Phylum Chordata is divided into three subphyla: Urochordata or Tunicata, Cephalochordata and Vertebrata.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:4:4.2.11:4",
+            "order": 4,
+            "title": "Protochordates",
+            "content_text": "Subphyla Urochordata and Cephalochordata are often referred to as protochordates and are exclusively marine. In Urochordata, notochord is present only in larval tail, while in Cephalochordata, it extends from head to tail region and is persistent throughout their life. Examples: Urochordata – Ascidia, Salpa, Doliolum; Cephalochordata – Branchiostoma (Amphioxus or Lancelet).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.17",
+                "description": "An illustration of Ascidia, a member of the subphylum Urochordata.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:4:4.2.11:5",
+            "order": 5,
+            "title": "Subphylum Vertebrata",
+            "content_text": "The members of subphylum Vertebrata possess notochord during the embryonic period. The notochord is replaced by a cartilaginous or bony vertebral column in the adult. Thus all vertebrates are chordates but all chordates are not vertebrates. Besides the basic chordate characters, vertebrates have a ventral muscular heart with two, three or four chambers, kidneys for excretion and osmoregulation and paired appendages which may be fins or limbs.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:4:4.2.11:6",
+            "order": 6,
+            "title": "Classification of Vertebrata",
+            "content_text": "The subphylum Vertebrata is further divided into Division Agnatha (lacks jaw) and Gnathostomata (bears jaw). Agnatha includes Class Cyclostomata. Gnathostomata is divided into Super Class Pisces (bear fins) and Tetrapoda (bear limbs). Pisces includes Classes Chondrichthyes and Osteichthyes. Tetrapoda includes Classes Amphibia, Reptilia, Aves, and Mammals.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Classification of Vertebrata",
+                "description": "A flowchart showing the division of Subphylum Vertebrata into Division Agnatha (lacks jaw) and Gnathostomata (bears jaw). Agnatha includes Class Cyclostomata. Gnathostomata is divided into Super Class Pisces (bear fins) and Tetrapoda (bear limbs). Pisces includes Classes Chondrichthyes and Osteichthyes. Tetrapoda includes Classes Amphibia, Reptilia, Aves, and Mammals.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:4:4.2.11.1",
+        "number": "4.2.11.1",
+        "title": "Class - Cyclostomata",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:4:4.2.11.1:1",
+            "order": 1,
+            "title": "Characteristics and Life Cycle of Cyclostomes",
+            "content_text": "All living members of the class Cyclostomata are ectoparasites on some fishes. They have an elongated body bearing 6-15 pairs of gill slits for respiration. Cyclostomes have a sucking and circular mouth without jaws (Fig. 4.18). Their body is devoid of scales and paired fins. Cranium and vertebral column are cartilaginous. Circulation is of closed type. Cyclostomes are marine but migrate for spawning to fresh water. After spawning, within a few days, they die. Their larvae, after metamorphosis, return to the ocean. Examples: Petromyzon (Lamprey) and Myxine (Hagfish).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.18",
+                "description": "An illustration of Petromyzon, a jawless vertebrate belonging to the class Cyclostomata.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:4:4.2.11.2",
+        "number": "4.2.11.2",
+        "title": "Class - Chondrichthyes",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:4:4.2.11.2:1",
+            "order": 1,
+            "title": "Physical Characteristics and Habitat",
+            "content_text": "They are marine animals with streamlined body and have cartilaginous endoskeleton (Figure 4.19). Mouth is located ventrally. Notochord is persistent throughout life. Gill slits are separate and without operculum (gill cover). The skin is tough, containing minute placoid scales. Teeth are modified placoid scales which are backwardly directed. Their jaws are very powerful. These animals are predaceous. Due to the absence of air bladder, they have to swim constantly to avoid sinking.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.19",
+                "description": "Illustrations of cartilaginous fishes: (a) Scoliodon (Dog fish) and (b) Pristis (Saw fish).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:4:4.2.11.2:2",
+            "order": 2,
+            "title": "Physiological Features and Reproduction",
+            "content_text": "Heart is two-chambered (one auricle and one ventricle). Some of them have electric organs (e.g., Torpedo) and some possess poison sting (e.g., Trygon). They are cold-blooded (poikilothermous) animals, i.e., they lack the capacity to regulate their body temperature. Sexes are separate. In males pelvic fins bear claspers. They have internal fertilisation and many of them are viviparous. Examples: Scoliodon (Dog fish), Pristis (Saw fish), Carcharodon (Great white shark), Trygon (Sting ray).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:4:4.2.11.3",
+        "number": "4.2.11.3",
+        "title": "Class - Osteichthyes",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:4:4.2.11.3:1",
+            "order": 1,
+            "title": "Characteristics of Bony Fishes",
+            "content_text": "It includes both marine and fresh water fishes with bony endoskeleton. Their body is streamlined. Mouth is mostly terminal (Figure 4.20). They have four pairs of gills which are covered by an operculum on each side. Skin is covered with cycloid/ctenoid scales. Air bladder is present which regulates buoyancy. Heart is two-chambered (one auricle and one ventricle). They are cold-blooded animals. Sexes are separate. Fertilisation is usually external. They are mostly oviparous and development is direct. Examples: Marine – Exocoetus (Flying fish), Hippocampus (Sea horse); Freshwater – Labeo (Rohu), Catla (Katla), Clarias (Magur); Aquarium – Betta (Fighting fish), Pterophyllum (Angel fish).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.20",
+                "description": "Illustrations of bony fishes: (a) Hippocampus (Sea horse) and (b) Catla (Katla).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:4:4.2.11.4",
+        "number": "4.2.11.4",
+        "title": "Class - Amphibia",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:4:4.2.11.4:1",
+            "order": 1,
+            "title": "Characteristics of Amphibians",
+            "content_text": "As the name indicates (Gr., Amphi : dual, bios, life), amphibians can live in aquatic as well as terrestrial habitats (Figure 4.21). Most of them have two pairs of limbs. Body is divisible into head and trunk. Tail may be present in some. The amphibian skin is moist (without scales). The eyes have eyelids. A tympanum represents the ear. Alimentary canal, urinary and reproductive tracts open into a common chamber called cloaca which opens to the exterior. Respiration is by gills, lungs and through skin. The heart is three-chambered (two auricles and one ventricle). These are cold-blooded animals. Sexes are separate. Fertilisation is external. They are oviparous and development is indirect. Examples: Bufo (Toad), Rana (Frog), Hyla (Tree frog), Salamandra (Salamander), Ichthyophis (Limbless amphibia).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 4.21",
+                "description": "Illustrations of amphibians: (a) Salamandra (Salamander) and (b) Rana (Frog).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:4:4.2.11.5",
+        "number": "4.2.11.5",
+        "title": "Class - Reptilia",
+        "content_text": "The class name refers to their creeping or crawling mode of locomotion (Latin, repere or reptum, to creep or crawl). They are mostly terrestrial animals and their body is covered by dry and cornified skin, epidermal scales or scutes. They do not have external ear openings. Tympanum represents ear. Limbs, when present, are two pairs. Heart is usually three-chambered, but four-chambered in crocodiles. Reptiles are poikilotherms. Snakes and lizards shed their scales as skin cast. Sexes are separate. Fertilisation is internal. They are oviparous and development is direct.\n\nExamples: Chelone (Turtle), Testudo (Tortoise), Chameleon (Tree lizard), Calotes (Garden lizard), Crocodilus (Crocodile), Alligator (Alligator). Hemidactylus (Wall lizard), Poisonous snakes – Naja (Cobra), Bangarus (Krait), Vipera (Viper).",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:4:4.2.11.5:1",
+            "order": 1,
+            "title": "Characteristics of Reptiles",
+            "content_text": "The class name refers to their creeping or crawling mode of locomotion (Latin, repere or reptum, to creep or crawl). They are mostly terrestrial animals and their body is covered by dry and cornified skin, epidermal scales or scutes. They do not have external ear openings. Tympanum represents ear. Limbs, when present, are two pairs. Heart is usually three-chambered, but four-chambered in crocodiles. Reptiles are poikilotherms. Snakes and lizards shed their scales as skin cast. Sexes are separate. Fertilisation is internal. They are oviparous and development is direct.\n\nExamples: Chelone (Turtle), Testudo (Tortoise), Chameleon (Tree lizard), Calotes (Garden lizard), Crocodilus (Crocodile), Alligator (Alligator). Hemidactylus (Wall lizard), Poisonous snakes – Naja (Cobra), Bangarus (Krait), Vipera (Viper).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:4:4.2.11.6",
+        "number": "4.2.11.6",
+        "title": "Class - Aves",
+        "content_text": "The characteristic features of Aves (birds) are the presence of feathers and most of them can fly except flightless birds (e.g., Ostrich). They possess beak. The forelimbs are modified into wings. The hind limbs generally have scales and are modified for walking, swimming or clasping the tree branches. Skin is dry without glands except the oil gland at the base of the tail. Endoskeleton is fully ossified (bony) and the long bones are hollow with air cavities (pneumatic). The digestive tract of birds has additional chambers, the crop and gizzard. Heart is completely four-chambered. They are warm-blooded (homoiothermic) animals, i.e., they are able to maintain a constant body temperature. Respiration is by lungs. Air sacs connected to lungs supplement respiration. Sexes are separate. Fertilisation is internal. They are oviparous and development is direct.\n\nExamples: Corvus (Crow), Columba (Pigeon), Psittacula (Parrot), Struthio (Ostrich), Pavo (Peacock), Aptenodytes (Penguin), Neophron (Vulture).",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:4:4.2.11.6:1",
+            "order": 1,
+            "title": "Characteristics of Birds",
+            "content_text": "The characteristic features of Aves (birds) are the presence of feathers and most of them can fly except flightless birds (e.g., Ostrich). They possess beak. The forelimbs are modified into wings. The hind limbs generally have scales and are modified for walking, swimming or clasping the tree branches. Skin is dry without glands except the oil gland at the base of the tail. Endoskeleton is fully ossified (bony) and the long bones are hollow with air cavities (pneumatic). The digestive tract of birds has additional chambers, the crop and gizzard. Heart is completely four-chambered. They are warm-blooded (homoiothermic) animals, i.e., they are able to maintain a constant body temperature. Respiration is by lungs. Air sacs connected to lungs supplement respiration. Sexes are separate. Fertilisation is internal. They are oviparous and development is direct.\n\nExamples: Corvus (Crow), Columba (Pigeon), Psittacula (Parrot), Struthio (Ostrich), Pavo (Peacock), Aptenodytes (Penguin), Neophron (Vulture).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:4:4.2.11.7",
+        "number": "4.2.11.7",
+        "title": "Class - Mammalia",
+        "content_text": "They are found in a variety of habitats – polar ice caps, deserts, mountains, forests, grasslands and dark caves. Some of them have adapted to fly or live in water. The most unique mammalian characteristic is the presence of milk producing glands (mammary glands) by which the young ones are nourished. They have two pairs of limbs, adapted for walking, running, climbing, burrowing, swimming or flying. The skin of mammals is unique in possessing hair. External ears or pinnae are present. Different types of teeth are present in the jaw. Heart is four-chambered. They are homoiothermous. Respiration is by lungs. Sexes are separate and fertilisation is internal. They are viviparous with few exceptions and development is direct.\n\nExamples: Oviparous - Ornithorhynchus (Platypus); Viviparous - Macropus (Kangaroo), Pteropus (Flying fox), Camelus (Camel), Macaca (Monkey), Rattus (Rat), Canis (Dog), Felis (Cat), Elephas (Elephant), Equus (Horse), Delphinus (Common dolphin), Balaenoptera (Blue whale), Panthera tigris (Tiger), Panthera leo (Lion).\n\nThe salient distinguishing features of all phyla under animal kingdom is comprehensively given in Table 4.2.\n\nTable 4.2 Salient Features of Different Phyla in the Animal Kingdom:\n- Porifera: Cellular level, Various symmetry, Absent coelom, No segmentation, No digestive/circulatory/respiratory system. Body with pores and canals in walls.\n- Coelenterata (Cnidaria): Tissue level, Radial symmetry, Absent coelom, Incomplete digestive system. Cnidoblasts present.\n- Ctenophora: Tissue level, Radial symmetry, Absent coelom, Incomplete digestive system. Comb plates for locomotion.\n- Platyhelminthes: Organ & Organ-system level, Bilateral symmetry, Absent coelom, Incomplete digestive system. Flat body, suckers.\n- Aschelminthes: Organ-system level, Bilateral symmetry, Pseudocoelomate, Complete digestive system. Often worm-shaped, elongated.\n- Annelida: Organ-system level, Bilateral symmetry, Coelomate, Segmented, Complete digestive system, Circulatory system present. Body segmentation like rings.\n- Arthropoda: Organ-system level, Bilateral symmetry, Coelomate, Segmented, Complete digestive/circulatory/respiratory systems. Exoskeleton of cuticle, jointed appendages.\n- Mollusca: Organ-system level, Bilateral symmetry, Coelomate, Complete digestive/circulatory/respiratory systems. External skeleton of shell usually present.\n- Echinodermata: Organ-system level, Radial symmetry, Coelomate, Complete digestive/circulatory/respiratory systems. Water vascular system, radial symmetry.\n- Hemichordata: Organ-system level, Bilateral symmetry, Coelomate, Complete digestive/circulatory/respiratory systems. Worm-like with proboscis, collar and trunk.\n- Chordata: Organ-system level, Bilateral symmetry, Coelomate, Segmented, Complete digestive/circulatory/respiratory systems. Notochord, dorsal hollow nerve cord, gill slits with limbs or fins.",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:4:4.2.11.7:1",
+            "order": 1,
+            "title": "Characteristics of Mammals",
+            "content_text": "They are found in a variety of habitats – polar ice caps, deserts, mountains, forests, grasslands and dark caves. Some of them have adapted to fly or live in water. The most unique mammalian characteristic is the presence of milk producing glands (mammary glands) by which the young ones are nourished. They have two pairs of limbs, adapted for walking, running, climbing, burrowing, swimming or flying. The skin of mammals is unique in possessing hair. External ears or pinnae are present. Different types of teeth are present in the jaw. Heart is four-chambered. They are homoiothermous. Respiration is by lungs. Sexes are separate and fertilisation is internal. They are viviparous with few exceptions and development is direct.\n\nExamples: Oviparous - Ornithorhynchus (Platypus); Viviparous - Macropus (Kangaroo), Pteropus (Flying fox), Camelus (Camel), Macaca (Monkey), Rattus (Rat), Canis (Dog), Felis (Cat), Elephas (Elephant), Equus (Horse), Delphinus (Common dolphin), Balaenoptera (Blue whale), Panthera tigris (Tiger), Panthera leo (Lion).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:4:Summary",
+        "number": "Summary",
+        "title": "Summary of Animal Classification",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:4:Summary:1",
+            "order": 1,
+            "title": "Fundamental Features of Animal Classification",
+            "content_text": "The animal kingdom is broadly classified based on basic fundamental features such as the level of organisation (cellular, tissue, organ, or organ system), body symmetry (radial or bilateral), cell organisation (diploblastic or triploblastic), presence or absence of coelom (acoelomate, pseudocoelomate, or coelomate), segmentation (metamerism), and the presence of a notochord. Besides these fundamental features, each phylum or class possesses distinctive characters that set them apart.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:4:Summary:2",
+            "order": 2,
+            "title": "Overview of Non-Chordate Phyla",
+            "content_text": "Porifera includes multicellular animals with a cellular level of organisation and characteristic flagellated choanocytes. Coelenterates (Cnidaria) possess tentacles and cnidoblasts; they are mostly aquatic and can be sessile or free-floating. Ctenophores are marine animals distinguished by their comb plates. Platyhelminthes have a flat body, exhibit bilateral symmetry, and parasitic forms possess suckers and hooks. Aschelminthes are pseudocoelomates and include both parasitic and non-parasitic roundworms. Annelids are metamerically segmented with a true coelom. Arthropods, the most abundant group, are characterised by jointed appendages and a chitinous exoskeleton. Molluscs have a soft body often surrounded by an external calcareous shell. Echinoderms possess a spiny skin and a unique water vascular system. Hemichordates are a small group of worm-like marine animals with a body divided into proboscis, collar, and trunk.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:4:Summary:3",
+            "order": 3,
+            "title": "Phylum Chordata and Subdivisions",
+            "content_text": "Phylum Chordata includes animals that possess a notochord at some stage of their life cycle, along with a dorsal hollow nerve cord and paired pharyngeal gill slits. Vertebrates are divided into Agnatha (jawless, e.g., Class Cyclostomata) and Gnathostomata (jawed). Cyclostomes are primitive, jawless ectoparasites on fishes. Gnathostomata is further divided into two super-classes: Pisces and Tetrapoda. Pisces includes Class Chondrichthyes (cartilaginous fishes) and Class Osteichthyes (bony fishes), both using fins for locomotion. Tetrapoda includes classes Amphibia, Reptilia, Aves, and Mammalia, all typically possessing two pairs of limbs.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:4:Summary:4",
+            "order": 4,
+            "title": "Classes of Tetrapoda",
+            "content_text": "Amphibians are adapted for both land and water. Reptiles are characterised by dry and cornified skin; limbs are absent in snakes. Fishes, amphibians, and reptiles are poikilothermous (cold-blooded). Aves (birds) are warm-blooded (homeothermous) with feathers and forelimbs modified into wings for flight; their hind limbs are adapted for walking, swimming, or perching. Mammals are uniquely identified by the presence of mammary glands and hair on their skin, and they commonly exhibit viviparity.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:biology:11:4:ex:1",
+          "number": 1,
+          "problem": "What are the difficulties that you would face in classification of animals, if common fundamental features are not taken into account?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:4:ex:2",
+          "number": 2,
+          "problem": "If you are given a specimen, what are the steps that you would follow to classify it?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:4:ex:3",
+          "number": 3,
+          "problem": "How useful is the study of the nature of body cavity and coelom in the classification of animals?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:4:ex:4",
+          "number": 4,
+          "problem": "Distinguish between intracellular and extracellular digestion?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:4:ex:5",
+          "number": 5,
+          "problem": "What is the difference between direct and indirect development?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:4:ex:6",
+          "number": 6,
+          "problem": "What are the peculiar features that you find in parasitic platyhelminthes?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:4:ex:7",
+          "number": 7,
+          "problem": "What are the reasons that you can think of for the arthropods to constitute the largest group of the animal kingdom?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:4:ex:8",
+          "number": 8,
+          "problem": "Water vascular system is the characteristic of which group of the following: (a) Porifera (b) Ctenophora (c) Echinodermata (d) Chordata",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:4:ex:9",
+          "number": 9,
+          "problem": "“All vertebrates are chordates but all chordates are not vertebrates”. Justify the statement.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:4:ex:10",
+          "number": 10,
+          "problem": "How important is the presence of air bladder in Pisces?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:4:ex:11",
+          "number": 11,
+          "problem": "What are the modifications that are observed in birds that help them fly?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:4:ex:12",
+          "number": 12,
+          "problem": "Could the number of eggs or young ones produced by an oviparous and viviparous mother be equal? Why?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:4:ex:13",
+          "number": 13,
+          "problem": "Segmentation in the body is first observed in which of the following: (a) Platyhelminthes (b) Aschelminthes (c) Annelida (d) Arthropoda",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:4:ex:14",
+          "number": 14,
+          "problem": "Match the following: (a) Operculum (i) Ctenophora; (b) Parapodia (ii) Mollusca; (c) Scales (iii) Porifera; (d) Comb plates (iv) Reptilia; (e) Radula (v) Annelida; (f) Hairs (vi) Cyclostomata and Chondrichthyes; (g) Choanocytes (vii) Mammalia; (h) Gill slits (viii) Osteichthyes",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:4:ex:15",
+          "number": 15,
+          "problem": "Prepare a list of some animals that are found parasitic on human beings.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        }
+      ]
+    }
+  }
+}

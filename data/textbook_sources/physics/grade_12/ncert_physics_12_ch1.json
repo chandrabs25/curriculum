@@ -1,0 +1,1820 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_physics_12_ch1.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:physics:12:1",
+  "curriculum": "ncert",
+  "subject": "physics",
+  "grade": 12,
+  "textbook_name": "Physics Part I",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:physics:12:1",
+    "number": 1,
+    "title": "Electric Charges and Fields",
+    "summary": "This chapter introduces the fundamental concepts of electric charges and fields, laying the groundwork for understanding electromagnetism. It begins by defining electrostatics and exploring the nature of electric charge, including its historical context, experimental observations, and basic properties like additivity, conservation, and quantization. Coulomb's Law is introduced as the quantitative description of the force between point charges, leading to the principle of superposition for multiple charges.\n\nThe concept of the electric field is developed as a way to describe the influence of charges on their surroundings, visualized through electric field lines. Electric flux is defined, culminating in Gauss's Law, a powerful tool for calculating electric fields, particularly in situations with symmetry. Applications of Gauss's Law include calculating fields due to charged wires, sheets, and spherical shells.\n\nThe chapter then introduces electric dipoles, examining their behavior in uniform and non-uniform electric fields. Finally, continuous charge distributions (linear, surface, and volume) are discussed. Each concept builds upon the previous one, providing a comprehensive understanding of how charges interact and create electric fields, which is crucial for explaining phenomena ranging from static electricity to the behavior of molecules. These principles are essential for understanding future topics such as capacitors, electric potential, and circuits.",
+    "sections": [
+      {
+        "id": "ncert:physics:12:1:1.1",
+        "number": "1.1",
+        "title": "Introduction",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:1:1.1:1",
+            "order": 1,
+            "title": "Phenomenon of Static Electricity",
+            "content_text": "Common experiences such as seeing a spark or hearing a crackle when taking off synthetic clothes or sweaters in dry weather are manifestations of electric discharge. Other examples include lightning during thunderstorms and the sensation of an electric shock when opening a car door or holding the iron bar of a bus after sliding from a seat. These experiences occur due to the discharge of electric charges through the body, which were accumulated because of the rubbing of insulating surfaces. This generation of static electricity is the foundation of the study of electrostatics.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.1:2",
+            "order": 2,
+            "title": "Definition of Electrostatics",
+            "content_text": "Static refers to anything that does not move or change with time. Electrostatics is defined as the study of forces, fields, and potentials arising from static charges.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:1:1.2",
+        "number": "1.2",
+        "title": "Electric Charge",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:1:1.2:1",
+            "order": 1,
+            "title": "Historical Context and Etymology",
+            "content_text": "The discovery that amber rubbed with wool or silk cloth attracts light objects is historically attributed to Thales of Miletus, Greece, around 600 BC. The term 'electricity' is derived from the Greek word 'elektron', which means amber. Many pairs of materials, when rubbed together, exhibit the ability to attract light objects like straw, pith balls, and bits of paper.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.2:2",
+            "order": 2,
+            "title": "Experimental Observations of Attraction and Repulsion",
+            "content_text": "Experimental studies show that if two glass rods rubbed with wool or silk are brought close, they repel each other. Similarly, two plastic rods rubbed with cat's fur repel each other. However, a glass rod and a plastic rod attract each other. Furthermore, the glass rod attracts the fur, and the plastic rod attracts the silk used for rubbing. These observations, illustrated in Figure 1.1, lead to the conclusion that there are two kinds of electrification: (i) like charges repel and (ii) unlike charges attract. Bodies that acquire these properties are said to be electrified or to possess an electric charge.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 1.1",
+                "description": "Three diagrams (a, b, c) showing the interaction between rods: (a) two glass rods suspended by silk threads repelling each other, (b) two plastic rods repelling each other, and (c) a glass rod and a plastic rod attracting each other.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.2:3",
+            "order": 3,
+            "title": "Polarity and Neutralization",
+            "content_text": "The property that differentiates the two kinds of charges is called the polarity of charge. When a glass rod rubbed with silk is brought into contact with the silk it was rubbed with, they no longer attract each other or other light objects. This indicates that the charges acquired after rubbing are lost or nullified when the charged bodies are brought back into contact. This led American scientist Benjamin Franklin to name the two types of charges as positive and negative. By convention, the charge on a glass rod or cat's fur is called positive, and the charge on a plastic rod or silk is called negative. An object possessing an electric charge is 'electrified' or 'charged'; otherwise, it is 'electrically neutral'.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.2:4",
+            "order": 4,
+            "title": "Gold-leaf Electroscope",
+            "content_text": "The gold-leaf electroscope is a simple apparatus used to detect the presence and magnitude of charge on a body. It consists of a vertical metal rod housed in a box, with two thin gold leaves attached to its bottom end. When a charged object touches the metal knob at the top of the rod, charge flows down to the leaves, causing them to diverge. The degree of divergence serves as an indicator of the amount of charge present.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.2:5",
+            "order": 5,
+            "title": "Microscopic Origin of Electric Charge",
+            "content_text": "All matter is composed of atoms and molecules, which are normally electrically neutral because their internal charges are balanced. The forces holding atoms together in solids, adhesive forces, and surface tension are essentially electrical in nature, arising from interactions between charged particles. To electrify a neutral body, one must add or remove one kind of charge. In solids, charging occurs through the transfer of electrons, which are less tightly bound to the atom. A body becomes positively charged by losing electrons and negatively charged by gaining electrons. For example, when a glass rod is rubbed with silk, electrons are transferred from the rod to the silk, making the rod positive and the silk negative. No new charge is created; only a transfer of existing electrons occurs.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:1:1.3",
+        "number": "1.3",
+        "title": "Conductors and Insulators",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:1:1.3:1",
+            "order": 1,
+            "title": "Classification of Materials",
+            "content_text": "Substances are classified based on their ability to allow the passage of electricity. Conductors are materials that readily allow electricity (electrons) to pass through them, such as metals, the human body, animal bodies, and the earth. Insulators are materials that offer high resistance to the passage of electricity, such as glass, porcelain, plastic, nylon, and wood. A third category, semiconductors, offers resistance intermediate between conductors and insulators.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.3:2",
+            "order": 2,
+            "title": "Behavior of Charge on Materials",
+            "content_text": "When charge is transferred to a conductor, it readily distributes itself over the entire surface of the conductor. In contrast, if charge is placed on an insulator, it stays at the same location where it was placed. This property explains why a nylon or plastic comb gets electrified upon rubbing or combing dry hair, but a metal article like spoon does not. The charges on metal leak through our body to the ground as both are conductors of electricity. However, if a metal rod with a wooden or plastic handle is rubbed without touching its metal part, it shows signs of charging. This behavior is further illustrated by the use of electroscopes, which are devices used to detect and measure electric charge.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 1.2",
+                "description": "Figure 1.2(a) depicts a gold leaf electroscope consisting of a metal knob connected to a metal rod that passes through a rubber stopper into a glass-windowed box. At the bottom of the rod are two gold leaves. Figure 1.2(b) shows a schematic of a simple electroscope using a glass bottle, a cork, and a metal rod with thin aluminum foils or leaves at the end.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:1:1.4",
+        "number": "1.4",
+        "title": "Basic Properties of Electric Charge",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:1:1.4:1",
+            "order": 1,
+            "title": "Point Charges",
+            "content_text": "There are two types of charges, namely positive and negative, and their effects tend to cancel each other. If the sizes of charged bodies are very small as compared to the distances between them, we treat them as point charges. All the charge content of the body is assumed to be concentrated at one point in space.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.4:2",
+            "order": 2,
+            "title": "1.4.1 Additivity of charges",
+            "content_text": "If a system contains two point charges $q_1$ and $q_2$, the total charge of the system is obtained simply by adding algebraically $q_1$ and $q_2$, i.e., charges add up like real numbers or they are scalars like the mass of a body. If a system contains $n$ charges $q_1, q_2, q_3, \\dots, q_n$, then the total charge of the system is $q_1 + q_2 + q_3 + \\dots + q_n$. Charge has magnitude but no direction, similar to mass. However, there is one difference between mass and charge: mass of a body is always positive whereas a charge can be either positive or negative. Proper signs have to be used while adding the charges in a system. For example, the total charge of a system containing five charges $+1, +2, -3, +4$ and $-5$, in some arbitrary unit, is $(+1) + (+2) + (-3) + (+4) + (-5) = -1$ in the same unit.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.4:3",
+            "order": 3,
+            "title": "1.4.2 Charge is conserved",
+            "content_text": "When bodies are charged by rubbing, there is transfer of electrons from one body to the other; no new charges are either created or destroyed. Within an isolated system consisting of many charged bodies, due to interactions among the bodies, charges may get redistributed but it is found that the total charge of the isolated system is always conserved. Conservation of charge has been established experimentally. It is not possible to create or destroy net charge carried by any isolated system although the charge carrying particles may be created or destroyed in a process. For instance, a neutron can turn into a proton and an electron; the proton and electron thus created have equal and opposite charges, so the total charge remains zero.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.4:4",
+            "order": 4,
+            "title": "1.4.3 Quantisation of charge",
+            "content_text": "Experimentally it is established that all free charges are integral multiples of a basic unit of charge denoted by $e$. Thus charge $q$ on a body is always given by $q = ne$ where $n$ is any integer, positive or negative. This basic unit of charge is the charge that an electron or proton carries. By convention, the charge on an electron is taken to be negative ($-e$) and that on a proton as positive ($+e$). The fact that electric charge is always an integral multiple of $e$ is termed as quantisation of charge. This was first suggested by Faraday's laws of electrolysis and experimentally demonstrated by Millikan in 1912.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.4:5",
+            "order": 5,
+            "title": "SI Unit of Charge",
+            "content_text": "In the International System (SI) of Units, a unit of charge is called a coulomb and is denoted by the symbol C. A coulomb is defined in terms of electric current: one coulomb is the charge flowing through a wire in 1 s if the current is 1 A (ampere). In this system, the value of the basic unit of charge is $e = 1.602192 \\times 10^{-19}$ C. Thus, there are about $6 \\times 10^{18}$ electrons in a charge of $-1$ C. In electrostatics, charges of this large magnitude are seldom encountered, so we use smaller units like $1 \\mu\\text{C} = 10^{-6}$ C or $1 \\text{mC} = 10^{-3}$ C.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.4:6",
+            "order": 6,
+            "title": "Macroscopic vs Microscopic Quantisation",
+            "content_text": "If a body contains $n_1$ electrons and $n_2$ protons, the total charge is $(n_2 - n_1) e$. Since $n_1$ and $n_2$ are integers, the charge is always an integral multiple of $e$. However, at the macroscopic level, we deal with charges of a few $\\mu\\text{C}$, which involve a huge number of elementary charges. At this scale, the grainy nature of charge is lost and it appears continuous, much like a dotted line appears solid from a distance. Thus, quantisation can be ignored at the macroscopic level but is essential at the microscopic level where charges are on the order of tens or hundreds of $e$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.4:7",
+            "order": 7,
+            "title": "Example 1.1: Scale of One Coulomb",
+            "content_text": "This example illustrates the magnitude of one coulomb by calculating the time needed to accumulate it at a rate of $10^9$ electrons per second. It shows that 1 C is a very large unit, requiring nearly 200 years to accumulate at this rate.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 1.1",
+                "problem": "If $10^9$ electrons move out of a body to another body every second, how much time is required to get a total charge of 1 C on the other body?",
+                "solution": "In one second $10^9$ electrons move out of the body. Therefore the charge given out in one second is $1.6 \\times 10^{-19} \\times 10^9 \\text{ C} = 1.6 \\times 10^{-10} \\text{ C}$. The time required to accumulate a charge of 1 C can then be estimated to be $1 \\text{ C} \\div (1.6 \\times 10^{-10} \\text{ C/s}) = 6.25 \\times 10^9 \\text{ s} = 6.25 \\times 10^9 \\div (365 \\times 24 \\times 3600) \\text{ years} = 198 \\text{ years}$. Thus to collect a charge of one coulomb, from a body from which $10^9$ electrons move out every second, we will need approximately 200 years. One coulomb is, therefore, a very large unit for many practical purposes. A cubic piece of copper of side 1 cm contains about $2.5 \\times 10^{24}$ electrons."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.4:8",
+            "order": 8,
+            "title": "Example 1.2: Charge in a Cup of Water",
+            "content_text": "This example calculates the total positive and negative charge in a standard cup of water (250 g), demonstrating the enormous amount of balanced charge present in ordinary matter.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 1.2",
+                "problem": "How much positive and negative charge is there in a cup of water?",
+                "solution": "Let us assume that the mass of one cup of water is 250 g. The molecular mass of water is 18 g. Thus, one mole ($= 6.02 \\times 10^{23}$ molecules) of water is 18 g. Therefore the number of molecules in one cup of water is $(250/18) \\times 6.02 \\times 10^{23}$. Each molecule of water contains two hydrogen atoms and one oxygen atom, i.e., 10 electrons and 10 protons. Hence the total positive and total negative charge has the same magnitude. It is equal to $(250/18) \\times 6.02 \\times 10^{23} \\times 10 \\times 1.6 \\times 10^{-19} \\text{ C} = 1.34 \\times 10^7 \\text{ C}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:1:1.5",
+        "number": "1.5",
+        "title": "Coulomb's Law",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:1:1.5:1",
+            "order": 1,
+            "title": "Introduction to Coulomb's Law",
+            "content_text": "Coulomb’s law is a quantitative statement about the force between two point charges. When the linear size of charged bodies are much smaller than the distance separating them, the size may be ignored and the charged bodies are treated as point charges. Coulomb measured the force between two point charges and found that it varied inversely as the square of the distance between the charges and was directly proportional to the product of the magnitude of the two charges and acted along the line joining the two charges. Thus, if two point charges $q_1, q_2$ are separated by a distance $r$ in vacuum, the magnitude of the force ($F$) between them is given by $F = k \\frac{|q_1 q_2|}{r^2}$ (1.1). This law applies to point charges, which are charged bodies whose dimensions are much smaller than the distance separating them. The force acts along the line connecting the centers of the two charges.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.5:2",
+            "order": 2,
+            "title": "Experimental Verification and the Torsion Balance",
+            "content_text": "Coulomb arrived at this law using a torsion balance, a sensitive device for measuring force (also used by Cavendish to measure gravitational force). To measure the force between spheres with unknown charges, Coulomb used the principle of symmetry and charge conservation. By touching a charged metallic sphere of charge $q$ with an identical uncharged sphere, the charge is shared equally, resulting in $q/2$ on each. This process can be repeated to obtain charges of $q/4, q/8$, etc. By varying the distance for a fixed pair of charges and varying the charges for a fixed distance, Coulomb established the inverse square relationship and the proportionality to the product of charges. This law is valid from macroscopic scales down to subatomic levels ($r \\sim 10^{-10}$ m).",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.5:3",
+            "order": 3,
+            "title": "The Unit of Charge: The Coulomb",
+            "content_text": "Coulomb's law is used to define the SI unit of charge, the coulomb (C). In the equation $F = k \\frac{|q_1 q_2|}{r^2}$, the constant $k$ is chosen to be approximately $9 \\times 10^9$ Nm$^2$/C$^2$. One coulomb is defined as the charge that, when placed at a distance of 1 m from another charge of the same magnitude in vacuum, experiences an electrical force of repulsion of magnitude $9 \\times 10^9$ N. Because 1 C is a very large unit, practical applications often use millicoulombs (1 mC = $10^{-3}$ C) or microcoulombs (1 $\\mu$C = $10^{-6}$ C).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.5:4",
+            "order": 4,
+            "title": "Permittivity of Free Space",
+            "content_text": "For later mathematical convenience, the constant $k$ is expressed as $k = \\frac{1}{4\\pi\\epsilon_0}$. Here, $\\epsilon_0$ is the permittivity of free space. In SI units, its value is $\\epsilon_0 = 8.854 \\times 10^{-12}$ C$^2$N$^{-1}$m$^{-2}$. Consequently, Coulomb's law is written as $F = \\frac{1}{4\\pi\\epsilon_0} \\frac{|q_1 q_2|}{r^2}$ (1.2).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.5:5",
+            "order": 5,
+            "title": "Vector Notation of Coulomb's Law",
+            "content_text": "To account for the directional nature of force, Coulomb's law is expressed in vector form. Let $\\mathbf{r}_1$ and $\\mathbf{r}_2$ be the position vectors of charges $q_1$ and $q_2$. The vector from $q_1$ to $q_2$ is $\\mathbf{r}_{21} = \\mathbf{r}_2 - \\mathbf{r}_1$, with magnitude $r_{21}$ and unit vector $\\hat{\\mathbf{r}}_{21} = \\frac{\\mathbf{r}_{21}}{r_{21}}$. The force $\\mathbf{F}_{21}$ exerted on $q_2$ by $q_1$ is $\\mathbf{F}_{21} = \\frac{1}{4\\pi\\epsilon_0} \\frac{q_1 q_2}{r_{21}^2} \\hat{\\mathbf{r}}_{21}$ (1.3). This notation automatically handles both attraction and repulsion: if $q_1 q_2 > 0$ (like charges), the force is along $\\hat{\\mathbf{r}}_{21}$ (repulsive); if $q_1 q_2 < 0$ (unlike charges), the force is along $-\\hat{\\mathbf{r}}_{21}$ (attractive).",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 1.3",
+                "description": "(a) Geometry and (b) Forces between charges. Part (a) shows position vectors $\\mathbf{r}_1, \\mathbf{r}_2$ relative to origin O and the relative vector $\\mathbf{r}_{21}$. Part (b) illustrates repulsive forces for like charges ($q_1 q_2 > 0$) and attractive forces for unlike charges ($q_1 q_2 < 0$).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.5:6",
+            "order": 6,
+            "title": "Consistency with Newton's Third Law",
+            "content_text": "The vector form of Coulomb's law is consistent with Newton's third law. By interchanging the indices 1 and 2 in the force equation, we find that the force $\\mathbf{F}_{12}$ on charge $q_1$ due to $q_2$ is equal in magnitude and opposite in direction to $\\mathbf{F}_{21}$, i.e., $\\mathbf{F}_{12} = -\\mathbf{F}_{21}$. This symmetry is a fundamental property of the electrostatic force between two point charges.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.5:7",
+            "order": 7,
+            "title": "Coulomb's Law in Matter",
+            "content_text": "Coulomb's law as stated applies to charges in a vacuum. When charges are placed in a medium or when the space between them contains matter, the interaction becomes more complex because the medium itself contains charged constituents (electrons and nuclei) that respond to the presence of the external charges. These effects of matter on electrostatics are discussed in subsequent chapters.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.5:8",
+            "order": 8,
+            "title": "Example 1.3: Comparison of Electrostatic and Gravitational Forces",
+            "content_text": "This example compares the magnitudes of electrostatic and gravitational forces between subatomic particles. The comparison highlights the dominance of electromagnetic forces at the atomic scale.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 1.3",
+                "problem": "Coulomb’s law for electrostatic force between two point charges and Newton’s law for gravitational force between two stationary point masses, both have inverse-square dependence on the distance between the charges and masses respectively. (a) Compare the strength of these forces by determining the ratio of their magnitudes (i) for an electron and a proton and (ii) for two protons. (b) Estimate the accelerations of electron and proton due to the electrical force of their mutual attraction when they are 1 Å (= $10^{-10}$ m) apart? ($m_p = 1.67 \\times 10^{-27}$ kg, $m_e = 9.11 \\times 10^{-31}$ kg)",
+                "solution": "(a) (i) The electric force between an electron and a proton at a distance $r$ apart is: $F_e = -\\frac{1}{4\\pi\\epsilon_0} \\frac{e^2}{r^2}$ where the negative sign indicates that the force is attractive. The corresponding gravitational force (always attractive) is: $F_G = -G \\frac{m_p m_e}{r^2}$ where $m_p$ and $m_e$ are the masses of a proton and an electron respectively. The ratio of their magnitudes is $\\frac{|F_e|}{|F_G|} = \\frac{e^2}{4\\pi\\epsilon_0 G m_p m_e} = 2.4 \\times 10^{39}$. (ii) Similarly, the ratio of the magnitudes of electric force to the gravitational force between two protons at a distance $r$ apart is: $\\frac{|F_e|}{|F_G|} = \\frac{e^2}{4\\pi\\epsilon_0 G m_p m_p} = 1.3 \\times 10^{36}$. Note that for two protons, the gravitational force is attractive while the Coulomb force is repulsive. Inside a nucleus ($r \\sim 10^{-15}$ m), $F_e \\sim 230$ N and $F_G \\sim 1.9 \\times 10^{-34}$ N. The ratio shows that electrical forces are enormously stronger than gravitational forces. [CONTINUES]"
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.5:9",
+            "order": 9,
+            "title": "Example 1.3 (b): Comparison of Accelerations",
+            "content_text": "The electric force $\\vec{F}$ exerted by a proton on an electron is equal in magnitude to the force exerted by an electron on a proton. However, because the masses of an electron and a proton are significantly different, their resulting accelerations differ. The magnitude of the electrostatic force is calculated as $|\\vec{F}| = \\frac{1}{4\\pi\\epsilon_0} \\frac{e^2}{r^2} = 8.987 \\times 10^9 \\text{ Nm}^2/\\text{C}^2 \\times (1.6 \\times 10^{-19}\\text{C})^2 / (10^{-10}\\text{m})^2 = 2.3 \\times 10^{-8} \\text{ N}$. Using Newton’s second law, $\\vec{F} = m\\vec{a}$, the acceleration of an electron is $a_e = 2.3 \\times 10^{-8} \\text{ N} / 9.11 \\times 10^{-31} \\text{ kg} = 2.5 \\times 10^{22} \\text{ m/s}^2$. In comparison, the acceleration of a proton is $a_p = 2.3 \\times 10^{-8} \\text{ N} / 1.67 \\times 10^{-27} \\text{ kg} = 1.4 \\times 10^{19} \\text{ m/s}^2$. These values are vastly larger than the acceleration due to gravity, indicating that gravitational effects are negligible for subatomic particles under the action of Coulomb forces.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 1.3 (b)",
+                "problem": "Compare the accelerations of an electron and a proton due to their mutual electrostatic attraction at a distance of $10^{-10}$ m.",
+                "solution": "$|\\vec{F}| = 2.3 \\times 10^{-8} \\text{ N}$. Acceleration of electron $a_e = F/m_e = 2.5 \\times 10^{22} \\text{ m/s}^2$. Acceleration of proton $a_p = F/m_p = 1.4 \\times 10^{19} \\text{ m/s}^2$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.5:10",
+            "order": 10,
+            "title": "Example 1.4: Electrostatic Force and Charge Redistribution",
+            "content_text": "This example explores how the electrostatic force between two charged metallic spheres, A and B, changes when their charges are redistributed and their separation is altered. Initially, spheres A and B are separated by a distance $r = 10$ cm, resulting in a force $F = \\frac{1}{4\\pi\\epsilon_0} \\frac{qq'}{r^2}$. When identical uncharged spheres C and D touch A and B respectively, the charge on each pair redistributes equally due to symmetry, leaving A with $q/2$ and B with $q'/2$. If the distance between A and B is then halved to $r/2 = 5.0$ cm, the new force $F'$ is calculated as $F' = \\frac{1}{4\\pi\\epsilon_0} \\frac{(q/2)(q'/2)}{(r/2)^2} = \\frac{1}{4\\pi\\epsilon_0} \\frac{qq'}{r^2} = F$. Thus, the electrostatic force remains unchanged despite the reduction in both charge and distance.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 1.4",
+                "problem": "A charged metallic sphere A is suspended by a nylon thread. Another charged metallic sphere B held by an insulating handle is brought close to A such that the distance between their centres is 10 cm. Spheres A and B are touched by uncharged spheres C and D respectively. C and D are then removed and B is brought closer to A to a distance of 5.0 cm between their centres. What is the expected repulsion of A on the basis of Coulomb’s law?",
+                "solution": "Let original charges be $q, q'$ and distance $r$. $F = \\frac{1}{4\\pi\\epsilon_0} \\frac{qq'}{r^2}$. After touching uncharged identical spheres, charges become $q/2$ and $q'/2$. At distance $r/2$, $F' = \\frac{1}{4\\pi\\epsilon_0} \\frac{(q/2)(q'/2)}{(r/2)^2} = F$. The force remains unaltered."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Figure 1.4",
+                "description": "A three-part diagram showing: (a) two charged spheres A and B separated by 10 cm; (b) spheres A and B being touched by identical uncharged spheres C and D; (c) spheres A and B separated by 5 cm after the uncharged spheres are removed.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:1:1.6",
+        "number": "1.6",
+        "title": "Forces between Multiple Charges",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:1:1.6:1",
+            "order": 1,
+            "title": "The Principle of Superposition",
+            "content_text": "While Coulomb's law describes the mutual electric force between two charges, the principle of superposition is required to calculate the force on a charge in a system of multiple charges. Experimentally, it is verified that the force on any charge due to a number of other charges is the vector sum of all the forces on that charge due to the other charges, taken one at a time. Crucially, the individual force between any two charges is unaffected by the presence of other charges in the vicinity.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.6:2",
+            "order": 2,
+            "title": "Force on a Charge due to Two Other Charges",
+            "content_text": "Consider a system of three charges $q_1, q_2, q_3$. The force on $q_1$ due to $q_2$ is $\\vec{F}_{12} = \\frac{1}{4\\pi\\epsilon_0} \\frac{q_1 q_2}{r_{12}^2} \\hat{r}_{12}$. Similarly, the force on $q_1$ due to $q_3$ is $\\vec{F}_{13} = \\frac{1}{4\\pi\\epsilon_0} \\frac{q_1 q_3}{r_{13}^2} \\hat{r}_{13}$. According to the principle of superposition, the total force $\\vec{F}_1$ on $q_1$ is the vector sum: $\\vec{F}_1 = \\vec{F}_{12} + \\vec{F}_{13}$. This vector addition follows the parallelogram law.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 1.5 (a)",
+                "description": "Vector diagram showing the forces $\\vec{F}_{12}$ and $\\vec{F}_{13}$ on charge $q_1$ due to $q_2$ and $q_3$, and their resultant $\\vec{F}_1$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.6:3",
+            "order": 3,
+            "title": "Generalization to a System of n Charges",
+            "content_text": "The principle can be generalized to a system of $n$ stationary charges $q_1, q_2, \\dots, q_n$. The total force $\\vec{F}_1$ on charge $q_1$ due to all other charges is the vector sum of the individual forces: $\\vec{F}_1 = \\vec{F}_{12} + \\vec{F}_{13} + \\dots + \\vec{F}_{1n}$. Mathematically, this is expressed as $\\vec{F}_1 = \\frac{q_1}{4\\pi\\epsilon_0} \\sum_{i=2}^{n} \\frac{q_i}{r_{1i}^2} \\hat{r}_{1i}$. All of electrostatics is essentially a consequence of Coulomb’s law combined with this superposition principle.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 1.5 (b)",
+                "description": "Vector diagram showing multiple forces $\\vec{F}_{21}, \\vec{F}_{31}, \\vec{F}_{41}, \\vec{F}_{51}$ on charge $q_1$ due to a system of charges $q_2, q_3, q_4, q_5$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.6:4",
+            "order": 4,
+            "title": "Example 1.5: Force on a Charge at the Centroid of an Equilateral Triangle",
+            "content_text": "Consider three charges $q_1, q_2, q_3$ each equal to $q$ at the vertices of an equilateral triangle of side $l$. We seek the force on a charge $Q$ (of the same sign as $q$) placed at the centroid $O$ of the triangle. In an equilateral triangle ABC, a perpendicular AD to side BC has length $AD = AC \\cos 30^\\circ = (\\sqrt{3}/2) l$. The distance from a vertex to the centroid $O$ is $AO = (2/3) AD = (1/\\sqrt{3}) l$. By symmetry, the distances $AO = BO = CO = l/\\sqrt{3}$. Continuing the calculation for the force on charge $Q$ at the centroid $O$ of an equilateral triangle with charges $q$ at vertices $A, B, C$: The force $\\mathbf{F}_1$ on $Q$ due to charge $q$ at $A = \\frac{3}{4\\pi\\epsilon_0} \\frac{Qq}{l^2}$ along $AO$. The force $\\mathbf{F}_2$ on $Q$ due to charge $q$ at $B = \\frac{3}{4\\pi\\epsilon_0} \\frac{Qq}{l^2}$ along $BO$. The force $\\mathbf{F}_3$ on $Q$ due to charge $q$ at $C = \\frac{3}{4\\pi\\epsilon_0} \\frac{Qq}{l^2}$ along $CO$. The resultant of forces $\\mathbf{F}_2$ and $\\mathbf{F}_3$ is $\\frac{3}{4\\pi\\epsilon_0} \\frac{Qq}{l^2}$ along $OA$, by the parallelogram law. Therefore, the total force on $Q = \\frac{3}{4\\pi\\epsilon_0} \\frac{Qq}{l^2}(\\hat{\\mathbf{r}} - \\hat{\\mathbf{r}}) = 0$, where $\\hat{\\mathbf{r}}$ is the unit vector along $OA$. It is clear by symmetry that the three forces will sum to zero. If the resultant force was non-zero, rotating the system through $60^\\circ$ about $O$ would lead to a contradiction as the charge configuration remains the same but the force direction would change.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 1.5",
+                "problem": "Consider three charges $q_1, q_2, q_3$ each equal to $q$ at the vertices of an equilateral triangle of side $l$. What is the force on a charge $Q$ (with the same sign as $q$) placed at the centroid of the triangle?",
+                "solution": "In the given equilateral triangle ABC of sides of length $l$, if we draw a perpendicular AD to the side BC, $AD = AC \\cos 30^\\circ = (\\sqrt{3}/2) l$ and the distance AO of the centroid O from A is $(2/3) AD = (1/\\sqrt{3}) l$. By symmetry $AO = BO = CO$. [CONTINUES]"
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Figure 1.6",
+                "description": "An equilateral triangle ABC with charges $q$ at each vertex and a charge $Q$ at the centroid O. Forces $\\vec{F}_1, \\vec{F}_2, \\vec{F}_3$ are shown acting on $Q$ from the vertices.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.6:5",
+            "order": 5,
+            "title": "Example 1.6: Forces on Charges at the Vertices of an Equilateral Triangle",
+            "content_text": "This example considers three charges $q, q,$ and $-q$ placed at the vertices of an equilateral triangle of side $l$. We calculate the net force on each charge. For charge $q_1 = q$ at $A$, the forces are $\\mathbf{F}_{12}$ (repulsion from $B$) and $\\mathbf{F}_{13}$ (attraction to $C$). The magnitude of each pair-wise force is $F = \\frac{q^2}{4\\pi\\epsilon_0 l^2}$. By the parallelogram law, the total force $\\mathbf{F}_1$ on charge $q$ at $A$ is $\\mathbf{F}_1 = F \\hat{\\mathbf{r}}_1$, where $\\hat{\\mathbf{r}}_1$ is a unit vector along $BC$. Similarly, the total force $\\mathbf{F}_2$ on charge $q$ at $B$ is $\\mathbf{F}_2 = F \\hat{\\mathbf{r}}_2$, where $\\hat{\\mathbf{r}}_2$ is a unit vector along $AC$. For the charge $-q$ at $C$, the forces $\\mathbf{F}_{31}$ and $\\mathbf{F}_{32}$ are both attractive. The resultant force $\\mathbf{F}_3 = \\sqrt{3} F \\hat{\\mathbf{n}}$, where $\\hat{\\mathbf{n}}$ is the unit vector along the direction bisecting $\\angle BCA$. Interestingly, the sum of the forces on the three charges is zero: $\\mathbf{F}_1 + \\mathbf{F}_2 + \\mathbf{F}_3 = 0$, which is consistent with Newton's third law.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 1.6",
+                "problem": "Consider the charges $q, q,$ and $-q$ placed at the vertices of an equilateral triangle, as shown in Fig. 1.7. What is the force on each charge?",
+                "solution": "The forces acting on charge $q$ at $A$ due to charges $q$ at $B$ and $-q$ at $C$ are $\\mathbf{F}_{12}$ along $BA$ and $\\mathbf{F}_{13}$ along $AC$ respectively. By the parallelogram law, the total force $\\mathbf{F}_1$ on the charge $q$ at $A$ is given by $\\mathbf{F}_1 = F \\hat{\\mathbf{r}}_1$ where $\\hat{\\mathbf{r}}_1$ is a unit vector along $BC$. The force of attraction or repulsion for each pair of charges has the same magnitude $F = \\frac{q^2}{4\\pi\\epsilon_0 l^2}$. The total force $\\mathbf{F}_2$ on charge $q$ at $B$ is thus $\\mathbf{F}_2 = F \\hat{\\mathbf{r}}_2$, where $\\hat{\\mathbf{r}}_2$ is a unit vector along $AC$. Similarly the total force on charge $-q$ at $C$ is $\\mathbf{F}_3 = \\sqrt{3} F \\hat{\\mathbf{n}}$, where $\\hat{\\mathbf{n}}$ is the unit vector along the direction bisecting the $\\angle BCA$. The sum of the forces on the three charges is zero, i.e., $\\mathbf{F}_1 + \\mathbf{F}_2 + \\mathbf{F}_3 = 0$."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "FIGURE 1.7",
+                "description": "An equilateral triangle with vertices A, B, and C. Charges $q_1=q$ and $q_2=q$ are at A and B, and $q_3=-q$ is at C. Vector arrows show the individual forces and the resultant forces $\\mathbf{F}_1, \\mathbf{F}_2, \\mathbf{F}_3$ acting on each charge. The side length is $l$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:1:1.7",
+        "number": "1.7",
+        "title": "Electric Field",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:1:1.7:1",
+            "order": 1,
+            "title": "Concept of Electric Field",
+            "content_text": "To understand how a force acts between charges separated by a distance, scientists introduced the concept of a field. A point charge $Q$ placed in vacuum produces an electric field everywhere in its surroundings. When another point charge $q$ is brought to some point $P$ at a distance $r$, the field at $P$ exerts a force on it. The electric field $\\mathbf{E}(\\mathbf{r})$ produced by the charge $Q$ at a point $\\mathbf{r}$ is defined as: $$\\mathbf{E}(\\mathbf{r}) = \\frac{1}{4\\pi\\epsilon_0} \\frac{Q}{r^2} \\hat{\\mathbf{r}} = \\frac{1}{4\\pi\\epsilon_0} \\frac{Q}{r^2} \\hat{\\mathbf{r}}$$ where $\\hat{\\mathbf{r}} = \\mathbf{r}/r$ is a unit vector from the origin to the point $\\mathbf{r}$. The word 'field' signifies how a distributed quantity (scalar or vector) varies with position.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "FIGURE 1.8",
+                "description": "Electric field lines for (a) a positive point charge $Q$, showing arrows pointing radially outwards, and (b) a negative point charge $-Q$, showing arrows pointing radially inwards.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.7:2",
+            "order": 2,
+            "title": "Force in terms of Electric Field",
+            "content_text": "The electrostatic force $\\mathbf{F}$ exerted by a charge $Q$ on a charge $q$ can be expressed using the electric field $\\mathbf{E}$ at the location of $q$: $$\\mathbf{F} = \\frac{1}{4\\pi\\epsilon_0} \\frac{Qq}{r^2} \\hat{\\mathbf{r}}$$ This can be rewritten as: $$\\mathbf{F}(\\mathbf{r}) = q \\mathbf{E}(\\mathbf{r})$$ This equation defines the SI unit of electric field as N/C (Newtons per Coulomb). An alternate unit is V/m (Volts per meter).",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.7:3",
+            "order": 3,
+            "title": "Source Charge and Test Charge",
+            "content_text": "The charge $Q$ which produces the electric field is called the 'source charge', and the charge $q$ which tests the effect of the source charge is called the 'test charge'. To ensure the test charge $q$ does not disturb the original location of the source charge $Q$ through its own electrical force, $q$ should be made negligibly small. Mathematically, the electric field is defined as the limit: $$\\mathbf{E} = \\lim_{q \\to 0} \\left( \\frac{\\mathbf{F}}{q} \\right)$$ In practice, the source charge is often held in place by unspecified forces to keep it undisturbed.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.7:4",
+            "order": 4,
+            "title": "Properties of the Electric Field",
+            "content_text": "Several important remarks regarding the electric field: (i) The electric field $\\mathbf{E}$ is independent of the test charge $q$; it is a characteristic of the source charge $Q$ and the position $\\mathbf{r}$. (ii) For a positive source charge, the electric field is directed radially outwards. For a negative source charge, the field vector at each point points radially inwards. (iii) The magnitude of the electric field depends only on the distance $r$ from the source charge. Thus, at equal distances from $Q$, the magnitude of $\\mathbf{E}$ is the same, meaning the field has spherical symmetry.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:1:1.7.1",
+        "number": "1.7.1",
+        "title": "Electric field due to a system of charges",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:1:1.7.1:1",
+            "order": 1,
+            "title": "Superposition Principle for Electric Fields",
+            "content_text": "Consider a system of charges $q_1, q_2, \\dots, q_n$ with position vectors $\\mathbf{r}_1, \\mathbf{r}_2, \\dots, \\mathbf{r}_n$ relative to an origin $O$. To determine the electric field at a point $P$ (position vector $\\mathbf{r}$), we use Coulomb's law and the superposition principle. The electric field at a point in space due to a system of charges is defined as the force experienced by a unit test charge placed at that point, without disturbing the original positions of the charges $q_1, q_2, \\dots, q_n$. The electric field due to a system of charges is defined as the force experienced by a unit test charge placed at that point, without disturbing the original positions of the charges $q_1, q_2, \\dots, q_n$. The electric field $\\mathbf{E}_1$ at $\\mathbf{r}$ due to $q_1$ at $\\mathbf{r}_1$ is given by $\\mathbf{E}_1 = \\frac{1}{4\\pi\\epsilon_0} \\frac{q_1}{r_{1P}^2} \\hat{\\mathbf{r}}_{1P}$, where $\\hat{\\mathbf{r}}_{1P}$ is a unit vector in the direction from $q_1$ to P, and $r_{1P}$ is the distance between $q_1$ and P. In the same manner, the electric field $\\mathbf{E}_2$ at $\\mathbf{r}$ due to $q_2$ at $\\mathbf{r}_2$ is $\\mathbf{E}_2 = \\frac{1}{4\\pi\\epsilon_0} \\frac{q_2}{r_{2P}^2} \\hat{\\mathbf{r}}_{2P}$, where $\\hat{\\mathbf{r}}_{2P}$ is a unit vector in the direction from $q_2$ to P and $r_{2P}$ is the distance between $q_2$ and P. Similar expressions hold for fields $\\mathbf{E}_3, \\mathbf{E}_4, \\dots, \\mathbf{E}_n$ due to charges $q_3, q_4, \\dots, q_n$. By the superposition principle, the total electric field $\\mathbf{E}$ at $\\mathbf{r}$ due to the system of charges is the vector sum of the individual fields: $\\mathbf{E}(\\mathbf{r}) = \\mathbf{E}_1(\\mathbf{r}) + \\mathbf{E}_2(\\mathbf{r}) + \\dots + \\mathbf{E}_n(\\mathbf{r})$. Substituting the expressions for individual fields, we get $\\mathbf{E}(\\mathbf{r}) = \\frac{1}{4\\pi\\epsilon_0} \\frac{q_1}{r_{1P}^2} \\hat{\\mathbf{r}}_{1P} + \\frac{1}{4\\pi\\epsilon_0} \\frac{q_2}{r_{2P}^2} \\hat{\\mathbf{r}}_{2P} + \\dots + \\frac{1}{4\\pi\\epsilon_0} \\frac{q_n}{r_{nP}^2} \\hat{\\mathbf{r}}_{nP}$. This can be compactly written as $\\mathbf{E}(\\mathbf{r}) = \\frac{1}{4\\pi\\epsilon_0} \\sum_{i=1}^{n} \\frac{q_i}{r_{iP}^2} \\hat{\\mathbf{r}}_{iP}$. The electric field $\\mathbf{E}$ is a vector quantity that varies from one point to another in space and is determined by the positions of the source charges.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 1.9",
+                "description": "Electric field at a point P due to a system of four charges $q_1, q_2, q_3, q_4$. The individual field vectors $\\mathbf{E}_1, \\mathbf{E}_2, \\mathbf{E}_3, \\mathbf{E}_4$ are shown, and their vector sum $\\mathbf{E}$ is represented as the resultant vector.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:1:1.7.2",
+        "number": "1.7.2",
+        "title": "Physical significance of electric field",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:1:1.7.2:1",
+            "order": 1,
+            "title": "Concept of Field in Electrostatics",
+            "content_text": "In electrostatics, the concept of electric field is convenient but not strictly necessary, as the force on a charge can be directly determined using Coulomb's law and the superposition principle. However, the electric field provides an elegant way to characterize the electrical environment of a system of charges. The electric field at a point tells us the force a unit positive test charge would experience if placed at that point, without disturbing the original system. It is a characteristic of the system of charges and is independent of the test charge used to measure it. In physics, a 'field' refers to a quantity defined at every point in space that may vary from point to point. Since force is a vector, the electric field is a vector field.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.7.2:2",
+            "order": 2,
+            "title": "Significance in Time-Dependent Phenomena",
+            "content_text": "The true physical significance of the electric field emerges in time-dependent electromagnetic phenomena. When charges are in accelerated motion, information about their motion travels at the finite speed of light $c$. Consequently, the effect of the motion of one charge on another distant charge is not instantaneous; there is a time delay. The field concept (strictly, the electromagnetic field) elegantly accounts for this delay. The accelerated motion of a charge produces electromagnetic waves that propagate at speed $c$, eventually reaching and exerting a force on other charges. Fields are regarded as physical entities with independent dynamics, meaning they evolve according to their own laws and can transport energy. A source of time-dependent fields can be turned on briefly and then off, leaving behind propagating fields that continue to transport energy. This concept, first introduced by Faraday, is now central to physics.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.7.2:3",
+            "order": 3,
+            "title": "Example 1.7: Motion of Charged Particles in a Uniform Field",
+            "content_text": "This example analyzes the motion of an electron and a proton in a uniform electric field to calculate their acceleration and time of fall. It demonstrates that the acceleration produced by typical electric fields is much larger than the acceleration due to gravity ($g$), allowing gravity to be ignored. It also highlights that unlike gravitational free fall, where time is independent of mass, the time of fall in an electric field depends on the particle's mass.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 1.7",
+                "problem": "An electron falls through a distance of 1.5 cm in a uniform electric field of magnitude $2.0 \\times 10^4$ N C$^{-1}$ [Fig. 1.10(a)]. The direction of the field is reversed keeping its magnitude unchanged and a proton falls through the same distance [Fig. 1.10(b)]. Compute the time of fall in each case. Contrast the situation with that of 'free fall under gravity'.",
+                "solution": "In Fig. 1.10(a), the field is upward, so the electron experiences a downward force of magnitude $eE$. The acceleration is $a_e = eE/m_e$. Starting from rest, the time to fall distance $h$ is $t_e = \\sqrt{2h/a_e} = \\sqrt{2hm_e/eE}$. Using $e = 1.6 \\times 10^{-19}$ C, $m_e = 9.11 \\times 10^{-31}$ kg, $E = 2.0 \\times 10^4$ N C$^{-1}$, and $h = 1.5 \\times 10^{-2}$ m, we find $t_e = 2.9 \\times 10^{-9}$ s. In Fig. 1.10(b), the field is downward, so the proton experiences a downward force $eE$. Its acceleration is $a_p = eE/m_p$ where $m_p = 1.67 \\times 10^{-27}$ kg. The time of fall is $t_p = \\sqrt{2hm_p/eE} = 1.3 \\times 10^{-7}$ s. The heavier proton takes more time. In contrast, in gravity, time of fall is independent of mass. To justify ignoring gravity, we calculate $a_p = eE/m_p = 1.9 \\times 10^{12}$ m s$^{-2}$, which is much larger than $g = 9.8$ m s$^{-2}$."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Figure 1.10",
+                "description": "(a) An electron falling in an upward uniform electric field, resulting in a downward force. (b) A proton falling in a downward uniform electric field, also resulting in a downward force.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.7.2:4",
+            "order": 4,
+            "title": "Example 1.8: Electric Field Calculation for a Two-Charge System",
+            "content_text": "This example applies the superposition principle to find the net electric field at various points (A, B, and C) relative to two point charges of equal magnitude but opposite sign. It illustrates the vector addition of individual field contributions.\nThe calculation of the electric field at points B and C for the system of two charges $q_1 = 10^{-8}$ C and $q_2 = -10^{-8}$ C continues. At point B, the electric field vector $\\mathbf{E}_{1B}$ due to the positive charge $q_1$ points towards the left with a magnitude $E_{1B} = \\frac{(9 \\times 10^9 \\text{ Nm}^2\\text{C}^{-2}) \\times (10^{-8} \\text{ C})}{(0.05 \\text{ m})^2} = 3.6 \\times 10^4 \\text{ N C}^{-1}$. The electric field vector $\\mathbf{E}_{2B}$ at B due to the negative charge $q_2$ points towards the right with a magnitude $E_{2B} = \\frac{(9 \\times 10^9 \\text{ Nm}^2\\text{C}^{-2}) \\times (10^{-8} \\text{ C})}{(0.15 \\text{ m})^2} = 4 \\times 10^3 \\text{ N C}^{-1}$. The magnitude of the total electric field at B is $E_B = E_{1B} - E_{2B} = 3.2 \\times 10^4 \\text{ N C}^{-1}$, directed towards the left. At point C, the magnitude of each electric field vector due to charges $q_1$ and $q_2$ is $E_{1C} = E_{2C} = \\frac{(9 \\times 10^9 \\text{ Nm}^2\\text{C}^{-2}) \\times (10^{-8} \\text{ C})}{(0.10 \\text{ m})^2} = 9 \\times 10^3 \\text{ N C}^{-1}$. The resultant of these two vectors is $E_C = E_{1C} \\cos \\frac{\\pi}{3} + E_{2C} \\cos \\frac{\\pi}{3} = 9 \\times 10^3 \\text{ N C}^{-1}$, pointing towards the right.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 1.8",
+                "problem": "Two point charges $q_1$ and $q_2$, of magnitude $+10^{-8}$ C and $-10^{-8}$ C, respectively, are placed 0.1 m apart. Calculate the electric fields at points A, B and C shown in Fig. 1.11.",
+                "solution": "The electric field vector $\\mathbf{E}_{1A}$ at A due to $q_1$ points right with magnitude $E_{1A} = \\frac{(9 \\times 10^9 \\text{ N m}^2 \\text{ C}^{-2}) \\times (10^{-8} \\text{ C})}{(0.05 \\text{ m})^2} = 3.6 \\times 10^4 \\text{ N C}^{-1}$. The field $\\mathbf{E}_{2A}$ at A due to $q_2$ also points right with the same magnitude. The total field at A is $E_A = E_{1A} + E_{2A} = 7.2 \\times 10^4 \\text{ N C}^{-1}$, directed toward the right. [CONTINUES]"
+              },
+              {
+                "label": "Example 1.8",
+                "problem": "Calculate the electric field at points B and C for a system of two charges $q_1 = 10^{-8}$ C and $q_2 = -10^{-8}$ C separated by 0.1 m. Point B is 0.05 m from $q_1$ on the line joining them (outside the segment), and point C is at the vertex of an equilateral triangle with the charges.",
+                "solution": "At point B: $E_{1B} = 3.6 \\times 10^4 \\text{ N C}^{-1}$ (left), $E_{2B} = 4 \\times 10^3 \\text{ N C}^{-1}$ (right). Net $E_B = E_{1B} - E_{2B} = 3.2 \\times 10^4 \\text{ N C}^{-1}$ (left). At point C: $E_{1C} = E_{2C} = 9 \\times 10^3 \\text{ N C}^{-1}$. The angle between the vectors and the horizontal is $\\pi/3$. Resultant $E_C = E_{1C} \\cos(\\pi/3) + E_{2C} \\cos(\\pi/3) = 2 \\times (9 \\times 10^3) \\times 0.5 = 9 \\times 10^3 \\text{ N C}^{-1}$ (right)."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Figure 1.11",
+                "description": "A system of two charges $q_1$ and $q_2$ separated by 0.1 m. Point A is the midpoint. Point B is 0.05 m to the left of $q_1$. Point C forms an equilateral triangle with the charges. Field vectors from each charge and the resultant fields are shown at each point.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:1:1.8",
+        "number": "1.8",
+        "title": "Electric Field Lines",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:1:1.8:1",
+            "order": 1,
+            "title": "Pictorial Representation of Electric Field",
+            "content_text": "The electric field $\\mathbf{E}$ is a vector quantity and can be represented pictorially. For a point charge at the origin, vectors are drawn pointing in the direction of the field with lengths proportional to the field strength at each point. Since the magnitude of the electric field decreases inversely as the square of the distance ($1/r^2$), the vectors get shorter as one moves away from the charge, always pointing radially outward for a positive charge. By connecting these arrows, we obtain field lines.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 1.12",
+                "description": "Field of a point charge represented by vectors of decreasing length as distance from the center increases, all pointing radially outward.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.8:2",
+            "order": 2,
+            "title": "Field Line Density and Magnitude",
+            "content_text": "The magnitude of the electric field is represented by the density of field lines. $\\mathbf{E}$ is strong near the charge where the density of field lines is high (lines are closer). Away from the charge, the field gets weaker and the density of field lines is less, resulting in well-separated lines. While an infinite number of lines can be drawn, it is the relative density of lines in different regions that is physically significant.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.8:3",
+            "order": 3,
+            "title": "Solid Angle and the Inverse Square Law",
+            "content_text": "To understand the dependence of field lines on area, we use the concept of a solid angle. In two dimensions, an angle is $\\Delta \\theta = \\Delta l / r$. In three dimensions, the solid angle $\\Delta \\Omega$ subtended by a small perpendicular plane area $\\Delta S$ at a distance $r$ is $\\Delta \\Omega = \\Delta S / r^2$. For a given solid angle, the number of radial field lines $n$ remains constant. At distances $r_1$ and $r_2$, the area elements are $r_1^2 \\Delta \\Omega$ and $r_2^2 \\Delta \\Omega$. The number of lines per unit area is $n/(r_1^2 \\Delta \\Omega)$ and $n/(r_2^2 \\Delta \\Omega)$ respectively, showing the $1/r^2$ dependence of field strength.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 1.13",
+                "description": "A diagram showing a point charge at O and a cone of solid angle $\\Delta \\Omega$ intersecting two area elements at distances $r_1$ and $r_2$. It illustrates how the same number of field lines pass through larger areas at greater distances, decreasing the density.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.8:4",
+            "order": 4,
+            "title": "Definition of Electric Field Lines",
+            "content_text": "The concept of field lines was invented by Michael Faraday as a non-mathematical way to visualize electric fields; he called them 'lines of force'. An electric field line is defined as a curve drawn such that the tangent to it at each point is in the direction of the net electric field at that point. An arrow on the curve specifies the direction of the field.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.8:5",
+            "order": 5,
+            "title": "Field Lines for Simple Charge Configurations",
+            "content_text": "Field lines for a single positive charge ($q > 0$) are radially outward, while for a single negative charge ($q < 0$), they are radially inward. For a system of two positive charges ($q, q$), the lines show mutual repulsion. For a dipole (two equal and opposite charges $q, -q$), the lines show mutual attraction between the charges.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 1.14",
+                "description": "Four panels showing field lines: (a) single positive charge (outward), (b) single negative charge (inward), (c) two identical positive charges (repelling), and (d) an electric dipole (curving from positive to negative).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.8:6",
+            "order": 6,
+            "title": "General Properties of Electric Field Lines",
+            "content_text": "Electric field lines follow these general properties: (i) They start from positive charges and end at negative charges; if there is a single charge, they may start or end at infinity. (ii) In a charge-free region, they are continuous curves without breaks. (iii) Two field lines can never cross each other, as this would imply two different directions for the net field at the intersection point, which is impossible. (iv) Electrostatic field lines do not form closed loops, reflecting the conservative nature of the electric field.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:1:1.9",
+        "number": "1.9",
+        "title": "Electric Flux",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:1:1.9:1",
+            "order": 1,
+            "title": "Introduction to Electric Flux",
+            "content_text": "Electric flux is analogous to the flow of a liquid. If a liquid flows with velocity $\\mathbf{v}$ through a small flat surface $dS$ normal to the flow, the rate of flow is $v dS$. If the normal to the surface makes an angle $\\theta$ with $\\mathbf{v}$, the projected area perpendicular to the flow is $dS \\cos \\theta$, and the flux is $\\mathbf{v} \\cdot \\hat{\\mathbf{n}} dS$. Similarly, for an electric field $\\mathbf{E}$, we define electric flux. While there is no physical flow of a quantity in an electric field, the number of field lines crossing a unit area normal to the field is a measure of field strength. This means that if If we place a small planar element of area $\\Delta S$ normal to $\\mathbf{E}$ at a point, the number of field lines crossing it is proportional to $E \\Delta S$. Now suppose we tilt the area element by angle $\\theta$. Clearly, the number of field lines crossing the area element will be smaller. The projection of the area element normal to $\\mathbf{E}$ is $\\Delta S \\cos \\theta$. Thus, the number of field lines crossing $\\Delta S$ is proportional to $E \\Delta S \\cos \\theta$. When $\\theta = 90^\\circ$, field lines will be parallel to $\\Delta S$ and will not cross it at all (Fig. 1.15). Note that the number of field lines is a matter of choice in drawing; what is physically significant is the relative number of field lines crossing a given area at different points.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 1.15",
+                "description": "A diagram showing a uniform electric field $\\mathbf{E}$ passing through a planar area element $\\Delta S$. It illustrates how the number of field lines crossing the area changes as the area is tilted by an angle $\\theta$. When the area is perpendicular to the field, flux is maximum ($E \\Delta S$). When tilted, the effective area is $\\Delta S \\cos \\theta$. When parallel ($\\theta = 90^\\circ$), no field lines cross the area.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.9:2",
+            "order": 2,
+            "title": "Area Vector",
+            "content_text": "The orientation of an area element, and not merely its magnitude, is important in many contexts. For example, in a stream, the amount of water flowing through a ring depends on how you hold the ring. This shows that an area element should be treated as a vector. The direction of a planar area vector is along its normal. For a curved surface, we imagine dividing the surface into a large number of very small area elements, each treated as planar. For a closed surface, the convention is to take the vector in the direction of the outward normal. Thus, the area element vector $\\Delta \\mathbf{S}$ at a point on a closed surface equals $\\Delta S \\hat{\\mathbf{n}}$, where $\\Delta S$ is the magnitude of the area element and $\\hat{\\mathbf{n}}$ is a unit vector in the direction of the outward normal at that point (Fig. 1.16).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 1.16",
+                "description": "An illustration showing the convention for area vectors. For a flat surface, the area vector $\\Delta \\mathbf{S}$ is shown as a vector normal to the surface. For a closed, curved surface, a small area element $\\Delta S$ is shown with its associated unit normal vector $\\hat{\\mathbf{n}}$ pointing outwards from the volume, defining $\\Delta \\mathbf{S} = \\Delta S \\hat{\\mathbf{n}}$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.9:3",
+            "order": 3,
+            "title": "Definition of Electric Flux",
+            "content_text": "Electric flux $\\Delta \\phi$ through an area element $\\Delta \\mathbf{S}$ is defined by $\\Delta \\phi = \\mathbf{E} \\cdot \\Delta \\mathbf{S} = E \\Delta S \\cos \\theta$, which is proportional to the number of field lines cutting the area element. The angle $\\theta$ is the angle between $\\mathbf{E}$ and $\\Delta \\mathbf{S}$. For a closed surface, $\\theta$ is the angle between $\\mathbf{E}$ and the outward normal. We can look at the expression $E \\Delta S \\cos \\theta$ in two ways: $E (\\Delta S \\cos \\theta)$, i.e., $E$ times the projection of area normal to $\\mathbf{E}$, or $E_\\perp \\Delta S$, i.e., the component of $\\mathbf{E}$ along the normal to the area element times the magnitude of the area element. The unit of electric flux is $N C^{-1} m^2$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.9:4",
+            "order": 4,
+            "title": "Total Flux Calculation",
+            "content_text": "The basic definition of electric flux can be used to calculate the total flux through any given surface by dividing the surface into small area elements, calculating the flux at each element, and adding them up. Thus, the total flux $\\phi$ through a surface $S$ is $\\phi \\simeq \\sum \\mathbf{E} \\cdot \\Delta \\mathbf{S}$. The approximation sign is used because the electric field $\\mathbf{E}$ is taken to be constant over the small area element. This is mathematically exact only when you take the limit $\\Delta S \\to 0$ and the sum is written as an integral.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:1:1.10",
+        "number": "1.10",
+        "title": "Electric Dipole",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:1:1.10:1",
+            "order": 1,
+            "title": "Definition and Properties",
+            "content_text": "An electric dipole is a pair of equal and opposite point charges $q$ and $-q$, separated by a distance $2a$. The line connecting the two charges defines a direction in space. By convention, the direction from $-q$ to $q$ is said to be the direction of the dipole. The mid-point of locations of $-q$ and $q$ is called the centre of the dipole.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.10:2",
+            "order": 2,
+            "title": "Qualitative Field Behavior",
+            "content_text": "The total charge of the electric dipole is zero, but this does not mean that the field of the electric dipole is zero. Since the charges $q$ and $-q$ are separated by some distance, the electric fields due to them do not exactly cancel out. However, at distances much larger than the separation ($r \\gg 2a$), the fields nearly cancel. The electric field of a dipole therefore falls off at large distances faster than $1/r^2$, which is the dependence for a single point charge.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:1:1.10.1",
+        "number": "1.10.1",
+        "title": "The field of an electric dipole",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:1:1.10.1:1",
+            "order": 1,
+            "title": "Field on the Dipole Axis",
+            "content_text": "The electric field of a dipole at any point in space can be found using Coulomb's law and the superposition principle. For a point $P$ at distance $r$ from the centre on the side of charge $q$: $\\mathbf{E}_{-q} = -\\frac{q}{4\\pi\\epsilon_0(r+a)^2} \\hat{\\mathbf{p}}$ and $\\mathbf{E}_{+q} = \\frac{q}{4\\pi\\epsilon_0(r-a)^2} \\hat{\\mathbf{p}}$, where $\\hat{\\mathbf{p}}$ is the unit vector along the dipole axis (from $-q$ to $q$). The total field is $\\mathbf{E} = \\mathbf{E}_{+q} + \\mathbf{E}_{-q} = \\frac{q}{4\\pi\\epsilon_0} [\\frac{1}{(r-a)^2} - \\frac{1}{(r+a)^2}] \\hat{\\mathbf{p}} = \\frac{q}{4\\pi\\epsilon_0} \\frac{4ar}{(r^2-a^2)^2} \\hat{\\mathbf{p}}$. For $r \\gg a$, this simplifies to $\\mathbf{E} = \\frac{4qa}{4\\pi\\epsilon_0 r^3} \\hat{\\mathbf{p}}$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 1.17(a)",
+                "description": "A diagram showing the electric field of a dipole at a point $P$ on its axis. The point $P$ is at a distance $r$ from the center of the dipole. The field vectors $\\mathbf{E}_{+q}$ and $\\mathbf{E}_{-q}$ are shown along the axis, with the net field $\\mathbf{E}$ pointing in the direction of the dipole moment.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.10.1:2",
+            "order": 2,
+            "title": "Field on the Equatorial Plane",
+            "content_text": "For a point on the equatorial plane at distance $r$ from the centre, the magnitudes of fields from $+q$ and $-q$ are equal: $E_{+q} = E_{-q} = \\frac{q}{4\\pi\\epsilon_0 (r^2+a^2)}$. The components normal to the dipole axis cancel, while components along the axis add up. The total field is opposite to $\\hat{\\mathbf{p}}$: $\\mathbf{E} = -(E_{+q} + E_{-q}) \\cos \\theta \\hat{\\mathbf{p}}$. Since $\\cos \\theta = \\frac{a}{(r^2+a^2)^{1/2}}$, we get $\\mathbf{E} = -\\frac{2qa}{4\\pi\\epsilon_0 (r^2+a^2)^{3/2}} \\hat{\\mathbf{p}}$. At large distances ($r \\gg a$), this reduces to $\\mathbf{E} = -\\frac{2qa}{4\\pi\\epsilon_0 r^3} \\hat{\\mathbf{p}}$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 1.17(b)",
+                "description": "A diagram showing the electric field of a dipole at a point $P$ on its equatorial plane. The fields from $+q$ and $-q$ have equal magnitudes. Their vertical components cancel, and their horizontal components add up to give a net field $\\mathbf{E}$ that is parallel to the dipole axis but opposite in direction to the dipole moment vector $\\mathbf{p}$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.10.1:3",
+            "order": 3,
+            "title": "Definition of Dipole Moment",
+            "content_text": "The dipole field at large distances depends on the product $qa$. The dipole moment vector $\\mathbf{p}$ of an electric dipole is defined by $\\mathbf{p} = q \\times 2a \\hat{\\mathbf{p}}$. It is a vector whose magnitude is the charge $q$",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.10.1:4",
+            "order": 4,
+            "title": "Characteristics of Dipole Field at Large Distances",
+            "content_text": "At large distances, the electric field of a dipole falls off as $1/r^3$ rather than the $1/r^2$ dependence characteristic of a single point charge. Furthermore, the magnitude and direction of the dipole field depend not only on the distance $r$ from the center but also on the angle between the position vector $\\vec{r}$ and the dipole moment vector $\\vec{p}$. This $1/r^3$ dependence is a result of the two charges $\\pm q$ being close together, causing their individual $1/r^2$ fields to nearly cancel each other out at large distances.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.10.1:5",
+            "order": 5,
+            "title": "Point Dipole",
+            "content_text": "A point dipole is defined as the limit where the dipole size $2a$ approaches zero and the charge $q$ approaches infinity in such a way that the product $p = q \\times 2a$ remains a finite constant. For such an idealized point dipole, the equations derived for the axial field $\\vec{E} = \\frac{2\\vec{p}}{4\\pi\\epsilon_0 r^3}$ and the equatorial field $\\vec{E} = \\frac{-\\vec{p}}{4\\pi\\epsilon_0 r^3}$ are exact for any distance $r$ from the center.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:1:1.10.2",
+        "number": "1.10.2",
+        "title": "Physical significance of dipoles",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:1:1.10.2:1",
+            "order": 1,
+            "title": "Non-polar Molecules",
+            "content_text": "In many molecules, such as $CO_2$ and $CH_4$, the centers of positive charges (nuclei) and negative charges (electrons) coincide at the same location. Consequently, these molecules have zero intrinsic dipole moment and are considered non-polar. However, they can develop an induced dipole moment when placed in an external electric field, as the field causes a slight displacement of the charge centers.\nIn some molecules, the centers of negative and positive charges do not coincide even in the absence of an external field. These molecules possess a permanent electric dipole moment and are called polar molecules. A common example is the water molecule, $H_2O$. Materials composed of polar or non-polar molecules exhibit unique properties and applications depending on their behavior in the presence or absence of electric fields.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.10.2:2",
+            "order": 2,
+            "title": "Center of Charge",
+            "content_text": "The center of a collection of point charges is defined analogously to the center of mass in mechanics. For a system of charges $q_i$ at positions $\\vec{r}_i$, the center of charge $\\vec{r}_{cm}$ is given by: $$\\vec{r}_{cm} = \\frac{\\sum q_i \\vec{r}_i}{\\sum q_i}$$ This concept is useful for determining the effective location of the total charge in a molecule or system.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.10.2:3",
+            "order": 3,
+            "title": "Example 1.9: Electric Field of a Dipole",
+            "content_text": "This example demonstrates the calculation of the electric field at axial and equatorial points for a specific dipole configuration and compares the results with the approximate formulas for a short dipole. It highlights that for distances much larger than the dipole separation ($r \\gg a$), the approximate $1/r^3$ formulas provide very accurate results.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 1.9",
+                "problem": "Two charges $\\pm 10 \\mu\\text{C}$ are placed $5.0 \\text{ mm}$ apart. Determine the electric field at (a) a point P on the axis of the dipole $15 \\text{ cm}$ away from its centre O on the side of the positive charge, as shown in Fig. 1.18(a), and (b) a point Q, $15 \\text{ cm}$ away from O on a line passing through O and normal to the axis of the dipole, as shown in Fig. 1.18(b).",
+                "solution": "(a) Field at P due to charge $+10 \\mu\\text{C}$ is $E_{+q} = \\frac{10^{-5} \\text{ C}}{4\\pi(8.854 \\times 10^{-12} \\text{ C}^2 \\text{ N}^{-1} \\text{ m}^{-2})} \\times \\frac{1}{(15-0.25)^2 \\times 10^{-4} \\text{ m}^2} = 4.13 \\times 10^6 \\text{ N C}^{-1}$ along BP. Field at P due to charge $-10 \\mu\\text{C}$ is $E_{-q} = \\frac{10^{-5} \\text{ C}}{4\\pi(8.854 \\times 10^{-12} \\text{ C}^2 \\text{ N}^{-1} \\text{ m}^{-2})} \\times \\frac{1}{(15+0.25)^2 \\times 10^{-4} \\text{ m}^2} = 3.86 \\times 10^6 \\text{ N C}^{-1}$ along PA. Resultant field at P is $E = E_{+q} - E_{-q} = 2.7 \\times 10^5 \\text{ N C}^{-1}$ along BP. Using the short dipole formula $E = \\frac{2p}{4\\pi\\epsilon_0 r^3}$ with $p = 10^{-5} \\times 5 \\times 10^{-3} = 5 \\times 10^{-8} \\text{ C m}$, we get $E = \\frac{2 \\times 5 \\times 10^{-8}}{4\\pi(8.854 \\times 10^{-12})(0.15)^3} = 2.6 \\times 10^5 \\text{ N C}^{-1}$. (b) Field at Q due to $+10 \\mu\\text{C}$ is $E_{+q} = \\frac{10^{-5}}{4\\pi\\epsilon_0 [15^2 + (0.25)^2] \\times 10^{-4}} = 3.99 \\times 10^6 \\text{ N C}^{-1}$ along BQ. Field at Q due to $-10 \\mu\\text{C}$ is $E_{-q} = 3.99 \\times 10^6 \\text{ N C}^{-1}$ along QA. The components along OQ cancel, while components parallel to BA add up. Resultant field $E = 2 \\times E_{+q} \\cos\\theta = 2 \\times 3.99 \\times 10^6 \\times \\frac{0.25}{\\sqrt{15^2 + 0.25^2}} = 1.33 \\times 10^5 \\text{ N C}^{-1}$ along BA. Using the short dipole formula $E = \\frac{p}{4\\pi\\epsilon_0 r^3}$ gives $1.33 \\times 10^5 \\text{ N C}^{-1}$."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Figure 1.18",
+                "description": "(a) Point P on the axis of the dipole at distance r from center O. (b) Point Q on the equatorial line (normal to the axis) at distance r from center O.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:1:1.11",
+        "number": "1.11",
+        "title": "Dipole in a Uniform External Field",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:1:1.11:1",
+            "order": 1,
+            "title": "Forces on a Dipole in a Uniform Field",
+            "content_text": "When a permanent dipole with dipole moment $\\vec{p}$ is placed in a uniform external electric field $\\vec{E}$, the charge $+q$ experiences a force $q\\vec{E}$ and the charge $-q$ experiences a force $-q\\vec{E}$. Since the field is uniform, these two forces are equal in magnitude and opposite in direction, resulting in a net force of zero on the dipole. However, because these forces act at different points, they form a couple that exerts a torque on the dipole.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 1.19",
+                "description": "A dipole with charges -q and +q and dipole moment p placed in a uniform electric field E at an angle theta. It shows the forces qE and -qE acting on the charges, forming a couple that exerts a torque.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.11:2",
+            "order": 2,
+            "title": "Torque on a Dipole",
+            "content_text": "The magnitude of the torque $\\tau$ is equal to the magnitude of each force multiplied by the perpendicular distance between the two antiparallel forces (the arm of the couple): $$\\tau = qE \\times 2a \\sin\\theta = pE \\sin\\theta$$ where $p = 2qa$ is the dipole moment. In vector notation, the torque is the cross product of the dipole moment and the electric field: $$\\vec{\\tau} = \\vec{p} \\times \\vec{E}$$ This torque tends to rotate the dipole to align $\\vec{p}$ with the direction of $\\vec{E}$. When $\\vec{p}$ is parallel to $\\vec{E}$, the torque becomes zero.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.11:3",
+            "order": 3,
+            "title": "Dipole in a Non-uniform Field",
+            "content_text": "In a non-uniform electric field, the net force on a dipole is generally non-zero because the field $\\vec{E}$ is different at the positions of $+q$ and $-q$. If the dipole moment $\\vec{p}$ is parallel to $\\vec{E}$, the dipole experiences a net force in the direction of the increasing field. Conversely, if $\\vec{p}$ is antiparallel to $\\vec{E}$, the net force is in the direction of the decreasing field. In general, the force depends on the orientation of $\\vec{p}$ relative to the field gradient.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 1.20",
+                "description": "Electric force on a dipole in a non-uniform field. (a) Dipole moment p is parallel to the external field E; the net force is in the direction of increasing field. (b) Dipole moment p is anti-parallel to the external field E; the net force is in the direction of decreasing field.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.11:4",
+            "order": 4,
+            "title": "Application: Attraction of Neutral Objects",
+            "content_text": "The attraction of neutral objects by a charged body, such as a comb attracting bits of paper, can be explained by dipole interactions. A comb run through dry hair becomes charged by friction. When brought near neutral paper, the comb's non-uniform electric field polarizes the molecules in the paper, inducing a net dipole moment. Because the field is non-uniform, it exerts a net attractive force on these induced dipoles, pulling the paper toward the comb. Taking the clue from the preceding discussion, the charged comb ‘polarises’ the piece of paper, i.e., induces a net dipole moment in the direction of field. Further, the electric field due to the comb is not uniform. This non-uniformity of the field makes a dipole to experience a net force on it. In this situation, it is easily seen that the paper should move in the direction of the comb!",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:1:1.12",
+        "number": "1.12",
+        "title": "Continuous Charge Distribution",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:1:1.12:1",
+            "order": 1,
+            "title": "Introduction to Continuous Charge Distribution",
+            "content_text": "We have so far dealt with charge configurations involving discrete charges $q_1, q_2, ..., q_n$. While discrete charge treatment is simpler and avoids calculus, it is impractical for macroscopic systems like the surface of a charged conductor. On a macroscopic scale, it is more feasible to consider area elements $\\Delta S$ that are small enough to be considered points but large enough to contain a vast number of electrons. This allows us to define charge densities that smooth out the microscopic discontinuities of individual charges.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.12:2",
+            "order": 2,
+            "title": "Surface Charge Density",
+            "content_text": "The surface charge density $\\sigma$ at an area element $\\Delta S$ is defined as: $$\\sigma = \\frac{\\Delta Q}{\\Delta S}$$ where $\\Delta Q$ is the charge on that element. This density $\\sigma$ represents a macroscopic average that ignores the quantization of charge at the microscopic level. The units for $\\sigma$ are $C/m^2$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 1.21 (Middle)",
+                "description": "A surface charge distribution showing an area element $\\Delta S$ with position vector $\\mathbf{r}$ and a point P at distance $r'$ from the element.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.12:3",
+            "order": 3,
+            "title": "Linear and Volume Charge Densities",
+            "content_text": "Similar definitions apply to other dimensions. The linear charge density $\\lambda$ of a wire is defined by: $$\\lambda = \\frac{\\Delta Q}{\\Delta l}$$ where $\\Delta l$ is a small line element on the macroscopic scale. Its units are $C/m$. The volume charge density $\\rho$ is defined as: $$\\rho = \\frac{\\Delta Q}{\\Delta V}$$ where $\\Delta V$ is a macroscopically small volume element. Its units are $C/m^3$. These notions are analogous to continuous mass distribution in mechanics, where we treat liquids as continuous fluids despite their molecular constitution.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 1.21 (Top and Bottom)",
+                "description": "Top: A line charge distribution with element $\\Delta l$. Bottom: A volume charge distribution with element $\\Delta V$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.12:4",
+            "order": 4,
+            "title": "Electric Field due to Continuous Charge Distribution",
+            "content_text": "To find the electric field due to a continuous charge distribution, we divide the distribution into small volume elements $\\Delta V$. The charge in such an element is $\\rho \\Delta V$. According to Coulomb's law, the electric field $\\Delta \\mathbf{E}$ at a point P (with position vector $\\mathbf{R}$) due to this element is: $$\\Delta \\mathbf{E} = \\frac{1}{4\\pi\\epsilon_0} \\frac{\\rho \\Delta V}{r'^2} \\mathbf{\\hat{r}'}$$ where $r'$ is the distance between the element and P, and $\\mathbf{\\hat{r}'}$ is the unit vector in that direction. By the superposition principle, the total field is the sum of fields from all elements: $$\\mathbf{E} \\cong \\frac{1}{4\\pi\\epsilon_0} \\sum_{all \\Delta V} \\frac{\\rho \\Delta V}{r'^2} \\mathbf{\\hat{r}'}$$ In the limit where $\\Delta V \\to 0$, this sum becomes an integral. This method allows the determination of electric fields for any charge distribution, whether discrete, continuous, or a mix of both.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:1:1.13",
+        "number": "1.13",
+        "title": "Gauss's Law",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:1:1.13:1",
+            "order": 1,
+            "title": "Derivation of Gauss's Law for a Point Charge",
+            "content_text": "Consider the total flux through a sphere of radius $r$ enclosing a point charge $q$ at its center. Divide the sphere into small area elements $\\Delta S$. The flux through an element is: $$\\Delta \\phi = \\mathbf{E} \\cdot \\Delta \\mathbf{S} = \\frac{q}{4\\pi\\epsilon_0 r^2} \\mathbf{\\hat{r}} \\cdot \\Delta \\mathbf{S}$$ Since the normal to the sphere at every point is along the radius vector, $\\Delta \\mathbf{S}$ and $\\mathbf{\\hat{r}}$ are in the same direction. Thus, $\\Delta \\phi = \\frac{q}{4\\pi\\epsilon_0 r^2} \\Delta S$. The total flux $\\phi$ is obtained by summing over all elements: $$\\phi = \\sum_{all \\Delta S} \\frac{q}{4\\pi\\epsilon_0 r^2} \\Delta S = \\frac{q}{4\\pi\\epsilon_0 r^2} \\sum_{all \\Delta S} \\Delta S$$ Since the total surface area of the sphere is $4\\pi r^2$, we get: $$\\phi = \\frac{q}{4\\pi\\epsilon_0 r^2} \\times 4\\pi r^2 = \\frac{q}{\\epsilon_0}$$",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 1.22",
+                "description": "A sphere of radius $r$ enclosing a point charge $q$ at its center. An area element $\\Delta S$ is shown with the electric field vector $\\mathbf{E}$ pointing radially outward.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.13:2",
+            "order": 2,
+            "title": "Statement of Gauss's Law",
+            "content_text": "Gauss's law states that the electric flux through a closed surface $S$ is equal to the total charge $q$ enclosed by the surface divided by the permittivity of free space $\\epsilon_0$: $$\\phi = q/\\epsilon_0$$ This law implies that if no charge is enclosed by a surface, the net electric flux through it is zero.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.13:3",
+            "order": 3,
+            "title": "Application: Flux through a Cylinder in a Uniform Field",
+            "content_text": "Consider a closed cylindrical surface in a uniform electric field $\\mathbf{E}$ with its axis parallel to the field. The total flux $\\phi$ is the sum of fluxes through the two circular cross-sections (1 and 2) and the curved surface (3): $\\phi = \\phi_1 + \\phi_2 + \\phi_3$. For the curved surface, the normal is perpendicular to $\\mathbf{E}$, so $\\phi_3 = 0$. For surface 1, the outward normal is opposite to $\\mathbf{E}$, so $\\phi_1 = -E S_1$. For surface 2, the outward normal is along $\\mathbf{E}$, so $\\phi_2 = +E S_2$. Since $S_1 = S_2 = S$, the total flux $\\phi = -ES + ES + 0 = 0$. This confirms Gauss's law, as the cylinder encloses no net charge.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 1.23",
+                "description": "A cylinder placed in a uniform electric field $\\mathbf{E}$. The field lines enter through face 1 and exit through face 2. The curved surface is labeled 3.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.13:4",
+            "order": 4,
+            "title": "Important Points Regarding Gauss's Law",
+            "content_text": "The following points are crucial for understanding Gauss's law: (i) Gauss’s law is true for any closed surface, regardless of its shape or size. (ii) The term $q$ on the right side includes the algebraic sum of all charges enclosed by the surface, no matter where they are located inside. (iii) The electric field $\\mathbf{E}$ on the left side of the equation is the net field due to all charges, both inside and outside the surface. However, the flux contribution from charges outside the surface always sums to zero. In the equation for Gauss's law, the electric field on the left side is the net field due to all charges, both inside and outside the Gaussian surface. However, the flux contribution from charges outside the surface always sums to zero. This is because any field line from an external charge that enters the surface must also leave it, resulting in no net flux contribution.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.13:5",
+            "order": 5,
+            "title": "The Gaussian Surface",
+            "content_text": "The surface chosen for the application of Gauss's law is called the Gaussian surface. While any closed surface can be chosen, it should not pass through any discrete charge because the electric field is not well-defined at the location of a point charge (it grows without bound). However, a Gaussian surface can pass through a continuous charge distribution.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.13:6",
+            "order": 6,
+            "title": "Symmetry in Field Calculations",
+            "content_text": "Gauss's law is particularly useful for calculating the electrostatic field when the system exhibits symmetry (such as spherical, cylindrical, or planar symmetry). By choosing a Gaussian surface that matches the symmetry of the charge distribution, the calculation of the flux integral becomes significantly easier.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.13:7",
+            "order": 7,
+            "title": "Relation to Coulomb's Law",
+            "content_text": "Gauss's law is fundamentally based on the inverse square dependence on distance found in Coulomb's law. Any experimental violation of Gauss's law would imply a departure from the inverse square law of electrostatics.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.13:8",
+            "order": 8,
+            "title": "Example 1.10: Flux and Charge in a Cube",
+            "content_text": "This example demonstrates how to calculate the net flux and enclosed charge for a cube placed in a non-uniform electric field. Given an electric field with only an $x$-component $E_x = \\alpha x^{1/2}$, flux only exists through the faces perpendicular to the $x$-axis. The left face is at $x = a$ and the right face is at $x = 2a$. The field magnitudes are $E_L = \\alpha a^{1/2}$ and $E_R = \\alpha (2a)^{1/2}$. The flux through the left face is $\\phi_L = -E_L a^2$ (outward normal is in $-x$ direction) and through the right face is $\\phi_R = E_R a^2$. The net flux is $\\phi = \\phi_R + \\phi_L = \\alpha a^{5/2} (\\sqrt{2} - 1)$. Using Gauss's law, the charge $q$ inside the cube is $q = \\epsilon_0 \\phi$.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 1.10",
+                "problem": "The electric field components in Fig. 1.24 are $E_x = \\alpha x^{1/2}$, $E_y = E_z = 0$, in which $\\alpha = 800 \\text{ N/C m}^{1/2}$. Calculate (a) the flux through the cube, and (b) the charge within the cube. Assume that $a = 0.1 \\text{ m}$.",
+                "solution": "(a) Since the electric field has only an $x$ component, for faces perpendicular to $x$ direction, the angle between $\\mathbf{E}$ and $\\Delta \\mathbf{S}$ is $\\pm \\pi/2$. Therefore, the flux $\\phi = \\mathbf{E} \\cdot \\Delta \\mathbf{S}$ is separately zero for each face of the cube except the two shaded ones. Now the magnitude of the electric field at the left face is $E_L = \\alpha x^{1/2} = \\alpha a^{1/2}$ ($x = a$ at the left face). The magnitude of electric field at the right face is $E_R = \\alpha x^{1/2} = \\alpha (2a)^{1/2}$ ($x = 2a$ at the right face). The corresponding fluxes are $\\phi_L = \\mathbf{E}_L \\cdot \\Delta \\mathbf{S} = \\Delta S \\mathbf{E}_L \\cdot \\hat{\\mathbf{n}}_L = -E_L \\Delta S = -E_L a^2 = -\\alpha a^{5/2}$ and $\\phi_R = \\mathbf{E}_R \\cdot \\Delta \\mathbf{S} = E_R a^2 = \\alpha (2a)^{1/2} a^2 = \\alpha \\sqrt{2} a^{5/2}$. Net flux through the cube $\\phi = \\phi_R + \\phi_L = \\alpha a^{5/2} (\\sqrt{2} - 1) = 800 (0.1)^{5/2} (\\sqrt{2} - 1) = 1.05 \\text{ N m}^2 \\text{ C}^{-1}$. (b) The total charge $q$ inside the cube is $q = \\epsilon_0 \\phi = 8.854 \\times 10^{-12} \\times 1.05 = 9.27 \\times 10^{-12} \\text{ C}$."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Figure 1.24",
+                "description": "A cube of side $a$ placed in a coordinate system with its left face at $x=a$ and right face at $x=2a$. The electric field $\\mathbf{E}$ is directed along the $x$-axis. Unit vectors $\\hat{n}_L$ and $\\hat{n}_R$ represent the outward normals for the left and right faces respectively.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.13:9",
+            "order": 9,
+            "title": "Example 1.11: Flux and Charge in a Cylinder",
+            "content_text": "This example considers a cylinder in a uniform electric field that points away from the origin in both directions ($+x$ for $x>0$ and $-x$ for $x<0$). For the flat end caps, the electric field and area vectors are parallel, leading to positive outward flux from both ends. For the curved side of the cylinder, the electric field is perpendicular to the area elements, so the flux is zero. The net flux is the sum of the fluxes through the two end caps. The enclosed charge is then found using $q = \\epsilon_0 \\phi$.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 1.11",
+                "problem": "An electric field is uniform, and in the positive $x$ direction for positive $x$, and uniform with the same magnitude but in the negative $x$ direction for negative $x$. It is given that $\\mathbf{E} = 200 \\hat{\\mathbf{i}} \\text{ N/C}$ for $x > 0$ and $\\mathbf{E} = -200 \\hat{\\mathbf{i}} \\text{ N/C}$ for $x < 0$. A right circular cylinder of length $20 \\text{ cm}$ and radius $5 \\text{ cm}$ has its centre at the origin and its axis along the $x$-axis so that one face is at $x = +10 \\text{ cm}$ and the other is at $x = -10 \\text{ cm}$. (a) What is the net outward flux through each flat face? (b) What is the flux through the side of the cylinder? (c) What is the net outward flux through the cylinder? (d) What is the net charge inside the cylinder?",
+                "solution": "(a) On the left face $\\mathbf{E}$ and $\\Delta \\mathbf{S}$ are parallel. The outward flux is $\\phi_L = \\mathbf{E} \\cdot \\Delta \\mathbf{S} = -200 \\hat{\\mathbf{i}} \\cdot \\Delta \\mathbf{S} = +200 \\Delta S = +200 \\times \\pi (0.05)^2 = +1.57 \\text{ N m}^2 \\text{ C}^{-1}$. On the right face, $\\mathbf{E}$ and $\\Delta \\mathbf{S}$ are parallel and therefore $\\phi_R = \\mathbf{E} \\cdot \\Delta \\mathbf{S} = +1.57 \\text{ N m}^2 \\text{ C}^{-1}$. (b) For any point on the side of the cylinder $\\mathbf{E}$ is perpendicular to $\\Delta \\mathbf{S}$ and hence $\\mathbf{E} \\cdot \\Delta \\mathbf{S} = 0$. Therefore, the flux out of the side of the cylinder is zero. (c) Net outward flux through the cylinder $\\phi = 1.57 + 1.57 + 0 = 3.14 \\text{ N m}^2 \\text{ C}^{-1}$. (d) The net charge within the cylinder is $q = \\epsilon_0 \\phi = 8.854 \\times 10^{-12} \\times 3.14 = 2.78 \\times 10^{-11} \\text{ C}$."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Figure 1.25",
+                "description": "A cylinder of length $20 \\text{ cm}$ and radius $5 \\text{ cm}$ centered at the origin along the $x$-axis. The electric field $\\mathbf{E}$ points in the $+x$ direction for $x>0$ and $-x$ direction for $x<0$. Area elements $\\Delta \\mathbf{S}$ are shown for the end caps and the curved surface.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:1:1.14",
+        "number": "1.14",
+        "title": "Applications of Gauss's Law",
+        "content_text": "",
+        "subsections": []
+      },
+      {
+        "id": "ncert:physics:12:1:1.14.1",
+        "number": "1.14.1",
+        "title": "Field due to an infinitely long straight uniformly charged wire",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:1:1.14.1:1",
+            "order": 1,
+            "title": "Symmetry and Field Direction",
+            "content_text": "For an infinitely long thin straight wire with uniform linear charge density $\\lambda$, the wire acts as an axis of symmetry. By rotating the system around the wire or shifting it along the wire, the physical situation remains unchanged. This implies that the electric field magnitude must be the same at all points at a fixed radial distance $r$ from the wire. Furthermore, by considering pairs of line elements equidistant from a point $P$, the components of the electric field normal to the radial vector cancel out, leaving a resultant field that is purely radial (outward if $\\lambda > 0$, inward if $\\lambda < 0$).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 1.26(a)",
+                "description": "Diagram showing the radial nature of the electric field around an infinitely long charged wire. Points $P, P', P''$ at the same radial distance from the wire have the same field magnitude due to symmetry.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.14.1:2",
+            "order": 2,
+            "title": "Flux Calculation for a Cylindrical Gaussian Surface",
+            "content_text": "To calculate the field, imagine a cylindrical Gaussian surface of radius $r$ and length $l$ coaxial with the wire. Since the field is everywhere radial, it is parallel to the surface normals of the curved part of the cylinder but perpendicular to the normals of the two flat end caps. Consequently, the flux through the two ends of the cylindrical Gaussian surface is zero. At the curved part of the surface, $\\mathbf{E}$ is normal to the surface at every point, and its magnitude is constant because it depends only on $r$. The surface area of the curved part is $2\\pi rl$, where $l$ is the length of the cylinder. Flux through the Gaussian surface = flux through the curved cylindrical part of the surface = $E \\times 2\\pi rl$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 1.26(b)",
+                "description": "A cylindrical Gaussian surface of radius $r$ and length $l$ surrounding a long thin wire of uniform linear charge density. The electric field $\\mathbf{E}$ is shown perpendicular to the curved surface and parallel to the end caps.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.14.1:3",
+            "order": 3,
+            "title": "Applying Gauss's Law",
+            "content_text": "The surface includes charge equal to $\\lambda l$. Gauss’s law then gives $E \\times 2\\pi rl = \\lambda l / \\epsilon_0$, which simplifies to $E = \\frac{\\lambda}{2\\pi\\epsilon_0 r}$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.14.1:4",
+            "order": 4,
+            "title": "Vector Form and Direction",
+            "content_text": "Vectorially, the electric field $\\mathbf{E}$ at any point is given by $\\mathbf{E} = \\frac{\\lambda}{2\\pi\\epsilon_0 r} \\hat{\\mathbf{n}}$ (1.32), where $\\hat{\\mathbf{n}}$ is the radial unit vector in the plane normal to the wire passing through the point. $\\mathbf{E}$ is directed outward if $\\lambda$ is positive and inward if $\\lambda$ is negative.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.14.1:5",
+            "order": 5,
+            "title": "Algebraic Representation of Vectors",
+            "content_text": "When a vector $\\mathbf{A}$ is written as a scalar multiplied by a unit vector ($\\mathbf{A} = A \\hat{\\mathbf{a}}$), the scalar $A$ is an algebraic number. The direction of $\\mathbf{A}$ is the same as $\\hat{\\mathbf{a}}$ if $A > 0$ and opposite if $A < 0$. The modulus $|\\mathbf{A}|$ is used for non-negative values, so $|\\mathbf{A}| \\ge 0$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.14.1:6",
+            "order": 6,
+            "title": "Physical Considerations and Assumptions",
+            "content_text": "Although only the enclosed charge $\\lambda l$ is used in the calculation, the electric field $\\mathbf{E}$ is due to the charge on the entire wire. The assumption of an infinitely long wire is crucial for $\\mathbf{E}$ to be normal to the curved part of the Gaussian surface. However, the result is approximately true for the central portions of a long wire where end effects can be ignored.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:1:1.14.2",
+        "number": "1.14.2",
+        "title": "Field due to a uniformly charged infinite plane sheet",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:1:1.14.2:1",
+            "order": 1,
+            "title": "Gaussian Surface and Flux Calculation",
+            "content_text": "The Gaussian surface is taken as a rectangular parallelepiped of cross-sectional area $A$. Only the two faces (1 and 2) normal to the $x$-axis contribute to the flux, as field lines are parallel to the other faces. The unit vector normal to surface 1 is in the $-x$ direction, and for surface 2, it is in the $+x$ direction. Thus, the flux through both surfaces is equal and adds up to a net flux of $2EA$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.14.2:2",
+            "order": 2,
+            "title": "Independence of Distance",
+            "content_text": "The application of Gauss's law shows that the electric field $E$ is independent of the distance $x$ from the sheet. For a finite large planar sheet, this result is approximately true in the middle regions, away from the ends.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:1:1.14.3",
+        "number": "1.14.3",
+        "title": "Field due to a uniformly charged thin spherical shell",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:1:1.14.3:1",
+            "order": 1,
+            "title": "Spherical Symmetry and Setup",
+            "content_text": "Let $\\sigma$ be the uniform surface charge density of a thin spherical shell of radius $R$. Due to spherical symmetry, the field at any point $P$ depends only on the radial distance $r$ from the center and must be directed along the radius vector.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 1.28",
+                "description": "Gaussian surfaces for a thin spherical shell: (a) for a point outside (r > R) and (b) for a point inside (r < R). Both surfaces are concentric spheres.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.14.3:2",
+            "order": 2,
+            "title": "Field Outside the Shell (r > R)",
+            "content_text": "For a point $P$ outside the shell, we use a spherical Gaussian surface of radius $r$. The electric field at each point is parallel to the radius vector and has constant magnitude $E$. The flux is $E \\times 4\\pi r^2$. The charge enclosed is $q = \\sigma \\times 4\\pi R^2$. Gauss’s law gives $E \\times 4\\pi r^2 = \\frac{\\sigma}{\\epsilon_0} 4\\pi R^2$, leading to $E = \\frac{q}{4\\pi\\epsilon_0 r^2}$. Vectorially, $\\mathbf{E} = \\frac{q}{4\\pi\\epsilon_0 r^2} \\hat{\\mathbf{r}}$ (1.34). The field is as if the entire charge is concentrated at the center.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.14.3:3",
+            "order": 3,
+            "title": "Field Inside the Shell (r < R)",
+            "content_text": "For a point $P$ inside the shell, the Gaussian surface is a sphere of radius $r < R$. The flux is $E \\times 4\\pi r^2$, but the enclosed charge is zero. Gauss’s law gives $E \\times 4\\pi r^2 = 0$, so $E = 0$ (1.35). The field is zero at all points inside the shell. This result confirms the $1/r^2$ dependence in Coulomb’s law and is analogous to the gravitational field inside a uniform mass shell (compare with Section 7.5 of Class XI Textbook of Physics).",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.14.3:4",
+            "order": 4,
+            "title": "Example 1.12: Atomic Model Field Calculation",
+            "content_text": "This example calculates the electric field for an early atomic model with a point nucleus and a uniform negative charge cloud. It involves determining the charge density and applying Gauss's law to spherical surfaces for points inside and outside the charge distribution.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 1.12",
+                "problem": "An early model for an atom considered it to have a positively charged point nucleus of charge $Ze$, surrounded by a uniform density of negative charge up to a radius $R$. The atom as a whole is neutral. For this model, what is the electric field at a distance $r$ from the nucleus?",
+                "solution": "The total negative charge must be $-Ze$ for neutrality. The negative charge density $\\rho$ is: $\\rho = -\\frac{3Ze}{4\\pi R^3}$. Using a spherical Gaussian surface of radius $r$, the flux is $\\phi = E(r) \\times 4\\pi r^2$. (i) For $r < R$: The electric flux $\\phi$ enclosed by the spherical surface is $\\phi = E(r) \\times 4\\pi r^2$ [CONTINUES]"
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Figure 1.29",
+                "description": "Model of an atom with a positive nucleus and a uniform spherical cloud of negative charge of radius R. Point P is at distance r.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:1.14.3:5",
+            "order": 5,
+            "title": "Example 1.12: Field Calculation (Continued)",
+            "content_text": "The derivation for the electric field $E(r)$ of the atomic model continues by determining the charge $q$ enclosed by a Gaussian surface of radius $r$. The field at any point on the spherical Gaussian surface has the same direction as the normal to the surface and the same magnitude at all points. \n\nFor the case (i) $r < R$, the charge $q$ enclosed is the sum of the positive nuclear charge and the negative charge within the sphere of radius $r$: \n$$q = Ze + \\frac{4\\pi r^3}{3} \\rho$$\nSubstituting the charge density $\\rho$ obtained earlier, we have:\n$$q = Ze - Ze \\frac{r^3}{R^3}$$\nApplying Gauss's law, the electric field is:\n$$E(r) = \\frac{Ze}{4\\pi \\epsilon_0} \\left( \\frac{1}{r^2} - \\frac{r}{R^3} \\right) ; r < R$$\nThe electric field is directed radially outward. \n\nFor the case (ii) $r > R$, the total charge enclosed by the Gaussian spherical surface is zero since the atom is neutral. Thus, from Gauss's law:\n$$E(r) \\times 4\\pi r^2 = 0 \\implies E(r) = 0 ; r > R$$\nAt the boundary $r = R$, both cases yield the same result: $E = 0$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:1:Summary",
+        "number": "Summary",
+        "title": "Summary of Electric Charges and Fields",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:1:Summary:1",
+            "order": 1,
+            "title": "Fundamental Nature of Electric Charge and Forces",
+            "content_text": "Electric and magnetic forces are fundamental interactions that determine the properties of atoms, molecules, and bulk matter. Experimental evidence from frictional electricity shows there are two types of charges in nature. By convention, the charge on a glass rod rubbed with silk is positive, while the charge on a plastic rod rubbed with fur is negative. Like charges repel each other, and unlike charges attract.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:Summary:2",
+            "order": 2,
+            "title": "Conductors, Insulators, and Basic Properties of Charge",
+            "content_text": "Materials are classified as conductors if they allow the movement of electric charge (e.g., metals via mobile electrons, electrolytes via mobile ions) and insulators if they do not. Electric charge has three basic properties:\n1. **Quantisation**: The total charge $q$ of a body is always an integral multiple of a basic quantum of charge $e$ ($q = ne$, where $n = 0, \\pm 1, \\pm 2, \\dots$). For macroscopic charges where $n$ is very large, quantisation can be ignored.\n2. **Additivity**: The total charge of a system is the algebraic sum of all individual charges, taking into account their proper signs.\n3. **Conservation**: The total charge of an isolated system remains unchanged with time. Charging involves the transfer of charge between bodies, not its creation or destruction.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:Summary:3",
+            "order": 3,
+            "title": "Coulomb's Law and Superposition Principle",
+            "content_text": "Coulomb's Law states that the mutual electrostatic force between two point charges $q_1$ and $q_2$ is proportional to the product $q_1 q_2$ and inversely proportional to the square of the distance $r_{21}$ separating them:\n$$\\mathbf{F}_{21} = \\frac{k (q_1 q_2)}{r_{21}^2} \\mathbf{\\hat{r}}_{21}$$\nwhere $k = \\frac{1}{4\\pi\\epsilon_0} \\approx 9 \\times 10^9 \\text{ N m}^2 \\text{ C}^{-2}$ and $\\epsilon_0 \\approx 8.854 \\times 10^{-12} \\text{ C}^2 \\text{ N}^{-1} \\text{ m}^{-2}$. The ratio of electric force to gravitational force between a proton and an electron is approximately $2.4 \\times 10^{39}$. The Superposition Principle states that the force on any charge is the vector sum of the forces exerted by each individual charge in a system.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:Summary:4",
+            "order": 4,
+            "title": "Electric Field and Field Lines",
+            "content_text": "The electric field $\\mathbf{E}$ at a point is the force on a small positive test charge $q$ divided by the magnitude of that charge. For a point charge, the field magnitude is $E = |q|/4\\pi\\epsilon_0 r^2$, directed radially outward for positive charges and inward for negative ones. Electric field lines are visual tools where the tangent at any point gives the field direction. They are continuous curves that do not cross, start at positive charges, end at negative charges, and do not form closed loops. Their relative closeness indicates the field's strength.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:Summary:5",
+            "order": 5,
+            "title": "Electric Dipoles and Torque",
+            "content_text": "An electric dipole is a pair of equal and opposite charges $q$ and $-q$ separated by distance $2a$. The dipole moment vector $\\mathbf{p}$ has magnitude $2qa$ and points from $-q$ to $+q$. The field of a dipole at large distances ($r \\gg a$) falls off as $1/r^3$:\n- **Equatorial plane**: $\\mathbf{E} = \\frac{-\\mathbf{p}}{4\\pi\\epsilon_0 (a^2 + r^2)^{3/2}} \\cong \\frac{-\\mathbf{p}}{4\\pi\\epsilon_0 r^3}$\n- **Axial line**: $\\mathbf{E} = \\frac{2\\mathbf{p}r}{4\\pi\\epsilon_0 (r^2 - a^2)^2} \\cong \\frac{2\\mathbf{p}}{4\\pi\\epsilon_0 r^3}$\nIn a uniform external field $\\mathbf{E}$, a dipole experiences a torque $\\boldsymbol{\\tau} = \\mathbf{p} \\times \\mathbf{E}$ but no net force.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:Summary:6",
+            "order": 6,
+            "title": "Electric Flux and Gauss's Law",
+            "content_text": "Electric flux $\\Delta \\phi$ through an area element $\\Delta \\mathbf{S}$ is $\\Delta \\phi = \\mathbf{E} \\cdot \\Delta \\mathbf{S}$, where $\\Delta \\mathbf{S} = \\Delta S \\mathbf{\\hat{n}}$. Gauss's Law states that the total flux through any closed surface $S$ is $1/\\epsilon_0$ times the total charge enclosed. It is particularly useful for symmetric charge distributions:\n- **Infinitely long straight wire**: $\\mathbf{E} = \\frac{\\lambda}{2\\pi\\epsilon_0 r} \\mathbf{\\hat{n}}$ (where $\\lambda$ is linear charge density and $\\mathbf{\\hat{n}}$ is the radial unit vector).\n- **Infinite thin plane sheet**: $\\mathbf{E} = \\frac{\\sigma}{2\\epsilon_0} \\mathbf{\\hat{n}}$ (where $\\sigma$ is surface charge density and $\\mathbf{\\hat{n}}$ is the unit vector normal to the plane).",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:Summary:7",
+            "order": 7,
+            "title": "Field due to a Thin Spherical Shell",
+            "content_text": "The electric field $\\mathbf{E}$ due to a thin spherical shell of uniform surface charge density $\\sigma$ and radius $R$ is characterized by two regions: (i) Outside the shell ($r \\ge R$), the field is $\\mathbf{E} = \\frac{q}{4 \\pi \\epsilon_0 r^2} \\hat{\\mathbf{r}}$, where $q = 4\\pi R^2 \\sigma$ is the total charge. This indicates that the field outside the shell is as though the total charge is concentrated at the centre. This same result applies to a solid sphere of uniform volume charge density. (ii) Inside the shell ($r < R$), the electric field is zero ($\\mathbf{E} = 0$) at all points.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:Summary:8",
+            "order": 8,
+            "title": "Physical Quantities in Electrostatics",
+            "content_text": "The following table summarizes the key physical quantities encountered in the study of electric charges and fields, including their symbols, dimensional formulas, SI units, and defining remarks.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 1.1",
+                "caption": "Physical Quantities in Electrostatics",
+                "headers": [
+                  "Physical quantity",
+                  "Symbol",
+                  "Dimensions",
+                  "Unit",
+                  "Remarks"
+                ],
+                "rows": [
+                  [
+                    "Vector area element",
+                    "$\\Delta \\mathbf{S}$",
+                    "$[L^2]$",
+                    "$m^2$",
+                    "$\\Delta \\mathbf{S} = \\Delta S \\hat{\\mathbf{n}}$"
+                  ],
+                  [
+                    "Electric field",
+                    "$\\mathbf{E}$",
+                    "$[MLT^{-3}A^{-1}]$",
+                    "$V m^{-1}$",
+                    ""
+                  ],
+                  [
+                    "Electric flux",
+                    "$\\phi$",
+                    "$[ML^3 T^{-3}A^{-1}]$",
+                    "$V m$",
+                    "$\\Delta \\phi = \\mathbf{E} \\cdot \\Delta \\mathbf{S}$"
+                  ],
+                  [
+                    "Dipole moment",
+                    "$\\mathbf{p}$",
+                    "$[LTA]$",
+                    "$C m$",
+                    "Vector directed from negative to positive charge"
+                  ],
+                  [
+                    "Linear charge density",
+                    "$\\lambda$",
+                    "$[L^{-1} TA]$",
+                    "$C m^{-1}$",
+                    "Charge/length"
+                  ],
+                  [
+                    "Surface charge density",
+                    "$\\sigma$",
+                    "$[L^{-2} TA]$",
+                    "$C m^{-2}$",
+                    "Charge/area"
+                  ],
+                  [
+                    "Volume charge density",
+                    "$\\rho$",
+                    "$[L^{-3} TA]$",
+                    "$C m^{-3}$",
+                    "Charge/volume"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:1:Points to Ponder",
+        "number": "Points to Ponder",
+        "title": "Points to Ponder",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:1:Points to Ponder:1",
+            "order": 1,
+            "title": "Nuclear Forces and Atomic Structure",
+            "content_text": "Protons, despite carrying positive charges, reside compactly inside the nucleus due to the strong nuclear force, which is a third kind of fundamental force. This force is effective only over very small distances (~$10^{-14}$ m), which is the size of the nucleus. Electrons do not reside inside the nucleus because the laws of quantum mechanics prevent them from sitting on top of protons, giving atoms their structure.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:Points to Ponder:2",
+            "order": 2,
+            "title": "Comparison of Electrostatic and Gravitational Forces",
+            "content_text": "Both Coulomb and gravitational forces follow the inverse-square law ($1/r^2$). However, gravitational force is always attractive, while Coulomb force can be both attractive and repulsive. Despite being much weaker, gravity can be a dominating force in nature because electrostatic forces often cancel out due to the presence of both positive and negative charges.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:Points to Ponder:3",
+            "order": 3,
+            "title": "The Proportionality Constant and SI Units",
+            "content_text": "The constant $k$ in Coulomb's law is determined by the choice of the unit of charge. In SI units, the unit of current (Ampere) is defined via its magnetic effect, and the unit of charge (Coulomb) is defined as $1 \\text{ C} = 1 \\text{ A s}$. Consequently, $k$ is not arbitrary and is approximately $9 \\times 10^9 \\text{ N m}^2 \\text{ C}^{-2}$. A charge of $1 \\text{ C}$ is quite large because magnetic forces are generally much weaker than electric forces.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:Points to Ponder:4",
+            "order": 4,
+            "title": "Properties of Charge: Scalar Nature and Invariance",
+            "content_text": "Electric charge is a scalar quantity and possesses an additive property. It is invariant under rotation and remains constant across different frames of reference in relative motion (unlike quantities like kinetic energy). The total charge of an isolated system is conserved over time, which is a property independent of its scalar nature.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:Points to Ponder:5",
+            "order": 5,
+            "title": "Quantisation and Superposition",
+            "content_text": "Quantisation of electric charge is a basic law of nature with no known analogue for mass. The superposition principle states that the force on one charge due to another is unaffected by the presence of additional charges. This principle allows for the calculation of total force in multi-body systems by vector addition.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:12:1:Points to Ponder:6",
+            "order": 6,
+            "title": "Electric Field Definitions and Neutral Configurations",
+            "content_text": "The electric field due to discrete charges is not defined at the charge locations themselves. For continuous distributions, it is defined everywhere, though it is discontinuous across a surface charge distribution. Even if a configuration has a total charge of zero, its electric field is not necessarily zero; however, at large distances, the field of such neutral configurations (like dipoles) falls off faster than the $1/r^2$ rate typical of a single point charge.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 1.30",
+                "description": "Tracks of three charged particles in a uniform electrostatic field. Particles 1 and 2 are deflected towards the positive plate, while particle 3 is deflected towards the negative plate. Particle 3 shows the greatest vertical displacement, suggesting a higher charge-to-mass ratio.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:12:1:1.15",
+        "number": "1.15",
+        "title": "Exercises Illustrations",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:12:1:1.15:1",
+            "order": 1,
+            "title": "Visual Representation of Exercise Scenarios",
+            "content_text": "The following figures provide visual context for the exercises in this chapter. Figure 1.30 shows the paths of three charged particles in a uniform electric field established between two oppositely charged plates. The top plate is positively charged, and the bottom plate is negatively charged. Particles 1 and 2 are deflected upwards toward the positive plate, while particle 3 is deflected downwards toward the negative plate. Figure 1.31 illustrates a point charge positioned above a square surface, a configuration used to calculate electric flux through symmetry by considering the square as one face of a cube.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 1.30",
+                "description": "A diagram showing three numbered paths (1, 2, 3) of particles moving horizontally into a region between two parallel charged plates. The top plate is marked with '+' signs and the bottom plate with '-' signs. Paths 1 and 2 curve upwards towards the positive plate, while path 3 curves downwards towards the negative plate. A coordinate system with x and y axes is shown.",
+                "image_url": null
+              },
+              {
+                "label": "Figure 1.31",
+                "description": "A perspective drawing of a square surface with side length 10 cm. A point charge is shown at a distance of 5 cm vertically above the geometric center of the square.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:physics:12:1:ex:1",
+          "number": 1,
+          "problem": "What is the force between two small charged spheres having charges of $2 \\times 10^{-7} \\text{ C}$ and $3 \\times 10^{-7} \\text{ C}$ placed $30 \\text{ cm}$ apart in air?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:1:ex:2",
+          "number": 2,
+          "problem": "The electrostatic force on a small sphere of charge $0.4 \\mu\\text{C}$ due to another small sphere of charge $-0.8 \\mu\\text{C}$ in air is $0.2 \\text{ N}$. (a) What is the distance between the two spheres? (b) What is the force on the second sphere due to the first?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:1:ex:3",
+          "number": 3,
+          "problem": "Check that the ratio $ke^2/G m_e m_p$ is dimensionless. Look up a Table of Physical Constants and determine the value of this ratio. What does the ratio signify?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:1:ex:4",
+          "number": 4,
+          "problem": "(a) Explain the meaning of the statement 'electric charge of a body is quantised'. (b) Why can one ignore quantisation of electric charge when dealing with macroscopic i.e., large scale charges?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:12:1:ex:5",
+          "number": 5,
+          "problem": "When a glass rod is rubbed with a silk cloth, charges appear on both. A similar phenomenon is observed with many other pairs of bodies. Explain how this observation is consistent with the law of conservation of charge.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:12:1:ex:6",
+          "number": 6,
+          "problem": "Four point charges $q_A = 2 \\mu\\text{C}$, $q_B = -5 \\mu\\text{C}$, $q_C = 2 \\mu\\text{C}$, and $q_D = -5 \\mu\\text{C}$ are located at the corners of a square $ABCD$ of side $10 \\text{ cm}$. What is the force on a charge of $1 \\mu\\text{C}$ placed at the centre of the square?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:1:ex:7",
+          "number": 7,
+          "problem": "(a) An electrostatic field line is a continuous curve. That is, a field line cannot have sudden breaks. Why not? (b) Explain why two field lines never cross each other at any point?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:12:1:ex:8",
+          "number": 8,
+          "problem": "Two point charges $q_A = 3 \\mu\\text{C}$ and $q_B = -3 \\mu\\text{C}$ are located $20 \\text{ cm}$ apart in vacuum. (a) What is the electric field at the midpoint $O$ of the line $AB$ joining the two charges? (b) If a negative test charge of magnitude $1.5 \\times 10^{-9} \\text{ C}$ is placed at this point, what is the force experienced by the test charge?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:1:ex:9",
+          "number": 9,
+          "problem": "A system has two charges $q_A = 2.5 \\times 10^{-7} \\text{ C}$ and $q_B = -2.5 \\times 10^{-7} \\text{ C}$ located at points $A: (0, 0, -15 \\text{ cm})$ and $B: (0, 0, +15 \\text{ cm})$, respectively. What are the total charge and electric dipole moment of the system?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:1:ex:10",
+          "number": 10,
+          "problem": "An electric dipole with dipole moment $4 \\times 10^{-9} \\text{ C m}$ is aligned at $30^\\circ$ with the direction of a uniform electric field of magnitude $5 \\times 10^4 \\text{ N C}^{-1}$. Calculate the magnitude of the torque acting on the dipole.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:1:ex:11",
+          "number": 11,
+          "problem": "A polythene piece rubbed with wool is found to have a negative charge of $3 \\times 10^{-7} \\text{ C}$. (a) Estimate the number of electrons transferred (from which to which?). (b) Is there a transfer of mass from wool to polythene?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:1:ex:12",
+          "number": 12,
+          "problem": "(a) Two insulated charged copper spheres $A$ and $B$ have their centres separated by a distance of $50 \\text{ cm}$. What is the mutual force of electrostatic repulsion if the charge on each is $6.5 \\times 10^{-7} \\text{ C}$? The radii of $A$ and $B$ are negligible compared to the distance of separation. (b) What is the force of repulsion if each sphere is charged double the above amount, and the distance between them is halved?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:1:ex:13",
+          "number": 13,
+          "problem": "Figure 1.30 shows tracks of three charged particles in a uniform electrostatic field. Give the signs of the three charges. Which particle has the highest charge to mass ratio?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:12:1:ex:14",
+          "number": 14,
+          "problem": "Consider a uniform electric field $\\mathbf{E} = 3 \\times 10^3 \\hat{\\mathbf{i}}$ N/C. (a) What is the flux of this field through a square of 10 cm on a side whose plane is parallel to the $yz$ plane? (b) What is the flux through the same square if the normal to its plane makes a $60^\\circ$ angle with the $x$-axis?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:1:ex:15",
+          "number": 15,
+          "problem": "What is the net flux of the uniform electric field of Exercise 1.14 through a cube of side 20 cm oriented so that its faces are parallel to the coordinate planes?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:1:ex:16",
+          "number": 16,
+          "problem": "Careful measurement of the electric field at the surface of a black box indicates that the net outward flux through the surface of the box is $8.0 \\times 10^3$ Nm$^2$/C. (a) What is the net charge inside the box? (b) If the net outward flux through the surface of the box were zero, could you conclude that there were no charges inside the box? Why or Why not?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:12:1:ex:17",
+          "number": 17,
+          "problem": "A point charge $+10 \\mu$C is a distance 5 cm directly above the centre of a square of side 10 cm, as shown in Fig. 1.31. What is the magnitude of the electric flux through the square? (Hint: Think of the square as one face of a cube with edge 10 cm.)",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:1:ex:18",
+          "number": 18,
+          "problem": "A point charge of $2.0 \\mu$C is at the centre of a cubic Gaussian surface 9.0 cm on edge. What is the net electric flux through the surface?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:1:ex:19",
+          "number": 19,
+          "problem": "A point charge causes an electric flux of $-1.0 \\times 10^3$ Nm$^2$/C to pass through a spherical Gaussian surface of 10.0 cm radius centred on the charge. (a) If the radius of the Gaussian surface were doubled, how much flux would pass through the surface? (b) What is the value of the point charge?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:1:ex:20",
+          "number": 20,
+          "problem": "A conducting sphere of radius 10 cm has an unknown charge. If the electric field 20 cm from the centre of the sphere is $1.5 \\times 10^3$ N/C and points radially inward, what is the net charge on the sphere?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:1:ex:21",
+          "number": 21,
+          "problem": "A uniformly charged conducting sphere of 2.4 m diameter has a surface charge density of $80.0 \\mu$C/m$^2$. (a) Find the charge on the sphere. (b) What is the total electric flux leaving the surface of the sphere?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:1:ex:22",
+          "number": 22,
+          "problem": "An infinite line charge produces a field of $9 \\times 10^4$ N/C at a distance of 2 cm. Calculate the linear charge density.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:12:1:ex:23",
+          "number": 23,
+          "problem": "Two large, thin metal plates are parallel and close to each other. On their inner faces, the plates have surface charge densities of opposite signs and of magnitude $17.0 \\times 10^{-22}$ C/m$^2$. What is $\\mathbf{E}$: (a) in the outer region of the first plate, (b) in the outer region of the second plate, and (c) between the plates?",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        }
+      ]
+    }
+  }
+}

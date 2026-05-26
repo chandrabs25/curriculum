@@ -1,0 +1,1112 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_biology_11_ch8.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:biology:11:8",
+  "curriculum": "ncert",
+  "subject": "biology",
+  "grade": 11,
+  "textbook_name": "Biology",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:biology:11:8",
+    "number": 8,
+    "title": "Cell: the Unit of Life",
+    "summary": "This chapter, \"Cell: The Unit of Life,\" introduces the fundamental building block of all living organisms: the cell. It begins by defining the cell and tracing its historical discovery, leading to the formulation of the cell theory, which states that all living organisms are composed of cells and that all cells arise from pre-existing cells.\n\nThe chapter then distinguishes between prokaryotic and eukaryotic cells, highlighting their structural differences, particularly the presence (eukaryotic) or absence (prokaryotic) of a membrane-bound nucleus and other organelles. Prokaryotic cells, exemplified by bacteria, are characterized by their simple structure, including a cell envelope, genetic material in the form of a nucleoid, and ribosomes. Eukaryotic cells, found in protists, fungi, plants, and animals, are more complex, containing a nucleus and a variety of membrane-bound organelles, each with specific functions.\n\nThe chapter delves into the structure and function of key eukaryotic cell components, including the cell membrane (fluid mosaic model and transport mechanisms), cell wall (in plants), endomembrane system (ER, Golgi apparatus, lysosomes, vacuoles), mitochondria (energy production), plastids (photosynthesis in plants), ribosomes (protein synthesis), cytoskeleton (structure and movement), cilia/flagella (motility), centrosomes/centrioles, and the nucleus (control center with DNA). Understanding cell structure and function is crucial for comprehending biological processes at all levels, from molecular interactions to organismal behavior, and has implications for medicine, biotechnology, and agriculture.",
+    "sections": [
+      {
+        "id": "ncert:biology:11:8:8.1",
+        "number": "8.1",
+        "title": "What is a Cell?",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:8:8.1:1",
+            "order": 1,
+            "title": "The Cell as the Basic Unit of Life",
+            "content_text": "When observing the world, one can distinguish between living and non-living things. The fundamental difference lies in the presence of the basic unit of life—the cell—in all living organisms. Organisms are categorized based on their cellular composition: unicellular organisms consist of a single cell, while multicellular organisms, such as humans, are composed of many cells.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.1:2",
+            "order": 2,
+            "title": "Definition and Capabilities of a Cell",
+            "content_text": "Unicellular organisms are capable of independent existence and performing all essential functions of life. This demonstrates that any structure less than a complete cell does not ensure independent living. Consequently, the cell is defined as the fundamental structural and functional unit of all living organisms.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.1:3",
+            "order": 3,
+            "title": "Historical Milestones in Cell Discovery",
+            "content_text": "The discovery of the cell and its components was driven by advancements in microscopy. Antonie Von Leeuwenhoek was the first to see and describe a live cell. Subsequently, Robert Brown discovered the nucleus. The invention of the microscope and its later improvement into the electron microscope allowed scientists to reveal the intricate structural details of the cell.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:8:8.2",
+        "number": "8.2",
+        "title": "Cell Theory",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:8:8.2:1",
+            "order": 1,
+            "title": "Schleiden's Contribution to Cell Theory",
+            "content_text": "In 1838, Matthias Schleiden, a German botanist, examined a large number of plants and observed that all plants are composed of different kinds of cells which form the tissues of the plant. At about the same time, Theodore Theodore Schwann (1839), a German Zoologist, studied different types of animal cells and reported that cells had a thin outer layer which is today known as the ‘plasma membrane’. He also concluded, based on his studies on plant tissues, that the presence of cell wall is a unique character of the plant cells. On the basis of this, Schwann proposed the hypothesis that the bodies of animals and plants are composed of cells and products of cells. Schleiden and Schwann together formulated the cell theory. This theory however, did not explain as to how new cells were formed.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.2:2",
+            "order": 2,
+            "title": "Rudolf Virchow and the Modern Cell Theory",
+            "content_text": "Rudolf Virchow (1855) first explained that cells divided and new cells are formed from pre-existing cells (*Omnis cellula-e cellula*). He modified the hypothesis of Schleiden and Schwann to give the cell theory a final shape. Cell theory as understood today is: (i) all living organisms are composed of cells and products of cells. (ii) all cells arise from pre-existing cells.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:8:8.3",
+        "number": "8.3",
+        "title": "An Overview of Cell",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:8:8.3:1",
+            "order": 1,
+            "title": "Basic Structure and Nucleus",
+            "content_text": "Cells can be observed in an onion peel (typical plant cell) or human cheek cells (animal cell) under a microscope. The onion cell has a distinct cell wall as its outer boundary and just within it is the cell membrane. The human cheek cells have an outer membrane as the delimiting structure. Inside each cell is a dense membrane bound structure called nucleus, which contains chromosomes. These chromosomes contain the genetic material, DNA.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.3:2",
+            "order": 2,
+            "title": "Eukaryotic vs Prokaryotic Classification",
+            "content_text": "Cells are classified based on the presence of a membrane-bound nucleus. Cells that have membrane bound nuclei are called eukaryotic, whereas cells that lack a membrane bound nucleus are prokaryotic. In both types, a semi-fluid matrix called cytoplasm occupies the volume of the cell. The cytoplasm is the main arena of cellular activities in both plant and animal cells, where various chemical reactions occur to keep the cell in the 'living state'.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.3:3",
+            "order": 3,
+            "title": "Organelles in Eukaryotic Cells",
+            "content_text": "Besides the nucleus, eukaryotic cells contain other membrane bound distinct structures called organelles, such as the endoplasmic reticulum (ER), the golgi complex, lysosomes, mitochondria, microbodies, and vacuoles. Prokaryotic cells lack such membrane bound organelles.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.3:4",
+            "order": 4,
+            "title": "Ribosomes and Centrosomes",
+            "content_text": "Ribosomes are non-membrane bound organelles found in all cells (both eukaryotic and prokaryotic). Within the cell, ribosomes are found not only in the cytoplasm but also within two organelles – chloroplasts (in plants) and mitochondria – and on rough ER. Animal cells also contain another non-membrane bound organelle called centrosome which helps in cell division.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.3:5",
+            "order": 5,
+            "title": "Variation in Cell Size",
+            "content_text": "Cells differ greatly in size and activities. Mycoplasmas, the smallest cells, are only $0.3 \\mu m$ in length, while bacteria could be $3$ to $5 \\mu m$. The largest isolated single cell is the egg of an ostrich. Among multicellular organisms, human red blood cells are about $7.0 \\mu m$ in diameter. Nerve cells are among the longest cells.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.3:6",
+            "order": 6,
+            "title": "Variation in Cell Shape",
+            "content_text": "Cells vary greatly in their shape, which often corresponds to the function they perform. They may be disc-like, polygonal, columnar, cuboid, thread-like, or even irregular. Common examples include round and biconcave red blood cells, amoeboid white blood cells, long and narrow columnar epithelial cells, branched and long nerve cells, elongated tracheids, and round/oval mesophyll cells.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 8.1",
+                "description": "Diagram showing different shapes of the cells: Red blood cells (round and biconcave), White blood cells (amoeboid), Columnar epithelial cells (long and narrow), Nerve cell (Branched and long), A tracheid (elongated), and Mesophyll cells (round and oval).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:8:8.4",
+        "number": "8.4",
+        "title": "Prokaryotic Cells",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:8:8.4:1",
+            "order": 1,
+            "title": "Prokaryotic Examples and Multiplication",
+            "content_text": "Prokaryotic cells are represented by bacteria, blue-green algae, mycoplasma, and PPLO (Pleuro Pneumonia Like Organisms). They are generally smaller and multiply more rapidly than eukaryotic cells. They exhibit a wide variety of shapes and functions, though their fundamental organization is similar.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 8.2",
+                "description": "Diagram showing comparison of eukaryotic cell with other organisms: A typical eukaryotic cell ($10-20 \\mu m$), Typical bacteria ($1-2 \\mu m$), PPLO (about $0.1 \\mu m$), and Viruses ($0.02-0.2 \\mu m$).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.4:2",
+            "order": 2,
+            "title": "Bacterial Shapes",
+            "content_text": "The four basic shapes of bacteria are bacillus (rod-like), coccus (spherical), vibrio (comma-shaped), and spirillum (spiral).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.4:3",
+            "order": 3,
+            "title": "Genetic Material and Plasmids",
+            "content_text": "Prokaryotes have a cell wall surrounding the cell membrane (except in mycoplasma). There is no well-defined nucleus; the genetic material is basically naked and not enveloped by a nuclear membrane. In addition to the genomic DNA (single chromosome/circular DNA), many bacteria have small circular DNA outside the genomic DNA called plasmids. The plasmid DNA confers certain unique phenotypic characters, such as resistance to antibiotics, and is used to monitor bacterial transformation with foreign DNA.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.4:4",
+            "order": 4,
+            "title": "Internal Structure and Mesosomes",
+            "content_text": "Prokaryotic cells lack the membrane-bound organelles found in eukaryotes, except for ribosomes. They have a unique specialized differentiated form of cell membrane called the mesosome, which consists of infoldings of the cell membrane. Prokaryotes also contain unique structures called inclusions.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:8:8.4.1",
+        "number": "8.4.1",
+        "title": "Cell Envelope and its Modifications",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:8:8.4.1:1",
+            "order": 1,
+            "title": "The Three-Layered Cell Envelope",
+            "content_text": "Most prokaryotic cells, particularly bacterial cells, have a chemically complex cell envelope. This envelope consists of a tightly bound three-layered structure: the outermost glycocalyx, followed by the cell wall, and then the plasma membrane. Although each layer performs a distinct function, they act together as a single protective unit.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.4.1:2",
+            "order": 2,
+            "title": "Gram Staining and Classification",
+            "content_text": "Bacteria can be classified into two groups based on differences in their cell envelopes and their response to the Gram stain: Gram positive (those that take up the stain) and Gram negative (those that do not).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.4.1:3",
+            "order": 3,
+            "title": "Glycocalyx: Slime Layer vs Capsule",
+            "content_text": "The glycocalyx differs in composition and thickness among different bacteria. It could be a loose sheath called the slime layer in some, while in others it may be thick and tough, called the capsule.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.4.1:4",
+            "order": 4,
+            "title": "Cell Wall and Plasma Membrane Functions",
+            "content_text": "The cell wall determines the shape of the cell and provides strong structural support to prevent the bacterium from bursting or collapsing. The plasma membrane is selectively permeable and interacts with the outside world; it is structurally similar to the plasma membrane of eukaryotes.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.4.1:5",
+            "order": 5,
+            "title": "Mesosome Structure and Initial Functions",
+            "content_text": "A special membranous structure is the mesosome, formed by extensions of the plasma membrane into the cell. These extensions are in the form of vesicles, tubules, and lamellae. They help in cell wall formation, DNA replication and distribution to daughter cells. They also help in respiration, secretion processes, to increase the surface area of the plasma membrane and enzymatic content.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.4.1:6",
+            "order": 6,
+            "title": "Chromatophores",
+            "content_text": "In some prokaryotes like cyanobacteria, there are other membranous extensions into the cytoplasm called chromatophores which contain pigments.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.4.1:7",
+            "order": 7,
+            "title": "Bacterial Flagella",
+            "content_text": "Bacterial cells may be motile or non-motile. If motile, they have thin filamentous extensions from their cell wall called flagella. Bacteria show a range in the number and arrangement of flagella. Bacterial flagellum is composed of three parts – filament, hook and basal body. The filament is the longest portion and extends from the cell surface to the outside.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.4.1:8",
+            "order": 8,
+            "title": "Pili and Fimbriae",
+            "content_text": "Besides flagella, Pili and Fimbriae are also surface structures of the bacteria but do not play a role in motility. The pili are elongated tubular structures made of a special protein. The fimbriae are small bristle like fibres sprouting out of the cell. In some bacteria, they are known to help attach the bacteria to rocks in streams and also to the host tissues.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:8:8.4.2",
+        "number": "8.4.2",
+        "title": "Ribosomes and Inclusion Bodies",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:8:8.4.2:1",
+            "order": 1,
+            "title": "Prokaryotic Ribosomes",
+            "content_text": "In prokaryotes, ribosomes are associated with the plasma membrane of the cell. They are about $15\\text{ nm}$ by $20\\text{ nm}$ in size and are made of two subunits - $50S$ and $30S$ units which when present together form $70S$ prokaryotic ribosomes. Ribosomes are the site of protein synthesis. Several ribosomes may attach to a single mRNA and form a chain called polyribosomes or polysome. The ribosomes of a polysome translate the mRNA into proteins.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.4.2:2",
+            "order": 2,
+            "title": "Inclusion Bodies",
+            "content_text": "Reserve material in prokaryotic cells are stored in the cytoplasm in the form of inclusion bodies. These are not bound by any membrane system and lie free in the cytoplasm, e.g., phosphate granules, cyanophycean granules and glycogen granules. Gas vacuoles are found in blue green and purple and green photosynthetic bacteria.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:8:8.5",
+        "number": "8.5",
+        "title": "Eukaryotic Cells",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:8:8.5:1",
+            "order": 1,
+            "title": "General Characteristics of Eukaryotic Cells",
+            "content_text": "The eukaryotes include all the protists, plants, animals and fungi. In eukaryotic cells there is an extensive compartmentalisation of cytoplasm through the presence of membrane bound organelles. Eukaryotic cells possess an organised nucleus with a nuclear envelope. In addition, eukaryotic cells have a variety of complex locomotory and cytoskeletal structures. Their genetic material is organised into chromosomes.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.5:2",
+            "order": 2,
+            "title": "Differences between Plant and Animal Cells",
+            "content_text": "All eukaryotic cells are not identical. Plant and animal cells are different as the former possess cell walls, plastids and a large central vacuole which are absent in animal cells. On the other hand, animal cells have centrioles which are absent in almost all plant cells (Figure 8.3).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 8.3",
+                "description": "Diagram showing: (a) Plant cell (b) Animal cell. The plant cell (a) features a cell wall, plasma membrane, middle lamella, plasmodesmata, chloroplast, large central vacuole, nucleus with nucleolus, Golgi apparatus, rough and smooth endoplasmic reticulum, mitochondria, ribosomes, peroxisome, and microtubule. The animal cell (b) features a plasma membrane, microvilli, centriole, peroxisome, lysosome, ribosomes, mitochondrion, rough and smooth endoplasmic reticulum, cytoplasm, and a nucleus with nucleolus and nuclear envelope.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.5:3",
+            "order": 3,
+            "title": "Introduction to Organelles",
+            "content_text": "Let us now look at individual cell organelles to understand their structure and functions.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:8:8.5.1",
+        "number": "8.5.1",
+        "title": "Cell Membrane",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:8:8.5.1:1",
+            "order": 1,
+            "title": "Discovery and Chemical Composition",
+            "content_text": "The detailed structure of the membrane was studied only after the advent of the electron microscope in the 1950s. Meanwhile, chemical studies on the cell membrane, especially in human red blood cells (RBCs), enabled the scientists to deduce the possible structure of plasma membrane.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.5.1:2",
+            "order": 2,
+            "title": "Lipid Bilayer Structure",
+            "content_text": "These studies showed that the cell membrane is mainly composed of lipids and proteins. The major lipids are phospholipids that are arranged in a bilayer. Also, the lipids are arranged within the membrane with the polar head towards the outer sides and the hydrophobic tails towards the inner part. This ensures that the nonpolar tail of saturated hydrocarbons is protected from the aqueous environment (Figure 8.4). In addition to phospholipids, membrane also contains cholesterol.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 8.4",
+                "description": "Fluid mosaic model of plasma membrane. The diagram illustrates a phospholipid bilayer with polar heads facing outwards and hydrophobic tails facing inwards. Integral proteins are shown embedded within the bilayer, while peripheral proteins are on the surface. Sugar chains (carbohydrates) are attached to the exterior surface, and cholesterol molecules are interspersed within the lipid tails.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.5.1:3",
+            "order": 3,
+            "title": "Biochemical Investigation and Protein-Lipid Ratio",
+            "content_text": "Later, biochemical investigation clearly revealed that the cell membranes also possess protein and carbohydrate. The ratio of protein and lipid varies considerably in different cell types. In human beings, the membrane of the erythrocyte has approximately $52\\%$ protein and $40\\%$ lipids.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.5.1:4",
+            "order": 4,
+            "title": "Membrane Proteins",
+            "content_text": "Depending on the ease of extraction, membrane proteins can be classified as integral and peripheral. Peripheral proteins lie on the surface of membrane while the integral proteins are partially or totally buried in the membrane.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.5.1:5",
+            "order": 5,
+            "title": "Fluid Mosaic Model",
+            "content_text": "In 1972, Singer and Nicolson proposed the fluid mosaic model, which is the currently accepted structural framework for the cell membrane. This model describes the lipid bilayer as a quasi-fluid environment that allows proteins to move laterally. This capacity for lateral movement is known as the membrane's fluidity.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.5.1:6",
+            "order": 6,
+            "title": "Membrane Fluidity",
+            "content_text": "The fluidity of the membrane is essential for various cellular activities, including growth, the establishment of junctions between cells, secretory processes, endocytosis, and the mechanics of cell division.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.5.1:7",
+            "order": 7,
+            "title": "Passive Transport and Osmosis",
+            "content_text": "A primary role of the plasma membrane is regulating the movement of substances through selective permeability. Passive transport allows molecules to cross without energy expenditure, typically through simple diffusion from high to low concentration. Osmosis refers specifically to the diffusion of water. While neutral solutes diffuse easily, polar molecules require specific carrier proteins to traverse the hydrophobic lipid core.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.5.1:8",
+            "order": 8,
+            "title": "Active Transport",
+            "content_text": "Active transport is an energy-intensive process that moves ions or molecules against their concentration gradient, from areas of lower concentration to higher concentration. This process requires ATP, with the $Na^+/K^+$ pump being a classic example.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:8:8.5.2",
+        "number": "8.5.2",
+        "title": "Cell Wall",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:8:8.5.2:1",
+            "order": 1,
+            "title": "Cell Wall Overview",
+            "content_text": "The cell wall is a rigid, non-living outer layer found in plants and fungi that encases the plasma membrane. It maintains cell shape, offers protection against physical damage and pathogens, facilitates communication between cells, and filters large molecules.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.5.2:2",
+            "order": 2,
+            "title": "Cell Wall Composition",
+            "content_text": "Cell wall composition varies among organisms: algae use cellulose, galactans, mannans, and minerals such as calcium carbonate ($CaCO_3$), while other plants utilize cellulose, hemicellulose, pectins, and proteins.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.5.2:3",
+            "order": 3,
+            "title": "Primary and Secondary Walls",
+            "content_text": "In young plants, the primary wall allows for expansion and growth. As the cell matures, this capacity diminishes, and a secondary wall develops on the inner surface of the cell, facing the plasma membrane.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.5.2:4",
+            "order": 4,
+            "title": "Middle Lamella and Plasmodesmata",
+            "content_text": "The middle lamella is a layer primarily composed of calcium pectate that acts as an adhesive, binding adjacent cells together. Both the cell wall and the middle lamella are often penetrated by plasmodesmata, which are channels that link the cytoplasm of neighboring cells.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:8:8.5.3",
+        "number": "8.5.3",
+        "title": "Endomembrane System",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:8:8.5.3:1",
+            "order": 1,
+            "title": "Endomembrane System Overview",
+            "content_text": "Although various membrane-bound organelles have unique structures and roles, several are grouped into the endomembrane system due to their functional coordination. This system comprises the endoplasmic reticulum, Golgi complex, lysosomes, and vacuoles. Organelles like mitochondria, chloroplasts, and peroxisomes operate independently and are thus excluded from this system.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.5.3:2",
+            "order": 2,
+            "title": "8.5.3.1 The Endoplasmic Reticulum (ER): Structure",
+            "content_text": "The endoplasmic reticulum (ER) is an extensive network of small tubular structures within the cytoplasm. It partitions the cell's interior into two distinct regions: the luminal compartment (the space within the ER) and the extra-luminal compartment (the surrounding cytoplasm).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 8.5",
+                "description": "A diagrammatic representation of the Endoplasmic Reticulum showing the nucleus, nuclear pores, and the network of Rough ER (with ribosomes) and Smooth ER (without ribosomes).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.5.3:3",
+            "order": 3,
+            "title": "8.5.3.1 The Endoplasmic Reticulum (ER): Types",
+            "content_text": "The ER is categorized into two types: Rough ER (RER), which is studded with ribosomes on its outer surface, and Smooth ER (SER), which lacks ribosomes. RER is often continuous with the outer membrane of the nucleus.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.5.3:4",
+            "order": 4,
+            "title": "8.5.3.1 The Endoplasmic Reticulum (ER): Functions",
+            "content_text": "RER is primarily involved in the synthesis and secretion of proteins. SER serves as the main site for lipid production and, in animal cells, the synthesis of lipid-like steroid hormones.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.5.3:5",
+            "order": 5,
+            "title": "8.5.3.2 Golgi apparatus: Structure",
+            "content_text": "Identified by Camillo Golgi in 1898, the Golgi apparatus is composed of multiple flattened, disc-shaped sacs called cisternae, which range from $0.5\\mu m$ to $1.0\\mu m$ in diameter and are arranged in parallel stacks.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 8.6",
+                "description": "A diagram of the Golgi apparatus showing the stacked arrangement of flattened cisternae.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.5.3:6",
+            "order": 6,
+            "title": "8.5.3.2 Golgi apparatus: Polarity",
+            "content_text": "Cisternae are organized concentrically near the nucleus, featuring a convex 'cis' (forming) face and a concave 'trans' (maturing) face. Although these two faces are structurally distinct, they remain functionally interconnected.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.5.3:7",
+            "order": 7,
+            "title": "8.5.3.2 Golgi apparatus: Functions",
+            "content_text": "The Golgi's main role is packaging and modifying substances for transport. Vesicles from the ER enter at the cis face, undergo processing within the cisternae, and exit from the trans face. It is also the primary site for the synthesis of glycoproteins and glycolipids.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.5.3:8",
+            "order": 8,
+            "title": "8.5.3.3 Lysosomes",
+            "content_text": "Lysosomes are membrane-enclosed vesicles produced by the Golgi apparatus. They contain a variety of hydrolytic enzymes, such as lipases, proteases, and carbohydrases, which function best in acidic conditions to break down proteins, lipids, carbohydrates, and nucleic acids.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.5.3:9",
+            "order": 9,
+            "title": "8.5.3.4 Vacuoles: Plant Vacuoles",
+            "content_text": "Vacuoles are cytoplasmic spaces enclosed by a single membrane known as the tonoplast, storing water, sap, and waste. In plant cells, they can occupy up to 90% of the volume. The tonoplast actively transports ions into the vacuole against concentration gradients, resulting in higher internal concentrations than in the cytoplasm.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.5.3:10",
+            "order": 10,
+            "title": "8.5.3.4 Vacuoles: Specialized Vacuoles",
+            "content_text": "Specialized vacuoles include the contractile vacuole in Amoeba, which is vital for osmoregulation and excretion, and food vacuoles in various protists, formed by the engulfment of food particles.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:8:8.5.4",
+        "number": "8.5.4",
+        "title": "Mitochondria",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:8:8.5.4:1",
+            "order": 1,
+            "title": "Mitochondrial Morphology",
+            "content_text": "Mitochondria are organelles that are difficult to observe without specific staining. Their abundance in a cell depends on its metabolic activity. They vary in size and shape but are typically cylindrical or sausage-shaped, with a diameter of $0.2-1.0\\mu m$ (averaging $0.5\\mu m$) and a length of $1.0-4.1\\mu m$. Each mitochondrion is a double Mitochondria are double membrane-bound structures where the outer and inner membranes partition the lumen into two distinct aqueous compartments: the outer and inner compartments. The outer membrane serves as a continuous boundary, while the inner membrane forms numerous inward folds called cristae that project into the matrix. These cristae significantly increase the surface area available for metabolic activities. The inner compartment is filled with a dense, homogeneous substance known as the matrix.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 8.7",
+                "description": "A longitudinal section of a mitochondrion showing the outer membrane, the inner membrane with its inward folds (cristae), the matrix, the inter-membrane space, and the overall cylindrical structure.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.5.4:2",
+            "order": 2,
+            "title": "Mitochondrial Function and Autonomy",
+            "content_text": "Mitochondria are the primary sites for aerobic respiration and are responsible for generating cellular energy in the form of ATP, which is why they are often called the 'power houses' of the cell. The matrix contains its own genetic and protein-synthetic machinery, including a single circular DNA molecule, several RNA molecules, and 70S ribosomes. Mitochondria are capable of independent reproduction through a process called fission.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:8:8.5.5",
+        "number": "8.5.5",
+        "title": "Plastids",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:8:8.5.5:1",
+            "order": 1,
+            "title": "Classification of Plastids",
+            "content_text": "Plastids are large organelles found in all plant cells and euglenoids, easily visible under a light microscope. They are classified into three types based on the specific pigments they contain: chloroplasts, chromoplasts, and leucoplasts. Chloroplasts contain chlorophyll and carotenoids, which trap light energy for photosynthesis. Chromoplasts contain fat-soluble carotenoid pigments like carotene and xanthophylls, giving plant parts yellow, orange, or red colors.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.5.5:2",
+            "order": 2,
+            "title": "Types of Leucoplasts",
+            "content_text": "Leucoplasts are colorless plastids that vary in shape and size and function as storage units for nutrients. They are further divided into amyloplasts, which store carbohydrates such as starch (e.g., in potatoes); elaioplasts, which store oils and fats; and aleuroplasts, which are responsible for storing proteins.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.5.5:3",
+            "order": 3,
+            "title": "Chloroplast Morphology and Distribution",
+            "content_text": "Most chloroplasts are located in the mesophyll cells of leaves. They can be lens-shaped, oval, spherical, discoid, or ribbon-like. Their dimensions typically range from $5-10\\mu m$ in length and $2-4\\mu m$ in width. Their number per cell varies from one in the green alga Chlamydomonas to 20-40 in leaf mesophyll cells.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.5.5:4",
+            "order": 4,
+            "title": "Internal Structure of Chloroplasts",
+            "content_text": "Like mitochondria, chloroplasts are double-membrane bound, with the inner membrane being relatively less permeable. The space enclosed by the inner membrane is called the stroma. Within the stroma are organized stacks of flattened membranous sacs called thylakoids; each stack is known as a granum. Thylakoids of different grana are connected by flat membranous tubules called stroma lamellae. The stroma contains enzymes for carbohydrate and protein synthesis, small double-stranded circular DNA, and 70S ribosomes, which are smaller than the 80S cytoplasmic ribosomes. Chlorophyll pigments are located in the thylakoids.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 8.8",
+                "description": "A sectional view of a chloroplast illustrating the outer and inner membranes, the stroma, thylakoids organized into grana, and the stroma lamellae connecting the grana.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:8:8.5.6",
+        "number": "8.5.6",
+        "title": "Ribosomes",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:8:8.5.6:1",
+            "order": 1,
+            "title": "Ribosome Discovery and Composition",
+            "content_text": "Ribosomes are granular structures first identified by George Palade in 1953 using electron microscopy. They are composed of ribonucleic acid (RNA) and proteins and are unique because they are not enclosed by any membrane.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.5.6:2",
+            "order": 2,
+            "title": "Subunit Structure and Svedberg Unit",
+            "content_text": "Ribosomes consist of two subunits: a large subunit and a small subunit. Eukaryotic ribosomes are 80S (composed of 60S and 40S subunits), while prokaryotic ribosomes are 70S (composed of 50S and 30S subunits). The 'S' stands for Svedberg's Unit, which represents the sedimentation coefficient and serves as an indirect measure of the particle's density and size.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 8.9",
+                "description": "A diagram of a ribosome showing the association between its large and small subunits.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:8:8.5.7",
+        "number": "8.5.7",
+        "title": "Cytoskeleton",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:8:8.5.7:1",
+            "order": 1,
+            "title": "Composition and Function of the Cytoskeleton",
+            "content_text": "The cytoskeleton is an extensive network of proteinaceous filaments found in the cytoplasm, consisting of microtubules, microfilaments, and intermediate filaments. It provides the cell with mechanical support, enables motility, and helps maintain its structural shape.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:8:8.5.8",
+        "number": "8.5.8",
+        "title": "Cilia and Flagella",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:8:8.5.8:1",
+            "order": 1,
+            "title": "General Characteristics of Cilia and Flagella",
+            "content_text": "Cilia and flagella are hair-like outgrowths of the cell membrane. Cilia are small and function like oars, moving either the cell itself or the surrounding fluid. Flagella are longer and primarily responsible for cell movement. While prokaryotic bacteria also have flagella, they are structurally distinct from eukaryotic flagella.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.5.8:2",
+            "order": 2,
+            "title": "Ultrastructure and the 9+2 Arrangement",
+            "content_text": "The core of a cilium or flagellum is called the axoneme, which is covered by the plasma membrane. The axoneme contains microtubules arranged in a 9+2 pattern: nine pairs of peripheral doublets and one central pair of microtubules. The central tubules are connected by bridges and enclosed by a central sheath. This sheath is connected to each peripheral doublet by a radial spoke, totaling nine spokes. Peripheral doublets are also linked to each other. Both cilia and flagella originate from centriole-like structures called basal bodies.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 8.10",
+                "description": "The internal structure of cilia or flagella showing (a) an electron micrograph and (b) a diagrammatic representation of the 9+2 microtubule arrangement, including the plasma membrane, peripheral doublets, central sheath, radial spokes, and interdoublet bridges.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:8:8.5.9",
+        "number": "8.5.9",
+        "title": "Centrosome and Centrioles",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:8:8.5.9:1",
+            "order": 1,
+            "title": "Basic Structure and Orientation",
+            "content_text": "The centrosome is an organelle that typically contains two cylindrical structures known as centrioles, which are embedded in amorphous pericentriolar material. The two centrioles are oriented perpendicular to each other and have a structural organization that resembles a cartwheel. They are The centrioles are made up of nine evenly spaced peripheral fibrils of tubulin protein. Each of the peripheral fibril is a triplet. The adjacent triplets are also linked. The central part of the proximal region of the centriole is also proteinaceous and called the hub, which is connected with tubules of the peripheral triplets by radial spokes made of protein. The centrioles form the basal body of cilia or flagella, and spindle fibres that give rise to spindle apparatus during cell division in animal cells.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:8:8.5.10",
+        "number": "8.5.10",
+        "title": "Nucleus",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:8:8.5.10:1",
+            "order": 1,
+            "title": "Discovery and Interphase Nucleus",
+            "content_text": "The nucleus as a cell organelle was first described by Robert Brown in $1831$. Later, the material of the nucleus stained by basic dyes was named chromatin by Flemming. The interphase nucleus (the nucleus of a cell when it is not dividing) contains highly extended and elaborate nucleoprotein fibres called chromatin, a nuclear matrix, and one or more spherical bodies called nucleoli (singular: nucleolus).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 8.11",
+                "description": "Structure of the nucleus showing the nucleoplasm, nucleolus, nuclear pores, and the double-layered nuclear membrane.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.5.10:2",
+            "order": 2,
+            "title": "Nuclear Envelope and Perinuclear Space",
+            "content_text": "Electron microscopy reveals that the nuclear envelope consists of two parallel membranes with a space between them ($10$ to $50$ nm) called the perinuclear space. This space forms a barrier between the materials inside the nucleus and those in the cytoplasm. The outer membrane usually remains continuous with the endoplasmic reticulum and often bears ribosomes on its surface.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.5.10:3",
+            "order": 3,
+            "title": "Nuclear Pores and Nucleocytoplasmic Traffic",
+            "content_text": "The nuclear envelope is interrupted at several places by minute pores formed by the fusion of its two membranes. These nuclear pores serve as passages for the bidirectional movement of RNA and protein molecules between the nucleus and the cytoplasm. While most cells have a single nucleus, variations exist; some mature cells, such as mammalian erythrocytes (RBCs) and sieve tube cells of vascular plants, lack a nucleus entirely.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.5.10:4",
+            "order": 4,
+            "title": "Nucleoplasm and Nucleolus",
+            "content_text": "The nuclear matrix or nucleoplasm contains the nucleolus and chromatin. Nucleoli are spherical structures that are not membrane-bound, making their content continuous with the rest of the nucleoplasm. The nucleolus is the primary site for active ribosomal RNA (rRNA) synthesis. Cells that are actively involved in protein synthesis typically possess larger and more numerous nucleoli.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.5.10:5",
+            "order": 5,
+            "title": "Chromatin and DNA Packaging",
+            "content_text": "During interphase, the nucleus contains a loose network of nucleoprotein fibres called chromatin. This chromatin consists of DNA, basic proteins called histones, some non-histone proteins, and RNA. In a single human cell, approximately $2$ metres of DNA is distributed among its $46$ ($23$ pairs) chromosomes. During cell division, this chromatin condenses into structured chromosomes.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.5.10:6",
+            "order": 6,
+            "title": "Chromosome Morphology and Kinetochores",
+            "content_text": "Every chromosome, visible only during cell division, features a primary constriction called the centromere. On the sides of the centromere, disc-shaped structures called kinetochores are present. The centromere serves to hold the two sister chromatids of a chromosome together.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 8.12",
+                "description": "A chromosome showing two chromatids joined at the centromere with kinetochores on either side.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.5.10:7",
+            "order": 7,
+            "title": "Classification of Chromosomes",
+            "content_text": "Chromosomes are classified into four types based on the position of the centromere: 1. Metacentric: The centromere is in the middle, forming two equal arms. 2. Sub-metacentric: The centromere is slightly away from the middle, resulting in one shorter and one longer arm. 3. Acrocentric: The centromere is situated close to one end, forming one extremely short and one very long arm. 4. Telocentric: The chromosome has a terminal centromere.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 8.13",
+                "description": "Types of chromosomes based on centromere position: Metacentric, Sub-metacentric, Acrocentric, and Telocentric. The diagram also identifies the satellite, secondary constriction, short arm, and long arm.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:8.5.10:8",
+            "order": 8,
+            "title": "Secondary Constrictions and Satellites",
+            "content_text": "Occasionally, certain chromosomes exhibit non-staining secondary constrictions at specific locations. This gives the appearance of a small fragment beyond the constriction, known as a satellite.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:8:8.5.11",
+        "number": "8.5.11",
+        "title": "Microbodies",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:8:8.5.11:1",
+            "order": 1,
+            "title": "General Characteristics",
+            "content_text": "Microbodies are many membrane-bound minute vesicles that contain various enzymes. They are present in both plant and animal cells.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:8:Summary",
+        "number": "Summary",
+        "title": "Summary of Cell: The Unit of Life",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:8:Summary:1",
+            "order": 1,
+            "title": "Overview of Cell Structure",
+            "content_text": "All organisms are composed of cells or cell aggregates, which vary in shape, size, and function. Cells are categorized as eukaryotic or prokaryotic based on the presence or absence of a membrane-bound nucleus and organelles. A typical eukaryotic cell consists of a cell membrane, nucleus, and cytoplasm. Plant cells are distinguished by a cell wall outside the cell membrane.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:Summary:2",
+            "order": 2,
+            "title": "Organelles and the Endomembrane System",
+            "content_text": "The endomembrane system includes the endoplasmic reticulum (ER), golgi complex, lysosomes, and vacuoles. ER exists as rough (with ribosomes for protein transport/synthesis) or smooth. The golgi body processes and packs cell secretions. Lysosomes contain digestive enzymes. Mitochondria are double-membrane bound and responsible for oxidative phosphorylation and ATP generation. Plastids, found in plants, include chloroplasts for photosynthesis.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:8:Summary:3",
+            "order": 3,
+            "title": "Cytoskeleton and Genetic Material",
+            "content_text": "The cytoskeleton provides structural support and motility. Centrosomes and centrioles form the basal bodies of cilia/flagella and the spindle apparatus. The nucleus, enclosed by a double-membrane nuclear envelope with pores, contains the nucleolus and chromatin. It controls organelle activities and plays a major role in heredity. Thus, the cell is the fundamental structural and functional unit of life.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:biology:11:8:ex:1",
+          "number": 1,
+          "problem": "Which of the following is not correct?\n(a) Robert Brown discovered the cell.\n(b) Schleiden and Schwann formulated the cell theory.\n(c) Virchow explained that cells are formed from pre-existing cells.\n(d) A unicellular organism carries out its life activities within a single cell.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:8:ex:2",
+          "number": 2,
+          "problem": "New cells generate from\n(a) bacterial fermentation\n(b) regeneration of old cells\n(c) pre-existing cells\n(d) abiotic materials",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:8:ex:3",
+          "number": 3,
+          "problem": "Match the following\nColumn I\tColumn II\n(a) Cristae\t(i) Flat membranous sacs in stroma\n(b) Cisternae\t(ii) Infoldings in mitochondria\n(c) Thylakoids\t(iii) Disc-shaped sacs in Golgi apparatus",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:8:ex:4",
+          "number": 4,
+          "problem": "Which of the following is correct:\n(a) Cells of all living organisms have a nucleus.\n(b) Both animal and plant cells have a well defined cell wall.\n(c) In prokaryotes, there are no membrane bound organelles.\n(d) Cells are formed de novo from abiotic materials.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:8:ex:5",
+          "number": 5,
+          "problem": "What is a mesosome in a prokaryotic cell? Mention the functions that it performs.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:8:ex:6",
+          "number": 6,
+          "problem": "How do neutral solutes move across the plasma membrane? Can the polar molecules also move across it in the same way? If not, then how are these transported across the membrane?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:8:ex:7",
+          "number": 7,
+          "problem": "Name two cell-organelles that are double membrane bound. What are the characteristics of these two organelles? State their functions and draw labelled diagrams of both.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:8:ex:8",
+          "number": 8,
+          "problem": "What are the characteristics of prokaryotic cells?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:8:ex:9",
+          "number": 9,
+          "problem": "Multicellular organisms have division of labour. Explain.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:8:ex:10",
+          "number": 10,
+          "problem": "Cell is the basic unit of life. Discuss in brief.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:8:ex:11",
+          "number": 11,
+          "problem": "What are nuclear pores? State their function.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:8:ex:12",
+          "number": 12,
+          "problem": "Both lysosomes and vacuoles are endomembrane structures, yet they differ in terms of their functions. Comment.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:8:ex:13",
+          "number": 13,
+          "problem": "Describe the structure of the following with the help of labelled diagrams.\n(i) Nucleus\n(ii) Centrosome",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:8:ex:14",
+          "number": 14,
+          "problem": "What is a centromere? How does the position of centromere form the basis of classification of chromosomes. Support your answer with a diagram showing the position of centromere on different types of chromosomes.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        }
+      ]
+    }
+  }
+}

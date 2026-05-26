@@ -1,0 +1,1245 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_physics_11_ch3.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:physics:11:3",
+  "curriculum": "ncert",
+  "subject": "physics",
+  "grade": 11,
+  "textbook_name": "Physics Part I",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:physics:11:3",
+    "number": 3,
+    "title": "Motion in a Plane",
+    "summary": "This chapter introduces the concepts of motion in a plane, expanding upon one-dimensional motion. It begins by defining scalars and vectors, emphasizing the importance of direction in quantities like displacement, velocity, and acceleration. Vector addition and subtraction are explained using graphical methods (triangle and parallelogram laws) and the analytical method involving vector components and unit vectors. The chapter details how to resolve a vector into its components along perpendicular axes, making calculations easier.\n\nBuilding on vector algebra, the chapter then discusses motion in a plane, defining position, displacement, velocity, and acceleration vectors. Special attention is given to motion with constant acceleration and projectile motion, where the horizontal and vertical components of motion are treated independently. Key formulas are derived for the time of flight, maximum height, and horizontal range of a projectile. Finally, the chapter covers uniform circular motion, defining angular speed and centripetal acceleration, essential for describing objects moving in circular paths at constant speeds. The concepts of time period and frequency in circular motion are also explained. The knowledge of these laws is useful in real world application, like projectile motion, where we can calculate time of flight, max height etc.\n\nEach section connects logically, starting with fundamental vector concepts and progressing to more complex applications like projectile and circular motion. The chapter emphasizes the practical significance of understanding motion in two dimensions, providing a foundation for more advanced topics in physics.",
+    "sections": [
+      {
+        "id": "ncert:physics:11:3:3.1",
+        "number": "3.1",
+        "title": "INTRODUCTION",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:3:3.1:1",
+            "order": 1,
+            "title": "Need for Vectors in Multi-dimensional Motion",
+            "content_text": "In the study of motion along a straight line (one dimension), the directional aspect of physical quantities like position, displacement, velocity, and acceleration can be managed using $+$ and $-$ signs. However, to describe the motion of an object in two dimensions (a plane) or three dimensions (space), vectors are necessary. This chapter introduces the language of vectors, including how to add, subtract, and multiply them, which is essential for defining velocity and acceleration in a plane. These concepts are applied to specific cases such as projectile motion and uniform circular motion. The equations developed for motion in a plane can be readily extended to three-dimensional cases.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:3:3.2",
+        "number": "3.2",
+        "title": "SCALARS AND VECTORS",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:3:3.2:1",
+            "order": 1,
+            "title": "Scalar Quantities",
+            "content_text": "A scalar quantity is defined as a physical quantity that has magnitude only and no associated direction. It is completely specified by a single number and its corresponding unit. Examples include distance, mass, temperature, and time. Scalars follow the rules of ordinary algebra and can be added, subtracted, multiplied, and divided like ordinary numbers. For instance, the perimeter of a rectangle with sides $1.0\\text{ m}$ and $0.5\\text{ m}$ is the scalar sum $1.0\\text{ m} + 0.5\\text{ m} + 1.0\\text{ m} + 0.5\\text{ m} = 3.0\\text{ m}$. Similarly, the difference between temperatures of $35.6^\\circ\\text{C}$ and $24.2^\\circ\\text{C}$ is $11.4^\\circ\\text{C}$. It is important to note that while scalars of the same units can be added or subtracted, scalars of different units can only be multiplied or divided. For example, a uniform solid aluminium cube of side $10\\text{ cm}$ has a volume of $10^{-3}\\text{ m}^3$ and a mass of $2.7\\text{ kg}$, resulting in a density of $2.7 \\times 10^3\\text{ kg m}^{-3}$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.2:2",
+            "order": 2,
+            "title": "Vector Quantities and Notation",
+            "content_text": "A vector quantity is one that possesses both magnitude and direction and obeys specific laws of addition, such as the triangle law or the parallelogram law. Examples include displacement, velocity, acceleration, and force. In text, vectors are represented by boldface type (e.g., $\\mathbf{v}$), while in handwritten form, they are typically denoted by an arrow over the letter (e.g., $\\vec{v}$). The magnitude of a vector $\\mathbf{v}$ is its absolute value, denoted as $|\\mathbf{v}|$ or simply $v$ in lightface type. Thus, a vector $\\mathbf{A}$ has a magnitude $A$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.2:3",
+            "order": 3,
+            "title": "Position and Displacement Vectors",
+            "content_text": "To describe motion in a plane, an origin $O$ is chosen. The position vector $\\mathbf{r}$ of an object at point $P$ is the directed line segment $\\mathbf{OP}$. If the object moves from $P$ to $P'$, the new position vector is $\\mathbf{r'} = \\mathbf{OP'}$. The displacement vector is the vector $\\mathbf{PP'}$ representing the change in position from time $t$ to $t'$. The displacement vector is a straight line joining the initial and final positions and is independent of the actual path taken (e.g., paths $PABCQ$ or $PDQ$ in Fig. 3.1(b) result in the same displacement $\\mathbf{PQ}$). Crucially, the magnitude of displacement is always less than or equal to the actual path length covered by the object.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 3.1",
+                "description": "(a) Diagram showing origin O and points P and P' with position vectors r and r', and the displacement vector PP'. (b) Diagram showing that the displacement vector PQ is the same regardless of the path (PABCQ, PDQ, or PBEFQ) taken between points P and Q.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.2:4",
+            "order": 4,
+            "title": "Equality of Vectors",
+            "content_text": "Two vectors $\\mathbf{A}$ and $\\mathbf{B}$ are equal if and only if they have the same magnitude and the same direction. This can be verified by shifting vector $\\mathbf{B}$ parallel to itself; if its tail and tip coincide with those of $\\mathbf{A}$, they are equal ($\\mathbf{A} = \\mathbf{B}$). Vectors that can be displaced parallel to themselves without changing are called 'free vectors'. In contrast, 'localised vectors' are those where the point of application is significant. Vectors with the same length but different directions are not equal.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 3.2",
+                "description": "(a) Two equal vectors A and B pointing in the same direction with the same length. (b) Two unequal vectors A' and B' which have the same length but different directions.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:3:3.3",
+        "number": "3.3",
+        "title": "MULTIPLICATION OF VECTORS BY REAL NUMBERS",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:3:3.3:1",
+            "order": 1,
+            "title": "Scaling Vectors by Real Numbers",
+            "content_text": "Multiplying a vector $\\mathbf{A}$ by a positive real number $\\lambda$ results in a vector with magnitude $\\lambda |\\mathbf{A}|$ and the same direction as $\\mathbf{A}$. For example, $2\\mathbf{A}$ has twice the magnitude of $\\mathbf{A}$ in the same direction. Multiplying by a negative number $-\\lambda$ results in a vector with magnitude $\\lambda |\\mathbf{A}|$ but the opposite direction to $\\mathbf{A}$. For instance, multiplying $\\mathbf{A}$ by $-1$ or $-1.5$ reverses its direction. If the multiplier $\\lambda$ is a scalar with physical dimensions, the resulting vector $\\lambda \\mathbf{A}$ has dimensions equal to the product of the dimensions of $\\lambda$ and $\\mathbf{A}$. An example is multiplying a velocity vector by a time duration to obtain a displacement vector.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 3.3",
+                "description": "(a) Vector A and its resultant 2A after multiplication by 2. (b) Vector A and its resultants -A and -1.5A after multiplication by negative numbers.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:3:3.4",
+        "number": "3.4",
+        "title": "ADDITION AND SUBTRACTION OF VECTORS — GRAPHICAL METHOD",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:3:3.4:1",
+            "order": 1,
+            "title": "Triangle Law of Vector Addition",
+            "content_text": "Vectors obey the triangle law of addition. To add two vectors $\\mathbf{A}$ and $\\mathbf{B}$ graphically, place the tail of vector $\\mathbf{B}$ at the head (tip) of vector $\\mathbf{A}$. The resultant vector $\\mathbf{R} = \\mathbf{A} + \\mathbf{B}$ is the vector drawn from the tail of $\\mathbf{A}$ to the head of $\\mathbf{B}$. The lengths of the segments representing the vectors are proportional to their magnitudes. Since, in this procedure of vector addition, vectors are\nVector addition is commutative, meaning the order of addition does not matter: $\\mathbf{A} + \\mathbf{B} = \\mathbf{B} + \\mathbf{A}$. This is shown by the fact that placing the tail of $\\mathbf{A}$ at the head of $\\mathbf{B}$ yields the same resultant $\\mathbf{R}$. Furthermore, vector addition is associative: $(\\mathbf{A} + \\mathbf{B}) + \\mathbf{C} = \\mathbf{A} + (\\mathbf{B} + \\mathbf{C})$. This means when adding three or more vectors, the grouping of vectors does not affect the final resultant vector.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 3.4 (a, b)",
+                "description": "(a) Two independent vectors A and B. (b) The triangle law of addition where the tail of B is at the head of A, and the resultant R connects the tail of A to the head of B.",
+                "image_url": null
+              },
+              {
+                "label": "Fig. 3.4 (c, d)",
+                "description": "(c) Illustration of the commutative law showing B + A = R. (d) Illustration of the associative law of vector addition involving three vectors A, B, and C.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.4:2",
+            "order": 2,
+            "title": "Triangle Method and Commutative Law",
+            "content_text": "When vectors are arranged head to tail, the graphical method is called the head-to-tail method. The two vectors and their resultant form three sides of a triangle, so this method is also known as the triangle method of vector addition. If we find the resultant of $\\mathbf{B} + \\mathbf{A}$ as in Fig. 3.4(c), the same vector $\\mathbf{R}$ is obtained. Thus, vector addition is commutative: $$\\mathbf{A} + \\mathbf{B} = \\mathbf{B} + \\mathbf{A} \\quad (3.1)$$",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.4:3",
+            "order": 3,
+            "title": "Associative Law of Vector Addition",
+            "content_text": "The addition of vectors also obeys the associative law as illustrated in Fig. 3.4(d). The result of adding vectors $\\mathbf{A}$ and $\\mathbf{B}$ first and then adding vector $\\mathbf{C}$ is the same as the result of adding $\\mathbf{B}$ and $\\mathbf{C}$ first and then adding vector $\\mathbf{A}$: $$(\\mathbf{A} + \\mathbf{B}) + \\mathbf{C} = \\mathbf{A} + (\\mathbf{B} + \\mathbf{C}) \\quad (3.2)$$",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.4:4",
+            "order": 4,
+            "title": "The Null Vector",
+            "content_text": "A null vector or a zero vector, represented by $\\mathbf{0}$, is a vector with zero magnitude. It results when adding two equal and opposite vectors: $\\mathbf{A} + (-\\mathbf{A}) = \\mathbf{0}$. Since the magnitude of a null vector is zero, its direction cannot be specified. The null vector also results when we multiply a vector $\\mathbf{A}$ by the number zero. The main properties of $\\mathbf{0}$ are: $$\\mathbf{A} + \\mathbf{0} = \\mathbf{A}$$ $$\\lambda \\mathbf{0} = \\mathbf{0}$$ $$0 \\mathbf{A} = \\mathbf{0} \\quad (3.4)$$ Physically, a null vector represents a displacement where the initial and final positions coincide, such as an object moving from P to P' and back to P.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.4:5",
+            "order": 5,
+            "title": "Subtraction of Vectors",
+            "content_text": "Subtraction of vectors can be defined in terms of addition. We define the difference of two vectors $\\mathbf{A}$ and $\\mathbf{B}$ as the sum of two vectors $\\mathbf{A}$ and $-\\mathbf{B}$: $$\\mathbf{A} - \\mathbf{B} = \\mathbf{A} + (-\\mathbf{B}) \\quad (3.5)$$ As shown in Fig 3.5, the vector $-\\mathbf{B}$ is added to vector $\\mathbf{A}$ to get $\\mathbf{R}_2 = (\\mathbf{A} - \\mathbf{B})$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 3.5",
+                "description": "(a) Two vectors A and B, with -B also shown. (b) Subtracting vector B from vector A by adding -B to A, resulting in R2 = A - B. For comparison, addition R1 = A + B is also shown.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.4:6",
+            "order": 6,
+            "title": "Parallelogram Method of Vector Addition",
+            "content_text": "To add two vectors $\\mathbf{A}$ and $\\mathbf{B}$, we can use the parallelogram method. Bring their tails to a common origin O as shown in Fig. 3.6(a). Then draw a line from the head of $\\mathbf{A}$ parallel to $\\mathbf{B}$ and another line from the head of $\\mathbf{B}$ parallel to $\\mathbf{A}$ to complete a parallelogram OQSP. The resultant vector $\\mathbf{R}$ is directed from the common origin O along the diagonal (OS) of the parallelogram. This method is equivalent to the triangle law, as shown in Fig. 3.6(c).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 3.6",
+                "description": "(a) Two vectors A and B with their tails brought to a common origin. (b) The sum A + B obtained using the parallelogram method. (c) The parallelogram method of vector addition is equivalent to the triangle method.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.4:7",
+            "order": 7,
+            "title": "Application: Resultant Velocity and Umbrella Direction",
+            "content_text": "Vector addition is used to find the resultant velocity of an object affected by multiple motions. For example, if rain falls vertically and wind blows horizontally, the resultant velocity $\\mathbf{R}$ determines the direction in which an umbrella should be held to avoid getting wet. The magnitude of the resultant is $R = \\sqrt{v_r^2 + v_w^2}$ and the direction $\\theta$ with the vertical is given by $\\tan \\theta = v_w / v_r$.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 3.1",
+                "problem": "Rain is falling vertically with a speed of $35 \\text{ m s}^{-1}$. Winds starts blowing after sometime with a speed of $12 \\text{ m s}^{-1}$ in east to west direction. In which direction should a boy waiting at a bus stop hold his umbrella?",
+                "solution": "The velocity of the rain and the wind are represented by the vectors $\\mathbf{v}_r$ and $\\mathbf{v}_w$ in Fig. 3.7. Using the rule of vector addition, the resultant of $\\mathbf{v}_r$ and $\\mathbf{v}_w$ is $\\mathbf{R}$. The magnitude of $\\mathbf{R}$ is $R = \\sqrt{v_r^2 + v_w^2} = \\sqrt{35^2 + 12^2} \\text{ m s}^{-1} = 37 \\text{ m s}^{-1}$. The direction $\\theta$ that $\\mathbf{R}$ makes with the vertical is given by $\\tan \\theta = \\frac{v_w}{v_r} = \\frac{12}{35} = 0.343$. Or, $\\theta = \\tan^{-1}(0.343) = 19^\\circ$. Therefore, the boy should hold his umbrella in the vertical plane at an angle of about $19^\\circ$ with the vertical towards the east."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Fig. 3.7",
+                "description": "Vector diagram for Example 3.1 showing rain velocity vector vr pointing down, wind velocity vector vw pointing west, and their resultant R at an angle theta to the vertical.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:3:3.5",
+        "number": "3.5",
+        "title": "RESOLUTION OF VECTORS",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:3:3.5:1",
+            "order": 1,
+            "title": "Concept of Vector Resolution",
+            "content_text": "Let $\\mathbf{a}$ and $\\mathbf{b}$ be any two non-zero vectors in a plane with different directions and let $\\mathbf{A}$ be another vector in the same plane. $\\mathbf{A}$ can be expressed as a sum of two vectors — one obtained by multiplying $\\mathbf{a}$ by a real number $\\lambda$ and the other obtained by multiplying $\\mathbf{b}$ by another real number $\\mu$. By drawing lines through the tail and head of $\\mathbf{A}$ parallel to $\\mathbf{a}$ and $\\mathbf{b}$, we find: $$\\mathbf{A} = \\lambda \\mathbf{a} + \\mu \\mathbf{b} \\quad (3.8)$$ We say that $\\mathbf{A}$ has been resolved into two component vectors $\\lambda \\mathbf{a}$ and $\\mu \\mathbf{b}$ along $\\mathbf{a}$ and $\\mathbf{b}$ respectively.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 3.8",
+                "description": "(a) Two non-collinear vectors a and b. (b) Resolving a vector A in terms of vectors a and b.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.5:2",
+            "order": 2,
+            "title": "Unit Vectors",
+            "content_text": "A unit vector is a vector of unit magnitude and points in a particular direction. It has no dimension and unit. It is used to specify a direction only. Unit vectors along the $x$-, $y$-, and $z$-axes of a rectangular coordinate system are denoted by $\\hat{\\mathbf{i}}$, $\\hat{\\mathbf{j}}$, and $\\hat{\\mathbf{k}}$, respectively. Since these are unit vectors, we have: $$|\\hat{\\mathbf{i}}| = |\\hat{\\mathbf{j}}| = |\\hat{\\mathbf{k}}| = 1 \\quad (3.9)$$ These unit vectors are perpendicular to each other. In general, a vector $\\mathbf{A}$ can be written as: $$\\mathbf{A} = |\\mathbf{A}| \\hat{\\mathbf{n}} \\quad (3.10)$$ where $\\hat{\\mathbf{n}}$ is a unit vector along $\\mathbf{A}$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.5:3",
+            "order": 3,
+            "title": "Resolution in a Plane (Rectangular Components)",
+            "content_text": "We can resolve a vector $\\mathbf{A}$ into component vectors that lie along unit vectors $\\hat{\\mathbf{i}}$ and $\\hat{\\mathbf{j}}$. Consider a vector $\\mathbf{A}$ in the $x-y$ plane. By drawing lines from the head of $\\mathbf{A}$ perpendicular to the coordinate axes, we get vectors $\\mathbf{A}_1$ and $\\mathbf{A}_2$ such that $\\mathbf{A}_1 + \\mathbf{A}_2 = \\mathbf{A}$. Since $\\mathbf{A}_1$ is parallel to $\\hat{\\mathbf{i}}$ and $\\mathbf{A}_2$ is parallel to $\\hat{\\mathbf{j}}$, we have: $$\\mathbf{A}_1 = A_x \\hat{\\mathbf{i}}, \\mathbf{A}_2 = A_y \\hat{\\mathbf{j}} \\quad (3.11)$$ Thus, $$\\mathbf{A} = A_x \\hat{\\mathbf{i}} + A_y \\hat{\\mathbf{j}} \\quad (3.12)$$ The quantities $A_x$ and $A_y$ are called $x$- and $y$-components of vector $\\mathbf{A}$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 3.9",
+                "description": "(a) Unit vectors i, j, and k along the x-, y-, and z-axes. (b) A vector A is resolved into its components Ax and Ay along x- and y- axes. (c) A1 and A2 expressed in terms of i and j.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.5:4",
+            "order": 4,
+            "title": "Magnitude and Direction from Components",
+            "content_text": "Using trigonometry, the components of vector $\\mathbf{A}$ making an angle $\\theta$ with the $x$-axis are: $$A_x = A \\cos \\theta$$ $$A_y = A \\sin \\theta \\quad (3.13)$$ A component of a vector can be positive, negative or zero depending on the value of $\\theta$. The magnitude $A$ and direction $\\theta$ can be obtained from the components as follows: $$A = \\sqrt{A_x^2 + A_y^2} \\quad (3.14)$$ $$\\tan \\theta = \\frac{A_y}{A_x}, \\quad \\theta = \\tan^{-1} \\frac{A_y}{A_x} \\quad (3.15)$$ The procedure for resolving a vector in a 2D plane can be extended to three dimensions. A general vector $\\mathbf{A}$ can be resolved into three components along the $x$-, $y$-, and $z$-axes. If $\\alpha$, $\\beta$, and $\\gamma$ are the angles between $\\mathbf{A}$ and the $x$-, $y$-, and $z$-axes respectively, the components are given by: $$A_x = A \\cos \\alpha, A_y = A \\cos \\beta, A_z = A \\cos \\gamma \\quad (3.16a)$$ In general, the vector is expressed as: $$\\mathbf{A} = A_x\\hat{\\mathbf{i}} + A_y\\hat{\\mathbf{j}} + A_z\\hat{\\mathbf{k}} \\quad (3.16b)$$ The magnitude of vector $\\mathbf{A}$ is: $$A = \\sqrt{A_x^2 + A_y^2 + A_z^2} \\quad (3.16c)$$ A position vector $\\mathbf{r}$ can similarly be expressed as: $$\\mathbf{r} = x\\hat{\\mathbf{i}} + y\\hat{\\mathbf{j}} + z\\hat{\\mathbf{k}} \\quad (3.17)$$ where $x, y, z$ are the components of $\\mathbf{r}$ along the respective axes.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 3.9 (d)",
+                "description": "A vector A resolved into three-dimensional components Ax, Ay, and Az along the x, y, and z axes respectively, forming a rectangular parallelepiped.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:3:3.6",
+        "number": "3.6",
+        "title": "VECTOR ADDITION – ANALYTICAL METHOD",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:3:3.6:1",
+            "order": 1,
+            "title": "Analytical Method of Vector Addition",
+            "content_text": "While the graphical method helps visualize vectors, it has limited accuracy and can be tedious. The analytical method involves adding vectors by combining their respective components. Consider two vectors $\\mathbf{A}$ and $\\mathbf{B}$ in the $x$-$y$ plane: $$\\mathbf{A} = A_x\\hat{\\mathbf{i}} + A_y\\hat{\\mathbf{j}} \\quad (3.18)$$ $$\\mathbf{B} = B_x\\hat{\\mathbf{i}} + B_y\\hat{\\mathbf{j}}$$ Let $\\mathbf{R}$ be their sum: $$\\mathbf{R} = \\mathbf{A} + \\mathbf{B} = (A_x\\hat{\\mathbf{i}} + A_y\\hat{\\mathbf{j}}) + (B_x\\hat{\\mathbf{i}} + B_y\\hat{\\mathbf{j}}) \\quad (3.19a)$$ Using commutative and associative laws: $$\\mathbf{R} = (A_x + B_x)\\hat{\\mathbf{i}} + (A_y + B_y)\\hat{\\mathbf{j}} \\quad (3.19b)$$ Since $\\mathbf{R} = R_x\\hat{\\mathbf{i}} + R_y\\hat{\\mathbf{j}}$, we have: $$R_x = A_x + B_x, R_y = A_y + B_y \\quad (3.21)$$ Thus, each component of the resultant vector is the sum of the corresponding components of the individual vectors.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.6:2",
+            "order": 2,
+            "title": "Vector Addition in Three Dimensions",
+            "content_text": "The analytical method extends to three dimensions. For vectors $\\mathbf{A} = A_x\\hat{\\mathbf{i}} + A_y\\hat{\\mathbf{j}} + A_z\\hat{\\mathbf{k}}$ and $\\mathbf{B} = B_x\\hat{\\mathbf{i}} + B_y\\hat{\\mathbf{j}} + B_z\\hat{\\mathbf{k}}$, the resultant $\\mathbf{R} = \\mathbf{A} + \\mathbf{B}$ has components: $$R_x = A_x + B_x, R_y = A_y + B_y, R_z = A_z + B_z \\quad (3.22)$$ This method applies to any number of vectors. For example, if $\\mathbf{T} = \\mathbf{a} + \\mathbf{b} - \\mathbf{c}$, its components are: $$T_x = a_x + b_x - c_x, T_y = a_y + b_y - c_y, T_z = a_z + b_z - c_z \\quad (3.23b)$$",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.6:3",
+            "order": 3,
+            "title": "Derivation of Law of Cosines and Law of Sines",
+            "content_text": "Using the parallelogram method for vectors $\\mathbf{A}$ and $\\mathbf{B}$ at an angle $\\theta$, the magnitude of the resultant $\\mathbf{R}$ is derived from geometry. In Fig. 3.10, $SN$ is normal to $OP$ and $PM$ is normal to $OS$. From the geometry: $OS^2 = ON^2 + SN^2$. Since $ON = OP + PN = A + B \\cos \\theta$ and $SN = B \\sin \\theta$, we get: $$R^2 = (A + B \\cos \\theta)^2 + (B \\sin \\theta)^2 = A^2 + B^2 + 2AB \\cos \\theta$$ $$R = \\sqrt{A^2 + B^2 + 2AB \\cos \\theta} \\quad (3.24a)$$ This is the Law of Cosines. For direction, in $\\Delta OSN$, $SN = R \\sin \\alpha$ and $SN = B \\sin \\theta$, leading to the Law of Sines: $$\\frac{R}{\\sin \\theta} = \\frac{A}{\\sin \\beta} = \\frac{B}{\\sin \\alpha} \\quad (3.24d)$$ The direction $\\alpha$ is given by: $$\\tan \\alpha = \\frac{SN}{OP + PN} = \\frac{B \\sin \\theta}{A + B \\cos \\theta} \\quad (3.24f)$$",
+            "content_type": "derivation",
+            "worked_examples": [
+              {
+                "label": "Example 3.2",
+                "problem": "Find the magnitude and direction of the resultant of two vectors A and B in terms of their magnitudes and angle $\\theta$ between them.",
+                "solution": "The magnitude is $R = \\sqrt{A^2 + B^2 + 2AB \\cos \\theta}$ and the direction $\\alpha$ with respect to vector A is $\\tan \\alpha = \\frac{B \\sin \\theta}{A + B \\cos \\theta}$."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Fig. 3.10",
+                "description": "Parallelogram OQSP representing the addition of vectors A and B. R is the resultant diagonal. SN is a perpendicular dropped from S to the extension of OP. PM is a perpendicular dropped from P to OS.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.6:4",
+            "order": 4,
+            "title": "Application: Resultant Velocity of a Motorboat",
+            "content_text": "The Law of Cosines and Law of Sines can be applied to find the resultant velocity of objects. For a motorboat moving North and a water current moving $60^\\circ$ East of South, the angle between the two velocity vectors is $120^\\circ$. The magnitude of the resultant velocity is calculated using the Law of Cosines, and the direction is found using the Law of Sines.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 3.3",
+                "problem": "A motorboat is racing towards north at 25 km/h and the water current in that region is 10 km/h in the direction of $60^\\circ$ east of south. Find the resultant velocity of the boat.",
+                "solution": "Let $\\mathbf{v}_b$ be boat velocity (25 km/h North) and $\\mathbf{v}_c$ be current velocity (10 km/h, $60^\\circ$ E of S). The angle $\\theta$ between them is $180^\\circ - 60^\\circ = 120^\\circ$. Using Law of Cosines: $R = \\sqrt{25^2 + 10^2 + 2(25)(10)\\cos 120^\\circ} = \\sqrt{625 + 100 + 500(-1/2)} = \\sqrt{475} \\approx 22$ km/h. Using Law of Sines for direction $\\phi$: $\\frac{R}{\\sin \\theta} = \\frac{v_c}{\\sin \\phi} \\implies \\sin \\phi = \\frac{v_c \\sin \\theta}{R} = \\frac{10 \\sin 120^\\circ}{21.8} \\approx 0.397$. Thus $\\phi \\approx 23.4^\\circ$ East of North."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Fig. 3.11",
+                "description": "Vector diagram showing velocity of boat vb pointing North, velocity of current vc pointing 60 degrees East of South, and the resultant velocity R.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:3:3.7",
+        "number": "3.7",
+        "title": "MOTION IN A PLANE",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:3:3.7:1",
+            "order": 1,
+            "title": "Position Vector and Displacement in 2D",
+            "content_text": "The position vector $\\mathbf{r}$ of a particle P in an $x$-$y$ plane is $\\mathbf{r} = x\\hat{\\mathbf{i}} + y\\hat{\\mathbf{j}}$. If the particle moves from P at time $t$ to P' at time $t'$, the displacement is $\\Delta \\mathbf{r} = \\mathbf{r}' - \\mathbf{r} \\quad (3.25)$. In component form: $$\\Delta \\mathbf{r} = (x'\\hat{\\mathbf{i}} + y'\\hat{\\mathbf{j}}) - (x\\hat{\\mathbf{i}} + y\\hat{\\mathbf{j}}) = \\hat{\\mathbf{i}}\\Delta x + \\hat{\\mathbf{j}}\\Delta y \\quad (3.26)$$ where $\\Delta x = x' - x$ and $\\Delta y = y' - y$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 3.12",
+                "description": "(a) Position vector r of a particle. (b) Displacement vector Δr between points P and P' on a curved path, along with average velocity v.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.7:2",
+            "order": 2,
+            "title": "Average and Instantaneous Velocity",
+            "content_text": "Average velocity $\\bar{\\mathbf{v}}$ is the ratio of displacement to the time interval: $$\\bar{\\mathbf{v}} = \\frac{\\Delta \\mathbf{r}}{\\Delta t} = \\frac{\\Delta x\\hat{\\mathbf{i}} + \\Delta y\\hat{\\mathbf{j}}}{\\Delta t} = \\hat{\\mathbf{i}}\\bar{v}_x + \\hat{\\mathbf{j}}\\bar{v}_y \\quad (3.27)$$ The instantaneous velocity $\\mathbf{v}$ is the limit of average velocity as $\\Delta t$ approaches zero: $$\\mathbf{v} = \\lim_{\\Delta t \\to 0} \\frac{\\Delta \\mathbf{r}}{\\Delta t} = \\frac{d\\mathbf{r}}{dt} \\quad (3.28)$$ As $\\Delta t$ decreases, the direction of $\\Delta \\mathbf{r}$ approaches the tangent to the path. Therefore, the direction of velocity at any point on the path of an object is tangential to the path at that point and is in the direction of motion.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 3.13",
+                "description": "A series of four diagrams (a to d) showing how as the time interval Δt approaches zero, the displacement vector Δr and the average velocity vector v approach the tangent to the path at point P.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.7:3",
+            "order": 3,
+            "title": "Direction of Velocity",
+            "content_text": "The direction of the average velocity $\\bar{\\mathbf{v}}$ depends on the displacement $\\Delta \\mathbf{r}$. As the time interval $\\Delta t$ decreases ($\\Delta t_1 > \\Delta t_2 > \\Delta t_3$), the displacement vector $\\Delta \\mathbf{r}$ changes direction. In the limit as $\\Delta t \\to 0$, the displacement $\\Delta \\mathbf{r}$ approaches zero and its direction becomes tangential to the path of the object. Therefore, the direction of velocity at any point on the path of an object is tangential to the path at that point and is in the direction of motion.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.7:4",
+            "order": 4,
+            "title": "Velocity in Component Form",
+            "content_text": "Velocity $\\mathbf{v}$ can be expressed in component form by taking the derivative of the position vector $\\mathbf{r}$ with respect to time: $\\mathbf{v} = \\frac{d\\mathbf{r}}{dt} = \\lim_{\\Delta t \\to 0} (\\frac{\\Delta x}{\\Delta t} \\hat{\\mathbf{i}} + \\frac{\\Delta y}{\\Delta t} \\hat{\\mathbf{j}}) = \\hat{\\mathbf{i}} \\lim_{\\Delta t \\to 0} \\frac{\\Delta x}{\\Delta t} + \\hat{\\mathbf{j}} \\lim_{\\Delta t \\to 0} \\frac{\\Delta y}{\\Delta t}$. This simplifies to $\\mathbf{v} = \\hat{\\mathbf{i}} \\frac{dx}{dt} + \\hat{\\mathbf{j}} \\frac{dy}{dt} = v_x \\hat{\\mathbf{i}} + v_y \\hat{\\mathbf{j}}$, where $v_x = \\frac{dx}{dt}$ and $v_y = \\frac{dy}{dt}$. If the coordinates $x$ and $y$ are known as functions of time, these equations allow us to find the velocity components $v_x$ and $v_y$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.7:5",
+            "order": 5,
+            "title": "Magnitude and Direction of Velocity",
+            "content_text": "The magnitude of the velocity vector $\\mathbf{v}$ is calculated using the Pythagorean theorem on its components: $v = \\sqrt{v_x^2 + v_y^2}$. The direction of $\\mathbf{v}$ is specified by the angle $\\theta$ it makes with the x-axis, given by: $\\tan \\theta = \\frac{v_y}{v_x}$, which implies $\\theta = \\tan^{-1} (\\frac{v_y}{v_x})$. These relationships are illustrated in Fig. 3.14.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 3.14",
+                "description": "A graph showing the components $v_x$ and $v_y$ of velocity vector $\\mathbf{v}$ at a point P on a curved path. The vector $\\mathbf{v}$ makes an angle $\\theta$ with the x-axis, with $v_x = v \\cos \\theta$ and $v_y = v \\sin \\theta$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.7:6",
+            "order": 6,
+            "title": "Average Acceleration",
+            "content_text": "The average acceleration $\\bar{\\mathbf{a}}$ of an object moving in the $x-y$ plane over a time interval $\\Delta t$ is defined as the change in velocity divided by the time interval: $\\bar{\\mathbf{a}} = \\frac{\\Delta \\mathbf{v}}{\\Delta t} = \\frac{\\Delta (v_x \\hat{\\mathbf{i}} + v_y \\hat{\\mathbf{j}})}{\\Delta t} = \\frac{\\Delta v_x}{\\Delta t} \\hat{\\mathbf{i}} + \\frac{\\Delta v_y}{\\Delta t} \\hat{\\mathbf{j}}$. This can be written as $\\bar{\\mathbf{a}} = a_x \\hat{\\mathbf{i}} + a_y \\hat{\\mathbf{j}}$.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.7:7",
+            "order": 7,
+            "title": "Instantaneous Acceleration",
+            "content_text": "Instantaneous acceleration $\\mathbf{a}$ is the limit of average acceleration as the time interval approaches zero: $\\mathbf{a} = \\lim_{\\Delta t \\to 0} \\frac{\\Delta \\mathbf{v}}{\\Delta t}$. In component form, $\\mathbf{a} = \\hat{\\mathbf{i}} \\lim_{\\Delta t \\to 0} \\frac{\\Delta v_x}{\\Delta t} + \\hat{\\mathbf{j}} \\lim_{\\Delta t \\to 0} \\frac{\\Delta v_y}{\\Delta t}$, which results in $\\mathbf{a} = a_x \\hat{\\mathbf{i}} + a_y \\hat{\\mathbf{j}}$, where $a_x = \\frac{dv_x}{dt}$ and $a_y = \\frac{dv_y}{dt}$. These can also be expressed as second derivatives of position: $a_x = \\frac{d^2x}{dt^2}$ and $a_y = \\frac{d^2y}{dt^2}$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.7:8",
+            "order": 8,
+            "title": "Graphical Interpretation of Acceleration",
+            "content_text": "The limiting process for acceleration can be visualized on a path graph (Fig. 3.15). The direction of average acceleration is the same as the direction of the velocity change vector $\\Delta \\mathbf{v}$. As $\\Delta t$ decreases, the direction of $\\Delta \\mathbf{v}$ changes. In the limit $\\Delta t \\to 0$, the average acceleration becomes the instantaneous acceleration $\\mathbf{a}$. Unlike velocity, acceleration is not necessarily tangential to the path.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 3.15",
+                "description": "A series of four panels (a-d) showing the path of an object and the velocity vectors at different times. Panels (a), (b), and (c) show the vector subtraction $\\Delta \\mathbf{v} = \\mathbf{v}' - \\mathbf{v}$ for decreasing time intervals. Panel (d) shows the instantaneous acceleration vector $\\mathbf{a}$ in the limit $\\Delta t \\to 0$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.7:9",
+            "order": 9,
+            "title": "Comparison of 1D and 2D/3D Motion",
+            "content_text": "In one-dimensional motion, velocity and acceleration are always collinear (either in the same or opposite directions). In two or three dimensions, however, the velocity and acceleration vectors can have any angle between $0^\\circ$ and $180^\\circ$ between them.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.7:10",
+            "order": 10,
+            "title": "Example 3.4: Velocity and Acceleration from Position Vector",
+            "content_text": "This example demonstrates how to find velocity and acceleration vectors by differentiating a given position vector, and how to calculate magnitude and direction at a specific time.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 3.4",
+                "problem": "The position of a particle is given by $\\mathbf{r} = 3.0t \\hat{\\mathbf{i}} + 2.0t^2 \\hat{\\mathbf{j}} + 5.0 \\hat{\\mathbf{k}}$ where $t$ is in seconds and the coefficients have the proper units for $\\mathbf{r}$ to be in metres. (a) Find $\\mathbf{v}(t)$ and $\\mathbf{a}(t)$ of the particle. (b) Find the magnitude and direction of $\\mathbf{v}(t)$ at $t = 1.0$ s.",
+                "solution": "(a) $\\mathbf{v}(t) = \\frac{d\\mathbf{r}}{dt} = \\frac{d}{dt} (3.0t \\hat{\\mathbf{i}} + 2.0t^2 \\hat{\\mathbf{j}} + 5.0 \\hat{\\mathbf{k}}) = 3.0 \\hat{\\mathbf{i}} + 4.0t \\hat{\\mathbf{j}}$. $\\mathbf{a}(t) = \\frac{d\\mathbf{v}}{dt} = \\frac{d}{dt} (3.0 \\hat{\\mathbf{i}} + 4.0t \\hat{\\mathbf{j}}) = 4.0 \\hat{\\mathbf{j}}$. The acceleration is $4.0$ m s$^{-2}$ along the y-direction. (b) At $t = 1.0$ s, $\\mathbf{v} = 3.0 \\hat{\\mathbf{i}} + 4.0 \\hat{\\mathbf{j}}$. Magnitude $v = \\sqrt{3.0^2 + 4.0^2} = 5.0$ m s$^{-1}$. Direction $\\theta = \\tan^{-1}(v_y/v_x) = \\tan^{-1}(4/3) \\cong 53^\\circ$ with the x-axis."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:3:3.8",
+        "number": "3.8",
+        "title": "MOTION IN A PLANE WITH CONSTANT ACCELERATION",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:3:3.8:1",
+            "order": 1,
+            "title": "Velocity-Time Relation",
+            "content_text": "For an object moving in the $x-y$ plane with constant acceleration $\\mathbf{a}$, let $\\mathbf{v}_0$ be the velocity at $t=0$ and $\\mathbf{v}$ be the velocity at time $t$. By the definition of constant acceleration, $\\mathbf{a} = \\frac{\\mathbf{v} - \\mathbf{v}_0}{t - 0}$, which leads to the vector equation: $\\mathbf{v} = \\mathbf{v}_0 + \\mathbf{a}t$. In component form, this represents two independent equations: $v_x = v_{0x} + a_x t$ and $v_y = v_{0y} + a_y t$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.8:2",
+            "order": 2,
+            "title": "Position-Time Relation",
+            "content_text": "The position $\\mathbf{r}$ at time $t$ can be found using the average velocity. If $\\mathbf{r}_0$ is the initial position, the displacement is $\\mathbf{r} - \\mathbf{r}_0 = (\\frac{\\mathbf{v} + \\mathbf{v}_0}{2}) t$. Substituting $\\mathbf{v} = \\mathbf{v}_0 + \\mathbf{a}t$ gives $\\mathbf{r} - \\mathbf{r}_0 = (\\frac{\\mathbf{v}_0 + \\mathbf{a}t + \\mathbf{v}_0}{2}) t = \\mathbf{v}_0 t + \\frac{1}{2} \\mathbf{a} t^2$. Thus, the position vector is $\\mathbf{r} = \\mathbf{r}_0 + \\mathbf{v}_0 t + \\frac{1}{2} \\mathbf{a} t^2$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.8:3",
+            "order": 3,
+            "title": "Independence of Perpendicular Motions",
+            "content_text": "The vector equation for position can be split into scalar component equations: $x = x_0 + v_{0x} t + \\frac{1}{2} a_x t^2$ and $y = y_0 + v_{0y} t + \\frac{1}{2} a_y t^2$. This demonstrates that motion in a plane (two dimensions) can be treated as two separate, simultaneous one-dimensional motions with constant acceleration along two perpendicular directions. This principle allows for the independent analysis of $x$ and $y$ components of motion.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.8:4",
+            "order": 4,
+            "title": "Example 3.5: Motion with Constant Acceleration",
+            "content_text": "This example applies the equations of motion for constant acceleration in two dimensions to find coordinates and speed.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 3.5",
+                "problem": "A particle starts from origin at $t = 0$ with a velocity $5.0 \\hat{\\mathbf{i}}$ m/s and moves in $x-y$ plane under action of a force which produces a constant acceleration of $(3.0 \\hat{\\mathbf{i}} + 2.0 \\hat{\\mathbf{j}})$ m/s$^2$. (a) What is the $y$-coordinate of the particle at the instant its $x$-coordinate is 84 m? (b) What is the speed of the particle at this time?",
+                "solution": "From Eq. (3.34a) for $\\mathbf{r}_0 = 0$, the position is $\\mathbf{r}(t) = \\mathbf{v}_0 t + \\frac{1}{2} \\mathbf{a} t^2 = 5.0t \\hat{\\mathbf{i}} + \\frac{1}{2} (3.0 \\hat{\\mathbf{i}} + 2.0 \\hat{\\mathbf{j}}) t^2 = (5.0t + 1.5t^2) \\hat{\\mathbf{i}} + 1.0t^2 \\hat{\\mathbf{j}}$. Thus, $x(t) = 5.0t + 1.5t^2$ and $y(t) = 1.0t^2$. (a) Setting $x(t) = 84$ m gives $1.5t^2 + 5.0t - 84 = 0$. Solving the quadratic equation yields $t = 6$ s. At $t = 6$ s, $y = 1.0(6)^2 = 36.0$ m. (b) Velocity $\\mathbf{v} = \\frac{d\\mathbf{r}}{dt} = (5.0 + 3.0t) \\hat{\\mathbf{i}} + 2.0t \\hat{\\mathbf{j}}$. At $t = 6$ s, $\\mathbf{v} = 23.0 \\hat{\\mathbf{i}} + 12.0 \\hat{\\mathbf{j}}$. Speed $|\\mathbf{v}| = \\sqrt{23^2 + 12^2} \\cong 26$ m s$^{-1}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:3:3.9",
+        "number": "3.9",
+        "title": "PROJECTILE MOTION",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:3:3.9:1",
+            "order": 1,
+            "title": "Definition and Galileo's Principle",
+            "content_text": "A projectile is an object in flight after being thrown or projected (e.g., a football or cricket ball). Projectile motion is the result of two independent, simultaneous components: a horizontal component with zero acceleration and a vertical component with constant acceleration due to gravity. Galileo first stated this independence of horizontal and vertical components in 1632.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.9:2",
+            "order": 2,
+            "title": "Initial Conditions and Acceleration",
+            "content_text": "In projectile motion, assuming negligible air resistance, the acceleration is $\\mathbf{a} = -g \\hat{\\mathbf{j}}$, meaning $a_x = 0$ and $a_y = -g$. If the initial velocity is $\\mathbf{v}_0$ at an angle $\\theta_0$ with the x-axis, its components are $v_{ox} = v_o \\cos \\theta_o$ and $v_{oy} = v_o \\sin \\theta_o$. its components are $v_{ox} = v_o \\cos \\theta_o$ and $v_{oy} = v_o \\sin \\theta_o$. If we take the initial position to be the origin of the reference frame as shown in Fig. 3.16, we have : $x_o = 0, y_o = 0$. Then, Eq.(3.34b) becomes : $x = v_{ox} t = (v_o \\cos \\theta_o) t$ and $y = (v_o \\sin \\theta_o) t - (1/2) g t^2$ (3.37). The components of velocity at time $t$ can be obtained using Eq.(3.33b) : $v_x = v_{ox} = v_o \\cos \\theta_o$ and $v_y = v_o \\sin \\theta_o - g t$ (3.38). Equation (3.37) gives the $x$-, and $y$-coordinates of the position of a projectile at time $t$ in terms of two parameters — initial speed $v_o$ and projection angle $\\theta_o$. Notice that the choice of mutually perpendicular $x$-, and $y$-directions for the analysis of the projectile motion has resulted in a simplification. One of the components of velocity, i.e. $x$-component remains constant throughout the motion and only the $y$-component changes, like an object in free fall in vertical direction. This is shown graphically at few instants in Fig. 3.17. Note that at the point of maximum height, $v_y = 0$ and therefore, $\\theta = \\tan^{-1} \\frac{v_y}{v_x} = 0$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 3.16",
+                "description": "Motion of an object projected with velocity $\\mathbf{v}_o$ at angle $\\theta_o$. The diagram shows the initial velocity vector $\\mathbf{v}_o$ starting from the origin $O$, making an angle $\\theta_o$ with the $x$-axis. Its components $v_o \\cos \\theta_o$ and $v_o \\sin \\theta_o$ are marked along the axes. The acceleration vector $\\mathbf{a} = -g \\hat{\\mathbf{j}}$ is shown pointing downwards.",
+                "image_url": null
+              },
+              {
+                "label": "Fig 3.17",
+                "description": "The path of a projectile is a parabola. The diagram shows the trajectory of a projectile with velocity vectors $\\mathbf{v}$ at various points. Each velocity vector is decomposed into a constant horizontal component $v_{0x}\\hat{\\mathbf{i}}$ and a varying vertical component $v_y\\hat{\\mathbf{j}}$. At the peak of the trajectory, $v_y = 0$. After the peak, the vertical component points downwards.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.9:3",
+            "order": 3,
+            "title": "Equation of path of a projectile",
+            "content_text": "What is the shape of the path followed by the projectile? This can be seen by eliminating the time between the expressions for $x$ and $y$ as given in Eq. (3.37). We obtain: $y = (\\tan \\theta_o) x - \\frac{g}{2 (v_o \\cos \\theta_o)^2} x^2$ (3.39). Now, since $g, \\theta_o$ and $v_o$ are constants, Eq. (3.39) is of the form $y = ax + bx^2$, in which $a$ and $b$ are constants. This is the equation of a parabola, i.e. the path of the projectile is a parabola (Fig. 3.17).",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.9:4",
+            "order": 4,
+            "title": "Time of maximum height and Time of flight",
+            "content_text": "How much time does the projectile take to reach the maximum height? Let this time be denoted by $t_m$. Since at this point, $v_y = 0$, we have from Eq. (3.38): $v_y = v_o \\sin \\theta_o - g t_m = 0$. Or, $t_m = v_o \\sin \\theta_o / g$ (3.40a). The total time $T_f$ during which the projectile is in flight can be obtained by putting $y = 0$ in Eq. (3.37). We get: $T_f = 2 (v_o \\sin \\theta_o) / g$ (3.40b). $T_f$ is known as the time of flight of the projectile. We note that $T_f = 2 t_m$, which is expected because of the symmetry of the parabolic path.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.9:5",
+            "order": 5,
+            "title": "Maximum height of a projectile",
+            "content_text": "The maximum height $h_m$ reached by the projectile can be calculated by substituting $t = t_m$ in Eq. (3.37): $y = h_m = (v_o \\sin \\theta_o) \\left( \\frac{v_o \\sin \\theta_o}{g} \\right) - \\frac{g}{2} \\left( \\frac{v_o \\sin \\theta_o}{g} \\right)^2$. Or, $h_m = \\frac{(v_o \\sin \\theta_o)^2}{2g}$ (3.41).",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.9:6",
+            "order": 6,
+            "title": "Horizontal range of a projectile",
+            "content_text": "The horizontal distance travelled by a projectile from its initial position ($x=y=0$) to the position where it passes $y=0$ during its fall is called the horizontal range, $R$. It is the distance travelled during the time of flight $T_f$. Therefore, the range $R$ is $R = (v_o \\cos \\theta_o) (T_f) = (v_o \\cos \\theta_o) (2 v_o \\sin \\theta_o) / g$. Or, $R = \\frac{v_o^2 \\sin 2\\theta_o}{g}$ (3.42a). Equation (3.42a) shows that for a given projection velocity $v_o$, $R$ is maximum when $\\sin 2\\theta_o$ is maximum, i.e., when $2\\theta_o = 90^\\circ$ or $\\theta_o = 45^\\circ$. The maximum horizontal range is, therefore, $R_m = \\frac{v_o^2}{g}$ (3.42b).",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.9:7",
+            "order": 7,
+            "title": "Example 3.6: Range for Complementary Angles",
+            "content_text": "Galileo, in his book Two new sciences, stated that “for elevations which exceed or fall short of 45° by equal amounts, the ranges are equal”. This subsection provides the proof for this statement using the range formula.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 3.6",
+                "problem": "Galileo, in his book Two new sciences, stated that “for elevations which exceed or fall short of 45° by equal amounts, the ranges are equal”. Prove this statement.",
+                "solution": "For a projectile launched with velocity $\\mathbf{v}_o$ at an angle $\\theta_o$, the range is given by $R = \\frac{v_o^2 \\sin 2\\theta_o}{g}$. Now, for angles, $(45^\\circ + \\alpha)$ and $(45^\\circ - \\alpha)$, $2\\theta_o$ is $(90^\\circ + 2\\alpha)$ and $(90^\\circ - 2\\alpha)$, respectively. The values of $\\sin (90^\\circ + 2\\alpha)$ and $\\sin (90^\\circ - 2\\alpha)$ are the same, equal to $\\cos 2\\alpha$. Therefore, ranges are equal for elevations which exceed or fall short of 45° by equal amounts $\\alpha$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.9:8",
+            "order": 8,
+            "title": "Example 3.7: Horizontal Projection from a Cliff",
+            "content_text": "This example analyzes the motion of a stone thrown horizontally from a height. It demonstrates how to treat $x$ and $y$ components independently to find the time of flight and final speed.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 3.7",
+                "problem": "A hiker stands on the edge of a cliff 490 m above the ground and throws a stone horizontally with an initial speed of 15 m s$^{-1}$. Neglecting air resistance, find the time taken by the stone to reach the ground, and the speed with which it hits the ground. (Take $g = 9.8 \\text{ m s}^{-2}$).",
+                "solution": "We choose the origin of the $x$-, and $y$-axis at the edge of the cliff and $t = 0$ s at the instant the stone is thrown. Choose the positive direction of $x$-axis to be along the initial velocity and the positive direction of $y$-axis to be the vertically upward direction. The $x$-, and $y$-components of the motion can be treated independently. The equations of motion are : $x (t) = x_o + v_{ox} t$ and $y (t) = y_o + v_{oy} t + (1/2) a_y t^2$. Here, $x_o = y_o = 0, v_{oy} = 0, a_y = -g = -9.8 \\text{ m s}^{-2}, v_{ox} = 15 \\text{ m s}^{-1}$. The stone hits the ground when $y(t) = -490 \\text{ m}$. $-490 \\text{ m} = -(1/2)(9.8) t^2$. This gives $t = 10 \\text{ s}$. The velocity components are $v_x = v_{ox}$ and $v_y = v_{oy} - g t$ so that when the stone hits the ground : $v_x = 15 \\text{ m s}^{-1}$, $v_y = 0 - 9.8 \\times 10 = -98 \\text{ m s}^{-1}$. Therefore, the speed of the stone is $\\sqrt{v_x^2 + v_y^2} = \\sqrt{15^2 + 98^2} = 99 \\text{ m s}^{-1}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.9:9",
+            "order": 9,
+            "title": "Example 3.8: Projectile Motion Parameters",
+            "content_text": "This example calculates the standard parameters of projectile motion—maximum height, time of flight, and horizontal range—for a ball thrown at an angle.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 3.8",
+                "problem": "A cricket ball is thrown at a speed of 28 m s$^{-1}$ in a direction 30° above the horizontal. Calculate (a) the maximum height, (b) the time taken by the ball to return to the same level, and (c) the distance from the thrower to the point where the ball returns to the same level.",
+                "solution": "(a) The maximum height is given by $h_m = \\frac{(v_o \\sin \\theta_o)^2}{2g} = \\frac{(28 \\sin 30^\\circ)^2}{2 (9.8)} \\text{ m} = \\frac{14 \\times 14}{2 \\times 9.8} = 10.0 \\text{ m}$. (b) The time taken to return to the same level is $T_f = (2 v_o \\sin \\theta_o)/g = (2 \\times 28 \\times \\sin 30^\\circ)/9.8 = 28/9.8 \\text{ s} = 2.9 \\text{ s}$. (c) The distance from the thrower to the point where the ball returns to the same level is $R = \\frac{v_o^2 \\sin 2\\theta_o}{g} = \\frac{28 \\times 28 \\times \\sin 60^\\circ}{9.8} = 69 \\text{ m}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:3:3.10",
+        "number": "3.10",
+        "title": "UNIFORM CIRCULAR MOTION",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:3:3.10:1",
+            "order": 1,
+            "title": "Introduction and Definition",
+            "content_text": "When an object follows a circular path at a constant speed, the motion of the object is called uniform circular motion. The word “uniform” refers to the speed, which is uniform (constant) throughout the motion. Suppose an object is moving with uniform speed $v$ in a circle of radius $R$ as shown in Fig. 3.18. Since the velocity of the object is changing continuously in direction, the object undergoes acceleration.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.10:2",
+            "order": 2,
+            "title": "Direction of Acceleration in Uniform Circular Motion",
+            "content_text": "Let $\\mathbf{r}$ and $\\mathbf{r}'$ be the position vectors and $\\mathbf{v}$ and $\\mathbf{v}'$ the velocities of the object when it is at point $P$ and $P'$ as shown in Fig. 3.18(a). By definition, velocity at a point is along the tangent at that point in the direction of motion. The velocity vectors $\\mathbf{v}$ and $\\mathbf{v}'$ are as shown in Fig. 3.18(a1). $\\Delta \\mathbf{v}$ is obtained in Fig. 3.18(a2) using the triangle law of vector addition. Since the path is circular, $\\mathbf{v}$ is perpendicular to $\\mathbf{r}$ and so is $\\mathbf{v}'$ to $\\mathbf{r}'$. Therefore, $\\Delta \\mathbf{v}$ is perpendicular to $\\Delta \\mathbf{r}$. Since average acceleration is along $\\Delta \\mathbf{v}$ ($\\bar{\\mathbf{a}} = \\frac{\\Delta \\mathbf{v}}{\\Delta t}$), the average acceleration $\\bar{\\mathbf{a}}$ is perpendicular to $\\Delta \\mathbf{r}$. If we place $\\Delta \\mathbf{v}$ on the line that bisects the angle between $\\mathbf{r}$ and $\\mathbf{r}'$, we see that it is directed towards the centre of the circle. Figure 3.18(b) shows the same quantities for smaller time interval. $\\Delta \\mathbf{v}$ and hence $\\bar{\\mathbf{a}}$ is again directed towards the centre. In Fig. 3.18(c), $\\Delta t \\to 0$ and the average acceleration becomes the instantaneous acceleration. It is directed towards the centre. Thus, we find that the acceleration of an object in uniform circular motion is always directed towards the centre of the circle. In the limit $\\Delta t \\to 0$, $\\Delta \\mathbf{r}$ becomes perpendicular to $\\mathbf{r}$. In this limit $\\Delta \\mathbf{v} \\to 0$ and is consequently also perpendicular to $\\mathbf{v}$. Therefore, the acceleration is directed towards the centre, at each point of the circular path.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 3.18",
+                "description": "Velocity and acceleration of an object in uniform circular motion. (a) shows position vectors $\\mathbf{r}, \\mathbf{r}'$ and velocity vectors $\\mathbf{v}, \\mathbf{v}'$ at points $P$ and $P'$. (a1) and (a2) show the vector subtraction $\\Delta \\mathbf{v} = \\mathbf{v}' - \\mathbf{v}$. (b1) and (b2) show the same for a smaller time interval $\\Delta t$. (c) shows the limit $\\Delta t \\to 0$ where the acceleration vector $\\mathbf{a}$ is directed towards the centre $C$ of the circle.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.10:3",
+            "order": 3,
+            "title": "Magnitude of Centripetal Acceleration",
+            "content_text": "Let us now find the magnitude of the acceleration. The magnitude of $\\mathbf{a}$ is, by definition, given by $|\\mathbf{a}| = \\lim_{\\Delta t \\to 0} \\frac{|\\Delta \\mathbf{v}|}{\\Delta t}$. Let the angle between position vectors $\\mathbf{r}$ and $\\mathbf{r}'$ be $\\Delta \\theta$. Since the velocity vectors $\\mathbf{v}$ and $\\mathbf{v}'$ are always perpendicular to the position vectors, the angle between them is also $\\Delta \\theta$. Therefore, the triangle $CPP'$ formed by the position vectors and the triangle $GHI$ formed by the velocity vectors $\\mathbf{v}, \\mathbf{v}'$ and $\\Delta \\mathbf{v}$ are similar (Fig. 3.18a). Therefore, the ratio of the base-length to side-length for one of the triangles is equal to that of the other triangle. That is : $\\frac{|\\Delta \\mathbf{v}|}{v} = \\frac{|\\Delta \\mathbf{r}|}{R}$ or $|\\Delta \\mathbf{v}| = v \\frac{|\\Delta \\mathbf{r}|}{R}$. Therefore, $|\\mathbf{a}| = \\lim_{\\Delta t \\to 0} \\frac{|\\Delta \\mathbf{v}|}{\\Delta t} = \\lim_{\\Delta t \\to 0} \\frac{v |\\Delta \\mathbf{r}|}{R \\Delta t} = \\frac{v}{R} \\lim_{\\Delta t \\to 0} \\frac{|\\Delta \\mathbf{r}|}{\\Delta t}$. If $\\Delta t$ is small, $\\Delta \\theta$ will also be small and then arc $PP'$ can be approximately taken to be $|\\Delta \\mathbf{r}|$: $|\\Delta \\mathbf{r}| \\cong v \\Delta t$, $\\frac{|\\Delta \\mathbf{r}|}{\\Delta t} \\cong v$. Or, $\\lim_{\\Delta t \\to 0} \\frac{|\\Delta \\mathbf{r}|}{\\Delta t} = v$. Therefore, the centripetal acceleration $a_c$ is : Therefore, the centripetal acceleration $a_c$ is : $$a_c = \\left( \\frac{v}{R} \\right) v = v^2/R$$ Thus, the acceleration of an object moving with speed $v$ in a circle of radius $R$ has a magnitude $v^2/R$ and is always directed towards the centre. This is why this acceleration is called centripetal acceleration (a term proposed by Newton). A thorough analysis of centripetal acceleration was first published in 1673 by the Dutch scientist Christiaan Huygens (1629-1695) but it was probably known to Newton also some years earlier. 'Centripetal' comes from a Greek term which means 'centre-seeking'. Since $v$ and $R$ are constant, the magnitude of the centripetal acceleration is also constant. However, the direction changes — pointing always towards the centre. Therefore, a centripetal acceleration is not a constant vector.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.10:4",
+            "order": 4,
+            "title": "Angular Speed and Displacement",
+            "content_text": "We have another way of describing the velocity and the acceleration of an object in uniform circular motion. As the object moves from $P$ to $P'$ in time $\\Delta t (= t' - t)$, the line $CP$ turns through an angle $\\Delta \\theta$. $\\Delta \\theta$ is called angular displacement. We define the angular speed $\\omega$ (Greek letter omega) as the time rate of change of angular displacement: $$\\omega = \\frac{\\Delta \\theta}{\\Delta t}$$",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.10:5",
+            "order": 5,
+            "title": "Relation between Linear Speed and Angular Speed",
+            "content_text": "If the distance travelled by the object during the time $\\Delta t$ is $\\Delta s$, i.e. arc $PP'$ is $\\Delta s$, then the linear speed is $v = \\frac{\\Delta s}{\\Delta t}$. Since $\\Delta s = R \\Delta \\theta$, we can substitute this into the speed equation: $$v = R \\frac{\\Delta \\theta}{\\Delta t} = R \\omega$$ Thus, the relation between linear speed $v$ and angular speed $\\omega$ is: $$v = R \\omega$$",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.10:6",
+            "order": 6,
+            "title": "Centripetal Acceleration in terms of Angular Speed",
+            "content_text": "We can express centripetal acceleration $a_c$ in terms of angular speed $\\omega$ by substituting $v = R \\omega$ into the formula $a_c = v^2/R$: $$a_c = \\frac{(R \\omega)^2}{R} = \\omega^2 R$$ Thus, $a_c = \\omega^2 R$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.10:7",
+            "order": 7,
+            "title": "Time Period and Frequency in Circular Motion",
+            "content_text": "The time taken by an object to make one revolution is known as its time period $T$. The number of revolutions made in one second is called its frequency $\\nu$, where $\\nu = 1/T$. During one time period $T$, the distance moved by the object is the circumference $s = 2\\pi R$. Therefore, the linear speed is: $$v = \\frac{2\\pi R}{T} = 2\\pi R \\nu$$ In terms of frequency $\\nu$, the angular speed is: $$\\omega = 2\\pi \\nu$$ Substituting these into the acceleration formula gives: $$a_c = 4\\pi^2 \\nu^2 R$$",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:3.10:8",
+            "order": 8,
+            "title": "Example 3.9: Insect in a Circular Groove",
+            "content_text": "This example demonstrates the calculation of angular speed, linear speed, and centripetal acceleration for an object in uniform circular motion. It also highlights that while the magnitude of acceleration is constant, the acceleration vector itself is not constant because its direction changes continuously.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 3.9",
+                "problem": "An insect trapped in a circular groove of radius 12 cm moves along the groove steadily and completes 7 revolutions in 100 s. (a) What is the angular speed, and the linear speed of the motion? (b) Is the acceleration vector a constant vector? What is its magnitude?",
+                "solution": "This is an example of uniform circular motion. Here $R = 12$ cm. The angular speed $\\omega$ is given by: $\\omega = 2\\pi/T = 2\\pi \\times 7/100 = 0.44$ rad/s. The linear speed $v$ is: $v = \\omega R = 0.44 \\text{ s}^{-1} \\times 12 \\text{ cm} = 5.3 \\text{ cm s}^{-1}$. The direction of velocity $\\mathbf{v}$ is along the tangent to the circle at every point. The acceleration is directed towards the centre of the circle. Since this direction changes continuously, acceleration here is not a constant vector. However, the magnitude of acceleration is constant: $a = \\omega^2 R = (0.44 \\text{ s}^{-1})^2 (12 \\text{ cm}) = 2.3 \\text{ cm s}^{-2}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:3:SUMMARY",
+        "number": "SUMMARY",
+        "title": "SUMMARY",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:3:SUMMARY:1",
+            "order": 1,
+            "title": "Scalars, Vectors, and Multiplication",
+            "content_text": "Scalar quantities are quantities with magnitudes only (e.g., distance, speed, mass, temperature). Vector quantities have both magnitude and direction and obey special rules of vector algebra. A vector $\\mathbf{A}$ multiplied by a real number $\\lambda$ is also a vector, with magnitude $\\lambda$ times the magnitude of $\\mathbf{A}$ and direction same or opposite depending on the sign of $\\lambda$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:SUMMARY:2",
+            "order": 2,
+            "title": "Vector Addition and Subtraction",
+            "content_text": "Two vectors $\\mathbf{A}$ and $\\mathbf{B}$ can be added graphically using the head-to-tail method or the parallelogram method. Vector addition is commutative ($\\mathbf{A} + \\mathbf{B} = \\mathbf{B} + \\mathbf{A}$) and associative ($(\\mathbf{A} + \\mathbf{B}) + \\mathbf{C} = \\mathbf{A} + (\\mathbf{B} + \\mathbf{C})$). A null or zero vector has zero magnitude and no specific direction, with properties: $\\mathbf{A} + \\mathbf{0} = \\mathbf{A}$, $\\lambda \\mathbf{0} = \\mathbf{0}$, and $0 \\mathbf{A} = \\mathbf{0}$. Subtraction is defined as $\\mathbf{A} - \\mathbf{B} = \\mathbf{A} + (-\\mathbf{B})$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:SUMMARY:3",
+            "order": 3,
+            "title": "Resolution, Unit Vectors, and Components",
+            "content_text": "A vector $\\mathbf{A}$ can be resolved into components along two given vectors $\\mathbf{a}$ and $\\mathbf{b}$ in the same plane: $\\mathbf{A} = \\lambda \\mathbf{a} + \\mu \\mathbf{b}$. A unit vector $\\hat{\\mathbf{n}}$ associated with vector $\\mathbf{A}$ has magnitude 1 and is along $\\mathbf{A}$: $\\hat{\\mathbf{n}} = \\frac{\\mathbf{A}}{|\\mathbf{A}|}$. In a right-handed coordinate system, $\\hat{\\mathbf{i}}, \\hat{\\mathbf{j}}, \\hat{\\mathbf{k}}$ are unit vectors along the $x, y, z$ axes. A vector $\\mathbf{A}$ in the $x-y$ plane is $\\mathbf{A} = A_x \\hat{\\mathbf{i}} + A_y \\hat{\\mathbf{j}}$, where $A_x = A \\cos \\theta$ and $A_y = A \\sin \\theta$. The magnitude is $A = |\\mathbf{A}| = \\sqrt{A_x^2 + A_y^2}$ and direction is $\\tan \\theta = A_y/A_x$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:SUMMARY:4",
+            "order": 4,
+            "title": "Analytical Addition and Position Vector",
+            "content_text": "Vectors can be added analytically: if $\\mathbf{R} = \\mathbf{A} + \\mathbf{B}$, then $R_x = A_x + B_x$ and $R_y = A_y + B_y$. The position vector of an object in the $x-y$ plane is $\\mathbf{r} = x\\hat{\\mathbf{i}} + y\\hat{\\mathbf{j}}$. Displacement from position $\\mathbf{r}$ to position $\\mathbf{r}'$ is $\\Delta \\mathbf{r} = \\mathbf{r}' - \\mathbf{r} = (x' - x)\\hat{\\mathbf{i}} + (y' - y)\\hat{\\mathbf{j}} = \\Delta x \\hat{\\mathbf{i}} + \\Delta y \\hat{\\mathbf{j}}$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:SUMMARY:5",
+            "order": 5,
+            "title": "Velocity and Acceleration",
+            "content_text": "Average velocity is $\\mathbf{v} = \\frac{\\Delta \\mathbf{r}}{\\Delta t}$. Instantaneous velocity is the limit as $\\Delta t \\to 0$: $\\mathbf{v} = \\frac{d\\mathbf{r}}{dt} = v_x \\hat{\\mathbf{i}} + v_y \\hat{\\mathbf{j}} + v_z \\hat{\\mathbf{k}}$, where $v_x = \\frac{dx}{dt}, v_y = \\frac{dy}{dt}, v_z = \\frac{dz}{dt}$. Velocity is always tangent to the path. Average acceleration is $\\bar{\\mathbf{a}} = \\frac{\\Delta \\mathbf{v}}{\\Delta t}$. Instantaneous acceleration is $\\mathbf{a} = \\frac{d\\mathbf{v}}{dt} = a_x \\hat{\\mathbf{i}} + a_y \\hat{\\mathbf{j}} + a_z \\hat{\\mathbf{k}}$, where $a_x = \\frac{dv_x}{dt}, a_y = \\frac{dv_y}{dt}, a_z = \\frac{dv_z}{dt}$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:SUMMARY:6",
+            "order": 6,
+            "title": "Motion with Constant Acceleration",
+            "content_text": "For motion in a plane with constant acceleration $\\mathbf{a}$, the position at time $t$ is $\\mathbf{r} = \\mathbf{r}_0 + \\mathbf{v}_0 t + \\frac{1}{2}\\mathbf{a}t^2$ and velocity is $\\mathbf{v} = \\mathbf{v}_0 + \\mathbf{a}t$. In component form: $x = x_0 + v_{0x}t + \\frac{1}{2}a_x t^2$, $y = y_0 + v_{0y}t + \\frac{1}{2}a_y t^2$, $v_x = v_{0x} + a_x t$, and $v_y = v_{0y} + a_y t$. Motion in a plane can be treated as the superposition of two separate simultaneous one-dimensional motions along two perpendicular directions.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:SUMMARY:7",
+            "order": 7,
+            "title": "Projectile Motion",
+            "content_text": "An object in flight after being projected is a projectile. With initial velocity $\\mathbf{v}_0$ at angle $\\theta_0$ with the $x$-axis, the position and velocity at time $t$ are: $x = (v_0 \\cos \\theta_0)t$, $y = (v_0 \\sin \\theta_0)t - \\frac{1}{2}gt^2$, $v_x = v_{0x} = v_0 \\cos \\theta_0$, and $v_y = v_0 \\sin \\theta_0 - gt$. The path is parabolic: $y = (\\tan \\theta_0)x - \\frac{gx^2}{2(v_0 \\cos \\theta_0)^2}$. The maximum height that a projectile attains is : The maximum height that a projectile attains is : $$h_m = \\frac{(v_0 \\sin \\theta_0)^2}{2g}$$ The time taken to reach this height is : $$t_m = \\frac{v_0 \\sin \\theta_0}{g}$$ The horizontal distance travelled by a projectile from its initial position to the position it passes $y = 0$ during its fall is called the range, $R$ of the projectile. It is : $$R = \\frac{v_0^2}{g} \\sin 2\\theta_0$$",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:SUMMARY:8",
+            "order": 8,
+            "title": "Uniform Circular Motion",
+            "content_text": "When an object follows a circular path at constant speed, the motion of the object is called uniform circular motion. The magnitude of its acceleration is $a_c = v^2 / R$. The direction of $a_c$ is always towards the centre of the circle. The angular speed $\\omega$, is the rate of change of angular distance. It is related to velocity $v$ by $v = \\omega R$. The acceleration is $a_c = \\omega^2 R$. If $T$ is the time period of revolution of the object in circular motion and $\\nu$ is its frequency, we have $\\omega = 2\\pi\\nu$, $v = 2\\pi\\nu R$, $a_c = 4\\pi^2\\nu^2 R$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:SUMMARY:9",
+            "order": 9,
+            "title": "Summary Table of Physical Quantities",
+            "content_text": "The following table provides a summary of the physical quantities related to motion in a plane, including their symbols, dimensions, units, and key formulas or remarks.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 3.1",
+                "caption": "Summary of Physical Quantities in Motion in a Plane",
+                "headers": [
+                  "Physical Quantity",
+                  "Symbol",
+                  "Dimensions",
+                  "Unit",
+                  "Remark"
+                ],
+                "rows": [
+                  [
+                    "Position vector",
+                    "$\\mathbf{r}$",
+                    "$[L]$",
+                    "m",
+                    "Vector. It may be denoted by any other symbol as well."
+                  ],
+                  [
+                    "Displacement",
+                    "$\\Delta\\mathbf{r}$",
+                    "$[L]$",
+                    "m",
+                    "- do -"
+                  ],
+                  [
+                    "Velocity (a) Average",
+                    "$\\mathbf{\\bar{v}}$",
+                    "$[LT^{-1}]$",
+                    "m s$^{-1}$",
+                    "$= \\frac{\\Delta\\mathbf{r}}{\\Delta t}$, vector"
+                  ],
+                  [
+                    "Velocity (b) Instantaneous",
+                    "$\\mathbf{v}$",
+                    "$[LT^{-1}]$",
+                    "m s$^{-1}$",
+                    "$= \\frac{d\\mathbf{r}}{dt}$, vector"
+                  ],
+                  [
+                    "Acceleration (a) Average",
+                    "$\\mathbf{\\bar{a}}$",
+                    "$[LT^{-2}]$",
+                    "m s$^{-2}$",
+                    "$= \\frac{\\Delta\\mathbf{v}}{\\Delta t}$, vector"
+                  ],
+                  [
+                    "Acceleration (b) Instantaneous",
+                    "$\\mathbf{a}$",
+                    "$[LT^{-2}]$",
+                    "m s$^{-2}$",
+                    "$= \\frac{d\\mathbf{v}}{dt}$, vector"
+                  ],
+                  [
+                    "Projectile motion (a) Time of max. height",
+                    "$t_m$",
+                    "$[T]$",
+                    "s",
+                    "$= \\frac{v_0 \\sin \\theta_0}{g}$"
+                  ],
+                  [
+                    "Projectile motion (b) Max. height",
+                    "$h_m$",
+                    "$[L]$",
+                    "m",
+                    "$= \\frac{(v_0 \\sin \\theta_0)^2}{2g}$"
+                  ],
+                  [
+                    "Projectile motion (c) Horizontal range",
+                    "$R$",
+                    "$[L]$",
+                    "m",
+                    "$= \\frac{v_0^2 \\sin 2\\theta_0}{g}$"
+                  ],
+                  [
+                    "Circular motion (a) Angular speed",
+                    "$\\omega$",
+                    "$[T^{-1}]$",
+                    "rad/s",
+                    "$= \\frac{\\Delta \\theta}{\\Delta t} = \\frac{v}{r}$"
+                  ],
+                  [
+                    "Circular motion (b) Centripetal acceleration",
+                    "$a_c$",
+                    "$[LT^{-2}]$",
+                    "m s$^{-2}$",
+                    "$= \\frac{v^2}{r}$"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:3:POINTS TO PONDER",
+        "number": "POINTS TO PONDER",
+        "title": "Points to Ponder",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:3:POINTS TO PONDER:1",
+            "order": 1,
+            "title": "Path Length vs Displacement",
+            "content_text": "The path length traversed by an object between two points is, in general, not the same as the magnitude of displacement. The displacement depends only on the end points; the path length (as the name implies) depends on the actual path. The two quantities are equal only if the object does not change its direction during the course of motion. In all other cases, the path length is greater than the magnitude of displacement.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:POINTS TO PONDER:2",
+            "order": 2,
+            "title": "Average Speed and Average Velocity",
+            "content_text": "In view of the difference between path length and displacement, the average speed of an object is greater than or equal to the magnitude of the average velocity over a given time interval. The two are equal only if the path length is equal to the magnitude of displacement.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:POINTS TO PONDER:3",
+            "order": 3,
+            "title": "Independence of Axes",
+            "content_text": "Vector equations do not involve any choice of axes. They represent physical relationships that can be resolved along any two independent axes for calculation purposes.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:POINTS TO PONDER:4",
+            "order": 4,
+            "title": "Kinematic Equations in Circular Motion",
+            "content_text": "The kinematic equations for uniform acceleration do not apply to the case of uniform circular motion. Although the magnitude of acceleration is constant in uniform circular motion, its direction is continuously changing, which violates the condition of constant acceleration vector.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:POINTS TO PONDER:5",
+            "order": 5,
+            "title": "Resultant and Relative Velocity",
+            "content_text": "An object subjected to two velocities $\\mathbf{v}_1$ and $\\mathbf{v}_2$ has a resultant velocity $\\mathbf{v} = \\mathbf{v}_1 + \\mathbf{v}_2$. This must be distinguished from the relative velocity of object 1 with respect to object 2, which is given by $\\mathbf{v}_{12} = \\mathbf{v}_1 - \\mathbf{v}_2$. Both $\\mathbf{v}_1$ and $\\mathbf{v}_2$ must be measured with respect to the same reference frame.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:POINTS TO PONDER:6",
+            "order": 6,
+            "title": "Acceleration in Circular Motion",
+            "content_text": "The resultant acceleration of an object in circular motion is directed towards the centre (centripetal) only if the speed of the object is constant. If the speed changes, there is also a tangential component of acceleration.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:3:POINTS TO PONDER:7",
+            "order": 7,
+            "title": "Trajectory and Initial Conditions",
+            "content_text": "The shape of an object's trajectory is not determined by acceleration alone; it also depends on the initial conditions, specifically the initial position and initial velocity. For instance, an object under constant gravitational acceleration can follow a straight-line path (if thrown vertically) or a parabolic path (if thrown at an angle).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:physics:11:3:ex:1",
+          "number": 1,
+          "problem": "State, for each of the following physical quantities, if it is a scalar or a vector : volume, mass, speed, acceleration, density, number of moles, velocity, angular frequency, displacement, angular velocity.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:3:ex:2",
+          "number": 2,
+          "problem": "Pick out the two scalar quantities in the following list : force, angular momentum, work, current, linear momentum, electric field, average velocity, magnetic moment, relative velocity.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:3:ex:3",
+          "number": 3,
+          "problem": "Pick out the only vector quantity in the following list : Temperature, pressure, impulse, time, power, total path length, energy, gravitational potential, coefficient of friction, charge.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:3:ex:4",
+          "number": 4,
+          "problem": "State with reasons, whether the following algebraic operations with scalar and vector physical quantities are meaningful : (a) adding any two scalars, (b) adding a scalar to a vector of the same dimensions, (c) multiplying any vector by any scalar, (d) multiplying any two scalars, (e) adding any two vectors, (f) adding a component of a vector to the same vector.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:3:ex:5",
+          "number": 5,
+          "problem": "Read each statement below carefully and state with reasons, if it is true or false : (a) The magnitude of a vector is always a scalar, (b) each component of a vector is always a scalar, (c) the total path length is always equal to the magnitude of the displacement vector of a particle. (d) the average speed of a particle (defined as total path length divided by the time taken to cover the path) is either greater or equal to the magnitude of average velocity of the particle over the same interval of time, (e) Three vectors not lying in a plane can never add up to give a null vector.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:3:ex:6",
+          "number": 6,
+          "problem": "Establish the following vector inequalities geometrically or otherwise : (a) $|\\mathbf{a}+\\mathbf{b}| \\le |\\mathbf{a}| + |\\mathbf{b}|$ (b) $|\\mathbf{a}+\\mathbf{b}| \\ge ||\\mathbf{a}| - |\\mathbf{b}||$ (c) $|\\mathbf{a}-\\mathbf{b}| \\le |\\mathbf{a}| + |\\mathbf{b}|$ (d) $|\\mathbf{a}-\\mathbf{b}| \\ge ||\\mathbf{a}| - |\\mathbf{b}||$. When does the equality sign above apply?",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "derivation"
+        },
+        {
+          "id": "ncert:physics:11:3:ex:7",
+          "number": 7,
+          "problem": "Given $\\mathbf{a} + \\mathbf{b} + \\mathbf{c} + \\mathbf{d} = \\mathbf{0}$, which of the following statements are correct : (a) $\\mathbf{a}, \\mathbf{b}, \\mathbf{c}$, and $\\mathbf{d}$ must each be a null vector, (b) The magnitude of $(\\mathbf{a} + \\mathbf{c})$ equals the magnitude of $(\\mathbf{b} + \\mathbf{d})$, (c) The magnitude of $\\mathbf{a}$ can never be greater than the sum of the magnitudes of $\\mathbf{b}, \\mathbf{c}$, and $\\mathbf{d}$, (d) $\\mathbf{b} + \\mathbf{c}$ must lie in the plane of $\\mathbf{a}$ and $\\mathbf{d}$ if $\\mathbf{a}$ and $\\mathbf{d}$ are not collinear, and in the line of $\\mathbf{a}$ and $\\mathbf{d}$, if they are collinear ?",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:3:ex:8",
+          "number": 8,
+          "problem": "Three girls skating on a circular ice ground of radius 200 m start from a point $P$ on the edge of the ground and reach a point $Q$ diametrically opposite to $P$ following different paths (A, B, C) as shown in Fig. 3.19. What is the magnitude of the displacement vector for each ? For which girl is this equal to the actual length of path skate ?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:3:ex:9",
+          "number": 9,
+          "problem": "A cyclist starts from the centre $O$ of a circular park of radius 1 km, reaches the edge $P$ of the park, then cycles along the circumference, and returns to the centre along $QO$ as shown in Fig. 3.20. If the round trip takes 10 min, what is the (a) net displacement, (b) average velocity, and (c) average speed of the cyclist ?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:3:ex:10",
+          "number": 10,
+          "problem": "On an open ground, a motorist follows a track that turns to his left by an angle of $60^\\circ$ after every 500 m. Starting from a given turn, specify the displacement of the motorist at the third, sixth and eighth turn. Compare the magnitude of the displacement with the total path length covered by the motorist in each case.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:3:ex:11",
+          "number": 11,
+          "problem": "A passenger arriving in a new town wishes to go from the station to a hotel located 10 km away on a straight road from the station. A dishonest cabman takes him along a circuitous path 23 km long and reaches the hotel in 28 min. What is (a) the average speed of the taxi, (b) the magnitude of average velocity ? Are the two equal ?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:3:ex:12",
+          "number": 12,
+          "problem": "The ceiling of a long hall is 25 m high. What is the maximum horizontal distance that a ball thrown with a speed of 40 m s$^{-1}$ can go without hitting the ceiling of the hall ?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:3:ex:13",
+          "number": 13,
+          "problem": "A cricketer can throw a ball to a maximum horizontal distance of 100 m. How much high above the ground can the cricketer throw the same ball ?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:3:ex:14",
+          "number": 14,
+          "problem": "A stone tied to the end of a string 80 cm long is whirled in a horizontal circle with a constant speed. If the stone makes 14 revolutions in 25 s, what is the magnitude and direction of acceleration of the stone ?",
+          "solution": "Radius $r = 80$ cm = $0.8$ m. Frequency $\\nu = \\frac{14}{25}$ Hz. Angular speed $\\omega = 2\\pi\\nu = 2 \\times \\frac{22}{7} \\times \\frac{14}{25} = 3.52$ rad/s. Centripetal acceleration $a_c = \\omega^2 r = (3.52)^2 \\times 0.8 \\approx 9.9$ m/s$^2$. The direction is along the string towards the centre.",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:3:ex:15",
+          "number": 15,
+          "problem": "An aircraft executes a horizontal loop of radius 1.00 km with a steady speed of 900 km/h. Compare its centripetal acceleration with the acceleration due to gravity.",
+          "solution": "$r = 1000$ m, $v = 900$ km/h = $900 \\times \\frac{5}{18} = 250$ m/s. Centripetal acceleration $a_c = \\frac{v^2}{r} = \\frac{250^2}{1000} = 62.5$ m/s$^2$. Ratio $\\frac{a_c}{g} = \\frac{62.5}{9.8} \\approx 6.38$.",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:3:ex:16",
+          "number": 16,
+          "problem": "Read each statement below carefully and state, with reasons, if it is true or false : (a) The net acceleration of a particle in circular motion is always along the radius of the circle towards the centre (b) The velocity vector of a particle at a point is always along the tangent to the path of the particle at that point (c) The acceleration vector of a particle in uniform circular motion averaged over one cycle is a null vector",
+          "solution": "(a) False. This is only true for uniform circular motion. In non-uniform circular motion, there is also a tangential component of acceleration. (b) True. Velocity is always tangential to the path. (c) True. In uniform circular motion, the acceleration vector has constant magnitude but its direction changes continuously. Over one full cycle, the sum of these vectors is zero.",
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:3:ex:17",
+          "number": 17,
+          "problem": "The position of a particle is given by $\\mathbf{r} = 3.0t \\hat{\\mathbf{i}} - 2.0t^2 \\hat{\\mathbf{j}} + 4.0 \\hat{\\mathbf{k}}$ m where $t$ is in seconds and the coefficients have the proper units for $\\mathbf{r}$ to be in metres. (a) Find the $\\mathbf{v}$ and $\\mathbf{a}$ of the particle? (b) What is the magnitude and direction of velocity of the particle at $t = 2.0$ s ?",
+          "solution": "(a) $\\mathbf{v} = \\frac{d\\mathbf{r}}{dt} = 3.0 \\hat{\\mathbf{i}} - 4.0t \\hat{\\mathbf{j}}$. $\\mathbf{a} = \\frac{d\\mathbf{v}}{dt} = -4.0 \\hat{\\mathbf{j}}$. (b) At $t = 2.0$ s, $\\mathbf{v} = 3.0 \\hat{\\mathbf{i}} - 8.0 \\hat{\\mathbf{j}}$. Magnitude $v = \\sqrt{3^2 + (-8)^2} = \\sqrt{73} \\approx 8.54$ m/s. Direction $\\theta = \\tan^{-1}(\\frac{-8}{3}) \\approx -69.4^\\circ$ with the $x$-axis.",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:3:ex:18",
+          "number": 18,
+          "problem": "A particle starts from the origin at $t = 0$ s with a velocity of $10.0 \\hat{\\mathbf{j}}$ m/s and moves in the $x$-$y$ plane with a constant acceleration of $(8.0\\hat{\\mathbf{i}} + 2.0\\hat{\\mathbf{j}})$ m s$^{-2}$. (a) At what time is the $x$-coordinate of the particle 16 m? What is the $y$-coordinate of the particle at that time? (b) What is the speed of the particle at the time ?",
+          "solution": "(a) $x(t) = x_0 + v_{0x}t + \\frac{1}{2}a_x t^2 \\Rightarrow 16 = 0 + 0 + \\frac{1}{2}(8)t^2 \\Rightarrow 4t^2 = 16 \\Rightarrow t = 2$ s. $y(t) = y_0 + v_{0y}t + \\frac{1}{2}a_y t^2 = 0 + 10(2) + \\frac{1}{2}(2)(2^2) = 20 + 4 = 24$ m. (b) $\\mathbf{v}(t) = \\mathbf{v}_0 + \\mathbf{a}t = 10\\hat{\\mathbf{j}} + (8\\hat{\\mathbf{i}} + 2\\hat{\\mathbf{j}})(2) = 16\\hat{\\mathbf{i}} + 14\\hat{\\mathbf{j}}$. Speed $v = \\sqrt{16^2 + 14^2} = \\sqrt{256 + 196} = \\sqrt{452} \\approx 21.26$ m/s.",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:3:ex:19",
+          "number": 19,
+          "problem": "$\\hat{\\mathbf{i}}$ and $\\hat{\\mathbf{j}}$ are unit vectors along $x$- and $y$- axis respectively. What is the magnitude and direction of the vectors $\\hat{\\mathbf{i}} + \\hat{\\mathbf{j}}$, and $\\hat{\\mathbf{i}} - \\hat{\\mathbf{j}}$ ? What are the components of a vector $\\mathbf{A} = 2 \\hat{\\mathbf{i}} + 3 \\hat{\\mathbf{j}}$ along the directions of $\\hat{\\mathbf{i}} + \\hat{\\mathbf{j}}$ and $\\hat{\\mathbf{i}} - \\hat{\\mathbf{j}}$ ? [You may use graphical method]",
+          "solution": "Magnitude of $\\hat{\\mathbf{i}} + \\hat{\\mathbf{j}}$ is $\\sqrt{1^2 + 1^2} = \\sqrt{2}$, direction is $45^\\circ$ with $x$-axis. Magnitude of $\\hat{\\mathbf{i}} - \\hat{\\mathbf{j}}$ is $\\sqrt{1^2 + (-1)^2} = \\sqrt{2}$, direction is $-45^\\circ$ with $x$-axis. Component of $\\mathbf{A}$ along $\\mathbf{B}$ is $\\frac{\\mathbf{A} \\cdot \\mathbf{B}}{|\\mathbf{B}|}$. Along $\\hat{\\mathbf{i}} + \\hat{\\mathbf{j}}$: $\\frac{(2\\hat{\\mathbf{i}} + 3\\hat{\\mathbf{j}}) \\cdot (\\hat{\\mathbf{i}} + \\hat{\\mathbf{j}})}{\\sqrt{2}} = \\frac{2+3}{\\sqrt{2}} = \\frac{5}{\\sqrt{2}}$. Along $\\hat{\\mathbf{i}} - \\hat{\\mathbf{j}}$: $\\frac{(2\\hat{\\mathbf{i}} + 3\\hat{\\mathbf{j}}) \\cdot (\\hat{\\mathbf{i}} - \\hat{\\mathbf{j}})}{\\sqrt{2}} = \\frac{2-3}{\\sqrt{2}} = -\\frac{1}{\\sqrt{2}}$.",
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:3:ex:20",
+          "number": 20,
+          "problem": "For any arbitrary motion in space, which of the following relations are true : (a) $\\mathbf{v}_{\\text{average}} = (1/2) (\\mathbf{v} (t_1) + \\mathbf{v} (t_2))$ (b) $\\mathbf{v}_{\\text{average}} = [\\mathbf{r}(t_2) - \\mathbf{r}(t_1) ] / (t_2 - t_1)$ (c) $\\mathbf{v} (t) = \\mathbf{v} (0) + \\mathbf{a} t$ (d) $\\mathbf{r} (t) = \\mathbf{r} (0) + \\mathbf{v} (0) t + (1/2) \\mathbf{a} t^2$ (e) $\\mathbf{a}_{\\text{average}} = [\\mathbf{v} (t_2) - \\mathbf{v} (t_1) ] / (t_2 - t_1)$ (The 'average' stands for average of the quantity over the time interval $t_1$ to $t_2$)",
+          "solution": "(b) and (e) are true for any arbitrary motion as they are the definitions of average velocity and average acceleration. (a), (c), and (d) are only true for motion with constant acceleration.",
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:3:ex:21",
+          "number": 21,
+          "problem": "Read each statement below carefully and state, with reasons, if it is true or false : A scalar quantity is one that (a) is conserved in a process (b) can never take negative values (c) must be dimensionless (d) does not vary from one point to another in space (e) has the same value for observers with different orientations of axes.",
+          "solution": "(a) False (e.g., kinetic energy is not conserved in inelastic collisions). (b) False (e.g., temperature can be negative). (c) False (e.g., mass has dimensions). (d) False (e.g., gravitational potential varies in space). (e) True (scalars are invariant under coordinate rotation).",
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:3:ex:22",
+          "number": 22,
+          "problem": "An aircraft is flying at a height of 3400 m above the ground. If the angle subtended at a ground observation point by the aircraft positions 10.0 s apart is $30^\\circ$, what is the speed of the aircraft ?",
+          "solution": "Let $O$ be the observation point and $A, B$ be the positions of the aircraft. Height $h = 3400$ m. Angle $\\angle AOB = 30^\\circ$. In $\\triangle OAB$, the distance $d = AB = 2h \\tan(15^\\circ) = 2 \\times 3400 \\times 0.2679 \\approx 1821.7$ m. Speed $v = \\frac{d}{t} = \\frac{1821.7}{10} \\approx 182.2$ m/s.",
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        }
+      ]
+    }
+  }
+}

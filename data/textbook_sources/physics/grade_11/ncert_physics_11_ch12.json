@@ -1,0 +1,879 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_physics_11_ch12.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:physics:11:12",
+  "curriculum": "ncert",
+  "subject": "physics",
+  "grade": 11,
+  "textbook_name": "Physics Part II",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:physics:11:12",
+    "number": 12,
+    "title": "Kinetic Theory",
+    "summary": "This chapter introduces the kinetic theory of gases, explaining gas behavior through the motion of atoms and molecules. It begins by establishing the molecular nature of matter, discussing the atomic hypothesis and the evolution of atomic theory. Key concepts include molecular size, mean free path, and Avogadro's number.\n\nThe chapter then focuses on the behavior of ideal gases, presenting the ideal gas equation ($PV = \\mu RT$) and related gas laws like Boyle's and Charles' laws. Dalton's law of partial pressures is introduced for gas mixtures. Building upon this, the kinetic theory of an ideal gas is developed, linking pressure to the average kinetic energy of molecules. The concept of root mean square (rms) speed is defined.\n\nThe law of equipartition of energy is explored, explaining how energy is distributed among different degrees of freedom (translational, rotational, and vibrational). This is applied to calculate specific heat capacities of monatomic, diatomic, and polyatomic gases, connecting microscopic properties to macroscopic thermal behavior. Finally, the chapter discusses the mean free path, the average distance a molecule travels between collisions, relating it to molecular size and density. These concepts explain phenomena like gas diffusion and provide insights into the behavior of matter at a molecular level, enabling predictions about macroscopic properties like pressure, temperature, and specific heat.",
+    "sections": [
+      {
+        "id": "ncert:physics:11:12:12.1",
+        "number": "12.1",
+        "title": "INTRODUCTION",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:12:12.1:1",
+            "order": 1,
+            "title": "Overview of Kinetic Theory",
+            "content_text": "Boyle discovered the law named after him in 1661. Kinetic theory explains the behaviour of gases based on the idea that the gas consists of rapidly moving atoms or molecules. This is possible as the inter-atomic forces, which are short range forces that are important for solids and liquids, can be neglected for gases. The kinetic theory was developed in the nineteenth century by Maxwell, Boltzmann and others. It gives a molecular interpretation of pressure and temperature of a gas, and is consistent with gas laws and Avogadro’s hypothesis. It correctly explains specific heat capacities of many gases. It also relates measurable properties of gases such as viscosity, conduction and diffusion with molecular parameters, yielding estimates of molecular sizes and masses.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:12:12.2",
+        "number": "12.2",
+        "title": "MOLECULAR NATURE OF MATTER",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:12:12.2:1",
+            "order": 1,
+            "title": "The Atomic Hypothesis",
+            "content_text": "Richard Feynman considers the discovery that “Matter is made up of atoms” to be a very significant one. The Atomic Hypothesis states: All things are made of atoms - little particles that move around in perpetual motion, attracting each other when they are a little distance apart, but repelling upon being squeezed into one another. Speculation that matter may not be continuous existed in many places and cultures, including Kanada in India and Democritus in Greece.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:12:12.2:2",
+            "order": 2,
+            "title": "Atomic Hypothesis in Ancient India and Greece",
+            "content_text": "In the Vaisheshika school of thought in India founded by Kanada (Sixth century B.C.), the atomic picture was developed in detail. Atoms were thought to be eternal, indivisible, infinitesimal and ultimate parts of matter. The four kinds of atoms (Paramanu) were Bhoomi (Earth), Ap (water), Tejas (fire) and Vayu (air). Atoms combine to form different molecules. In ancient Greece, Democritus (Fourth century B.C.) is best known for his atomic hypothesis. The word ‘atom’ means ‘indivisible’ in Greek. According to him, atoms differ from each other physically, in shape, size and other properties. The atoms of water were smooth and round, while atoms of earth were rough and jagged. These ideas were intuitive conjectures and speculations not tested by quantitative experiments.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:12:12.2:3",
+            "order": 3,
+            "title": "Modern Atomic Theory and Chemical Laws",
+            "content_text": "John Dalton is credited with the introduction of the atomic viewpoint in modern science. He proposed the atomic theory to explain the laws of definite and multiple proportions. The first law says that any given compound has a fixed proportion by mass of its constituents. The second law says that when two elements form more than one compound, for a fixed mass of one element, the masses of the other elements are in ratio of small integers. Dalton suggested that the smallest constituents of an element are atoms. Atoms of one element are identical but differ from those of other elements. Gay Lussac’s law states: When gases combine chemically to yield another gas, their volumes are in the ratios of small integers. Avogadro’s law (or hypothesis) says: Equal volumes of all gases at equal temperature and pressure have the same number of molecules. Avogadro’s law, when combined with Dalton’s theory, explains Gay Lussac’s law.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:12:12.2:4",
+            "order": 4,
+            "title": "Molecular Scales and Mean Free Path",
+            "content_text": "The size of an atom is about an angstrom ($10^{-10}$ m). In solids, atoms are tightly packed and spaced about a few angstroms ($2$ Å) apart. In liquids, the separation is also about the same, but atoms can move around, enabling flow. In gases, the interatomic distances are in tens of angstroms. The average distance a molecule can travel without colliding is called the mean free path. The mean free path in gases is of the order of thousands of angstroms. Molecules are much freer in gases and can travel long distances without colliding. In solids and liquids, the closeness makes the interatomic force important. The force has a long range attraction and a short range repulsion. The atoms attract when they are at a few angstroms but repel when they come closer.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:12:12.2:5",
+            "order": 5,
+            "title": "Atomic Structure and Quarks",
+            "content_text": "Atoms are not indivisible or elementary. They consist of a nucleus and electrons. The nucleus itself is made up of protons and neutrons. The protons and neutrons are again made up of quarks. Even quarks may not be the end of the story; there may be string-like elementary entities.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:12:12.3",
+        "number": "12.3",
+        "title": "BEHAVIOUR OF GASES",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:12:12.3:1",
+            "order": 1,
+            "title": "The Ideal Gas Equation and Boltzmann Constant",
+            "content_text": "Properties of gases are easier to understand because molecules are far from each other and their mutual interactions are negligible except when they collide. Gases at low pressures and high temperatures satisfy a simple relation between pressure, temperature and volume: $$PV = KT$$ (Eq. 12.1) for a given sample, where $T$ is the absolute temperature. $K$ is a constant that varies with the volume of the gas. If we consider the number of molecules $N$ in the sample, $K$ is proportional to $N$, so $K = N k$. Observation shows that $k$ is the same for all gases, called the Boltzmann constant and denoted by $k_B$. Thus: $$\\frac{P_1 V_1}{N_1 T_1} = \frac{P_2 V_2}{N_2 T_2} = k_B$$ (Eq. 12.2). If $P$, $V$ and $T$ are the same, then $N$ is also the same for all gases, which is Avogadro’s hypothesis.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:12:12.3:2",
+            "order": 2,
+            "title": "Avogadro's Number and the Mole",
+            "content_text": "The number of molecules in $22.4$ litres of any gas at S.T.P. (standard temperature $273$ K and pressure $1$ atm) is $6.02 \\times 10^{23}$. This is known as Avogadro number and is denoted by $N_A$. The mass of $22.4$ litres of any gas is equal to its molecular weight in grams at S.T.P. This amount of substance is called a mole. Avogadro had guessed the equality of numbers in equal volumes of gas at a fixed temperature and pressure from chemical reactions. Kinetic theory justifies this hypothesis.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:12:12.3:3",
+            "order": 3,
+            "title": "Universal Gas Constant and Molar Forms",
+            "content_text": "The perfect gas equation can be written as: $$PV = \\mu RT$$ (Eq. 12.3) where $\\mu$ is the number of moles and $R = N_A k_B$ is the universal gas constant. Choosing the Kelvin scale for absolute temperature, $R = 8.314 \\text{ J mol}^{-1} \\text{K}^{-1}$. The number of moles is given by: $$\\mu = \\frac{M}{M_0} = \\frac{N}{N_A}$$ (Eq. 12.4) where $M$ is the mass of the gas containing $N$ molecules and $M_0$ is the molar mass. The equation can also be written as $PV = k_B NT$ or $P = k_B nT$, where $n = N/V$ is the number density (number of molecules per unit volume). The Boltzmann constant $k_B$ has a value of $1.38 \\times 10^{-23} \\text{ J K}^{-1}$. Another useful form is: $$P = \\frac{\\rho RT}{M_0}$$ (Eq. 12.5) where $\\rho$ is the mass density.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:12:12.3:4",
+            "order": 4,
+            "title": "Real Gas Behavior",
+            "content_text": "Real gases approach ideal gas behaviour at low pressures and high temperatures. This is illustrated in the graph of $\\frac{PV}{\\mu T}$ versus $P$. As pressure decreases, the curves for different temperatures $T_1, T_2, T_3$ converge toward the ideal gas value $R$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 12.1",
+                "description": "A graph showing the behavior of real gases compared to an ideal gas. The y-axis represents $\\frac{PV}{\\mu T}$ in units of $\\text{J mol}^{-1} \\text{K}^{-1}$ and the x-axis represents pressure $P$ in atm. Three curves for temperatures $T_1, T_2, T_3$ (where $T_1 > T_2 > T_3$) are shown. All curves approach the horizontal dashed line representing the ideal gas constant $R$ as the pressure $P$ approaches zero.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:12:12.3:5",
+            "order": 5,
+            "title": "Ideal Gas Definition",
+            "content_text": "An ideal gas is a theoretical model defined as a gas that satisfies the equation $PV = \\mu RT$ exactly at all pressures and temperatures. In reality, no real gas is truly ideal. Experimental observations show departures from ideal gas behavior, but all real gases approach ideal behavior at low pressures and high temperatures. At these conditions, molecules are far apart, and molecular interactions become negligible, allowing the gas to behave like an ideal one.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 12.2",
+                "description": "Experimental P-V curves (solid lines) for steam at three different temperatures $T_1, T_2, T_3$ ($T_1 > T_2 > T_3$) compared with theoretical curves predicted by Boyle's law (dotted lines). Agreement is better at higher temperatures and lower pressures.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:12:12.3:6",
+            "order": 6,
+            "title": "Boyle's Law and Charles' Law",
+            "content_text": "Boyle's law states that for a fixed mass of gas at a constant temperature, the pressure varies inversely with volume, expressed as $PV = \\text{constant}$. Charles' law states that for a fixed pressure, the volume of a gas is directly proportional to its absolute temperature, $V \\propto T$. These laws are approximations that hold well for real gases at low pressures and high temperatures, as shown in experimental $P-V$ and $T-V$ curves.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 12.3",
+                "description": "Experimental T-V curves (solid lines) for $CO_2$ at three different pressures $P_1, P_2, P_3$ ($P_1 > P_2 > P_3$) compared with Charles' law (dotted lines). Agreement is better at lower pressures.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:12:12.3:7",
+            "order": 7,
+            "title": "Dalton's Law of Partial Pressures",
+            "content_text": "Dalton's law applies to a mixture of non-interacting ideal gases. For a mixture of $\\mu_1$ moles of gas 1, $\\mu_2$ moles of gas 2, etc., in a vessel of volume $V$ at temperature $T$, the equation of state is $PV = (\\mu_1 + \\mu_2 + \\dots) RT$. This can be rewritten as $P = P_1 + P_2 + \\dots$, where $P_1 = \\mu_1 RT/V$ is the partial pressure of gas 1—the pressure it would exert if it occupied the same volume alone at the same temperature. Thus, the total pressure of a mixture of ideal gases is the sum of their partial pressures.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:12:12.3:8",
+            "order": 8,
+            "title": "Example 12.1: Molecular Volume Ratio",
+            "content_text": "This example estimates the ratio of molecular volume to the total volume occupied by water vapour. By comparing the density of liquid water ($1000 \\text{ kg m}^{-3}$) and water vapour ($0.6 \\text{ kg m}^{-3}$), we find that for a given mass, the volume of vapour is $1000/0.6 \\approx 1.67 \\times 10^3$ times larger than the liquid. Assuming the molecules are closely packed in the liquid state, the fraction of molecular volume to total volume in the vapour state is the ratio of densities: $0.6/1000 = 6 \\times 10^{-4}$.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 12.1",
+                "problem": "The density of water is $1000 \\text{ kg m}^{-3}$. The density of water vapour at $100^\\circ\\text{C}$ and $1 \\text{ atm}$ pressure is $0.6 \\text{ kg m}^{-3}$. The volume of a molecule multiplied by the total number gives, what is called, molecular volume. Estimate the ratio (or fraction) of the molecular volume to the total volume occupied by the water vapour under the above conditions of temperature and pressure.",
+                "solution": "For a given mass of water molecules, the density is less if volume is large. So the volume of the vapour is $1000/0.6 = 1/(6 \\times 10^{-4})$ times larger. If densities of bulk water and water molecules are same, then the fraction of molecular volume to the total volume in liquid state is 1. As volume in vapour state has increased, the fractional volume is less by the same amount, i.e. $6 \\times 10^{-4}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:12:12.3:9",
+            "order": 9,
+            "title": "Example 12.2: Volume of a Water Molecule",
+            "content_text": "To estimate the volume and radius of a single water molecule, we use the bulk density of water ($1000 \\text{ kg m}^{-3}$) and the molar mass ($18 \\text{ g} = 0.018 \\text{ kg}$). The mass of one molecule is found by dividing the molar mass by Avogadro's number ($6 \\times 10^{23}$), yielding $\\approx 3 \\times 10^{-26} \\text{ kg}$. Dividing this mass by the density gives a molecular volume of $\\approx 3 \\times 10^{-29} \\text{ m}^3$. Assuming a spherical shape, the radius is calculated to be approximately $2 \\times 10^{-10} \\text{ m}$ or $2 \\text{ \\AA}$.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 12.2",
+                "problem": "Estimate the volume of a water molecule using the data in Example 12.1.",
+                "solution": "In the liquid phase, molecules are closely packed. Density of water molecule $\\approx$ density of bulk water $= 1000 \\text{ kg m}^{-3}$. Mass of 1 mole of water $= 18 \\text{ g} = 0.018 \\text{ kg}$. Mass of a molecule $= 0.018 / (6 \\times 10^{23}) = 3 \\times 10^{-26} \\text{ kg}$. Volume of a molecule $= (3 \\times 10^{-26} \\text{ kg}) / (1000 \\text{ kg m}^{-3}) = 3 \\times 10^{-29} \\text{ m}^3$. Since $V = (4/3) \\pi r^3$, Radius $\\approx 2 \\times 10^{-10} \\text{ m} = 2 \\text{ \\AA}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:12:12.3:10",
+            "order": 10,
+            "title": "Example 12.3: Interatomic Distance in Vapour",
+            "content_text": "This example estimates the average interatomic distance in water vapour. Since the volume per molecule in vapour is $\\approx 10^3$ times larger than in liquid, the linear distance between molecules increases by the cube root of the volume factor, i.e., $10$ times. Taking the molecular radius as $2 \\text{ \\AA}$, the average distance is estimated as $2 \\times 20 = 40 \\text{ \\AA}$.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 12.3",
+                "problem": "What is the average distance between atoms (interatomic distance) in water? Use the data given in Examples 12.1 and 12.2.",
+                "solution": "A given mass of water in vapour state has $1.67 \\times 10^3$ times the volume of the same mass in liquid state. When volume increases by $10^3$ times, the radius increases by $V^{1/3}$ or $10$ times, i.e., $10 \\times 2 \\text{ \\AA} = 20 \\text{ \\AA}$. So the average distance is $2 \\times 20 = 40 \\text{ \\AA}$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:12:12.3:11",
+            "order": 11,
+            "title": "Example 12.4: Gas Mixture Ratios",
+            "content_text": "This example calculates ratios for a mixture of neon and oxygen with a partial pressure ratio of 3:2. (i) The ratio of the number of molecules $N_1/N_2$ is equal to the ratio of partial pressures, 3:2. (ii) The ratio of mass densities $\\rho_1/\\rho_2$ is calculated using the molar masses ($M_{Ne} = 20.2 \\text{ u}$, $M_{O_2} = 32.0 \\text{ u}$), resulting in $\\frac{\\rho_1}{\\rho_2} = \\frac{\\mu_1 M_1}{\\mu_2 M_2} = \\frac{3}{2} \\times \\frac{20.2}{32.0} \\approx 0.947$.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 12.4",
+                "problem": "A vessel contains two non-reactive gases: neon (monatomic) and oxygen (diatomic). The ratio of their partial pressures is 3:2. Estimate the ratio of (i) number of molecules and (ii) mass density of neon and oxygen in the vessel. Atomic mass of $Ne = 20.2 \\text{ u}$, molecular mass of $O_2 = 32.0 \\text{ u}$.",
+                "solution": "Partial pressure $P = \\mu RT/V$. Since $V$ and $T$ are common, $P_1/P_2 = \\mu_1/\\mu_2 = 3/2$. (i) $\\mu = N/N_A$, so $N_1/N_2 = \\mu_1/\\mu_2 = 3/2$. (ii) $\\rho = m/V = \\mu M/V$. So $\\rho_1/\\rho_2 = (\\mu_1 M_1)/(\\mu_2 M_2) = (3/2) \\times (20.2/32.0) = 0.947$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:12:12.4",
+        "number": "12.4",
+        "title": "KINETIC THEORY OF AN IDEAL GAS",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:12:12.4:1",
+            "order": 1,
+            "title": "Molecular Picture and Assumptions",
+            "content_text": "The kinetic theory of gases is based on the molecular picture of matter. A gas is viewed as a collection of a large number of molecules (typically $\\sim 10^{23}$) in incessant random motion. At ordinary pressure and temperature, the average distance between molecules is about 10 times the molecular size ($\\sim 2 \\text{ \\AA}$), making intermolecular interactions negligible. Molecules move freely in straight lines according to Newton's first law until they undergo elastic collisions with each other or the container walls. These collisions are the source of gas pressure.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:12:12.4:2",
+            "order": 2,
+            "title": "Pressure of an Ideal Gas",
+            "content_text": "To derive the pressure of an ideal gas, consider a gas in a cube of side $l$. A molecule with velocity $(v_x, v_y, v_z)$ colliding elastically with a wall parallel to the $yz$-plane experiences a change in $x$-momentum of $-2mv_x$, imparting $2mv_x$ to the wall. The number of molecules hitting the wall of area $A$ in time $\\Delta t$ is $\\frac{1}{2} n A v_x \\Delta t$, where $n$ is the number density. The total momentum transferred is $Q = n m A v_x^2 \\Delta t$, leading to pressure $P = Q/(A \\Delta t) = n m v_x^2$. Summing over all molecules gives $P = n m \\overline{v_x^2}$. Due to isotropy, $\\overline{v_x^2}",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:12:12.4:3",
+            "order": 3,
+            "title": "Effect of Molecular Collisions on Velocity Distribution",
+            "content_text": "Molecular collisions do not affect the steady distribution of velocities in an ideal gas, provided they are not too frequent and the time spent in a collision is negligible compared to the time between collisions. A molecule with a different initial velocity which after a collision acquires the velocity $(v_x, v_y, v_z)$ ensures that the distribution remains steady. Thus, the calculation for pressure based on mean square velocity $\\overline{v_x^2}$ remains valid despite constant internal collisions.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:12:12.4:4",
+            "order": 4,
+            "title": "Kinetic Interpretation of Temperature",
+            "content_text": "The pressure of an ideal gas can be expressed as $PV = (1/3) nV m \\overline{v^2}$, which can be rewritten as $PV = (2/3) N \\times \\frac{1}{2} m \\overline{v^2}$, where $N = nV$ is the total number of molecules in the sample. The quantity in the bracket, $\\frac{1}{2} m \\overline{v^2}$, represents the average translational kinetic energy of the molecules in the gas. This relates the macroscopic product of pressure and volume to the microscopic kinetic energy of the constituent particles.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:12:12.4:5",
+            "order": 5,
+            "title": "Internal Energy and Temperature Relation",
+            "content_text": "For an ideal gas, the internal energy $E$ is purely kinetic (ignoring potential energy from intermolecular forces). Thus, $E = N (1/2) m \\overline{v^2}$. Substituting this into the pressure equation gives $PV = (2/3) E$. By combining this with the ideal gas law $PV = k_B NT$, we derive $E = (3/2) k_B NT$, or $E/N = \\frac{1}{2} m \\overline{v^2} = (3/2) k_B T$. This fundamental result shows that the average kinetic energy of a molecule is directly proportional to the absolute temperature of the gas and is independent of pressure, volume, or the nature of the ideal gas. This connects the macroscopic thermodynamic variable (temperature) to a molecular quantity (average kinetic energy) via the Boltzmann constant $k_B$.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:12:12.4:6",
+            "order": 6,
+            "title": "Kinetic Theory and Dalton's Law of Partial Pressures",
+            "content_text": "For a mixture of non-reactive ideal gases, the total pressure $P$ is the sum of the partial pressures of each component. From kinetic theory, $P = (1/3) [n_1 m_1 \\overline{v_1^2} + n_2 m_2 \\overline{v_2^2} + ...]$. In thermal equilibrium, the average kinetic energy of the molecules of different gases will be equal: $\\frac{1}{2} m_1 \\overline{v_1^2} = \\frac{1}{2} m_2 \\overline{v_2^2} = (3/2) k_B T$. Substituting this into the pressure equation yields $P = (n_1 + n_2 + ...) k_B T$, which is the kinetic theory derivation of Dalton's law of partial pressures.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:12:12.4:7",
+            "order": 7,
+            "title": "Root Mean Square (rms) Speed",
+            "content_text": "The root mean square (rms) speed, denoted by $v_{rms}$, is defined as the square root of the mean square speed: $v_{rms} = \\sqrt{\\overline{v^2}}$. From the relation $\\overline{v^2} = 3 k_B T / m$, it follows that at a given temperature, lighter molecules have higher rms speeds. For example, in nitrogen gas at $T = 300$ K, the rms speed is approximately $516$ m/s, which is comparable to the speed of sound in air.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:12:12.4:8",
+            "order": 8,
+            "title": "Example 12.5: Kinetic Energy and RMS Speed in Mixtures",
+            "content_text": "This example explores the properties of a mixture of argon and chlorine. It emphasizes that average kinetic energy per molecule depends only on temperature, while rms speed depends on the molecular mass.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 12.5",
+                "problem": "A flask contains argon and chlorine in the ratio of 2:1 by mass. The temperature of the mixture is $27^{\\circ}$ C. Obtain the ratio of (i) average kinetic energy per molecule, and (ii) root mean square speed $v_{rms}$ of the molecules of the two gases. Atomic mass of argon = 39.9 u; Molecular mass of chlorine = 70.9 u.",
+                "solution": "(i) The average kinetic energy (per molecule) of any ideal gas is always equal to $(3/2) k_B T$. It depends only on temperature and is independent of the nature of the gas. Since both gases are at the same temperature, the ratio of average kinetic energy is 1:1. (ii) The rms speed is given by $v_{rms} = \\sqrt{3 k_B T / m}$. Therefore, $\\frac{(v_{rms})_{Ar}}{(v_{rms})_{Cl}} = \\sqrt{\\frac{m_{Cl}}{m_{Ar}}} = \\sqrt{\\frac{M_{Cl}}{M_{Ar}}} = \\sqrt{\\frac{70.9}{39.9}} = 1.33$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:12:12.4:9",
+            "order": 9,
+            "title": "Example 12.6: Isotope Separation and Diffusion",
+            "content_text": "This example demonstrates the application of kinetic theory in the enrichment of Uranium isotopes using the difference in their rms speeds.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 12.6",
+                "problem": "Uranium has two isotopes of masses 235 and 238 units. If both are present in Uranium hexafluoride gas which would have the larger average speed? If atomic mass of fluorine is 19 units, estimate the percentage difference in speeds at any temperature.",
+                "solution": "At a fixed temperature, the average energy $\\frac{1}{2} m \\langle v^2 \\rangle$ is constant. Thus, the smaller the mass of the molecule, the faster will be the speed. The molecules are $^{235}UF_6$ and $^{238}UF_6$. Their masses are $235 + 6 \\times 19 = 349$ u and $238 + 6 \\times 19 = 352$ u. The ratio of speeds is $v_{349} / v_{352} = (352 / 349)^{1/2} = 1.0044$. The percentage difference is $\\frac{\\Delta V}{V} \\times 100 = 0.44\\%$."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Fig. 12.5",
+                "description": "A diagram showing gas molecules of different sizes/speeds passing through a narrow pore in a thick porous wall. It illustrates the process of diffusion where faster (lighter) molecules leak out more efficiently than slower (heavier) ones.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:12:12.4:10",
+            "order": 10,
+            "title": "Conceptual Applications of Kinetic Theory",
+            "content_text": "Kinetic theory explains macroscopic phenomena like gas compression and expansion through molecular collisions. When a piston moves towards a gas (compression), molecules rebounding from the moving piston gain speed, increasing the gas temperature. Conversely, during expansion, molecules lose speed upon hitting a receding piston, leading to cooling.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Example 12.7",
+                "problem": "(a) When a molecule hits a massive wall, it rebounds with the same speed. When a ball hits a massive bat moving towards it, does the ball move faster or slower? (b) When gas in a cylinder is compressed by a piston, its temperature rises. Explain using (a). (c) What happens when a compressed gas pushes a piston out and expands? (d) Did Sachin Tendulkar's use of a heavy cricket bat help him?",
+                "solution": "(a) Let the ball speed be $u$ and bat speed be $V$ towards the ball. Relative speed is $V+u$. After collision, relative speed remains $V+u$ away from the bat. Speed relative to the ground is $V + (V+u) = 2V + u$. The ball speeds up. (b) The moving piston acts like the moving bat; molecules gain kinetic energy upon collision, raising the temperature. (c) Molecules lose kinetic energy hitting a receding piston, so the gas cools. (d) A heavy bat (massive) ensures the bat's speed $V$ is less affected by the ball, maximizing the rebound speed of the ball."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:12:12.5",
+        "number": "12.5",
+        "title": "LAW OF EQUIPARTITION OF ENERGY",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:12:12.5:1",
+            "order": 1,
+            "title": "Translational Energy and Thermal Equilibrium",
+            "content_text": "The kinetic energy of a single molecule is given by $\\epsilon_t = \\frac{1}{2} m v_x^2 + \\frac{1}{2} m v_y^2 + \\frac{1}{2} m v_z^2$. In thermal equilibrium at temperature $T$, the average total energy is $\\langle \\epsilon_t \\rangle = \\frac{3}{2} k_B T$. Since there is no preferred direction in space, the average energy is distributed equally among the three Cartesian components: $\\langle \\frac{1}{2} m v_x^2 \\rangle = \\frac{1}{2} k_B T$, $\\langle \\frac{1}{2} m v_y^2 \\rangle = \\frac{1}{2} k_B T$, and $\\langle \\frac{1}{2} m v_z^2 \\rangle = \\frac{1}{2} k_B T$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:12:12.5:2",
+            "order": 2,
+            "title": "Degrees of Freedom",
+            "content_text": "A degree of freedom refers to an independent way a molecule can move or store energy. A molecule free to move in three-dimensional space has three translational degrees of freedom. If constrained to a plane, it has two; along a line, it has one. Each degree of freedom corresponds to a term in the energy expression that contains the square of a variable of motion (e.g., $\\frac{1}{2} m v_x^2$). The law of equipartition states that in equilibrium, each such term contributes an average energy of $\\frac{1}{2} k_B T$.\nMolecules can also have rotational and vibrational degrees of freedom. A diatomic molecule like $O_2$ has three translational degrees of freedom and two rotational degrees of freedom (rotation about two independent axes perpendicular to the interatomic axis). Each rotational term $\\frac{1}{2} I \\omega^2$ contributes $\\frac{1}{2} k_B T$. At higher temperatures, vibrational modes become active. A vibrational mode contributes two squared terms: kinetic energy $\\frac{1}{2} m (dy/dt)^2$ and potential energy $\\frac{1}{2} ky^2$. Thus, each vibrational mode contributes $k_B T$ ($2 \\times \\frac{1}{2} k_B T$) to the average energy. While each translational and rotational degree of freedom contributes only one 'squared term' to the energy expression, one vibrational mode contributes two 'squared terms': kinetic energy $\\frac{1}{2} m (dy/dt)^2$ and potential energy $\\frac{1}{2} ky^2$. Each quadratic term occurring in the expression for energy is a mode of absorption of energy by the molecule. In thermal equilibrium at absolute temperature $T$, for each translational mode of motion, the average energy is $\\frac{1}{2} k_B T$. The law of equipartition of energy, first proved by Maxwell, states that in equilibrium, the total energy is equally distributed in all possible energy modes (translational, rotational, and vibrational), with each mode having an average energy equal to $\\frac{1}{2} k_B T$. Accordingly, each translational and rotational degree of freedom of a molecule contributes $\\frac{1}{2} k_B T$ to the energy, while each vibrational frequency contributes $2 \\times \\frac{1}{2} k_B T = k_B T$, since a vibrational mode has both kinetic and potential energy modes. This law can be applied to predict the specific heats of gases and solids theoretically.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 12.6",
+                "description": "A diagram showing a diatomic molecule with two independent axes of rotation (labeled 1 and 2) that are perpendicular to the line joining the two atoms. The rotation about the interatomic axis is ignored due to its very small moment of inertia.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:12:12.6",
+        "number": "12.6",
+        "title": "SPECIFIC HEAT CAPACITY",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:12:12.6:1",
+            "order": 1,
+            "title": "Monatomic Gases",
+            "content_text": "The molecule of a monatomic gas has only three translational degrees of freedom. Thus, the average energy of a molecule at temperature $T$ is $(3/2) k_B T$. The total internal energy $U$ of a mole of such a gas is $U = \\frac{3}{2} k_B T \\times N_A = \\frac{3}{2} RT$. The molar specific heat at constant volume, $C_v$, is given by $C_v = \\frac{dU}{dT} = \\frac{3}{2} R$. For an ideal gas, the relation $C_p - C_v = R$ holds, so $C_p = \\frac{5}{2} R$. The ratio of specific heats is $\\gamma = \\frac{C_p}{C_v} = \\frac{5}{3}$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:12:12.6:2",
+            "order": 2,
+            "title": "Diatomic Gases",
+            "content_text": "A diatomic molecule treated as a rigid rotator, like a dumbbell, has 5 degrees of freedom: 3 translational and 2 rotational. Using the law of equipartition of energy, the total internal energy of a mole of such a gas is $U = \\frac{5}{2} k_B T \\times N_A = \\frac{5}{2} RT$. The molar specific heats are then given by $C_v = \\frac{5}{2} R$ and $C_p = \\frac{7}{2} R$, with the ratio $\\gamma = \\frac{7}{5}$. If the diatomic molecule is not rigid but has in addition a vibrational mode, it contributes two extra squared terms (kinetic and potential). In this case, $U = (\\frac{5}{2} k_B T + k_B T) N_A = \\frac{7}{2} RT$. Consequently, $C_v = \\frac{7}{2} R$, $C_p = \\frac{9}{2} R$, and $\\gamma = \\frac{9}{7}$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:12:12.6:3",
+            "order": 3,
+            "title": "Polyatomic Gases",
+            "content_text": "In general, a polyatomic molecule has 3 translational and 3 rotational degrees of freedom, and a certain number ($f$) of vibrational modes. According to the law of equipartition of energy, one mole of such a gas has internal energy $U = (\\frac{3}{2} k_B T + \\frac{3}{2} k_B T + f k_B T) N_A = (3 + f) RT$. This leads to $C_v = (3 + f) R$, $C_p = (4 + f) R$, and $\\gamma = \\frac{4+f}{3+f}$. The relation $C_p - C_v = R$ is true for any ideal gas. Table 12.1 summarises the theoretical predictions for specific heats of gases ignoring vibrational modes, while Table 12.2 provides measured values. The agreement is generally good at ordinary temperatures, though discrepancies in gases like $Cl_2$ and $C_2H_6$ suggest vibrational modes must be included in those cases.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 12.1",
+                "caption": "Predicted values of specific heat capacities of gases (ignoring vibrational modes)",
+                "headers": [
+                  "Nature of Gas",
+                  "$C_v$ (J mol$^{-1}$ K$^{-1}$)",
+                  "$C_p$ (J mol$^{-1}$ K$^{-1}$)",
+                  "$C_p - C_v$ (J mol$^{-1}$ K$^{-1}$)",
+                  "$\\gamma$"
+                ],
+                "rows": [
+                  [
+                    "Monatomic",
+                    "12.5",
+                    "20.8",
+                    "8.31",
+                    "1.67"
+                  ],
+                  [
+                    "Diatomic",
+                    "20.8",
+                    "29.1",
+                    "8.31",
+                    "1.40"
+                  ],
+                  [
+                    "Triatomic",
+                    "24.93",
+                    "33.24",
+                    "8.31",
+                    "1.33"
+                  ]
+                ]
+              },
+              {
+                "label": "Table 12.2",
+                "caption": "Measured values of specific heat capacities of some gases",
+                "headers": [
+                  "Nature of gas",
+                  "Gas",
+                  "$C_v$ (J mol$^{-1}$ K$^{-1}$)",
+                  "$C_p$ (J mol$^{-1}$ K$^{-1}$)",
+                  "$C_p - C_v$ (J mol$^{-1}$ K$^{-1}$)",
+                  "$\\gamma$"
+                ],
+                "rows": [
+                  [
+                    "Monatomic",
+                    "He",
+                    "12.5",
+                    "20.8",
+                    "8.30",
+                    "1.66"
+                  ],
+                  [
+                    "Monatomic",
+                    "Ne",
+                    "12.7",
+                    "20.8",
+                    "8.12",
+                    "1.64"
+                  ],
+                  [
+                    "Monatomic",
+                    "Ar",
+                    "12.5",
+                    "20.8",
+                    "8.30",
+                    "1.67"
+                  ],
+                  [
+                    "Diatomic",
+                    "H$_2$",
+                    "20.4",
+                    "28.8",
+                    "8.45",
+                    "1.41"
+                  ],
+                  [
+                    "Diatomic",
+                    "O$_2$",
+                    "21.0",
+                    "29.3",
+                    "8.32",
+                    "1.40"
+                  ],
+                  [
+                    "Diatomic",
+                    "N$_2$",
+                    "20.8",
+                    "29.1",
+                    "8.32",
+                    "1.40"
+                  ],
+                  [
+                    "Triatomic",
+                    "H$_2$O",
+                    "27.0",
+                    "35.4",
+                    "8.35",
+                    "1.31"
+                  ],
+                  [
+                    "Polyatomic",
+                    "CH$_4$",
+                    "27.1",
+                    "35.4",
+                    "8.36",
+                    "1.31"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:physics:11:12:12.6:4",
+            "order": 4,
+            "title": "Example 12.8: Heat Required for Helium Gas",
+            "content_text": "This application demonstrates how to calculate the heat required to raise the temperature of a monatomic gas (Helium) in a fixed-volume cylinder using the molar specific heat $C_v$.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 12.8",
+                "problem": "A cylinder of fixed capacity 44.8 litres contains helium gas at standard temperature and pressure. What is the amount of heat needed to raise the temperature of the gas in the cylinder by $15.0 ^\\circ C$? ($R = 8.31$ J mol$^{-1}$ K$^{-1}$).",
+                "solution": "Using the gas law $PV = \\mu RT$, we find that 1 mol of any (ideal) gas at standard temperature (273 K) and pressure (1 atm = $1.01 \\times 10^5$ Pa) occupies a volume of 22.4 litres. Thus the cylinder contains 2 mol of helium. Since helium is monatomic, its predicted molar specific heat at constant volume, $C_v = (3/2) R$, and molar specific heat at constant pressure, $C_p = (3/2) R + R = (5/2) R$. Since the volume of the cylinder is fixed, the heat required is determined by $C_v$. Therefore, Heat required = no. of moles $\\times$ molar specific heat $\\times$ rise in temperature $= 2 \\times 1.5 R \\times 15.0 = 45 R = 45 \\times 8.31 = 374$ J."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:12:12.6:5",
+            "order": 5,
+            "title": "Specific Heat Capacity of Solids",
+            "content_text": "The law of equipartition of energy can determine the specific heats of solids. Consider a solid of $N$ atoms, each vibrating about its mean position. An oscillation in one dimension has an average energy of $2 \\times \\frac{1}{2} k_B T = k_B T$. In three dimensions, the average energy is $3 k_B T$. For a mole of solid ($N = N_A$), the total internal energy is $U = 3 k_B T \\times N_A = 3 RT$. At constant pressure, since the change in volume $\\Delta V$ is negligible for a solid, $\\Delta Q = \\Delta U$. Hence, the molar specific heat $C = \\frac{\\Delta Q}{\\Delta T} = \\frac{\\Delta U}{\\Delta T} = 3R$. This prediction generally agrees with experimental values at ordinary temperatures, as shown in Table 12.3, though Carbon is an exception.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 12.3",
+                "caption": "Specific Heat Capacity of some solids at room temperature and atmospheric pressure",
+                "headers": [
+                  "Substance",
+                  "Specific heat (J kg$^{-1}$ K$^{-1}$)",
+                  "Molar specific heat (J mol$^{-1}$ K$^{-1}$)"
+                ],
+                "rows": [
+                  [
+                    "Aluminium",
+                    "900.0",
+                    "24.4"
+                  ],
+                  [
+                    "Carbon",
+                    "506.5",
+                    "6.1"
+                  ],
+                  [
+                    "Copper",
+                    "386.4",
+                    "24.5"
+                  ],
+                  [
+                    "Lead",
+                    "127.7",
+                    "26.5"
+                  ],
+                  [
+                    "Silver",
+                    "236.1",
+                    "25.5"
+                  ],
+                  [
+                    "Tungsten",
+                    "134.4",
+                    "24.9"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:12:12.7",
+        "number": "12.7",
+        "title": "MEAN FREE PATH",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:12:12.7:1",
+            "order": 1,
+            "title": "Introduction to Mean Free Path",
+            "content_text": "Molecules in a gas move at high speeds, yet phenomena like gas diffusion take significant time. This occurs because molecules have a finite size and undergo frequent collisions, causing their paths to be constantly deflected. The mean free path $l$ is the average distance between two successive collisions.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:12:12.7:2",
+            "order": 2,
+            "title": "Derivation of Mean Free Path",
+            "content_text": "Suppose molecules are spheres of diameter $d$. A molecule moving with average speed $\\langle v \\rangle$ will collide with any molecule whose center comes within a distance $d$ of its center. In time $\\Delta t$, it sweeps a volume $\\pi d^2 \\langle v \\rangle \\Delta t$ (see Fig. 12.7). If $n$ is the number of molecules per unit volume, the molecule suffers $n \\pi d^2 \\langle v \\rangle \\Delta t$ collisions. The rate of collisions is $n \\pi d^2 \\langle v \\rangle$, and the average time between collisions is $\\tau = 1/(n \\pi \\langle v \\rangle d^2)$. The mean free path $l$ is $l = \\langle v \\rangle \\tau = 1/(n \\pi d^2)$. This derivation assumes other molecules are at rest.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 12.7",
+                "description": "A diagram showing a molecule moving through a cylindrical volume of length $\\langle v \\rangle \\Delta t$ and radius $d$. The molecule will collide with any other molecule whose center lies within this cylinder. Three other molecules are shown, one of which is inside the cylinder and thus would be hit.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:12:12.7:3",
+            "order": 3,
+            "title": "Refined Formula and Molecular Parameters",
+            "content_text": "In reality, all molecules are moving, and the collision rate is determined by the average relative velocity. A more exact treatment gives $l = 1/(\\sqrt{2} n \\pi d^2)$. The mean free path depends inversely on the number density $n$ and the size of the molecules. In a highly evacuated tube, $n$ is small and $l$ can be as large as the tube length. Kinetic theory relates bulk properties like viscosity, heat conductivity, and diffusion to these microscopic parameters.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:12:12.7:4",
+            "order": 4,
+            "title": "Example 12.9: Mean Free Path of Water Vapour",
+            "content_text": "This example estimates the mean free path for a water molecule in water vapour at 373 K, showing it is much larger than interatomic distances.",
+            "content_type": "application",
+            "worked_examples": [
+              {
+                "label": "Example 12.9",
+                "problem": "Estimate the mean free path for a water molecule in water vapour at 373 K. Use information from Exercises 12.1 and Eq. (12.41) above.",
+                "solution": "The $d$ for water vapour is same as that of air. The number density is inversely proportional to absolute temperature. So $n = 2.7 \\times 10^{25} \\times \\frac{273}{373} = 2 \\times 10^{25}$ m$^{-3}$. Hence, mean free path $l = 4 \\times 10^{-7}$ m. Note that the mean free path is 100 times the interatomic distance $\\sim 40$ \\AA $= 4 \\times 10^{-9}$ m calculated earlier. It is this large value of mean free path that leads to the typical gaseous behaviour. Gases can not be confined without a container."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:physics:11:12:12.8",
+        "number": "12.8",
+        "title": "SUMMARY AND POINTS TO PONDER",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:physics:11:12:12.8:1",
+            "order": 1,
+            "title": "Ideal Gas Equation and Real Gas Behavior",
+            "content_text": "The ideal gas equation connects pressure ($P$), volume ($V$) and absolute temperature ($T$) as: $$PV = \\mu RT = k_B NT$$ where $\\mu$ is the number of moles and $N$ is the number of molecules. $R$ and $k_B$ are universal constants with values: $R = 8.314 \\text{ J mol}^{-1} \\text{ K}^{-1}$ and $k_B = \\frac{R}{N_A} = 1.38 \\times 10^{-23} \\text{ J K}^{-1}$. Real gases satisfy the ideal gas equation only approximately, with better agreement at low pressures and high temperatures.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:12:12.8:2",
+            "order": 2,
+            "title": "Kinetic Theory and Temperature Interpretation",
+            "content_text": "Kinetic theory of an ideal gas provides the fundamental relation: $$P = \\frac{1}{3} n m \\overline{v^2}$$ where $n$ is the number density of molecules, $m$ is the mass of the molecule, and $\\overline{v^2}$ is the mean of squared speed. Combined with the ideal gas equation, it yields a kinetic interpretation of temperature: $$\\frac{1}{2} m \\overline{v^2} = \\frac{3}{2} k_B T$$ The root mean square speed is given by: $$v_{rms} = (\\overline{v^2})^{1/2} = \\sqrt{\\frac{3k_B T}{m}}$$ This indicates that the temperature of a gas is a measure of the average kinetic energy of a molecule, independent of the nature of the gas or molecule. In a mixture of gases at a fixed temperature, heavier molecules have lower average speeds.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:12:12.8:3",
+            "order": 3,
+            "title": "Translational Kinetic Energy and Pressure Relation",
+            "content_text": "The total translational kinetic energy $E$ of a gas system is given by: $$E = \\frac{3}{2} k_B NT$$ This leads to a direct relation between pressure, volume, and energy: $$PV = \\frac{2}{3} E$$ showing that the product of pressure and volume is proportional to the total translational kinetic energy of the gas molecules.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:12:12.8:4",
+            "order": 4,
+            "title": "Law of Equipartition of Energy",
+            "content_text": "The law of equipartition of energy states that if a system is in equilibrium at absolute temperature $T$, the total energy is distributed equally among different energy modes of absorption. The energy in each mode is equal to $\\frac{1}{2} k_B T$. Each translational and rotational degree of freedom corresponds to one energy mode of absorption. Each vibrational frequency has two modes of energy (kinetic and potential) with a corresponding total energy equal to $2 \\times \\frac{1}{2} k_B T = k_B T$.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:12:12.8:5",
+            "order": 5,
+            "title": "Molar Specific Heats of Gases",
+            "content_text": "Using the law of equipartition of energy, the molar specific heats of gases can be determined. The calculated values are in good agreement with experimental values for several gases. This agreement can be further improved by including vibrational modes of motion in the theoretical models.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:12:12.8:6",
+            "order": 6,
+            "title": "Mean Free Path",
+            "content_text": "The mean free path $l$ is defined as the average distance covered by a molecule between two successive collisions. It is given by the formula: $$l = \\frac{1}{\\sqrt{2} n \\pi d^2}$$ where $n$ is the number density and $d$ is the diameter of the molecule.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:12:12.8:7",
+            "order": 7,
+            "title": "Conceptual Insights on Pressure and Molecular Scales",
+            "content_text": "Pressure in a fluid is not only exerted on the container walls but exists everywhere within the fluid. Any layer of gas inside a container is in equilibrium because the pressure is the same on both sides of the layer. Regarding molecular scales, at ordinary pressures and temperatures, the intermolecular distance in a gas is only about 10 times the interatomic distance in solids and liquids. The mean free path in a gas is approximately 100 times the interatomic distance and 1000 times the size of the molecule.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:physics:11:12:12.8:8",
+            "order": 8,
+            "title": "Energy Modes and Statistical Averages",
+            "content_text": "In the law of equipartition of energy, each quadratic term in the total energy expression is counted as a degree of freedom, contributing $\\frac{1}{2} k_B T$. Thus, each vibrational mode contributes two degrees of freedom (kinetic and potential), totaling $k_B T$. Molecules in a room do not settle on the ground due to gravity because their high speeds and constant collisions maintain equilibrium, with only a negligible density increase at lower heights. The effect is small since the potential energy ($mgh$) for ordinary heights is much less than the average kinetic energy $\\frac{1}{2} mv^2$. Additionally, the average of a squared quantity $\\langle v^2 \\rangle$ is not always equal to the square of the average $(\\langle v \\rangle)^2$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:physics:11:12:ex:1",
+          "number": 1,
+          "problem": "Estimate the fraction of molecular volume to the actual volume occupied by oxygen gas at STP. Take the diameter of an oxygen molecule to be 3 Å.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:12:ex:2",
+          "number": 2,
+          "problem": "Molar volume is the volume occupied by 1 mol of any (ideal) gas at standard temperature and pressure (STP: 1 atmospheric pressure, $0 ^\\circ C$). Show that it is 22.4 litres.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:12:ex:3",
+          "number": 3,
+          "problem": "Figure 12.8 shows plot of $PV/T$ versus $P$ for $1.00 \\times 10^{-3}$ kg of oxygen gas at two different temperatures. (a) What does the dotted plot signify? (b) Which is true: $T_1 > T_2$ or $T_1 < T_2$? (c) What is the value of $PV/T$ where the curves meet on the y-axis? (d) If we obtained similar plots for $1.00 \\times 10^{-3}$ kg of hydrogen, would we get the same value of $PV/T$ at the point where the curves meet on the y-axis? If not, what mass of hydrogen yields the same value of $PV/T$ (for low pressure high temperature region of the plot)? (Molecular mass of $H_2 = 2.02$ u, of $O_2 = 32.0$ u, $R = 8.31 \\text{ J mol}^{-1} \\text{ K}^{-1}$.)",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:12:ex:4",
+          "number": 4,
+          "problem": "An oxygen cylinder of volume 30 litre has an initial gauge pressure of 15 atm and a temperature of $27 ^\\circ C$. After some oxygen is withdrawn from the cylinder, the gauge pressure drops to 11 atm and its temperature drops to $17 ^\\circ C$. Estimate the mass of oxygen taken out of the cylinder ($R = 8.31 \\text{ J mol}^{-1} \\text{ K}^{-1}$, molecular mass of $O_2 = 32$ u).",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:12:ex:5",
+          "number": 5,
+          "problem": "An air bubble of volume $1.0 \\text{ cm}^3$ rises from the bottom of a lake 40 m deep at a temperature of $12 ^\\circ C$. To what volume does it grow when it reaches the surface, which is at a temperature of $35 ^\\circ C$?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:12:ex:6",
+          "number": 6,
+          "problem": "Estimate the total number of air molecules (inclusive of oxygen, nitrogen, water vapour and other constituents) in a room of capacity $25.0 \\text{ m}^3$ at a temperature of $27 ^\\circ C$ and 1 atm pressure.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:12:ex:7",
+          "number": 7,
+          "problem": "Estimate the average thermal energy of a helium atom at (i) room temperature ($27 ^\\circ C$), (ii) the temperature on the surface of the Sun (6000 K), (iii) the temperature of 10 million kelvin (the typical core temperature in the case of a star).",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:12:ex:8",
+          "number": 8,
+          "problem": "Three vessels of equal capacity have gases at the same temperature and pressure. The first vessel contains neon (monatomic), the second contains chlorine (diatomic), and the third contains uranium hexafluoride (polyatomic). Do the vessels contain equal number of respective molecules? Is the root mean square speed of molecules the same in the three cases? If not, in which case is $v_{rms}$ the largest?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:physics:11:12:ex:9",
+          "number": 9,
+          "problem": "At what temperature is the root mean square speed of an atom in an argon gas cylinder equal to the rms speed of a helium gas atom at $-20 ^\\circ C$? (atomic mass of Ar = 39.9 u, of He = 4.0 u).",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:physics:11:12:ex:10",
+          "number": 10,
+          "problem": "Estimate the mean free path and collision frequency of a nitrogen molecule in a cylinder containing nitrogen at 2.0 atm and temperature $17 ^\\circ C$. Take the radius of a nitrogen molecule to be roughly 1.0 Å. Compare the collision time with the time the molecule moves freely between two successive collisions (Molecular mass of $N_2 = 28.0$ u).",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "numerical"
+        }
+      ]
+    }
+  }
+}

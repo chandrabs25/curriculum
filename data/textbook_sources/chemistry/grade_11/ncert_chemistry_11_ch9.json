@@ -1,0 +1,2058 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_chemistry_11_ch9.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:chemistry:11:9",
+  "curriculum": "ncert",
+  "subject": "chemistry",
+  "grade": 11,
+  "textbook_name": "Chemistry Part II",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:chemistry:11:9",
+    "number": 9,
+    "title": "Hydrocarbons",
+    "summary": "This chapter on Hydrocarbons introduces the fundamental classification, nomenclature, preparation, properties, and reactions of alkanes, alkenes, alkynes, and aromatic hydrocarbons. It begins by classifying hydrocarbons based on their carbon-carbon bonds: saturated (alkanes), unsaturated (alkenes and alkynes), and aromatic. Alkanes, with the general formula $C_nH_{2n+2}$, are explored in detail, including isomerism and IUPAC naming conventions. Preparation methods, like hydrogenation, Wurtz reaction, and decarboxylation, are discussed, along with their physical and chemical properties, including halogenation (free radical mechanism) and combustion. Conformations of alkanes and their relative stabilities are also covered.\n\nThe chapter then shifts to alkenes ($C_nH_{2n}$), emphasizing the structure of the double bond, geometrical isomerism, and preparation via elimination reactions. Key chemical properties include electrophilic addition reactions, governed by Markovnikov's rule and its exception (peroxide effect). Alkynes ($C_nH_{2n-2}$) are presented next, highlighting their triple bond structure, acidity, and addition reactions. Aromatic hydrocarbons, specifically benzene, are introduced, explaining their unique structure, aromaticity (Hückel's rule, $4n+2$ π electrons), and electrophilic substitution reactions like nitration and Friedel-Crafts reactions. The directive influence of substituents on monosubstituted benzenes determines the position of further substitution. The chapter concludes with a discussion on the carcinogenicity and toxicity of certain polynuclear aromatic hydrocarbons. The sections build upon each other, starting with the simplest saturated hydrocarbons and progressively introducing more complex unsaturated and aromatic systems. Understanding hydrocarbons is crucial as they are essential fuels, solvents, and building blocks for numerous organic compounds.",
+    "sections": [
+      {
+        "id": "ncert:chemistry:11:9:9.1",
+        "number": "9.1",
+        "title": "CLASSIFICATION",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:9:9.1:1",
+            "order": 1,
+            "title": "Introduction to Hydrocarbons",
+            "content_text": "Hydrocarbons are compounds composed exclusively of carbon and hydrogen. They serve as vital sources of energy in daily life. Common fuels include LPG (Liquified Petroleum Gas), CNG (Compressed Natural Gas), and LNG (Liquified Natural Gas). Petrol, diesel, and kerosene are obtained through the fractional distillation of petroleum found in the earth's crust, while coal gas is produced by the destructive distillation of coal. Natural gas, found in upper strata during oil well drilling, becomes CNG after compression. Beyond fuels, hydrocarbons are used to manufacture polymers like polythene, polypropene, and polystyrene, and higher hydrocarbons serve as solvents for paints and raw materials for dyes and drugs.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.1:2",
+            "order": 2,
+            "title": "Categories of Hydrocarbons",
+            "content_text": "Hydrocarbons are classified into three main categories based on the types of carbon-carbon bonds present: (i) Saturated hydrocarbons, which contain only carbon-carbon and carbon-hydrogen single bonds. If these form open chains, they are called alkanes; if they form closed rings, they are called cycloalkanes. (ii) Unsaturated hydrocarbons, which contain carbon-carbon multiple bonds (double bonds, triple bonds, or both). (iii) Aromatic hydrocarbons, which are a special type of cyclic compounds. Carbon is tetravalent and hydrogen is monovalent in all these structures.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:9:9.2",
+        "number": "9.2",
+        "title": "ALKANES",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:9:9.2:1",
+            "order": 1,
+            "title": "Properties and General Formula of Alkanes",
+            "content_text": "Alkanes are saturated open-chain hydrocarbons. Methane ($CH_4$) is the first member, followed by ethane ($C_2H_6$), propane ($C_3H_8$), and butane ($C_4H_{10}$). They form a homologous series with the general formula $C_nH_{2n+2}$. Alkanes are relatively inert under normal conditions, as they do not react with acids, bases, or other reagents; hence, they were historically known as paraffins (from Latin: *parum* meaning little, and *affinis* meaning affinity).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.2:2",
+            "order": 2,
+            "title": "Structure of Methane and Alkanes",
+            "content_text": "According to VSEPR theory, methane has a tetrahedral structure where the carbon atom is at the center and four hydrogen atoms lie at the corners of a regular tetrahedron. All $H-C-H$ bond angles are $109.5^\\circ$. In alkanes, tetrahedra are joined together. The $C-C$ bond length is $154$ pm and the $C-H$ bond length is $112$ pm. The $C-C$ and $C-H$ $\\sigma$ bonds are formed by the head-on overlapping of $sp^3$ hybrid orbitals of carbon and $1s$ orbitals of hydrogen atoms.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 9.1",
+                "description": "Structure of methane showing a central carbon atom bonded to four hydrogen atoms in a tetrahedral geometry with bond angles of $109.5^\\circ$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:9:9.2.1",
+        "number": "9.2.1",
+        "title": "Nomenclature and Isomerism",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:9:9.2.1:1",
+            "order": 1,
+            "title": "Chain Isomerism in Alkanes",
+            "content_text": "While methane, ethane, and propane have only one possible structure, higher alkanes can have multiple structures for the same molecular formula. For example, butane ($C_4H_{10}$) can exist as a continuous chain (n-butane, b.p. $273$ K) or a branched chain (2-methylpropane or isobutane, b.p. $261$ K). Pentane ($C_5H_{12}$) has three isomers: n-pentane (b.p. $309$ K), 2-methylbutane or isopentane (b.p. $301$ K), and 2,2-dimethylpropane or neopentane (b.p. $282.5$ K). Such compounds, which have the same molecular formula but differ in the chain of carbon atoms, are known as chain isomers, a type of structural isomerism.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.2.1:2",
+            "order": 2,
+            "title": "Classification of Carbon Atoms",
+            "content_text": "Carbon atoms in alkanes are classified based on the number of other carbon atoms they are attached to: (i) Primary ($1^\\circ$): Attached to no other carbon atom (as in methane) or only one carbon atom. (ii) Secondary ($2^\\circ$): Attached to two carbon atoms. (iii) Tertiary ($3^\\circ$): Attached to three carbon atoms. (iv) Quaternary ($4^\\circ$): Attached to four carbon atoms. Terminal carbon atoms are always primary.",
+            "content_type": "definition",
+            "worked_examples": [
+              {
+                "label": "Problem 9.1",
+                "problem": "Write structures of different chain isomers of alkanes corresponding to the molecular formula $C_6H_{14}$. Also write their IUPAC names.",
+                "solution": "(i) $CH_3-CH_2-CH_2-CH_2-CH_2-CH_3$ (n-Hexane); (ii) $CH_3-CH(CH_3)-CH_2-CH_2-CH_3$ (2-Methylpentane); (iii) $CH_3-CH_2-CH(CH_3)-CH_2-CH_3$ (3-Methylpentane); (iv) $CH_3-CH(CH_3)-CH(CH_3)-CH_3$ (2,3-Dimethylbutane); (v) $CH_3-C(CH_3)_2-CH_2-CH_3$ (2,2-Dimethylbutane)."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.2.1:3",
+            "order": 3,
+            "title": "Isomerism in Higher Alkanes",
+            "content_text": "As the number of carbon atoms in an alkane increases, the number of possible structural isomers grows rapidly. For example, while butane has only two isomers, hexane ($C_6H_{14}$) has five, and heptane ($C_7H_{16}$) has nine. For a decane molecule ($C_{10}H_{22}$), as many as 75 isomers are possible.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.2.1:4",
+            "order": 4,
+            "title": "Alkyl Groups",
+            "content_text": "Alkyl groups are substituents or functional groups derived from alkanes by the removal of one hydrogen atom. They are named by replacing the suffix '-ane' of the parent alkane with '-yl'. The general formula for alkyl groups is $C_nH_{2n+1}$. Common examples include the methyl group ($-CH_3$), ethyl group ($-C_2H_5$), and propyl group ($-C_3H_7$). These groups are frequently attached to carbon atoms in alkanes or other classes of organic compounds.\nThe nomenclature of substituted alkanes can be further understood by examining the different isomeric alkyl groups that can be formed from a single molecular formula. For instance, the molecular formula $C_5H_{11}$ corresponds to several isomeric alkyl groups, which can form different alcohols when an $-OH$ group is attached. The following table details these isomers and their IUPAC names.",
+            "content_type": "definition",
+            "worked_examples": [
+              {
+                "label": "Problem 9.2",
+                "problem": "Write structures of different isomeric alkyl groups corresponding to the molecular formula $C_5H_{11}$. Write IUPAC names of alcohols obtained by attachment of $-OH$ groups at different carbons of the chain.",
+                "solution": "The solution involves identifying all possible arrangements of five carbon atoms with one hydrogen removed, and then naming the resulting alcohol. (See Table for details)."
+              }
+            ],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Problem 9.2 Table",
+                "caption": "Isomeric $C_5H_{11}$ Groups and Corresponding Alcohols",
+                "headers": [
+                  "Structures of $-C_5H_{11}$ group",
+                  "Corresponding alcohols",
+                  "Name of alcohol"
+                ],
+                "rows": [
+                  [
+                    "(i) $CH_3-CH_2-CH_2-CH_2-CH_2-$",
+                    " $CH_3-CH_2-CH_2-CH_2-CH_2-OH$",
+                    "Pentan-1-ol"
+                  ],
+                  [
+                    "(ii) $CH_3-CH(-)-CH_2-CH_2-CH_3$",
+                    " $CH_3-CH(OH)-CH_2-CH_2-CH_3$",
+                    "Pentan-2-ol"
+                  ],
+                  [
+                    "(iii) $CH_3-CH_2-CH(-)-CH_2-CH_3$",
+                    " $CH_3-CH_2-CH(OH)-CH_2-CH_3$",
+                    "Pentan-3-ol"
+                  ],
+                  [
+                    "(iv) $CH_3-CH(CH_3)-CH_2-CH_2-$",
+                    " $CH_3-CH(CH_3)-CH_2-CH_2-OH$",
+                    "3-Methylbutan-1-ol"
+                  ],
+                  [
+                    "(v) $CH_3-CH_2-CH(CH_3)-CH_2-$",
+                    " $CH_3-CH_2-CH(CH_3)-CH_2-OH$",
+                    "2-Methylbutan-1-ol"
+                  ],
+                  [
+                    "(vi) $CH_3-C(-)(CH_3)-CH_2-CH_3$",
+                    " $CH_3-C(OH)(CH_3)-CH_2-CH_3$",
+                    "2-Methylbutan-2-ol"
+                  ],
+                  [
+                    "(vii) $CH_3-C(CH_3)_2-CH_2-$",
+                    " $CH_3-C(CH_3)_2-CH_2-OH$",
+                    "2,2-Dimethylpropan-1-ol"
+                  ],
+                  [
+                    "(viii) $CH_3-CH(CH_3)-CH(-)-CH_3$",
+                    " $CH_3-CH(CH_3)-CH(OH)-CH_3$",
+                    "3-Methylbutan-2-ol"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.2.1:5",
+            "order": 5,
+            "title": "Complex Nomenclature Examples",
+            "content_text": "Nomenclature of complex organic compounds requires careful application of IUPAC rules, including the lowest sum rule for locants and alphabetical ordering of substituents. Table 9.1 provides examples of how these rules are applied to branched alkanes, including those with complex side chains.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 9.1",
+                "caption": "Nomenclature of a Few Organic Compounds",
+                "headers": [
+                  "Structure and IUPAC Name",
+                  "Remarks"
+                ],
+                "rows": [
+                  [
+                    "(a) 4-Ethyl-2-methylhexane",
+                    "Lowest sum and alphabetical arrangement"
+                  ],
+                  [
+                    "(b) 3,3-Diethyl-5-isopropyl-4-methyloctane",
+                    "Lowest sum and alphabetical arrangement"
+                  ],
+                  [
+                    "(c) 5-sec-Butyl-4-isopropyldecane",
+                    "sec is not considered while arranging alphabetically; isopropyl is taken as one word"
+                  ],
+                  [
+                    "(d) 5-(2,2-Dimethylpropyl)nonane",
+                    "Further numbering to the substituents of the side chain"
+                  ],
+                  [
+                    "(e) 3-Ethyl-5-methylheptane",
+                    "Alphabetical priority order"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.2.1:6",
+            "order": 6,
+            "title": "IUPAC Naming Practice",
+            "content_text": "Practice in naming compounds from their condensed formulas is essential for mastering organic nomenclature. This involves expanding the condensed formula to identify the longest chain and the positions of substituents.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 9.3",
+                "problem": "Write IUPAC names of the following compounds: (i) $(CH_3)_3 C CH_2C(CH_3)_3$ (ii) $(CH_3)_2 C(C_2H_5)_2$ (iii) tetra-tert-butylmethane",
+                "solution": "(i) 2, 2, 4, 4-Tetramethylpentane (ii) 3, 3-Dimethylpentane (iii) 3,3-Di-tert-butyl-2,2,4,4-tetramethylpentane"
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.2.1:7",
+            "order": 7,
+            "title": "Writing Structures from IUPAC Names",
+            "content_text": "To write the correct structure from a given IUPAC name, follow these systematic steps: 1. Identify the parent alkane and draw the corresponding longest carbon chain. 2. Number the carbon atoms in the chain. 3. Attach the specified substituents to the carbon atoms at the positions indicated by the locants. 4. Finally, satisfy the tetravalency of each carbon atom by adding the required number of hydrogen atoms. For example, to write the structure of 3-ethyl-2,2-dimethylpentane: i) Draw a five-carbon chain: $C-C-C-C-C$. ii) Number the chain: $C^1-C^2-C^3-C^4-C^5$. iii) Attach an ethyl group at $C^3$ and two methyl groups at $C^2$. iv) Add hydrogens to complete the valency: $CH_3-C(CH_3)_2-CH(C_2H_5)-CH_2-CH_3$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.2.1:8",
+            "order": 8,
+            "title": "Structural Formula Practice",
+            "content_text": "Applying the methodology for writing structures ensures accuracy in representing organic molecules from their names.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 9.4",
+                "problem": "Write structural formulas of the following compounds: (i) 3, 4, 4, 5-Tetramethylheptane (ii) 2,5-Dimethylhexane",
+                "solution": "(i) $CH_3-CH_2-CH(CH_3)-C(CH_3)_2-CH(CH_3)-CH_2-CH_3$ (ii) $CH_3-CH(CH_3)-CH_2-CH_2-CH(CH_3)-CH_3$"
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.2.1:9",
+            "order": 9,
+            "title": "Correcting Incorrect IUPAC Names",
+            "content_text": "Sometimes names are given that do not follow IUPAC rules (e.g., not choosing the longest chain or incorrect numbering). To correct them, draw the structure based on the incorrect name, then re-evaluate it using IUPAC rules.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 9.5",
+                "problem": "Write structures for each of the following compounds. Why are the given names incorrect? Write correct IUPAC names. (i) 2-Ethylpentane (ii) 5-Ethyl-3-methylheptane",
+                "solution": "(i) Structure: $CH_3-CH(C_2H_5)-CH_2-CH_2-CH_3$. The longest chain has six carbon atoms, not five. Correct name: 3-Methylhexane. (ii) Structure: $CH_3-CH_2-CH(CH_3)-CH_2-CH(C_2H_5)-CH_2-CH_3$. Numbering should start from the end that gives lower numbers to substituents (alphabetical order considered). Correct name: 3-Ethyl-5-methylheptane."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:9:9.2.2",
+        "number": "9.2.2",
+        "title": "Preparation",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:9:9.2.2:1",
+            "order": 1,
+            "title": "From Unsaturated Hydrocarbons (Hydrogenation)",
+            "content_text": "Alkanes can be prepared by the addition of dihydrogen gas ($H_2$) to alkenes and alkynes in the presence of finely divided catalysts. This process is known as hydrogenation. Catalysts such as platinum ($Pt$), palladium ($Pd$), or nickel ($Ni$) are used. While $Pt$ and $Pd$ catalyze the reaction at room temperature, $Ni$ catalysts require relatively higher temperatures and pressures. Chemical Equations: 1. Ethene to Ethane: $CH_2=CH_2 + H_2 \\xrightarrow{Pt/Pd/Ni} CH_3-CH_3$ (9.1); 2. Propene to Propane: $CH_3-CH=CH_2 + H_2 \\xrightarrow{Pt/Pd/Ni} CH_3-CH_2-CH_3$ (9.2); 3. Propyne to Propane: $CH_3-C \\equiv C-H + 2H_2 \\xrightarrow{Pt/Pd/Ni} CH_3-CH_2-CH_3$ (9.3).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.2.2:2",
+            "order": 2,
+            "title": "From Alkyl Halides (Reduction)",
+            "content_text": "Alkyl halides (with the exception of fluorides) can be reduced to alkanes using zinc and dilute hydrochloric acid. Chemical Equation: Chloromethane to Methane: $CH_3-Cl + H_2 \\xrightarrow{Zn, H^+} CH_4 + HCl$ (9.4).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.2.2:3",
+            "order": 3,
+            "title": "Reduction of Alkyl Halides (Continued)",
+            "content_text": "Alkyl halides (except fluorides) are reduced to alkanes by zinc and dilute hydrochloric acid. The general reaction involves the replacement of the halogen atom with a hydrogen atom. For example, chloroethane is reduced to ethane: $C_2H_5-Cl + H_2 \\xrightarrow{Zn, H^+} C_2H_6 + HCl$ (9.5). Similarly, 1-chloropropane is reduced to propane: $CH_3CH_2CH_2Cl + H_2 \\xrightarrow{Zn, H^+} CH_3CH_2CH_3 + HCl$ (9.6).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.2.2:4",
+            "order": 4,
+            "title": "Wurtz Reaction",
+            "content_text": "Alkyl halides, when treated with sodium metal in a dry ethereal (moisture-free) solution, yield higher alkanes. This reaction is known as the Wurtz reaction and is primarily used for the preparation of higher alkanes containing an even number of carbon atoms. For example, bromomethane reacts with sodium to form ethane: $CH_3Br + 2Na + BrCH_3 \\xrightarrow{dry ether} CH_3-CH_3 + 2NaBr$ (9.7). Likewise, bromoethane yields n-butane: $C_2H_5Br + 2Na + BrC_2H_5 \\xrightarrow{dry ether} C_2H_5-C_2H_5 + 2NaBr$ (9.8). If two different alkyl halides are used, a mixture of three different alkanes is obtained, which makes the separation of the desired product difficult.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.2.2:5",
+            "order": 5,
+            "title": "Decarboxylation of Carboxylic Acids",
+            "content_text": "Sodium salts of carboxylic acids, when heated with soda lime (a mixture of sodium hydroxide and calcium oxide), undergo decarboxylation to give alkanes containing one carbon atom less than the parent carboxylic acid. This process involves the elimination of carbon dioxide in the form of sodium carbonate. For example, sodium ethanoate yields methane: $CH_3COO^-Na^+ + NaOH \\xrightarrow[\\Delta]{CaO} CH_4 + Na_2CO_3$.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 9.6",
+                "problem": "Sodium salt of which acid will be needed for the preparation of propane? Write chemical equation for the reaction.",
+                "solution": "Butanoic acid is required. The reaction is: $CH_3CH_2CH_2COO^-Na^+ + NaOH \\xrightarrow{CaO} CH_3CH_2CH_3 + Na_2CO_3$."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.2.2:6",
+            "order": 6,
+            "title": "Kolbe's Electrolytic Method",
+            "content_text": "An aqueous solution of a sodium or potassium salt of a carboxylic acid, on electrolysis, yields an alkane containing an even number of carbon atoms at the anode. For example, sodium acetate yields ethane: $2CH_3COO^-Na^+ + 2H_2O \\xrightarrow{Electrolysis} CH_3-CH_3 + 2CO_2 + H_2 + 2NaOH$ (9.9). The reaction mechanism involves: i) Dissociation: $2CH_3COO^-Na^+ \\rightleftharpoons 2CH_3-C(=O)-O^- + 2Na^+$. ii) At anode: Acetate ions lose electrons to form acetate free radicals, which then decompose into methyl free radicals and carbon dioxide: $2CH_3-C(=O)-O^- \\xrightarrow{-2e^-} 2CH_3-C(=O)-\\dot{O} \\rightarrow 2\\dot{C}H_3 + 2CO_2 \\uparrow$. iii) Coupling: Two methyl radicals combine to form ethane: $H_3\\dot{C} + \\dot{C}H_3 \\rightarrow H_3C-CH_3 \\uparrow$. iv) At cathode: Water is reduced to hydroxide ions and hydrogen gas: $H_2O + e^- \\rightarrow -OH + \\dot{H}$; $2\\dot{H} \\rightarrow H_2 \\uparrow$. Methane cannot be prepared by this method because the coupling of radicals requires at least two carbon atoms.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:9:9.2.3",
+        "number": "9.2.3",
+        "title": "Properties",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:9:9.2.3:1",
+            "order": 1,
+            "title": "Physical Properties - Polarity and State",
+            "content_text": "Alkanes are almost non-polar molecules due to the covalent nature of C-C and C-H bonds and the minimal difference in electronegativity between carbon and hydrogen. They possess weak van der Waals forces. Consequently, the first four members ($C_1$ to $C_4$) are gases, $C_5$ to $C_{17}$ are liquids, and those with 18 or more carbon atoms are solids at 298 K. They are colourless and odourless.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.2.3:2",
+            "order": 2,
+            "title": "Physical Properties - Solubility and Boiling Point Trends",
+            "content_text": "Alkanes follow the 'like dissolves like' rule; they are insoluble in polar solvents like water but soluble in non-polar solvents like petrol or ether. Petrol is used for dry cleaning to remove grease stains because grease (a mixture of higher alkanes) is non-polar and hydrophobic. The boiling point (b.p.) of alkanes increases steadily with molecular mass because intermolecular van der Waals forces increase with the surface area of the molecule. However, branching decreases the boiling point. For isomeric pentanes, n-pentane has the highest b.p. (309.1 K) while 2,2-dimethylpropane has the lowest (282.5 K) because branching makes the molecule more spherical, reducing the surface area and weakening the intermolecular forces.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 9.2",
+                "caption": "Variation of Melting Point and Boiling Point in Alkanes",
+                "headers": [
+                  "Molecular formula",
+                  "Name",
+                  "Molecular mass/u",
+                  "b.p./(K)",
+                  "m.p./(K)"
+                ],
+                "rows": [
+                  [
+                    "$CH_4$",
+                    "Methane",
+                    "16",
+                    "111.0",
+                    "90.5"
+                  ],
+                  [
+                    "$C_2H_6$",
+                    "Ethane",
+                    "30",
+                    "184.4",
+                    "101.0"
+                  ],
+                  [
+                    "$C_3H_8$",
+                    "Propane",
+                    "44",
+                    "230.9",
+                    "85.3"
+                  ],
+                  [
+                    "$C_4H_{10}$",
+                    "Butane",
+                    "58",
+                    "272.4",
+                    "134.6"
+                  ],
+                  [
+                    "$C_4H_{10}$",
+                    "2-Methylpropane",
+                    "58",
+                    "261.0",
+                    "114.7"
+                  ],
+                  [
+                    "$C_5H_{12}$",
+                    "Pentane",
+                    "72",
+                    "309.1",
+                    "143.3"
+                  ],
+                  [
+                    "$C_5H_{12}$",
+                    "2-Methylbutane",
+                    "72",
+                    "300.9",
+                    "113.1"
+                  ],
+                  [
+                    "$C_5H_{12}$",
+                    "2,2-Dimethylpropane",
+                    "72",
+                    "282.5",
+                    "256.4"
+                  ],
+                  [
+                    "$C_6H_{14}$",
+                    "Hexane",
+                    "86",
+                    "341.9",
+                    "178.5"
+                  ],
+                  [
+                    "$C_7H_{16}$",
+                    "Heptane",
+                    "100",
+                    "371.4",
+                    "182.4"
+                  ],
+                  [
+                    "$C_8H_{18}$",
+                    "Octane",
+                    "114",
+                    "398.7",
+                    "216.2"
+                  ],
+                  [
+                    "$C_9H_{20}$",
+                    "Nonane",
+                    "128",
+                    "423.8",
+                    "222.0"
+                  ],
+                  [
+                    "$C_{10}H_{22}$",
+                    "Decane",
+                    "142",
+                    "447.1",
+                    "243.3"
+                  ],
+                  [
+                    "$C_{20}H_{42}$",
+                    "Eicosane",
+                    "282",
+                    "615.0",
+                    "309.7"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.2.3:3",
+            "order": 3,
+            "title": "Chemical Properties - Substitution Reactions (Halogenation)",
+            "content_text": "Alkanes are generally inert towards acids, bases, and oxidizing/reducing agents. However, they undergo substitution reactions where hydrogen atoms are replaced by halogens, nitro groups, or sulphonic acid groups. Halogenation occurs at high temperatures (573-773 K) or in the presence of diffused sunlight/UV light. For methane, chlorination proceeds in steps: $CH_4 + Cl_2 \\xrightarrow{h\\nu} CH_3Cl + HCl$ (9.10), $CH_3Cl + Cl_2 \\xrightarrow{h\\nu} CH_2Cl_2 + HCl$ (9.11), $CH_2Cl_2 + Cl_2 \\xrightarrow{h\\nu} CHCl_3 + HCl$ (9.12), and $CHCl_3 + Cl_2 \\xrightarrow{h\\nu} CCl_4 + HCl$ (9.13). The rate of reaction of alkanes with halogens is $F_2 > Cl_2 > Br_2 > I_2$. Fluorination is too violent to be controlled, while iodination is reversible and requires oxidizing agents like $HIO_3$ or $HNO_3$ to remove the HI formed: $HIO_3 + 5HI \\rightarrow 3I_2 + 3H_2O$ (9.16). The rate of replacement of hydrogens is $3^\\circ > 2^\\circ > 1^\\circ$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.2.3:4",
+            "order": 4,
+            "title": "Mechanism of Halogenation - Initiation",
+            "content_text": "Halogenation proceeds via a free radical chain mechanism. The first step is initiation, where the chlorine molecule undergoes homolysis in the presence of light or heat to form chlorine free radicals. The Cl-Cl bond is weaker than C-C or C-H bonds and breaks easily: $Cl-Cl \\xrightarrow{h\\nu} \\dot{C}l + \\dot{C}l$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.2.3:5",
+            "order": 5,
+            "title": "Mechanism of Halogenation - Propagation",
+            "content_text": "In the propagation step, a chlorine radical attacks the methane molecule, breaking a C-H bond to generate a methyl free radical and HCl: (a) $CH_4 + \\dot{C}l \\xrightarrow{h\\nu} \\dot{C}H_3 + H-Cl$. The methyl radical then attacks a second molecule of chlorine to form chloromethane and a new chlorine radical: (b) $\\dot{C}H_3 + Cl-Cl \\xrightarrow{h\\nu} CH_3-Cl + \\dot{C}l$. These steps repeat, setting up a chain reaction. Further propagation steps lead to more highly halogenated products like $CH_2Cl_2$, $CHCl_3$, and $CCl_4$.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.2.3:6",
+            "order": 6,
+            "title": "Mechanism of Halogenation - Termination",
+            "content_text": "The reaction stops when free radicals are consumed by combining with each other. Possible termination steps include: (a) $\\dot{C}l + \\dot{C}l \\rightarrow Cl-Cl$, (b) $H_3\\dot{C} + \\dot{C}H_3 \\rightarrow H_3C-CH_3$, and (c) $H_3\\dot{C} + \\dot{C}l \\rightarrow H_3C-Cl$. The formation of ethane as a byproduct in the chlorination of methane is explained by step (b).",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.2.3:7",
+            "order": 7,
+            "title": "Combustion",
+            "content_text": "Alkanes undergo complete oxidation upon heating in the presence of air or oxygen to form carbon dioxide and water, releasing a large amount of heat. For methane: $CH_4(g) + 2O_2(g) \\rightarrow CO_2(g) + 2H_2O(l); \\Delta_c H^\\ominus = -890 kJ mol^{-1}$ (9.17). For butane: $C_4H_{10}(g) + 13/2 O_2(g) \\rightarrow 4CO_2(g) + 5H_2O(l); \\Delta_c H^\\ominus = -2875.84 kJ mol^{-1}$ (9.18). The general equation is: $C_nH_{2n+2} + (\\frac{3n+1}{2})O_2 \\rightarrow nCO_2 + (n+1)H_2O$ (9.19). Due to high heat evolution, alkanes are used as fuels. Incomplete combustion with insufficient oxygen produces carbon black: $CH_4(g) + O_2(g) \\rightarrow C(s) + 2H_2O(l)$. Carbon black is used in inks, filters, and black pigments.\nIncomplete combustion of alkanes with an insufficient amount of air or dioxygen produces carbon black. For example: $$CH_4(g) + O_2(g) \\xrightarrow{\\text{incomplete combustion}} C(s) + 2H_2O(l)$$ (9.20)",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.2.3:8",
+            "order": 8,
+            "title": "Controlled oxidation",
+            "content_text": "Alkanes on heating with a regulated supply of dioxygen or air at high pressure and in the presence of suitable catalysts give a variety of oxidation products. (i) Methanol is formed when methane reacts with oxygen in the presence of copper at 523 K and 100 atm: $$2CH_4 + O_2 \\xrightarrow{Cu/523K/100atm} 2CH_3OH$$ (ii) Methanal (formaldehyde) is produced using molybdenum trioxide catalyst: $$CH_4 + O_2 \\xrightarrow{Mo_2O_3, \\Delta} HCHO + H_2O$$ (iii) Ethanoic acid is formed from ethane in the presence of manganese acetate: $$2CH_3CH_3 + 3O_2 \\xrightarrow{(CH_3COO)_2Mn, \\Delta} 2CH_3COOH + 2H_2O$$ (iv) Ordinarily alkanes resist oxidation, but alkanes having a tertiary H atom can be oxidized to corresponding alcohols by potassium permanganate: $$(iCH_3)_3CH \\xrightarrow{KMnO_4, \\text{Oxidation}} (CH_3)_3COH$$ (2-Methylpropan-2-ol).",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.2.3:9",
+            "order": 9,
+            "title": "Isomerisation",
+            "content_text": "n-Alkanes on heating in the presence of anhydrous aluminium chloride and hydrogen chloride gas isomerise to branched chain alkanes. For example, n-hexane isomerises to 2-methylpentane and 3-methylpentane: $$CH_3(CH_2)_4CH_3 \\xrightarrow{\\text{Anhy. } AlCl_3 / HCl} CH_3CH(CH_3)(CH_2)_2CH_3 + CH_3CH_2CH(CH_3)CH_2CH_3$$ Minor products are also possible but are generally not reported in organic reactions.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.2.3:10",
+            "order": 10,
+            "title": "Aromatization",
+            "content_text": "n-Alkanes having six or more carbon atoms on heating to 773 K at 10-20 atmospheric pressure in the presence of oxides of vanadium, molybdenum or chromium supported over alumina get dehydrogenated and cyclised to benzene and its homologues. This reaction is known as aromatization or reforming. For example, n-hexane yields benzene: $$C_6H_{14} \\xrightarrow{Cr_2O_3 \\text{ or } V_2O_5 \\text{ or } Mo_2O_3, 773K, 10-20 atm} C_6H_6$$ Toluene ($C_7H_8$) is the methyl derivative of benzene; n-heptane is the suggested alkane for its preparation.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.2.3:11",
+            "order": 11,
+            "title": "Reaction with steam",
+            "content_text": "Methane reacts with steam at 1273 K in the presence of a nickel catalyst to form carbon monoxide and dihydrogen. This method is used for the industrial preparation of dihydrogen gas: $$CH_4 + H_2O \\xrightarrow{Ni, \\Delta} CO + 3H_2$$",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.2.3:12",
+            "order": 12,
+            "title": "Pyrolysis",
+            "content_text": "Higher alkanes on heating to higher temperatures decompose into lower alkanes, alkenes, etc. Such a decomposition reaction into smaller fragments by the application of heat is called pyrolysis or cracking. For example, hexane can decompose into various products: $$C_6H_{14} \\xrightarrow{773K} C_6H_{12} + H_2 \\text{ or } C_4H_8 + C_2H_6 \\text{ or } C_3H_6 + C_2H_4 + CH_4$$ Pyrolysis is believed to be a free radical reaction. It is used in the preparation of oil gas or petrol gas from kerosene oil or petrol. For instance, dodecane ($C_{12}H_{26}$) on heating to 973 K with Pt, Pd, or Ni gives a mixture of heptane and pentene: $$C_{12}H_{26} \\xrightarrow{Pt/Pd/Ni, 973K} C_7H_{16} + C_5H_{10} + \\text{Other Products}$$",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:9:9.2.4",
+        "number": "9.2.4",
+        "title": "Conformations",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:9:9.2.4:1",
+            "order": 1,
+            "title": "Introduction to Conformations",
+            "content_text": "Alkanes contain carbon-carbon sigma ($\\sigma$) bonds. The electron distribution of the sigma molecular orbital is symmetrical around the internuclear axis of the C–C bond, which is not disturbed by rotation about its axis. This permits free rotation about the C–C single bond. This rotation results in different spatial arrangements of atoms in space which can change into one another. Such spatial arrangements are called conformations, conformers, or rotamers. While rotation is theoretically free, it is hindered by a small energy barrier of $1-20 \\text{ kJ mol}^{-1}$ due to weak repulsive interaction between adjacent bonds, known as torsional strain.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.2.4:2",
+            "order": 2,
+            "title": "Conformations of Ethane",
+            "content_text": "Ethane ($C_2H_6$) has infinite conformations due to rotation around the C-C axis. Two extreme cases exist: 1. Eclipsed conformation: Hydrogen atoms attached to the two carbons are as close together as possible. 2. Staggered conformation: Hydrogen atoms are as far apart as possible. Any intermediate arrangement is called a skew conformation. Bond angles and bond lengths remain constant across all conformations.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.2.4:3",
+            "order": 3,
+            "title": "Sawhorse Projections",
+            "content_text": "In this projection, the molecule is viewed along the molecular axis. The central C–C bond is drawn as a long straight line, slightly tilted. The front carbon is at the lower end and the rear carbon at the upper end. Each carbon has three lines for hydrogen atoms, inclined at $120^\\circ$ to each other.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 9.2",
+                "description": "Sawhorse projections of ethane showing (i) Eclipsed form where H atoms are aligned and (ii) Staggered form where H atoms are offset.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.2.4:4",
+            "order": 4,
+            "title": "Newman Projections",
+            "content_text": "In this projection, the molecule is viewed head-on at the C–C bond. The front carbon is represented by a point, and the rear carbon by a circle. Hydrogen atoms on the front carbon are shown by lines from the point, while those on the rear carbon are shown by shorter lines from the circle, all at $120^\\circ$ angles.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 9.3",
+                "description": "Newman's projections of ethane showing (i) Eclipsed and (ii) Staggered forms, highlighting the dihedral angle (angle of rotation).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.2.4:5",
+            "order": 5,
+            "title": "Relative Stability of Conformations",
+            "content_text": "In the staggered form, electron clouds of C-H bonds are far apart, resulting in minimum repulsive forces, minimum energy, and maximum stability. In the eclipsed form, electron clouds are closer, increasing repulsions (torsional strain) and decreasing stability. The angle of rotation is called the dihedral angle or torsional angle. The energy difference between these forms in ethane is approximately $12.5 \\text{ kJ mol}^{-1}$. At ordinary temperatures, ethane molecules have enough thermal energy to overcome this barrier, making rotation almost free for practical purposes.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:9:9.3",
+        "number": "9.3",
+        "title": "ALKENES",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:9:9.3:1",
+            "order": 1,
+            "title": "Introduction to Alkenes",
+            "content_text": "Alkenes are unsaturated hydrocarbons containing at least one double bond. Their general formula is $C_nH_{2n}$. They are also known as olefins (oil forming) because the first member, ethene ($C_2H_4$), forms an oily liquid upon reaction with chlorine.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.3:2",
+            "order": 2,
+            "title": "9.3.1 Structure of Double Bond",
+            "content_text": "A carbon-carbon double bond consists of one strong sigma ($\\sigma$) bond (bond enthalpy $\\approx 397 \\text{ kJ mol}^{-1}$) formed by head-on overlap of $sp^2$ hybridised orbitals, and one weak pi ($\\pi$) bond (bond enthalpy $\\approx 284 \\text{ kJ mol}^{-1}$) formed by lateral overlap of $2p$ orbitals. The C=C bond length is 134 pm, shorter than the C–C bond (154 pm). The pi bond makes alkenes sources of loosely held mobile electrons, making them susceptible to attack by electrophilic reagents. The total strength of the double bond ($681 \\text{ kJ mol}^{-1}$) is greater than a single bond ($348 \\text{ kJ mol}^{-1}$).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 9.4",
+                "description": "Orbital picture of ethene depicting sigma bonds only, showing sp2-s and sp2-sp2 overlaps.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.3:3",
+            "order": 3,
+            "title": "9.3.2 Nomenclature",
+            "content_text": "In the IUPAC system, the longest carbon chain containing the double bond is selected as the parent chain. Numbering of the chain is done from the end which is nearer to In the IUPAC system, the longest carbon chain containing the double bond is selected as the parent chain. Numbering of the chain is done from the end which is nearer to the double bond. The suffix ‘ene’ replaces ‘ane’ of alkanes. It may be remembered that the first member of the alkene series is $CH_2$ (replacing $n$ by 1 in $C_n H_{2n}$) known as methene, but it has a very short life. As already mentioned, the first stable member of the alkene series is $C_2 H_4$, known as ethylene (common name) or ethene (IUPAC name). The following table provides IUPAC names for several members of the alkene series.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 9.7",
+                "problem": "Write IUPAC names of the following compounds: (i) $(CH_3)_2CH - CH = CH - CH_2 - CH = C(CH_3) - CH(C_2H_5) - CH_3$ [Note: Structure interpreted from visual representation] (ii) A skeletal structure with four conjugated double bonds. (iii) $CH_2 = C(CH_2CH_2CH_3)_2$ (iv) $CH_3 CH_2 CH_2 CH_2 CH(CH_2CH_3) C(CH_3) = CH - CH_2 - CH(CH_3)CH_3$",
+                "solution": "(i) 2,8-Dimethyl-3, 6-decadiene; (ii) 1,3,5,7 Octatetraene; (iii) 2-n-Propylpent-1-ene; (iv) 4-Ethyl-2,6-dimethyl-dec-4-ene;"
+              },
+              {
+                "label": "Problem 9.8",
+                "problem": "Calculate number of sigma ($\\sigma$) and pi ($\\pi$) bonds in the above structures (i-iv).",
+                "solution": "(i) $\\sigma$ bonds : 33, $\\pi$ bonds : 2; (ii) $\\sigma$ bonds : 17, $\\pi$ bonds : 4; (iii) $\\sigma$ bonds : 23, $\\pi$ bond : 1; (iv) $\\sigma$ bonds : 41, $\\pi$ bond : 1"
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Fig. 9.5",
+                "description": "Orbital picture of ethene showing formation of (a) $\\pi$-bond through p-p overlap, (b) the $\\pi$-cloud above and below the plane of the molecule, and (c) bond angles ($121.7^\\circ$ and $116.6^\\circ$) and bond lengths ($C=C$ is 134 pm, $C-H$ is 110 pm).",
+                "image_url": null
+              }
+            ],
+            "tables": [
+              {
+                "label": "Table 9.x",
+                "caption": "IUPAC names of a few members of alkenes",
+                "headers": [
+                  "Structure",
+                  "IUPAC name"
+                ],
+                "rows": [
+                  [
+                    "$CH_3 - CH = CH_2$",
+                    "Propene"
+                  ],
+                  [
+                    "$CH_3 - CH_2 - CH = CH_2$",
+                    "But - 1 - ene"
+                  ],
+                  [
+                    "$CH_3 - CH = CH - CH_3$",
+                    "But-2-ene"
+                  ],
+                  [
+                    "$CH_2 = CH - CH = CH_2$",
+                    "Buta - 1, 3 - diene"
+                  ],
+                  [
+                    "$CH_2 = C(CH_3) - CH_3$",
+                    "2-Methylprop-1-ene"
+                  ],
+                  [
+                    "$CH_2 = CH - CH(CH_3) - CH_3$",
+                    "3-Methylbut-1-ene"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.3:4",
+            "order": 4,
+            "title": "9.3.3 Isomerism: Structural Isomerism",
+            "content_text": "Alkenes show both structural isomerism and geometrical isomerism. Structural isomerism in alkenes includes chain isomerism and position isomerism. For example, ethene ($C_2 H_4$) and propene ($C_3 H_6$) have only one structure, but alkenes with higher molecular formulas like $C_4 H_8$ can be written in three ways: I. But-1-ene ($CH_2 = CH - CH_2 - CH_3$), II. But-2-ene ($CH_3 - CH = CH - CH_3$), and III. 2-Methylprop-1-ene ($CH_2 = C(CH_3) - CH_3$). Structures I and III, and II and III are examples of chain isomerism, whereas structures I and II are position isomers.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 9.9",
+                "problem": "Write structures and IUPAC names of different structural isomers of alkenes corresponding to $C_5 H_{10}$.",
+                "solution": "(a) $CH_2 = CH - CH_2 - CH_2 - CH_3$ (Pent-1-ene); (b) $CH_3 - CH = CH - CH_2 - CH_3$ (Pent-2-ene); (c) $CH_3 - C(CH_3) = CH - CH_3$ (2-Methylbut-2-ene); (d) $CH_3 - CH(CH_3) - CH = CH_2$ (3-Methylbut-1-ene); (e) $CH_2 = C(CH_3) - CH_2 - CH_3$ (2-Methylbut-1-ene)"
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.3:5",
+            "order": 5,
+            "title": "9.3.3 Isomerism: Geometrical Isomerism",
+            "content_text": "Geometrical isomerism is a type of stereoisomerism that arises due to restricted rotation around the carbon-carbon double bond ($C=C$). While rotation around a $C-C$ single bond is free, the $\\pi$-bond in alkenes restricts rotation, leading to different spatial arrangements. If two identical atoms or groups lie on the same side of the double bond, it is called the cis isomer. If they lie on opposite sides, it is called the trans isomer. These isomers differ in physical properties like melting point, boiling point, dipole moment, and solubility. This isomerism is common in alkenes of the type $XYC=CXY$, $XYC=CXZ$, and $XYC=CZW$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "General Geometrical Isomers",
+                "description": "Two spatial arrangements of $YX C = C XY$: (a) cis-isomer where identical groups X or Y are on the same side, and (b) trans-isomer where they are on opposite sides.",
+                "image_url": null
+              },
+              {
+                "label": "But-2-ene Isomers",
+                "description": "Cis-But-2-ene (boiling point 277 K) and trans-But-2-ene (boiling point 274 K).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.3:6",
+            "order": 6,
+            "title": "Physical Properties of Geometrical Isomers",
+            "content_text": "The cis form of an alkene is generally more polar than the trans form. For example, the dipole moment ($\\mu$) of cis-but-2-ene is $0.33 D$, whereas the dipole moment of trans-but-2-ene is zero because the dipole moments of the $C-CH_3$ bonds cancel each other out. In the case of solids, the trans isomer typically has a higher melting point than the cis form.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 9.10",
+                "problem": "Draw cis and trans isomers of the following compounds. Also write their IUPAC names: (i) $CHCl = CHCl$ (ii) $C_2 H_5 C(CH_3) = C(CH_3) C_2 H_5$",
+                "solution": "(i) cis-1, 2-Dichloroethene and trans-1, 2-Dichloroethene; (ii) cis-3, 4-Dimethylhex-3-ene and trans-3, 4-Dimethylhex-3-ene"
+              },
+              {
+                "label": "Problem 9.11",
+                "problem": "Which of the following compounds will show cis-trans isomerism? (i) $(CH_3)_2 C = CH - C_2 H_5$ (ii) $CH_2 = CBr_2$ (iii) $C_6 H_5 CH = CH - CH_3$ (iv) $CH_3 CH = CCl CH_3$",
+                "solution": "(iii) and (iv) show cis-trans isomerism. In structures (i) and (ii), two identical groups are attached to one of the doubly bonded carbon atoms, which prevents geometrical isomerism."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.3:7",
+            "order": 7,
+            "title": "9.3.4 Preparation: From Alkynes",
+            "content_text": "Alkenes can be prepared from alkynes by partial reduction with a calculated amount of dihydrogen. 1. Using Lindlar’s catalyst (palladised charcoal partially deactivated with poisons like sulphur compounds or quinoline) yields cis-alkenes. 2. Reduction with sodium in liquid ammonia yields trans-alkenes. For example, ethyne reduces to ethene, and propyne reduces to propene. Propene does not show geometrical isomerism because one carbon has two identical hydrogen atoms.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Equation 9.30-9.31",
+                "description": "General reduction of alkynes: (i) $RC \\equiv CR' + H_2 \\xrightarrow{Pd/C} \\text{cis-Alkene}$; (ii) $RC \\equiv CR' + H_2 \\xrightarrow{Na/liquid NH_3} \\text{trans-Alkene}$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.3:8",
+            "order": 8,
+            "title": "9.3.4 Preparation: From Alkyl Halides",
+            "content_text": "Alkyl halides (R-X) on heating with alcoholic potash (potassium hydroxide dissolved in alcohol, say, Alkyl halides ($R-X$) on heating with alcoholic potash (potassium hydroxide dissolved in alcohol, say, ethanol) eliminate one molecule of halogen acid to form alkenes. This reaction is known as dehydrohalogenation, which refers to the removal of a halogen acid molecule. It is a classic example of a $\\beta$-elimination reaction because the hydrogen atom is removed from the $\\beta$-carbon atom, which is the carbon atom adjacent to the $\\alpha$-carbon (the one bonded to the halogen). The general reaction is represented as: $H-C(\\beta)-C(\\alpha)-X \\xrightarrow{\\text{alc. KOH, } \\Delta} C=C + HX$. The nature of the halogen atom and the alkyl group determine the rate of the reaction. For halogens, the reactivity order is $I > Br > Cl$, and for alkyl groups, the order is $tertiary > secondary > primary$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "9.34",
+                "description": "General chemical equation for the dehydrohalogenation of an alkyl halide using alcoholic KOH and heat to produce an alkene and a halogen acid (HX).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.3:9",
+            "order": 9,
+            "title": "9.3.4 Preparation: From Vicinal Dihalides",
+            "content_text": "Vicinal dihalides are organic compounds where two halogen atoms are attached to two adjacent carbon atoms. When these dihalides are treated with zinc metal, they lose a molecule of $ZnX_2$ to form an alkene. This process is known as dehalogenation. For example, 1,2-dibromoethane reacts with zinc to produce ethene and zinc bromide: $CH_2Br-CH_2Br + Zn \\rightarrow CH_2=CH_2 + ZnBr_2$. Similarly, 1,2-dibromopropane reacts with zinc to form propene: $CH_3CHBr-CH_2Br + Zn \\rightarrow CH_3CH=CH_2 + ZnBr_2$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.3:10",
+            "order": 10,
+            "title": "9.3.4 Preparation: From Alcohols by Acidic Dehydration",
+            "content_text": "Alcohols are hydroxy derivatives of alkanes, represented by the general formula $R-OH$. When alcohols are heated with concentrated sulphuric acid, they form alkenes through the elimination of one water molecule. This reaction is known as acidic dehydration of alcohols. It is also an example of a $\\beta$-elimination reaction because the $-OH$ group and a hydrogen atom from the $\\beta$-carbon atom are removed to form the double bond. For instance, ethanol undergoes dehydration to form ethene: $CH_3-CH_2-OH \\xrightarrow{\\text{Conc. } H_2SO_4, \\Delta} CH_2=CH_2 + H_2O$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "9.37",
+                "description": "Chemical equation showing the acidic dehydration of ethanol to ethene using concentrated sulphuric acid and heat.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.3:11",
+            "order": 11,
+            "title": "9.3.5 Properties: Physical Properties",
+            "content_text": "Alkenes generally resemble alkanes in their physical properties, except in their types of isomerism and polar nature. The first three members of the homologous series (ethene, propene, and butene) are gases at room temperature. The next fourteen members are liquids, while higher alkenes are solids. Ethene is a colourless gas with a faint sweet smell, but all other alkenes are colourless and odourless. Alkenes are insoluble in water but fairly soluble in non-polar solvents like benzene and petroleum ether. They show a regular increase in boiling point with increase in molecular size; every additional $-CH_2$ group increases the boiling point by 20–30 K. Like alkanes, straight-chain alkenes have higher boiling points than their isomeric branched-chain counterparts.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.3:12",
+            "order": 12,
+            "title": "9.3.5 Properties: Chemical Properties (General)",
+            "content_text": "Alkenes are a rich source of loosely held pi ($\\pi$) electrons, which makes them highly reactive toward electrophiles. They primarily undergo addition reactions where electrophiles add to the carbon-carbon double bond to form saturated addition products. Some reagents may also add via a free radical mechanism. Under special conditions, alkenes can undergo free radical substitution reactions. Oxidation and ozonolysis reactions are also prominent chemical characteristics of alkenes.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.3:13",
+            "order": 13,
+            "title": "9.3.5 Properties: Addition of Dihydrogen",
+            "content_text": "Alkenes add one molecule of dihydrogen gas ($H_2$) in the presence of finely divided metallic catalysts such as nickel (Ni), palladium (Pd), or platinum (Pt) to form the corresponding alkanes. This process is a standard hydrogenation reaction.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.3:14",
+            "order": 14,
+            "title": "9.3.5 Properties: Addition of Halogens",
+            "content_text": "Halogens like bromine ($Br_2$) or chlorine ($Cl_2$) add to alkenes to form vicinal dihalides. Iodine ($I_2$) does not typically show addition reactions under normal conditions. A key application of this reaction is the laboratory test for unsaturation: the reddish-orange colour of a bromine solution in carbon tetrachloride ($CCl_4$) is discharged (becomes colourless) when it reacts with an alkene. This is an electrophilic addition reaction that involves the formation of a cyclic halonium ion. Examples include the reaction of ethene with bromine to form 1,2-dibromoethane and propene with chlorine to form 1,2-dichloropropane.",
+            "content_type": "experiment",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "9.38",
+                "description": "Equation showing the addition of bromine to ethene in CCl4 to produce 1,2-dibromoethane.",
+                "image_url": null
+              },
+              {
+                "label": "9.39",
+                "description": "Equation showing the addition of chlorine to propene to produce 1,2-dichloropropane.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.3:15",
+            "order": 15,
+            "title": "9.3.5 Properties: Addition of Hydrogen Halides (Symmetrical Alkenes)",
+            "content_text": "Hydrogen halides ($HCl, HBr, HI$) add to alkenes to form alkyl halides. The order of reactivity for these halides is $HI > HBr > HCl$. In the case of symmetrical alkenes (where identical groups are attached to both carbons of the double bond), the addition results in a single product. For example, ethene reacts with $HBr$ to form bromoethane ($CH_3-CH_2Br$), and but-2-ene reacts with $HBr$ to form 2-bromobutane.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.3:16",
+            "order": 16,
+            "title": "9.3.5 Properties: Markovnikov Rule for Unsymmetrical Alkenes",
+            "content_text": "When hydrogen halides add to unsymmetrical alkenes like propene, two products are theoretically possible. However, one product usually predominates. This is governed by the Markovnikov rule, formulated in 1869. The rule states that the negative part of the addendum (the molecule being added, such as $Br^-$ from $HBr$) gets attached to that carbon atom of the double bond which possesses the lesser number of hydrogen atoms. In propene ($CH_3-CH=CH_2$), the negative part ($Br^-$) attaches to the middle carbon, making 2-bromopropane the major product.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "9.42",
+                "description": "Reaction of propene with HBr showing two possible products: 2-bromopropane (major) and 1-bromopropane (minor).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.3:17",
+            "order": 17,
+            "title": "9.3.5 Properties: Mechanism of Markovnikov Rule",
+            "content_text": "The addition of $HBr$ to alkenes is an electrophilic addition reaction. In the first step, the electrophile ($H^+$) attacks the double bond to form a carbocation. In propene, two carbocations can form: a primary carbocation ($CH_3-CH_2-CH_2^+$) or a secondary carbocation ($CH_3-CH^+-CH_3$). The secondary carbocation is more stable than the primary one and thus forms at a faster rate. In the second step, the nucleophile ($Br^-$) attacks the more stable secondary carbocation to yield 2-bromopropane as the principal product.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Mechanism",
+                "description": "Diagram illustrating the formation of less stable primary and more stable secondary carbocations from propene, followed by the attack of the bromide ion.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.3:18",
+            "order": 18,
+            "title": "9.3.5 Properties: Anti-Markovnikov Addition (Peroxide Effect)",
+            "content_text": "In the presence of peroxides (such as benzoyl peroxide), the addition of $HBr$ to unsymmetrical alkenes like propene occurs contrary to the Markovnikov rule. This phenomenon is known as the peroxide effect, Anti-Markovnikov addition, or the Kharash effect, named after M.S. Kharash and F.R. Mayo who discovered it in 1933. Under these conditions, propene reacts with $HBr$ to form 1-bromopropane as the major product. This effect is specific to $HBr$ and is not observed with $HCl$ or $HI$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.3:19",
+            "order": 19,
+            "title": "9.3.5 Properties: Mechanism of Peroxide Effect",
+            "content_text": "The peroxide effect proceeds via a free radical chain mechanism. (i) Homolysis of peroxide generates free radicals, which react with $HBr$ to form a bromine free radical ($\\dot{Br}$). (ii) The bromine radical adds to the alkene. In propene, it adds to the terminal carbon to form a more stable secondary free radical ($CH_3-\\dot{CH}-CH_2Br$). (iii) This secondary radical reacts with $HBr$ to form 1-bromopropane and regenerates the bromine radical. The effect is not seen with $HCl$ because the $H-Cl$ bond is too strong ($430.5 \\text{ kJ mol}^{-1}$) to be broken by the peroxide radical. It is not seen with $HI$ because the $H-I$ bond is weak ($296.8 \\text{ kJ mol}^{-1}$), but iodine radicals tend to combine to form $I_2$ molecules rather than adding to the double bond.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Peroxide Mechanism",
+                "description": "Step-by-step free radical mechanism showing the homolysis of benzoyl peroxide, formation of bromine radicals, and the subsequent addition to propene to form a secondary free radical and the final product 1-bromopropane.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.3:20",
+            "order": 20,
+            "title": "9.3.5 Properties: Worked Example 9.12",
+            "content_text": "Problem 9.12 demonstrates the application of Markovnikov and Anti-Markovnikov rules to the addition of $HBr$ to hex-1-ene. In the absence of peroxide, the reaction follows the Markovnikov rule to produce 2-bromohexane. In the presence of peroxide, the reaction follows the Anti-Markovnikov rule to produce 1-bromohexane.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 9.12",
+                "problem": "Write IUPAC names of the products obtained by addition reactions of $HBr$ to hex-1-ene (i) in the absence of peroxide and (ii) in the presence of peroxide.",
+                "solution": "(i) In the absence of peroxide, addition follows Markovnikov rule: $CH_2=CH-CH_2-CH_2-CH_2-CH_3 + H-Br \\rightarrow CH_3-CH(Br)-CH_2-CH_2-CH_2-CH_3$ (2-Bromohexane). (ii) In the presence of peroxide, addition follows Anti-Markovnikov rule: $CH_2=CH-CH_2-CH_2-CH_2-CH_3 + H-Br \\xrightarrow{\\text{Peroxide}} Br-CH_2-CH_2-CH_2-CH_2-CH_2-CH_3$ (1-Bromohexane)."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.3:21",
+            "order": 21,
+            "title": "9.3.5 Properties: Addition of Sulphuric Acid",
+            "content_text": "Cold concentrated sulphuric acid adds to alkenes in accordance with the Markovnikov rule to form alkyl hydrogen sulphates. This is an electrophilic addition reaction where the hydrogen atom adds to the carbon with more hydrogens and the $-OSO_3H$ group adds to the carbon with fewer hydrogens.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.3:22",
+            "order": 22,
+            "title": "Properties: Addition of Sulphuric Acid (Continued)",
+            "content_text": "Cold concentrated sulphuric acid adds to alkenes in accordance with Markovnikov's rule to form alkyl hydrogen sulphates. This occurs through the addition of $H^+$ and $HSO_4^-$ across the double bond. For example, ethene reacts with sulphuric acid to produce ethyl hydrogen sulphate ($C_2H_5HSO_4$). Propene reacts to form propyl hydrogen sulphate. Equations: (9.44) $CH_2 = CH_2 + H - O - SO_2 - O - H \\to CH_3 - CH_2 - OSO_2 - OH$ (Ethyl hydrogen sulphate); (9.45) $CH_3 - CH = CH_2 + HOSO_2OH \\to CH_3 - CH(OSO_2OH) - CH_3$ (Propyl hydrogen sulphate).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.3:23",
+            "order": 23,
+            "title": "Properties: Addition of Water",
+            "content_text": "In the presence of a few drops of concentrated sulphuric acid, alkenes react with water to form alcohols. This addition reaction follows the Markovnikov rule. For instance, 2-methylpropene reacts with water in the presence of an acid catalyst ($H^+$) to form 2-methylpropan-2-ol. Equation: (9.46) $CH_3 - C(CH_3) = CH_2 + H_2O \\xrightarrow{H^+} CH_3 - C(OH)(CH_3) - CH_3$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.3:24",
+            "order": 24,
+            "title": "Properties: Oxidation",
+            "content_text": "Alkenes undergo oxidation depending on the reagents used. (a) Baeyer's Reagent: Alkenes react with cold, dilute, aqueous potassium permanganate ($KMnO_4$) to produce vicinal glycols. The decolorisation of the pink $KMnO_4$ solution serves as a test for unsaturation. Examples: (9.47) $CH_2=CH_2 + H_2O + [O] \\xrightarrow{\\text{dil. } KMnO_4, 273 K} CH_2(OH) - CH_2(OH)$ (Ethane-1,2-diol); (9.48) $CH_3-CH=CH_2 + H_2O + [O] \\xrightarrow{\\text{dil. } KMnO_4, 273 K} CH_3CH(OH)CH_2OH$ (Propane-1,2-diol). (b) Acidic Oxidation: Acidic $KMnO_4$ or $K_2Cr_2O_7$ oxidises alkenes to ketones and/or acids. Examples: (9.49) $(CH_3)_2C=CH_2 \\xrightarrow{KMnO_4/H^+} (CH_3)_2C=O + CO_2 + H_2O$; (9.50) $CH_3 - CH = CH - CH_3 \\xrightarrow{KMnO_4/H^+} 2CH_3COOH$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.3:25",
+            "order": 25,
+            "title": "Properties: Ozonolysis",
+            "content_text": "Ozonolysis involves the addition of ozone ($O_3$) to an alkene to form an ozonide, followed by cleavage with $Zn-H_2O$ to yield smaller carbonyl molecules (aldehydes or ketones). This reaction is useful for detecting the position of the double bond. Examples: (9.51) $CH_3CH=CH_2 + O_3 \\to \\text{Propene ozonide} \\xrightarrow{Zn + H_2O} CH_3CHO + HCHO$; (9.52) $(CH_3)_2C=CH_2 + O_3 \\to \\text{Ozonide} \\xrightarrow{Zn + H_2O} (CH_3)_2C=O + HCHO$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.3:26",
+            "order": 26,
+            "title": "Properties: Polymerisation",
+            "content_text": "Polymerisation is the combination of a large number of simple molecules (monomers) to form a large molecule (polymer) at high temperature and pressure with a catalyst. Ethene polymerises to polythene, and propene to polypropene. These are used for plastics, but their excessive use is an environmental concern. Equations: (9.53) $n(CH_2=CH_2) \\xrightarrow{\\text{High temp./pressure, Catalyst}} -(CH_2-CH_2)_n-$; (9.54) $n(CH_3-CH=CH_2) \\xrightarrow{\\text{High temp./pressure, Catalyst}} -(CH(CH_3)-CH_2)_n-$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:9:9.4",
+        "number": "9.4",
+        "title": "ALKYNES",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:9:9.4:1",
+            "order": 1,
+            "title": "Introduction to Alkynes",
+            "content_text": "Alkynes are unsaturated hydrocarbons containing at least one carbon-carbon triple bond ($C \\equiv C$). Their general formula is $C_nH_{2n-2}$. The first member is ethyne ($C_2H_2$), known as acetylene, used in oxyacetylene flames for welding. Alkynes are starting materials for many organic compounds.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:9:9.4.1",
+        "number": "9.4.1",
+        "title": "Nomenclature and Isomerism",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:9:9.4.1:1",
+            "order": 1,
+            "title": "Nomenclature of Alkynes",
+            "content_text": "In the common system, alkynes are named as derivatives of acetylene. In the IUPAC system, the suffix '-ane' of the alkane is replaced by '-yne'. The triple bond position is indicated by the lowest possible number. Common and IUPAC names are listed in Table 9.2.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": [
+              {
+                "label": "Table 9.2",
+                "caption": "Common and IUPAC Names of Alkynes ($C_nH_{2n-2}$)",
+                "headers": [
+                  "Value of n",
+                  "Formula",
+                  "Structure",
+                  "Common name",
+                  "IUPAC name"
+                ],
+                "rows": [
+                  [
+                    "2",
+                    "$C_2H_2$",
+                    "$H-C \\equiv CH$",
+                    "Acetylene",
+                    "Ethyne"
+                  ],
+                  [
+                    "3",
+                    "$C_3H_4$",
+                    "$CH_3-C \\equiv CH$",
+                    "Methylacetylene",
+                    "Propyne"
+                  ],
+                  [
+                    "4",
+                    "$C_4H_6$",
+                    "$CH_3CH_2-C \\equiv CH$",
+                    "Ethylacetylene",
+                    "But-1-yne"
+                  ],
+                  [
+                    "4",
+                    "$C_4H_6$",
+                    "$CH_3-C \\equiv C-CH_3$",
+                    "Dimethylacetylene",
+                    "But-2-yne"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.4.1:2",
+            "order": 2,
+            "title": "Isomerism in Alkynes",
+            "content_text": "Alkynes exhibit position isomerism (different triple bond positions, e.g., but-1-yne and but-2-yne) and chain isomerism (different carbon skeletons, e.g., pent-1-yne and 3-methylbut-1-yne).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.4.1:3",
+            "order": 3,
+            "title": "Worked Example: Isomers of Hexyne",
+            "content_text": "The 5th member of the alkyne series is $C_6H_{10}$. It exhibits various structural isomers.",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 9.13",
+                "problem": "Write structures of different isomers corresponding to the 5th member of alkyne series. Also write IUPAC names of all the isomers. What type of isomerism is exhibited by different pairs of isomers?",
+                "solution": "The 5th member is $C_6H_{10}$. Isomers: (a) Hex-1-yne, (b) Hex-2-yne, (c) Hex-3-yne, (d) 3-Methylpent-1-yne, (e) 4-Methylpent-1-yne, (f) 4-Methylpent-2-yne, (g) 3,3-Dimethylbut-1-yne. Pairs like (a, b, c) show position isomerism; (a, d, e, g) show chain isomerism."
+              }
+            ],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:9:9.4.2",
+        "number": "9.4.2",
+        "title": "Structure of Triple Bond",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:9:9.4.2:1",
+            "order": 1,
+            "title": "Hybridization and Sigma Bonding",
+            "content_text": "In ethyne, each carbon is $sp$ hybridised. One $sp$ orbital of each carbon overlaps head-on to form a $C-C$ sigma bond, while the other $sp$ orbital overlaps with a hydrogen $1s$ orbital to form a $C-H$ sigma bond. The molecule is linear with a $180^\\circ$ bond angle.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.4.2:2",
+            "order": 2,
+            "title": "Pi Bonding and Geometry",
+            "content_text": "Two unhybridised $2p$ orbitals on each carbon overlap laterally to form two pi bonds. The $C \\equiv C$ triple bond consists of one sigma and two pi bonds, with a cylindrically symmetrical electron cloud.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig. 9.6",
+                "description": "Orbital picture of ethyne showing (a) sigma overlaps and (b) pi overlaps between carbon atoms.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.4.2:3",
+            "order": 3,
+            "title": "Bond Parameters",
+            "content_text": "The $C \\equiv C$ bond is stronger (enthalpy $823 \\text{ kJ mol}^{-1}$) and shorter (120 pm) than $C=C$ (681 kJ/mol, 133 pm) and $C-C$ (348 kJ/mol, 154 pm).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:9:9.4.3",
+        "number": "9.4.3",
+        "title": "Preparation",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:9:9.4.3:1",
+            "order": 1,
+            "title": "Preparation from Calcium Carbide",
+            "content_text": "Industrially, ethyne is prepared by treating calcium carbide ($CaC_2$) with water. Calcium carbide is made by heating quick lime ($CaO$) with coke. Quick lime is obtained from limestone ($CaCO_3$): (9.55) $CaCO_3 \\xrightarrow{\\Delta} CaO + CO_2$ Ethyne is prepared by treating calcium carbide ($CaC_2$) with water. Calcium carbide is made by heating quick lime ($CaO$) with coke. Quick lime is obtained from limestone ($CaCO_3$): $$CaCO_3 \\xrightarrow{\\Delta} CaO + CO_2$$ $$CaO + 3C \\xrightarrow{\\Delta} CaC_2 + CO$$ $$CaC_2 + 2H_2O \\rightarrow Ca(OH)_2 + C_2H_2$$ Additionally, alkynes can be prepared from vicinal dihalides. Vicinal dihalides on treatment with alcoholic potassium hydroxide undergo dehydrohalogenation. One molecule of hydrogen halide is eliminated to form alkenyl halide which on treatment with sodamide ($NaNH_2$) gives alkyne.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Reaction Scheme",
+                "description": "Chemical reaction showing the conversion of a vicinal dibromide to an alkyne using alcoholic KOH followed by sodamide.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:9:9.4.4",
+        "number": "9.4.4",
+        "title": "Properties",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:9:9.4.4:1",
+            "order": 1,
+            "title": "Physical Properties",
+            "content_text": "Physical properties of alkynes follow the same trend as alkenes and alkanes. The first three members (ethyne, propyne, and butyne) are gases, the next eight are liquids, and higher members are solids. All alkynes are colourless. Ethyne has a characteristic odour, while other members are odourless. Alkynes are weakly polar, lighter than water, and immiscible with water but soluble in organic solvents like ethers, carbon tetrachloride, and benzene. Their melting point, boiling point, and density increase with increase in molar mass.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.4.4:2",
+            "order": 2,
+            "title": "Acidic Character of Alkynes",
+            "content_text": "Sodium metal and sodamide ($NaNH_2$) are strong bases that react with ethyne to form sodium acetylide with the liberation of dihydrogen gas. This reaction is not observed with ethene or ethane, indicating ethyne is more acidic. This acidity is due to the $sp$ hybridisation of carbon atoms in ethyne (50% s-character), which makes the $sp$ hybridised orbitals more electronegative than $sp^2$ or $sp^3$ orbitals. Consequently, the C-H bond in ethyne is more polarized, allowing hydrogen atoms to be liberated as protons more easily. Only hydrogen atoms attached to triply bonded carbons are acidic. $$HC \\equiv CH + Na \\rightarrow HC \\equiv C^-Na^+ + \\frac{1}{2}H_2$$ $$HC \\equiv C^-Na^+ + Na \\rightarrow Na^+C^- \\equiv C^-Na^+ + \\frac{1}{2}H_2$$ $$CH_3 - C \\equiv C - H + Na^+NH_2^- \\rightarrow CH_3 - C \\equiv C^-Na^+ + NH_3$$ The acidic behavior follows the trend: $CH \\equiv CH > CH_2 = CH_2 > CH_3 - CH_3$ and $HC \\equiv CH > CH_3 - C \\equiv CH >> CH_3 - C \\equiv C - CH_3$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.4.4:3",
+            "order": 3,
+            "title": "Addition Reactions",
+            "content_text": "Alkynes contain a triple bond and can add two molecules of dihydrogen, halogen, or hydrogen halides. These are typically electrophilic addition reactions. The addition product formed depends on the stability of the vinylic cation. In unsymmetrical alkynes, addition follows Markovnikov's rule.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Vinylic Cation",
+                "description": "General mechanism of electrophilic addition to an alkyne showing the formation of a vinylic cation intermediate.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.4.4:4",
+            "order": 4,
+            "title": "Addition of Dihydrogen and Halogens",
+            "content_text": "Alkynes react with dihydrogen in the presence of catalysts like Pt, Pd, or Ni to form alkanes via an alkene intermediate. $$CH_3 - C \\equiv CH + H_2 \\xrightarrow{Pt/Pd/Ni} [CH_3 - CH = CH_2] \\xrightarrow{H_2} CH_3 - CH_2 - CH_3$$ Halogens like bromine add to alkynes to form tetrahaloalkanes. The reddish-orange colour of bromine in carbon tetrachloride is decolourised, serving as a test for unsaturation. $$CH_3 - C \\equiv CH + Br_2 \\rightarrow [CH_3CBr = CHBr] \\xrightarrow{Br_2} CH_3CBr_2 - CHBr_2$$",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.4.4:5",
+            "order": 5,
+            "title": "Addition of Hydrogen Halides",
+            "content_text": "Two molecules of hydrogen halides (HCl, HBr, HI) add to alkynes to form gem-dihalides, where both halogen atoms are attached to the same carbon atom. $$H - C \\equiv C - H + HBr \\rightarrow [CH_2 = CHBr] \\xrightarrow{HBr} CH_3 - CHBr_2$$ $$CH_3 - C \\equiv CH + HBr \\rightarrow [CH_3 - C(Br) = CH_2] \\xrightarrow{HBr} CH_3 - CBr_2 - CH_3$$",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.4.4:6",
+            "order": 6,
+            "title": "Addition of Water",
+            "content_text": "Alkynes react with water on warming with mercuric sulphate ($HgSO_4$) and dilute sulphuric acid at 333 K to form carbonyl compounds. Ethyne yields ethanal, while other alkynes yield ketones. $$HC \\equiv CH + H_2O \\xrightarrow{Hg^{2+}/H^+, 333K} [CH_2 = CH - OH] \\xrightarrow{Isomerisation} CH_3CHO$$ $$CH_3 - C \\equiv CH + H_2O \\xrightarrow{Hg^{2+}/H^+, 333K} [CH_3 - C(OH) = CH_2] \\xrightarrow{Isomerisation} CH_3 - CO - CH_3$$",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.4.4:7",
+            "order": 7,
+            "title": "Polymerisation",
+            "content_text": "Alkynes undergo two types of polymerisation: (a) Linear polymerisation: Ethyne polymerises to produce polyacetylene or polyethyne, a high molecular weight polyene $(CH=CH-CH=CH)_n$ that conducts electricity under special conditions. (b) Cyclic polymerisation: Ethyne undergoes cyclic polymerisation when passed through a red-hot iron tube at 873 K. Three molecules of ethyne polymerise to form benzene ($C_6H_6$). This is the best route for entering from aliphatic to aromatic compounds. $$3C_2H_2 \\xrightarrow{\\text{Red hot iron tube, 873 K}} C_6H_6$$",
+            "content_type": "explanation",
+            "worked_examples": [
+              {
+                "label": "Problem 9.14",
+                "problem": "How will you convert ethanoic acid into benzene?",
+                "solution": "Ethanoic acid is first converted to sodium ethanoate using NaOH, then to methane via decarboxylation with soda lime. Methane is chlorinated to methyl chloride, which undergoes Wurtz reaction to form ethane. Ethane is chlorinated to ethyl chloride, then dehydrohalogenated with alcoholic KOH to ethene. Ethene is brominated to 1,2-dibromoethane, then treated with alcoholic KOH and sodamide to form ethyne. Finally, ethyne is passed through a red-hot iron tube at 873 K to yield benzene."
+              }
+            ],
+            "diagrams": [
+              {
+                "label": "Fig 9.69",
+                "description": "Diagram showing three molecules of ethyne cyclizing into a benzene ring in a red-hot iron tube.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:9:9.5",
+        "number": "9.5",
+        "title": "AROMATIC HYDROCARBON",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:9:9.5:1",
+            "order": 1,
+            "title": "Introduction to Arenes",
+            "content_text": "Aromatic hydrocarbons are also known as 'arenes'. The name 'aromatic' comes from the Greek word 'aroma' (pleasant smelling). Most contain a benzene ring. Although highly unsaturated, the benzene ring usually retains its unsaturation in reactions. Compounds containing a benzene ring are 'benzenoids', while those without are 'non-benzenoids'. Examples include benzene, toluene, naphthalene, and biphenyl.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Aromatic Structures",
+                "description": "Structural formulas for Benzene (six-carbon ring), Toluene (methylbenzene), Naphthalene (two fused rings), and Biphenyl (two connected rings).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:9:9.5.1",
+        "number": "9.5.1",
+        "title": "Nomenclature and Isomerism",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:9:9.5.1:1",
+            "order": 1,
+            "title": "Isomerism in Benzene Derivatives",
+            "content_text": "All six hydrogen atoms in benzene are equivalent, so it forms only one type of monosubstituted product. For disubstituted products, three position isomers exist: 1,2 (ortho, o-), 1,3 (meta, m-), and 1,4 (para, p-). Examples include methylbenzene (toluene) and 1,2-dimethylbenzene (o-xylene).",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Xylene Isomers",
+                "description": "Structures of Methylbenzene and 1,2-Dimethylbenzene (o-Xylene) showing the numbering of the benzene ring.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.5.1:2",
+            "order": 2,
+            "title": "Isomers of Dimethylbenzene",
+            "content_text": "Benzene derivatives with two substituent groups exhibit isomerism based on their relative positions. For example, dimethylbenzene (xylene) exists in three isomeric forms: 1,2-dimethylbenzene (ortho-xylene), 1,3-dimethylbenzene (meta-xylene), and 1,4-dimethylbenzene (para-xylene). The meta and para isomers are depicted with the methyl groups at positions 1,3 and 1,4 respectively on the hexagonal ring.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Dimethylbenzene Isomers",
+                "description": "Structural formulas for 1,3-Dimethylbenzene (m-Xylene) with methyl groups at positions 1 and 3, and 1,4-Dimethylbenzene (p-Xylene) with methyl groups at positions 1 and 4.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:9:9.5.2",
+        "number": "9.5.2",
+        "title": "Structure of Benzene",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:9:9.5.2:1",
+            "order": 1,
+            "title": "Discovery and Molecular Formula",
+            "content_text": "Benzene was first isolated by Michael Faraday in 1825. Its molecular formula was determined to be $C_6H_6$, which indicates a high degree of unsaturation. However, benzene does not behave like typical alkenes or alkynes. It is a remarkably stable molecule and does not easily undergo addition reactions. It was found to form a triozonide, which suggests the presence of three double bonds, yet it only produces one monosubstituted derivative, indicating that all six carbon and six hydrogen atoms are equivalent.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.5.2:2",
+            "order": 2,
+            "title": "Kekulé's Proposal and the Isomerism Paradox",
+            "content_text": "In 1865, August Kekulé proposed a cyclic structure for benzene consisting of six carbon atoms with alternating single and double bonds, with one hydrogen atom attached to each carbon. A major problem with this static structure was that it predicted two different 1,2-dibromobenzenes: one where the bromine atoms are on carbons joined by a double bond, and another where they are on carbons joined by a single bond. However, only one ortho-disubstituted product was ever found. Kekulé resolved this by suggesting that the double bonds in benzene are not fixed but oscillate rapidly between two positions.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Kekulé Structure",
+                "description": "The cyclic arrangement of six carbon atoms with alternate single and double bonds and one hydrogen atom attached to each carbon.",
+                "image_url": null
+              },
+              {
+                "label": "1,2-dibromobenzene Isomers",
+                "description": "Two theoretical isomers of 1,2-dibromobenzene showing bromine atoms attached to carbons with a double bond versus a single bond.",
+                "image_url": null
+              },
+              {
+                "label": "Oscillating Double Bonds",
+                "description": "Two hexagonal structures of benzene with double bonds in alternating positions, connected by a double-headed arrow to show oscillation.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.5.2:3",
+            "order": 3,
+            "title": "Resonance and Stability of Benzene",
+            "content_text": "According to Valence Bond Theory, the concept of oscillating double bonds is better explained by resonance. Benzene is a resonance hybrid of two main contributing structures (Kekulé structures A and B). The actual structure is more stable than either individual structure and is often represented by a hexagon with a circle inside (Structure C), signifying that the six $\\pi$ electrons are delocalised over the entire ring.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Resonance Structures",
+                "description": "Resonating structures (A) and (B) showing localized double bonds, and the resonance hybrid (C) represented by a hexagon with a circle or dotted circle inside.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.5.2:4",
+            "order": 4,
+            "title": "Orbital Picture of Benzene",
+            "content_text": "In benzene, all six carbon atoms are $sp^2$ hybridized. Each carbon uses two $sp^2$ hybrid orbitals to form $\\sigma$ bonds with adjacent carbons and one $sp^2$ hybrid orbital to form a $\\sigma$ bond with a hydrogen atom. This results in a planar hexagonal frame with $C-C-C$ and $C-C-H$ bond angles of $120^\\circ$. Each carbon atom is left with one unhybridised $p$ orbital containing one electron, oriented perpendicular to the plane of the ring. These $p$ orbitals overlap laterally to form $\\pi$ bonds.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 9.7 (a) and (b)",
+                "description": "Orbital diagrams showing the two possible sets of localized $\\pi$ bonds formed by the overlap of $p$ orbitals on adjacent carbon atoms (C1-C2, C3-C4, C5-C6 or C2-C3, C4-C5, C6-C1).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.5.2:5",
+            "order": 5,
+            "title": "Delocalization and X-ray Evidence",
+            "content_text": "X-ray diffraction data confirms that benzene is a planar molecule where all six $C-C$ bond lengths are identical at $139$ pm. This value is intermediate between a typical $C-C$ single bond ($154$ pm) and a $C=C$ double bond ($133$ pm). This uniformity arises because the six $\\pi$ electrons are delocalised and move freely about the six carbon nuclei. This delocalisation can be visualized as two continuous 'doughnut-shaped' electron clouds, one above and one below the plane of the hexagonal ring. This delocalisation accounts for the unusual stability and chemical behavior of benzene compared to hypothetical cyclohexatriene.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Fig 9.7 (c) and (d)",
+                "description": "Diagram (c) shows the overlap of $p$ orbitals of all six carbon atoms. Diagram (d) shows the resulting delocalised $\\pi$ electron clouds as two rings (doughnuts) above and below the plane of the carbon ring.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:9:9.5.3",
+        "number": "9.5.3",
+        "title": "Aromaticity",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:9:9.5.3:1",
+            "order": 1,
+            "title": "Criteria for Aromaticity (Hückel Rule)",
+            "content_text": "For a compound to be classified as 'aromatic', it must possess the following characteristics: (i) Planarity of the ring system. (ii) Complete delocalisation of the $\\pi$ electrons in the ring. (iii) Presence of $(4n + 2) \\pi$ electrons in the ring, where $n$ is an integer ($n = 0, 1, 2, \\dots$). This third requirement is known as the Hückel Rule.",
+            "content_type": "law",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.5.3:2",
+            "order": 2,
+            "title": "Examples of Aromatic Compounds",
+            "content_text": "Aromaticity is found in various cyclic systems: \n- Benzene: $n=1$, $6\\pi$ electrons.\n- Cyclopentadienyl anion: $n=1$, $6\\pi$ electrons.\n- Cycloheptatrienyl cation: $n=1$, $6\\pi$ electrons.\n- Naphthalene: $n=2$, $10\\pi$ electrons.\n- Anthracene and Phenanthrene: $n=3$, $14\\pi$ electrons.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Aromatic Systems",
+                "description": "Structural representations of Benzene, Cyclopentadienyl anion, Cycloheptatrienyl cation, Naphthalene, Anthracene, and Phenanthrene with their respective $\\pi$ electron counts.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:9:9.5.4",
+        "number": "9.5.4",
+        "title": "Preparation of Benzene",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:9:9.5.4:1",
+            "order": 1,
+            "title": "Methods of Preparation",
+            "content_text": "Benzene is commercially isolated from coal tar. In the laboratory, it can be prepared by the following methods:\n\n(i) Cyclic polymerisation of ethyne: As discussed in Section 9.4.4, passing ethyne through a red-hot iron tube at $873$ K yields benzene.\n\n(ii) Decarboxylation of aromatic acids: Heating the sodium salt of benzoic acid (sodium benzoate) with sodalime (a mixture of $NaOH$ and $CaO$) produces benzene. The reaction is as follows:\n$$C_6H_5COONa + NaOH \\xrightarrow{CaO, \\Delta} C_6H_6 + Na_2CO_3$$",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.5.4:2",
+            "order": 2,
+            "title": "Reduction of Phenol",
+            "content_text": "Phenol can be reduced to benzene by passing its vapours over heated zinc dust. The reaction is represented as: $C_6H_5OH + Zn \\xrightarrow{\\Delta} C_6H_6 + ZnO$. This method is a common laboratory preparation for benzene from phenolic compounds.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Equation 9.71",
+                "description": "Chemical equation showing phenol reacting with zinc dust under heat to produce benzene and zinc oxide.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:9:9.5.5",
+        "number": "9.5.5",
+        "title": "Properties",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:9:9.5.5:1",
+            "order": 1,
+            "title": "Physical Properties of Aromatic Hydrocarbons",
+            "content_text": "Aromatic hydrocarbons are non-polar molecules and are usually colourless liquids or solids with a characteristic aroma. Naphthalene balls, which have a unique smell and moth-repellent properties, are commonly used in toilets and for the preservation of clothes. These hydrocarbons are immiscible with water but are readily miscible with organic solvents. A characteristic feature of aromatic hydrocarbons is that they burn with a sooty flame.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.5.5:2",
+            "order": 2,
+            "title": "Chemical Properties: Electrophilic Substitution Reactions",
+            "content_text": "Arenes are primarily characterized by electrophilic substitution reactions. In these reactions, an attacking reagent is an electrophile ($E^+$). Common examples include nitration, halogenation, sulphonation, and Friedel-Crafts alkylation and acylation. While substitution is the norm, under special conditions, arenes can also undergo addition and oxidation reactions.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.5.5:3",
+            "order": 3,
+            "title": "Nitration of Benzene",
+            "content_text": "Nitration involves the introduction of a nitro group ($-NO_2$) into the benzene ring. This is achieved by heating benzene with a mixture of concentrated nitric acid and concentrated sulphuric acid, known as the nitrating mixture, at a temperature range of 323-333 K. The reaction is: $C_6H_6 + Conc. HNO_3 + Conc. H_2SO_4 \\xrightarrow{323-333 K} C_6H_5NO_2 + H_2O$.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Equation 9.72",
+                "description": "Reaction of benzene with nitrating mixture to form nitrobenzene.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.5.5:4",
+            "order": 4,
+            "title": "Halogenation of Arenes",
+            "content_text": "Arenes react with halogens in the presence of a Lewis acid catalyst such as anhydrous $FeCl_3$, $FeBr_3$, or $AlCl_3$ to yield haloarenes. For example, benzene reacts with chlorine in the presence of anhydrous $AlCl_3$ to form chlorobenzene: $C_6H_6 + Cl_2 \\xrightarrow{Anhyd. AlCl_3} C_6H_5Cl + HCl$.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Equation 9.73",
+                "description": "Chlorination of benzene to produce chlorobenzene.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.5.5:5",
+            "order": 5,
+            "title": "Sulphonation of Benzene",
+            "content_text": "Sulphonation is the process of replacing a hydrogen atom in the benzene ring with a sulphonic acid group ($-SO_3H$). This is carried out by heating benzene with fuming sulphuric acid (oleum), which is $H_2SO_4$ containing dissolved $SO_3$. The reaction produces benzene sulphonic acid: $C_6H_6 + H_2SO_4(SO_3) \\xrightarrow{\\Delta} C_6H_5SO_3H + H_2O$.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Equation 9.74",
+                "description": "Sulphonation of benzene using fuming sulphuric acid to form benzene sulphonic acid.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.5.5:6",
+            "order": 6,
+            "title": "Friedel-Crafts Alkylation Reaction",
+            "content_text": "When benzene is treated with an alkyl halide in the presence of anhydrous aluminium chloride (a Lewis acid), an alkylbenzene is formed. For example, benzene reacts with methyl chloride to form toluene ($C_6H_5CH_3$) and with ethyl chloride to form ethylbenzene ($C_6H_5C_2H_5$). A notable observation is that treating benzene with 1-chloropropane yields isopropyl benzene instead of n-propyl benzene due to carbocation rearrangement.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Equation 9.75 & 9.76",
+                "description": "Alkylation of benzene with methyl chloride and ethyl chloride to form toluene and ethylbenzene respectively.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.5.5:7",
+            "order": 7,
+            "title": "Friedel-Crafts Acylation Reaction",
+            "content_text": "The reaction of benzene with an acyl halide or acid anhydride in the presence of Lewis acids like $AlCl_3$ yields an acyl benzene. For instance, benzene reacts with acetyl chloride to form acetophenone: $C_6H_6 + CH_3COCl \\xrightarrow{Anhyd. AlCl_3, \\Delta} C_6H_5COCH_3 + HCl$. Similarly, reaction with acetic anhydride also yields acetophenone: $C_6H_6 + (CH_3CO)_2O \\xrightarrow{Anhyd. AlCl_3, \\Delta} C_6H_5COCH_3 + CH_3COOH$. If an excess of electrophilic reagent is used, further substitution can occur, such as the chlorination of benzene to hexachlorobenzene ($C_6Cl_6$) in the presence of excess chlorine and anhydrous $AlCl_3$ in the dark.",
+            "content_type": "application",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Equation 9.77, 9.78, 9.79",
+                "description": "Acylation reactions forming acetophenone and the formation of hexachlorobenzene.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.5.5:8",
+            "order": 8,
+            "title": "Mechanism: Generation of the Electrophile",
+            "content_text": "The first step in electrophilic substitution is the generation of the electrophile ($E^+$). In chlorination, alkylation, and acylation, anhydrous $AlCl_3$ (a Lewis acid) helps generate electrophiles like $Cl^+$, $R^+$, and $RC^+O$ (acylium ion). In nitration, the nitronium ion ($NO_2^+$) is produced by the transfer of a proton from sulphuric acid to nitric acid. This process involves the formation of protonated nitric acid, which then dissociates into water and the nitronium ion. In this context, sulphuric acid acts as an acid and nitric acid acts as a base.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Electrophile Generation",
+                "description": "Chemical equations showing the generation of $Cl^+$, $CH_3^+$, and $CH_3C^+O$ using $AlCl_3$, and the two-step generation of $NO_2^+$ from $HNO_3$ and $H_2SO_4$.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.5.5:9",
+            "order": 9,
+            "title": "Mechanism: Formation of Carbocation (Arenium Ion)",
+            "content_text": "The second step involves the attack of the electrophile on the benzene ring, resulting in the formation of a $\\sigma$-complex or arenium ion. In this intermediate, one of the carbon atoms becomes $sp^3$ hybridised. The arenium ion is stabilized by resonance, where the positive charge is delocalized over the ortho and para positions relative to the site of electrophilic attack. The delocalization stops at the $sp^3$ hybridised carbon, causing the ion to lose its aromatic character temporarily.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Sigma Complex Resonance",
+                "description": "Diagram showing the attack of an electrophile $E^+$ on benzene to form a resonance-stabilized arenium ion (sigma complex).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.5.5:10",
+            "order": 10,
+            "title": "Mechanism: Removal of Proton",
+            "content_text": "To restore the aromatic character, the $\\sigma$-complex releases a proton ($H^+$) from the $sp^3$ hybridised carbon. This proton is typically removed by the conjugate base of the catalyst (e.g., $[AlCl_4]^-$ in halogenation/alkylation or $[HSO_4]^-$ in nitration). The final product is the substituted benzene ring, and the catalyst is regenerated.",
+            "content_type": "derivation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Proton Removal",
+                "description": "Reaction showing the removal of a proton from the sigma complex by $[AlCl_4]^-$ or $[HSO_4]^-$ to restore aromaticity and form the final substituted product.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.5.5:11",
+            "order": 11,
+            "title": "Addition Reactions of Benzene",
+            "content_text": "Under vigorous conditions, such as high temperature and pressure in the presence of a nickel catalyst, benzene undergoes hydrogenation to form cyclohexane: $C_6H_6 + 3H_2 \\xrightarrow{Ni, \\Delta} C_6H_{12}$. Additionally, under ultra-violet light at 500 K, benzene reacts with three molecules of chlorine to produce benzene hexachloride ($C_6H_6Cl_6$), also known as gammaxane or BHC.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Equation 9.80 & 9.81",
+                "description": "Addition of hydrogen to form cyclohexane and addition of chlorine under UV light to form benzene hexachloride (BHC).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.5.5:12",
+            "order": 12,
+            "title": "Combustion of Benzene",
+            "content_text": "When heated in air, benzene burns with a sooty flame, producing carbon dioxide and water: $C_6H_6 + \\frac{15}{2}O_2 \\rightarrow 6CO_2 + 3H_2O$. The general combustion reaction for any hydrocarbon ($C_xH_y$) is given by: $C_xH_y + (x + \\frac{y}{4})O_2 \\rightarrow xCO_2 + \\frac{y}{2}H_2O$.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:9:9.5.6",
+        "number": "9.5.6",
+        "title": "Directive influence of a functional group in monosubstituted benzene",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:9:9.5.6:1",
+            "order": 1,
+            "title": "Ortho and Para Directing Groups",
+            "content_text": "When a monosubstituted benzene undergoes further substitution, the existing substituent determines the position of the incoming group. Groups that direct the incoming group to the ortho and para positions are called ortho and para directing groups. For example, the phenolic ($-OH$) group is ortho-para directing. Resonance structures of phenol (I-V) show that electron density increases specifically at the ortho and para positions due to the $+R$ effect. Although the $-I$ effect of the $-OH$ group slightly reduces overall electron density, the resonance effect predominates, making these positions more reactive toward electrophiles. Thus, the $-OH$ group activates the benzene ring for electrophilic attack.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Resonance in Phenol",
+                "description": "Five resonance structures of phenol showing the delocalization of lone pair electrons from oxygen into the ring, creating negative charges at ortho and para positions.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.5.6:2",
+            "order": 2,
+            "title": "Activating Groups and Aryl Halides",
+            "content_text": "Other examples of activating groups include $-NH_2$, $-NHR$, $-NHCOCH_3$, $-OCH_3$, $-CH_3$, $-C_2H_5$, etc. In the case of aryl halides, halogens are moderately deactivating. Because of their strong $-I$ effect, the overall electron density on the benzene ring decreases, which makes further substitution difficult. However, due to resonance, the electron density on the ortho- ($o-$) and para- ($p-$) positions is greater than that at the meta- ($m-$) position. Consequently, halogens act as $o-$ and $p-$ directing groups despite their deactivating nature.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Resonance structures of chlorobenzene",
+                "description": "Five resonance structures (I-V) of chlorobenzene showing the delocalization of a lone pair from the chlorine atom into the benzene ring. Structures II, III, and IV show negative charges at the ortho, para, and ortho positions respectively, explaining the $o, p$-directing nature.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.5.6:3",
+            "order": 3,
+            "title": "Meta Directing Groups",
+            "content_text": "Groups that direct the incoming electrophile to the meta position are called meta directing groups. Common examples include $-NO_2$, $-CN$, $-CHO$, $-COR$, $-COOH$, $-COOR$, $-SO_3H$, etc. These groups reduce the electron density in the benzene ring due to their strong $-I$ effect. For example, the nitro group in nitrobenzene acts as a resonance hybrid of five structures where electron density is withdrawn from the ring.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Resonance structures of nitrobenzene",
+                "description": "Five resonance structures (I-V) of nitrobenzene showing the withdrawal of electrons from the benzene ring by the nitro group. Structures II, III, and IV show positive charges at the ortho, para, and ortho positions respectively.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:chemistry:11:9:9.5.6:4",
+            "order": 4,
+            "title": "Deactivation and Meta Substitution",
+            "content_text": "In the case of meta-directing groups, the overall electron density on the benzene ring decreases, making further substitution difficult; therefore, these groups are also called 'deactivating groups'. Resonance analysis shows that the electron density on $o-$ and $p-$ positions is comparatively less than that at the $m-$ position. Hence, the electrophile attacks the comparatively electron-rich meta position, resulting in meta substitution.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:chemistry:11:9:9.6",
+        "number": "9.6",
+        "title": "CARCINOGENICITY AND TOXICITY",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:chemistry:11:9:9.6:1",
+            "order": 1,
+            "title": "Carcinogenic Polynuclear Hydrocarbons",
+            "content_text": "Benzene and polynuclear hydrocarbons containing more than two fused benzene rings are toxic and possess cancer-producing (carcinogenic) properties. These polynuclear hydrocarbons are formed during the incomplete combustion of organic materials such as tobacco, coal, and petroleum. Upon entering the human body, they undergo various biochemical reactions that can ultimately damage DNA and cause cancer.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Carcinogenic Hydrocarbons",
+                "description": "Structural formulas of five carcinogenic polynuclear hydrocarbons: 1,2-Benzanthracene (four fused rings), 3-Methylcholanthrene (five fused rings with a methyl group), 1,2-Benzpyrene (five fused rings), 1,2,5,6-Dibenzanthracene (five fused rings), and 9,10-Dimethyl-1,2-benzanthracene (four fused rings with two methyl groups).",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:chemistry:11:9:ex:1",
+          "number": 1,
+          "problem": "How do you account for the formation of ethane during chlorination of methane?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:9:ex:2",
+          "number": 2,
+          "problem": "Write IUPAC names of the following compounds: (a) $CH_3CH=C(CH_3)_2$ (b) $CH_2=CH-C \\equiv C-CH_3$ (c) 1,3-butadiene (d) 4-phenylbut-1-ene (e) 2-methylphenol (f) $CH_3(CH_2)_4 CH(CH_2-CH(CH_3)_2)(CH_2)_3 CH_3$ (g) $CH_3 - CH = CH - CH_2 - CH = CH - CH(C_2H_5) - CH_2 - CH = CH_2$",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:9:ex:3",
+          "number": 3,
+          "problem": "For the following compounds, write structural formulas and IUPAC names for all possible isomers having the number of double or triple bond as indicated: (a) $C_4H_8$ (one double bond) (b) $C_5H_8$ (one triple bond)",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:9:ex:4",
+          "number": 4,
+          "problem": "Write IUPAC names of the products obtained by the ozonolysis of the following compounds: (i) Pent-2-ene (ii) 3,4-Dimethylhept-3-ene (iii) 2-Ethylbut-1-ene (iv) 1-Phenylbut-1-ene",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:9:ex:5",
+          "number": 5,
+          "problem": "An alkene 'A' on ozonolysis gives a mixture of ethanal and pentan-3-one. Write structure and IUPAC name of 'A'.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:9:ex:6",
+          "number": 6,
+          "problem": "An alkene 'A' contains three $C-C$, eight $C-H$ $\\sigma$ bonds and one $C-C$ $\\pi$ bond. 'A' on ozonolysis gives two moles of an aldehyde of molar mass 44 u. Write IUPAC name of 'A'.",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:9:ex:7",
+          "number": 7,
+          "problem": "Propanal and pentan-3-one are the ozonolysis products of an alkene? What is the structural formula of the alkene?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:9:ex:8",
+          "number": 8,
+          "problem": "Write chemical equations for combustion reaction of the following hydrocarbons: (i) Butane (ii) Pentene (iii) Hexyne (iv) Toluene",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "numerical"
+        },
+        {
+          "id": "ncert:chemistry:11:9:ex:9",
+          "number": 9,
+          "problem": "Draw the cis and trans structures of hex-2-ene. Which isomer will have higher b.p. and why?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:9:ex:10",
+          "number": 10,
+          "problem": "Why is benzene extra ordinarily stable though it contains three double bonds?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:9:ex:11",
+          "number": 11,
+          "problem": "What are the necessary conditions for any system to be aromatic?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:9:ex:12",
+          "number": 12,
+          "problem": "Explain why the following systems are not aromatic: (i) methylenecyclohexadiene (ii) cyclopentadiene (iii) cyclooctatetraene",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:9:ex:13",
+          "number": 13,
+          "problem": "How will you convert benzene into (i) $p$-nitrobromobenzene (ii) $m$-nitrochlorobenzene (iii) $p$-nitrotoluene (iv) acetophenone?",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:9:ex:14",
+          "number": 14,
+          "problem": "In the alkane $H_3C - CH_2 - C(CH_3)_2 - CH_2 - CH(CH_3)_2$, identify $1^{\\circ}, 2^{\\circ}, 3^{\\circ}$ carbon atoms and give the number of H atoms bonded to each one of these.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:9:ex:15",
+          "number": 15,
+          "problem": "What effect does branching of an alkane chain has on its boiling point?",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:9:ex:16",
+          "number": 16,
+          "problem": "Addition of HBr to propene yields 2-bromopropane, while in the presence of benzoyl peroxide, the same reaction yields 1-bromopropane. Explain and give mechanism.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:9:ex:17",
+          "number": 17,
+          "problem": "Write down the products of ozonolysis of 1,2-dimethylbenzene (o-xylene). How does the result support Kekule structure for benzene?",
+          "solution": null,
+          "difficulty": "hard",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:9:ex:18",
+          "number": 18,
+          "problem": "Arrange benzene, $n$-hexane and ethyne in decreasing order of acidic behaviour. Also give reason for this behaviour.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:9:ex:19",
+          "number": 19,
+          "problem": "Why does benzene undergo electrophilic substitution reactions easily and nucleophilic substitutions with difficulty?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:9:ex:20",
+          "number": 20,
+          "problem": "How would you convert the following compounds into benzene? (i) Ethyne (ii) Ethene (iii) Hexane",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:9:ex:21",
+          "number": 21,
+          "problem": "Write structures of all the alkenes which on hydrogenation give 2-methylbutane.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:9:ex:22",
+          "number": 22,
+          "problem": "Arrange the following set of compounds in order of their decreasing relative reactivity with an electrophile, $E^+$: (a) Chlorobenzene, 2,4-dinitrochlorobenzene, $p$-nitrochlorobenzene (b) Toluene, $p-H_3C - C_6H_4 - NO_2, p-O_2N - C_6H_4 - NO_2$.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:9:ex:23",
+          "number": 23,
+          "problem": "Out of benzene, $m$-dinitrobenzene and toluene which will undergo nitration most easily and why?",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:9:ex:24",
+          "number": 24,
+          "problem": "Suggest the name of a Lewis acid other than anhydrous aluminium chloride which can be used during ethylation of benzene.",
+          "solution": null,
+          "difficulty": "easy",
+          "exercise_type": "conceptual"
+        },
+        {
+          "id": "ncert:chemistry:11:9:ex:25",
+          "number": 25,
+          "problem": "Why is Wurtz reaction not preferred for the preparation of alkanes containing odd number of carbon atoms? Illustrate your answer by taking one example.",
+          "solution": null,
+          "difficulty": "medium",
+          "exercise_type": "conceptual"
+        }
+      ]
+    }
+  }
+}

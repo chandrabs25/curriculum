@@ -1,0 +1,486 @@
+{
+  "schema_version": "textbook_source.v1",
+  "source": {
+    "repository": "learneros",
+    "source_file": "/Users/srichandrasamanapalli/code/AI TUTOR/learneros/data/ncert_biology_11_ch18.json",
+    "relationship_fields_removed": [
+      "chapter.sections[].prerequisites",
+      "chapter.exercises.items[].tests"
+    ]
+  },
+  "id": "ncert:biology:11:18",
+  "curriculum": "ncert",
+  "subject": "biology",
+  "grade": 11,
+  "textbook_name": "Biology",
+  "volume": 1,
+  "chapter": {
+    "id": "ncert:biology:11:18",
+    "number": 18,
+    "title": "Neural Control and Coordination",
+    "summary": "This chapter on Neural Control and Coordination explores the nervous system's role in maintaining homeostasis through coordination with the endocrine system. It begins by outlining the organization of neural systems in different animals, progressing to the human neural system, which is divided into the Central Nervous System (CNS) – brain and spinal cord – and the Peripheral Nervous System (PNS). The PNS includes afferent and efferent nerve fibers and further divides into the somatic and autonomic neural systems, including the visceral nervous system.\n\nThe chapter then delves into the neuron, the structural and functional unit of the neural system, describing its parts: cell body, dendrites, and axon, and detailing synaptic transmission. It explains how neurons generate and conduct nerve impulses, describing the polarized state, action potential generation, and propagation along myelinated and non-myelinated fibers. Impulse transmission between neurons occurs at synapses, both electrical and chemical, with the latter utilizing neurotransmitters.\n\nFinally, the chapter explores the CNS, focusing on the brain. It discusses brain protection, the meninges, and the major brain regions: forebrain (cerebrum, thalamus, hypothalamus, limbic system), midbrain, and hindbrain (pons, cerebellum, medulla oblongata), including the brainstem. Understanding this coordination is critical to understanding behaviour, responses to stimuli, and maintaining vital bodily functions. The chapter builds from basic neural structures to complex brain regions, highlighting the nervous system's crucial role in regulating and coordinating various bodily activities.",
+    "sections": [
+      {
+        "id": "ncert:biology:11:18:18.1",
+        "number": "18.1",
+        "title": "Neural System",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:18:18.1:1",
+            "order": 1,
+            "title": "Coordination and Homeostasis",
+            "content_text": "Coordination is the process through which two or more organs interact and complement the functions of one another. It is essential for maintaining homeostasis in the body. For example, during physical exercise, the energy demand increases for muscular activity, which in turn increases the supply of oxygen. This necessitates an increase in the rate of respiration, heart beat, and blood flow. Once exercise stops, the activities of these organs gradually return to normal. Thus, the functions of muscles, lungs, heart, blood vessels, kidney, and other organs are coordinated during physical activity.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:18:18.1:2",
+            "order": 2,
+            "title": "Integration by Neural and Endocrine Systems",
+            "content_text": "In the human body, the neural system and the endocrine system jointly coordinate and integrate all organ activities to ensure they function in a synchronized fashion. The neural system provides an organized network of point-to-point connections for quick coordination, while the endocrine system provides chemical integration through hormones.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:18:18.1:3",
+            "order": 3,
+            "title": "Neural Organisation in Animals",
+            "content_text": "The neural system of all animals is composed of highly specialised cells called neurons, which can detect, receive, and transmit different kinds of stimuli. Neural organisation is simple in lower invertebrates; for instance, in Hydra, it is composed of a network of neurons. In insects, it is better organised with a brain, several ganglia, and neural tissues. Vertebrates possess a more highly developed neural system.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:18:18.2",
+        "number": "18.2",
+        "title": "Human Neural System",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:18:18.2:1",
+            "order": 1,
+            "title": "Divisions of the Human Neural System",
+            "content_text": "The human neural system is divided into two main parts: (i) the central neural system (CNS) and (ii) the peripheral neural system (PNS). The CNS includes the brain and the spinal cord and serves as the site of information processing and control. The PNS comprises all the nerves of the body associated with the CNS.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:18:18.2:2",
+            "order": 2,
+            "title": "Nerve Fibres of the PNS",
+            "content_text": "The nerve fibres of the PNS are of two types: (a) afferent fibres and (b) efferent fibres. Afferent nerve fibres transmit impulses from tissues or organs to the CNS. Efferent fibres transmit regulatory impulses from the CNS to the concerned peripheral tissues or organs.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:18:18.2:3",
+            "order": 3,
+            "title": "Somatic and Autonomic Neural Systems",
+            "content_text": "The PNS is divided into two divisions: the somatic neural system and the autonomic neural system. The somatic neural system relays impulses from the CNS to skeletal muscles. The autonomic neural system transmits impulses from the CNS to involuntary organs and smooth muscles of the body. The autonomic neural system is further classified into the sympathetic neural system and the parasympathetic neural system.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:18:18.2:4",
+            "order": 4,
+            "title": "Visceral Nervous System",
+            "content_text": "The visceral nervous system is a part of the peripheral nervous system that comprises the whole complex of nerves, fibres, ganglia, and plexuses by which impulses travel from the central nervous system to the viscera and from the viscera to the central nervous system.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:18:18.3",
+        "number": "18.3",
+        "title": "Neuron as Structural and Functional Unit of Neural System",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:18:18.3:1",
+            "order": 1,
+            "title": "Structure of a Neuron",
+            "content_text": "A neuron is a microscopic structure composed of three major parts: the cell body, dendrites, and the axon. The cell body contains cytoplasm with typical cell organelles and specific granular bodies called Nissl’s granules. Short fibres which branch repeatedly and project out of the cell body also contain Nissl’s granules and are called dendrites. These fibres transmit impulses towards the cell body.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 18.1",
+                "description": "Structure of a multipolar neuron showing the cell body with nucleus and Nissl's granules, branching dendrites, a long axon covered by a myelin sheath (formed by Schwann cells) with nodes of Ranvier, and terminal axon branches ending in synaptic knobs.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:18:18.3:2",
+            "order": 2,
+            "title": "The Axon and Synaptic Transmission",
+            "content_text": "The axon is a long fibre, the distal end of which is branched. Each branch terminates as a bulb-like structure called a synaptic knob, which possesses synaptic vesicles containing chemicals called neurotransmitters. Axons transmit nerve impulses away from the cell body to a synapse or to a neuro-muscular junction.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:18:18.3:3",
+            "order": 3,
+            "title": "Types of Neurons",
+            "content_text": "Based on the number of axons and dendrites, neurons are divided into three types: (i) multipolar, with one axon and two or more dendrites (found in the cerebral cortex); (ii) bipolar, with one axon and one dendrite (found in the retina of the eye); and (iii) unipolar, with a cell body and one axon only (usually found in the embryonic stage).",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:18:18.3:4",
+            "order": 4,
+            "title": "Myelinated and Non-myelinated Nerve Fibres",
+            "content_text": "There are two types of axons: myelinated and non-myelinated. Myelinated nerve fibres are enveloped with Schwann cells, which form a myelin sheath around the axon. The gaps between two adjacent myelin sheaths are called nodes of Ranvier. Myelinated nerve fibres are found in spinal and cranial nerves. Unmyelinated nerve fibres are enclosed by a Schwann cell that does not form a myelin sheath around the axon, and are commonly found in autonomous and somatic neural systems.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:18:18.3.1",
+        "number": "18.3.1",
+        "title": "Generation and Conduction of Nerve Impulse",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:18:18.3.1:1",
+            "order": 1,
+            "title": "Polarised State of Resting Neurons",
+            "content_text": "Neurons are excitable cells because their membranes are in a polarised state. When a neuron is not conducting any impulse (resting), the axonal membrane is comparatively more permeable to potassium ions ($K^+$) and nearly impermeable to sodium ions ($Na^+$). Similarly, the membrane is impermeable to negatively charged proteins present in the axoplasm. Consequently, the axoplasm inside the axon contains a high concentration of $K^+$ and negatively charged proteins and a low concentration of $Na^+$. In contrast, the fluid outside the axon contains a low concentration of $K^+$ and a high concentration of $Na^+$, forming a concentration gradient.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:18:18.3.1:2",
+            "order": 2,
+            "title": "Maintenance of Resting Potential",
+            "content_text": "The ionic gradients across the resting membrane are maintained by the active transport of ions by the sodium-potassium pump, which transports $3 Na^+$ outwards for every $2 K^+$ into the cell. As a result, the outer surface of the axonal membrane possesses a positive charge while its inner surface The inner surface of the axonal membrane becomes negatively charged relative to the outside, resulting in a polarised state. The electrical potential difference measured across this resting plasma membrane is defined as the resting potential.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:18:18.3.1:3",
+            "order": 3,
+            "title": "Generation of the Action Potential",
+            "content_text": "When a stimulus is applied to a specific site (e.g., site A) on a polarised membrane, that site becomes highly permeable to $Na^+$. This causes a rapid influx of $Na^+$ ions, reversing the local polarity so the inner surface becomes positive and the outer surface becomes negative. This reversal of polarity is called depolarisation, and the resulting electrical potential difference is known as the action potential or nerve impulse.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 18.2",
+                "description": "A diagrammatic representation of impulse conduction along an axon. It shows the reversal of charges at site A (depolarisation) and the subsequent flow of current on the inner and outer surfaces toward site B to propagate the impulse.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:18:18.3.1:4",
+            "order": 4,
+            "title": "Propagation of the Impulse",
+            "content_text": "At sites immediately ahead of the impulse (e.g., site B), the membrane remains polarised with a positive exterior and negative interior. Current flows along the inner surface from the depolarised site A to site B, and along the outer surface from site B back to site A, completing a circuit. This process depolarises site B, generating a new action potential there, while site A begins to recover. This sequence repeats along the entire length of the axon to conduct the impulse.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:18:18.3.1:5",
+            "order": 5,
+            "title": "Restoration of Resting State",
+            "content_text": "The increase in $Na^+$ permeability is very brief and is quickly followed by an increase in $K^+$ permeability. $K^+$ ions rapidly diffuse out of the cell, which restores the resting potential of the membrane. This repolarisation ensures the neuron is ready to respond to further stimulation.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:18:18.3.2",
+        "number": "18.3.2",
+        "title": "Transmission of Impulses",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:18:18.3.2:1",
+            "order": 1,
+            "title": "Structure of the Synapse",
+            "content_text": "Nerve impulses are transferred between neurons at junctions called synapses. A synapse is composed of the membranes of a pre-synaptic neuron and a post-synaptic neuron. These membranes may be separated by a fluid-filled gap known as the synaptic cleft.",
+            "content_type": "definition",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:18:18.3.2:2",
+            "order": 2,
+            "title": "Electrical and Chemical Synapses",
+            "content_text": "There are two primary types of synapses. In electrical synapses, the pre- and post-synaptic membranes are in very close proximity, allowing electrical current to flow directly between cells. This method is faster and similar to conduction along a single axon, though it is rare in humans. Chemical synapses use neurotransmitters to bridge the synaptic cleft between neurons.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:18:18.3.2:3",
+            "order": 3,
+            "title": "Mechanism of Chemical Synaptic Transmission",
+            "content_text": "When an action potential reaches the axon terminal, it triggers synaptic vesicles to move toward and fuse with the plasma membrane, releasing neurotransmitters into the synaptic cleft. These chemicals bind to specific receptors on the post-synaptic membrane. This binding opens ion channels, generating a new electrical potential that can be either excitatory or inhibitory in the receiving neuron.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 18.3",
+                "description": "A detailed diagram of an axon terminal and synapse. It labels the axon, synaptic vesicles containing neurotransmitters, the pre-synaptic membrane, the synaptic cleft, the post-synaptic membrane, and the receptors where neurotransmitters bind.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:18:18.4",
+        "number": "18.4",
+        "title": "Central Neural System",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:18:18.4:1",
+            "order": 1,
+            "title": "Functional Overview of the Brain",
+            "content_text": "The brain serves as the central information processing and command center for the body. It regulates voluntary movements, balance, and the functioning of vital involuntary organs like the heart and lungs. It also manages thermoregulation, hunger, thirst, circadian rhythms, endocrine activity, and complex human behaviors including emotions, memory, and intelligence.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:18:18.4:2",
+            "order": 2,
+            "title": "Protection and Meninges",
+            "content_text": "The brain is protected by the skull and three layers of membranes called cranial meninges. These include the outer dura mater, the thin middle arachnoid layer, and the inner pia mater, which is in direct contact with the brain tissue.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:18:18.4:3",
+            "order": 3,
+            "title": "Anatomical Divisions of the Brain",
+            "content_text": "The human brain is divided into three major regions: the forebrain, the midbrain, and the hindbrain. These regions work together to coordinate all neural activities.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [
+              {
+                "label": "Figure 18.4",
+                "description": "A sagittal section of the human brain showing the forebrain (cerebrum, thalamus, hypothalamus), midbrain (cerebral aqueduct), and hindbrain (pons, cerebellum, medulla), as well as the spinal cord and corpus callosum.",
+                "image_url": null
+              }
+            ],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:18:18.4.1",
+        "number": "18.4.1",
+        "title": "Forebrain",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:18:18.4.1:1",
+            "order": 1,
+            "title": "The Cerebrum and Cerebral Cortex",
+            "content_text": "The forebrain consists of the cerebrum, thalamus, and hypothalamus. The cerebrum forms the major part of the human brain. A deep cleft divides the cerebrum longitudinally into two halves, which are termed as the left and right cerebral hemispheres. These hemispheres are connected by a tract of nerve fibres called the corpus callosum. The layer of cells which covers the cerebral hemisphere is called the cerebral cortex and is thrown into prominent folds. The cerebral cortex is referred to as the grey matter due to its greyish appearance, which is caused by the high concentration of neuron cell bodies. The cerebral cortex contains motor areas, sensory areas, and large regions that are neither clearly sensory nor motor in function. These regions, called association areas, are responsible for complex functions like intersensory associations, memory, and communication. Fibres of the tracts are covered with the myelin sheath, which constitute the inner part of the cerebral hemisphere. They give an opaque white appearance to the layer and, hence, it is called the white matter.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:18:18.4.1:2",
+            "order": 2,
+            "title": "Thalamus and Hypothalamus",
+            "content_text": "The cerebrum wraps around a structure called the thalamus, which is a major coordinating centre for sensory and motor signaling. Another very important part of the brain called the hypothalamus lies at the base of the thalamus. The hypothalamus contains a number of centres which control body temperature, the urge for eating, and drinking. It also contains several groups of neurosecretory cells, which secrete hormones called hypothalamic hormones.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:18:18.4.1:3",
+            "order": 3,
+            "title": "The Limbic System",
+            "content_text": "The inner parts of the cerebral hemispheres and a group of associated deep structures like the amygdala, hippocampus, etc., form a complex structure called the limbic lobe or limbic system. Along with the hypothalamus, it is involved in the regulation of sexual behaviour, expression of emotional reactions (e.g., excitement, pleasure, rage, and fear), and motivation. According to the summary, the limbic system is also concerned with olfaction and autonomic responses.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:18:18.4.2",
+        "number": "18.4.2",
+        "title": "Midbrain",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:18:18.4.2:1",
+            "order": 1,
+            "title": "Structure and Function of the Midbrain",
+            "content_text": "The midbrain is located between the thalamus/hypothalamus of the forebrain and the pons of the hindbrain. A canal called the cerebral aqueduct passes through the midbrain. The dorsal portion of the midbrain consists mainly of four round swellings (lobes) called corpora quadrigemina. The midbrain receives and integrates visual, tactile, and auditory inputs.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      },
+      {
+        "id": "ncert:biology:11:18:18.4.3",
+        "number": "18.4.3",
+        "title": "Hindbrain",
+        "content_text": "",
+        "subsections": [
+          {
+            "id": "ncert:biology:11:18:18.4.3:1",
+            "order": 1,
+            "title": "Components and Functions of the Hindbrain",
+            "content_text": "The hindbrain comprises the pons, cerebellum, and medulla (also called the medulla oblongata). Pons consists of fibre tracts that interconnect different regions of the brain. The cerebellum has a very convoluted surface in order to provide the additional space for many more neurons; it integrates information received from the semicircular canals of the ear and the auditory system. The medulla of the brain is connected to the spinal cord. The medulla contains centres which control respiration, cardiovascular reflexes, and gastric secretions.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          },
+          {
+            "id": "ncert:biology:11:18:18.4.3:2",
+            "order": 2,
+            "title": "The Brain Stem",
+            "content_text": "Three major regions make up the brain stem: the midbrain, pons, and medulla oblongata. The brain stem forms the connections between the brain and the spinal cord.",
+            "content_type": "explanation",
+            "worked_examples": [],
+            "diagrams": [],
+            "tables": []
+          }
+        ]
+      }
+    ],
+    "exercises": {
+      "title": "Exercises",
+      "items": [
+        {
+          "id": "ncert:biology:11:18:ex:1",
+          "number": 1,
+          "problem": "Briefly describe the structure of the Brain",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:18:ex:2",
+          "number": 2,
+          "problem": "Compare the following: (a) Central neural system (CNS) and Peripheral neural system (PNS) (b) Resting potential and action potential",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:18:ex:3",
+          "number": 3,
+          "problem": "Explain the following processes: (a) Polarisation of the membrane of a nerve fibre (b) Depolarisation of the membrane of a nerve fibre (c) Transmission of a nerve impulse across a chemical synapse",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:18:ex:4",
+          "number": 4,
+          "problem": "Draw labelled diagrams of the following: (a) Neuron (b) Brain",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:18:ex:5",
+          "number": 5,
+          "problem": "Write short notes on the following: (a) Neural coordination (b) Forebrain (c) Midbrain (d) Hindbrain (e) Synapse",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:18:ex:6",
+          "number": 6,
+          "problem": "Give a brief account of Mechanism of synaptic transmission.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:18:ex:7",
+          "number": 7,
+          "problem": "Explain the role of $Na^+$ in the generation of action potential.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:18:ex:8",
+          "number": 8,
+          "problem": "Differentiate between: (a) Myelinated and non-myelinated axons (b) Dendrites and axons (c) Thalamus and Hypothalamus (d) Cerebrum and Cerebellum",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:18:ex:9",
+          "number": 9,
+          "problem": "Answer the following: (a) Which part of the human brain is the most developed? (b) Which part of our central neural system acts as a master clock?",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        },
+        {
+          "id": "ncert:biology:11:18:ex:10",
+          "number": 10,
+          "problem": "Distinguish between: (a) afferent neurons and efferent neurons (b) impulse conduction in a myelinated nerve fibre and unmyelinated nerve fibre (f) cranial nerves and spinal nerves.",
+          "solution": null,
+          "difficulty": null,
+          "exercise_type": null
+        }
+      ]
+    }
+  }
+}
