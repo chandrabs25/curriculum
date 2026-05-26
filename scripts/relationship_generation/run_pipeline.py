@@ -21,7 +21,6 @@ ARTIFACT_DIR = REPO_ROOT / "data" / "relationship_artifacts"
 STAGES = [
     "03_generate_section_summaries.py",
     "02_normalize_concepts.py",
-    "04_generate_section_relationships.py",
     "07_gate_relationships.py",
     "08_validate_artifacts.py",
 ]
@@ -86,16 +85,6 @@ def validate_stage(stage: str, args: argparse.Namespace, refs: list) -> None:
         }
         require_no_missing("raw section concepts", missing_concepts)
 
-    elif stage == "04_generate_section_relationships.py":
-        rows = read_jsonl(ARTIFACT_DIR / "section_relationship_runs.jsonl")
-        actual_by_chapter: dict[str, set[str]] = {}
-        for row in rows:
-            actual_by_chapter.setdefault(row.get("chapter_id"), set()).add(row.get("section_id"))
-        missing = {
-            chapter_id: ids - actual_by_chapter.get(chapter_id, set())
-            for chapter_id, ids in expected_sections(refs).items()
-        }
-        require_no_missing("section relationship runs", missing)
 
     elif stage == "07_gate_relationships.py":
         summary = read_json(ARTIFACT_DIR / "relationship_summary.json")
@@ -153,10 +142,7 @@ def main() -> int:
 
     for stage in STAGES[start_index : stop_index + 1]:
         stage_args: list[str] = []
-        if stage in {
-            "03_generate_section_summaries.py",
-            "04_generate_section_relationships.py",
-        }:
+        if stage == "03_generate_section_summaries.py":
             stage_args = filters[:]
         elif stage == "02_normalize_concepts.py":
             if args.model:

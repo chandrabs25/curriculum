@@ -29,6 +29,38 @@ SUMMARY_OUTPUT_NAME = "section_summaries.jsonl"
 CONCEPT_OUTPUT_NAME = "raw_concepts.jsonl"
 
 
+_CONCEPT_ITEM_SCHEMA: dict[str, Any] = {
+    "type": "object",
+    "properties": {
+        "label": {"type": "string"},
+        "definition": {"type": "string"},
+        "source_unit_ids": {"type": "array", "items": {"type": "string"}},
+        "evidence": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "unit_id": {"type": "string"},
+                    "text": {"type": "string"},
+                },
+                "required": ["unit_id", "text"],
+            },
+        },
+        "confidence": {"type": "number"},
+    },
+    "required": ["label", "definition", "source_unit_ids", "evidence", "confidence"],
+}
+
+_REQUIRES_CONCEPT_ITEM_SCHEMA: dict[str, Any] = {
+    "type": "object",
+    "properties": {
+        "label": {"type": "string"},
+        "reason": {"type": "string"},
+        "confidence": {"type": "number"},
+    },
+    "required": ["label", "reason", "confidence"],
+}
+
 SECTION_SUMMARY_SCHEMA: dict[str, Any] = {
     "type": "object",
     "properties": {
@@ -42,33 +74,11 @@ SECTION_SUMMARY_SCHEMA: dict[str, Any] = {
                 "required": ["text"],
             },
         },
-        "concepts": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "label": {"type": "string"},
-                    "definition": {"type": "string"},
-                    "source_unit_ids": {"type": "array", "items": {"type": "string"}},
-                    "evidence": {
-                        "type": "array",
-                        "items": {
-                            "type": "object",
-                            "properties": {
-                                "unit_id": {"type": "string"},
-                                "text": {"type": "string"},
-                            },
-                            "required": ["unit_id", "text"],
-                        },
-                    },
-                    "confidence": {"type": "number"},
-                },
-                "required": ["label", "definition", "source_unit_ids", "evidence", "confidence"],
-            },
-        },
+        "concepts": {"type": "array", "items": _CONCEPT_ITEM_SCHEMA},
+        "requires_concepts": {"type": "array", "items": _REQUIRES_CONCEPT_ITEM_SCHEMA},
         "confidence": {"type": "number"},
     },
-    "required": ["summary", "key_terms", "evidence_snippets", "concepts", "confidence"],
+    "required": ["summary", "key_terms", "evidence_snippets", "concepts", "requires_concepts", "confidence"],
 }
 
 
@@ -96,7 +106,7 @@ def section_payload(chapter_id: str, section: dict[str, Any]) -> dict[str, Any]:
 
 
 def build_prompt(section: dict[str, Any]) -> str:
-    return f"""Create a compact curriculum-graph summary and raw concept candidates for this textbook section.
+    return f"""Create a compact curriculum-graph summary, taught concept candidates, and prerequisite concept candidates for this textbook section.
 
 Summarize the section as a teaching unit. Use the section text, all subsection
 content, worked examples, diagrams, and tables. Do not summarize any other
@@ -105,13 +115,21 @@ chapter section.
 Key terms should be concise textbook terms that would help later concept extraction and relationship generation.
 Evidence snippets must be copied from the provided section content or attached examples/diagrams/tables.
 
-For concepts:
+For concepts (taught):
 - Return only concepts explicitly taught, defined, explained, derived, applied, practiced, or substantially reinforced in this section.
 - Do not include generic words such as introduction, overview, summary, exercise, example, student, question, activity.
 - Prefer precise textbook concepts over vague umbrella concepts.
 - Use source_unit_ids from the provided section_id or subsection ids only. Prefer subsection ids when possible.
 - Each concept must include evidence copied from this section content.
 - These are raw candidates; later stages will normalize aliases into canonical concepts.
+
+For requires_concepts (prerequisites):
+- Return concepts the learner must already understand before studying this section.
+- These are concepts assumed as prior knowledge, not concepts taught here.
+- Do not list a concept as required if this section introduces or teaches it from scratch.
+- Each entry needs a reason explaining why the concept is a prerequisite.
+- Use precise textbook concept labels, not vague terms.
+- Omit if the section is introductory and has no real prerequisites.
 
 Section:
 {json.dumps(section, ensure_ascii=False)}
@@ -152,9 +170,15 @@ def concept_rows_from_payload(
     section: dict[str, Any],
     payload: dict[str, Any],
     model: str,
-) -> list[dict[str, Any]]:
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    """Extract teaches and requires concept rows from the LLM payload.
+
+    Returns (teaches_rows, requires_rows).
+    """
     valid_unit_ids = {section["id"], *[subsection["id"] for subsection in section.get("subsections", [])]}
-    rows: list[dict[str, Any]] = []
+
+    # --- Teaches concepts ---
+    teaches_rows: list[dict[str, Any]] = []
     for item in payload.get("concepts", []):
         label = str(item.get("label") or "").strip()
         if not label:
@@ -178,6 +202,7 @@ def concept_rows_from_payload(
             "grade": ref.grade,
             "chapter_title": ref.chapter_title,
             "source_section_id": section["id"],
+            "relationship_type": "teaches",
             "label": label,
             "normalized_label": normalize_label(label),
             "candidate_concept_id": concept_id_from_label(label),
@@ -188,8 +213,36 @@ def concept_rows_from_payload(
             "generation": {"model": model, "script": "03_generate_section_summaries.py"},
         }
         row["raw_concept_id"] = stable_hash(row, "raw_concept")
-        rows.append(row)
-    return rows
+        teaches_rows.append(row)
+
+    # --- Requires concepts ---
+    requires_rows: list[dict[str, Any]] = []
+    for item in payload.get("requires_concepts", []):
+        label = str(item.get("label") or "").strip()
+        reason = str(item.get("reason") or "").strip()
+        if not label:
+            continue
+        row = {
+            "chapter_id": ref.id,
+            "subject": ref.subject,
+            "grade": ref.grade,
+            "chapter_title": ref.chapter_title,
+            "source_section_id": section["id"],
+            "relationship_type": "requires",
+            "label": label,
+            "normalized_label": normalize_label(label),
+            "candidate_concept_id": concept_id_from_label(label),
+            "definition": "",
+            "reason": reason,
+            "source_unit_ids": [section["id"]],
+            "evidence": [{"unit_id": section["id"], "text": reason[:1000]}],
+            "confidence": validate_confidence(item.get("confidence")),
+            "generation": {"model": model, "script": "03_generate_section_summaries.py"},
+        }
+        row["raw_concept_id"] = stable_hash(row, "raw_concept")
+        requires_rows.append(row)
+
+    return teaches_rows, requires_rows
 
 
 def main() -> int:
@@ -238,11 +291,15 @@ def main() -> int:
             try:
                 summary_payload = client.generate_json(prompt, SECTION_SUMMARY_SCHEMA)
                 row = row_from_payload(chapter_id=ref.id, section=section, payload=summary_payload, model=args.model)
-                concept_rows = concept_rows_from_payload(ref=ref, section=section, payload=summary_payload, model=args.model)
+                teaches_rows, requires_rows = concept_rows_from_payload(ref=ref, section=section, payload=summary_payload, model=args.model)
                 append_jsonl(summary_output, [row])
-                append_jsonl(concept_output, concept_rows)
+                append_jsonl(concept_output, teaches_rows + requires_rows)
                 written += 1
-                print(f"{section['id']}: wrote section summary and {len(concept_rows)} raw concepts")
+                print(
+                    f"{section['id']}: wrote summary, "
+                    f"{len(teaches_rows)} teaches concepts, "
+                    f"{len(requires_rows)} requires concepts"
+                )
             except Exception as exc:
                 failures += 1
                 write_error(args.artifact_dir / "errors.jsonl", stage="section_summary", item_id=section["id"], error=str(exc))
