@@ -103,3 +103,29 @@ Embedding-based clustering is most valuable **not as a replacement** for that st
 
 
 ---
+## 3:00 pm:
+
+I have just finished implementing the pipeline that would generate the knowledge base with relationships like TEACHES_CONCEPT, REQUIRES_CONCEPT, DEPENDS_ON_UNIT, etc., and the script would run in the background calling gemini api. Currently finalising the various typed models that are used across for module generation, assessments, and insight creation.
+
+---
+
+# Why Do We Need a Properly Structured Knowledge Base for Curriculum Generation?
+
+We need a well-structured knowledge base because the system should not only generate a curriculum, but also improve it based on each learner’s performance over time.
+
+After a learner completes an assessment, the evaluation feedback must be traceable back to the exact curriculum sections, concepts, and source textbook units that the questions were based on. Only then can the system reliably identify:
+
+1. Which concepts the learner understood well
+2. Which sections caused confusion
+3. Which misconceptions appeared in the answers
+4. Which modules should be revisited
+5. Whether the learner needs reassessment or relearning
+
+Without this structure, assessment feedback remains generic. With it, every test result can be mapped back to specific sections of the curriculum, allowing us to build a complete feedback loop:
+
+**Curriculum → Assessment → Evaluation → Weak Area Detection → Targeted Remediation → Updated Learner Insights → Improved Curriculum**
+
+This is why the knowledge base needs explicit relationships between sections, concepts, exercises, assessments, and learner insights. It allows the AI curriculum creator to become adaptive rather than just generative.
+
+---
+
