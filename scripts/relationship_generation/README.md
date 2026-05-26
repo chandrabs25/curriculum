@@ -34,19 +34,13 @@ python3 scripts/relationship_generation/run_pipeline.py \
 Or run each stage manually:
 
 ```bash
-# Generate section summaries for every chapter in the cleaned corpus. This stage
-# does not require canonical concepts.
+# Generate section summaries and raw concept candidates for every chapter in the
+# cleaned corpus. This stage does not require canonical concepts.
 python3 scripts/relationship_generation/03_generate_section_summaries.py \
   --force
 
-python3 scripts/relationship_generation/01_extract_chapter_concepts.py \
-  --chapter-id ncert:physics:11:1
-
 python3 scripts/relationship_generation/02_normalize_concepts.py \
   --use-gemini-adjudication
-
-python3 scripts/relationship_generation/03_generate_section_summaries.py \
-  --chapter-id ncert:physics:11:1
 
 python3 scripts/relationship_generation/04_generate_section_relationships.py \
   --chapter-id ncert:physics:11:1
@@ -59,7 +53,7 @@ python3 scripts/relationship_generation/08_validate_artifacts.py
 If you do not activate the virtualenv, call the scripts with:
 
 ```bash
-.venv/bin/python scripts/relationship_generation/01_extract_chapter_concepts.py \
+.venv/bin/python scripts/relationship_generation/03_generate_section_summaries.py \
   --chapter-id ncert:physics:11:1
 ```
 
@@ -120,5 +114,5 @@ Every generated relationship must include evidence text, a reason, and confidenc
 The cleaned JSON uses `chapter.sections[]` as a flattened heading/unit layer.
 Those section IDs may look like `1`, `1.2`, `1.2.1`, or `Summary`. Each section
 row owns its atomic prose chunks in `section.subsections[]`. The section-summary
-stage writes one summary per `chapter.sections[]` row, not one summary per
-`section.subsections[]` row.
+stage writes one summary plus raw concept candidates per `chapter.sections[]`
+row, not one summary per `section.subsections[]` row.

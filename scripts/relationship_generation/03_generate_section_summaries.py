@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate compact summaries for each textbook section."""
+"""Generate compact summaries and raw concept candidates for each section."""
 
 from __future__ import annotations
 
@@ -13,9 +13,11 @@ from common import (
     add_common_filters,
     append_jsonl,
     completed_ids,
+    concept_id_from_label,
     ensure_repo_root,
     load_full_chapter,
     load_manifest,
+    normalize_label,
     reset_output_on_force,
     stable_hash,
     validate_confidence,
@@ -23,7 +25,8 @@ from common import (
 )
 
 
-OUTPUT_NAME = "section_summaries.jsonl"
+SUMMARY_OUTPUT_NAME = "section_summaries.jsonl"
+CONCEPT_OUTPUT_NAME = "raw_concepts.jsonl"
 
 
 SECTION_SUMMARY_SCHEMA: dict[str, Any] = {
@@ -39,9 +42,33 @@ SECTION_SUMMARY_SCHEMA: dict[str, Any] = {
                 "required": ["text"],
             },
         },
+        "concepts": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "label": {"type": "string"},
+                    "definition": {"type": "string"},
+                    "source_unit_ids": {"type": "array", "items": {"type": "string"}},
+                    "evidence": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "unit_id": {"type": "string"},
+                                "text": {"type": "string"},
+                            },
+                            "required": ["unit_id", "text"],
+                        },
+                    },
+                    "confidence": {"type": "number"},
+                },
+                "required": ["label", "definition", "source_unit_ids", "evidence", "confidence"],
+            },
+        },
         "confidence": {"type": "number"},
     },
-    "required": ["summary", "key_terms", "evidence_snippets", "confidence"],
+    "required": ["summary", "key_terms", "evidence_snippets", "concepts", "confidence"],
 }
 
 
@@ -69,7 +96,7 @@ def section_payload(chapter_id: str, section: dict[str, Any]) -> dict[str, Any]:
 
 
 def build_prompt(section: dict[str, Any]) -> str:
-    return f"""Create a compact curriculum-graph summary for this textbook section.
+    return f"""Create a compact curriculum-graph summary and raw concept candidates for this textbook section.
 
 Summarize the section as a teaching unit. Use the section text, all subsection
 content, worked examples, diagrams, and tables. Do not summarize any other
@@ -77,6 +104,14 @@ chapter section.
 
 Key terms should be concise textbook terms that would help later concept extraction and relationship generation.
 Evidence snippets must be copied from the provided section content or attached examples/diagrams/tables.
+
+For concepts:
+- Return only concepts explicitly taught, defined, explained, derived, applied, practiced, or substantially reinforced in this section.
+- Do not include generic words such as introduction, overview, summary, exercise, example, student, question, activity.
+- Prefer precise textbook concepts over vague umbrella concepts.
+- Use source_unit_ids from the provided section_id or subsection ids only. Prefer subsection ids when possible.
+- Each concept must include evidence copied from this section content.
+- These are raw candidates; later stages will normalize aliases into canonical concepts.
 
 Section:
 {json.dumps(section, ensure_ascii=False)}
@@ -111,6 +146,52 @@ def row_from_payload(
     }
 
 
+def concept_rows_from_payload(
+    *,
+    ref: Any,
+    section: dict[str, Any],
+    payload: dict[str, Any],
+    model: str,
+) -> list[dict[str, Any]]:
+    valid_unit_ids = {section["id"], *[subsection["id"] for subsection in section.get("subsections", [])]}
+    rows: list[dict[str, Any]] = []
+    for item in payload.get("concepts", []):
+        label = str(item.get("label") or "").strip()
+        if not label:
+            continue
+        source_unit_ids = [
+            uid for uid in item.get("source_unit_ids", [])
+            if isinstance(uid, str) and uid in valid_unit_ids
+        ]
+        evidence = [
+            {"unit_id": ev.get("unit_id"), "text": str(ev.get("text") or "")[:1000]}
+            for ev in item.get("evidence", [])
+            if isinstance(ev, dict) and ev.get("unit_id") in valid_unit_ids and ev.get("text")
+        ]
+        if not source_unit_ids and evidence:
+            source_unit_ids = sorted({ev["unit_id"] for ev in evidence})
+        if not source_unit_ids or not evidence:
+            continue
+        row = {
+            "chapter_id": ref.id,
+            "subject": ref.subject,
+            "grade": ref.grade,
+            "chapter_title": ref.chapter_title,
+            "source_section_id": section["id"],
+            "label": label,
+            "normalized_label": normalize_label(label),
+            "candidate_concept_id": concept_id_from_label(label),
+            "definition": str(item.get("definition") or "").strip(),
+            "source_unit_ids": source_unit_ids,
+            "evidence": evidence,
+            "confidence": validate_confidence(item.get("confidence")),
+            "generation": {"model": model, "script": "03_generate_section_summaries.py"},
+        }
+        row["raw_concept_id"] = stable_hash(row, "raw_concept")
+        rows.append(row)
+    return rows
+
+
 def main() -> int:
     ensure_repo_root()
     parser = argparse.ArgumentParser(description=__doc__)
@@ -119,9 +200,11 @@ def main() -> int:
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 
-    output = args.artifact_dir / OUTPUT_NAME
-    reset_output_on_force(output, args.force)
-    done = set() if args.force else completed_ids(output, "section_id")
+    summary_output = args.artifact_dir / SUMMARY_OUTPUT_NAME
+    concept_output = args.artifact_dir / CONCEPT_OUTPUT_NAME
+    reset_output_on_force(summary_output, args.force)
+    reset_output_on_force(concept_output, args.force)
+    done = set() if args.force else completed_ids(summary_output, "section_id")
     refs = load_manifest(args.manifest, subject=args.subject, grade=args.grade, chapter_id=args.chapter_id, limit=args.limit)
     client = None if args.dry_run else GeminiClient(args.model)
     total_sections = sum(len(load_full_chapter(ref.path)["chapter"].get("sections", [])) for ref in refs)
@@ -155,15 +238,18 @@ def main() -> int:
             try:
                 summary_payload = client.generate_json(prompt, SECTION_SUMMARY_SCHEMA)
                 row = row_from_payload(chapter_id=ref.id, section=section, payload=summary_payload, model=args.model)
-                append_jsonl(output, [row])
+                concept_rows = concept_rows_from_payload(ref=ref, section=section, payload=summary_payload, model=args.model)
+                append_jsonl(summary_output, [row])
+                append_jsonl(concept_output, concept_rows)
                 written += 1
-                print(f"{section['id']}: wrote section summary")
+                print(f"{section['id']}: wrote section summary and {len(concept_rows)} raw concepts")
             except Exception as exc:
                 failures += 1
                 write_error(args.artifact_dir / "errors.jsonl", stage="section_summary", item_id=section["id"], error=str(exc))
                 print(f"{section['id']}: ERROR {exc}")
 
-    print(f"done: wrote {written} section summaries to {output}")
+    print(f"done: wrote {written} section summaries to {summary_output}")
+    print(f"done: raw concepts written to {concept_output}")
     return 1 if failures else 0
 
 

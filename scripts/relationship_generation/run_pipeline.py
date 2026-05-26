@@ -19,9 +19,8 @@ ARTIFACT_DIR = REPO_ROOT / "data" / "relationship_artifacts"
 
 
 STAGES = [
-    "01_extract_chapter_concepts.py",
-    "02_normalize_concepts.py",
     "03_generate_section_summaries.py",
+    "02_normalize_concepts.py",
     "04_generate_section_relationships.py",
     "07_gate_relationships.py",
     "08_validate_artifacts.py",
@@ -68,16 +67,7 @@ def validate_stage(stage: str, args: argparse.Namespace, refs: list) -> None:
     if not refs:
         raise RuntimeError("No chapters matched the requested filters")
 
-    if stage == "01_extract_chapter_concepts.py":
-        rows = read_jsonl(ARTIFACT_DIR / "raw_concepts.jsonl")
-        missing = {
-            ref.id: {ref.id}
-            for ref in refs
-            if not any(row.get("chapter_id") == ref.id for row in rows)
-        }
-        require_no_missing("concept extraction", missing)
-
-    elif stage == "03_generate_section_summaries.py":
+    if stage == "03_generate_section_summaries.py":
         rows = read_jsonl(ARTIFACT_DIR / "section_summaries.jsonl")
         actual_by_chapter: dict[str, set[str]] = {}
         for row in rows:
@@ -87,6 +77,14 @@ def validate_stage(stage: str, args: argparse.Namespace, refs: list) -> None:
             for chapter_id, ids in expected_sections(refs).items()
         }
         require_no_missing("section summaries", missing)
+
+        concepts = read_jsonl(ARTIFACT_DIR / "raw_concepts.jsonl")
+        missing_concepts = {
+            ref.id: {ref.id}
+            for ref in refs
+            if not any(row.get("chapter_id") == ref.id for row in concepts)
+        }
+        require_no_missing("raw section concepts", missing_concepts)
 
     elif stage == "04_generate_section_relationships.py":
         rows = read_jsonl(ARTIFACT_DIR / "section_relationship_runs.jsonl")
@@ -156,7 +154,6 @@ def main() -> int:
     for stage in STAGES[start_index : stop_index + 1]:
         stage_args: list[str] = []
         if stage in {
-            "01_extract_chapter_concepts.py",
             "03_generate_section_summaries.py",
             "04_generate_section_relationships.py",
         }:
