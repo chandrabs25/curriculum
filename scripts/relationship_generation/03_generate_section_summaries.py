@@ -115,6 +115,12 @@ chapter section.
 Key terms should be concise textbook terms that would help later concept extraction and relationship generation.
 Evidence snippets must be copied from the provided section content or attached examples/diagrams/tables.
 
+CRITICAL CONSTRAINTS for performance and correctness:
+- Keep the overall summary extremely concise (at most 2-3 sentences).
+- Extract at most 5-6 primary taught concepts. Do not extract low-level details.
+- Keep evidence snippets brief (at most 150 characters per snippet).
+- Keep requires_concepts list to only the absolute necessary prerequisites.
+
 For concepts (taught):
 - Return only concepts explicitly taught, defined, explained, derived, applied, practiced, or substantially reinforced in this section.
 - Do not include generic words such as introduction, overview, summary, exercise, example, student, question, activity.
@@ -135,6 +141,7 @@ Section:
 {json.dumps(section, ensure_ascii=False)}
 
 Return JSON matching the requested schema."""
+
 
 
 def row_from_payload(

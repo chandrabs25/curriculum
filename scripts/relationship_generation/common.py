@@ -442,7 +442,15 @@ class GeminiClient:
                 text = text.strip()
                 if text.startswith("```"):
                     text = text.split("\n", 1)[1].rsplit("```", 1)[0].strip()
-                return json.loads(text)
+                try:
+                    return json.loads(text)
+                except json.JSONDecodeError:
+                    # Clean up invalid unicode escape sequences like \unit or \under
+                    fixed_text = re.sub(r"\\u(?![0-9a-fA-F]{4})", r"\\\\u", text)
+                    try:
+                        return json.loads(fixed_text)
+                    except json.JSONDecodeError as exc:
+                        raise ValueError(f"JSONDecodeError: {exc}. Raw response: {text}") from exc
             except Exception as exc:
                 last_exc = exc
                 if attempt >= self.max_retries or not self._is_transient_error(exc):

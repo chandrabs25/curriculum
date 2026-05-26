@@ -7,6 +7,14 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Iterable
 
+from .contracts import (
+    CanonicalConceptArtifact,
+    RawConceptArtifact,
+    RelationshipArtifact,
+    SectionSummaryArtifact,
+    parse_rows,
+)
+
 
 def read_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
@@ -96,14 +104,29 @@ class ArtifactStore:
     def section_summaries(self) -> list[dict[str, Any]]:
         return read_jsonl(self.path("section_summaries.jsonl"))
 
+    def typed_section_summaries(self) -> list[SectionSummaryArtifact]:
+        return parse_rows(self.section_summaries(), SectionSummaryArtifact)
+
+    def raw_concepts(self) -> list[dict[str, Any]]:
+        return read_jsonl(self.path("raw_concepts.jsonl"))
+
+    def typed_raw_concepts(self) -> list[RawConceptArtifact]:
+        return parse_rows(self.raw_concepts(), RawConceptArtifact)
+
     def concepts(self) -> list[dict[str, Any]]:
         return read_jsonl(self.path("canonical_concepts.jsonl"))
+
+    def typed_concepts(self) -> list[CanonicalConceptArtifact]:
+        return parse_rows(self.concepts(), CanonicalConceptArtifact)
 
     def relationships(self, *, include_review: bool = False) -> list[dict[str, Any]]:
         rows = read_jsonl(self.path("accepted_relationships.jsonl"))
         if include_review:
             rows.extend(read_jsonl(self.path("review/relationships.jsonl")))
         return rows
+
+    def typed_relationships(self, *, include_review: bool = False) -> list[RelationshipArtifact]:
+        return parse_rows(self.relationships(include_review=include_review), RelationshipArtifact)
 
     def raw_section_relationships(self) -> list[dict[str, Any]]:
         rows = read_jsonl(self.path("raw_section_concept_relationships.jsonl"))
