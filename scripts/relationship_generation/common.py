@@ -7,8 +7,10 @@ import argparse
 import hashlib
 import json
 import os
+import random
 import re
 import sys
+import time
 from dataclasses import dataclass
 from difflib import SequenceMatcher
 from pathlib import Path
@@ -17,7 +19,7 @@ from typing import Any, Iterable
 
 ARTIFACT_DIR = Path("data/relationship_artifacts")
 SOURCE_MANIFEST = Path("data/textbook_sources/manifest.json")
-DEFAULT_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-pro")
+DEFAULT_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.5-flash")
 
 RELATIONSHIP_TYPES = {
     "DEPENDS_ON_UNIT",
@@ -55,6 +57,12 @@ def append_jsonl(path: Path, rows: Iterable[dict[str, Any]]) -> int:
             fh.write(json.dumps(row, ensure_ascii=False, sort_keys=True) + "\n")
             count += 1
     return count
+
+
+def reset_output_on_force(path: Path, force: bool) -> None:
+    """Remove a stage output before regeneration when --force is used."""
+    if force:
+        path.unlink(missing_ok=True)
 
 
 def read_jsonl(path: Path) -> list[dict[str, Any]]:
@@ -393,6 +401,26 @@ class GeminiClient:
         self._client = genai.Client(api_key=api_key)
         self._types = types
         self.model = model
+        self.max_retries = int(os.getenv("GEMINI_MAX_RETRIES", "5"))
+        self.base_retry_seconds = float(os.getenv("GEMINI_RETRY_BASE_SECONDS", "2.0"))
+
+    @staticmethod
+    def _is_transient_error(exc: Exception) -> bool:
+        text = str(exc).lower()
+        transient_markers = (
+            "429",
+            "500",
+            "502",
+            "503",
+            "504",
+            "deadline",
+            "exhausted",
+            "temporar",
+            "timeout",
+            "too many requests",
+            "unavailable",
+        )
+        return any(marker in text for marker in transient_markers)
 
     def generate_json(self, prompt: str, schema: dict[str, Any] | None = None) -> dict[str, Any]:
         config_kwargs: dict[str, Any] = {
@@ -402,16 +430,35 @@ class GeminiClient:
         if schema:
             config_kwargs["response_schema"] = schema
         config = self._types.GenerateContentConfig(**config_kwargs)
-        response = self._client.models.generate_content(
-            model=self.model,
-            contents=prompt,
-            config=config,
-        )
-        text = getattr(response, "text", None) or ""
-        text = text.strip()
-        if text.startswith("```"):
-            text = text.split("\n", 1)[1].rsplit("```", 1)[0].strip()
-        return json.loads(text)
+        last_exc: Exception | None = None
+        for attempt in range(self.max_retries + 1):
+            try:
+                response = self._client.models.generate_content(
+                    model=self.model,
+                    contents=prompt,
+                    config=config,
+                )
+                text = getattr(response, "text", None) or ""
+                text = text.strip()
+                if text.startswith("```"):
+                    text = text.split("\n", 1)[1].rsplit("```", 1)[0].strip()
+                return json.loads(text)
+            except Exception as exc:
+                last_exc = exc
+                if attempt >= self.max_retries or not self._is_transient_error(exc):
+                    raise
+                delay = self.base_retry_seconds * (2**attempt) + random.uniform(0, 0.5)
+                print(
+                    f"Gemini transient error on attempt {attempt + 1}/{self.max_retries + 1}; "
+                    f"retrying in {delay:.1f}s: {exc}",
+                    file=sys.stderr,
+                    flush=True,
+                )
+                time.sleep(delay)
+
+        if last_exc:
+            raise last_exc
+        raise RuntimeError("Gemini request failed without an exception")
 
 
 def ensure_repo_root() -> None:

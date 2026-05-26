@@ -18,7 +18,7 @@ export GEMINI_API_KEY="..."
 Optional:
 
 ```bash
-export GEMINI_MODEL="gemini-2.5-pro"
+export GEMINI_MODEL="gemini-3.5-flash"
 ```
 
 ## Run Order
@@ -34,22 +34,21 @@ python3 scripts/relationship_generation/run_pipeline.py \
 Or run each stage manually:
 
 ```bash
+# Generate section summaries for every chapter in the cleaned corpus. This stage
+# does not require canonical concepts.
+python3 scripts/relationship_generation/03_generate_section_summaries.py \
+  --force
+
 python3 scripts/relationship_generation/01_extract_chapter_concepts.py \
   --chapter-id ncert:physics:11:1
 
 python3 scripts/relationship_generation/02_normalize_concepts.py \
   --use-gemini-adjudication
 
-python3 scripts/relationship_generation/03_generate_unit_summaries.py \
+python3 scripts/relationship_generation/03_generate_section_summaries.py \
   --chapter-id ncert:physics:11:1
 
-python3 scripts/relationship_generation/04_generate_unit_concept_edges.py \
-  --chapter-id ncert:physics:11:1
-
-python3 scripts/relationship_generation/05_generate_unit_dependencies.py \
-  --chapter-id ncert:physics:11:1
-
-python3 scripts/relationship_generation/06_generate_exercise_edges.py \
+python3 scripts/relationship_generation/04_generate_section_relationships.py \
   --chapter-id ncert:physics:11:1
 
 python3 scripts/relationship_generation/07_gate_relationships.py --force
@@ -73,10 +72,10 @@ Main outputs are written to `data/relationship_artifacts/`:
 - `raw_concepts.jsonl`
 - `canonical_concepts.jsonl`
 - `concept_aliases.jsonl`
-- `unit_summaries.jsonl`
-- `raw_unit_concept_relationships.jsonl`
-- `raw_unit_dependency_relationships.jsonl`
-- `raw_exercise_relationships.jsonl`
+- `section_summaries.jsonl`
+- `raw_section_concept_relationships.jsonl`
+- `raw_section_dependency_relationships.jsonl`
+- `section_relationship_runs.jsonl`
 - `accepted_relationships.jsonl`
 - `relationship_summary.json`
 - `validation_report.json`
@@ -106,12 +105,20 @@ Relationship gating defaults:
 Records with dangling IDs, missing evidence, invalid relationship types, or duplicate
 edges are rejected regardless of confidence.
 
+Same-unit `TEACHES_CONCEPT` and `REQUIRES_CONCEPT` conflicts are sent to review.
+
 ## Relationship Types
 
 - `DEPENDS_ON_UNIT`: unit should be learned after another unit in the same chapter.
 - `REQUIRES_CONCEPT`: unit expects prior mastery of a concept.
 - `TEACHES_CONCEPT`: unit teaches or reinforces a concept.
-- `TESTS_UNIT`: exercise assesses a unit.
-- `TESTS_CONCEPT`: exercise assesses a concept.
 
 Every generated relationship must include evidence text, a reason, and confidence.
+
+## Source Structure Note
+
+The cleaned JSON uses `chapter.sections[]` as a flattened heading/unit layer.
+Those section IDs may look like `1`, `1.2`, `1.2.1`, or `Summary`. Each section
+row owns its atomic prose chunks in `section.subsections[]`. The section-summary
+stage writes one summary per `chapter.sections[]` row, not one summary per
+`section.subsections[]` row.

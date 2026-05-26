@@ -18,6 +18,7 @@ from common import (
     load_chapter_context,
     load_manifest,
     normalize_label,
+    reset_output_on_force,
     stable_hash,
     validate_confidence,
     write_error,
@@ -131,6 +132,7 @@ def main() -> int:
     args = parser.parse_args()
 
     output = args.artifact_dir / OUTPUT_NAME
+    reset_output_on_force(output, args.force)
     done = set() if args.force else completed_chapter_ids(output)
     refs = load_manifest(
         args.manifest,
@@ -142,6 +144,7 @@ def main() -> int:
     client = None if args.dry_run else GeminiClient(args.model)
 
     written = 0
+    failures = 0
     for ref in refs:
         if ref.id in done:
             print(f"skip {ref.id} (already extracted)")
@@ -157,10 +160,11 @@ def main() -> int:
             written += append_jsonl(output, rows)
             print(f"{ref.id}: wrote {len(rows)} raw concepts")
         except Exception as exc:
+            failures += 1
             write_error(args.artifact_dir / "errors.jsonl", stage="extract_concepts", item_id=ref.id, error=str(exc))
             print(f"{ref.id}: ERROR {exc}")
     print(f"done: wrote {written} records to {output}")
-    return 0
+    return 1 if failures else 0
 
 
 if __name__ == "__main__":

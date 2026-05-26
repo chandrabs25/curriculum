@@ -10,10 +10,12 @@ from typing import Any
 
 from common import (
     RELATIONSHIP_TYPES,
-    all_source_ids_from_manifest,
     append_jsonl,
     concept_id_from_label,
     ensure_repo_root,
+    exercise_ids_from_chapter,
+    load_chapter_context,
+    load_manifest,
     read_jsonl,
     stable_hash,
     validate_confidence,
@@ -22,9 +24,8 @@ from common import (
 
 
 RAW_RELATIONSHIP_FILES = [
-    "raw_unit_concept_relationships.jsonl",
-    "raw_unit_dependency_relationships.jsonl",
-    "raw_exercise_relationships.jsonl",
+    "raw_section_concept_relationships.jsonl",
+    "raw_section_dependency_relationships.jsonl",
 ]
 
 
@@ -73,6 +74,16 @@ def canonicalize_concept_id(to_id: Any, canonical_ids: set[str], alias_to_canoni
     return None
 
 
+def all_section_and_exercise_ids(manifest_path: Path) -> tuple[set[str], set[str]]:
+    section_ids: set[str] = set()
+    exercise_ids: set[str] = set()
+    for ref in load_manifest(manifest_path):
+        data = load_chapter_context(ref.path, max_chars=10**9)
+        section_ids.update(section["id"] for section in data["chapter"].get("sections", []))
+        exercise_ids.update(exercise_ids_from_chapter(data))
+    return section_ids, exercise_ids
+
+
 def main() -> int:
     ensure_repo_root()
     parser = argparse.ArgumentParser(description=__doc__)
@@ -96,7 +107,16 @@ def main() -> int:
     concepts = read_jsonl(args.artifact_dir / "canonical_concepts.jsonl")
     aliases = read_jsonl(args.artifact_dir / "concept_aliases.jsonl")
     canonical_ids, alias_to_canonical = build_alias_map(concepts, aliases)
-    unit_ids, exercise_ids = all_source_ids_from_manifest(args.manifest)
+    section_ids, exercise_ids = all_section_and_exercise_ids(args.manifest)
+    raw_concept_types: dict[tuple[Any, Any], set[Any]] = {}
+    for row in raw:
+        if row.get("type") in {"TEACHES_CONCEPT", "REQUIRES_CONCEPT"}:
+            raw_concept_types.setdefault((row.get("from_id"), row.get("to_id")), set()).add(row.get("type"))
+    teach_require_conflicts = {
+        key
+        for key, types in raw_concept_types.items()
+        if {"TEACHES_CONCEPT", "REQUIRES_CONCEPT"}.issubset(types)
+    }
 
     accepted: list[dict[str, Any]] = []
     review: list[dict[str, Any]] = []
@@ -105,6 +125,7 @@ def main() -> int:
 
     for row in raw:
         reasons: list[str] = []
+        review_reasons: list[str] = []
         rel_type = row.get("type")
         from_id = row.get("from_id")
         to_id = row.get("to_id")
@@ -113,14 +134,14 @@ def main() -> int:
         if rel_type not in RELATIONSHIP_TYPES:
             reasons.append("invalid_relationship_type")
 
-        if rel_type in {"DEPENDS_ON_UNIT", "REQUIRES_CONCEPT", "TEACHES_CONCEPT"} and from_id not in unit_ids:
-            reasons.append("from_id_not_unit")
+        if rel_type in {"DEPENDS_ON_UNIT", "REQUIRES_CONCEPT", "TEACHES_CONCEPT"} and from_id not in section_ids:
+            reasons.append("from_id_not_section")
         if rel_type in {"TESTS_UNIT", "TESTS_CONCEPT"} and from_id not in exercise_ids:
             reasons.append("from_id_not_exercise")
 
         if rel_type in {"DEPENDS_ON_UNIT", "TESTS_UNIT"}:
-            if to_id not in unit_ids:
-                reasons.append("to_id_not_unit")
+            if to_id not in section_ids:
+                reasons.append("to_id_not_section")
         if rel_type in {"REQUIRES_CONCEPT", "TEACHES_CONCEPT", "TESTS_CONCEPT"}:
             canonical_to = canonicalize_concept_id(to_id, canonical_ids, alias_to_canonical)
             if canonical_to:
@@ -134,6 +155,8 @@ def main() -> int:
         evidence = row.get("evidence") or {}
         if not evidence.get("text") or not evidence.get("reason"):
             reasons.append("missing_evidence")
+        if rel_type in {"TEACHES_CONCEPT", "REQUIRES_CONCEPT"} and (from_id, to_id) in teach_require_conflicts:
+            review_reasons.append("same_unit_teaches_and_requires_concept")
 
         edge_key = (rel_type, from_id, to_id)
         if edge_key in seen:
@@ -142,11 +165,13 @@ def main() -> int:
 
         row["confidence"] = confidence
         row["gate_reasons"] = reasons
+        if review_reasons:
+            row["review_reasons"] = review_reasons
         row["relationship_id"] = stable_hash({"type": rel_type, "from": from_id, "to": to_id}, "rel")
 
         if reasons or confidence < args.review_threshold:
             rejected.append(row)
-        elif confidence < args.accept_threshold:
+        elif review_reasons or confidence < args.accept_threshold:
             review.append(row)
         else:
             accepted.append(row)
@@ -163,6 +188,7 @@ def main() -> int:
         "accepted_by_type": dict(Counter(r["type"] for r in accepted)),
         "review_by_type": dict(Counter(r["type"] for r in review)),
         "rejected_by_type": dict(Counter(r.get("type") for r in rejected)),
+        "review_reasons": dict(Counter(reason for r in review for reason in r.get("review_reasons", []))),
         "rejected_reasons": dict(Counter(reason for r in rejected for reason in r.get("gate_reasons", []))),
         "accept_threshold": args.accept_threshold,
         "review_threshold": args.review_threshold,

@@ -20,6 +20,7 @@ from common import (
     load_manifest,
     read_jsonl,
     relevant_concepts_for_text,
+    reset_output_on_force,
     stable_hash,
     validate_confidence,
     write_error,
@@ -119,11 +120,13 @@ def main() -> int:
     args = parser.parse_args()
 
     output = args.artifact_dir / OUTPUT_NAME
+    reset_output_on_force(output, args.force)
     done = set() if args.force else completed_ids(output, "unit_id")
     concepts = read_jsonl(args.artifact_dir / "canonical_concepts.jsonl")
     refs = load_manifest(args.manifest, subject=args.subject, grade=args.grade, chapter_id=args.chapter_id, limit=args.limit)
     client = None if args.dry_run else GeminiClient(args.model)
     written = 0
+    failures = 0
 
     for ref in refs:
         chapter = load_full_chapter(ref.path)
@@ -150,11 +153,12 @@ def main() -> int:
                 written += 1
                 print(f"{unit['unit_id']}: wrote summary")
             except Exception as exc:
+                failures += 1
                 write_error(args.artifact_dir / "errors.jsonl", stage="unit_summary", item_id=unit["unit_id"], error=str(exc))
                 print(f"{unit['unit_id']}: ERROR {exc}")
 
     print(f"done: wrote {written} summaries to {output}")
-    return 0
+    return 1 if failures else 0
 
 
 if __name__ == "__main__":

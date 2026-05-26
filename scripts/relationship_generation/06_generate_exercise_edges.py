@@ -19,6 +19,7 @@ from common import (
     load_full_chapter,
     load_manifest,
     read_jsonl,
+    reset_output_on_force,
     stable_hash,
     validate_confidence,
     write_error,
@@ -142,12 +143,14 @@ def main() -> int:
     args = parser.parse_args()
 
     output = args.artifact_dir / OUTPUT_NAME
+    reset_output_on_force(output, args.force)
     done = set() if args.force else completed_ids(output, "from_id")
     summaries = read_jsonl(args.artifact_dir / "unit_summaries.jsonl")
     unit_edges = read_jsonl(args.artifact_dir / "raw_unit_concept_relationships.jsonl")
     refs = load_manifest(args.manifest, subject=args.subject, grade=args.grade, chapter_id=args.chapter_id, limit=args.limit)
     client = None if args.dry_run else GeminiClient(args.model)
     written = 0
+    failures = 0
 
     for ref in refs:
         source = load_full_chapter(ref.path)
@@ -165,11 +168,12 @@ def main() -> int:
                 written += append_jsonl(output, rows)
                 print(f"{exercise['exercise_id']}: wrote {len(rows)} exercise edges")
             except Exception as exc:
+                failures += 1
                 write_error(args.artifact_dir / "errors.jsonl", stage="exercise_edges", item_id=exercise["exercise_id"], error=str(exc))
                 print(f"{exercise['exercise_id']}: ERROR {exc}")
 
     print(f"done: wrote {written} relationships to {output}")
-    return 0
+    return 1 if failures else 0
 
 
 if __name__ == "__main__":
