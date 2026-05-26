@@ -42,9 +42,6 @@ python3 scripts/relationship_generation/03_generate_section_summaries.py \
 python3 scripts/relationship_generation/02_normalize_concepts.py \
   --use-gemini-adjudication
 
-python3 scripts/relationship_generation/04_generate_section_relationships.py \
-  --chapter-id ncert:physics:11:1
-
 python3 scripts/relationship_generation/07_gate_relationships.py --force
 
 python3 scripts/relationship_generation/08_validate_artifacts.py
@@ -67,9 +64,6 @@ Main outputs are written to `data/relationship_artifacts/`:
 - `canonical_concepts.jsonl`
 - `concept_aliases.jsonl`
 - `section_summaries.jsonl`
-- `raw_section_concept_relationships.jsonl`
-- `raw_section_dependency_relationships.jsonl`
-- `section_relationship_runs.jsonl`
 - `accepted_relationships.jsonl`
 - `relationship_summary.json`
 - `validation_report.json`
