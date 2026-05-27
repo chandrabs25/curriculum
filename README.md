@@ -124,19 +124,19 @@ To make the graph artifacts usable by the application, I implemented the curricu
 ## May 27th
 ---
 
-* What problem am I solving?
+What problem am I solving?
 
 1. Books are one-dimensional; we can either turn the page forward or backward. If you want to refer to other books/chapters on the topic that you are currently studying, there is no easy way for you to instantly move to the page with the required reference.
 
-* What's my solution?
+*What's my solution?
 
-** We need to move from 1-dimensional movement of turning pages back or forth, by adding 2 more dimensions of movement:
+**We need to move from 1-dimensional movement of turning pages back or forth, by adding 2 more dimensions of movement:
 
 i. Dimension 2: According to the learning goal, we need to make it possible to move back to the pages in other sections/chapters/books where the prerequisites for current topics are being taught, and move forward to the pages where the current topic is used to teach another topic.
 
 ii. Dimension 3: We need one more dimension where we can move to the pages in other sections/chapters/books, with the same prerequisite concepts, so this helps us understand where else we can use the intuition we built here on this page.
 
-* To create these 2 more dimensions of movement, I implemented the following techniques:
+*To create these 2 more dimensions of movement, I implemented the following techniques:
 
 1. I ran every section of the 6 science textbooks of classes 11 and 12 through an LLM extraction loop, where the LLM gives a summary for each section, generates the concepts one requires to understand that section, with the reason behind it, and the concepts the section teaches with confidence scores.
 
@@ -147,7 +147,7 @@ ii. Dimension 3: We need one more dimension where we can move to the pages in ot
 
 3. If 2 sections have the same prerequisite concepts, then we can create a bi-directional relationship between them called "RELATED_BY_CONCEPT"
 
-** Retrieval using vector embeddings and these graph relationships:
+**Retrieval using vector embeddings and these graph relationships:
 
 1. We use semantic matching on the section embeddings and concepts, score them, and select the top matched sections and concepts
 2. Now, we inspect the various relationships of these matched sections and collect them all.
