@@ -11,8 +11,10 @@ from common import (
     RELATIONSHIP_TYPES,
     add_common_filters,
     ensure_repo_root,
+    is_curriculum_section_id,
     load_chapter_context,
     load_manifest,
+    read_json,
     read_jsonl,
     unit_ids_from_chapter,
     exercise_ids_from_chapter,
@@ -28,6 +30,10 @@ def scoped_source_ids(args: argparse.Namespace) -> tuple[set[str], set[str], set
         chapter_id=args.chapter_id,
         limit=args.limit,
     )
+    if getattr(args, "usable_only", False):
+        usable_path = args.artifact_dir / "usable_chapters.json"
+        usable_chapter_ids = set(read_json(usable_path).get("usable_chapter_ids", [])) if usable_path.exists() else set()
+        refs = [ref for ref in refs if ref.id in usable_chapter_ids]
     unit_ids: set[str] = set()
     exercise_ids: set[str] = set()
     section_ids: set[str] = set()
@@ -37,7 +43,11 @@ def scoped_source_ids(args: argparse.Namespace) -> tuple[set[str], set[str], set
         chapter_ids.add(ref.id)
         unit_ids.update(unit_ids_from_chapter(data))
         exercise_ids.update(exercise_ids_from_chapter(data))
-        section_ids.update(section["id"] for section in data["chapter"].get("sections", []))
+        section_ids.update(
+            section["id"]
+            for section in data["chapter"].get("sections", [])
+            if is_curriculum_section_id(section["id"])
+        )
     return unit_ids, exercise_ids, section_ids, chapter_ids
 
 
@@ -45,6 +55,7 @@ def main() -> int:
     ensure_repo_root()
     parser = argparse.ArgumentParser(description=__doc__)
     add_common_filters(parser)
+    parser.add_argument("--usable-only", action="store_true", help="Validate only chapters listed in usable_chapters.json.")
     args = parser.parse_args()
 
     _unit_ids, exercise_ids, section_ids, scoped_chapter_ids = scoped_source_ids(args)
@@ -57,7 +68,8 @@ def main() -> int:
     concept_ids = {c.get("concept_id") for c in concepts}
     scoped_section_summaries = [
         s for s in section_summaries
-        if not scoped_chapter_ids or s.get("chapter_id") in scoped_chapter_ids
+        if is_curriculum_section_id(s.get("section_id", ""))
+        and (not scoped_chapter_ids or s.get("chapter_id") in scoped_chapter_ids)
     ]
     scoped_accepted = [
         r for r in accepted
@@ -94,11 +106,17 @@ def main() -> int:
         if (rel_type, from_id, to_id) in seen_edges:
             errors.append({"kind": "duplicate_relationship", "relationship_id": rid})
         seen_edges.add((rel_type, from_id, to_id))
-        if rel_type in {"DEPENDS_ON_UNIT", "REQUIRES_CONCEPT", "TEACHES_CONCEPT"} and from_id not in section_ids:
+        if rel_type in {
+            "DEPENDS_ON_UNIT",
+            "RELATED_BY_CONCEPT",
+            "REQUIRES_CONCEPT",
+            "TEACHES_CONCEPT",
+            "TRANSFER_SUPPORTS_UNIT",
+        } and from_id not in section_ids:
             errors.append({"kind": "dangling_from_section", "relationship_id": rid, "from_id": from_id})
         if rel_type in {"TESTS_UNIT", "TESTS_CONCEPT"} and from_id not in exercise_ids:
             errors.append({"kind": "dangling_from_exercise", "relationship_id": rid, "from_id": from_id})
-        if rel_type in {"DEPENDS_ON_UNIT", "TESTS_UNIT"} and to_id not in section_ids:
+        if rel_type in {"DEPENDS_ON_UNIT", "RELATED_BY_CONCEPT", "TESTS_UNIT", "TRANSFER_SUPPORTS_UNIT"} and to_id not in section_ids:
             errors.append({"kind": "dangling_to_section", "relationship_id": rid, "to_id": to_id})
         if rel_type in {"REQUIRES_CONCEPT", "TEACHES_CONCEPT", "TESTS_CONCEPT"} and to_id not in concept_ids:
             errors.append({"kind": "dangling_to_concept", "relationship_id": rid, "to_id": to_id})

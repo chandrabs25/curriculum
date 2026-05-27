@@ -129,6 +129,9 @@ class ArtifactContractTest(unittest.TestCase):
                     "to_id": "concept:unit",
                     "confidence": 0.95,
                     "evidence": {"unit_id": "section:1", "text": "A unit is a standard.", "reason": "Definition."},
+                    "teaching_evidence": "A unit is a standard.",
+                    "source_raw_concept_ids": ["raw_concept:1"],
+                    "source_labels": ["Unit"],
                     "generation": {"script": "07_gate_relationships.py"},
                     "gate_reasons": [],
                 }
@@ -142,6 +145,8 @@ class ArtifactContractTest(unittest.TestCase):
         self.assertEqual(store.typed_raw_concepts()[1].relationship_type, RawConceptRelationshipType.REQUIRES)
         self.assertEqual(store.typed_concepts()[0].concept_id, "concept:unit")
         self.assertEqual(store.typed_relationships()[0].type, RelationshipType.TEACHES_CONCEPT)
+        self.assertEqual(store.typed_relationships()[0].teaching_evidence, "A unit is a standard.")
+        self.assertEqual(store.typed_relationships()[0].source_raw_concept_ids, ["raw_concept:1"])
 
     def test_contract_rejects_invalid_relationship_type(self) -> None:
         row = {

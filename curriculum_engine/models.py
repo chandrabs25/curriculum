@@ -51,6 +51,9 @@ class CurriculumModule:
     expected_outcome: str
     estimated_time_minutes: int
     prerequisite_warnings: list[str] = field(default_factory=list)
+    parallel_support_section_ids: list[str] = field(default_factory=list)
+    reinforcement_section_ids: list[str] = field(default_factory=list)
+    next_step_section_ids: list[str] = field(default_factory=list)
     personalization_note: str = ""
 
 

@@ -8,6 +8,7 @@ import re
 from typing import Any
 
 from .graph import CurriculumGraph
+from .vector_index import SectionVectorIndex
 
 
 class LearnerConceptStatus(str, Enum):
@@ -41,6 +42,7 @@ class SectionRetrievalResult:
 @dataclass
 class CurriculumRetriever:
     graph: CurriculumGraph
+    vector_index: SectionVectorIndex | None = None
 
     def search(
         self,
@@ -51,39 +53,98 @@ class CurriculumRetriever:
         learner_state: list[LearnerConceptState] | None = None,
         limit: int = 10,
         include_prerequisites: bool = True,
+        include_soft_links: bool = True,
     ) -> list[SectionRetrievalResult]:
         query_terms = _terms(query)
-        if not query_terms:
+        if not query_terms and not str(query or "").strip():
             return []
 
         concept_matches = self.graph.concept_ids_for_query(query)
         state_by_concept = {state.concept_id: state for state in learner_state or []}
         scored: dict[str, dict[str, Any]] = {}
 
-        for section_id, summary in self.graph.section_summaries_by_id.items():
+        self._add_vector_matches(
+            scored,
+            query,
+            concept_matches,
+            state_by_concept,
+            subject=subject,
+            grade=grade,
+            chapter_id=chapter_id,
+            limit=max(limit * 4, 20),
+        )
+
+        if query_terms:
+            for section_id, summary in self.graph.section_summaries_by_id.items():
+                section = self.graph.sections_by_id.get(section_id, {})
+                if not self._passes_filters(summary, section, subject=subject, grade=grade, chapter_id=chapter_id):
+                    continue
+                matched_concepts = [
+                    cid
+                    for cid in self.graph.concepts_taught_by_section(section_id)
+                    if cid in concept_matches
+                ]
+                score, reasons = self._score_summary(summary, query_terms)
+                if matched_concepts:
+                    score += 10.0 * len(matched_concepts)
+                    reasons.append("concept_match")
+                if score <= 0:
+                    continue
+                score += self._learner_adjustment(section_id, matched_concepts, state_by_concept, reasons)
+                self._add_or_update(scored, section_id, summary, section, score, matched_concepts, reasons)
+
+        for section_id in self.graph.teaching_sections_for_concepts(concept_matches):
+            summary = self.graph.section_summaries_by_id.get(section_id)
+            if not summary:
+                continue
             section = self.graph.sections_by_id.get(section_id, {})
             if not self._passes_filters(summary, section, subject=subject, grade=grade, chapter_id=chapter_id):
                 continue
-            matched_concepts = [
-                cid
-                for cid in self.graph.concepts_taught_by_section(section_id)
-                if cid in concept_matches
-            ]
-            score, reasons = self._score_summary(summary, query_terms)
-            if matched_concepts:
-                score += 10.0 * len(matched_concepts)
-                reasons.append("concept_match")
-            if score <= 0:
-                continue
+            matched_concepts = [cid for cid in self.graph.concepts_taught_by_section(section_id) if cid in concept_matches]
+            score = 10.0 * max(1, len(matched_concepts))
+            reasons = ["concept_match"]
             score += self._learner_adjustment(section_id, matched_concepts, state_by_concept, reasons)
             self._add_or_update(scored, section_id, summary, section, score, matched_concepts, reasons)
 
         if include_prerequisites:
             self._add_prerequisites(scored, state_by_concept, subject=subject, grade=grade, chapter_id=chapter_id)
+        if include_soft_links:
+            self._add_soft_links(scored, state_by_concept, subject=subject, grade=grade, chapter_id=chapter_id)
 
         results = [self._result_from_score(row) for row in scored.values()]
         results.sort(key=lambda row: (-row.score, row.subject or "", row.grade or 0, row.chapter_id, row.section_id))
         return results[:limit]
+
+    def _add_vector_matches(
+        self,
+        scored: dict[str, dict[str, Any]],
+        query: str,
+        concept_matches: list[str],
+        state_by_concept: dict[str, LearnerConceptState],
+        *,
+        subject: str | None,
+        grade: int | None,
+        chapter_id: str | None,
+        limit: int,
+    ) -> None:
+        if not self.vector_index:
+            return
+        for match in self.vector_index.search(query, limit=limit):
+            summary = self.graph.section_summaries_by_id.get(match.section_id)
+            if not summary:
+                continue
+            section = self.graph.sections_by_id.get(match.section_id, {})
+            if not self._passes_filters(summary, section, subject=subject, grade=grade, chapter_id=chapter_id):
+                continue
+            section_concepts = self.graph.concepts_taught_by_section(match.section_id)
+            matched_concepts = [cid for cid in section_concepts if cid in concept_matches]
+            reasons = ["vector_match"]
+            if matched_concepts:
+                reasons.append("concept_match")
+            score = 20.0 * max(0.0, match.score)
+            score += 6.0 * len(matched_concepts)
+            score += self._learner_adjustment(match.section_id, matched_concepts, state_by_concept, reasons)
+            self._add_or_update(scored, match.section_id, summary, section, score, matched_concepts, reasons)
 
     def _passes_filters(
         self,
@@ -175,6 +236,34 @@ class CurriculumRetriever:
                 score = max(0.1, float(base["score"]) * 0.45)
                 score += self._learner_adjustment(prereq_id, prereq_concepts, state_by_concept, reasons)
                 self._add_or_update(scored, prereq_id, summary, section, score, prereq_concepts, reasons, prerequisite_for=section_id)
+
+    def _add_soft_links(
+        self,
+        scored: dict[str, dict[str, Any]],
+        state_by_concept: dict[str, LearnerConceptState],
+        *,
+        subject: str | None,
+        grade: int | None,
+        chapter_id: str | None,
+    ) -> None:
+        existing_ids = list(scored)
+        for section_id in existing_ids:
+            base = scored[section_id]
+            candidates: list[tuple[str, str, float]] = []
+            candidates.extend((sid, "transfer_support", 0.25) for sid in self.graph.transfer_source_sections(section_id)[:2])
+            candidates.extend((sid, "related_concept", 0.18) for sid in self.graph.related_sections_by_concept(section_id)[:2])
+            for linked_id, reason, weight in candidates:
+                summary = self.graph.section_summaries_by_id.get(linked_id)
+                if not summary:
+                    continue
+                section = self.graph.sections_by_id.get(linked_id, {})
+                if not self._passes_filters(summary, section, subject=subject, grade=grade, chapter_id=chapter_id):
+                    continue
+                concepts = self.graph.concepts_taught_by_section(linked_id)
+                reasons = [reason]
+                score = max(0.1, float(base["score"]) * weight)
+                score += self._learner_adjustment(linked_id, concepts, state_by_concept, reasons)
+                self._add_or_update(scored, linked_id, summary, section, score, concepts, reasons)
 
     def _add_or_update(
         self,

@@ -18,10 +18,12 @@ class RawConceptRelationshipType(str, Enum):
 
 class RelationshipType(str, Enum):
     DEPENDS_ON_UNIT = "DEPENDS_ON_UNIT"
+    RELATED_BY_CONCEPT = "RELATED_BY_CONCEPT"
     REQUIRES_CONCEPT = "REQUIRES_CONCEPT"
     TEACHES_CONCEPT = "TEACHES_CONCEPT"
     TESTS_UNIT = "TESTS_UNIT"
     TESTS_CONCEPT = "TESTS_CONCEPT"
+    TRANSFER_SUPPORTS_UNIT = "TRANSFER_SUPPORTS_UNIT"
 
 
 def _require_str(row: Mapping[str, Any], key: str) -> str:
@@ -193,6 +195,10 @@ class RelationshipArtifact:
     generation: dict[str, Any] = field(default_factory=dict)
     gate_reasons: list[str] = field(default_factory=list)
     review_reasons: list[str] = field(default_factory=list)
+    pedagogical_reason: str = ""
+    teaching_evidence: str = ""
+    source_raw_concept_ids: list[str] = field(default_factory=list)
+    source_labels: list[str] = field(default_factory=list)
 
     @classmethod
     def from_row(cls, row: Mapping[str, Any]) -> "RelationshipArtifact":
@@ -217,6 +223,10 @@ class RelationshipArtifact:
             generation=_generation(row),
             gate_reasons=_str_list(row, "gate_reasons"),
             review_reasons=_str_list(row, "review_reasons"),
+            pedagogical_reason=_optional_str(row, "pedagogical_reason"),
+            teaching_evidence=_optional_str(row, "teaching_evidence"),
+            source_raw_concept_ids=_str_list(row, "source_raw_concept_ids"),
+            source_labels=_str_list(row, "source_labels"),
         )
 
 

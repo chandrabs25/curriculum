@@ -17,24 +17,40 @@ class CurriculumGraph:
     textbooks: TextbookStore
     artifacts: ArtifactStore
     include_review: bool = False
+    usable_only: bool = False
 
     @classmethod
-    def from_repo(cls, root: Path | str = ".") -> "CurriculumGraph":
+    def from_repo(cls, root: Path | str = ".", *, usable_only: bool = False) -> "CurriculumGraph":
         root_path = Path(root)
-        return cls(textbooks=TextbookStore(root_path), artifacts=ArtifactStore(root_path))
+        return cls(textbooks=TextbookStore(root_path), artifacts=ArtifactStore(root_path), usable_only=usable_only)
+
+    @cached_property
+    def usable_chapter_ids(self) -> set[str]:
+        return self.artifacts.usable_chapter_ids() if self.usable_only else set()
 
     @cached_property
     def section_summaries_by_id(self) -> dict[str, dict[str, Any]]:
-        return {row["section_id"]: row for row in self.artifacts.section_summaries() if row.get("section_id")}
+        rows = (
+            self.artifacts.section_summaries_for_usable_chapters()
+            if self.usable_only
+            else self.artifacts.section_summaries()
+        )
+        return {row["section_id"]: row for row in rows if row.get("section_id")}
 
     @cached_property
     def sections_by_id(self) -> dict[str, dict[str, Any]]:
-        return {section["id"]: section for section in self.textbooks.iter_sections() if section.get("id")}
+        return {
+            section["id"]: section
+            for section in self.textbooks.iter_sections()
+            if section.get("id") and self._chapter_allowed(section.get("chapter_id"))
+        }
 
     @cached_property
     def sections_by_chapter_id(self) -> dict[str, list[dict[str, Any]]]:
         by_chapter: dict[str, list[dict[str, Any]]] = defaultdict(list)
         for section in self.textbooks.iter_sections():
+            if not self._chapter_allowed(section.get("chapter_id")):
+                continue
             by_chapter[section["chapter_id"]].append(section)
         return dict(by_chapter)
 
@@ -45,7 +61,10 @@ class CurriculumGraph:
     @cached_property
     def relationships(self) -> list[dict[str, Any]]:
         accepted = self.artifacts.relationships(include_review=self.include_review)
-        return accepted or self.artifacts.raw_section_relationships()
+        rows = accepted or self.artifacts.raw_section_relationships()
+        if not self.usable_only:
+            return rows
+        return [row for row in rows if self._chapter_allowed(row.get("chapter_id"))]
 
     @cached_property
     def relationships_by_type_index(self) -> dict[str, list[dict[str, Any]]]:
@@ -94,11 +113,35 @@ class CurriculumGraph:
                 index[row["to_id"]].append(row["from_id"])
         return {key: _dedupe(values) for key, values in index.items()}
 
+    @cached_property
+    def transfer_support_sections_by_section(self) -> dict[str, list[str]]:
+        index: dict[str, list[str]] = defaultdict(list)
+        for row in self.relationships_by_type("TRANSFER_SUPPORTS_UNIT"):
+            if row.get("from_id") and row.get("to_id"):
+                index[row["from_id"]].append(row["to_id"])
+        return {key: _dedupe(values) for key, values in index.items()}
+
+    @cached_property
+    def related_sections_by_section_index(self) -> dict[str, list[str]]:
+        index: dict[str, list[str]] = defaultdict(list)
+        for row in self.relationships_by_type("RELATED_BY_CONCEPT"):
+            if row.get("from_id") and row.get("to_id"):
+                index[row["from_id"]].append(row["to_id"])
+                index[row["to_id"]].append(row["from_id"])
+        return {key: _dedupe(values) for key, values in index.items()}
+
     def relationships_by_type(self, rel_type: str) -> list[dict[str, Any]]:
         return self.relationships_by_type_index.get(rel_type, [])
 
     def concepts_taught_by_section(self, section_id: str) -> list[str]:
         return self.taught_concepts_by_section.get(section_id, [])
+
+    def teaches_concept_details(self, section_id: str) -> list[dict[str, Any]]:
+        return [
+            self._concept_relationship_detail(row, "teaching_evidence")
+            for row in self.relationships_by_type("TEACHES_CONCEPT")
+            if row.get("from_id") == section_id
+        ]
 
     def sections_teaching_concept(self, concept_id: str) -> list[str]:
         return self.teaching_sections_by_concept.get(concept_id, [])
@@ -106,11 +149,62 @@ class CurriculumGraph:
     def required_concepts_for_section(self, section_id: str) -> list[str]:
         return self.required_concepts_by_section.get(section_id, [])
 
+    def requires_concept_details(self, section_id: str) -> list[dict[str, Any]]:
+        return [
+            self._concept_relationship_detail(row, "pedagogical_reason")
+            for row in self.relationships_by_type("REQUIRES_CONCEPT")
+            if row.get("from_id") == section_id
+        ]
+
     def prerequisite_sections(self, section_id: str) -> list[str]:
         return self.prerequisite_sections_by_section.get(section_id, [])
 
+    def hard_dependency_edges_for_section(self, section_id: str) -> list[dict[str, Any]]:
+        return [
+            self._section_link_detail(row, "to_section should be studied before from_section")
+            for row in self.relationships_by_type("DEPENDS_ON_UNIT")
+            if row.get("from_id") == section_id
+        ]
+
     def dependents_of_section(self, section_id: str) -> list[str]:
         return self.dependent_sections_by_section.get(section_id, [])
+
+    def dependent_edges_for_section(self, section_id: str) -> list[dict[str, Any]]:
+        return [
+            self._section_link_detail(row, "from_section can be suggested after completing to_section")
+            for row in self.relationships_by_type("DEPENDS_ON_UNIT")
+            if row.get("to_id") == section_id
+        ]
+
+    def transfer_support_sections(self, section_id: str) -> list[str]:
+        return self.transfer_support_sections_by_section.get(section_id, [])
+
+    @cached_property
+    def transfer_source_sections_by_section(self) -> dict[str, list[str]]:
+        index: dict[str, list[str]] = defaultdict(list)
+        for row in self.relationships_by_type("TRANSFER_SUPPORTS_UNIT"):
+            if row.get("from_id") and row.get("to_id"):
+                index[row["to_id"]].append(row["from_id"])
+        return {key: _dedupe(values) for key, values in index.items()}
+
+    def transfer_source_sections(self, section_id: str) -> list[str]:
+        return self.transfer_source_sections_by_section.get(section_id, [])
+
+    def related_sections_by_concept(self, section_id: str) -> list[str]:
+        return self.related_sections_by_section_index.get(section_id, [])
+
+    def optional_support_edges_for_section(self, section_id: str) -> list[dict[str, Any]]:
+        edges = [
+            self._section_link_detail(row, "to_section can support from_section as an optional transfer bridge")
+            for row in self.relationships_by_type("TRANSFER_SUPPORTS_UNIT")
+            if row.get("from_id") == section_id
+        ]
+        edges.extend(
+            self._section_link_detail(row, "sections overlap by concept and can be used for reinforcement")
+            for row in self.relationships_by_type("RELATED_BY_CONCEPT")
+            if row.get("from_id") == section_id or row.get("to_id") == section_id
+        )
+        return edges
 
     def concept_ids_for_query(self, query: str) -> list[str]:
         query_text = _normalize_text(query)
@@ -190,6 +284,38 @@ class CurriculumGraph:
             rel_type = rel.get("type") or "unknown"
             coverage[chapter_id][rel_type] += 1
         return {chapter_id: dict(counts) for chapter_id, counts in coverage.items()}
+
+    def _chapter_allowed(self, chapter_id: str | None) -> bool:
+        return not self.usable_only or bool(chapter_id and chapter_id in self.usable_chapter_ids)
+
+    def _concept_relationship_detail(self, row: dict[str, Any], planning_text_key: str) -> dict[str, Any]:
+        concept_id = str(row.get("to_id") or "")
+        concept = self.concepts_by_id.get(concept_id, {})
+        evidence = row.get("evidence") or {}
+        planning_text = str(row.get(planning_text_key) or evidence.get("text") or "")
+        return {
+            "relationship_id": row.get("relationship_id"),
+            "concept_id": concept_id,
+            "label": concept.get("canonical_label") or concept.get("normalized_label") or concept_id,
+            "confidence": row.get("confidence"),
+            planning_text_key: planning_text,
+            "evidence_text": evidence.get("text") or "",
+            "source_labels": row.get("source_labels") or [],
+        }
+
+    def _section_link_detail(self, row: dict[str, Any], planning_meaning: str) -> dict[str, Any]:
+        evidence = row.get("evidence") or {}
+        return {
+            "relationship_id": row.get("relationship_id"),
+            "type": row.get("type"),
+            "from_section_id": row.get("from_id"),
+            "to_section_id": row.get("to_id"),
+            "bridge_concept_id": row.get("source_concept_id"),
+            "confidence": row.get("confidence"),
+            "evidence_text": evidence.get("text") or "",
+            "evidence_reason": evidence.get("reason") or "",
+            "planning_meaning": planning_meaning,
+        }
 
 
 def _dedupe(values: list[str]) -> list[str]:

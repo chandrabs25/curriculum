@@ -11,6 +11,7 @@ from .contracts import (
     SectionSummaryArtifact,
 )
 from .graph import CurriculumGraph
+from .learning_path import LearningPathContext, build_learning_path_context
 from .models import (
     Assessment,
     AssessmentItem,
@@ -31,6 +32,14 @@ from .retrieval import (
     LearnerConceptStatus,
     SectionRetrievalResult,
 )
+from .vector_index import (
+    DEFAULT_INDEX_DIR,
+    DEFAULT_MODEL_DIR,
+    SectionDocument,
+    SectionVectorIndex,
+    VectorSearchResult,
+    build_section_documents,
+)
 
 __all__ = [
     "ArtifactStore",
@@ -45,7 +54,10 @@ __all__ = [
     "CurriculumPlan",
     "CurriculumPlanner",
     "CurriculumRetriever",
+    "DEFAULT_INDEX_DIR",
+    "DEFAULT_MODEL_DIR",
     "LearningInsight",
+    "LearningPathContext",
     "LearnerConceptState",
     "LearnerConceptStatus",
     "OnboardingAnswers",
@@ -54,7 +66,12 @@ __all__ = [
     "RawConceptRelationshipType",
     "RelationshipArtifact",
     "RelationshipType",
+    "SectionDocument",
     "SectionRetrievalResult",
     "SectionSummaryArtifact",
+    "SectionVectorIndex",
     "TextbookStore",
+    "VectorSearchResult",
+    "build_learning_path_context",
+    "build_section_documents",
 ]

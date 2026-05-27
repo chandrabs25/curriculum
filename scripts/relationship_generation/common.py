@@ -23,10 +23,12 @@ DEFAULT_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.5-flash")
 
 RELATIONSHIP_TYPES = {
     "DEPENDS_ON_UNIT",
+    "RELATED_BY_CONCEPT",
     "REQUIRES_CONCEPT",
     "TEACHES_CONCEPT",
     "TESTS_UNIT",
     "TESTS_CONCEPT",
+    "TRANSFER_SUPPORTS_UNIT",
 }
 
 
@@ -101,6 +103,12 @@ def normalize_label(label: str) -> str:
 
 def concept_id_from_label(label: str) -> str:
     return f"concept:{normalize_label(label)}"
+
+
+def is_curriculum_section_id(section_id: str) -> bool:
+    """Return True for actual numbered curriculum sections, not summary/answer tails."""
+    tail = str(section_id or "").rsplit(":", 1)[-1].strip()
+    return bool(re.fullmatch(r"\d+(?:\.\d+)*", tail))
 
 
 def compact_text(text: str, limit: int = 1200) -> str:
@@ -386,10 +394,35 @@ def write_error(path: Path, *, stage: str, item_id: str, error: str, payload: An
     )
 
 
+def load_env_file() -> None:
+    """Load GEMINI_API_KEY from .env files if not already set in environment."""
+    if os.getenv("GEMINI_API_KEY"):
+        return
+    current = Path(__file__).resolve().parent
+    # Look for .env in current directory and parent directories up to root
+    for _ in range(4):
+        env_path = current / ".env"
+        if env_path.exists():
+            try:
+                for line in env_path.read_text(encoding="utf-8").splitlines():
+                    line = line.strip()
+                    if line and not line.startswith("#") and "=" in line:
+                        k, v = line.split("=", 1)
+                        if k.strip() == "GEMINI_API_KEY":
+                            os.environ["GEMINI_API_KEY"] = v.strip().strip("'\"")
+                            return
+            except Exception:
+                pass
+        if current.parent == current:
+            break
+        current = current.parent
+
+
 class GeminiClient:
     """Small wrapper around the Google GenAI SDK with JSON parsing fallback."""
 
     def __init__(self, model: str = DEFAULT_MODEL):
+        load_env_file()
         api_key = os.getenv("GEMINI_API_KEY")
         if not api_key:
             raise RuntimeError("GEMINI_API_KEY is not set")
@@ -398,7 +431,12 @@ class GeminiClient:
             from google.genai import types  # type: ignore
         except Exception as exc:  # pragma: no cover - depends on local env
             raise RuntimeError("Install google-genai to use Gemini scripts: pip install google-genai") from exc
-        self._client = genai.Client(api_key=api_key)
+        
+        is_vertex = api_key.startswith("AQ.")
+        if is_vertex:
+            self._client = genai.Client(vertexai=True, api_key=api_key)
+        else:
+            self._client = genai.Client(api_key=api_key)
         self._types = types
         self.model = model
         self.max_retries = int(os.getenv("GEMINI_MAX_RETRIES", "5"))

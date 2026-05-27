@@ -7,6 +7,7 @@ from dataclasses import dataclass
 from datetime import datetime, timezone
 from typing import Any, Protocol
 
+from .learning_path import LearningPathContext, build_learning_path_context
 from .models import CurriculumModule, CurriculumPlan, OnboardingAnswers
 from .retrieval import CurriculumRetriever, LearnerConceptState, SectionRetrievalResult
 
@@ -34,6 +35,9 @@ CURRICULUM_PLAN_SCHEMA: dict[str, Any] = {
                     "expected_outcome": {"type": "string"},
                     "estimated_time_minutes": {"type": "integer"},
                     "prerequisite_warnings": {"type": "array", "items": {"type": "string"}},
+                    "parallel_support_section_ids": {"type": "array", "items": {"type": "string"}},
+                    "reinforcement_section_ids": {"type": "array", "items": {"type": "string"}},
+                    "next_step_section_ids": {"type": "array", "items": {"type": "string"}},
                     "personalization_note": {"type": "string"},
                 },
                 "required": [
@@ -57,6 +61,7 @@ class PlannerRequest:
     learner_id: str
     onboarding: OnboardingAnswers
     learner_state: list[LearnerConceptState] | None = None
+    prerequisite_check: dict[str, Any] | None = None
     subject: str | None = None
     grade: int | None = None
     chapter_id: str | None = None
@@ -79,9 +84,20 @@ class CurriculumPlanner:
             limit=request.retrieval_limit,
             include_prerequisites=True,
         )
-        prompt = build_curriculum_prompt(request, retrieved)
+        learning_path_context = build_learning_path_context(
+            self.retriever.graph,
+            retrieved,
+            learner_state=request.learner_state,
+            prerequisite_check=request.prerequisite_check,
+        )
+        prompt = build_curriculum_prompt(request, retrieved, learning_path_context)
         payload = self.llm_client.generate_json(prompt, CURRICULUM_PLAN_SCHEMA)
-        modules = modules_from_payload(payload, retrieved, max_modules=request.max_modules)
+        modules = modules_from_payload(
+            payload,
+            retrieved,
+            learning_path_context=learning_path_context,
+            max_modules=request.max_modules,
+        )
         plan_id = stable_plan_id(request, modules)
         return CurriculumPlan(
             curriculum_plan_id=plan_id,
@@ -91,12 +107,17 @@ class CurriculumPlanner:
             created_at=datetime.now(timezone.utc),
             metadata={
                 "retrieved_section_ids": [item.section_id for item in retrieved],
+                "learning_path_context": learning_path_context.to_dict(),
                 "planner": "CurriculumPlanner",
             },
         )
 
 
-def build_curriculum_prompt(request: PlannerRequest, retrieved: list[SectionRetrievalResult]) -> str:
+def build_curriculum_prompt(
+    request: PlannerRequest,
+    retrieved: list[SectionRetrievalResult],
+    learning_path_context: LearningPathContext,
+) -> str:
     learner_state = [
         {
             "concept_id": state.concept_id,
@@ -118,6 +139,7 @@ def build_curriculum_prompt(request: PlannerRequest, retrieved: list[SectionRetr
             "deadline_or_pace": request.onboarding.deadline_or_pace,
         },
         "learner_state": learner_state,
+        "learning_path_context": learning_path_context.to_dict(),
         "retrieved_sections": [
             {
                 "section_id": item.section_id,
@@ -136,8 +158,15 @@ def build_curriculum_prompt(request: PlannerRequest, retrieved: list[SectionRetr
     return f"""Create a personalized curriculum plan from the grounded textbook sections.
 
 Rules:
-- Use only source_section_ids from retrieved_sections.
-- Prefer the retrieved order unless prerequisites clearly need to appear first.
+- Use only source_section_ids from retrieved_sections and learning_path_context sections.
+- Build required modules only from learning_path_context.main_path_sections.
+- Hard dependency edges affect order: to_section_id should be studied before from_section_id.
+- Required concepts explain prerequisite warnings; use their pedagogical_reason when explaining foundations.
+- Teaching evidence explains what each section contributes; use it to keep module outcomes grounded.
+- Use parallel_support_paths only in parallel_support_section_ids or optional activities.
+- Use reinforcement_paths only in reinforcement_section_ids or review/practice recommendations.
+- Use next_step_paths only in next_step_section_ids as after-completion suggestions.
+- Never treat RELATED_BY_CONCEPT or TRANSFER_SUPPORTS_UNIT as hard prerequisites.
 - Keep modules small and teachable.
 - Personalize using learner_state: misconceptions need remediation, partial understanding needs practice, competencies can move faster.
 - Do not invent source ids or concept ids.
@@ -153,9 +182,24 @@ def modules_from_payload(
     payload: dict[str, Any],
     retrieved: list[SectionRetrievalResult],
     *,
+    learning_path_context: LearningPathContext | None = None,
     max_modules: int,
 ) -> list[CurriculumModule]:
     allowed_sections = {item.section_id for item in retrieved}
+    main_path_sections = set(allowed_sections)
+    parallel_support_sections: set[str] = set()
+    reinforcement_sections: set[str] = set()
+    next_step_sections: set[str] = set()
+    if learning_path_context:
+        context = learning_path_context.to_dict()
+        main_path_sections = _section_ids_from_rows(context.get("main_path_sections") or [])
+        parallel_support_sections = _section_ids_from_rows(context.get("parallel_support_paths") or [])
+        reinforcement_sections = _section_ids_from_rows(context.get("reinforcement_paths") or [])
+        next_step_sections = _section_ids_from_rows(context.get("next_step_paths") or [])
+        allowed_sections.update(main_path_sections)
+        allowed_sections.update(parallel_support_sections)
+        allowed_sections.update(reinforcement_sections)
+        allowed_sections.update(next_step_sections)
     modules: list[CurriculumModule] = []
     for index, item in enumerate(payload.get("modules", [])[:max_modules], 1):
         if not isinstance(item, dict):
@@ -163,7 +207,7 @@ def modules_from_payload(
         section_ids = [
             section_id
             for section_id in _str_list(item.get("source_section_ids"))
-            if section_id in allowed_sections
+            if section_id in main_path_sections
         ]
         if not section_ids:
             continue
@@ -179,6 +223,21 @@ def modules_from_payload(
             expected_outcome=str(item.get("expected_outcome") or "Explain the module concepts in your own words."),
             estimated_time_minutes=max(5, int(item.get("estimated_time_minutes") or 30)),
             prerequisite_warnings=_str_list(item.get("prerequisite_warnings")),
+            parallel_support_section_ids=[
+                section_id
+                for section_id in _str_list(item.get("parallel_support_section_ids"))
+                if section_id in parallel_support_sections
+            ],
+            reinforcement_section_ids=[
+                section_id
+                for section_id in _str_list(item.get("reinforcement_section_ids"))
+                if section_id in reinforcement_sections
+            ],
+            next_step_section_ids=[
+                section_id
+                for section_id in _str_list(item.get("next_step_section_ids"))
+                if section_id in next_step_sections
+            ],
             personalization_note=str(item.get("personalization_note") or ""),
         )
         modules.append(module)
@@ -235,3 +294,7 @@ def _str_list(value: Any) -> list[str]:
     if not isinstance(value, list):
         return []
     return [str(item) for item in value if str(item).strip()]
+
+
+def _section_ids_from_rows(rows: list[dict[str, Any]]) -> set[str]:
+    return {str(row.get("section_id")) for row in rows if row.get("section_id")}

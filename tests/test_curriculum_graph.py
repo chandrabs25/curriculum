@@ -41,6 +41,14 @@ class CurriculumGraphTest(unittest.TestCase):
                         "chapter_number": 1,
                         "chapter_title": "Measurement",
                         "path": str(chapter_path),
+                    },
+                    {
+                        "id": "chapter:2",
+                        "subject": "physics",
+                        "grade": 11,
+                        "chapter_number": 2,
+                        "chapter_title": "Motion",
+                        "path": "data/textbook_sources/physics/grade_11/ch2.json",
                     }
                 ]
             },
@@ -58,6 +66,23 @@ class CurriculumGraphTest(unittest.TestCase):
                         {"id": "section:1", "number": "1.1", "title": "Units", "content_text": "", "subsections": []},
                         {"id": "section:2", "number": "1.2", "title": "SI Units", "content_text": "", "subsections": []},
                         {"id": "section:3", "number": "1.3", "title": "Dimensional Analysis", "content_text": "", "subsections": []},
+                        {"id": "section:Summary", "number": None, "title": "Summary", "content_text": "", "subsections": []},
+                    ],
+                    "exercises": {"items": []},
+                },
+            },
+        )
+        write_json(
+            self.root / "data/textbook_sources/physics/grade_11/ch2.json",
+            {
+                "id": "chapter:2",
+                "subject": "physics",
+                "grade": 11,
+                "chapter": {
+                    "id": "chapter:2",
+                    "title": "Motion",
+                    "sections": [
+                        {"id": "section:4", "number": "2.1", "title": "Speed", "content_text": "", "subsections": []},
                     ],
                     "exercises": {"items": []},
                 },
@@ -69,7 +94,16 @@ class CurriculumGraphTest(unittest.TestCase):
                 {"chapter_id": "chapter:1", "section_id": "section:1", "title": "Units", "summary": "Defines units.", "key_terms": ["unit"]},
                 {"chapter_id": "chapter:1", "section_id": "section:2", "title": "SI Units", "summary": "Introduces SI units.", "key_terms": ["SI"]},
                 {"chapter_id": "chapter:1", "section_id": "section:3", "title": "Dimensional Analysis", "summary": "Uses dimensions to test equations.", "key_terms": ["dimension"]},
+                {"chapter_id": "chapter:1", "section_id": "section:Summary", "title": "Summary", "summary": "Recap.", "key_terms": ["summary"]},
+                {"chapter_id": "chapter:2", "section_id": "section:4", "title": "Speed", "summary": "Defines speed.", "key_terms": ["speed"]},
             ],
+        )
+        write_json(
+            self.root / "data/relationship_artifacts/usable_chapters.json",
+            {
+                "status": "ok",
+                "usable_chapter_ids": ["chapter:1"],
+            },
         )
         write_jsonl(
             self.root / "data/relationship_artifacts/canonical_concepts.jsonl",
@@ -89,6 +123,8 @@ class CurriculumGraphTest(unittest.TestCase):
                 {"chapter_id": "chapter:1", "type": "DEPENDS_ON_UNIT", "from_id": "section:3", "to_id": "section:1"},
                 {"chapter_id": "chapter:1", "type": "REQUIRES_CONCEPT", "from_id": "section:2", "to_id": "concept:unit"},
                 {"chapter_id": "chapter:1", "type": "REQUIRES_CONCEPT", "from_id": "section:3", "to_id": "concept:unit"},
+                {"chapter_id": "chapter:1", "type": "TRANSFER_SUPPORTS_UNIT", "from_id": "section:3", "to_id": "section:2"},
+                {"chapter_id": "chapter:1", "type": "RELATED_BY_CONCEPT", "from_id": "section:2", "to_id": "section:3"},
             ],
         )
 
@@ -105,7 +141,13 @@ class CurriculumGraphTest(unittest.TestCase):
         self.assertEqual(graph.prerequisite_sections("section:2"), ["section:1"])
         self.assertEqual(graph.dependents_of_section("section:1"), ["section:2", "section:3"])
         self.assertEqual(graph.required_concepts_for_section("section:2"), ["concept:unit"])
+        self.assertEqual(graph.transfer_support_sections("section:3"), ["section:2"])
+        self.assertEqual(graph.transfer_source_sections("section:2"), ["section:3"])
+        self.assertEqual(graph.related_sections_by_concept("section:2"), ["section:3"])
         self.assertEqual(graph.weak_area_remediation_sections(["concept:unit"]), ["section:1"])
+        self.assertEqual(graph.teaches_concept_details("section:2")[0]["label"], "SI Units")
+        self.assertEqual(graph.requires_concept_details("section:2")[0]["label"], "Unit")
+        self.assertEqual(graph.hard_dependency_edges_for_section("section:2")[0]["to_section_id"], "section:1")
 
     def test_graph_uses_cached_indexes(self) -> None:
         graph = CurriculumGraph(TextbookStore(self.root), ArtifactStore(self.root))
@@ -124,6 +166,23 @@ class CurriculumGraphTest(unittest.TestCase):
         graph = CurriculumGraph(TextbookStore(self.root), ArtifactStore(self.root))
         results = graph.search_sections("SI")
         self.assertEqual(results[0]["section_id"], "section:2")
+
+    def test_graph_can_filter_to_usable_chapters(self) -> None:
+        graph = CurriculumGraph.from_repo(self.root, usable_only=True)
+
+        self.assertEqual(graph.usable_chapter_ids, {"chapter:1"})
+        self.assertIn("section:1", graph.sections_by_id)
+        self.assertNotIn("section:4", graph.sections_by_id)
+        self.assertEqual([row["section_id"] for row in graph.search_sections("speed")], [])
+
+    def test_artifact_store_exposes_usable_summaries(self) -> None:
+        store = ArtifactStore(self.root)
+
+        self.assertEqual(store.usable_chapter_ids(), {"chapter:1"})
+        self.assertEqual(
+            {row["section_id"] for row in store.section_summaries_for_usable_chapters()},
+            {"section:1", "section:2", "section:3"},
+        )
 
     def test_retriever_finds_concept_label_and_prerequisites(self) -> None:
         graph = CurriculumGraph(TextbookStore(self.root), ArtifactStore(self.root))

@@ -4,7 +4,7 @@
 from __future__ import annotations
 
 import argparse
-from collections import Counter, defaultdict
+from collections import Counter
 from pathlib import Path
 from typing import Any
 
@@ -23,93 +23,19 @@ from common import (
 )
 
 
+RAW_RELATIONSHIP_FILES = [
+    "raw_section_concept_relationships.jsonl",
+    "raw_section_dependency_relationships.jsonl",
+]
+
+
 def load_raw_relationships(artifact_dir: Path) -> list[dict[str, Any]]:
-    # Load canonical concepts to map raw concepts to canonical concepts
-    concepts = read_jsonl(artifact_dir / "canonical_concepts.jsonl")
-    raw_to_canonical = {}
-    for concept in concepts:
-        cid = concept["concept_id"]
-        for rcid in concept.get("source_raw_concept_ids", []):
-            raw_to_canonical[rcid] = cid
-
-    # Load raw concepts
-    raw_concepts = read_jsonl(artifact_dir / "raw_concepts.jsonl")
-    edges: list[dict[str, Any]] = []
-
-    # Create TEACHES_CONCEPT and REQUIRES_CONCEPT edges
-    for rc in raw_concepts:
-        rcid = rc.get("raw_concept_id")
-        cid = raw_to_canonical.get(rcid)
-        if not cid:
-            cid = f"concept:{rc.get('normalized_label')}"
-        
-        rel_type = "TEACHES_CONCEPT" if rc.get("relationship_type") == "teaches" else "REQUIRES_CONCEPT"
-        evidence = rc.get("evidence", [])
-        evidence_text = evidence[0].get("text", "") if evidence else ""
-        evidence_reason = rc.get("reason") or rc.get("definition") or ""
-
-        row = {
-            "chapter_id": rc["chapter_id"],
-            "type": rel_type,
-            "from_id": rc["source_section_id"],
-            "to_id": cid,
-            "confidence": validate_confidence(rc.get("confidence")),
-            "evidence": {
-                "unit_id": rc["source_section_id"],
-                "text": str(evidence_text)[:1200],
-                "reason": str(evidence_reason)[:800],
-            },
-            "generation": rc.get("generation") or {"model": "unknown", "script": "07_gate_relationships.py"},
-            "source_file": "raw_concepts.jsonl"
-        }
-        row["relationship_id"] = stable_hash({"type": rel_type, "from": row["from_id"], "to": row["to_id"]}, "rel")
-        edges.append(row)
-
-    # Programmatically infer DEPENDS_ON_UNIT edges within each chapter
-    chapter_teaches = defaultdict(lambda: defaultdict(list))
-    chapter_requires = defaultdict(lambda: defaultdict(list))
-
-    for edge in edges:
-        ch_id = edge["chapter_id"]
-        cid = edge["to_id"]
-        if edge["type"] == "TEACHES_CONCEPT":
-            chapter_teaches[ch_id][cid].append(edge)
-        elif edge["type"] == "REQUIRES_CONCEPT":
-            chapter_requires[ch_id][cid].append(edge)
-
-    for ch_id, requires_map in chapter_requires.items():
-        teaches_map = chapter_teaches[ch_id]
-        for cid, req_edges in requires_map.items():
-            if cid in teaches_map:
-                for req_edge in req_edges:
-                    for teach_edge in teaches_map[cid]:
-                        from_id = req_edge["from_id"]
-                        to_id = teach_edge["from_id"]
-                        if from_id == to_id:
-                            continue
-                        confidence = round(min(req_edge["confidence"], teach_edge["confidence"]), 4)
-                        
-                        reason = f"Unit {from_id} requires concept '{cid}' (Reason: {req_edge['evidence']['reason']}), which is taught in unit {to_id}."
-                        text = f"Prerequisite requirement evidence: {req_edge['evidence']['text']}\nTeaches concept evidence: {teach_edge['evidence']['text']}"
-
-                        dep_row = {
-                            "chapter_id": ch_id,
-                            "type": "DEPENDS_ON_UNIT",
-                            "from_id": from_id,
-                            "to_id": to_id,
-                            "confidence": confidence,
-                            "evidence": {
-                                "unit_id": from_id,
-                                "text": text[:1200],
-                                "reason": reason[:800],
-                            },
-                            "generation": {"model": "programmatic", "script": "07_gate_relationships.py"},
-                            "source_file": "programmatic_inference"
-                        }
-                        dep_row["relationship_id"] = stable_hash({"type": "DEPENDS_ON_UNIT", "from": from_id, "to": to_id}, "rel")
-                        edges.append(dep_row)
-
-    return edges
+    rows: list[dict[str, Any]] = []
+    for filename in RAW_RELATIONSHIP_FILES:
+        for row in read_jsonl(artifact_dir / filename):
+            row.setdefault("source_file", filename)
+            rows.append(row)
+    return rows
 
 
 def build_alias_map(concepts: list[dict[str, Any]], aliases: list[dict[str, Any]]) -> tuple[set[str], dict[str, str]]:
@@ -207,12 +133,18 @@ def main() -> int:
         if rel_type not in RELATIONSHIP_TYPES:
             reasons.append("invalid_relationship_type")
 
-        if rel_type in {"DEPENDS_ON_UNIT", "REQUIRES_CONCEPT", "TEACHES_CONCEPT"} and from_id not in section_ids:
+        if rel_type in {
+            "DEPENDS_ON_UNIT",
+            "RELATED_BY_CONCEPT",
+            "REQUIRES_CONCEPT",
+            "TEACHES_CONCEPT",
+            "TRANSFER_SUPPORTS_UNIT",
+        } and from_id not in section_ids:
             reasons.append("from_id_not_section")
         if rel_type in {"TESTS_UNIT", "TESTS_CONCEPT"} and from_id not in exercise_ids:
             reasons.append("from_id_not_exercise")
 
-        if rel_type in {"DEPENDS_ON_UNIT", "TESTS_UNIT"}:
+        if rel_type in {"DEPENDS_ON_UNIT", "RELATED_BY_CONCEPT", "TESTS_UNIT", "TRANSFER_SUPPORTS_UNIT"}:
             if to_id not in section_ids:
                 reasons.append("to_id_not_section")
         if rel_type in {"REQUIRES_CONCEPT", "TEACHES_CONCEPT", "TESTS_CONCEPT"}:
