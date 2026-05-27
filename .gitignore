@@ -1,6 +1,7 @@
 .venv/
 __pycache__/
 *.pyc
+*.env
 
 # Generated relationship pipeline outputs.
 data/relationship_artifacts/
