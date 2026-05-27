@@ -118,3 +118,44 @@ I implemented a textbook ingestion pipeline that extracts section summaries, tau
 ## 7:30pm
 
 To make the graph artifacts usable by the application, I implemented the curriculum_engine querying and retrieval library. I built in-memory dictionary indexes cached in RAM via Python's @cached_property to ensure all graph lookups run in instant, $O(1)$ time instead of scanning lists linearly. I used these indexes to implement pathfinding algorithms that can trace prerequisites and dynamically map out remediation paths when a student struggles with specific concepts. I also added a token-based search indexing method over summaries and key terms to provide a robust, deterministic routing layer for module sequencing and assessment grading.
+
+---
+
+## May 27th
+---
+
+* What problem am I solving?
+
+1. Books are one-dimensional; we can either turn the page forward or backward. If you want to refer to other books/chapters on the topic that you are currently studying, there is no easy way for you to instantly move to the page with the required reference.
+
+* What's my solution?
+
+** We need to move from 1-dimensional movement of turning pages back or forth, by adding 2 more dimensions of movement:
+
+i. Dimension 2: According to the learning goal, we need to make it possible to move back to the pages in other sections/chapters/books where the prerequisites for current topics are being taught, and move forward to the pages where the current topic is used to teach another topic.
+
+ii. Dimension 3: We need one more dimension where we can move to the pages in other sections/chapters/books, with the same prerequisite concepts, so this helps us understand where else we can use the intuition we built here on this page.
+
+* To create these 2 more dimensions of movement, I implemented the following techniques:
+
+1. I ran every section of the 6 science textbooks of classes 11 and 12 through an LLM extraction loop, where the LLM gives a summary for each section, generates the concepts one requires to understand that section, with the reason behind it, and the concepts the section teaches with confidence scores.
+
+2. If any concept is taught by one section and is a prerequisite for another section, we can form 2 relationships:
+
+   i. Section X --> [:Depends_on_unit] --> Section Y: When a section X has a prerequisite concept that is taught by the section Y of any book.
+   ii. Section X --> [:TRANSFER_SUPPORTS_UNIT]--> Section Y: The inverse of the above relationship
+
+3. If 2 sections have the same prerequisite concepts, then we can create a bi-directional relationship between them called "RELATED_BY_CONCEPT"
+
+** Retrieval using vector embeddings and these graph relationships:
+
+1. We use semantic matching on the section embeddings and concepts, score them, and select the top matched sections and concepts
+2. Now, we inspect the various relationships of these matched sections and collect them all.
+3. Now, we collect the summary and meta of each section matched and how they are related to each other. Since we have generated reasoning for every prerequisite concept for every section, we can use that reasoning to make the relationships meta-rich between the sections. We don't need to have the detailed full text of each section; this meta is very rich enough for LLM to infer everything.
+4. We send this entire meta of all sections, relationships between them, with reasoning to an LLM and ask it to arrange the sections in a learning sequence that would make sense according to our learning goal and omit sections that aren't relevant to our learning goal.
+5. For each section ID from the output response of the first LLM call, we fetch richer metadata about this section from the database, concatenate it with the larger learning goal and how this section plays a part in reaching that goal, and ask an LLM to produce small learning units with suggested activities and checkpoint MCQ questions.
+6. Now we have created a dynamic curriculum generator based on our base curriculum and adapted it to our needs
+
+Currently, I am working on creating the frontend and wiring up a few missing things. Currently, I am not yet using a database; I am using a flat file and loading the indexes in the RAM for fast retrieval, but I have made sure things are modular enough that I can wire things with an actual database like PostgreSQL. After doing that, I will create an auth and user-based access and record the insights produced from the tests against the section IDs. We can use these insights to spot the section IDs where there are many misconceptions, and address that by changing the metadata of the section so that LLM can address that particular problem 
+   
+
