@@ -187,20 +187,18 @@ class CurriculumPlannerTest(unittest.TestCase):
             {
                 "modules": [
                     {
+                        "module_id": "module:si",
                         "title": "Build SI Unit Foundations",
-                        "covered_concept_ids": ["concept:si_units"],
+                        "module_goal": "Build a reliable base for SI unit use.",
+                        "position": 2,
+                        "depends_on_module_ids": ["module:intro", "module:missing"],
+                        "link_from_previous": "Units prepare SI unit conventions.",
+                        "link_to_next": "SI units support later applications.",
                         "source_section_ids": ["section:2", "section:missing"],
-                        "activities": ["Read the SI section", "Make a unit table"],
-                        "recommended_examples": [],
-                        "recommended_exercises": [],
                         "parallel_support_section_ids": ["section:3", "section:missing"],
                         "reinforcement_section_ids": ["section:4"],
                         "next_step_section_ids": ["section:5"],
-                        "milestone": "Explain base SI units.",
-                        "expected_outcome": "Use SI units correctly.",
-                        "estimated_time_minutes": 45,
                         "prerequisite_warnings": ["Review Units first."],
-                        "personalization_note": "Low confidence: move carefully.",
                     }
                 ]
             }
@@ -232,25 +230,48 @@ class CurriculumPlannerTest(unittest.TestCase):
         plan = self.planner(llm).create_plan(request)
 
         self.assertEqual(plan.learner_id, "learner:1")
+        self.assertEqual(plan.modules[0].module_id, "module:si")
         self.assertEqual(plan.modules[0].title, "Build SI Unit Foundations")
+        self.assertEqual(plan.modules[0].module_goal, "Build a reliable base for SI unit use.")
+        self.assertEqual(plan.modules[0].position, 2)
+        self.assertEqual(plan.modules[0].depends_on_module_ids, [])
+        self.assertEqual(plan.modules[0].link_from_previous, "Units prepare SI unit conventions.")
+        self.assertEqual(plan.modules[0].link_to_next, "SI units support later applications.")
         self.assertEqual(plan.modules[0].source_section_ids, ["section:2"])
+        self.assertEqual(plan.modules[0].covered_concept_ids, ["concept:si_units"])
+        self.assertEqual(plan.modules[0].activities, ["Design-stage activity pending."])
+        self.assertEqual(plan.modules[0].recommended_examples, [])
+        self.assertEqual(plan.modules[0].milestone, "Complete the module design checkpoint.")
+        self.assertEqual(plan.modules[0].expected_outcome, "Build a reliable base for SI unit use.")
+        self.assertEqual(plan.modules[0].estimated_time_minutes, 30)
         self.assertEqual(plan.modules[0].parallel_support_section_ids, ["section:3"])
         self.assertEqual(plan.modules[0].reinforcement_section_ids, ["section:4"])
         self.assertEqual(plan.modules[0].next_step_section_ids, ["section:5"])
         self.assertIn("learner_state", llm.prompt)
-        self.assertIn("learning_path_context", llm.prompt)
-        self.assertIn("main_path_sections", llm.prompt)
-        self.assertIn("parallel_support_paths", llm.prompt)
-        self.assertIn("reinforcement_paths", llm.prompt)
-        self.assertIn("next_step_paths", llm.prompt)
+        self.assertIn("Planning packet:", llm.prompt)
+        self.assertIn("ordered curriculum module sequence", llm.prompt)
+        self.assertIn("Do not produce concept IDs, activities", llm.prompt)
+        self.assertIn("main_path_section_ids", llm.prompt)
+        self.assertIn("parallel_support", llm.prompt)
+        self.assertIn("reinforcement", llm.prompt)
+        self.assertIn("next_steps", llm.prompt)
         self.assertIn("relationship_policy", llm.prompt)
         self.assertIn("known_well", llm.prompt)
-        self.assertIn("Learners should understand units first.", llm.prompt)
-        self.assertIn("SI units are introduced.", llm.prompt)
-        self.assertIn("Never treat RELATED_BY_CONCEPT or TRANSFER_SUPPORTS_UNIT as hard prerequisites", llm.prompt)
-        self.assertIn("concept:si_units", llm.prompt)
+        self.assertIn("Do not put optional support/reinforcement/next-step sections into source_section_ids", llm.prompt)
+        self.assertIn("Concepts are intentionally omitted", llm.prompt)
+        self.assertNotIn("Learners should understand units first.", llm.prompt)
+        self.assertNotIn("SI units are introduced.", llm.prompt)
+        self.assertNotIn('"learning_path_context"', llm.prompt)
+        self.assertLess(llm.prompt.index("Planning packet:"), llm.prompt.index("Critical rules:"))
         self.assertIsNotNone(llm.schema)
+        schema_props = llm.schema["properties"]["modules"]["items"]["properties"]
+        self.assertNotIn("covered_concept_ids", schema_props)
+        self.assertNotIn("activities", schema_props)
+        self.assertNotIn("milestone", schema_props)
+        self.assertNotIn("estimated_time_minutes", schema_props)
+        self.assertEqual(PlannerRequest(learner_id="x", onboarding=self.onboarding()).max_modules, 10)
         self.assertIn("learning_path_context", plan.metadata)
+        self.assertIn("planning_packet", plan.metadata)
 
     def test_planner_falls_back_when_llm_returns_no_valid_modules(self) -> None:
         llm = FakeLLM({"modules": [{"title": "Invalid", "source_section_ids": ["unknown"]}]})

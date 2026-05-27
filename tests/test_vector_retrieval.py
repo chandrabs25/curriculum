@@ -77,8 +77,10 @@ class VectorRetrievalTest(unittest.TestCase):
             [
                 {"chapter_id": "chapter:1", "section_id": "section:1", "title": "Units", "summary": "Defines units.", "key_terms": ["unit"]},
                 {"chapter_id": "chapter:1", "section_id": "section:2", "title": "SI Units", "summary": "Introduces SI units.", "key_terms": ["SI"]},
+                {"chapter_id": "chapter:1", "section_id": "section:2:1", "title": "SI base units detail", "summary": "Detailed subsection about base SI units.", "key_terms": ["SI", "base"]},
                 {"chapter_id": "chapter:1", "section_id": "section:3", "title": "Dimensional Analysis", "summary": "Checks equations.", "key_terms": ["dimension"]},
                 {"chapter_id": "chapter:1", "section_id": "section:4", "title": "Measurement Practice", "summary": "Practice with units.", "key_terms": ["practice"]},
+                {"chapter_id": "chapter:1", "section_id": "section:5", "title": "Points to Ponder", "summary": "Meta review points about units.", "key_terms": ["unit"]},
             ],
         )
         write_jsonl(
@@ -133,6 +135,25 @@ class VectorRetrievalTest(unittest.TestCase):
         self.assertIn("transfer_support", by_id["section:3"].reasons)
         self.assertIn("section:4", by_id)
         self.assertIn("related_concept", by_id["section:4"].reasons)
+
+    def test_vector_match_can_include_subsection_but_lexical_cannot(self) -> None:
+        graph = self.graph()
+
+        lexical_results = CurriculumRetriever(graph).search("base SI units", limit=5, include_prerequisites=False, include_soft_links=False)
+        self.assertNotIn("section:2:1", {row.section_id for row in lexical_results})
+
+        vector_results = CurriculumRetriever(
+            graph,
+            vector_index=FakeVectorIndex([VectorSearchResult("section:2:1", 0.9)]),
+        ).search("base SI units", limit=5, include_prerequisites=False, include_soft_links=False)
+        by_id = {row.section_id: row for row in vector_results}
+        self.assertIn("section:2:1", by_id)
+        self.assertIn("vector_match", by_id["section:2:1"].reasons)
+
+    def test_meta_sections_are_excluded(self) -> None:
+        results = CurriculumRetriever(self.graph()).search("ponder units", limit=5, include_prerequisites=False, include_soft_links=False)
+
+        self.assertNotIn("section:5", {row.section_id for row in results})
 
     def test_retriever_falls_back_without_vector_index(self) -> None:
         results = CurriculumRetriever(self.graph()).search("SI Units", limit=2)

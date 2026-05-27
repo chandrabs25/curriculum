@@ -1,0 +1,85 @@
+[
+  {
+    "section_id": "ncert:physics:11:6:6.8.2",
+    "chapter_id": "ncert:physics:11:6",
+    "title": "Centre of gravity",
+    "summary": "This section defines the centre of gravity (CG) as the point where the entire weight of a body acts and where the net gravitational torque is zero. It explores the relationship between the centre of gravity and the centre of mass, explaining that they coincide in a uniform gravitational field. Additionally, it details experimental methods to locate the CG and applies equilibrium conditions to solve mechanical problems.",
+    "score": 9.0,
+    "matched_concept_ids": [],
+    "prerequisite_section_ids": [],
+    "reasons": [
+      "key_term_match",
+      "summary_match",
+      "title_match"
+    ],
+    "subject": "physics",
+    "grade": 11
+  },
+  {
+    "section_id": "ncert:physics:11:7:7.6",
+    "chapter_id": "ncert:physics:11:7",
+    "title": "Acceleration Due to Gravity Below and Above the Surface of Earth",
+    "summary": "This section derives and analyzes the variation of acceleration due to gravity both above and below the Earth's surface. It demonstrates that gravity is at its maximum on the surface and decreases with both altitude and depth.",
+    "score": 9.0,
+    "matched_concept_ids": [],
+    "prerequisite_section_ids": [],
+    "reasons": [
+      "key_term_match",
+      "summary_match",
+      "title_match"
+    ],
+    "subject": "physics",
+    "grade": 11
+  },
+  {
+    "section_id": "ncert:physics:11:7:7.5",
+    "chapter_id": "ncert:physics:11:7",
+    "title": "Acceleration Due to Gravity of the Earth",
+    "summary": "This section explains how to calculate the gravitational force exerted by the Earth on objects located both outside and inside its volume using the shell theorem. It derives the formula for the acceleration due to gravity (g) at the Earth's surface and demonstrates how this value can be used to estimate the Earth's mass.",
+    "score": 8.0,
+    "matched_concept_ids": [],
+    "prerequisite_section_ids": [],
+    "reasons": [
+      "key_term_match",
+      "summary_match",
+      "title_match"
+    ],
+    "subject": "physics",
+    "grade": 11
+  },
+  {
+    "section_id": "ncert:physics:11:7:7.1",
+    "chapter_id": "ncert:physics:11:7",
+    "title": "Introduction",
+    "summary": "This section introduces the historical development of gravity and planetary motion theories. It covers Galileo's experiments on constant gravitational acceleration, the transition from the geocentric to the heliocentric model, and the observational work of Tycho Brahe and Johannes Kepler.",
+    "score": 4.0,
+    "matched_concept_ids": [],
+    "prerequisite_section_ids": [],
+    "reasons": [
+      "key_term_match",
+      "summary_match"
+    ],
+    "subject": "physics",
+    "grade": 11
+  },
+  {
+    "section_id": "ncert:physics:11:3:3.9",
+    "chapter_id": "ncert:physics:11:3",
+    "title": "PROJECTILE MOTION",
+    "summary": "This section introduces projectile motion as the combination of independent horizontal motion with constant velocity and vertical motion with constant acceleration due to gravity. It derives the parabolic trajectory equation and formulas for key parameters including time of flight, maximum height, and horizontal range.",
+    "score": 2.0,
+    "matched_concept_ids": [
+      "concept:horizontal_range_of_a_projectile",
+      "concept:maximum_height_of_a_projectile",
+      "concept:projectile_motion",
+      "concept:time_of_flight",
+      "concept:trajectory_of_a_projectile"
+    ],
+    "prerequisite_section_ids": [],
+    "reasons": [
+      "transfer_support"
+    ],
+    "subject": "physics",
+    "grade": 11
+  }
+]

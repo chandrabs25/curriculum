@@ -11,6 +11,55 @@ from .graph import CurriculumGraph
 from .vector_index import SectionVectorIndex
 
 
+DIRECT_MATCH_REASONS = {
+    "vector_match",
+    "concept_match",
+    "title_match",
+    "key_term_match",
+    "summary_match",
+    "learner_misconception",
+    "learner_partial",
+    "learner_competency",
+}
+ALWAYS_KEEP_DIRECT_REASONS = {"vector_match", "concept_match", "title_match"}
+META_SECTION_TITLES = {
+    "summary",
+    "points to ponder",
+    "exercises",
+    "exercise",
+    "answers",
+    "answer",
+    "appendix",
+    "glossary",
+    "references",
+    "bibliography",
+}
+MIN_SUMMARY_ONLY_SCORE = 6.0
+QUERY_STOPWORDS = {
+    "i",
+    "me",
+    "my",
+    "we",
+    "want",
+    "wants",
+    "need",
+    "needs",
+    "learn",
+    "learning",
+    "study",
+    "studying",
+    "understand",
+    "to",
+    "the",
+    "a",
+    "an",
+    "about",
+    "of",
+    "on",
+    "in",
+}
+
+
 class LearnerConceptStatus(str, Enum):
     COMPETENT = "competent"
     PARTIAL = "partial"
@@ -79,6 +128,8 @@ class CurriculumRetriever:
                 section = self.graph.sections_by_id.get(section_id, {})
                 if not self._passes_filters(summary, section, subject=subject, grade=grade, chapter_id=chapter_id):
                     continue
+                if not self._is_top_level_section(section_id):
+                    continue
                 matched_concepts = [
                     cid
                     for cid in self.graph.concepts_taught_by_section(section_id)
@@ -92,6 +143,8 @@ class CurriculumRetriever:
                     continue
                 score += self._learner_adjustment(section_id, matched_concepts, state_by_concept, reasons)
                 self._add_or_update(scored, section_id, summary, section, score, matched_concepts, reasons)
+
+        self._prune_weak_direct_matches(scored)
 
         for section_id in self.graph.teaching_sections_for_concepts(concept_matches):
             summary = self.graph.section_summaries_by_id.get(section_id)
@@ -157,9 +210,14 @@ class CurriculumRetriever:
     ) -> bool:
         if chapter_id and summary.get("chapter_id") != chapter_id:
             return False
-        if subject and section.get("subject") != subject:
+        chapter_ref = self._chapter_ref(summary.get("chapter_id"))
+        section_subject = section.get("subject") or chapter_ref.get("subject")
+        section_grade = section.get("grade") or chapter_ref.get("grade")
+        if subject and section_subject != subject:
             return False
-        if grade is not None and section.get("grade") != grade:
+        if grade is not None and int(section_grade or -1) != grade:
+            return False
+        if self._is_meta_section(summary, section):
             return False
         return True
 
@@ -231,6 +289,8 @@ class CurriculumRetriever:
                 section = self.graph.sections_by_id.get(prereq_id, {})
                 if not self._passes_filters(summary, section, subject=subject, grade=grade, chapter_id=chapter_id):
                     continue
+                if not self._is_top_level_section(prereq_id):
+                    continue
                 prereq_concepts = self.graph.concepts_taught_by_section(prereq_id)
                 reasons = ["prerequisite"]
                 score = max(0.1, float(base["score"]) * 0.45)
@@ -258,6 +318,8 @@ class CurriculumRetriever:
                     continue
                 section = self.graph.sections_by_id.get(linked_id, {})
                 if not self._passes_filters(summary, section, subject=subject, grade=grade, chapter_id=chapter_id):
+                    continue
+                if not self._is_top_level_section(linked_id):
                     continue
                 concepts = self.graph.concepts_taught_by_section(linked_id)
                 reasons = [reason]
@@ -313,10 +375,46 @@ class CurriculumRetriever:
             grade=row.get("grade"),
         )
 
+    def _chapter_ref(self, chapter_id: Any) -> dict[str, Any]:
+        if not chapter_id:
+            return {}
+        for ref in self.graph.textbooks.chapter_refs(chapter_id=str(chapter_id)):
+            return ref
+        return {}
+
+    def _is_top_level_section(self, section_id: str) -> bool:
+        return section_id in self.graph.sections_by_id
+
+    def _is_meta_section(self, summary: dict[str, Any], section: dict[str, Any]) -> bool:
+        title = _normalize_label(summary.get("title") or section.get("title") or "")
+        tail = _normalize_label(str(summary.get("section_id") or section.get("id") or "").rsplit(":", 1)[-1])
+        return title in META_SECTION_TITLES or tail in META_SECTION_TITLES or any(label in title for label in META_SECTION_TITLES)
+
+    def _prune_weak_direct_matches(self, scored: dict[str, dict[str, Any]]) -> None:
+        direct_scores = [
+            float(row.get("score") or 0.0)
+            for row in scored.values()
+            if set(row.get("reasons") or set()) & DIRECT_MATCH_REASONS
+        ]
+        relative_cutoff = max(0.1, max(direct_scores, default=0.0) * 0.4)
+        for section_id, row in list(scored.items()):
+            reasons = set(row.get("reasons") or set())
+            if not reasons & DIRECT_MATCH_REASONS:
+                continue
+            if reasons & ALWAYS_KEEP_DIRECT_REASONS:
+                continue
+            if float(row.get("score") or 0.0) >= relative_cutoff:
+                continue
+            del scored[section_id]
+
 
 def _terms(query: str) -> list[str]:
-    return _tokens(str(query or "").replace("_", " "))
+    return [term for term in _tokens(str(query or "").replace("_", " ")) if term not in QUERY_STOPWORDS]
 
 
 def _tokens(text: str) -> list[str]:
     return re.findall(r"[a-z0-9]+", str(text or "").lower())
+
+
+def _normalize_label(value: Any) -> str:
+    return " ".join(str(value or "").replace("_", " ").replace("-", " ").lower().split())

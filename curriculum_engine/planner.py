@@ -3,12 +3,13 @@
 from __future__ import annotations
 
 import json
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from datetime import datetime, timezone
 from typing import Any, Protocol
 
 from .learning_path import LearningPathContext, build_learning_path_context
 from .models import CurriculumModule, CurriculumPlan, OnboardingAnswers
+from .planning_packet import CurriculumPlanningPacket, build_curriculum_planning_packet
 from .retrieval import CurriculumRetriever, LearnerConceptState, SectionRetrievalResult
 
 
@@ -26,28 +27,23 @@ CURRICULUM_PLAN_SCHEMA: dict[str, Any] = {
                 "type": "object",
                 "properties": {
                     "title": {"type": "string"},
-                    "covered_concept_ids": {"type": "array", "items": {"type": "string"}},
+                    "module_id": {"type": "string"},
+                    "module_goal": {"type": "string"},
+                    "position": {"type": "integer"},
+                    "depends_on_module_ids": {"type": "array", "items": {"type": "string"}},
+                    "link_from_previous": {"type": "string"},
+                    "link_to_next": {"type": "string"},
                     "source_section_ids": {"type": "array", "items": {"type": "string"}},
-                    "activities": {"type": "array", "items": {"type": "string"}},
-                    "recommended_examples": {"type": "array", "items": {"type": "string"}},
-                    "recommended_exercises": {"type": "array", "items": {"type": "string"}},
-                    "milestone": {"type": "string"},
-                    "expected_outcome": {"type": "string"},
-                    "estimated_time_minutes": {"type": "integer"},
                     "prerequisite_warnings": {"type": "array", "items": {"type": "string"}},
                     "parallel_support_section_ids": {"type": "array", "items": {"type": "string"}},
                     "reinforcement_section_ids": {"type": "array", "items": {"type": "string"}},
                     "next_step_section_ids": {"type": "array", "items": {"type": "string"}},
-                    "personalization_note": {"type": "string"},
                 },
                 "required": [
                     "title",
-                    "covered_concept_ids",
+                    "module_goal",
+                    "position",
                     "source_section_ids",
-                    "activities",
-                    "milestone",
-                    "expected_outcome",
-                    "estimated_time_minutes",
                 ],
             },
         }
@@ -65,7 +61,7 @@ class PlannerRequest:
     subject: str | None = None
     grade: int | None = None
     chapter_id: str | None = None
-    max_modules: int = 6
+    max_modules: int = 10
     retrieval_limit: int = 12
 
 
@@ -90,12 +86,19 @@ class CurriculumPlanner:
             learner_state=request.learner_state,
             prerequisite_check=request.prerequisite_check,
         )
-        prompt = build_curriculum_prompt(request, retrieved, learning_path_context)
+        planning_packet = build_curriculum_planning_packet(
+            request.onboarding,
+            request.learner_state,
+            retrieved,
+            learning_path_context,
+        )
+        prompt = build_curriculum_prompt(planning_packet)
         payload = self.llm_client.generate_json(prompt, CURRICULUM_PLAN_SCHEMA)
         modules = modules_from_payload(
             payload,
             retrieved,
-            learning_path_context=learning_path_context,
+            planning_packet=planning_packet,
+            retriever=self.retriever,
             max_modules=request.max_modules,
         )
         plan_id = stable_plan_id(request, modules)
@@ -108,73 +111,65 @@ class CurriculumPlanner:
             metadata={
                 "retrieved_section_ids": [item.section_id for item in retrieved],
                 "learning_path_context": learning_path_context.to_dict(),
+                "planning_packet": planning_packet.to_dict(),
                 "planner": "CurriculumPlanner",
             },
         )
 
 
-def build_curriculum_prompt(
-    request: PlannerRequest,
-    retrieved: list[SectionRetrievalResult],
-    learning_path_context: LearningPathContext,
-) -> str:
-    learner_state = [
-        {
-            "concept_id": state.concept_id,
-            "status": str(state.status.value if hasattr(state.status, "value") else state.status),
-            "confidence": state.confidence,
-            "recency_weight": state.recency_weight,
-        }
-        for state in request.learner_state or []
-    ]
-    context = {
-        "onboarding": {
-            "subject": request.onboarding.subject,
-            "topic": request.onboarding.topic,
-            "current_level": request.onboarding.current_level,
-            "confidence": request.onboarding.confidence,
-            "learning_goal": request.onboarding.learning_goal,
-            "available_time": request.onboarding.available_time,
-            "preferred_learning_style": request.onboarding.preferred_learning_style,
-            "deadline_or_pace": request.onboarding.deadline_or_pace,
-        },
-        "learner_state": learner_state,
-        "learning_path_context": learning_path_context.to_dict(),
-        "retrieved_sections": [
+def build_curriculum_prompt(planning_packet: CurriculumPlanningPacket) -> str:
+    schema_example = {
+        "modules": [
             {
-                "section_id": item.section_id,
-                "chapter_id": item.chapter_id,
-                "title": item.title,
-                "summary": item.summary,
-                "matched_concept_ids": item.matched_concept_ids,
-                "prerequisite_section_ids": item.prerequisite_section_ids,
-                "retrieval_reasons": item.reasons,
-                "score": item.score,
+                "module_id": "module:1",
+                "title": "string",
+                "module_goal": "string",
+                "position": 1,
+                "depends_on_module_ids": ["module:0"],
+                "link_from_previous": "string",
+                "link_to_next": "string",
+                "source_section_ids": ["string"],
+                "prerequisite_warnings": ["string"],
+                "parallel_support_section_ids": ["string"],
+                "reinforcement_section_ids": ["string"],
+                "next_step_section_ids": ["string"],
             }
-            for item in retrieved
-        ],
-        "max_modules": request.max_modules,
+        ]
     }
-    return f"""Create a personalized curriculum plan from the grounded textbook sections.
+    return f"""You are an AI curriculum planner.
 
-Rules:
-- Use only source_section_ids from retrieved_sections and learning_path_context sections.
-- Build required modules only from learning_path_context.main_path_sections.
-- Hard dependency edges affect order: to_section_id should be studied before from_section_id.
-- Required concepts explain prerequisite warnings; use their pedagogical_reason when explaining foundations.
-- Teaching evidence explains what each section contributes; use it to keep module outcomes grounded.
-- Use parallel_support_paths only in parallel_support_section_ids or optional activities.
-- Use reinforcement_paths only in reinforcement_section_ids or review/practice recommendations.
-- Use next_step_paths only in next_step_section_ids as after-completion suggestions.
-- Never treat RELATED_BY_CONCEPT or TRANSFER_SUPPORTS_UNIT as hard prerequisites.
-- Keep modules small and teachable.
-- Personalize using learner_state: misconceptions need remediation, partial understanding needs practice, competencies can move faster.
-- Do not invent source ids or concept ids.
-- Recommended examples/exercises may be empty because exercise mapping is deferred.
-- Return JSON matching the schema.
+The backend has already retrieved textbook sections, resolved section relationships, and classified relationships by purpose.
 
-Planning context:
-{json.dumps(context, ensure_ascii=False)}
+Relationship meanings:
+- DEPENDS_ON_UNIT: required ordering. to_section_id must be studied before from_section_id.
+- TRANSFER_SUPPORTS_UNIT: optional support bridge only.
+- RELATED_BY_CONCEPT: reinforcement/comparison only.
+- next_steps: after-completion recommendations only.
+
+Planning packet:
+{planning_packet.to_json()}
+
+Now create the ordered curriculum module sequence.
+
+Critical rules:
+- Return JSON only.
+- Use only section IDs present in planning_packet.
+- Build required modules only from planning_packet.main_path_section_ids.
+- Do not put optional support/reinforcement/next-step sections into source_section_ids.
+- Use relationships.parallel_support only in parallel_support_section_ids or optional activities.
+- Use relationships.reinforcement only in reinforcement_section_ids or review/practice recommendations.
+- Use relationships.next_steps only in next_step_section_ids as after-completion suggestions.
+- Respect DEPENDS_ON_UNIT hard dependency ordering.
+- Use hard dependency evidence_reason to explain prerequisite warnings and ordering.
+- Concepts are intentionally omitted from this first planner call except bridge_concept_id on section links.
+- Do not produce concept IDs, activities, examples, exercises, milestones, detailed teaching content, or assessments.
+- Make each module a coherent ordering unit for a later module-design LLM call.
+- Put modules in the sequence the learner should follow.
+- Explain why each module follows from the previous module and prepares the next module.
+- Do not invent source ids, concept ids, examples, exercises, or relationships.
+
+Required JSON shape:
+{json.dumps(schema_example, ensure_ascii=False)}
 """
 
 
@@ -183,6 +178,8 @@ def modules_from_payload(
     retrieved: list[SectionRetrievalResult],
     *,
     learning_path_context: LearningPathContext | None = None,
+    planning_packet: CurriculumPlanningPacket | None = None,
+    retriever: CurriculumRetriever | None = None,
     max_modules: int,
 ) -> list[CurriculumModule]:
     allowed_sections = {item.section_id for item in retrieved}
@@ -190,7 +187,18 @@ def modules_from_payload(
     parallel_support_sections: set[str] = set()
     reinforcement_sections: set[str] = set()
     next_step_sections: set[str] = set()
-    if learning_path_context:
+    if planning_packet:
+        packet = planning_packet.to_dict()
+        main_path_sections = set(packet.get("main_path_section_ids") or [])
+        relationships = packet.get("relationships") or {}
+        parallel_support_sections = _section_ids_from_rows(relationships.get("parallel_support") or [])
+        reinforcement_sections = _section_ids_from_rows(relationships.get("reinforcement") or [])
+        next_step_sections = _section_ids_from_rows(relationships.get("next_steps") or [])
+        allowed_sections.update(main_path_sections)
+        allowed_sections.update(parallel_support_sections)
+        allowed_sections.update(reinforcement_sections)
+        allowed_sections.update(next_step_sections)
+    elif learning_path_context:
         context = learning_path_context.to_dict()
         main_path_sections = _section_ids_from_rows(context.get("main_path_sections") or [])
         parallel_support_sections = _section_ids_from_rows(context.get("parallel_support_paths") or [])
@@ -211,18 +219,24 @@ def modules_from_payload(
         ]
         if not section_ids:
             continue
+        module_id = str(item.get("module_id") or f"module:{index}")
         module = CurriculumModule(
-            module_id=f"module:{index}",
+            module_id=module_id,
             title=str(item.get("title") or f"Module {index}"),
-            covered_concept_ids=_str_list(item.get("covered_concept_ids")),
+            module_goal=str(item.get("module_goal") or f"Learn {item.get('title') or f'Module {index}'}"),
+            position=max(1, int(item.get("position") or index)),
+            covered_concept_ids=_covered_concepts_for_sections(retriever, section_ids),
             source_section_ids=section_ids,
-            activities=_str_list(item.get("activities")) or ["Read the source section and summarize the key ideas."],
-            recommended_examples=_str_list(item.get("recommended_examples")),
-            recommended_exercises=_str_list(item.get("recommended_exercises")),
-            milestone=str(item.get("milestone") or "Complete the module checkpoint."),
-            expected_outcome=str(item.get("expected_outcome") or "Explain the module concepts in your own words."),
-            estimated_time_minutes=max(5, int(item.get("estimated_time_minutes") or 30)),
+            activities=["Design-stage activity pending."],
+            recommended_examples=[],
+            recommended_exercises=[],
+            milestone="Complete the module design checkpoint.",
+            expected_outcome=str(item.get("module_goal") or "Understand the ordered module section."),
+            estimated_time_minutes=30,
             prerequisite_warnings=_str_list(item.get("prerequisite_warnings")),
+            depends_on_module_ids=_str_list(item.get("depends_on_module_ids")),
+            link_from_previous=str(item.get("link_from_previous") or ""),
+            link_to_next=str(item.get("link_to_next") or ""),
             parallel_support_section_ids=[
                 section_id
                 for section_id in _str_list(item.get("parallel_support_section_ids"))
@@ -242,7 +256,16 @@ def modules_from_payload(
         )
         modules.append(module)
     if modules:
-        return modules
+        valid_module_ids = {module.module_id for module in modules}
+        return [
+            replace(
+                module,
+                depends_on_module_ids=[
+                    module_id for module_id in module.depends_on_module_ids if module_id in valid_module_ids
+                ],
+            )
+            for module in sorted(modules, key=lambda module: module.position)
+        ]
     return fallback_modules(retrieved, max_modules=max_modules)
 
 
@@ -253,6 +276,8 @@ def fallback_modules(retrieved: list[SectionRetrievalResult], *, max_modules: in
             CurriculumModule(
                 module_id=f"module:{index}",
                 title=item.title or f"Module {index}",
+                module_goal=item.summary or f"Understand {item.title or item.section_id}.",
+                position=index,
                 covered_concept_ids=item.matched_concept_ids,
                 source_section_ids=[item.section_id],
                 activities=["Read the section, write a short summary, and solve a self-check question."],
@@ -298,3 +323,18 @@ def _str_list(value: Any) -> list[str]:
 
 def _section_ids_from_rows(rows: list[dict[str, Any]]) -> set[str]:
     return {str(row.get("section_id")) for row in rows if row.get("section_id")}
+
+
+def _covered_concepts_for_sections(retriever: CurriculumRetriever | None, section_ids: list[str]) -> list[str]:
+    if not retriever:
+        return []
+    concept_ids: list[str] = []
+    for section_id in section_ids:
+        concept_ids.extend(retriever.graph.concepts_taught_by_section(section_id))
+    seen = set()
+    ordered = []
+    for concept_id in concept_ids:
+        if concept_id not in seen:
+            seen.add(concept_id)
+            ordered.append(concept_id)
+    return ordered

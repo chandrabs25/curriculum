@@ -39,9 +39,11 @@ class OnboardingAnswers:
 
 
 @dataclass(frozen=True)
-class CurriculumModule:
+class PlannedCurriculumModule:
     module_id: str
     title: str
+    module_goal: str
+    position: int
     covered_concept_ids: list[str]
     source_section_ids: list[str]
     activities: list[str]
@@ -51,10 +53,45 @@ class CurriculumModule:
     expected_outcome: str
     estimated_time_minutes: int
     prerequisite_warnings: list[str] = field(default_factory=list)
+    depends_on_module_ids: list[str] = field(default_factory=list)
+    link_from_previous: str = ""
+    link_to_next: str = ""
     parallel_support_section_ids: list[str] = field(default_factory=list)
     reinforcement_section_ids: list[str] = field(default_factory=list)
     next_step_section_ids: list[str] = field(default_factory=list)
     personalization_note: str = ""
+
+
+@dataclass(frozen=True)
+class CurriculumModule(PlannedCurriculumModule):
+    """Backward-compatible name for planned modules in a curriculum outline."""
+
+
+@dataclass(frozen=True)
+class ModuleCheckpointMCQ:
+    question: str
+    options: list[str]
+    correct_option: str
+    explanation: str
+    tested_concept_ids: list[str]
+    source_section_ids: list[str]
+
+
+@dataclass(frozen=True)
+class ExpandedCurriculumModule:
+    module_id: str
+    title: str
+    module_goal: str
+    source_section_ids: list[str]
+    concept_ids: list[str]
+    larger_goal_alignment: str
+    transition_from_previous: str
+    transition_to_next: str
+    lesson_sections: list[dict[str, Any]]
+    guided_activity: str
+    common_misconceptions: list[str]
+    checkpoint_mcq: ModuleCheckpointMCQ
+    metadata: dict[str, Any] = field(default_factory=dict)
 
 
 @dataclass(frozen=True)
