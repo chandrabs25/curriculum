@@ -8,7 +8,8 @@ from pathlib import Path
 from typing import Any
 
 from curriculum_engine import (
-    CurriculumModule,
+    allocate_module_mcq_targets,
+    PlannedCurriculumModule,
     CurriculumPlan,
     ModuleExpander,
     OnboardingAnswers,
@@ -26,6 +27,29 @@ def write_json(path: Path, data: object) -> None:
 def write_jsonl(path: Path, rows: list[dict[str, Any]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text("".join(json.dumps(row) + "\n" for row in rows), encoding="utf-8")
+
+
+def mcq_rows(count: int) -> list[dict[str, Any]]:
+    return [
+        {
+            "question_id": f"module:2:q{index}",
+            "question": f"Which statement about SI units is correct? {index}",
+            "options": [
+                "A. SI units create shared standards",
+                "B. SI units remove all measurement",
+                "C. SI units replace physical quantities",
+                "D. SI units avoid calculations entirely",
+            ],
+            "correct_option": "A",
+            "explanation": "The summary connects SI units with standard base units.",
+            "tested_concept_ids": ["concept:si_units"],
+            "source_section_ids": ["section:2"],
+            "difficulty": "medium",
+            "diagnostic_purpose": "Checks whether the learner understands SI units as standards.",
+            "misconception_tags": ["treats_units_as_quantities"],
+        }
+        for index in range(1, count + 1)
+    ]
 
 
 class FakeExpansionLLM:
@@ -165,49 +189,31 @@ class ModuleExpansionTest(unittest.TestCase):
                 deadline_or_pace="steady",
             ),
             modules=[
-                CurriculumModule(
+                PlannedCurriculumModule(
                     module_id="module:1",
                     title="Units",
                     module_goal="Understand units.",
                     position=1,
                     covered_concept_ids=["concept:unit"],
                     source_section_ids=["section:1"],
-                    activities=[],
-                    recommended_examples=[],
-                    recommended_exercises=[],
-                    milestone="Explain units.",
-                    expected_outcome="Use units.",
-                    estimated_time_minutes=20,
                 ),
-                CurriculumModule(
+                PlannedCurriculumModule(
                     module_id="module:2",
                     title="SI Units",
                     module_goal="Use SI units.",
                     position=2,
                     covered_concept_ids=["concept:si_units"],
                     source_section_ids=["section:2"],
-                    activities=[],
-                    recommended_examples=[],
-                    recommended_exercises=[],
-                    milestone="Explain SI units.",
-                    expected_outcome="Use SI base units.",
-                    estimated_time_minutes=30,
                     link_from_previous="Units prepare SI standards.",
                     link_to_next="SI standards support applications.",
                 ),
-                CurriculumModule(
+                PlannedCurriculumModule(
                     module_id="module:3",
                     title="Applications",
                     module_goal="Apply SI units.",
                     position=3,
                     covered_concept_ids=["concept:application"],
                     source_section_ids=["section:3"],
-                    activities=[],
-                    recommended_examples=[],
-                    recommended_exercises=[],
-                    milestone="Apply SI units.",
-                    expected_outcome="Solve applications.",
-                    estimated_time_minutes=30,
                 ),
             ],
             created_at=datetime.now(timezone.utc),
@@ -253,6 +259,7 @@ class ModuleExpansionTest(unittest.TestCase):
         self.assertEqual(packet["source_sections"][0]["summary"], "Introduces SI base units and why standards matter.")
         self.assertEqual(packet["source_sections"][0]["key_terms"], ["SI", "base unit"])
         self.assertEqual(packet["source_sections"][0]["candidate_concept_ids"], ["concept:si_units"])
+        self.assertEqual(packet["mcq_target_count"], 4)
         self.assertNotIn("content_text", packet["source_sections"][0])
         self.assertNotIn("subsections", packet["source_sections"][0])
         self.assertGreater(packet["source_sections"][0]["resource_counts"]["worked_examples"], 0)
@@ -269,19 +276,13 @@ class ModuleExpansionTest(unittest.TestCase):
         self.assertIn("The metre, kilogram, and second", rows[0]["subsections"][0]["content_text"])
 
     def test_target_concepts_come_from_graph_when_module_concepts_are_empty(self) -> None:
-        module = CurriculumModule(
+        module = PlannedCurriculumModule(
             module_id="module:empty",
             title="SI Units",
             module_goal="Use SI units.",
             position=2,
             covered_concept_ids=[],
             source_section_ids=["section:2"],
-            activities=[],
-            recommended_examples=[],
-            recommended_exercises=[],
-            milestone="Explain SI units.",
-            expected_outcome="Use SI base units.",
-            estimated_time_minutes=30,
         )
         plan = CurriculumPlan(
             curriculum_plan_id="plan:2",
@@ -298,20 +299,56 @@ class ModuleExpansionTest(unittest.TestCase):
         self.assertIn("concept:si_units", concept_ids)
         self.assertIn("concept:unit", concept_ids)
 
+    def test_allocates_plan_level_mcqs_by_module_size(self) -> None:
+        plan = CurriculumPlan(
+            curriculum_plan_id="plan:weighted",
+            learner_id="learner:1",
+            onboarding=self.plan.onboarding,
+            modules=[
+                PlannedCurriculumModule(
+                    module_id="module:small",
+                    title="Small",
+                    module_goal="Learn one section.",
+                    position=1,
+                    covered_concept_ids=[],
+                    source_section_ids=["section:1"],
+                ),
+                PlannedCurriculumModule(
+                    module_id="module:large",
+                    title="Large",
+                    module_goal="Learn two sections.",
+                    position=2,
+                    covered_concept_ids=[],
+                    source_section_ids=["section:2", "section:3"],
+                ),
+                PlannedCurriculumModule(
+                    module_id="module:medium",
+                    title="Medium",
+                    module_goal="Learn one section.",
+                    position=3,
+                    covered_concept_ids=[],
+                    source_section_ids=["section:1"],
+                ),
+            ],
+            created_at=self.plan.created_at,
+            metadata={},
+        )
+
+        allocation = allocate_module_mcq_targets(plan)
+
+        self.assertGreaterEqual(sum(allocation.values()), 10)
+        self.assertLessEqual(sum(allocation.values()), 12)
+        self.assertTrue(all(count >= 1 for count in allocation.values()))
+        self.assertGreater(allocation["module:large"], allocation["module:small"])
+
     def test_expander_creates_grounded_module_and_mcq(self) -> None:
-        module_without_concepts = CurriculumModule(
+        module_without_concepts = PlannedCurriculumModule(
             module_id="module:2",
             title="SI Units",
             module_goal="Use SI units.",
             position=2,
             covered_concept_ids=[],
             source_section_ids=["section:2"],
-            activities=[],
-            recommended_examples=[],
-            recommended_exercises=[],
-            milestone="Explain SI units.",
-            expected_outcome="Use SI base units.",
-            estimated_time_minutes=30,
             link_from_previous="Units prepare SI standards.",
             link_to_next="SI standards support applications.",
         )
@@ -334,20 +371,13 @@ class ModuleExpansionTest(unittest.TestCase):
                     {
                         "heading": "Base SI units",
                         "body": "Use metre, kilogram, and second as standards.",
-                        "source_section_ids": ["section:missing"],
-                        "concept_ids": ["concept:si_units", "concept:missing"],
+                        "source_section_ids": ["section:2"],
+                        "concept_ids": ["concept:si_units"],
                     }
                 ],
                 "guided_activity": "Make a table of base units.",
                 "common_misconceptions": ["Confusing a quantity with its unit."],
-                "checkpoint_mcq": {
-                    "question": "Which option lists SI base units?",
-                    "options": ["A. metre, kilogram, second", "B. metre, litre, hour", "C. gram, second, mile", "D. foot, pound, hour"],
-                    "correct_option": "A",
-                    "explanation": "The source names metre, kilogram, and second as base units.",
-                    "tested_concept_ids": ["concept:si_units", "concept:missing"],
-                    "source_section_ids": ["section:missing"],
-                },
+                "checkpoint_mcqs": mcq_rows(12),
             }
         )
 
@@ -356,17 +386,89 @@ class ModuleExpansionTest(unittest.TestCase):
         self.assertEqual(expanded.module_id, "module:2")
         self.assertEqual(expanded.lesson_sections[0]["source_section_ids"], ["section:2"])
         self.assertEqual(expanded.lesson_sections[0]["concept_ids"], ["concept:si_units"])
-        self.assertEqual(expanded.checkpoint_mcq.correct_option, "A")
-        self.assertEqual(expanded.checkpoint_mcq.source_section_ids, ["section:2"])
-        self.assertEqual(expanded.checkpoint_mcq.tested_concept_ids, ["concept:si_units"])
-        self.assertEqual(expanded.concept_ids, [])
+        self.assertEqual(len(expanded.checkpoint_mcqs), 12)
+        self.assertEqual(expanded.checkpoint_mcqs[0].correct_option, "A")
+        self.assertEqual(expanded.checkpoint_mcqs[0].source_section_ids, ["section:2"])
+        self.assertEqual(expanded.checkpoint_mcqs[0].tested_concept_ids, ["concept:si_units"])
+        self.assertEqual(expanded.checkpoint_mcqs[0].question_id, "module:2:q1")
+        self.assertEqual(expanded.checkpoint_mcqs[0].difficulty, "medium")
+        self.assertEqual(expanded.checkpoint_mcqs[0].diagnostic_purpose, "Checks whether the learner understands SI units as standards.")
+        self.assertEqual(expanded.checkpoint_mcqs[0].misconception_tags, ["treats_units_as_quantities"])
+        self.assertIn("concept:si_units", expanded.concept_ids)
         self.assertIn("Module design packet:", llm.prompt)
-        self.assertIn("checkpoint MCQ draft", llm.prompt)
+        self.assertIn("checkpoint_mcqs", llm.prompt)
+        self.assertIn("diagnostic_purpose", llm.prompt)
         self.assertIn('"source_mode": "summary"', llm.prompt)
         self.assertNotIn("SI units define standard base units.", llm.prompt)
         self.assertNotIn("The metre, kilogram, and second", llm.prompt)
         self.assertLess(llm.prompt.index("Module design packet:"), llm.prompt.index("Critical rules:"))
         self.assertIsNotNone(llm.schema)
+        self.assertIn("checkpoint_mcqs", llm.schema["required"])
+
+    def test_legacy_single_checkpoint_mcq_is_rejected(self) -> None:
+        llm = FakeExpansionLLM(
+            {
+                "title": "SI Units",
+                "module_goal": "Use SI units.",
+                "larger_goal_alignment": "SI units help solve physics problems consistently.",
+                "lesson_sections": [
+                    {
+                        "heading": "Base SI units",
+                        "body": "Use SI units as shared standards.",
+                        "source_section_ids": ["section:2"],
+                        "concept_ids": ["concept:si_units"],
+                    }
+                ],
+                "guided_activity": "Make a table of base units.",
+                "checkpoint_mcq": {
+                    "question": "Which option lists SI base units?",
+                    "options": ["A. metre, kilogram, second", "B. litre, hour", "C. mile, foot", "D. pound, ounce"],
+                    "correct_option": "A",
+                    "explanation": "The summary names standard base units.",
+                    "tested_concept_ids": ["concept:si_units"],
+                    "source_section_ids": ["section:2"],
+                },
+            }
+        )
+
+        with self.assertRaises(ValueError):
+            ModuleExpander(TextbookStore(self.root), llm).expand_module(self.plan, "module:2")
+
+    def test_invalid_mcq_concepts_are_rejected(self) -> None:
+        llm = FakeExpansionLLM(
+            {
+                "title": "SI Units",
+                "module_goal": "Use SI units.",
+                "larger_goal_alignment": "SI units help solve physics problems consistently.",
+                "lesson_sections": [
+                    {
+                        "heading": "Base SI units",
+                        "body": "Use SI units as shared standards.",
+                        "source_section_ids": ["section:2"],
+                        "concept_ids": ["concept:si_units"],
+                    }
+                ],
+                "guided_activity": "Make a table of base units.",
+                "checkpoint_mcqs": [
+                    {
+                        "question_id": "module:2:q1",
+                        "question": "Which statement is correct?",
+                        "options": ["A. SI units are standards", "B. Units are never used", "C. Standards are optional", "D. Quantities are units"],
+                        "correct_option": "A",
+                        "explanation": "The module summary introduces SI standards.",
+                        "tested_concept_ids": ["concept:missing"],
+                        "source_section_ids": ["section:2"],
+                        "difficulty": "medium",
+                        "diagnostic_purpose": "Checks whether the learner understands SI units as standards.",
+                        "misconception_tags": ["treats_units_as_quantities"],
+                    }
+                ]
+                + mcq_rows(3),
+            }
+        )
+
+        with self.assertRaises(ValueError):
+            ModuleExpander(TextbookStore(self.root), llm).expand_module(self.plan, "module:2")
 
 
 if __name__ == "__main__":

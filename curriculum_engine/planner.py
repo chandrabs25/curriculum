@@ -7,8 +7,8 @@ from dataclasses import dataclass, replace
 from datetime import datetime, timezone
 from typing import Any, Protocol
 
-from .learning_path import LearningPathContext, build_learning_path_context
-from .models import CurriculumModule, CurriculumPlan, OnboardingAnswers
+from .learning_path import build_learning_path_context
+from .models import CurriculumPlan, OnboardingAnswers, PlannedCurriculumModule
 from .planning_packet import CurriculumPlanningPacket, build_curriculum_planning_packet
 from .retrieval import CurriculumRetriever, LearnerConceptState, SectionRetrievalResult
 
@@ -40,10 +40,18 @@ CURRICULUM_PLAN_SCHEMA: dict[str, Any] = {
                     "next_step_section_ids": {"type": "array", "items": {"type": "string"}},
                 },
                 "required": [
+                    "module_id",
                     "title",
                     "module_goal",
                     "position",
+                    "depends_on_module_ids",
+                    "link_from_previous",
+                    "link_to_next",
                     "source_section_ids",
+                    "prerequisite_warnings",
+                    "parallel_support_section_ids",
+                    "reinforcement_section_ids",
+                    "next_step_section_ids",
                 ],
             },
         }
@@ -156,7 +164,7 @@ Critical rules:
 - Use only section IDs present in planning_packet.
 - Build required modules only from planning_packet.main_path_section_ids.
 - Do not put optional support/reinforcement/next-step sections into source_section_ids.
-- Use relationships.parallel_support only in parallel_support_section_ids or optional activities.
+- Use relationships.parallel_support only in parallel_support_section_ids.
 - Use relationships.reinforcement only in reinforcement_section_ids or review/practice recommendations.
 - Use relationships.next_steps only in next_step_section_ids as after-completion suggestions.
 - Respect DEPENDS_ON_UNIT hard dependency ordering.
@@ -177,62 +185,42 @@ def modules_from_payload(
     payload: dict[str, Any],
     retrieved: list[SectionRetrievalResult],
     *,
-    learning_path_context: LearningPathContext | None = None,
     planning_packet: CurriculumPlanningPacket | None = None,
     retriever: CurriculumRetriever | None = None,
     max_modules: int,
-) -> list[CurriculumModule]:
+) -> list[PlannedCurriculumModule]:
+    if not planning_packet:
+        raise ValueError("planning_packet is required to parse curriculum modules")
     allowed_sections = {item.section_id for item in retrieved}
-    main_path_sections = set(allowed_sections)
-    parallel_support_sections: set[str] = set()
-    reinforcement_sections: set[str] = set()
-    next_step_sections: set[str] = set()
-    if planning_packet:
-        packet = planning_packet.to_dict()
-        main_path_sections = set(packet.get("main_path_section_ids") or [])
-        relationships = packet.get("relationships") or {}
-        parallel_support_sections = _section_ids_from_rows(relationships.get("parallel_support") or [])
-        reinforcement_sections = _section_ids_from_rows(relationships.get("reinforcement") or [])
-        next_step_sections = _section_ids_from_rows(relationships.get("next_steps") or [])
-        allowed_sections.update(main_path_sections)
-        allowed_sections.update(parallel_support_sections)
-        allowed_sections.update(reinforcement_sections)
-        allowed_sections.update(next_step_sections)
-    elif learning_path_context:
-        context = learning_path_context.to_dict()
-        main_path_sections = _section_ids_from_rows(context.get("main_path_sections") or [])
-        parallel_support_sections = _section_ids_from_rows(context.get("parallel_support_paths") or [])
-        reinforcement_sections = _section_ids_from_rows(context.get("reinforcement_paths") or [])
-        next_step_sections = _section_ids_from_rows(context.get("next_step_paths") or [])
-        allowed_sections.update(main_path_sections)
-        allowed_sections.update(parallel_support_sections)
-        allowed_sections.update(reinforcement_sections)
-        allowed_sections.update(next_step_sections)
-    modules: list[CurriculumModule] = []
+    packet = planning_packet.to_dict()
+    main_path_sections = set(packet.get("main_path_section_ids") or [])
+    relationships = packet.get("relationships") or {}
+    parallel_support_sections = _section_ids_from_rows(relationships.get("parallel_support") or [])
+    reinforcement_sections = _section_ids_from_rows(relationships.get("reinforcement") or [])
+    next_step_sections = _section_ids_from_rows(relationships.get("next_steps") or [])
+    allowed_sections.update(main_path_sections)
+    allowed_sections.update(parallel_support_sections)
+    allowed_sections.update(reinforcement_sections)
+    allowed_sections.update(next_step_sections)
+    modules: list[PlannedCurriculumModule] = []
     for index, item in enumerate(payload.get("modules", [])[:max_modules], 1):
         if not isinstance(item, dict):
-            continue
+            raise ValueError(f"Module row {index} is not an object")
         section_ids = [
             section_id
             for section_id in _str_list(item.get("source_section_ids"))
             if section_id in main_path_sections
         ]
         if not section_ids:
-            continue
-        module_id = str(item.get("module_id") or f"module:{index}")
-        module = CurriculumModule(
+            raise ValueError(f"Module row {index} has no valid main-path source_section_ids")
+        module_id = _required_str(item, "module_id", index)
+        module = PlannedCurriculumModule(
             module_id=module_id,
-            title=str(item.get("title") or f"Module {index}"),
-            module_goal=str(item.get("module_goal") or f"Learn {item.get('title') or f'Module {index}'}"),
-            position=max(1, int(item.get("position") or index)),
+            title=_required_str(item, "title", index),
+            module_goal=_required_str(item, "module_goal", index),
+            position=max(1, int(item["position"])),
             covered_concept_ids=_covered_concepts_for_sections(retriever, section_ids),
             source_section_ids=section_ids,
-            activities=["Design-stage activity pending."],
-            recommended_examples=[],
-            recommended_exercises=[],
-            milestone="Complete the module design checkpoint.",
-            expected_outcome=str(item.get("module_goal") or "Understand the ordered module section."),
-            estimated_time_minutes=30,
             prerequisite_warnings=_str_list(item.get("prerequisite_warnings")),
             depends_on_module_ids=_str_list(item.get("depends_on_module_ids")),
             link_from_previous=str(item.get("link_from_previous") or ""),
@@ -252,7 +240,6 @@ def modules_from_payload(
                 for section_id in _str_list(item.get("next_step_section_ids"))
                 if section_id in next_step_sections
             ],
-            personalization_note=str(item.get("personalization_note") or ""),
         )
         modules.append(module)
     if modules:
@@ -266,37 +253,10 @@ def modules_from_payload(
             )
             for module in sorted(modules, key=lambda module: module.position)
         ]
-    return fallback_modules(retrieved, max_modules=max_modules)
+    raise ValueError("LLM returned no valid curriculum modules")
 
 
-def fallback_modules(retrieved: list[SectionRetrievalResult], *, max_modules: int) -> list[CurriculumModule]:
-    modules = []
-    for index, item in enumerate(retrieved[:max_modules], 1):
-        modules.append(
-            CurriculumModule(
-                module_id=f"module:{index}",
-                title=item.title or f"Module {index}",
-                module_goal=item.summary or f"Understand {item.title or item.section_id}.",
-                position=index,
-                covered_concept_ids=item.matched_concept_ids,
-                source_section_ids=[item.section_id],
-                activities=["Read the section, write a short summary, and solve a self-check question."],
-                recommended_examples=[],
-                recommended_exercises=[],
-                milestone=f"Complete {item.title or item.section_id}.",
-                expected_outcome=item.summary or "Understand the selected section.",
-                estimated_time_minutes=30,
-                prerequisite_warnings=[
-                    f"Review prerequisite section {section_id} first."
-                    for section_id in item.prerequisite_section_ids
-                ],
-                personalization_note=", ".join(item.reasons),
-            )
-        )
-    return modules
-
-
-def stable_plan_id(request: PlannerRequest, modules: list[CurriculumModule]) -> str:
+def stable_plan_id(request: PlannerRequest, modules: list[PlannedCurriculumModule]) -> str:
     raw = json.dumps(
         {
             "learner_id": request.learner_id,
@@ -319,6 +279,13 @@ def _str_list(value: Any) -> list[str]:
     if not isinstance(value, list):
         return []
     return [str(item) for item in value if str(item).strip()]
+
+
+def _required_str(item: dict[str, Any], key: str, index: int) -> str:
+    value = str(item.get(key) or "").strip()
+    if not value:
+        raise ValueError(f"Module row {index} is missing required field {key}")
+    return value
 
 
 def _section_ids_from_rows(rows: list[dict[str, Any]]) -> set[str]:

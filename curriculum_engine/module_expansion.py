@@ -46,24 +46,35 @@ MODULE_EXPANSION_SCHEMA: dict[str, Any] = {
         },
         "guided_activity": {"type": "string"},
         "common_misconceptions": {"type": "array", "items": {"type": "string"}},
-        "checkpoint_mcq": {
-            "type": "object",
-            "properties": {
-                "question": {"type": "string"},
-                "options": {"type": "array", "items": {"type": "string"}},
-                "correct_option": {"type": "string"},
-                "explanation": {"type": "string"},
-                "tested_concept_ids": {"type": "array", "items": {"type": "string"}},
-                "source_section_ids": {"type": "array", "items": {"type": "string"}},
+        "checkpoint_mcqs": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "question_id": {"type": "string"},
+                    "question": {"type": "string"},
+                    "options": {"type": "array", "items": {"type": "string"}},
+                    "correct_option": {"type": "string"},
+                    "explanation": {"type": "string"},
+                    "tested_concept_ids": {"type": "array", "items": {"type": "string"}},
+                    "source_section_ids": {"type": "array", "items": {"type": "string"}},
+                    "difficulty": {"type": "string"},
+                    "diagnostic_purpose": {"type": "string"},
+                    "misconception_tags": {"type": "array", "items": {"type": "string"}},
+                },
+                "required": [
+                    "question_id",
+                    "question",
+                    "options",
+                    "correct_option",
+                    "explanation",
+                    "tested_concept_ids",
+                    "source_section_ids",
+                    "difficulty",
+                    "diagnostic_purpose",
+                    "misconception_tags",
+                ],
             },
-            "required": [
-                "question",
-                "options",
-                "correct_option",
-                "explanation",
-                "tested_concept_ids",
-                "source_section_ids",
-            ],
         },
     },
     "required": [
@@ -72,7 +83,7 @@ MODULE_EXPANSION_SCHEMA: dict[str, Any] = {
         "larger_goal_alignment",
         "lesson_sections",
         "guided_activity",
-        "checkpoint_mcq",
+        "checkpoint_mcqs",
     ],
 }
 
@@ -106,6 +117,7 @@ class ModuleExpander:
             plan,
             module,
             learner_state=learner_state,
+            mcq_target_count=allocate_module_mcq_targets(plan).get(module.module_id),
         )
         prompt = build_module_expansion_prompt(packet)
         payload = self.llm_client.generate_json(prompt, MODULE_EXPANSION_SCHEMA)
@@ -118,6 +130,7 @@ def build_module_expansion_packet(
     module: PlannedCurriculumModule,
     *,
     learner_state: list[LearnerConceptState] | None = None,
+    mcq_target_count: int | None = None,
 ) -> ModuleExpansionPacket:
     graph = _as_graph(textbook_store)
     previous_module = _neighbor_module(plan, module.position - 1)
@@ -133,6 +146,7 @@ def build_module_expansion_packet(
         "relationship_reasoning": _relationship_reasoning_for_module(planning_packet, module),
         "target_concepts": _target_concept_rows(graph, module, planning_packet),
         "source_sections": [_summary_section_row(graph, section_id) for section_id in module.source_section_ids],
+        "mcq_target_count": mcq_target_count or allocate_module_mcq_targets(plan).get(module.module_id, 1),
     }
     packet["budget"] = {"estimated_chars": len(json.dumps(packet, ensure_ascii=False))}
     return ModuleExpansionPacket(packet)
@@ -163,14 +177,20 @@ def build_module_expansion_prompt(packet: ModuleExpansionPacket) -> str:
         ],
         "guided_activity": "string",
         "common_misconceptions": ["string"],
-        "checkpoint_mcq": {
-            "question": "string",
-            "options": ["A. string", "B. string", "C. string", "D. string"],
-            "correct_option": "A",
-            "explanation": "string",
-            "tested_concept_ids": ["string"],
-            "source_section_ids": ["string"],
-        },
+        "checkpoint_mcqs": [
+            {
+                "question_id": "string",
+                "question": "string",
+                "options": ["A. string", "B. string", "C. string", "D. string"],
+                "correct_option": "A",
+                "explanation": "string",
+                "tested_concept_ids": ["string"],
+                "source_section_ids": ["string"],
+                "difficulty": "easy|medium|hard",
+                "diagnostic_purpose": "string",
+                "misconception_tags": ["string"],
+            }
+        ],
     }
     return f"""You are designing one planned curriculum module into learner-facing structure.
 
@@ -188,8 +208,12 @@ Critical rules:
 - Ground explanations and the checkpoint MCQ draft in source summaries, target concepts, and relationship reasoning.
 - Explain how this module serves onboarding.topic and onboarding.learning_goal.
 - Explain how this module connects from the previous module and prepares the next module when those modules exist.
-- Create exactly one checkpoint_mcq draft with four options.
-- The MCQ is a lightweight module checkpoint draft, not a final source-verified assessment item.
+- Create exactly the module design packet's mcq_target_count checkpoint_mcqs, each with four options.
+- Spread checkpoint_mcqs across the module's main source sections and target concepts where possible.
+- Do not test optional, parallel-support, reinforcement, or next-step sections unless they are also in source_sections.
+- Each checkpoint MCQ must include source_section_ids, tested_concept_ids, difficulty, diagnostic_purpose, and misconception_tags.
+- Write diagnostic_purpose so a future evaluator can turn correct answers into competency evidence and wrong answers into possible misconception or partial-understanding insights.
+- The MCQs are lightweight module checkpoint drafts, not final source-verified assessment items.
 - Do not invent source sections, concepts, textbook facts, or final assessment claims.
 
 Required JSON shape:
@@ -210,48 +234,143 @@ def expanded_module_from_payload(
         if row.get("concept_id")
     }
     lesson_sections = []
-    for row in payload.get("lesson_sections", []):
+    lesson_rows = payload.get("lesson_sections")
+    if not isinstance(lesson_rows, list) or not lesson_rows:
+        raise ValueError("Module design payload must include non-empty lesson_sections")
+    for index, row in enumerate(lesson_rows, start=1):
         if not isinstance(row, dict):
-            continue
+            raise ValueError(f"lesson_sections[{index}] must be an object")
         source_section_ids = [section_id for section_id in _str_list(row.get("source_section_ids")) if section_id in allowed_sections]
         if not source_section_ids:
-            source_section_ids = list(module.source_section_ids)
+            raise ValueError(f"lesson_sections[{index}] has no valid source_section_ids")
+        concept_ids = [concept_id for concept_id in _str_list(row.get("concept_ids")) if concept_id in allowed_concepts]
+        if row.get("concept_ids") and not concept_ids:
+            raise ValueError(f"lesson_sections[{index}] has no valid concept_ids")
         lesson_sections.append(
             {
-                "heading": str(row.get("heading") or "Lesson"),
-                "body": str(row.get("body") or ""),
+                "heading": _required_str(row, "heading", f"lesson_sections[{index}]"),
+                "body": _required_str(row, "body", f"lesson_sections[{index}]"),
                 "source_section_ids": source_section_ids,
-                "concept_ids": [concept_id for concept_id in _str_list(row.get("concept_ids")) if concept_id in allowed_concepts],
+                "concept_ids": concept_ids,
             }
         )
-    mcq_payload = payload.get("checkpoint_mcq") if isinstance(payload.get("checkpoint_mcq"), dict) else {}
-    options = _str_list(mcq_payload.get("options"))[:4]
-    mcq = ModuleCheckpointMCQ(
-        question=str(mcq_payload.get("question") or "Which statement best matches the module content?"),
-        options=options,
-        correct_option=str(mcq_payload.get("correct_option") or (options[0][:1] if options else "A")),
-        explanation=str(mcq_payload.get("explanation") or ""),
-        tested_concept_ids=[concept_id for concept_id in _str_list(mcq_payload.get("tested_concept_ids")) if concept_id in allowed_concepts],
-        source_section_ids=[
-            section_id for section_id in _str_list(mcq_payload.get("source_section_ids")) if section_id in allowed_sections
-        ]
-        or list(module.source_section_ids),
-    )
+    checkpoint_mcqs = _checkpoint_mcqs_from_payload(payload, module, packet_data, allowed_sections, allowed_concepts)
     return ExpandedCurriculumModule(
         module_id=module.module_id,
         title=str(payload.get("title") or module.title),
         module_goal=str(payload.get("module_goal") or module.module_goal),
         source_section_ids=module.source_section_ids,
-        concept_ids=module.covered_concept_ids,
+        concept_ids=_dedupe([str(row.get("concept_id")) for row in packet_data.get("target_concepts", []) if row.get("concept_id")]),
         larger_goal_alignment=str(payload.get("larger_goal_alignment") or ""),
         transition_from_previous=str(payload.get("transition_from_previous") or module.link_from_previous),
         transition_to_next=str(payload.get("transition_to_next") or module.link_to_next),
         lesson_sections=lesson_sections,
         guided_activity=str(payload.get("guided_activity") or ""),
         common_misconceptions=_str_list(payload.get("common_misconceptions")),
-        checkpoint_mcq=mcq,
+        checkpoint_mcqs=checkpoint_mcqs,
         metadata={"module_expansion_packet": packet_data, "source_mode": packet_data.get("source_mode")},
     )
+
+
+def allocate_module_mcq_targets(
+    plan: CurriculumPlan,
+    *,
+    total_target: int = 12,
+    min_total: int = 10,
+    max_total: int = 12,
+) -> dict[str, int]:
+    """Allocate plan-level checkpoint MCQs across required modules.
+
+    The allocation is deterministic, gives every module at least one MCQ, and
+    gives larger modules more questions based on their main source-section count.
+    """
+    modules = list(plan.modules)
+    if not modules:
+        return {}
+    total = max(min_total, min(max_total, total_target))
+    total = max(total, len(modules))
+    allocation = {module.module_id: 1 for module in modules}
+    remaining = total - len(modules)
+    if remaining <= 0:
+        return allocation
+
+    weights = {module.module_id: max(1, len(module.source_section_ids)) for module in modules}
+    weight_total = sum(weights.values())
+    exact_shares = {
+        module.module_id: (remaining * weights[module.module_id]) / weight_total for module in modules
+    }
+    for module in modules:
+        whole = int(exact_shares[module.module_id])
+        allocation[module.module_id] += whole
+        remaining -= whole
+
+    ranked_remainders = sorted(
+        modules,
+        key=lambda module: (
+            exact_shares[module.module_id] - int(exact_shares[module.module_id]),
+            weights[module.module_id],
+            -module.position,
+        ),
+        reverse=True,
+    )
+    for module in ranked_remainders[:remaining]:
+        allocation[module.module_id] += 1
+    return allocation
+
+
+def _checkpoint_mcqs_from_payload(
+    payload: dict[str, Any],
+    module: PlannedCurriculumModule,
+    packet_data: dict[str, Any],
+    allowed_sections: set[str],
+    allowed_concepts: set[str],
+) -> list[ModuleCheckpointMCQ]:
+    rows = payload.get("checkpoint_mcqs")
+    if not isinstance(rows, list):
+        raise ValueError("Module design payload must include checkpoint_mcqs")
+    try:
+        target_count = int(packet_data["mcq_target_count"])
+    except (KeyError, TypeError, ValueError):
+        raise ValueError("Module design packet has invalid mcq_target_count") from None
+    if len(rows) != target_count:
+        raise ValueError(f"Expected {target_count} checkpoint_mcqs, got {len(rows)}")
+    target_concept_order = [
+        str(row.get("concept_id"))
+        for row in packet_data.get("target_concepts", [])
+        if row.get("concept_id") and str(row.get("concept_id")) in allowed_concepts
+    ]
+    checkpoint_mcqs = []
+    for index, mcq_payload in enumerate(rows[:target_count], start=1):
+        if not isinstance(mcq_payload, dict):
+            raise ValueError(f"checkpoint_mcqs[{index}] must be an object")
+        options = _str_list(mcq_payload.get("options"))[:4]
+        if len(options) != 4:
+            raise ValueError(f"checkpoint_mcqs[{index}] must have exactly four options")
+        source_section_ids = [
+            section_id for section_id in _str_list(mcq_payload.get("source_section_ids")) if section_id in allowed_sections
+        ]
+        if not source_section_ids:
+            raise ValueError(f"checkpoint_mcqs[{index}] has no valid source_section_ids")
+        tested_concept_ids = [
+            concept_id for concept_id in _str_list(mcq_payload.get("tested_concept_ids")) if concept_id in allowed_concepts
+        ]
+        if target_concept_order and not tested_concept_ids:
+            raise ValueError(f"checkpoint_mcqs[{index}] has no valid tested_concept_ids")
+        checkpoint_mcqs.append(
+            ModuleCheckpointMCQ(
+                question_id=_required_str(mcq_payload, "question_id", f"checkpoint_mcqs[{index}]"),
+                question=_required_str(mcq_payload, "question", f"checkpoint_mcqs[{index}]"),
+                options=options,
+                correct_option=_required_str(mcq_payload, "correct_option", f"checkpoint_mcqs[{index}]"),
+                explanation=_required_str(mcq_payload, "explanation", f"checkpoint_mcqs[{index}]"),
+                tested_concept_ids=tested_concept_ids,
+                source_section_ids=source_section_ids,
+                difficulty=_required_str(mcq_payload, "difficulty", f"checkpoint_mcqs[{index}]"),
+                diagnostic_purpose=_required_str(mcq_payload, "diagnostic_purpose", f"checkpoint_mcqs[{index}]"),
+                misconception_tags=_str_list(mcq_payload.get("misconception_tags")),
+            )
+        )
+    return checkpoint_mcqs
 
 
 def _as_graph(textbook_store: TextbookStore | CurriculumGraph) -> CurriculumGraph:
@@ -286,7 +405,6 @@ def _module_row(module: PlannedCurriculumModule) -> dict[str, Any]:
         "link_from_previous": module.link_from_previous,
         "link_to_next": module.link_to_next,
         "prerequisite_warnings": module.prerequisite_warnings,
-        "personalization_note": module.personalization_note,
     }
 
 
@@ -464,6 +582,13 @@ def _str_list(value: Any) -> list[str]:
     if not isinstance(value, list):
         return []
     return [str(item) for item in value if str(item).strip()]
+
+
+def _required_str(item: dict[str, Any], key: str, location: str) -> str:
+    value = str(item.get(key) or "").strip()
+    if not value:
+        raise ValueError(f"{location} is missing required field {key}")
+    return value
 
 
 def _dedupe(values: list[str]) -> list[str]:

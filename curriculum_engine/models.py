@@ -46,12 +46,6 @@ class PlannedCurriculumModule:
     position: int
     covered_concept_ids: list[str]
     source_section_ids: list[str]
-    activities: list[str]
-    recommended_examples: list[str]
-    recommended_exercises: list[str]
-    milestone: str
-    expected_outcome: str
-    estimated_time_minutes: int
     prerequisite_warnings: list[str] = field(default_factory=list)
     depends_on_module_ids: list[str] = field(default_factory=list)
     link_from_previous: str = ""
@@ -59,22 +53,20 @@ class PlannedCurriculumModule:
     parallel_support_section_ids: list[str] = field(default_factory=list)
     reinforcement_section_ids: list[str] = field(default_factory=list)
     next_step_section_ids: list[str] = field(default_factory=list)
-    personalization_note: str = ""
-
-
-@dataclass(frozen=True)
-class CurriculumModule(PlannedCurriculumModule):
-    """Backward-compatible name for planned modules in a curriculum outline."""
 
 
 @dataclass(frozen=True)
 class ModuleCheckpointMCQ:
+    question_id: str
     question: str
     options: list[str]
     correct_option: str
     explanation: str
     tested_concept_ids: list[str]
     source_section_ids: list[str]
+    difficulty: str
+    diagnostic_purpose: str
+    misconception_tags: list[str]
 
 
 @dataclass(frozen=True)
@@ -90,7 +82,7 @@ class ExpandedCurriculumModule:
     lesson_sections: list[dict[str, Any]]
     guided_activity: str
     common_misconceptions: list[str]
-    checkpoint_mcq: ModuleCheckpointMCQ
+    checkpoint_mcqs: list[ModuleCheckpointMCQ]
     metadata: dict[str, Any] = field(default_factory=dict)
 
 
@@ -99,7 +91,7 @@ class CurriculumPlan:
     curriculum_plan_id: str
     learner_id: str
     onboarding: OnboardingAnswers
-    modules: list[CurriculumModule]
+    modules: list[PlannedCurriculumModule]
     created_at: datetime
     metadata: dict[str, Any] = field(default_factory=dict)
 

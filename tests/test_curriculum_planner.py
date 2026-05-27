@@ -239,11 +239,6 @@ class CurriculumPlannerTest(unittest.TestCase):
         self.assertEqual(plan.modules[0].link_to_next, "SI units support later applications.")
         self.assertEqual(plan.modules[0].source_section_ids, ["section:2"])
         self.assertEqual(plan.modules[0].covered_concept_ids, ["concept:si_units"])
-        self.assertEqual(plan.modules[0].activities, ["Design-stage activity pending."])
-        self.assertEqual(plan.modules[0].recommended_examples, [])
-        self.assertEqual(plan.modules[0].milestone, "Complete the module design checkpoint.")
-        self.assertEqual(plan.modules[0].expected_outcome, "Build a reliable base for SI unit use.")
-        self.assertEqual(plan.modules[0].estimated_time_minutes, 30)
         self.assertEqual(plan.modules[0].parallel_support_section_ids, ["section:3"])
         self.assertEqual(plan.modules[0].reinforcement_section_ids, ["section:4"])
         self.assertEqual(plan.modules[0].next_step_section_ids, ["section:5"])
@@ -273,7 +268,7 @@ class CurriculumPlannerTest(unittest.TestCase):
         self.assertIn("learning_path_context", plan.metadata)
         self.assertIn("planning_packet", plan.metadata)
 
-    def test_planner_falls_back_when_llm_returns_no_valid_modules(self) -> None:
+    def test_planner_rejects_no_valid_modules(self) -> None:
         llm = FakeLLM({"modules": [{"title": "Invalid", "source_section_ids": ["unknown"]}]})
         request = PlannerRequest(
             learner_id="learner:1",
@@ -282,11 +277,8 @@ class CurriculumPlannerTest(unittest.TestCase):
             max_modules=2,
         )
 
-        plan = self.planner(llm).create_plan(request)
-
-        self.assertTrue(plan.modules)
-        self.assertEqual(plan.modules[0].source_section_ids, ["section:2"])
-        self.assertIn("retrieved_section_ids", plan.metadata)
+        with self.assertRaises(ValueError):
+            self.planner(llm).create_plan(request)
 
 
 if __name__ == "__main__":
