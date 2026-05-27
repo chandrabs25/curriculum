@@ -122,40 +122,125 @@ To make the graph artifacts usable by the application, I implemented the curricu
 ---
 
 ## May 27th
+
 ---
 
-What problem am I solving?
+# What problem am I solving?
 
 1. Books are one-dimensional; we can either turn the page forward or backward. If you want to refer to other books/chapters on the topic that you are currently studying, there is no easy way for you to instantly move to the page with the required reference.
 
-*What's my solution?
+# What's my solution?
 
-**We need to move from 1-dimensional movement of turning pages back or forth, by adding 2 more dimensions of movement:
+We need to move from 1-dimensional movement of turning pages back or forth, by adding 2 more dimensions of movement:
 
-i. Dimension 2: According to the learning goal, we need to make it possible to move back to the pages in other sections/chapters/books where the prerequisites for current topics are being taught, and move forward to the pages where the current topic is used to teach another topic.
+## i. Dimension 2
 
-ii. Dimension 3: We need one more dimension where we can move to the pages in other sections/chapters/books, with the same prerequisite concepts, so this helps us understand where else we can use the intuition we built here on this page.
+According to the learning goal, we need to make it possible to move back to the pages in other sections/chapters/books where the prerequisites for current topics are being taught, and move forward to the pages where the current topic is used to teach another topic.
 
-*To create these 2 more dimensions of movement, I implemented the following techniques:
+## ii. Dimension 3
 
-1. I ran every section of the 6 science textbooks of classes 11 and 12 through an LLM extraction loop, where the LLM gives a summary for each section, generates the concepts one requires to understand that section, with the reason behind it, and the concepts the section teaches with confidence scores.
+We need one more dimension where we can move to the pages in other sections/chapters/books with the same prerequisite concepts, so this helps us understand where else we can use the intuition we built here on this page.
 
-2. If any concept is taught by one section and is a prerequisite for another section, we can form 2 relationships:
+# To create these 2 more dimensions of movement, I implemented the following techniques:
 
-   i. Section X --> [:Depends_on_unit] --> Section Y: When a section X has a prerequisite concept that is taught by the section Y of any book.
-   ii. Section X --> [:TRANSFER_SUPPORTS_UNIT]--> Section Y: The inverse of the above relationship
+## 1. LLM Extraction Pipeline
 
-3. If 2 sections have the same prerequisite concepts, then we can create a bi-directional relationship between them called "RELATED_BY_CONCEPT"
+I ran every section of the 6 science textbooks of classes 11 and 12 through an LLM extraction loop, where the LLM:
 
-**Retrieval using vector embeddings and these graph relationships:
+* Gives a summary for each section
+* Generates the concepts one requires to understand that section, with the reason behind it
+* Generates the concepts the section teaches, with confidence scores
 
-1. We use semantic matching on the section embeddings and concepts, score them, and select the top matched sections and concepts
-2. Now, we inspect the various relationships of these matched sections and collect them all.
-3. Now, we collect the summary and meta of each section matched and how they are related to each other. Since we have generated reasoning for every prerequisite concept for every section, we can use that reasoning to make the relationships meta-rich between the sections. We don't need to have the detailed full text of each section; this meta is very rich enough for LLM to infer everything.
-4. We send this entire meta of all sections, relationships between them, with reasoning to an LLM and ask it to arrange the sections in a learning sequence that would make sense according to our learning goal and omit sections that aren't relevant to our learning goal.
-5. For each section ID from the output response of the first LLM call, we fetch richer metadata about this section from the database, concatenate it with the larger learning goal and how this section plays a part in reaching that goal, and ask an LLM to produce small learning units with suggested activities and checkpoint MCQ questions.
-6. Now we have created a dynamic curriculum generator based on our base curriculum and adapted it to our needs
+## 2. Relationship Graph Construction
 
-Currently, I am working on creating the frontend and wiring up a few missing things. Currently, I am not yet using a database; I am using a flat file and loading the indexes in the RAM for fast retrieval, but I have made sure things are modular enough that I can wire things with an actual database like PostgreSQL. After doing that, I will create an auth and user-based access and record the insights produced from the tests against the section IDs. We can use these insights to spot the section IDs where there are many misconceptions, and address that by changing the metadata of the section so that LLM can address that particular problem 
-   
+If any concept is taught by one section and is a prerequisite for another section, we can form 2 relationships:
+
+### i. Dependency Relationship
+
+`Section X --> [:Depends_on_unit] --> Section Y`
+
+When a section X has a prerequisite concept that is taught by section Y of any book.
+
+### ii. Transfer Relationship
+
+`Section X --> [:TRANSFER_SUPPORTS_UNIT] --> Section Y`
+
+The inverse of the above relationship.
+
+## 3. Concept-Based Similarity Relationships
+
+If 2 sections have the same prerequisite concepts, then we can create a bi-directional relationship between them called:
+
+`RELATED_BY_CONCEPT`
+
+---
+
+# Retrieval using vector embeddings and graph relationships
+
+## 1. Semantic Matching
+
+We use semantic matching on the section embeddings and concepts, score them, and select the top matched sections and concepts.
+
+## 2. Relationship Expansion
+
+Now, we inspect the various relationships of these matched sections and collect them all.
+
+## 3. Metadata Aggregation
+
+Now, we collect the summary and metadata of each matched section and how they are related to each other.
+
+Since we have generated reasoning for every prerequisite concept for every section, we can use that reasoning to make the relationships metadata-rich between the sections.
+
+We don't need to have the detailed full text of each section; this metadata is rich enough for the LLM to infer everything.
+
+## 4. Learning Sequence Generation
+
+We send this entire metadata of all sections, relationships between them, along with reasoning, to an LLM and ask it to:
+
+* Arrange the sections in a learning sequence that would make sense according to our learning goal
+* Omit sections that aren't relevant to our learning goal
+
+## 5. Dynamic Learning Unit Generation
+
+For each section ID from the output response of the first LLM call:
+
+* We fetch richer metadata about this section from the database
+* Concatenate it with:
+
+  * The larger learning goal
+  * How this section contributes toward reaching that goal
+
+We then ask an LLM to produce:
+
+* Small learning units
+* Suggested activities
+* Checkpoint MCQ questions
+
+## 6. Dynamic Curriculum Generation
+
+Now we have created a dynamic curriculum generator based on our base curriculum and adapted it to our needs.
+
+---
+
+# Current Status
+
+Currently, I am working on:
+
+* Creating the frontend
+* Wiring up a few missing components
+
+At the moment, I am not yet using a database. Instead:
+
+* I am using a flat file
+* Loading the indexes into RAM for fast retrieval
+
+However, I have made sure things are modular enough that I can later integrate an actual database like PostgreSQL.
+
+After doing that, I plan to:
+
+1. Create authentication and user-based access
+2. Record insights produced from tests against section IDs
+3. Use these insights to identify section IDs where many misconceptions occur
+4. Address those misconceptions by modifying the metadata of the section so the LLM can better address those learning problems
+
 
