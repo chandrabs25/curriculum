@@ -36,6 +36,10 @@ META_SECTION_TITLES = {
     "bibliography",
 }
 MIN_SUMMARY_ONLY_SCORE = 6.0
+MIN_SOFT_LINK_SCORE = 1.5
+MAX_SEED_SECTIONS = 6
+MIN_SEED_RELATIVE_SCORE = 0.55
+VECTOR_PRIMARY_RELATIVE_CUTOFF = 0.72
 QUERY_STOPWORDS = {
     "i",
     "me",
@@ -110,60 +114,43 @@ class CurriculumRetriever:
             return []
 
         concept_matches = self.graph.concept_ids_for_query(query)
+        concept_anchor_terms = self._concept_anchor_terms(concept_matches)
         state_by_concept = {state.concept_id: state for state in learner_state or []}
         scored: dict[str, dict[str, Any]] = {}
 
-        self._add_vector_matches(
-            scored,
-            query,
-            concept_matches,
-            state_by_concept,
-            subject=subject,
-            grade=grade,
-            chapter_id=chapter_id,
-            limit=max(limit * 4, 20),
-        )
-
-        if query_terms:
-            for section_id, summary in self.graph.section_summaries_by_id.items():
-                section = self.graph.sections_by_id.get(section_id, {})
-                if not self._passes_filters(summary, section, subject=subject, grade=grade, chapter_id=chapter_id):
-                    continue
-                if not self._is_top_level_section(section_id):
-                    continue
-                matched_concepts = [
-                    cid
-                    for cid in self.graph.concepts_taught_by_section(section_id)
-                    if cid in concept_matches
-                ]
-                score, reasons = self._score_summary(summary, query_terms)
-                if matched_concepts:
-                    score += 10.0 * len(matched_concepts)
-                    reasons.append("concept_match")
-                if score <= 0:
-                    continue
-                score += self._learner_adjustment(section_id, matched_concepts, state_by_concept, reasons)
-                self._add_or_update(scored, section_id, summary, section, score, matched_concepts, reasons)
+        if self.vector_index:
+            self._add_vector_matches(
+                scored,
+                query,
+                concept_matches,
+                state_by_concept,
+                subject=subject,
+                grade=grade,
+                chapter_id=chapter_id,
+                limit=max(limit * 6, 30),
+            )
+            self._boost_existing_direct_evidence(scored, query_terms, concept_matches, state_by_concept)
+            self._prune_weak_vector_matches(scored)
+        else:
+            self._add_lexical_and_concept_matches(
+                scored,
+                query_terms,
+                concept_matches,
+                concept_anchor_terms,
+                state_by_concept,
+                subject=subject,
+                grade=grade,
+                chapter_id=chapter_id,
+            )
 
         self._prune_weak_direct_matches(scored)
-
-        for section_id in self.graph.teaching_sections_for_concepts(concept_matches):
-            summary = self.graph.section_summaries_by_id.get(section_id)
-            if not summary:
-                continue
-            section = self.graph.sections_by_id.get(section_id, {})
-            if not self._passes_filters(summary, section, subject=subject, grade=grade, chapter_id=chapter_id):
-                continue
-            matched_concepts = [cid for cid in self.graph.concepts_taught_by_section(section_id) if cid in concept_matches]
-            score = 10.0 * max(1, len(matched_concepts))
-            reasons = ["concept_match"]
-            score += self._learner_adjustment(section_id, matched_concepts, state_by_concept, reasons)
-            self._add_or_update(scored, section_id, summary, section, score, matched_concepts, reasons)
+        seed_ids = self._select_seed_section_ids(scored, limit=limit)
+        scored = {section_id: scored[section_id] for section_id in seed_ids}
 
         if include_prerequisites:
-            self._add_prerequisites(scored, state_by_concept, subject=subject, grade=grade, chapter_id=chapter_id)
+            self._add_prerequisites(seed_ids, scored, state_by_concept, subject=subject, grade=grade, chapter_id=chapter_id)
         if include_soft_links:
-            self._add_soft_links(scored, state_by_concept, subject=subject, grade=grade, chapter_id=chapter_id)
+            self._add_soft_links(seed_ids, scored, state_by_concept, subject=subject, grade=grade, chapter_id=chapter_id)
 
         results = [self._result_from_score(row) for row in scored.values()]
         results.sort(key=lambda row: (-row.score, row.subject or "", row.grade or 0, row.chapter_id, row.section_id))
@@ -224,10 +211,94 @@ class CurriculumRetriever:
             reasons = ["vector_match"]
             if matched_concepts:
                 reasons.append("concept_match")
-            score = 20.0 * max(0.0, match.score)
+            score = 30.0 * max(0.0, match.score)
             score += 6.0 * len(matched_concepts)
             score += self._learner_adjustment(match.section_id, matched_concepts, state_by_concept, reasons)
             self._add_or_update(scored, match.section_id, summary, section, score, matched_concepts, reasons)
+
+    def _add_lexical_and_concept_matches(
+        self,
+        scored: dict[str, dict[str, Any]],
+        query_terms: list[str],
+        concept_matches: list[str],
+        concept_anchor_terms: list[str],
+        state_by_concept: dict[str, LearnerConceptState],
+        *,
+        subject: str | None,
+        grade: int | None,
+        chapter_id: str | None,
+    ) -> None:
+        if query_terms:
+            for section_id, summary in self.graph.section_summaries_by_id.items():
+                section = self.graph.sections_by_id.get(section_id, {})
+                if not self._passes_filters(summary, section, subject=subject, grade=grade, chapter_id=chapter_id):
+                    continue
+                if not self._is_top_level_section(section_id):
+                    continue
+                matched_concepts = [
+                    cid
+                    for cid in self.graph.concepts_taught_by_section(section_id)
+                    if cid in concept_matches
+                ]
+                score, reasons = self._score_summary(summary, query_terms)
+                if matched_concepts:
+                    score += 10.0 * len(matched_concepts)
+                    reasons.append("concept_match")
+                elif concept_anchor_terms and not self._summary_contains_terms(summary, concept_anchor_terms):
+                    continue
+                if score <= 0:
+                    continue
+                score += self._learner_adjustment(section_id, matched_concepts, state_by_concept, reasons)
+                self._add_or_update(scored, section_id, summary, section, score, matched_concepts, reasons)
+
+        for section_id in self.graph.teaching_sections_for_concepts(concept_matches):
+            summary = self.graph.section_summaries_by_id.get(section_id)
+            if not summary:
+                continue
+            section = self.graph.sections_by_id.get(section_id, {})
+            if not self._passes_filters(summary, section, subject=subject, grade=grade, chapter_id=chapter_id):
+                continue
+            matched_concepts = [cid for cid in self.graph.concepts_taught_by_section(section_id) if cid in concept_matches]
+            if concept_anchor_terms and not matched_concepts and not self._summary_contains_terms(summary, concept_anchor_terms):
+                continue
+            score = 10.0 * max(1, len(matched_concepts))
+            reasons = ["concept_match"]
+            score += self._learner_adjustment(section_id, matched_concepts, state_by_concept, reasons)
+            self._add_or_update(scored, section_id, summary, section, score, matched_concepts, reasons)
+
+    def _boost_existing_direct_evidence(
+        self,
+        scored: dict[str, dict[str, Any]],
+        query_terms: list[str],
+        concept_matches: list[str],
+        state_by_concept: dict[str, LearnerConceptState],
+    ) -> None:
+        if not scored:
+            return
+        for section_id, row in list(scored.items()):
+            summary = self.graph.section_summaries_by_id.get(section_id)
+            if not summary:
+                continue
+            matched_concepts = [
+                cid
+                for cid in self.graph.concepts_taught_by_section(section_id)
+                if cid in concept_matches
+            ]
+            boost = 0.0
+            reasons: list[str] = []
+            if query_terms:
+                lexical_score, lexical_reasons = self._score_summary(summary, query_terms)
+                boost += lexical_score
+                reasons.extend(lexical_reasons)
+            if matched_concepts:
+                boost += 6.0 * len(matched_concepts)
+                reasons.append("concept_match")
+            boost += self._learner_adjustment(section_id, matched_concepts, state_by_concept, reasons)
+            if boost <= 0 and not matched_concepts and not reasons:
+                continue
+            row["score"] = round(float(row.get("score") or 0.0) + boost, 4)
+            row["matched_concept_ids"].update(matched_concepts)
+            row["reasons"].update(reasons)
 
     def _passes_filters(
         self,
@@ -274,6 +345,34 @@ class CurriculumRetriever:
             reasons.append("summary_match")
         return score, reasons
 
+    def _concept_anchor_terms(self, concept_ids: list[str]) -> list[str]:
+        terms: list[str] = []
+        for concept_id in concept_ids:
+            concept = self.graph.concepts_by_id.get(concept_id) or {}
+            labels = [
+                concept.get("canonical_label"),
+                concept.get("normalized_label"),
+                concept_id.removeprefix("concept:").replace("_", " "),
+            ]
+            for alias in concept.get("aliases") or []:
+                labels.append(alias)
+            for label in labels:
+                for term in _terms(str(label or "")):
+                    if term not in terms:
+                        terms.append(term)
+        return terms
+
+    def _summary_contains_terms(self, summary: dict[str, Any], terms: list[str]) -> bool:
+        text = " ".join(
+            [
+                str(summary.get("title") or ""),
+                " ".join(str(term) for term in summary.get("key_terms") or []),
+                str(summary.get("summary") or ""),
+            ]
+        ).lower()
+        tokens = set(_tokens(text))
+        return any(term in tokens for term in terms)
+
     def _learner_adjustment(
         self,
         section_id: str,
@@ -302,6 +401,7 @@ class CurriculumRetriever:
 
     def _add_prerequisites(
         self,
+        source_section_ids: list[str],
         scored: dict[str, dict[str, Any]],
         state_by_concept: dict[str, LearnerConceptState],
         *,
@@ -309,8 +409,7 @@ class CurriculumRetriever:
         grade: int | None,
         chapter_id: str | None,
     ) -> None:
-        existing_ids = list(scored)
-        for section_id in existing_ids:
+        for section_id in source_section_ids:
             base = scored[section_id]
             for prereq_id in self.graph.prerequisite_sections(section_id):
                 summary = self.graph.section_summaries_by_id.get(prereq_id)
@@ -329,6 +428,7 @@ class CurriculumRetriever:
 
     def _add_soft_links(
         self,
+        source_section_ids: list[str],
         scored: dict[str, dict[str, Any]],
         state_by_concept: dict[str, LearnerConceptState],
         *,
@@ -336,9 +436,9 @@ class CurriculumRetriever:
         grade: int | None,
         chapter_id: str | None,
     ) -> None:
-        existing_ids = list(scored)
-        for section_id in existing_ids:
+        for section_id in source_section_ids:
             base = scored[section_id]
+            base_subject = base.get("subject")
             candidates: list[tuple[str, str, float]] = []
             candidates.extend((sid, "transfer_support", 0.25) for sid in self.graph.transfer_source_sections(section_id)[:2])
             candidates.extend((sid, "related_concept", 0.18) for sid in self.graph.related_sections_by_concept(section_id)[:2])
@@ -354,6 +454,9 @@ class CurriculumRetriever:
                 concepts = self.graph.concepts_taught_by_section(linked_id)
                 reasons = [reason]
                 score = max(0.1, float(base["score"]) * weight)
+                linked_subject = section.get("subject") or self._chapter_ref(summary.get("chapter_id")).get("subject")
+                if reason == "related_concept" and (score < MIN_SOFT_LINK_SCORE or linked_subject != base_subject):
+                    continue
                 score += self._learner_adjustment(linked_id, concepts, state_by_concept, reasons)
                 self._add_or_update(scored, linked_id, summary, section, score, concepts, reasons)
 
@@ -436,6 +539,61 @@ class CurriculumRetriever:
             if float(row.get("score") or 0.0) >= relative_cutoff:
                 continue
             del scored[section_id]
+
+    def _prune_weak_vector_matches(self, scored: dict[str, dict[str, Any]]) -> None:
+        vector_rows = [
+            row
+            for row in scored.values()
+            if "vector_match" in set(row.get("reasons") or set())
+        ]
+        if not vector_rows:
+            return
+        vector_rows.sort(
+            key=lambda row: (-float(row.get("score") or 0.0), str(row.get("chapter_id") or ""), str(row.get("section_id") or ""))
+        )
+        top_chapter = str(vector_rows[0].get("chapter_id") or "")
+        cutoff = float(vector_rows[0].get("score") or 0.0) * VECTOR_PRIMARY_RELATIVE_CUTOFF
+        for section_id, row in list(scored.items()):
+            reasons = set(row.get("reasons") or set())
+            if "vector_match" not in reasons:
+                continue
+            same_chapter = str(row.get("chapter_id") or "") == top_chapter
+            if same_chapter and reasons & {"concept_match", "title_match"}:
+                continue
+            if reasons & {"concept_match"} and float(row.get("score") or 0.0) >= cutoff * 0.75:
+                continue
+            if float(row.get("score") or 0.0) >= cutoff:
+                continue
+            del scored[section_id]
+
+    def _select_seed_section_ids(self, scored: dict[str, dict[str, Any]], *, limit: int) -> list[str]:
+        if not scored:
+            return []
+        rows = sorted(
+            scored.values(),
+            key=lambda row: (-float(row.get("score") or 0.0), str(row.get("chapter_id") or ""), str(row.get("section_id") or "")),
+        )
+        best_score = max(0.1, float(rows[0].get("score") or 0.0))
+        top_chapter = str(rows[0].get("chapter_id") or "")
+        seed_limit = max(1, min(MAX_SEED_SECTIONS, limit))
+        seed_ids: list[str] = []
+        for row in rows:
+            section_id = str(row.get("section_id") or "")
+            if not section_id:
+                continue
+            score = float(row.get("score") or 0.0)
+            reasons = set(row.get("reasons") or set())
+            same_chapter = str(row.get("chapter_id") or "") == top_chapter
+            strong_evidence = bool(reasons & {"concept_match", "intent_grounding"}) or (
+                same_chapter and bool(reasons & {"title_match", "key_term_match"})
+            )
+            strong_vector_neighbor = same_chapter and "vector_match" in reasons and score >= best_score * 0.88
+            chapter_neighbor = same_chapter and score >= best_score * MIN_SEED_RELATIVE_SCORE
+            if strong_evidence or strong_vector_neighbor or chapter_neighbor:
+                seed_ids.append(section_id)
+            if len(seed_ids) >= seed_limit:
+                break
+        return seed_ids or [str(rows[0]["section_id"])]
 
 
 def _terms(query: str) -> list[str]:

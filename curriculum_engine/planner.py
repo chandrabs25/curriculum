@@ -66,7 +66,6 @@ class PlannerRequest:
     onboarding: OnboardingAnswers
     learner_state: list[LearnerConceptState] | None = None
     prerequisite_check: dict[str, Any] | None = None
-    intent_grounding_section_ids: list[str] | None = None
     subject: str | None = None
     grade: int | None = None
     chapter_id: str | None = None
@@ -80,17 +79,15 @@ class CurriculumPlanner:
     llm_client: CurriculumLLMClient
 
     def create_plan(self, request: PlannerRequest) -> CurriculumPlan:
-        retrieved = self.retriever.results_for_section_ids(request.intent_grounding_section_ids or [])
-        if not retrieved:
-            retrieved = self.retriever.search(
-                request.onboarding.topic,
-                subject=request.subject or _blank_to_none(request.onboarding.subject),
-                grade=request.grade,
-                chapter_id=request.chapter_id,
-                learner_state=request.learner_state,
-                limit=request.retrieval_limit,
-                include_prerequisites=True,
-            )
+        retrieved = self.retriever.search(
+            request.onboarding.topic,
+            subject=request.subject or _blank_to_none(request.onboarding.subject),
+            grade=request.grade,
+            chapter_id=request.chapter_id,
+            learner_state=request.learner_state,
+            limit=request.retrieval_limit,
+            include_prerequisites=True,
+        )
         retrieved = retrieved[: request.retrieval_limit]
         learning_path_context = build_learning_path_context(
             self.retriever.graph,

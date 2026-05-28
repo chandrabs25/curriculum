@@ -1,0 +1,341 @@
+{
+  "onboarding": {
+    "subject": "",
+    "topic": "I want to learn photosynthesis",
+    "current_level": "",
+    "confidence": "",
+    "learning_goal": "Learn photosynthesis",
+    "available_time": "",
+    "preferred_learning_style": "",
+    "deadline_or_pace": ""
+  },
+  "learner_state": [],
+  "prerequisite_check": {
+    "asked": false,
+    "answers": []
+  },
+  "sections_by_id": {
+    "ncert:biology:11:11:11": {
+      "section_id": "ncert:biology:11:11:11",
+      "chapter_id": "ncert:biology:11:11",
+      "title": "Photosynthesis in Higher Plants",
+      "summary": "This section introduces photosynthesis as a vital physico-chemical process where green plants convert light energy into chemical energy to synthesize organic compounds. It emphasizes its role as the primary source of food on Earth and the generator of atmospheric oxygen.",
+      "role": "target",
+      "score": 18.0,
+      "retrieval_reasons": [
+        "concept_match",
+        "key_term_match",
+        "prerequisite",
+        "summary_match",
+        "title_match"
+      ],
+      "matched_concept_ids": [
+        "concept:autotrophs",
+        "concept:heterotrophs",
+        "concept:photosynthesis"
+      ]
+    },
+    "ncert:biology:11:11:11.1": {
+      "section_id": "ncert:biology:11:11:11.1",
+      "chapter_id": "ncert:biology:11:11",
+      "title": "What do we Know?",
+      "summary": "This section introduces the fundamental requirements for photosynthesis, which include chlorophyll, light, and carbon dioxide. It describes classic experiments, such as starch testing on variegated leaves and KOH-treated setups, to demonstrate the necessity of these components.",
+      "role": "optional"
+    },
+    "ncert:biology:11:11:11.10": {
+      "section_id": "ncert:biology:11:11:11.10",
+      "chapter_id": "ncert:biology:11:11",
+      "title": "Factors affecting Photosynthesis",
+      "summary": "This section explores the internal and external factors that regulate the rate of photosynthesis in plants. It highlights Blackman's Law of Limiting Factors, which states that the rate of a multi-factor biochemical process is governed by the factor closest to its minimum level.",
+      "role": "target",
+      "score": 8.0,
+      "retrieval_reasons": [
+        "key_term_match",
+        "summary_match",
+        "title_match"
+      ],
+      "matched_concept_ids": []
+    },
+    "ncert:biology:11:11:11.10.1": {
+      "section_id": "ncert:biology:11:11:11.10.1",
+      "chapter_id": "ncert:biology:11:11",
+      "title": "Light",
+      "summary": "This section explores how light intensity affects the rate of photosynthesis, demonstrating a linear relationship at low intensities that plateaus as other factors become limiting. It defines the light saturation point and explains how excessive light beyond this point can cause chlorophyll breakdown, reducing photosynthesis.",
+      "role": "optional"
+    },
+    "ncert:biology:11:11:11.10.4": {
+      "section_id": "ncert:biology:11:11:11.10.4",
+      "chapter_id": "ncert:biology:11:11",
+      "title": "Water",
+      "summary": "This section describes how water acts as a limiting factor in photosynthesis, primarily through indirect physiological effects. It explains how water stress leads to stomatal closure and leaf wilting, which subsequently reduce carbon dioxide availability and light absorption.",
+      "role": "optional"
+    },
+    "ncert:biology:11:11:11.2": {
+      "section_id": "ncert:biology:11:11:11.2",
+      "chapter_id": "ncert:biology:11:11",
+      "title": "Early Experiments",
+      "summary": "This section traces the historical milestones and key experiments that led to our understanding of photosynthesis. It highlights the contributions of scientists like Priestley, Ingenhousz, Sachs, Engelmann, and van Niel, culminating in the correct balanced chemical equation for photosynthesis.",
+      "role": "optional"
+    },
+    "ncert:biology:11:11:11.3": {
+      "section_id": "ncert:biology:11:11:11.3",
+      "chapter_id": "ncert:biology:11:11",
+      "title": "Where does Photosynthesis take Place?",
+      "summary": "This section identifies the chloroplasts within mesophyll cells as the site of photosynthesis and details their internal structure. It explains the division of labor within the chloroplast, distinguishing between light-driven reactions in the membrane system and carbon-fixing dark reactions in the stroma.",
+      "role": "target",
+      "score": 5.0,
+      "retrieval_reasons": [
+        "prerequisite",
+        "summary_match",
+        "title_match"
+      ],
+      "matched_concept_ids": [
+        "concept:chloroplast_structure",
+        "concept:dark_reactions",
+        "concept:light_reaction",
+        "concept:mesophyll_cells"
+      ]
+    },
+    "ncert:biology:11:11:11.4": {
+      "section_id": "ncert:biology:11:11:11.4",
+      "chapter_id": "ncert:biology:11:11",
+      "title": "How many Types of Pigments are Involved in Photosynthesis?",
+      "summary": "This section explains how leaf pigments can be separated using paper chromatography and identifies chlorophyll a, chlorophyll b, xanthophylls, and carotenoids. It describes the relationship between light absorption and photosynthetic rate using absorption and action spectra, highlighting chlorophyll a as the primary pigment. Finally, it discusses how accessory pigments assist in light absorption and protect chloro...",
+      "role": "target",
+      "score": 4.0,
+      "retrieval_reasons": [
+        "title_match"
+      ],
+      "matched_concept_ids": []
+    },
+    "ncert:biology:11:11:11.6.3": {
+      "section_id": "ncert:biology:11:11:11.6.3",
+      "chapter_id": "ncert:biology:11:11",
+      "title": "Chemiosmotic Hypothesis",
+      "summary": "This section explains the chemiosmotic hypothesis, which describes how ATP is synthesized in chloroplasts via a proton gradient across the thylakoid membrane. It details the factors contributing to the gradient—water splitting, proton transport by plastoquinone, and NADP reductase activity—and how ATP synthase utilizes this gradient to produce ATP.",
+      "role": "optional"
+    },
+    "ncert:biology:11:12:12.0": {
+      "section_id": "ncert:biology:11:12:12.0",
+      "chapter_id": "ncert:biology:11:12",
+      "title": "Introduction to Cellular Respiration",
+      "summary": "This section introduces cellular respiration as the process of breaking down food materials within cells to release and trap energy as ATP. It contrasts autotrophic and heterotrophic energy acquisition and defines respiratory substrates like carbohydrates, proteins, and fats.",
+      "role": "support",
+      "score": 4.5,
+      "retrieval_reasons": [
+        "transfer_support"
+      ],
+      "matched_concept_ids": [
+        "concept:adenosine_triphosphate_atp",
+        "concept:autotrophic_nutrition",
+        "concept:cellular_respiration",
+        "concept:heterotrophic_nutrition",
+        "concept:respiratory_substrates"
+      ]
+    },
+    "ncert:biology:11:12:12.1": {
+      "section_id": "ncert:biology:11:12:12.1",
+      "chapter_id": "ncert:biology:11:12",
+      "title": "Do Plants Breathe?",
+      "summary": "This section explains how plants perform gaseous exchange without specialized respiratory organs, utilizing stomata, lenticels, and loose parenchyma cells. It introduces the chemical equation of respiration, where glucose is catabolized to release energy, and discusses anaerobic respiration and glycolysis as evolutionary adaptations.",
+      "role": "support",
+      "score": 4.5,
+      "retrieval_reasons": [
+        "transfer_support"
+      ],
+      "matched_concept_ids": [
+        "concept:anaerobic_respiration",
+        "concept:chemical_equation_of_respiration",
+        "concept:gaseous_exchange_in_plants",
+        "concept:glycolysis",
+        "concept:plant_respiratory_adaptations"
+      ]
+    },
+    "ncert:chemistry:11:2:2.3.4": {
+      "section_id": "ncert:chemistry:11:2:2.3.4",
+      "chapter_id": "ncert:chemistry:11:2",
+      "title": "Evidence for the Quantized Electronic Energy Levels: Atomic Spectra",
+      "summary": "This section explains atomic spectra as key evidence for quantized electronic energy levels, distinguishing between continuous, emission, and absorption spectra. It introduces spectroscopy and details the line spectrum of hydrogen, characterized by the Balmer series and the generalized Rydberg formula.",
+      "role": "support",
+      "score": 0.72,
+      "retrieval_reasons": [
+        "related_concept"
+      ],
+      "matched_concept_ids": [
+        "concept:absorption_spectrum",
+        "concept:atomic_line_spectrum",
+        "concept:continuous_spectrum",
+        "concept:emission_spectrum",
+        "concept:quantization",
+        "concept:rydberg_formula"
+      ]
+    },
+    "ncert:physics:12:12:12.3": {
+      "section_id": "ncert:physics:12:12:12.3",
+      "chapter_id": "ncert:physics:12:12",
+      "title": "Atomic Spectra",
+      "summary": "This section introduces atomic spectra, detailing how excited atomic gases emit specific wavelengths to form emission line spectra. It also explains absorption spectra, which occur when white light passing through a gas produces dark lines at those same characteristic wavelengths.",
+      "role": "support",
+      "score": 0.72,
+      "retrieval_reasons": [
+        "related_concept"
+      ],
+      "matched_concept_ids": [
+        "concept:absorption_spectrum",
+        "concept:emission_line_spectrum",
+        "concept:hydrogen_spectral_series"
+      ]
+    }
+  },
+  "main_path_section_ids": [
+    "ncert:biology:11:11:11",
+    "ncert:biology:11:11:11.10",
+    "ncert:biology:11:11:11.3",
+    "ncert:biology:11:11:11.4"
+  ],
+  "relationships": {
+    "hard_dependencies": [
+      {
+        "relationship_id": "rel:21bfa40522e2197b97e1d98d",
+        "relationship_type": "DEPENDS_ON_UNIT",
+        "from_section_id": "ncert:biology:11:11:11.10",
+        "to_section_id": "ncert:biology:11:11:11.3",
+        "bridge_concept_id": "concept:chloroplast_structure",
+        "confidence": 0.9,
+        "evidence_text": "Required concept evidence: Chloroplasts and chlorophyll are mentioned as internal factors, requiring prior knowledge of their role in photosynthesis. Teaching evidence: Within the chloroplast, there is a membranous system consisting of grana, stroma lamella...",
+        "evidence_reason": "ncert:biology:11:11:11.10 requires concept:chloroplast_structure, which is taught by ncert:biology:11:11:11.3.",
+        "planning_meaning": "to_section should be studied before from_section"
+      },
+      {
+        "relationship_id": "rel:0b448719122cfb22b517eaa5",
+        "relationship_type": "DEPENDS_ON_UNIT",
+        "from_section_id": "ncert:biology:11:11:11.10",
+        "to_section_id": "ncert:biology:11:11:11",
+        "bridge_concept_id": "concept:photosynthesis",
+        "confidence": 1.0,
+        "evidence_text": "Required concept evidence: The student must understand the basic biochemical process of photosynthesis before analyzing the factors that limit or affect its rate. Teaching evidence: Photosynthesis is a physico-chemical process by which green plants use ligh...",
+        "evidence_reason": "ncert:biology:11:11:11.10 requires concept:photosynthesis, which is taught by ncert:biology:11:11:11.",
+        "planning_meaning": "to_section should be studied before from_section"
+      },
+      {
+        "relationship_id": "rel:58aa00adb6e49348b2b6bb87",
+        "relationship_type": "DEPENDS_ON_UNIT",
+        "from_section_id": "ncert:biology:11:11:11.3",
+        "to_section_id": "ncert:biology:11:11:11",
+        "bridge_concept_id": "concept:photosynthesis",
+        "confidence": 0.9,
+        "evidence_text": "Required concept evidence: The section details the specific site and sub-reactions of photosynthesis, assuming the student already understands the basic definition and overall purpose of the process. Teaching evidence: Photosynthesis is a physico-chemical p...",
+        "evidence_reason": "ncert:biology:11:11:11.3 requires concept:photosynthesis, which is taught by ncert:biology:11:11:11.",
+        "planning_meaning": "to_section should be studied before from_section"
+      },
+      {
+        "relationship_id": "rel:ae4ad906be030841fc92cdc2",
+        "relationship_type": "DEPENDS_ON_UNIT",
+        "from_section_id": "ncert:biology:11:11:11.4",
+        "to_section_id": "ncert:biology:11:11:11",
+        "bridge_concept_id": "concept:photosynthesis",
+        "confidence": 0.95,
+        "evidence_text": "Required concept evidence: The student must understand the basic process of photosynthesis and its overall function before analyzing how specific pigments and light wavelengths affect its rate. Teaching evidence: Photosynthesis is a physico-chemical process...",
+        "evidence_reason": "ncert:biology:11:11:11.4 requires concept:photosynthesis, which is taught by ncert:biology:11:11:11.",
+        "planning_meaning": "to_section should be studied before from_section"
+      }
+    ],
+    "parallel_support": [],
+    "reinforcement": [
+      {
+        "relationship_id": "rel:2298f8aeaf3ca86828d28577",
+        "relationship_type": "RELATED_BY_CONCEPT",
+        "section_id": "ncert:chemistry:11:2:2.3.4",
+        "source_target_section_id": "ncert:biology:11:11:11.4",
+        "bridge_concept_id": "concept:absorption_spectrum",
+        "confidence": 1.0,
+        "evidence_text": "First section evidence: Figure 11.3a shows the absorption spectrum of chlorophyll a, b, and carotenoids Second section evidence: An absorption spectrum is like the photographic negative of an emission spectrum... leaving dark spaces in the bright continuous...",
+        "planning_meaning": "sections overlap by concept and can be used for reinforcement",
+        "use_as": "extra practice or comparison after the core module"
+      },
+      {
+        "relationship_id": "rel:a647e7bb0cbdcaf7859f73fd",
+        "relationship_type": "RELATED_BY_CONCEPT",
+        "section_id": "ncert:physics:12:12:12.3",
+        "source_target_section_id": "ncert:biology:11:11:11.4",
+        "bridge_concept_id": "concept:absorption_spectrum",
+        "confidence": 1.0,
+        "evidence_text": "First section evidence: Figure 11.3a shows the absorption spectrum of chlorophyll a, b, and carotenoids Second section evidence: These dark lines correspond precisely to the wavelengths found in the emission line spectrum of the same gas. This is called the...",
+        "planning_meaning": "sections overlap by concept and can be used for reinforcement",
+        "use_as": "extra practice or comparison after the core module"
+      }
+    ],
+    "next_steps": [
+      {
+        "relationship_id": "rel:10bb3f5af41a3d2fb38a656d",
+        "relationship_type": "DEPENDS_ON_UNIT",
+        "section_id": "ncert:biology:11:11:11.10.1",
+        "source_target_section_id": "ncert:biology:11:11:11",
+        "bridge_concept_id": "concept:photosynthesis",
+        "confidence": 1.0,
+        "evidence_text": "Required concept evidence: The learner must understand the basic process of photosynthesis and carbon dioxide fixation to comprehend how external factors like light affect its rate. Teaching evidence: Photosynthesis is a physico-chemical process by which gr...",
+        "planning_meaning": "from_section can be suggested after completing to_section",
+        "use_as": "recommended next section after completing the module"
+      },
+      {
+        "relationship_id": "rel:dee3c63b72e27ffac31a30e5",
+        "relationship_type": "DEPENDS_ON_UNIT",
+        "section_id": "ncert:biology:11:11:11.10.4",
+        "source_target_section_id": "ncert:biology:11:11:11.3",
+        "bridge_concept_id": "concept:light_reaction",
+        "confidence": 0.95,
+        "evidence_text": "Required concept evidence: The text assumes prior knowledge that water is a reactant in the light reaction of photosynthesis. Teaching evidence: The reactions occurring in the membrane system that are directly light-driven are called light reactions (photoc...",
+        "planning_meaning": "from_section can be suggested after completing to_section",
+        "use_as": "recommended next section after completing the module"
+      },
+      {
+        "relationship_id": "rel:fa9ca43b01806216c8f8e062",
+        "relationship_type": "DEPENDS_ON_UNIT",
+        "section_id": "ncert:biology:11:11:11.1",
+        "source_target_section_id": "ncert:biology:11:11:11",
+        "bridge_concept_id": "concept:photosynthesis",
+        "confidence": 0.9,
+        "evidence_text": "Required concept evidence: The section assumes a basic understanding of what photosynthesis is as a biological process before exploring its specific requirements and experimental proofs. Teaching evidence: Photosynthesis is a physico-chemical process by whi...",
+        "planning_meaning": "from_section can be suggested after completing to_section",
+        "use_as": "recommended next section after completing the module"
+      },
+      {
+        "relationship_id": "rel:cc3fe08495b741e74a5c94cd",
+        "relationship_type": "DEPENDS_ON_UNIT",
+        "section_id": "ncert:biology:11:11:11.2",
+        "source_target_section_id": "ncert:biology:11:11:11",
+        "bridge_concept_id": "concept:photosynthesis",
+        "confidence": 0.9,
+        "evidence_text": "Required concept evidence: The student must understand the basic definition of photosynthesis as a process where plants make food using light before studying its historical discovery. Teaching evidence: Photosynthesis is a physico-chemical process by which...",
+        "planning_meaning": "from_section can be suggested after completing to_section",
+        "use_as": "recommended next section after completing the module"
+      },
+      {
+        "relationship_id": "rel:eb98162fc3a463ddf7123bf3",
+        "relationship_type": "DEPENDS_ON_UNIT",
+        "section_id": "ncert:biology:11:11:11.6.3",
+        "source_target_section_id": "ncert:biology:11:11:11",
+        "bridge_concept_id": "concept:photosynthesis",
+        "confidence": 0.9,
+        "evidence_text": "Required concept evidence: Understanding the overall process of photosynthesis is necessary to contextualize where and why ATP synthesis occurs in chloroplasts. Teaching evidence: Photosynthesis is a physico-chemical process by which green plants use light...",
+        "planning_meaning": "from_section can be suggested after completing to_section",
+        "use_as": "recommended next section after completing the module"
+      }
+    ],
+    "cross_chapter_bridges": []
+  },
+  "relationship_policy": {
+    "hard_dependencies": "DEPENDS_ON_UNIT edges must affect ordering; to_section_id should appear before from_section_id.",
+    "required_concepts": "REQUIRES_CONCEPT explains prerequisite warnings and checkpoint questions.",
+    "teaches_concepts": "TEACHES_CONCEPT explains concept coverage and can reveal downstream next steps.",
+    "transfer_support": "TRANSFER_SUPPORTS_UNIT is an optional bridge, not mandatory curriculum sequence.",
+    "related_by_concept": "RELATED_BY_CONCEPT is reinforcement or comparison only, not a prerequisite.",
+    "next_steps": "Next-step paths are suggested after completion, not before the main module."
+  },
+  "budget": {
+    "estimated_chars": 17071,
+    "target_chars": 25000,
+    "hard_cap_chars": 40000,
+    "trimmed": false
+  }
+}

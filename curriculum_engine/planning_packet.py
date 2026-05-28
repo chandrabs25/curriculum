@@ -20,6 +20,8 @@ NEXT_STEPS_CAP = 5
 CROSS_CHAPTER_CAP = 5
 TARGET_CHARS = 25_000
 HARD_CAP_CHARS = 40_000
+BROAD_SECTION_THRESHOLD = 10
+TOP_RANKED_TARGET_LIMIT = 6
 
 
 @dataclass(frozen=True)
@@ -53,62 +55,203 @@ def build_curriculum_planning_packet(
         item.section_id: {
             "score": item.score,
             "retrieval_reasons": item.reasons,
-            "matched_concept_ids": item.matched_concept_ids,
         }
         for item in retrieved
     }
+    broad_selection = _broad_selection(ctx, retrieved_by_id)
 
-    for row in ctx.get("main_path_sections", []):
+    for row in _selected_main_path_rows(ctx, broad_selection):
         _add_section(sections_by_id, row, retrieved_by_id)
-    for row in ctx.get("support_sections", []):
-        _add_section(sections_by_id, row, retrieved_by_id)
+    if not broad_selection["active"]:
+        for row in ctx.get("support_sections", []):
+            _add_section(sections_by_id, row, retrieved_by_id)
 
-    for row in ctx.get("hard_dependency_edges", []):
+    for row in _selected_hard_dependency_edges(ctx, broad_selection):
         relationships["hard_dependencies"].append(_section_link_row(row))
 
-    _add_recommendation_bucket(
-        relationships["parallel_support"],
-        sections_by_id,
-        ctx.get("parallel_support_paths", []),
-        PARALLEL_SUPPORT_CAP,
-        retrieved_by_id,
-    )
-    _add_recommendation_bucket(
-        relationships["reinforcement"],
-        sections_by_id,
-        ctx.get("reinforcement_paths", []),
-        REINFORCEMENT_CAP,
-        retrieved_by_id,
-    )
-    _add_recommendation_bucket(
-        relationships["next_steps"],
-        sections_by_id,
-        ctx.get("next_step_paths", []),
-        NEXT_STEPS_CAP,
-        retrieved_by_id,
-    )
-    _add_recommendation_bucket(
-        relationships["cross_chapter_bridges"],
-        sections_by_id,
-        ctx.get("cross_chapter_bridges", []),
-        CROSS_CHAPTER_CAP,
-        retrieved_by_id,
-    )
+    if not broad_selection["active"]:
+        _add_recommendation_bucket(
+            relationships["parallel_support"],
+            sections_by_id,
+            ctx.get("parallel_support_paths", []),
+            PARALLEL_SUPPORT_CAP,
+            retrieved_by_id,
+        )
+        _add_recommendation_bucket(
+            relationships["reinforcement"],
+            sections_by_id,
+            ctx.get("reinforcement_paths", []),
+            REINFORCEMENT_CAP,
+            retrieved_by_id,
+        )
+        _add_recommendation_bucket(
+            relationships["next_steps"],
+            sections_by_id,
+            ctx.get("next_step_paths", []),
+            NEXT_STEPS_CAP,
+            retrieved_by_id,
+        )
+        _add_recommendation_bucket(
+            relationships["cross_chapter_bridges"],
+            sections_by_id,
+            ctx.get("cross_chapter_bridges", []),
+            CROSS_CHAPTER_CAP,
+            retrieved_by_id,
+        )
 
     packet = {
         "onboarding": _onboarding_row(onboarding),
         "learner_state": _learner_state_rows(learner_state or []),
         "prerequisite_check": ctx.get("prerequisite_check") or {"asked": False, "answers": []},
         "sections_by_id": dict(sorted(sections_by_id.items())),
-        "main_path_section_ids": [row["section_id"] for row in ctx.get("main_path_sections", []) if row.get("section_id")],
+        "main_path_section_ids": [
+            row["section_id"]
+            for row in _selected_main_path_rows(ctx, broad_selection)
+            if row.get("section_id")
+        ],
         "relationships": relationships,
-        "relationship_policy": ctx.get("relationship_policy") or {},
+        "relationship_policy": _planner_relationship_policy(ctx.get("relationship_policy") or {}),
     }
-    packet["budget"] = _budget(packet, trimmed=False)
+    packet["budget"] = _budget(packet, trimmed=broad_selection["active"], broad_selection=broad_selection)
     if packet["budget"]["estimated_chars"] > HARD_CAP_CHARS:
         _trim_to_budget(packet)
-    packet["budget"] = _budget(packet, trimmed=packet.get("budget", {}).get("trimmed", False))
+    packet["budget"] = _budget(
+        packet,
+        trimmed=packet.get("budget", {}).get("trimmed", False) or broad_selection["active"],
+        broad_selection=broad_selection,
+    )
     return CurriculumPlanningPacket(packet)
+
+
+def _broad_selection(
+    ctx: dict[str, Any],
+    retrieved_by_id: dict[str, dict[str, Any]],
+) -> dict[str, Any]:
+    all_section_ids = _context_section_ids(ctx)
+    if len(all_section_ids) <= BROAD_SECTION_THRESHOLD:
+        return {
+            "active": False,
+            "input_section_count": len(all_section_ids),
+            "selected_target_section_ids": [
+                row["section_id"] for row in ctx.get("target_sections", []) if row.get("section_id")
+            ],
+            "selected_prerequisite_section_ids": [
+                row["section_id"] for row in ctx.get("prerequisite_sections", []) if row.get("section_id")
+            ],
+        }
+    target_rows = [row for row in ctx.get("target_sections", []) if row.get("section_id")]
+    ranked_targets = _ranked_section_rows(target_rows, retrieved_by_id)
+    selected_target_ids = [row["section_id"] for row in ranked_targets[:TOP_RANKED_TARGET_LIMIT]]
+    selected_prereq_ids = _hard_prerequisite_ids_for_targets(ctx, set(selected_target_ids))
+    return {
+        "active": True,
+        "input_section_count": len(all_section_ids),
+        "broad_section_threshold": BROAD_SECTION_THRESHOLD,
+        "selected_target_limit": TOP_RANKED_TARGET_LIMIT,
+        "selected_target_section_ids": selected_target_ids,
+        "selected_prerequisite_section_ids": selected_prereq_ids,
+    }
+
+
+def _context_section_ids(ctx: dict[str, Any]) -> set[str]:
+    ids: set[str] = set()
+    for bucket_name in (
+        "main_path_sections",
+        "target_sections",
+        "prerequisite_sections",
+        "support_sections",
+        "parallel_support_paths",
+        "reinforcement_paths",
+        "next_step_paths",
+        "cross_chapter_bridges",
+    ):
+        for row in ctx.get(bucket_name, []):
+            section_id = row.get("section_id")
+            if section_id:
+                ids.add(section_id)
+    for row in ctx.get("hard_dependency_edges", []):
+        from_id = row.get("from_section_id")
+        to_id = row.get("to_section_id")
+        if from_id:
+            ids.add(from_id)
+        if to_id:
+            ids.add(to_id)
+    return ids
+
+
+def _ranked_section_rows(
+    rows: list[dict[str, Any]],
+    retrieved_by_id: dict[str, dict[str, Any]],
+) -> list[dict[str, Any]]:
+    indexed_rows = list(enumerate(rows))
+    return [
+        row
+        for _, row in sorted(
+            indexed_rows,
+            key=lambda item: (-_section_score(item[1], retrieved_by_id), item[0]),
+        )
+    ]
+
+
+def _section_score(row: dict[str, Any], retrieved_by_id: dict[str, dict[str, Any]]) -> float:
+    section_id = row.get("section_id")
+    retrieved_score = retrieved_by_id.get(section_id, {}).get("score") if section_id else None
+    if retrieved_score is not None:
+        return float(retrieved_score)
+    return float(row.get("score") or 0.0)
+
+
+def _hard_prerequisite_ids_for_targets(ctx: dict[str, Any], selected_target_ids: set[str]) -> list[str]:
+    prereq_ids = {
+        str(row.get("to_section_id") or "")
+        for row in ctx.get("hard_dependency_edges", [])
+        if row.get("from_section_id") in selected_target_ids and row.get("to_section_id")
+    }
+    ordered = []
+    for row in ctx.get("prerequisite_sections", []):
+        section_id = row.get("section_id")
+        if section_id in prereq_ids and section_id not in ordered:
+            ordered.append(section_id)
+    return ordered
+
+
+def _selected_main_path_rows(ctx: dict[str, Any], broad_selection: dict[str, Any]) -> list[dict[str, Any]]:
+    if not broad_selection["active"]:
+        return list(ctx.get("main_path_sections", []))
+    selected_prereq_ids = set(broad_selection.get("selected_prerequisite_section_ids") or [])
+    selected_target_ids = broad_selection.get("selected_target_section_ids") or []
+    prereq_rows = [
+        row
+        for row in ctx.get("prerequisite_sections", [])
+        if row.get("section_id") in selected_prereq_ids
+    ]
+    target_by_id = {
+        row.get("section_id"): row
+        for row in ctx.get("target_sections", [])
+        if row.get("section_id")
+    }
+    target_rows = [target_by_id[section_id] for section_id in selected_target_ids if section_id in target_by_id]
+    return prereq_rows + target_rows
+
+
+def _selected_hard_dependency_edges(ctx: dict[str, Any], broad_selection: dict[str, Any]) -> list[dict[str, Any]]:
+    if not broad_selection["active"]:
+        return list(ctx.get("hard_dependency_edges", []))
+    selected_ids = set(broad_selection.get("selected_target_section_ids") or [])
+    selected_ids.update(broad_selection.get("selected_prerequisite_section_ids") or [])
+    return [
+        row
+        for row in ctx.get("hard_dependency_edges", [])
+        if row.get("from_section_id") in selected_ids and row.get("to_section_id") in selected_ids
+    ]
+
+
+def _planner_relationship_policy(policy: dict[str, str]) -> dict[str, str]:
+    return {
+        key: value
+        for key, value in policy.items()
+        if key not in {"required_concepts", "teaches_concepts"}
+    }
 
 
 def _add_section(
@@ -206,13 +349,32 @@ def _learner_state_rows(learner_state: list[LearnerConceptState]) -> list[dict[s
     return rows
 
 
-def _budget(packet: dict[str, Any], *, trimmed: bool) -> dict[str, Any]:
-    return {
+def _budget(
+    packet: dict[str, Any],
+    *,
+    trimmed: bool,
+    broad_selection: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    budget = {
         "estimated_chars": len(json.dumps(packet, ensure_ascii=False)),
         "target_chars": TARGET_CHARS,
         "hard_cap_chars": HARD_CAP_CHARS,
         "trimmed": trimmed,
+        "sent_section_count": len(packet.get("sections_by_id") or {}),
     }
+    if broad_selection:
+        budget.update(
+            {
+                "broad_section_selection": bool(broad_selection.get("active")),
+                "input_section_count": broad_selection.get("input_section_count", 0),
+                "selected_target_limit": broad_selection.get("selected_target_limit"),
+                "selected_target_section_count": len(broad_selection.get("selected_target_section_ids") or []),
+                "selected_prerequisite_section_count": len(
+                    broad_selection.get("selected_prerequisite_section_ids") or []
+                ),
+            }
+        )
+    return budget
 
 
 def _trim_to_budget(packet: dict[str, Any]) -> None:

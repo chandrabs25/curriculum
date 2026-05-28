@@ -1,0 +1,36 @@
+{
+    "status": "needs_clarification",
+    "original_query": "photosynthesis",
+    "needs_user_choice": true,
+    "question": "What aspect of photosynthesis would you like to focus on?",
+    "confirmed_intent": null,
+    "options": [
+        {
+            "label": "Basic mechanism of photosynthesis",
+            "user_facing_description": "Learn how plants convert light into chemical energy step by step",
+            "refined_query": "photosynthesis basic mechanism"
+        },
+        {
+            "label": "Chemical equation and energy conversion",
+            "user_facing_description": "Study the overall reaction, reactants, products, and energy changes",
+            "refined_query": "photosynthesis chemical equation"
+        },
+        {
+            "label": "Ecological importance of photosynthesis",
+            "user_facing_description": "Understand how photosynthesis supports ecosystems and the global carbon cycle",
+            "refined_query": "photosynthesis ecological role"
+        }
+    ],
+    "classification_packet": {
+        "original_query": "photosynthesis",
+        "matched_concepts": [
+            {
+                "concept_id": "concept:photosynthesis",
+                "label": "Photosynthesis"
+            }
+        ],
+        "instructions": {
+            "user_facing_options": "Phrase options as what the learner wants to learn, not as section titles."
+        }
+    }
+}

@@ -29,7 +29,6 @@ export interface CurriculumQueryPayload {
   onboarding: OnboardingPayload;
   learner_state: LearnerConceptStatePayload[];
   prerequisite_check: PrerequisiteCheckPayload | null;
-  intent_grounding_section_ids: string[];
   subject: string | null;
   grade: number | null;
   chapter_id: string | null;
@@ -49,14 +48,12 @@ export interface ConfirmedIntent {
   label: string;
   user_facing_summary: string;
   refined_query: string;
-  grounding_section_ids: string[];
 }
 
 export interface IntentOption {
   label: string;
   user_facing_description: string;
   refined_query: string;
-  grounding_section_ids: string[];
 }
 
 export interface IntentClassificationPacket {

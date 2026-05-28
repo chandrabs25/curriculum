@@ -1,14 +1,14 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useParams, useRouter } from "next/navigation";
+import { useParams } from "next/navigation";
 import Link from "next/link";
 import { CurriculumPlanPayload } from "../../types/curriculum";
 
 export default function PlanDashboardPage() {
   const params = useParams();
-  const router = useRouter();
-  const id = decodeURIComponent(params.id as string);
+  const rawId = params.id as string;
+  const id = decodeURIComponent(rawId);
 
   const [plan, setPlan] = useState<CurriculumPlanPayload | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -21,11 +21,16 @@ export default function PlanDashboardPage() {
     if (typeof window === "undefined") return;
 
     const loadTimer = window.setTimeout(() => {
-      const storedPlan = localStorage.getItem(`curriculum-plan-${id}`) || matchingCurrentPlan(id);
+      const storedPlan =
+        localStorage.getItem(`curriculum-plan-${id}`) ||
+        localStorage.getItem(`curriculum-plan-${rawId}`) ||
+        matchingCurrentPlan(id, rawId);
       if (storedPlan) {
         try {
           const parsedPlan = JSON.parse(storedPlan) as CurriculumPlanPayload;
-          localStorage.setItem(`curriculum-plan-${parsedPlan.curriculum_plan_id}`, JSON.stringify(parsedPlan));
+          const serializedPlan = JSON.stringify(parsedPlan);
+          localStorage.setItem(`curriculum-plan-${parsedPlan.curriculum_plan_id}`, serializedPlan);
+          localStorage.setItem(`curriculum-plan-${encodeURIComponent(parsedPlan.curriculum_plan_id)}`, serializedPlan);
           setPlan(parsedPlan);
           
           // Check localStorage to find which modules have finished quizzes
@@ -47,7 +52,7 @@ export default function PlanDashboardPage() {
     }, 0);
 
     return () => window.clearTimeout(loadTimer);
-  }, [id]);
+  }, [id, rawId]);
 
   if (error) {
     return (
@@ -114,7 +119,7 @@ export default function PlanDashboardPage() {
             </span>
             {activeModule && (
               <Link
-                href={`/plan/${plan.curriculum_plan_id}/module/${activeModuleId}`}
+                href={moduleHref(plan.curriculum_plan_id, activeModuleId)}
                 className="text-on-surface-variant font-hanken font-bold text-sm hover:text-secondary transition-colors"
               >
                 Active Module
@@ -182,7 +187,7 @@ export default function PlanDashboardPage() {
             </span>
             {activeModule && (
               <Link
-                href={`/plan/${plan.curriculum_plan_id}/module/${activeModuleId}`}
+                href={moduleHref(plan.curriculum_plan_id, activeModuleId)}
                 className="flex items-center gap-3 px-3 py-2.5 text-on-surface-variant hover:bg-surface-variant transition-all rounded-lg group"
               >
                 <span className="material-symbols-outlined group-hover:text-secondary">auto_stories</span>
@@ -369,7 +374,7 @@ export default function PlanDashboardPage() {
 
                         {isCompleted && (
                           <Link
-                            href={`/plan/${plan.curriculum_plan_id}/module/${module.module_id}`}
+                            href={moduleHref(plan.curriculum_plan_id, module.module_id)}
                             className="text-secondary font-hanken font-bold text-sm hover:underline flex items-center gap-1"
                           >
                             Review Module
@@ -379,7 +384,7 @@ export default function PlanDashboardPage() {
 
                         {isActive && (
                           <Link
-                            href={`/plan/${plan.curriculum_plan_id}/module/${module.module_id}`}
+                            href={moduleHref(plan.curriculum_plan_id, module.module_id)}
                             className="bg-primary text-on-primary px-6 py-2 rounded-lg font-hanken font-bold text-xs shadow-md hover:bg-on-background transition-all"
                           >
                             Start Studying
@@ -488,10 +493,10 @@ export default function PlanDashboardPage() {
           <div className="mt-auto p-4 bg-surface-container-low rounded-xl border border-outline-variant">
             <p className="text-[10px] text-on-surface-variant font-bold uppercase tracking-wider mb-2">Academic Advisor AI</p>
             <p className="text-xs italic text-on-surface mb-3 leading-relaxed">
-              "We have mapped {sortedModules.length} lessons optimized for Grade {plan.metadata?.grade || "N/A"} textbook constraints. Master checkpoints to track misconceptions."
+              We have mapped {sortedModules.length} lessons optimized for Grade {plan.metadata?.grade || "N/A"} textbook constraints. Master checkpoints to track misconceptions.
             </p>
             <Link
-              href={`/plan/${plan.curriculum_plan_id}/module/${activeModuleId}`}
+              href={moduleHref(plan.curriculum_plan_id, activeModuleId)}
               className="w-full py-2 bg-surface-container-highest text-secondary border border-secondary/20 rounded-lg text-xs font-bold text-center block hover:bg-surface-variant transition-colors"
             >
               Study Active Lesson
@@ -517,7 +522,7 @@ export default function PlanDashboardPage() {
         </span>
         {activeModule && (
           <Link
-            href={`/plan/${plan.curriculum_plan_id}/module/${activeModuleId}`}
+            href={moduleHref(plan.curriculum_plan_id, activeModuleId)}
             className="flex flex-col items-center justify-center text-on-surface-variant hover:text-secondary"
           >
             <span className="material-symbols-outlined">school</span>
@@ -539,13 +544,17 @@ export default function PlanDashboardPage() {
   );
 }
 
-function matchingCurrentPlan(id: string): string | null {
+function matchingCurrentPlan(id: string, rawId: string): string | null {
   const raw = localStorage.getItem("curriculum-current-plan");
   if (!raw) return null;
   try {
     const parsed = JSON.parse(raw) as CurriculumPlanPayload;
-    return parsed.curriculum_plan_id === id ? raw : null;
+    return parsed.curriculum_plan_id === id || encodeURIComponent(parsed.curriculum_plan_id) === rawId ? raw : null;
   } catch {
     return null;
   }
+}
+
+function moduleHref(planId: string, moduleId: string): string {
+  return `/plan/${encodeURIComponent(planId)}/module/${encodeURIComponent(moduleId)}`;
 }

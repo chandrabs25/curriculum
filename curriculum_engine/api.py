@@ -47,7 +47,6 @@ class CurriculumQueryPayload(BaseModel):
     onboarding: OnboardingPayload
     learner_state: list[LearnerConceptStatePayload] = Field(default_factory=list)
     prerequisite_check: dict[str, Any] | None = None
-    intent_grounding_section_ids: list[str] = Field(default_factory=list)
     subject: str | None = None
     grade: int | None = None
     chapter_id: str | None = None
@@ -152,7 +151,7 @@ class CurriculumAPIService:
         planning_packet = build_curriculum_planning_packet(onboarding, learner_state, retrieved, context)
         return {
             "retrieved_sections": [_retrieval_row(row) for row in retrieved],
-            "prerequisite_questions": _prerequisite_questions(context.to_dict()),
+            "prerequisite_questions": [],
             "learning_path_context": context.to_dict(),
             "planning_packet": planning_packet.to_dict(),
         }
@@ -165,7 +164,6 @@ class CurriculumAPIService:
                 onboarding=_onboarding(payload.onboarding),
                 learner_state=_learner_state(payload.learner_state),
                 prerequisite_check=payload.prerequisite_check,
-                intent_grounding_section_ids=payload.intent_grounding_section_ids,
                 subject=payload.subject,
                 grade=payload.grade,
                 chapter_id=payload.chapter_id,
@@ -327,9 +325,6 @@ def _retrieve_for_payload(
     onboarding: OnboardingAnswers,
     learner_state: list[LearnerConceptState],
 ) -> list[Any]:
-    grounded = retriever.results_for_section_ids(payload.intent_grounding_section_ids)
-    if grounded:
-        return grounded[: payload.retrieval_limit]
     return retriever.search(
         onboarding.topic,
         subject=payload.subject or _blank_to_none(onboarding.subject),
@@ -371,30 +366,6 @@ def _retrieval_row(row: Any) -> dict[str, Any]:
         "subject": row.subject,
         "grade": row.grade,
     }
-
-
-def _prerequisite_questions(context: dict[str, Any]) -> list[dict[str, Any]]:
-    questions = []
-    seen: set[tuple[str, str]] = set()
-    for row in context.get("required_concepts") or []:
-        concept_id = str(row.get("concept_id") or "")
-        section_id = str(row.get("section_id") or "")
-        if not concept_id or not section_id or (concept_id, section_id) in seen:
-            continue
-        seen.add((concept_id, section_id))
-        label = row.get("label") or concept_id.replace("concept:", "").replace("_", " ")
-        questions.append(
-            {
-                "question_id": f"prereq:{section_id}:{concept_id}",
-                "concept_id": concept_id,
-                "required_by_section_id": section_id,
-                "label": label,
-                "question": f"How comfortable are you with {label}?",
-                "pedagogical_reason": row.get("pedagogical_reason") or "",
-                "options": ["known_well", "somewhat_known", "unfamiliar"],
-            }
-        )
-    return questions
 
 
 def _plan_row(plan: CurriculumPlan) -> dict[str, Any]:

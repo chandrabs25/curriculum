@@ -1,27 +1,80 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
-import { CurriculumPlanPayload, CheckpointResultPayload } from "../../../../../../types/curriculum";
+import { RetryPanel } from "../../../../../../components/RetryPanel";
+import {
+  CurriculumPlanPayload,
+  CheckpointResultPayload,
+  ExpandedCurriculumModulePayload,
+} from "../../../../../../types/curriculum";
 import { designModule } from "../../../../../../services/api";
+import { readCachedModuleDesign, writeCachedModuleDesign } from "../../../../../../services/moduleDesignCache";
 
 export default function CheckpointResultsPage() {
   const params = useParams();
   const router = useRouter();
-  const id = params.id as string;
-  const moduleId = params.moduleId as string;
+  const rawId = params.id as string;
+  const id = decodeURIComponent(rawId);
+  const rawModuleId = params.moduleId as string;
+  const moduleId = decodeURIComponent(rawModuleId);
 
   const [plan, setPlan] = useState<CurriculumPlanPayload | null>(null);
   const [result, setResult] = useState<CheckpointResultPayload | null>(null);
-  const [moduleData, setModuleData] = useState<any | null>(null);
+  const [moduleData, setModuleData] = useState<ExpandedCurriculumModulePayload | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [moduleError, setModuleError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
+  const [moduleRetrying, setModuleRetrying] = useState(false);
+
+  const loadModuleDesign = useCallback(
+    async (parsedPlan: CurriculumPlanPayload, useCache: boolean) => {
+      setModuleError(null);
+      if (useCache) {
+        const cached = readCachedModuleDesign(parsedPlan.curriculum_plan_id, moduleId);
+        if (cached) {
+          setModuleData(cached);
+          setLoading(false);
+          return;
+        }
+      }
+
+      const data = await designModule({
+        plan: parsedPlan,
+        module_id: moduleId,
+        learner_state: [],
+      });
+      writeCachedModuleDesign(parsedPlan.curriculum_plan_id, moduleId, data);
+      setModuleData(data);
+    },
+    [moduleId]
+  );
+
+  const retryLoadModuleDesign = useCallback(async () => {
+    if (!plan) return;
+    setModuleRetrying(true);
+    setModuleError(null);
+    try {
+      await loadModuleDesign(plan, false);
+    } catch (err: unknown) {
+      console.error(err);
+      setModuleError(errorMessage(err, "Failed to load module details for this checkpoint report."));
+    } finally {
+      setModuleRetrying(false);
+      setLoading(false);
+    }
+  }, [loadModuleDesign, plan]);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const storedPlan = localStorage.getItem(`curriculum-plan-${id}`);
-      const storedResult = localStorage.getItem(`curriculum-checkpoint-result-${id}-${moduleId}`);
+      const storedPlan =
+        localStorage.getItem(`curriculum-plan-${id}`) ||
+        localStorage.getItem(`curriculum-plan-${rawId}`) ||
+        matchingCurrentPlan(id, rawId);
+      const storedResult =
+        localStorage.getItem(`curriculum-checkpoint-result-${id}-${moduleId}`) ||
+        localStorage.getItem(`curriculum-checkpoint-result-${rawId}-${rawModuleId}`);
 
       if (storedPlan && storedResult) {
         try {
@@ -30,17 +83,10 @@ export default function CheckpointResultsPage() {
           setPlan(parsedPlan);
           setResult(parsedResult);
 
-          // Fetch designed module content from backend
-          designModule({
-            plan: parsedPlan,
-            module_id: moduleId,
-            learner_state: [],
-          })
-            .then((data) => {
-              setModuleData(data);
-            })
+          loadModuleDesign(parsedPlan, true)
             .catch((err) => {
               console.error(err);
+              setModuleError(errorMessage(err, "Failed to load module details for this checkpoint report."));
             })
             .finally(() => {
               setLoading(false);
@@ -54,7 +100,7 @@ export default function CheckpointResultsPage() {
         setLoading(false);
       }
     }
-  }, [id, moduleId]);
+  }, [id, loadModuleDesign, rawId, rawModuleId]);
 
   if (loading) {
     return (
@@ -74,7 +120,7 @@ export default function CheckpointResultsPage() {
           <h2 className="text-2xl font-bold text-error">Error</h2>
           <p className="mt-2 text-on-surface-variant text-sm">{error || "Results unavailable."}</p>
           <Link
-            href={`/plan/${id}/module/${moduleId}/checkpoint`}
+            href={`${moduleHref(id, moduleId)}/checkpoint`}
             className="mt-6 inline-block px-6 py-2 bg-primary text-on-primary rounded-full hover:opacity-90 text-sm font-semibold shadow-sm"
           >
             Take Checkpoint
@@ -123,13 +169,13 @@ export default function CheckpointResultsPage() {
               Dashboard
             </Link>
             <Link
-              href={`/plan/${id}`}
+              href={`/plan/${encodeURIComponent(id)}`}
               className="font-hanken font-bold text-sm text-on-surface-variant hover:text-secondary transition-colors"
             >
               Curriculum Plan
             </Link>
             <Link
-              href={`/plan/${id}/module/${moduleId}`}
+              href={moduleHref(id, moduleId)}
               className="font-hanken font-bold text-sm text-secondary border-b-2 border-secondary h-16 flex items-center px-1"
             >
               Active Module
@@ -180,6 +226,21 @@ export default function CheckpointResultsPage() {
         </div>
 
         {/* Bento Grid Results */}
+        {moduleError && !moduleData && (
+          <div className="mb-8">
+            <RetryPanel
+              title="Module Details Unavailable"
+              message={moduleError}
+              onRetry={plan ? () => void retryLoadModuleDesign() : undefined}
+              retryLabel="Retry Module Details"
+              isRetrying={moduleRetrying}
+              fallbackHref={moduleHref(id, moduleId)}
+              fallbackLabel="Back to Module"
+              compact
+            />
+          </div>
+        )}
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
           
           {/* Recommendation Card (Primary Action) */}
@@ -204,7 +265,7 @@ export default function CheckpointResultsPage() {
               <div className="flex flex-wrap gap-4">
                 {nextModule ? (
                   <Link
-                    href={`/plan/${plan.curriculum_plan_id}/module/${nextModule.module_id}`}
+                    href={moduleHref(plan.curriculum_plan_id, nextModule.module_id)}
                     className="bg-primary text-on-primary px-8 py-3 rounded-xl font-hanken font-bold text-xs flex items-center gap-2 hover:opacity-90 active:scale-95 transition-all shadow-md"
                   >
                     Next Module
@@ -212,7 +273,7 @@ export default function CheckpointResultsPage() {
                   </Link>
                 ) : (
                   <Link
-                    href={`/plan/${plan.curriculum_plan_id}`}
+                    href={`/plan/${encodeURIComponent(plan.curriculum_plan_id)}`}
                     className="bg-primary text-on-primary px-8 py-3 rounded-xl font-hanken font-bold text-xs flex items-center gap-2 hover:opacity-90 active:scale-95 transition-all shadow-md"
                   >
                     View Plan Timeline
@@ -221,7 +282,7 @@ export default function CheckpointResultsPage() {
                 )}
                 
                 <Link
-                  href={`/plan/${plan.curriculum_plan_id}/module/${moduleId}`}
+                  href={moduleHref(plan.curriculum_plan_id, moduleId)}
                   className="border border-outline-variant text-on-surface px-8 py-3 rounded-xl font-hanken font-bold text-xs bg-white hover:bg-surface-container transition-all"
                 >
                   View Study Materials
@@ -380,7 +441,7 @@ export default function CheckpointResultsPage() {
       <footer className="fixed bottom-0 left-0 w-full bg-surface border-t border-outline-variant shadow-lg z-50 py-4">
         <div className="max-w-[1280px] mx-auto px-4 md:px-10 flex flex-col md:flex-row justify-between items-center gap-4">
           <Link
-            href={`/plan/${id}`}
+            href={`/plan/${encodeURIComponent(id)}`}
             className="w-full md:w-auto px-8 py-3 rounded-xl border border-outline-variant text-on-surface-variant font-hanken font-bold text-xs bg-white hover:bg-surface-container flex items-center justify-center gap-2 shadow-sm"
           >
             <span className="material-symbols-outlined text-base">arrow_back</span>
@@ -389,7 +450,7 @@ export default function CheckpointResultsPage() {
           
           <div className="flex w-full md:w-auto gap-4">
             <Link
-              href={`/plan/${id}/module/${moduleId}/checkpoint`}
+              href={`${moduleHref(id, moduleId)}/checkpoint`}
               className="flex-1 md:flex-none px-8 py-3 rounded-xl border border-secondary text-secondary font-hanken font-bold text-xs bg-white hover:bg-surface-container flex items-center justify-center gap-2 shadow-sm"
             >
               <span className="material-symbols-outlined text-base">replay</span>
@@ -398,7 +459,7 @@ export default function CheckpointResultsPage() {
             
             {nextModule ? (
               <Link
-                href={`/plan/${id}/module/${nextModule.module_id}`}
+                href={moduleHref(id, nextModule.module_id)}
                 className="flex-1 md:flex-none px-8 py-3 rounded-xl bg-secondary text-on-primary font-hanken font-bold text-xs flex items-center justify-center gap-2 hover:opacity-90 active:scale-95 transition-all shadow-md"
               >
                 Next Module
@@ -406,7 +467,7 @@ export default function CheckpointResultsPage() {
               </Link>
             ) : (
               <Link
-                href={`/plan/${id}`}
+                href={`/plan/${encodeURIComponent(id)}`}
                 className="flex-1 md:flex-none px-8 py-3 rounded-xl bg-secondary text-on-primary font-hanken font-bold text-xs flex items-center justify-center gap-2 hover:opacity-90 active:scale-95 transition-all shadow-md"
               >
                 Curriculum Complete
@@ -418,4 +479,24 @@ export default function CheckpointResultsPage() {
       </footer>
     </div>
   );
+}
+
+function matchingCurrentPlan(id: string, rawId: string): string | null {
+  const raw = localStorage.getItem("curriculum-current-plan");
+  if (!raw) return null;
+  try {
+    const parsed = JSON.parse(raw) as CurriculumPlanPayload;
+    return parsed.curriculum_plan_id === id || encodeURIComponent(parsed.curriculum_plan_id) === rawId ? raw : null;
+  } catch {
+    return null;
+  }
+}
+
+function moduleHref(planId: string, moduleId: string): string {
+  return `/plan/${encodeURIComponent(planId)}/module/${encodeURIComponent(moduleId)}`;
+}
+
+function errorMessage(err: unknown, fallback: string): string {
+  if (err instanceof Error) return err.message;
+  return fallback;
 }

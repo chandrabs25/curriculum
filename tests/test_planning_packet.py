@@ -5,6 +5,7 @@ import unittest
 from curriculum_engine import OnboardingAnswers
 from curriculum_engine.learning_path import LearningPathContext
 from curriculum_engine.planning_packet import build_curriculum_planning_packet
+from curriculum_engine.retrieval import SectionRetrievalResult
 
 
 class PlanningPacketTest(unittest.TestCase):
@@ -112,9 +113,132 @@ class PlanningPacketTest(unittest.TestCase):
         self.assertNotIn("concepts_by_id", packet)
         self.assertNotIn("requires_concept", packet["relationships"])
         self.assertNotIn("teaches_concept", packet["relationships"])
+        self.assertNotIn("required_concepts", packet["relationship_policy"])
+        self.assertNotIn("teaches_concepts", packet["relationship_policy"])
+        self.assertNotIn("matched_concept_ids", packet["sections_by_id"]["section:2"])
         self.assertIn("evidence_reason", packet["relationships"]["hard_dependencies"][0])
         self.assertLessEqual(len(packet["sections_by_id"]["section:2"]["summary"]), 420)
         self.assertIn("estimated_chars", packet["budget"])
+
+    def test_broad_context_keeps_top_six_ranked_targets_and_their_prerequisites(self) -> None:
+        targets = [
+            {
+                "section_id": f"section:t{index}",
+                "chapter_id": "chapter:1",
+                "title": f"Target {index}",
+                "summary": f"Target summary {index}",
+                "role": "target",
+                "score": float(index),
+                "teaches": [],
+                "requires": [],
+            }
+            for index in range(1, 9)
+        ]
+        prerequisite = {
+            "section_id": "section:p1",
+            "chapter_id": "chapter:1",
+            "title": "Prerequisite",
+            "summary": "A hard prerequisite.",
+            "role": "prerequisite",
+            "score": 0.0,
+            "teaches": [],
+            "requires": [],
+        }
+        support_sections = [
+            {
+                "section_id": f"section:s{index}",
+                "chapter_id": "chapter:1",
+                "title": f"Support {index}",
+                "summary": "Optional support.",
+                "role": "support",
+                "score": 0.0,
+                "teaches": [],
+                "requires": [],
+            }
+            for index in range(1, 4)
+        ]
+        context = LearningPathContext(
+            main_path_sections=[prerequisite, *targets],
+            target_sections=targets,
+            prerequisite_sections=[prerequisite],
+            support_sections=support_sections,
+            prerequisite_check={"asked": False, "answers": []},
+            parallel_support_paths=[
+                {
+                    "section_id": "section:s1",
+                    "chapter_id": "chapter:1",
+                    "title": "Support 1",
+                    "summary": "Optional support.",
+                    "relationship_id": "rel:s",
+                    "relationship_type": "TRANSFER_SUPPORTS_UNIT",
+                    "source_target_section_id": "section:t8",
+                    "confidence": 0.9,
+                }
+            ],
+            reinforcement_paths=[],
+            next_step_paths=[],
+            cross_chapter_bridges=[],
+            relationship_policy={"hard_dependencies": "must affect ordering"},
+            required_concepts=[],
+            taught_concepts=[],
+            hard_dependency_edges=[
+                {
+                    "relationship_id": "rel:selected",
+                    "type": "DEPENDS_ON_UNIT",
+                    "from_section_id": "section:t8",
+                    "to_section_id": "section:p1",
+                    "confidence": 0.9,
+                    "evidence_reason": "Target 8 needs the prerequisite.",
+                },
+                {
+                    "relationship_id": "rel:unselected",
+                    "type": "DEPENDS_ON_UNIT",
+                    "from_section_id": "section:t1",
+                    "to_section_id": "section:p1",
+                    "confidence": 0.9,
+                },
+            ],
+            optional_support_edges=[],
+            learner_adjustments=[],
+        )
+        retrieved = [
+            SectionRetrievalResult(
+                section_id=f"section:t{index}",
+                chapter_id="chapter:1",
+                title=f"Target {index}",
+                summary=f"Target summary {index}",
+                score=float(index),
+                matched_concept_ids=[f"concept:t{index}"],
+                reasons=["vector_match"],
+            )
+            for index in range(1, 9)
+        ]
+
+        packet = build_curriculum_planning_packet(self.onboarding(), [], retrieved, context).to_dict()
+
+        self.assertTrue(packet["budget"]["broad_section_selection"])
+        self.assertEqual(packet["budget"]["input_section_count"], 12)
+        self.assertEqual(packet["budget"]["selected_target_section_count"], 6)
+        self.assertEqual(packet["main_path_section_ids"], [
+            "section:p1",
+            "section:t8",
+            "section:t7",
+            "section:t6",
+            "section:t5",
+            "section:t4",
+            "section:t3",
+        ])
+        self.assertEqual(set(packet["sections_by_id"]), set(packet["main_path_section_ids"]))
+        self.assertEqual(packet["relationships"]["parallel_support"], [])
+        self.assertEqual(packet["relationships"]["reinforcement"], [])
+        self.assertEqual(packet["relationships"]["next_steps"], [])
+        self.assertEqual(packet["relationships"]["cross_chapter_bridges"], [])
+        self.assertEqual(
+            [row["relationship_id"] for row in packet["relationships"]["hard_dependencies"]],
+            ["rel:selected"],
+        )
+        for section in packet["sections_by_id"].values():
+            self.assertNotIn("matched_concept_ids", section)
 
 
 if __name__ == "__main__":

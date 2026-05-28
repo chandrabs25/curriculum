@@ -78,7 +78,6 @@ export default function OnboardPage() {
       label: option.label,
       user_facing_summary: option.user_facing_description,
       refined_query: option.refined_query,
-      grounding_section_ids: option.grounding_section_ids,
     });
   };
 
@@ -102,7 +101,6 @@ export default function OnboardPage() {
       onboarding,
       learner_state: [],
       prerequisite_check: null,
-      intent_grounding_section_ids: intent.grounding_section_ids,
       subject: null,
       grade: null,
       chapter_id: null,
@@ -237,7 +235,7 @@ export default function OnboardPage() {
                   disabled={flowState === "building_preview"}
                   className="flex h-12 items-center justify-center gap-2 rounded-xl bg-secondary px-5 font-hanken text-sm font-bold text-on-secondary shadow-sm transition-all hover:opacity-90 disabled:opacity-50"
                 >
-                  <span>{flowState === "building_preview" ? "Building preview..." : "Continue to prerequisite check"}</span>
+                  <span>{flowState === "building_preview" ? "Building reading screen..." : "Continue and generate plan"}</span>
                   <span className={`material-symbols-outlined ${flowState === "building_preview" ? "animate-spin" : ""}`}>
                     {flowState === "building_preview" ? "sync" : "arrow_forward"}
                   </span>
@@ -288,5 +286,5 @@ function errorMessage(err: unknown, fallback: string): string {
 }
 
 function intentOptionKey(option: IntentOption, index: number): string {
-  return `${index}:${option.refined_query}:${option.grounding_section_ids.join("|")}`;
+  return `${index}:${option.refined_query}`;
 }

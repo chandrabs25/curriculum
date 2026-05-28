@@ -1,0 +1,31 @@
+{
+    "status": "needs_clarification",
+    "original_query": "gravitation",
+    "needs_user_choice": true,
+    "question": "What aspect of gravitation would you like to learn about?",
+    "confirmed_intent": null,
+    "options": [
+        {
+            "label": "Fundamentals of Newtonian gravity",
+            "user_facing_description": "Learn the basic laws of gravity and how it governs motion.",
+            "refined_query": "Newtonian gravitation fundamentals"
+        },
+        {
+            "label": "Introduction to Einstein's general relativity",
+            "user_facing_description": "Explore how gravity is described as spacetime curvature in relativity.",
+            "refined_query": "general relativity gravity introduction"
+        },
+        {
+            "label": "Gravitational waves and modern discoveries",
+            "user_facing_description": "Study the detection and significance of gravitational waves.",
+            "refined_query": "gravitational waves overview"
+        }
+    ],
+    "classification_packet": {
+        "original_query": "gravitation",
+        "matched_concepts": [],
+        "instructions": {
+            "user_facing_options": "Phrase options as what the learner wants to learn, not as section titles."
+        }
+    }
+}

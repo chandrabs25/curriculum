@@ -111,6 +111,8 @@ class CurriculumGraphTest(unittest.TestCase):
                 {"concept_id": "concept:unit", "canonical_label": "Unit", "normalized_label": "unit", "aliases": []},
                 {"concept_id": "concept:si_units", "canonical_label": "SI Units", "normalized_label": "si_units", "aliases": ["International System of Units"]},
                 {"concept_id": "concept:dimensional_analysis", "canonical_label": "Dimensional Analysis", "normalized_label": "dimensional_analysis", "aliases": []},
+                {"concept_id": "concept:universal_law_of_gravitation", "canonical_label": "Universal Law of Gravitation", "normalized_label": "universal_law_of_gravitation", "aliases": []},
+                {"concept_id": "concept:myasthenia_gravis", "canonical_label": "Myasthenia gravis", "normalized_label": "myasthenia_gravis", "aliases": []},
             ],
         )
         write_jsonl(
@@ -155,6 +157,9 @@ class CurriculumGraphTest(unittest.TestCase):
         self.assertEqual(graph.taught_concepts_by_section["section:2"], ["concept:si_units"])
         self.assertEqual(graph.required_concepts_by_section["section:3"], ["concept:unit"])
         self.assertEqual(graph.concept_ids_for_query("International System of Units"), ["concept:si_units"])
+        self.assertIn("concept:universal_law_of_gravitation", graph.concept_ids_for_query("gravitation"))
+        self.assertNotIn("concept:myasthenia_gravis", graph.concept_ids_for_query("gravitation"))
+        self.assertNotIn("concept:universal_law_of_gravitation", graph.concept_ids_for_query("law"))
 
     def test_graph_expands_concepts_and_prerequisites(self) -> None:
         graph = CurriculumGraph(TextbookStore(self.root), ArtifactStore(self.root))

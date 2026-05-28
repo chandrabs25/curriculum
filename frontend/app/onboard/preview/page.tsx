@@ -1,619 +1,387 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { RetryPanel } from "../../components/RetryPanel";
 import { ApiError, createCurriculumPlan } from "../../services/api";
-import { RetrievalPreviewResponse, CurriculumQueryPayload } from "../../types/curriculum";
+import {
+  CurriculumQueryPayload,
+  CurriculumPlanningPacket,
+  PlanningPacketSection,
+  RetrievalPreviewResponse,
+} from "../../types/curriculum";
+
+type GenerationPhase = "loading" | "reading" | "planning" | "done" | "error";
+
+type ReadingItem = {
+  id: string;
+  title: string;
+  summary: string;
+  role: "Target" | "Prerequisite" | "Support";
+  icon: string;
+};
 
 export default function OnboardPreviewPage() {
   const router = useRouter();
-  
+  const generationStarted = useRef(false);
+  const progressTimer = useRef<number | null>(null);
+
   const [previewData, setPreviewData] = useState<RetrievalPreviewResponse | null>(null);
   const [query, setQuery] = useState<CurriculumQueryPayload | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [submitting, setSubmitting] = useState(false);
+  const [phase, setPhase] = useState<GenerationPhase>("loading");
+  const [progressWidth, setProgressWidth] = useState(8);
+  const [activeStep, setActiveStep] = useState(0);
   const [error, setError] = useState<string | null>(null);
-  
-  // Quiz selection state: maps concept_id to status ("known_well" | "somewhat_known" | "unfamiliar")
-  const [comfortAnswers, setComfortAnswers] = useState<Record<string, string>>({});
-  
-  // Reveal state for live animation transitions
-  const [revealedSections, setRevealedSections] = useState({
-    target: false,
-    prereq: false,
-    optional: false,
-  });
-
-  // Building shimmer states
-  const [buildingSections, setBuildingSections] = useState({
-    target: false,
-    prereq: false,
-    optional: false,
-  });
-
-  // Success overlay state
-  const [showOverlay, setShowOverlay] = useState(false);
-  const [progressWidth, setProgressWidth] = useState(0);
+  const [planAttemptCount, setPlanAttemptCount] = useState(0);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    const loadTimer = window.setTimeout(() => {
-      const storedPreview = localStorage.getItem("curriculum-onboard-preview");
-      const storedQuery = localStorage.getItem("curriculum-onboard-query");
+    const storedPreview = localStorage.getItem("curriculum-onboard-preview");
+    const storedQuery = localStorage.getItem("curriculum-onboard-query");
 
-      if (storedPreview && storedQuery) {
-        try {
-          const parsedPreview = JSON.parse(storedPreview) as RetrievalPreviewResponse;
-          const parsedQuery = JSON.parse(storedQuery) as CurriculumQueryPayload;
+    if (!storedPreview || !storedQuery) {
+      window.setTimeout(() => {
+        setError("Onboarding query context not found. Please start again.");
+        setPhase("error");
+      }, 0);
+      return;
+    }
 
-          setPreviewData(parsedPreview);
-          setQuery(parsedQuery);
-          
-          const questions = parsedPreview.prerequisite_questions || [];
-          if (questions.length === 0) {
-            // No prerequisite questions, reveal sections in staggered sequence on load
-            setTimeout(() => {
-              setRevealedSections((prev) => ({ ...prev, target: true }));
-            }, 300);
-            setTimeout(() => {
-              setRevealedSections((prev) => ({ ...prev, prereq: true }));
-            }, 600);
-            setTimeout(() => {
-              setRevealedSections((prev) => ({ ...prev, optional: true }));
-            }, 900);
-          } else {
-            // Interactive reveals: do not pre-populate defaults, keep them empty initially
-            setComfortAnswers({});
-          }
-        } catch {
-          setError("Failed to load retrieval preview details.");
-        }
-      } else {
-        setError("Onboarding query context not found. Please fill out the form first.");
-      }
-      setLoading(false);
-    }, 0);
-
-    return () => window.clearTimeout(loadTimer);
+    try {
+      const parsedPreview = JSON.parse(storedPreview) as RetrievalPreviewResponse;
+      const parsedQuery = JSON.parse(storedQuery) as CurriculumQueryPayload;
+      window.setTimeout(() => {
+        setPreviewData(parsedPreview);
+        setQuery(parsedQuery);
+        setPhase("reading");
+      }, 0);
+    } catch {
+      window.setTimeout(() => {
+        setError("Failed to load retrieval preview details.");
+        setPhase("error");
+      }, 0);
+    }
   }, []);
 
-  const handleSelectOption = (conceptId: string, status: string) => {
-    setComfortAnswers((prev) => ({
-      ...prev,
-      [conceptId]: status,
-    }));
+  const readingItems = useMemo(() => {
+    if (!previewData) return [];
+    return buildReadingItems(previewData.planning_packet);
+  }, [previewData]);
 
-    if (!previewData) return;
-    const questions = previewData.prerequisite_questions || [];
-    const qIndex = questions.findIndex((q) => q.concept_id === conceptId);
+  const visibleConcepts = useMemo(() => {
+    const packet = previewData?.planning_packet;
+    if (!packet) return [];
+    const seen = new Set<string>();
+    return packet.relationships.hard_dependencies
+      .map((row) => row.bridge_concept_id)
+      .filter((conceptId): conceptId is string => {
+        if (!conceptId || seen.has(conceptId)) return false;
+        seen.add(conceptId);
+        return true;
+      })
+      .slice(0, 12)
+      .map((conceptId) => conceptId.replace("concept:", "").replaceAll("_", " "));
+  }, [previewData]);
 
-    // Staggered reveal based on which question they click
-    if (qIndex === 0) {
-      setRevealedSections((prev) => ({ ...prev, target: true }));
-    } else if (qIndex === 1) {
-      setRevealedSections((prev) => ({ ...prev, prereq: true }));
-    } else if (qIndex >= 2) {
-      setRevealedSections((prev) => ({ ...prev, optional: true }));
-    }
-  };
-
-  const handleGeneratePlan = async () => {
-    if (!query || !previewData) return;
-
-    // Check which sections are not yet revealed and trigger staggered reveal with shimmers
-    const sectionsToReveal: ("target" | "prereq" | "optional")[] = [];
-    if (!revealedSections.target) sectionsToReveal.push("target");
-    if (!revealedSections.prereq) sectionsToReveal.push("prereq");
-    if (!revealedSections.optional) sectionsToReveal.push("optional");
-
-    setSubmitting(true);
+  const generatePlan = useCallback(async () => {
+    if (!query || !previewData || generationStarted.current) return;
+    generationStarted.current = true;
+    setPhase("planning");
     setError(null);
+    setPlanAttemptCount((current) => current + 1);
+    setProgressWidth(38);
+    setActiveStep(1);
 
-    let delay = 0;
-    sectionsToReveal.forEach((sec) => {
-      setTimeout(() => {
-        setRevealedSections((prev) => ({ ...prev, [sec]: true }));
-        setBuildingSections((prev) => ({ ...prev, [sec]: true }));
-      }, delay);
-      delay += 400;
-    });
+    progressTimer.current = window.setInterval(() => {
+      setProgressWidth((current) => Math.min(94, current + 7));
+      setActiveStep((current) => Math.min(2, current + 1));
+    }, 900);
 
-    // Launch success screen overlay after the sequenced live reveals trigger
-    setTimeout(async () => {
-      setShowOverlay(true);
-      setProgressWidth(0);
+    const finalQuery: CurriculumQueryPayload = {
+      ...query,
+      prerequisite_check: {
+        asked: false,
+        answers: [],
+      },
+    };
 
-      // Start progress bar animation
-      const progressInterval = setInterval(() => {
-        setProgressWidth((prev) => {
-          if (prev >= 95) {
-            clearInterval(progressInterval);
-            return 95;
-          }
-          return prev + 12;
-        });
-      }, 250);
+    try {
+      const plan = await createCurriculumPlan(finalQuery);
+      if (progressTimer.current) window.clearInterval(progressTimer.current);
+      setProgressWidth(100);
+      setActiveStep(3);
+      setPhase("done");
 
-      // Ensure all prerequisite questions are answered, using "somewhat_known" as fallback
-      const finalAnswers = { ...comfortAnswers };
-      previewData.prerequisite_questions?.forEach((q) => {
-        if (!finalAnswers[q.concept_id]) {
-          finalAnswers[q.concept_id] = "somewhat_known";
-        }
-      });
+      const serializedPlan = JSON.stringify(plan);
+      const encodedPlanId = encodeURIComponent(plan.curriculum_plan_id);
+      localStorage.setItem(`curriculum-plan-${plan.curriculum_plan_id}`, serializedPlan);
+      localStorage.setItem(`curriculum-plan-${encodedPlanId}`, serializedPlan);
+      localStorage.setItem("curriculum-current-plan", serializedPlan);
 
-      // Structure the prerequisite checks matching PrerequisiteCheckPayload
-      const formattedAnswers = Object.entries(finalAnswers).map(([conceptId, status]) => {
-        const matchingQuestion = previewData.prerequisite_questions.find(
-          (q) => q.concept_id === conceptId
-        );
-        return {
-          concept_id: conceptId,
-          status: status,
-          required_by_section_id: matchingQuestion?.required_by_section_id || "",
-        };
-      });
+      window.setTimeout(() => {
+        router.push(`/plan/${encodeURIComponent(plan.curriculum_plan_id)}`);
+      }, 600);
+    } catch (err: unknown) {
+      if (progressTimer.current) window.clearInterval(progressTimer.current);
+      generationStarted.current = false;
+      setPhase("error");
+      setError(errorMessage(err, "Failed to generate curriculum. Please check backend connections."));
+    }
+  }, [previewData, query, router]);
 
-      const finalQuery: CurriculumQueryPayload = {
-        ...query,
-        prerequisite_check: {
-          asked: true,
-          answers: formattedAnswers,
-        },
-        intent_grounding_section_ids: query.intent_grounding_section_ids,
-      };
+  useEffect(() => {
+    if (!previewData || !query || phase !== "reading" || generationStarted.current) return;
 
-      try {
-        const plan = await createCurriculumPlan(finalQuery);
-        
-        clearInterval(progressInterval);
-        
-        // Turn off shimmers
-        setBuildingSections({
-          target: false,
-          prereq: false,
-          optional: false,
-        });
-        
-        setProgressWidth(100);
+    const stepTimer = window.setInterval(() => {
+      setActiveStep((current) => Math.min(2, current + 1));
+      setProgressWidth((current) => Math.min(34, current + 9));
+    }, 450);
 
-        // Save plan to localStorage because backend is stateless
-        localStorage.setItem(`curriculum-plan-${plan.curriculum_plan_id}`, JSON.stringify(plan));
-        localStorage.setItem("curriculum-current-plan", JSON.stringify(plan));
-        
-        // Delay slightly to finish progress bar animation
-        setTimeout(() => {
-          router.push(`/plan/${encodeURIComponent(plan.curriculum_plan_id)}`);
-        }, 500);
-      } catch (err: unknown) {
-        clearInterval(progressInterval);
-        setShowOverlay(false);
-        setBuildingSections({
-          target: false,
-          prereq: false,
-          optional: false,
-        });
-        console.error(err);
-        setError(
-          err instanceof ApiError || err instanceof Error
-            ? err.message
-            : "Failed to generate curriculum. Please check backend connections."
-        );
-        setSubmitting(false);
-      }
-    }, delay + (sectionsToReveal.length > 0 ? 500 : 0));
-  };
+    const generateTimer = window.setTimeout(() => {
+      window.clearInterval(stepTimer);
+      void generatePlan();
+    }, 1200);
 
-  if (loading) {
+    return () => {
+      window.clearInterval(stepTimer);
+      window.clearTimeout(generateTimer);
+    };
+  }, [generatePlan, phase, previewData, query]);
+
+  useEffect(() => {
+    return () => {
+      if (progressTimer.current) window.clearInterval(progressTimer.current);
+    };
+  }, []);
+
+  if (phase === "loading") {
     return (
       <div className="flex min-h-screen items-center justify-center bg-background">
         <div className="text-center">
-          <div className="h-8 w-8 animate-spin rounded-full border-4 border-secondary border-t-transparent mx-auto"></div>
-          <p className="mt-4 text-on-surface-variant text-sm">Analyzing textbooks...</p>
+          <div className="mx-auto h-8 w-8 animate-spin rounded-full border-4 border-secondary border-t-transparent" />
+          <p className="mt-4 text-sm text-on-surface-variant">Loading retrieval context...</p>
         </div>
       </div>
     );
   }
 
-  if (error || !previewData || !query) {
+  if (phase === "error" || !previewData || !query) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-background px-4">
-        <div className="max-w-md w-full text-center bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant shadow-md">
-          <h2 className="text-2xl font-bold text-error">Error</h2>
-          <p className="mt-2 text-on-surface-variant text-sm">{error || "Preview unavailable."}</p>
-          <Link
-            href="/onboard"
-            className="mt-6 inline-block px-6 py-2 bg-primary text-on-primary rounded-full hover:opacity-90 text-sm font-semibold shadow-sm"
-          >
-            Back to Onboarding
-          </Link>
+        <div className="w-full max-w-md">
+          <RetryPanel
+            title="Generation Paused"
+            message={
+              planAttemptCount > 1
+                ? `${error || "Preview unavailable."} Attempted ${planAttemptCount} times.`
+                : error || "Preview unavailable."
+            }
+            onRetry={previewData && query ? () => void generatePlan() : undefined}
+            retryLabel="Retry Generation"
+            isRetrying={phase === "planning"}
+            fallbackHref="/onboard"
+            fallbackLabel="Back to Onboarding"
+          />
         </div>
       </div>
     );
   }
 
+  const planningPacket = previewData.planning_packet;
+  const doubledItems = readingItems.length > 0 ? [...readingItems, ...readingItems] : [];
+
   return (
-    <div className="font-public text-body-md bg-background min-h-screen overflow-x-hidden">
+    <div className="min-h-screen overflow-hidden bg-background font-public text-on-surface">
       <style>{`
-        @keyframes slideUpFade {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-            filter: blur(8px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-            filter: blur(0);
-          }
+        @keyframes readingRail {
+          from { transform: translateX(0); }
+          to { transform: translateX(-50%); }
         }
 
-        @keyframes shimmer {
-          0% { background-position: -200% 0; }
-          100% { background-position: 200% 0; }
+        @keyframes floatIn {
+          from { opacity: 0; transform: translateY(12px); }
+          to { opacity: 1; transform: translateY(0); }
         }
 
-        .reveal-section {
-          opacity: 0;
-          max-height: 0;
-          overflow: hidden;
-          visibility: hidden;
-          transition: max-height 0.6s ease-out, opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.6s;
+        @keyframes pulseGlow {
+          0%, 100% { opacity: 0.45; transform: scale(0.98); }
+          50% { opacity: 1; transform: scale(1); }
         }
 
-        .reveal-section.active {
-          opacity: 1;
-          max-height: 2000px;
-          overflow: visible;
-          visibility: visible;
-          animation: slideUpFade 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        .reading-rail {
+          animation: readingRail 24s linear infinite;
         }
 
-        .shimmer-effect {
-          background: linear-gradient(90deg, transparent 25%, rgba(255, 255, 255, 0.45) 50%, transparent 75%);
-          background-size: 200% 100%;
-          animation: shimmer 1.5s infinite;
+        .float-in {
+          animation: floatIn 0.7s ease-out both;
+        }
+
+        .pulse-glow {
+          animation: pulseGlow 1.6s ease-in-out infinite;
         }
       `}</style>
 
-      {/* focused onboarding container */}
-      <main className="min-h-screen px-4 md:px-10 py-10 max-w-[1280px] mx-auto">
-        
-        {/* Header Section */}
-        <header className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
-          <div className="space-y-2">
-            <div className="flex items-center gap-2 text-secondary font-hanken font-bold text-sm">
-              <span className="material-symbols-outlined text-sm">auto_awesome</span>
-              <span>Curriculum Preview</span>
+      <main className="mx-auto flex min-h-screen w-full max-w-[1180px] flex-col justify-center px-4 py-8 md:px-8">
+        <header className="float-in mb-8 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+          <div className="max-w-2xl">
+            <div className="mb-3 flex items-center gap-2 text-sm font-bold text-secondary">
+              <span className="material-symbols-outlined text-base">auto_awesome</span>
+              <span>Reading textbook graph</span>
             </div>
-            <h1 className="font-hanken text-3xl md:text-4xl font-extrabold text-on-background">
-              Topic: {query.onboarding.topic}
+            <h1 className="font-hanken text-3xl font-extrabold text-on-background md:text-5xl">
+              Building your curriculum for {query.onboarding.topic}
             </h1>
-            <p className="text-body-lg text-on-surface-variant max-w-2xl">
-              Goal: {query.onboarding.learning_goal}
+            <p className="mt-4 text-sm leading-6 text-on-surface-variant md:text-base">
+              The planner is scanning matched sections, prerequisite links, and concept coverage before arranging the module sequence. The LLM planning call may take a little while.
             </p>
           </div>
           <Link
             href="/onboard"
-            className="hidden md:flex items-center gap-2 px-6 py-3 border border-outline-variant rounded-xl bg-white hover:bg-surface-container-low transition-colors font-hanken font-bold text-sm text-on-surface-variant"
+            className="self-start rounded-xl border border-outline-variant bg-white px-5 py-3 font-hanken text-sm font-bold text-on-surface-variant shadow-sm hover:bg-surface-container-low md:self-auto"
           >
-            <span className="material-symbols-outlined text-base">edit</span>
-            Back to Onboarding
+            Edit Query
           </Link>
         </header>
 
-        {/* Bento Grid layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-          
-          {/* Left Bento: Modules and details */}
-          <div className="lg:col-span-8 space-y-12">
-            
-            {/* Target Sections */}
-            <section className={`reveal-section ${revealedSections.target ? "active" : ""}`}>
-              <div className="flex items-center justify-between mb-4">
-                <h2 className="font-hanken text-2xl font-bold text-on-background">Target Sections</h2>
-                <span className="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-semibold">
-                  {previewData.retrieved_sections?.length || 0} Sections
-                </span>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {previewData.retrieved_sections?.map((section) => {
-                  const estReadTime = Math.max(5, Math.round(section.summary.split(/\s+/).length / 20));
-                  return (
-                    <article
-                      key={section.section_id}
-                      className="tonal-card bg-surface-container-lowest p-6 rounded-xl relative border border-[#E2E8F0] shadow-sm hover:border-secondary transition-all cursor-default overflow-hidden"
-                    >
-                      {buildingSections.target && (
-                        <div className="absolute inset-0 pointer-events-none bg-secondary/5 shimmer-effect z-10"></div>
-                      )}
-                      <div className="absolute top-4 right-4 text-xs text-on-surface-variant opacity-60">
-                        {estReadTime} min read
-                      </div>
-                      <div className="mb-3 flex items-center gap-2">
-                        <span className="bg-[#EFF6FF] text-secondary text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded">
-                          {section.score >= 0.7 ? "Highly Relevant" : "Related Section"}
-                        </span>
-                      </div>
-                      <h3 className="font-hanken font-bold text-lg mb-2 text-on-background">
-                        {section.title}
-                      </h3>
-                      <p className="text-sm text-on-surface-variant mb-4 line-clamp-3">
-                        {section.summary}
-                      </p>
-                      <div className="flex items-center gap-4 text-xs text-outline">
-                        <div className="flex items-center gap-1">
-                          <span className="material-symbols-outlined text-sm">school</span>
-                          {section.subject || "General"}
-                        </div>
-                        {section.grade !== null && (
-                          <div className="flex items-center gap-1">
-                            <span className="material-symbols-outlined text-sm">grade</span>
-                            Grade {section.grade}
-                          </div>
-                        )}
-                      </div>
-                    </article>
-                  );
-                })}
-                {previewData.retrieved_sections.length === 0 && (
-                  <div className="md:col-span-2 rounded-xl border border-outline-variant bg-surface-container-lowest p-6 text-center shadow-sm">
-                    <h3 className="font-hanken text-lg font-bold text-on-background">
-                      No matching textbook sections found
-                    </h3>
-                    <p className="mt-2 text-sm text-on-surface-variant">
-                      Try removing subject, grade, or chapter filters, or rephrase the topic with a textbook concept.
-                    </p>
-                  </div>
-                )}
-              </div>
-            </section>
-
-            {/* Prerequisite Sections */}
-            {previewData.learning_path_context?.prerequisite_sections?.length > 0 && (
-              <section className={`reveal-section ${revealedSections.prereq ? "active" : ""}`}>
-                <div className="flex items-center justify-between mb-4">
-                  <h2 className="font-hanken text-2xl font-bold text-on-background">Foundational Prerequisites</h2>
-                </div>
-                <div className="bg-surface-container-low rounded-xl overflow-hidden border border-outline-variant/60 shadow-inner relative">
-                  {buildingSections.prereq && (
-                    <div className="absolute inset-0 pointer-events-none bg-secondary/5 shimmer-effect z-10"></div>
-                  )}
-                  <div className="divide-y divide-outline-variant">
-                    {previewData.learning_path_context.prerequisite_sections.map((prereq) => (
-                      <div
-                        key={prereq.section_id}
-                        className="p-6 flex flex-col md:flex-row md:items-center gap-4 hover:bg-surface-container-high transition-colors"
-                      >
-                        <div className="h-12 w-12 rounded-lg bg-surface-container-lowest flex items-center justify-center shrink-0 border border-outline-variant">
-                          <span className="material-symbols-outlined text-secondary">
-                            energy_savings_leaf
-                          </span>
-                        </div>
-                        <div className="grow">
-                          <div className="flex items-center gap-2 mb-1">
-                            <h4 className="font-hanken font-semibold text-sm text-on-background">
-                              {prereq.title}
-                            </h4>
-                            <span className="text-[10px] font-bold uppercase tracking-wider text-on-surface-variant px-2 py-0.5 border border-outline-variant rounded">
-                              {prereq.role}
-                            </span>
-                          </div>
-                          <p className="text-xs text-on-surface-variant">
-                            {prereq.summary}
-                          </p>
-                        </div>
-                        <div className="text-xs text-secondary font-semibold shrink-0 uppercase tracking-wide">
-                          Required Base
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </section>
-            )}
-
-            {/* Optional Support / reinforcement */}
-            {previewData.learning_path_context?.support_sections?.length > 0 && (
-              <section className={`reveal-section ${revealedSections.optional ? "active font-body-md" : ""}`}>
-                <div className="flex items-center justify-between mb-4">
-                  <h2 className="font-hanken text-2xl font-bold text-on-background">Optional Support Resources</h2>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {previewData.learning_path_context.support_sections.map((support) => (
-                    <div
-                      key={support.section_id}
-                      className="tonal-card bg-surface-container-lowest p-5 rounded-xl border border-[#E2E8F0] shadow-sm flex gap-4 relative overflow-hidden"
-                    >
-                      {buildingSections.optional && (
-                        <div className="absolute inset-0 pointer-events-none bg-secondary/5 shimmer-effect z-10"></div>
-                      )}
-                      <div className="h-14 w-14 rounded-lg bg-surface-container-low flex items-center justify-center shrink-0 border border-outline-variant">
-                        <span className="material-symbols-outlined text-secondary text-2xl">
-                          layers
-                        </span>
-                      </div>
-                      <div className="py-0.5">
-                        <h4 className="font-hanken font-semibold text-sm text-on-background mb-1">
-                          {support.title}
-                        </h4>
-                        <p className="text-xs text-on-surface-variant mb-2 line-clamp-2">
-                          {support.summary}
-                        </p>
-                        <span className="text-[10px] font-bold bg-surface-container px-2 py-0.5 rounded text-secondary uppercase tracking-wider">
-                          {support.role}
-                        </span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </section>
-            )}
-          </div>
-
-          {/* Right Bento: Prerequisite comfort check */}
-          <div className="lg:col-span-4 space-y-6 lg:sticky lg:top-24">
-            
-            {/* comfort check panel */}
-            {previewData.prerequisite_questions?.length > 0 ? (
-              <div className="tonal-card bg-surface-container-lowest p-6 rounded-xl border border-[#E2E8F0] shadow-md">
-                <h3 className="font-hanken text-lg font-bold mb-3 flex items-center gap-2 text-on-background">
-                  <span className="material-symbols-outlined text-secondary">psychology</span>
-                  Prerequisite Check
-                </h3>
-                <p className="text-sm text-on-surface-variant mb-6 leading-relaxed">
-                  Before generating your flow, how comfortable are you with these foundational concepts?
-                </p>
-
-                <div className="space-y-6">
-                  {previewData.prerequisite_questions.map((q) => {
-                    const selectedVal = comfortAnswers[q.concept_id];
-
-                    return (
-                      <div key={q.question_id} className="border-t border-outline-variant/40 pt-4 first:border-0 first:pt-0">
-                        <span className="font-hanken font-bold text-sm block text-on-background mb-3">
-                          Concept: {q.label}
-                        </span>
-                        
-                        {q.pedagogical_reason && (
-                          <p className="text-[11px] text-on-surface-variant/80 italic mb-2 leading-tight">
-                            Reason: {q.pedagogical_reason}
-                          </p>
-                        )}
-
-                        <div className="grid grid-cols-1 gap-2">
-                          <button
-                            type="button"
-                            onClick={() => handleSelectOption(q.concept_id, "known_well")}
-                            className={`quiz-btn w-full text-left p-3 rounded-lg border text-sm transition-all flex items-center justify-between focus:outline-none cursor-pointer ${
-                              selectedVal === "known_well"
-                                ? "bg-[#EFF6FF] border-secondary text-secondary font-semibold"
-                                : "border-outline-variant bg-surface-container-lowest text-on-surface-variant hover:border-secondary"
-                            }`}
-                          >
-                            <span>Know Well</span>
-                            <span className={`material-symbols-outlined text-sm check ${
-                              selectedVal === "known_well" ? "opacity-100" : "opacity-0"
-                            }`}>
-                              check_circle
-                            </span>
-                          </button>
-                          
-                          <button
-                            type="button"
-                            onClick={() => handleSelectOption(q.concept_id, "somewhat_known")}
-                            className={`quiz-btn w-full text-left p-3 rounded-lg border text-sm transition-all flex items-center justify-between focus:outline-none cursor-pointer ${
-                              selectedVal === "somewhat_known"
-                                ? "bg-[#EFF6FF] border-secondary text-secondary font-semibold"
-                                : "border-outline-variant bg-surface-container-lowest text-on-surface-variant hover:border-secondary"
-                            }`}
-                          >
-                            <span>Somewhat Know</span>
-                            <span className={`material-symbols-outlined text-sm check ${
-                              selectedVal === "somewhat_known" ? "opacity-100" : "opacity-0"
-                            }`}>
-                              check_circle
-                            </span>
-                          </button>
-
-                          <button
-                            type="button"
-                            onClick={() => handleSelectOption(q.concept_id, "unfamiliar")}
-                            className={`quiz-btn w-full text-left p-3 rounded-lg border text-sm transition-all flex items-center justify-between focus:outline-none cursor-pointer ${
-                              selectedVal === "unfamiliar"
-                                ? "bg-[#EFF6FF] border-secondary text-secondary font-semibold"
-                                : "border-outline-variant bg-surface-container-lowest text-on-surface-variant hover:border-secondary"
-                            }`}
-                          >
-                            <span>Unfamiliar</span>
-                            <span className={`material-symbols-outlined text-sm check ${
-                              selectedVal === "unfamiliar" ? "opacity-100" : "opacity-0"
-                            }`}>
-                              check_circle
-                            </span>
-                          </button>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            ) : (
-              <div className="tonal-card bg-surface-container-lowest p-6 rounded-xl border border-[#E2E8F0] shadow-md text-center">
-                <span className="material-symbols-outlined text-secondary text-4xl mb-2">check_circle</span>
-                <h4 className="font-hanken font-bold text-base text-on-background">No Prerequisites Required</h4>
-                <p className="text-xs text-on-surface-variant mt-2 leading-relaxed">
-                  Your selected subject and topic flow seamlessly from scratch! We are ready to generate your curriculum plan.
-                </p>
-              </div>
-            )}
-
-            {/* Main Action buttons */}
-            <div className="space-y-3">
-              <button
-                type="button"
-                onClick={handleGeneratePlan}
-                disabled={submitting}
-                className="w-full bg-primary text-on-primary py-4 rounded-xl font-hanken font-bold text-sm hover:opacity-90 active:scale-[0.98] transition-all flex items-center justify-center gap-2 group cursor-pointer shadow-md disabled:opacity-50"
-              >
-                <span>Continue and Generate Plan</span>
-                <span className="material-symbols-outlined transition-transform group-hover:translate-x-1">
-                  arrow_forward
-                </span>
-              </button>
-              <Link
-                href="/onboard"
-                className="w-full py-4 rounded-xl font-hanken font-bold text-sm border border-outline-variant bg-white text-on-surface-variant hover:bg-surface-container-low transition-colors block text-center shadow-sm"
-              >
-                Back to Edit Onboarding
-              </Link>
-            </div>
-
-            {/* intelligence counter */}
-            <div className="flex items-center gap-3 p-4 bg-surface-container-low rounded-xl border border-outline-variant/40 shadow-inner">
-              <div className="relative shrink-0">
-                <span className="material-symbols-outlined text-secondary animate-pulse">hub</span>
-              </div>
-              <p className="text-xs text-on-surface-variant leading-normal">
-                Our AI engine is processing <span className="font-bold text-on-background">24,000+ textbook concepts</span> to tailor this learning pathway.
+        <section className="float-in rounded-2xl border border-outline-variant bg-surface-container-lowest p-5 shadow-sm md:p-7">
+          <div className="mb-5 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+            <div>
+              <h2 className="font-hanken text-xl font-bold text-on-background">Live Reading Pass</h2>
+              <p className="mt-1 text-sm text-on-surface-variant">
+                {sectionCount(planningPacket)} sections selected for planning
+                {visibleConcepts.length > 0 ? `, with ${visibleConcepts.length} prerequisite concept bridges.` : "."}
               </p>
             </div>
+            <span className="inline-flex items-center gap-2 rounded-full bg-secondary-container px-4 py-2 text-xs font-bold text-on-secondary-container">
+              <span className="h-2 w-2 rounded-full bg-secondary pulse-glow" />
+                {phase === "done" ? "Plan ready" : phase === "planning" ? "Calling planner" : "Reading context"}
+            </span>
           </div>
-        </div>
-      </main>
 
-      {/* Success Loading Overlay */}
-      {showOverlay && (
-        <div className="fixed inset-0 z-[100] bg-[#0b1c30]/80 flex items-center justify-center p-6 transition-opacity duration-500 animate-fadeIn">
-          <div className="bg-surface-container-lowest max-w-md w-full p-8 rounded-xl text-center shadow-2xl border border-outline-variant">
-            <div className="mb-6 flex justify-center">
-              <div className="h-20 w-20 rounded-full bg-surface-container-low flex items-center justify-center border border-secondary/20">
-                <span className="material-symbols-outlined text-4xl text-secondary animate-spin">
-                  auto_fix_high
-                </span>
+          <div className="relative overflow-hidden py-3">
+            <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-surface-container-lowest to-transparent" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-surface-container-lowest to-transparent" />
+            {doubledItems.length > 0 ? (
+              <div className="reading-rail flex w-max gap-4">
+                {doubledItems.map((item, index) => (
+                  <article
+                    key={`${item.id}:${index}`}
+                    className="h-[178px] w-[280px] shrink-0 rounded-xl border border-outline-variant bg-white p-4 shadow-sm md:w-[340px]"
+                  >
+                    <div className="mb-3 flex items-center justify-between gap-3">
+                      <span className="flex items-center gap-2 rounded-full bg-surface-container-low px-3 py-1 text-[11px] font-bold text-secondary">
+                        <span className="material-symbols-outlined text-sm">{item.icon}</span>
+                        {item.role}
+                      </span>
+                      <span className="max-w-[130px] truncate font-mono text-[10px] text-outline">{item.id}</span>
+                    </div>
+                    <h3 className="line-clamp-2 font-hanken text-base font-bold text-on-background">{item.title}</h3>
+                    <p className="mt-2 line-clamp-3 text-xs leading-5 text-on-surface-variant">{item.summary}</p>
+                  </article>
+                ))}
               </div>
-            </div>
-            <h2 className="font-hanken text-xl font-bold mb-2 text-on-background">Generating Your Flow</h2>
-            <p className="text-sm text-on-surface-variant mb-6 leading-relaxed">
-              Assembling the tailored roadmap for <span className="font-semibold">{query?.onboarding.topic}</span> based on your comfort assessments.
-            </p>
-            
-            {/* Pulsing Progress Bar */}
-            <div className="h-2 w-full bg-surface-container rounded-full overflow-hidden mb-6">
-              <div
-                className="h-full bg-secondary rounded-full transition-all duration-300 ease-out"
-                style={{ width: `${progressWidth}%` }}
-              ></div>
-            </div>
-            <p className="text-xs text-outline font-semibold uppercase tracking-widest animate-pulse">
-              Optimizing Pathways...
-            </p>
+            ) : (
+              <div className="rounded-xl border border-outline-variant bg-white p-6 text-center text-sm text-on-surface-variant">
+                No matching sections were found for this query.
+              </div>
+            )}
           </div>
-        </div>
-      )}
+
+          {visibleConcepts.length > 0 && (
+            <div className="mt-6 flex flex-wrap gap-2">
+              {visibleConcepts.map((label, index) => (
+                <span
+                  key={`${label}:${index}`}
+                  className="rounded-full border border-outline-variant bg-surface-container-low px-3 py-1 text-xs font-semibold text-on-surface-variant"
+                >
+                  {label}
+                </span>
+              ))}
+            </div>
+          )}
+        </section>
+
+        <section className="float-in mt-6 grid gap-4 md:grid-cols-3">
+          {planningSteps.map((step, index) => (
+            <div
+              key={step.label}
+              className={`rounded-xl border p-4 shadow-sm transition-all ${
+                index <= activeStep
+                  ? "border-secondary bg-surface-container-lowest"
+                  : "border-outline-variant bg-surface-container-low text-on-surface-variant"
+              }`}
+            >
+              <div className="mb-3 flex items-center gap-2">
+                <span className={`material-symbols-outlined text-lg ${index <= activeStep ? "text-secondary" : "text-outline"}`}>
+                  {step.icon}
+                </span>
+                <h3 className="font-hanken text-sm font-bold">{step.label}</h3>
+              </div>
+              <p className="text-xs leading-5 text-on-surface-variant">{step.body}</p>
+            </div>
+          ))}
+        </section>
+
+        <section className="float-in mt-8 rounded-2xl border border-outline-variant bg-surface-container-lowest p-5 shadow-sm">
+          <div className="mb-3 flex items-center justify-between text-xs font-bold uppercase tracking-wider text-on-surface-variant">
+            <span>{phase === "done" ? "Opening plan" : phase === "planning" ? "Waiting for curriculum planner" : "Generating automatically"}</span>
+            <span>{progressWidth}%</span>
+          </div>
+          <div className="h-3 overflow-hidden rounded-full bg-surface-container">
+            <div
+              className="h-full rounded-full bg-secondary transition-all duration-500 ease-out"
+              style={{ width: `${progressWidth}%` }}
+            />
+          </div>
+        </section>
+      </main>
     </div>
   );
+}
+
+const planningSteps = [
+  {
+    label: "Read matched sections",
+    body: "Scanning target sections and summaries selected by retrieval.",
+    icon: "chrome_reader_mode",
+  },
+  {
+    label: "Trace relationships",
+    body: "Following prerequisite, support, reinforcement, and next-step links.",
+    icon: "account_tree",
+  },
+  {
+    label: "Order modules",
+    body: "Calling the planner to arrange a compact learning sequence.",
+    icon: "route",
+  },
+];
+
+function buildReadingItems(packet: CurriculumPlanningPacket): ReadingItem[] {
+  return packet.main_path_section_ids
+    .map((sectionId) => packet.sections_by_id[sectionId])
+    .filter((section): section is PlanningPacketSection => Boolean(section))
+    .map((section) => itemFromPlanningSection(section));
+}
+
+function itemFromPlanningSection(section: PlanningPacketSection): ReadingItem {
+  const role = section.role === "prerequisite" ? "Prerequisite" : "Target";
+  return {
+    id: section.section_id,
+    title: section.title,
+    summary: section.summary,
+    role,
+    icon: role === "Prerequisite" ? "foundation" : "my_location",
+  };
+}
+
+function sectionCount(packet: CurriculumPlanningPacket): number {
+  return packet.main_path_section_ids.length;
+}
+
+function errorMessage(err: unknown, fallback: string): string {
+  if (err instanceof ApiError || err instanceof Error) return err.message;
+  return fallback;
 }

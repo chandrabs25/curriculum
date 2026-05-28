@@ -1,25 +1,71 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
+import { RetryPanel } from "../../../../components/RetryPanel";
 import { designModule } from "../../../../services/api";
-import { CurriculumPlanPayload } from "../../../../types/curriculum";
+import { readCachedModuleDesign, writeCachedModuleDesign } from "../../../../services/moduleDesignCache";
+import { CurriculumPlanPayload, ExpandedCurriculumModulePayload } from "../../../../types/curriculum";
 
 export default function ModuleReadingPage() {
   const params = useParams();
-  const id = params.id as string;
-  const moduleId = params.moduleId as string;
+  const rawId = params.id as string;
+  const id = decodeURIComponent(rawId);
+  const rawModuleId = params.moduleId as string;
+  const moduleId = decodeURIComponent(rawModuleId);
 
   const [plan, setPlan] = useState<CurriculumPlanPayload | null>(null);
-  const [moduleData, setModuleData] = useState<any | null>(null);
+  const [moduleData, setModuleData] = useState<ExpandedCurriculumModulePayload | null>(null);
   const [loading, setLoading] = useState(true);
+  const [retrying, setRetrying] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [completedCount, setCompletedCount] = useState(0);
 
+  const loadModuleDesign = useCallback(
+    async (parsedPlan: CurriculumPlanPayload, useCache: boolean) => {
+      setError(null);
+      if (useCache) {
+        const cached = readCachedModuleDesign(parsedPlan.curriculum_plan_id, moduleId);
+        if (cached) {
+          setModuleData(cached);
+          setLoading(false);
+          return;
+        }
+      }
+
+      const data = await designModule({
+        plan: parsedPlan,
+        module_id: moduleId,
+        learner_state: [],
+      });
+      writeCachedModuleDesign(parsedPlan.curriculum_plan_id, moduleId, data);
+      setModuleData(data);
+    },
+    [moduleId]
+  );
+
+  const retryLoadModuleDesign = useCallback(async () => {
+    if (!plan) return;
+    setRetrying(true);
+    setError(null);
+    try {
+      await loadModuleDesign(plan, false);
+    } catch (err: unknown) {
+      console.error(err);
+      setError(errorMessage(err, "Failed to load module details from API backend."));
+    } finally {
+      setRetrying(false);
+      setLoading(false);
+    }
+  }, [loadModuleDesign, plan]);
+
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const storedPlan = localStorage.getItem(`curriculum-plan-${id}`);
+      const storedPlan =
+        localStorage.getItem(`curriculum-plan-${id}`) ||
+        localStorage.getItem(`curriculum-plan-${rawId}`) ||
+        matchingCurrentPlan(id, rawId);
       
       Promise.resolve().then(() => {
         if (!storedPlan) {
@@ -38,18 +84,10 @@ export default function ModuleReadingPage() {
           }).length;
           setCompletedCount(count);
 
-          // Fetch designed module content from backend
-          designModule({
-            plan: parsedPlan,
-            module_id: moduleId,
-            learner_state: [],
-          })
-            .then((data) => {
-              setModuleData(data);
-            })
+          loadModuleDesign(parsedPlan, true)
             .catch((err) => {
               console.error(err);
-              setError(err.message || "Failed to load module details from API backend.");
+              setError(errorMessage(err, "Failed to load module details from API backend."));
             })
             .finally(() => {
               setLoading(false);
@@ -60,7 +98,7 @@ export default function ModuleReadingPage() {
         }
       });
     }
-  }, [id, moduleId]);
+  }, [id, loadModuleDesign, rawId]);
 
   if (loading) {
     return (
@@ -79,14 +117,33 @@ export default function ModuleReadingPage() {
     return (
       <div className="flex min-h-screen items-center justify-center bg-background px-4">
         <div className="max-w-md w-full text-center bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant shadow-md">
-          <h2 className="text-2xl font-bold text-error">Error</h2>
-          <p className="mt-2 text-on-surface-variant text-sm">{error}</p>
-          <Link
-            href={`/plan/${id}`}
-            className="mt-6 inline-block px-6 py-2 bg-primary text-on-primary rounded-full hover:opacity-90 text-sm font-semibold shadow-sm"
-          >
-            Back to Plan
-          </Link>
+          <RetryPanel
+            title="Module Load Failed"
+            message={error}
+            onRetry={plan ? () => void retryLoadModuleDesign() : undefined}
+            retryLabel="Retry Module"
+            isRetrying={retrying}
+            fallbackHref={`/plan/${encodeURIComponent(id)}`}
+            fallbackLabel="Back to Plan"
+          />
+        </div>
+      </div>
+    );
+  }
+
+  if (!moduleData) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-background px-4">
+        <div className="max-w-md w-full">
+          <RetryPanel
+            title="Module Unavailable"
+            message="The module content was not loaded."
+            onRetry={plan ? () => void retryLoadModuleDesign() : undefined}
+            retryLabel="Retry Module"
+            isRetrying={retrying}
+            fallbackHref={`/plan/${encodeURIComponent(id)}`}
+            fallbackLabel="Back to Plan"
+          />
         </div>
       </div>
     );
@@ -124,7 +181,7 @@ export default function ModuleReadingPage() {
             <span className="font-hanken font-semibold text-sm">Dashboard</span>
           </Link>
           <Link
-            href={`/plan/${id}`}
+            href={`/plan/${encodeURIComponent(id)}`}
             className="flex items-center gap-3 px-3 py-2.5 text-on-surface-variant hover:bg-surface-variant transition-all rounded-lg group"
           >
             <span className="material-symbols-outlined group-hover:text-secondary">map</span>
@@ -245,7 +302,7 @@ export default function ModuleReadingPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
               {prevModule ? (
                 <Link
-                  href={`/plan/${id}/module/${prevModule.module_id}`}
+                  href={moduleHref(id, prevModule.module_id)}
                   className="group p-4 border border-outline-variant rounded-lg flex items-center gap-4 hover:bg-surface-container transition-all"
                 >
                   <span className="material-symbols-outlined text-outline group-hover:text-secondary transition-colors">
@@ -258,7 +315,7 @@ export default function ModuleReadingPage() {
                 </Link>
               ) : (
                 <Link
-                  href={`/plan/${id}`}
+                  href={`/plan/${encodeURIComponent(id)}`}
                   className="group p-4 border border-outline-variant rounded-lg flex items-center gap-4 hover:bg-surface-container transition-all"
                 >
                   <span className="material-symbols-outlined text-outline group-hover:text-secondary transition-colors">
@@ -273,7 +330,7 @@ export default function ModuleReadingPage() {
 
               {nextModule ? (
                 <Link
-                  href={`/plan/${id}/module/${nextModule.module_id}`}
+                  href={moduleHref(id, nextModule.module_id)}
                   className="group p-4 border border-outline-variant rounded-lg flex items-center justify-end gap-4 text-right hover:bg-surface-container transition-all"
                 >
                   <div>
@@ -286,7 +343,7 @@ export default function ModuleReadingPage() {
                 </Link>
               ) : (
                 <Link
-                  href={`/plan/${id}`}
+                  href={`/plan/${encodeURIComponent(id)}`}
                   className="group p-4 border border-outline-variant rounded-lg flex items-center justify-end gap-4 text-right hover:bg-surface-container transition-all"
                 >
                   <div>
@@ -382,7 +439,7 @@ export default function ModuleReadingPage() {
                 Ready to validate your progress?
               </p>
               <Link
-                href={`/plan/${id}/module/${moduleId}/checkpoint`}
+                href={`${moduleHref(id, moduleId)}/checkpoint`}
                 className="bg-secondary text-on-secondary px-8 py-4 rounded-full font-hanken font-bold text-sm hover:shadow-lg hover:scale-105 active:scale-95 transition-all flex items-center gap-3 mx-auto cursor-pointer w-fit"
               >
                 <span className="material-symbols-outlined">quiz</span>
@@ -398,7 +455,7 @@ export default function ModuleReadingPage() {
             <span className="material-symbols-outlined">home</span>
             <span className="text-[10px]">Home</span>
           </Link>
-          <Link href={`/plan/${id}`} className="flex flex-col items-center justify-center text-on-surface-variant hover:text-secondary">
+          <Link href={`/plan/${encodeURIComponent(id)}`} className="flex flex-col items-center justify-center text-on-surface-variant hover:text-secondary">
             <span className="material-symbols-outlined">menu_book</span>
             <span className="text-[10px]">My Plan</span>
           </Link>
@@ -410,4 +467,24 @@ export default function ModuleReadingPage() {
       </main>
     </div>
   );
+}
+
+function matchingCurrentPlan(id: string, rawId: string): string | null {
+  const raw = localStorage.getItem("curriculum-current-plan");
+  if (!raw) return null;
+  try {
+    const parsed = JSON.parse(raw) as CurriculumPlanPayload;
+    return parsed.curriculum_plan_id === id || encodeURIComponent(parsed.curriculum_plan_id) === rawId ? raw : null;
+  } catch {
+    return null;
+  }
+}
+
+function moduleHref(planId: string, moduleId: string): string {
+  return `/plan/${encodeURIComponent(planId)}/module/${encodeURIComponent(moduleId)}`;
+}
+
+function errorMessage(err: unknown, fallback: string): string {
+  if (err instanceof Error) return err.message;
+  return fallback;
 }

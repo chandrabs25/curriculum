@@ -86,11 +86,31 @@ def build_learning_path_context(
             next_step_edges.append(edge)
 
     target_sections = [_section_context(graph, section_id, "target", retrieved_by_id.get(section_id)) for section_id in target_ids]
-    prerequisite_sections = [
-        _section_context(graph, section_id, "prerequisite", retrieved_by_id.get(section_id))
-        for section_id in prerequisite_ids
-        if section_id and section_id not in target_ids
-    ]
+    
+    known_well_concepts = set()
+    if prerequisite_check and prerequisite_check.get("asked"):
+        for ans in prerequisite_check.get("answers") or []:
+            if ans.get("status") == "known_well":
+                known_well_concepts.add(ans.get("concept_id"))
+
+    target_required_concepts = {
+        concept["concept_id"]
+        for section in target_sections
+        for concept in section.get("requires") or []
+    }
+
+    prerequisite_sections = []
+    for section_id in prerequisite_ids:
+        if not section_id or section_id in target_ids:
+            continue
+        # Prune prerequisite section if all the target-required concepts it teaches are known well
+        taught_concepts = set(graph.concepts_taught_by_section(section_id))
+        relevant_reqs = taught_concepts & target_required_concepts
+        if relevant_reqs and relevant_reqs.issubset(known_well_concepts):
+            continue
+        prerequisite_sections.append(
+            _section_context(graph, section_id, "prerequisite", retrieved_by_id.get(section_id))
+        )
     support_sections = [
         _section_context(graph, section_id, "support", retrieved_by_id.get(section_id))
         for section_id in support_ids
@@ -118,7 +138,7 @@ def build_learning_path_context(
         next_step_paths=next_step_paths,
         cross_chapter_bridges=cross_chapter_bridges,
         relationship_policy=relationship_policy(),
-        required_concepts=_concept_rows(main_concept_sections, "requires"),
+        required_concepts=_concept_rows(target_sections, "requires"),
         taught_concepts=_concept_rows(all_sections, "teaches"),
         hard_dependency_edges=hard_edges,
         optional_support_edges=optional_edges,

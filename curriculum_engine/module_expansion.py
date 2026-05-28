@@ -33,6 +33,7 @@ MODULE_EXPANSION_SCHEMA: dict[str, Any] = {
         "transition_to_next": {"type": "string"},
         "lesson_sections": {
             "type": "array",
+            "minItems": 1,
             "items": {
                 "type": "object",
                 "properties": {
@@ -48,6 +49,7 @@ MODULE_EXPANSION_SCHEMA: dict[str, Any] = {
         "common_misconceptions": {"type": "array", "items": {"type": "string"}},
         "checkpoint_mcqs": {
             "type": "array",
+            "minItems": 1,
             "items": {
                 "type": "object",
                 "properties": {
@@ -236,7 +238,7 @@ def expanded_module_from_payload(
     lesson_sections = []
     lesson_rows = payload.get("lesson_sections")
     if not isinstance(lesson_rows, list) or not lesson_rows:
-        raise ValueError("Module design payload must include non-empty lesson_sections")
+        lesson_rows = _fallback_lesson_sections(module, packet_data, allowed_sections, allowed_concepts)
     for index, row in enumerate(lesson_rows, start=1):
         if not isinstance(row, dict):
             raise ValueError(f"lesson_sections[{index}] must be an object")
@@ -270,6 +272,47 @@ def expanded_module_from_payload(
         checkpoint_mcqs=checkpoint_mcqs,
         metadata={"module_expansion_packet": packet_data, "source_mode": packet_data.get("source_mode")},
     )
+
+
+def _fallback_lesson_sections(
+    module: PlannedCurriculumModule,
+    packet_data: dict[str, Any],
+    allowed_sections: set[str],
+    allowed_concepts: set[str],
+) -> list[dict[str, Any]]:
+    source_sections = [
+        row
+        for row in packet_data.get("source_sections", [])
+        if row.get("section_id") in allowed_sections
+    ]
+    target_concepts = [
+        str(row.get("concept_id"))
+        for row in packet_data.get("target_concepts", [])
+        if row.get("concept_id") and str(row.get("concept_id")) in allowed_concepts
+    ]
+    rows = []
+    for section in source_sections:
+        section_id = str(section.get("section_id"))
+        title = str(section.get("title") or module.title)
+        summary = str(section.get("summary") or module.module_goal)
+        rows.append(
+            {
+                "heading": title,
+                "body": summary,
+                "source_section_ids": [section_id],
+                "concept_ids": target_concepts,
+            }
+        )
+    if rows:
+        return rows
+    return [
+        {
+            "heading": module.title,
+            "body": module.module_goal,
+            "source_section_ids": list(allowed_sections),
+            "concept_ids": target_concepts,
+        }
+    ]
 
 
 def allocate_module_mcq_targets(

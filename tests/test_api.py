@@ -35,7 +35,6 @@ class FakeLLM:
                 "confirmed_label": "Learn SI units",
                 "confirmed_summary": "You want to learn SI measurement standards.",
                 "refined_query": "SI units and measurement standards",
-                "grounding_section_ids": ["section:2"],
                 "options": [],
             }
         if schema and "modules" in schema.get("properties", {}):
@@ -221,23 +220,7 @@ class APITest(unittest.TestCase):
         data = response.json()
         self.assertTrue(data["retrieved_sections"])
         self.assertIn("planning_packet", data)
-        self.assertTrue(data["prerequisite_questions"])
-
-    def test_retrieval_preview_uses_intent_grounding_as_main_target(self) -> None:
-        payload = self.query_payload()
-        payload["onboarding"]["topic"] = "basic measurement applications"
-        payload["intent_grounding_section_ids"] = ["section:2"]
-
-        response = self.client.post("/api/retrieval/preview", json=payload)
-
-        self.assertEqual(response.status_code, 200)
-        data = response.json()
-        self.assertEqual([row["section_id"] for row in data["retrieved_sections"]], ["section:2"])
-        self.assertEqual([row["section_id"] for row in data["learning_path_context"]["target_sections"]], ["section:2"])
-        self.assertEqual(
-            [(row["concept_id"], row["required_by_section_id"]) for row in data["prerequisite_questions"]],
-            [("concept:unit", "section:2")],
-        )
+        self.assertEqual(data["prerequisite_questions"], [])
 
     def test_intent_classification_endpoint(self) -> None:
         response = self.client.post("/api/intent/classify", json={"query": "SI Units", "grade": 11})

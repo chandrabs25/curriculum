@@ -92,13 +92,13 @@ class IntentTest(unittest.TestCase):
     def tearDown(self) -> None:
         self.tmp.cleanup()
 
-    def test_packet_uses_only_titles_and_concepts(self) -> None:
+    def test_packet_uses_corpus_clues_without_summaries(self) -> None:
         packet = build_intent_classification_packet(self.graph, self.retriever, "acceleration").to_dict()
 
         self.assertEqual(packet["original_query"], "acceleration")
         self.assertTrue(packet["matched_concepts"])
         self.assertTrue(packet["candidate_sections"])
-        self.assertIn("title", packet["candidate_sections"][0])
+        self.assertEqual(packet["candidate_sections"][0]["title"], "ACCELERATION")
         self.assertNotIn("summary", packet["candidate_sections"][0])
 
     def test_prompt_tells_llm_not_to_copy_section_titles(self) -> None:
@@ -107,6 +107,7 @@ class IntentTest(unittest.TestCase):
         )
 
         self.assertIn("Do not copy section titles as option labels", prompt)
+        self.assertIn("Do not propose topics that are not supported", prompt)
         self.assertLess(prompt.index("Intent packet:"), prompt.index("Final task:"))
 
     def test_parse_confirmed_intent(self) -> None:
@@ -118,7 +119,6 @@ class IntentTest(unittest.TestCase):
                 "confirmed_label": "Understand what acceleration means",
                 "confirmed_summary": "Learn acceleration as change in velocity over time.",
                 "refined_query": "basic meaning of acceleration as rate of change of velocity",
-                "grounding_section_ids": ["section:2.3", "missing"],
                 "options": [],
             },
             packet,
@@ -126,7 +126,9 @@ class IntentTest(unittest.TestCase):
 
         self.assertEqual(result["status"], "confirmed")
         self.assertNotIn("intent_id", result["confirmed_intent"])
-        self.assertEqual(result["confirmed_intent"]["grounding_section_ids"], ["section:2.3"])
+        self.assertEqual(result["confirmed_intent"]["label"], "Understand what acceleration means")
+        self.assertEqual(result["confirmed_intent"]["user_facing_summary"], "Learn acceleration as change in velocity over time.")
+        self.assertEqual(result["confirmed_intent"]["refined_query"], "basic meaning of acceleration as rate of change of velocity")
 
     def test_parse_clarification_options(self) -> None:
         packet = build_intent_classification_packet(self.graph, self.retriever, "acceleration")
@@ -137,19 +139,16 @@ class IntentTest(unittest.TestCase):
                 "confirmed_label": "",
                 "confirmed_summary": "",
                 "refined_query": "",
-                "grounding_section_ids": [],
                 "options": [
                     {
                         "label": "Understand what acceleration means",
                         "user_facing_description": "Learn acceleration as change in velocity over time.",
                         "refined_query": "basic meaning of acceleration",
-                        "grounding_section_ids": ["section:2.3"],
                     },
                     {
                         "label": "Learn acceleration due to gravity",
                         "user_facing_description": "Understand what g means for falling objects.",
                         "refined_query": "acceleration due to gravity",
-                        "grounding_section_ids": ["section:2.4"],
                     },
                 ],
             },
@@ -171,7 +170,6 @@ class IntentTest(unittest.TestCase):
                 "confirmed_label": "Understand what acceleration means",
                 "confirmed_summary": "Learn acceleration as change in velocity over time.",
                 "refined_query": "basic meaning of acceleration",
-                "grounding_section_ids": ["section:2.3"],
                 "options": [],
             },
             packet,

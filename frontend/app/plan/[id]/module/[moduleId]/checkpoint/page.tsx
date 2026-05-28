@@ -1,20 +1,29 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
+import { RetryPanel } from "../../../../../components/RetryPanel";
 import { designModule, submitCheckpoint } from "../../../../../services/api";
-import { CurriculumPlanPayload, CheckpointAnswerPayload } from "../../../../../types/curriculum";
+import { readCachedModuleDesign, writeCachedModuleDesign } from "../../../../../services/moduleDesignCache";
+import {
+  CurriculumPlanPayload,
+  CheckpointAnswerPayload,
+  ExpandedCurriculumModulePayload,
+} from "../../../../../types/curriculum";
 
 export default function CheckpointQuizPage() {
   const params = useParams();
   const router = useRouter();
-  const id = params.id as string;
-  const moduleId = params.moduleId as string;
+  const rawId = params.id as string;
+  const id = decodeURIComponent(rawId);
+  const rawModuleId = params.moduleId as string;
+  const moduleId = decodeURIComponent(rawModuleId);
 
   const [plan, setPlan] = useState<CurriculumPlanPayload | null>(null);
-  const [moduleData, setModuleData] = useState<any | null>(null);
+  const [moduleData, setModuleData] = useState<ExpandedCurriculumModulePayload | null>(null);
   const [loading, setLoading] = useState(true);
+  const [retrying, setRetrying] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -22,9 +31,50 @@ export default function CheckpointQuizPage() {
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [quizResult, setQuizResult] = useState<any | null>(null);
 
+  const loadModuleDesign = useCallback(
+    async (parsedPlan: CurriculumPlanPayload, useCache: boolean) => {
+      setError(null);
+      if (useCache) {
+        const cached = readCachedModuleDesign(parsedPlan.curriculum_plan_id, moduleId);
+        if (cached) {
+          setModuleData(cached);
+          setLoading(false);
+          return;
+        }
+      }
+
+      const data = await designModule({
+        plan: parsedPlan,
+        module_id: moduleId,
+        learner_state: [],
+      });
+      writeCachedModuleDesign(parsedPlan.curriculum_plan_id, moduleId, data);
+      setModuleData(data);
+    },
+    [moduleId]
+  );
+
+  const retryLoadModuleDesign = useCallback(async () => {
+    if (!plan) return;
+    setRetrying(true);
+    setError(null);
+    try {
+      await loadModuleDesign(plan, false);
+    } catch (err: unknown) {
+      console.error(err);
+      setError(errorMessage(err, "Failed to load checkpoint MCQs from backend."));
+    } finally {
+      setRetrying(false);
+      setLoading(false);
+    }
+  }, [loadModuleDesign, plan]);
+
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const storedPlan = localStorage.getItem(`curriculum-plan-${id}`);
+      const storedPlan =
+        localStorage.getItem(`curriculum-plan-${id}`) ||
+        localStorage.getItem(`curriculum-plan-${rawId}`) ||
+        matchingCurrentPlan(id, rawId);
       if (!storedPlan) {
         setError("Plan not found. Please regenerate onboarding.");
         setLoading(false);
@@ -35,18 +85,10 @@ export default function CheckpointQuizPage() {
         const parsedPlan = JSON.parse(storedPlan) as CurriculumPlanPayload;
         setPlan(parsedPlan);
 
-        // Fetch designed module content from backend
-        designModule({
-          plan: parsedPlan,
-          module_id: moduleId,
-          learner_state: [],
-        })
-          .then((data) => {
-            setModuleData(data);
-          })
+        loadModuleDesign(parsedPlan, true)
           .catch((err) => {
             console.error(err);
-            setError(err.message || "Failed to load checkpoint MCQs from backend.");
+            setError(errorMessage(err, "Failed to load checkpoint MCQs from backend."));
           })
           .finally(() => {
             setLoading(false);
@@ -56,7 +98,7 @@ export default function CheckpointQuizPage() {
         setLoading(false);
       }
     }
-  }, [id, moduleId]);
+  }, [id, loadModuleDesign, rawId]);
 
   const handleSelectOption = (questionId: string, optionPrefix: string) => {
     if (quizResult || submitting) return;
@@ -99,9 +141,11 @@ export default function CheckpointQuizPage() {
       setTimeout(() => {
         // Save completed module score to localStorage
         localStorage.setItem(`curriculum-checkpoint-score-${id}-${moduleId}`, String(result.score));
+        localStorage.setItem(`curriculum-checkpoint-score-${rawId}-${rawModuleId}`, String(result.score));
         localStorage.setItem(`curriculum-checkpoint-result-${id}-${moduleId}`, JSON.stringify(result));
+        localStorage.setItem(`curriculum-checkpoint-result-${rawId}-${rawModuleId}`, JSON.stringify(result));
         setSubmitting(false);
-        router.push(`/plan/${id}/module/${moduleId}/checkpoint/results`);
+        router.push(`${moduleHref(id, moduleId)}/checkpoint/results`);
       }, 1500);
     } catch (err: any) {
       console.error(err);
@@ -125,14 +169,33 @@ export default function CheckpointQuizPage() {
     return (
       <div className="flex min-h-screen items-center justify-center bg-background px-4">
         <div className="max-w-md w-full text-center bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant shadow-md">
-          <h2 className="text-2xl font-bold text-error">Error</h2>
-          <p className="mt-2 text-on-surface-variant text-sm">{error}</p>
-          <Link
-            href={`/plan/${id}/module/${moduleId}`}
-            className="mt-6 inline-block px-6 py-2 bg-primary text-on-primary rounded-full hover:opacity-90 text-sm font-semibold shadow-sm"
-          >
-            Back to Module
-          </Link>
+          <RetryPanel
+            title="Checkpoint Load Failed"
+            message={error}
+            onRetry={plan ? () => void retryLoadModuleDesign() : undefined}
+            retryLabel="Retry Checkpoint"
+            isRetrying={retrying}
+            fallbackHref={moduleHref(id, moduleId)}
+            fallbackLabel="Back to Module"
+          />
+        </div>
+      </div>
+    );
+  }
+
+  if (!moduleData) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-background px-4">
+        <div className="max-w-md w-full">
+          <RetryPanel
+            title="Checkpoint Unavailable"
+            message="The checkpoint questions were not loaded."
+            onRetry={plan ? () => void retryLoadModuleDesign() : undefined}
+            retryLabel="Retry Checkpoint"
+            isRetrying={retrying}
+            fallbackHref={moduleHref(id, moduleId)}
+            fallbackLabel="Back to Module"
+          />
         </div>
       </div>
     );
@@ -159,13 +222,13 @@ export default function CheckpointQuizPage() {
             Dashboard
           </Link>
           <Link
-            href={`/plan/${id}`}
+            href={`/plan/${encodeURIComponent(id)}`}
             className="text-on-surface-variant hover:text-secondary transition-colors font-hanken font-bold text-sm"
           >
             Curriculum Plan
           </Link>
           <Link
-            href={`/plan/${id}/module/${moduleId}`}
+            href={moduleHref(id, moduleId)}
             className="text-secondary border-b-2 border-secondary font-hanken font-bold text-sm h-16 flex items-center px-1"
           >
             Active Module
@@ -412,7 +475,7 @@ export default function CheckpointQuizPage() {
                   Reset Checkpoint
                 </button>
                 <Link
-                  href={`/plan/${id}`}
+                  href={`/plan/${encodeURIComponent(id)}`}
                   className="flex-1 py-3 bg-primary text-on-primary hover:opacity-90 rounded-lg font-hanken font-bold text-sm shadow-md block text-center"
                 >
                   Return to Pathway
@@ -440,7 +503,7 @@ export default function CheckpointQuizPage() {
           <span className="material-symbols-outlined">home</span>
           <span className="text-[10px]">Home</span>
         </Link>
-        <Link href={`/plan/${id}`} className="flex flex-col items-center justify-center text-on-surface-variant hover:text-secondary">
+        <Link href={`/plan/${encodeURIComponent(id)}`} className="flex flex-col items-center justify-center text-on-surface-variant hover:text-secondary">
           <span className="material-symbols-outlined">menu_book</span>
           <span className="text-[10px]">My Plan</span>
         </Link>
@@ -451,4 +514,24 @@ export default function CheckpointQuizPage() {
       </nav>
     </div>
   );
+}
+
+function matchingCurrentPlan(id: string, rawId: string): string | null {
+  const raw = localStorage.getItem("curriculum-current-plan");
+  if (!raw) return null;
+  try {
+    const parsed = JSON.parse(raw) as CurriculumPlanPayload;
+    return parsed.curriculum_plan_id === id || encodeURIComponent(parsed.curriculum_plan_id) === rawId ? raw : null;
+  } catch {
+    return null;
+  }
+}
+
+function moduleHref(planId: string, moduleId: string): string {
+  return `/plan/${encodeURIComponent(planId)}/module/${encodeURIComponent(moduleId)}`;
+}
+
+function errorMessage(err: unknown, fallback: string): string {
+  if (err instanceof Error) return err.message;
+  return fallback;
 }

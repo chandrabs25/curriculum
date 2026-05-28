@@ -211,18 +211,16 @@ class CurriculumGraph:
         if not query_text:
             return []
         query_tokens = set(_tokens(query_text))
-        matches = []
+        scored_matches: list[tuple[int, str]] = []
         for concept_id, concept in self.concepts_by_id.items():
-            labels = {
-                concept_id,
-                concept_id.replace("concept:", ""),
-                str(concept.get("canonical_label") or ""),
-                str(concept.get("normalized_label") or "").replace("_", " "),
-                *[str(alias) for alias in concept.get("aliases", [])],
-            }
-            if any(_concept_label_matches(_normalize_text(label), query_text, query_tokens) for label in labels):
-                matches.append(concept_id)
-        return _dedupe(matches)
+            labels = _concept_labels(concept_id, concept)
+            score = max((_concept_label_match_score(_normalize_text(label), query_text, query_tokens) for label in labels), default=0)
+            if score > 0:
+                scored_matches.append((score, concept_id))
+        if any(score >= 3 for score, _ in scored_matches):
+            scored_matches = [(score, concept_id) for score, concept_id in scored_matches if score >= 3]
+        scored_matches.sort(key=lambda item: (-item[0], item[1]))
+        return _dedupe([concept_id for _, concept_id in scored_matches])
 
     def teaching_sections_for_concepts(self, concept_ids: list[str]) -> list[str]:
         section_ids: list[str] = []
@@ -336,10 +334,87 @@ def _tokens(text: str) -> list[str]:
     return re.findall(r"[a-z0-9]+", str(text or "").lower())
 
 
-def _concept_label_matches(label: str, query_text: str, query_tokens: set[str]) -> bool:
+def _concept_label_match_score(label: str, query_text: str, query_tokens: set[str]) -> int:
     if not label:
-        return False
+        return 0
     label_tokens = set(_tokens(label))
     if len(label_tokens) <= 1:
-        return label in query_tokens
-    return label in query_text
+        return 4 if label in query_tokens else 0
+    if label in query_text:
+        return 4
+    exact_overlap = (_specific_concept_tokens(label_tokens) & _specific_concept_tokens(query_tokens))
+    if exact_overlap:
+        return 3
+    significant_overlap = _significant_concept_tokens(label_tokens) & _significant_concept_tokens(query_tokens)
+    if significant_overlap:
+        return 2 if "gravity_family" not in significant_overlap else 1
+    return 0
+
+
+def _concept_labels(concept_id: str, concept: dict[str, Any]) -> set[str]:
+    return {
+        concept_id,
+        concept_id.replace("concept:", ""),
+        str(concept.get("canonical_label") or ""),
+        str(concept.get("normalized_label") or "").replace("_", " "),
+        *[str(alias) for alias in concept.get("aliases", [])],
+    }
+
+
+def _concept_has_significant_token(concept_id: str, concept: dict[str, Any], token: str) -> bool:
+    return any(token in _significant_concept_tokens(_tokens(label)) for label in _concept_labels(concept_id, concept))
+
+
+GENERIC_CONCEPT_MATCH_TOKENS = {
+    "about",
+    "basic",
+    "basics",
+    "chemical",
+    "concept",
+    "concepts",
+    "definition",
+    "equation",
+    "formula",
+    "fundamental",
+    "fundamentals",
+    "introduction",
+    "law",
+    "laws",
+    "learn",
+    "mechanism",
+    "mechanisms",
+    "property",
+    "properties",
+    "role",
+    "study",
+    "theory",
+    "types",
+    "universal",
+}
+
+
+def _significant_concept_tokens(tokens: set[str] | list[str]) -> set[str]:
+    normalized = set()
+    for token in tokens:
+        value = _concept_token_stem(str(token))
+        if value == "gravity_family":
+            normalized.add(value)
+            continue
+        if len(value) >= 6 and value not in GENERIC_CONCEPT_MATCH_TOKENS:
+            normalized.add(value)
+    return normalized
+
+
+def _specific_concept_tokens(tokens: set[str] | list[str]) -> set[str]:
+    return {
+        str(token).lower()
+        for token in tokens
+        if len(str(token)) >= 6 and str(token).lower() not in GENERIC_CONCEPT_MATCH_TOKENS
+    }
+
+
+def _concept_token_stem(token: str) -> str:
+    token = token.lower()
+    if token == "gravity" or token.startswith("gravit"):
+        return "gravity_family"
+    return token

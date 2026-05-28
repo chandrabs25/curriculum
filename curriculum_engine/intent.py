@@ -13,6 +13,8 @@ from .retrieval import CurriculumRetriever
 INTENT_CANDIDATE_LIMIT = 12
 CONCEPT_CANDIDATE_LIMIT = 12
 INTENT_OUTPUT_MAX_TOKENS = 1400
+INTENT_SECTION_CLUE_LIMIT = 8
+DIRECT_SECTION_CLUE_REASONS = {"title_match", "key_term_match", "summary_match"}
 
 
 class IntentLLMClient(Protocol):
@@ -28,7 +30,6 @@ INTENT_CLASSIFICATION_SCHEMA: dict[str, Any] = {
         "confirmed_label": {"type": "string", "maxLength": 90},
         "confirmed_summary": {"type": "string", "maxLength": 180},
         "refined_query": {"type": "string", "maxLength": 120},
-        "grounding_section_ids": {"type": "array", "items": {"type": "string"}},
         "options": {
             "type": "array",
             "maxItems": 3,
@@ -38,13 +39,11 @@ INTENT_CLASSIFICATION_SCHEMA: dict[str, Any] = {
                     "label": {"type": "string", "maxLength": 90},
                     "user_facing_description": {"type": "string", "maxLength": 180},
                     "refined_query": {"type": "string", "maxLength": 120},
-                    "grounding_section_ids": {"type": "array", "items": {"type": "string"}},
                 },
                 "required": [
                     "label",
                     "user_facing_description",
                     "refined_query",
-                    "grounding_section_ids",
                 ],
             },
         },
@@ -55,7 +54,6 @@ INTENT_CLASSIFICATION_SCHEMA: dict[str, Any] = {
         "confirmed_label",
         "confirmed_summary",
         "refined_query",
-        "grounding_section_ids",
         "options",
     ],
 }
@@ -111,16 +109,23 @@ def build_intent_classification_packet(
     chapter_id: str | None = None,
     limit: int = INTENT_CANDIDATE_LIMIT,
 ) -> IntentClassificationPacket:
-    concept_ids = graph.concept_ids_for_query(query)[:CONCEPT_CANDIDATE_LIMIT]
-    retrieved = retriever.search(
-        query,
-        subject=subject,
-        grade=grade,
-        chapter_id=chapter_id,
-        limit=limit,
-        include_prerequisites=False,
-        include_soft_links=False,
+    candidate_sections = _intent_section_clues(
+        retriever.search(
+            query,
+            subject=subject,
+            grade=grade,
+            chapter_id=chapter_id,
+            limit=max(limit * 2, INTENT_SECTION_CLUE_LIMIT),
+            include_prerequisites=False,
+            include_soft_links=False,
+        )
     )
+    section_concept_ids = [
+        concept_id
+        for row in candidate_sections
+        for concept_id in row.matched_concept_ids
+    ]
+    concept_ids = _dedupe(section_concept_ids + graph.concept_ids_for_query(query))[:CONCEPT_CANDIDATE_LIMIT]
     packet = {
         "original_query": query,
         "matched_concepts": [
@@ -140,14 +145,41 @@ def build_intent_classification_packet(
                 "reasons": row.reasons,
                 "matched_concept_ids": row.matched_concept_ids,
             }
-            for row in retrieved
+            for row in candidate_sections[:INTENT_SECTION_CLUE_LIMIT]
         ],
         "instructions": {
+            "corpus_constraint": "Only refine toward learning goals supported by matched_concepts or candidate_sections.",
             "user_facing_options": "Phrase options as what the learner wants to learn, not as section titles.",
-            "internal_grounding": "Use section IDs only as internal grounding_section_ids.",
         },
     }
     return IntentClassificationPacket(packet)
+
+
+def _intent_section_clues(rows: list[Any]) -> list[Any]:
+    usable = [
+        row
+        for row in rows
+        if set(row.reasons) & (DIRECT_SECTION_CLUE_REASONS | {"concept_match"})
+    ]
+    usable.sort(key=_intent_section_sort_key)
+    return usable
+
+
+def _intent_section_sort_key(row: Any) -> tuple[int, int, float, str]:
+    reasons = set(row.reasons)
+    direct_rank = 0 if reasons & DIRECT_SECTION_CLUE_REASONS else 1
+    concept_rank = 0 if "concept_match" in reasons else 1
+    return (direct_rank, concept_rank, -float(row.score), row.section_id)
+
+
+def _dedupe(values: list[str]) -> list[str]:
+    seen: set[str] = set()
+    ordered: list[str] = []
+    for value in values:
+        if value not in seen:
+            seen.add(value)
+            ordered.append(value)
+    return ordered
 
 
 def build_intent_classification_prompt(packet: IntentClassificationPacket) -> str:
@@ -157,19 +189,17 @@ def build_intent_classification_prompt(packet: IntentClassificationPacket) -> st
         "confirmed_label": "string",
         "confirmed_summary": "string",
         "refined_query": "string",
-        "grounding_section_ids": ["string"],
         "options": [
             {
                 "label": "string",
                 "user_facing_description": "string",
                 "refined_query": "string",
-                "grounding_section_ids": ["string"],
             }
         ],
     }
-    return f"""Classify the learner's intent before curriculum retrieval. The learner is in high interested in studies.
+    return f"""Classify the learner's intent before curriculum retrieval for a textbook-grounded curriculum app.
 
-Use the compact title/concept clues to infer what the learner may mean. Do not design a curriculum.
+Use only the provided concept and section-title clues to infer what the learner may mean. Do not design a curriculum.
 
 Intent packet:
 {packet.to_json()}
@@ -177,13 +207,16 @@ Intent packet:
 Final task:
 - Your first character must be {{ and your last character must be }}.
 - Do not write analysis, reasoning, markdown, or prose.
-- If the query is specific enough, return needs_user_choice=false, fill confirmed_label, confirmed_summary, refined_query, grounding_section_ids, and return options=[].
-- If the query can reasonably mean multiple learning goals, return needs_user_choice=true, fill question and 2-3 options. Set confirmed_label="", confirmed_summary="", refined_query="", and grounding_section_ids=[].
+- If the query is specific enough, return needs_user_choice=false, fill confirmed_label, confirmed_summary, refined_query, and return options=[].
+- If the query can reasonably mean multiple learning goals, return needs_user_choice=true, fill question and 2-3 options. Set confirmed_label="", confirmed_summary="", and refined_query="".
 - Keep every label under 10 words and every description under 18 words.
 - User-facing labels and descriptions must describe learning goals, not textbook section titles.
 - Do not copy section titles as option labels.
+- Option labels should sound like learner goals, for example "Understand gravitational force laws", not "Universal Law of Gravitation".
+- Do not propose topics that are not supported by matched_concepts or candidate_sections.
+- If candidate evidence is thin, confirm a conservative textbook-level interpretation instead of inventing advanced options.
+- Never introduce out-of-corpus directions such as relativity, quantum theory, or modern discoveries unless those ideas appear in the packet.
 - Do not invent status values, original_query echoes, or intent IDs. The backend assigns them after parsing.
-- Keep grounding_section_ids internal and preserve IDs exactly.
 - Keep refined_query short and useful for the later retrieval call.
 - Return compact JSON only.
 
@@ -197,11 +230,10 @@ def intent_classification_from_payload(
     packet: IntentClassificationPacket,
 ) -> dict[str, Any]:
     packet_data = packet.to_dict()
-    allowed_sections = {row["section_id"] for row in packet_data.get("candidate_sections", [])}
     needs_user_choice = bool(payload.get("needs_user_choice"))
-    confirmed = _confirmed_intent_row(payload, allowed_sections)
+    confirmed = _confirmed_intent_row(payload)
     options = [
-        _option_row(row, allowed_sections, index)
+        _option_row(row, index)
         for index, row in enumerate(payload.get("options") or [], start=1)
         if isinstance(row, dict)
     ]
@@ -224,7 +256,7 @@ def intent_classification_from_payload(
     }
 
 
-def _confirmed_intent_row(value: Any, allowed_sections: set[str]) -> dict[str, Any] | None:
+def _confirmed_intent_row(value: Any) -> dict[str, Any] | None:
     if not isinstance(value, dict) or not value:
         return None
     label = str(value.get("confirmed_label") or "").strip()
@@ -236,23 +268,15 @@ def _confirmed_intent_row(value: Any, allowed_sections: set[str]) -> dict[str, A
         "label": _required_str(value, "confirmed_label"),
         "user_facing_summary": _required_str(value, "confirmed_summary"),
         "refined_query": _required_str(value, "refined_query"),
-        "grounding_section_ids": _valid_section_ids(value.get("grounding_section_ids"), allowed_sections),
     }
 
 
-def _option_row(value: dict[str, Any], allowed_sections: set[str], index: int) -> dict[str, Any]:
+def _option_row(value: dict[str, Any], index: int) -> dict[str, Any]:
     return {
         "label": _required_str(value, "label"),
         "user_facing_description": _required_str(value, "user_facing_description"),
         "refined_query": _required_str(value, "refined_query"),
-        "grounding_section_ids": _valid_section_ids(value.get("grounding_section_ids"), allowed_sections),
     }
-
-
-def _valid_section_ids(value: Any, allowed_sections: set[str]) -> list[str]:
-    if not isinstance(value, list):
-        return []
-    return [str(row) for row in value if str(row) in allowed_sections]
 
 
 def _required_str(row: dict[str, Any], key: str) -> str:
