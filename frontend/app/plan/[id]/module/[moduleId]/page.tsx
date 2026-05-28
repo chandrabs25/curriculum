@@ -15,40 +15,50 @@ export default function ModuleReadingPage() {
   const [moduleData, setModuleData] = useState<any | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [completedCount, setCompletedCount] = useState(0);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       const storedPlan = localStorage.getItem(`curriculum-plan-${id}`);
-      if (!storedPlan) {
-        setError("Plan not found. Please regenerate onboarding.");
-        setLoading(false);
-        return;
-      }
+      
+      Promise.resolve().then(() => {
+        if (!storedPlan) {
+          setError("Plan not found. Please regenerate onboarding.");
+          setLoading(false);
+          return;
+        }
 
-      try {
-        const parsedPlan = JSON.parse(storedPlan) as CurriculumPlanPayload;
-        setPlan(parsedPlan);
+        try {
+          const parsedPlan = JSON.parse(storedPlan) as CurriculumPlanPayload;
+          setPlan(parsedPlan);
 
-        // Fetch designed module content from backend
-        designModule({
-          plan: parsedPlan,
-          module_id: moduleId,
-          learner_state: [],
-        })
-          .then((data) => {
-            setModuleData(data);
+          // Calculate completed count
+          const count = parsedPlan.modules.filter((m) => {
+            return localStorage.getItem(`curriculum-checkpoint-score-${id}-${m.module_id}`) !== null;
+          }).length;
+          setCompletedCount(count);
+
+          // Fetch designed module content from backend
+          designModule({
+            plan: parsedPlan,
+            module_id: moduleId,
+            learner_state: [],
           })
-          .catch((err) => {
-            console.error(err);
-            setError(err.message || "Failed to load module details from API backend.");
-          })
-          .finally(() => {
-            setLoading(false);
-          });
-      } catch (e) {
-        setError("Invalid curriculum plan file format.");
-        setLoading(false);
-      }
+            .then((data) => {
+              setModuleData(data);
+            })
+            .catch((err) => {
+              console.error(err);
+              setError(err.message || "Failed to load module details from API backend.");
+            })
+            .finally(() => {
+              setLoading(false);
+            });
+        } catch (e) {
+          setError("Invalid curriculum plan file format.");
+          setLoading(false);
+        }
+      });
     }
   }, [id, moduleId]);
 
@@ -89,13 +99,7 @@ export default function ModuleReadingPage() {
   const prevModule = currentIndex > 0 ? sortedModules[currentIndex - 1] : null;
   const nextModule = currentIndex < sortedModules.length - 1 ? sortedModules[currentIndex + 1] : null;
 
-  // Completed chapters for calculation
-  const completedCount = sortedModules.filter((m) => {
-    if (typeof window !== "undefined") {
-      return localStorage.getItem(`curriculum-checkpoint-score-${id}-${m.module_id}`) !== null;
-    }
-    return false;
-  }).length;
+  // Completed chapters computed in useEffect to avoid hydration mismatches
   
   const progressPercent = sortedModules.length > 0 
     ? Math.round((completedCount / sortedModules.length) * 100) 

@@ -8,7 +8,7 @@ import { CurriculumPlanPayload } from "../../types/curriculum";
 export default function PlanDashboardPage() {
   const params = useParams();
   const router = useRouter();
-  const id = params.id as string;
+  const id = decodeURIComponent(params.id as string);
 
   const [plan, setPlan] = useState<CurriculumPlanPayload | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -18,11 +18,14 @@ export default function PlanDashboardPage() {
   const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const storedPlan = localStorage.getItem(`curriculum-plan-${id}`);
+    if (typeof window === "undefined") return;
+
+    const loadTimer = window.setTimeout(() => {
+      const storedPlan = localStorage.getItem(`curriculum-plan-${id}`) || matchingCurrentPlan(id);
       if (storedPlan) {
         try {
           const parsedPlan = JSON.parse(storedPlan) as CurriculumPlanPayload;
+          localStorage.setItem(`curriculum-plan-${parsedPlan.curriculum_plan_id}`, JSON.stringify(parsedPlan));
           setPlan(parsedPlan);
           
           // Check localStorage to find which modules have finished quizzes
@@ -40,7 +43,10 @@ export default function PlanDashboardPage() {
       } else {
         setError("Curriculum plan not found. Please create a new one.");
       }
-    }
+
+    }, 0);
+
+    return () => window.clearTimeout(loadTimer);
   }, [id]);
 
   if (error) {
@@ -531,4 +537,15 @@ export default function PlanDashboardPage() {
       </Link>
     </div>
   );
+}
+
+function matchingCurrentPlan(id: string): string | null {
+  const raw = localStorage.getItem("curriculum-current-plan");
+  if (!raw) return null;
+  try {
+    const parsed = JSON.parse(raw) as CurriculumPlanPayload;
+    return parsed.curriculum_plan_id === id ? raw : null;
+  } catch {
+    return null;
+  }
 }

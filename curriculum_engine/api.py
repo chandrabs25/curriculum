@@ -8,12 +8,14 @@ from pathlib import Path
 from typing import Any
 
 from fastapi import Depends, FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
 from .artifacts import ArtifactStore, TextbookStore
 from .graph import CurriculumGraph
+from .intent import INTENT_OUTPUT_MAX_TOKENS, IntentClassifier
 from .learning_path import build_learning_path_context
-from .llm_clients import FireworksLLMClient
+from .llm_clients import FIREWORKS_GPT_OSS_120B, FireworksLLMClient
 from .models import CurriculumPlan, OnboardingAnswers, PlannedCurriculumModule
 from .module_expansion import ModuleExpander, allocate_module_mcq_targets
 from .planner import CurriculumPlanner, PlannerRequest
@@ -45,11 +47,20 @@ class CurriculumQueryPayload(BaseModel):
     onboarding: OnboardingPayload
     learner_state: list[LearnerConceptStatePayload] = Field(default_factory=list)
     prerequisite_check: dict[str, Any] | None = None
+    intent_grounding_section_ids: list[str] = Field(default_factory=list)
     subject: str | None = None
     grade: int | None = None
     chapter_id: str | None = None
     max_modules: int = 10
     retrieval_limit: int = 12
+
+
+class IntentClassifyPayload(BaseModel):
+    query: str
+    subject: str | None = None
+    grade: int | None = None
+    chapter_id: str | None = None
+    candidate_limit: int = 12
 
 
 class PlannedModulePayload(BaseModel):
@@ -102,6 +113,7 @@ class CurriculumAPIService:
         root: Path | str = ".",
         use_vector: bool = False,
         llm_client: Any | None = None,
+        intent_llm_client: Any | None = None,
     ):
         self.root = Path(root)
         self.graph = CurriculumGraph(
@@ -111,19 +123,26 @@ class CurriculumAPIService:
         )
         self.retriever = CurriculumRetriever(self.graph, vector_index=_load_vector_index(self.root, use_vector=use_vector))
         self.llm_client = llm_client or FireworksLLMClient()
+        self.intent_llm_client = intent_llm_client or FireworksLLMClient(
+            model=FIREWORKS_GPT_OSS_120B,
+            max_tokens=INTENT_OUTPUT_MAX_TOKENS,
+            temperature=0.0,
+        )
+
+    def classify_intent(self, payload: IntentClassifyPayload) -> dict[str, Any]:
+        classifier = IntentClassifier(self.graph, self.retriever, self.intent_llm_client)
+        return classifier.classify(
+            payload.query,
+            subject=payload.subject,
+            grade=payload.grade,
+            chapter_id=payload.chapter_id,
+            limit=payload.candidate_limit,
+        )
 
     def retrieval_preview(self, payload: CurriculumQueryPayload) -> dict[str, Any]:
         onboarding = _onboarding(payload.onboarding)
         learner_state = _learner_state(payload.learner_state)
-        retrieved = self.retriever.search(
-            onboarding.topic,
-            subject=payload.subject or _blank_to_none(onboarding.subject),
-            grade=payload.grade,
-            chapter_id=payload.chapter_id,
-            learner_state=learner_state,
-            limit=payload.retrieval_limit,
-            include_prerequisites=True,
-        )
+        retrieved = _retrieve_for_payload(self.retriever, payload, onboarding, learner_state)
         context = build_learning_path_context(
             self.graph,
             retrieved,
@@ -146,6 +165,7 @@ class CurriculumAPIService:
                 onboarding=_onboarding(payload.onboarding),
                 learner_state=_learner_state(payload.learner_state),
                 prerequisite_check=payload.prerequisite_check,
+                intent_grounding_section_ids=payload.intent_grounding_section_ids,
                 subject=payload.subject,
                 grade=payload.grade,
                 chapter_id=payload.chapter_id,
@@ -230,6 +250,13 @@ class CurriculumAPIService:
 
 def create_app(service: CurriculumAPIService | None = None) -> FastAPI:
     app = FastAPI(title="AI Curriculum Creator API")
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=["*"],
+        allow_credentials=True,
+        allow_methods=["*"],
+        allow_headers=["*"],
+    )
     app.state.service = service
 
     def service_dep() -> CurriculumAPIService:
@@ -251,6 +278,10 @@ def create_app(service: CurriculumAPIService | None = None) -> FastAPI:
             "grades": sorted({int(row.get("grade")) for row in refs if row.get("grade") is not None}),
             "chapters": refs,
         }
+
+    @app.post("/api/intent/classify")
+    def classify_intent(payload: IntentClassifyPayload, svc: CurriculumAPIService = Depends(service_dep)) -> dict[str, Any]:
+        return _handle_api(lambda: svc.classify_intent(payload))
 
     @app.post("/api/retrieval/preview")
     def retrieval_preview(payload: CurriculumQueryPayload, svc: CurriculumAPIService = Depends(service_dep)) -> dict[str, Any]:
@@ -288,6 +319,26 @@ def _handle_api(fn: Any) -> Any:
         raise HTTPException(status_code=404, detail=str(exc)) from exc
     except RuntimeError as exc:
         raise HTTPException(status_code=502, detail=str(exc)) from exc
+
+
+def _retrieve_for_payload(
+    retriever: CurriculumRetriever,
+    payload: CurriculumQueryPayload,
+    onboarding: OnboardingAnswers,
+    learner_state: list[LearnerConceptState],
+) -> list[Any]:
+    grounded = retriever.results_for_section_ids(payload.intent_grounding_section_ids)
+    if grounded:
+        return grounded[: payload.retrieval_limit]
+    return retriever.search(
+        onboarding.topic,
+        subject=payload.subject or _blank_to_none(onboarding.subject),
+        grade=payload.grade,
+        chapter_id=payload.chapter_id,
+        learner_state=learner_state,
+        limit=payload.retrieval_limit,
+        include_prerequisites=True,
+    )
 
 
 def _onboarding(payload: OnboardingPayload) -> OnboardingAnswers:

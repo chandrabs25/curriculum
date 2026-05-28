@@ -20,8 +20,9 @@ DIRECT_MATCH_REASONS = {
     "learner_misconception",
     "learner_partial",
     "learner_competency",
+    "intent_grounding",
 }
-ALWAYS_KEEP_DIRECT_REASONS = {"vector_match", "concept_match", "title_match"}
+ALWAYS_KEEP_DIRECT_REASONS = {"vector_match", "concept_match", "title_match", "intent_grounding"}
 META_SECTION_TITLES = {
     "summary",
     "points to ponder",
@@ -167,6 +168,35 @@ class CurriculumRetriever:
         results = [self._result_from_score(row) for row in scored.values()]
         results.sort(key=lambda row: (-row.score, row.subject or "", row.grade or 0, row.chapter_id, row.section_id))
         return results[:limit]
+
+    def results_for_section_ids(self, section_ids: list[str], *, reason: str = "intent_grounding") -> list[SectionRetrievalResult]:
+        results = []
+        seen: set[str] = set()
+        for section_id in section_ids:
+            if section_id in seen:
+                continue
+            seen.add(section_id)
+            summary = self.graph.section_summaries_by_id.get(section_id)
+            section = self.graph.sections_by_id.get(section_id, {})
+            if not summary or self._is_meta_section(summary, section):
+                continue
+            chapter_ref = self._chapter_ref(summary.get("chapter_id"))
+            matched_concepts = self.graph.concepts_taught_by_section(section_id)
+            results.append(
+                SectionRetrievalResult(
+                    section_id=section_id,
+                    chapter_id=str(summary.get("chapter_id") or section.get("chapter_id") or ""),
+                    title=str(summary.get("title") or section.get("title") or section_id),
+                    summary=str(summary.get("summary") or ""),
+                    score=100.0,
+                    matched_concept_ids=matched_concepts,
+                    prerequisite_section_ids=[],
+                    reasons=[reason],
+                    subject=section.get("subject") or chapter_ref.get("subject"),
+                    grade=int(section.get("grade") or chapter_ref.get("grade") or 0) or None,
+                )
+            )
+        return results
 
     def _add_vector_matches(
         self,

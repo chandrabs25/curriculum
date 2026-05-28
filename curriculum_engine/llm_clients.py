@@ -16,6 +16,7 @@ from typing import Any, Callable
 
 FIREWORKS_BASE_URL = "https://api.fireworks.ai/inference/v1"
 FIREWORKS_DEEPSEEK_V4_PRO = "accounts/fireworks/models/deepseek-v4-pro"
+FIREWORKS_GPT_OSS_120B = "accounts/fireworks/models/gpt-oss-120b"
 
 
 class FireworksAPIError(RuntimeError):
@@ -129,13 +130,26 @@ def parse_llm_json(text: str) -> dict[str, Any]:
         try:
             value = json.loads(fixed_text)
         except json.JSONDecodeError:
-            match = re.search(r"\{.*\}", fixed_text, flags=re.DOTALL)
-            if not match:
+            value = _parse_first_json_object(fixed_text)
+            if value is None:
                 raise
-            value = json.loads(match.group(0))
     if not isinstance(value, dict):
         raise ValueError("LLM JSON response must be an object")
     return value
+
+
+def _parse_first_json_object(text: str) -> dict[str, Any] | None:
+    decoder = json.JSONDecoder()
+    for index, char in enumerate(text):
+        if char != "{":
+            continue
+        try:
+            value, _ = decoder.raw_decode(text[index:])
+        except json.JSONDecodeError:
+            continue
+        if isinstance(value, dict):
+            return value
+    return None
 
 
 def load_env_file(key: str) -> None:

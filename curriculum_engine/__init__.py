@@ -15,9 +15,19 @@ from .learning_path import LearningPathContext, build_learning_path_context
 from .llm_clients import (
     FIREWORKS_BASE_URL,
     FIREWORKS_DEEPSEEK_V4_PRO,
+    FIREWORKS_GPT_OSS_120B,
     FireworksAPIError,
     FireworksLLMClient,
     parse_llm_json,
+)
+from .intent import (
+    INTENT_CLASSIFICATION_SCHEMA,
+    INTENT_OUTPUT_MAX_TOKENS,
+    IntentClassificationPacket,
+    IntentClassifier,
+    build_intent_classification_packet,
+    build_intent_classification_prompt,
+    intent_classification_from_payload,
 )
 from .models import (
     Assessment,
@@ -79,8 +89,13 @@ __all__ = [
     "DEFAULT_MODEL_DIR",
     "FIREWORKS_BASE_URL",
     "FIREWORKS_DEEPSEEK_V4_PRO",
+    "FIREWORKS_GPT_OSS_120B",
     "FireworksAPIError",
     "FireworksLLMClient",
+    "INTENT_CLASSIFICATION_SCHEMA",
+    "INTENT_OUTPUT_MAX_TOKENS",
+    "IntentClassificationPacket",
+    "IntentClassifier",
     "LearningInsight",
     "LearningPathContext",
     "LearnerConceptState",
@@ -109,8 +124,11 @@ __all__ = [
     "build_module_expansion_packet",
     "build_module_expansion_prompt",
     "build_curriculum_planning_packet",
+    "build_intent_classification_packet",
+    "build_intent_classification_prompt",
     "build_section_documents",
     "expanded_module_from_payload",
     "fetch_full_source_sections",
+    "intent_classification_from_payload",
     "parse_llm_json",
 ]

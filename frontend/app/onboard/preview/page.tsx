@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { createCurriculumPlan } from "../../services/api";
+import { ApiError, createCurriculumPlan } from "../../services/api";
 import { RetrievalPreviewResponse, CurriculumQueryPayload } from "../../types/curriculum";
 
 export default function OnboardPreviewPage() {
@@ -18,12 +18,28 @@ export default function OnboardPreviewPage() {
   // Quiz selection state: maps concept_id to status ("known_well" | "somewhat_known" | "unfamiliar")
   const [comfortAnswers, setComfortAnswers] = useState<Record<string, string>>({});
   
+  // Reveal state for live animation transitions
+  const [revealedSections, setRevealedSections] = useState({
+    target: false,
+    prereq: false,
+    optional: false,
+  });
+
+  // Building shimmer states
+  const [buildingSections, setBuildingSections] = useState({
+    target: false,
+    prereq: false,
+    optional: false,
+  });
+
   // Success overlay state
   const [showOverlay, setShowOverlay] = useState(false);
   const [progressWidth, setProgressWidth] = useState(0);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
+    if (typeof window === "undefined") return;
+
+    const loadTimer = window.setTimeout(() => {
       const storedPreview = localStorage.getItem("curriculum-onboard-preview");
       const storedQuery = localStorage.getItem("curriculum-onboard-query");
 
@@ -35,20 +51,32 @@ export default function OnboardPreviewPage() {
           setPreviewData(parsedPreview);
           setQuery(parsedQuery);
           
-          // Pre-populate quiz answers with default "somewhat_known" for all prerequisite questions
-          const defaults: Record<string, string> = {};
-          parsedPreview.prerequisite_questions?.forEach((q) => {
-            defaults[q.concept_id] = "somewhat_known";
-          });
-          setComfortAnswers(defaults);
-        } catch (e) {
+          const questions = parsedPreview.prerequisite_questions || [];
+          if (questions.length === 0) {
+            // No prerequisite questions, reveal sections in staggered sequence on load
+            setTimeout(() => {
+              setRevealedSections((prev) => ({ ...prev, target: true }));
+            }, 300);
+            setTimeout(() => {
+              setRevealedSections((prev) => ({ ...prev, prereq: true }));
+            }, 600);
+            setTimeout(() => {
+              setRevealedSections((prev) => ({ ...prev, optional: true }));
+            }, 900);
+          } else {
+            // Interactive reveals: do not pre-populate defaults, keep them empty initially
+            setComfortAnswers({});
+          }
+        } catch {
           setError("Failed to load retrieval preview details.");
         }
       } else {
         setError("Onboarding query context not found. Please fill out the form first.");
       }
       setLoading(false);
-    }
+    }, 0);
+
+    return () => window.clearTimeout(loadTimer);
   }, []);
 
   const handleSelectOption = (conceptId: string, status: string) => {
@@ -56,68 +84,126 @@ export default function OnboardPreviewPage() {
       ...prev,
       [conceptId]: status,
     }));
+
+    if (!previewData) return;
+    const questions = previewData.prerequisite_questions || [];
+    const qIndex = questions.findIndex((q) => q.concept_id === conceptId);
+
+    // Staggered reveal based on which question they click
+    if (qIndex === 0) {
+      setRevealedSections((prev) => ({ ...prev, target: true }));
+    } else if (qIndex === 1) {
+      setRevealedSections((prev) => ({ ...prev, prereq: true }));
+    } else if (qIndex >= 2) {
+      setRevealedSections((prev) => ({ ...prev, optional: true }));
+    }
   };
 
   const handleGeneratePlan = async () => {
     if (!query || !previewData) return;
 
+    // Check which sections are not yet revealed and trigger staggered reveal with shimmers
+    const sectionsToReveal: ("target" | "prereq" | "optional")[] = [];
+    if (!revealedSections.target) sectionsToReveal.push("target");
+    if (!revealedSections.prereq) sectionsToReveal.push("prereq");
+    if (!revealedSections.optional) sectionsToReveal.push("optional");
+
     setSubmitting(true);
     setError(null);
-    setShowOverlay(true);
-    setProgressWidth(0);
 
-    // Increment progress bar animation
-    const progressInterval = setInterval(() => {
-      setProgressWidth((prev) => {
-        if (prev >= 95) {
-          clearInterval(progressInterval);
-          return 95;
-        }
-        return prev + 15;
-      });
-    }, 300);
-
-    // Structure the prerequisite checks matching PrerequisiteCheckPayload
-    const formattedAnswers = Object.entries(comfortAnswers).map(([conceptId, status]) => {
-      const matchingQuestion = previewData.prerequisite_questions.find(
-        (q) => q.concept_id === conceptId
-      );
-      return {
-        concept_id: conceptId,
-        status: status,
-        required_by_section_id: matchingQuestion?.required_by_section_id || "",
-      };
+    let delay = 0;
+    sectionsToReveal.forEach((sec) => {
+      setTimeout(() => {
+        setRevealedSections((prev) => ({ ...prev, [sec]: true }));
+        setBuildingSections((prev) => ({ ...prev, [sec]: true }));
+      }, delay);
+      delay += 400;
     });
 
-    const finalQuery: CurriculumQueryPayload = {
-      ...query,
-      prerequisite_check: {
-        asked: true,
-        answers: formattedAnswers,
-      },
-    };
+    // Launch success screen overlay after the sequenced live reveals trigger
+    setTimeout(async () => {
+      setShowOverlay(true);
+      setProgressWidth(0);
 
-    try {
-      const plan = await createCurriculumPlan(finalQuery);
-      
-      clearInterval(progressInterval);
-      setProgressWidth(100);
+      // Start progress bar animation
+      const progressInterval = setInterval(() => {
+        setProgressWidth((prev) => {
+          if (prev >= 95) {
+            clearInterval(progressInterval);
+            return 95;
+          }
+          return prev + 12;
+        });
+      }, 250);
 
-      // Save plan to localStorage because backend is stateless
-      localStorage.setItem(`curriculum-plan-${plan.curriculum_plan_id}`, JSON.stringify(plan));
-      
-      // Delay slightly to finish progress bar animation
-      setTimeout(() => {
-        router.push(`/plan/${plan.curriculum_plan_id}`);
-      }, 500);
-    } catch (err: any) {
-      clearInterval(progressInterval);
-      setShowOverlay(false);
-      console.error(err);
-      setError(err.message || "Failed to generate curriculum. Please check backend connections.");
-    } finally {
-      setSubmitting(false);
-    }
+      // Ensure all prerequisite questions are answered, using "somewhat_known" as fallback
+      const finalAnswers = { ...comfortAnswers };
+      previewData.prerequisite_questions?.forEach((q) => {
+        if (!finalAnswers[q.concept_id]) {
+          finalAnswers[q.concept_id] = "somewhat_known";
+        }
+      });
+
+      // Structure the prerequisite checks matching PrerequisiteCheckPayload
+      const formattedAnswers = Object.entries(finalAnswers).map(([conceptId, status]) => {
+        const matchingQuestion = previewData.prerequisite_questions.find(
+          (q) => q.concept_id === conceptId
+        );
+        return {
+          concept_id: conceptId,
+          status: status,
+          required_by_section_id: matchingQuestion?.required_by_section_id || "",
+        };
+      });
+
+      const finalQuery: CurriculumQueryPayload = {
+        ...query,
+        prerequisite_check: {
+          asked: true,
+          answers: formattedAnswers,
+        },
+        intent_grounding_section_ids: query.intent_grounding_section_ids,
+      };
+
+      try {
+        const plan = await createCurriculumPlan(finalQuery);
+        
+        clearInterval(progressInterval);
+        
+        // Turn off shimmers
+        setBuildingSections({
+          target: false,
+          prereq: false,
+          optional: false,
+        });
+        
+        setProgressWidth(100);
+
+        // Save plan to localStorage because backend is stateless
+        localStorage.setItem(`curriculum-plan-${plan.curriculum_plan_id}`, JSON.stringify(plan));
+        localStorage.setItem("curriculum-current-plan", JSON.stringify(plan));
+        
+        // Delay slightly to finish progress bar animation
+        setTimeout(() => {
+          router.push(`/plan/${encodeURIComponent(plan.curriculum_plan_id)}`);
+        }, 500);
+      } catch (err: unknown) {
+        clearInterval(progressInterval);
+        setShowOverlay(false);
+        setBuildingSections({
+          target: false,
+          prereq: false,
+          optional: false,
+        });
+        console.error(err);
+        setError(
+          err instanceof ApiError || err instanceof Error
+            ? err.message
+            : "Failed to generate curriculum. Please check backend connections."
+        );
+        setSubmitting(false);
+      }
+    }, delay + (sectionsToReveal.length > 0 ? 500 : 0));
   };
 
   if (loading) {
@@ -150,6 +236,48 @@ export default function OnboardPreviewPage() {
 
   return (
     <div className="font-public text-body-md bg-background min-h-screen overflow-x-hidden">
+      <style>{`
+        @keyframes slideUpFade {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+            filter: blur(8px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+            filter: blur(0);
+          }
+        }
+
+        @keyframes shimmer {
+          0% { background-position: -200% 0; }
+          100% { background-position: 200% 0; }
+        }
+
+        .reveal-section {
+          opacity: 0;
+          max-height: 0;
+          overflow: hidden;
+          visibility: hidden;
+          transition: max-height 0.6s ease-out, opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.6s;
+        }
+
+        .reveal-section.active {
+          opacity: 1;
+          max-height: 2000px;
+          overflow: visible;
+          visibility: visible;
+          animation: slideUpFade 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        .shimmer-effect {
+          background: linear-gradient(90deg, transparent 25%, rgba(255, 255, 255, 0.45) 50%, transparent 75%);
+          background-size: 200% 100%;
+          animation: shimmer 1.5s infinite;
+        }
+      `}</style>
+
       {/* focused onboarding container */}
       <main className="min-h-screen px-4 md:px-10 py-10 max-w-[1280px] mx-auto">
         
@@ -183,22 +311,25 @@ export default function OnboardPreviewPage() {
           <div className="lg:col-span-8 space-y-12">
             
             {/* Target Sections */}
-            <section>
+            <section className={`reveal-section ${revealedSections.target ? "active" : ""}`}>
               <div className="flex items-center justify-between mb-4">
                 <h2 className="font-hanken text-2xl font-bold text-on-background">Target Sections</h2>
                 <span className="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-semibold">
-                  {previewData.retrieved_sections?.length || 0} Modules
+                  {previewData.retrieved_sections?.length || 0} Sections
                 </span>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {previewData.retrieved_sections?.map((section, index) => {
+                {previewData.retrieved_sections?.map((section) => {
                   const estReadTime = Math.max(5, Math.round(section.summary.split(/\s+/).length / 20));
                   return (
                     <article
                       key={section.section_id}
-                      className="tonal-card bg-surface-container-lowest p-6 rounded-xl relative border border-[#E2E8F0] shadow-sm hover:border-secondary transition-all cursor-default"
+                      className="tonal-card bg-surface-container-lowest p-6 rounded-xl relative border border-[#E2E8F0] shadow-sm hover:border-secondary transition-all cursor-default overflow-hidden"
                     >
+                      {buildingSections.target && (
+                        <div className="absolute inset-0 pointer-events-none bg-secondary/5 shimmer-effect z-10"></div>
+                      )}
                       <div className="absolute top-4 right-4 text-xs text-on-surface-variant opacity-60">
                         {estReadTime} min read
                       </div>
@@ -228,18 +359,31 @@ export default function OnboardPreviewPage() {
                     </article>
                   );
                 })}
+                {previewData.retrieved_sections.length === 0 && (
+                  <div className="md:col-span-2 rounded-xl border border-outline-variant bg-surface-container-lowest p-6 text-center shadow-sm">
+                    <h3 className="font-hanken text-lg font-bold text-on-background">
+                      No matching textbook sections found
+                    </h3>
+                    <p className="mt-2 text-sm text-on-surface-variant">
+                      Try removing subject, grade, or chapter filters, or rephrase the topic with a textbook concept.
+                    </p>
+                  </div>
+                )}
               </div>
             </section>
 
             {/* Prerequisite Sections */}
             {previewData.learning_path_context?.prerequisite_sections?.length > 0 && (
-              <section>
+              <section className={`reveal-section ${revealedSections.prereq ? "active" : ""}`}>
                 <div className="flex items-center justify-between mb-4">
                   <h2 className="font-hanken text-2xl font-bold text-on-background">Foundational Prerequisites</h2>
                 </div>
-                <div className="bg-surface-container-low rounded-xl overflow-hidden border border-outline-variant/60 shadow-inner">
+                <div className="bg-surface-container-low rounded-xl overflow-hidden border border-outline-variant/60 shadow-inner relative">
+                  {buildingSections.prereq && (
+                    <div className="absolute inset-0 pointer-events-none bg-secondary/5 shimmer-effect z-10"></div>
+                  )}
                   <div className="divide-y divide-outline-variant">
-                    {previewData.learning_path_context.prerequisite_sections.map((prereq, index) => (
+                    {previewData.learning_path_context.prerequisite_sections.map((prereq) => (
                       <div
                         key={prereq.section_id}
                         className="p-6 flex flex-col md:flex-row md:items-center gap-4 hover:bg-surface-container-high transition-colors"
@@ -274,16 +418,19 @@ export default function OnboardPreviewPage() {
 
             {/* Optional Support / reinforcement */}
             {previewData.learning_path_context?.support_sections?.length > 0 && (
-              <section>
+              <section className={`reveal-section ${revealedSections.optional ? "active font-body-md" : ""}`}>
                 <div className="flex items-center justify-between mb-4">
                   <h2 className="font-hanken text-2xl font-bold text-on-background">Optional Support Resources</h2>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {previewData.learning_path_context.support_sections.map((support, index) => (
+                  {previewData.learning_path_context.support_sections.map((support) => (
                     <div
                       key={support.section_id}
-                      className="tonal-card bg-surface-container-lowest p-5 rounded-xl border border-[#E2E8F0] shadow-sm flex gap-4"
+                      className="tonal-card bg-surface-container-lowest p-5 rounded-xl border border-[#E2E8F0] shadow-sm flex gap-4 relative overflow-hidden"
                     >
+                      {buildingSections.optional && (
+                        <div className="absolute inset-0 pointer-events-none bg-secondary/5 shimmer-effect z-10"></div>
+                      )}
                       <div className="h-14 w-14 rounded-lg bg-surface-container-low flex items-center justify-center shrink-0 border border-outline-variant">
                         <span className="material-symbols-outlined text-secondary text-2xl">
                           layers
@@ -323,7 +470,7 @@ export default function OnboardPreviewPage() {
 
                 <div className="space-y-6">
                   {previewData.prerequisite_questions.map((q) => {
-                    const selectedVal = comfortAnswers[q.concept_id] || "somewhat_known";
+                    const selectedVal = comfortAnswers[q.concept_id];
 
                     return (
                       <div key={q.question_id} className="border-t border-outline-variant/40 pt-4 first:border-0 first:pt-0">
@@ -451,7 +598,7 @@ export default function OnboardPreviewPage() {
             </div>
             <h2 className="font-hanken text-xl font-bold mb-2 text-on-background">Generating Your Flow</h2>
             <p className="text-sm text-on-surface-variant mb-6 leading-relaxed">
-              Assembling the tailored roadmap for <span className="font-semibold">{query.onboarding.topic}</span> based on your comfort assessments.
+              Assembling the tailored roadmap for <span className="font-semibold">{query?.onboarding.topic}</span> based on your comfort assessments.
             </p>
             
             {/* Pulsing Progress Bar */}

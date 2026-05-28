@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 interface LocalPlan {
@@ -11,34 +11,35 @@ interface LocalPlan {
 }
 
 export default function Home() {
-  const [recentPlans] = useState<LocalPlan[]>(() => {
-    if (typeof window !== "undefined") {
-      const keys = Object.keys(localStorage);
-      const plans: LocalPlan[] = [];
+  const [recentPlans, setRecentPlans] = useState<LocalPlan[]>([]);
 
-      keys.forEach((key) => {
-        if (key.startsWith("curriculum-plan-")) {
-          const raw = localStorage.getItem(key);
-          if (raw) {
-            try {
-              const parsed = JSON.parse(raw);
-              plans.push({
-                id: parsed.curriculum_plan_id,
-                topic: parsed.onboarding?.topic || "Unknown Topic",
-                subject: parsed.onboarding?.subject || "General",
-                modulesCount: parsed.modules?.length || 0,
-              });
-            } catch {
-              // Ignore corrupted plans
-            }
+  useEffect(() => {
+    const keys = Object.keys(localStorage);
+    const plans: LocalPlan[] = [];
+
+    keys.forEach((key) => {
+      if (key.startsWith("curriculum-plan-")) {
+        const raw = localStorage.getItem(key);
+        if (raw) {
+          try {
+            const parsed = JSON.parse(raw);
+            plans.push({
+              id: parsed.curriculum_plan_id,
+              topic: parsed.onboarding?.topic || "Unknown Topic",
+              subject: parsed.onboarding?.subject || "General",
+              modulesCount: parsed.modules?.length || 0,
+            });
+          } catch {
+            // Ignore corrupted plans
           }
         }
-      });
+      }
+    });
 
-      return plans;
-    }
-    return [];
-  });
+    Promise.resolve().then(() => {
+      setRecentPlans(plans);
+    });
+  }, []);
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-50 dark:bg-zinc-900 font-sans text-gray-900 dark:text-zinc-50">

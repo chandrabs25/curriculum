@@ -5,6 +5,8 @@ import type {
   CurriculumQueryPayload,
   ExpandedCurriculumModulePayload,
   HealthResponse,
+  IntentClassificationResponse,
+  IntentClassifyPayload,
   ModuleDesignPayload,
   OptionsResponse,
   RetrievalPreviewResponse,
@@ -79,6 +81,15 @@ export function fetchHealth(): Promise<HealthResponse> {
 
 export function fetchOptions(): Promise<OptionsResponse> {
   return requestJson<OptionsResponse>("/api/options");
+}
+
+export function classifyIntent(
+  payload: IntentClassifyPayload
+): Promise<IntentClassificationResponse> {
+  return postJson<IntentClassifyPayload, IntentClassificationResponse>(
+    "/api/intent/classify",
+    payload
+  );
 }
 
 export function previewRetrieval(

@@ -29,11 +29,62 @@ export interface CurriculumQueryPayload {
   onboarding: OnboardingPayload;
   learner_state: LearnerConceptStatePayload[];
   prerequisite_check: PrerequisiteCheckPayload | null;
+  intent_grounding_section_ids: string[];
   subject: string | null;
   grade: number | null;
   chapter_id: string | null;
   max_modules: number;
   retrieval_limit: number;
+}
+
+export interface IntentClassifyPayload {
+  query: string;
+  subject: string | null;
+  grade: number | null;
+  chapter_id: string | null;
+  candidate_limit: number;
+}
+
+export interface ConfirmedIntent {
+  label: string;
+  user_facing_summary: string;
+  refined_query: string;
+  grounding_section_ids: string[];
+}
+
+export interface IntentOption {
+  label: string;
+  user_facing_description: string;
+  refined_query: string;
+  grounding_section_ids: string[];
+}
+
+export interface IntentClassificationPacket {
+  original_query: string;
+  matched_concepts: {
+    concept_id: string;
+    label: string;
+  }[];
+  candidate_sections: {
+    section_id: string;
+    title: string;
+    subject: string | null;
+    grade: number | null;
+    chapter_id: string;
+    reasons: string[];
+    matched_concept_ids: string[];
+  }[];
+  instructions: Record<string, string>;
+}
+
+export interface IntentClassificationResponse {
+  status: "confirmed" | "needs_clarification";
+  original_query: string;
+  needs_user_choice: boolean;
+  question: string;
+  confirmed_intent: ConfirmedIntent | null;
+  options: IntentOption[];
+  classification_packet: IntentClassificationPacket;
 }
 
 export interface ChapterOption {

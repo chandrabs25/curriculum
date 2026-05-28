@@ -1,0 +1,120 @@
+{
+    "status": "confirmed",
+    "original_query": "basic concepts in acceleration",
+    "needs_user_choice": false,
+    "question": "",
+    "confirmed_intent": {
+        "label": "Basic concepts of acceleration",
+        "user_facing_summary": "Introduction to acceleration, its definition, units, and simple examples",
+        "refined_query": "basic concepts of acceleration",
+        "grounding_section_ids": [
+            "ncert:physics:11:2:2.3"
+        ]
+    },
+    "options": [],
+    "classification_packet": {
+        "original_query": "basic concepts in acceleration",
+        "matched_concepts": [
+            {
+                "concept_id": "concept:acceleration",
+                "label": "Acceleration"
+            }
+        ],
+        "candidate_sections": [
+            {
+                "section_id": "ncert:physics:11:2:2.3",
+                "title": "ACCELERATION",
+                "subject": "physics",
+                "grade": 11,
+                "chapter_id": "ncert:physics:11:2",
+                "reasons": [
+                    "concept_match",
+                    "key_term_match",
+                    "summary_match",
+                    "title_match"
+                ],
+                "matched_concept_ids": [
+                    "concept:acceleration"
+                ]
+            },
+            {
+                "section_id": "ncert:physics:11:13:13.5",
+                "title": "VELOCITY AND ACCELERATION IN SIMPLE HARMONIC MOTION",
+                "subject": "physics",
+                "grade": 11,
+                "chapter_id": "ncert:physics:11:13",
+                "reasons": [
+                    "key_term_match",
+                    "summary_match",
+                    "title_match"
+                ],
+                "matched_concept_ids": []
+            },
+            {
+                "section_id": "ncert:physics:11:3:3.8",
+                "title": "MOTION IN A PLANE WITH CONSTANT ACCELERATION",
+                "subject": "physics",
+                "grade": 11,
+                "chapter_id": "ncert:physics:11:3",
+                "reasons": [
+                    "key_term_match",
+                    "summary_match",
+                    "title_match"
+                ],
+                "matched_concept_ids": []
+            },
+            {
+                "section_id": "ncert:physics:11:7:7.5",
+                "title": "Acceleration Due to Gravity of the Earth",
+                "subject": "physics",
+                "grade": 11,
+                "chapter_id": "ncert:physics:11:7",
+                "reasons": [
+                    "key_term_match",
+                    "summary_match",
+                    "title_match"
+                ],
+                "matched_concept_ids": []
+            },
+            {
+                "section_id": "ncert:physics:11:7:7.6",
+                "title": "Acceleration Due to Gravity Below and Above the Surface of Earth",
+                "subject": "physics",
+                "grade": 11,
+                "chapter_id": "ncert:physics:11:7",
+                "reasons": [
+                    "key_term_match",
+                    "summary_match",
+                    "title_match"
+                ],
+                "matched_concept_ids": []
+            },
+            {
+                "section_id": "ncert:chemistry:11:8:8.7",
+                "title": "FUNDAMENTAL CONCEPTS IN ORGANIC REACTION MECHANISM",
+                "subject": "chemistry",
+                "grade": 11,
+                "chapter_id": "ncert:chemistry:11:8",
+                "reasons": [
+                    "title_match"
+                ],
+                "matched_concept_ids": []
+            },
+            {
+                "section_id": "ncert:physics:12:1:1.4",
+                "title": "Basic Properties of Electric Charge",
+                "subject": "physics",
+                "grade": 12,
+                "chapter_id": "ncert:physics:12:1",
+                "reasons": [
+                    "title_match"
+                ],
+                "matched_concept_ids": []
+            }
+        ],
+        "instructions": {
+            "user_facing_options": "Phrase options as what the learner wants to learn, not as section titles.",
+            "internal_grounding": "Use section IDs only as internal grounding_section_ids."
+        }
+    }
+}

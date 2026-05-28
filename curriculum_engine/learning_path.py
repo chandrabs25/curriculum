@@ -18,6 +18,7 @@ DIRECT_MATCH_REASONS = {
     "learner_misconception",
     "learner_partial",
     "learner_competency",
+    "intent_grounding",
 }
 
 
@@ -104,7 +105,8 @@ def build_learning_path_context(
         for row in parallel_support_paths
         if row.get("chapter_id") and row.get("source_target_chapter_id") and row.get("chapter_id") != row.get("source_target_chapter_id")
     ]
-    all_sections = target_sections + prerequisite_sections + support_sections
+    main_concept_sections = target_sections + prerequisite_sections
+    all_sections = main_concept_sections + support_sections
     return LearningPathContext(
         main_path_sections=main_path_sections,
         target_sections=target_sections,
@@ -116,7 +118,7 @@ def build_learning_path_context(
         next_step_paths=next_step_paths,
         cross_chapter_bridges=cross_chapter_bridges,
         relationship_policy=relationship_policy(),
-        required_concepts=_concept_rows(all_sections, "requires"),
+        required_concepts=_concept_rows(main_concept_sections, "requires"),
         taught_concepts=_concept_rows(all_sections, "teaches"),
         hard_dependency_edges=hard_edges,
         optional_support_edges=optional_edges,
