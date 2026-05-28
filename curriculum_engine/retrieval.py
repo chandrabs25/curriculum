@@ -108,6 +108,7 @@ class CurriculumRetriever:
         limit: int = 10,
         include_prerequisites: bool = True,
         include_soft_links: bool = True,
+        expand_across_subjects: bool = True,
     ) -> list[SectionRetrievalResult]:
         query_terms = _terms(query)
         if not query_terms and not str(query or "").strip():
@@ -146,11 +147,12 @@ class CurriculumRetriever:
         self._prune_weak_direct_matches(scored)
         seed_ids = self._select_seed_section_ids(scored, limit=limit)
         scored = {section_id: scored[section_id] for section_id in seed_ids}
+        expansion_subject = None if expand_across_subjects else subject
 
         if include_prerequisites:
-            self._add_prerequisites(seed_ids, scored, state_by_concept, subject=subject, grade=grade, chapter_id=chapter_id)
+            self._add_prerequisites(seed_ids, scored, state_by_concept, subject=expansion_subject, grade=grade, chapter_id=chapter_id)
         if include_soft_links:
-            self._add_soft_links(seed_ids, scored, state_by_concept, subject=subject, grade=grade, chapter_id=chapter_id)
+            self._add_soft_links(seed_ids, scored, state_by_concept, subject=expansion_subject, grade=grade, chapter_id=chapter_id)
 
         results = [self._result_from_score(row) for row in scored.values()]
         results.sort(key=lambda row: (-row.score, row.subject or "", row.grade or 0, row.chapter_id, row.section_id))

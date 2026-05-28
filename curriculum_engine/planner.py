@@ -163,18 +163,22 @@ Now create the ordered curriculum module sequence.
 Critical rules:
 - Return JSON only.
 - Use only section IDs present in planning_packet.
-- Build required modules only from planning_packet.main_path_section_ids.
+- Treat planning_packet.onboarding.topic and planning_packet.onboarding.learning_goal as the current learning goal.
+- Build required modules only from planning_packet.main_path_section_ids, but do not use every ID just because it is present.
+- Include a section in source_section_ids only when its title/summary clearly advances the current learning goal.
+- Exclude sections that are merely generic word matches, broad background, or loosely related by shared terms unless a hard dependency proves they are necessary for the current learning goal.
 - Do not put optional support/reinforcement/next-step sections into source_section_ids.
 - Use relationships.parallel_support only in parallel_support_section_ids.
 - Use relationships.reinforcement only in reinforcement_section_ids or review/practice recommendations.
 - Use relationships.next_steps only in next_step_section_ids as after-completion suggestions.
 - Respect DEPENDS_ON_UNIT hard dependency ordering.
-- Use hard dependency evidence_reason to explain prerequisite warnings and ordering.
+- Use hard dependency evidence_reason to explain prerequisite warnings and ordering, but only include prerequisite modules that are needed to understand the current learning goal.
 - Concepts are intentionally omitted from this first planner call except bridge_concept_id on section links.
 - Do not produce concept IDs, activities, examples, exercises, milestones, detailed teaching content, or assessments.
 - Make each module a coherent ordering unit for a later module-design LLM call.
 - Put modules in the sequence the learner should follow.
 - Explain why each module follows from the previous module and prepares the next module.
+- Module titles and goals must describe what the selected source sections teach for the current learning goal; do not drift to another subject or topic.
 - Do not invent source ids, concept ids, examples, exercises, or relationships.
 
 Required JSON shape:

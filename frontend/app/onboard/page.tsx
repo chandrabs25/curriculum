@@ -17,6 +17,7 @@ export default function OnboardPage() {
   const router = useRouter();
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const [topic, setTopic] = useState("");
+  const [subject, setSubject] = useState("biology");
   const [flowState, setFlowState] = useState<FlowState>("idle");
   const [intentResult, setIntentResult] = useState<IntentClassificationResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -86,7 +87,7 @@ export default function OnboardPage() {
     setError(null);
 
     const onboarding: OnboardingPayload = {
-      subject: "",
+      subject,
       topic: intent.refined_query,
       current_level: "",
       confidence: "",
@@ -101,7 +102,7 @@ export default function OnboardPage() {
       onboarding,
       learner_state: [],
       prerequisite_check: null,
-      subject: null,
+      subject,
       grade: null,
       chapter_id: null,
       max_modules: 10,
@@ -110,6 +111,7 @@ export default function OnboardPage() {
 
     try {
       const previewData = await previewRetrieval(queryPayload);
+      clearGeneratedCurriculumState();
       localStorage.setItem("curriculum-onboard-preview", JSON.stringify(previewData));
       localStorage.setItem("curriculum-onboard-query", JSON.stringify(queryPayload));
       localStorage.setItem("curriculum-onboard-intent", JSON.stringify(intent));
@@ -156,6 +158,35 @@ export default function OnboardPage() {
         )}
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-5 rounded-2xl border border-outline-variant bg-surface-container-lowest p-5 shadow-sm">
+          <fieldset className="flex flex-col gap-3">
+            <legend className="font-hanken text-sm font-bold text-on-surface">Subject</legend>
+            <div className="grid grid-cols-3 gap-2">
+              {subjectOptions.map((option) => {
+                const selected = subject === option.value;
+                return (
+                  <button
+                    key={option.value}
+                    type="button"
+                    onClick={() => {
+                      setSubject(option.value);
+                      setIntentResult(null);
+                      setError(null);
+                    }}
+                    disabled={isBusy}
+                    className={`rounded-xl border px-4 py-3 text-center font-hanken text-sm font-bold transition-all disabled:opacity-50 ${
+                      selected
+                        ? "border-secondary bg-secondary-container text-on-secondary-container"
+                        : "border-outline-variant bg-white text-on-surface-variant hover:border-secondary hover:bg-surface-container-low"
+                    }`}
+                    aria-pressed={selected}
+                  >
+                    {option.label}
+                  </button>
+                );
+              })}
+            </div>
+          </fieldset>
+
           <label className="flex flex-col gap-3">
             <span className="font-hanken text-sm font-bold text-on-surface">Learning query</span>
             <div className="relative flex items-center">
@@ -185,15 +216,18 @@ export default function OnboardPage() {
           </label>
 
           <div className="flex flex-wrap gap-2">
-            {["I want to learn acceleration", "I want to learn gravity", "Organic chemistry basics"].map((sample) => (
+            {sampleQueries.map((sample) => (
               <button
-                key={sample}
+                key={sample.query}
                 type="button"
-                onClick={() => setQuery(sample)}
+                onClick={() => {
+                  setSubject(sample.subject);
+                  setQuery(sample.query);
+                }}
                 disabled={isBusy}
                 className="rounded-full border border-outline-variant bg-surface-container-low px-3 py-1 text-xs text-on-surface-variant transition-all hover:border-secondary hover:bg-surface-variant disabled:opacity-50"
               >
-                {sample}
+                {sample.query}
               </button>
             ))}
           </div>
@@ -285,6 +319,34 @@ function errorMessage(err: unknown, fallback: string): string {
   return fallback;
 }
 
+function clearGeneratedCurriculumState(): void {
+  const prefixes = [
+    "curriculum-plan-",
+    "curriculum-current-plan",
+    "curriculum-module-design-",
+    "curriculum-checkpoint-score-",
+    "curriculum-checkpoint-result-",
+  ];
+  for (const key of Object.keys(localStorage)) {
+    if (prefixes.some((prefix) => key === prefix || key.startsWith(prefix))) {
+      localStorage.removeItem(key);
+    }
+  }
+}
+
 function intentOptionKey(option: IntentOption, index: number): string {
   return `${index}:${option.refined_query}`;
 }
+
+const subjectOptions = [
+  { value: "biology", label: "Biology" },
+  { value: "physics", label: "Physics" },
+  { value: "chemistry", label: "Chemistry" },
+];
+
+const sampleQueries = [
+  { subject: "physics", query: "I want to learn acceleration" },
+  { subject: "physics", query: "I want to learn gravity" },
+  { subject: "biology", query: "I want to learn photosynthesis" },
+  { subject: "chemistry", query: "Organic chemistry basics" },
+];

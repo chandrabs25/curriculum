@@ -52,6 +52,13 @@ export default function OnboardPreviewPage() {
     try {
       const parsedPreview = JSON.parse(storedPreview) as RetrievalPreviewResponse;
       const parsedQuery = JSON.parse(storedQuery) as CurriculumQueryPayload;
+      if (!parsedPreview.planning_packet?.main_path_section_ids?.length) {
+        window.setTimeout(() => {
+          setError("Stored preview is stale. Please run the query again.");
+          setPhase("error");
+        }, 0);
+        return;
+      }
       window.setTimeout(() => {
         setPreviewData(parsedPreview);
         setQuery(parsedQuery);
@@ -190,8 +197,6 @@ export default function OnboardPreviewPage() {
   }
 
   const planningPacket = previewData.planning_packet;
-  const doubledItems = readingItems.length > 0 ? [...readingItems, ...readingItems] : [];
-
   return (
     <div className="min-h-screen overflow-hidden bg-background font-public text-on-surface">
       <style>{`
@@ -263,12 +268,12 @@ export default function OnboardPreviewPage() {
           <div className="relative overflow-hidden py-3">
             <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-surface-container-lowest to-transparent" />
             <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-surface-container-lowest to-transparent" />
-            {doubledItems.length > 0 ? (
-              <div className="reading-rail flex w-max gap-4">
-                {doubledItems.map((item, index) => (
+            {readingItems.length > 0 ? (
+              <div className="flex flex-wrap gap-4">
+                {readingItems.map((item, index) => (
                   <article
                     key={`${item.id}:${index}`}
-                    className="h-[178px] w-[280px] shrink-0 rounded-xl border border-outline-variant bg-white p-4 shadow-sm md:w-[340px]"
+                    className="h-[178px] w-[280px] rounded-xl border border-outline-variant bg-white p-4 shadow-sm md:w-[340px]"
                   >
                     <div className="mb-3 flex items-center justify-between gap-3">
                       <span className="flex items-center gap-2 rounded-full bg-surface-container-low px-3 py-1 text-[11px] font-bold text-secondary">
