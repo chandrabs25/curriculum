@@ -21,6 +21,7 @@ from .module_expansion import ModuleExpander, allocate_module_mcq_targets
 from .planner import CurriculumPlanner, PlannerRequest
 from .planning_packet import build_curriculum_planning_packet
 from .retrieval import CurriculumRetriever, LearnerConceptState
+from .section_insights import generate_section_insights
 from .vector_index import DEFAULT_MODEL_DIR, SectionVectorIndex, SentenceTransformerEmbeddingModel
 
 
@@ -90,6 +91,7 @@ class ModuleDesignPayload(BaseModel):
     plan: CurriculumPlanPayload
     module_id: str
     learner_state: list[LearnerConceptStatePayload] = Field(default_factory=list)
+    section_insights: list[dict[str, Any]] = Field(default_factory=list)
 
 
 class CheckpointAnswerPayload(BaseModel):
@@ -103,6 +105,7 @@ class CheckpointSubmitPayload(BaseModel):
     module_id: str
     checkpoint_mcqs: list[dict[str, Any]]
     answers: list[CheckpointAnswerPayload]
+    existing_section_insights: list[dict[str, Any]] = Field(default_factory=list)
 
 
 class CurriculumAPIService:
@@ -182,6 +185,7 @@ class CurriculumAPIService:
             plan,
             payload.module_id,
             learner_state=_learner_state(payload.learner_state),
+            section_insights=payload.section_insights,
         )
         return _jsonable(expanded)
 
@@ -231,6 +235,15 @@ class CurriculumAPIService:
             )
         total = len(payload.checkpoint_mcqs)
         score = correct_count / total if total else 0.0
+        section_insights = generate_section_insights(
+            self.llm_client,
+            learner_id=payload.learner_id,
+            curriculum_plan_id=payload.curriculum_plan_id,
+            module_id=payload.module_id,
+            question_results=rows,
+            checkpoint_mcqs=payload.checkpoint_mcqs,
+            existing_section_insights=payload.existing_section_insights,
+        )
         return {
             "learner_id": payload.learner_id,
             "curriculum_plan_id": payload.curriculum_plan_id,
@@ -242,6 +255,7 @@ class CurriculumAPIService:
             "weak_concept_ids": _dedupe(weak_concept_ids),
             "question_results": rows,
             "insight_events": insight_events,
+            "section_insights": section_insights,
             "recommendation": "continue" if score >= 0.7 else "review_module",
         }
 

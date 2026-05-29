@@ -15,7 +15,7 @@ export default function Home() {
 
   useEffect(() => {
     const keys = Object.keys(localStorage);
-    const plans: LocalPlan[] = [];
+    const plansById = new Map<string, LocalPlan>();
 
     keys.forEach((key) => {
       if (key.startsWith("curriculum-plan-")) {
@@ -23,7 +23,9 @@ export default function Home() {
         if (raw) {
           try {
             const parsed = JSON.parse(raw);
-            plans.push({
+            const id = parsed.curriculum_plan_id;
+            if (!id || plansById.has(id)) return;
+            plansById.set(id, {
               id: parsed.curriculum_plan_id,
               topic: parsed.onboarding?.topic || "Unknown Topic",
               subject: parsed.onboarding?.subject || "General",
@@ -37,7 +39,7 @@ export default function Home() {
     });
 
     Promise.resolve().then(() => {
-      setRecentPlans(plans);
+      setRecentPlans([...plansById.values()]);
     });
   }, []);
 

@@ -99,6 +99,7 @@ export default function PlanDashboardPage() {
     m.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
     m.module_goal.toLowerCase().includes(searchQuery.toLowerCase())
   );
+  const labels = buildPlanLabelResolver(plan);
 
   return (
     <div className="bg-background text-on-surface min-h-screen flex flex-col font-public">
@@ -138,12 +139,6 @@ export default function PlanDashboardPage() {
               className="bg-surface-container-low border border-outline-variant rounded-full px-4 py-1.5 text-sm w-64 focus:ring-2 focus:ring-secondary focus:border-transparent outline-none"
             />
           </div>
-          <button className="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
-            notifications
-          </button>
-          <button className="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
-            account_circle
-          </button>
           <Link
             href="/onboard"
             className="bg-primary text-on-primary px-4 py-2 rounded-lg font-hanken font-bold text-xs flex items-center gap-2 hover:opacity-90 active:scale-95 transition-all shadow-sm"
@@ -161,11 +156,9 @@ export default function PlanDashboardPage() {
         <aside className="hidden md:flex flex-col h-full py-6 bg-surface-container-low border-r border-outline-variant w-64 shrink-0 px-4">
           <div className="mb-8">
             <div className="flex items-center gap-3 mb-1">
-              <img
-                alt="User Profile"
-                className="w-10 h-10 rounded-full bg-surface-container-high border border-outline-variant object-cover"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnJhQ53m1u2m5YRvCuVeDOmDiMVBh5M3TbAznPVxGkB9kJjUQ2lzxmLvGg_oDRstbvgwoZlESK-x_JZp7-NfVe92tYeLpZuq0HWFy1RbbAJ4JxBtvo17-VwsGP7zc34ldWCRj5TwaMUz0Wrt5dkcq3ZWZ7Ys9a7I7h2fofFw3By9c14BUPO4Y2BrF-X44OtTCt_uC_PmK0_EMJkscJ6hLWf12VoRHsaRKL_tqQe5o2P-k9cWEr3xBbQRSXpheTLCfcMEUayyhOZZrc"
-              />
+              <div className="w-10 h-10 rounded-full bg-surface-container-high border border-outline-variant flex items-center justify-center text-secondary">
+                <span className="material-symbols-outlined text-[22px]">school</span>
+              </div>
               <div>
                 <p className="font-hanken font-bold text-xs text-on-surface">Academic Portal</p>
                 <p className="text-[10px] text-on-surface-variant uppercase tracking-wider font-semibold">Curriculum Engine</p>
@@ -196,15 +189,14 @@ export default function PlanDashboardPage() {
             )}
           </nav>
 
-          <div className="mt-auto pt-6 border-t border-outline-variant space-y-1">
-            <a href="#" className="flex items-center gap-3 px-3 py-2.5 text-on-surface-variant hover:bg-surface-variant transition-all rounded-lg">
-              <span className="material-symbols-outlined">settings</span>
-              <span className="font-hanken font-semibold text-sm">Settings</span>
-            </a>
-            <a href="#" className="flex items-center gap-3 px-3 py-2.5 text-on-surface-variant hover:bg-surface-variant transition-all rounded-lg">
-              <span className="material-symbols-outlined">help</span>
-              <span className="font-hanken font-semibold text-sm">Support</span>
-            </a>
+          <div className="mt-auto pt-6 border-t border-outline-variant space-y-2">
+            <p className="text-[10px] text-on-surface-variant uppercase tracking-wider font-bold">Plan facts</p>
+            <p className="text-xs text-on-surface-variant">
+              {sortedModules.length} modules
+            </p>
+            <p className="text-xs text-on-surface-variant">
+              {totalCheckpointCount(plan)} checkpoint questions
+            </p>
           </div>
         </aside>
 
@@ -347,7 +339,7 @@ export default function PlanDashboardPage() {
                                   : "bg-surface-container text-on-surface-variant"
                               }`}
                             >
-                              {concept.replace("concept:", "").replace(/_/g, " ")}
+                              {labels.conceptLabel(concept)}
                             </span>
                           ))}
                         </div>
@@ -357,7 +349,7 @@ export default function PlanDashboardPage() {
                       {module.prerequisite_warnings && module.prerequisite_warnings.length > 0 && (
                         <div className="mb-6 p-3 rounded-lg bg-amber-50 dark:bg-amber-950 border border-amber-200 dark:border-amber-900 text-xs text-amber-800 dark:text-amber-300 flex items-center gap-2">
                           <span className="material-symbols-outlined text-base">warning</span>
-                          <span>{module.prerequisite_warnings[0]}</span>
+                          <span>{labels.renderRelationshipText(module.prerequisite_warnings[0])}</span>
                         </div>
                       )}
 
@@ -420,80 +412,56 @@ export default function PlanDashboardPage() {
           </section>
         </main>
 
-        {/* Right Sidebar: Recommended content & reinforcement (Desktop Only) */}
+        {/* Right Sidebar: Real graph-backed recommendations (Desktop Only) */}
         <aside className="hidden xl:flex flex-col w-80 shrink-0 border-l border-outline-variant bg-surface-container-lowest p-6 overflow-y-auto custom-scrollbar">
-          
-          {/* recommended box */}
-          <div className="mb-8">
-            <h4 className="font-hanken font-bold text-sm text-primary mb-4 flex items-center gap-2">
-              <span className="material-symbols-outlined text-secondary text-lg">recommend</span>
-              Helpful Alongside This
-            </h4>
-            
-            <div className="space-y-4">
-              <div className="group cursor-pointer">
-                <div className="w-full h-32 rounded-lg bg-surface-container mb-2 overflow-hidden relative border border-outline-variant/40">
-                  <img
-                    alt="Abstract study notes"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQyoC7glS4bULrZwtHHGt-Inoo87iKg-Yn3dmlgB5KBKNSMQjyO8gAvEEC3YFSrOqyu46rJskdEx_pL0X-Tkiu0B_8tG6cayUwnd73kS6eehK2roQtP--nlQXTcsfgP5Fh1HbOpCZVTaCMI6Q70UUlIXsFzbaRZz-h-4eOrHM26n60oKMQNu8a_SzSH8yvzqtUoeApZKNbwYJbgvlfsmPfKrdxxQ62M1UG95AkNVGPF3wxiEOIgHlQYU6p38fOf1FfbYqAiAAO23rK"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-3">
-                    <span className="text-white text-xxs font-bold uppercase tracking-wider">Recommended Pack</span>
+          {activeModule && (
+            <div className="mb-8">
+              <h4 className="font-hanken font-bold text-sm text-primary mb-4 flex items-center gap-2">
+                <span className="material-symbols-outlined text-secondary text-lg">auto_stories</span>
+                Active Module
+              </h4>
+              <div className="p-4 rounded-xl border border-outline-variant bg-surface-container-low">
+                <p className="font-hanken font-bold text-sm text-on-surface mb-2">{activeModule.title}</p>
+                <p className="text-xs text-on-surface-variant leading-relaxed">{activeModule.module_goal}</p>
+                {activeModule.source_section_ids.length > 0 && (
+                  <div className="mt-4 pt-4 border-t border-outline-variant">
+                    <p className="text-[10px] text-on-surface-variant uppercase tracking-wider font-bold mb-2">Source sections</p>
+                    <ul className="space-y-2">
+                      {activeModule.source_section_ids.map((sectionId) => (
+                        <li key={sectionId} className="text-xs text-on-surface">
+                          {labels.sectionLabel(sectionId)}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                </div>
-                <p className="font-hanken font-semibold text-xs text-on-surface group-hover:text-secondary transition-colors">
-                  Reference Formulas & Formulas Cheatsheet
-                </p>
-                <p className="text-[10px] text-on-surface-variant">Strengthen your math derivations</p>
-              </div>
-
-              <div className="group cursor-pointer">
-                <div className="w-full h-32 rounded-lg bg-surface-container mb-2 overflow-hidden relative border border-outline-variant/40">
-                  <img
-                    alt="strategic nodes"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtiSnoiupQgXeEMwDzoOCdqvhBjFEuSAyEKM7PAJVc6JvPEJbpC8D9Rzda_zFIY4CxEG6tAGCLZN_49ImWGfqpE6qAQpd6QAsDIppnPPPrQPz7-zxnmYcnKY8BSiKxRGAc93O-EqMRuMn7l1Lbhr7GL93CHKcF8lRYlw9KuFYVQup9EJoWeR0z3vyh9x6en9ezJvBxW_eeMT-jS_egUA0wRlAI91ZcjCIGzBc6ez3zkvntjV1bHFFxx_FomnsFWLHKBR68Ym641iPG"
-                  />
-                </div>
-                <p className="font-hanken font-semibold text-xs text-on-surface group-hover:text-secondary transition-colors">
-                  Intro to Concept Relations
-                </p>
-                <p className="text-[10px] text-on-surface-variant">Parallel concepts in textbook links</p>
+                )}
               </div>
             </div>
-          </div>
+          )}
 
-          {/* reinforcement box */}
-          <div className="mb-8 pt-6 border-t border-outline-variant">
-            <h4 className="font-hanken font-bold text-sm text-primary mb-4 flex items-center gap-2">
-              <span className="material-symbols-outlined text-secondary text-lg">fitness_center</span>
-              Reinforce With
-            </h4>
-            
-            <ul className="space-y-3">
-              <li className="flex items-start gap-3 p-3 rounded-lg hover:bg-surface-container transition-colors cursor-pointer border border-transparent hover:border-outline-variant">
-                <span className="material-symbols-outlined text-secondary mt-1 text-base">quiz</span>
-                <div>
-                  <p className="text-xs font-bold text-on-surface">Concept Scaffolding Quiz</p>
-                  <p className="text-[10px] text-on-surface-variant">10 Rapid-fire questions</p>
-                </div>
-              </li>
-              <li className="flex items-start gap-3 p-3 rounded-lg hover:bg-surface-container transition-colors cursor-pointer border border-transparent hover:border-outline-variant">
-                <span className="material-symbols-outlined text-secondary mt-1 text-base">edit_note</span>
-                <div>
-                  <p className="text-xs font-bold text-on-surface">Worked Out Proofs</p>
-                  <p className="text-[10px] text-on-surface-variant">Guided textbook exercises</p>
-                </div>
-              </li>
-            </ul>
-          </div>
+          <PlanSectionList
+            title="Helpful Alongside This"
+            icon="recommend"
+            sectionIds={activeModule?.parallel_support_section_ids || []}
+            labels={labels}
+          />
+          <PlanSectionList
+            title="Reinforce With"
+            icon="fitness_center"
+            sectionIds={activeModule?.reinforcement_section_ids || []}
+            labels={labels}
+          />
+          <PlanSectionList
+            title="After This"
+            icon="trending_flat"
+            sectionIds={activeModule?.next_step_section_ids || []}
+            labels={labels}
+          />
 
-          {/* AI advisor helper */}
           <div className="mt-auto p-4 bg-surface-container-low rounded-xl border border-outline-variant">
-            <p className="text-[10px] text-on-surface-variant font-bold uppercase tracking-wider mb-2">Academic Advisor AI</p>
-            <p className="text-xs italic text-on-surface mb-3 leading-relaxed">
-              We have mapped {sortedModules.length} lessons optimized for Grade {plan.metadata?.grade || "N/A"} textbook constraints. Master checkpoints to track misconceptions.
+            <p className="text-[10px] text-on-surface-variant font-bold uppercase tracking-wider mb-2">Plan Summary</p>
+            <p className="text-xs text-on-surface mb-3 leading-relaxed">
+              {sortedModules.length} modules generated from retrieved textbook sections. Checkpoint questions are created from module design output.
             </p>
             <Link
               href={moduleHref(plan.curriculum_plan_id, activeModuleId)}
@@ -557,4 +525,133 @@ function matchingCurrentPlan(id: string, rawId: string): string | null {
 
 function moduleHref(planId: string, moduleId: string): string {
   return `/plan/${encodeURIComponent(planId)}/module/${encodeURIComponent(moduleId)}`;
+}
+
+function PlanSectionList({
+  title,
+  icon,
+  sectionIds,
+  labels,
+}: {
+  title: string;
+  icon: string;
+  sectionIds: string[];
+  labels: ReturnType<typeof buildPlanLabelResolver>;
+}) {
+  if (sectionIds.length === 0) return null;
+
+  return (
+    <div className="mb-8 pt-6 border-t border-outline-variant">
+      <h4 className="font-hanken font-bold text-sm text-primary mb-4 flex items-center gap-2">
+        <span className="material-symbols-outlined text-secondary text-lg">{icon}</span>
+        {title}
+      </h4>
+      <ul className="space-y-3">
+        {sectionIds.map((sectionId) => (
+          <li key={sectionId} className="p-3 rounded-lg bg-surface-container-low border border-outline-variant">
+            <p className="text-xs font-bold text-on-surface leading-snug">
+              {labels.sectionLabel(sectionId)}
+            </p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function totalCheckpointCount(plan: CurriculumPlanPayload): number {
+  return Object.values(plan.mcq_allocation || {}).reduce((total, count) => total + Number(count || 0), 0);
+}
+
+function buildPlanLabelResolver(plan: CurriculumPlanPayload) {
+  const sectionLabels = new Map<string, string>();
+  const conceptLabels = new Map<string, string>();
+
+  const packetSections = plan.metadata?.planning_packet?.sections_by_id || {};
+  for (const [sectionId, section] of Object.entries(packetSections)) {
+    const label = section.title?.trim();
+    if (label) {
+      sectionLabels.set(sectionId, label);
+    }
+  }
+
+  const learningPath = plan.metadata?.learning_path_context;
+  const sectionRows = [
+    ...(learningPath?.main_path_sections || []),
+    ...(learningPath?.target_sections || []),
+    ...(learningPath?.prerequisite_sections || []),
+    ...(learningPath?.support_sections || []),
+  ];
+  for (const section of sectionRows) {
+    const sectionId = section.section_id?.trim();
+    const label = section.title?.trim();
+    if (sectionId && label) {
+      sectionLabels.set(sectionId, label);
+    }
+  }
+
+  const conceptRows = [
+    ...(learningPath?.required_concepts || []),
+    ...(learningPath?.taught_concepts || []),
+    ...((learningPath?.main_path_sections || []).flatMap((section) => [
+      ...(section.teaches || []),
+      ...(section.requires || []),
+    ])),
+    ...((learningPath?.target_sections || []).flatMap((section) => [
+      ...(section.teaches || []),
+      ...(section.requires || []),
+    ])),
+    ...((learningPath?.prerequisite_sections || []).flatMap((section) => [
+      ...(section.teaches || []),
+      ...(section.requires || []),
+    ])),
+  ];
+
+  for (const concept of conceptRows) {
+    const conceptId = concept.concept_id?.trim();
+    const label = concept.label?.trim();
+    if (conceptId && label && label !== conceptId) {
+      conceptLabels.set(conceptId, label);
+    }
+  }
+
+  const replacementLabels = new Map<string, string>([
+    ...sectionLabels,
+    ...conceptLabels,
+  ]);
+
+  return {
+    sectionLabel: (sectionId: string) => sectionLabels.get(sectionId) || readableId(sectionId),
+    conceptLabel: (conceptId: string) => conceptLabels.get(conceptId) || readableId(conceptId),
+    renderRelationshipText: (text: string) => replaceKnownIds(text, replacementLabels),
+  };
+}
+
+function replaceKnownIds(text: string, labelsById: Map<string, string>): string {
+  let rendered = text;
+  const ids = [...labelsById.keys()].sort((a, b) => b.length - a.length);
+  for (const id of ids) {
+    rendered = rendered.replace(new RegExp(escapeRegExp(id), "g"), labelsById.get(id) || readableId(id));
+  }
+  return rendered
+    .replace(/\bconcept:([a-zA-Z0-9_./-]+)/g, (_, value: string) => readableId(value))
+    .replace(/\bncert:([a-zA-Z0-9_./:-]+)/g, (_, value: string) => readableSectionId(value));
+}
+
+function readableId(id: string): string {
+  const rawTail = id.includes(":") ? id.split(":").at(-1) || id : id;
+  return rawTail
+    .replace(/^concept[:_-]?/i, "")
+    .replace(/[_-]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function readableSectionId(id: string): string {
+  const rawTail = id.includes(":") ? id.split(":").at(-1) || id : id;
+  return `section ${rawTail.replace(/[_-]+/g, " ").trim()}`;
+}
+
+function escapeRegExp(value: string): string {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }

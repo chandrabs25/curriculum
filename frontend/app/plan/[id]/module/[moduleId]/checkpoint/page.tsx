@@ -6,6 +6,7 @@ import Link from "next/link";
 import { RetryPanel } from "../../../../../components/RetryPanel";
 import { designModule, submitCheckpoint } from "../../../../../services/api";
 import { readCachedModuleDesign, writeCachedModuleDesign } from "../../../../../services/moduleDesignCache";
+import { readSectionInsights, sectionIdsFromMcqs, writeSectionInsights } from "../../../../../services/sectionInsights";
 import {
   CurriculumPlanPayload,
   CheckpointAnswerPayload,
@@ -47,6 +48,10 @@ export default function CheckpointQuizPage() {
         plan: parsedPlan,
         module_id: moduleId,
         learner_state: [],
+        section_insights: readSectionInsights(
+          parsedPlan.learner_id,
+          parsedPlan.modules.find((module) => module.module_id === moduleId)?.source_section_ids || []
+        ),
       });
       writeCachedModuleDesign(parsedPlan.curriculum_plan_id, moduleId, data);
       setModuleData(data);
@@ -135,6 +140,7 @@ export default function CheckpointQuizPage() {
         module_id: moduleId,
         checkpoint_mcqs: mcqs,
         answers: answerPayloads,
+        existing_section_insights: readSectionInsights(plan.learner_id, sectionIdsFromMcqs(mcqs)),
       });
       
       // Delay slightly to show "Grading your submission..." shimmer state
@@ -144,6 +150,7 @@ export default function CheckpointQuizPage() {
         localStorage.setItem(`curriculum-checkpoint-score-${rawId}-${rawModuleId}`, String(result.score));
         localStorage.setItem(`curriculum-checkpoint-result-${id}-${moduleId}`, JSON.stringify(result));
         localStorage.setItem(`curriculum-checkpoint-result-${rawId}-${rawModuleId}`, JSON.stringify(result));
+        writeSectionInsights(result.section_insights || []);
         setSubmitting(false);
         router.push(`${moduleHref(id, moduleId)}/checkpoint/results`);
       }, 1500);

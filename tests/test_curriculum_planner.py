@@ -250,7 +250,7 @@ class CurriculumPlannerTest(unittest.TestCase):
         self.assertIn("parallel_support", llm.prompt)
         self.assertIn("reinforcement", llm.prompt)
         self.assertIn("next_steps", llm.prompt)
-        self.assertIn("relationship_policy", llm.prompt)
+        self.assertNotIn("relationship_policy", llm.prompt)
         self.assertIn("known_well", llm.prompt)
         self.assertIn("Do not put optional support/reinforcement/next-step sections into source_section_ids", llm.prompt)
         self.assertIn("Concepts are intentionally omitted", llm.prompt)

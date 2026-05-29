@@ -6,6 +6,7 @@ import Link from "next/link";
 import { RetryPanel } from "../../../../components/RetryPanel";
 import { designModule } from "../../../../services/api";
 import { readCachedModuleDesign, writeCachedModuleDesign } from "../../../../services/moduleDesignCache";
+import { readSectionInsights } from "../../../../services/sectionInsights";
 import { CurriculumPlanPayload, ExpandedCurriculumModulePayload } from "../../../../types/curriculum";
 
 export default function ModuleReadingPage() {
@@ -38,6 +39,10 @@ export default function ModuleReadingPage() {
         plan: parsedPlan,
         module_id: moduleId,
         learner_state: [],
+        section_insights: readSectionInsights(
+          parsedPlan.learner_id,
+          parsedPlan.modules.find((module) => module.module_id === moduleId)?.source_section_ids || []
+        ),
       });
       writeCachedModuleDesign(parsedPlan.curriculum_plan_id, moduleId, data);
       setModuleData(data);
@@ -161,6 +166,8 @@ export default function ModuleReadingPage() {
   const progressPercent = sortedModules.length > 0 
     ? Math.round((completedCount / sortedModules.length) * 100) 
     : 0;
+  const sourceSectionLabels = buildSourceSectionLabels(moduleData);
+  const checkpointCount = moduleData.checkpoint_mcqs?.length || 0;
 
   return (
     <div className="bg-background text-on-surface font-public overflow-hidden flex min-h-screen">
@@ -169,7 +176,7 @@ export default function ModuleReadingPage() {
       <aside className="hidden md:flex flex-col h-screen py-6 bg-surface-container-low border-r border-outline-variant w-64 shrink-0 px-4">
         <div className="mb-8">
           <h2 className="font-hanken text-lg font-bold text-primary">Academic Portal</h2>
-          <p className="text-[10px] text-on-surface-variant uppercase tracking-wider font-semibold opacity-70">Modern Academic System</p>
+          <p className="text-[10px] text-on-surface-variant uppercase tracking-wider font-semibold opacity-70">Curriculum Engine</p>
         </div>
         
         <nav className="flex-1 space-y-1">
@@ -201,15 +208,14 @@ export default function ModuleReadingPage() {
             <span className="material-symbols-outlined text-[18px]">add</span>
             New Plan
           </Link>
-          <div className="space-y-1 pt-6 border-t border-outline-variant">
-            <a href="#" className="flex items-center text-on-surface-variant hover:bg-surface-variant py-2 px-2 rounded transition-all">
-              <span className="material-symbols-outlined mr-3 text-[20px]">settings</span>
-              <span className="font-hanken font-semibold text-xs">Settings</span>
-            </a>
-            <a href="#" className="flex items-center text-on-surface-variant hover:bg-surface-variant py-2 px-2 rounded transition-all">
-              <span className="material-symbols-outlined mr-3 text-[20px]">help</span>
-              <span className="font-hanken font-semibold text-xs">Support</span>
-            </a>
+          <div className="space-y-2 pt-6 border-t border-outline-variant">
+            <p className="text-[10px] text-on-surface-variant uppercase tracking-wider font-bold">Module facts</p>
+            <p className="text-xs text-on-surface-variant">
+              {moduleData.source_section_ids.length} source sections
+            </p>
+            <p className="text-xs text-on-surface-variant">
+              {checkpointCount} checkpoint questions
+            </p>
           </div>
         </div>
       </aside>
@@ -222,27 +228,10 @@ export default function ModuleReadingPage() {
           <div className="flex items-center gap-4">
             <span className="text-headline-md font-hanken font-bold text-primary">AcademicFlow</span>
           </div>
-          <div className="flex items-center gap-6">
-            <div className="relative hidden sm:block">
-              <input
-                type="text"
-                placeholder="Search lessons..."
-                className="bg-surface-container-low border-none rounded-full px-4 py-1.5 text-xs w-64 focus:ring-2 focus:ring-secondary/20 transition-all outline-none"
-              />
-              <span className="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-[20px] text-on-surface-variant">
-                search
-              </span>
-            </div>
-            
-            <div className="flex items-center gap-4 text-primary">
-              <button className="hover:text-secondary transition-colors relative cursor-pointer">
-                <span className="material-symbols-outlined">notifications</span>
-                <span className="absolute top-0 right-0 w-2 h-2 bg-error rounded-full"></span>
-              </button>
-              <button className="hover:text-secondary transition-colors cursor-pointer">
-                <span className="material-symbols-outlined">account_circle</span>
-              </button>
-            </div>
+          <div className="flex items-center gap-3 text-xs text-on-surface-variant font-semibold">
+            <span>{checkpointCount} checkpoint questions</span>
+            <span className="hidden sm:inline">•</span>
+            <span className="hidden sm:inline">{moduleData.source_section_ids.length} source sections</span>
           </div>
         </header>
 
@@ -377,23 +366,21 @@ export default function ModuleReadingPage() {
                       {section.body}
                     </div>
 
-                    {/* Show a beautiful botanical / laboratory graphic on the first lesson stack */}
-                    {idx === 0 && (
-                      <div className="my-6 relative overflow-hidden rounded-xl shadow-md border border-outline-variant h-80">
-                        <img
-                          alt="Cross-section scientific biology visualization"
-                          className="w-full h-full object-cover"
-                          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKWGXncvYiopwOqal8ge4t_w1yNloJD5-2StN-irk3Z9_l8NUifTL_TQ_mcnKUblvUWMuI2m6Vd-BAGhq8jGDseHqWBfD16KFhL5GSVQ378J4idZ3gYIDh5eOlfFYrcD76w3qno96jFQmrGyfvTC_vbd6En5yHyvepimfh_ZbVODhOyY6JPhOkgMoELMKnIHJVA3_eRRoArvkC9qu0CjLshfcmrTwxwwTAHOlhpjySNyMexispNoIOec3zBos7nnW8yRU4jdudWBK4"
-                        />
-                      </div>
-                    )}
-
                     {section.source_section_ids && section.source_section_ids.length > 0 && (
-                      <div className="mt-4 flex items-center gap-2 py-2 text-xs">
+                      <div className="mt-4 flex items-start gap-2 py-2 text-xs">
                         <span className="material-symbols-outlined text-sm text-outline">menu_book</span>
-                        <span className="text-[10px] text-on-surface-variant uppercase tracking-wider font-semibold">
-                          Source Section: {section.source_section_ids[0]}
-                        </span>
+                        <div>
+                          <p className="text-[10px] text-on-surface-variant uppercase tracking-wider font-semibold mb-1">
+                            Source sections
+                          </p>
+                          <ul className="space-y-1">
+                            {section.source_section_ids.map((sectionId: string) => (
+                              <li key={sectionId} className="text-xs text-on-surface-variant">
+                                {sourceSectionLabels.get(sectionId) || readableSourceId(sectionId)}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
                       </div>
                     )}
                   </article>
@@ -482,6 +469,22 @@ function matchingCurrentPlan(id: string, rawId: string): string | null {
 
 function moduleHref(planId: string, moduleId: string): string {
   return `/plan/${encodeURIComponent(planId)}/module/${encodeURIComponent(moduleId)}`;
+}
+
+function buildSourceSectionLabels(moduleData: ExpandedCurriculumModulePayload): Map<string, string> {
+  const labels = new Map<string, string>();
+  const sourceSections = moduleData.metadata?.module_expansion_packet?.source_sections || [];
+  for (const section of sourceSections) {
+    if (section.section_id && section.title) {
+      labels.set(section.section_id, section.title);
+    }
+  }
+  return labels;
+}
+
+function readableSourceId(sectionId: string): string {
+  const tail = sectionId.split(":").at(-1) || sectionId;
+  return `Section ${tail}`;
 }
 
 function errorMessage(err: unknown, fallback: string): string {

@@ -247,6 +247,24 @@ class ModuleExpansionTest(unittest.TestCase):
             TextbookStore(self.root),
             self.plan,
             self.plan.modules[1],
+            section_insights=[
+                {
+                    "insight_id": "section_insight:1",
+                    "section_id": "section:2",
+                    "current_status": "partial_understanding",
+                    "understanding_summary": "Learner knows SI units but confuses quantities with units.",
+                    "strengths": ["Recognizes SI as a standard system."],
+                    "misconceptions_or_gaps": ["Confuses quantity and unit."],
+                    "recommended_adjustment": "Emphasize quantity versus unit distinctions.",
+                    "confidence": 0.8,
+                    "created_at": "2026-01-01T00:00:00+00:00",
+                },
+                {
+                    "insight_id": "section_insight:other",
+                    "section_id": "section:other",
+                    "current_status": "misconception",
+                },
+            ],
         ).to_dict()
 
         self.assertEqual(packet["source_mode"], "summary")
@@ -264,6 +282,8 @@ class ModuleExpansionTest(unittest.TestCase):
         self.assertNotIn("subsections", packet["source_sections"][0])
         self.assertGreater(packet["source_sections"][0]["resource_counts"]["worked_examples"], 0)
         self.assertEqual(packet["target_concepts"][0]["concept_id"], "concept:si_units")
+        self.assertEqual(packet["learner_section_insights"][0]["section_id"], "section:2")
+        self.assertEqual(len(packet["learner_section_insights"]), 1)
         self.assertEqual(
             packet["relationship_reasoning"]["requires_concept"][0]["pedagogical_reason"],
             "Units are needed before SI standards.",
@@ -398,6 +418,7 @@ class ModuleExpansionTest(unittest.TestCase):
         self.assertIn("Module design packet:", llm.prompt)
         self.assertIn("checkpoint_mcqs", llm.prompt)
         self.assertIn("diagnostic_purpose", llm.prompt)
+        self.assertIn("learner_section_insights", llm.prompt)
         self.assertIn('"source_mode": "summary"', llm.prompt)
         self.assertNotIn("SI units define standard base units.", llm.prompt)
         self.assertNotIn("The metre, kilogram, and second", llm.prompt)

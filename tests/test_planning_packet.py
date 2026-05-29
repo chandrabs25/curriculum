@@ -113,12 +113,39 @@ class PlanningPacketTest(unittest.TestCase):
         self.assertNotIn("concepts_by_id", packet)
         self.assertNotIn("requires_concept", packet["relationships"])
         self.assertNotIn("teaches_concept", packet["relationships"])
-        self.assertNotIn("required_concepts", packet["relationship_policy"])
-        self.assertNotIn("teaches_concepts", packet["relationship_policy"])
+        self.assertNotIn("relationship_policy", packet)
+        self.assertIn("prerequisite_check", packet)
         self.assertNotIn("matched_concept_ids", packet["sections_by_id"]["section:2"])
         self.assertIn("evidence_reason", packet["relationships"]["hard_dependencies"][0])
         self.assertLessEqual(len(packet["sections_by_id"]["section:2"]["summary"]), 420)
         self.assertIn("estimated_chars", packet["budget"])
+
+    def test_packet_omits_empty_planner_context(self) -> None:
+        context = self.context()
+        context = LearningPathContext(
+            main_path_sections=context.main_path_sections,
+            target_sections=context.target_sections,
+            prerequisite_sections=context.prerequisite_sections,
+            support_sections=context.support_sections,
+            prerequisite_check={"asked": False, "answers": []},
+            parallel_support_paths=context.parallel_support_paths,
+            reinforcement_paths=context.reinforcement_paths,
+            next_step_paths=context.next_step_paths,
+            cross_chapter_bridges=context.cross_chapter_bridges,
+            relationship_policy=context.relationship_policy,
+            required_concepts=context.required_concepts,
+            taught_concepts=context.taught_concepts,
+            hard_dependency_edges=context.hard_dependency_edges,
+            optional_support_edges=context.optional_support_edges,
+            learner_adjustments=context.learner_adjustments,
+        )
+
+        packet = build_curriculum_planning_packet(self.onboarding(), [], [], context).to_dict()
+
+        self.assertNotIn("learner_state", packet)
+        self.assertNotIn("prerequisite_check", packet)
+        self.assertNotIn("relationship_policy", packet)
+        self.assertNotIn("cross_chapter_bridges", packet["relationships"])
 
     def test_broad_context_keeps_top_six_ranked_targets_and_their_prerequisites(self) -> None:
         targets = [
@@ -232,7 +259,7 @@ class PlanningPacketTest(unittest.TestCase):
         self.assertEqual(packet["relationships"]["parallel_support"], [])
         self.assertEqual(packet["relationships"]["reinforcement"], [])
         self.assertEqual(packet["relationships"]["next_steps"], [])
-        self.assertEqual(packet["relationships"]["cross_chapter_bridges"], [])
+        self.assertNotIn("cross_chapter_bridges", packet["relationships"])
         self.assertEqual(
             [row["relationship_id"] for row in packet["relationships"]["hard_dependencies"]],
             ["rel:selected"],

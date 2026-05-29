@@ -17,7 +17,6 @@ EVIDENCE_LIMIT = 260
 PARALLEL_SUPPORT_CAP = 5
 REINFORCEMENT_CAP = 5
 NEXT_STEPS_CAP = 5
-CROSS_CHAPTER_CAP = 5
 TARGET_CHARS = 25_000
 HARD_CAP_CHARS = 40_000
 BROAD_SECTION_THRESHOLD = 10
@@ -48,7 +47,6 @@ def build_curriculum_planning_packet(
         "parallel_support": [],
         "reinforcement": [],
         "next_steps": [],
-        "cross_chapter_bridges": [],
     }
 
     retrieved_by_id = {
@@ -91,18 +89,9 @@ def build_curriculum_planning_packet(
             NEXT_STEPS_CAP,
             retrieved_by_id,
         )
-        _add_recommendation_bucket(
-            relationships["cross_chapter_bridges"],
-            sections_by_id,
-            ctx.get("cross_chapter_bridges", []),
-            CROSS_CHAPTER_CAP,
-            retrieved_by_id,
-        )
 
     packet = {
         "onboarding": _onboarding_row(onboarding),
-        "learner_state": _learner_state_rows(learner_state or []),
-        "prerequisite_check": ctx.get("prerequisite_check") or {"asked": False, "answers": []},
         "sections_by_id": dict(sorted(sections_by_id.items())),
         "main_path_section_ids": [
             row["section_id"]
@@ -110,8 +99,13 @@ def build_curriculum_planning_packet(
             if row.get("section_id")
         ],
         "relationships": relationships,
-        "relationship_policy": _planner_relationship_policy(ctx.get("relationship_policy") or {}),
     }
+    learner_state_rows = _learner_state_rows(learner_state or [])
+    if learner_state_rows:
+        packet["learner_state"] = learner_state_rows
+    prerequisite_check = ctx.get("prerequisite_check") or {}
+    if prerequisite_check.get("asked") and prerequisite_check.get("answers"):
+        packet["prerequisite_check"] = prerequisite_check
     packet["budget"] = _budget(packet, trimmed=broad_selection["active"], broad_selection=broad_selection)
     if packet["budget"]["estimated_chars"] > HARD_CAP_CHARS:
         _trim_to_budget(packet)
@@ -163,7 +157,6 @@ def _context_section_ids(ctx: dict[str, Any]) -> set[str]:
         "parallel_support_paths",
         "reinforcement_paths",
         "next_step_paths",
-        "cross_chapter_bridges",
     ):
         for row in ctx.get(bucket_name, []):
             section_id = row.get("section_id")
@@ -244,14 +237,6 @@ def _selected_hard_dependency_edges(ctx: dict[str, Any], broad_selection: dict[s
         for row in ctx.get("hard_dependency_edges", [])
         if row.get("from_section_id") in selected_ids and row.get("to_section_id") in selected_ids
     ]
-
-
-def _planner_relationship_policy(policy: dict[str, str]) -> dict[str, str]:
-    return {
-        key: value
-        for key, value in policy.items()
-        if key not in {"required_concepts", "teaches_concepts"}
-    }
 
 
 def _add_section(
@@ -379,7 +364,7 @@ def _budget(
 
 def _trim_to_budget(packet: dict[str, Any]) -> None:
     relationships = packet.get("relationships") or {}
-    for bucket_name in ("reinforcement", "parallel_support", "cross_chapter_bridges", "next_steps"):
+    for bucket_name in ("reinforcement", "parallel_support", "next_steps"):
         bucket = relationships.get(bucket_name) or []
         while len(json.dumps(packet, ensure_ascii=False)) > HARD_CAP_CHARS and bucket:
             bucket.pop()

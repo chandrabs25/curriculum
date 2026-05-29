@@ -11,6 +11,7 @@ import {
 } from "../../../../../../types/curriculum";
 import { designModule } from "../../../../../../services/api";
 import { readCachedModuleDesign, writeCachedModuleDesign } from "../../../../../../services/moduleDesignCache";
+import { readSectionInsights } from "../../../../../../services/sectionInsights";
 
 export default function CheckpointResultsPage() {
   const params = useParams();
@@ -44,6 +45,10 @@ export default function CheckpointResultsPage() {
         plan: parsedPlan,
         module_id: moduleId,
         learner_state: [],
+        section_insights: readSectionInsights(
+          parsedPlan.learner_id,
+          parsedPlan.modules.find((module) => module.module_id === moduleId)?.source_section_ids || []
+        ),
       });
       writeCachedModuleDesign(parsedPlan.curriculum_plan_id, moduleId, data);
       setModuleData(data);

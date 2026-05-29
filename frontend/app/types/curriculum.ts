@@ -214,8 +214,8 @@ export interface PlanningPacketSection {
 
 export interface CurriculumPlanningPacket {
   onboarding: OnboardingPayload;
-  learner_state: LearnerConceptStatePayload[];
-  prerequisite_check: PrerequisiteCheckPayload;
+  learner_state?: LearnerConceptStatePayload[];
+  prerequisite_check?: PrerequisiteCheckPayload;
   sections_by_id: Record<string, PlanningPacketSection>;
   main_path_section_ids: string[];
   relationships: {
@@ -223,9 +223,7 @@ export interface CurriculumPlanningPacket {
     parallel_support: SectionRelationshipRow[];
     reinforcement: SectionRelationshipRow[];
     next_steps: SectionRelationshipRow[];
-    cross_chapter_bridges: SectionRelationshipRow[];
   };
-  relationship_policy: Record<string, string>;
   budget: {
     estimated_chars: number;
     target_chars: number;
@@ -278,6 +276,7 @@ export interface ModuleDesignPayload {
   plan: CurriculumPlanPayload;
   module_id: string;
   learner_state: LearnerConceptStatePayload[];
+  section_insights?: SectionLearningInsight[];
 }
 
 export interface LessonSection {
@@ -336,6 +335,7 @@ export interface ModuleExpansionPacket {
     next_steps: SectionRelationshipRow[];
   };
   target_concepts: ConceptRelationshipDetail[];
+  learner_section_insights: SectionLearningInsight[];
   source_sections: SourceSectionSummary[];
   mcq_target_count: number;
   budget: {
@@ -381,6 +381,7 @@ export interface CheckpointSubmitPayload {
   module_id: string;
   checkpoint_mcqs: ModuleCheckpointMCQ[];
   answers: CheckpointAnswerPayload[];
+  existing_section_insights?: SectionLearningInsight[];
 }
 
 export interface CheckpointQuestionResult {
@@ -406,6 +407,24 @@ export interface InsightEvent {
   confidence: number;
 }
 
+export interface SectionLearningInsight {
+  insight_id: string;
+  learner_id: string;
+  curriculum_plan_id: string;
+  module_id: string;
+  section_id: string;
+  understanding_summary: string;
+  current_status: "competent" | "partial_understanding" | "misconception" | "uncertain" | string;
+  strengths: string[];
+  misconceptions_or_gaps: string[];
+  recommended_adjustment: string;
+  confidence: number;
+  evidence_question_ids: string[];
+  supersedes_insight_id?: string | null;
+  reconciliation_reason: string;
+  created_at: string;
+}
+
 export interface CheckpointResultPayload {
   learner_id: string;
   curriculum_plan_id: string;
@@ -417,5 +436,6 @@ export interface CheckpointResultPayload {
   weak_concept_ids: string[];
   question_results: CheckpointQuestionResult[];
   insight_events: InsightEvent[];
+  section_insights: SectionLearningInsight[];
   recommendation: CheckpointRecommendation;
 }

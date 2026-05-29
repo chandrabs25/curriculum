@@ -56,6 +56,23 @@ class FakeLLM:
                     }
                 ]
             }
+        if schema and "section_insights" in schema.get("properties", {}):
+            return {
+                "section_insights": [
+                    {
+                        "section_id": "section:2",
+                        "understanding_summary": "The learner understands SI units as shared standards.",
+                        "current_status": "competent",
+                        "strengths": ["Recognizes SI units as standards."],
+                        "misconceptions_or_gaps": [],
+                        "recommended_adjustment": "Keep explanations concise and move toward applications.",
+                        "confidence": 0.9,
+                        "evidence_question_ids": ["module:si:q1"],
+                        "supersedes_insight_id": "section_insight:old",
+                        "reconciliation_reason": "New correct answers supersede the prior partial insight.",
+                    }
+                ]
+            }
         count_match = re.search(r'"mcq_target_count":\s*(\d+)', prompt)
         count = int(count_match.group(1)) if count_match else 1
         return {
@@ -190,8 +207,8 @@ class APITest(unittest.TestCase):
                 },
             ],
         )
-        fake_llm = FakeLLM()
-        service = CurriculumAPIService(root=self.root, use_vector=False, llm_client=fake_llm, intent_llm_client=fake_llm)
+        self.fake_llm = FakeLLM()
+        service = CurriculumAPIService(root=self.root, use_vector=False, llm_client=self.fake_llm, intent_llm_client=self.fake_llm)
         self.client = TestClient(create_app(service))
 
     def tearDown(self) -> None:
@@ -254,6 +271,24 @@ class APITest(unittest.TestCase):
                 "curriculum_plan_id": plan["curriculum_plan_id"],
                 "module_id": "module:si",
                 "checkpoint_mcqs": module["checkpoint_mcqs"],
+                "existing_section_insights": [
+                    {
+                        "insight_id": "section_insight:old",
+                        "learner_id": "learner:1",
+                        "curriculum_plan_id": plan["curriculum_plan_id"],
+                        "module_id": "module:old",
+                        "section_id": "section:2",
+                        "understanding_summary": "The learner had partial understanding of SI units.",
+                        "current_status": "partial_understanding",
+                        "strengths": [],
+                        "misconceptions_or_gaps": ["Confuses quantities and units."],
+                        "recommended_adjustment": "Review SI units carefully.",
+                        "confidence": 0.7,
+                        "evidence_question_ids": ["old:q1"],
+                        "reconciliation_reason": "Prior checkpoint evidence.",
+                        "created_at": "2026-01-01T00:00:00+00:00",
+                    }
+                ],
                 "answers": [
                     {"question_id": mcq["question_id"], "selected_option": "A"}
                     for mcq in module["checkpoint_mcqs"]
@@ -264,6 +299,9 @@ class APITest(unittest.TestCase):
         result = submit_response.json()
         self.assertEqual(result["score"], 1.0)
         self.assertTrue(result["insight_events"])
+        self.assertEqual(result["section_insights"][0]["section_id"], "section:2")
+        self.assertEqual(result["section_insights"][0]["supersedes_insight_id"], "section_insight:old")
+        self.assertTrue(any("existing_section_insights" in prompt for prompt in self.fake_llm.prompts))
 
 
 if __name__ == "__main__":

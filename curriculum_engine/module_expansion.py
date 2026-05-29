@@ -112,6 +112,7 @@ class ModuleExpander:
         module_id: str,
         *,
         learner_state: list[LearnerConceptState] | None = None,
+        section_insights: list[dict[str, Any]] | None = None,
     ) -> ExpandedCurriculumModule:
         module = _module_by_id(plan, module_id)
         packet = build_module_expansion_packet(
@@ -119,6 +120,7 @@ class ModuleExpander:
             plan,
             module,
             learner_state=learner_state,
+            section_insights=section_insights,
             mcq_target_count=allocate_module_mcq_targets(plan).get(module.module_id),
         )
         prompt = build_module_expansion_prompt(packet)
@@ -132,6 +134,7 @@ def build_module_expansion_packet(
     module: PlannedCurriculumModule,
     *,
     learner_state: list[LearnerConceptState] | None = None,
+    section_insights: list[dict[str, Any]] | None = None,
     mcq_target_count: int | None = None,
 ) -> ModuleExpansionPacket:
     graph = _as_graph(textbook_store)
@@ -147,6 +150,7 @@ def build_module_expansion_packet(
         "next_module": _compact_module_row(next_module),
         "relationship_reasoning": _relationship_reasoning_for_module(planning_packet, module),
         "target_concepts": _target_concept_rows(graph, module, planning_packet),
+        "learner_section_insights": _section_insight_rows(section_insights or [], module.source_section_ids),
         "source_sections": [_summary_section_row(graph, section_id) for section_id in module.source_section_ids],
         "mcq_target_count": mcq_target_count or allocate_module_mcq_targets(plan).get(module.module_id, 1),
     }
@@ -208,6 +212,8 @@ Critical rules:
 - Use only source section IDs and concept IDs present in the module design packet.
 - Treat source_sections as summaries, not full textbook text.
 - Ground explanations and the checkpoint MCQ draft in source summaries, target concepts, and relationship reasoning.
+- Use learner_section_insights to tailor explanation depth, guided activity, misconception handling, and checkpoint focus.
+- If learner_section_insights mention partial understanding or misconceptions, directly address those gaps without changing source grounding.
 - Explain how this module serves onboarding.topic and onboarding.learning_goal.
 - Explain how this module connects from the previous module and prepares the next module when those modules exist.
 - Create exactly the module design packet's mcq_target_count checkpoint_mcqs, each with four options.
@@ -216,7 +222,7 @@ Critical rules:
 - Each checkpoint MCQ must include source_section_ids, tested_concept_ids, difficulty, diagnostic_purpose, and misconception_tags.
 - Write diagnostic_purpose so a future evaluator can turn correct answers into competency evidence and wrong answers into possible misconception or partial-understanding insights.
 - The MCQs are lightweight module checkpoint drafts, not final source-verified assessment items.
-- Do not invent source sections, concepts, textbook facts, or final assessment claims.
+- Do not invent learner history, source sections, concepts, textbook facts, or final assessment claims.
 
 Required JSON shape:
 {json.dumps(schema_example, ensure_ascii=False)}
@@ -500,6 +506,31 @@ def _relationship_reasoning_for_module(
     }
 
 
+def _section_insight_rows(rows: list[dict[str, Any]], source_section_ids: list[str]) -> list[dict[str, Any]]:
+    allowed = set(source_section_ids)
+    compact_rows = []
+    seen = set()
+    for row in rows:
+        section_id = str(row.get("section_id") or "")
+        if section_id not in allowed or section_id in seen:
+            continue
+        seen.add(section_id)
+        compact_rows.append(
+            {
+                "insight_id": row.get("insight_id"),
+                "section_id": section_id,
+                "current_status": row.get("current_status"),
+                "understanding_summary": _compact(row.get("understanding_summary"), 360),
+                "strengths": _str_list(row.get("strengths"))[:5],
+                "misconceptions_or_gaps": _str_list(row.get("misconceptions_or_gaps"))[:5],
+                "recommended_adjustment": _compact(row.get("recommended_adjustment"), 320),
+                "confidence": row.get("confidence"),
+                "created_at": row.get("created_at"),
+            }
+        )
+    return compact_rows
+
+
 def _target_concept_rows(
     graph: CurriculumGraph,
     module: PlannedCurriculumModule,
@@ -625,6 +656,13 @@ def _str_list(value: Any) -> list[str]:
     if not isinstance(value, list):
         return []
     return [str(item) for item in value if str(item).strip()]
+
+
+def _compact(value: Any, limit: int) -> str:
+    text = " ".join(str(value or "").split())
+    if len(text) <= limit:
+        return text
+    return text[: limit - 3].rstrip() + "..."
 
 
 def _required_str(item: dict[str, Any], key: str, location: str) -> str:
