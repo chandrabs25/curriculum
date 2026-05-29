@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: curriculum-api
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements-demo-vector.txt
+    startCommand: python -m uvicorn curriculum_engine.api:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: CURRICULUM_USE_VECTOR
+        value: "1"
+      - key: FIREWORKS_API_KEY
+        sync: false
+      - key: HF_TOKEN
+        sync: false
