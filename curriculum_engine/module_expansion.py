@@ -219,7 +219,8 @@ Critical rules:
 - Create exactly the module design packet's mcq_target_count checkpoint_mcqs, each with four options.
 - Spread checkpoint_mcqs across the module's main source sections and target concepts where possible.
 - Do not test optional, parallel-support, reinforcement, or next-step sections unless they are also in source_sections.
-- Each checkpoint MCQ must include source_section_ids, tested_concept_ids, difficulty, diagnostic_purpose, and misconception_tags.
+- Each checkpoint MCQ must include exact source_section_ids copied from source_sections[].section_id, tested_concept_ids, difficulty, diagnostic_purpose, and misconception_tags.
+- If a checkpoint MCQ mainly tests the whole module, still include the most relevant exact source_section_ids from source_sections.
 - Write diagnostic_purpose so a future evaluator can turn correct answers into competency evidence and wrong answers into possible misconception or partial-understanding insights.
 - The MCQs are lightweight module checkpoint drafts, not final source-verified assessment items.
 - Do not invent learner history, source sections, concepts, textbook facts, or final assessment claims.
@@ -388,6 +389,7 @@ def _checkpoint_mcqs_from_payload(
         for row in packet_data.get("target_concepts", [])
         if row.get("concept_id") and str(row.get("concept_id")) in allowed_concepts
     ]
+    fallback_sections = [section_id for section_id in module.source_section_ids if section_id in allowed_sections]
     checkpoint_mcqs = []
     for index, mcq_payload in enumerate(rows[:target_count], start=1):
         if not isinstance(mcq_payload, dict):
@@ -399,7 +401,9 @@ def _checkpoint_mcqs_from_payload(
             section_id for section_id in _str_list(mcq_payload.get("source_section_ids")) if section_id in allowed_sections
         ]
         if not source_section_ids:
-            raise ValueError(f"checkpoint_mcqs[{index}] has no valid source_section_ids")
+            source_section_ids = _fallback_mcq_source_sections(fallback_sections, index)
+        if not source_section_ids:
+            raise ValueError(f"checkpoint_mcqs[{index}] cannot be mapped to a source section")
         tested_concept_ids = [
             concept_id for concept_id in _str_list(mcq_payload.get("tested_concept_ids")) if concept_id in allowed_concepts
         ]
@@ -420,6 +424,14 @@ def _checkpoint_mcqs_from_payload(
             )
         )
     return checkpoint_mcqs
+
+
+def _fallback_mcq_source_sections(module_section_ids: list[str], question_index: int) -> list[str]:
+    if not module_section_ids:
+        return []
+    if len(module_section_ids) == 1:
+        return [module_section_ids[0]]
+    return [module_section_ids[(question_index - 1) % len(module_section_ids)]]
 
 
 def _as_graph(textbook_store: TextbookStore | CurriculumGraph) -> CurriculumGraph:
@@ -509,12 +521,8 @@ def _relationship_reasoning_for_module(
 def _section_insight_rows(rows: list[dict[str, Any]], source_section_ids: list[str]) -> list[dict[str, Any]]:
     allowed = set(source_section_ids)
     compact_rows = []
-    seen = set()
-    for row in rows:
+    for row in _latest_insights_by_section(rows, allowed).values():
         section_id = str(row.get("section_id") or "")
-        if section_id not in allowed or section_id in seen:
-            continue
-        seen.add(section_id)
         compact_rows.append(
             {
                 "insight_id": row.get("insight_id"),
@@ -529,6 +537,18 @@ def _section_insight_rows(rows: list[dict[str, Any]], source_section_ids: list[s
             }
         )
     return compact_rows
+
+
+def _latest_insights_by_section(rows: list[dict[str, Any]], allowed: set[str]) -> dict[str, dict[str, Any]]:
+    latest: dict[str, dict[str, Any]] = {}
+    for row in rows:
+        section_id = str(row.get("section_id") or "")
+        if section_id not in allowed:
+            continue
+        current = latest.get(section_id)
+        if current is None or str(row.get("created_at") or "") >= str(current.get("created_at") or ""):
+            latest[section_id] = row
+    return latest
 
 
 def _target_concept_rows(

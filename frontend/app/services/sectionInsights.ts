@@ -1,6 +1,6 @@
 import type { SectionLearningInsight } from "../types/curriculum";
 
-export function readSectionInsights(
+export function readLatestSectionInsights(
   learnerId: string,
   sectionIds: string[]
 ): SectionLearningInsight[] {

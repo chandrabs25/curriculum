@@ -472,6 +472,31 @@ class ModuleExpansionTest(unittest.TestCase):
         self.assertEqual(expanded.lesson_sections[0]["source_section_ids"], ["section:2"])
         self.assertIn("Introduces SI base units", expanded.lesson_sections[0]["body"])
 
+    def test_missing_mcq_source_sections_falls_back_to_module_source_section(self) -> None:
+        rows = mcq_rows(4)
+        rows[1]["source_section_ids"] = []
+        llm = FakeExpansionLLM(
+            {
+                "title": "SI Units",
+                "module_goal": "Use SI units.",
+                "larger_goal_alignment": "SI units help solve physics problems consistently.",
+                "lesson_sections": [
+                    {
+                        "heading": "Base SI units",
+                        "body": "Use SI units as shared standards.",
+                        "source_section_ids": ["section:2"],
+                        "concept_ids": ["concept:si_units"],
+                    }
+                ],
+                "guided_activity": "Make a table of base units.",
+                "checkpoint_mcqs": rows,
+            }
+        )
+
+        expanded = ModuleExpander(TextbookStore(self.root), llm).expand_module(self.plan, "module:2")
+
+        self.assertEqual(expanded.checkpoint_mcqs[1].source_section_ids, ["section:2"])
+
     def test_invalid_mcq_concepts_are_rejected(self) -> None:
         llm = FakeExpansionLLM(
             {

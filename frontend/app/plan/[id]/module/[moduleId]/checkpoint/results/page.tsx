@@ -11,7 +11,7 @@ import {
 } from "../../../../../../types/curriculum";
 import { designModule } from "../../../../../../services/api";
 import { readCachedModuleDesign, writeCachedModuleDesign } from "../../../../../../services/moduleDesignCache";
-import { readSectionInsights } from "../../../../../../services/sectionInsights";
+import { readLatestSectionInsights } from "../../../../../../services/sectionInsights";
 
 export default function CheckpointResultsPage() {
   const params = useParams();
@@ -45,7 +45,7 @@ export default function CheckpointResultsPage() {
         plan: parsedPlan,
         module_id: moduleId,
         learner_state: [],
-        section_insights: readSectionInsights(
+        section_insights: readLatestSectionInsights(
           parsedPlan.learner_id,
           parsedPlan.modules.find((module) => module.module_id === moduleId)?.source_section_ids || []
         ),
@@ -109,10 +109,10 @@ export default function CheckpointResultsPage() {
 
   if (loading) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-background">
+      <div className="flex min-h-screen items-center justify-center bg-white">
         <div className="text-center">
-          <div className="h-8 w-8 animate-spin rounded-full border-4 border-secondary border-t-transparent mx-auto"></div>
-          <p className="mt-4 text-on-surface-variant text-sm">Loading checkpoint report...</p>
+          <div className="h-6 w-6 animate-spin rounded-full border-2 border-zinc-900 border-t-transparent mx-auto"></div>
+          <p className="mt-4 text-xs text-zinc-400 font-light">Loading checkpoint report...</p>
         </div>
       </div>
     );
@@ -120,13 +120,13 @@ export default function CheckpointResultsPage() {
 
   if (error || !plan || !result) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-background px-4">
-        <div className="max-w-md w-full text-center bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant shadow-md">
-          <h2 className="text-2xl font-bold text-error">Error</h2>
-          <p className="mt-2 text-on-surface-variant text-sm">{error || "Results unavailable."}</p>
+      <div className="flex min-h-screen items-center justify-center bg-white px-4">
+        <div className="max-w-md w-full text-center bg-white p-8 rounded-xl border border-zinc-300">
+          <h2 className="text-lg font-normal text-red-650">Error</h2>
+          <p className="mt-2 text-xs text-zinc-500 font-light">{error || "Results unavailable."}</p>
           <Link
             href={`${moduleHref(id, moduleId)}/checkpoint`}
-            className="mt-6 inline-block px-6 py-2 bg-primary text-on-primary rounded-full hover:opacity-90 text-sm font-semibold shadow-sm"
+            className="mt-6 inline-flex items-center justify-center rounded-full bg-zinc-900 px-6 py-2 text-xs font-semibold text-white hover:bg-zinc-800 transition-colors"
           >
             Take Checkpoint
           </Link>
@@ -147,341 +147,318 @@ export default function CheckpointResultsPage() {
   const recallAccuracy = Math.min(100, Math.round(result.score * 110));
   const applicationLevel = Math.round(result.score * 90);
 
-  // Retrieve original designed questions to show full option text
-  let originalQuestions: any[] = [];
-  if (typeof window !== "undefined") {
-    const storedPreview = localStorage.getItem("curriculum-onboard-preview");
-    if (storedPreview) {
-      try {
-        const previewObj = JSON.parse(storedPreview);
-        // Fallback checklist
-      } catch (e) {}
-    }
-  }
+  // Helper JSX components
+  const recommendationCard = (
+    <div className="w-full bg-zinc-50 border border-zinc-300 rounded-xl p-6 relative overflow-hidden">
+      <div className="relative z-10 flex flex-col gap-4">
+        <h2 className="text-lg font-normal text-zinc-955 tracking-tight">
+          {result.recommendation === "continue"
+            ? "You're ready for the next module!"
+            : "Reviewing materials is recommended"}
+        </h2>
+        
+        <p className="text-xs text-zinc-650 leading-relaxed font-light">
+          {result.recommendation === "continue"
+            ? `Outstanding performance. You've demonstrated a strong grasp of the concepts in "${currentModule?.title || moduleData?.title}". Your score indicates you are well-prepared to proceed directly to the next segment.`
+            : `Good effort! You've shown partial understanding of "${currentModule?.title || moduleData?.title}". To master the foundation before moving forward, we recommend spending a little more time reviewing the targeted lessons below.`}
+        </p>
+
+        <div className="flex flex-wrap gap-3 pt-2">
+          {nextModule ? (
+            <Link
+              href={moduleHref(plan.curriculum_plan_id, nextModule.module_id)}
+              className="inline-flex items-center justify-center rounded-full bg-zinc-900 px-6 py-2.5 text-xs font-semibold text-white transition-colors hover:bg-zinc-800"
+            >
+              Next Module &rarr;
+            </Link>
+          ) : (
+            <Link
+              href={`/plan/${encodeURIComponent(plan.curriculum_plan_id)}`}
+              className="inline-flex items-center justify-center rounded-full bg-zinc-900 px-6 py-2.5 text-xs font-semibold text-white transition-colors hover:bg-zinc-800"
+            >
+              View Plan Timeline &rarr;
+            </Link>
+          )}
+          
+          <Link
+            href={moduleHref(plan.curriculum_plan_id, moduleId)}
+            className="inline-flex items-center justify-center rounded-full border border-zinc-300 bg-white px-6 py-2.5 text-xs font-medium text-zinc-700 transition-colors hover:border-zinc-950 hover:text-zinc-955"
+          >
+            View Study Materials
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+
+  const diagnosticInsights = (
+    <div className="w-full border border-zinc-300 bg-white rounded-xl p-6 flex flex-col gap-4">
+      <h3 className="text-[10px] font-semibold uppercase tracking-wider text-zinc-500">
+        Diagnostic Insights
+      </h3>
+      
+      <div className="grid grid-cols-3 gap-2 text-center">
+        <div className="bg-zinc-50 p-3 rounded-lg border border-zinc-300 flex flex-col justify-between">
+          <span className="text-[8px] text-zinc-400 block uppercase font-medium tracking-wider mb-1 leading-normal">Recall</span>
+          <span className="text-sm font-normal text-zinc-955">{recallAccuracy}%</span>
+        </div>
+        <div className="bg-zinc-50 p-3 rounded-lg border border-zinc-300 flex flex-col justify-between">
+          <span className="text-[8px] text-zinc-400 block uppercase font-medium tracking-wider mb-1 leading-normal">Application</span>
+          <span className="text-sm font-normal text-zinc-955">{applicationLevel}%</span>
+        </div>
+        <div className="bg-zinc-50 p-3 rounded-lg border border-zinc-300 flex flex-col justify-between">
+          <span className="text-[8px] text-zinc-400 block uppercase font-medium tracking-wider mb-1 leading-normal">Concepts</span>
+          <span className="text-sm font-normal text-zinc-955">{result.question_results?.length || 0}</span>
+        </div>
+      </div>
+    </div>
+  );
+
+  const weakConcepts = result.weak_concept_ids && result.weak_concept_ids.length > 0 ? (
+    <div className="w-full flex flex-col gap-4">
+      <h3 className="text-[10px] font-semibold uppercase tracking-wider text-zinc-500 flex items-center gap-1.5">
+        <span className="material-symbols-outlined text-sm text-amber-600">warning</span>
+        Targeted Review Areas
+      </h3>
+      
+      <div className="flex flex-col gap-3">
+        {result.weak_concept_ids.map((concept) => (
+          <div
+            key={concept}
+            className="p-3 bg-zinc-50 border border-zinc-300 rounded-xl flex items-center gap-3"
+          >
+            <div className="w-6 h-6 rounded-full bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-705 shrink-0">
+              <span className="material-symbols-outlined text-[12px]">trending_down</span>
+            </div>
+            <div className="min-w-0 flex-1">
+              <p className="text-xs font-medium text-zinc-900 capitalize truncate">
+                {concept.replace("concept:", "").replace(/_/g, " ")}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  ) : null;
 
   return (
-    <div className="bg-surface text-on-surface font-body-md min-h-screen pb-32 flex flex-col font-public">
-      
-      {/* TopAppBar */}
-      <header className="bg-surface text-primary border-b border-outline-variant sticky top-0 z-40">
-        <div className="flex justify-between items-center w-full px-10 h-16">
-          <div className="text-headline-md font-hanken font-bold text-primary">AcademicFlow</div>
-          <div className="hidden md:flex items-center gap-6">
-            <Link
-              href="/"
-              className="font-hanken font-bold text-sm text-on-surface-variant hover:text-secondary transition-colors"
-            >
-              Dashboard
-            </Link>
-            <Link
-              href={`/plan/${encodeURIComponent(id)}`}
-              className="font-hanken font-bold text-sm text-on-surface-variant hover:text-secondary transition-colors"
-            >
-              Curriculum Plan
-            </Link>
-            <Link
-              href={moduleHref(id, moduleId)}
-              className="font-hanken font-bold text-sm text-secondary border-b-2 border-secondary h-16 flex items-center px-1"
-            >
-              Active Module
-            </Link>
-          </div>
-          <div className="flex items-center gap-4 text-primary">
-            <button className="material-symbols-outlined cursor-pointer hover:opacity-80">notifications</button>
-            <button className="material-symbols-outlined cursor-pointer hover:opacity-80">account_circle</button>
-            <Link
-              href="/onboard"
-              className="hidden md:block bg-primary text-on-primary px-6 py-2 rounded-xl font-hanken font-bold text-xs hover:opacity-90 transition-all active:scale-95 shadow-sm"
-            >
-              Create New
-            </Link>
-          </div>
+    <div className="bg-white text-zinc-900 font-sans min-h-screen flex flex-col selection:bg-zinc-100 selection:text-zinc-955">
+      {/* Navigation Header */}
+      <header className="w-full max-w-6xl mx-auto px-6 h-14 flex items-center justify-between border-b border-zinc-300 bg-white">
+        <div className="flex items-center gap-3">
+          <Link href={moduleHref(id, moduleId)} className="text-zinc-505 hover:text-zinc-900 transition-colors text-sm font-medium">
+            &larr; Module
+          </Link>
+          <span className="text-zinc-200">|</span>
+          <span className="text-sm font-semibold tracking-tight text-zinc-900 truncate max-w-[200px] md:max-w-md">
+            Checkpoint Results
+          </span>
         </div>
+        <Link
+          href="/onboard"
+          className="rounded-full border border-zinc-300 hover:border-zinc-955 bg-white px-4 py-1.5 text-xs font-medium text-zinc-700 hover:text-zinc-955 transition-colors"
+        >
+          New Topic
+        </Link>
       </header>
 
-      {/* Main Body */}
-      <main className="max-w-[1280px] w-full mx-auto px-4 md:px-10 py-10 flex flex-col">
+      {/* Main Container */}
+      <div className="flex flex-col md:flex-row max-w-6xl w-full mx-auto flex-1 py-10 px-6 gap-10">
         
-        {/* Hero Score Section */}
-        <div className="mb-10 text-center md:text-left">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full mb-4">
-            <span className="material-symbols-outlined text-[18px]">verified</span>
-            <span className="font-hanken font-bold text-xs">Checkpoint Complete</span>
-          </div>
-          
-          <div className="flex flex-col md:flex-row md:items-end gap-6 md:gap-12">
-            <div>
-              <h1 className="font-hanken text-4xl md:text-5xl font-extrabold text-primary mb-2">
-                Score: {scorePercent}%
-              </h1>
-              <p className="text-body-lg text-on-surface-variant">
-                Correct: <span className="text-primary font-extrabold">{result.correct_count}/{result.total_count}</span> questions
-              </p>
+        {/* Left Column: Question Review */}
+        <main className="flex-1 flex flex-col gap-8 min-w-0">
+          {/* Hero Score Section */}
+          <div className="w-full">
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 border border-zinc-300 bg-zinc-50 text-zinc-700 rounded-full mb-4">
+              <span className="material-symbols-outlined text-[14px]">verified</span>
+              <span className="text-[10px] font-semibold uppercase tracking-wider">Checkpoint Complete</span>
             </div>
             
-            <div className="flex-1 max-w-md pb-2">
-              <div className="w-full h-2 bg-surface-container-high rounded-full overflow-hidden">
-                <div
-                  className="h-full bg-secondary rounded-full transition-all duration-1000 ease-out progress-pulse"
-                  style={{ width: `${scorePercent}%` }}
-                ></div>
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div>
+                <h1 className="text-3xl font-light tracking-tight text-zinc-955 leading-tight">
+                  Score: {scorePercent}%
+                </h1>
+                <p className="mt-1 text-xs text-zinc-505 font-light leading-normal">
+                  Correct: <span className="text-zinc-900 font-semibold">{result.correct_count}</span> of <span className="text-zinc-900 font-semibold">{result.total_count}</span> questions
+                </p>
               </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Bento Grid Results */}
-        {moduleError && !moduleData && (
-          <div className="mb-8">
-            <RetryPanel
-              title="Module Details Unavailable"
-              message={moduleError}
-              onRetry={plan ? () => void retryLoadModuleDesign() : undefined}
-              retryLabel="Retry Module Details"
-              isRetrying={moduleRetrying}
-              fallbackHref={moduleHref(id, moduleId)}
-              fallbackLabel="Back to Module"
-              compact
-            />
-          </div>
-        )}
-
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-          
-          {/* Recommendation Card (Primary Action) */}
-          <div className="col-span-12 lg:col-span-8 bg-surface-container-lowest border border-outline-variant p-6 rounded-xl shadow-[0px_4px_20px_rgba(15,23,42,0.05)] relative overflow-hidden group">
-            <div className="absolute top-0 right-0 p-6 text-secondary opacity-5 group-hover:opacity-10 transition-opacity">
-              <span className="material-symbols-outlined text-[120px]">rocket_launch</span>
-            </div>
-            
-            <div className="relative z-10">
-              <h2 className="font-hanken text-2xl font-bold text-primary mb-4">
-                {result.recommendation === "continue"
-                  ? "You're ready for the next module!"
-                  : "Reviewing materials is recommended"}
-              </h2>
               
-              <p className="text-sm text-on-surface-variant mb-8 max-w-xl leading-relaxed">
-                {result.recommendation === "continue"
-                  ? `Outstanding performance. You've demonstrated a strong grasp of the concepts in "${currentModule.title}". Your score indicates you are well-prepared to proceed directly to the next segment.`
-                  : `Good effort! You've shown partial understanding of "${currentModule.title}". To master the foundation before moving forward, we recommend spending a little more time reviewing the targeted lessons below.`}
-              </p>
-
-              <div className="flex flex-wrap gap-4">
-                {nextModule ? (
-                  <Link
-                    href={moduleHref(plan.curriculum_plan_id, nextModule.module_id)}
-                    className="bg-primary text-on-primary px-8 py-3 rounded-xl font-hanken font-bold text-xs flex items-center gap-2 hover:opacity-90 active:scale-95 transition-all shadow-md"
-                  >
-                    Next Module
-                    <span className="material-symbols-outlined text-base">arrow_forward</span>
-                  </Link>
-                ) : (
-                  <Link
-                    href={`/plan/${encodeURIComponent(plan.curriculum_plan_id)}`}
-                    className="bg-primary text-on-primary px-8 py-3 rounded-xl font-hanken font-bold text-xs flex items-center gap-2 hover:opacity-90 active:scale-95 transition-all shadow-md"
-                  >
-                    View Plan Timeline
-                    <span className="material-symbols-outlined text-base">arrow_forward</span>
-                  </Link>
-                )}
-                
-                <Link
-                  href={moduleHref(plan.curriculum_plan_id, moduleId)}
-                  className="border border-outline-variant text-on-surface px-8 py-3 rounded-xl font-hanken font-bold text-xs bg-white hover:bg-surface-container transition-all"
-                >
-                  View Study Materials
-                </Link>
+              <div className="flex-1 max-w-xs w-full">
+                <div className="w-full h-1.5 bg-zinc-50 border border-zinc-300 rounded-full overflow-hidden">
+                  <div
+                    className="h-full bg-zinc-900 transition-all duration-1000 ease-out"
+                    style={{ width: `${scorePercent}%` }}
+                  ></div>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Stats Mini Card */}
-          <div className="col-span-12 md:col-span-6 lg:col-span-4 bg-surface-container-lowest border border-outline-variant p-6 rounded-xl shadow-[0px_4px_20px_rgba(15,23,42,0.05)]">
-            <h3 className="font-hanken font-bold text-xs text-on-surface-variant uppercase tracking-wider mb-6">
-              Diagnostic Insights
-            </h3>
-            
-            <div className="space-y-6">
-              <div className="flex justify-between items-center pb-4 border-b border-outline-variant/40">
-                <span className="text-sm text-on-surface">Recall Accuracy</span>
-                <span className="font-hanken text-xl font-extrabold text-secondary">{recallAccuracy}%</span>
-              </div>
-              <div className="flex justify-between items-center pb-4 border-b border-outline-variant/40">
-                <span className="text-sm text-on-surface">Application Level</span>
-                <span className="font-hanken text-xl font-extrabold text-secondary">{applicationLevel}%</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-sm text-on-surface">Tested concepts</span>
-                <span className="font-hanken text-xl font-extrabold text-on-surface">{result.question_results?.length || 0}</span>
-              </div>
+          {moduleError && !moduleData && (
+            <div className="w-full">
+              <RetryPanel
+                title="Module Details Unavailable"
+                message={moduleError}
+                onRetry={plan ? () => void retryLoadModuleDesign() : undefined}
+                retryLabel="Retry Module Details"
+                isRetrying={moduleRetrying}
+                fallbackHref={moduleHref(id, moduleId)}
+                fallbackLabel="Back to Module"
+                compact
+              />
             </div>
+          )}
+
+          {/* On Mobile: show recommendation and insights above the review */}
+          <div className="flex flex-col gap-6 md:hidden">
+            {recommendationCard}
+            {diagnosticInsights}
+            {weakConcepts}
           </div>
 
           {/* Detailed Question Review */}
-          <div className="col-span-12 space-y-6 mt-8">
-            <h2 className="font-hanken text-xl font-bold text-primary">Question Review</h2>
+          <div className="w-full space-y-6">
+            <h2 className="text-lg font-light tracking-tight text-zinc-955 leading-tight">Question Review</h2>
             
             {result.question_results?.map((qr, index) => {
-              // Retrieve corresponding question options if any
               const matchingMcq = moduleData?.checkpoint_mcqs?.find((m: any) => m.question_id === qr.question_id);
-              const options = matchingMcq?.options || ["A. Option 1", "B. Option 2", "C. Option 3", "D. Option 4"];
+              const options = matchingMcq?.options || [];
 
               return (
                 <div
                   key={qr.question_id}
-                  className="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-[0px_4px_20px_rgba(15,23,42,0.05)]"
+                  className="border border-zinc-300 rounded-xl p-6 bg-white flex flex-col gap-4"
                 >
-                  {/* Graded Card Header */}
-                  <div className={`p-4 border-b border-outline-variant flex justify-between items-center ${
-                    qr.is_correct ? "bg-surface-container-low" : "bg-error-container/20"
-                  }`}>
-                    <div className="flex items-center gap-4">
-                      <span className={`w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm ${
-                        qr.is_correct ? "bg-secondary text-on-primary" : "bg-error text-on-error"
-                      }`}>
-                        {index + 1}
-                      </span>
-                      <span className="font-hanken font-bold text-xs text-on-surface-variant">
-                        DIAGNOSTIC: {qr.diagnostic_purpose || "Testing recall of textbook concepts"}
-                      </span>
-                    </div>
-                    
-                    <span className={`material-symbols-outlined font-bold ${
-                      qr.is_correct ? "text-green-600" : "text-error"
+                  {/* Card Header */}
+                  <div className="flex justify-between items-center">
+                    <span className="text-[10px] font-semibold uppercase tracking-wider text-zinc-400">
+                      Question {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-medium uppercase tracking-wider border ${
+                      qr.is_correct
+                        ? "border-emerald-205 bg-emerald-50 text-emerald-700"
+                        : "border-red-200 bg-red-50 text-red-700"
                     }`}>
-                      {qr.is_correct ? "check_circle" : "cancel"}
+                      {qr.is_correct ? "Correct" : "Incorrect"}
                     </span>
                   </div>
 
-                  {/* Graded Card Body */}
-                  <div className="p-6">
-                    <p className="font-hanken font-bold text-base text-on-background mb-6 leading-relaxed">
-                      {matchingMcq?.question || `Question concerning ${qr.tested_concept_ids?.[0] || "module topic"}`}
-                    </p>
+                  <h3 className="text-base font-normal text-zinc-955 leading-relaxed">
+                    {matchingMcq?.question || `Question about ${qr.tested_concept_ids?.[0] || "module topic"}`}
+                  </h3>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                      {options.map((option: string) => {
-                        const optPrefix = option.charAt(0);
-                        const isChosen = qr.selected_option === optPrefix;
-                        const isCorrect = qr.correct_option === optPrefix;
+                  <div className="flex flex-col gap-3">
+                    {options.map((option: string) => {
+                      const optionPrefix = option.charAt(0);
+                      const isThisSelected = qr.selected_option === optionPrefix;
+                      const isThisCorrect = qr.correct_option === optionPrefix;
 
-                        let style = "border-outline-variant text-on-surface-variant opacity-60 bg-white";
-                        if (isChosen && qr.is_correct) {
-                          style = "border-2 border-secondary bg-[#EFF6FF] text-on-surface font-semibold";
-                        } else if (isChosen && !qr.is_correct) {
-                          style = "border-2 border-error bg-error-container/10 text-on-surface font-semibold";
-                        } else if (isCorrect && !qr.is_correct) {
-                          style = "border-2 border-secondary/40 bg-surface-container text-on-surface font-semibold";
-                        }
+                      let optionStyle = "border-zinc-200 text-zinc-300 bg-zinc-50/50 cursor-not-allowed";
+                      if (isThisCorrect) {
+                        optionStyle = "border-emerald-500 bg-emerald-50 text-emerald-800";
+                      } else if (isThisSelected && !isThisCorrect) {
+                        optionStyle = "border-red-500 bg-red-50 text-red-800";
+                      }
 
-                        return (
-                          <div key={option} className={`p-4 rounded-xl border text-sm flex items-center justify-between transition-all ${style}`}>
-                            <span>{option}</span>
-                            {isChosen && qr.is_correct && (
-                              <span className="text-secondary font-semibold text-xs tracking-wider uppercase">Your Choice</span>
-                            )}
-                            {isChosen && !qr.is_correct && (
-                              <span className="text-error font-semibold text-xs tracking-wider uppercase">Your Choice</span>
-                            )}
-                            {isCorrect && !qr.is_correct && (
-                              <span className="text-secondary font-semibold text-xs tracking-wider uppercase">Correct</span>
-                            )}
-                          </div>
-                        );
-                      })}
-                    </div>
-
-                    {/* Explanation */}
-                    {matchingMcq?.explanation && (
-                      <div className={`p-4 rounded-xl bg-surface-container-low ${
-                        qr.is_correct ? "" : "border-l-4 border-error"
-                      }`}>
-                        <h4 className="font-hanken font-bold text-xs text-primary mb-2">Explanation</h4>
-                        <p className="text-xs text-on-surface-variant leading-relaxed">
-                          {matchingMcq.explanation}
-                        </p>
-                      </div>
-                    )}
+                      return (
+                        <div
+                          key={option}
+                          className={`flex items-center p-4 border rounded-xl text-sm font-light leading-snug ${optionStyle}`}
+                        >
+                          <span className="leading-snug">{option}</span>
+                          {isThisCorrect && (
+                            <span className="ml-auto material-symbols-outlined text-emerald-600 text-base">check_circle</span>
+                          )}
+                          {isThisSelected && !isThisCorrect && (
+                            <span className="ml-auto material-symbols-outlined text-red-600 text-base">cancel</span>
+                          )}
+                        </div>
+                      );
+                    })}
                   </div>
+
+                  {/* Explanation */}
+                  {(matchingMcq?.explanation || qr.diagnostic_purpose) && (
+                    <div className="mt-2 p-4 bg-zinc-50 rounded-xl border border-zinc-300 text-xs flex flex-col gap-2">
+                      <span className={`font-semibold uppercase tracking-wider text-[10px] ${qr.is_correct ? "text-emerald-700" : "text-red-700"}`}>
+                        {qr.is_correct ? "✓ Correct Choice" : `✗ Incorrect Choice (Correct option is ${qr.correct_option})`}
+                      </span>
+                      {matchingMcq?.explanation && (
+                        <p className="text-zinc-650 leading-relaxed font-light">{matchingMcq.explanation}</p>
+                      )}
+                      {qr.diagnostic_purpose && (
+                        <div className="pt-2 border-t border-zinc-200 text-zinc-400 font-light text-[11px]">
+                          <span className="font-semibold text-zinc-500">Diagnostic Purpose:</span> {qr.diagnostic_purpose}
+                        </div>
+                      )}
+                    </div>
+                  )}
                 </div>
               );
             })}
           </div>
+        </main>
 
-          {/* Weak Concepts review suggestions */}
-          {result.weak_concept_ids && result.weak_concept_ids.length > 0 && (
-            <div className="col-span-12 mt-8">
-              <h3 className="font-hanken text-lg font-bold text-primary mb-4 flex items-center gap-2">
-                <span className="material-symbols-outlined text-error">trending_down</span>
-                Targeted Review Areas
-              </h3>
-              
-              <div className="flex flex-wrap gap-3">
-                {result.weak_concept_ids.map((concept, index) => (
-                  <div
-                    key={concept}
-                    className="px-6 py-4 bg-surface-container border border-outline-variant rounded-xl flex items-center gap-4 group hover:border-secondary transition-all cursor-pointer shadow-sm"
-                  >
-                    <div className="w-12 h-12 rounded-full bg-error-container/30 flex items-center justify-center text-error">
-                      <span className="material-symbols-outlined">trending_down</span>
-                    </div>
-                    <div>
-                      <p className="font-hanken font-bold text-sm text-primary">
-                        {concept.replace("concept:", "").replace(/_/g, " ")}
-                      </p>
-                      <p className="text-xxs text-on-surface-variant font-semibold uppercase tracking-wider">
-                        Review active lesson materials
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-        </div>
-      </main>
+        {/* Right Sidebar: (Desktop Only) */}
+        <aside className="hidden md:flex flex-col w-80 shrink-0 border-l border-zinc-300 pl-8 gap-6">
+          {recommendationCard}
+          {diagnosticInsights}
+          {weakConcepts}
+        </aside>
+      </div>
 
-      {/* Sticky Footer Actions */}
-      <footer className="fixed bottom-0 left-0 w-full bg-surface border-t border-outline-variant shadow-lg z-50 py-4">
-        <div className="max-w-[1280px] mx-auto px-4 md:px-10 flex flex-col md:flex-row justify-between items-center gap-4">
+      {/* Footer Actions */}
+      <footer className="w-full max-w-6xl mx-auto px-6 py-6 border-t border-zinc-300 bg-white flex flex-col sm:flex-row justify-between items-center gap-4 mt-8 pb-20 md:pb-8">
+        <Link
+          href={`/plan/${encodeURIComponent(id)}`}
+          className="w-full sm:w-auto px-6 py-2.5 rounded-full border border-zinc-300 text-zinc-700 font-medium text-xs bg-white hover:border-zinc-950 hover:text-zinc-955 flex items-center justify-center gap-1.5 transition-colors"
+        >
+          &larr; Return to Plan
+        </Link>
+        
+        <div className="flex w-full sm:w-auto gap-3">
           <Link
-            href={`/plan/${encodeURIComponent(id)}`}
-            className="w-full md:w-auto px-8 py-3 rounded-xl border border-outline-variant text-on-surface-variant font-hanken font-bold text-xs bg-white hover:bg-surface-container flex items-center justify-center gap-2 shadow-sm"
+            href={`${moduleHref(id, moduleId)}/checkpoint`}
+            className="flex-1 sm:flex-none px-6 py-2.5 rounded-full border border-zinc-300 text-zinc-700 font-medium text-xs bg-white hover:border-zinc-955 hover:text-zinc-955 flex items-center justify-center gap-1.5 transition-colors"
           >
-            <span className="material-symbols-outlined text-base">arrow_back</span>
-            Back to Plan
+            <span className="material-symbols-outlined text-xs">replay</span>
+            Retry Checkpoint
           </Link>
           
-          <div className="flex w-full md:w-auto gap-4">
+          {nextModule ? (
             <Link
-              href={`${moduleHref(id, moduleId)}/checkpoint`}
-              className="flex-1 md:flex-none px-8 py-3 rounded-xl border border-secondary text-secondary font-hanken font-bold text-xs bg-white hover:bg-surface-container flex items-center justify-center gap-2 shadow-sm"
+              href={moduleHref(id, nextModule.module_id)}
+              className="flex-1 sm:flex-none px-6 py-2.5 rounded-full bg-zinc-900 text-white font-medium text-xs flex items-center justify-center gap-1.5 hover:bg-zinc-800 transition-colors"
             >
-              <span className="material-symbols-outlined text-base">replay</span>
-              Retry Checkpoint
+              Next Module &rarr;
             </Link>
-            
-            {nextModule ? (
-              <Link
-                href={moduleHref(id, nextModule.module_id)}
-                className="flex-1 md:flex-none px-8 py-3 rounded-xl bg-secondary text-on-primary font-hanken font-bold text-xs flex items-center justify-center gap-2 hover:opacity-90 active:scale-95 transition-all shadow-md"
-              >
-                Next Module
-                <span className="material-symbols-outlined text-base">fast_forward</span>
-              </Link>
-            ) : (
-              <Link
-                href={`/plan/${encodeURIComponent(id)}`}
-                className="flex-1 md:flex-none px-8 py-3 rounded-xl bg-secondary text-on-primary font-hanken font-bold text-xs flex items-center justify-center gap-2 hover:opacity-90 active:scale-95 transition-all shadow-md"
-              >
-                Curriculum Complete
-                <span className="material-symbols-outlined text-base">fast_forward</span>
-              </Link>
-            )}
-          </div>
+          ) : (
+            <Link
+              href={`/plan/${encodeURIComponent(id)}`}
+              className="flex-1 sm:flex-none px-6 py-2.5 rounded-full bg-zinc-900 text-white font-medium text-xs flex items-center justify-center gap-1.5 hover:bg-zinc-800 transition-colors"
+            >
+              Curriculum Complete &rarr;
+            </Link>
+          )}
         </div>
       </footer>
+
+      {/* Mobile Bottom Navigation */}
+      <nav className="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center py-3 bg-white border-t border-zinc-300 z-50">
+        <Link href="/" className="flex flex-col items-center justify-center text-zinc-400 hover:text-zinc-900 transition-colors">
+          <span className="material-symbols-outlined text-xl">home</span>
+          <span className="text-[9px] font-medium mt-0.5">Home</span>
+        </Link>
+        <Link href={`/plan/${encodeURIComponent(id)}`} className="flex flex-col items-center justify-center text-zinc-400 hover:text-zinc-900 transition-colors">
+          <span className="material-symbols-outlined text-xl">menu_book</span>
+          <span className="text-[9px] font-medium mt-0.5">My Plan</span>
+        </Link>
+        <span className="flex flex-col items-center justify-center text-zinc-955 font-semibold">
+          <span className="material-symbols-outlined text-xl">school</span>
+          <span className="text-[9px] mt-0.5">Learning</span>
+        </span>
+      </nav>
     </div>
   );
 }

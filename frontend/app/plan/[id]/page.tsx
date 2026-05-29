@@ -3,7 +3,10 @@
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
-import { CurriculumPlanPayload } from "../../types/curriculum";
+import { designModule } from "../../services/api";
+import { writeCachedModuleDesign } from "../../services/moduleDesignCache";
+import { readLatestSectionInsights } from "../../services/sectionInsights";
+import { CurriculumPlanPayload, PlannedModulePayload } from "../../types/curriculum";
 
 export default function PlanDashboardPage() {
   const params = useParams();
@@ -16,6 +19,10 @@ export default function PlanDashboardPage() {
   // Track completed module IDs locally
   const [completedModuleIds, setCompletedModuleIds] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
+  const [moduleInsightCounts, setModuleInsightCounts] = useState<Record<string, number>>({});
+  const [regeneratingModuleIds, setRegeneratingModuleIds] = useState<Record<string, boolean>>({});
+  const [regeneratedModuleIds, setRegeneratedModuleIds] = useState<Record<string, boolean>>({});
+  const [regenerationError, setRegenerationError] = useState<string | null>(null);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -32,6 +39,7 @@ export default function PlanDashboardPage() {
           localStorage.setItem(`curriculum-plan-${parsedPlan.curriculum_plan_id}`, serializedPlan);
           localStorage.setItem(`curriculum-plan-${encodeURIComponent(parsedPlan.curriculum_plan_id)}`, serializedPlan);
           setPlan(parsedPlan);
+          setModuleInsightCounts(moduleInsightCountsForPlan(parsedPlan));
           
           // Check localStorage to find which modules have finished quizzes
           const completed: string[] = [];
@@ -48,7 +56,6 @@ export default function PlanDashboardPage() {
       } else {
         setError("Curriculum plan not found. Please create a new one.");
       }
-
     }, 0);
 
     return () => window.clearTimeout(loadTimer);
@@ -56,13 +63,13 @@ export default function PlanDashboardPage() {
 
   if (error) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-background px-4">
-        <div className="max-w-md w-full text-center bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant shadow-md">
-          <h2 className="text-2xl font-bold text-error">Error</h2>
-          <p className="mt-2 text-on-surface-variant text-sm">{error}</p>
+      <div className="flex min-h-screen items-center justify-center bg-white px-4">
+        <div className="max-w-md w-full text-center bg-white p-8 rounded-xl border border-zinc-300">
+          <h2 className="text-lg font-medium text-red-600">Error</h2>
+          <p className="mt-2 text-zinc-500 text-xs font-light">{error}</p>
           <Link
             href="/onboard"
-            className="mt-6 inline-block px-6 py-2 bg-primary text-on-primary rounded-full hover:opacity-90 text-sm font-semibold shadow-sm"
+            className="mt-6 inline-flex items-center justify-center rounded-full bg-zinc-900 px-6 py-2.5 text-xs font-medium text-white transition-colors hover:bg-zinc-800"
           >
             Go to Onboarding
           </Link>
@@ -73,10 +80,10 @@ export default function PlanDashboardPage() {
 
   if (!plan) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-background">
+      <div className="flex min-h-screen items-center justify-center bg-white">
         <div className="text-center">
-          <div className="h-8 w-8 animate-spin rounded-full border-4 border-secondary border-t-transparent mx-auto"></div>
-          <p className="mt-4 text-on-surface-variant text-sm">Loading plan dashboard...</p>
+          <div className="h-6 w-6 animate-spin rounded-full border-2 border-zinc-900 border-t-transparent mx-auto"></div>
+          <p className="mt-4 text-xs text-zinc-400 font-light">Loading plan dashboard...</p>
         </div>
       </div>
     );
@@ -100,244 +107,167 @@ export default function PlanDashboardPage() {
     m.module_goal.toLowerCase().includes(searchQuery.toLowerCase())
   );
   const labels = buildPlanLabelResolver(plan);
+  const planDetails = planDetailRows(plan);
+
+  const handleRegenerateWithInsights = async (module: PlannedModulePayload) => {
+    const sectionInsights = readLatestSectionInsights(plan.learner_id, module.source_section_ids);
+    if (sectionInsights.length === 0) {
+      setModuleInsightCounts(moduleInsightCountsForPlan(plan));
+      return;
+    }
+
+    setRegenerationError(null);
+    setRegeneratingModuleIds((current) => ({ ...current, [module.module_id]: true }));
+    try {
+      const moduleDesign = await designModule({
+        plan,
+        module_id: module.module_id,
+        learner_state: [],
+        section_insights: sectionInsights,
+      });
+      writeCachedModuleDesign(plan.curriculum_plan_id, module.module_id, moduleDesign);
+      setRegeneratedModuleIds((current) => ({ ...current, [module.module_id]: true }));
+    } catch (err: unknown) {
+      setRegenerationError(errorMessage(err, "Failed to regenerate this module with learner insights."));
+    } finally {
+      setRegeneratingModuleIds((current) => ({ ...current, [module.module_id]: false }));
+      setModuleInsightCounts(moduleInsightCountsForPlan(plan));
+    }
+  };
 
   return (
-    <div className="bg-background text-on-surface min-h-screen flex flex-col font-public">
-      
-      {/* Top Navigation Bar */}
-      <nav className="bg-surface border-b border-outline-variant sticky top-0 z-45 flex justify-between items-center w-full px-10 h-16">
-        <div className="flex items-center gap-6">
-          <span className="text-headline-md font-hanken font-bold text-primary">AcademicFlow</span>
-          <div className="hidden md:flex gap-6 h-full items-center">
-            <Link
-              href="/"
-              className="text-on-surface-variant font-hanken font-bold text-sm hover:text-secondary transition-colors"
-            >
-              Dashboard
-            </Link>
-            <span className="text-secondary border-b-2 border-secondary font-hanken font-bold text-sm h-16 flex items-center px-1">
-              Curriculum Plan
-            </span>
-            {activeModule && (
-              <Link
-                href={moduleHref(plan.curriculum_plan_id, activeModuleId)}
-                className="text-on-surface-variant font-hanken font-bold text-sm hover:text-secondary transition-colors"
-              >
-                Active Module
-              </Link>
-            )}
-          </div>
+    <div className="bg-white text-zinc-900 min-h-screen flex flex-col font-sans selection:bg-zinc-100 selection:text-zinc-950">
+      {/* Navigation Header */}
+      <header className="w-full max-w-6xl mx-auto px-6 h-14 flex items-center justify-between border-b border-zinc-300">
+        <div className="flex items-center gap-3">
+          <Link href="/" className="text-zinc-500 hover:text-zinc-900 transition-colors text-sm font-medium">
+            &larr; Home
+          </Link>
+          <span className="text-zinc-300">|</span>
+          <span className="text-sm font-semibold tracking-tight text-zinc-900">
+            Curriculum Detail
+          </span>
         </div>
-
         <div className="flex items-center gap-4">
-          <div className="relative hidden lg:block">
+          <div className="relative hidden md:block">
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search curriculum..."
-              className="bg-surface-container-low border border-outline-variant rounded-full px-4 py-1.5 text-sm w-64 focus:ring-2 focus:ring-secondary focus:border-transparent outline-none"
+              placeholder="Search modules..."
+              className="bg-zinc-55 border border-zinc-300 rounded-full px-4 py-1 text-xs w-48 focus:border-zinc-950 outline-none placeholder:text-zinc-400 font-light"
             />
           </div>
           <Link
             href="/onboard"
-            className="bg-primary text-on-primary px-4 py-2 rounded-lg font-hanken font-bold text-xs flex items-center gap-2 hover:opacity-90 active:scale-95 transition-all shadow-sm"
+            className="text-xs font-medium text-zinc-500 hover:text-zinc-950 transition-colors border border-zinc-300 rounded-full px-4 py-1.5 hover:border-zinc-955"
           >
-            <span className="material-symbols-outlined text-base">add</span>
-            Create New
+            New Plan
           </Link>
         </div>
-      </nav>
+      </header>
 
       {/* Main Container */}
-      <div className="flex max-w-[1280px] w-full mx-auto flex-1 h-[calc(100vh-64px)] overflow-hidden">
-        
-        {/* Left Side Navigation (Desktop Only) */}
-        <aside className="hidden md:flex flex-col h-full py-6 bg-surface-container-low border-r border-outline-variant w-64 shrink-0 px-4">
-          <div className="mb-8">
-            <div className="flex items-center gap-3 mb-1">
-              <div className="w-10 h-10 rounded-full bg-surface-container-high border border-outline-variant flex items-center justify-center text-secondary">
-                <span className="material-symbols-outlined text-[22px]">school</span>
-              </div>
-              <div>
-                <p className="font-hanken font-bold text-xs text-on-surface">Academic Portal</p>
-                <p className="text-[10px] text-on-surface-variant uppercase tracking-wider font-semibold">Curriculum Engine</p>
-              </div>
-            </div>
-          </div>
-          
-          <nav className="flex-1 space-y-1">
-            <Link
-              href="/"
-              className="flex items-center gap-3 px-3 py-2.5 text-on-surface-variant hover:bg-surface-variant transition-all rounded-lg group"
-            >
-              <span className="material-symbols-outlined group-hover:text-secondary">dashboard</span>
-              <span className="font-hanken font-semibold text-sm">Dashboard</span>
-            </Link>
-            <span className="flex items-center gap-3 px-3 py-2.5 text-secondary font-bold border-r-4 border-secondary bg-surface-container-high rounded-l-lg translate-x-1 transition-transform">
-              <span className="material-symbols-outlined">map</span>
-              <span className="font-hanken font-semibold text-sm">Curriculum Plan</span>
-            </span>
-            {activeModule && (
-              <Link
-                href={moduleHref(plan.curriculum_plan_id, activeModuleId)}
-                className="flex items-center gap-3 px-3 py-2.5 text-on-surface-variant hover:bg-surface-variant transition-all rounded-lg group"
-              >
-                <span className="material-symbols-outlined group-hover:text-secondary">auto_stories</span>
-                <span className="font-hanken font-semibold text-sm">Active Module</span>
-              </Link>
-            )}
-          </nav>
-
-          <div className="mt-auto pt-6 border-t border-outline-variant space-y-2">
-            <p className="text-[10px] text-on-surface-variant uppercase tracking-wider font-bold">Plan facts</p>
-            <p className="text-xs text-on-surface-variant">
-              {sortedModules.length} modules
-            </p>
-            <p className="text-xs text-on-surface-variant">
-              {totalCheckpointCount(plan)} checkpoint questions
-            </p>
-          </div>
-        </aside>
-
-        {/* Central main view: Timeline/Roadmap */}
-        <main className="flex-1 overflow-y-auto px-4 md:px-10 py-8 bg-background custom-scrollbar">
-          
+      <div className="flex flex-col md:flex-row max-w-6xl w-full mx-auto flex-1 py-10 px-6 gap-12 overflow-y-auto md:overflow-hidden">
+        {/* Timeline roadmap view */}
+        <main className="flex-1 flex flex-col gap-10 overflow-y-auto custom-scrollbar pr-0 md:pr-4">
           {/* Summary Banner Card */}
-          <section className="mb-8">
-            <div className="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-[0px_4px_20px_rgba(15,23,42,0.05)]">
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-                <div>
-                  <h1 className="font-hanken text-2xl md:text-3xl font-extrabold text-primary mb-1">
-                    {plan.onboarding.topic}
-                  </h1>
-                  <p className="text-sm text-on-surface-variant">
-                    {plan.onboarding.learning_goal}
+          <section className="flex flex-col gap-6 border-b border-zinc-300 pb-8">
+            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+              <div>
+                <span className="text-[10px] font-semibold uppercase tracking-wider text-zinc-500">
+                  Curriculum Plan
+                </span>
+                <h1 className="text-3xl font-light tracking-tight text-zinc-950 leading-tight mt-1">
+                  {plan.onboarding.topic}
+                </h1>
+                {cleanText(plan.onboarding.learning_goal) && (
+                  <p className="mt-2 text-sm text-zinc-500 leading-normal font-light">
+                    Goal: {plan.onboarding.learning_goal}
                   </p>
-                </div>
-                
-                <div className="flex items-center gap-4 shrink-0">
-                  <div className="text-right">
-                    <p className="text-[10px] font-bold uppercase tracking-wider text-secondary">
-                      Pathway Progress
-                    </p>
-                    <p className="font-hanken text-2xl font-extrabold text-primary">
-                      {progressPercentage}%
-                    </p>
-                  </div>
-                  <div className="w-32 h-2 bg-surface-container rounded-full overflow-hidden">
+                )}
+              </div>
+              
+              <div className="flex flex-col items-start sm:items-end gap-1.5 shrink-0">
+                <span className="text-[10px] font-semibold uppercase tracking-wider text-zinc-500">
+                  Progress
+                </span>
+                <div className="flex items-center gap-3">
+                  <span className="text-2xl font-light text-zinc-950 leading-none">
+                    {progressPercentage}%
+                  </span>
+                  <div className="w-24 h-1.5 bg-zinc-50 border border-zinc-300 rounded-full overflow-hidden">
                     <div
-                      className="h-full bg-secondary-container rounded-full transition-all duration-1000 ease-out"
+                      className="h-full bg-zinc-900 rounded-full transition-all duration-1000 ease-out"
                       style={{ width: `${progressPercentage}%` }}
                     ></div>
                   </div>
                 </div>
               </div>
-
-              {/* Preferences breakdown */}
-              <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 mt-8 pt-6 border-t border-outline-variant">
-                <div>
-                  <p className="text-[10px] text-on-surface-variant uppercase font-bold tracking-wider mb-0.5">Subject</p>
-                  <p className="text-sm font-semibold text-on-surface">{plan.onboarding.subject || "General"}</p>
-                </div>
-                <div>
-                  <p className="text-[10px] text-on-surface-variant uppercase font-bold tracking-wider mb-0.5">Grade Level</p>
-                  <p className="text-sm font-semibold text-on-surface">Grade {plan.metadata?.grade || "N/A"}</p>
-                </div>
-                <div>
-                  <p className="text-[10px] text-on-surface-variant uppercase font-bold tracking-wider mb-0.5">Study Pace</p>
-                  <p className="text-sm font-semibold text-on-surface">{plan.onboarding.deadline_or_pace}</p>
-                </div>
-                <div>
-                  <p className="text-[10px] text-on-surface-variant uppercase font-bold tracking-wider mb-0.5">Learning Style</p>
-                  <p className="text-sm font-semibold text-on-surface capitalize">{plan.onboarding.preferred_learning_style.replace("-", " ")}</p>
-                </div>
-                <div>
-                  <p className="text-[10px] text-on-surface-variant uppercase font-bold tracking-wider mb-0.5">Total Duration</p>
-                  <p className="text-sm font-semibold text-on-surface">{plan.onboarding.available_time}</p>
-                </div>
-              </div>
             </div>
+
+            {/* Preferences breakdown */}
+            {planDetails.length > 0 && (
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-zinc-200">
+                {planDetails.map((detail) => (
+                  <div key={detail.label}>
+                    <p className="text-[9px] text-zinc-400 uppercase font-medium tracking-wider mb-0.5">{detail.label}</p>
+                    <p className="text-xs font-normal text-zinc-700">{detail.value}</p>
+                  </div>
+                ))}
+              </div>
+            )}
           </section>
 
           {/* Chronological Timeline list */}
-          <section className="relative">
-            <div className="absolute left-6 top-0 bottom-0 w-px bg-outline-variant/60 hidden md:block"></div>
+          <section className="flex flex-col gap-8">
+            {regenerationError && (
+              <div className="rounded-xl border border-red-200 bg-red-50 p-4 text-red-700 text-xs font-medium">
+                {regenerationError}
+              </div>
+            )}
             
-            <div className="space-y-6 relative">
+            <div className="flex flex-col gap-10">
               {displayedModules.map((module, idx) => {
                 const isCompleted = completedModuleIds.includes(module.module_id);
                 const isActive = module.module_id === activeModuleId;
-                const isUpcoming = !isCompleted && !isActive;
-
-                const estReadTime = Math.max(10, module.source_section_ids.length * 6);
 
                 return (
-                  <div key={module.module_id} className="flex gap-8 group">
-                    {/* Circle Icon Badge on Timeline (Desktop Only) */}
-                    <div className="relative z-10 hidden md:flex items-center justify-center w-12 h-12 rounded-full border-4 border-background shadow-md shrink-0">
-                      {isCompleted && (
-                        <div className="w-full h-full rounded-full bg-secondary-container text-on-secondary flex items-center justify-center">
-                          <span className="material-symbols-outlined text-[20px]" style={{ fontVariationSettings: "'FILL' 1" }}>
-                            check_circle
-                          </span>
-                        </div>
-                      )}
-                      {isActive && (
-                        <div className="w-full h-full rounded-full bg-white text-secondary border border-secondary flex items-center justify-center animate-pulse">
-                          <span className="material-symbols-outlined text-[20px]" style={{ fontVariationSettings: "'FILL' 1" }}>
-                            play_circle
-                          </span>
-                        </div>
-                      )}
-                      {isUpcoming && (
-                        <div className="w-full h-full rounded-full bg-surface-container text-outline flex items-center justify-center">
-                          <span className="material-symbols-outlined text-[20px]">lock</span>
-                        </div>
-                      )}
+                  <div key={module.module_id} className="flex flex-col md:flex-row gap-4 md:gap-8 border-b border-zinc-200 pb-10 last:border-b-0">
+                    {/* Metadata Column */}
+                    <div className="w-full md:w-36 shrink-0 flex flex-row md:flex-col md:items-start justify-between md:justify-start gap-1">
+                      <span className="text-[10px] font-semibold uppercase tracking-wider text-zinc-400">
+                        Module {String(idx + 1).padStart(2, "0")}
+                      </span>
+                      <span className={`inline-flex items-center gap-1 text-[10px] font-medium uppercase tracking-wider mt-1 px-2.5 py-0.5 rounded-full border ${
+                        isCompleted
+                          ? "border-zinc-200 bg-zinc-50 text-zinc-500"
+                          : isActive
+                            ? "border-zinc-950 bg-zinc-950 text-white animate-pulse"
+                            : "border-zinc-300 bg-white text-zinc-500"
+                      }`}>
+                        {isCompleted ? "Completed" : isActive ? "Active" : "Upcoming"}
+                      </span>
                     </div>
 
-                    {/* Module card body */}
-                    <div className={`flex-1 border rounded-xl p-6 relative overflow-hidden transition-all duration-300 ${
-                      isActive
-                        ? "bg-white border-2 border-secondary-container shadow-xl"
-                        : "bg-surface-container-lowest border-outline-variant hover:shadow-lg"
-                    } ${isUpcoming ? "opacity-75 hover:opacity-100" : ""}`}>
-                      
-                      <div className="absolute top-0 right-0 p-3">
-                        <span className={`px-2 py-1 rounded text-[10px] font-bold uppercase tracking-wider ${
-                          isActive
-                            ? "bg-secondary-fixed-dim text-on-secondary-fixed"
-                            : "bg-surface-variant text-on-surface-variant"
-                        }`}>
-                          {estReadTime}m to Read
-                        </span>
-                      </div>
-
-                      <div className="mb-4">
-                        <p className="text-[10px] font-bold text-secondary uppercase tracking-widest mb-1">
-                          Module {String(idx + 1).padStart(2, "0")} {isActive ? "• Active" : ""}
-                        </p>
-                        <h3 className="font-hanken text-lg font-bold text-on-surface">
+                    {/* Module details */}
+                    <div className="flex-1 flex flex-col gap-4">
+                      <div>
+                        <h3 className="text-lg font-normal text-zinc-950 leading-tight">
                           {module.title}
                         </h3>
+                        <p className="mt-2.5 text-sm text-zinc-650 leading-relaxed font-light">
+                          {module.module_goal}
+                        </p>
                       </div>
-
-                      <p className="text-sm text-on-surface-variant mb-6 leading-relaxed">
-                        {module.module_goal}
-                      </p>
 
                       {/* Concepts Covered */}
                       {module.covered_concept_ids && module.covered_concept_ids.length > 0 && (
-                        <div className="flex flex-wrap gap-2 mb-6">
+                        <div className="flex flex-wrap gap-1.5 mt-1">
                           {module.covered_concept_ids.map((concept) => (
                             <span
                               key={concept}
-                              className={`px-2 py-1 rounded text-xs font-semibold ${
-                                isActive
-                                  ? "bg-secondary-container/10 text-secondary border border-secondary/20"
-                                  : "bg-surface-container text-on-surface-variant"
-                              }`}
+                              className="px-2.5 py-0.5 rounded-full border border-zinc-200 bg-zinc-50 text-[10px] font-medium text-zinc-600"
                             >
                               {labels.conceptLabel(concept)}
                             </span>
@@ -347,48 +277,57 @@ export default function PlanDashboardPage() {
 
                       {/* Prerequisite Alert warning */}
                       {module.prerequisite_warnings && module.prerequisite_warnings.length > 0 && (
-                        <div className="mb-6 p-3 rounded-lg bg-amber-50 dark:bg-amber-950 border border-amber-200 dark:border-amber-900 text-xs text-amber-800 dark:text-amber-300 flex items-center gap-2">
-                          <span className="material-symbols-outlined text-base">warning</span>
+                        <div className="p-3 rounded-lg border border-amber-200 bg-amber-50 text-[11px] text-amber-800 leading-normal font-light flex items-start gap-1.5">
+                          <span className="material-symbols-outlined text-sm mt-0.5">warning</span>
                           <span>{labels.renderRelationshipText(module.prerequisite_warnings[0])}</span>
                         </div>
                       )}
 
-                      <div className="flex items-center justify-between border-t border-outline-variant pt-4">
+                      {/* Footer Actions */}
+                      <div className="flex items-center justify-between border-t border-zinc-200 pt-4 mt-2">
                         {idx < sortedModules.length - 1 ? (
-                          <p className="text-xs text-on-surface-variant italic">
-                            Next: {sortedModules[idx + 1].title}
-                          </p>
+                          <span className="text-[11px] text-zinc-400 font-light">
+                            Next &rarr; {sortedModules[idx + 1].title}
+                          </span>
                         ) : (
-                          <p className="text-xs text-on-surface-variant italic">
-                            Prerequisite Complete
-                          </p>
-                        )}
-
-                        {isCompleted && (
-                          <Link
-                            href={moduleHref(plan.curriculum_plan_id, module.module_id)}
-                            className="text-secondary font-hanken font-bold text-sm hover:underline flex items-center gap-1"
-                          >
-                            Review Module
-                            <span className="material-symbols-outlined text-base">arrow_forward</span>
-                          </Link>
-                        )}
-
-                        {isActive && (
-                          <Link
-                            href={moduleHref(plan.curriculum_plan_id, module.module_id)}
-                            className="bg-primary text-on-primary px-6 py-2 rounded-lg font-hanken font-bold text-xs shadow-md hover:bg-on-background transition-all"
-                          >
-                            Start Studying
-                          </Link>
-                        )}
-
-                        {isUpcoming && (
-                          <span className="text-on-surface-variant font-hanken font-bold text-sm flex items-center gap-1 cursor-not-allowed opacity-60">
-                            Open Module
-                            <span className="material-symbols-outlined text-base">lock</span>
+                          <span className="text-[11px] text-zinc-400 font-light">
+                            End of curriculum
                           </span>
                         )}
+
+                        <div className="flex items-center gap-3">
+                          {/* Regenerate Button */}
+                          {(moduleInsightCounts[module.module_id] || 0) > 0 && (
+                            <button
+                              type="button"
+                              onClick={() => void handleRegenerateWithInsights(module)}
+                              disabled={Boolean(regeneratingModuleIds[module.module_id])}
+                              className="text-[11px] font-medium border border-zinc-300 rounded-full px-4 py-1.5 text-zinc-650 hover:border-zinc-950 hover:text-zinc-955 hover:bg-zinc-50 transition-colors disabled:opacity-50 disabled:cursor-wait"
+                            >
+                              {regeneratingModuleIds[module.module_id]
+                                ? "Regenerating..."
+                                : regeneratedModuleIds[module.module_id]
+                                  ? "Personalized ✓"
+                                  : `Personalize (${moduleInsightCounts[module.module_id]} insights)`}
+                            </button>
+                          )}
+
+                          {isCompleted ? (
+                            <Link
+                              href={moduleHref(plan.curriculum_plan_id, module.module_id)}
+                              className="text-xs font-semibold text-zinc-900 hover:text-zinc-600 transition-colors inline-flex items-center gap-0.5"
+                            >
+                              Review &rarr;
+                            </Link>
+                          ) : (
+                            <Link
+                              href={moduleHref(plan.curriculum_plan_id, module.module_id)}
+                              className="bg-zinc-900 text-white rounded-full px-5 py-2 text-xs font-semibold hover:bg-zinc-800 transition-colors"
+                            >
+                              {isActive ? "Start Studying" : "Open Module"}
+                            </Link>
+                          )}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -396,39 +335,25 @@ export default function PlanDashboardPage() {
               })}
             </div>
           </section>
-
-          {/* Bottom CTA for new curriculum */}
-          <section className="mt-12 flex justify-center pb-12">
-            <Link
-              href="/onboard"
-              className="flex flex-col items-center gap-2 group p-8 rounded-2xl border-2 border-dashed border-outline-variant hover:border-secondary hover:bg-surface-container-low transition-all cursor-pointer text-center w-full max-w-md"
-            >
-              <span className="material-symbols-outlined text-secondary scale-150 mb-2 group-hover:rotate-90 transition-transform">
-                add_circle
-              </span>
-              <span className="font-hanken font-bold text-lg text-on-surface">New Curriculum</span>
-              <span className="text-xs text-on-surface-variant">Generate a fresh learning path with AI</span>
-            </Link>
-          </section>
         </main>
 
         {/* Right Sidebar: Real graph-backed recommendations (Desktop Only) */}
-        <aside className="hidden xl:flex flex-col w-80 shrink-0 border-l border-outline-variant bg-surface-container-lowest p-6 overflow-y-auto custom-scrollbar">
+        <aside className="hidden md:flex flex-col w-80 shrink-0 border-l border-zinc-300 pl-8 overflow-y-auto custom-scrollbar gap-6">
           {activeModule && (
-            <div className="mb-8">
-              <h4 className="font-hanken font-bold text-sm text-primary mb-4 flex items-center gap-2">
-                <span className="material-symbols-outlined text-secondary text-lg">auto_stories</span>
+            <div className="flex flex-col gap-3">
+              <h4 className="text-xs font-semibold uppercase tracking-wider text-zinc-500 flex items-center gap-1.5">
+                <span className="material-symbols-outlined text-sm">auto_stories</span>
                 Active Module
               </h4>
-              <div className="p-4 rounded-xl border border-outline-variant bg-surface-container-low">
-                <p className="font-hanken font-bold text-sm text-on-surface mb-2">{activeModule.title}</p>
-                <p className="text-xs text-on-surface-variant leading-relaxed">{activeModule.module_goal}</p>
+              <div className="p-4 rounded-xl border border-zinc-300 bg-zinc-50 flex flex-col gap-2">
+                <p className="text-sm font-medium text-zinc-900 leading-tight">{activeModule.title}</p>
+                <p className="text-xs text-zinc-505 leading-normal font-light">{activeModule.module_goal}</p>
                 {activeModule.source_section_ids.length > 0 && (
-                  <div className="mt-4 pt-4 border-t border-outline-variant">
-                    <p className="text-[10px] text-on-surface-variant uppercase tracking-wider font-bold mb-2">Source sections</p>
-                    <ul className="space-y-2">
+                  <div className="mt-3 pt-3 border-t border-zinc-200">
+                    <p className="text-[9px] text-zinc-400 uppercase font-medium tracking-wider mb-2">Source sections</p>
+                    <ul className="flex flex-col gap-1.5">
                       {activeModule.source_section_ids.map((sectionId) => (
-                        <li key={sectionId} className="text-xs text-on-surface">
+                        <li key={sectionId} className="text-xs text-zinc-700 font-light">
                           {labels.sectionLabel(sectionId)}
                         </li>
                       ))}
@@ -458,56 +383,49 @@ export default function PlanDashboardPage() {
             labels={labels}
           />
 
-          <div className="mt-auto p-4 bg-surface-container-low rounded-xl border border-outline-variant">
-            <p className="text-[10px] text-on-surface-variant font-bold uppercase tracking-wider mb-2">Plan Summary</p>
-            <p className="text-xs text-on-surface mb-3 leading-relaxed">
-              {sortedModules.length} modules generated from retrieved textbook sections. Checkpoint questions are created from module design output.
+          <div className="mt-auto p-4 bg-zinc-50 rounded-xl border border-zinc-300 flex flex-col gap-2">
+            <p className="text-[9px] text-zinc-400 uppercase font-medium tracking-wider">Plan Summary</p>
+            <p className="text-xs text-zinc-700 leading-normal font-light">
+              {sortedModules.length} modules
+              {totalCheckpointCount(plan) > 0 ? ` with ${totalCheckpointCount(plan)} quiz questions` : ""}.
             </p>
-            <Link
-              href={moduleHref(plan.curriculum_plan_id, activeModuleId)}
-              className="w-full py-2 bg-surface-container-highest text-secondary border border-secondary/20 rounded-lg text-xs font-bold text-center block hover:bg-surface-variant transition-colors"
-            >
-              Study Active Lesson
-            </Link>
+            {activeModule && (
+              <Link
+                href={moduleHref(plan.curriculum_plan_id, activeModuleId)}
+                className="w-full py-2 bg-white text-zinc-900 border border-zinc-300 rounded-lg text-xs font-semibold text-center block hover:border-zinc-900 hover:bg-zinc-50 transition-all mt-1"
+              >
+                Open Active Module
+              </Link>
+            )}
           </div>
         </aside>
       </div>
 
       {/* Bottom Nav Bar (Mobile Only) */}
-      <nav className="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center py-2 bg-surface-container-lowest border-t border-outline-variant shadow-lg z-50 rounded-t-xl">
+      <nav className="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center py-3 bg-white border-t border-zinc-300 z-50">
         <Link
           href="/"
-          className="flex flex-col items-center justify-center text-on-surface-variant hover:text-secondary"
+          className="flex flex-col items-center justify-center text-zinc-400 hover:text-zinc-900 transition-colors"
         >
-          <span className="material-symbols-outlined">home</span>
-          <span className="text-[10px]">Home</span>
+          <span className="material-symbols-outlined text-xl">home</span>
+          <span className="text-[9px] font-medium mt-0.5">Home</span>
         </Link>
-        <span className="flex flex-col items-center justify-center text-secondary font-bold">
-          <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>
+        <span className="flex flex-col items-center justify-center text-zinc-950 font-semibold">
+          <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>
             menu_book
           </span>
-          <span className="text-[10px]">My Plan</span>
+          <span className="text-[9px] mt-0.5">My Plan</span>
         </span>
         {activeModule && (
           <Link
             href={moduleHref(plan.curriculum_plan_id, activeModuleId)}
-            className="flex flex-col items-center justify-center text-on-surface-variant hover:text-secondary"
+            className="flex flex-col items-center justify-center text-zinc-400 hover:text-zinc-900 transition-colors"
           >
-            <span className="material-symbols-outlined">school</span>
-            <span className="text-[10px]">Learning</span>
+            <span className="material-symbols-outlined text-xl">school</span>
+            <span className="text-[9px] font-medium mt-0.5">Learning</span>
           </Link>
         )}
       </nav>
-      
-      {/* Floating Action Button for curriculum creation */}
-      <Link
-        href="/onboard"
-        className="fixed bottom-20 right-6 md:bottom-8 md:right-8 w-14 h-14 bg-secondary-container text-on-secondary-container rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-90 transition-all z-40"
-      >
-        <span className="material-symbols-outlined text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>
-          add
-        </span>
-      </Link>
     </div>
   );
 }
@@ -541,15 +459,15 @@ function PlanSectionList({
   if (sectionIds.length === 0) return null;
 
   return (
-    <div className="mb-8 pt-6 border-t border-outline-variant">
-      <h4 className="font-hanken font-bold text-sm text-primary mb-4 flex items-center gap-2">
-        <span className="material-symbols-outlined text-secondary text-lg">{icon}</span>
+    <div className="pt-6 border-t border-zinc-300">
+      <h4 className="text-xs font-semibold uppercase tracking-wider text-zinc-500 mb-3 flex items-center gap-1.5">
+        <span className="material-symbols-outlined text-sm">{icon}</span>
         {title}
       </h4>
-      <ul className="space-y-3">
+      <ul className="flex flex-col gap-2">
         {sectionIds.map((sectionId) => (
-          <li key={sectionId} className="p-3 rounded-lg bg-surface-container-low border border-outline-variant">
-            <p className="text-xs font-bold text-on-surface leading-snug">
+          <li key={sectionId} className="p-3 rounded-xl border border-zinc-300 bg-white">
+            <p className="text-xs font-normal text-zinc-900 leading-snug">
               {labels.sectionLabel(sectionId)}
             </p>
           </li>
@@ -561,6 +479,49 @@ function PlanSectionList({
 
 function totalCheckpointCount(plan: CurriculumPlanPayload): number {
   return Object.values(plan.mcq_allocation || {}).reduce((total, count) => total + Number(count || 0), 0);
+}
+
+function planDetailRows(plan: CurriculumPlanPayload): Array<{ label: string; value: string }> {
+  const rows: Array<{ label: string; value: string }> = [];
+  const subject = cleanText(plan.onboarding.subject);
+  const grade = cleanText(plan.metadata?.grade);
+  const pace = cleanText(plan.onboarding.deadline_or_pace);
+  const learningStyle = cleanText(plan.onboarding.preferred_learning_style);
+  const availableTime = cleanText(plan.onboarding.available_time);
+  const checkpointCount = totalCheckpointCount(plan);
+
+  if (subject) rows.push({ label: "Subject", value: subject });
+  if (grade) rows.push({ label: "Grade", value: `Grade ${grade}` });
+  if (pace) rows.push({ label: "Pace", value: pace });
+  if (learningStyle) rows.push({ label: "Learning Style", value: learningStyle.replace(/[-_]+/g, " ") });
+  if (availableTime) rows.push({ label: "Available Time", value: availableTime });
+  rows.push({ label: "Modules", value: String(plan.modules.length) });
+  if (checkpointCount > 0) rows.push({ label: "Checkpoint Questions", value: String(checkpointCount) });
+
+  return rows;
+}
+
+function cleanText(value: unknown): string {
+  if (typeof value !== "string" && typeof value !== "number") return "";
+  const text = String(value).trim();
+  if (!text || ["n/a", "na", "none", "null", "undefined", "general"].includes(text.toLowerCase())) {
+    return "";
+  }
+  return text;
+}
+
+function moduleInsightCountsForPlan(plan: CurriculumPlanPayload): Record<string, number> {
+  return Object.fromEntries(
+    plan.modules.map((module) => [
+      module.module_id,
+      readLatestSectionInsights(plan.learner_id, module.source_section_ids).length,
+    ])
+  );
+}
+
+function errorMessage(err: unknown, fallback: string): string {
+  if (err instanceof Error) return err.message;
+  return fallback;
 }
 
 function buildPlanLabelResolver(plan: CurriculumPlanPayload) {

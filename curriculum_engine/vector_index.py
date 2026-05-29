@@ -82,6 +82,40 @@ class SentenceTransformerEmbeddingModel:
         return self.model.encode(texts, normalize_embeddings=True, show_progress_bar=False)
 
 
+class HFInferenceEmbeddingModel:
+    """Embedding model using the HuggingFace Inference API (no local model needed)."""
+
+    def __init__(self, model: str = "BAAI/bge-m3", api_key: str | None = None):
+        import os
+
+        try:
+            from huggingface_hub import InferenceClient
+        except ImportError as exc:
+            raise RuntimeError(
+                "huggingface_hub is required for HF Inference API embeddings. "
+                "pip install huggingface_hub"
+            ) from exc
+
+        self.client = InferenceClient(
+            provider="hf-inference",
+            api_key=api_key or os.environ.get("HF_TOKEN", ""),
+        )
+        self.model_name = model
+
+    def encode(self, texts: list[str]) -> Any:
+        import numpy as np
+
+        result = self.client.feature_extraction(
+            texts,
+            model=self.model_name,
+        )
+        embeddings = np.asarray(result, dtype="float32")
+        # Normalize to unit vectors (matches local model's normalize_embeddings=True)
+        norms = np.linalg.norm(embeddings, axis=1, keepdims=True)
+        norms = np.where(norms == 0, 1, norms)
+        return embeddings / norms
+
+
 @dataclass
 class SectionVectorIndex:
     documents: list[SectionDocument]

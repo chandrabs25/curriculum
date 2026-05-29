@@ -6,7 +6,7 @@ import Link from "next/link";
 import { RetryPanel } from "../../../../../components/RetryPanel";
 import { designModule, submitCheckpoint } from "../../../../../services/api";
 import { readCachedModuleDesign, writeCachedModuleDesign } from "../../../../../services/moduleDesignCache";
-import { readSectionInsights, sectionIdsFromMcqs, writeSectionInsights } from "../../../../../services/sectionInsights";
+import { readLatestSectionInsights, sectionIdsFromMcqs, writeSectionInsights } from "../../../../../services/sectionInsights";
 import {
   CurriculumPlanPayload,
   CheckpointAnswerPayload,
@@ -48,7 +48,7 @@ export default function CheckpointQuizPage() {
         plan: parsedPlan,
         module_id: moduleId,
         learner_state: [],
-        section_insights: readSectionInsights(
+        section_insights: readLatestSectionInsights(
           parsedPlan.learner_id,
           parsedPlan.modules.find((module) => module.module_id === moduleId)?.source_section_ids || []
         ),
@@ -140,12 +140,11 @@ export default function CheckpointQuizPage() {
         module_id: moduleId,
         checkpoint_mcqs: mcqs,
         answers: answerPayloads,
-        existing_section_insights: readSectionInsights(plan.learner_id, sectionIdsFromMcqs(mcqs)),
+        existing_section_insights: readLatestSectionInsights(plan.learner_id, sectionIdsFromMcqs(mcqs)),
       });
       
-      // Delay slightly to show "Grading your submission..." shimmer state
+      // Delay slightly to show grading shimmer state
       setTimeout(() => {
-        // Save completed module score to localStorage
         localStorage.setItem(`curriculum-checkpoint-score-${id}-${moduleId}`, String(result.score));
         localStorage.setItem(`curriculum-checkpoint-score-${rawId}-${rawModuleId}`, String(result.score));
         localStorage.setItem(`curriculum-checkpoint-result-${id}-${moduleId}`, JSON.stringify(result));
@@ -163,10 +162,10 @@ export default function CheckpointQuizPage() {
 
   if (loading) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-background">
+      <div className="flex min-h-screen items-center justify-center bg-white">
         <div className="text-center">
-          <div className="h-8 w-8 animate-spin rounded-full border-4 border-secondary border-t-transparent mx-auto"></div>
-          <p className="mt-4 text-on-surface-variant text-sm">Loading checkpoint MCQs...</p>
+          <div className="h-6 w-6 animate-spin rounded-full border-2 border-zinc-900 border-t-transparent mx-auto"></div>
+          <p className="mt-4 text-xs text-zinc-400 font-light">Loading checkpoint quiz...</p>
         </div>
       </div>
     );
@@ -174,8 +173,8 @@ export default function CheckpointQuizPage() {
 
   if (error && !moduleData) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-background px-4">
-        <div className="max-w-md w-full text-center bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant shadow-md">
+      <div className="flex min-h-screen items-center justify-center bg-white px-4">
+        <div className="max-w-md w-full text-center bg-white p-8 rounded-xl border border-zinc-300">
           <RetryPanel
             title="Checkpoint Load Failed"
             message={error}
@@ -192,7 +191,7 @@ export default function CheckpointQuizPage() {
 
   if (!moduleData) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-background px-4">
+      <div className="flex min-h-screen items-center justify-center bg-white px-4">
         <div className="max-w-md w-full">
           <RetryPanel
             title="Checkpoint Unavailable"
@@ -214,104 +213,78 @@ export default function CheckpointQuizPage() {
   const allAnswered = answeredCount === mcqs.length;
 
   return (
-    <div className="bg-surface text-on-surface font-body-md min-h-screen selection:bg-surface-variant flex flex-col">
-      
-      {/* Top Navigation Bar */}
-      <header className="bg-surface border-b border-outline-variant flex justify-between items-center w-full px-10 h-16 sticky top-0 z-40">
-        <div className="flex items-center gap-2">
-          <span className="text-headline-md font-hanken font-bold text-primary">AcademicFlow</span>
-        </div>
-        <div className="hidden md:flex items-center gap-6">
-          <Link
-            href="/"
-            className="text-on-surface-variant hover:text-secondary transition-colors font-hanken font-bold text-sm"
-          >
-            Dashboard
+    <div className="bg-white text-zinc-900 font-sans min-h-screen selection:bg-zinc-100 selection:text-zinc-950 flex flex-col">
+      {/* Navigation Header */}
+      <header className="w-full max-w-4xl mx-auto px-6 h-14 flex items-center justify-between border-b border-zinc-300 bg-white">
+        <div className="flex items-center gap-3">
+          <Link href={moduleHref(id, moduleId)} className="text-zinc-500 hover:text-zinc-900 transition-colors text-sm font-medium">
+            &larr; Module
           </Link>
-          <Link
-            href={`/plan/${encodeURIComponent(id)}`}
-            className="text-on-surface-variant hover:text-secondary transition-colors font-hanken font-bold text-sm"
-          >
-            Curriculum Plan
-          </Link>
-          <Link
-            href={moduleHref(id, moduleId)}
-            className="text-secondary border-b-2 border-secondary font-hanken font-bold text-sm h-16 flex items-center px-1"
-          >
-            Active Module
-          </Link>
+          <span className="text-zinc-200">|</span>
+          <span className="text-sm font-semibold tracking-tight text-zinc-900 truncate max-w-[200px] md:max-w-md">
+            Checkpoint Quiz
+          </span>
         </div>
-        <div className="flex items-center gap-6">
-          <button className="material-symbols-outlined text-on-surface-variant p-2 hover:bg-surface-container rounded-full transition-all cursor-pointer">
-            notifications
-          </button>
-          <button className="material-symbols-outlined text-on-surface-variant p-2 hover:bg-surface-container rounded-full transition-all cursor-pointer">
-            account_circle
-          </button>
-        </div>
+        <span className="text-xs text-zinc-500 font-light hidden sm:inline">
+          {answeredCount} of {mcqs.length} answered
+        </span>
       </header>
 
       {/* Main Body */}
-      <main className="max-w-[1280px] w-full mx-auto px-4 md:px-10 py-10 flex flex-col items-center flex-1">
-        
+      <main className="mx-auto flex w-full max-w-3xl flex-col px-6 py-10 gap-8 flex-1">
         {/* Header & Progress Indicator */}
-        <div className="w-full max-w-3xl mb-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-3">
-            <div>
-              <span className="text-xs text-secondary font-bold uppercase tracking-wider block mb-1">
-                {plan?.onboarding.topic}
-              </span>
-              <h1 className="font-hanken text-2xl md:text-3xl font-extrabold text-primary mb-1">
-                Module {moduleData.checkpoint_mcqs ? "" : ""} Checkpoint
-              </h1>
-              <p className="text-sm text-on-surface-variant">
-                {moduleData.title} • comfort assessment
-              </p>
-            </div>
-            
-            <span className="font-hanken font-bold text-sm text-secondary mt-3 md:mt-0" id="progress-text">
-              {answeredCount} of {mcqs.length} questions answered
-            </span>
-          </div>
+        <div className="w-full mb-2">
+          <span className="text-[10px] font-semibold uppercase tracking-wider text-zinc-500 block mb-1">
+            {plan?.onboarding.topic}
+          </span>
+          <h1 className="text-2xl font-light tracking-tight text-zinc-950 leading-tight">
+            Module Checkpoint
+          </h1>
+          <p className="mt-1 text-xs text-zinc-500 font-light leading-normal">
+            {moduleData.title} &bull; comfort assessment
+          </p>
 
-          <div className="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+          <div className="mt-6 flex items-center justify-between text-[10px] font-semibold uppercase tracking-wider text-zinc-400 mb-2">
+            <span>Progress</span>
+            <span>{answeredCount} of {mcqs.length} answered</span>
+          </div>
+          <div className="w-full h-1.5 bg-zinc-50 border border-zinc-300 rounded-full overflow-hidden">
             <div
-              className="h-full bg-secondary-container transition-all duration-500 ease-out"
-              id="progress-bar"
+              className="h-full bg-zinc-900 transition-all duration-500 ease-out"
               style={{ width: `${progressPercent}%` }}
             ></div>
           </div>
         </div>
 
         {error && (
-          <div className="w-full max-w-3xl mb-6 p-4 bg-error-container text-on-error-container border border-error/20 rounded-xl text-xs font-semibold">
+          <div className="w-full p-4 bg-red-50 text-red-750 border border-red-200 rounded-xl text-xs font-semibold">
             {error}
           </div>
         )}
 
         {/* Dynamic Graded Results Summary */}
         {quizResult && (
-          <div className="w-full max-w-3xl mb-8 p-6 rounded-xl bg-[#EFF6FF] border border-secondary/20 shadow-md animate-fadeIn">
-            <h3 className="font-hanken text-lg font-bold text-secondary mb-2 flex items-center gap-2">
-              <span className="material-symbols-outlined">verified</span>
-              Checkpoint Graded successfully!
+          <div className="w-full p-6 rounded-xl bg-zinc-50 border border-zinc-300 flex flex-col gap-4">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-zinc-700 flex items-center gap-1.5">
+              <span className="material-symbols-outlined text-sm">verified</span>
+              Checkpoint Graded
             </h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4 text-center">
-              <div className="bg-white p-3 rounded-lg border border-outline-variant/40">
-                <span className="text-[10px] text-on-surface-variant block uppercase font-bold tracking-wider">Score</span>
-                <span className="text-xl font-extrabold text-on-background">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+              <div className="bg-white p-3 rounded-lg border border-zinc-300">
+                <span className="text-[9px] text-zinc-400 block uppercase font-medium tracking-wider">Score</span>
+                <span className="text-lg font-normal text-zinc-900">
                   {Math.round(quizResult.score * 100)}%
                 </span>
               </div>
-              <div className="bg-white p-3 rounded-lg border border-outline-variant/40">
-                <span className="text-[10px] text-on-surface-variant block uppercase font-bold tracking-wider">Correct</span>
-                <span className="text-xl font-extrabold text-on-background">
+              <div className="bg-white p-3 rounded-lg border border-zinc-300">
+                <span className="text-[9px] text-zinc-400 block uppercase font-medium tracking-wider">Correct</span>
+                <span className="text-lg font-normal text-zinc-900">
                   {quizResult.correct_count} / {quizResult.total_count}
                 </span>
               </div>
-              <div className="bg-white p-3 rounded-lg border border-outline-variant/40 col-span-2">
-                <span className="text-[10px] text-on-surface-variant block uppercase font-bold tracking-wider">AI Recommendation</span>
-                <span className={`text-sm font-bold block mt-1 uppercase ${
+              <div className="bg-white p-3 rounded-lg border border-zinc-300 col-span-2">
+                <span className="text-[9px] text-zinc-400 block uppercase font-medium tracking-wider">AI Recommendation</span>
+                <span className={`text-xs font-semibold block mt-1 uppercase ${
                   quizResult.recommendation === "continue" ? "text-emerald-600" : "text-amber-600"
                 }`}>
                   {quizResult.recommendation === "continue" ? "Mastered • Continue" : "Review Recommended"}
@@ -320,15 +293,15 @@ export default function CheckpointQuizPage() {
             </div>
 
             {quizResult.weak_concept_ids && quizResult.weak_concept_ids.length > 0 && (
-              <div className="mt-4 pt-4 border-t border-secondary/25">
-                <span className="text-[10px] font-bold text-secondary uppercase tracking-wider block mb-2">
+              <div className="pt-4 border-t border-zinc-200">
+                <span className="text-[9px] font-semibold text-zinc-500 uppercase tracking-wider block mb-2">
                   Reviewing concepts recommended:
                 </span>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1.5">
                   {quizResult.weak_concept_ids.map((concept: string) => (
                     <span
                       key={concept}
-                      className="bg-amber-100 text-amber-800 px-2 py-0.5 rounded text-xs font-semibold"
+                      className="bg-zinc-100 border border-zinc-300 text-zinc-650 px-2.5 py-0.5 rounded-full text-xs font-light"
                     >
                       {concept.replace("concept:", "").replace(/_/g, " ")}
                     </span>
@@ -340,10 +313,10 @@ export default function CheckpointQuizPage() {
         )}
 
         {/* Quiz Form */}
-        <form onSubmit={handleQuizSubmit} className="w-full max-w-3xl space-y-6" id="quiz-form">
+        <form onSubmit={handleQuizSubmit} className="w-full space-y-6" id="quiz-form">
           {mcqs.map((mcq: any, qIdx: number) => {
             const selectedVal = answers[mcq.question_id] || "";
-            const isSelected = (prefix: string) => selectedVal === prefix;
+            const isSelected = (optionPrefix: string) => selectedVal === optionPrefix;
 
             const isGraded = !!quizResult;
             const qr = quizResult?.question_results?.find(
@@ -353,45 +326,45 @@ export default function CheckpointQuizPage() {
             return (
               <div
                 key={mcq.question_id}
-                className={`bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-[0px_4px_20px_rgba(15,23,42,0.05)] transition-all ${
+                className={`border border-zinc-300 rounded-xl p-6 bg-white flex flex-col gap-4 ${
                   isGraded ? "opacity-90" : ""
                 }`}
               >
-                <div className="flex justify-between items-start mb-4">
-                  <span className="font-hanken font-bold text-xs text-on-surface-variant uppercase tracking-wider">
+                <div className="flex justify-between items-center">
+                  <span className="text-[10px] font-semibold uppercase tracking-wider text-zinc-400">
                     Question {String(qIdx + 1).padStart(2, "0")}
                   </span>
-                  <span className={`px-3 py-1 rounded-full text-xs font-bold uppercase ${
+                  <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-medium uppercase tracking-wider border ${
                     mcq.difficulty.toLowerCase() === "hard"
-                      ? "bg-error-container text-on-error-container"
-                      : "bg-surface-container-high text-on-primary-fixed-variant"
+                      ? "border-red-200 bg-red-50 text-red-700"
+                      : "border-zinc-200 bg-zinc-50 text-zinc-650"
                   }`}>
                     {mcq.difficulty}
                   </span>
                 </div>
 
-                <h3 className="font-hanken font-bold text-base text-on-surface mb-6 leading-relaxed">
+                <h3 className="text-base font-normal text-zinc-950 leading-relaxed">
                   {mcq.question}
                 </h3>
 
-                <div className="space-y-3">
+                <div className="flex flex-col gap-3">
                   {mcq.options.map((option: string) => {
                     const optionPrefix = option.charAt(0);
                     const isThisSelected = isSelected(optionPrefix);
                     const isThisCorrect = mcq.correct_option === optionPrefix;
 
-                    let optionStyle = "border-outline-variant bg-surface-container-lowest hover:border-secondary";
+                    let optionStyle = "border-zinc-300 bg-white text-zinc-800 hover:border-zinc-950 hover:text-zinc-950";
                     if (isThisSelected) {
-                      optionStyle = "bg-[#EFF6FF] border-secondary border-2 ring-1 ring-secondary";
+                      optionStyle = "bg-zinc-950 text-white border-zinc-955";
                     }
 
                     if (isGraded) {
                       if (isThisCorrect) {
-                        optionStyle = "border-emerald-500 bg-emerald-50/75 text-emerald-800 border-2";
+                        optionStyle = "border-emerald-500 bg-emerald-50 text-emerald-800";
                       } else if (isThisSelected && !isThisCorrect) {
-                        optionStyle = "border-red-500 bg-red-50/75 text-red-800 border-2";
+                        optionStyle = "border-red-500 bg-red-50 text-red-800";
                       } else {
-                        optionStyle = "border-outline-variant/40 text-on-surface-variant/40 bg-white/40 cursor-not-allowed";
+                        optionStyle = "border-zinc-200 text-zinc-300 bg-zinc-50/50 cursor-not-allowed";
                       }
                     }
 
@@ -399,20 +372,17 @@ export default function CheckpointQuizPage() {
                       <label
                         key={option}
                         onClick={() => handleSelectOption(mcq.question_id, optionPrefix)}
-                        className={`flex items-center p-4 border rounded-lg cursor-pointer transition-all group quiz-option ${optionStyle}`}
+                        className={`flex items-center p-4 border rounded-xl cursor-pointer transition-colors text-sm font-light ${optionStyle}`}
                       >
                         <input
                           type="radio"
                           disabled={isGraded || submitting}
                           name={mcq.question_id}
                           checked={isThisSelected}
-                          onChange={() => {}} // Controlled click handles this
-                          className="w-4 h-4 text-secondary focus:ring-secondary border-outline-variant cursor-pointer disabled:opacity-50"
+                          onChange={() => {}}
+                          className="sr-only"
                         />
-                        <span className="ml-4 text-sm text-on-surface leading-tight">
-                          {option}
-                        </span>
-                        
+                        <span className="leading-snug">{option}</span>
                         {isGraded && isThisCorrect && (
                           <span className="ml-auto material-symbols-outlined text-emerald-600 text-base">check_circle</span>
                         )}
@@ -426,14 +396,14 @@ export default function CheckpointQuizPage() {
 
                 {/* Show Explanations on Graded */}
                 {isGraded && (
-                  <div className="mt-4 p-4 bg-surface-container-low rounded-lg border border-outline-variant/60 text-xs">
-                    <span className={`font-bold block mb-1 uppercase ${qr?.is_correct ? "text-emerald-700" : "text-red-700"}`}>
-                      {qr?.is_correct ? "✓ Correct!" : `✗ Incorrect (Correct Option is ${mcq.correct_option})`}
+                  <div className="mt-2 p-4 bg-zinc-50 rounded-xl border border-zinc-300 text-xs flex flex-col gap-2">
+                    <span className={`font-semibold uppercase tracking-wider text-[10px] ${qr?.is_correct ? "text-emerald-700" : "text-red-700"}`}>
+                      {qr?.is_correct ? "✓ Correct" : `✗ Incorrect (Correct Option is ${mcq.correct_option})`}
                     </span>
-                    <p className="text-on-surface-variant leading-relaxed mb-2">{mcq.explanation}</p>
+                    <p className="text-zinc-655 leading-relaxed font-light">{mcq.explanation}</p>
                     {mcq.diagnostic_purpose && (
-                      <div className="pt-2 border-t border-outline-variant/30 text-gray-500">
-                        <span className="font-semibold">Diagnostic Purpose:</span> {mcq.diagnostic_purpose}
+                      <div className="pt-2 border-t border-zinc-200 text-zinc-400 font-light text-[11px]">
+                        <span className="font-semibold text-zinc-500">Diagnostic Purpose:</span> {mcq.diagnostic_purpose}
                       </div>
                     )}
                   </div>
@@ -448,7 +418,7 @@ export default function CheckpointQuizPage() {
               <button
                 type="submit"
                 disabled={!allAnswered || submitting}
-                className="w-full md:w-64 py-4 bg-primary text-on-primary font-hanken font-bold text-sm rounded-lg hover:opacity-90 active:scale-95 transition-all shadow-md flex justify-center items-center gap-2 cursor-pointer disabled:bg-outline-variant disabled:cursor-not-allowed disabled:opacity-50"
+                className="inline-flex items-center justify-center rounded-full bg-zinc-900 px-8 py-3 text-xs font-semibold text-white transition-colors hover:bg-zinc-800 disabled:opacity-50 disabled:bg-zinc-300 disabled:cursor-not-allowed"
               >
                 Submit Answers
               </button>
@@ -456,13 +426,13 @@ export default function CheckpointQuizPage() {
 
             {/* Shimmer State */}
             {submitting && (
-              <div className="flex flex-col items-center mt-4" id="grading-state">
-                <div className="flex items-center gap-3 text-secondary animate-pulse">
-                  <span className="material-symbols-outlined animate-spin text-xl">sync</span>
-                  <span className="font-hanken font-bold text-sm">Grading your submission...</span>
+              <div className="flex flex-col items-center mt-4">
+                <div className="flex items-center gap-2 text-zinc-900 animate-pulse font-medium text-xs uppercase tracking-wider">
+                  <span className="material-symbols-outlined animate-spin text-sm">sync</span>
+                  <span>Grading responses...</span>
                 </div>
-                <p className="text-xs text-on-surface-variant mt-2 text-center max-w-xs">
-                  Our AI is analyzing your responses against the curriculum benchmarks.
+                <p className="text-[11px] text-zinc-400 mt-1.5 text-center font-light">
+                  Analyzing your responses against the curriculum benchmarks.
                 </p>
               </div>
             )}
@@ -477,13 +447,13 @@ export default function CheckpointQuizPage() {
                     setQuizResult(null);
                     setError(null);
                   }}
-                  className="flex-1 py-3 border border-outline-variant bg-white text-on-surface-variant hover:bg-surface-container rounded-lg font-hanken font-bold text-sm cursor-pointer shadow-sm"
+                  className="flex-1 py-3 border border-zinc-300 bg-white text-zinc-650 hover:text-zinc-900 hover:border-zinc-900 rounded-full text-xs font-medium transition-colors"
                 >
                   Reset Checkpoint
                 </button>
                 <Link
                   href={`/plan/${encodeURIComponent(id)}`}
-                  className="flex-1 py-3 bg-primary text-on-primary hover:opacity-90 rounded-lg font-hanken font-bold text-sm shadow-md block text-center"
+                  className="flex-1 py-3 bg-zinc-900 text-white hover:bg-zinc-800 rounded-full text-xs font-medium block text-center transition-colors"
                 >
                   Return to Pathway
                 </Link>
@@ -491,32 +461,21 @@ export default function CheckpointQuizPage() {
             )}
           </div>
         </form>
-
-        {/* Illustration / Decor */}
-        <div className="mt-8 w-full max-w-3xl opacity-40 hidden md:block">
-          <div className="h-40 w-full rounded-xl overflow-hidden grayscale border border-outline-variant/30">
-            <img
-              alt="academic study decoration"
-              className="w-full h-full object-cover"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAen1gCc3HOgrdq6YXY8kd0KHt5uNf3fN7vu3dv5VUGW1LvhAkDiuCzTzu055B_r0VpnEn2173RjFCDOMxZEkrDGEmDk5U68tA9AxnSNR-hFtUb4UDIyaaXAertazwO0LBZpQREOxITrT0Bf_AagNrt4a5NJ-OohNGkSzZqYDde6hmGx9hX8kVCrk0oxoBexJadVoO2H5VLQXsNFzxH0wWU9kg9UE63Qlek5HDroE_bchI0aFPyOHM_OsWDzM7Q2m8QMpCQoTgc-2ZA"
-            />
-          </div>
-        </div>
       </main>
 
       {/* Mobile Bottom Navigation */}
-      <nav className="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center py-2 bg-surface-container-lowest border-t border-outline-variant shadow-lg z-50 rounded-t-xl">
-        <Link href="/" className="flex flex-col items-center justify-center text-on-surface-variant hover:text-secondary">
-          <span className="material-symbols-outlined">home</span>
-          <span className="text-[10px]">Home</span>
+      <nav className="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center py-3 bg-white border-t border-zinc-300 z-50">
+        <Link href="/" className="flex flex-col items-center justify-center text-zinc-400 hover:text-zinc-900 transition-colors">
+          <span className="material-symbols-outlined text-xl">home</span>
+          <span className="text-[9px] font-medium mt-0.5">Home</span>
         </Link>
-        <Link href={`/plan/${encodeURIComponent(id)}`} className="flex flex-col items-center justify-center text-on-surface-variant hover:text-secondary">
-          <span className="material-symbols-outlined">menu_book</span>
-          <span className="text-[10px]">My Plan</span>
+        <Link href={`/plan/${encodeURIComponent(id)}`} className="flex flex-col items-center justify-center text-zinc-400 hover:text-zinc-900 transition-colors">
+          <span className="material-symbols-outlined text-xl">menu_book</span>
+          <span className="text-[9px] font-medium mt-0.5">My Plan</span>
         </Link>
-        <span className="flex flex-col items-center justify-center text-secondary font-bold">
-          <span className="material-symbols-outlined">school</span>
-          <span className="text-[10px]">Learning</span>
+        <span className="flex flex-col items-center justify-center text-zinc-950 font-semibold">
+          <span className="material-symbols-outlined text-xl">school</span>
+          <span className="text-[9px] mt-0.5">Learning</span>
         </span>
       </nav>
     </div>

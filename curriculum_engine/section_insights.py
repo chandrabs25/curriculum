@@ -67,11 +67,7 @@ def generate_section_insights(
     if not evidence_by_section:
         return []
 
-    existing_by_section = {
-        str(row.get("section_id")): row
-        for row in existing_section_insights or []
-        if row.get("section_id") in evidence_by_section
-    }
+    existing_by_section = _latest_by_section(existing_section_insights or [], set(evidence_by_section))
     prompt = build_section_insight_prompt(
         learner_id=learner_id,
         curriculum_plan_id=curriculum_plan_id,
@@ -221,6 +217,22 @@ def _evidence_by_section(
     return evidence
 
 
+def _latest_by_section(rows: list[dict[str, Any]], allowed_section_ids: set[str]) -> dict[str, dict[str, Any]]:
+    latest: dict[str, dict[str, Any]] = {}
+    for row in rows:
+        section_id = str(row.get("section_id") or "")
+        if section_id not in allowed_section_ids:
+            continue
+        current = latest.get(section_id)
+        if current is None or _created_at_key(row) >= _created_at_key(current):
+            latest[section_id] = row
+    return latest
+
+
+def _created_at_key(row: dict[str, Any]) -> str:
+    return str(row.get("created_at") or "")
+
+
 def _valid_question_ids(value: Any, evidence_rows: list[dict[str, Any]]) -> list[str]:
     valid = {str(row.get("question_id")) for row in evidence_rows if row.get("question_id")}
     ids = [item for item in _str_list(value) if item in valid]
@@ -271,4 +283,3 @@ def _str_list(value: Any, *, limit: int | None = None) -> list[str]:
         return []
     rows = [str(item).strip() for item in value if str(item).strip()]
     return rows[:limit] if limit is not None else rows
-

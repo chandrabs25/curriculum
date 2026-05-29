@@ -22,7 +22,7 @@ from .planner import CurriculumPlanner, PlannerRequest
 from .planning_packet import build_curriculum_planning_packet
 from .retrieval import CurriculumRetriever, LearnerConceptState
 from .section_insights import generate_section_insights
-from .vector_index import DEFAULT_MODEL_DIR, SectionVectorIndex, SentenceTransformerEmbeddingModel
+from .vector_index import SectionVectorIndex, HFInferenceEmbeddingModel
 
 
 class OnboardingPayload(BaseModel):
@@ -364,7 +364,7 @@ def _load_vector_index(root: Path, *, use_vector: bool) -> SectionVectorIndex | 
     index = SectionVectorIndex.load(root)
     if not index:
         return None
-    return index.with_embedding_model(SentenceTransformerEmbeddingModel(DEFAULT_MODEL_DIR))
+    return index.with_embedding_model(HFInferenceEmbeddingModel())
 
 
 def _retrieval_row(row: Any) -> dict[str, Any]:

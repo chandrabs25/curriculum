@@ -6,7 +6,7 @@ import Link from "next/link";
 import { RetryPanel } from "../../../../components/RetryPanel";
 import { designModule } from "../../../../services/api";
 import { readCachedModuleDesign, writeCachedModuleDesign } from "../../../../services/moduleDesignCache";
-import { readSectionInsights } from "../../../../services/sectionInsights";
+import { readLatestSectionInsights } from "../../../../services/sectionInsights";
 import { CurriculumPlanPayload, ExpandedCurriculumModulePayload } from "../../../../types/curriculum";
 
 export default function ModuleReadingPage() {
@@ -39,7 +39,7 @@ export default function ModuleReadingPage() {
         plan: parsedPlan,
         module_id: moduleId,
         learner_state: [],
-        section_insights: readSectionInsights(
+        section_insights: readLatestSectionInsights(
           parsedPlan.learner_id,
           parsedPlan.modules.find((module) => module.module_id === moduleId)?.source_section_ids || []
         ),
@@ -107,21 +107,19 @@ export default function ModuleReadingPage() {
 
   if (loading) {
     return (
-      <div className="fixed inset-0 z-[100] bg-surface flex flex-col items-center justify-center transition-opacity duration-500">
-        <div className="relative w-48 h-1 bg-surface-container-highest overflow-hidden rounded-full mb-3">
-          <div className="absolute inset-0 bg-secondary pulsing-bar h-full rounded-full"></div>
+      <div className="flex min-h-screen items-center justify-center bg-white">
+        <div className="text-center">
+          <div className="h-6 w-6 animate-spin rounded-full border-2 border-zinc-900 border-t-transparent mx-auto"></div>
+          <p className="mt-4 text-xs text-zinc-400 font-light">Loading module content...</p>
         </div>
-        <p className="font-hanken font-bold text-xs text-primary tracking-widest uppercase animate-pulse">
-          Synthesizing module content...
-        </p>
       </div>
     );
   }
 
   if (error && !moduleData) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-background px-4">
-        <div className="max-w-md w-full text-center bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant shadow-md">
+      <div className="flex min-h-screen items-center justify-center bg-white px-4">
+        <div className="max-w-md w-full text-center bg-white p-8 rounded-xl border border-zinc-300">
           <RetryPanel
             title="Module Load Failed"
             message={error}
@@ -138,7 +136,7 @@ export default function ModuleReadingPage() {
 
   if (!moduleData) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-background px-4">
+      <div className="flex min-h-screen items-center justify-center bg-white px-4">
         <div className="max-w-md w-full">
           <RetryPanel
             title="Module Unavailable"
@@ -161,296 +159,174 @@ export default function ModuleReadingPage() {
   const prevModule = currentIndex > 0 ? sortedModules[currentIndex - 1] : null;
   const nextModule = currentIndex < sortedModules.length - 1 ? sortedModules[currentIndex + 1] : null;
 
-  // Completed chapters computed in useEffect to avoid hydration mismatches
-  
   const progressPercent = sortedModules.length > 0 
     ? Math.round((completedCount / sortedModules.length) * 100) 
     : 0;
-  const sourceSectionLabels = buildSourceSectionLabels(moduleData);
   const checkpointCount = moduleData.checkpoint_mcqs?.length || 0;
 
   return (
-    <div className="bg-background text-on-surface font-public overflow-hidden flex min-h-screen">
-      
-      {/* Side Navigation Bar (Desktop Only) */}
-      <aside className="hidden md:flex flex-col h-screen py-6 bg-surface-container-low border-r border-outline-variant w-64 shrink-0 px-4">
-        <div className="mb-8">
-          <h2 className="font-hanken text-lg font-bold text-primary">Academic Portal</h2>
-          <p className="text-[10px] text-on-surface-variant uppercase tracking-wider font-semibold opacity-70">Curriculum Engine</p>
-        </div>
-        
-        <nav className="flex-1 space-y-1">
-          <Link
-            href="/"
-            className="flex items-center gap-3 px-3 py-2.5 text-on-surface-variant hover:bg-surface-variant transition-all rounded-lg group"
-          >
-            <span className="material-symbols-outlined group-hover:text-secondary">dashboard</span>
-            <span className="font-hanken font-semibold text-sm">Dashboard</span>
+    <div className="bg-white text-zinc-900 font-sans min-h-screen flex flex-col selection:bg-zinc-100 selection:text-zinc-950">
+      {/* Navigation Header */}
+      <header className="w-full max-w-4xl mx-auto px-6 h-14 flex items-center justify-between border-b border-zinc-300">
+        <div className="flex items-center gap-3">
+          <Link href={`/plan/${encodeURIComponent(id)}`} className="text-zinc-500 hover:text-zinc-900 transition-colors text-sm font-medium">
+            &larr; Plan
           </Link>
-          <Link
-            href={`/plan/${encodeURIComponent(id)}`}
-            className="flex items-center gap-3 px-3 py-2.5 text-on-surface-variant hover:bg-surface-variant transition-all rounded-lg group"
-          >
-            <span className="material-symbols-outlined group-hover:text-secondary">map</span>
-            <span className="font-hanken font-semibold text-sm">Curriculum Plan</span>
-          </Link>
-          <span className="flex items-center gap-3 px-3 py-2.5 text-secondary font-bold border-r-4 border-secondary bg-surface-container-high rounded-l-lg translate-x-1 transition-transform">
-            <span className="material-symbols-outlined">auto_stories</span>
-            <span className="font-hanken font-semibold text-sm">Active Module</span>
+          <span className="text-zinc-200">|</span>
+          <span className="text-sm font-semibold tracking-tight text-zinc-900 truncate max-w-[200px] md:max-w-md">
+            {moduleData.title}
           </span>
-        </nav>
-
-        <div className="mt-auto space-y-3">
-          <Link
-            href="/onboard"
-            className="w-full bg-primary text-on-primary font-hanken font-bold text-xs py-3 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
-          >
-            <span className="material-symbols-outlined text-[18px]">add</span>
-            New Plan
-          </Link>
-          <div className="space-y-2 pt-6 border-t border-outline-variant">
-            <p className="text-[10px] text-on-surface-variant uppercase tracking-wider font-bold">Module facts</p>
-            <p className="text-xs text-on-surface-variant">
-              {moduleData.source_section_ids.length} source sections
-            </p>
-            <p className="text-xs text-on-surface-variant">
-              {checkpointCount} checkpoint questions
-            </p>
-          </div>
         </div>
-      </aside>
+        <span className="text-xs text-zinc-500 font-light hidden sm:inline">
+          {checkpointCount > 0 ? `${checkpointCount} quiz questions` : "Reading Lesson"}
+        </span>
+      </header>
 
       {/* Main Content Area */}
-      <main className="flex-1 flex flex-col min-w-0 bg-background overflow-hidden relative">
-        
-        {/* Top AppBar */}
-        <header className="flex justify-between items-center w-full px-10 h-16 bg-surface border-b border-outline-variant shrink-0">
-          <div className="flex items-center gap-4">
-            <span className="text-headline-md font-hanken font-bold text-primary">AcademicFlow</span>
-          </div>
-          <div className="flex items-center gap-3 text-xs text-on-surface-variant font-semibold">
-            <span>{checkpointCount} checkpoint questions</span>
-            <span className="hidden sm:inline">•</span>
-            <span className="hidden sm:inline">{moduleData.source_section_ids.length} source sections</span>
-          </div>
-        </header>
-
-        {/* Scrollable Container */}
-        <div className="flex-1 overflow-y-auto px-4 md:px-10 py-6 custom-scrollbar">
-          <div className="max-w-[1280px] mx-auto pb-24">
+      <main className="flex-1 overflow-y-auto px-6 py-10 custom-scrollbar">
+        <div className="max-w-3xl mx-auto flex flex-col gap-10 pb-20">
+          
+          {/* Breadcrumbs & Progress Indicator */}
+          <nav className="flex items-center gap-2 text-xs font-light text-zinc-400">
+            <span className="font-normal text-zinc-500">{plan?.onboarding.topic}</span>
+            <span>&middot;</span>
+            <span className="font-normal text-zinc-800">{moduleData.title}</span>
             
-            {/* Breadcrumbs & Progress Indicator */}
-            <nav className="flex items-center gap-2 mb-6">
-              <span className="text-xs text-on-surface-variant font-semibold">{plan?.onboarding.topic}</span>
-              <span className="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
-              <span className="text-xs text-secondary font-semibold">{moduleData.title}</span>
-              
-              <div className="ml-auto flex items-center gap-3 shrink-0">
-                <span className="text-xs text-on-surface-variant font-semibold">{progressPercent}% Complete</span>
-                <div className="w-24 h-2 bg-surface-container-high rounded-full overflow-hidden">
-                  <div
-                    className="h-full bg-secondary rounded-full transition-all duration-1000"
-                    style={{ width: `${progressPercent}%` }}
-                  ></div>
-                </div>
-              </div>
-            </nav>
-
-            {/* Module Title Header */}
-            <div className="mb-8 border-b border-outline-variant pb-6">
-              <h1 className="font-hanken text-2xl md:text-3xl font-extrabold text-on-background mb-2">
-                Module {currentIndex + 1}: {moduleData.title}
-              </h1>
-              
-              <div className="flex flex-wrap gap-6 items-start mt-6">
-                {/* Goal Panel */}
-                <div className="flex-1 min-w-[300px] p-6 bg-surface-container-low rounded-xl border border-outline-variant/30">
-                  <h3 className="font-hanken font-bold text-xs text-secondary uppercase tracking-wider mb-2">
-                    Primary Goal
-                  </h3>
-                  <p className="text-sm text-on-surface leading-relaxed">
-                    {moduleData.module_goal}
-                  </p>
-                </div>
-                
-                {/* Alignment Panel */}
-                {moduleData.larger_goal_alignment && (
-                  <div className="flex-1 min-w-[300px] p-6 bg-white border border-outline-variant rounded-xl shadow-sm">
-                    <h3 className="font-hanken font-bold text-xs text-on-surface-variant mb-2">
-                      How it supports your goal
-                    </h3>
-                    <p className="text-sm text-on-surface-variant italic leading-relaxed">
-                      "{moduleData.larger_goal_alignment}"
-                    </p>
-                  </div>
-                )}
+            <div className="ml-auto flex items-center gap-3 shrink-0">
+              <span className="font-medium text-zinc-700">{progressPercent}% Complete</span>
+              <div className="w-20 h-1 bg-zinc-50 border border-zinc-300 rounded-full overflow-hidden">
+                <div
+                  className="h-full bg-zinc-900 rounded-full transition-all duration-1000"
+                  style={{ width: `${progressPercent}%` }}
+                ></div>
               </div>
             </div>
+          </nav>
 
-            {/* Transitions timeline previously / next */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-              {prevModule ? (
-                <Link
-                  href={moduleHref(id, prevModule.module_id)}
-                  className="group p-4 border border-outline-variant rounded-lg flex items-center gap-4 hover:bg-surface-container transition-all"
-                >
-                  <span className="material-symbols-outlined text-outline group-hover:text-secondary transition-colors">
-                    arrow_back
-                  </span>
-                  <div>
-                    <p className="text-[10px] font-bold text-on-surface-variant uppercase tracking-wider">Previously</p>
-                    <p className="font-hanken font-bold text-sm text-on-background">{prevModule.title}</p>
-                  </div>
-                </Link>
-              ) : (
-                <Link
-                  href={`/plan/${encodeURIComponent(id)}`}
-                  className="group p-4 border border-outline-variant rounded-lg flex items-center gap-4 hover:bg-surface-container transition-all"
-                >
-                  <span className="material-symbols-outlined text-outline group-hover:text-secondary transition-colors">
-                    arrow_back
-                  </span>
-                  <div>
-                    <p className="text-[10px] font-bold text-on-surface-variant uppercase tracking-wider">Previously</p>
-                    <p className="font-hanken font-bold text-sm text-on-background">Pathway Timeline</p>
-                  </div>
-                </Link>
-              )}
+          {/* Module Title Header */}
+          <section className="flex flex-col gap-4 border-b border-zinc-300 pb-8">
+            <span className="text-[10px] font-semibold uppercase tracking-wider text-zinc-500">
+              Module {currentIndex + 1}
+            </span>
+            <h1 className="text-3xl font-light tracking-tight text-zinc-950 leading-tight">
+              {moduleData.title}
+            </h1>
+            <p className="text-sm text-zinc-700 leading-relaxed font-light mt-1">
+              {moduleData.module_goal}
+            </p>
+            {moduleData.larger_goal_alignment && (
+              <div className="mt-4 p-4 border border-zinc-300 bg-zinc-50 rounded-xl">
+                <p className="text-[9px] text-zinc-400 uppercase font-medium tracking-wider mb-1">
+                  Goal Alignment
+                </p>
+                <p className="text-xs text-zinc-650 leading-normal font-light italic">
+                  "{moduleData.larger_goal_alignment}"
+                </p>
+              </div>
+            )}
+          </section>
 
-              {nextModule ? (
-                <Link
-                  href={moduleHref(id, nextModule.module_id)}
-                  className="group p-4 border border-outline-variant rounded-lg flex items-center justify-end gap-4 text-right hover:bg-surface-container transition-all"
-                >
-                  <div>
-                    <p className="text-[10px] font-bold text-on-surface-variant uppercase tracking-wider">Next</p>
-                    <p className="font-hanken font-bold text-sm text-on-background">{nextModule.title}</p>
-                  </div>
-                  <span className="material-symbols-outlined text-outline group-hover:text-secondary transition-colors">
-                    arrow_forward
-                  </span>
-                </Link>
-              ) : (
-                <Link
-                  href={`/plan/${encodeURIComponent(id)}`}
-                  className="group p-4 border border-outline-variant rounded-lg flex items-center justify-end gap-4 text-right hover:bg-surface-container transition-all"
-                >
-                  <div>
-                    <p className="text-[10px] font-bold text-on-surface-variant uppercase tracking-wider">Next</p>
-                    <p className="font-hanken font-bold text-sm text-on-background">Curriculum Complete</p>
-                  </div>
-                  <span className="material-symbols-outlined text-outline group-hover:text-secondary transition-colors">
-                    arrow_forward
-                  </span>
-                </Link>
-              )}
-            </div>
-
-            {/* Lesson Content Sections */}
-            <div className="space-y-12 mb-10">
-              {moduleData.lesson_sections?.map((section: any, idx: number) => {
-                const readMinutes = Math.max(3, Math.round(section.body.split(/\s+/).length / 150));
-                
-                return (
-                  <article key={idx} className="prose max-w-none border-b border-outline-variant/30 pb-10 last:border-b-0">
-                    <div className="flex items-center justify-between mb-4">
-                      <h2 className="font-hanken text-xl font-extrabold text-primary m-0">
-                        {section.heading}
-                      </h2>
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-on-surface-variant bg-surface-container-high px-2.5 py-1 rounded">
-                        {readMinutes} min read
-                      </span>
-                    </div>
-
-                    <div className="text-sm text-on-surface-variant leading-relaxed space-y-4 whitespace-pre-line">
-                      {section.body}
-                    </div>
-
-                    {section.source_section_ids && section.source_section_ids.length > 0 && (
-                      <div className="mt-4 flex items-start gap-2 py-2 text-xs">
-                        <span className="material-symbols-outlined text-sm text-outline">menu_book</span>
-                        <div>
-                          <p className="text-[10px] text-on-surface-variant uppercase tracking-wider font-semibold mb-1">
-                            Source sections
-                          </p>
-                          <ul className="space-y-1">
-                            {section.source_section_ids.map((sectionId: string) => (
-                              <li key={sectionId} className="text-xs text-on-surface-variant">
-                                {sourceSectionLabels.get(sectionId) || readableSourceId(sectionId)}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      </div>
-                    )}
-                  </article>
-                );
-              })}
-            </div>
-
-            {/* Guided Activity Section */}
-            {moduleData.guided_activity && (
-              <section className="mb-10 p-6 bg-surface-container-low rounded-xl border-l-4 border-secondary shadow-sm">
-                <div className="flex items-center gap-3 mb-4 text-secondary">
-                  <span className="material-symbols-outlined text-2xl">explore</span>
-                  <h3 className="font-hanken text-lg font-bold text-on-background m-0">
-                    Guided Activity
-                  </h3>
-                </div>
-                <div className="text-sm text-on-surface leading-relaxed whitespace-pre-line">
-                  {moduleData.guided_activity}
-                </div>
-              </section>
+          {/* Navigation Controls (Previous/Next) */}
+          <section className="grid grid-cols-2 gap-4 border-b border-zinc-300 pb-8">
+            {prevModule ? (
+              <Link
+                href={moduleHref(id, prevModule.module_id)}
+                className="flex flex-col items-start gap-1 p-3 border border-zinc-300 rounded-xl hover:border-zinc-950 transition-colors text-left"
+              >
+                <span className="text-[9px] font-semibold uppercase tracking-wider text-zinc-400">&larr; Previous</span>
+                <span className="text-xs font-normal text-zinc-900 truncate max-w-full">{prevModule.title}</span>
+              </Link>
+            ) : (
+              <Link
+                href={`/plan/${encodeURIComponent(id)}`}
+                className="flex flex-col items-start gap-1 p-3 border border-zinc-300 rounded-xl hover:border-zinc-950 transition-colors text-left"
+              >
+                <span className="text-[9px] font-semibold uppercase tracking-wider text-zinc-400">&larr; Previous</span>
+                <span className="text-xs font-normal text-zinc-900">Timeline Dashboard</span>
+              </Link>
             )}
 
-            {/* Common Misconceptions Section */}
-            {moduleData.common_misconceptions && moduleData.common_misconceptions.length > 0 && (
-              <section className="mb-10 p-6 bg-error-container/20 rounded-xl border border-error/10">
-                <div className="flex items-center gap-3 mb-4 text-error">
-                  <span className="material-symbols-outlined">warning</span>
-                  <h3 className="font-hanken text-xs font-bold uppercase tracking-wider m-0">
-                    Common Misconceptions
-                  </h3>
-                </div>
-                <ul className="list-disc list-inside space-y-2 text-sm text-on-surface leading-relaxed">
-                  {moduleData.common_misconceptions.map((misconception: string, mIdx: number) => (
-                    <li key={mIdx}>{misconception}</li>
-                  ))}
-                </ul>
-              </section>
+            {nextModule ? (
+              <Link
+                href={moduleHref(id, nextModule.module_id)}
+                className="flex flex-col items-end gap-1 p-3 border border-zinc-300 rounded-xl hover:border-zinc-950 transition-colors text-right"
+              >
+                <span className="text-[9px] font-semibold uppercase tracking-wider text-zinc-400">Next &rarr;</span>
+                <span className="text-xs font-normal text-zinc-900 truncate max-w-full">{nextModule.title}</span>
+              </Link>
+            ) : (
+              <Link
+                href={`/plan/${encodeURIComponent(id)}`}
+                className="flex flex-col items-end gap-1 p-3 border border-zinc-300 rounded-xl hover:border-zinc-950 transition-colors text-right"
+              >
+                <span className="text-[9px] font-semibold uppercase tracking-wider text-zinc-400">Next &rarr;</span>
+                <span className="text-xs font-normal text-zinc-900">Curriculum Dashboard</span>
+              </Link>
             )}
+          </section>
 
-            {/* Checkpoint triggering region */}
-            <div className="mt-12 mb-10 pt-10 border-t border-outline-variant text-center">
-              <p className="text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-4">
-                Ready to validate your progress?
+          {/* Lesson Content Sections */}
+          <section className="flex flex-col gap-10">
+            {moduleData.lesson_sections?.map((section: any, idx: number) => (
+              <article key={idx} className="flex flex-col gap-4">
+                <h2 className="text-xl font-normal text-zinc-950">
+                  {section.heading}
+                </h2>
+                <div className="text-sm text-zinc-705 leading-relaxed font-light whitespace-pre-line space-y-4">
+                  {section.body}
+                </div>
+              </article>
+            ))}
+          </section>
+
+          {/* Guided Activity Section */}
+          {moduleData.guided_activity && (
+            <section className="p-5 border-l-2 border-zinc-900 bg-zinc-50 rounded-r-xl flex flex-col gap-3">
+              <div className="flex items-center gap-1.5 text-zinc-950">
+                <span className="material-symbols-outlined text-sm">explore</span>
+                <h3 className="text-xs font-semibold uppercase tracking-wider m-0">
+                  Guided Activity
+                </h3>
+              </div>
+              <div className="text-xs text-zinc-650 leading-relaxed whitespace-pre-line font-light">
+                {moduleData.guided_activity}
+              </div>
+            </section>
+          )}
+
+          {/* Common Misconceptions Section */}
+          {moduleData.common_misconceptions && moduleData.common_misconceptions.length > 0 && (
+            <section className="p-5 border border-red-200 bg-red-50 rounded-xl flex flex-col gap-3">
+              <div className="flex items-center gap-1.5 text-red-700">
+                <span className="material-symbols-outlined text-sm">warning</span>
+                <h3 className="text-xs font-semibold uppercase tracking-wider m-0">
+                  Common Misconceptions
+                </h3>
+              </div>
+              <ul className="list-disc list-inside flex flex-col gap-1.5 text-xs text-red-800 leading-normal font-light">
+                {moduleData.common_misconceptions.map((misconception: string, mIdx: number) => (
+                  <li key={mIdx}>{misconception}</li>
+                ))}
+              </ul>
+            </section>
+          )}
+
+          {/* Checkpoint Quiz Section */}
+          {checkpointCount > 0 && (
+            <section className="border-t border-zinc-200 pt-10 text-center flex flex-col items-center gap-4">
+              <p className="text-[10px] font-semibold text-zinc-450 uppercase tracking-wider">
+                Check your understanding of this module
               </p>
               <Link
                 href={`${moduleHref(id, moduleId)}/checkpoint`}
-                className="bg-secondary text-on-secondary px-8 py-4 rounded-full font-hanken font-bold text-sm hover:shadow-lg hover:scale-105 active:scale-95 transition-all flex items-center gap-3 mx-auto cursor-pointer w-fit"
+                className="inline-flex items-center justify-center gap-1.5 rounded-full bg-zinc-900 px-6 py-3 text-xs font-medium text-white transition-colors hover:bg-zinc-800"
               >
-                <span className="material-symbols-outlined">quiz</span>
-                Checkpoint Quiz
+                <span className="material-symbols-outlined text-sm">quiz</span>
+                <span>Checkpoint Quiz</span>
               </Link>
-            </div>
-          </div>
+            </section>
+          )}
         </div>
-
-        {/* Mobile Navigation bar */}
-        <nav className="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center py-2 bg-surface-container-lowest border-t border-outline-variant shadow-lg z-50 rounded-t-xl">
-          <Link href="/" className="flex flex-col items-center justify-center text-on-surface-variant hover:text-secondary">
-            <span className="material-symbols-outlined">home</span>
-            <span className="text-[10px]">Home</span>
-          </Link>
-          <Link href={`/plan/${encodeURIComponent(id)}`} className="flex flex-col items-center justify-center text-on-surface-variant hover:text-secondary">
-            <span className="material-symbols-outlined">menu_book</span>
-            <span className="text-[10px]">My Plan</span>
-          </Link>
-          <span className="flex flex-col items-center justify-center text-secondary font-bold scale-110">
-            <span className="material-symbols-outlined">school</span>
-            <span className="text-[10px]">Learning</span>
-          </span>
-        </nav>
       </main>
     </div>
   );
@@ -469,22 +345,6 @@ function matchingCurrentPlan(id: string, rawId: string): string | null {
 
 function moduleHref(planId: string, moduleId: string): string {
   return `/plan/${encodeURIComponent(planId)}/module/${encodeURIComponent(moduleId)}`;
-}
-
-function buildSourceSectionLabels(moduleData: ExpandedCurriculumModulePayload): Map<string, string> {
-  const labels = new Map<string, string>();
-  const sourceSections = moduleData.metadata?.module_expansion_packet?.source_sections || [];
-  for (const section of sourceSections) {
-    if (section.section_id && section.title) {
-      labels.set(section.section_id, section.title);
-    }
-  }
-  return labels;
-}
-
-function readableSourceId(sectionId: string): string {
-  const tail = sectionId.split(":").at(-1) || sectionId;
-  return `Section ${tail}`;
 }
 
 function errorMessage(err: unknown, fallback: string): string {
