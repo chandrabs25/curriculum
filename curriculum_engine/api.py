@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 from dataclasses import asdict, is_dataclass
 from functools import lru_cache
 from pathlib import Path
@@ -124,6 +125,7 @@ class CurriculumAPIService:
             usable_only=True,
         )
         self.retriever = CurriculumRetriever(self.graph, vector_index=_load_vector_index(self.root, use_vector=use_vector))
+        self.use_vector = bool(self.retriever.vector_index)
         self.llm_client = llm_client or FireworksLLMClient()
         self.intent_llm_client = intent_llm_client or FireworksLLMClient(
             model=FIREWORKS_GPT_OSS_120B,
@@ -278,6 +280,7 @@ def create_app(service: CurriculumAPIService | None = None) -> FastAPI:
     def health(svc: CurriculumAPIService = Depends(service_dep)) -> dict[str, Any]:
         return {
             "ok": True,
+            "vector_enabled": svc.use_vector,
             "usable_chapters": len(svc.graph.usable_chapter_ids),
             "section_summaries": len(svc.graph.section_summaries_by_id),
         }
@@ -316,7 +319,8 @@ def create_app(service: CurriculumAPIService | None = None) -> FastAPI:
 
 @lru_cache(maxsize=1)
 def default_service() -> CurriculumAPIService:
-    return CurriculumAPIService(root=Path.cwd(), use_vector=False)
+    use_vector = os.getenv("CURRICULUM_USE_VECTOR", "0").strip().lower() in {"1", "true", "yes", "on"}
+    return CurriculumAPIService(root=Path.cwd(), use_vector=use_vector)
 
 
 app = create_app()
