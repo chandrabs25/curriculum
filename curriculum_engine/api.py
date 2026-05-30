@@ -262,12 +262,22 @@ class CurriculumAPIService:
         }
 
 
+def _cors_allowed_origins() -> list[str]:
+    origins = [
+        origin.strip()
+        for origin in os.getenv("CORS_ALLOW_ORIGINS", "").split(",")
+        if origin.strip()
+    ]
+    return origins or ["http://localhost:3000", "http://127.0.0.1:3000"]
+
+
 def create_app(service: CurriculumAPIService | None = None) -> FastAPI:
     app = FastAPI(title="AI Curriculum Creator API")
+    cors_origins = _cors_allowed_origins()
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=["*"],
-        allow_credentials=True,
+        allow_origins=cors_origins,
+        allow_credentials=False,
         allow_methods=["*"],
         allow_headers=["*"],
     )

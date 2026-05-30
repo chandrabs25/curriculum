@@ -1,0 +1,25 @@
+.git
+.venv
+__pycache__
+*.pyc
+.pytest_cache
+.DS_Store
+.env
+.env.*
+
+frontend
+concept csv
+scratch
+tests
+scripts
+
+data/relationship_artifacts/raw_*
+data/relationship_artifacts/review
+data/relationship_artifacts/rejected
+data/relationship_artifacts/errors.jsonl
+data/relationship_artifacts/*before*
+data/relationship_artifacts/*pre_merge*
+data/relationship_artifacts/*merge_log*
+
+frontend/node_modules
+frontend/.next
