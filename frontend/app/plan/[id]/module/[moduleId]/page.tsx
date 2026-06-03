@@ -4,9 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { RetryPanel } from "../../../../components/RetryPanel";
-import { designModule } from "../../../../services/api";
-import { readCachedModuleDesign, writeCachedModuleDesign } from "../../../../services/moduleDesignCache";
-import { readLatestSectionInsights } from "../../../../services/sectionInsights";
+import { designModule, fetchCurriculumPlan } from "../../../../services/api";
 import { CurriculumPlanPayload, ExpandedCurriculumModulePayload } from "../../../../types/curriculum";
 
 export default function ModuleReadingPage() {
@@ -24,27 +22,14 @@ export default function ModuleReadingPage() {
   const [completedCount, setCompletedCount] = useState(0);
 
   const loadModuleDesign = useCallback(
-    async (parsedPlan: CurriculumPlanPayload, useCache: boolean) => {
+    async (parsedPlan: CurriculumPlanPayload) => {
       setError(null);
-      if (useCache) {
-        const cached = readCachedModuleDesign(parsedPlan.curriculum_plan_id, moduleId);
-        if (cached) {
-          setModuleData(cached);
-          setLoading(false);
-          return;
-        }
-      }
 
       const data = await designModule({
-        plan: parsedPlan,
+        curriculum_plan_id: parsedPlan.curriculum_plan_id,
         module_id: moduleId,
         learner_state: [],
-        section_insights: readLatestSectionInsights(
-          parsedPlan.learner_id,
-          parsedPlan.modules.find((module) => module.module_id === moduleId)?.source_section_ids || []
-        ),
       });
-      writeCachedModuleDesign(parsedPlan.curriculum_plan_id, moduleId, data);
       setModuleData(data);
     },
     [moduleId]
@@ -55,7 +40,7 @@ export default function ModuleReadingPage() {
     setRetrying(true);
     setError(null);
     try {
-      await loadModuleDesign(plan, false);
+      await loadModuleDesign(plan);
     } catch (err: unknown) {
       console.error(err);
       setError(errorMessage(err, "Failed to load module details from API backend."));
@@ -67,43 +52,28 @@ export default function ModuleReadingPage() {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const storedPlan =
-        localStorage.getItem(`curriculum-plan-${id}`) ||
-        localStorage.getItem(`curriculum-plan-${rawId}`) ||
-        matchingCurrentPlan(id, rawId);
-      
       Promise.resolve().then(() => {
-        if (!storedPlan) {
-          setError("Plan not found. Please regenerate onboarding.");
-          setLoading(false);
-          return;
-        }
+        fetchCurriculumPlan(id)
+          .then((parsedPlan) => {
+            setPlan(parsedPlan);
+            setCompletedCount(0);
 
-        try {
-          const parsedPlan = JSON.parse(storedPlan) as CurriculumPlanPayload;
-          setPlan(parsedPlan);
-
-          // Calculate completed count
-          const count = parsedPlan.modules.filter((m) => {
-            return localStorage.getItem(`curriculum-checkpoint-score-${id}-${m.module_id}`) !== null;
-          }).length;
-          setCompletedCount(count);
-
-          loadModuleDesign(parsedPlan, true)
-            .catch((err) => {
-              console.error(err);
-              setError(errorMessage(err, "Failed to load module details from API backend."));
-            })
-            .finally(() => {
-              setLoading(false);
-            });
-        } catch (e) {
-          setError("Invalid curriculum plan file format.");
-          setLoading(false);
-        }
+            loadModuleDesign(parsedPlan)
+              .catch((err) => {
+                console.error(err);
+                setError(errorMessage(err, "Failed to load module details from API backend."));
+              })
+              .finally(() => {
+                setLoading(false);
+              });
+          })
+          .catch((err: unknown) => {
+            setError(errorMessage(err, "Plan not found. Please regenerate onboarding."));
+            setLoading(false);
+          });
       });
     }
-  }, [id, loadModuleDesign, rawId]);
+  }, [id, loadModuleDesign]);
 
   if (loading) {
     return (
@@ -330,17 +300,6 @@ export default function ModuleReadingPage() {
       </main>
     </div>
   );
-}
-
-function matchingCurrentPlan(id: string, rawId: string): string | null {
-  const raw = localStorage.getItem("curriculum-current-plan");
-  if (!raw) return null;
-  try {
-    const parsed = JSON.parse(raw) as CurriculumPlanPayload;
-    return parsed.curriculum_plan_id === id || encodeURIComponent(parsed.curriculum_plan_id) === rawId ? raw : null;
-  } catch {
-    return null;
-  }
 }
 
 function moduleHref(planId: string, moduleId: string): string {

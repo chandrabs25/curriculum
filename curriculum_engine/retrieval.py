@@ -120,7 +120,7 @@ class CurriculumRetriever:
         scored: dict[str, dict[str, Any]] = {}
 
         if self.vector_index:
-            self._add_vector_matches(
+            vector_ok = self._add_vector_matches(
                 scored,
                 query,
                 concept_matches,
@@ -130,8 +130,20 @@ class CurriculumRetriever:
                 chapter_id=chapter_id,
                 limit=max(limit * 6, 30),
             )
-            self._boost_existing_direct_evidence(scored, query_terms, concept_matches, state_by_concept)
-            self._prune_weak_vector_matches(scored)
+            if vector_ok and scored:
+                self._boost_existing_direct_evidence(scored, query_terms, concept_matches, state_by_concept)
+                self._prune_weak_vector_matches(scored)
+            else:
+                self._add_lexical_and_concept_matches(
+                    scored,
+                    query_terms,
+                    concept_matches,
+                    concept_anchor_terms,
+                    state_by_concept,
+                    subject=subject,
+                    grade=grade,
+                    chapter_id=chapter_id,
+                )
         else:
             self._add_lexical_and_concept_matches(
                 scored,
@@ -198,10 +210,22 @@ class CurriculumRetriever:
         grade: int | None,
         chapter_id: str | None,
         limit: int,
-    ) -> None:
+    ) -> bool:
         if not self.vector_index:
-            return
-        for match in self.vector_index.search(query, limit=limit):
+            return False
+        try:
+            vector_matches = self.vector_index.search(
+                query,
+                limit=limit,
+                subject=subject,
+                grade=grade,
+                chapter_id=chapter_id,
+            )
+        except TypeError:
+            vector_matches = self.vector_index.search(query, limit=limit)
+        except Exception:
+            return False
+        for match in vector_matches:
             summary = self.graph.section_summaries_by_id.get(match.section_id)
             if not summary:
                 continue
@@ -217,6 +241,7 @@ class CurriculumRetriever:
             score += 6.0 * len(matched_concepts)
             score += self._learner_adjustment(match.section_id, matched_concepts, state_by_concept, reasons)
             self._add_or_update(scored, match.section_id, summary, section, score, matched_concepts, reasons)
+        return True
 
     def _add_lexical_and_concept_matches(
         self,

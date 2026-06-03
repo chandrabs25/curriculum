@@ -29,6 +29,7 @@ from .intent import (
     build_intent_classification_prompt,
     intent_classification_from_payload,
 )
+from .hotspots import HotspotThresholds, detect_hotspot_candidates
 from .models import (
     Assessment,
     AssessmentItem,
@@ -92,6 +93,7 @@ __all__ = [
     "FIREWORKS_GPT_OSS_120B",
     "FireworksAPIError",
     "FireworksLLMClient",
+    "HotspotThresholds",
     "INTENT_CLASSIFICATION_SCHEMA",
     "INTENT_OUTPUT_MAX_TOKENS",
     "IntentClassificationPacket",
@@ -127,6 +129,7 @@ __all__ = [
     "build_intent_classification_packet",
     "build_intent_classification_prompt",
     "build_section_documents",
+    "detect_hotspot_candidates",
     "expanded_module_from_payload",
     "fetch_full_source_sections",
     "intent_classification_from_payload",

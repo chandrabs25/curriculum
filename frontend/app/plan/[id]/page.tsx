@@ -3,9 +3,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
-import { designModule } from "../../services/api";
-import { writeCachedModuleDesign } from "../../services/moduleDesignCache";
-import { readLatestSectionInsights } from "../../services/sectionInsights";
+import { designModule, fetchCurriculumPlan, fetchLatestSectionInsights } from "../../services/api";
 import { CurriculumPlanPayload, PlannedModulePayload } from "../../types/curriculum";
 
 export default function PlanDashboardPage() {
@@ -28,34 +26,17 @@ export default function PlanDashboardPage() {
     if (typeof window === "undefined") return;
 
     const loadTimer = window.setTimeout(() => {
-      const storedPlan =
-        localStorage.getItem(`curriculum-plan-${id}`) ||
-        localStorage.getItem(`curriculum-plan-${rawId}`) ||
-        matchingCurrentPlan(id, rawId);
-      if (storedPlan) {
-        try {
-          const parsedPlan = JSON.parse(storedPlan) as CurriculumPlanPayload;
-          const serializedPlan = JSON.stringify(parsedPlan);
-          localStorage.setItem(`curriculum-plan-${parsedPlan.curriculum_plan_id}`, serializedPlan);
-          localStorage.setItem(`curriculum-plan-${encodeURIComponent(parsedPlan.curriculum_plan_id)}`, serializedPlan);
+      fetchCurriculumPlan(id)
+        .then((parsedPlan) => {
+          localStorage.setItem("curriculum-current-plan-id", parsedPlan.curriculum_plan_id);
           setPlan(parsedPlan);
-          setModuleInsightCounts(moduleInsightCountsForPlan(parsedPlan));
+          refreshModuleInsightCounts(parsedPlan, setModuleInsightCounts);
           
-          // Check localStorage to find which modules have finished quizzes
-          const completed: string[] = [];
-          parsedPlan.modules.forEach((m) => {
-            const quizScoreKey = `curriculum-checkpoint-score-${id}-${m.module_id}`;
-            if (localStorage.getItem(quizScoreKey) !== null) {
-              completed.push(m.module_id);
-            }
-          });
-          setCompletedModuleIds(completed);
-        } catch {
-          setError("Failed to parse the saved curriculum plan.");
-        }
-      } else {
-        setError("Curriculum plan not found. Please create a new one.");
-      }
+          setCompletedModuleIds([]);
+        })
+        .catch((err: unknown) => {
+          setError(errorMessage(err, "Curriculum plan not found. Please create a new one."));
+        });
     }, 0);
 
     return () => window.clearTimeout(loadTimer);
@@ -110,9 +91,8 @@ export default function PlanDashboardPage() {
   const planDetails = planDetailRows(plan);
 
   const handleRegenerateWithInsights = async (module: PlannedModulePayload) => {
-    const sectionInsights = readLatestSectionInsights(plan.learner_id, module.source_section_ids);
-    if (sectionInsights.length === 0) {
-      setModuleInsightCounts(moduleInsightCountsForPlan(plan));
+    if ((moduleInsightCounts[module.module_id] || 0) === 0) {
+      refreshModuleInsightCounts(plan, setModuleInsightCounts);
       return;
     }
 
@@ -120,18 +100,18 @@ export default function PlanDashboardPage() {
     setRegeneratingModuleIds((current) => ({ ...current, [module.module_id]: true }));
     try {
       const moduleDesign = await designModule({
-        plan,
+        curriculum_plan_id: plan.curriculum_plan_id,
         module_id: module.module_id,
         learner_state: [],
-        section_insights: sectionInsights,
+        force_regenerate: true,
       });
-      writeCachedModuleDesign(plan.curriculum_plan_id, module.module_id, moduleDesign);
+      void moduleDesign;
       setRegeneratedModuleIds((current) => ({ ...current, [module.module_id]: true }));
     } catch (err: unknown) {
       setRegenerationError(errorMessage(err, "Failed to regenerate this module with learner insights."));
     } finally {
       setRegeneratingModuleIds((current) => ({ ...current, [module.module_id]: false }));
-      setModuleInsightCounts(moduleInsightCountsForPlan(plan));
+      refreshModuleInsightCounts(plan, setModuleInsightCounts);
     }
   };
 
@@ -430,17 +410,6 @@ export default function PlanDashboardPage() {
   );
 }
 
-function matchingCurrentPlan(id: string, rawId: string): string | null {
-  const raw = localStorage.getItem("curriculum-current-plan");
-  if (!raw) return null;
-  try {
-    const parsed = JSON.parse(raw) as CurriculumPlanPayload;
-    return parsed.curriculum_plan_id === id || encodeURIComponent(parsed.curriculum_plan_id) === rawId ? raw : null;
-  } catch {
-    return null;
-  }
-}
-
 function moduleHref(planId: string, moduleId: string): string {
   return `/plan/${encodeURIComponent(planId)}/module/${encodeURIComponent(moduleId)}`;
 }
@@ -510,13 +479,22 @@ function cleanText(value: unknown): string {
   return text;
 }
 
-function moduleInsightCountsForPlan(plan: CurriculumPlanPayload): Record<string, number> {
-  return Object.fromEntries(
-    plan.modules.map((module) => [
-      module.module_id,
-      readLatestSectionInsights(plan.learner_id, module.source_section_ids).length,
-    ])
-  );
+function refreshModuleInsightCounts(
+  plan: CurriculumPlanPayload,
+  setCounts: (counts: Record<string, number>) => void
+): void {
+  Promise.all(
+    plan.modules.map(async (module) => {
+      const payload = await fetchLatestSectionInsights(module.source_section_ids);
+      return [module.module_id, payload.section_insights.length] as const;
+    })
+  )
+    .then((rows) => {
+      setCounts(Object.fromEntries(rows));
+    })
+    .catch(() => {
+      setCounts({});
+    });
 }
 
 function errorMessage(err: unknown, fallback: string): string {

@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import Any, Iterable, Protocol
 
 from .graph import CurriculumGraph
+from .database import PostgresRepository
 
 
 DEFAULT_MODEL_DIR = Path(
@@ -152,7 +153,15 @@ class SectionVectorIndex:
         self.embedding_model = embedding_model
         return self
 
-    def search(self, query: str, *, limit: int = 20) -> list[VectorSearchResult]:
+    def search(
+        self,
+        query: str,
+        *,
+        limit: int = 20,
+        subject: str | None = None,
+        grade: int | None = None,
+        chapter_id: str | None = None,
+    ) -> list[VectorSearchResult]:
         if not self.embedding_model or not str(query or "").strip():
             return []
         try:
@@ -164,11 +173,57 @@ class SectionVectorIndex:
         if query_array.ndim != 2 or query_array.shape[0] != 1:
             raise ValueError("embedding model must return a single query vector")
         scores = np.dot(self.vectors, query_array[0])
-        order = np.argsort(-scores)[:limit]
+        ordered = np.argsort(-scores)
+        results: list[VectorSearchResult] = []
+        for idx in ordered:
+            doc = self.documents[int(idx)]
+            if subject and doc.subject != subject:
+                continue
+            if grade is not None and doc.grade != grade:
+                continue
+            if chapter_id and doc.chapter_id != chapter_id:
+                continue
+            score = float(scores[int(idx)])
+            if score <= 0:
+                continue
+            results.append(VectorSearchResult(section_id=doc.section_id, score=score))
+            if len(results) >= limit:
+                break
+        return results
+
+
+@dataclass
+class PgVectorSectionIndex:
+    repository: PostgresRepository
+    embedding_model: EmbeddingModel
+    subject: str | None = None
+    grade: int | None = None
+    chapter_id: str | None = None
+
+    def search(
+        self,
+        query: str,
+        *,
+        limit: int = 20,
+        subject: str | None = None,
+        grade: int | None = None,
+        chapter_id: str | None = None,
+    ) -> list[VectorSearchResult]:
+        if not str(query or "").strip():
+            return []
+        query_vector = self.embedding_model.encode([query])
+        vector_row = query_vector[0] if hasattr(query_vector, "__getitem__") else query_vector
+        rows = self.repository.search_section_embeddings(
+            [float(value) for value in vector_row],
+            limit=limit,
+            subject=subject or self.subject,
+            grade=grade if grade is not None else self.grade,
+            chapter_id=chapter_id or self.chapter_id,
+        )
         return [
-            VectorSearchResult(section_id=self.documents[int(idx)].section_id, score=float(scores[int(idx)]))
-            for idx in order
-            if float(scores[int(idx)]) > 0
+            VectorSearchResult(section_id=str(row["section_id"]), score=float(row["score"]))
+            for row in rows
+            if float(row["score"]) > 0
         ]
 
 

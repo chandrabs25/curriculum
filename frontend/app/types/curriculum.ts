@@ -25,7 +25,6 @@ export interface LearnerConceptStatePayload {
 }
 
 export interface CurriculumQueryPayload {
-  learner_id: string;
   onboarding: OnboardingPayload;
   learner_state: LearnerConceptStatePayload[];
   prerequisite_check: PrerequisiteCheckPayload | null;
@@ -103,6 +102,10 @@ export type OptionResponse = OptionsResponse;
 
 export interface HealthResponse {
   ok: boolean;
+  vector_enabled?: boolean;
+  vector_backend?: string;
+  database_enabled?: boolean;
+  database?: JsonRecord | null;
   usable_chapters: number;
   section_summaries: number;
 }
@@ -273,10 +276,10 @@ export interface CurriculumPlanPayload {
 }
 
 export interface ModuleDesignPayload {
-  plan: CurriculumPlanPayload;
+  curriculum_plan_id: string;
   module_id: string;
   learner_state: LearnerConceptStatePayload[];
-  section_insights?: SectionLearningInsight[];
+  force_regenerate?: boolean;
 }
 
 export interface LessonSection {
@@ -336,11 +339,24 @@ export interface ModuleExpansionPacket {
   };
   target_concepts: ConceptRelationshipDetail[];
   learner_section_insights: SectionLearningInsight[];
+  section_hotspots: SectionHotspotGuidance[];
   source_sections: SourceSectionSummary[];
   mcq_target_count: number;
   budget: {
     estimated_chars: number;
   };
+}
+
+export interface SectionHotspotGuidance {
+  hotspot_id: string;
+  section_id: string;
+  concept_id: string;
+  misconception_tag: string;
+  diagnostic_summary: string;
+  reviewed_guidance: string;
+  suggested_activity_adjustment: string;
+  suggested_checkpoint_focus: string;
+  misconception_rate?: number;
 }
 
 export interface CompactModulePayload {
@@ -376,12 +392,9 @@ export interface CheckpointAnswerPayload {
 }
 
 export interface CheckpointSubmitPayload {
-  learner_id: string;
   curriculum_plan_id: string;
   module_id: string;
-  checkpoint_mcqs: ModuleCheckpointMCQ[];
   answers: CheckpointAnswerPayload[];
-  existing_section_insights?: SectionLearningInsight[];
 }
 
 export interface CheckpointQuestionResult {
@@ -438,4 +451,14 @@ export interface CheckpointResultPayload {
   insight_events: InsightEvent[];
   section_insights: SectionLearningInsight[];
   recommendation: CheckpointRecommendation;
+}
+
+export interface CurriculumPlanSummary {
+  curriculum_plan_id: string;
+  learner_id: string;
+  topic: string;
+  subject: string;
+  module_count: number;
+  created_at: string;
+  metadata?: JsonRecord;
 }

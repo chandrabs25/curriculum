@@ -4,9 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import { RetryPanel } from "../../../../../components/RetryPanel";
-import { designModule, submitCheckpoint } from "../../../../../services/api";
-import { readCachedModuleDesign, writeCachedModuleDesign } from "../../../../../services/moduleDesignCache";
-import { readLatestSectionInsights, sectionIdsFromMcqs, writeSectionInsights } from "../../../../../services/sectionInsights";
+import { designModule, fetchCurriculumPlan, submitCheckpoint } from "../../../../../services/api";
 import {
   CurriculumPlanPayload,
   CheckpointAnswerPayload,
@@ -33,27 +31,13 @@ export default function CheckpointQuizPage() {
   const [quizResult, setQuizResult] = useState<any | null>(null);
 
   const loadModuleDesign = useCallback(
-    async (parsedPlan: CurriculumPlanPayload, useCache: boolean) => {
+    async (parsedPlan: CurriculumPlanPayload) => {
       setError(null);
-      if (useCache) {
-        const cached = readCachedModuleDesign(parsedPlan.curriculum_plan_id, moduleId);
-        if (cached) {
-          setModuleData(cached);
-          setLoading(false);
-          return;
-        }
-      }
-
       const data = await designModule({
-        plan: parsedPlan,
+        curriculum_plan_id: parsedPlan.curriculum_plan_id,
         module_id: moduleId,
         learner_state: [],
-        section_insights: readLatestSectionInsights(
-          parsedPlan.learner_id,
-          parsedPlan.modules.find((module) => module.module_id === moduleId)?.source_section_ids || []
-        ),
       });
-      writeCachedModuleDesign(parsedPlan.curriculum_plan_id, moduleId, data);
       setModuleData(data);
     },
     [moduleId]
@@ -64,7 +48,7 @@ export default function CheckpointQuizPage() {
     setRetrying(true);
     setError(null);
     try {
-      await loadModuleDesign(plan, false);
+      await loadModuleDesign(plan);
     } catch (err: unknown) {
       console.error(err);
       setError(errorMessage(err, "Failed to load checkpoint MCQs from backend."));
@@ -76,34 +60,20 @@ export default function CheckpointQuizPage() {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const storedPlan =
-        localStorage.getItem(`curriculum-plan-${id}`) ||
-        localStorage.getItem(`curriculum-plan-${rawId}`) ||
-        matchingCurrentPlan(id, rawId);
-      if (!storedPlan) {
-        setError("Plan not found. Please regenerate onboarding.");
-        setLoading(false);
-        return;
-      }
-
-      try {
-        const parsedPlan = JSON.parse(storedPlan) as CurriculumPlanPayload;
-        setPlan(parsedPlan);
-
-        loadModuleDesign(parsedPlan, true)
-          .catch((err) => {
-            console.error(err);
-            setError(errorMessage(err, "Failed to load checkpoint MCQs from backend."));
-          })
-          .finally(() => {
-            setLoading(false);
-          });
-      } catch (e) {
-        setError("Invalid curriculum plan file format.");
-        setLoading(false);
-      }
+      fetchCurriculumPlan(id)
+        .then((parsedPlan) => {
+          setPlan(parsedPlan);
+          return loadModuleDesign(parsedPlan);
+        })
+        .catch((err: unknown) => {
+          console.error(err);
+          setError(errorMessage(err, "Failed to load checkpoint MCQs from backend."));
+        })
+        .finally(() => {
+          setLoading(false);
+        });
     }
-  }, [id, loadModuleDesign, rawId]);
+  }, [id, loadModuleDesign]);
 
   const handleSelectOption = (questionId: string, optionPrefix: string) => {
     if (quizResult || submitting) return;
@@ -135,21 +105,14 @@ export default function CheckpointQuizPage() {
 
     try {
       const result = await submitCheckpoint({
-        learner_id: plan.learner_id,
         curriculum_plan_id: plan.curriculum_plan_id,
         module_id: moduleId,
-        checkpoint_mcqs: mcqs,
         answers: answerPayloads,
-        existing_section_insights: readLatestSectionInsights(plan.learner_id, sectionIdsFromMcqs(mcqs)),
       });
       
       // Delay slightly to show grading shimmer state
       setTimeout(() => {
-        localStorage.setItem(`curriculum-checkpoint-score-${id}-${moduleId}`, String(result.score));
-        localStorage.setItem(`curriculum-checkpoint-score-${rawId}-${rawModuleId}`, String(result.score));
-        localStorage.setItem(`curriculum-checkpoint-result-${id}-${moduleId}`, JSON.stringify(result));
-        localStorage.setItem(`curriculum-checkpoint-result-${rawId}-${rawModuleId}`, JSON.stringify(result));
-        writeSectionInsights(result.section_insights || []);
+        setQuizResult(result);
         setSubmitting(false);
         router.push(`${moduleHref(id, moduleId)}/checkpoint/results`);
       }, 1500);
@@ -480,17 +443,6 @@ export default function CheckpointQuizPage() {
       </nav>
     </div>
   );
-}
-
-function matchingCurrentPlan(id: string, rawId: string): string | null {
-  const raw = localStorage.getItem("curriculum-current-plan");
-  if (!raw) return null;
-  try {
-    const parsed = JSON.parse(raw) as CurriculumPlanPayload;
-    return parsed.curriculum_plan_id === id || encodeURIComponent(parsed.curriculum_plan_id) === rawId ? raw : null;
-  } catch {
-    return null;
-  }
 }
 
 function moduleHref(planId: string, moduleId: string): string {

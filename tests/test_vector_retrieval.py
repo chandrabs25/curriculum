@@ -33,6 +33,11 @@ class FakeVectorIndex:
         return self.results[:limit]
 
 
+class FailingVectorIndex:
+    def search(self, query: str, *, limit: int = 20, subject: str | None = None, grade: int | None = None, chapter_id: str | None = None) -> list[VectorSearchResult]:
+        raise RuntimeError("embedding provider failed")
+
+
 class VectorRetrievalTest(unittest.TestCase):
     def setUp(self) -> None:
         self.tmp = tempfile.TemporaryDirectory()
@@ -157,6 +162,17 @@ class VectorRetrievalTest(unittest.TestCase):
 
     def test_retriever_falls_back_without_vector_index(self) -> None:
         results = CurriculumRetriever(self.graph()).search("SI Units", limit=2)
+
+        self.assertEqual(results[0].section_id, "section:2")
+        self.assertNotIn("vector_match", results[0].reasons)
+
+    def test_retriever_falls_back_when_vector_provider_fails(self) -> None:
+        results = CurriculumRetriever(self.graph(), vector_index=FailingVectorIndex()).search(
+            "SI Units",
+            limit=2,
+            include_prerequisites=False,
+            include_soft_links=False,
+        )
 
         self.assertEqual(results[0].section_id, "section:2")
         self.assertNotIn("vector_match", results[0].reasons)

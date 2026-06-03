@@ -239,7 +239,7 @@ class CurriculumGraphTest(unittest.TestCase):
                         "id": "chem:1",
                         "title": "Catalysis",
                         "sections": [
-                            {"id": "chem:section", "number": "1.1", "title": "Catalyst Action", "content_text": "", "subsections": []},
+                            {"id": "chem:1.1", "number": "1.1", "title": "Catalyst Action", "content_text": "", "subsections": []},
                         ],
                         "exercises": {"items": []},
                     },
@@ -255,7 +255,7 @@ class CurriculumGraphTest(unittest.TestCase):
                         "id": "phys:1",
                         "title": "Energy",
                         "sections": [
-                            {"id": "phys:section", "number": "1.1", "title": "Energy Barrier", "content_text": "", "subsections": []},
+                            {"id": "phys:1.1", "number": "1.1", "title": "Energy Barrier", "content_text": "", "subsections": []},
                         ],
                         "exercises": {"items": []},
                     },
@@ -265,8 +265,8 @@ class CurriculumGraphTest(unittest.TestCase):
             write_jsonl(
                 root / "data/relationship_artifacts/section_summaries.jsonl",
                 [
-                    {"chapter_id": "chem:1", "section_id": "chem:section", "title": "Catalyst Action", "summary": "Catalyst action in chemical reactions.", "key_terms": ["catalyst"]},
-                    {"chapter_id": "phys:1", "section_id": "phys:section", "title": "Energy Barrier", "summary": "Energy barrier needed before reactions proceed.", "key_terms": ["energy"]},
+                    {"chapter_id": "chem:1", "section_id": "chem:1.1", "title": "Catalyst Action", "summary": "Catalyst action in chemical reactions.", "key_terms": ["catalyst"]},
+                    {"chapter_id": "phys:1", "section_id": "phys:1.1", "title": "Energy Barrier", "summary": "Energy barrier needed before reactions proceed.", "key_terms": ["energy"]},
                 ],
             )
             write_jsonl(
@@ -279,9 +279,9 @@ class CurriculumGraphTest(unittest.TestCase):
             write_jsonl(
                 root / "data/relationship_artifacts/accepted_relationships.jsonl",
                 [
-                    {"chapter_id": "chem:1", "type": "TEACHES_CONCEPT", "from_id": "chem:section", "to_id": "concept:catalyst"},
-                    {"chapter_id": "phys:1", "type": "TEACHES_CONCEPT", "from_id": "phys:section", "to_id": "concept:energy_barrier"},
-                    {"chapter_id": "chem:1", "type": "DEPENDS_ON_UNIT", "from_id": "chem:section", "to_id": "phys:section"},
+                    {"chapter_id": "chem:1", "type": "TEACHES_CONCEPT", "from_id": "chem:1.1", "to_id": "concept:catalyst"},
+                    {"chapter_id": "phys:1", "type": "TEACHES_CONCEPT", "from_id": "phys:1.1", "to_id": "concept:energy_barrier"},
+                    {"chapter_id": "chem:1", "type": "DEPENDS_ON_UNIT", "from_id": "chem:1.1", "to_id": "phys:1.1"},
                 ],
             )
 
@@ -289,9 +289,9 @@ class CurriculumGraphTest(unittest.TestCase):
             results = CurriculumRetriever(graph).search("catalyst", subject="chemistry", include_prerequisites=True)
             by_id = {result.section_id: result for result in results}
 
-            self.assertIn("chem:section", by_id)
-            self.assertIn("phys:section", by_id)
-            self.assertIn("prerequisite", by_id["phys:section"].reasons)
+            self.assertIn("chem:1.1", by_id)
+            self.assertIn("phys:1.1", by_id)
+            self.assertIn("prerequisite", by_id["phys:1.1"].reasons)
 
     def test_retriever_personalization_boosts_misconceptions(self) -> None:
         graph = CurriculumGraph(TextbookStore(self.root), ArtifactStore(self.root))

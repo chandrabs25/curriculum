@@ -10,6 +10,7 @@ from typing import Any
 from fastapi.testclient import TestClient
 
 from curriculum_engine.api import CurriculumAPIService, create_app
+from curriculum_engine.auth import AuthUser, StaticAuthVerifier
 
 
 def write_json(path: Path, data: object) -> None:
@@ -114,6 +115,96 @@ class FakeLLM:
         }
 
 
+class FakeRepository:
+    def __init__(self) -> None:
+        self.plans: dict[str, dict[str, Any]] = {}
+        self.module_designs: dict[tuple[str, str], dict[str, Any]] = {}
+        self.section_insights: dict[tuple[str, str], dict[str, Any]] = {}
+        self.hotspots: list[dict[str, Any]] = []
+        self.checkpoint_results: dict[tuple[str, str, str], dict[str, Any]] = {}
+        self.profiles: dict[str, dict[str, Any]] = {}
+
+    def upsert_user_profile(self, profile: dict[str, Any]) -> None:
+        self.profiles[str(profile["user_id"])] = dict(profile)
+
+    def save_plan(self, plan: dict[str, Any]) -> None:
+        self.plans[str(plan["curriculum_plan_id"])] = json.loads(json.dumps(plan))
+
+    def health(self) -> dict[str, Any]:
+        return {"ok": True, "section_embedding_documents": 0}
+
+    def get_plan(self, curriculum_plan_id: str, *, learner_id: str | None = None) -> dict[str, Any] | None:
+        plan = self.plans.get(curriculum_plan_id)
+        if not plan or (learner_id and plan.get("learner_id") != learner_id):
+            return None
+        return json.loads(json.dumps(plan))
+
+    def list_plans(self, learner_id: str, *, limit: int = 20) -> list[dict[str, Any]]:
+        rows = [row for row in self.plans.values() if row.get("learner_id") == learner_id]
+        return [
+            {
+                "curriculum_plan_id": row["curriculum_plan_id"],
+                "learner_id": row["learner_id"],
+                "topic": row["onboarding"].get("topic") or "",
+                "subject": row["onboarding"].get("subject") or "",
+                "module_count": len(row.get("modules") or []),
+                "created_at": row.get("created_at") or "",
+                "metadata": row.get("metadata") or {},
+            }
+            for row in rows[:limit]
+        ]
+
+    def save_module_design(self, curriculum_plan_id: str, module_id: str, design: dict[str, Any]) -> None:
+        self.module_designs[(curriculum_plan_id, module_id)] = json.loads(json.dumps(design))
+
+    def get_module_design(self, curriculum_plan_id: str, module_id: str, *, learner_id: str | None = None) -> dict[str, Any] | None:
+        if learner_id and not self.plan_belongs_to_learner(curriculum_plan_id, learner_id):
+            return None
+        design = self.module_designs.get((curriculum_plan_id, module_id))
+        return json.loads(json.dumps(design)) if design else None
+
+    def plan_belongs_to_learner(self, curriculum_plan_id: str, learner_id: str) -> bool:
+        plan = self.plans.get(curriculum_plan_id)
+        return bool(plan and plan.get("learner_id") == learner_id)
+
+    def latest_section_insights(self, learner_id: str, section_ids: list[str]) -> list[dict[str, Any]]:
+        rows = []
+        for section_id in section_ids:
+            insight = self.section_insights.get((learner_id, section_id))
+            if insight:
+                rows.append(json.loads(json.dumps(insight)))
+        return rows
+
+    def save_section_insights(self, insights: list[dict[str, Any]]) -> None:
+        for insight in insights:
+            self.section_insights[(insight["learner_id"], insight["section_id"])] = json.loads(json.dumps(insight))
+
+    def active_hotspots(self, section_ids: list[str] | None = None) -> list[dict[str, Any]]:
+        allowed = set(section_ids or [])
+        rows = [
+            row
+            for row in self.hotspots
+            if row.get("status") == "active" and (not allowed or row.get("section_id") in allowed)
+        ]
+        return json.loads(json.dumps(rows))
+
+    def save_checkpoint_result(self, result: dict[str, Any]) -> None:
+        key = (result["learner_id"], result["curriculum_plan_id"], result["module_id"])
+        self.checkpoint_results[key] = json.loads(json.dumps(result))
+
+    def get_latest_checkpoint_result(
+        self,
+        curriculum_plan_id: str,
+        module_id: str,
+        *,
+        learner_id: str | None = None,
+    ) -> dict[str, Any] | None:
+        if learner_id is None:
+            return None
+        row = self.checkpoint_results.get((learner_id, curriculum_plan_id, module_id))
+        return json.loads(json.dumps(row)) if row else None
+
+
 class APITest(unittest.TestCase):
     def setUp(self) -> None:
         self.tmp = tempfile.TemporaryDirectory()
@@ -208,15 +299,53 @@ class APITest(unittest.TestCase):
             ],
         )
         self.fake_llm = FakeLLM()
-        service = CurriculumAPIService(root=self.root, use_vector=False, llm_client=self.fake_llm, intent_llm_client=self.fake_llm)
+        self.repository = FakeRepository()
+        self.repository.section_insights[("learner:1", "section:2")] = {
+            "insight_id": "section_insight:old",
+            "learner_id": "learner:1",
+            "curriculum_plan_id": "curriculum_plan:old",
+            "module_id": "module:old",
+            "section_id": "section:2",
+            "understanding_summary": "The learner had partial understanding of SI units.",
+            "current_status": "partial_understanding",
+            "strengths": [],
+            "misconceptions_or_gaps": ["Confuses quantities and units."],
+            "recommended_adjustment": "Review SI units carefully.",
+            "confidence": 0.7,
+            "evidence_question_ids": ["old:q1"],
+            "reconciliation_reason": "Prior checkpoint evidence.",
+            "created_at": "2026-01-01T00:00:00+00:00",
+        }
+        self.repository.hotspots.append(
+            {
+                "hotspot_id": "section_hotspot:si",
+                "section_id": "section:2",
+                "concept_id": "concept:si_units",
+                "misconception_tag": "treats_units_as_quantities",
+                "diagnostic_summary": "Many learners treat units as quantities.",
+                "reviewed_guidance": "Contrast physical quantities with their measurement units.",
+                "suggested_activity_adjustment": "Ask learners to sort examples into quantity and unit.",
+                "suggested_checkpoint_focus": "Test quantity-versus-unit distinction.",
+                "misconception_rate": 0.5,
+                "status": "active",
+            }
+        )
+        service = CurriculumAPIService(
+            root=self.root,
+            use_vector=False,
+            llm_client=self.fake_llm,
+            intent_llm_client=self.fake_llm,
+            repository=self.repository,  # type: ignore[arg-type]
+            auth_verifier=StaticAuthVerifier(AuthUser(user_id="learner:1", email="learner@example.com")),
+        )
         self.client = TestClient(create_app(service))
+        self.auth_headers = {"Authorization": "Bearer test-token"}
 
     def tearDown(self) -> None:
         self.tmp.cleanup()
 
     def query_payload(self) -> dict[str, Any]:
         return {
-            "learner_id": "learner:1",
             "onboarding": {
                 "subject": "physics",
                 "topic": "SI Units",
@@ -250,58 +379,108 @@ class APITest(unittest.TestCase):
         self.assertIn("classification_packet", data)
 
     def test_plan_module_design_and_checkpoint_submit_endpoints(self) -> None:
-        plan_response = self.client.post("/api/curriculum/plan", json=self.query_payload())
+        missing_auth = self.client.post("/api/curriculum/plan", json=self.query_payload())
+        self.assertEqual(missing_auth.status_code, 401)
+
+        plan_response = self.client.post("/api/curriculum/plan", json=self.query_payload(), headers=self.auth_headers)
         self.assertEqual(plan_response.status_code, 200)
         plan = plan_response.json()
+        self.assertEqual(plan["learner_id"], "learner:1")
         self.assertEqual(plan["modules"][0]["module_id"], "module:si")
         self.assertIn("mcq_allocation", plan)
 
         design_response = self.client.post(
             "/api/modules/design",
-            json={"plan": plan, "module_id": "module:si"},
+            json={"curriculum_plan_id": plan["curriculum_plan_id"], "module_id": "module:si"},
+            headers=self.auth_headers,
         )
         self.assertEqual(design_response.status_code, 200)
         module = design_response.json()
         self.assertEqual(len(module["checkpoint_mcqs"]), plan["mcq_allocation"]["module:si"])
+        self.assertTrue(module["metadata"]["module_design_id"].startswith("module_design:"))
+        packet = module["metadata"]["module_expansion_packet"]
+        self.assertEqual(packet["section_hotspots"][0]["hotspot_id"], "section_hotspot:si")
 
         submit_response = self.client.post(
             "/api/checkpoints/submit",
             json={
-                "learner_id": "learner:1",
                 "curriculum_plan_id": plan["curriculum_plan_id"],
                 "module_id": "module:si",
-                "checkpoint_mcqs": module["checkpoint_mcqs"],
-                "existing_section_insights": [
-                    {
-                        "insight_id": "section_insight:old",
-                        "learner_id": "learner:1",
-                        "curriculum_plan_id": plan["curriculum_plan_id"],
-                        "module_id": "module:old",
-                        "section_id": "section:2",
-                        "understanding_summary": "The learner had partial understanding of SI units.",
-                        "current_status": "partial_understanding",
-                        "strengths": [],
-                        "misconceptions_or_gaps": ["Confuses quantities and units."],
-                        "recommended_adjustment": "Review SI units carefully.",
-                        "confidence": 0.7,
-                        "evidence_question_ids": ["old:q1"],
-                        "reconciliation_reason": "Prior checkpoint evidence.",
-                        "created_at": "2026-01-01T00:00:00+00:00",
-                    }
-                ],
                 "answers": [
                     {"question_id": mcq["question_id"], "selected_option": "A"}
                     for mcq in module["checkpoint_mcqs"]
                 ],
             },
+            headers=self.auth_headers,
         )
         self.assertEqual(submit_response.status_code, 200)
         result = submit_response.json()
         self.assertEqual(result["score"], 1.0)
+        self.assertEqual(result["module_design_id"], module["metadata"]["module_design_id"])
         self.assertTrue(result["insight_events"])
         self.assertEqual(result["section_insights"][0]["section_id"], "section:2")
         self.assertEqual(result["section_insights"][0]["supersedes_insight_id"], "section_insight:old")
         self.assertTrue(any("existing_section_insights" in prompt for prompt in self.fake_llm.prompts))
+
+    def test_module_design_rejects_client_owned_plan_payload(self) -> None:
+        plan_response = self.client.post("/api/curriculum/plan", json=self.query_payload(), headers=self.auth_headers)
+        self.assertEqual(plan_response.status_code, 200)
+        plan = plan_response.json()
+
+        response = self.client.post(
+            "/api/modules/design",
+            json={"plan": plan, "module_id": "module:si"},
+            headers=self.auth_headers,
+        )
+
+        self.assertEqual(response.status_code, 422)
+
+    def test_checkpoint_submit_rejects_client_owned_mcq_payload(self) -> None:
+        plan_response = self.client.post("/api/curriculum/plan", json=self.query_payload(), headers=self.auth_headers)
+        plan = plan_response.json()
+        design_response = self.client.post(
+            "/api/modules/design",
+            json={"curriculum_plan_id": plan["curriculum_plan_id"], "module_id": "module:si"},
+            headers=self.auth_headers,
+        )
+        module = design_response.json()
+
+        response = self.client.post(
+            "/api/checkpoints/submit",
+            json={
+                "curriculum_plan_id": plan["curriculum_plan_id"],
+                "module_id": "module:si",
+                "checkpoint_mcqs": module["checkpoint_mcqs"],
+                "answers": [
+                    {"question_id": mcq["question_id"], "selected_option": "A"}
+                    for mcq in module["checkpoint_mcqs"]
+                ],
+            },
+            headers=self.auth_headers,
+        )
+
+        self.assertEqual(response.status_code, 422)
+
+    def test_checkpoint_submit_requires_stored_module_design(self) -> None:
+        plan_response = self.client.post("/api/curriculum/plan", json=self.query_payload(), headers=self.auth_headers)
+        plan = plan_response.json()
+
+        response = self.client.post(
+            "/api/checkpoints/submit",
+            json={
+                "curriculum_plan_id": plan["curriculum_plan_id"],
+                "module_id": "module:si",
+                "answers": [{"question_id": "module:si:q1", "selected_option": "A"}],
+            },
+            headers=self.auth_headers,
+        )
+
+        self.assertEqual(response.status_code, 404)
+
+    def test_base_schema_does_not_delete_anonymous_demo_data(self) -> None:
+        schema = (Path(__file__).resolve().parents[1] / "database/schema.sql").read_text(encoding="utf-8").lower()
+
+        self.assertNotIn("delete from learners", schema)
 
 
 if __name__ == "__main__":

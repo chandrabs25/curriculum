@@ -265,6 +265,25 @@ class ModuleExpansionTest(unittest.TestCase):
                     "current_status": "misconception",
                 },
             ],
+            section_hotspots=[
+                {
+                    "hotspot_id": "section_hotspot:1",
+                    "section_id": "section:2",
+                    "concept_id": "concept:si_units",
+                    "misconception_tag": "treats_units_as_quantities",
+                    "diagnostic_summary": "Many learners confuse quantity and unit.",
+                    "reviewed_guidance": "Contrast quantities with units before practice.",
+                    "suggested_activity_adjustment": "Sort terms into quantities and units.",
+                    "suggested_checkpoint_focus": "Test quantity versus unit.",
+                    "misconception_rate": 0.5,
+                    "status": "active",
+                },
+                {
+                    "hotspot_id": "section_hotspot:other",
+                    "section_id": "section:other",
+                    "status": "active",
+                },
+            ],
         ).to_dict()
 
         self.assertEqual(packet["source_mode"], "summary")
@@ -284,6 +303,8 @@ class ModuleExpansionTest(unittest.TestCase):
         self.assertEqual(packet["target_concepts"][0]["concept_id"], "concept:si_units")
         self.assertEqual(packet["learner_section_insights"][0]["section_id"], "section:2")
         self.assertEqual(len(packet["learner_section_insights"]), 1)
+        self.assertEqual(packet["section_hotspots"][0]["hotspot_id"], "section_hotspot:1")
+        self.assertEqual(len(packet["section_hotspots"]), 1)
         self.assertEqual(
             packet["relationship_reasoning"]["requires_concept"][0]["pedagogical_reason"],
             "Units are needed before SI standards.",
@@ -419,6 +440,8 @@ class ModuleExpansionTest(unittest.TestCase):
         self.assertIn("checkpoint_mcqs", llm.prompt)
         self.assertIn("diagnostic_purpose", llm.prompt)
         self.assertIn("learner_section_insights", llm.prompt)
+        self.assertIn("section_hotspots", llm.prompt)
+        self.assertIn("population-level guidance", llm.prompt)
         self.assertIn('"source_mode": "summary"', llm.prompt)
         self.assertNotIn("SI units define standard base units.", llm.prompt)
         self.assertNotIn("The metre, kilogram, and second", llm.prompt)

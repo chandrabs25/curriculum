@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { RetryPanel } from "../../components/RetryPanel";
 import { ApiError, createCurriculumPlan } from "../../services/api";
+import { getAccessToken, redirectToLogin } from "../../services/auth";
 import {
   CurriculumQueryPayload,
   CurriculumPlanningPacket,
@@ -133,14 +134,19 @@ export default function OnboardPreviewPage() {
     setPlanAttemptCount((current) => current + 1);
 
     try {
+      sessionStorage.setItem("curriculum-pending-plan-query", JSON.stringify(query));
+      sessionStorage.setItem("curriculum-auth-return-to", "/onboard/preview");
+      const token = await getAccessToken();
+      if (!token) {
+        generationStarted.current = false;
+        redirectToLogin("/onboard/preview");
+        return;
+      }
       const plan = await createCurriculumPlan(query);
       setPhase("done");
 
-      const serializedPlan = JSON.stringify(plan);
-      const encodedPlanId = encodeURIComponent(plan.curriculum_plan_id);
-      localStorage.setItem(`curriculum-plan-${plan.curriculum_plan_id}`, serializedPlan);
-      localStorage.setItem(`curriculum-plan-${encodedPlanId}`, serializedPlan);
-      localStorage.setItem("curriculum-current-plan", serializedPlan);
+      sessionStorage.removeItem("curriculum-pending-plan-query");
+      localStorage.setItem("curriculum-current-plan-id", plan.curriculum_plan_id);
 
       window.setTimeout(() => {
         router.push(`/plan/${encodeURIComponent(plan.curriculum_plan_id)}`);

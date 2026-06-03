@@ -113,6 +113,7 @@ class ModuleExpander:
         *,
         learner_state: list[LearnerConceptState] | None = None,
         section_insights: list[dict[str, Any]] | None = None,
+        section_hotspots: list[dict[str, Any]] | None = None,
     ) -> ExpandedCurriculumModule:
         module = _module_by_id(plan, module_id)
         packet = build_module_expansion_packet(
@@ -121,6 +122,7 @@ class ModuleExpander:
             module,
             learner_state=learner_state,
             section_insights=section_insights,
+            section_hotspots=section_hotspots,
             mcq_target_count=allocate_module_mcq_targets(plan).get(module.module_id),
         )
         prompt = build_module_expansion_prompt(packet)
@@ -135,6 +137,7 @@ def build_module_expansion_packet(
     *,
     learner_state: list[LearnerConceptState] | None = None,
     section_insights: list[dict[str, Any]] | None = None,
+    section_hotspots: list[dict[str, Any]] | None = None,
     mcq_target_count: int | None = None,
 ) -> ModuleExpansionPacket:
     graph = _as_graph(textbook_store)
@@ -151,6 +154,7 @@ def build_module_expansion_packet(
         "relationship_reasoning": _relationship_reasoning_for_module(planning_packet, module),
         "target_concepts": _target_concept_rows(graph, module, planning_packet),
         "learner_section_insights": _section_insight_rows(section_insights or [], module.source_section_ids),
+        "section_hotspots": _section_hotspot_rows(section_hotspots or [], module.source_section_ids),
         "source_sections": [_summary_section_row(graph, section_id) for section_id in module.source_section_ids],
         "mcq_target_count": mcq_target_count or allocate_module_mcq_targets(plan).get(module.module_id, 1),
     }
@@ -214,6 +218,8 @@ Critical rules:
 - Ground explanations and the checkpoint MCQ draft in source summaries, target concepts, and relationship reasoning.
 - Use learner_section_insights to tailor explanation depth, guided activity, misconception handling, and checkpoint focus.
 - If learner_section_insights mention partial understanding or misconceptions, directly address those gaps without changing source grounding.
+- Use section_hotspots as reviewed population-level guidance for common misunderstandings in this section.
+- If learner_section_insights conflict with section_hotspots, prioritize learner_section_insights for this learner while still using hotspot guidance for general teaching clarity.
 - Explain how this module serves onboarding.topic and onboarding.learning_goal.
 - Explain how this module connects from the previous module and prepares the next module when those modules exist.
 - Create exactly the module design packet's mcq_target_count checkpoint_mcqs, each with four options.
@@ -534,6 +540,30 @@ def _section_insight_rows(rows: list[dict[str, Any]], source_section_ids: list[s
                 "recommended_adjustment": _compact(row.get("recommended_adjustment"), 320),
                 "confidence": row.get("confidence"),
                 "created_at": row.get("created_at"),
+            }
+        )
+    return compact_rows
+
+
+def _section_hotspot_rows(rows: list[dict[str, Any]], source_section_ids: list[str]) -> list[dict[str, Any]]:
+    allowed = set(source_section_ids)
+    compact_rows = []
+    for row in rows:
+        section_id = str(row.get("section_id") or "")
+        reviewed_guidance = _compact(row.get("reviewed_guidance"), 360)
+        if section_id not in allowed or str(row.get("status") or "") != "active" or not reviewed_guidance:
+            continue
+        compact_rows.append(
+            {
+                "hotspot_id": row.get("hotspot_id"),
+                "section_id": section_id,
+                "concept_id": row.get("concept_id"),
+                "misconception_tag": row.get("misconception_tag"),
+                "diagnostic_summary": _compact(row.get("diagnostic_summary"), 360),
+                "reviewed_guidance": reviewed_guidance,
+                "suggested_activity_adjustment": _compact(row.get("suggested_activity_adjustment"), 260),
+                "suggested_checkpoint_focus": _compact(row.get("suggested_checkpoint_focus"), 260),
+                "misconception_rate": row.get("misconception_rate"),
             }
         )
     return compact_rows

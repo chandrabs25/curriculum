@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { useParams, useRouter } from "next/navigation";
+import { useParams } from "next/navigation";
 import Link from "next/link";
 import { RetryPanel } from "../../../../../../components/RetryPanel";
 import {
@@ -9,13 +9,10 @@ import {
   CheckpointResultPayload,
   ExpandedCurriculumModulePayload,
 } from "../../../../../../types/curriculum";
-import { designModule } from "../../../../../../services/api";
-import { readCachedModuleDesign, writeCachedModuleDesign } from "../../../../../../services/moduleDesignCache";
-import { readLatestSectionInsights } from "../../../../../../services/sectionInsights";
+import { designModule, fetchCurriculumPlan, fetchLatestCheckpointResult } from "../../../../../../services/api";
 
 export default function CheckpointResultsPage() {
   const params = useParams();
-  const router = useRouter();
   const rawId = params.id as string;
   const id = decodeURIComponent(rawId);
   const rawModuleId = params.moduleId as string;
@@ -30,27 +27,13 @@ export default function CheckpointResultsPage() {
   const [moduleRetrying, setModuleRetrying] = useState(false);
 
   const loadModuleDesign = useCallback(
-    async (parsedPlan: CurriculumPlanPayload, useCache: boolean) => {
+    async (parsedPlan: CurriculumPlanPayload) => {
       setModuleError(null);
-      if (useCache) {
-        const cached = readCachedModuleDesign(parsedPlan.curriculum_plan_id, moduleId);
-        if (cached) {
-          setModuleData(cached);
-          setLoading(false);
-          return;
-        }
-      }
-
       const data = await designModule({
-        plan: parsedPlan,
+        curriculum_plan_id: parsedPlan.curriculum_plan_id,
         module_id: moduleId,
         learner_state: [],
-        section_insights: readLatestSectionInsights(
-          parsedPlan.learner_id,
-          parsedPlan.modules.find((module) => module.module_id === moduleId)?.source_section_ids || []
-        ),
       });
-      writeCachedModuleDesign(parsedPlan.curriculum_plan_id, moduleId, data);
       setModuleData(data);
     },
     [moduleId]
@@ -61,7 +44,7 @@ export default function CheckpointResultsPage() {
     setModuleRetrying(true);
     setModuleError(null);
     try {
-      await loadModuleDesign(plan, false);
+      await loadModuleDesign(plan);
     } catch (err: unknown) {
       console.error(err);
       setModuleError(errorMessage(err, "Failed to load module details for this checkpoint report."));
@@ -73,39 +56,21 @@ export default function CheckpointResultsPage() {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const storedPlan =
-        localStorage.getItem(`curriculum-plan-${id}`) ||
-        localStorage.getItem(`curriculum-plan-${rawId}`) ||
-        matchingCurrentPlan(id, rawId);
-      const storedResult =
-        localStorage.getItem(`curriculum-checkpoint-result-${id}-${moduleId}`) ||
-        localStorage.getItem(`curriculum-checkpoint-result-${rawId}-${rawModuleId}`);
-
-      if (storedPlan && storedResult) {
-        try {
-          const parsedPlan = JSON.parse(storedPlan) as CurriculumPlanPayload;
-          const parsedResult = JSON.parse(storedResult) as CheckpointResultPayload;
+      Promise.all([fetchCurriculumPlan(id), fetchLatestCheckpointResult(id, moduleId)])
+        .then(([parsedPlan, parsedResult]) => {
           setPlan(parsedPlan);
           setResult(parsedResult);
-
-          loadModuleDesign(parsedPlan, true)
-            .catch((err) => {
-              console.error(err);
-              setModuleError(errorMessage(err, "Failed to load module details for this checkpoint report."));
-            })
-            .finally(() => {
-              setLoading(false);
-            });
-        } catch (e) {
-          setError("Failed to load checkpoint results data.");
+          return loadModuleDesign(parsedPlan);
+        })
+        .catch((err: unknown) => {
+          console.error(err);
+          setError(errorMessage(err, "Checkpoint result not found. Please complete the quiz first."));
+        })
+        .finally(() => {
           setLoading(false);
-        }
-      } else {
-        setError("Checkpoint result not found. Please complete the quiz first.");
-        setLoading(false);
-      }
+        });
     }
-  }, [id, loadModuleDesign, rawId, rawModuleId]);
+  }, [id, loadModuleDesign, moduleId]);
 
   if (loading) {
     return (
@@ -461,17 +426,6 @@ export default function CheckpointResultsPage() {
       </nav>
     </div>
   );
-}
-
-function matchingCurrentPlan(id: string, rawId: string): string | null {
-  const raw = localStorage.getItem("curriculum-current-plan");
-  if (!raw) return null;
-  try {
-    const parsed = JSON.parse(raw) as CurriculumPlanPayload;
-    return parsed.curriculum_plan_id === id || encodeURIComponent(parsed.curriculum_plan_id) === rawId ? raw : null;
-  } catch {
-    return null;
-  }
 }
 
 function moduleHref(planId: string, moduleId: string): string {

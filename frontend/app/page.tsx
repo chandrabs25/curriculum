@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { fetchLearnerPlans } from "./services/api";
+import { getCurrentUser, signOut } from "./services/auth";
 
 interface LocalPlan {
   id: string;
@@ -10,38 +12,40 @@ interface LocalPlan {
   modulesCount: number;
 }
 
+type AuthStatus = "loading" | "signed_in" | "signed_out";
+
 export default function Home() {
   const [recentPlans, setRecentPlans] = useState<LocalPlan[]>([]);
+  const [authStatus, setAuthStatus] = useState<AuthStatus>("loading");
 
   useEffect(() => {
-    const keys = Object.keys(localStorage);
-    const plansById = new Map<string, LocalPlan>();
-
-    keys.forEach((key) => {
-      if (key.startsWith("curriculum-plan-")) {
-        const raw = localStorage.getItem(key);
-        if (raw) {
-          try {
-            const parsed = JSON.parse(raw);
-            const id = parsed.curriculum_plan_id;
-            if (!id || plansById.has(id)) return;
-            plansById.set(id, {
-              id: parsed.curriculum_plan_id,
-              topic: parsed.onboarding?.topic || "Unknown Topic",
-              subject: parsed.onboarding?.subject || "General",
-              modulesCount: parsed.modules?.length || 0,
-            });
-          } catch {
-            // Ignore corrupted plans
-          }
+    getCurrentUser()
+      .then((user) => {
+        if (!user) {
+          setAuthStatus("signed_out");
+          return { plans: [] };
         }
-      }
-    });
-
-    Promise.resolve().then(() => {
-      setRecentPlans([...plansById.values()]);
-    });
+        setAuthStatus("signed_in");
+        return fetchLearnerPlans(8);
+      })
+      .then((payload) => {
+        setRecentPlans(
+          payload.plans.map((plan) => ({
+            id: plan.curriculum_plan_id,
+            topic: plan.topic || "Untitled topic",
+            subject: plan.subject || "General",
+            modulesCount: plan.module_count,
+          }))
+        );
+      })
+      .catch(() => {
+        setAuthStatus("signed_out");
+        setRecentPlans([]);
+      });
   }, []);
+
+  const signedIn = authStatus === "signed_in";
+  const authLoading = authStatus === "loading";
 
   return (
     <div className="flex flex-col min-h-screen bg-white font-sans text-zinc-900 selection:bg-zinc-100 selection:text-zinc-950">
@@ -50,12 +54,29 @@ export default function Home() {
         <Link href="/" className="text-sm font-medium tracking-tight text-zinc-900 hover:opacity-85 transition-opacity">
           Curriculum
         </Link>
-        <Link
-          href="/onboard"
-          className="text-xs font-medium text-zinc-500 hover:text-zinc-900 transition-colors border border-zinc-300 rounded-full px-4 py-1.5 hover:border-zinc-900"
-        >
-          New Plan
-        </Link>
+        <div className="flex items-center gap-3">
+          {authLoading ? (
+            <span className="text-xs font-medium text-zinc-400">Checking session...</span>
+          ) : signedIn ? (
+            <button
+              type="button"
+              onClick={() => void signOut().then(() => window.location.reload())}
+              className="text-xs font-medium text-zinc-500 hover:text-zinc-900"
+            >
+              Sign Out
+            </button>
+          ) : (
+            <Link href="/login" className="text-xs font-medium text-zinc-500 hover:text-zinc-900">
+              Sign In
+            </Link>
+          )}
+          <Link
+            href="/onboard"
+            className="text-xs font-medium text-zinc-500 hover:text-zinc-900 transition-colors border border-zinc-300 rounded-full px-4 py-1.5 hover:border-zinc-900"
+          >
+            New Plan
+          </Link>
+        </div>
       </header>
 
       {/* Main Content */}
@@ -66,14 +87,18 @@ export default function Home() {
             AI Curriculum Creator
           </h1>
           <p className="mt-4 text-sm text-zinc-500 leading-relaxed font-normal">
-            Generate customized subject roadmaps and take diagnostic checks to track core competencies.
+            {authLoading
+              ? "Create personalized learning paths grounded in textbook sections and checkpoint feedback."
+              : signedIn
+              ? "Create learning paths, save your curriculum plans, and track section-level insights over time."
+              : "Preview learning paths as a guest, then sign in to save plans and track section-level insights."}
           </p>
           <div className="mt-8">
             <Link
               className="inline-flex items-center justify-center rounded-full bg-zinc-900 px-6 py-2.5 text-xs font-medium text-white transition-colors hover:bg-zinc-800"
               href="/onboard"
             >
-              Start
+              {authLoading ? "Start" : signedIn ? "Create New Plan" : "Start Guest Preview"}
             </Link>
           </div>
         </section>
@@ -84,7 +109,11 @@ export default function Home() {
           {recentPlans.length === 0 ? (
             <div className="text-left py-4">
               <p className="text-sm text-zinc-400">
-                No active plans. Create one to begin.
+                {authLoading
+                  ? "Loading saved plans..."
+                  : signedIn
+                  ? "No saved plans yet. Create one to begin."
+                  : "Sign in to view saved plans."}
               </p>
             </div>
           ) : (
@@ -127,4 +156,3 @@ export default function Home() {
     </div>
   );
 }
-

@@ -1,6 +1,7 @@
 import type {
   CheckpointResultPayload,
   CheckpointSubmitPayload,
+  CurriculumPlanSummary,
   CurriculumPlanPayload,
   CurriculumQueryPayload,
   ExpandedCurriculumModulePayload,
@@ -10,7 +11,9 @@ import type {
   ModuleDesignPayload,
   OptionsResponse,
   RetrievalPreviewResponse,
+  SectionLearningInsight,
 } from "../types/curriculum";
+import { getAccessToken, redirectToLogin } from "./auth";
 
 export const API_BASE_URL =
   process.env.NEXT_PUBLIC_API_URL?.replace(/\/$/, "") || "http://127.0.0.1:8000";
@@ -29,13 +32,25 @@ export class ApiError extends Error {
 
 async function requestJson<TResponse>(
   path: string,
-  init?: RequestInit
+  init?: RequestInit,
+  options?: { auth?: boolean }
 ): Promise<TResponse> {
+  const authHeaders: Record<string, string> = {};
+  if (options?.auth) {
+    const token = await getAccessToken();
+    if (!token) {
+      redirectToLogin();
+      throw new ApiError("Sign in required.", 401, { detail: "Sign in required." });
+    }
+    authHeaders.Authorization = `Bearer ${token}`;
+  }
+
   const response = await fetch(`${API_BASE_URL}${path}`, {
     cache: "no-store",
     ...init,
     headers: {
       "Content-Type": "application/json",
+      ...authHeaders,
       ...init?.headers,
     },
   });
@@ -46,6 +61,9 @@ async function requestJson<TResponse>(
     : await response.text();
 
   if (!response.ok) {
+    if (options?.auth && response.status === 401) {
+      redirectToLogin();
+    }
     throw new ApiError(apiErrorMessage(body, response), response.status, body);
   }
 
@@ -54,12 +72,13 @@ async function requestJson<TResponse>(
 
 function postJson<TPayload, TResponse>(
   path: string,
-  payload: TPayload
+  payload: TPayload,
+  options?: { auth?: boolean }
 ): Promise<TResponse> {
   return requestJson<TResponse>(path, {
     method: "POST",
     body: JSON.stringify(payload),
-  });
+  }, options);
 }
 
 function apiErrorMessage(body: unknown, response: Response): string {
@@ -106,7 +125,18 @@ export function createCurriculumPlan(
 ): Promise<CurriculumPlanPayload> {
   return postJson<CurriculumQueryPayload, CurriculumPlanPayload>(
     "/api/curriculum/plan",
-    payload
+    payload,
+    { auth: true }
+  );
+}
+
+export function fetchCurriculumPlan(
+  curriculumPlanId: string
+): Promise<CurriculumPlanPayload> {
+  return requestJson<CurriculumPlanPayload>(
+    `/api/curriculum/plans/${encodeURIComponent(curriculumPlanId)}`,
+    undefined,
+    { auth: true }
   );
 }
 
@@ -115,7 +145,19 @@ export function designModule(
 ): Promise<ExpandedCurriculumModulePayload> {
   return postJson<ModuleDesignPayload, ExpandedCurriculumModulePayload>(
     "/api/modules/design",
-    payload
+    payload,
+    { auth: true }
+  );
+}
+
+export function fetchModuleDesign(
+  curriculumPlanId: string,
+  moduleId: string
+): Promise<ExpandedCurriculumModulePayload> {
+  return requestJson<ExpandedCurriculumModulePayload>(
+    `/api/curriculum/plans/${encodeURIComponent(curriculumPlanId)}/modules/${encodeURIComponent(moduleId)}/design`,
+    undefined,
+    { auth: true }
   );
 }
 
@@ -124,6 +166,39 @@ export function submitCheckpoint(
 ): Promise<CheckpointResultPayload> {
   return postJson<CheckpointSubmitPayload, CheckpointResultPayload>(
     "/api/checkpoints/submit",
-    payload
+    payload,
+    { auth: true }
+  );
+}
+
+export function fetchLatestCheckpointResult(
+  curriculumPlanId: string,
+  moduleId: string
+): Promise<CheckpointResultPayload> {
+  return requestJson<CheckpointResultPayload>(
+    `/api/curriculum/plans/${encodeURIComponent(curriculumPlanId)}/modules/${encodeURIComponent(moduleId)}/checkpoint/latest`,
+    undefined,
+    { auth: true }
+  );
+}
+
+export function fetchLearnerPlans(
+  limit = 20
+): Promise<{ plans: CurriculumPlanSummary[] }> {
+  return requestJson<{ plans: CurriculumPlanSummary[] }>(
+    `/api/me/plans?limit=${encodeURIComponent(String(limit))}`,
+    undefined,
+    { auth: true }
+  );
+}
+
+export function fetchLatestSectionInsights(
+  sectionIds: string[]
+): Promise<{ section_insights: SectionLearningInsight[] }> {
+  const ids = sectionIds.join(",");
+  return requestJson<{ section_insights: SectionLearningInsight[] }>(
+    `/api/me/section-insights?section_ids=${encodeURIComponent(ids)}`,
+    undefined,
+    { auth: true }
   );
 }

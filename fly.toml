@@ -6,6 +6,8 @@ primary_region = "bom"
 
 [env]
   CURRICULUM_USE_VECTOR = "1"
+  CURRICULUM_VECTOR_BACKEND = "pgvector"
+  SUPABASE_URL = "https://ibqyplpziayzfilhgfxa.supabase.co"
   CORS_ALLOW_ORIGINS = "https://curriculum-frontend.22f3002048.workers.dev"
   PORT = "8080"
 

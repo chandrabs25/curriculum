@@ -99,7 +99,6 @@ export default function OnboardPage() {
     };
 
     const queryPayload: CurriculumQueryPayload = {
-      learner_id: "anonymous",
       onboarding,
       learner_state: [],
       prerequisite_check: null,
@@ -366,4 +365,3 @@ const sampleQueries = [
   { subject: "biology", query: "I want to learn photosynthesis" },
   { subject: "chemistry", query: "Organic chemistry basics" },
 ];
-

@@ -6,6 +6,7 @@ import json
 import os
 import random
 import re
+import socket
 import time
 import urllib.error
 import urllib.request
@@ -38,7 +39,7 @@ class FireworksLLMClient:
     base_url: str = FIREWORKS_BASE_URL
     temperature: float = 0.1
     max_tokens: int = 4096
-    timeout_seconds: float = 120.0
+    timeout_seconds: float = 240.0
     max_retries: int = 3
     base_retry_seconds: float = 1.0
     transport: FireworksTransport | None = None
@@ -112,6 +113,8 @@ class FireworksLLMClient:
             ) from exc
         except urllib.error.URLError as exc:
             raise FireworksAPIError(f"Fireworks API network error: {exc}") from exc
+        except (TimeoutError, socket.timeout) as exc:
+            raise FireworksAPIError(f"Fireworks API network timeout: {exc}") from exc
 
         try:
             return json.loads(body)
@@ -193,7 +196,7 @@ def _is_transient(exc: Exception) -> bool:
     if isinstance(exc, FireworksAPIError):
         return exc.status_code in {408, 409, 425, 429, 500, 502, 503, 504} or exc.status_code is None
     text = str(exc).lower()
-    return any(marker in text for marker in ("timeout", "temporar", "rate limit", "429", "503", "unavailable"))
+    return any(marker in text for marker in ("timeout", "timed out", "temporar", "rate limit", "429", "503", "unavailable"))
 
 
 def _is_retryable(exc: Exception) -> bool:

@@ -5,6 +5,7 @@ import tempfile
 import os
 from pathlib import Path
 from typing import Any
+from unittest.mock import patch
 
 from curriculum_engine import (
     FIREWORKS_DEEPSEEK_V4_PRO,
@@ -85,6 +86,36 @@ class FireworksClientTest(unittest.TestCase):
         )
 
         self.assertEqual(client.generate_json("Return JSON"), {"ok": True})
+        self.assertEqual(attempts, 2)
+
+    def test_retries_urlopen_timeout(self) -> None:
+        attempts = 0
+
+        class FakeResponse:
+            def __enter__(self) -> "FakeResponse":
+                return self
+
+            def __exit__(self, exc_type: object, exc: object, tb: object) -> None:
+                return None
+
+            def read(self) -> bytes:
+                return b'{"choices":[{"message":{"content":"{\\"ok\\": true}"}}]}'
+
+        def fake_urlopen(request: object, timeout: float) -> FakeResponse:
+            nonlocal attempts
+            attempts += 1
+            if attempts == 1:
+                raise TimeoutError("The read operation timed out")
+            return FakeResponse()
+
+        client = FireworksLLMClient(
+            api_key="test-key",
+            max_retries=1,
+            base_retry_seconds=0,
+        )
+
+        with patch("urllib.request.urlopen", side_effect=fake_urlopen):
+            self.assertEqual(client.generate_json("Return JSON"), {"ok": True})
         self.assertEqual(attempts, 2)
 
     def test_retries_malformed_json(self) -> None:
