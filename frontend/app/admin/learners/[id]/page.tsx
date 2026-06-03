@@ -104,6 +104,10 @@ export default function LearnerDetailPage() {
               {profile.provider}
             </span>
             <span className="flex items-center gap-1">
+              <span className="material-symbols-outlined text-sm">admin_panel_settings</span>
+              {profile.role}
+            </span>
+            <span className="flex items-center gap-1">
               <span className="material-symbols-outlined text-sm">calendar_today</span>
               Joined {formatDate(profile.created_at)}
             </span>

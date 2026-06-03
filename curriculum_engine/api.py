@@ -5,7 +5,7 @@ from __future__ import annotations
 import os
 import uuid
 import logging
-from dataclasses import asdict, is_dataclass
+from dataclasses import asdict, is_dataclass, replace
 from functools import lru_cache
 from pathlib import Path
 from typing import Any
@@ -384,6 +384,11 @@ def create_app(service: CurriculumAPIService | None = None) -> FastAPI:
             raise HTTPException(status_code=401, detail=str(exc)) from exc
         if svc.repository:
             svc.repository.upsert_user_profile(user.to_profile())
+            profile = svc.repository.get_user_profile(user.user_id)
+            role = str((profile or {}).get("role") or "learner")
+            if role not in {"learner", "admin"}:
+                role = "learner"
+            user = replace(user, role=role)
         return user
 
     @app.get("/health")
@@ -448,6 +453,18 @@ def create_app(service: CurriculumAPIService | None = None) -> FastAPI:
         svc: CurriculumAPIService = Depends(service_dep),
     ) -> dict[str, Any]:
         return {"plans": svc.list_plans(user.user_id, limit=max(1, min(limit, 50)))}
+
+    @app.get("/api/me/profile")
+    def me_profile(
+        user: AuthUser = Depends(current_user),
+        svc: CurriculumAPIService = Depends(service_dep),
+    ) -> dict[str, Any]:
+        profile = user.to_profile()
+        if svc.repository:
+            stored = svc.repository.get_user_profile(user.user_id)
+            if stored:
+                profile = stored
+        return {"profile": profile}
 
     @app.get("/api/me/section-insights")
     def latest_section_insights(

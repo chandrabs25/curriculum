@@ -14,8 +14,8 @@ from .graph import CurriculumGraph
 from .learning_path import LearningPathContext, build_learning_path_context
 from .llm_clients import (
     FIREWORKS_BASE_URL,
-    FIREWORKS_DEEPSEEK_V4_PRO,
     FIREWORKS_GPT_OSS_120B,
+    FIREWORKS_KIMI_K2P5,
     FireworksAPIError,
     FireworksLLMClient,
     parse_llm_json,
@@ -89,8 +89,8 @@ __all__ = [
     "DEFAULT_INDEX_DIR",
     "DEFAULT_MODEL_DIR",
     "FIREWORKS_BASE_URL",
-    "FIREWORKS_DEEPSEEK_V4_PRO",
     "FIREWORKS_GPT_OSS_120B",
+    "FIREWORKS_KIMI_K2P5",
     "FireworksAPIError",
     "FireworksLLMClient",
     "HotspotThresholds",

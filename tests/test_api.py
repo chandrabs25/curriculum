@@ -125,7 +125,17 @@ class FakeRepository:
         self.profiles: dict[str, dict[str, Any]] = {}
 
     def upsert_user_profile(self, profile: dict[str, Any]) -> None:
-        self.profiles[str(profile["user_id"])] = dict(profile)
+        user_id = str(profile["user_id"])
+        existing = self.profiles.get(user_id, {})
+        merged = {
+            **profile,
+            "role": existing.get("role") or profile.get("role") or "learner",
+        }
+        self.profiles[user_id] = dict(merged)
+
+    def get_user_profile(self, user_id: str) -> dict[str, Any] | None:
+        profile = self.profiles.get(user_id)
+        return json.loads(json.dumps(profile)) if profile else None
 
     def save_plan(self, plan: dict[str, Any]) -> None:
         self.plans[str(plan["curriculum_plan_id"])] = json.loads(json.dumps(plan))
@@ -336,7 +346,7 @@ class APITest(unittest.TestCase):
             llm_client=self.fake_llm,
             intent_llm_client=self.fake_llm,
             repository=self.repository,  # type: ignore[arg-type]
-            auth_verifier=StaticAuthVerifier(AuthUser(user_id="learner:1", email="learner@example.com")),
+            auth_verifier=StaticAuthVerifier(AuthUser(user_id="learner:1", email="learner@example.com", role="admin")),
         )
         self.client = TestClient(create_app(service))
         self.auth_headers = {"Authorization": "Bearer test-token"}
@@ -358,6 +368,58 @@ class APITest(unittest.TestCase):
             },
             "grade": 11,
         }
+
+    def test_me_profile_upserts_authenticated_user(self) -> None:
+        response = self.client.get("/api/me/profile", headers=self.auth_headers)
+
+        self.assertEqual(response.status_code, 200)
+        profile = response.json()["profile"]
+        self.assertEqual(profile["user_id"], "learner:1")
+        self.assertEqual(profile["email"], "learner@example.com")
+        self.assertEqual(profile["role"], "learner")
+        self.assertIn("learner:1", self.repository.profiles)
+
+    def test_me_profile_requires_bearer_token(self) -> None:
+        response = self.client.get("/api/me/profile")
+
+        self.assertEqual(response.status_code, 401)
+
+    def test_existing_admin_role_is_preserved_after_profile_sync(self) -> None:
+        self.repository.profiles["learner:1"] = {
+            "user_id": "learner:1",
+            "email": "old@example.com",
+            "display_name": "Existing Admin",
+            "avatar_url": "",
+            "provider": "google",
+            "role": "admin",
+        }
+
+        response = self.client.get("/api/me/profile", headers=self.auth_headers)
+
+        self.assertEqual(response.status_code, 200)
+        profile = response.json()["profile"]
+        self.assertEqual(profile["email"], "learner@example.com")
+        self.assertEqual(profile["role"], "admin")
+
+    def test_admin_check_uses_database_role_not_verified_token_role(self) -> None:
+        response = self.client.get("/api/admin/check", headers=self.auth_headers)
+
+        self.assertEqual(response.status_code, 403)
+
+    def test_admin_check_allows_database_admin_role(self) -> None:
+        self.repository.profiles["learner:1"] = {
+            "user_id": "learner:1",
+            "email": "learner@example.com",
+            "display_name": "Admin Learner",
+            "avatar_url": "",
+            "provider": "google",
+            "role": "admin",
+        }
+
+        response = self.client.get("/api/admin/check", headers=self.auth_headers)
+
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.json()["role"], "admin")
 
     def test_retrieval_preview_endpoint(self) -> None:
         response = self.client.post("/api/retrieval/preview", json=self.query_payload())

@@ -14,6 +14,7 @@ export interface AdminLearnerRow {
   display_name: string;
   avatar_url: string;
   provider: string;
+  role: string;
   created_at: string;
   last_seen_at: string;
   plan_count: number;
@@ -52,6 +53,7 @@ export interface LearnerProfile {
   display_name: string;
   avatar_url: string;
   provider: string;
+  role: string;
   created_at: string;
   updated_at: string;
   last_seen_at: string;

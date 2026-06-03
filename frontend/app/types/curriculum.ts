@@ -110,6 +110,18 @@ export interface HealthResponse {
   section_summaries: number;
 }
 
+export interface UserProfilePayload {
+  user_id: string;
+  email: string;
+  display_name: string;
+  avatar_url: string;
+  provider: string;
+  role: string;
+  created_at?: string;
+  updated_at?: string;
+  last_seen_at?: string;
+}
+
 export interface RetrievedSection {
   section_id: string;
   chapter_id: string;

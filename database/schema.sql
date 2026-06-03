@@ -6,6 +6,7 @@ create table if not exists user_profiles (
   display_name text not null default '',
   avatar_url text not null default '',
   provider text not null default 'google',
+  role text not null default 'learner' check (role in ('learner', 'admin')),
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now(),
   last_seen_at timestamptz not null default now()

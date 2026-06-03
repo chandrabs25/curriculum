@@ -12,6 +12,7 @@ import type {
   OptionsResponse,
   RetrievalPreviewResponse,
   SectionLearningInsight,
+  UserProfilePayload,
 } from "../types/curriculum";
 import { getAccessToken, redirectToLogin } from "./auth";
 
@@ -187,6 +188,14 @@ export function fetchLearnerPlans(
 ): Promise<{ plans: CurriculumPlanSummary[] }> {
   return requestJson<{ plans: CurriculumPlanSummary[] }>(
     `/api/me/plans?limit=${encodeURIComponent(String(limit))}`,
+    undefined,
+    { auth: true }
+  );
+}
+
+export function fetchMyProfile(): Promise<{ profile: UserProfilePayload }> {
+  return requestJson<{ profile: UserProfilePayload }>(
+    "/api/me/profile",
     undefined,
     { auth: true }
   );

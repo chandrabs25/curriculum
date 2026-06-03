@@ -125,5 +125,5 @@ def _claims_to_user(claims: dict[str, Any]) -> AuthUser:
         display_name=display_name,
         avatar_url=str(metadata.get("avatar_url") or metadata.get("picture") or ""),
         provider=provider,
-        role=str(app_metadata.get("role") or ""),
+        role="",
     )

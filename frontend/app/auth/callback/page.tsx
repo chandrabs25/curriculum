@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { createCurriculumPlan } from "../../services/api";
+import { createCurriculumPlan, fetchMyProfile } from "../../services/api";
 import { completeOAuthCallback } from "../../services/auth";
 import type { CurriculumQueryPayload } from "../../types/curriculum";
 
@@ -20,6 +20,8 @@ export default function AuthCallbackPage() {
         if (!session) {
           throw new Error("No Supabase session was found after sign in.");
         }
+        setMessage("Syncing your profile...");
+        await fetchMyProfile();
 
         const pendingQuery = sessionStorage.getItem("curriculum-pending-plan-query");
         if (pendingQuery) {

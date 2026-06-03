@@ -11,9 +11,6 @@ from .auth import AuthUser
 from .database import PostgresRepository
 
 
-router = APIRouter(prefix="/api/admin", tags=["admin"])
-
-
 class HotspotStatusPayload(BaseModel):
     status: str
     reviewed_guidance: str = ""
@@ -41,6 +38,8 @@ def mount_admin_routes(
     service_dep: Any,
 ) -> None:
     """Register all admin routes on the FastAPI app."""
+
+    router = APIRouter(prefix="/api/admin", tags=["admin"])
 
     def admin_user(user: AuthUser = Depends(current_user_dep)) -> AuthUser:
         return require_admin(user)

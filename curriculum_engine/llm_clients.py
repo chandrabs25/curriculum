@@ -16,7 +16,6 @@ from typing import Any, Callable
 
 
 FIREWORKS_BASE_URL = "https://api.fireworks.ai/inference/v1"
-FIREWORKS_DEEPSEEK_V4_PRO = "accounts/fireworks/models/deepseek-v4-pro"
 FIREWORKS_GPT_OSS_120B = "accounts/fireworks/models/gpt-oss-120b"
 FIREWORKS_KIMI_K2P5 = "accounts/fireworks/models/kimi-k2p5"
 

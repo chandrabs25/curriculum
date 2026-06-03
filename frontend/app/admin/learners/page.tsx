@@ -78,6 +78,7 @@ export default function AdminLearnersPage() {
             <tr className="border-b border-outline-variant text-xs font-bold uppercase tracking-wider text-on-surface-variant">
               <th className="px-5 py-3">Learner</th>
               <th className="px-5 py-3">Provider</th>
+              <th className="px-5 py-3">Role</th>
               <th className="px-5 py-3 text-right">Plans</th>
               <th className="px-5 py-3 text-right">Attempts</th>
               <th className="px-5 py-3 text-right">Last Seen</th>
@@ -87,7 +88,7 @@ export default function AdminLearnersPage() {
             {!data
               ? [...Array(5)].map((_, i) => (
                   <tr key={i}>
-                    <td colSpan={5} className="px-5 py-4">
+                    <td colSpan={6} className="px-5 py-4">
                       <div className="h-4 w-full rounded bg-surface-container-high loading-pulse" />
                     </td>
                   </tr>
@@ -95,7 +96,7 @@ export default function AdminLearnersPage() {
               : data.learners.length === 0
                 ? (
                   <tr>
-                    <td colSpan={5} className="px-5 py-10 text-center text-on-surface-variant">
+                    <td colSpan={6} className="px-5 py-10 text-center text-on-surface-variant">
                       No learners found.
                     </td>
                   </tr>
@@ -167,6 +168,11 @@ function LearnerRow({ learner }: { learner: AdminLearnerRow }) {
       <td className="px-5 py-3">
         <span className="rounded-full bg-surface-container-high px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">
           {learner.provider}
+        </span>
+      </td>
+      <td className="px-5 py-3">
+        <span className="rounded-full bg-surface-container-high px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">
+          {learner.role}
         </span>
       </td>
       <td className="px-5 py-3 text-right font-hanken font-bold text-on-surface">

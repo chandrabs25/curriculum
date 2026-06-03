@@ -84,6 +84,7 @@ class PostgresRepository:
             "display_name": row["display_name"] or "",
             "avatar_url": row["avatar_url"] or "",
             "provider": row["provider"] or "google",
+            "role": row.get("role") or "learner",
             "created_at": row["created_at"].isoformat() if row.get("created_at") else "",
             "updated_at": row["updated_at"].isoformat() if row.get("updated_at") else "",
             "last_seen_at": row["last_seen_at"].isoformat() if row.get("last_seen_at") else "",
@@ -675,7 +676,7 @@ class PostgresRepository:
                 cur.execute(
                     f"""
                     select u.user_id, u.email, u.display_name, u.avatar_url,
-                           u.provider, u.created_at, u.last_seen_at,
+                           u.provider, u.role, u.created_at, u.last_seen_at,
                            count(distinct p.curriculum_plan_id) as plan_count,
                            count(distinct ca.checkpoint_attempt_id) as attempt_count
                     from user_profiles u
@@ -705,6 +706,7 @@ class PostgresRepository:
                     "display_name": row["display_name"] or "",
                     "avatar_url": row["avatar_url"] or "",
                     "provider": row["provider"] or "google",
+                    "role": row.get("role") or "learner",
                     "created_at": row["created_at"].isoformat() if row.get("created_at") else "",
                     "last_seen_at": row["last_seen_at"].isoformat() if row.get("last_seen_at") else "",
                     "plan_count": int(row["plan_count"] or 0),
