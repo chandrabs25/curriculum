@@ -102,6 +102,11 @@ def main() -> int:
     parser.add_argument("--model", default=DEFAULT_MODEL)
     parser.add_argument("--use-gemini-adjudication", action="store_true")
     parser.add_argument("--force", action="store_true")
+    parser.add_argument(
+        "--allow-reviewed-merge-reset",
+        action="store_true",
+        help="Allow forced normalization even though it removes previously replayed reviewed merges.",
+    )
     args = parser.parse_args()
 
     from pathlib import Path
@@ -112,10 +117,16 @@ def main() -> int:
     alias_path = artifact_dir / "concept_aliases.jsonl"
     review_path = artifact_dir / "review" / "concept_merges.jsonl"
     summary_path = artifact_dir / "concept_summary.json"
+    finalized_review_path = artifact_dir / "review" / "finalized_prerequisite_concept_decisions.jsonl"
 
     if out_path.exists() and not args.force:
         print(f"{out_path} exists; pass --force to regenerate")
         return 0
+    if args.force and finalized_review_path.exists() and not args.allow_reviewed_merge_reset:
+        raise SystemExit(
+            f"{finalized_review_path} exists. Forced normalization would remove reviewed merge replay results. "
+            "Pass --allow-reviewed-merge-reset only if you will replay finalized merges and rebuild dependent artifacts."
+        )
 
     raw_rows = read_jsonl(raw_path)
     groups: dict[str, list[dict[str, Any]]] = defaultdict(list)

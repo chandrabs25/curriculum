@@ -10,6 +10,8 @@ import {
   ExpandedCurriculumModulePayload,
 } from "../../../../../../types/curriculum";
 import { designModule, fetchCurriculumPlan, fetchLatestCheckpointResult } from "../../../../../../services/api";
+import { getAccessToken, redirectToLogin } from "../../../../../../services/auth";
+import { loadGuestPlan, markGuestPlanPersisted, planForModuleDesign, storePendingModuleRoute } from "../../../../../../services/guest-plan";
 
 export default function CheckpointResultsPage() {
   const params = useParams();
@@ -29,11 +31,20 @@ export default function CheckpointResultsPage() {
   const loadModuleDesign = useCallback(
     async (parsedPlan: CurriculumPlanPayload) => {
       setModuleError(null);
+      const token = await getAccessToken();
+      if (!token) {
+        const route = `${moduleHref(parsedPlan.curriculum_plan_id, moduleId)}/checkpoint/results`;
+        storePendingModuleRoute(route);
+        redirectToLogin(route);
+        return;
+      }
       const data = await designModule({
         curriculum_plan_id: parsedPlan.curriculum_plan_id,
         module_id: moduleId,
+        plan: planForModuleDesign(parsedPlan),
         learner_state: [],
       });
+      markGuestPlanPersisted(parsedPlan.curriculum_plan_id);
       setModuleData(data);
     },
     [moduleId]
@@ -56,7 +67,10 @@ export default function CheckpointResultsPage() {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      Promise.all([fetchCurriculumPlan(id), fetchLatestCheckpointResult(id, moduleId)])
+      const localPlan = loadGuestPlan(id);
+      const planRequest = localPlan ? Promise.resolve(localPlan) : fetchCurriculumPlan(id);
+
+      Promise.all([planRequest, fetchLatestCheckpointResult(id, moduleId)])
         .then(([parsedPlan, parsedResult]) => {
           setPlan(parsedPlan);
           setResult(parsedResult);

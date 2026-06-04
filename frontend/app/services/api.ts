@@ -126,8 +126,7 @@ export function createCurriculumPlan(
 ): Promise<CurriculumPlanPayload> {
   return postJson<CurriculumQueryPayload, CurriculumPlanPayload>(
     "/api/curriculum/plan",
-    payload,
-    { auth: true }
+    payload
   );
 }
 

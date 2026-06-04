@@ -56,7 +56,7 @@ export default function OnboardPage() {
     try {
       const classification = await classifyIntent({
         query: trimmedQuery,
-        subject: null,
+        subject,
         grade: null,
         chapter_id: null,
         candidate_limit: 12,
@@ -186,7 +186,7 @@ export default function OnboardPage() {
                     event.currentTarget.form?.requestSubmit();
                   }
                 }}
-                placeholder="Example: I want to learn acceleration"
+                placeholder="Example: I want to learn gravity"
                 className="w-full resize-none border border-zinc-300 rounded-xl p-3.5 text-sm font-light outline-none transition-all focus:border-zinc-950 focus:ring-1 focus:ring-zinc-950 placeholder:text-zinc-400 bg-white min-h-[72px]"
                 rows={1}
                 disabled={isBusy}
@@ -360,7 +360,6 @@ const subjectOptions = [
 ];
 
 const sampleQueries = [
-  { subject: "physics", query: "I want to learn acceleration" },
   { subject: "physics", query: "I want to learn gravity" },
   { subject: "biology", query: "I want to learn photosynthesis" },
   { subject: "chemistry", query: "Organic chemistry basics" },

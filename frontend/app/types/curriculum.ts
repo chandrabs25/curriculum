@@ -128,6 +128,11 @@ export interface RetrievedSection {
   title: string;
   summary: string;
   score: number;
+  vector_score: number;
+  evidence_score: number;
+  ranking_score: number;
+  selection_decision: string;
+  rejection_reason: string;
   matched_concept_ids: string[];
   prerequisite_section_ids: string[];
   reasons: string[];
@@ -290,6 +295,7 @@ export interface CurriculumPlanPayload {
 export interface ModuleDesignPayload {
   curriculum_plan_id: string;
   module_id: string;
+  plan?: CurriculumPlanPayload;
   learner_state: LearnerConceptStatePayload[];
   force_regenerate?: boolean;
 }

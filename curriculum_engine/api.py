@@ -20,11 +20,20 @@ from .database import PostgresRepository, repository_from_env
 from .graph import CurriculumGraph
 from .intent import INTENT_OUTPUT_MAX_TOKENS, IntentClassifier
 from .learning_path import build_learning_path_context
-from .llm_clients import FIREWORKS_GPT_OSS_120B, FireworksLLMClient
+from .llm_clients import FIREWORKS_GPT_OSS_120B, FireworksAPIError, FireworksLLMClient
 from .models import CurriculumPlan, OnboardingAnswers, PlannedCurriculumModule
 from .module_expansion import ModuleExpander, allocate_module_mcq_targets
 from .planner import CurriculumPlanner, PlannerRequest
 from .planning_packet import build_curriculum_planning_packet
+from .public_cache import (
+    expires_at_for,
+    fresh_guest_plan_response,
+    intent_cache_key,
+    is_public_curriculum_cacheable,
+    plan_cache_key,
+    public_cache_enabled,
+    retrieval_cache_key,
+)
 from .retrieval import CurriculumRetriever, LearnerConceptState
 from .section_insights import generate_section_insights
 from .vector_index import SectionVectorIndex, PgVectorSectionIndex, HFInferenceEmbeddingModel
@@ -100,6 +109,7 @@ class ModuleDesignPayload(BaseModel):
 
     curriculum_plan_id: str
     module_id: str
+    plan: CurriculumPlanPayload | None = None
     learner_state: list[LearnerConceptStatePayload] = Field(default_factory=list)
     force_regenerate: bool = False
 
@@ -153,18 +163,30 @@ class CurriculumAPIService:
             temperature=0.0,
         )
         self.auth_verifier = auth_verifier or SupabaseAuthVerifier.from_env()
+        self._memory_public_cache: dict[str, dict[str, Any]] = {}
 
     def classify_intent(self, payload: IntentClassifyPayload) -> dict[str, Any]:
+        cache_key = intent_cache_key(payload)
+        cached = self._public_cache_get(cache_key)
+        if cached:
+            return cached
         classifier = IntentClassifier(self.graph, self.retriever, self.intent_llm_client)
-        return classifier.classify(
+        result = classifier.classify(
             payload.query,
             subject=payload.subject,
             grade=payload.grade,
             chapter_id=payload.chapter_id,
             limit=payload.candidate_limit,
         )
+        self._public_cache_set(cache_key, "intent", result)
+        return result
 
     def retrieval_preview(self, payload: CurriculumQueryPayload) -> dict[str, Any]:
+        cache_key = retrieval_cache_key(payload) if is_public_curriculum_cacheable(payload) else ""
+        if cache_key:
+            cached = self._public_cache_get(cache_key)
+            if cached:
+                return cached
         onboarding = _onboarding(payload.onboarding)
         learner_state = _learner_state(payload.learner_state)
         retrieved = _retrieve_for_payload(self.retriever, payload, onboarding, learner_state)
@@ -175,18 +197,26 @@ class CurriculumAPIService:
             prerequisite_check=payload.prerequisite_check,
         )
         planning_packet = build_curriculum_planning_packet(onboarding, learner_state, retrieved, context)
-        return {
+        result = {
             "retrieved_sections": [_retrieval_row(row) for row in retrieved],
             "prerequisite_questions": [],
             "learning_path_context": context.to_dict(),
             "planning_packet": planning_packet.to_dict(),
         }
+        if cache_key:
+            self._public_cache_set(cache_key, "retrieval", result)
+        return result
 
-    def create_plan(self, payload: CurriculumQueryPayload, *, user_id: str) -> dict[str, Any]:
+    def create_plan(self, payload: CurriculumQueryPayload) -> dict[str, Any]:
+        cache_key = plan_cache_key(payload) if is_public_curriculum_cacheable(payload) else ""
+        if cache_key:
+            cached = self._public_cache_get(cache_key)
+            if cached:
+                return fresh_guest_plan_response(cached)
         planner = CurriculumPlanner(self.retriever, self.llm_client)
         plan = planner.create_plan(
             PlannerRequest(
-                learner_id=user_id,
+                learner_id="guest",
                 onboarding=_onboarding(payload.onboarding),
                 learner_state=_learner_state(payload.learner_state),
                 prerequisite_check=payload.prerequisite_check,
@@ -199,16 +229,50 @@ class CurriculumAPIService:
         )
         plan_row = _plan_row(plan)
         plan_row["mcq_allocation"] = allocate_module_mcq_targets(plan)
-        if self.repository:
-            self.repository.save_plan(plan_row)
-        return plan_row
+        if cache_key:
+            self._public_cache_set(cache_key, "plan", plan_row)
+        return fresh_guest_plan_response(plan_row)
+
+    def _public_cache_get(self, cache_key: str) -> dict[str, Any] | None:
+        if not cache_key or not public_cache_enabled():
+            return None
+        if self.repository and hasattr(self.repository, "get_public_response_cache"):
+            return self.repository.get_public_response_cache(cache_key)  # type: ignore[attr-defined]
+        return self._memory_public_cache.get(cache_key)
+
+    def _public_cache_set(self, cache_key: str, cache_kind: str, response_payload: dict[str, Any]) -> None:
+        if not cache_key or not public_cache_enabled():
+            return
+        if self.repository and hasattr(self.repository, "set_public_response_cache"):
+            self.repository.set_public_response_cache(  # type: ignore[attr-defined]
+                cache_key=cache_key,
+                cache_kind=cache_kind,
+                response_payload=response_payload,
+                expires_at=expires_at_for(cache_kind),
+            )
+            return
+        self._memory_public_cache[cache_key] = response_payload
 
     def design_module(self, payload: ModuleDesignPayload, *, user_id: str) -> dict[str, Any]:
         if not self.repository:
             raise RuntimeError("Database persistence is required for module design")
         plan_payload = self.get_plan_payload(payload.curriculum_plan_id, learner_id=user_id)
         if not plan_payload:
-            raise KeyError(f"Unknown curriculum_plan_id: {payload.curriculum_plan_id}")
+            existing_plan_for_other_user = self.repository.get_plan(payload.curriculum_plan_id)
+            if existing_plan_for_other_user:
+                raise KeyError(f"Unknown curriculum_plan_id: {payload.curriculum_plan_id}")
+            if not payload.plan:
+                raise KeyError(f"Unknown curriculum_plan_id: {payload.curriculum_plan_id}")
+            if payload.plan.curriculum_plan_id != payload.curriculum_plan_id:
+                raise ValueError("Module design plan payload does not match curriculum_plan_id")
+            plan_payload = payload.plan.model_copy(deep=True)
+            plan_payload.learner_id = user_id
+            claimed_plan = _plan_from_payload(plan_payload)
+            plan_row = plan_payload.model_dump()
+            plan_row["learner_id"] = user_id
+            if not plan_row.get("mcq_allocation"):
+                plan_row["mcq_allocation"] = allocate_module_mcq_targets(claimed_plan)
+            self.repository.save_plan(plan_row)
         plan_payload.learner_id = user_id
         if not payload.force_regenerate:
             existing = self.repository.get_module_design(plan_payload.curriculum_plan_id, payload.module_id, learner_id=user_id)
@@ -430,10 +494,9 @@ def create_app(service: CurriculumAPIService | None = None) -> FastAPI:
     @app.post("/api/curriculum/plan")
     def curriculum_plan(
         payload: CurriculumQueryPayload,
-        user: AuthUser = Depends(current_user),
         svc: CurriculumAPIService = Depends(service_dep),
     ) -> dict[str, Any]:
-        return _handle_api(lambda: svc.create_plan(payload, user_id=user.user_id))
+        return _handle_api(lambda: svc.create_plan(payload))
 
     @app.get("/api/curriculum/plans/{curriculum_plan_id}")
     def get_curriculum_plan(
@@ -537,6 +600,9 @@ app = create_app()
 def _handle_api(fn: Any) -> Any:
     try:
         return fn()
+    except FireworksAPIError as exc:
+        status_code = exc.status_code if exc.status_code in {408, 409, 425, 429, 500, 502, 503, 504} else 502
+        raise HTTPException(status_code=status_code or 502, detail=str(exc)) from exc
     except ValueError as exc:
         raise HTTPException(status_code=422, detail=str(exc)) from exc
     except KeyError as exc:
@@ -599,6 +665,11 @@ def _retrieval_row(row: Any) -> dict[str, Any]:
         "title": row.title,
         "summary": row.summary,
         "score": row.score,
+        "vector_score": row.vector_score,
+        "evidence_score": row.evidence_score,
+        "ranking_score": row.ranking_score,
+        "selection_decision": row.selection_decision,
+        "rejection_reason": row.rejection_reason,
         "matched_concept_ids": row.matched_concept_ids,
         "prerequisite_section_ids": row.prerequisite_section_ids,
         "reasons": row.reasons,

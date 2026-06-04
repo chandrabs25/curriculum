@@ -11,6 +11,7 @@ from fastapi.testclient import TestClient
 
 from curriculum_engine.api import CurriculumAPIService, create_app
 from curriculum_engine.auth import AuthUser, StaticAuthVerifier
+from curriculum_engine.llm_clients import FireworksAPIError
 
 
 def write_json(path: Path, data: object) -> None:
@@ -123,6 +124,7 @@ class FakeRepository:
         self.hotspots: list[dict[str, Any]] = []
         self.checkpoint_results: dict[tuple[str, str, str], dict[str, Any]] = {}
         self.profiles: dict[str, dict[str, Any]] = {}
+        self.public_cache: dict[str, dict[str, Any]] = {}
 
     def upsert_user_profile(self, profile: dict[str, Any]) -> None:
         user_id = str(profile["user_id"])
@@ -136,6 +138,20 @@ class FakeRepository:
     def get_user_profile(self, user_id: str) -> dict[str, Any] | None:
         profile = self.profiles.get(user_id)
         return json.loads(json.dumps(profile)) if profile else None
+
+    def get_public_response_cache(self, cache_key: str) -> dict[str, Any] | None:
+        row = self.public_cache.get(cache_key)
+        return json.loads(json.dumps(row)) if row else None
+
+    def set_public_response_cache(
+        self,
+        *,
+        cache_key: str,
+        cache_kind: str,
+        response_payload: dict[str, Any],
+        expires_at: str,
+    ) -> None:
+        self.public_cache[cache_key] = json.loads(json.dumps(response_payload))
 
     def save_plan(self, plan: dict[str, Any]) -> None:
         self.plans[str(plan["curriculum_plan_id"])] = json.loads(json.dumps(plan))
@@ -440,23 +456,79 @@ class APITest(unittest.TestCase):
         self.assertEqual(data["confirmed_intent"]["refined_query"], "SI units and measurement standards")
         self.assertIn("classification_packet", data)
 
-    def test_plan_module_design_and_checkpoint_submit_endpoints(self) -> None:
-        missing_auth = self.client.post("/api/curriculum/plan", json=self.query_payload())
-        self.assertEqual(missing_auth.status_code, 401)
+    def test_intent_classification_uses_public_cache_for_same_request(self) -> None:
+        first = self.client.post("/api/intent/classify", json={"query": "I want to learn SI Units", "subject": "physics", "grade": 11})
+        second = self.client.post("/api/intent/classify", json={"query": "learn si units", "subject": "physics", "grade": 11})
 
-        plan_response = self.client.post("/api/curriculum/plan", json=self.query_payload(), headers=self.auth_headers)
+        self.assertEqual(first.status_code, 200)
+        self.assertEqual(second.status_code, 200)
+        self.assertEqual(len(self.fake_llm.prompts), 1)
+
+    def test_intent_cache_is_scoped_by_subject(self) -> None:
+        first = self.client.post("/api/intent/classify", json={"query": "SI Units", "subject": "physics", "grade": 11})
+        second = self.client.post("/api/intent/classify", json={"query": "SI Units", "subject": "chemistry", "grade": 11})
+
+        self.assertEqual(first.status_code, 200)
+        self.assertEqual(second.status_code, 200)
+        self.assertEqual(len(self.fake_llm.prompts), 2)
+
+    def test_retrieval_preview_stores_public_cache_entry(self) -> None:
+        first = self.client.post("/api/retrieval/preview", json=self.query_payload())
+        cache_entries_after_first = len(self.repository.public_cache)
+        second = self.client.post("/api/retrieval/preview", json=self.query_payload())
+
+        self.assertEqual(first.status_code, 200)
+        self.assertEqual(second.status_code, 200)
+        self.assertEqual(cache_entries_after_first, 1)
+        self.assertEqual(len(self.repository.public_cache), 1)
+        self.assertEqual(first.json()["planning_packet"], second.json()["planning_packet"])
+
+    def test_curriculum_plan_cache_reuses_template_with_fresh_guest_ids(self) -> None:
+        first = self.client.post("/api/curriculum/plan", json=self.query_payload())
+        second = self.client.post("/api/curriculum/plan", json=self.query_payload())
+
+        self.assertEqual(first.status_code, 200)
+        self.assertEqual(second.status_code, 200)
+        self.assertNotEqual(first.json()["curriculum_plan_id"], second.json()["curriculum_plan_id"])
+        planner_prompts = [prompt for prompt in self.fake_llm.prompts if "Now create the ordered curriculum module sequence" in prompt]
+        self.assertEqual(len(planner_prompts), 1)
+
+    def test_fireworks_overload_returns_provider_status(self) -> None:
+        class OverloadedLLM:
+            def generate_json(self, prompt: str, schema: dict[str, Any] | None = None) -> dict[str, Any]:
+                raise FireworksAPIError("Fireworks API error 503: service overloaded", status_code=503)
+
+        service = CurriculumAPIService(
+            root=self.root,
+            use_vector=False,
+            llm_client=OverloadedLLM(),
+            intent_llm_client=OverloadedLLM(),
+            repository=self.repository,  # type: ignore[arg-type]
+            auth_verifier=StaticAuthVerifier(AuthUser(user_id="learner:1", email="learner@example.com", role="admin")),
+        )
+        client = TestClient(create_app(service))
+
+        response = client.post("/api/intent/classify", json={"query": "SI Units", "grade": 11})
+
+        self.assertEqual(response.status_code, 503)
+        self.assertIn("service overloaded", response.json()["detail"])
+
+    def test_plan_module_design_and_checkpoint_submit_endpoints(self) -> None:
+        plan_response = self.client.post("/api/curriculum/plan", json=self.query_payload())
         self.assertEqual(plan_response.status_code, 200)
         plan = plan_response.json()
-        self.assertEqual(plan["learner_id"], "learner:1")
+        self.assertEqual(plan["learner_id"], "guest")
         self.assertEqual(plan["modules"][0]["module_id"], "module:si")
         self.assertIn("mcq_allocation", plan)
+        self.assertNotIn(plan["curriculum_plan_id"], self.repository.plans)
 
         design_response = self.client.post(
             "/api/modules/design",
-            json={"curriculum_plan_id": plan["curriculum_plan_id"], "module_id": "module:si"},
+            json={"curriculum_plan_id": plan["curriculum_plan_id"], "module_id": "module:si", "plan": plan},
             headers=self.auth_headers,
         )
         self.assertEqual(design_response.status_code, 200)
+        self.assertEqual(self.repository.plans[plan["curriculum_plan_id"]]["learner_id"], "learner:1")
         module = design_response.json()
         self.assertEqual(len(module["checkpoint_mcqs"]), plan["mcq_allocation"]["module:si"])
         self.assertTrue(module["metadata"]["module_design_id"].startswith("module_design:"))
@@ -484,25 +556,56 @@ class APITest(unittest.TestCase):
         self.assertEqual(result["section_insights"][0]["supersedes_insight_id"], "section_insight:old")
         self.assertTrue(any("existing_section_insights" in prompt for prompt in self.fake_llm.prompts))
 
-    def test_module_design_rejects_client_owned_plan_payload(self) -> None:
-        plan_response = self.client.post("/api/curriculum/plan", json=self.query_payload(), headers=self.auth_headers)
+    def test_module_design_claims_matching_guest_plan_payload(self) -> None:
+        plan_response = self.client.post("/api/curriculum/plan", json=self.query_payload())
         self.assertEqual(plan_response.status_code, 200)
         plan = plan_response.json()
 
         response = self.client.post(
             "/api/modules/design",
-            json={"plan": plan, "module_id": "module:si"},
+            json={"curriculum_plan_id": plan["curriculum_plan_id"], "module_id": "module:si", "plan": plan},
+            headers=self.auth_headers,
+        )
+
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(self.repository.plans[plan["curriculum_plan_id"]]["learner_id"], "learner:1")
+
+    def test_module_design_rejects_mismatched_guest_plan_payload(self) -> None:
+        plan_response = self.client.post("/api/curriculum/plan", json=self.query_payload())
+        self.assertEqual(plan_response.status_code, 200)
+        plan = plan_response.json()
+
+        response = self.client.post(
+            "/api/modules/design",
+            json={"curriculum_plan_id": "curriculum_plan:other", "module_id": "module:si", "plan": plan},
             headers=self.auth_headers,
         )
 
         self.assertEqual(response.status_code, 422)
 
+    def test_module_design_does_not_claim_plan_owned_by_another_user(self) -> None:
+        plan_response = self.client.post("/api/curriculum/plan", json=self.query_payload())
+        self.assertEqual(plan_response.status_code, 200)
+        plan = plan_response.json()
+        stored = dict(plan)
+        stored["learner_id"] = "learner:other"
+        self.repository.save_plan(stored)
+
+        response = self.client.post(
+            "/api/modules/design",
+            json={"curriculum_plan_id": plan["curriculum_plan_id"], "module_id": "module:si", "plan": plan},
+            headers=self.auth_headers,
+        )
+
+        self.assertEqual(response.status_code, 404)
+        self.assertEqual(self.repository.plans[plan["curriculum_plan_id"]]["learner_id"], "learner:other")
+
     def test_checkpoint_submit_rejects_client_owned_mcq_payload(self) -> None:
-        plan_response = self.client.post("/api/curriculum/plan", json=self.query_payload(), headers=self.auth_headers)
+        plan_response = self.client.post("/api/curriculum/plan", json=self.query_payload())
         plan = plan_response.json()
         design_response = self.client.post(
             "/api/modules/design",
-            json={"curriculum_plan_id": plan["curriculum_plan_id"], "module_id": "module:si"},
+            json={"curriculum_plan_id": plan["curriculum_plan_id"], "module_id": "module:si", "plan": plan},
             headers=self.auth_headers,
         )
         module = design_response.json()
@@ -524,8 +627,11 @@ class APITest(unittest.TestCase):
         self.assertEqual(response.status_code, 422)
 
     def test_checkpoint_submit_requires_stored_module_design(self) -> None:
-        plan_response = self.client.post("/api/curriculum/plan", json=self.query_payload(), headers=self.auth_headers)
+        plan_response = self.client.post("/api/curriculum/plan", json=self.query_payload())
         plan = plan_response.json()
+        claimed = dict(plan)
+        claimed["learner_id"] = "learner:1"
+        self.repository.save_plan(claimed)
 
         response = self.client.post(
             "/api/checkpoints/submit",

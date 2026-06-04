@@ -24,6 +24,7 @@ alter table checkpoint_attempts enable row level security;
 alter table checkpoint_answers enable row level security;
 alter table section_learning_insights enable row level security;
 alter table section_misunderstanding_hotspots enable row level security;
+alter table public_response_cache enable row level security;
 
 -- ============================================================
 -- 2. ADD INDEXES ON UNINDEXED FOREIGN KEY COLUMNS

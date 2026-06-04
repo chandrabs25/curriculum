@@ -61,6 +61,32 @@ python3 scripts/relationship_generation/07_gate_relationships.py \
 
 python3 scripts/relationship_generation/08_validate_artifacts.py \
   --usable-only
+
+# Audit required concepts that cannot currently form exact dependency bridges.
+# This writes review candidates but never mutates concepts or relationships.
+python3 scripts/relationship_generation/13_audit_prerequisite_coverage.py \
+  --force
+
+# Ask Kimi to judge each prerequisite equivalence candidate. This requires a
+# separate key and writes decisions only; it never applies merges automatically.
+export FIREWORKS_CONCEPT_REVIEW_API_KEY="..."
+python3 scripts/relationship_generation/14_adjudicate_prerequisite_concepts.py
+
+# Finalize reviewed decisions, inspect the non-mutating merge dry run, then
+# explicitly apply the approved merges.
+python3 scripts/relationship_generation/15_finalize_prerequisite_concept_reviews.py \
+  --expect-merge-count 28 \
+  --expect-distinct-count 8 \
+  --force
+python3 scripts/relationship_generation/10_apply_manual_concept_merges.py
+python3 scripts/relationship_generation/10_apply_manual_concept_merges.py \
+  --apply
+
+# Rebuild every artifact that depends on canonical concept IDs.
+python3 scripts/relationship_generation/12_build_section_concept_links.py --force
+python3 scripts/relationship_generation/07_gate_relationships.py --force
+python3 scripts/relationship_generation/13_audit_prerequisite_coverage.py --force
+python3 scripts/relationship_generation/08_validate_artifacts.py --usable-only
 ```
 
 If you do not activate the virtualenv, call the scripts with:
@@ -85,11 +111,15 @@ Main outputs are written to `data/relationship_artifacts/`:
 - `validation_report.json`
 - `usable_chapters.json`
 - `section_concept_index.json`
+- `prerequisite_coverage_audit.json`
 
 Review queues:
 
 - `review/concept_merges.jsonl`
 - `review/relationships.jsonl`
+- `review/prerequisite_concept_candidates.jsonl`
+- `review/prerequisite_concept_llm_decisions.jsonl`
+- `review/finalized_prerequisite_concept_decisions.jsonl`
 
 Rejected records:
 
@@ -163,3 +193,21 @@ whose final ID segment matches `1`, `1.2`, or `1.2.1`. Non-curriculum section
 IDs such as `Summary`, `Answers`, `Exercises`, `Appendix`, and
 `Points to Ponder` are excluded from usable corpus indexing, relationship
 generation, validation, and graph retrieval.
+
+## Reviewed Concept Merge Replay
+
+`prerequisite_concept_llm_decisions.jsonl` is immutable judge evidence and must
+never be passed directly to the merge applicator. Finalize it first with
+`15_finalize_prerequisite_concept_reviews.py`. The finalized artifact records the
+approved decision and selected canonical concept ID for every reviewed pair.
+
+`10_apply_manual_concept_merges.py` is non-mutating unless `--apply` is passed.
+It preserves existing aliases, remaps aliases from removed concepts, and backs up
+both the canonical concept and alias files before applying changes.
+
+Running `02_normalize_concepts.py --force` rebuilds canonical concepts from raw
+concepts and therefore removes reviewed merge replay results. It refuses to do
+this while a finalized review artifact exists unless
+`--allow-reviewed-merge-reset` is explicitly passed. After such a reset, rerun
+the finalizer, reviewed merge applicator, section concept link builder, gating,
+prerequisite audit, and validation in that order.

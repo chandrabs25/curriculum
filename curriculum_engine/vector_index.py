@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import os
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
@@ -12,10 +13,7 @@ from .graph import CurriculumGraph
 from .database import PostgresRepository
 
 
-DEFAULT_MODEL_DIR = Path(
-    "/Users/srichandrasamanapalli/.cache/huggingface/hub/"
-    "models--BAAI--bge-m3/snapshots/5617a9f61b028005a4858fdac845db406aefb181"
-)
+DEFAULT_MODEL_DIR = Path(os.getenv("CURRICULUM_EMBEDDING_MODEL", "BAAI/bge-m3"))
 DEFAULT_INDEX_DIR = Path("data/retrieval_index")
 
 
@@ -77,7 +75,8 @@ class SentenceTransformerEmbeddingModel:
                 "Install requirements before building the retrieval index."
             ) from exc
         self.model_dir = Path(model_dir)
-        self.model = SentenceTransformer(str(self.model_dir))
+        model_name_or_path = str(self.model_dir) if self.model_dir.exists() else str(model_dir)
+        self.model = SentenceTransformer(model_name_or_path)
 
     def encode(self, texts: list[str]) -> Any:
         return self.model.encode(texts, normalize_embeddings=True, show_progress_bar=False)

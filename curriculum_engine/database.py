@@ -36,6 +36,49 @@ class PostgresRepository:
                 row = cur.fetchone() or {"count": 0}
         return {"ok": True, "section_embedding_documents": int(row["count"])}
 
+    def get_public_response_cache(self, cache_key: str) -> dict[str, Any] | None:
+        try:
+            with self._connect() as conn:
+                with conn.cursor() as cur:
+                    cur.execute(
+                        """
+                        select response_payload
+                        from public_response_cache
+                        where cache_key = %s and expires_at > now()
+                        """,
+                        (cache_key,),
+                    )
+                    row = cur.fetchone()
+        except Exception:
+            return None
+        return dict(row["response_payload"]) if row else None
+
+    def set_public_response_cache(
+        self,
+        *,
+        cache_key: str,
+        cache_kind: str,
+        response_payload: dict[str, Any],
+        expires_at: str,
+    ) -> None:
+        try:
+            with self._connect() as conn:
+                with conn.cursor() as cur:
+                    cur.execute(
+                        """
+                        insert into public_response_cache(cache_key, cache_kind, response_payload, expires_at, updated_at)
+                        values (%s, %s, %s::jsonb, %s::timestamptz, now())
+                        on conflict (cache_key) do update set
+                          cache_kind = excluded.cache_kind,
+                          response_payload = excluded.response_payload,
+                          expires_at = excluded.expires_at,
+                          updated_at = now()
+                        """,
+                        (cache_key, cache_kind, _json(response_payload), expires_at),
+                    )
+        except Exception:
+            return
+
     def upsert_user_profile(self, profile: dict[str, Any]) -> None:
         user_id = str(profile.get("user_id") or "")
         if not user_id:

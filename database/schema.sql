@@ -180,6 +180,20 @@ create table if not exists section_misunderstanding_hotspots (
 create index if not exists section_misunderstanding_hotspots_section_status_idx
 on section_misunderstanding_hotspots(section_id, status);
 
+create table if not exists public_response_cache (
+  cache_key text primary key,
+  cache_kind text not null,
+  response_payload jsonb not null,
+  expires_at timestamptz not null,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create index if not exists public_response_cache_kind_expires_idx
+on public_response_cache(cache_kind, expires_at);
+
+alter table public_response_cache enable row level security;
+
 alter table module_designs
 add column if not exists module_design_id text not null default '';
 

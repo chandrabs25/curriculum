@@ -155,6 +155,45 @@ class VectorRetrievalTest(unittest.TestCase):
         self.assertIn("section:2:1", by_id)
         self.assertIn("vector_match", by_id["section:2:1"].reasons)
 
+    def test_close_semantic_neighbor_survives_exact_title_boost(self) -> None:
+        graph = self.graph()
+        retriever = CurriculumRetriever(
+            graph,
+            vector_index=FakeVectorIndex(
+                [
+                    VectorSearchResult("section:2", 0.90),
+                    VectorSearchResult("section:3", 0.86),
+                    VectorSearchResult("section:4", 0.60),
+                ]
+            ),
+        )
+
+        results = retriever.search(
+            "SI Units",
+            limit=6,
+            include_prerequisites=False,
+            include_soft_links=False,
+        )
+        by_id = {row.section_id: row for row in results}
+
+        self.assertIn("section:2", by_id)
+        self.assertIn("section:3", by_id)
+        self.assertGreater(by_id["section:2"].evidence_score, by_id["section:3"].evidence_score)
+        self.assertEqual(by_id["section:3"].selection_decision, "selected_target")
+
+    def test_direct_target_selection_is_bounded(self) -> None:
+        graph = self.graph()
+        vector_rows = [
+            VectorSearchResult(section_id, 0.90 - index * 0.005)
+            for index, section_id in enumerate(["section:1", "section:2", "section:2:1", "section:3", "section:4"])
+        ]
+        retriever = CurriculumRetriever(graph, vector_index=FakeVectorIndex(vector_rows))
+
+        retriever.search("measurement fundamentals", limit=20, include_prerequisites=False, include_soft_links=False)
+
+        selected = [row for row in retriever.last_selection_trace if row["selection_decision"] == "selected_target"]
+        self.assertLessEqual(len(selected), 6)
+
     def test_meta_sections_are_excluded(self) -> None:
         results = CurriculumRetriever(self.graph()).search("ponder units", limit=5, include_prerequisites=False, include_soft_links=False)
 

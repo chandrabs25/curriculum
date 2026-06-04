@@ -64,6 +64,8 @@ def main() -> int:
     accepted = read_jsonl(args.artifact_dir / "accepted_relationships.jsonl")
     review = read_jsonl(args.artifact_dir / "review" / "relationships.jsonl")
     rejected = read_jsonl(args.artifact_dir / "rejected" / "relationships.jsonl")
+    prerequisite_audit_path = args.artifact_dir / "prerequisite_coverage_audit.json"
+    prerequisite_audit = read_json(prerequisite_audit_path) if prerequisite_audit_path.exists() else {}
 
     concept_ids = {c.get("concept_id") for c in concepts}
     scoped_section_summaries = [
@@ -134,6 +136,7 @@ def main() -> int:
         "rejected_relationship_count": len(rejected),
         "relationship_count_by_type": dict(Counter(r.get("type") for r in scoped_accepted)),
         "chapter_coverage": {chapter: dict(counts) for chapter, counts in sorted(coverage.items())},
+        "prerequisite_coverage": prerequisite_audit.get("summary", {}),
         "error_count": len(errors),
         "warning_count": len(warnings),
         "errors": errors[:500],

@@ -73,17 +73,19 @@ class FireworksLLMClient:
         else:
             payload["response_format"] = {"type": "json_object"}
 
+        max_retries = _env_int("FIREWORKS_MAX_RETRIES", self.max_retries)
+        base_retry_seconds = _env_float("FIREWORKS_BASE_RETRY_SECONDS", self.base_retry_seconds)
         last_exc: Exception | None = None
-        for attempt in range(self.max_retries + 1):
+        for attempt in range(max_retries + 1):
             try:
                 response = self.transport(payload) if self.transport else self._post_json(payload, api_key or "")
                 content = _message_content(response)
                 return parse_llm_json(content)
             except Exception as exc:
                 last_exc = exc
-                if attempt >= self.max_retries or not _is_retryable(exc):
+                if attempt >= max_retries or not _is_retryable(exc):
                     raise
-                delay = self.base_retry_seconds * (2**attempt) + random.uniform(0, 0.25)
+                delay = min(30.0, base_retry_seconds * (2**attempt)) + random.uniform(0, 0.25)
                 time.sleep(delay)
         if last_exc:
             raise last_exc
@@ -98,6 +100,13 @@ class FireworksLLMClient:
                 "Authorization": f"Bearer {api_key}",
                 "Content-Type": "application/json",
                 "Accept": "application/json",
+                "User-Agent": (
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                    "AppleWebKit/537.36 (KHTML, like Gecko) "
+                    "Chrome/125.0.0.0 Safari/537.36"
+                ),
+                "Origin": "https://curriculum-frontend.22f3002048.workers.dev",
+                "Referer": "https://curriculum-frontend.22f3002048.workers.dev/",
             },
             method="POST",
         )
@@ -174,6 +183,26 @@ def load_env_file(key: str) -> None:
                     return
         except OSError:
             continue
+
+
+def _env_int(key: str, fallback: int) -> int:
+    value = os.getenv(key)
+    if value is None:
+        return fallback
+    try:
+        return max(0, int(value))
+    except ValueError:
+        return fallback
+
+
+def _env_float(key: str, fallback: float) -> float:
+    value = os.getenv(key)
+    if value is None:
+        return fallback
+    try:
+        return max(0.0, float(value))
+    except ValueError:
+        return fallback
 
 
 def _message_content(response: dict[str, Any]) -> str:

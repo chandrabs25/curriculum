@@ -5,6 +5,8 @@ import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import { RetryPanel } from "../../../../../components/RetryPanel";
 import { designModule, fetchCurriculumPlan, submitCheckpoint } from "../../../../../services/api";
+import { getAccessToken, redirectToLogin } from "../../../../../services/auth";
+import { loadGuestPlan, markGuestPlanPersisted, planForModuleDesign, storePendingModuleRoute } from "../../../../../services/guest-plan";
 import {
   CurriculumPlanPayload,
   CheckpointAnswerPayload,
@@ -33,11 +35,20 @@ export default function CheckpointQuizPage() {
   const loadModuleDesign = useCallback(
     async (parsedPlan: CurriculumPlanPayload) => {
       setError(null);
+      const token = await getAccessToken();
+      if (!token) {
+        const route = `${moduleHref(parsedPlan.curriculum_plan_id, moduleId)}/checkpoint`;
+        storePendingModuleRoute(route);
+        redirectToLogin(route);
+        return;
+      }
       const data = await designModule({
         curriculum_plan_id: parsedPlan.curriculum_plan_id,
         module_id: moduleId,
+        plan: planForModuleDesign(parsedPlan),
         learner_state: [],
       });
+      markGuestPlanPersisted(parsedPlan.curriculum_plan_id);
       setModuleData(data);
     },
     [moduleId]
@@ -60,7 +71,10 @@ export default function CheckpointQuizPage() {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      fetchCurriculumPlan(id)
+      const localPlan = loadGuestPlan(id);
+      const planRequest = localPlan ? Promise.resolve(localPlan) : fetchCurriculumPlan(id);
+
+      planRequest
         .then((parsedPlan) => {
           setPlan(parsedPlan);
           return loadModuleDesign(parsedPlan);

@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { designModule, fetchCurriculumPlan, fetchLatestSectionInsights } from "../../services/api";
+import { isGuestPlanPersisted, loadGuestPlan, markGuestPlanPersisted, planForModuleDesign } from "../../services/guest-plan";
 import { CurriculumPlanPayload, PlannedModulePayload } from "../../types/curriculum";
 
 export default function PlanDashboardPage() {
@@ -26,6 +27,17 @@ export default function PlanDashboardPage() {
     if (typeof window === "undefined") return;
 
     const loadTimer = window.setTimeout(() => {
+      const localPlan = loadGuestPlan(id);
+      if (localPlan) {
+        localStorage.setItem("curriculum-current-plan-id", localPlan.curriculum_plan_id);
+        setPlan(localPlan);
+        setCompletedModuleIds([]);
+        if (isGuestPlanPersisted(localPlan.curriculum_plan_id)) {
+          refreshModuleInsightCounts(localPlan, setModuleInsightCounts);
+        }
+        return;
+      }
+
       fetchCurriculumPlan(id)
         .then((parsedPlan) => {
           localStorage.setItem("curriculum-current-plan-id", parsedPlan.curriculum_plan_id);
@@ -102,10 +114,12 @@ export default function PlanDashboardPage() {
       const moduleDesign = await designModule({
         curriculum_plan_id: plan.curriculum_plan_id,
         module_id: module.module_id,
+        plan: planForModuleDesign(plan),
         learner_state: [],
         force_regenerate: true,
       });
       void moduleDesign;
+      markGuestPlanPersisted(plan.curriculum_plan_id);
       setRegeneratedModuleIds((current) => ({ ...current, [module.module_id]: true }));
     } catch (err: unknown) {
       setRegenerationError(errorMessage(err, "Failed to regenerate this module with learner insights."));

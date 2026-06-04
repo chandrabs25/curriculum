@@ -4,8 +4,8 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { RetryPanel } from "../../components/RetryPanel";
-import { ApiError, createCurriculumPlan } from "../../services/api";
-import { getAccessToken, redirectToLogin } from "../../services/auth";
+import { createCurriculumPlan } from "../../services/api";
+import { saveGuestPlan } from "../../services/guest-plan";
 import {
   CurriculumQueryPayload,
   CurriculumPlanningPacket,
@@ -32,6 +32,8 @@ type ReadingItem = {
   role: "Target" | "Prerequisite";
   icon: string;
 };
+
+const MIN_PREVIEW_DURATION_MS = 15000;
 
 export default function OnboardPreviewPage() {
   const router = useRouter();
@@ -129,24 +131,16 @@ export default function OnboardPreviewPage() {
   const generatePlan = useCallback(async () => {
     if (!query || !previewData || generationStarted.current) return;
     generationStarted.current = true;
+    const startedAt = Date.now();
     setPhase("planning");
     setError(null);
     setPlanAttemptCount((current) => current + 1);
 
     try {
-      sessionStorage.setItem("curriculum-pending-plan-query", JSON.stringify(query));
-      sessionStorage.setItem("curriculum-auth-return-to", "/onboard/preview");
-      const token = await getAccessToken();
-      if (!token) {
-        generationStarted.current = false;
-        redirectToLogin("/onboard/preview");
-        return;
-      }
       const plan = await createCurriculumPlan(query);
+      await waitForMinimumDuration(startedAt, MIN_PREVIEW_DURATION_MS);
       setPhase("done");
-
-      sessionStorage.removeItem("curriculum-pending-plan-query");
-      localStorage.setItem("curriculum-current-plan-id", plan.curriculum_plan_id);
+      saveGuestPlan(plan);
 
       window.setTimeout(() => {
         router.push(`/plan/${encodeURIComponent(plan.curriculum_plan_id)}`);
@@ -491,6 +485,14 @@ function generateTraceSteps(packet: CurriculumPlanningPacket): TraceStep[] {
 }
 
 function errorMessage(err: unknown, fallback: string): string {
-  if (err instanceof ApiError || err instanceof Error) return err.message;
+  if (err instanceof Error) return err.message;
   return fallback;
+}
+
+function waitForMinimumDuration(startedAt: number, minimumMs: number): Promise<void> {
+  const remainingMs = minimumMs - (Date.now() - startedAt);
+  if (remainingMs <= 0) return Promise.resolve();
+  return new Promise((resolve) => {
+    window.setTimeout(resolve, remainingMs);
+  });
 }

@@ -101,6 +101,16 @@ export default function Home() {
               {authLoading ? "Start" : signedIn ? "Create New Plan" : "Start Guest Preview"}
             </Link>
           </div>
+          <div className="mt-10 border-l-2 border-zinc-300 pl-4">
+            <p className="text-xs font-medium text-zinc-700">
+              Current coverage: NCERT Classes 11 and 12 Physics, Chemistry, and Biology.
+            </p>
+            <p className="mt-2 text-xs leading-relaxed text-zinc-500">
+              Class 12 Physics currently excludes Alternating Current, Electromagnetic Waves, and Ray Optics and
+              Optical Instruments. Class 12 Chemistry currently excludes Haloalkanes and Haloarenes; Alcohols,
+              Phenols and Ethers; and Aldehydes, Ketones and Carboxylic Acids.
+            </p>
+          </div>
         </section>
 
         {/* Recent Plans */}

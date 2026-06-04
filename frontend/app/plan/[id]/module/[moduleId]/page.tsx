@@ -5,6 +5,8 @@ import { useParams } from "next/navigation";
 import Link from "next/link";
 import { RetryPanel } from "../../../../components/RetryPanel";
 import { designModule, fetchCurriculumPlan } from "../../../../services/api";
+import { getAccessToken, redirectToLogin } from "../../../../services/auth";
+import { loadGuestPlan, markGuestPlanPersisted, planForModuleDesign, storePendingModuleRoute } from "../../../../services/guest-plan";
 import { CurriculumPlanPayload, ExpandedCurriculumModulePayload } from "../../../../types/curriculum";
 
 export default function ModuleReadingPage() {
@@ -25,11 +27,21 @@ export default function ModuleReadingPage() {
     async (parsedPlan: CurriculumPlanPayload) => {
       setError(null);
 
+      const token = await getAccessToken();
+      if (!token) {
+        const route = moduleHref(parsedPlan.curriculum_plan_id, moduleId);
+        storePendingModuleRoute(route);
+        redirectToLogin(route);
+        return;
+      }
+
       const data = await designModule({
         curriculum_plan_id: parsedPlan.curriculum_plan_id,
         module_id: moduleId,
+        plan: planForModuleDesign(parsedPlan),
         learner_state: [],
       });
+      markGuestPlanPersisted(parsedPlan.curriculum_plan_id);
       setModuleData(data);
     },
     [moduleId]
@@ -53,7 +65,10 @@ export default function ModuleReadingPage() {
   useEffect(() => {
     if (typeof window !== "undefined") {
       Promise.resolve().then(() => {
-        fetchCurriculumPlan(id)
+        const localPlan = loadGuestPlan(id);
+        const planRequest = localPlan ? Promise.resolve(localPlan) : fetchCurriculumPlan(id);
+
+        planRequest
           .then((parsedPlan) => {
             setPlan(parsedPlan);
             setCompletedCount(0);
