@@ -1,5 +1,7 @@
 # AI Curriculum Creator
 
+Here is the link to the development log: https://github.com/chandrabs25/curriculum/blob/cloudfar-deployment/development%20log
+
 AI Curriculum Creator builds textbook-grounded learning paths for NCERT Class 11
 and 12 Physics, Chemistry, and Biology.
 
