@@ -25,7 +25,7 @@ The runtime corpus contains 73 usable chapters from NCERT Class 11 and 12:
 - Biology
 
 The following chapters are excluded because their runtime relationship artifacts
-are partial or missing:
+are not extracted due to time constraints:
 
 - Class 12 Chemistry: Haloalkanes and Haloarenes
 - Class 12 Chemistry: Alcohols, Phenols and Ethers
