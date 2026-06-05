@@ -1,4 +1,4 @@
-"""Local vector retrieval over section-level curriculum documents."""
+"""Section embedding document builders and pgvector retrieval."""
 
 from __future__ import annotations
 
@@ -44,19 +44,6 @@ class SectionDocument:
             "taught_concept_ids": self.taught_concept_ids,
             "required_concept_ids": self.required_concept_ids,
         }
-
-    @classmethod
-    def from_row(cls, row: dict[str, Any]) -> "SectionDocument":
-        return cls(
-            section_id=str(row["section_id"]),
-            chapter_id=str(row["chapter_id"]),
-            subject=row.get("subject"),
-            grade=int(row["grade"]) if row.get("grade") is not None else None,
-            title=str(row.get("title") or ""),
-            text=str(row.get("text") or ""),
-            taught_concept_ids=[str(item) for item in row.get("taught_concept_ids") or []],
-            required_concept_ids=[str(item) for item in row.get("required_concept_ids") or []],
-        )
 
 
 @dataclass(frozen=True)
@@ -114,81 +101,6 @@ class HFInferenceEmbeddingModel:
         norms = np.linalg.norm(embeddings, axis=1, keepdims=True)
         norms = np.where(norms == 0, 1, norms)
         return embeddings / norms
-
-
-@dataclass
-class SectionVectorIndex:
-    documents: list[SectionDocument]
-    vectors: Any
-    embedding_model: EmbeddingModel | None = None
-
-    @classmethod
-    def load(
-        cls,
-        root: Path | str = ".",
-        *,
-        index_dir: Path | str = DEFAULT_INDEX_DIR,
-        embedding_model: EmbeddingModel | None = None,
-    ) -> "SectionVectorIndex | None":
-        root_path = Path(root)
-        index_path = root_path / index_dir
-        docs_path = index_path / "section_documents.jsonl"
-        vectors_path = index_path / "section_vectors.npy"
-        if not docs_path.exists() or not vectors_path.exists():
-            return None
-        try:
-            import numpy as np
-        except ImportError:
-            return None
-        documents = [SectionDocument.from_row(row) for row in _read_jsonl(docs_path)]
-        vectors = np.load(vectors_path)
-        if len(documents) != len(vectors):
-            raise ValueError(
-                f"retrieval index mismatch: {len(documents)} documents for {len(vectors)} vectors"
-            )
-        return cls(documents=documents, vectors=vectors, embedding_model=embedding_model)
-
-    def with_embedding_model(self, embedding_model: EmbeddingModel) -> "SectionVectorIndex":
-        self.embedding_model = embedding_model
-        return self
-
-    def search(
-        self,
-        query: str,
-        *,
-        limit: int = 20,
-        subject: str | None = None,
-        grade: int | None = None,
-        chapter_id: str | None = None,
-    ) -> list[VectorSearchResult]:
-        if not self.embedding_model or not str(query or "").strip():
-            return []
-        try:
-            import numpy as np
-        except ImportError:
-            return []
-        query_vector = self.embedding_model.encode([query])
-        query_array = np.asarray(query_vector, dtype="float32")
-        if query_array.ndim != 2 or query_array.shape[0] != 1:
-            raise ValueError("embedding model must return a single query vector")
-        scores = np.dot(self.vectors, query_array[0])
-        ordered = np.argsort(-scores)
-        results: list[VectorSearchResult] = []
-        for idx in ordered:
-            doc = self.documents[int(idx)]
-            if subject and doc.subject != subject:
-                continue
-            if grade is not None and doc.grade != grade:
-                continue
-            if chapter_id and doc.chapter_id != chapter_id:
-                continue
-            score = float(scores[int(idx)])
-            if score <= 0:
-                continue
-            results.append(VectorSearchResult(section_id=doc.section_id, score=score))
-            if len(results) >= limit:
-                break
-        return results
 
 
 @dataclass
@@ -311,16 +223,6 @@ def _concept_labels(graph: CurriculumGraph, concept_ids: Iterable[str]) -> list[
         label = concept.get("canonical_label") or concept.get("normalized_label") or concept_id
         labels.append(f"{concept_id} ({label})")
     return labels
-
-
-def _read_jsonl(path: Path) -> list[dict[str, Any]]:
-    rows = []
-    with path.open("r", encoding="utf-8") as fh:
-        for line in fh:
-            line = line.strip()
-            if line:
-                rows.append(json.loads(line))
-    return rows
 
 
 def _write_jsonl(path: Path, rows: list[dict[str, Any]]) -> None:

@@ -1,246 +1,463 @@
-# AI Curriculum Engine — Development Log
+# AI Curriculum Creator
 
-## Assumption
+AI Curriculum Creator builds textbook-grounded learning paths for NCERT Class 11
+and 12 Physics, Chemistry, and Biology.
 
-A POD has requested curriculum modules covering selected chapters from the Class 9 NCERT Science textbook. The current working scope includes Chapters 4, 6, 7, 8, 9, and 10 — the physics-related chapters — from which **192 atomic concepts** have been extracted.
+A learner selects a subject and enters a learning goal. The application:
+
+1. Clarifies the learner's intent.
+2. Retrieves semantically relevant textbook sections.
+3. Expands the result through prerequisite and support relationships.
+4. Uses an LLM to arrange the selected sections into an ordered curriculum.
+5. Designs each module with lesson blocks, an activity, and checkpoint MCQs.
+6. Evaluates checkpoint answers and stores section-level learning insights.
+7. Uses recent learner insights and reviewed population hotspots when regenerating
+   future modules.
+
+## Supported Content
+
+The runtime corpus contains 73 usable chapters from NCERT Class 11 and 12:
+
+- Physics
+- Chemistry
+- Biology
+
+The following chapters are excluded because their runtime relationship artifacts
+are partial or missing:
+
+- Class 12 Chemistry: Haloalkanes and Haloarenes
+- Class 12 Chemistry: Alcohols, Phenols and Ethers
+- Class 12 Chemistry: Aldehydes, Ketones and Carboxylic Acids
+- Class 12 Physics: Alternating Current
+- Class 12 Physics: Electromagnetic Waves
+- Class 12 Physics: Ray Optics and Optical Instruments
+
+## Runtime Architecture
+
+```mermaid
+flowchart LR
+    Browser["Next.js frontend<br/>Cloudflare Workers"]
+    API["FastAPI backend<br/>Fly.io"]
+    Auth["Supabase Auth<br/>Google OAuth"]
+    DB["Supabase Postgres<br/>pgvector"]
+    HF["Hugging Face Inference<br/>BGE-M3 query embeddings"]
+    LLM["Fireworks AI<br/>GPT-OSS + Kimi"]
+    Files["Packaged textbook and<br/>relationship artifacts"]
+
+    Browser --> API
+    Browser --> Auth
+    API --> Auth
+    API --> DB
+    API --> HF
+    API --> LLM
+    API --> Files
+```
+
+### Runtime Components
 
----
+- `frontend/`: Next.js application deployed through OpenNext on Cloudflare Workers.
+- `curriculum_engine/`: FastAPI application, retrieval, planning, module design,
+  checkpoint evaluation, personalization, and admin services.
+- `data/textbook_sources/`: packaged textbook source content.
+- `data/relationship_artifacts/`: packaged canonical concepts, section summaries,
+  and graph relationships.
+- Supabase Postgres: users, plans, modules, checkpoint history, insights,
+  hotspots, public response cache, and section vectors.
 
-# Monday, 25th May — Log
+The textbook and relationship graph remain file-based at runtime. Supabase stores
+application state and the pgvector retrieval index.
 
-Since I have already worked on AI personalisation and identifying hotspots in the curriculum using the insights generated during tests, I spent today researching ways to make it easier to create curriculum modules based on the concepts that need to be covered.
+## User Flow
 
----
+### Guest Flow
 
-# Focus: Concept Clustering and Its Applications in Curriculum Design
+The following operations do not require authentication:
+
+1. Select a subject and enter a learning query.
+2. Classify or clarify the intended learning goal.
+3. Preview retrieved target sections, prerequisites, and relationship reasoning.
+4. Generate and view an ordered curriculum plan.
 
-The day was spent researching and experimenting with how **embedding-based clustering of physics concepts** could support the curriculum engine, with the following three research questions driving the work:
+Guest curriculum plans are stored only in browser `localStorage`. They are not
+written to Postgres.
+
+### Authenticated Flow
+
+Authentication is required when a learner opens a module.
+
+1. The frontend signs the learner in with Supabase Google OAuth.
+2. On first module creation, the frontend sends the guest plan to the backend.
+3. The backend claims and stores that plan under the authenticated Supabase user.
+4. The module-design LLM creates lesson blocks, a guided activity, and checkpoint
+   MCQs.
+5. Checkpoint submissions are evaluated against the stored module design.
+6. The backend stores results and reconciled section-level learning insights.
+
+Future module regeneration uses only the learner's latest section insights.
+
+### Curriculum Generation Calls
+
+The runtime uses separate LLM responsibilities:
+
+- **Intent classification:** Fireworks GPT-OSS 120B receives the query and compact
+  corpus clues. It confirms a clear intent or returns user-facing interpretations.
+- **Curriculum planning:** Fireworks Kimi receives selected sections and
+  section-to-section relationship reasoning. It returns an ordered module
+  sequence using canonical section IDs.
+- **Module design:** Fireworks Kimi receives section summaries, backend-derived
+  concepts, relationship reasoning, active population guidance, and latest
+  learner insights. It returns lesson blocks, an activity, and checkpoint MCQs.
+- **Insight reconciliation:** Fireworks Kimi summarizes current understanding for
+  each tested section using current checkpoint evidence and the latest prior
+  insight.
+
+## Retrieval
+
+Runtime retrieval combines:
+
+1. BGE-M3 semantic similarity over section embeddings stored in pgvector.
+2. Subject filtering for the first semantic-match layer.
+3. Bounded evidence scoring from titles, summaries, key terms, and concepts.
+4. A maximum of six direct target sections.
+5. Graph expansion from selected targets into prerequisites and optional support.
+
+Subject filtering applies only to initial semantic matching. Relationship
+expansion may include useful sections from other subjects.
+
+Graph relationship meanings:
+
+- `DEPENDS_ON_UNIT`: hard ordering relationship.
+- `TRANSFER_SUPPORTS_UNIT`: optional cross-chapter or cross-subject bridge.
+- `RELATED_BY_CONCEPT`: optional reinforcement.
+- `TEACHES_CONCEPT`: concepts taught by a section.
+- `REQUIRES_CONCEPT`: concepts expected before studying a section.
+
+## Persistence
+
+Supabase Postgres stores:
+
+- authenticated user profiles and pedagogical learner identities
+- claimed curriculum plans and ordered modules
+- current and versioned module designs
+- checkpoint attempts and answers
+- latest and historical section-level learning insights
+- reviewed misunderstanding hotspots
+- section embedding documents and pgvector embeddings
+- cached public intent, retrieval, and curriculum responses
 
----
+Supabase Auth supplies identity. `public.user_profiles.role` is the single source
+of truth for application authorization.
 
-## 1. Concept Ordering — Reducing Friction in Learning
+Public schema tables have RLS enabled with no browser-facing policies. FastAPI is
+the application data gateway and connects directly to Postgres.
 
-Since concepts within the same embedding cluster are semantically similar, clustering provides a principled basis for determining the order in which concepts should be taught.
+## Local Setup
 
-Grouping related concepts together and sequencing them in order of increasing complexity minimises the cognitive load caused by switching between unrelated ideas.
+### Requirements
 
-### Hypothesis
+- Python 3.11+
+- Node.js 20+
+- Supabase project with Google OAuth and pgvector enabled
+- Fireworks API key
+- Hugging Face token with access to BGE-M3 inference
 
-A student experiences less friction when related concepts are introduced in a cohesive sequence rather than being scattered across disconnected modules.
+### Backend
 
----
+```bash
+git clone https://github.com/chandrabs25/curriculum curriculum
+cd curriculum
+
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+pip install -r requirements-runtime.txt
+```
+
+Set runtime environment variables:
+
+```bash
+export DATABASE_URL='postgresql://...'
+export SUPABASE_URL='https://<project-ref>.supabase.co'
+export FIREWORKS_API_KEY='...'
+export HF_TOKEN='...'
+export CURRICULUM_USE_VECTOR='1'
+export CURRICULUM_VECTOR_BACKEND='pgvector'
+export CORS_ALLOW_ORIGINS='http://localhost:3000'
+```
+
+Use the Supabase **session pooler** connection string when the direct database
+hostname is unavailable over IPv4.
+
+Start the API:
+
+```bash
+python -m uvicorn curriculum_engine.api:app \
+  --host 127.0.0.1 \
+  --port 8000 \
+  --reload
+```
+
+Verify:
 
-## 2. Cross-Cluster Concept Links — A Recommendation Signal
+```bash
+curl http://127.0.0.1:8000/health
+```
+
+Expected health fields include:
+
+```json
+{
+  "ok": true,
+  "vector_enabled": true,
+  "vector_backend": "pgvector",
+  "database_enabled": true
+}
+```
+
+### Frontend
+
+```bash
+cd frontend
+npm install
+```
+
+Create `frontend/.env.local`:
+
+```bash
+NEXT_PUBLIC_API_URL=http://127.0.0.1:8000
+NEXT_PUBLIC_SUPABASE_URL=https://<project-ref>.supabase.co
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=<publishable-key>
+```
+
+Start:
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000).
+
+Configure this Supabase Auth redirect URL:
 
-Concepts that are semantically close but belong to different clusters (i.e., different chapters or topic groups) represent a natural opportunity for cross-domain recommendation.
+```text
+http://localhost:3000/auth/callback
+```
+
+## Environment Variables
+
+### Backend Required
 
-If a student has mastered concept **X**, and concept **Y** is semantically near **X** but resides in another cluster, the student's established understanding of **X** can serve as a bridge when concept **Y** is introduced.
+| Variable | Purpose |
+| --- | --- |
+| `DATABASE_URL` | Supabase Postgres connection string |
+| `SUPABASE_URL` | Supabase project URL used for JWT verification |
+| `FIREWORKS_API_KEY` | Fireworks calls for intent, planning, module design, and insights |
+| `HF_TOKEN` | BGE-M3 query embeddings through Hugging Face Inference |
+| `CURRICULUM_USE_VECTOR=1` | Enables semantic retrieval |
+| `CURRICULUM_VECTOR_BACKEND=pgvector` | Selects Supabase pgvector retrieval |
+| `CORS_ALLOW_ORIGINS` | Comma-separated frontend origins |
 
-This inter-cluster similarity can be surfaced as candidate links for curriculum designers, who can then validate and assign directionality, such as:
+### Backend Optional
 
-* “X is a prerequisite for Y”
-* “X and Y are analogous”
+| Variable | Default | Purpose |
+| --- | --- | --- |
+| `SUPABASE_JWT_SECRET` | unset | Legacy HS256 JWT fallback |
+| `FIREWORKS_MAX_RETRIES` | `3` | Transient provider retry count |
+| `FIREWORKS_BASE_RETRY_SECONDS` | `1` | Initial retry delay |
+| `CURRICULUM_PUBLIC_CACHE` | `1` | Enables public response caching |
+| `CURRICULUM_PUBLIC_CACHE_VERSION` | `public-cache-v1` | Invalidates all public cache keys when changed |
+| `CURRICULUM_INTENT_CACHE_VERSION` | `intent-v2` | Intent cache version |
+| `CURRICULUM_RETRIEVAL_CACHE_VERSION` | `retrieval-v2` | Retrieval cache version |
+| `CURRICULUM_PLAN_CACHE_VERSION` | `plan-v2` | Guest plan cache version |
 
-### Research Question
+### Frontend Required
 
-Can semantic similarity help curriculum creators establish meaningful, evidence-backed relationships between concepts across chapters?
+| Variable | Purpose |
+| --- | --- |
+| `NEXT_PUBLIC_API_URL` | FastAPI base URL |
+| `NEXT_PUBLIC_SUPABASE_URL` | Supabase project URL |
+| `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` | Browser-safe Supabase publishable key |
 
----
+Never expose the database password, Fireworks key, Hugging Face token, Supabase
+secret key, or service-role key in frontend variables.
 
-## 3. Tiered Assessment Design — Leveraging Clusters for Difficulty Scaffolding
+## API Surface
 
-Clustering also provides a natural scaffold for designing assessments at three tiers of difficulty.
+### Public Endpoints
 
-### Basic Tier
+| Method | Endpoint | Purpose |
+| --- | --- | --- |
+| `GET` | `/health` | Runtime, database, vector, and corpus health |
+| `GET` | `/api/options` | Available subjects, grades, and chapters |
+| `POST` | `/api/intent/classify` | Confirm or clarify a learning query |
+| `POST` | `/api/retrieval/preview` | Retrieve and expand textbook sections |
+| `POST` | `/api/curriculum/plan` | Generate an unsaved guest curriculum plan |
 
-Questions that test a student on a single atomic concept from one cluster.
+### Authenticated Learner Endpoints
 
-### Intermediate Tier
+All require `Authorization: Bearer <supabase-access-token>`.
 
-Questions that require reasoning across two or more related concepts from the same cluster, where the combination is semantically coherent.
+| Method | Endpoint | Purpose |
+| --- | --- | --- |
+| `GET` | `/api/me/profile` | Current user profile and database role |
+| `GET` | `/api/me/plans` | Current user's persisted plans |
+| `GET` | `/api/me/section-insights` | Latest insights for selected sections |
+| `GET` | `/api/curriculum/plans/{plan_id}` | Load an owned plan |
+| `POST` | `/api/modules/design` | Claim a guest plan if needed and design a module |
+| `GET` | `/api/curriculum/plans/{plan_id}/modules/{module_id}/design` | Load a stored module design |
+| `POST` | `/api/checkpoints/submit` | Evaluate stored checkpoint MCQs |
+| `GET` | `/api/curriculum/plans/{plan_id}/modules/{module_id}/checkpoint/latest` | Load latest checkpoint result |
 
-### Advanced Tier
+### Admin Endpoints
 
-Questions that require reasoning across concepts from different clusters, where the relationship is validated as meaningful by curriculum designers using inter-cluster similarity as a guide.
+Admin endpoints require `user_profiles.role = 'admin'`.
 
-### Key Constraint
+- `/api/admin/check`
+- `/api/admin/dashboard`
+- `/api/admin/learners`
+- `/api/admin/learners/{user_id}`
+- `/api/admin/hotspots`
+- `/api/admin/hotspots/{hotspot_id}`
+- `/api/admin/content/stats`
+- `/api/admin/checkpoint-analytics`
 
-Concepts should only be combined in questions when the relationship between them is pedagogically meaningful.
+Grant admin access:
 
-Semantic similarity is used as a signal to help curriculum creators surface and verify these relationships — not as an automatic rule.
+```sql
+update public.user_profiles
+set role = 'admin'
+where email = 'admin@example.com';
+```
 
----
+## Deployment
 
-# Key Finding: Does Clustering Add Value Over NCERT's Existing Chapter Structure?
+### Backend: Fly.io
 
-An important conclusion from today's research is that **NCERT's chapter structure already provides a strong primary grouping of concepts**.
+Runtime configuration is in `fly.toml`.
 
-Embedding-based clustering is most valuable **not as a replacement** for that structure, but as a complementary analytical layer for:
+Set secrets:
 
-1. Detecting cross-chapter concept relationships that the chapter structure does not explicitly capture.
+```bash
+fly secrets set \
+  DATABASE_URL='postgresql://...' \
+  FIREWORKS_API_KEY='...' \
+  HF_TOKEN='...'
+```
 
-2. Identifying near-duplicate or semantically overlapping concepts across chapters.
+Deploy:
 
-3. Informing tiered assessment design by surfacing which concepts are close enough to meaningfully combine in multi-concept questions.
+```bash
+fly deploy
+```
 
----
+Verify:
 
-# Final Insight
+```bash
+curl https://<fly-app>.fly.dev/health
+```
 
-* **The chapter structure** drives the curriculum and the knowledge graph.
-* **Clustering** drives the analytics layer, recommendation layer, and assessment blueprint.
+### Frontend: Cloudflare Workers
 
----
-# 26th MAY
+Runtime configuration is in `frontend/wrangler.jsonc`.
 
-## Goal:
+```bash
+cd frontend
+npm install
+npm run deploy
+```
 
-1. Create the NCERT content ready for it to act as a knowledge base on which AI creates modules (Using too much of the content from NCERT consumes a lot of tokens, so use the content for providing the skeleton around which modules should be made)
-2. Create meaningful relationships between the concepts across the chapters to help the recommendation system and prerequisite checks(make an internal tool, for helping in the creation of these cross-chapter links)
-3. Finalise the Onboarding questions.
-4. Finalise the schemas (make sure the AI module personalisation is based on the onboarding questions and the students understanding of the semantically close concepts)
-5. Implement most of the backend logic
+The deployed frontend origin must be present in backend
+`CORS_ALLOW_ORIGINS`, and its `/auth/callback` URL must be allowed in Supabase
+Auth redirect settings.
 
+## Runtime Operations
 
----
-## 3:00 pm:
+### Rebuild And Upload Section Embeddings
 
-I have just finished implementing the pipeline that would generate the knowledge base with relationships like TEACHES_CONCEPT, REQUIRES_CONCEPT, DEPENDS_ON_UNIT, etc., and the script would run in the background calling gemini api. Currently finalising the various typed models that are used across for module generation, assessments, and insight creation. I am using the doing the project on class 11 and 12 physics, chemistry and biology textbooks instead, because I already had the base content with me from my earlier project, but I had to redesign the way relationships are created to make it suitable for this project.
+Run this after canonical concepts, section relationships, or embedding text
+changes:
 
----
+```bash
+source .venv/bin/activate
 
-## 4:00 pm
+pip install -r requirements.txt
+python scripts/download_embedding_model.py
+python scripts/build_retrieval_index.py --force
+python scripts/import_pgvector_index.py --skip-schema
+```
 
-I implemented a textbook ingestion pipeline that extracts section summaries, taught concepts, and required concepts using a single LLM call per section unit, saving thousands of API requests and keeping the execution fast. I then wrote the concept normalization logic to group these raw extractions into a global canonical concept registry, which allows us to natively bridge concepts across different subjects and grades. Finally, I built a programmatic relationship generator that automatically compiles the TEACHES_CONCEPT and REQUIRES_CONCEPT edges, and deterministically infers DEPENDS_ON_UNIT dependencies within each chapter by matching requirements and teachings on shared concepts, ensuring the graph is semantically consistent.
+The full requirements are needed only for local index building because that
+process loads `sentence-transformers`. The running API uses Hugging Face
+Inference for query embeddings and does not load the embedding model locally.
 
----
+The import upserts all section vectors. `/health` should report the same
+`section_embedding_documents` count as the local index.
 
-## 7:30pm
+### Invalidate Public Caches
 
-To make the graph artifacts usable by the application, I implemented the curriculum_engine querying and retrieval library. I built in-memory dictionary indexes cached in RAM via Python's @cached_property to ensure all graph lookups run in instant, $O(1)$ time instead of scanning lists linearly. I used these indexes to implement pathfinding algorithms that can trace prerequisites and dynamically map out remediation paths when a student struggles with specific concepts. I also added a token-based search indexing method over summaries and key terms to provide a robust, deterministic routing layer for module sequencing and assessment grading.
+Use after retrieval, graph, prompt, or model changes:
 
----
+```sql
+truncate table public.public_response_cache;
+```
 
-## May 27th
+Then bump the deployed cache version:
 
----
+```bash
+fly secrets set CURRICULUM_PUBLIC_CACHE_VERSION=public-cache-v2
+```
 
-# What problem am I solving?
+### Detect Misunderstanding Hotspots
 
-1. Books are one-dimensional; we can either turn the page forward or backward. If you want to refer to other books/chapters on the topic that you are currently studying, there is no easy way for you to instantly move to the page with the required reference.
+Checkpoint evidence is aggregated by section, concept, and misconception tag.
+Candidates do not affect modules until an admin reviews and activates them.
 
-# What's my solution?
+```bash
+python scripts/detect_hotspots.py
+```
 
-We need to move from 1-dimensional movement of turning pages back or forth, by adding 2 more dimensions of movement:
+Use deterministic summaries without an LLM call:
 
-## i. Dimension 2
+```bash
+python scripts/detect_hotspots.py --no-llm
+```
 
-According to the learning goal, we need to make it possible to move back to the pages in other sections/chapters/books where the prerequisites for current topics are being taught, and move forward to the pages where the current topic is used to teach another topic.
+### Reset Disposable Learning Data
 
-## ii. Dimension 3
+For demo environments where plans and checkpoints can be discarded:
 
-We need one more dimension where we can move to the pages in other sections/chapters/books with the same prerequisite concepts, so this helps us understand where else we can use the intuition we built here on this page.
+```sql
+begin;
+delete from public.curriculum_plans;
+truncate table public.section_misunderstanding_hotspots;
+truncate table public.public_response_cache;
+commit;
+```
 
-# To create these 2 more dimensions of movement, I implemented the following techniques:
+This preserves users, textbook content, relationship artifacts, and section
+embeddings.
 
-## 1. LLM Extraction Pipeline
+## Verification
 
-I ran every section of the 6 science textbooks of classes 11 and 12 through an LLM extraction loop, where the LLM:
+Backend:
 
-* Gives a summary for each section
-* Generates the concepts one requires to understand that section, with the reason behind it
-* Generates the concepts the section teaches, with confidence scores
+```bash
+source .venv/bin/activate
+python -m unittest discover -s tests -v
+```
 
-## 2. Relationship Graph Construction
+Frontend:
 
-If any concept is taught by one section and is a prerequisite for another section, we can form 2 relationships:
+```bash
+cd frontend
+npm run build
+```
 
-### i. Dependency Relationship
+Before a deployment, verify:
 
-`Section X --> [:Depends_on_unit] --> Section Y`
-
-When a section X has a prerequisite concept that is taught by section Y of any book.
-
-### ii. Transfer Relationship
-
-`Section X --> [:TRANSFER_SUPPORTS_UNIT] --> Section Y`
-
-The inverse of the above relationship.
-
-## 3. Concept-Based Similarity Relationships
-
-If 2 sections have the same prerequisite concepts, then we can create a bi-directional relationship between them called:
-
-`RELATED_BY_CONCEPT`
-
----
-
-# Retrieval using vector embeddings and graph relationships
-
-## 1. Semantic Matching
-
-We use semantic matching on the section embeddings and concepts, score them, and select the top matched sections and concepts.
-
-## 2. Relationship Expansion
-
-Now, we inspect the various relationships of these matched sections and collect them all.
-
-## 3. Metadata Aggregation
-
-Now, we collect the summary and metadata of each matched section and how they are related to each other.
-
-Since we have generated reasoning for every prerequisite concept for every section, we can use that reasoning to make the relationships metadata-rich between the sections.
-
-We don't need to have the detailed full text of each section; this metadata is rich enough for the LLM to infer everything.
-
-## 4. Learning Sequence Generation
-
-We send this entire metadata of all sections, relationships between them, along with reasoning, to an LLM and ask it to:
-
-* Arrange the sections in a learning sequence that would make sense according to our learning goal
-* Omit sections that aren't relevant to our learning goal
-
-## 5. Dynamic Learning Unit Generation
-
-For each section ID from the output response of the first LLM call:
-
-* We fetch richer metadata about this section from the database
-* Concatenate it with:
-
-  * The larger learning goal
-  * How this section contributes toward reaching that goal
-
-We then ask an LLM to produce:
-
-* Small learning units
-* Suggested activities
-* Checkpoint MCQ questions
-
-## 6. Dynamic Curriculum Generation
-
-Now we have created a dynamic curriculum generator based on our base curriculum and adapted it to our needs.
-
----
-
-# Current Status
-
-Currently, I am working on:
-
-* Creating the frontend
-* Wiring up a few missing components
-
-At the moment, I am not yet using a database. Instead:
-
-* I am using a flat file
-* Loading the indexes into RAM for fast retrieval
-
-However, I have made sure things are modular enough that I can later integrate an actual database like PostgreSQL.
-
-After doing that, I plan to:
-
-1. Create authentication and user-based access
-2. Record insights produced from tests against section IDs
-3. Use these insights to identify section IDs where many misconceptions occur
-4. Address those misconceptions by modifying the metadata of the section so the LLM can better address those learning problems
-
-
+1. `/health` reports `ok`, pgvector enabled, and database connectivity.
+2. A guest can classify intent, preview retrieval, and create a curriculum.
+3. Opening a module requires login and persists the guest plan.
+4. Module design returns lesson content, an activity, and checkpoint MCQs.
+5. Checkpoint submission creates a result and section insight.
+6. A normal learner cannot access admin routes.

@@ -36,7 +36,7 @@ from .public_cache import (
 )
 from .retrieval import CurriculumRetriever, LearnerConceptState
 from .section_insights import generate_section_insights
-from .vector_index import SectionVectorIndex, PgVectorSectionIndex, HFInferenceEmbeddingModel
+from .vector_index import PgVectorSectionIndex, HFInferenceEmbeddingModel
 
 
 LOGGER = logging.getLogger(__name__)
@@ -140,7 +140,7 @@ class CurriculumAPIService:
     ):
         self.root = Path(root)
         self.repository = repository if repository is not None else repository_from_env()
-        self.vector_backend = os.getenv("CURRICULUM_VECTOR_BACKEND", "file").strip().lower()
+        self.vector_backend = os.getenv("CURRICULUM_VECTOR_BACKEND", "pgvector").strip().lower()
         self.graph = CurriculumGraph(
             TextbookStore(self.root),
             ArtifactStore(self.root),
@@ -643,19 +643,18 @@ def _load_vector_index(
     root: Path,
     *,
     use_vector: bool,
-    vector_backend: str = "file",
+    vector_backend: str = "pgvector",
     repository: PostgresRepository | None = None,
-) -> SectionVectorIndex | PgVectorSectionIndex | None:
+) -> PgVectorSectionIndex | None:
     if not use_vector:
         return None
     if vector_backend == "pgvector":
         if not repository:
             raise RuntimeError("CURRICULUM_VECTOR_BACKEND=pgvector requires DATABASE_URL")
         return PgVectorSectionIndex(repository=repository, embedding_model=HFInferenceEmbeddingModel())
-    index = SectionVectorIndex.load(root)
-    if not index:
-        return None
-    return index.with_embedding_model(HFInferenceEmbeddingModel())
+    raise RuntimeError(
+        f"Unsupported CURRICULUM_VECTOR_BACKEND={vector_backend!r}; runtime retrieval uses pgvector"
+    )
 
 
 def _retrieval_row(row: Any) -> dict[str, Any]:

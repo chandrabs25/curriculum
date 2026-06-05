@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Curriculum Frontend
 
-## Getting Started
+Next.js frontend for AI Curriculum Creator.
 
-First, run the development server:
+The frontend supports:
+
+- guest intent classification, retrieval preview, and curriculum generation
+- browser-local guest plans
+- Supabase Google OAuth when a learner opens a module
+- persisted module design and checkpoint flows
+- learner plan history
+- admin dashboards for learners, content, checkpoints, and hotspots
+
+## Local Development
+
+Create `.env.local`:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+NEXT_PUBLIC_API_URL=http://127.0.0.1:8000
+NEXT_PUBLIC_SUPABASE_URL=https://<project-ref>.supabase.co
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=<publishable-key>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Run:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm install
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000](http://localhost:3000).
 
-## Learn More
+The backend must allow `http://localhost:3000` through `CORS_ALLOW_ORIGINS`.
+Supabase Auth must allow:
 
-To learn more about Next.js, take a look at the following resources:
+```text
+http://localhost:3000/auth/callback
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Cloudflare Workers Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The application uses OpenNext for Cloudflare Workers:
 
-## Deploy on Vercel
+```bash
+npm run deploy
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Public runtime variables must be configured for the deployed Worker. The
+deployed worker origin must also be allowed by the backend CORS configuration
+and Supabase Auth redirect settings.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Build Verification
+
+```bash
+npm run build
+```
+
+For complete runtime architecture, backend setup, deployment, and operations, see
+the repository root `README.md`.

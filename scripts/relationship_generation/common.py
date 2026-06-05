@@ -297,14 +297,6 @@ def completed_ids(path: Path, key: str) -> set[str]:
     return {row[key] for row in read_jsonl(path) if row.get(key)}
 
 
-def load_unit_summaries(path: Path) -> dict[str, dict[str, Any]]:
-    return {row["unit_id"]: row for row in read_jsonl(path) if row.get("unit_id")}
-
-
-def chapter_unit_summaries(path: Path, chapter_id: str) -> list[dict[str, Any]]:
-    return [row for row in read_jsonl(path) if row.get("chapter_id") == chapter_id]
-
-
 def relevant_concepts_for_text(
     chapter_id: str,
     subject: str,

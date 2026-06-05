@@ -68,7 +68,6 @@ from .vector_index import (
     DEFAULT_INDEX_DIR,
     DEFAULT_MODEL_DIR,
     SectionDocument,
-    SectionVectorIndex,
     VectorSearchResult,
     build_section_documents,
 )
@@ -118,7 +117,6 @@ __all__ = [
     "SectionDocument",
     "SectionRetrievalResult",
     "SectionSummaryArtifact",
-    "SectionVectorIndex",
     "TextbookStore",
     "VectorSearchResult",
     "allocate_module_mcq_targets",

@@ -5,10 +5,10 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from enum import Enum
 import re
-from typing import Any
+from typing import Any, Protocol
 
 from .graph import CurriculumGraph
-from .vector_index import SectionVectorIndex
+from .vector_index import VectorSearchResult
 
 
 DIRECT_MATCH_REASONS = {
@@ -70,6 +70,19 @@ QUERY_STOPWORDS = {
 BASIC_SCOPE_TERMS = {"basic", "basics", "fundamental", "fundamentals", "introductory", "overview"}
 
 
+class SectionSearchIndex(Protocol):
+    def search(
+        self,
+        query: str,
+        *,
+        limit: int = 20,
+        subject: str | None = None,
+        grade: int | None = None,
+        chapter_id: str | None = None,
+    ) -> list[VectorSearchResult]:
+        """Return vector matches for section IDs."""
+
+
 class LearnerConceptStatus(str, Enum):
     COMPETENT = "competent"
     PARTIAL = "partial"
@@ -106,7 +119,7 @@ class SectionRetrievalResult:
 @dataclass
 class CurriculumRetriever:
     graph: CurriculumGraph
-    vector_index: SectionVectorIndex | None = None
+    vector_index: SectionSearchIndex | None = None
     last_selection_trace: list[dict[str, Any]] = field(default_factory=list, init=False)
 
     def search(
