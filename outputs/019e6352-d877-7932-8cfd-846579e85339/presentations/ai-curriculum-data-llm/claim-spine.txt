@@ -1,0 +1,14 @@
+Thesis: The project scales by separating deterministic data engineering from bounded, role-specific LLM calls.
+Audience: technical project reviewers, demo stakeholders, engineering collaborators.
+Arc: start with runtime shape, show data foundation, show retrieval and LLM orchestration, then close with personalization and scale controls.
+
+01. System Thesis — The agent is a data product first, with LLMs used only at controlled decision points. Proof: architecture spine with runtime roles.
+02. Content Substrate — Cleaned textbook JSON becomes reusable section, concept, relationship, and vector artifacts. Proof: artifact pipeline.
+03. Graph Layer — Relationships convert textbook order into teach/require/depend/support signals. Proof: relationship taxonomy and contract.
+04. Retrieval Path — Query retrieval is bounded before the planner sees context. Proof: query-to-packet flow.
+05. LLM Call Split — Different LLM calls own different cognitive jobs. Proof: four-call sequence map.
+06. Planner Packet — The planner gets section-level ordering evidence, not bulk concepts or full text. Proof: include/exclude matrix.
+07. Runtime Persistence — Supabase separates identity, plans, module designs, checkpoints, insights, hotspots, cache, and vectors. Proof: data model map.
+08. Personalization Loop — Checkpoint evidence becomes latest section insight, then changes future module design. Proof: feedback loop.
+09. Scale Controls — Caches, pgvector indexes, caps, validation, and provider retry bound cost and latency. Proof: scaling control board.
+10. Evaluation Roadmap — The next maturity jump is visible metrics around retrieval, LLM validity, learning outcomes, and cost. Proof: metric stack.

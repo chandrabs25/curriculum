@@ -1,0 +1,52 @@
+[warning] slide-01.layout.json:tight-text:27: 73 text box is tight: height 38px for 1 line(s) at 34px.
+    - shape 73 bbox=[84,535,160,38]
+[warning] slide-01.layout.json:tight-text:29: 841 text box is tight: height 38px for 1 line(s) at 34px.
+    - shape 841 bbox=[314,535,160,38]
+[warning] slide-01.layout.json:tight-text:31: 4 text box is tight: height 38px for 1 line(s) at 34px.
+    - shape 4 bbox=[566,535,160,38]
+[warning] slide-01.layout.json:tight-text:33: 1 text box is tight: height 38px for 1 line(s) at 34px.
+    - shape 1 bbox=[818,535,160,38]
+[warning] slide-03.layout.json:tight-text:18: TRANSFER_SUPPORTS_UNIT text box is tight: height 20px for 2 line(s) at 12.51px.
+    - shape TRANSFER_SUPPORTS_UNIT bbox=[92,442,170,20]
+[warning] slide-03.layout.json:tight-text:26: Rows carry IDs, confidence, evidence text, and reasoning. Invalid or dangling IDs are rejected before runtime use. text box is tight: height 28px for 2 line(s) at 12.51px.
+    - shape Rows carry IDs, confidence, evidence text, and reasoning. Invalid or dangling IDs are rejected befor bbox=[778,284,332,28]
+[warning] slide-03.layout.json:tight-text:30: Aliases and reviewed merges prevent synonym drift from breaking dependency inference. text box is tight: height 28px for 2 line(s) at 12.51px.
+    - shape Aliases and reviewed merges prevent synonym drift from breaking dependency inference. bbox=[778,402,332,28]
+[warning] slide-03.layout.json:tight-text:34: LLMs receive relationship purpose labels, not a flat bag of “related sections.” text box is tight: height 28px for 2 line(s) at 12.51px.
+    - shape LLMs receive relationship purpose labels, not a flat bag of “related sections.” bbox=[778,520,332,28]
+[warning] slide-04.layout.json:tight-text:7: User query + subject text box is tight: height 24px for 2 line(s) at 17px.
+    - shape User query + subject bbox=[80,264,162,24]
+[warning] slide-04.layout.json:tight-text:11: BGE-M3 embedding text box is tight: height 24px for 2 line(s) at 17px.
+    - shape BGE-M3 embedding bbox=[316,264,162,24]
+[warning] slide-04.layout.json:tight-text:38: Design consequence: retrieval quality is now a measurable data-engineering problem, not a model-vibes problem. text box is tight: height 42px for 2 line(s) at 22px.
+    - shape Design consequence: retrieval quality is now a measurable data-engineering problem, not a model-vibe bbox=[110,548,920,42]
+[warning] slide-06.layout.json:tight-text:19: Supports “alongside / reinforce / next” recommendations. text box is tight: height 20px for 2 line(s) at 12.51px.
+    - shape Supports “alongside / reinforce / next” recommendations. bbox=[278,424,300,20]
+[warning] slide-06.layout.json:tight-text:41: Large packet sits in the middle; final task, rules, and JSON schema appear at the end of the prompt. text box is tight: height -4px for 1 line(s) at 12.51px.
+    - shape Large packet sits in the middle; final task, rules, and JSON schema appear at the end of the prompt. bbox=[274,594,732,-4]
+[warning] slide-06.layout.json:box-bottom-pad:17:19: Supports “alongside / reinforce / next” recommendations. has only 15px bottom padding inside its containing box; expected at least 16px.
+    - shape order 17 bbox=[78,412,520,47]
+    - shape Supports “alongside / reinforce / next” recommendations. bbox=[278,424,300,20]
+[warning] slide-07.layout.json:tight-text:12: curriculum_plans | curriculum_modules text box is tight: height 24px for 2 line(s) at 12.51px.
+    - shape curriculum_plans | curriculum_modules bbox=[504,250,272,24]
+[warning] slide-07.layout.json:tight-text:16: module_designs | module_design_versions text box is tight: height 24px for 2 line(s) at 12.51px.
+    - shape module_designs | module_design_versions bbox=[504,370,272,24]
+[warning] slide-07.layout.json:tight-text:20: checkpoint_attempts | checkpoint_answers text box is tight: height 24px for 2 line(s) at 12.51px.
+    - shape checkpoint_attempts | checkpoint_answers bbox=[504,490,272,24]
+[warning] slide-08.layout.json:tight-text:11: Checkpoint answers text box is tight: height 24px for 2 line(s) at 17px.
+    - shape Checkpoint answers bbox=[318,350,154,24]
+[warning] slide-08.layout.json:tight-text:15: Deterministic scoring text box is tight: height 24px for 2 line(s) at 17px.
+    - shape Deterministic scoring bbox=[546,272,154,24]
+[warning] slide-08.layout.json:tight-text:23: Regenerated module text box is tight: height 24px for 2 line(s) at 17px.
+    - shape Regenerated module bbox=[1002,272,154,24]
+[warning] slide-09.layout.json:tight-text:29: p95 text box is tight: height 38px for 1 line(s) at 34px.
+    - shape p95 bbox=[96,552,160,38]
+[warning] slide-09.layout.json:tight-text:31: $/plan text box is tight: height 38px for 1 line(s) at 34px.
+    - shape $/plan bbox=[350,552,160,38]
+[warning] slide-09.layout.json:tight-text:33: hit% text box is tight: height 38px for 1 line(s) at 34px.
+    - shape hit% bbox=[632,552,160,38]
+[warning] slide-09.layout.json:tight-text:35: fail% text box is tight: height 38px for 1 line(s) at 34px.
+    - shape fail% bbox=[880,552,160,38]
+[warning] slide-10.layout.json:tight-text:34: Practical evaluation set: 30–50 golden queries across Physics, Chemistry, and Biology, each with expected sections and forbidden sections. text box is tight: height 48px for 2 line(s) at 22px.
+    - shape Practical evaluation set: 30–50 golden queries across Physics, Chemistry, and Biology, each with exp bbox=[104,548,920,48]
+Checked 10 layout file(s): 0 error(s), 25 warning(s).

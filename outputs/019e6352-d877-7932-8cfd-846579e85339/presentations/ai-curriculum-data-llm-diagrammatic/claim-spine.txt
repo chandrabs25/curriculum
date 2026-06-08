@@ -1,0 +1,8 @@
+01. Raw textbook JSON becomes structured section payloads.
+02. One section at a time goes to the extraction LLM.
+03. Raw concept labels are normalized into canonical concepts.
+04. Teaches/requires concepts create graph edges.
+05. Section-to-section links are inferred through concept bridges.
+06. Retrieval combines vector search and graph expansion.
+07. LLM planning and module design are separate calls.
+08. Checkpoints feed insights back into future module design.

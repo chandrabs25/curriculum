@@ -1,0 +1,91 @@
+[warning] slide-01.layout.json:box-bottom-pad:6:9: next page has only 11px bottom padding inside its containing box; expected at least 12px.
+    - shape order 6 bbox=[104,210,146,96]
+    - shape next page bbox=[122,255,116,40]
+[warning] slide-01.layout.json:box-bottom-pad:10:13: next page has only 11px bottom padding inside its containing box; expected at least 12px.
+    - shape order 10 bbox=[314,210,146,96]
+    - shape next page bbox=[332,255,116,40]
+[warning] slide-01.layout.json:box-bottom-pad:14:17: next page has only 11px bottom padding inside its containing box; expected at least 12px.
+    - shape order 14 bbox=[524,210,146,96]
+    - shape next page bbox=[542,255,116,40]
+[warning] slide-01.layout.json:box-bottom-pad:18:21: next page has only 11px bottom padding inside its containing box; expected at least 12px.
+    - shape order 18 bbox=[734,210,146,96]
+    - shape next page bbox=[752,255,116,40]
+[warning] slide-01.layout.json:box-bottom-pad:22:25: next page has only 11px bottom padding inside its containing box; expected at least 12px.
+    - shape order 22 bbox=[944,210,146,96]
+    - shape next page bbox=[962,255,116,40]
+[warning] slide-03.layout.json:tight-text:3: One LLM call produces summary, teaches, requires, and reasoning text box is tight: height 76px for 2 line(s) at 34px.
+    - shape One LLM call produces summary, teaches, requires, and reasoning bbox=[56,64,920,76]
+[warning] slide-03.layout.json:box-bottom-pad:11:14: reads one full section | returns strict JSON | keeps evidence + reason has only 11px bottom padding inside its containing box; expected at least 16px.
+    - shape order 11 bbox=[470,260,230,190]
+    - shape reads one full section | returns strict JSON | keeps evidence + reason bbox=[488,305,200,134]
+[warning] slide-06.layout.json:tight-text:3: Concept bridges create three section-to-section edge types text box is tight: height 76px for 2 line(s) at 34px.
+    - shape Concept bridges create three section-to-section edge types bbox=[56,64,920,76]
+[warning] slide-06.layout.json:tight-text:7: TEACHES X | same chapter text box is tight: height 26px for 2 line(s) at 12.2px.
+    - shape TEACHES X | same chapter bbox=[90,215,188,26]
+[warning] slide-06.layout.json:tight-text:11: TEACHES X | other chapter text box is tight: height 26px for 2 line(s) at 12.2px.
+    - shape TEACHES X | other chapter bbox=[90,375,188,26]
+[warning] slide-06.layout.json:box-bottom-pad:4:7: TEACHES X | same chapter has only 11px bottom padding inside its containing box; expected at least 16px.
+    - shape order 4 bbox=[72,170,218,82]
+    - shape TEACHES X | same chapter bbox=[90,215,188,26]
+[warning] slide-06.layout.json:box-bottom-pad:8:11: TEACHES X | other chapter has only 11px bottom padding inside its containing box; expected at least 16px.
+    - shape order 8 bbox=[72,330,218,82]
+    - shape TEACHES X | other chapter bbox=[90,375,188,26]
+[warning] slide-06.layout.json:box-bottom-pad:12:15: TEACHES X has only 11px bottom padding inside its containing box; expected at least 12px.
+    - shape order 12 bbox=[72,490,218,82]
+    - shape TEACHES X bbox=[90,535,188,26]
+[warning] slide-06.layout.json:box-bottom-pad:16:19: same concept X has only 11px bottom padding inside its containing box; expected at least 12px.
+    - shape order 16 bbox=[370,170,190,82]
+    - shape same concept X bbox=[388,215,160,26]
+[warning] slide-06.layout.json:box-bottom-pad:20:23: same concept X has only 11px bottom padding inside its containing box; expected at least 12px.
+    - shape order 20 bbox=[370,330,190,82]
+    - shape same concept X bbox=[388,375,160,26]
+[warning] slide-06.layout.json:box-bottom-pad:24:27: same concept X has only 11px bottom padding inside its containing box; expected at least 12px.
+    - shape order 24 bbox=[370,490,190,82]
+    - shape same concept X bbox=[388,535,160,26]
+[warning] slide-06.layout.json:box-bottom-pad:28:31: REQUIRES X has only 11px bottom padding inside its containing box; expected at least 12px.
+    - shape order 28 bbox=[640,170,218,82]
+    - shape REQUIRES X bbox=[658,215,188,26]
+[warning] slide-06.layout.json:box-bottom-pad:32:35: REQUIRES X has only 11px bottom padding inside its containing box; expected at least 12px.
+    - shape order 32 bbox=[640,330,218,82]
+    - shape REQUIRES X bbox=[658,375,188,26]
+[warning] slide-06.layout.json:box-bottom-pad:36:39: TEACHES X has only 11px bottom padding inside its containing box; expected at least 12px.
+    - shape order 36 bbox=[640,490,218,82]
+    - shape TEACHES X bbox=[658,535,188,26]
+[warning] slide-07.layout.json:tight-text:3: Runtime retrieval combines vector matches with graph expansion text box is tight: height 76px for 2 line(s) at 34px.
+    - shape Runtime retrieval combines vector matches with graph expansion bbox=[56,64,920,76]
+[warning] slide-07.layout.json:box-bottom-pad:4:7: subject filter | + refined intent has only 11px bottom padding inside its containing box; expected at least 16px.
+    - shape order 4 bbox=[58,262,190,128]
+    - shape subject filter | + refined intent bbox=[76,307,160,72]
+[warning] slide-07.layout.json:box-bottom-pad:8:11: BGE-M3 vector | 1024 dimensions has only 11px bottom padding inside its containing box; expected at least 16px.
+    - shape order 8 bbox=[302,206,210,110]
+    - shape BGE-M3 vector | 1024 dimensions bbox=[320,251,180,54]
+[warning] slide-07.layout.json:box-bottom-pad:12:15: subject-scoped | top candidate pool has only 11px bottom padding inside its containing box; expected at least 16px.
+    - shape order 12 bbox=[574,206,210,110]
+    - shape subject-scoped | top candidate pool bbox=[592,251,180,54]
+[warning] slide-07.layout.json:box-bottom-pad:16:19: vector score | evidence score | max target seeds has only 11px bottom padding inside its containing box; expected at least 16px.
+    - shape order 16 bbox=[846,206,210,110]
+    - shape vector score | evidence score | max target seeds bbox=[864,251,180,54]
+[warning] slide-08.layout.json:tight-text:23: concept IDs | activities | MCQs | teaching content text box is tight: height 40px for 4 line(s) at 12.2px.
+    - shape concept IDs | activities | MCQs | teaching content bbox=[136,519,216,40]
+[warning] slide-08.layout.json:tight-text:27: IDs only | main path only | optional IDs separate text box is tight: height 40px for 3 line(s) at 12.2px.
+    - shape IDs only | main path only | optional IDs separate bbox=[532,519,216,40]
+[warning] slide-08.layout.json:tight-text:31: source_section_ids | main_path membership | module cap text box is tight: height 40px for 3 line(s) at 12.2px.
+    - shape source_section_ids | main_path membership | module cap bbox=[928,519,216,40]
+[warning] slide-09.layout.json:box-bottom-pad:16:19: lesson blocks | guided activity | misconception handling | checkpoint MCQs has only 11px bottom padding inside its containing box; expected at least 16px.
+    - shape order 16 bbox=[742,250,230,140]
+    - shape lesson blocks | guided activity | misconception handling | checkpoint MCQs bbox=[760,295,200,84]
+[warning] slide-09.layout.json:box-bottom-pad:20:23: module_design_id | checkpoint_mcqs | metadata has only 11px bottom padding inside its containing box; expected at least 16px.
+    - shape order 20 bbox=[1040,250,176,140]
+    - shape module_design_id | checkpoint_mcqs | metadata bbox=[1058,295,146,84]
+[warning] slide-10.layout.json:tight-text:3: Checkpoint answers become future personalization metadata text box is tight: height 76px for 2 line(s) at 34px.
+    - shape Checkpoint answers become future personalization metadata bbox=[56,64,920,76]
+[warning] slide-10.layout.json:box-bottom-pad:4:7: question_id | selected option has only 11px bottom padding inside its containing box; expected at least 16px.
+    - shape order 4 bbox=[58,222,216,116]
+    - shape question_id | selected option bbox=[76,267,186,60]
+[warning] slide-10.layout.json:box-bottom-pad:8:11: loaded by backend | from module_design_id has only 11px bottom padding inside its containing box; expected at least 16px.
+    - shape order 8 bbox=[332,222,220,116]
+    - shape loaded by backend | from module_design_id bbox=[350,267,190,60]
+[warning] slide-10.layout.json:box-bottom-pad:12:15: correctness | weak sections | weak concepts has only 11px bottom padding inside its containing box; expected at least 16px.
+    - shape order 12 bbox=[610,222,220,116]
+    - shape correctness | weak sections | weak concepts bbox=[628,267,190,60]
+Checked 10 layout file(s): 0 error(s), 33 warning(s).
