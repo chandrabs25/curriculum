@@ -1,9 +1,43 @@
 # AI Curriculum Creator
 
-Here is the link to the development log: https://github.com/chandrabs25/curriculum/blob/cloudfar-deployment/development%20log
+## The Problem
 
-AI Curriculum Creator builds textbook-grounded learning paths for NCERT Class 11
-and 12 Physics, Chemistry, and Biology.
+Textbooks offer learners only one direction of travel: chapter after chapter,
+section after section. That sequence is useful for publishing a book, but it is
+not enough for constructing a curriculum around a learner's goal. Understanding
+one section may depend on knowledge taught much earlier, in another chapter, or
+even in another subject. A learner may also benefit from visiting other sections
+that explain or apply the same concept from a different perspective.
+
+An effective learning path therefore needs three dimensions:
+
+1. **Textbook sequence:** the original chapter and section order.
+2. **Prerequisite travel:** movement to the sections that teach knowledge required
+   before the learner can understand the current section.
+3. **Conceptual reinforcement:** movement to sections that teach related or
+   overlapping concepts, helping the learner compare applications and consolidate
+   intuition.
+
+Ordinary course generators rarely represent these dimensions explicitly. Generic
+AI-generated curricula can produce plausible topic lists without being grounded
+in textbook content, without explaining why one section should precede another,
+and without distinguishing a required prerequisite from an optional conceptual
+connection. A fixed path also cannot respond when a learner demonstrates a new
+competency, partial understanding, or misconception.
+
+AI Curriculum Creator turns NCERT Class 11 and 12 Physics, Chemistry, and Biology
+content into an auditable learning graph. It combines semantic retrieval with
+section, concept, prerequisite, and reinforcement relationships, then adapts
+module generation using the learner's latest evidence of understanding. The goal
+is not merely to generate a list of topics, but to answer:
+
+- What should this learner study next?
+- Which prerequisite knowledge is missing?
+- What can be shortened or skipped because the learner already understands it?
+- Why was each section included in the path?
+- How should future modules change as the learner's understanding changes?
+
+## What the Project Does
 
 A learner selects a subject and enters a learning goal. The application:
 
@@ -15,6 +49,8 @@ A learner selects a subject and enters a learning goal. The application:
 6. Evaluates checkpoint answers and stores section-level learning insights.
 7. Uses recent learner insights and reviewed population hotspots when regenerating
    future modules.
+
+Development log: https://github.com/chandrabs25/curriculum/blob/cloudfar-deployment/development%20log
 
 ## Supported Content
 
