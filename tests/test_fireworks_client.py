@@ -9,7 +9,7 @@ from unittest.mock import patch
 
 from curriculum_engine import (
     FIREWORKS_GPT_OSS_120B,
-    FIREWORKS_KIMI_K2P5,
+    FIREWORKS_MINIMAX_M2P7,
     INTENT_OUTPUT_MAX_TOKENS,
     FireworksAPIError,
     FireworksLLMClient,
@@ -18,7 +18,7 @@ from curriculum_engine import (
 
 
 class FireworksClientTest(unittest.TestCase):
-    def test_generate_json_uses_kimi_model_and_schema(self) -> None:
+    def test_generate_json_uses_minimax_model_and_schema(self) -> None:
         calls: list[dict[str, Any]] = []
 
         def transport(payload: dict[str, Any]) -> dict[str, Any]:
@@ -36,7 +36,7 @@ class FireworksClientTest(unittest.TestCase):
         )
 
         self.assertEqual(result, {"ok": True})
-        self.assertEqual(calls[0]["model"], FIREWORKS_KIMI_K2P5)
+        self.assertEqual(calls[0]["model"], FIREWORKS_MINIMAX_M2P7)
         self.assertEqual(calls[0]["response_format"]["type"], "json_schema")
         self.assertEqual(calls[0]["response_format"]["json_schema"]["name"], "StructuredOutput")
         self.assertTrue(calls[0]["response_format"]["json_schema"]["strict"])

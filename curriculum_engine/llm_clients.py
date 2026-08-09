@@ -17,7 +17,7 @@ from typing import Any, Callable
 
 FIREWORKS_BASE_URL = "https://api.fireworks.ai/inference/v1"
 FIREWORKS_GPT_OSS_120B = "accounts/fireworks/models/gpt-oss-120b"
-FIREWORKS_KIMI_K2P5 = "accounts/fireworks/models/kimi-k2p5"
+FIREWORKS_MINIMAX_M2P7 = "accounts/fireworks/models/minimax-m2p7"
 
 
 class FireworksAPIError(RuntimeError):
@@ -34,7 +34,7 @@ class FireworksLLMClient:
     """OpenAI-compatible Fireworks chat client with JSON-schema output."""
 
     api_key: str | None = None
-    model: str = FIREWORKS_KIMI_K2P5
+    model: str = FIREWORKS_MINIMAX_M2P7
     base_url: str = FIREWORKS_BASE_URL
     temperature: float = 0.1
     max_tokens: int = 4096

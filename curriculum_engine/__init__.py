@@ -15,7 +15,7 @@ from .learning_path import LearningPathContext, build_learning_path_context
 from .llm_clients import (
     FIREWORKS_BASE_URL,
     FIREWORKS_GPT_OSS_120B,
-    FIREWORKS_KIMI_K2P5,
+    FIREWORKS_MINIMAX_M2P7,
     FireworksAPIError,
     FireworksLLMClient,
     parse_llm_json,
@@ -89,7 +89,7 @@ __all__ = [
     "DEFAULT_MODEL_DIR",
     "FIREWORKS_BASE_URL",
     "FIREWORKS_GPT_OSS_120B",
-    "FIREWORKS_KIMI_K2P5",
+    "FIREWORKS_MINIMAX_M2P7",
     "FireworksAPIError",
     "FireworksLLMClient",
     "HotspotThresholds",

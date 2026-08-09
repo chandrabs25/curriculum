@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from curriculum_engine.llm_clients import FIREWORKS_KIMI_K2P5, FireworksLLMClient  # noqa: E402
+from curriculum_engine.llm_clients import FIREWORKS_MINIMAX_M2P7, FireworksLLMClient  # noqa: E402
 
 
 API_KEY_ENV = "FIREWORKS_CONCEPT_REVIEW_API_KEY"
@@ -133,7 +133,7 @@ def validate_decision(candidate: dict[str, Any], payload: dict[str, Any]) -> dic
         "confidence": round(confidence, 4),
         "judge": {
             "provider": "fireworks",
-            "model": FIREWORKS_KIMI_K2P5,
+            "model": FIREWORKS_MINIMAX_M2P7,
             "reviewed_at": datetime.now(timezone.utc).isoformat(),
         },
     }
@@ -177,7 +177,7 @@ def main() -> int:
 
     client = FireworksLLMClient(
         api_key=api_key,
-        model=FIREWORKS_KIMI_K2P5,
+        model=FIREWORKS_MINIMAX_M2P7,
         temperature=0.0,
         max_tokens=args.max_tokens,
     )
@@ -214,7 +214,7 @@ def main() -> int:
             "completed_candidate_count": len(read_jsonl(args.output)),
             "pending_candidate_count": len(candidates) - len(read_jsonl(args.output)),
             "run_counts": dict(counts),
-            "model": FIREWORKS_KIMI_K2P5,
+            "model": FIREWORKS_MINIMAX_M2P7,
             "api_key_env": API_KEY_ENV,
         },
     )
