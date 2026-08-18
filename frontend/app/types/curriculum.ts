@@ -310,14 +310,19 @@ export interface LessonSection {
 export interface ModuleCheckpointMCQ {
   question_id: string;
   question: string;
-  options: string[];
-  correct_option: string;
+  options: ModuleCheckpointOption[];
+  correct_option_id: string;
   explanation: string;
   tested_concept_ids: string[];
   source_section_ids: string[];
   difficulty: Difficulty;
   diagnostic_purpose: string;
   misconception_tags: string[];
+}
+
+export interface ModuleCheckpointOption {
+  option_id: "A" | "B" | "C" | "D";
+  text: string;
 }
 
 export interface ExpandedCurriculumModulePayload {
@@ -406,7 +411,7 @@ export interface SourceSectionSummary {
 
 export interface CheckpointAnswerPayload {
   question_id: string;
-  selected_option: string;
+  selected_option_id: string;
 }
 
 export interface CheckpointSubmitPayload {
@@ -417,25 +422,14 @@ export interface CheckpointSubmitPayload {
 
 export interface CheckpointQuestionResult {
   question_id: string;
-  selected_option: string;
-  correct_option: string;
+  selected_option_id: string;
+  correct_option_id: string;
   is_correct: boolean;
+  evaluation_feedback: string;
   source_section_ids: string[];
   tested_concept_ids: string[];
   diagnostic_purpose: string;
   misconception_tags: string[];
-}
-
-export interface InsightEvent {
-  learner_id: string;
-  type: "COMPETENCY" | "MISCONCEPTION" | string;
-  concept_id: string;
-  module_id: string;
-  question_id: string;
-  source_section_ids: string[];
-  diagnostic_purpose: string;
-  misconception_tags: string[];
-  confidence: number;
 }
 
 export interface SectionLearningInsight {
@@ -466,9 +460,28 @@ export interface CheckpointResultPayload {
   weak_section_ids: string[];
   weak_concept_ids: string[];
   question_results: CheckpointQuestionResult[];
-  insight_events: InsightEvent[];
+  overall_feedback: string;
   section_insights: SectionLearningInsight[];
+  insight_generation_status: "pending" | "complete" | "failed";
+  insight_generation_error?: string;
   recommendation: CheckpointRecommendation;
+}
+
+export interface CurriculumProgressModule {
+  module_id: string;
+  position: number;
+  status: "not_started" | "needs_review" | "completed";
+  latest_score: number | null;
+  last_attempted_at: string | null;
+}
+
+export interface CurriculumProgressPayload {
+  curriculum_plan_id: string;
+  completed_module_ids: string[];
+  completed_count: number;
+  total_count: number;
+  progress_percentage: number;
+  modules: CurriculumProgressModule[];
 }
 
 export interface CurriculumPlanSummary {

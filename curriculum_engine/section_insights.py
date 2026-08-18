@@ -119,7 +119,7 @@ def build_section_insight_prompt(
     }
     return f"""You reconcile checkpoint evidence into current section-level learner insights.
 
-The deterministic grader has already scored each answer. Use the evidence to describe the learner's current understanding for each tested source section. If an existing insight is present for a section, judge whether the new evidence confirms it, improves it, contradicts it, or supersedes it.
+The checkpoint evaluator has already judged each answer. Use that evidence to describe the learner's current understanding for each tested source section. If an existing insight is present for a section, judge whether the new evidence confirms it, improves it, contradicts it, or supersedes it.
 
 Insight evidence packet:
 {json.dumps(packet, ensure_ascii=False)}
@@ -205,9 +205,10 @@ def _evidence_by_section(
                 {
                     "question_id": question_id,
                     "question": mcq.get("question") or "",
-                    "selected_option": result.get("selected_option") or "",
-                    "correct_option": result.get("correct_option") or "",
+                    "selected_option_id": result.get("selected_option_id") or "",
+                    "correct_option_id": result.get("correct_option_id") or "",
                     "is_correct": bool(result.get("is_correct")),
+                    "evaluation_feedback": result.get("evaluation_feedback") or "",
                     "explanation": mcq.get("explanation") or "",
                     "tested_concept_ids": result.get("tested_concept_ids") or [],
                     "diagnostic_purpose": result.get("diagnostic_purpose") or "",

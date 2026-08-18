@@ -4,13 +4,15 @@ import { useCallback, useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import { RetryPanel } from "../../../../../components/RetryPanel";
-import { designModule, fetchCurriculumPlan, submitCheckpoint } from "../../../../../services/api";
+import { fetchCurriculumPlan, fetchOrDesignModule, submitCheckpoint } from "../../../../../services/api";
 import { getAccessToken, redirectToLogin } from "../../../../../services/auth";
 import { loadGuestPlan, markGuestPlanPersisted, planForModuleDesign, storePendingModuleRoute } from "../../../../../services/guest-plan";
 import {
   CurriculumPlanPayload,
   CheckpointAnswerPayload,
+  CheckpointResultPayload,
   ExpandedCurriculumModulePayload,
+  ModuleCheckpointMCQ,
 } from "../../../../../types/curriculum";
 
 export default function CheckpointQuizPage() {
@@ -30,7 +32,7 @@ export default function CheckpointQuizPage() {
 
   // Selection states
   const [answers, setAnswers] = useState<Record<string, string>>({});
-  const [quizResult, setQuizResult] = useState<any | null>(null);
+  const [quizResult, setQuizResult] = useState<CheckpointResultPayload | null>(null);
 
   const loadModuleDesign = useCallback(
     async (parsedPlan: CurriculumPlanPayload) => {
@@ -42,7 +44,7 @@ export default function CheckpointQuizPage() {
         redirectToLogin(route);
         return;
       }
-      const data = await designModule({
+      const data = await fetchOrDesignModule({
         curriculum_plan_id: parsedPlan.curriculum_plan_id,
         module_id: moduleId,
         plan: planForModuleDesign(parsedPlan),
@@ -113,7 +115,7 @@ export default function CheckpointQuizPage() {
     const answerPayloads: CheckpointAnswerPayload[] = Object.entries(answers).map(
       ([qId, opt]) => ({
         question_id: qId,
-        selected_option: opt,
+        selected_option_id: opt,
       })
     );
 
@@ -130,9 +132,9 @@ export default function CheckpointQuizPage() {
         setSubmitting(false);
         router.push(`${moduleHref(id, moduleId)}/checkpoint/results`);
       }, 1500);
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error(err);
-      setError(err.message || "Failed to submit checkpoint responses.");
+      setError(errorMessage(err, "Failed to submit checkpoint responses."));
       setSubmitting(false);
     }
   };
@@ -291,13 +293,13 @@ export default function CheckpointQuizPage() {
 
         {/* Quiz Form */}
         <form onSubmit={handleQuizSubmit} className="w-full space-y-6" id="quiz-form">
-          {mcqs.map((mcq: any, qIdx: number) => {
+          {mcqs.map((mcq: ModuleCheckpointMCQ, qIdx: number) => {
             const selectedVal = answers[mcq.question_id] || "";
             const isSelected = (optionPrefix: string) => selectedVal === optionPrefix;
 
             const isGraded = !!quizResult;
             const qr = quizResult?.question_results?.find(
-              (res: any) => res.question_id === mcq.question_id
+              (res) => res.question_id === mcq.question_id
             );
 
             return (
@@ -325,10 +327,9 @@ export default function CheckpointQuizPage() {
                 </h3>
 
                 <div className="flex flex-col gap-3">
-                  {mcq.options.map((option: string) => {
-                    const optionPrefix = option.charAt(0);
-                    const isThisSelected = isSelected(optionPrefix);
-                    const isThisCorrect = mcq.correct_option === optionPrefix;
+                  {mcq.options.map((option) => {
+                    const isThisSelected = isSelected(option.option_id);
+                    const isThisCorrect = mcq.correct_option_id === option.option_id;
 
                     let optionStyle = "border-zinc-300 bg-white text-zinc-800 hover:border-zinc-950 hover:text-zinc-950";
                     if (isThisSelected) {
@@ -347,8 +348,8 @@ export default function CheckpointQuizPage() {
 
                     return (
                       <label
-                        key={option}
-                        onClick={() => handleSelectOption(mcq.question_id, optionPrefix)}
+                        key={option.option_id}
+                        onClick={() => handleSelectOption(mcq.question_id, option.option_id)}
                         className={`flex items-center p-4 border rounded-xl cursor-pointer transition-colors text-sm font-light ${optionStyle}`}
                       >
                         <input
@@ -359,7 +360,8 @@ export default function CheckpointQuizPage() {
                           onChange={() => {}}
                           className="sr-only"
                         />
-                        <span className="leading-snug">{option}</span>
+                        <span className="mr-3 font-medium">{option.option_id}.</span>
+                        <span className="leading-snug">{option.text}</span>
                         {isGraded && isThisCorrect && (
                           <span className="ml-auto material-symbols-outlined text-emerald-600 text-base">check_circle</span>
                         )}
@@ -375,9 +377,9 @@ export default function CheckpointQuizPage() {
                 {isGraded && (
                   <div className="mt-2 p-4 bg-zinc-50 rounded-xl border border-zinc-300 text-xs flex flex-col gap-2">
                     <span className={`font-semibold uppercase tracking-wider text-[10px] ${qr?.is_correct ? "text-emerald-700" : "text-red-700"}`}>
-                      {qr?.is_correct ? "✓ Correct" : `✗ Incorrect (Correct Option is ${mcq.correct_option})`}
+                      {qr?.is_correct ? "Correct" : `Needs review (answer: ${mcq.correct_option_id})`}
                     </span>
-                    <p className="text-zinc-655 leading-relaxed font-light">{mcq.explanation}</p>
+                    <p className="text-zinc-655 leading-relaxed font-light">{qr?.evaluation_feedback || mcq.explanation}</p>
                     {mcq.diagnostic_purpose && (
                       <div className="pt-2 border-t border-zinc-200 text-zinc-400 font-light text-[11px]">
                         <span className="font-semibold text-zinc-500">Diagnostic Purpose:</span> {mcq.diagnostic_purpose}

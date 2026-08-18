@@ -120,8 +120,8 @@ create table if not exists checkpoint_attempts (
 create table if not exists checkpoint_answers (
   checkpoint_attempt_id text not null references checkpoint_attempts(checkpoint_attempt_id) on delete cascade,
   question_id text not null,
-  selected_option text not null,
-  correct_option text not null,
+  selected_option_id text not null,
+  correct_option_id text not null,
   is_correct boolean not null,
   source_section_ids jsonb not null default '[]'::jsonb,
   tested_concept_ids jsonb not null default '[]'::jsonb,
@@ -129,6 +129,28 @@ create table if not exists checkpoint_answers (
   misconception_tags jsonb not null default '[]'::jsonb,
   primary key (checkpoint_attempt_id, question_id)
 );
+
+do $$
+begin
+  if exists (
+    select 1 from information_schema.columns
+    where table_schema = 'public' and table_name = 'checkpoint_answers' and column_name = 'selected_option'
+  ) and not exists (
+    select 1 from information_schema.columns
+    where table_schema = 'public' and table_name = 'checkpoint_answers' and column_name = 'selected_option_id'
+  ) then
+    alter table checkpoint_answers rename column selected_option to selected_option_id;
+  end if;
+  if exists (
+    select 1 from information_schema.columns
+    where table_schema = 'public' and table_name = 'checkpoint_answers' and column_name = 'correct_option'
+  ) and not exists (
+    select 1 from information_schema.columns
+    where table_schema = 'public' and table_name = 'checkpoint_answers' and column_name = 'correct_option_id'
+  ) then
+    alter table checkpoint_answers rename column correct_option to correct_option_id;
+  end if;
+end $$;
 
 create table if not exists section_learning_insights (
   insight_id text primary key,
@@ -192,7 +214,36 @@ create table if not exists public_response_cache (
 create index if not exists public_response_cache_kind_expires_idx
 on public_response_cache(cache_kind, expires_at);
 
+alter table user_profiles enable row level security;
+alter table learners enable row level security;
+alter table section_embedding_documents enable row level security;
+alter table curriculum_plans enable row level security;
+alter table curriculum_modules enable row level security;
+alter table module_designs enable row level security;
+alter table module_design_versions enable row level security;
+alter table checkpoint_attempts enable row level security;
+alter table checkpoint_answers enable row level security;
+alter table section_learning_insights enable row level security;
+alter table section_misunderstanding_hotspots enable row level security;
 alter table public_response_cache enable row level security;
+
+create index if not exists idx_curriculum_plans_learner_id
+on curriculum_plans(learner_id);
+
+create index if not exists idx_module_design_versions_plan_module
+on module_design_versions(curriculum_plan_id, module_id);
+
+create index if not exists idx_checkpoint_attempts_learner_id
+on checkpoint_attempts(learner_id);
+
+create index if not exists idx_checkpoint_attempts_plan_id
+on checkpoint_attempts(curriculum_plan_id);
+
+create index if not exists idx_section_learning_insights_learner_id
+on section_learning_insights(learner_id);
+
+create index if not exists idx_section_learning_insights_plan_id
+on section_learning_insights(curriculum_plan_id);
 
 alter table module_designs
 add column if not exists module_design_id text not null default '';

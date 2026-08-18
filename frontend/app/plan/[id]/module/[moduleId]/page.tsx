@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { RetryPanel } from "../../../../components/RetryPanel";
-import { designModule, fetchCurriculumPlan } from "../../../../services/api";
+import { fetchCurriculumPlan, fetchCurriculumProgress, fetchOrDesignModule } from "../../../../services/api";
 import { getAccessToken, redirectToLogin } from "../../../../services/auth";
 import { loadGuestPlan, markGuestPlanPersisted, planForModuleDesign, storePendingModuleRoute } from "../../../../services/guest-plan";
 import { CurriculumPlanPayload, ExpandedCurriculumModulePayload } from "../../../../types/curriculum";
@@ -35,7 +35,7 @@ export default function ModuleReadingPage() {
         return;
       }
 
-      const data = await designModule({
+      const data = await fetchOrDesignModule({
         curriculum_plan_id: parsedPlan.curriculum_plan_id,
         module_id: moduleId,
         plan: planForModuleDesign(parsedPlan),
@@ -43,6 +43,12 @@ export default function ModuleReadingPage() {
       });
       markGuestPlanPersisted(parsedPlan.curriculum_plan_id);
       setModuleData(data);
+      try {
+        const progress = await fetchCurriculumProgress(parsedPlan.curriculum_plan_id);
+        setCompletedCount(progress.completed_count);
+      } catch {
+        setCompletedCount(0);
+      }
     },
     [moduleId]
   );
@@ -71,8 +77,6 @@ export default function ModuleReadingPage() {
         planRequest
           .then((parsedPlan) => {
             setPlan(parsedPlan);
-            setCompletedCount(0);
-
             loadModuleDesign(parsedPlan)
               .catch((err) => {
                 console.error(err);
@@ -205,7 +209,7 @@ export default function ModuleReadingPage() {
                   Goal Alignment
                 </p>
                 <p className="text-xs text-zinc-650 leading-normal font-light italic">
-                  "{moduleData.larger_goal_alignment}"
+                  &ldquo;{moduleData.larger_goal_alignment}&rdquo;
                 </p>
               </div>
             )}
@@ -252,7 +256,7 @@ export default function ModuleReadingPage() {
 
           {/* Lesson Content Sections */}
           <section className="flex flex-col gap-10">
-            {moduleData.lesson_sections?.map((section: any, idx: number) => (
+            {moduleData.lesson_sections?.map((section, idx) => (
               <article key={idx} className="flex flex-col gap-4">
                 <h2 className="text-xl font-normal text-zinc-950">
                   {section.heading}

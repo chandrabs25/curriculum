@@ -37,6 +37,7 @@ from .models import (
     ExpandedCurriculumModule,
     LearningInsight,
     ModuleCheckpointMCQ,
+    ModuleCheckpointOption,
     OnboardingAnswers,
     PlannedCurriculumModule,
 )
@@ -104,6 +105,7 @@ __all__ = [
     "MODULE_EXPANSION_SCHEMA",
     "ExpandedCurriculumModule",
     "ModuleCheckpointMCQ",
+    "ModuleCheckpointOption",
     "ModuleExpander",
     "ModuleExpansionLLMClient",
     "ModuleExpansionPacket",

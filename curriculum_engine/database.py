@@ -5,7 +5,7 @@ from __future__ import annotations
 import json
 import os
 import uuid
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
@@ -22,12 +22,30 @@ def repository_from_env() -> "PostgresRepository | None":
 @dataclass
 class PostgresRepository:
     url: str
+    _pool: Any = field(init=False, repr=False)
+
+    def __post_init__(self) -> None:
+        from psycopg.rows import dict_row
+        from psycopg_pool import ConnectionPool
+
+        self._pool = ConnectionPool(
+            conninfo=self.url,
+            min_size=0,
+            max_size=max(1, int(os.getenv("DATABASE_POOL_MAX_SIZE", "8"))),
+            timeout=float(os.getenv("DATABASE_POOL_TIMEOUT_SECONDS", "10")),
+            kwargs={
+                "row_factory": dict_row,
+                "prepare_threshold": None,
+                "connect_timeout": int(os.getenv("DATABASE_CONNECT_TIMEOUT_SECONDS", "10")),
+            },
+            open=True,
+        )
 
     def _connect(self):
-        import psycopg
-        from psycopg.rows import dict_row
+        return self._pool.connection()
 
-        return psycopg.connect(self.url, row_factory=dict_row, prepare_threshold=None)
+    def close(self) -> None:
+        self._pool.close()
 
     def health(self) -> dict[str, Any]:
         with self._connect() as conn:
@@ -79,10 +97,10 @@ class PostgresRepository:
         except Exception:
             return
 
-    def upsert_user_profile(self, profile: dict[str, Any]) -> None:
+    def upsert_user_profile(self, profile: dict[str, Any]) -> dict[str, Any] | None:
         user_id = str(profile.get("user_id") or "")
         if not user_id:
-            return
+            return None
         with self._connect() as conn:
             with conn.cursor() as cur:
                 cur.execute(
@@ -94,8 +112,17 @@ class PostgresRepository:
                       display_name = excluded.display_name,
                       avatar_url = excluded.avatar_url,
                       provider = excluded.provider,
-                      updated_at = now(),
-                      last_seen_at = now()
+                      updated_at = case
+                        when user_profiles.email is distinct from coalesce(excluded.email, user_profiles.email)
+                          or user_profiles.display_name is distinct from excluded.display_name
+                          or user_profiles.avatar_url is distinct from excluded.avatar_url
+                          or user_profiles.provider is distinct from excluded.provider
+                        then now() else user_profiles.updated_at
+                      end,
+                      last_seen_at = case
+                        when user_profiles.last_seen_at < now() - interval '15 minutes'
+                        then now() else user_profiles.last_seen_at
+                      end
                     """,
                     (
                         user_id,
@@ -109,10 +136,13 @@ class PostgresRepository:
                     """
                     insert into learners(learner_id)
                     values (%s)
-                    on conflict (learner_id) do update set updated_at = now()
+                    on conflict (learner_id) do nothing
                     """,
                     (user_id,),
                 )
+                cur.execute("select * from user_profiles where user_id = %s", (user_id,))
+                row = cur.fetchone()
+        return _profile_row(row) if row else None
 
     def get_user_profile(self, user_id: str) -> dict[str, Any] | None:
         with self._connect() as conn:
@@ -121,31 +151,13 @@ class PostgresRepository:
                 row = cur.fetchone()
         if not row:
             return None
-        return {
-            "user_id": row["user_id"],
-            "email": row["email"] or "",
-            "display_name": row["display_name"] or "",
-            "avatar_url": row["avatar_url"] or "",
-            "provider": row["provider"] or "google",
-            "role": row.get("role") or "learner",
-            "created_at": row["created_at"].isoformat() if row.get("created_at") else "",
-            "updated_at": row["updated_at"].isoformat() if row.get("updated_at") else "",
-            "last_seen_at": row["last_seen_at"].isoformat() if row.get("last_seen_at") else "",
-        }
+        return _profile_row(row)
 
     def save_plan(self, plan: dict[str, Any]) -> None:
         learner_id = str(plan["learner_id"])
         plan_id = str(plan["curriculum_plan_id"])
         with self._connect() as conn:
             with conn.cursor() as cur:
-                cur.execute(
-                    """
-                    insert into learners(learner_id)
-                    values (%s)
-                    on conflict (learner_id) do update set updated_at = now()
-                    """,
-                    (learner_id,),
-                )
                 cur.execute(
                     """
                     insert into curriculum_plans(curriculum_plan_id, learner_id, onboarding, metadata, mcq_allocation, created_at, updated_at)
@@ -440,7 +452,7 @@ class PostgresRepository:
                     cur.execute(
                         """
                         insert into checkpoint_answers(
-                          checkpoint_attempt_id, question_id, selected_option, correct_option, is_correct,
+                          checkpoint_attempt_id, question_id, selected_option_id, correct_option_id, is_correct,
                           source_section_ids, tested_concept_ids, diagnostic_purpose, misconception_tags
                         )
                         values (%s, %s, %s, %s, %s, %s::jsonb, %s::jsonb, %s, %s::jsonb)
@@ -448,8 +460,8 @@ class PostgresRepository:
                         (
                             attempt_id,
                             row.get("question_id"),
-                            row.get("selected_option") or "",
-                            row.get("correct_option") or "",
+                            row.get("selected_option_id") or "",
+                            row.get("correct_option_id") or "",
                             bool(row.get("is_correct")),
                             _json(row.get("source_section_ids") or []),
                             _json(row.get("tested_concept_ids") or []),
@@ -458,6 +470,68 @@ class PostgresRepository:
                         ),
                     )
         return attempt_id
+
+    def update_checkpoint_result(self, checkpoint_attempt_id: str, result: dict[str, Any]) -> None:
+        with self._connect() as conn:
+            with conn.cursor() as cur:
+                cur.execute(
+                    """
+                    update checkpoint_attempts
+                    set result_payload = %s::jsonb
+                    where checkpoint_attempt_id = %s
+                    """,
+                    (_json(result), checkpoint_attempt_id),
+                )
+
+    def get_plan_progress(self, curriculum_plan_id: str, *, learner_id: str) -> dict[str, Any]:
+        with self._connect() as conn:
+            with conn.cursor() as cur:
+                cur.execute(
+                    """
+                    select module_id, position
+                    from curriculum_modules
+                    where curriculum_plan_id = %s
+                    order by position
+                    """,
+                    (curriculum_plan_id,),
+                )
+                modules = cur.fetchall()
+                cur.execute(
+                    """
+                    select distinct on (module_id) module_id, recommendation, score, created_at
+                    from checkpoint_attempts
+                    where curriculum_plan_id = %s and learner_id = %s
+                    order by module_id, created_at desc
+                    """,
+                    (curriculum_plan_id, learner_id),
+                )
+                latest_attempts = {row["module_id"]: row for row in cur.fetchall()}
+        rows = []
+        completed_module_ids = []
+        for module in modules:
+            module_id = str(module["module_id"])
+            attempt = latest_attempts.get(module_id)
+            completed = bool(attempt and attempt["recommendation"] == "continue")
+            if completed:
+                completed_module_ids.append(module_id)
+            rows.append(
+                {
+                    "module_id": module_id,
+                    "position": int(module["position"]),
+                    "status": "completed" if completed else "needs_review" if attempt else "not_started",
+                    "latest_score": float(attempt["score"]) if attempt else None,
+                    "last_attempted_at": attempt["created_at"].isoformat() if attempt else None,
+                }
+            )
+        total = len(rows)
+        return {
+            "curriculum_plan_id": curriculum_plan_id,
+            "completed_module_ids": completed_module_ids,
+            "completed_count": len(completed_module_ids),
+            "total_count": total,
+            "progress_percentage": round((len(completed_module_ids) / total) * 100) if total else 0,
+            "modules": rows,
+        }
 
     def checkpoint_hotspot_evidence(self) -> list[dict[str, Any]]:
         with self._connect() as conn:
@@ -983,17 +1057,35 @@ class PostgresRepository:
 
 
 def run_schema(database_url_value: str | None = None, *, schema_path: Path | str = "database/schema.sql") -> None:
-    repo = PostgresRepository(database_url_value or database_url() or "")
-    if not repo.url:
+    url = database_url_value or database_url()
+    if not url:
         raise RuntimeError("DATABASE_URL is not set")
+    repo = PostgresRepository(url)
     sql = Path(schema_path).read_text(encoding="utf-8")
-    with repo._connect() as conn:
-        with conn.cursor() as cur:
-            cur.execute(sql)
+    try:
+        with repo._connect() as conn:
+            with conn.cursor() as cur:
+                cur.execute(sql)
+    finally:
+        repo.close()
 
 
 def _json(value: Any) -> str:
     return json.dumps(value, ensure_ascii=False)
+
+
+def _profile_row(row: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "user_id": row["user_id"],
+        "email": row["email"] or "",
+        "display_name": row["display_name"] or "",
+        "avatar_url": row["avatar_url"] or "",
+        "provider": row["provider"] or "google",
+        "role": row.get("role") or "learner",
+        "created_at": row["created_at"].isoformat() if row.get("created_at") else "",
+        "updated_at": row["updated_at"].isoformat() if row.get("updated_at") else "",
+        "last_seen_at": row["last_seen_at"].isoformat() if row.get("last_seen_at") else "",
+    }
 
 
 def _vector_literal(values: list[float]) -> str:

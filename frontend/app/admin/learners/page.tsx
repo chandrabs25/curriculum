@@ -33,7 +33,8 @@ export default function AdminLearnersPage() {
   }, [page, search]);
 
   useEffect(() => {
-    load();
+    const timer = window.setTimeout(load, 0);
+    return () => window.clearTimeout(timer);
   }, [load]);
 
   function handleSearch(e: React.FormEvent) {

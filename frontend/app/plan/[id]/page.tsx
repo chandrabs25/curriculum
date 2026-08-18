@@ -3,7 +3,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
-import { designModule, fetchCurriculumPlan, fetchLatestSectionInsights } from "../../services/api";
+import { designModule, fetchCurriculumPlan, fetchCurriculumProgress, fetchLatestSectionInsights } from "../../services/api";
+import { getAccessToken } from "../../services/auth";
 import { isGuestPlanPersisted, loadGuestPlan, markGuestPlanPersisted, planForModuleDesign } from "../../services/guest-plan";
 import { CurriculumPlanPayload, PlannedModulePayload } from "../../types/curriculum";
 
@@ -15,7 +16,6 @@ export default function PlanDashboardPage() {
   const [plan, setPlan] = useState<CurriculumPlanPayload | null>(null);
   const [error, setError] = useState<string | null>(null);
   
-  // Track completed module IDs locally
   const [completedModuleIds, setCompletedModuleIds] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [moduleInsightCounts, setModuleInsightCounts] = useState<Record<string, number>>({});
@@ -31,9 +31,9 @@ export default function PlanDashboardPage() {
       if (localPlan) {
         localStorage.setItem("curriculum-current-plan-id", localPlan.curriculum_plan_id);
         setPlan(localPlan);
-        setCompletedModuleIds([]);
         if (isGuestPlanPersisted(localPlan.curriculum_plan_id)) {
           refreshModuleInsightCounts(localPlan, setModuleInsightCounts);
+          refreshPlanProgress(localPlan.curriculum_plan_id, setCompletedModuleIds);
         }
         return;
       }
@@ -43,8 +43,7 @@ export default function PlanDashboardPage() {
           localStorage.setItem("curriculum-current-plan-id", parsedPlan.curriculum_plan_id);
           setPlan(parsedPlan);
           refreshModuleInsightCounts(parsedPlan, setModuleInsightCounts);
-          
-          setCompletedModuleIds([]);
+          refreshPlanProgress(parsedPlan.curriculum_plan_id, setCompletedModuleIds);
         })
         .catch((err: unknown) => {
           setError(errorMessage(err, "Curriculum plan not found. Please create a new one."));
@@ -120,6 +119,7 @@ export default function PlanDashboardPage() {
       });
       void moduleDesign;
       markGuestPlanPersisted(plan.curriculum_plan_id);
+      refreshPlanProgress(plan.curriculum_plan_id, setCompletedModuleIds);
       setRegeneratedModuleIds((current) => ({ ...current, [module.module_id]: true }));
     } catch (err: unknown) {
       setRegenerationError(errorMessage(err, "Failed to regenerate this module with learner insights."));
@@ -426,6 +426,23 @@ export default function PlanDashboardPage() {
 
 function moduleHref(planId: string, moduleId: string): string {
   return `/plan/${encodeURIComponent(planId)}/module/${encodeURIComponent(moduleId)}`;
+}
+
+async function refreshPlanProgress(
+  planId: string,
+  setter: (moduleIds: string[]) => void
+): Promise<void> {
+  const token = await getAccessToken();
+  if (!token) {
+    setter([]);
+    return;
+  }
+  try {
+    const progress = await fetchCurriculumProgress(planId);
+    setter(progress.completed_module_ids);
+  } catch {
+    setter([]);
+  }
 }
 
 function PlanSectionList({

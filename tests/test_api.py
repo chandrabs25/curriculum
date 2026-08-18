@@ -75,6 +75,21 @@ class FakeLLM:
                     }
                 ]
             }
+        if schema and "question_results" in schema.get("properties", {}) and "score" in schema.get("properties", {}):
+            question_ids = list(dict.fromkeys(re.findall(r'"question_id":\s*"(module:[^"]+)"', prompt)))
+            return {
+                "score": 1.0,
+                "recommendation": "continue",
+                "overall_feedback": "The submitted responses show a sound understanding of SI units.",
+                "question_results": [
+                    {
+                        "question_id": question_id,
+                        "is_correct": True,
+                        "feedback": "The selected response matches the supplied answer-key evidence.",
+                    }
+                    for question_id in question_ids
+                ],
+            }
         count_match = re.search(r'"mcq_target_count":\s*(\d+)', prompt)
         count = int(count_match.group(1)) if count_match else 1
         return {
@@ -98,12 +113,12 @@ class FakeLLM:
                     "question_id": f"module:si:q{index}",
                     "question": f"Which statement about SI units is correct? {index}",
                     "options": [
-                        "A. SI units create shared standards",
-                        "B. SI units remove measurement",
-                        "C. SI units replace physical quantities",
-                        "D. SI units avoid calculations",
+                        {"option_id": "A", "text": "SI units create shared standards"},
+                        {"option_id": "B", "text": "SI units remove measurement"},
+                        {"option_id": "C", "text": "SI units replace physical quantities"},
+                        {"option_id": "D", "text": "SI units avoid calculations"},
                     ],
-                    "correct_option": "A",
+                    "correct_option_id": "A",
                     "explanation": "SI units are shared measurement standards.",
                     "tested_concept_ids": ["concept:si_units"],
                     "source_section_ids": ["section:2"],
@@ -126,7 +141,7 @@ class FakeRepository:
         self.profiles: dict[str, dict[str, Any]] = {}
         self.public_cache: dict[str, dict[str, Any]] = {}
 
-    def upsert_user_profile(self, profile: dict[str, Any]) -> None:
+    def upsert_user_profile(self, profile: dict[str, Any]) -> dict[str, Any]:
         user_id = str(profile["user_id"])
         existing = self.profiles.get(user_id, {})
         merged = {
@@ -134,6 +149,7 @@ class FakeRepository:
             "role": existing.get("role") or profile.get("role") or "learner",
         }
         self.profiles[user_id] = dict(merged)
+        return json.loads(json.dumps(merged))
 
     def get_user_profile(self, user_id: str) -> dict[str, Any] | None:
         profile = self.profiles.get(user_id)
@@ -214,9 +230,44 @@ class FakeRepository:
         ]
         return json.loads(json.dumps(rows))
 
-    def save_checkpoint_result(self, result: dict[str, Any]) -> None:
+    def save_checkpoint_result(self, result: dict[str, Any]) -> str:
         key = (result["learner_id"], result["curriculum_plan_id"], result["module_id"])
         self.checkpoint_results[key] = json.loads(json.dumps(result))
+        return "checkpoint_attempt:test"
+
+    def update_checkpoint_result(self, checkpoint_attempt_id: str, result: dict[str, Any]) -> None:
+        del checkpoint_attempt_id
+        key = (result["learner_id"], result["curriculum_plan_id"], result["module_id"])
+        self.checkpoint_results[key] = json.loads(json.dumps(result))
+
+    def get_plan_progress(self, curriculum_plan_id: str, *, learner_id: str) -> dict[str, Any]:
+        plan = self.get_plan(curriculum_plan_id, learner_id=learner_id) or {}
+        modules = sorted(plan.get("modules") or [], key=lambda row: row.get("position") or 0)
+        completed = []
+        rows = []
+        for module in modules:
+            module_id = module["module_id"]
+            result = self.checkpoint_results.get((learner_id, curriculum_plan_id, module_id))
+            is_complete = bool(result and result.get("recommendation") == "continue")
+            if is_complete:
+                completed.append(module_id)
+            rows.append(
+                {
+                    "module_id": module_id,
+                    "position": module["position"],
+                    "status": "completed" if is_complete else "needs_review" if result else "not_started",
+                    "latest_score": result.get("score") if result else None,
+                    "last_attempted_at": None,
+                }
+            )
+        return {
+            "curriculum_plan_id": curriculum_plan_id,
+            "completed_module_ids": completed,
+            "completed_count": len(completed),
+            "total_count": len(modules),
+            "progress_percentage": round(len(completed) / len(modules) * 100) if modules else 0,
+            "modules": rows,
+        }
 
     def get_latest_checkpoint_result(
         self,
@@ -541,7 +592,7 @@ class APITest(unittest.TestCase):
                 "curriculum_plan_id": plan["curriculum_plan_id"],
                 "module_id": "module:si",
                 "answers": [
-                    {"question_id": mcq["question_id"], "selected_option": "A"}
+                    {"question_id": mcq["question_id"], "selected_option_id": "A"}
                     for mcq in module["checkpoint_mcqs"]
                 ],
             },
@@ -551,10 +602,18 @@ class APITest(unittest.TestCase):
         result = submit_response.json()
         self.assertEqual(result["score"], 1.0)
         self.assertEqual(result["module_design_id"], module["metadata"]["module_design_id"])
-        self.assertTrue(result["insight_events"])
+        self.assertEqual(result["overall_feedback"], "The submitted responses show a sound understanding of SI units.")
+        self.assertEqual(result["insight_generation_status"], "complete")
         self.assertEqual(result["section_insights"][0]["section_id"], "section:2")
         self.assertEqual(result["section_insights"][0]["supersedes_insight_id"], "section_insight:old")
         self.assertTrue(any("existing_section_insights" in prompt for prompt in self.fake_llm.prompts))
+
+        progress_response = self.client.get(
+            f"/api/curriculum/plans/{plan['curriculum_plan_id']}/progress",
+            headers=self.auth_headers,
+        )
+        self.assertEqual(progress_response.status_code, 200)
+        self.assertEqual(progress_response.json()["completed_module_ids"], ["module:si"])
 
     def test_module_design_claims_matching_guest_plan_payload(self) -> None:
         plan_response = self.client.post("/api/curriculum/plan", json=self.query_payload())
@@ -617,7 +676,7 @@ class APITest(unittest.TestCase):
                 "module_id": "module:si",
                 "checkpoint_mcqs": module["checkpoint_mcqs"],
                 "answers": [
-                    {"question_id": mcq["question_id"], "selected_option": "A"}
+                    {"question_id": mcq["question_id"], "selected_option_id": "A"}
                     for mcq in module["checkpoint_mcqs"]
                 ],
             },
@@ -638,7 +697,7 @@ class APITest(unittest.TestCase):
             json={
                 "curriculum_plan_id": plan["curriculum_plan_id"],
                 "module_id": "module:si",
-                "answers": [{"question_id": "module:si:q1", "selected_option": "A"}],
+                "answers": [{"question_id": "module:si:q1", "selected_option_id": "A"}],
             },
             headers=self.auth_headers,
         )
@@ -649,6 +708,10 @@ class APITest(unittest.TestCase):
         schema = (Path(__file__).resolve().parents[1] / "database/schema.sql").read_text(encoding="utf-8").lower()
 
         self.assertNotIn("delete from learners", schema)
+        self.assertIn("alter table user_profiles enable row level security", schema)
+        self.assertIn("alter table checkpoint_answers enable row level security", schema)
+        self.assertIn("selected_option_id text not null", schema)
+        self.assertIn("correct_option_id text not null", schema)
 
 
 if __name__ == "__main__":

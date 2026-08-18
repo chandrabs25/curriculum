@@ -35,12 +35,12 @@ def mcq_rows(count: int) -> list[dict[str, Any]]:
             "question_id": f"module:2:q{index}",
             "question": f"Which statement about SI units is correct? {index}",
             "options": [
-                "A. SI units create shared standards",
-                "B. SI units remove all measurement",
-                "C. SI units replace physical quantities",
-                "D. SI units avoid calculations entirely",
+                {"option_id": "A", "text": "SI units create shared standards"},
+                {"option_id": "B", "text": "SI units remove all measurement"},
+                {"option_id": "C", "text": "SI units replace physical quantities"},
+                {"option_id": "D", "text": "SI units avoid calculations entirely"},
             ],
-            "correct_option": "A",
+            "correct_option_id": "A",
             "explanation": "The summary connects SI units with standard base units.",
             "tested_concept_ids": ["concept:si_units"],
             "source_section_ids": ["section:2"],
@@ -428,7 +428,8 @@ class ModuleExpansionTest(unittest.TestCase):
         self.assertEqual(expanded.lesson_sections[0]["source_section_ids"], ["section:2"])
         self.assertEqual(expanded.lesson_sections[0]["concept_ids"], ["concept:si_units"])
         self.assertEqual(len(expanded.checkpoint_mcqs), 12)
-        self.assertEqual(expanded.checkpoint_mcqs[0].correct_option, "A")
+        self.assertEqual(expanded.checkpoint_mcqs[0].correct_option_id, "A")
+        self.assertEqual(expanded.checkpoint_mcqs[0].options[0].option_id, "A")
         self.assertEqual(expanded.checkpoint_mcqs[0].source_section_ids, ["section:2"])
         self.assertEqual(expanded.checkpoint_mcqs[0].tested_concept_ids, ["concept:si_units"])
         self.assertEqual(expanded.checkpoint_mcqs[0].question_id, "module:2:q1")
@@ -539,8 +540,13 @@ class ModuleExpansionTest(unittest.TestCase):
                     {
                         "question_id": "module:2:q1",
                         "question": "Which statement is correct?",
-                        "options": ["A. SI units are standards", "B. Units are never used", "C. Standards are optional", "D. Quantities are units"],
-                        "correct_option": "A",
+                        "options": [
+                            {"option_id": "A", "text": "SI units are standards"},
+                            {"option_id": "B", "text": "Units are never used"},
+                            {"option_id": "C", "text": "Standards are optional"},
+                            {"option_id": "D", "text": "Quantities are units"},
+                        ],
+                        "correct_option_id": "A",
                         "explanation": "The module summary introduces SI standards.",
                         "tested_concept_ids": ["concept:missing"],
                         "source_section_ids": ["section:2"],

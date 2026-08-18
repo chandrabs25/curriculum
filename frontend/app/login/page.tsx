@@ -10,18 +10,21 @@ export default function LoginPage() {
   const [returnTo, setReturnTo] = useState("/");
 
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const target = params.get("returnTo") || "/";
-    setReturnTo(target);
-    getCurrentUser()
-      .then((user) => {
-        if (user) {
-          window.location.replace(target);
-        }
-      })
-      .catch(() => {
-        // Stay on login when the current session cannot be verified.
-      });
+    const timer = window.setTimeout(() => {
+      const params = new URLSearchParams(window.location.search);
+      const target = params.get("returnTo") || "/";
+      setReturnTo(target);
+      getCurrentUser()
+        .then((user) => {
+          if (user) {
+            window.location.replace(target);
+          }
+        })
+        .catch(() => {
+          // Stay on login when the current session cannot be verified.
+        });
+    }, 0);
+    return () => window.clearTimeout(timer);
   }, []);
 
   const handleGoogleSignIn = async () => {

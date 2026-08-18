@@ -3,6 +3,7 @@ import type {
   CheckpointSubmitPayload,
   CurriculumPlanSummary,
   CurriculumPlanPayload,
+  CurriculumProgressPayload,
   CurriculumQueryPayload,
   ExpandedCurriculumModulePayload,
   HealthResponse,
@@ -161,6 +162,19 @@ export function fetchModuleDesign(
   );
 }
 
+export async function fetchOrDesignModule(
+  payload: ModuleDesignPayload
+): Promise<ExpandedCurriculumModulePayload> {
+  try {
+    return await fetchModuleDesign(payload.curriculum_plan_id, payload.module_id);
+  } catch (error) {
+    if (!(error instanceof ApiError) || error.status !== 404) {
+      throw error;
+    }
+  }
+  return designModule(payload);
+}
+
 export function submitCheckpoint(
   payload: CheckpointSubmitPayload
 ): Promise<CheckpointResultPayload> {
@@ -177,6 +191,16 @@ export function fetchLatestCheckpointResult(
 ): Promise<CheckpointResultPayload> {
   return requestJson<CheckpointResultPayload>(
     `/api/curriculum/plans/${encodeURIComponent(curriculumPlanId)}/modules/${encodeURIComponent(moduleId)}/checkpoint/latest`,
+    undefined,
+    { auth: true }
+  );
+}
+
+export function fetchCurriculumProgress(
+  curriculumPlanId: string
+): Promise<CurriculumProgressPayload> {
+  return requestJson<CurriculumProgressPayload>(
+    `/api/curriculum/plans/${encodeURIComponent(curriculumPlanId)}/progress`,
     undefined,
     { auth: true }
   );

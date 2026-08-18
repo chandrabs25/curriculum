@@ -13,5 +13,7 @@ RUN pip install --no-cache-dir --upgrade pip \
 COPY curriculum_engine ./curriculum_engine
 COPY data/textbook_sources ./data/textbook_sources
 COPY data/relationship_artifacts ./data/relationship_artifacts
+COPY database ./database
+COPY scripts/apply_database_schema.py ./scripts/apply_database_schema.py
 
 CMD ["sh", "-c", "python -m uvicorn curriculum_engine.api:app --host 0.0.0.0 --port ${PORT:-8080}"]

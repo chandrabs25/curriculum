@@ -12,6 +12,7 @@ from .models import (
     CurriculumPlan,
     ExpandedCurriculumModule,
     ModuleCheckpointMCQ,
+    ModuleCheckpointOption,
     OnboardingAnswers,
     PlannedCurriculumModule,
 )
@@ -55,8 +56,20 @@ MODULE_EXPANSION_SCHEMA: dict[str, Any] = {
                 "properties": {
                     "question_id": {"type": "string"},
                     "question": {"type": "string"},
-                    "options": {"type": "array", "items": {"type": "string"}},
-                    "correct_option": {"type": "string"},
+                    "options": {
+                        "type": "array",
+                        "minItems": 4,
+                        "maxItems": 4,
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "option_id": {"type": "string"},
+                                "text": {"type": "string"},
+                            },
+                            "required": ["option_id", "text"],
+                        },
+                    },
+                    "correct_option_id": {"type": "string"},
                     "explanation": {"type": "string"},
                     "tested_concept_ids": {"type": "array", "items": {"type": "string"}},
                     "source_section_ids": {"type": "array", "items": {"type": "string"}},
@@ -68,7 +81,7 @@ MODULE_EXPANSION_SCHEMA: dict[str, Any] = {
                     "question_id",
                     "question",
                     "options",
-                    "correct_option",
+                    "correct_option_id",
                     "explanation",
                     "tested_concept_ids",
                     "source_section_ids",
@@ -191,8 +204,13 @@ def build_module_expansion_prompt(packet: ModuleExpansionPacket) -> str:
             {
                 "question_id": "string",
                 "question": "string",
-                "options": ["A. string", "B. string", "C. string", "D. string"],
-                "correct_option": "A",
+                "options": [
+                    {"option_id": "A", "text": "string"},
+                    {"option_id": "B", "text": "string"},
+                    {"option_id": "C", "text": "string"},
+                    {"option_id": "D", "text": "string"},
+                ],
+                "correct_option_id": "A",
                 "explanation": "string",
                 "tested_concept_ids": ["string"],
                 "source_section_ids": ["string"],
@@ -223,6 +241,7 @@ Critical rules:
 - Explain how this module serves onboarding.topic and onboarding.learning_goal.
 - Explain how this module connects from the previous module and prepares the next module when those modules exist.
 - Create exactly the module design packet's mcq_target_count checkpoint_mcqs, each with four options.
+- Give each option a unique option_id: A, B, C, or D. Set correct_option_id to exactly one of those IDs.
 - Spread checkpoint_mcqs across the module's main source sections and target concepts where possible.
 - Do not test optional, parallel-support, reinforcement, or next-step sections unless they are also in source_sections.
 - Each checkpoint MCQ must include exact source_section_ids copied from source_sections[].section_id, tested_concept_ids, difficulty, diagnostic_purpose, and misconception_tags.
@@ -400,9 +419,17 @@ def _checkpoint_mcqs_from_payload(
     for index, mcq_payload in enumerate(rows[:target_count], start=1):
         if not isinstance(mcq_payload, dict):
             raise ValueError(f"checkpoint_mcqs[{index}] must be an object")
-        options = _str_list(mcq_payload.get("options"))[:4]
-        if len(options) != 4:
-            raise ValueError(f"checkpoint_mcqs[{index}] must have exactly four options")
+        options = _checkpoint_options(mcq_payload.get("options"), index)
+        option_ids = {option.option_id for option in options}
+        correct_option_id = _required_str(
+            mcq_payload,
+            "correct_option_id",
+            f"checkpoint_mcqs[{index}]",
+        ).upper()
+        if correct_option_id not in option_ids:
+            raise ValueError(
+                f"checkpoint_mcqs[{index}].correct_option_id must reference one of its option IDs"
+            )
         source_section_ids = [
             section_id for section_id in _str_list(mcq_payload.get("source_section_ids")) if section_id in allowed_sections
         ]
@@ -420,7 +447,7 @@ def _checkpoint_mcqs_from_payload(
                 question_id=_required_str(mcq_payload, "question_id", f"checkpoint_mcqs[{index}]"),
                 question=_required_str(mcq_payload, "question", f"checkpoint_mcqs[{index}]"),
                 options=options,
-                correct_option=_required_str(mcq_payload, "correct_option", f"checkpoint_mcqs[{index}]"),
+                correct_option_id=correct_option_id,
                 explanation=_required_str(mcq_payload, "explanation", f"checkpoint_mcqs[{index}]"),
                 tested_concept_ids=tested_concept_ids,
                 source_section_ids=source_section_ids,
@@ -430,6 +457,41 @@ def _checkpoint_mcqs_from_payload(
             )
         )
     return checkpoint_mcqs
+
+
+def _checkpoint_options(value: Any, question_index: int) -> list[ModuleCheckpointOption]:
+    if not isinstance(value, list) or len(value) != 4:
+        raise ValueError(f"checkpoint_mcqs[{question_index}] must have exactly four structured options")
+    options: list[ModuleCheckpointOption] = []
+    seen: set[str] = set()
+    for option_index, row in enumerate(value, start=1):
+        if not isinstance(row, dict):
+            raise ValueError(
+                f"checkpoint_mcqs[{question_index}].options[{option_index}] must be an object"
+            )
+        option_id = _required_str(
+            row,
+            "option_id",
+            f"checkpoint_mcqs[{question_index}].options[{option_index}]",
+        ).upper()
+        if option_id not in {"A", "B", "C", "D"} or option_id in seen:
+            raise ValueError(
+                f"checkpoint_mcqs[{question_index}] option IDs must be unique A, B, C, and D"
+            )
+        seen.add(option_id)
+        options.append(
+            ModuleCheckpointOption(
+                option_id=option_id,
+                text=_required_str(
+                    row,
+                    "text",
+                    f"checkpoint_mcqs[{question_index}].options[{option_index}]",
+                ),
+            )
+        )
+    if seen != {"A", "B", "C", "D"}:
+        raise ValueError(f"checkpoint_mcqs[{question_index}] option IDs must be A, B, C, and D")
+    return options
 
 
 def _fallback_mcq_source_sections(module_section_ids: list[str], question_index: int) -> list[str]:

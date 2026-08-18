@@ -56,11 +56,17 @@ class PlannedCurriculumModule:
 
 
 @dataclass(frozen=True)
+class ModuleCheckpointOption:
+    option_id: str
+    text: str
+
+
+@dataclass(frozen=True)
 class ModuleCheckpointMCQ:
     question_id: str
     question: str
-    options: list[str]
-    correct_option: str
+    options: list[ModuleCheckpointOption]
+    correct_option_id: str
     explanation: str
     tested_concept_ids: list[str]
     source_section_ids: list[str]

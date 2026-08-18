@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import os
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Any, Protocol
 
 
@@ -50,6 +50,7 @@ class SupabaseAuthVerifier:
     supabase_url: str
     jwt_secret: str | None = None
     audience: str = "authenticated"
+    _jwks_client: Any = field(default=None, init=False, repr=False)
 
     @classmethod
     def from_env(cls) -> "SupabaseAuthVerifier":
@@ -78,8 +79,11 @@ class SupabaseAuthVerifier:
         errors: list[Exception] = []
         if self.supabase_url:
             try:
-                jwks_client = PyJWKClient(f"{self.supabase_url}/auth/v1/.well-known/jwks.json")
-                signing_key = jwks_client.get_signing_key_from_jwt(token)
+                if self._jwks_client is None:
+                    self._jwks_client = PyJWKClient(
+                        f"{self.supabase_url}/auth/v1/.well-known/jwks.json"
+                    )
+                signing_key = self._jwks_client.get_signing_key_from_jwt(token)
                 return jwt.decode(
                     token,
                     signing_key.key,

@@ -16,6 +16,7 @@ from pydantic import BaseModel, ConfigDict, Field
 
 from .artifacts import ArtifactStore, TextbookStore
 from .auth import AuthError, AuthUser, AuthVerifier, SupabaseAuthVerifier
+from .checkpoint_evaluation import evaluate_checkpoint
 from .database import PostgresRepository, repository_from_env
 from .graph import CurriculumGraph
 from .intent import INTENT_OUTPUT_MAX_TOKENS, IntentClassifier
@@ -116,7 +117,7 @@ class ModuleDesignPayload(BaseModel):
 
 class CheckpointAnswerPayload(BaseModel):
     question_id: str
-    selected_option: str
+    selected_option_id: str
 
 
 class CheckpointSubmitPayload(BaseModel):
@@ -330,85 +331,67 @@ class CurriculumAPIService:
         module_design_id = str(design_metadata.get("module_design_id") or "")
         if not module_design_id:
             raise ValueError(f"Stored module design has no module_design_id: {payload.module_id}")
-        answer_by_id = {answer.question_id: answer.selected_option for answer in payload.answers}
-        rows = []
-        correct_count = 0
+        evaluation = evaluate_checkpoint(
+            self.llm_client,
+            checkpoint_mcqs=checkpoint_mcqs,
+            submitted_answers=[answer.model_dump() for answer in payload.answers],
+        )
+        rows = evaluation["question_results"]
         weak_section_ids: list[str] = []
         weak_concept_ids: list[str] = []
-        insight_events: list[dict[str, Any]] = []
-        for mcq in checkpoint_mcqs:
-            question_id = str(mcq.get("question_id") or "")
-            selected = answer_by_id.get(question_id, "")
-            correct = selected == str(mcq.get("correct_option") or "")
-            correct_count += 1 if correct else 0
-            source_section_ids = [str(item) for item in mcq.get("source_section_ids") or []]
-            tested_concept_ids = [str(item) for item in mcq.get("tested_concept_ids") or []]
-            if not correct:
-                weak_section_ids.extend(source_section_ids)
-                weak_concept_ids.extend(tested_concept_ids)
-            insight_type = "COMPETENCY" if correct else "MISCONCEPTION"
-            for concept_id in tested_concept_ids:
-                insight_events.append(
-                    {
-                        "learner_id": user_id,
-                        "type": insight_type,
-                        "concept_id": concept_id,
-                        "module_id": payload.module_id,
-                        "question_id": question_id,
-                        "source_section_ids": source_section_ids,
-                        "diagnostic_purpose": mcq.get("diagnostic_purpose") or "",
-                        "misconception_tags": mcq.get("misconception_tags") or [],
-                        "confidence": 0.8 if correct else 0.7,
-                    }
-                )
-            rows.append(
-                {
-                    "question_id": question_id,
-                    "selected_option": selected,
-                    "correct_option": mcq.get("correct_option"),
-                    "is_correct": correct,
-                    "source_section_ids": source_section_ids,
-                    "tested_concept_ids": tested_concept_ids,
-                    "diagnostic_purpose": mcq.get("diagnostic_purpose") or "",
-                    "misconception_tags": mcq.get("misconception_tags") or [],
-                }
-            )
+        for row in rows:
+            if not row["is_correct"]:
+                weak_section_ids.extend(row["source_section_ids"])
+                weak_concept_ids.extend(row["tested_concept_ids"])
         total = len(checkpoint_mcqs)
-        score = correct_count / total if total else 0.0
+        correct_count = sum(1 for row in rows if row["is_correct"])
         section_ids = _dedupe([sid for mcq in checkpoint_mcqs for sid in (mcq.get("source_section_ids") or [])])
         existing_insights = self.repository.latest_section_insights(user_id, section_ids)
-        section_insights = generate_section_insights(
-            self.llm_client,
-            learner_id=user_id,
-            curriculum_plan_id=payload.curriculum_plan_id,
-            module_id=payload.module_id,
-            question_results=rows,
-            checkpoint_mcqs=checkpoint_mcqs,
-            existing_section_insights=existing_insights,
-        )
         result = {
             "learner_id": user_id,
             "curriculum_plan_id": payload.curriculum_plan_id,
             "module_id": payload.module_id,
             "module_design_id": module_design_id,
-            "score": score,
+            "score": evaluation["score"],
             "correct_count": correct_count,
             "total_count": total,
             "weak_section_ids": _dedupe(weak_section_ids),
             "weak_concept_ids": _dedupe(weak_concept_ids),
             "question_results": rows,
-            "insight_events": insight_events,
-            "section_insights": section_insights,
-            "recommendation": "continue" if score >= 0.7 else "review_module",
+            "overall_feedback": evaluation["overall_feedback"],
+            "section_insights": [],
+            "insight_generation_status": "pending",
+            "recommendation": evaluation["recommendation"],
         }
-        self.repository.save_checkpoint_result(result)
-        self.repository.save_section_insights(section_insights)
+        attempt_id = self.repository.save_checkpoint_result(result)
+        try:
+            section_insights = generate_section_insights(
+                self.llm_client,
+                learner_id=user_id,
+                curriculum_plan_id=payload.curriculum_plan_id,
+                module_id=payload.module_id,
+                question_results=rows,
+                checkpoint_mcqs=checkpoint_mcqs,
+                existing_section_insights=existing_insights,
+            )
+            self.repository.save_section_insights(section_insights)
+            result["section_insights"] = section_insights
+            result["insight_generation_status"] = "complete"
+        except Exception as exc:  # The evaluated checkpoint remains durable when enrichment fails.
+            result["insight_generation_status"] = "failed"
+            result["insight_generation_error"] = str(exc)
+        self.repository.update_checkpoint_result(attempt_id, result)
         return result
 
     def latest_checkpoint_result(self, curriculum_plan_id: str, module_id: str, *, user_id: str) -> dict[str, Any] | None:
         if not self.repository:
             return None
         return self.repository.get_latest_checkpoint_result(curriculum_plan_id, module_id, learner_id=user_id)
+
+    def plan_progress(self, curriculum_plan_id: str, *, user_id: str) -> dict[str, Any]:
+        if not self.repository or not self.repository.plan_belongs_to_learner(curriculum_plan_id, user_id):
+            raise KeyError(f"Unknown curriculum_plan_id: {curriculum_plan_id}")
+        return self.repository.get_plan_progress(curriculum_plan_id, learner_id=user_id)
 
 
 def _cors_allowed_origins() -> list[str]:
@@ -447,8 +430,7 @@ def create_app(service: CurriculumAPIService | None = None) -> FastAPI:
         except AuthError as exc:
             raise HTTPException(status_code=401, detail=str(exc)) from exc
         if svc.repository:
-            svc.repository.upsert_user_profile(user.to_profile())
-            profile = svc.repository.get_user_profile(user.user_id)
+            profile = svc.repository.upsert_user_profile(user.to_profile())
             role = str((profile or {}).get("role") or "learner")
             if role not in {"learner", "admin"}:
                 role = "learner"
@@ -579,6 +561,14 @@ def create_app(service: CurriculumAPIService | None = None) -> FastAPI:
         if not result:
             raise HTTPException(status_code=404, detail="Checkpoint result not found")
         return result
+
+    @app.get("/api/curriculum/plans/{curriculum_plan_id}/progress")
+    def curriculum_progress(
+        curriculum_plan_id: str,
+        user: AuthUser = Depends(current_user),
+        svc: CurriculumAPIService = Depends(service_dep),
+    ) -> dict[str, Any]:
+        return _handle_api(lambda: svc.plan_progress(curriculum_plan_id, user_id=user.user_id))
 
     # -- Admin routes -------------------------------------------------------
     from .admin_api import mount_admin_routes

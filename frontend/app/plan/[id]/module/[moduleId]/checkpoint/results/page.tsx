@@ -9,9 +9,9 @@ import {
   CheckpointResultPayload,
   ExpandedCurriculumModulePayload,
 } from "../../../../../../types/curriculum";
-import { designModule, fetchCurriculumPlan, fetchLatestCheckpointResult } from "../../../../../../services/api";
+import { fetchCurriculumPlan, fetchLatestCheckpointResult, fetchModuleDesign } from "../../../../../../services/api";
 import { getAccessToken, redirectToLogin } from "../../../../../../services/auth";
-import { loadGuestPlan, markGuestPlanPersisted, planForModuleDesign, storePendingModuleRoute } from "../../../../../../services/guest-plan";
+import { loadGuestPlan, storePendingModuleRoute } from "../../../../../../services/guest-plan";
 
 export default function CheckpointResultsPage() {
   const params = useParams();
@@ -38,13 +38,7 @@ export default function CheckpointResultsPage() {
         redirectToLogin(route);
         return;
       }
-      const data = await designModule({
-        curriculum_plan_id: parsedPlan.curriculum_plan_id,
-        module_id: moduleId,
-        plan: planForModuleDesign(parsedPlan),
-        learner_state: [],
-      });
-      markGuestPlanPersisted(parsedPlan.curriculum_plan_id);
+      const data = await fetchModuleDesign(parsedPlan.curriculum_plan_id, moduleId);
       setModuleData(data);
     },
     [moduleId]
@@ -74,7 +68,10 @@ export default function CheckpointResultsPage() {
         .then(([parsedPlan, parsedResult]) => {
           setPlan(parsedPlan);
           setResult(parsedResult);
-          return loadModuleDesign(parsedPlan);
+          return loadModuleDesign(parsedPlan).catch((err: unknown) => {
+            console.error(err);
+            setModuleError(errorMessage(err, "Failed to load module details for this checkpoint report."));
+          });
         })
         .catch((err: unknown) => {
           console.error(err);
@@ -117,14 +114,13 @@ export default function CheckpointResultsPage() {
   // Find sorted modules & sequencing
   const sortedModules = [...plan.modules].sort((a, b) => a.position - b.position);
   const currentIndex = sortedModules.findIndex((m) => m.module_id === moduleId);
-  const currentModule = sortedModules[currentIndex];
-  
   const nextModule = currentIndex < sortedModules.length - 1 ? sortedModules[currentIndex + 1] : null;
 
   // Stats calculation
   const scorePercent = Math.round(result.score * 100);
-  const recallAccuracy = Math.min(100, Math.round(result.score * 110));
-  const applicationLevel = Math.round(result.score * 90);
+  const testedSectionCount = new Set(
+    result.question_results.flatMap((row) => row.source_section_ids)
+  ).size;
 
   // Helper JSX components
   const recommendationCard = (
@@ -137,9 +133,7 @@ export default function CheckpointResultsPage() {
         </h2>
         
         <p className="text-xs text-zinc-650 leading-relaxed font-light">
-          {result.recommendation === "continue"
-            ? `Outstanding performance. You've demonstrated a strong grasp of the concepts in "${currentModule?.title || moduleData?.title}". Your score indicates you are well-prepared to proceed directly to the next segment.`
-            : `Good effort! You've shown partial understanding of "${currentModule?.title || moduleData?.title}". To master the foundation before moving forward, we recommend spending a little more time reviewing the targeted lessons below.`}
+          {result.overall_feedback}
         </p>
 
         <div className="flex flex-wrap gap-3 pt-2">
@@ -173,21 +167,21 @@ export default function CheckpointResultsPage() {
   const diagnosticInsights = (
     <div className="w-full border border-zinc-300 bg-white rounded-xl p-6 flex flex-col gap-4">
       <h3 className="text-[10px] font-semibold uppercase tracking-wider text-zinc-500">
-        Diagnostic Insights
+        Checkpoint Evidence
       </h3>
       
       <div className="grid grid-cols-3 gap-2 text-center">
         <div className="bg-zinc-50 p-3 rounded-lg border border-zinc-300 flex flex-col justify-between">
-          <span className="text-[8px] text-zinc-400 block uppercase font-medium tracking-wider mb-1 leading-normal">Recall</span>
-          <span className="text-sm font-normal text-zinc-955">{recallAccuracy}%</span>
+          <span className="text-[8px] text-zinc-400 block uppercase font-medium tracking-wider mb-1 leading-normal">Evaluator score</span>
+          <span className="text-sm font-normal text-zinc-955">{scorePercent}%</span>
         </div>
         <div className="bg-zinc-50 p-3 rounded-lg border border-zinc-300 flex flex-col justify-between">
-          <span className="text-[8px] text-zinc-400 block uppercase font-medium tracking-wider mb-1 leading-normal">Application</span>
-          <span className="text-sm font-normal text-zinc-955">{applicationLevel}%</span>
+          <span className="text-[8px] text-zinc-400 block uppercase font-medium tracking-wider mb-1 leading-normal">Questions judged</span>
+          <span className="text-sm font-normal text-zinc-955">{result.correct_count}/{result.total_count}</span>
         </div>
         <div className="bg-zinc-50 p-3 rounded-lg border border-zinc-300 flex flex-col justify-between">
-          <span className="text-[8px] text-zinc-400 block uppercase font-medium tracking-wider mb-1 leading-normal">Concepts</span>
-          <span className="text-sm font-normal text-zinc-955">{result.question_results?.length || 0}</span>
+          <span className="text-[8px] text-zinc-400 block uppercase font-medium tracking-wider mb-1 leading-normal">Sections tested</span>
+          <span className="text-sm font-normal text-zinc-955">{testedSectionCount}</span>
         </div>
       </div>
     </div>
@@ -301,7 +295,7 @@ export default function CheckpointResultsPage() {
             <h2 className="text-lg font-light tracking-tight text-zinc-955 leading-tight">Question Review</h2>
             
             {result.question_results?.map((qr, index) => {
-              const matchingMcq = moduleData?.checkpoint_mcqs?.find((m: any) => m.question_id === qr.question_id);
+              const matchingMcq = moduleData?.checkpoint_mcqs?.find((mcq) => mcq.question_id === qr.question_id);
               const options = matchingMcq?.options || [];
 
               return (
@@ -328,10 +322,9 @@ export default function CheckpointResultsPage() {
                   </h3>
 
                   <div className="flex flex-col gap-3">
-                    {options.map((option: string) => {
-                      const optionPrefix = option.charAt(0);
-                      const isThisSelected = qr.selected_option === optionPrefix;
-                      const isThisCorrect = qr.correct_option === optionPrefix;
+                    {options.map((option) => {
+                      const isThisSelected = qr.selected_option_id === option.option_id;
+                      const isThisCorrect = qr.correct_option_id === option.option_id;
 
                       let optionStyle = "border-zinc-200 text-zinc-300 bg-zinc-50/50 cursor-not-allowed";
                       if (isThisCorrect) {
@@ -342,10 +335,11 @@ export default function CheckpointResultsPage() {
 
                       return (
                         <div
-                          key={option}
+                          key={option.option_id}
                           className={`flex items-center p-4 border rounded-xl text-sm font-light leading-snug ${optionStyle}`}
                         >
-                          <span className="leading-snug">{option}</span>
+                          <span className="mr-3 font-medium">{option.option_id}.</span>
+                          <span className="leading-snug">{option.text}</span>
                           {isThisCorrect && (
                             <span className="ml-auto material-symbols-outlined text-emerald-600 text-base">check_circle</span>
                           )}
@@ -361,10 +355,10 @@ export default function CheckpointResultsPage() {
                   {(matchingMcq?.explanation || qr.diagnostic_purpose) && (
                     <div className="mt-2 p-4 bg-zinc-50 rounded-xl border border-zinc-300 text-xs flex flex-col gap-2">
                       <span className={`font-semibold uppercase tracking-wider text-[10px] ${qr.is_correct ? "text-emerald-700" : "text-red-700"}`}>
-                        {qr.is_correct ? "✓ Correct Choice" : `✗ Incorrect Choice (Correct option is ${qr.correct_option})`}
+                        {qr.is_correct ? "Correct choice" : `Needs review (answer: ${qr.correct_option_id})`}
                       </span>
-                      {matchingMcq?.explanation && (
-                        <p className="text-zinc-650 leading-relaxed font-light">{matchingMcq.explanation}</p>
+                      {(qr.evaluation_feedback || matchingMcq?.explanation) && (
+                        <p className="text-zinc-650 leading-relaxed font-light">{qr.evaluation_feedback || matchingMcq?.explanation}</p>
                       )}
                       {qr.diagnostic_purpose && (
                         <div className="pt-2 border-t border-zinc-200 text-zinc-400 font-light text-[11px]">

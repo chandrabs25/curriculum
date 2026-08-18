@@ -41,7 +41,8 @@ export default function AdminHotspotsPage() {
   }, [statusFilter, page]);
 
   useEffect(() => {
-    load();
+    const timer = window.setTimeout(load, 0);
+    return () => window.clearTimeout(timer);
   }, [load]);
 
   return (

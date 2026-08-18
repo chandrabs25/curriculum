@@ -11,7 +11,8 @@ frontend
 concept csv
 scratch
 tests
-scripts
+scripts/*
+!scripts/apply_database_schema.py
 
 data/relationship_artifacts/raw_*
 data/relationship_artifacts/review
