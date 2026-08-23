@@ -35,11 +35,11 @@ export class ApiError extends Error {
 async function requestJson<TResponse>(
   path: string,
   init?: RequestInit,
-  options?: { auth?: boolean }
+  options?: { auth?: boolean; accessToken?: string }
 ): Promise<TResponse> {
   const authHeaders: Record<string, string> = {};
   if (options?.auth) {
-    const token = await getAccessToken();
+    const token = options.accessToken || await getAccessToken();
     if (!token) {
       redirectToLogin();
       throw new ApiError("Sign in required.", 401, { detail: "Sign in required." });
@@ -75,7 +75,7 @@ async function requestJson<TResponse>(
 function postJson<TPayload, TResponse>(
   path: string,
   payload: TPayload,
-  options?: { auth?: boolean }
+  options?: { auth?: boolean; accessToken?: string }
 ): Promise<TResponse> {
   return requestJson<TResponse>(path, {
     method: "POST",
@@ -132,47 +132,51 @@ export function createCurriculumPlan(
 }
 
 export function fetchCurriculumPlan(
-  curriculumPlanId: string
+  curriculumPlanId: string,
+  accessToken?: string
 ): Promise<CurriculumPlanPayload> {
   return requestJson<CurriculumPlanPayload>(
     `/api/curriculum/plans/${encodeURIComponent(curriculumPlanId)}`,
     undefined,
-    { auth: true }
+    { auth: true, accessToken }
   );
 }
 
 export function designModule(
-  payload: ModuleDesignPayload
+  payload: ModuleDesignPayload,
+  accessToken?: string
 ): Promise<ExpandedCurriculumModulePayload> {
   return postJson<ModuleDesignPayload, ExpandedCurriculumModulePayload>(
     "/api/modules/design",
     payload,
-    { auth: true }
+    { auth: true, accessToken }
   );
 }
 
 export function fetchModuleDesign(
   curriculumPlanId: string,
-  moduleId: string
+  moduleId: string,
+  accessToken?: string
 ): Promise<ExpandedCurriculumModulePayload> {
   return requestJson<ExpandedCurriculumModulePayload>(
     `/api/curriculum/plans/${encodeURIComponent(curriculumPlanId)}/modules/${encodeURIComponent(moduleId)}/design`,
     undefined,
-    { auth: true }
+    { auth: true, accessToken }
   );
 }
 
 export async function fetchOrDesignModule(
-  payload: ModuleDesignPayload
+  payload: ModuleDesignPayload,
+  accessToken?: string
 ): Promise<ExpandedCurriculumModulePayload> {
   try {
-    return await fetchModuleDesign(payload.curriculum_plan_id, payload.module_id);
+    return await fetchModuleDesign(payload.curriculum_plan_id, payload.module_id, accessToken);
   } catch (error) {
     if (!(error instanceof ApiError) || error.status !== 404) {
       throw error;
     }
   }
-  return designModule(payload);
+  return designModule(payload, accessToken);
 }
 
 export function submitCheckpoint(

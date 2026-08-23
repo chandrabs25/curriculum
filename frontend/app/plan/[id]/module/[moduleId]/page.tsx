@@ -1,13 +1,12 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { RetryPanel } from "../../../../components/RetryPanel";
-import { fetchCurriculumPlan, fetchCurriculumProgress, fetchOrDesignModule } from "../../../../services/api";
-import { getAccessToken, redirectToLogin } from "../../../../services/auth";
-import { loadGuestPlan, markGuestPlanPersisted, planForModuleDesign, storePendingModuleRoute } from "../../../../services/guest-plan";
-import { CurriculumPlanPayload, ExpandedCurriculumModulePayload } from "../../../../types/curriculum";
+import { fetchCurriculumProgress } from "../../../../services/api";
+import { moduleHref } from "../../../../services/curriculum-session";
+import { useModuleWorkspace } from "../../../../hooks/useModuleWorkspace";
 
 export default function ModuleReadingPage() {
   const params = useParams();
@@ -16,83 +15,22 @@ export default function ModuleReadingPage() {
   const rawModuleId = params.moduleId as string;
   const moduleId = decodeURIComponent(rawModuleId);
 
-  const [plan, setPlan] = useState<CurriculumPlanPayload | null>(null);
-  const [moduleData, setModuleData] = useState<ExpandedCurriculumModulePayload | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [retrying, setRetrying] = useState(false);
-  const [error, setError] = useState<string | null>(null);
   const [completedCount, setCompletedCount] = useState(0);
-
-  const loadModuleDesign = useCallback(
-    async (parsedPlan: CurriculumPlanPayload) => {
-      setError(null);
-
-      const token = await getAccessToken();
-      if (!token) {
-        const route = moduleHref(parsedPlan.curriculum_plan_id, moduleId);
-        storePendingModuleRoute(route);
-        redirectToLogin(route);
-        return;
-      }
-
-      const data = await fetchOrDesignModule({
-        curriculum_plan_id: parsedPlan.curriculum_plan_id,
-        module_id: moduleId,
-        plan: planForModuleDesign(parsedPlan),
-        learner_state: [],
-      });
-      markGuestPlanPersisted(parsedPlan.curriculum_plan_id);
-      setModuleData(data);
-      try {
-        const progress = await fetchCurriculumProgress(parsedPlan.curriculum_plan_id);
-        setCompletedCount(progress.completed_count);
-      } catch {
-        setCompletedCount(0);
-      }
-    },
-    [moduleId]
-  );
-
-  const retryLoadModuleDesign = useCallback(async () => {
-    if (!plan) return;
-    setRetrying(true);
-    setError(null);
-    try {
-      await loadModuleDesign(plan);
-    } catch (err: unknown) {
-      console.error(err);
-      setError(errorMessage(err, "Failed to load module details from API backend."));
-    } finally {
-      setRetrying(false);
-      setLoading(false);
-    }
-  }, [loadModuleDesign, plan]);
+  const workspace = useModuleWorkspace({
+    planId: id,
+    moduleId,
+    returnTo: moduleHref(id, moduleId),
+    mode: "fetch-or-design",
+    fallbackError: "Failed to load module details from API backend.",
+  });
+  const { plan, moduleData, loading, retrying, error, retry } = workspace;
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      Promise.resolve().then(() => {
-        const localPlan = loadGuestPlan(id);
-        const planRequest = localPlan ? Promise.resolve(localPlan) : fetchCurriculumPlan(id);
-
-        planRequest
-          .then((parsedPlan) => {
-            setPlan(parsedPlan);
-            loadModuleDesign(parsedPlan)
-              .catch((err) => {
-                console.error(err);
-                setError(errorMessage(err, "Failed to load module details from API backend."));
-              })
-              .finally(() => {
-                setLoading(false);
-              });
-          })
-          .catch((err: unknown) => {
-            setError(errorMessage(err, "Plan not found. Please regenerate onboarding."));
-            setLoading(false);
-          });
-      });
-    }
-  }, [id, loadModuleDesign]);
+    if (!plan || !moduleData) return;
+    fetchCurriculumProgress(plan.curriculum_plan_id)
+      .then((progress) => setCompletedCount(progress.completed_count))
+      .catch(() => setCompletedCount(0));
+  }, [moduleData, plan]);
 
   if (loading) {
     return (
@@ -112,7 +50,7 @@ export default function ModuleReadingPage() {
           <RetryPanel
             title="Module Load Failed"
             message={error}
-            onRetry={plan ? () => void retryLoadModuleDesign() : undefined}
+            onRetry={() => void retry()}
             retryLabel="Retry Module"
             isRetrying={retrying}
             fallbackHref={`/plan/${encodeURIComponent(id)}`}
@@ -130,7 +68,7 @@ export default function ModuleReadingPage() {
           <RetryPanel
             title="Module Unavailable"
             message="The module content was not loaded."
-            onRetry={plan ? () => void retryLoadModuleDesign() : undefined}
+            onRetry={() => void retry()}
             retryLabel="Retry Module"
             isRetrying={retrying}
             fallbackHref={`/plan/${encodeURIComponent(id)}`}
@@ -319,13 +257,4 @@ export default function ModuleReadingPage() {
       </main>
     </div>
   );
-}
-
-function moduleHref(planId: string, moduleId: string): string {
-  return `/plan/${encodeURIComponent(planId)}/module/${encodeURIComponent(moduleId)}`;
-}
-
-function errorMessage(err: unknown, fallback: string): string {
-  if (err instanceof Error) return err.message;
-  return fallback;
 }

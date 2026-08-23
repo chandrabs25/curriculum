@@ -16,7 +16,7 @@ from pydantic import BaseModel, ConfigDict, Field
 
 from .artifacts import ArtifactStore, TextbookStore
 from .auth import AuthError, AuthUser, AuthVerifier, SupabaseAuthVerifier
-from .checkpoint_evaluation import evaluate_checkpoint
+from .checkpoint_workflow import CheckpointAttemptWorkflow, CheckpointSubmission
 from .database import PostgresRepository, repository_from_env
 from .graph import CurriculumGraph
 from .intent import INTENT_OUTPUT_MAX_TOKENS, IntentClassifier
@@ -36,7 +36,6 @@ from .public_cache import (
     retrieval_cache_key,
 )
 from .retrieval import CurriculumRetriever, LearnerConceptState
-from .section_insights import generate_section_insights
 from .vector_index import PgVectorSectionIndex, HFInferenceEmbeddingModel
 
 
@@ -164,6 +163,11 @@ class CurriculumAPIService:
             temperature=0.0,
         )
         self.auth_verifier = auth_verifier or SupabaseAuthVerifier.from_env()
+        self.checkpoint_workflow = (
+            CheckpointAttemptWorkflow(self.repository, self.llm_client)
+            if self.repository is not None
+            else None
+        )
         self._memory_public_cache: dict[str, dict[str, Any]] = {}
 
     def classify_intent(self, payload: IntentClassifyPayload) -> dict[str, Any]:
@@ -317,71 +321,16 @@ class CurriculumAPIService:
         return self.repository.latest_section_insights(learner_id, section_ids)
 
     def submit_checkpoint(self, payload: CheckpointSubmitPayload, *, user_id: str) -> dict[str, Any]:
-        if not self.repository:
+        if not self.checkpoint_workflow:
             raise RuntimeError("Database persistence is required for checkpoint submission")
-        if not self.repository.plan_belongs_to_learner(payload.curriculum_plan_id, user_id):
-            raise KeyError(f"Unknown curriculum_plan_id: {payload.curriculum_plan_id}")
-        design = self.repository.get_module_design(payload.curriculum_plan_id, payload.module_id, learner_id=user_id)
-        if not design:
-            raise KeyError(f"Module design not found: {payload.module_id}")
-        checkpoint_mcqs = list((design or {}).get("checkpoint_mcqs") or [])
-        if not checkpoint_mcqs:
-            raise ValueError(f"Module design has no checkpoint_mcqs: {payload.module_id}")
-        design_metadata = design.get("metadata") if isinstance(design.get("metadata"), dict) else {}
-        module_design_id = str(design_metadata.get("module_design_id") or "")
-        if not module_design_id:
-            raise ValueError(f"Stored module design has no module_design_id: {payload.module_id}")
-        evaluation = evaluate_checkpoint(
-            self.llm_client,
-            checkpoint_mcqs=checkpoint_mcqs,
-            submitted_answers=[answer.model_dump() for answer in payload.answers],
-        )
-        rows = evaluation["question_results"]
-        weak_section_ids: list[str] = []
-        weak_concept_ids: list[str] = []
-        for row in rows:
-            if not row["is_correct"]:
-                weak_section_ids.extend(row["source_section_ids"])
-                weak_concept_ids.extend(row["tested_concept_ids"])
-        total = len(checkpoint_mcqs)
-        correct_count = sum(1 for row in rows if row["is_correct"])
-        section_ids = _dedupe([sid for mcq in checkpoint_mcqs for sid in (mcq.get("source_section_ids") or [])])
-        existing_insights = self.repository.latest_section_insights(user_id, section_ids)
-        result = {
-            "learner_id": user_id,
-            "curriculum_plan_id": payload.curriculum_plan_id,
-            "module_id": payload.module_id,
-            "module_design_id": module_design_id,
-            "score": evaluation["score"],
-            "correct_count": correct_count,
-            "total_count": total,
-            "weak_section_ids": _dedupe(weak_section_ids),
-            "weak_concept_ids": _dedupe(weak_concept_ids),
-            "question_results": rows,
-            "overall_feedback": evaluation["overall_feedback"],
-            "section_insights": [],
-            "insight_generation_status": "pending",
-            "recommendation": evaluation["recommendation"],
-        }
-        attempt_id = self.repository.save_checkpoint_result(result)
-        try:
-            section_insights = generate_section_insights(
-                self.llm_client,
-                learner_id=user_id,
+        return self.checkpoint_workflow.submit(
+            CheckpointSubmission(
                 curriculum_plan_id=payload.curriculum_plan_id,
                 module_id=payload.module_id,
-                question_results=rows,
-                checkpoint_mcqs=checkpoint_mcqs,
-                existing_section_insights=existing_insights,
+                learner_id=user_id,
+                answers=[answer.model_dump() for answer in payload.answers],
             )
-            self.repository.save_section_insights(section_insights)
-            result["section_insights"] = section_insights
-            result["insight_generation_status"] = "complete"
-        except Exception as exc:  # The evaluated checkpoint remains durable when enrichment fails.
-            result["insight_generation_status"] = "failed"
-            result["insight_generation_error"] = str(exc)
-        self.repository.update_checkpoint_result(attempt_id, result)
-        return result
+        )
 
     def latest_checkpoint_result(self, curriculum_plan_id: str, module_id: str, *, user_id: str) -> dict[str, Any] | None:
         if not self.repository:

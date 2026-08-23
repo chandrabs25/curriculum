@@ -1,17 +1,13 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { RetryPanel } from "../../../../../../components/RetryPanel";
-import {
-  CurriculumPlanPayload,
-  CheckpointResultPayload,
-  ExpandedCurriculumModulePayload,
-} from "../../../../../../types/curriculum";
-import { fetchCurriculumPlan, fetchLatestCheckpointResult, fetchModuleDesign } from "../../../../../../services/api";
-import { getAccessToken, redirectToLogin } from "../../../../../../services/auth";
-import { loadGuestPlan, storePendingModuleRoute } from "../../../../../../services/guest-plan";
+import { CheckpointResultPayload } from "../../../../../../types/curriculum";
+import { fetchLatestCheckpointResult } from "../../../../../../services/api";
+import { moduleHref } from "../../../../../../services/curriculum-session";
+import { useModuleWorkspace } from "../../../../../../hooks/useModuleWorkspace";
 
 export default function CheckpointResultsPage() {
   const params = useParams();
@@ -20,68 +16,38 @@ export default function CheckpointResultsPage() {
   const rawModuleId = params.moduleId as string;
   const moduleId = decodeURIComponent(rawModuleId);
 
-  const [plan, setPlan] = useState<CurriculumPlanPayload | null>(null);
   const [result, setResult] = useState<CheckpointResultPayload | null>(null);
-  const [moduleData, setModuleData] = useState<ExpandedCurriculumModulePayload | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [moduleError, setModuleError] = useState<string | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [moduleRetrying, setModuleRetrying] = useState(false);
-
-  const loadModuleDesign = useCallback(
-    async (parsedPlan: CurriculumPlanPayload) => {
-      setModuleError(null);
-      const token = await getAccessToken();
-      if (!token) {
-        const route = `${moduleHref(parsedPlan.curriculum_plan_id, moduleId)}/checkpoint/results`;
-        storePendingModuleRoute(route);
-        redirectToLogin(route);
-        return;
-      }
-      const data = await fetchModuleDesign(parsedPlan.curriculum_plan_id, moduleId);
-      setModuleData(data);
-    },
-    [moduleId]
-  );
-
-  const retryLoadModuleDesign = useCallback(async () => {
-    if (!plan) return;
-    setModuleRetrying(true);
-    setModuleError(null);
-    try {
-      await loadModuleDesign(plan);
-    } catch (err: unknown) {
-      console.error(err);
-      setModuleError(errorMessage(err, "Failed to load module details for this checkpoint report."));
-    } finally {
-      setModuleRetrying(false);
-      setLoading(false);
-    }
-  }, [loadModuleDesign, plan]);
+  const workspace = useModuleWorkspace({
+    planId: id,
+    moduleId,
+    returnTo: `${moduleHref(id, moduleId)}/checkpoint/results`,
+    mode: "fetch-only",
+    fallbackError: "Failed to load module details for this checkpoint report.",
+  });
+  const {
+    plan,
+    moduleData,
+    loading: moduleLoading,
+    retrying: moduleRetrying,
+    error: moduleError,
+    errorStage,
+    retry: retryModule,
+  } = workspace;
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const localPlan = loadGuestPlan(id);
-      const planRequest = localPlan ? Promise.resolve(localPlan) : fetchCurriculumPlan(id);
+    if (!plan) return;
+    fetchLatestCheckpointResult(plan.curriculum_plan_id, moduleId)
+      .then(setResult)
+      .catch((err: unknown) => {
+        console.error(err);
+        setError(errorMessage(err, "Checkpoint result not found. Please complete the quiz first."));
+      });
+  }, [moduleId, plan]);
 
-      Promise.all([planRequest, fetchLatestCheckpointResult(id, moduleId)])
-        .then(([parsedPlan, parsedResult]) => {
-          setPlan(parsedPlan);
-          setResult(parsedResult);
-          return loadModuleDesign(parsedPlan).catch((err: unknown) => {
-            console.error(err);
-            setModuleError(errorMessage(err, "Failed to load module details for this checkpoint report."));
-          });
-        })
-        .catch((err: unknown) => {
-          console.error(err);
-          setError(errorMessage(err, "Checkpoint result not found. Please complete the quiz first."));
-        })
-        .finally(() => {
-          setLoading(false);
-        });
-    }
-  }, [id, loadModuleDesign, moduleId]);
+  const resultLoading = Boolean(plan) && !result && !error;
+  const loading = moduleLoading || (Boolean(plan) && resultLoading);
+  const blockingWorkspaceError = errorStage && errorStage !== "module" ? moduleError : null;
 
   if (loading) {
     return (
@@ -94,12 +60,12 @@ export default function CheckpointResultsPage() {
     );
   }
 
-  if (error || !plan || !result) {
+  if (error || blockingWorkspaceError || !plan || !result) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-white px-4">
         <div className="max-w-md w-full text-center bg-white p-8 rounded-xl border border-zinc-300">
           <h2 className="text-lg font-normal text-red-650">Error</h2>
-          <p className="mt-2 text-xs text-zinc-500 font-light">{error || "Results unavailable."}</p>
+          <p className="mt-2 text-xs text-zinc-500 font-light">{error || blockingWorkspaceError || "Results unavailable."}</p>
           <Link
             href={`${moduleHref(id, moduleId)}/checkpoint`}
             className="mt-6 inline-flex items-center justify-center rounded-full bg-zinc-900 px-6 py-2 text-xs font-semibold text-white hover:bg-zinc-800 transition-colors"
@@ -273,7 +239,7 @@ export default function CheckpointResultsPage() {
               <RetryPanel
                 title="Module Details Unavailable"
                 message={moduleError}
-                onRetry={plan ? () => void retryLoadModuleDesign() : undefined}
+                onRetry={() => void retryModule()}
                 retryLabel="Retry Module Details"
                 isRetrying={moduleRetrying}
                 fallbackHref={moduleHref(id, moduleId)}
@@ -434,10 +400,6 @@ export default function CheckpointResultsPage() {
       </nav>
     </div>
   );
-}
-
-function moduleHref(planId: string, moduleId: string): string {
-  return `/plan/${encodeURIComponent(planId)}/module/${encodeURIComponent(moduleId)}`;
 }
 
 function errorMessage(err: unknown, fallback: string): string {

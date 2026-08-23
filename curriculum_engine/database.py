@@ -361,67 +361,64 @@ class PostgresRepository:
                 rows = cur.fetchall()
         return [_insight_row(row) for row in rows]
 
-    def save_section_insights(self, insights: list[dict[str, Any]]) -> None:
-        if not insights:
-            return
-        with self._connect() as conn:
-            with conn.cursor() as cur:
-                for insight in insights:
-                    learner_id = str(insight.get("learner_id") or "")
-                    section_id = str(insight.get("section_id") or "")
-                    if not learner_id or not section_id:
-                        continue
-                    cur.execute(
-                        """
-                        update section_learning_insights
-                        set is_latest = false
-                        where learner_id = %s and section_id = %s and is_latest = true
-                        """,
-                        (learner_id, section_id),
-                    )
-                    cur.execute(
-                        """
-                        insert into section_learning_insights(
-                          insight_id, learner_id, curriculum_plan_id, module_id, section_id,
-                          current_status, understanding_summary, strengths, misconceptions_or_gaps,
-                          recommended_adjustment, confidence, evidence_question_ids,
-                          supersedes_insight_id, reconciliation_reason, is_latest, created_at
-                        )
-                        values (
-                          %s, %s, %s, %s, %s,
-                          %s, %s, %s::jsonb, %s::jsonb,
-                          %s, %s, %s::jsonb,
-                          %s, %s, true, coalesce(%s::timestamptz, now())
-                        )
-                        on conflict (insight_id) do update set
-                          current_status = excluded.current_status,
-                          understanding_summary = excluded.understanding_summary,
-                          strengths = excluded.strengths,
-                          misconceptions_or_gaps = excluded.misconceptions_or_gaps,
-                          recommended_adjustment = excluded.recommended_adjustment,
-                          confidence = excluded.confidence,
-                          evidence_question_ids = excluded.evidence_question_ids,
-                          reconciliation_reason = excluded.reconciliation_reason,
-                          is_latest = true
-                        """,
-                        (
-                            insight.get("insight_id"),
-                            learner_id,
-                            insight.get("curriculum_plan_id"),
-                            insight.get("module_id"),
-                            section_id,
-                            insight.get("current_status") or "uncertain",
-                            insight.get("understanding_summary") or "",
-                            _json(insight.get("strengths") or []),
-                            _json(insight.get("misconceptions_or_gaps") or []),
-                            insight.get("recommended_adjustment") or "",
-                            float(insight.get("confidence") or 0.0),
-                            _json(insight.get("evidence_question_ids") or []),
-                            insight.get("supersedes_insight_id"),
-                            insight.get("reconciliation_reason") or "",
-                            insight.get("created_at"),
-                        ),
-                    )
+    @staticmethod
+    def _save_section_insights(cur: Any, insights: list[dict[str, Any]]) -> None:
+        for insight in insights:
+            learner_id = str(insight.get("learner_id") or "")
+            section_id = str(insight.get("section_id") or "")
+            if not learner_id or not section_id:
+                continue
+            cur.execute(
+                """
+                update section_learning_insights
+                set is_latest = false
+                where learner_id = %s and section_id = %s and is_latest = true
+                """,
+                (learner_id, section_id),
+            )
+            cur.execute(
+                """
+                insert into section_learning_insights(
+                  insight_id, learner_id, curriculum_plan_id, module_id, section_id,
+                  current_status, understanding_summary, strengths, misconceptions_or_gaps,
+                  recommended_adjustment, confidence, evidence_question_ids,
+                  supersedes_insight_id, reconciliation_reason, is_latest, created_at
+                )
+                values (
+                  %s, %s, %s, %s, %s,
+                  %s, %s, %s::jsonb, %s::jsonb,
+                  %s, %s, %s::jsonb,
+                  %s, %s, true, coalesce(%s::timestamptz, now())
+                )
+                on conflict (insight_id) do update set
+                  current_status = excluded.current_status,
+                  understanding_summary = excluded.understanding_summary,
+                  strengths = excluded.strengths,
+                  misconceptions_or_gaps = excluded.misconceptions_or_gaps,
+                  recommended_adjustment = excluded.recommended_adjustment,
+                  confidence = excluded.confidence,
+                  evidence_question_ids = excluded.evidence_question_ids,
+                  reconciliation_reason = excluded.reconciliation_reason,
+                  is_latest = true
+                """,
+                (
+                    insight.get("insight_id"),
+                    learner_id,
+                    insight.get("curriculum_plan_id"),
+                    insight.get("module_id"),
+                    section_id,
+                    insight.get("current_status") or "uncertain",
+                    insight.get("understanding_summary") or "",
+                    _json(insight.get("strengths") or []),
+                    _json(insight.get("misconceptions_or_gaps") or []),
+                    insight.get("recommended_adjustment") or "",
+                    float(insight.get("confidence") or 0.0),
+                    _json(insight.get("evidence_question_ids") or []),
+                    insight.get("supersedes_insight_id"),
+                    insight.get("reconciliation_reason") or "",
+                    insight.get("created_at"),
+                ),
+            )
 
     def save_checkpoint_result(self, result: dict[str, Any]) -> str:
         attempt_id = "checkpoint_attempt:" + uuid.uuid4().hex[:16]
@@ -474,6 +471,25 @@ class PostgresRepository:
     def update_checkpoint_result(self, checkpoint_attempt_id: str, result: dict[str, Any]) -> None:
         with self._connect() as conn:
             with conn.cursor() as cur:
+                cur.execute(
+                    """
+                    update checkpoint_attempts
+                    set result_payload = %s::jsonb
+                    where checkpoint_attempt_id = %s
+                    """,
+                    (_json(result), checkpoint_attempt_id),
+                )
+
+    def finalize_checkpoint_result(
+        self,
+        checkpoint_attempt_id: str,
+        result: dict[str, Any],
+        section_insights: list[dict[str, Any]],
+    ) -> None:
+        """Commit reconciled insights and the completed attempt as one transaction."""
+        with self._connect() as conn:
+            with conn.cursor() as cur:
+                self._save_section_insights(cur, section_insights)
                 cur.execute(
                     """
                     update checkpoint_attempts

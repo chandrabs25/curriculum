@@ -217,10 +217,6 @@ class FakeRepository:
                 rows.append(json.loads(json.dumps(insight)))
         return rows
 
-    def save_section_insights(self, insights: list[dict[str, Any]]) -> None:
-        for insight in insights:
-            self.section_insights[(insight["learner_id"], insight["section_id"])] = json.loads(json.dumps(insight))
-
     def active_hotspots(self, section_ids: list[str] | None = None) -> list[dict[str, Any]]:
         allowed = set(section_ids or [])
         rows = [
@@ -239,6 +235,16 @@ class FakeRepository:
         del checkpoint_attempt_id
         key = (result["learner_id"], result["curriculum_plan_id"], result["module_id"])
         self.checkpoint_results[key] = json.loads(json.dumps(result))
+
+    def finalize_checkpoint_result(
+        self,
+        checkpoint_attempt_id: str,
+        result: dict[str, Any],
+        section_insights: list[dict[str, Any]],
+    ) -> None:
+        for insight in section_insights:
+            self.section_insights[(insight["learner_id"], insight["section_id"])] = json.loads(json.dumps(insight))
+        self.update_checkpoint_result(checkpoint_attempt_id, result)
 
     def get_plan_progress(self, curriculum_plan_id: str, *, learner_id: str) -> dict[str, Any]:
         plan = self.get_plan(curriculum_plan_id, learner_id=learner_id) or {}

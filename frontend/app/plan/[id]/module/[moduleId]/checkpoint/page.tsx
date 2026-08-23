@@ -1,17 +1,15 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import { RetryPanel } from "../../../../../components/RetryPanel";
-import { fetchCurriculumPlan, fetchOrDesignModule, submitCheckpoint } from "../../../../../services/api";
-import { getAccessToken, redirectToLogin } from "../../../../../services/auth";
-import { loadGuestPlan, markGuestPlanPersisted, planForModuleDesign, storePendingModuleRoute } from "../../../../../services/guest-plan";
+import { submitCheckpoint } from "../../../../../services/api";
+import { moduleHref } from "../../../../../services/curriculum-session";
+import { useModuleWorkspace } from "../../../../../hooks/useModuleWorkspace";
 import {
-  CurriculumPlanPayload,
   CheckpointAnswerPayload,
   CheckpointResultPayload,
-  ExpandedCurriculumModulePayload,
   ModuleCheckpointMCQ,
 } from "../../../../../types/curriculum";
 
@@ -23,73 +21,22 @@ export default function CheckpointQuizPage() {
   const rawModuleId = params.moduleId as string;
   const moduleId = decodeURIComponent(rawModuleId);
 
-  const [plan, setPlan] = useState<CurriculumPlanPayload | null>(null);
-  const [moduleData, setModuleData] = useState<ExpandedCurriculumModulePayload | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [retrying, setRetrying] = useState(false);
   const [submitting, setSubmitting] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [submissionError, setSubmissionError] = useState<string | null>(null);
 
   // Selection states
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [quizResult, setQuizResult] = useState<CheckpointResultPayload | null>(null);
 
-  const loadModuleDesign = useCallback(
-    async (parsedPlan: CurriculumPlanPayload) => {
-      setError(null);
-      const token = await getAccessToken();
-      if (!token) {
-        const route = `${moduleHref(parsedPlan.curriculum_plan_id, moduleId)}/checkpoint`;
-        storePendingModuleRoute(route);
-        redirectToLogin(route);
-        return;
-      }
-      const data = await fetchOrDesignModule({
-        curriculum_plan_id: parsedPlan.curriculum_plan_id,
-        module_id: moduleId,
-        plan: planForModuleDesign(parsedPlan),
-        learner_state: [],
-      });
-      markGuestPlanPersisted(parsedPlan.curriculum_plan_id);
-      setModuleData(data);
-    },
-    [moduleId]
-  );
-
-  const retryLoadModuleDesign = useCallback(async () => {
-    if (!plan) return;
-    setRetrying(true);
-    setError(null);
-    try {
-      await loadModuleDesign(plan);
-    } catch (err: unknown) {
-      console.error(err);
-      setError(errorMessage(err, "Failed to load checkpoint MCQs from backend."));
-    } finally {
-      setRetrying(false);
-      setLoading(false);
-    }
-  }, [loadModuleDesign, plan]);
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const localPlan = loadGuestPlan(id);
-      const planRequest = localPlan ? Promise.resolve(localPlan) : fetchCurriculumPlan(id);
-
-      planRequest
-        .then((parsedPlan) => {
-          setPlan(parsedPlan);
-          return loadModuleDesign(parsedPlan);
-        })
-        .catch((err: unknown) => {
-          console.error(err);
-          setError(errorMessage(err, "Failed to load checkpoint MCQs from backend."));
-        })
-        .finally(() => {
-          setLoading(false);
-        });
-    }
-  }, [id, loadModuleDesign]);
+  const workspace = useModuleWorkspace({
+    planId: id,
+    moduleId,
+    returnTo: `${moduleHref(id, moduleId)}/checkpoint`,
+    mode: "fetch-or-design",
+    fallbackError: "Failed to load checkpoint MCQs from backend.",
+  });
+  const { plan, moduleData, loading, retrying, error: loadError, retry } = workspace;
+  const error = submissionError || loadError;
 
   const handleSelectOption = (questionId: string, optionPrefix: string) => {
     if (quizResult || submitting) return;
@@ -105,12 +52,12 @@ export default function CheckpointQuizPage() {
 
     const mcqs = moduleData.checkpoint_mcqs || [];
     if (Object.keys(answers).length < mcqs.length) {
-      setError("Please answer all questions before submitting.");
+      setSubmissionError("Please answer all questions before submitting.");
       return;
     }
 
     setSubmitting(true);
-    setError(null);
+    setSubmissionError(null);
 
     const answerPayloads: CheckpointAnswerPayload[] = Object.entries(answers).map(
       ([qId, opt]) => ({
@@ -134,7 +81,7 @@ export default function CheckpointQuizPage() {
       }, 1500);
     } catch (err: unknown) {
       console.error(err);
-      setError(errorMessage(err, "Failed to submit checkpoint responses."));
+      setSubmissionError(errorMessage(err, "Failed to submit checkpoint responses."));
       setSubmitting(false);
     }
   };
@@ -150,14 +97,14 @@ export default function CheckpointQuizPage() {
     );
   }
 
-  if (error && !moduleData) {
+  if (loadError && !moduleData) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-white px-4">
         <div className="max-w-md w-full text-center bg-white p-8 rounded-xl border border-zinc-300">
           <RetryPanel
             title="Checkpoint Load Failed"
-            message={error}
-            onRetry={plan ? () => void retryLoadModuleDesign() : undefined}
+            message={loadError}
+            onRetry={() => void retry()}
             retryLabel="Retry Checkpoint"
             isRetrying={retrying}
             fallbackHref={moduleHref(id, moduleId)}
@@ -175,7 +122,7 @@ export default function CheckpointQuizPage() {
           <RetryPanel
             title="Checkpoint Unavailable"
             message="The checkpoint questions were not loaded."
-            onRetry={plan ? () => void retryLoadModuleDesign() : undefined}
+            onRetry={() => void retry()}
             retryLabel="Retry Checkpoint"
             isRetrying={retrying}
             fallbackHref={moduleHref(id, moduleId)}
@@ -424,7 +371,7 @@ export default function CheckpointQuizPage() {
                   onClick={() => {
                     setAnswers({});
                     setQuizResult(null);
-                    setError(null);
+                    setSubmissionError(null);
                   }}
                   className="flex-1 py-3 border border-zinc-300 bg-white text-zinc-650 hover:text-zinc-900 hover:border-zinc-900 rounded-full text-xs font-medium transition-colors"
                 >
@@ -459,10 +406,6 @@ export default function CheckpointQuizPage() {
       </nav>
     </div>
   );
-}
-
-function moduleHref(planId: string, moduleId: string): string {
-  return `/plan/${encodeURIComponent(planId)}/module/${encodeURIComponent(moduleId)}`;
 }
 
 function errorMessage(err: unknown, fallback: string): string {
